@@ -1,0 +1,18 @@
+/* TODO: set vars */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+/* TODO: i am not sure if we need this */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* TODO: change bootstrap classes */
+
+.btn-primary {
+  /* background-color: var(--blue); */
+  /* Add other styles as needed */
+}
