@@ -1,0 +1,19 @@
+{
+  "name": "genezio-landing-page",
+  "version": "1.0.0",
+  "description": "Genezio landing",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --gc --disableFastRender",
+    "build": "hugo --gc --cleanDestinationDir --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "bootstrap": "^5.3.2",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0"
+  }
+}
