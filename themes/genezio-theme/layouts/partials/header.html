@@ -1,11 +1,38 @@
-<nav style="border: 1px solid red; background-color: #6f42c1" class="navbar" role="navigation">
-  <header class="container">
-    <div class="navbar__left">
-      <a href="/"><strong>blogsite.com</strong></a>
+<nav
+  style="border-bottom: 1px solid red; background-color: #21143a"
+  class="navbar navbar-expand-lg p-0"
+>
+  <div class="container px-4 py-4" style="border-left: 1px solid red; border-right: 1px solid red">
+    <a class="navbar-brand border" href="#" style="width: 131px; height: 33px">Your Logo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse d-flex justify-content-between"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white opacity-75 fw-semibold mx-5" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white opacity-75 fw-semibold" href="#">Resources</a>
+        </li>
+      </ul>
+
+      <div class="d-flex my-2 my-lg-0 d-flex align-items-center">
+        <a class="nav-link text-white opacity-75 fw-semibold mx-5" href="#">Login</a>
+        <button class="btn btn-primary my-2 my-sm-0">Start for free</button>
+      </div>
     </div>
-    <div class="navbar__right">
-      <a href="/blog">Blogs</a>
-      <a href="/categories">Categories</a>
-    </div>
-  </header>
+  </div>
 </nav>

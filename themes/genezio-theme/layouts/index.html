@@ -1,8 +1,44 @@
 {{ define "main" }}
 
-<div class="container">
-  <button class="btn btn-primary">dwada</button>
-  <p class="border text-center">Dwada</p>
+<div class="px-3">
+  <div style="border-left: 1px solid red; border-right: 1px solid red" class="container">
+    {{/* Header Section */}}
+    <div class="d-flex align-items-center justify-content-center flex-column pt-5">
+      <h1 class="text-center fw-bold pt-4 text-white display-5">
+        The <span class="text-success">next gen</span> <br />
+        cloud native platform <br />
+        for modern full-stack developers
+      </h1>
+
+      <p class="fw-medium text-light mb-4 text-white opacity-50">
+        Everything you need to build backends that scale to millions of users.
+      </p>
+      <div class="d-flex mt-4">
+        <button class="btn btn-primary mx-1">Start for free</button>
+        <button class="btn btn-secondary mx-1 text-light">Check our Demo</button>
+      </div>
+    </div>
+
+    {{/* TODO: palceholder remove this later */}}
+    <div style="border: 1px solid red; height: 300px; margin-top: 94px; margin-bottom: 87px">w</div>
+
+    {{/* Hosting included for all plans */}}
+
+    <div class="d-flex align-items-center justify-content-center">
+      <div style="border-top: 1px solid red" class="d-flex p-5">
+        <div style="border: 1px solid red; width: 85px; height: 96px; margin-right: 48px">w</div>
+
+        <div class="text-white d-flex justify-content-center flex-column border">
+          <p class="m-0">Hosting included</p>
+          <p class="m-0">for all plans</p>
+        </div>
+      </div>
+    </div>
+
+    {{/* USED AND TRUSTED AT */}}
+    <p class="mb-0 text-success fw-bold text-center fs-6">USED AND TRUSTED AT</p>
+    <p class="mb-0 text-white opacity-50 fw-bold text-center fs-6">USED AND TRUSTED AT</p>
+  </div>
 </div>
 
 {{ end }}
