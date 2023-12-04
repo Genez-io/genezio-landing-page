@@ -1,7 +1,13 @@
 {{ define "main" }}
 
 <div class="px-3">
-  <div style="border-left: 1px solid red; border-right: 1px solid red" class="container">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    "
+    class="container"
+  >
     {{/* Header Section */}}
     <div class="d-flex align-items-center justify-content-center flex-column pt-5">
       <h1 class="text-center fw-bold pt-4 text-white display-5">
@@ -10,12 +16,15 @@
         for modern full-stack developers
       </h1>
 
-      <p class="fw-medium text-light mb-4 text-white opacity-50">
+      <p class="fw-medium mb-4 text-white opacity-50">
         Everything you need to build backends that scale to millions of users.
       </p>
+
       <div class="d-flex mt-4">
-        <button class="btn btn-primary mx-1">Start for free</button>
-        <button class="btn btn-secondary mx-1 text-light">Check our Demo</button>
+        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0">Start for free</button>
+        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75">
+          Check our Demo
+        </button>
       </div>
     </div>
 
@@ -23,7 +32,6 @@
     <div style="border: 1px solid red; height: 300px; margin-top: 94px; margin-bottom: 87px">w</div>
 
     {{/* Hosting included for all plans */}}
-
     <div class="d-flex align-items-center justify-content-center">
       <div style="border-top: 1px solid red" class="d-flex p-5">
         <div style="border: 1px solid red; width: 85px; height: 96px; margin-right: 48px">w</div>
@@ -36,8 +44,146 @@
     </div>
 
     {{/* USED AND TRUSTED AT */}}
-    <p class="mb-0 text-success fw-bold text-center fs-6">USED AND TRUSTED AT</p>
-    <p class="mb-0 text-white opacity-50 fw-bold text-center fs-6">USED AND TRUSTED AT</p>
+    <p
+      style="font-size: 12px; border-bottom: 1px solid red"
+      class="mb-4 text-success fw-bold text-center"
+    >
+      USED AND TRUSTED AT
+    </p>
+    <div
+      style="border: 1px solid red"
+      class="w-75 mx-auto d-flex align-items-center justify-content-between"
+    >
+      <img class="navbar-brand" alt="genezioLogo" src="/images/multiversxLogo.webp" />
+      <img class="navbar-brand" alt="genezioLogo" src="/images/googleLogo.webp" />
+      <img class="navbar-brand" alt="genezioLogo" src="/images/splunkLogo.webp" />
+      <img class="navbar-brand" alt="genezioLogo" src="/images/uipathLogo.webp" />
+    </div>
+
+    {{/* Your app, your code, your data! */}}
+    <div
+      class="text-white w-100 d-flex align-items-center justify-content-center flex-column py-4"
+      style="border: 1px solid red; background-color: #422f6a"
+    >
+      {{/* TODO: remove this h1 element (we have to keep only one on page) */}}
+      <h1 class="fw-bold text-white display-5 mt-2 pt-5">Your app, your code, your data!</h1>
+      <p class="text-center opacity-50 mt-3">
+        Use our deterministic template system combined with powerful LLM database creation to get
+        started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
+        stage and production environments, typesafe backend APIs to combine with classical REST for
+        the best architecture.
+      </p>
+
+      <div class="d-flex mt-4 mb-2 pb-5">
+        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0">Start for free</button>
+        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75">
+          Check our Demo
+        </button>
+      </div>
+    </div>
+    {{/* Enhance yourself */}}
+    <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">FEATURES</p>
+    <h2 class="text-white text-center fw-bold">Enhance yourself</h2>
+
+    <div class="row mx-2">
+      {{/* Card */}}
+      <div class="col-md m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="mb-4" style="border: 1px solid red; width: 96px; height: 96px"></div>
+            <h4 class="card-title pt-2">Get started in 2 minutes</h4>
+            <p class="card-text opacity-50">
+              From idea to deployed app - you pick a template for the backend and one for the
+              frontend, your choice of mono or multirepo and in 2 minutes you will have everything
+              set up!
+            </p>
+            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-md m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="mb-4" style="border: 1px solid red; width: 96px; height: 96px"></div>
+            <h4 class="card-title pt-2">Open Source forever</h4>
+            <p class="card-text opacity-50">
+              No vendor lock in. Everything you build with us is code that is yours to own. Template
+              code, code generated for the typesafe API, our example code, code generated by our LLM
+              tools - all is yours to own and use how you want. Genezio will be open source and will
+              integrate with other open source tools forever.
+            </p>
+            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-md m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="mb-4" style="border: 1px solid red; width: 96px; height: 96px"></div>
+            <h4 class="card-title pt-2">Microservice by design</h4>
+            <p class="card-text opacity-50">
+              If you started with a Firebase-like framework that offers a database and access
+              functions, and you want to outgrow that, with genezio you can write full business
+              logic that scales separately. Oftentimes you can move the business logic from the
+              frontend to the backend code with minimal changes.
+            </p>
+            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mx-2">
+      <div class="col-md m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Microservice by design</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Microservice by design</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Microservice by design</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/* FAQ */}}
   </div>
 </div>
 
