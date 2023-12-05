@@ -6,18 +6,12 @@ main {
 }
 
 // TODO: remove this css
-h1 {
-  // font-family: Inter;
+h1,
+h4,
+p,
+a {
   font-family: "Inter", sans-serif;
 }
-
-// TODO: remove this css
-p {
-  font-family: "Inter", sans-serif;
-}
-
-// Custom Font Weight
-// $font-weight-bolder: 600 !default;
 
 // Custom Colors
 $white: #fff !default;
@@ -35,9 +29,10 @@ $black: #000 !default;
 // Custom defaults
 $primary: #6f42c1;
 $secondary: #ffffff1a;
+$dark: #21143a;
 $success: #00faa4;
 $blue: #0d6efd !default;
-$indigo: #6610f2 !default;
+$indigo: #21143a !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #dc3545 !default;
