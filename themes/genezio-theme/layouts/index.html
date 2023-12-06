@@ -28,42 +28,57 @@
       </div>
     </div>
 
-    {{/* TODO: palceholder remove this later */}}
-    <div style="border: 1px solid red; height: 300px; margin-top: 94px; margin-bottom: 87px">w</div>
+    {{/* TODO: handle responsive remove this later */}}
+    <div
+      style="height: 200px; margin-top: 94px; margin-bottom: 387px; position: relative"
+      class="w-100"
+    >
+      <img
+        class="border d-block"
+        src="/images/backendTerminal.png"
+        alt="howGenezioWork"
+        style="position: absolute; left: -67px"
+      />
+      <img
+        style="position: absolute; left: 250px"
+        src="/images/deployTerminal.png"
+        alt="howGenezioWork"
+      />
+      <img
+        style="position: absolute; right: -67px"
+        src="/images/frontendTerminal.png"
+        alt="howGenezioWork"
+      />
+    </div>
 
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center">
-      <div style="border-top: 1px solid red" class="d-flex p-5">
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1)" class="d-flex p-5">
         <div style="border: 1px solid red; width: 85px; height: 96px; margin-right: 48px">w</div>
-
-        <div class="text-white d-flex justify-content-center flex-column border">
-          <p class="m-0">Hosting included</p>
-          <p class="m-0">for all plans</p>
+        <div class="text-white d-flex justify-content-center flex-column">
+          <p class="m-0 opacity-50 fw-semibold">Hosting included</p>
+          <p class="m-0 opacity-50 fw-medium">for all plans</p>
         </div>
       </div>
     </div>
 
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+
     {{/* USED AND TRUSTED AT */}}
-    <p
-      style="font-size: 12px; border-bottom: 1px solid red"
-      class="mb-4 text-success fw-bold text-center"
-    >
+    <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-2">
       USED AND TRUSTED AT
     </p>
-    {{/*
-    <div
-      style="border: 1px solid red"
-      class="w-75 mx-auto d-flex align-items-center justify-content-between"
-    >
-      <img class="navbar-brand" alt="genezioLogo" src="/images/multiversxLogo.webp" />
-      <img class="navbar-brand" alt="genezioLogo" src="/images/googleLogo.webp" />
-      <img class="navbar-brand" alt="genezioLogo" src="/images/splunkLogo.webp" />
-      <img class="navbar-brand" alt="genezioLogo" src="/images/uipathLogo.webp" />
+    <div class="w-75 mx-auto d-flex align-items-center justify-content-between mb-4 pb-4">
+      <img class="navbar-brand" alt="multiversxLogo" src="/images/multiversxLogo.webp" />
+      <img class="navbar-brand" alt="googleLogo" src="/images/googleLogo.webp" />
+      <img class="navbar-brand" alt="splunkLogo" src="/images/splunkLogo.webp" />
+      <img class="navbar-brand" alt="uipathLogo" src="/images/uipathLogo.webp" />
     </div>
-    */}} {{/* Your app, your code, your data! */}}
+
+    {{/* Your app, your code, your data! */}}
     <div
-      class="text-white w-100 d-flex align-items-center justify-content-center flex-column py-4"
-      style="border: 1px solid red; background-color: #422f6a"
+      class="text-white d-flex align-items-center justify-content-center flex-column py-4"
+      style="background-color: #422f6a; margin: -12px"
     >
       {{/* TODO: remove this h1 element (we have to keep only one on page) */}}
       <h1 class="fw-bold text-white display-5 mt-2 pt-5">Your app, your code, your data!</h1>
@@ -87,7 +102,7 @@
 
     <div class="row mx-2">
       {{/* Card */}}
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -112,7 +127,7 @@
         </div>
       </div>
       {{/* Card */}}
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -138,7 +153,7 @@
         </div>
       </div>
       {{/* Card */}}
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -166,7 +181,7 @@
     </div>
 
     <div class="row mx-2">
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -176,7 +191,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -186,7 +201,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -198,7 +213,7 @@
       </div>
     </div>
     <div class="row mx-2">
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -208,7 +223,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -218,7 +233,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -238,7 +253,11 @@
     <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">EDUCATION</p>
     <h2 class="text-white text-center fw-bold mb-4">Our latest article</h2>
 
-    <div class="text-white">test test</div>
+    <div class="row mx-2 text-white">
+      <div style="border: 1px solid green" class="col-lg col-md-12 m-2">test test</div>
+    </div>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
     {{/* Testimonials */}}
     <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">
@@ -248,7 +267,7 @@
 
     <div class="row mx-2">
       {{/* Card */}}
-      <div class="col-md col-sm-12 m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -278,7 +297,7 @@
         </div>
       </div>
       {{/* Card */}}
-      <div class="col-md col-sm-12 m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -308,7 +327,7 @@
         </div>
       </div>
       {{/* Card */}}
-      <div class="col-md col-sm-12 m-2">
+      <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -339,8 +358,9 @@
       </div>
     </div>
 
-    {{/* FAQ */}}
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
+    {{/* FAQ */}}
     <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">FAQ</p>
     <h2 class="text-white text-center fw-bold mb-4">Your questions answered</h2>
 
