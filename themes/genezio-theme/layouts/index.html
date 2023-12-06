@@ -187,7 +187,7 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Microservice by design</h4>
+            <h4 class="card-title m-0">Flexible database support</h4>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Microservice by design</h4>
+            <h4 class="card-title m-0">Global CDN and Custom Domain</h4>
           </div>
         </div>
       </div>
@@ -207,19 +207,19 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Microservice by design</h4>
+            <h4 class="card-title m-0">Automatic scaling</h4>
           </div>
         </div>
       </div>
     </div>
-    <div class="row mx-2">
+    <div class="row mx-2 pb-2">
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Microservice by design</h4>
+            <h4 class="card-title m-0">Postman-like test interface</h4>
           </div>
         </div>
       </div>
@@ -229,7 +229,7 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Microservice by design</h4>
+            <h4 class="card-title m-0">LLM database schema generation</h4>
           </div>
         </div>
       </div>
@@ -239,7 +239,7 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Microservice by design</h4>
+            <h4 class="card-title m-0">Dashboard - logs</h4>
           </div>
         </div>
       </div>
@@ -247,17 +247,19 @@
 
     {{/* Genezio in a nutshell */}}
 
-    <div style="background-color: #160d27" class="text-white">test test</div>
+    <div style="background-color: #160d27" class="text-white mt-4">test test</div>
 
     {{/* Our latest article */}}
     <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">EDUCATION</p>
     <h2 class="text-white text-center fw-bold mb-4">Our latest article</h2>
 
     <div class="row mx-2 text-white">
-      <div style="border: 1px solid green" class="col-lg col-md-12 m-2">test test</div>
+      <div class="col-lg col-md-12 m-2">
+        <img src="/images/lastArticle.png" alt="howGenezioWork" class="w-100 pb-2" />
+      </div>
     </div>
 
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" class="mt-4" />
 
     {{/* Testimonials */}}
     <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">
@@ -364,8 +366,26 @@
     <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">FAQ</p>
     <h2 class="text-white text-center fw-bold mb-4">Your questions answered</h2>
 
-    <p class="m-0">ww</p>
+    <p class="m-0 text-white">test</p>
   </div>
+</div>
+
+{{/* TODO: make it using bootstrap classes */}}
+<div style="position: relative">
+  <div
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      position: absolute;
+      width: 100%;
+      height: 2500px;
+      bottom: 0;
+      pointer-events: none;
+    "
+  ></div>
 </div>
 
 {{ end }}
