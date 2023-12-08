@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+<!-- TODO: remove this import to bootstrap -->
+{{/*
+<script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+*/}}
+
 <div class="px-3">
   <div
     style="
@@ -16,7 +21,7 @@
         for modern full-stack developers
       </h1>
 
-      <p class="fw-medium mb-4 text-white text-center opacity-50">
+      <p class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
         Everything you need to build backends that scale to millions of users.
       </p>
 
@@ -53,8 +58,11 @@
 
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center">
-      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1)" class="d-flex p-5">
-        <div style="border: 1px solid red; width: 85px; height: 96px; margin-right: 48px">w</div>
+      <div
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        class="d-flex direction-column p-5"
+      >
+        <img src="/images/hostingIncludedIcon.webp" alt="hostingIncludedIcon" />
         <div class="text-white d-flex justify-content-center flex-column">
           <p class="m-0 opacity-50 fw-semibold">Hosting included</p>
           <p class="m-0 opacity-50 fw-medium">for all plans</p>
@@ -82,7 +90,7 @@
     >
       {{/* TODO: remove this h1 element (we have to keep only one on page) */}}
       <h1 class="fw-bold text-white display-5 mt-2 pt-5">Your app, your code, your data!</h1>
-      <p class="text-center opacity-50 mt-3">
+      <p class="text-center opacity-50 fw-medium mt-3">
         Use our deterministic template system combined with powerful LLM database creation to get
         started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
         stage and production environments, typesafe backend APIs to combine with classical REST for
@@ -96,9 +104,10 @@
         </button>
       </div>
     </div>
+
     {{/* Enhance yourself */}}
-    <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">FEATURES</p>
-    <h2 class="text-white text-center fw-bold">Enhance yourself</h2>
+    <p style="font-size: 12px" class="mb-2 text-success fw-bold text-center mt-4 pt-2">FEATURES</p>
+    <h2 class="text-white text-center fw-bold mb-4">Enhance yourself</h2>
 
     <div class="row mx-2">
       {{/* Card */}}
@@ -259,7 +268,7 @@
     </div>
 
     {{/* Our latest article */}}
-    <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">EDUCATION</p>
+    <p style="font-size: 12px" class="mb-2 text-success fw-bold text-center mt-4 pt-2">EDUCATION</p>
     <h2 class="text-white text-center fw-bold mb-4">Our latest article</h2>
 
     <div class="row mx-2 text-white">
@@ -271,7 +280,7 @@
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" class="mt-4" />
 
     {{/* Testimonials */}}
-    <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">
+    <p style="font-size: 12px" class="mb-2 text-success fw-bold text-center mt-4 pt-2">
       TESTIMONIALS
     </p>
     <h2 class="text-white text-center fw-bold mb-4">Don’t take our word for it</h2>
@@ -372,10 +381,10 @@
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
     {{/* FAQ */}}
-    <p style="font-size: 12px" class="mb-4 text-success fw-bold text-center mt-4 pt-2">FAQ</p>
+    <p style="font-size: 12px" class="mb-2 text-success fw-bold text-center mt-4 pt-2">FAQ</p>
     <h2 class="text-white text-center fw-bold mb-4">Your questions answered</h2>
 
-    <p class="m-0 text-white">test</p>
+    <p class="mb-0">www</p>
   </div>
 </div>
 

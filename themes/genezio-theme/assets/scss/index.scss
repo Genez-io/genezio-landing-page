@@ -6,11 +6,17 @@ main {
   background-color: #21143a;
 }
 
+// TODO: remove this
+.btn {
+  font-family: "Inter", sans-serif !important;
+}
+
 // TODO: remove this css
 h1,
 h4,
 p,
-a {
+a,
+button {
   font-family: "Inter", sans-serif;
 }
 
