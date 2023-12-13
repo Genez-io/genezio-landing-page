@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+// TODO: remove this
+main {
+  background-color: #21143a;
+}
+
+input::placeholder {
+  color: white !important;
+}
+
+// TODO: remove this
+.btn {
+  font-family: "Inter", sans-serif !important;
+}
+
+// TODO: remove this css
+h1,
+h4,
+p,
+a,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+// Custom Colors
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+// Custom defaults
+$primary: #6f42c1;
+$secondary: #ffffff1a;
+$dark: #21143a;
+$success: #00faa4;
+$blue: #0d6efd !default;
+$indigo: #21143a !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+
+// import bootstrap from node modules
+// TODO: for a better performance let's import only the parts that we are using from bootstrap
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";

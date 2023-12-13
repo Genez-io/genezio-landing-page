@@ -1,0 +1,525 @@
+{{ define "main" }}
+
+<!-- TODO: remove this import to bootstrap -->
+{{/*
+<script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+*/}} {{/*
+<script>
+  import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+</script>
+*/}}
+
+<div class="px-3">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    "
+    class="container"
+  >
+    {{/* Header Section */}}
+    <div class="d-flex align-items-center justify-content-center flex-column pt-5">
+      <h1 class="text-center fw-bold pt-4 text-white display-5">
+        The <span class="text-success">next gen</span> <br />
+        cloud native platform <br />
+        for modern full-stack developers
+      </h1>
+
+      <p class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
+        Everything you need to build backends that scale to millions of users.
+      </p>
+
+      <div class="d-flex mt-4">
+        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0">Start for free</button>
+        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75">
+          Check our Demo
+        </button>
+      </div>
+    </div>
+
+    {{/* TODO: handle responsive remove this later */}}
+    <div
+      style="height: 200px; margin-top: 94px; margin-bottom: 387px; position: relative"
+      class="w-100"
+    >
+      {{/*
+      <img
+        class="border d-block"
+        src="/images/backendTerminal.png"
+        alt="howGenezioWork"
+        style="position: absolute; left: -67px"
+      />
+      <img
+        style="position: absolute; left: 250px"
+        src="/images/deployTerminal.png"
+        alt="howGenezioWork"
+      />
+      <img
+        style="position: absolute; right: -67px"
+        src="/images/frontendTerminal.png"
+        alt="howGenezioWork"
+      />
+      */}}
+    </div>
+
+    {{/* Hosting included for all plans */}}
+    <div class="d-flex align-items-center justify-content-center">
+      <div
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        class="d-flex direction-column p-5"
+      >
+        <img src="/images/hostingIncludedIcon.webp" alt="hostingIncludedIcon" />
+        <div class="mx-4"></div>
+        <div class="text-white d-flex justify-content-center flex-column">
+          <p class="m-0 opacity-50 fw-semibold">Hosting included</p>
+          <p class="m-0 opacity-50 fw-medium">for all plans</p>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+
+    {{/* USED AND TRUSTED AT */}}
+    <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-3">
+      USED AND TRUSTED AT
+    </p>
+    <div class="w-75 mx-auto d-flex align-items-center justify-content-between mb-4 pb-3">
+      <img class="navbar-brand" alt="multiversxLogo" src="/images/multiversxLogo.webp" />
+      <img class="navbar-brand" alt="googleLogo" src="/images/googleLogo.webp" />
+      <img class="navbar-brand" alt="splunkLogo" src="/images/splunkLogo.webp" />
+      <img class="navbar-brand" alt="uipathLogo" src="/images/uipathLogo.webp" />
+    </div>
+
+    {{/* Your app, your code, your data! */}}
+    <div
+      class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
+      style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
+    >
+      <img
+        class="border d-block pe-none"
+        src="/images/wave.png"
+        style="
+          mix-blend-mode: screen;
+          filter: grayscale(50%);
+          opacity: 0.4;
+          position: absolute;
+          top: -115px;
+        "
+        alt="howGenezioWork"
+      />
+
+      {{/* TODO: remove this h1 element (we have to keep only one on page) */}}
+      <h1 class="fw-bold text-white display-5 py-4 my-2">Your app, your code, your data!</h1>
+      {{/* TODO: fix width */}}
+      <p class="text-center opacity-50 fw-medium mt-1 w-50">
+        Use our deterministic template system combined with powerful LLM database creation to get
+        started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
+        stage and production environments, typesafe backend APIs to combine with classical REST for
+        the best architecture.
+      </p>
+
+      <div class="d-flex mt-4 pt-2 pb-4 mb-1">
+        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0">Start for free</button>
+        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75">
+          Check our Demo
+        </button>
+      </div>
+    </div>
+
+    {{/* Enhance yourself */}}
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      FEATURES
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3">Enhance yourself</h2>
+
+    <div class="row mx-2">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
+              style="border: 1px solid red; width: 96px; height: 96px"
+            >
+              <img class="navbar-brand" alt="genezioLogo" src="/images/genezioLogoBlack.webp" />
+            </div>
+            <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h4>
+            <p class="card-text opacity-50 mb-4 pb-3">
+              From idea to deployed app - you pick a template for the backend and one for the
+              frontend, your choice of mono or multirepo and in 2 minutes you will have everything
+              set up!
+            </p>
+            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
+              style="border: 1px solid red; width: 96px; height: 96px"
+            >
+              <img class="navbar-brand" alt="genezioLogo" src="/images/genezioLogoBlack.webp" />
+            </div>
+            <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Open Source forever</h4>
+            <p class="card-text opacity-50 mb-4 pb-3">
+              No vendor lock in. Everything you build with us is code that is yours to own. Template
+              code, code generated for the typesafe API, our example code, code generated by our LLM
+              tools - all is yours to own and use how you want. Genezio will be open source and will
+              integrate with other open source tools forever.
+            </p>
+            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
+              style="border: 1px solid red; width: 96px; height: 96px"
+            >
+              <img class="navbar-brand" alt="genezioLogo" src="/images/genezioLogoBlack.webp" />
+            </div>
+            <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Microservice by design</h4>
+            <p class="card-text opacity-50 mb-4 pb-3">
+              If you started with a Firebase-like framework that offers a database and access
+              functions, and you want to outgrow that, with genezio you can write full business
+              logic that scales separately. Oftentimes you can move the business logic from the
+              frontend to the backend code with minimal changes.
+            </p>
+            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mx-2">
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Flexible database support</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Global CDN and Custom Domain</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Automatic scaling</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mx-2 pb-2">
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Postman-like test interface</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">LLM database schema generation</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h4 class="card-title m-0">Dashboard - logs</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/* Genezio in a nutshell */}}
+    <div
+      style="
+        background-color: #160d27;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0 -12px;
+      "
+      class="text-white mt-4"
+    >
+      test test
+    </div>
+
+    {{/* Our latest article */}}
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      EDUCATION
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3">Our latest article</h2>
+
+    <div class="row mx-2 text-white">
+      <div class="col-lg col-md-12 m-2">
+        <img src="/images/lastArticle.png" alt="howGenezioWork" class="w-100 pb-3" />
+      </div>
+    </div>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" class="mt-4" />
+
+    {{/* Testimonials */}}
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      TESTIMONIALS
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3">Don’t take our word for it</h2>
+
+    <div class="row mx-2 pb-2">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <div
+                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
+                ></div>
+
+                <div class="mx-3">
+                  <p class="mb-0 fw-semibold">Teri</p>
+                  <p style="font-size: 14px" class="mb-0">@terieynike</p>
+                </div>
+              </div>
+
+              <div style="border: 1px solid red; width: 24px; height: 24px"></div>
+            </div>
+
+            <p class="mt-4 opacity-50">
+              Been a huge supporter of Appwrite for over a year, championing it even at the
+              companies I was working at. Their community is second-to-none, speed of feature
+              release is exceptional, and the support in their Discord is incredible.
+            </p>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <div
+                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
+                ></div>
+
+                <div class="mx-3">
+                  <p class="mb-0 fw-semibold">Teri</p>
+                  <p style="font-size: 14px" class="mb-0">@terieynike</p>
+                </div>
+              </div>
+
+              <div style="border: 1px solid red; width: 24px; height: 24px"></div>
+            </div>
+
+            <p class="mt-4 opacity-50">
+              Backend Engineers, you will agree with me that building the authentication process for
+              your app with each new API development is a pain. Here's my secret: I let @appwrite
+              handle my authentication process while I focus on the business logic.
+            </p>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <div
+                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
+                ></div>
+
+                <div class="mx-3">
+                  <p class="mb-0 fw-semibold">Teri</p>
+                  <p style="font-size: 14px" class="mb-0">@terieynike</p>
+                </div>
+              </div>
+
+              <div style="border: 1px solid red; width: 24px; height: 24px"></div>
+            </div>
+
+            <p class="mt-4 opacity-50">
+              I have used Appwrite twice, and the experience of using it was great as I got to build
+              a full-stack application. I would gladly recommend it to anyone looking to explore an
+              alternative database option. Appwrite is simply the best.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+
+    {{/* FAQ */}}
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">FAQ</p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3">Your questions answered</h2>
+
+    <p class="mb-0">www</p>
+  </div>
+</div>
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        Accordion Item #1
+      </button>
+    </h2>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse show"
+      aria-labelledby="headingOne"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+        collapse plugin adds the appropriate classes that we use to style each element. These
+        classes control the overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or overriding our default variables.
+        It's also worth noting that just about any HTML can go within the
+        <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="false"
+        aria-controls="collapseTwo"
+      >
+        Accordion Item #2
+      </button>
+    </h2>
+    <div
+      id="collapseTwo"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingTwo"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+        the collapse plugin adds the appropriate classes that we use to style each element. These
+        classes control the overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or overriding our default variables.
+        It's also worth noting that just about any HTML can go within the
+        <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        Accordion Item #3
+      </button>
+    </h2>
+    <div
+      id="collapseThree"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingThree"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+        collapse plugin adds the appropriate classes that we use to style each element. These
+        classes control the overall appearance, as well as the showing and hiding via CSS
+        transitions. You can modify any of this with custom CSS or overriding our default variables.
+        It's also worth noting that just about any HTML can go within the
+        <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/* TODO: make it using bootstrap classes */}}
+<div class="position-relative">
+  <div
+    class="position-absolute w-100 bottom-0 pe-none bg-red"
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      height: 2500px;
+    "
+  ></div>
+</div>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+{{ end }}
