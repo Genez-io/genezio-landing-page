@@ -1,0 +1,280 @@
+<div
+  class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area"
+>
+  <p
+    style="font-size: 12px"
+    class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
+  >
+    THE CODE
+  </p>
+  <h2 class="text-white text-center fw-bold mb-4 pb-3">
+    genezio in a nutshell
+  </h2>
+
+  <div class="col-lg-11 col-md-11 m-2">
+    <nav>
+      <div
+        class="nav nav-tabs nav-fill"
+        id="nav-tab"
+        role="tablist"
+        style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
+      >
+        <button
+          class="nav-link"
+          id="nav-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#genezio-rpc"
+          type="button"
+          role="tab"
+          aria-controls="genezio-rpc"
+          aria-selected="false"
+        >
+          genezio.Rpc
+        </button>
+        <button
+          class="nav-link active"
+          id="nav-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#genezio-backend"
+          type="button"
+          role="tab"
+          aria-controls="genezio-backend"
+          aria-selected="true"
+        >
+          genezio.Backend
+        </button>
+        <button
+          class="nav-link"
+          id="nav-contact-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#genezio-serverless"
+          type="button"
+          role="tab"
+          aria-controls="genezio-serverless"
+          aria-selected="false"
+        >
+          genezio.Serverless
+        </button>
+        <button
+          class="nav-link"
+          id="nav-contact-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#genezio-cloud"
+          type="button"
+          role="tab"
+          aria-controls="genezio-cloud"
+          aria-selected="false"
+        >
+          genezio.Cloud
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade"
+        id="genezio-rpc"
+        role="tabpanel"
+        aria-labelledby="genezio-rpc-tab"
+        tabindex="0"
+      >
+        ...
+      </div>
+      <div
+        class="tab-pane fade show active"
+        id="genezio-backend"
+        role="tabpanel"
+        aria-labelledby="genezio-backend-tab"
+        tabindex="0"
+      >
+        {{/* start genezio backend */}}
+        <div class="row mt-4">
+          <div class="col-3 d-flex text-left">
+            <nav class="w-100">
+              <div
+                class="nav flex-column nav-custom-left"
+                id="nav-tab"
+                role="tablist"
+              >
+                <button
+                  class="nav-link text-start active"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#user-auth"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-auth"
+                  aria-selected="true"
+                >
+                  User authentication
+                </button>
+                <button
+                  class="nav-link text-start"
+                  id="nav-profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#database-support"
+                  type="button"
+                  role="tab"
+                  aria-controls="database-support"
+                  aria-selected="false"
+                >
+                  Database support
+                </button>
+                <button
+                  class="nav-link text-start"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#storage"
+                  type="button"
+                  role="tab"
+                  aria-controls="storage"
+                  aria-selected="false"
+                >
+                  Storage
+                </button>
+                <button
+                  class="nav-link text-start"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#queues"
+                  type="button"
+                  role="tab"
+                  aria-controls="queues"
+                  aria-selected="false"
+                >
+                  Queues
+                </button>
+                <button
+                  class="nav-link text-start"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cron-jobs"
+                  type="button"
+                  role="tab"
+                  aria-controls="cron-jobs"
+                  aria-selected="false"
+                >
+                  Cron jobs
+                </button>
+                <button
+                  class="nav-link text-start"
+                  id="nav-contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#real-time"
+                  type="button"
+                  role="tab"
+                  aria-controls="real-time"
+                  aria-selected="false"
+                >
+                  Real time (soon)
+                </button>
+              </div>
+            </nav>
+          </div>
+          <div class="col-9">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-home"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+                tabindex="0"
+              >
+                <p class="opacity-50 m-0">
+                  Manage and process large volumes of tasks and requests with
+                  ease and reliability. Extremely helpful when you need to do
+                  something asynchronously.
+                </p>
+                <div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { ProductService } from '@genezio-sdk/my-app';
+
+const ProductDetails = () => {
+  // rest of the code
+
+  const buy = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    const details = await ProductService.buy(product)
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+import { getStorage } from '@genezio/storage';
+
+@GenezioDeploy()
+export class ProductService {
+  async buy(context: GnzContext, product: Product): Promise<boolean> {
+    this.queue.add('buyProduct', { product, user: context.user })
+  }
+
+  @GenezioMethod({ type: "queue", queue: 'buyProduct' })
+  async buyQueue(context: GnzContext, product: Product): Promise<boolean> {
+    // charge the user
+    // check if the payment was successful
+    // send the confirmation email
+    // return true or false
+  }
+}</code>
+                </pre>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-profile"
+                role="tabpanel"
+                aria-labelledby="nav-profile-tab"
+                tabindex="0"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-contact"
+                role="tabpanel"
+                aria-labelledby="nav-contact-tab"
+                tabindex="0"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-disabled"
+                role="tabpanel"
+                aria-labelledby="nav-disabled-tab"
+                tabindex="0"
+              >
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/* end genezio backend */}}
+      </div>
+      <div
+        class="tab-pane fade"
+        id="genezio-serverless"
+        role="tabpanel"
+        aria-labelledby="genezio-serverless-tab"
+        tabindex="0"
+      >
+        ...
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="genezio-cloud"
+        role="tabpanel"
+        aria-labelledby="genezio-cloud-tab"
+        tabindex="0"
+      >
+        ...
+      </div>
+    </div>
+  </div>
+</div>
