@@ -96,6 +96,11 @@ $cyan: #0dcaf0 !default;
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+.py-btn-custom {
+  padding-top: 0.75em !important;
+  padding-bottom: 0.75em !important;
+}
+
 @media (max-width: 768px) {  
   .flow-breaker-header {
     text-align: center;
@@ -128,4 +133,9 @@ letter-spacing: -0.966px;
     margin-top: 1em;
     margin-bottom: 1.5em;
   }
+
+  h2 {
+    font-size: 32px;
+  }
 }
+
