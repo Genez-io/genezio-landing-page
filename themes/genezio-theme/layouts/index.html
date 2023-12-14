@@ -66,16 +66,19 @@
     <div class="d-flex align-items-center justify-content-center">
       <div
         style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        class="d-flex direction-column p-5"
+        class="px-5 py-md-5 py-4 d-md-flex"
       >
-        <img src="/images/hostingIncludedIcon.webp" alt="hostingIncludedIcon" />
-        <div class="mx-4"></div>
+        <div class="d-flex justify-content-center">
+          <img src="/images/hostingIncludedIcon.webp" alt="hostingIncludedIcon" />
+        </div>
+        <div class="mx-4 my-4"></div>
         <div class="text-white d-flex justify-content-center flex-column">
           <p class="m-0 opacity-50 fw-semibold">Hosting included</p>
-          <p class="m-0 opacity-50 fw-medium">for all plans</p>
+          <p class="m-0 opacity-50 fw-medium text-md-start text-center">for all plans</p>
         </div>
       </div>
     </div>
+    <div class="py-4 my-3 d-md-none d-block"></div>
 
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
@@ -96,7 +99,7 @@
       style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
     >
       <img
-        class="border d-block pe-none"
+        class="border d-block pe-none w-100"
         src="/images/wave.png"
         style="
           mix-blend-mode: screen;
@@ -132,11 +135,11 @@
     </p>
     <h2 class="text-white text-center fw-bold mb-4 pb-3">Enhance yourself</h2>
 
-    <div class="row mx-2">
+    <div class="row mx-2 mb-md-3 pb-md-3">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -161,7 +164,7 @@
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -187,7 +190,7 @@
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -215,17 +218,18 @@
     <div class="row mx-2">
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
+            {{/* class="card p-2 p-md-4 text-white" */}}
             <h4 class="card-title m-0">Flexible database support</h4>
           </div>
         </div>
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -235,7 +239,7 @@
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -247,7 +251,7 @@
     <div class="row mx-2 pb-2">
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -257,7 +261,7 @@
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -267,7 +271,7 @@
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-4 text-white"
+          class="card p-2 p-md-4 text-white"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
@@ -298,7 +302,7 @@
 
     <div class="row mx-2 text-white">
       <div class="col-lg col-md-12 m-2">
-        <img src="/images/lastArticle.png" alt="howGenezioWork" class="w-100 pb-3" />
+        <img src="/images/lastArticle.png" alt="howGenezioWork" class="w-100 pb-2" />
       </div>
     </div>
 
@@ -409,102 +413,146 @@
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">FAQ</p>
     <h2 class="text-white text-center fw-bold mb-4 pb-3">Your questions answered</h2>
 
-    <p class="mb-0">www</p>
+    <div class="px-md-4 mx-1">
+      <div
+        class="accordion text-white pb-4"
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        id="accordionExample"
+      >
+        {{/* Second Question */}}
+        <div class="accordion-item py-2 my-2 text-white">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              I have a website on vercel/netlify. Can you help me?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body px-5 py-2 mx-4">
+              Yes! Firstly, design a database using llm. Use javascript to write the backend and
+              genezio to deploy it.
+            </div>
+          </div>
+        </div>
+        {{/* Second Question */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              I am using firebase and I need a more complex backend
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body py-2 px-5 mx-4">test test test test test test test</div>
+          </div>
+        </div>
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              I am using firebase and I need a more complex backend
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body py-2 px-5 mx-4">test test test test test test test</div>
+          </div>
+        </div>
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              I am using firebase and I need a more complex backend
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body py-2 px-5 mx-4">test test test test test test test</div>
+          </div>
+        </div>
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              I am using firebase and I need a more complex backend
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body py-2 px-5 mx-4">test test test test test test test</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/* End of main container */}}
   </div>
 </div>
 
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button
-        class="accordion-button"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseOne"
-        aria-expanded="true"
-        aria-controls="collapseOne"
-      >
-        Accordion Item #1
-      </button>
-    </h2>
-    <div
-      id="collapseOne"
-      class="accordion-collapse collapse show"
-      aria-labelledby="headingOne"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-        collapse plugin adds the appropriate classes that we use to style each element. These
-        classes control the overall appearance, as well as the showing and hiding via CSS
-        transitions. You can modify any of this with custom CSS or overriding our default variables.
-        It's also worth noting that just about any HTML can go within the
-        <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseTwo"
-        aria-expanded="false"
-        aria-controls="collapseTwo"
-      >
-        Accordion Item #2
-      </button>
-    </h2>
-    <div
-      id="collapseTwo"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingTwo"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-        the collapse plugin adds the appropriate classes that we use to style each element. These
-        classes control the overall appearance, as well as the showing and hiding via CSS
-        transitions. You can modify any of this with custom CSS or overriding our default variables.
-        It's also worth noting that just about any HTML can go within the
-        <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseThree"
-        aria-expanded="false"
-        aria-controls="collapseThree"
-      >
-        Accordion Item #3
-      </button>
-    </h2>
-    <div
-      id="collapseThree"
-      class="accordion-collapse collapse"
-      aria-labelledby="headingThree"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-        collapse plugin adds the appropriate classes that we use to style each element. These
-        classes control the overall appearance, as well as the showing and hiding via CSS
-        transitions. You can modify any of this with custom CSS or overriding our default variables.
-        It's also worth noting that just about any HTML can go within the
-        <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
-
-{{/* TODO: make it using bootstrap classes */}}
-<div class="position-relative">
+<div class="position-relative pt-3">
   <div
     class="position-absolute w-100 bottom-0 pe-none bg-red"
     style="
@@ -513,13 +561,15 @@
         rgba(0, 250, 164, 0) 77.17%,
         rgba(0, 250, 164, 0.47) 100%
       );
-      height: 2500px;
+      height: 5200px;
     "
   ></div>
 </div>
+
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
   crossorigin="anonymous"
 ></script>
+
 {{ end }}

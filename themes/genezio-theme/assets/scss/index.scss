@@ -10,7 +10,8 @@ input::placeholder {
 }
 
 // TODO: remove this
-.btn {
+.btn,
+.accordion-button {
   font-family: "Inter", sans-serif !important;
 }
 
@@ -35,6 +36,20 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
+
+// Accordion
+$accordion-bg: transparent;
+$accordion-button-active-bg: transparent;
+$accordion-button-color: $white;
+$accordion-button-active-color: $white;
+$accordion-border-width: 0;
+$accordion-button-icon: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.6485 15.2484C17.1799 15.7171 16.4201 15.7171 15.9515 15.2484L12 11.297L8.04853 15.2484C7.5799 15.7171 6.8201 15.7171 6.35147 15.2484C5.88284 14.7798 5.88284 14.02 6.35147 13.5514L11.1515 8.75137C11.6201 8.28274 12.3799 8.28275 12.8485 8.75137L17.6485 13.5514C18.1172 14.02 18.1172 14.7798 17.6485 15.2484Z" fill="#00FAA4"/></svg>');
+$accordion-button-active-icon: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.6485 15.2484C17.1799 15.7171 16.4201 15.7171 15.9515 15.2484L12 11.297L8.04853 15.2484C7.5799 15.7171 6.8201 15.7171 6.35147 15.2484C5.88284 14.7798 5.88284 14.02 6.35147 13.5514L11.1515 8.75137C11.6201 8.28274 12.3799 8.28275 12.8485 8.75137L17.6485 13.5514C18.1172 14.02 18.1172 14.7798 17.6485 15.2484Z" fill="#00FAA4"/></svg>');
+
+.accordion-button:after {
+  order: -1; //swap order
+  margin: 0 24px 0 10px !important;
+}
 
 // Custom defaults
 $primary: #6f42c1;
