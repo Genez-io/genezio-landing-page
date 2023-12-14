@@ -26,12 +26,12 @@
       </h1>
 
       <p class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
-        Everything you need to build backends that scale to millions of users.
+        Everything you need <br class="d-block d-sm-none">to build backends <br class="d-block d-sm-none">that scale to millions of users.
       </p>
 
-      <div class="d-flex mt-4">
-        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0">Start for free</button>
-        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75">
+      <div class="d-flex mt-4 flex-column flex-md-row w-100 justify-content-center">
+        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2">Start for free</button>
+        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2">
           Check our Demo
         </button>
       </div>
@@ -86,11 +86,28 @@
     <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-3">
       USED AND TRUSTED AT
     </p>
-    <div class="w-75 mx-auto d-flex align-items-center justify-content-between mb-4 pb-3">
-      <img class="navbar-brand" alt="multiversxLogo" src="/images/multiversxLogo.webp" />
-      <img class="navbar-brand" alt="googleLogo" src="/images/googleLogo.webp" />
-      <img class="navbar-brand" alt="splunkLogo" src="/images/splunkLogo.webp" />
-      <img class="navbar-brand" alt="uipathLogo" src="/images/uipathLogo.webp" />
+    <div class="w-100 mx-auto d-flex justify-content-around mb-4 pb-3">
+      <img class="navbar-brand d-none d-md-block" alt="multiversx-logo" src="/images/multiversx-logo.svg" />
+      <img class="navbar-brand d-none d-md-block" alt="google-logo" src="/images/google-logo.svg" />
+      <img class="navbar-brand d-none d-md-block" alt="splunk-logo" src="/images/splunk-logo.svg" />
+      <img class="navbar-brand d-none d-md-block" alt="uipath-logo" src="/images/uipath-logo.svg" />
+
+      <div id="carouselExampleInterval" class="carousel slide d-block d-sm-block d-md-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <img alt="multiversx-logo" src="/images/multiversx-logo.svg" class="d-block w-100 custom-brand-img-item">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img alt="google-logo" src="/images/google-logo.svg" class="d-block w-100 custom-brand-img-item">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img alt="splunk-logo" src="/images/splunk-logo.svg" class="d-block w-100 custom-brand-img-item">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img alt="uipath-logo" src="/images/uipath-logo.svg" class="d-block w-100 custom-brand-img-item">
+          </div>
+        </div>
+      </div>
     </div>
 
     {{/* Your app, your code, your data! */}}
@@ -98,8 +115,8 @@
       class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
       style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
     >
-      <img
-        class="border d-block pe-none w-100"
+      {{/*  <img
+        class="border d-block pe-none"
         src="/images/wave.png"
         style="
           mix-blend-mode: screen;
@@ -109,7 +126,7 @@
           top: -115px;
         "
         alt="howGenezioWork"
-      />
+      />  */}}
 
       {{/* TODO: remove this h1 element (we have to keep only one on page) */}}
       <h1 class="fw-bold text-white display-5 py-4 my-2">Your app, your code, your data!</h1>
@@ -147,7 +164,7 @@
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
               style="border: 1px solid red; width: 96px; height: 96px"
             >
-              <img class="navbar-brand" alt="genezioLogo" src="/images/genezioLogoBlack.webp" />
+              <img class="navbar-brand" alt="genezio-logo" src="/images/genezioLogoBlack.webp" />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -282,17 +299,8 @@
     </div>
 
     {{/* Genezio in a nutshell */}}
-    <div
-      style="
-        background-color: #160d27;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0 -12px;
-      "
-      class="text-white mt-4"
-    >
-      test test
-    </div>
+    {{- partial "theCode.html" . -}}
+    
 
     {{/* Our latest article */}}
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
