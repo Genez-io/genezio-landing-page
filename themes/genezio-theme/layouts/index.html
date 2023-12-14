@@ -31,11 +31,17 @@
       </p>
 
       <div class="d-flex mt-4 flex-column flex-md-row w-100 justify-content-center">
-        <a class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2" href="https://app.genez.io/auth/signup" target="_blank">
+        <a
+          class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
+          href="https://app.genez.io/auth/signup"
+          target="_blank"
+        >
           Start for free
         </a>
         <a
-          class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2" href="https://docs.genez.io/" target="_blank"
+          class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+          href="https://docs.genez.io/"
+          target="_blank"
         >
           Check our Docs
         </a>
@@ -43,29 +49,16 @@
     </div>
 
     {{/* TODO: handle responsive remove this later */}}
-    <div
-      class="d-none d-sm-block mt-5"
-
-    >
-      <img
-        class="w-100 mb-5"
-        src="/images/hero-3-terminals.svg"
-        alt="howGenezioWork"
-
-      />
+    <div class="d-none d-sm-block mt-5">
+      <img class="w-100 mb-5" src="/images/hero-3-terminals.svg" alt="howGenezioWork" />
     </div>
 
     <div
-    class="d-block d-sm-none mb-5"
-    style="margin-left: -2em !important; margin-right: -1.8em !important"
-
-  >
-    <img
-    class="w-100"
-    src="/images/hero-3-terminals-mobile.svg"
-    alt="howGenezioWork"
-  />
-  </div>
+      class="d-block d-sm-none mb-5"
+      style="margin-left: -2em !important; margin-right: -1.8em !important"
+    >
+      <img class="w-100" src="/images/hero-3-terminals-mobile.svg" alt="howGenezioWork" />
+    </div>
 
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center">
@@ -142,37 +135,58 @@
     </div>
 
     {{/* Your app, your code, your data! */}}
-    <div
-      class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
-      style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
-    >
-      {{/*
+    <div class="position-relative">
+      {{/* TODO: replace png -> svg */}}
       <img
-        class="border d-block pe-none"
+        class="d-md-block d-none pe-none"
         src="/images/wave.png"
         style="
           mix-blend-mode: screen;
           filter: grayscale(50%);
           opacity: 0.4;
           position: absolute;
-          top: -115px;
+          top: -125px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 99vw;
+          height: 838px;
         "
         alt="howGenezioWork"
-      /> */}}
-      <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your data!</h2>
-      {{/* TODO: fix width */}}
-      <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
-        Use our deterministic template system combined with powerful LLM database creation to get
-        started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
-        stage and production environments, typesafe backend APIs to combine with classical REST for
-        the best architecture.
-      </p>
+      />
 
-      <div class="d-flex mt-4 pt-2 pb-4 mb-1 flex-column flex-md-row w-100 px-4 justify-content-center ">
-        <a class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2" href="https://app.genez.io/auth/signup" target="_blank">Start for free</a>
-        <a class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2" href="https://docs.genez.io/" target="_blank">
-          Check our Docs
-        </a>
+      <div
+        class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
+        style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
+      >
+        <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">
+          Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your
+          data!
+        </h2>
+        {{/* TODO: fix width */}}
+        <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
+          Use our deterministic template system combined with powerful LLM database creation to get
+          started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
+          stage and production environments, typesafe backend APIs to combine with classical REST
+          for the best architecture.
+        </p>
+
+        <div
+          class="d-flex mt-4 pt-2 pb-4 mb-1 flex-column flex-md-row w-100 px-4 justify-content-center"
+        >
+          <a
+            class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
+            href="https://app.genez.io/auth/signup"
+            target="_blank"
+            >Start for free</a
+          >
+          <a
+            class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+            href="https://docs.genez.io/"
+            target="_blank"
+          >
+            Check our Docs
+          </a>
+        </div>
       </div>
     </div>
 
@@ -193,7 +207,11 @@
             <div
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" />
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+              />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -217,7 +235,11 @@
             <div
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" />
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+              />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Open Source forever</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -242,7 +264,11 @@
             <div
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" />
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+              />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Microservice by design</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -367,7 +393,11 @@
                 </div>
               </div>
 
-              <a href="https://www.linkedin.com/in/danielgmorosan/" target="_blank" rel="noopener nofollow">
+              <a
+                href="https://www.linkedin.com/in/danielgmorosan/"
+                target="_blank"
+                rel="noopener nofollow"
+              >
                 <img
                   class="mx-2 footer-social-logo"
                   alt="linkedin-logo"
