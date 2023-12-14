@@ -90,4 +90,24 @@ $cyan: #0dcaf0 !default;
   border-bottom: 0 !important;
 }
 
+.wrapper-logo-features {
+  width: 96px;
+  height: 96px;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
 
+@media (max-width: 768px) {  
+  .flow-breaker-header {
+    text-align: center;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; /* 116.667% */
+    letter-spacing: -1.104px;
+  }
+
+  .flow-breaker-p {
+    width: 100% !important;
+  }
+}

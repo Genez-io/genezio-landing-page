@@ -44,28 +44,28 @@
 
     {{/* TODO: handle responsive remove this later */}}
     <div
-      style="height: 200px; margin-top: 94px; margin-bottom: 387px; position: relative"
-      class="w-100"
+      class="d-none d-sm-block mt-5"
+
     >
-      {{/*
       <img
-        class="border d-block"
-        src="/images/backendTerminal.png"
+        class="w-100 mb-5"
+        src="/images/hero-3-terminals.svg"
         alt="howGenezioWork"
-        style="position: absolute; left: -67px"
+
       />
-      <img
-        style="position: absolute; left: 250px"
-        src="/images/deployTerminal.png"
-        alt="howGenezioWork"
-      />
-      <img
-        style="position: absolute; right: -67px"
-        src="/images/frontendTerminal.png"
-        alt="howGenezioWork"
-      />
-      */}}
     </div>
+
+    <div
+    class="d-block d-sm-none mb-5"
+    style="margin-left: -2em !important; margin-right: -2em !important;"
+
+  >
+    <img
+    class="w-100"
+    src="/images/hero-3-terminals-mobile.svg"
+    alt="howGenezioWork"
+  />
+  </div>
 
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center">
@@ -156,20 +156,19 @@
           top: -115px;
         "
         alt="howGenezioWork"
-      />
-      */}} {{/* TODO: remove this h1 element (we have to keep only one on page) */}}
-      <h1 class="fw-bold text-white display-5 py-4 my-2">Your app, your code, your data!</h1>
+      /> */}}
+      <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your data!</h2>
       {{/* TODO: fix width */}}
-      <p class="text-center opacity-50 fw-medium mt-1 w-50">
+      <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
         Use our deterministic template system combined with powerful LLM database creation to get
         started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
         stage and production environments, typesafe backend APIs to combine with classical REST for
         the best architecture.
       </p>
 
-      <div class="d-flex mt-4 pt-2 pb-4 mb-1">
-        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0">Start for free</button>
-        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75">
+      <div class="d-flex mt-4 pt-2 pb-4 mb-1 flex-column flex-md-row w-100 px-4 justify-content-center ">
+        <button class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2">Start for free</button>
+        <button class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2">
           Check our Demo
         </button>
       </div>
@@ -190,10 +189,9 @@
         >
           <div class="card-body">
             <div
-              class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
-              style="border: 1px solid red; width: 96px; height: 96px"
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img class="navbar-brand" alt="genezio-logo" src="/images/genezioLogoBlack.webp" />
+              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -215,10 +213,9 @@
         >
           <div class="card-body">
             <div
-              class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
-              style="border: 1px solid red; width: 96px; height: 96px"
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img class="navbar-brand" alt="genezioLogo" src="/images/genezioLogoBlack.webp" />
+              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Open Source forever</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -241,10 +238,9 @@
         >
           <div class="card-body">
             <div
-              class="mb-4 d-flex align-items-center justify-content-center rounded-circle"
-              style="border: 1px solid red; width: 96px; height: 96px"
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img class="navbar-brand" alt="genezioLogo" src="/images/genezioLogoBlack.webp" />
+              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" />
             </div>
             <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Microservice by design</h4>
             <p class="card-text opacity-50 mb-4 pb-3">
@@ -367,7 +363,7 @@
                 </div>
               </div>
 
-              <a href="https://www.linkedin.com/in/danielgmorosan/" target="_blank"  rel="noopener nofollow">
+              <a href="https://www.linkedin.com/in/danielgmorosan/" target="_blank" rel="noopener nofollow">
                 <img
                   class="mx-2 footer-social-logo"
                   alt="linkedin-logo"
