@@ -50,3 +50,11 @@
   background: #160d27;
   position: relative;
 }
+
+footer .nav-link {
+  color: $white !important;
+}
+
+footer .nav-link:hover {
+  color: $gray-500 !important;
+}
