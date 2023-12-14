@@ -1,6 +1,6 @@
 <nav
   style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-  class="navbar navbar-expand-lg p-0 bg-dark"
+  class="navbar navbar-expand-lg p-0 bg-dark px-3"
 >
   <div
     class="container px-4 py-4"
@@ -13,35 +13,22 @@
       <img class="navbar-brand" alt="genezio-logo" src="/images/genezio-logo.svg" />
     </a>
 
-    <button
-      class="navbar-toggler border-0"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 6H20M4 12H20M4 18H20"
-          stroke="white"
-          stroke-opacity="0.7"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+    {{/* Mobile Menu */}}
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+
+    {{/* Desktop Menu */}}
     <div
-      class="collapse navbar-collapse d-flex justify-content-between"
+      class="collapse navbar-collapse d-flex justify-content-between d-none d-lg-block"
       id="navbarSupportedContent"
     >
       <ul class="navbar-nav mr-auto">
