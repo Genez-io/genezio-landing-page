@@ -75,9 +75,19 @@ $cyan: #0dcaf0 !default;
   transform: scale(1.2);
 }
 
+
 // import bootstrap from node modules
 // TODO: for a better performance let's import only the parts that we are using from bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "./the-code.scss"
+@import "./the-code.scss";
+
+.border-gradient-green {
+  border-image-source: linear-gradient(to right, #ffffff00 5%, rgba(0, 250, 164, 0.4) 20%, #ffffff00 60%) !important;
+  border-image-slice: 1 !important;
+  border-width: 1px !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
 
 
