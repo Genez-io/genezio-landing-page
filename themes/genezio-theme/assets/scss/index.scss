@@ -110,4 +110,22 @@ $cyan: #0dcaf0 !default;
   .flow-breaker-p {
     width: 100% !important;
   }
+
+  .h1-hero-custom {
+    font-size: 42px !important;
+    color: #FFF;
+
+text-align: center;
+font-family: Inter;
+font-size: 42px;
+font-style: normal;
+font-weight: 700;
+line-height: 50px; /* 119.048% */
+letter-spacing: -0.966px;
+  }
+
+  .footer-subscribe-btn-custom {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+  }
 }
