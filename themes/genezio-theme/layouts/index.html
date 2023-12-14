@@ -83,7 +83,9 @@
         </div>
       </div>
     </div>
-    {{/*  <div class="py-4 my-3 d-md-none d-block"></div>  */}}
+    {{/*
+    <div class="py-4 my-3 d-md-none d-block"></div>
+    */}}
 
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
@@ -329,7 +331,7 @@
     </p>
     <h2 class="text-white text-center fw-bold mb-4 pb-3">Our latest article</h2>
 
-    <div class="row mx-2 text-white justify-content-center ">
+    <div class="row mx-2 text-white justify-content-center">
       <div class="col-lg col-md-12 m-2">
         <img src="/images/lastArticle.png" alt="howGenezioWork" class="w-100 pb-2" />
       </div>
@@ -341,9 +343,11 @@
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
       TESTIMONIALS
     </p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-3">Don’t take our word for it</h2>
+    <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
+      Don’t take our word for it
+    </h2>
 
-    <div class="row mx-2 pb-2 justify-content-center ">
+    <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
@@ -402,7 +406,8 @@
 
               <a
                 href="https://ro.linkedin.com/in/bogdanripa?challengeId=AQHmQtSaH_8NjwAAAYxojY7p1hJm-A6KoEUxl0PWIvDJj3xaZao1p-x3Rl5ngFWUm4RhK-sIHAc47rA2H14y7OC3mRBHNKHo4A&submissionId=2e7495e6-59b6-a017-3cfc-0dd586fc052b&challengeSource=AgED_pODfV1RJgAAAYxojZVafJ9LSy8eZkMavUQE3xpNxgs92wIXXAjZj2JKcao&challegeType=AgFNxUa21yPqVAAAAYxojZVe0treDzsD03RwagWXln_2WFt2rawtuGQ&memberId=AgHObN7hVorpQwAAAYxojZVhaFHp4cfitmZMHm0VM0GPEXQ&recognizeDevice=AgEDh7YS9If3lAAAAYxojZVk-TRmpqfUsLusiJCbvzhu-S0i_RTX"
-                target="_blank" rel="noopener nofollow"
+                target="_blank"
+                rel="noopener nofollow"
               >
                 <img
                   class="mx-2 footer-social-logo"
@@ -462,13 +467,21 @@
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
     {{/* FAQ */}}
-    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">FAQ</p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-3">Your questions answered</h2>
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative"
+      style="z-index: 99"
+    >
+      FAQ
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 position-relative" style="z-index: 99">
+      Your questions answered
+    </h2>
 
     <div class="px-md-4 mx-1">
       <div
-        class="accordion text-white pb-4"
-        style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        class="accordion text-white pb-4 position-relative"
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1); z-index: 99"
         id="accordionExample"
       >
         {{/* Second Question */}}
