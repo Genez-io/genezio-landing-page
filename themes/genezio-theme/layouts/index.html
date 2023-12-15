@@ -10,18 +10,21 @@
   >
     {{/* Header Section */}}
     <div class="d-flex align-items-center justify-content-center flex-column pt-5">
-      <h1 class="text-center fw-bold pt-4 text-white display-5">
+      <h1 style="z-index: 99" class="text-center fw-bold pt-4 text-white display-5">
         The <span class="text-success">next gen</span> <br />
         cloud native platform <br />
         for modern full-stack developers
       </h1>
 
-      <p class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
+      <p style="z-index: 99" class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
         Everything you need <br class="d-block d-sm-none" />to build backends
         <br class="d-block d-sm-none" />that scale to millions of users.
       </p>
 
-      <div class="d-flex mt-4 flex-column flex-md-row w-100 justify-content-center">
+      <div
+        style="z-index: 99"
+        class="d-flex mt-4 flex-column flex-md-row w-100 justify-content-center"
+      >
         <a
           class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
           href="https://app.genez.io/auth/signup"
@@ -41,24 +44,29 @@
 
     {{/* TODO: handle responsive remove this later */}}
     <div style="z-index: 99; position: relative" class="d-none d-sm-block mt-5">
-      <img class="w-100 mb-5" src="/images/hero-3-terminals.svg" alt="howGenezioWork" style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8));"/>
+      <img
+        class="w-100 mb-5"
+        src="/images/hero-3-terminals.svg"
+        alt="howGenezioWork"
+        style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8))"
+      />
     </div>
 
     {{/* big circle */}}
     <div
       class="pe-none"
       style="
-      opacity: 30%;
-      position: absolute;
-      background: #8c68cd;
-      box-shadow: 0px 4px 250px 20px #c5b3e6;
-      filter: blur(500px);
-      max-width: 1000px;
-      width: 100%;
-      height: 718px;
-      top: 625px;
-      left: 50%;
-      transform: translate(-50%, -50%);
+        opacity: 30%;
+        position: absolute;
+        background: #8c68cd;
+        box-shadow: 0px 4px 250px 20px #c5b3e6;
+        filter: blur(500px);
+        max-width: 1000px;
+        width: 100%;
+        height: 718px;
+        top: 625px;
+        left: 50%;
+        transform: translate(-50%, -50%);
       "
     ></div>
 
@@ -86,7 +94,12 @@
       class="d-block d-sm-none mb-5"
       style="margin-left: -2em !important; margin-right: -1.8em !important"
     >
-      <img class="w-100" src="/images/hero-3-terminals-mobile.svg" alt="howGenezioWork" style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8));"/>
+      <img
+        class="w-100"
+        src="/images/hero-3-terminals-mobile.svg"
+        alt="howGenezioWork"
+        style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8))"
+      />
     </div>
 
     {{/* Hosting included for all plans */}}
@@ -166,26 +179,45 @@
 
     {{/* Your app, your code, your data! */}}
     <div class="position-relative">
-      {{/* Header Colors */}}
+      {{/* Header Colors */}} {{/* Left Color */}}
       <div
         class="pe-none"
         style="
           position: absolute;
-          width: 100%;
-          height: 1000px;
+          height: 800px;
           filter: blur(325.484375px);
-          top: -200px;
-          left: 50%;
-          transform: translateX(-50%);
-          background-image: linear-gradient(
-              to right,
-              rgba(242, 123, 255, 0.3) 0%,
-              rgba(255, 255, 255, 0) 25%
+          top: -180px;
+          left: -35%;
+          transform: translateX(-30%);
+          background-image: radial-gradient(
+              ellipse at center,
+              rgba(242, 123, 255, 0.7),
+              transparent
             ),
-            linear-gradient(to left, rgba(0, 250, 164, 0.3) 0%, rgba(255, 255, 255, 0) 25%);
+            radial-gradient(ellipse at left, rgba(255, 255, 255, 0.3), transparent);
           background-repeat: no-repeat, no-repeat;
           background-position: left, right;
-          width: 99vw;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      {{/* Right Color */}}
+      <div
+        class="pe-none"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: 125%;
+          transform: translateX(-40%);
+          background-image: radial-gradient(ellipse at center, rgba(0, 250, 164, 0.7), transparent),
+            radial-gradient(ellipse at right, rgba(255, 255, 255, 0.3), transparent);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
         "
       ></div>
 
@@ -201,7 +233,7 @@
           top: -125px;
           left: 50%;
           transform: translateX(-50%);
-          width: 99vw;
+          width: 100vw;
           height: 838px;
         "
         alt="howGenezioWork"
@@ -587,7 +619,7 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body px-5 py-2 mx-4">
+            <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
               Yes! Firstly, design a database using llm. Use javascript to write the backend and
               genezio to deploy it.
             </div>
@@ -616,7 +648,7 @@
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body py-2 px-5 mx-4">
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
               We are better than firebase, migrate to genezio
             </div>
           </div>
