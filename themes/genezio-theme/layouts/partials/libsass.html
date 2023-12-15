@@ -5,4 +5,20 @@
 {{- end -}}  */}}
 {{- $postOpts := (dict "config" "config/postcss.config.js") -}}
 {{- $src = $src | toCSS $cssOpts | postCSS $postOpts | fingerprint -}}
-<link rel="stylesheet" href="{{- $src.Permalink | relURL -}}" integrity="{{- $src.Data.Integrity -}}" crossorigin="anonymous">
+
+
+<!-- if browser doesn't support JavaScript then use normal link tags to load CSS -->
+<noscript>
+  <link rel="stylesheet" href="{{- $src.Permalink | relURL -}}" integrity="{{- $src.Data.Integrity -}}" crossorigin="anonymous">
+</noscript>
+
+<!-- load main.css -->
+<script>
+(function() {
+var cssMain = document.createElement('link');
+cssMain.href = '{{- $src.Permalink | relURL -}}';
+cssMain.rel = 'stylesheet';
+cssMain.type = 'text/css';
+document.getElementsByTagName('head')[0].appendChild(cssMain);
+})();
+</script>
