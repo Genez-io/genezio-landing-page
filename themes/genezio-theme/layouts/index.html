@@ -13,7 +13,7 @@
       <h1 style="z-index: 99" class="text-center fw-bold pt-4 text-white display-5">
         The <span class="text-success">next gen</span> <br />
         cloud native platform <br />
-        for modern full-stack developers
+        for modern{{- printf " "}}<br class="d-block d-sm-none" />full-stack developers
       </h1>
 
       <p style="z-index: 99" class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
@@ -47,7 +47,9 @@
       <img
         class="w-100 mb-5"
         src="/images/hero-3-terminals.svg"
-        alt="howGenezioWork"
+        alt="here-3-terminals"
+        width="1294px"
+        height="459px"
         style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8))"
       />
     </div>
@@ -97,10 +99,13 @@
       <img
         class="w-100"
         src="/images/hero-3-terminals-mobile.svg"
-        alt="howGenezioWork"
+        alt="here-3-terminals-mobile"
+        width="100vw"
+        height="973px"
         style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8))"
       />
     </div>
+  
 
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center">
@@ -109,11 +114,7 @@
         class="px-5 py-md-5 py-4 d-md-flex"
       >
         <div class="d-flex justify-content-center">
-          <img
-            style="filter: drop-shadow(0px 64px 85.333px rgba(33, 20, 58, 0.6))"
-            src="/images/hostingIncludedIcon.webp"
-            alt="hostingIncludedIcon"
-          />
+          <img src="/images/hostingIncludedIcon.webp" style="filter: drop-shadow(0px 64px 85.333px rgba(33, 20, 58, 0.6))" loading="lazy" alt="hostingIncludedIcon" width="85px" height="95px" />
         </div>
         <div class="mx-4 my-4"></div>
         <div class="text-white d-flex justify-content-center flex-column">
@@ -134,10 +135,11 @@
         class="navbar-brand d-none d-md-block"
         alt="multiversx-logo"
         src="/images/multiversx-logo.svg"
+        loading="lazy" height="50px" width="294px"
       />
-      <img class="navbar-brand d-none d-md-block" alt="google-logo" src="/images/google-logo.svg" />
-      <img class="navbar-brand d-none d-md-block" alt="splunk-logo" src="/images/splunk-logo.svg" />
-      <img class="navbar-brand d-none d-md-block" alt="uipath-logo" src="/images/uipath-logo.svg" />
+      <img class="navbar-brand d-none d-md-block" alt="google-logo" src="/images/google-logo.svg" loading="lazy" height="50px" width="50px" />
+      <img class="navbar-brand d-none d-md-block" alt="splunk-logo" src="/images/splunk-logo.svg" loading="lazy" height="50px" width="168px"/>
+      <img class="navbar-brand d-none d-md-block" alt="uipath-logo" src="/images/uipath-logo.svg" loading="lazy" height="50px" width="51px"/>
 
       <div
         id="carouselExampleInterval"
@@ -145,38 +147,43 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1000">
+          <div class="carousel-item active" data-bs-interval="2000">
             <img
               alt="multiversx-logo"
               src="/images/multiversx-logo.svg"
               class="d-block w-100 custom-brand-img-item"
+              loading="lazy" height="50px"
             />
           </div>
-          <div class="carousel-item" data-bs-interval="1000">
+          <div class="carousel-item" data-bs-interval="2000">
             <img
               alt="google-logo"
               src="/images/google-logo.svg"
               class="d-block w-100 custom-brand-img-item"
+              loading="lazy" height="50px"
             />
           </div>
-          <div class="carousel-item" data-bs-interval="1000">
+          <div class="carousel-item" data-bs-interval="2000">
             <img
               alt="splunk-logo"
               src="/images/splunk-logo.svg"
               class="d-block w-100 custom-brand-img-item"
+              loading="lazy" height="50px"
             />
           </div>
-          <div class="carousel-item" data-bs-interval="1000">
+          <div class="carousel-item" data-bs-interval="2000">
             <img
               alt="uipath-logo"
               src="/images/uipath-logo.svg"
               class="d-block w-100 custom-brand-img-item"
+              loading="lazy" height="50px"
             />
           </div>
         </div>
       </div>
     </div>
 
+    {{/* Your app, your code, your data! */}}
     {{/* Your app, your code, your data! */}}
     <div class="position-relative">
       {{/* Header Colors */}} {{/* Left Color */}}
@@ -295,7 +302,6 @@
         </div>
       </div>
     </div>
-
     {{/* Enhance yourself */}}
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
       FEATURES
@@ -313,13 +319,9 @@
             <div
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img
-                class="navbar-brand"
-                alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
-              />
+              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" width="45px" height="49px" loading="lazy" />
             </div>
-            <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h4>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h3>
             <p class="card-text opacity-50 mb-4 pb-3">
               From idea to deployed app - you pick a template for the backend and one for the
               frontend, your choice of mono or multirepo and in 2 minutes you will have everything
@@ -341,13 +343,9 @@
             <div
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img
-                class="navbar-brand"
-                alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
-              />
+              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" width="45px" height="49px" loading="lazy" />
             </div>
-            <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Open Source forever</h4>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Open Source forever</h3>
             <p class="card-text opacity-50 mb-4 pb-3">
               No vendor lock in. Everything you build with us is code that is yours to own. Template
               code, code generated for the typesafe API, our example code, code generated by our LLM
@@ -370,13 +368,9 @@
             <div
               class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
             >
-              <img
-                class="navbar-brand"
-                alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
-              />
+              <img class="navbar-brand" alt="genezio-logo-icon-black" src="/images/genezio-logo-icon-black.svg" width="45px" height="49px" loading="lazy" />
             </div>
-            <h4 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Microservice by design</h4>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Microservice by design</h3>
             <p class="card-text opacity-50 mb-4 pb-3">
               If you started with a Firebase-like framework that offers a database and access
               functions, and you want to outgrow that, with genezio you can write full business
@@ -394,32 +388,32 @@
     <div class="row mb-md-3 pb-md-3 justify-content-center">
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-2 p-md-4 text-white border-gradient-green"
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
             {{/* class="card p-2 p-md-4 text-white" */}}
-            <h4 class="card-title m-0">Flexible database support</h4>
+            <h3 class="card-title m-0">Flexible database support</h3>
           </div>
         </div>
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-2 p-md-4 text-white border-gradient-green"
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Global CDN and Custom Domain</h4>
+            <h3 class="card-title m-0">Global CDN and Custom Domain</h3>
           </div>
         </div>
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-2 p-md-4 text-white border-gradient-green"
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Automatic scaling</h4>
+            <h3 class="card-title m-0">Automatic scaling</h3>
           </div>
         </div>
       </div>
@@ -427,37 +421,39 @@
     <div class="row mb-md-3 pb-md-3 justify-content-center">
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-2 p-md-4 text-white border-gradient-green"
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Postman-like test interface</h4>
+            <h3 class="card-title m-0">Postman-like test interface</h3>
           </div>
         </div>
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-2 p-md-4 text-white border-gradient-green"
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">LLM database schema generation</h4>
+            <h3 class="card-title m-0">LLM database schema generation</h3>
           </div>
         </div>
       </div>
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-2 p-md-4 text-white border-gradient-green"
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
-            <h4 class="card-title m-0">Dashboard - logs</h4>
+            <h3 class="card-title m-0">Dashboard - logs</h3>
           </div>
         </div>
       </div>
     </div>
 
-    {{/* Genezio in a nutshell */}} {{- partial "theCode.html" . -}} {{/* Our latest article */}}
+    {{/* Genezio in a nutshell */}} {{- partial "theCode.html" . -}}
+    
+    {{/* Our latest article */}}
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
       EDUCATION
     </p>
@@ -465,7 +461,7 @@
 
     <div class="row mx-2 text-white justify-content-center">
       <div class="col-lg col-md-12 m-2">
-        <img src="/images/lastArticle.png" alt="howGenezioWork" class="w-100 pb-2" />
+        <img src="/images/lastArticle.webp" alt="howGenezioWork" class="w-100 pb-2" loading="lazy" width="1238px" />
       </div>
     </div>
 
@@ -476,7 +472,7 @@
       TESTIMONIALS
     </p>
     <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
-      Don’t take our word for it
+      Don't take our <br class="d-block d-sm-none" />word for it
     </h2>
 
     <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
@@ -508,6 +504,9 @@
                   class="mx-2 footer-social-logo"
                   alt="linkedin-logo"
                   src="/images/linkedin-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -549,6 +548,9 @@
                   class="mx-2 footer-social-logo"
                   alt="linkedin-logo"
                   src="/images/linkedin-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -587,6 +589,9 @@
                 class="mx-2 footer-social-logo"
                 alt="linkedin-logo"
                 src="/images/linkedin-logo.svg"
+                width="24px"
+                height="24px"
+                loading="lazy"
               />
             </div>
 
