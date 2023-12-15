@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 // TODO: remove this
+body {
+  overflow-x: hidden;
+}
+
+// TODO: remove this
 main {
   background-color: #21143a;
 }
@@ -75,14 +80,18 @@ $cyan: #0dcaf0 !default;
   transform: scale(1.2);
 }
 
-
 // import bootstrap from node modules
 // TODO: for a better performance let's import only the parts that we are using from bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./the-code.scss";
 
 .border-gradient-green {
-  border-image-source: linear-gradient(to right, #ffffff00 5%, rgba(0, 250, 164, 0.4) 20%, #ffffff00 60%) !important;
+  border-image-source: linear-gradient(
+    to right,
+    #ffffff00 5%,
+    rgba(0, 250, 164, 0.4) 20%,
+    #ffffff00 60%
+  ) !important;
   border-image-slice: 1 !important;
   border-width: 1px !important;
   border-left: 0 !important;
@@ -119,14 +128,13 @@ $cyan: #0dcaf0 !default;
   .h1-hero-custom {
     font-size: 42px !important;
     color: #FFF;
-
-text-align: center;
-font-family: Inter;
-font-size: 42px;
-font-style: normal;
-font-weight: 700;
-line-height: 50px; /* 119.048% */
-letter-spacing: -0.966px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px; /* 119.048% */
+    letter-spacing: -0.966px;
   }
 
   .footer-subscribe-btn-custom {

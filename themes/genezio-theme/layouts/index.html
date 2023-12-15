@@ -1,14 +1,5 @@
 {{ define "main" }}
 
-<!-- TODO: remove this import to bootstrap -->
-{{/*
-<script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-*/}} {{/*
-<script>
-  import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-</script>
-*/}}
-
 <div class="px-3">
   <div
     style="
@@ -19,23 +10,32 @@
   >
     {{/* Header Section */}}
     <div class="d-flex align-items-center justify-content-center flex-column pt-5">
-      <h1 class="text-center fw-bold pt-4 text-white display-5 h1-hero-custom">
+      <h1 style="z-index: 99" class="text-center fw-bold pt-4 text-white display-5">
         The <span class="text-success">next gen</span> <br />
         cloud native platform <br />
         for modern{{- printf " "}}<br class="d-block d-sm-none" />full-stack developers
       </h1>
 
-      <p class="fw-medium mb-4 mt-4 text-white text-center opacity-50">
-        Everything you need{{- printf " "}}<br class="d-block d-sm-none" />
-         to build backends{{- printf " "}}<br class="d-block d-sm-none" /> that scale to millions of users.
+      <p style="z-index: 99" class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
+        Everything you need <br class="d-block d-sm-none" />to build backends
+        <br class="d-block d-sm-none" />that scale to millions of users.
       </p>
 
-      <div class="d-flex mt-2 flex-column flex-md-row w-100 justify-content-center">
-        <a class="btn btn-primary py-btn-custom fw-semibold mx-1 px-4 py-2 border-0 mt-2" href="https://app.genez.io/auth/signup" target="_blank">
+      <div
+        style="z-index: 99"
+        class="d-flex mt-4 flex-column flex-md-row w-100 justify-content-center"
+      >
+        <a
+          class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
+          href="https://app.genez.io/auth/signup"
+          target="_blank"
+        >
           Start for free
         </a>
         <a
-          class="btn btn-secondary py-btn-custom fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2" href="https://docs.genez.io/" target="_blank"
+          class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+          href="https://docs.genez.io/"
+          target="_blank"
         >
           Check our Docs
         </a>
@@ -43,32 +43,69 @@
     </div>
 
     {{/* TODO: handle responsive remove this later */}}
-    <div
-      class="d-none d-sm-block mt-5 mb-5"
-
-    >
+    <div style="z-index: 99; position: relative" class="d-none d-sm-block mt-5">
       <img
         class="w-100 mb-5"
         src="/images/hero-3-terminals.svg"
         alt="here-3-terminals"
         width="1294px"
         height="459px"
+        style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8))"
       />
     </div>
 
+    {{/* big circle */}}
     <div
-    class="d-block d-sm-none mb-5"
-    style="margin-left: -2em !important; margin-right: -1.8em !important"
+      class="pe-none d-none d-lg-block d-xl-block"
+      style="
+        opacity: 30%;
+        position: absolute;
+        background: #8c68cd;
+        box-shadow: 0px 4px 250px 20px #c5b3e6;
+        filter: blur(500px);
+        max-width: 1000px;
+        width: 100%;
+        height: 718px;
+        top: 625px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      "
+    ></div>
 
-  >
-    <img
-    class="w-100"
-    src="/images/hero-3-terminals-mobile.svg"
-    alt="here-3-terminals-mobile"
-    width="100vw"
-    height="973px"
-    />
-  </div>
+    {{/*
+    <div
+      style="
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        background-image: linear-gradient(
+            to right,
+            rgba(242, 123, 255, 0.3),
+            rgba(255, 255, 255, 0)
+          ),
+          linear-gradient(to left, rgba(0, 250, 164, 0.3), rgba(255, 255, 255, 0));
+        background-repeat: no-repeat, no-repeat;
+        background-position: left, right;
+      "
+    >
+      ww
+    </div>
+    */}}
+
+    <div
+      class="d-block d-sm-none mb-5"
+      style="margin-left: -2em !important; margin-right: -1.8em !important"
+    >
+      <img
+        class="w-100"
+        src="/images/hero-3-terminals-mobile.svg"
+        alt="here-3-terminals-mobile"
+        width="100vw"
+        height="973px"
+        style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8))"
+      />
+    </div>
+  
 
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center">
@@ -77,7 +114,7 @@
         class="px-5 py-md-5 py-4 d-md-flex"
       >
         <div class="d-flex justify-content-center">
-          <img src="/images/hostingIncludedIcon.webp" loading="lazy" alt="hostingIncludedIcon" width="85px" height="95px" />
+          <img src="/images/hostingIncludedIcon.webp" style="filter: drop-shadow(0px 64px 85.333px rgba(33, 20, 58, 0.6))" loading="lazy" alt="hostingIncludedIcon" width="85px" height="95px" />
         </div>
         <div class="mx-4 my-4"></div>
         <div class="text-white d-flex justify-content-center flex-column">
@@ -86,9 +123,6 @@
         </div>
       </div>
     </div>
-    {{/*
-    <div class="py-4 my-3 d-md-none d-block"></div>
-    */}}
 
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
@@ -150,40 +184,124 @@
     </div>
 
     {{/* Your app, your code, your data! */}}
-    <div
-      class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
-      style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
-    >
-      {{/*
+    {{/* Your app, your code, your data! */}}
+    <div class="position-relative">
+      {{/* Header Colors */}} {{/* Left Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: -35%;
+          transform: translateX(-30%);
+          background-image: radial-gradient(
+              ellipse at center,
+              rgba(242, 123, 255, 0.7),
+              transparent
+            ),
+            radial-gradient(ellipse at left, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          width: 100%;
+          height: 600px;
+          top: -140px;
+          left: 100%;
+          width: 150vw;
+          transform: translateX(-30%);
+          filter: blur(325px);
+          background-image: linear-gradient(
+            to right,
+            rgba(242, 123, 255, 0.2),
+            rgba(255, 255, 255, 0) 25%
+          );
+          background-repeat: no-repeat, no-repeat;
+          background-position: center;
+        "
+      ></div>
+
+      {{/* rgba(242, 123, 255, 0.2), rgba(255, 255, 255, 0) 25% */}} {{/* Right Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: 125%;
+          transform: translateX(-40%);
+          background-image: radial-gradient(ellipse at center, rgba(0, 250, 164, 0.7), transparent),
+            radial-gradient(ellipse at right, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      {{/* TODO: replace png -> svg */}}
       <img
-        class="border d-block pe-none"
+        class="pe-none d-none d-lg-block d-xl-block"
         src="/images/wave.png"
         style="
           mix-blend-mode: screen;
           filter: grayscale(50%);
           opacity: 0.4;
           position: absolute;
-          top: -115px;
+          top: -125px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100vw;
+          height: 838px;
         "
         alt="howGenezioWork"
-      /> */}}
-      <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your data!</h2>
-      {{/* TODO: fix width */}}
-      <p class="text-center opacity-75 fw-medium mt-1 w-50 px-4 flow-breaker-p">
-        Use our deterministic template system combined with powerful LLM database creation to get
-        started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
-        stage and production environments, typesafe backend APIs to combine with classical REST for
-        the best architecture.
-      </p>
+      />
 
-      <div class="d-flex mt-4 pt-2 pb-4 mb-1 flex-column flex-md-row w-100 px-4 justify-content-center ">
-        <a class="btn btn-primary py-btn-custom fw-semibold mx-1 px-4 py-2 border-0 mt-2" href="https://app.genez.io/auth/signup" target="_blank">Start for free</a>
-        <a class="btn btn-secondary py-btn-custom fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2" href="https://docs.genez.io/" target="_blank">
-          Check our Docs
-        </a>
+      <div
+        class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
+        style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
+      >
+        <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">
+          Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your
+          data!
+        </h2>
+        {{/* TODO: fix width */}}
+        <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
+          Use our deterministic template system combined with powerful LLM database creation to get
+          started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
+          stage and production environments, typesafe backend APIs to combine with classical REST
+          for the best architecture.
+        </p>
+
+        <div
+          class="d-flex mt-4 pt-2 pb-4 mb-1 flex-column flex-md-row w-100 px-4 justify-content-center"
+        >
+          <a
+            class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
+            href="https://app.genez.io/auth/signup"
+            target="_blank"
+            >Start for free</a
+          >
+          <a
+            class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+            href="https://docs.genez.io/"
+            target="_blank"
+          >
+            Check our Docs
+          </a>
+        </div>
       </div>
     </div>
-
     {{/* Enhance yourself */}}
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
       FEATURES
@@ -377,7 +495,11 @@
                 </div>
               </div>
 
-              <a href="https://www.linkedin.com/in/danielgmorosan/" target="_blank" rel="noopener nofollow">
+              <a
+                href="https://www.linkedin.com/in/danielgmorosan/"
+                target="_blank"
+                rel="noopener nofollow"
+              >
                 <img
                   class="mx-2 footer-social-logo"
                   alt="linkedin-logo"
@@ -523,7 +645,7 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body px-5 py-2 mx-4">
+            <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
               Yes! Firstly, design a database using llm. Use javascript to write the backend and
               genezio to deploy it.
             </div>
@@ -552,7 +674,7 @@
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body py-2 px-5 mx-4">
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
               We are better than firebase, migrate to genezio
             </div>
           </div>
@@ -565,7 +687,7 @@
 
 <div class="position-relative">
   <div
-    class="position-absolute w-100 bottom-0 pe-none bg-red"
+    class="position-absolute w-100 bottom-0 pe-none"
     style="
       background: linear-gradient(
         180deg,
