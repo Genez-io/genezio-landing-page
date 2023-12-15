@@ -1,5 +1,6 @@
 <nav
-  style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
+  style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 99999;"
   class="navbar navbar-expand-lg p-0 bg-dark px-3"
 >
   <div
@@ -10,7 +11,8 @@
     "
   >
     <a class="nav-link" href="/">
-      <img class="navbar-brand" alt="genezio-logo" src="/images/genezio-logo.svg" />
+      <img class="navbar-brand" alt="genezio-logo" src="/images/genezio-logo.svg" 
+      height="45px" width="135px"/>
     </a>
 
     {{/* Mobile Menu */}}
@@ -19,7 +21,7 @@
       data-bs-toggle="collapse"
       data-bs-target="#navbar"
     >
-      <img src="/images/burger-menu.svg" alt="burger-menu-icon" />
+      <img src="/images/burger-menu.svg" alt="burger-menu-icon" height="24px" width="24px" />
     </button>
 
     {{/*  <div class="navbar-collapse collapse" id="navbar">
@@ -37,7 +39,7 @@
     >
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link text-white opacity-75 fw-semibold mx-5" href="">Features</a>
+          <a class="nav-link text-white opacity-75 fw-semibold mx-5" href="#">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white opacity-75 fw-semibold" href="#">Resources</a>

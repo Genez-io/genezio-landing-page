@@ -20,8 +20,8 @@
         style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
       >
         <button
-          class="nav-link"
-          id="nav-home-tab"
+          class="nav-link nav-link-custom"
+          id="genezio-rpc-tab"
           data-bs-toggle="tab"
           data-bs-target="#genezio-rpc"
           type="button"
@@ -32,7 +32,7 @@
           genezio.Rpc
         </button>
         <button
-          class="nav-link active"
+          class="nav-link nav-link-custom active"
           id="nav-profile-tab"
           data-bs-toggle="tab"
           data-bs-target="#genezio-backend"
@@ -44,8 +44,8 @@
           genezio.Backend
         </button>
         <button
-          class="nav-link"
-          id="nav-contact-tab"
+          class="nav-link nav-link-custom"
+          id="genezio-serverless-tab"
           data-bs-toggle="tab"
           data-bs-target="#genezio-serverless"
           type="button"
@@ -56,8 +56,8 @@
           genezio.Serverless
         </button>
         <button
-          class="nav-link"
-          id="nav-contact-tab"
+          class="nav-link nav-link-custom"
+          id="genezio-cloud-tab"
           data-bs-toggle="tab"
           data-bs-target="#genezio-cloud"
           type="button"
@@ -96,8 +96,8 @@
                 role="tablist"
               >
                 <button
-                  class="nav-link text-start active"
-                  id="nav-home-tab"
+                  class="nav-link nav-link-custom text-start active"
+                  id="user-auth-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#user-auth"
                   type="button"
@@ -108,8 +108,8 @@
                   User authentication
                 </button>
                 <button
-                  class="nav-link text-start"
-                  id="nav-profile-tab"
+                  class="nav-link nav-link-custom text-start"
+                  id="database-support-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#database-support"
                   type="button"
@@ -120,8 +120,8 @@
                   Database support
                 </button>
                 <button
-                  class="nav-link text-start"
-                  id="nav-contact-tab"
+                  class="nav-link nav-link-custom text-start"
+                  id="storage-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#storage"
                   type="button"
@@ -132,8 +132,8 @@
                   Storage
                 </button>
                 <button
-                  class="nav-link text-start"
-                  id="nav-contact-tab"
+                  class="nav-link nav-link-custom text-start"
+                  id="queues-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#queues"
                   type="button"
@@ -144,8 +144,8 @@
                   Queues
                 </button>
                 <button
-                  class="nav-link text-start"
-                  id="nav-contact-tab"
+                  class="nav-link nav-link-custom text-start"
+                  id="cron-jobs-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#cron-jobs"
                   type="button"
@@ -156,8 +156,8 @@
                   Cron jobs
                 </button>
                 <button
-                  class="nav-link text-start"
-                  id="nav-contact-tab"
+                  class="nav-link nav-link-custom text-start"
+                  id="real-time-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#real-time"
                   type="button"
@@ -174,9 +174,9 @@
             <div class="tab-content" id="nav-tabContent">
               <div
                 class="tab-pane fade show active"
-                id="nav-home"
+                id="user-auth"
                 role="tabpanel"
-                aria-labelledby="nav-home-tab"
+                aria-labelledby="user-auth-tab"
                 tabindex="0"
               >
                 <p class="opacity-50 m-0">
@@ -226,30 +226,48 @@ export class ProductService {
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-profile"
+                id="storage"
                 role="tabpanel"
-                aria-labelledby="nav-profile-tab"
+                aria-labelledby="storage-tab"
                 tabindex="0"
               >
-                ...
+                storage ...
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-contact"
+                id="database-support"
                 role="tabpanel"
-                aria-labelledby="nav-contact-tab"
+                aria-labelledby="database-support-tab"
                 tabindex="0"
               >
-                ...
+                db support ...
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-disabled"
+                id="queues"
                 role="tabpanel"
-                aria-labelledby="nav-disabled-tab"
+                aria-labelledby="queues-tab"
                 tabindex="0"
               >
-                ...
+              queues ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="cron-jobs"
+                role="tabpanel"
+                aria-labelledby="cron-jobs-tab"
+                tabindex="0"
+              >
+                cron jobs ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="real-time"
+                role="tabpanel"
+                aria-labelledby="real-time-tab"
+                tabindex="0"
+              >
+                real time ...
               </div>
             </div>
           </div>
