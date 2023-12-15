@@ -63,6 +63,26 @@
       "
     ></div>
 
+    {{/*
+    <div
+      style="
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        background-image: linear-gradient(
+            to right,
+            rgba(242, 123, 255, 0.3),
+            rgba(255, 255, 255, 0)
+          ),
+          linear-gradient(to left, rgba(0, 250, 164, 0.3), rgba(255, 255, 255, 0));
+        background-repeat: no-repeat, no-repeat;
+        background-position: left, right;
+      "
+    >
+      ww
+    </div>
+    */}}
+
     <div
       class="d-block d-sm-none mb-5"
       style="margin-left: -2em !important; margin-right: -1.8em !important"
@@ -147,6 +167,29 @@
 
     {{/* Your app, your code, your data! */}}
     <div class="position-relative">
+      {{/* Header Colors */}}
+      <div
+        class="pe-none"
+        style="
+          position: absolute;
+          width: 100%;
+          height: 1000px;
+          filter: blur(325.484375px);
+          top: -200px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-image: linear-gradient(
+              to right,
+              rgba(242, 123, 255, 0.3) 0%,
+              rgba(255, 255, 255, 0) 25%
+            ),
+            linear-gradient(to left, rgba(0, 250, 164, 0.3) 0%, rgba(255, 255, 255, 0) 25%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 99vw;
+        "
+      ></div>
+
       {{/* TODO: replace png -> svg */}}
       <img
         class="d-md-block d-none pe-none"
