@@ -21,7 +21,7 @@
       >
         <button
           class="nav-link"
-          id="nav-home-tab"
+          id="genezio-rpc-tab"
           data-bs-toggle="tab"
           data-bs-target="#genezio-rpc"
           type="button"
@@ -97,7 +97,7 @@
               >
                 <button
                   class="nav-link text-start active"
-                  id="nav-home-tab"
+                  id="user-auth-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#user-auth"
                   type="button"
@@ -109,7 +109,7 @@
                 </button>
                 <button
                   class="nav-link text-start"
-                  id="nav-profile-tab"
+                  id="database-support-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#database-support"
                   type="button"
@@ -121,7 +121,7 @@
                 </button>
                 <button
                   class="nav-link text-start"
-                  id="nav-contact-tab"
+                  id="storage-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#storage"
                   type="button"
@@ -133,7 +133,7 @@
                 </button>
                 <button
                   class="nav-link text-start"
-                  id="nav-contact-tab"
+                  id="queues-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#queues"
                   type="button"
@@ -145,7 +145,7 @@
                 </button>
                 <button
                   class="nav-link text-start"
-                  id="nav-contact-tab"
+                  id="cron-jobs-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#cron-jobs"
                   type="button"
@@ -157,7 +157,7 @@
                 </button>
                 <button
                   class="nav-link text-start"
-                  id="nav-contact-tab"
+                  id="real-time-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#real-time"
                   type="button"
@@ -174,9 +174,9 @@
             <div class="tab-content" id="nav-tabContent">
               <div
                 class="tab-pane fade show active"
-                id="nav-home"
+                id="user-auth"
                 role="tabpanel"
-                aria-labelledby="nav-home-tab"
+                aria-labelledby="user-auth-tab"
                 tabindex="0"
               >
                 <p class="opacity-50 m-0">
@@ -226,30 +226,48 @@ export class ProductService {
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-profile"
+                id="storage"
                 role="tabpanel"
-                aria-labelledby="nav-profile-tab"
+                aria-labelledby="storage-tab"
                 tabindex="0"
               >
-                ...
+                storage ...
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-contact"
+                id="database-support"
                 role="tabpanel"
-                aria-labelledby="nav-contact-tab"
+                aria-labelledby="database-support-tab"
                 tabindex="0"
               >
-                ...
+                db support ...
               </div>
               <div
                 class="tab-pane fade"
-                id="nav-disabled"
+                id="queues"
                 role="tabpanel"
-                aria-labelledby="nav-disabled-tab"
+                aria-labelledby="queues-tab"
                 tabindex="0"
               >
-                ...
+              queues ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="cron-jobs"
+                role="tabpanel"
+                aria-labelledby="cron-jobs-tab"
+                tabindex="0"
+              >
+                cron jobs ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="real-time"
+                role="tabpanel"
+                aria-labelledby="real-time-tab"
+                tabindex="0"
+              >
+                real time ...
               </div>
             </div>
           </div>
