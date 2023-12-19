@@ -9,14 +9,23 @@
     class="container"
   >
     {{/* Header Section */}}
-    <div class="d-flex align-items-center justify-content-center flex-column pt-5">
-      <h1 style="z-index: 99" class="text-center fw-bold pt-4 text-white display-5">
+    <div
+      class="d-flex align-items-center justify-content-center flex-column pt-5"
+    >
+      <h1
+        style="z-index: 99"
+        class="text-center fw-bold pt-4 text-white display-5"
+      >
         The <span class="text-success">next gen</span> <br />
         cloud native platform <br />
-        for modern{{- printf " "}}<br class="d-block d-sm-none" />full-stack developers
+        for modern{{- printf " "}}<br class="d-block d-sm-none" />full-stack
+        developers
       </h1>
 
-      <p style="z-index: 99" class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
+      <p
+        style="z-index: 99"
+        class="fw-medium mb-4 mt-3 text-white text-center opacity-50"
+      >
         Everything you need <br class="d-block d-sm-none" />to build backends
         <br class="d-block d-sm-none" />that scale to millions of users.
       </p>
@@ -83,7 +92,11 @@
             rgba(242, 123, 255, 0.3),
             rgba(255, 255, 255, 0)
           ),
-          linear-gradient(to left, rgba(0, 250, 164, 0.3), rgba(255, 255, 255, 0));
+          linear-gradient(
+            to left,
+            rgba(0, 250, 164, 0.3),
+            rgba(255, 255, 255, 0)
+          );
         background-repeat: no-repeat, no-repeat;
         background-position: left, right;
       "
@@ -125,7 +138,9 @@
         <div class="mx-4 my-4"></div>
         <div class="text-white d-flex justify-content-center flex-column">
           <p class="m-0 opacity-50 fw-semibold">Hosting included</p>
-          <p class="m-0 opacity-50 fw-medium text-md-start text-center">for all plans</p>
+          <p class="m-0 opacity-50 fw-medium text-md-start text-center">
+            for all plans
+          </p>
         </div>
       </div>
     </div>
@@ -133,7 +148,10 @@
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
     {{/* USED AND TRUSTED AT */}}
-    <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-3">
+    <p
+      style="font-size: 12px"
+      class="text-success fw-bold text-center my-4 py-3"
+    >
       USED AND TRUSTED AT
     </p>
     <div class="w-100 mx-auto d-flex justify-content-around mb-4 pb-3">
@@ -216,7 +234,8 @@
       </div>
     </div>
 
-    {{/* Your app, your code, your data! */}} {{/* Your app, your code, your data! */}}
+    {{/* Your app, your code, your data! */}} {{/* Your app, your code, your
+    data! */}}
     <div class="position-relative">
       {{/* Header Colors */}} {{/* Left Color */}}
       <div
@@ -233,7 +252,11 @@
               rgba(242, 123, 255, 0.7),
               transparent
             ),
-            radial-gradient(ellipse at left, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+            radial-gradient(
+              ellipse at left,
+              rgba(255, 255, 255, 0.6) 50%,
+              transparent 50%
+            );
           background-repeat: no-repeat, no-repeat;
           background-position: left, right;
           width: 80em;
@@ -262,7 +285,8 @@
         "
       ></div>
 
-      {{/* rgba(242, 123, 255, 0.2), rgba(255, 255, 255, 0) 25% */}} {{/* Right Color */}}
+      {{/* rgba(242, 123, 255, 0.2), rgba(255, 255, 255, 0) 25% */}} {{/* Right
+      Color */}}
       <div
         class="pe-none d-none d-lg-block d-xl-block"
         style="
@@ -272,8 +296,16 @@
           top: -180px;
           left: 125%;
           transform: translateX(-40%);
-          background-image: radial-gradient(ellipse at center, rgba(0, 250, 164, 0.7), transparent),
-            radial-gradient(ellipse at right, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-image: radial-gradient(
+              ellipse at center,
+              rgba(0, 250, 164, 0.7),
+              transparent
+            ),
+            radial-gradient(
+              ellipse at right,
+              rgba(255, 255, 255, 0.6) 50%,
+              transparent 50%
+            );
           background-repeat: no-repeat, no-repeat;
           background-position: left, right;
           width: 80em;
@@ -293,25 +325,33 @@
           left: 50%;
           transform: translateX(-50%);
           width: 100vw;
-          height: 838px;
         "
         alt="howGenezioWork"
       />
 
       <div
         class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
-        style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
+        style="
+          background-color: #422f6a;
+          margin: 0 -12px 0 -12px;
+          position: relative;
+        "
       >
-        <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">
-          Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your
-          data!
+        <h2
+          class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center"
+        >
+          Your app, <br class="d-block d-sm-none" />your code,
+          <br class="d-block d-sm-none" />your data!
         </h2>
         {{/* TODO: fix width */}}
-        <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
-          Use our deterministic template system combined with powerful LLM database creation to get
-          started with your code. Enjoy seamless serverless deployment on AWS Lambda, local, dev,
-          stage and production environments, typesafe backend APIs to combine with classical REST
-          for the best architecture.
+        <p
+          class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p"
+        >
+          Use our deterministic template system combined with powerful LLM
+          database creation to get started with your code. Enjoy seamless
+          serverless deployment on AWS Lambda, local, dev, stage and production
+          environments, typesafe backend APIs to combine with classical REST for
+          the best architecture.
         </p>
 
         <div
@@ -334,7 +374,10 @@
       </div>
     </div>
     {{/* Enhance yourself */}}
-    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
+    >
       FEATURES
     </p>
     <h2 class="text-white text-center fw-bold mb-4 pb-3">Enhance yourself</h2>
@@ -344,7 +387,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <div
@@ -359,13 +405,17 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Get started in 2 minutes</h3>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">
+              Get started in 2 minutes
+            </h3>
             <p class="card-text opacity-50 mb-4 pb-3">
-              From idea to deployed app - you pick a template for the backend and one for the
-              frontend, your choice of mono or multirepo and in 2 minutes you will have everything
-              set up!
+              From idea to deployed app - you pick a template for the backend
+              and one for the frontend, your choice of mono or multirepo and in
+              2 minutes you will have everything set up!
             </p>
-            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+            <a
+              href="#"
+              class="card-link text-white text-decoration-none fw-semibold"
               >Learn more -></a
             >
           </div>
@@ -375,7 +425,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <div
@@ -390,14 +443,19 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Open Source forever</h3>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">
+              Open Source forever
+            </h3>
             <p class="card-text opacity-50 mb-4 pb-3">
-              No vendor lock in. Everything you build with us is code that is yours to own. Template
-              code, code generated for the typesafe API, our example code, code generated by our LLM
-              tools - all is yours to own and use how you want. Genezio will be open source and will
+              No vendor lock in. Everything you build with us is code that is
+              yours to own. Template code, code generated for the typesafe API,
+              our example code, code generated by our LLM tools - all is yours
+              to own and use how you want. Genezio will be open source and will
               integrate with other open source tools forever.
             </p>
-            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+            <a
+              href="#"
+              class="card-link text-white text-decoration-none fw-semibold"
               >Learn more -></a
             >
           </div>
@@ -407,7 +465,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <div
@@ -422,14 +483,19 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">Microservice by design</h3>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="height: 64px">
+              Microservice by design
+            </h3>
             <p class="card-text opacity-50 mb-4 pb-3">
-              If you started with a Firebase-like framework that offers a database and access
-              functions, and you want to outgrow that, with genezio you can write full business
-              logic that scales separately. Oftentimes you can move the business logic from the
-              frontend to the backend code with minimal changes.
+              If you started with a Firebase-like framework that offers a
+              database and access functions, and you want to outgrow that, with
+              genezio you can write full business logic that scales separately.
+              Oftentimes you can move the business logic from the frontend to
+              the backend code with minimal changes.
             </p>
-            <a href="#" class="card-link text-white text-decoration-none fw-semibold"
+            <a
+              href="#"
+              class="card-link text-white text-decoration-none fw-semibold"
               >Learn more -></a
             >
           </div>
@@ -441,7 +507,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             {{/* class="card p-2 p-md-4 text-white" */}}
@@ -452,7 +521,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <h3 class="card-title m-0">Global CDN and Custom Domain</h3>
@@ -462,7 +534,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <h3 class="card-title m-0">Automatic scaling</h3>
@@ -474,7 +549,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <h3 class="card-title m-0">Postman-like test interface</h3>
@@ -484,7 +562,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <h3 class="card-title m-0">LLM database schema generation</h3>
@@ -494,7 +575,10 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <h3 class="card-title m-0">Dashboard - logs</h3>
@@ -503,8 +587,12 @@
       </div>
     </div>
 
-    {{/* Genezio in a nutshell */}} {{- partial "theCode.html" . -}} {{/* Our latest article */}}
-    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+    {{/* Genezio in a nutshell */}} {{- partial "theCode.html" . -}} {{/* Our
+    latest article */}}
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
+    >
       EDUCATION
     </p>
     <h2 class="text-white text-center fw-bold mb-4 pb-3">Our latest article</h2>
@@ -521,28 +609,48 @@
       </div>
     </div>
 
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" class="mt-4" />
+    <hr
+      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px"
+      class="mt-4"
+    />
 
     {{/* Testimonials */}}
-    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
+    >
       TESTIMONIALS
     </p>
-    <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
+    <h2
+      style="z-index: 99"
+      class="text-white text-center fw-bold mb-4 pb-3 position-relative"
+    >
       Don't take our <br class="d-block d-sm-none" />word for it
     </h2>
 
-    <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
+    <div
+      style="z-index: 99"
+      class="row mx-2 pb-2 justify-content-center position-relative"
+    >
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center pb-3">
               <div class="d-flex">
                 <div
-                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
+                  style="
+                    height: 48px;
+                    width: 48px;
+                    border: 1px solid red;
+                    border-radius: 200px;
+                  "
                 ></div>
 
                 <div class="mx-3 me-0">
@@ -568,10 +676,10 @@
             </div>
 
             <p class="mt-4 opacity-50">
-              Using their SDK, I was able to deploy complex functionalities with an ease that I
-              hadn't experienced before. The integration process is so streamlined and user-friendly
-              that even those with a basic understanding of JavaScript can navigate it with
-              confidence.
+              Using their SDK, I was able to deploy complex functionalities with
+              an ease that I hadn't experienced before. The integration process
+              is so streamlined and user-friendly that even those with a basic
+              understanding of JavaScript can navigate it with confidence.
             </p>
           </div>
         </div>
@@ -580,13 +688,21 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center pb-3">
               <div class="d-flex">
                 <div
-                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
+                  style="
+                    height: 48px;
+                    width: 48px;
+                    border: 1px solid red;
+                    border-radius: 200px;
+                  "
                 ></div>
 
                 <div class="mx-3 me-0">
@@ -612,12 +728,13 @@
             </div>
 
             <p class="mt-4 opacity-50">
-              I used the genezio platform for building and deploying the app, I then had to build a
-              node.js module on top of Huawei's FusionSolar website as their official API does not
-              allow for real-time data, and used Tesla's unofficial API to change the charging amps
-              in real time. The genezio platform was easy to work with and the fact that I could
-              build and host it (for now it's free) in such a short time says quite a lot about
-              them.
+              I used the genezio platform for building and deploying the app, I
+              then had to build a node.js module on top of Huawei's FusionSolar
+              website as their official API does not allow for real-time data,
+              and used Tesla's unofficial API to change the charging amps in
+              real time. The genezio platform was easy to work with and the fact
+              that I could build and host it (for now it's free) in such a short
+              time says quite a lot about them.
             </p>
           </div>
         </div>
@@ -626,13 +743,21 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+          style="
+            border-radius: 0 20px 0 20px;
+            background-color: rgba(255, 255, 255, 0.07);
+          "
         >
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center pb-3">
               <div class="d-flex">
                 <div
-                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
+                  style="
+                    height: 48px;
+                    width: 48px;
+                    border: 1px solid red;
+                    border-radius: 200px;
+                  "
                 ></div>
 
                 <div class="mx-3">
@@ -652,16 +777,20 @@
             </div>
 
             <p class="mt-4 opacity-50">
-              I have used Appwrite twice, and the experience of using it was great as I got to build
-              a full-stack application. I would gladly recommend it to anyone looking to explore an
-              alternative database option. Appwrite is simply the best.
+              I have used Appwrite twice, and the experience of using it was
+              great as I got to build a full-stack application. I would gladly
+              recommend it to anyone looking to explore an alternative database
+              option. Appwrite is simply the best.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <hr
+      class="mt-4"
+      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px"
+    />
 
     {{/* FAQ */}}
     <p
@@ -671,7 +800,10 @@
     >
       FAQ
     </p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-3 position-relative" style="z-index: 99">
+    <h2
+      class="text-white text-center fw-bold mb-4 pb-3 position-relative"
+      style="z-index: 99"
+    >
       Your questions answered
     </h2>
 
@@ -702,8 +834,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
-              Yes! Firstly, design a database using llm. Use javascript to write the backend and
-              genezio to deploy it.
+              Yes! Firstly, design a database using llm. Use javascript to write
+              the backend and genezio to deploy it.
             </div>
           </div>
         </div>
