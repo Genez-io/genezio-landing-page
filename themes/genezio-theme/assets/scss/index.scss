@@ -5,28 +5,18 @@ body {
   overflow-x: hidden;
 }
 
-// TODO: remove this
-main {
-  background-color: #21143a;
-}
-
 input::placeholder {
   color: white !important;
 }
 
-// TODO: remove this
-.btn,
-.accordion-button {
-  font-family: "Inter", sans-serif !important;
-}
-
-// TODO: remove this css
 h1,
 h4,
 p,
 a,
-button {
-  font-family: "Inter", sans-serif;
+button,
+.btn,
+.accordion-button {
+  font-family: "Inter", sans-serif !important;
 }
 
 // Custom Colors
@@ -110,7 +100,7 @@ $cyan: #0dcaf0 !default;
   padding-bottom: 0.75em !important;
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
   .flow-breaker-header {
     text-align: center;
     font-family: Inter;
@@ -127,7 +117,7 @@ $cyan: #0dcaf0 !default;
 
   .h1-hero-custom {
     font-size: 42px !important;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-family: Inter;
     font-size: 42px;
@@ -146,4 +136,3 @@ $cyan: #0dcaf0 !default;
     font-size: 32px;
   }
 }
-
