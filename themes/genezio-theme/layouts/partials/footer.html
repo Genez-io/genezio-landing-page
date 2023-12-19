@@ -3,13 +3,19 @@
     style="
       border-left: 1px solid rgba(255, 255, 255, 0.1);
       border-right: 1px solid rgba(255, 255, 255, 0.1);
-  "
+    "
     class="text-white container px-4 py-2"
   >
     {{/* Footer Section 1 */}}
     <div class="row p-4 px-3 pb-0 mt-1 d-flex justify-content-between">
       <div class="col-md-7 p-1 mb-2">
-        <img class="navbar-brand" alt="genezio-logo-icon" src="/images/genezio-logo-icon.svg" width="31px" height="34px" />
+        <img
+          class="navbar-brand"
+          alt="genezio-logo-icon"
+          src="/images/genezio-logo-icon.svg"
+          width="31px"
+          height="34px"
+        />
       </div>
       <div class="col-md-4 p-1 pb-0">
         <div class="row text-white">
@@ -19,19 +25,47 @@
               <li>
                 <a style="font-size: 14px" class="nav-link text-white" href="/blog">Blog</a>
               </li>
-              <li><a style="font-size: 14px" class="nav-link text-white" href="https://docs.genez.io/" target="_blank" rel="noopener nofollow">Docs</a></li>
-              <li><a style="font-size: 14px" class="nav-link text-white" href="https://github.com/Genez-io/genezio" target="_blank" rel="noopener nofollow">Github</a></li>
+              <li>
+                <a
+                  style="font-size: 14px"
+                  class="nav-link text-white"
+                  href="https://docs.genez.io/"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Docs</a
+                >
+              </li>
+              <li>
+                <a
+                  style="font-size: 14px"
+                  class="nav-link text-white"
+                  href="https://github.com/Genez-io/genezio"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  >Github</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-6">
             <p class="fw-medium mb-2 fw-semibold text-success">Help</p>
             <ul class="list-unstyled mt-1">
-              <li><a style="font-size: 14px" class="nav-link text-white" href="#">Terms and Conditions</a></li>
               <li>
-                <a style="font-size: 14px" class="nav-link text-white" href="#">Frequently Asked Questions</a>
+                <a style="font-size: 14px" class="nav-link text-white" href="#"
+                  >Terms and Conditions</a
+                >
               </li>
-              <li><a style="font-size: 14px" class="nav-link text-white" href="#">Support Center</a></li>
-              <li><a style="font-size: 14px" class="nav-link text-white" href="#">Contact Us</a></li>
+              <li>
+                <a style="font-size: 14px" class="nav-link text-white" href="#"
+                  >Frequently Asked Questions</a
+                >
+              </li>
+              <li>
+                <a style="font-size: 14px" class="nav-link text-white" href="#">Support Center</a>
+              </li>
+              <li>
+                <a style="font-size: 14px" class="nav-link text-white" href="#">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -55,7 +89,9 @@
       </div>
       <div class="col-md-6 px-1 ms-0 justify-content-center d-flex flex-sm-column">
         <div class="row justify-content-end w-100">
-          <div class="col-12 col-md-9 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row">
+          <div
+            class="col-12 col-md-9 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row"
+          >
             <input
               type="email"
               class="form-control border-0 text-white ms-0"
@@ -63,7 +99,12 @@
               placeholder="Enter your email"
               style="background-color: rgba(255, 255, 255, 0.1); height: 48px"
             />
-            <button class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 footer-subscribe-btn-custom" style="height: 48px">Subscribe</button>
+            <button
+              class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 footer-subscribe-btn-custom"
+              style="height: 48px"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
@@ -78,21 +119,50 @@
     {{/* Footer Section 3 */}}
     <div class="row px-1 pt-2 pb-4 d-flex justify-content-between">
       <div class="col-md-10 px-1">
-        <p style="font-size: 14px" class="opacity-50 mt-3">© 2013-2023 Genezio Corp.
-        </p>
+        <p style="font-size: 14px" class="opacity-50 mt-3">© 2013-2023 Genezio Corp.</p>
       </div>
-      <div class="col-md-2 px-0 d-flex align-items-center justify-content-md-end justify-content-sm-start">
-        <a href="https://www.instagram.com/genezio.dev/" target="_blank" rel="noopener nofollow">
-          <img class="mx-2 footer-social-logo" alt="instagram-logo" src="/images/instagram-logo.svg" loading="lazy" width="24px" height="24px" />
+      <div
+        class="col-md-2 px-0 d-flex align-items-center justify-content-md-end justify-content-sm-start"
+      >
+        <a href="{{ .Site.Params.footer.instagram }}" target="_blank" rel="noopener nofollow">
+          <img
+            class="mx-2 footer-social-logo"
+            alt="instagram-logo"
+            src="/images/instagram-logo.svg"
+            loading="lazy"
+            width="24px"
+            height="24px"
+          />
         </a>
-        <a href="https://www.linkedin.com/company/genez-io/" target="_blank" rel="noopener nofollow">
-          <img class="mx-2 footer-social-logo" alt="linkedin-logo" src="/images/linkedin-logo.svg" loading="lazy" width="24px" height="24px" />
+        <a href="{{ .Site.Params.footer.linkedin }}" target="_blank" rel="noopener nofollow">
+          <img
+            class="mx-2 footer-social-logo"
+            alt="linkedin-logo"
+            src="/images/linkedin-logo.svg"
+            loading="lazy"
+            width="24px"
+            height="24px"
+          />
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100086667803855" target="_blank" rel="noopener nofollow">
-          <img class="mx-2 footer-social-logo" alt="facebook-logo" src="/images/facebook-logo.svg" loading="lazy" width="24px" height="24px" />
+        <a href="{{ .Site.Params.footer.facebook }}" target="_blank" rel="noopener nofollow">
+          <img
+            class="mx-2 footer-social-logo"
+            alt="facebook-logo"
+            src="/images/facebook-logo.svg"
+            loading="lazy"
+            width="24px"
+            height="24px"
+          />
         </a>
-        <a href="https://discord.com/invite/uc9H5YKjXv" target="_blank" rel="noopener nofollow">
-          <img class="mx-2 footer-social-logo" alt="discord-logo" src="/images/discord-logo.svg" loading="lazy" width="24px" height="24px" />
+        <a href="{{ .Site.Params.footer.discord }}" target="_blank" rel="noopener nofollow">
+          <img
+            class="mx-2 footer-social-logo"
+            alt="discord-logo"
+            src="/images/discord-logo.svg"
+            loading="lazy"
+            width="24px"
+            height="24px"
+          />
         </a>
       </div>
     </div>
