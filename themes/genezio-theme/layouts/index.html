@@ -73,26 +73,6 @@
       "
     ></div>
 
-    {{/*
-    <div
-      style="
-        position: absolute;
-        width: 100%;
-        height: 400px;
-        background-image: linear-gradient(
-            to right,
-            rgba(242, 123, 255, 0.3),
-            rgba(255, 255, 255, 0)
-          ),
-          linear-gradient(to left, rgba(0, 250, 164, 0.3), rgba(255, 255, 255, 0));
-        background-repeat: no-repeat, no-repeat;
-        background-position: left, right;
-      "
-    >
-      ww
-    </div>
-    */}}
-
     <div
       class="d-block d-sm-none mb-5"
       style="margin-left: -2em !important; margin-right: -1.8em !important"
@@ -303,8 +283,8 @@
         style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
       >
         <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">
-          Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your
-          data!
+          Your app, <span class="d-block d-sm-none"></span>your code,
+          <span class="d-block d-sm-none"></span>your data!
         </h2>
         {{/* TODO: fix width */}}
         <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
@@ -528,7 +508,7 @@
       TESTIMONIALS
     </p>
     <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
-      Don't take our <br class="d-block d-sm-none" />word for it
+      Don't take our <span class="d-block d-sm-none"></span>word for it
     </h2>
 
     <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
