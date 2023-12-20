@@ -100,6 +100,7 @@
             class="col-12 col-md-9 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row"
           >
             <form
+              id="subscribeForm"
               class="d-flex w-100 align-items-start align-items-md-center flex-column flex-md-row"
             >
               <input
@@ -181,3 +182,14 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById("subscribeForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // reset input value .5 second later
+    setTimeout(function () {
+      document.getElementById("emailSubscribeInput").value = "";
+    }, 500);
+  });
+</script>
