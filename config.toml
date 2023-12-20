@@ -3,3 +3,12 @@ languageCode = "en-us"
 title = "Genezio"  
 theme = "genezio-theme"  
 enableRobotsTXT = true
+
+[params.footer]
+        description = "genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
+        facebook = "https://www.facebook.com/profile.php?id=100086667803855"
+        twitter = "https://twitter.com/Geneziodev"
+        instagram = "https://www.instagram.com/genezio.dev/"
+        discord = "https://discord.com/invite/uc9H5YKjXv"
+        linkedin = "https://www.linkedin.com/company/genez-io/"
+        
