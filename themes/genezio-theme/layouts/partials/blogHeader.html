@@ -1,0 +1,127 @@
+<nav
+  style="border-bottom: 1px solid #e2d9f3; z-index: 99999; background-color: #f1ecf9"
+  class="navbar navbar-expand-lg p-0 px-3"
+>
+  <div
+    class="container px-4 py-4"
+    style="border-left: 1px solid #e2d9f3; border-right: 1px solid #e2d9f3"
+  >
+    <a class="nav-link" href="/">
+      <img
+        class="navbar-brand"
+        alt="genezio-logo"
+        src="/images/genezio-logo.svg"
+        height="45px"
+        width="135px"
+      />
+    </a>
+
+    {{/* Mobile Menu */}}
+    <button
+      class="navbar-toggler shadow-none border-0"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar"
+    >
+      <img
+        src="/images/burger-menu.svg"
+        alt="burger-menu-icon"
+        height="24px"
+        width="24px"
+        style="z-index: 9999; position: absolute"
+      />
+    </button>
+
+    <div
+      style="
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        background-color: #2a213c;
+      "
+      class="navbar-collapse collapse"
+      id="navbar"
+    >
+      <img
+        style="position: absolute; top: 35px; left: 20px"
+        alt="genezio-logo"
+        src="/images/genezio-logo.svg"
+        height="45px"
+        width="135px"
+      />
+      <div class="d-flex align-items-center justify-content-center" style="height: 100vh">
+        <ul class="navbar-nav w-100 d-flex align-items-center px-4 mx-2 fw-semibold">
+          <li
+            style="border: 1px solid rgba(153, 173, 203, 0.4); border-radius: 6px"
+            class="nav-item w-100 d-flex justify-content-center mb-3 mt-1"
+          >
+            <a style="color: #bfccde" href="#" class="nav-link py-2 my-1">Star us on GitHub</a>
+          </li>
+          <li
+            style="border: 1px solid rgba(153, 173, 203, 0.4); border-radius: 6px"
+            class="nav-item w-100 d-flex justify-content-center mb-3 mt-1"
+          >
+            <a style="color: #bfccde" href="#" class="nav-link py-2 my-1">Features</a>
+          </li>
+          <li
+            style="border: 1px solid rgba(153, 173, 203, 0.4); border-radius: 6px"
+            class="nav-item w-100 d-flex justify-content-center mb-3 mt-1"
+          >
+            <a style="color: #bfccde" href="#" class="nav-link py-2 my-1">Resources</a>
+          </li>
+          <li
+            style="border: 1px solid rgba(153, 173, 203, 0.4); border-radius: 6px"
+            class="nav-item w-100 d-flex justify-content-center mb-3 mt-1"
+          >
+            <a
+              style="color: #bfccde"
+              href="https://app.genez.io/auth/login"
+              target="_blank"
+              class="nav-link py-2 my-1"
+              >Login</a
+            >
+          </li>
+          <a
+            class="btn btn-primary my-sm-0 fw-semibold w-100 py-2 my-1"
+            href="https://app.genez.io/auth/signup"
+            target="_blank"
+            >Start for free</a
+          >
+        </ul>
+      </div>
+    </div>
+    {{/* Desktop Menu */}}
+    <div
+      class="collapse navbar-collapse d-flex justify-content-between d-none d-lg-block"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white opacity-75 fw-semibold mx-5" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="/blog/" class="nav-link text-white opacity-75 fw-semibold" href="#">Resources</a>
+        </li>
+      </ul>
+
+      <div class="d-flex my-2 my-lg-0 d-flex align-items-center">
+        <a
+          class="nav-link text-white opacity-75 fw-semibold mx-5"
+          href="https://app.genez.io/auth/login"
+          target="_blank"
+          rel="noopener nofollow"
+          >Login</a
+        >
+        <a
+          class="btn btn-primary my-2 my-sm-0 fw-semibold"
+          href="https://app.genez.io/auth/signup"
+          target="_blank"
+          rel="noopener nofollow"
+          >Start for free</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
