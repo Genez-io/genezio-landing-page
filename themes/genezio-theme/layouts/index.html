@@ -13,12 +13,13 @@
       <h1 style="z-index: 99" class="text-center fw-bold pt-4 text-white display-5">
         The <span class="text-success">next gen</span> <br />
         cloud native platform <br />
-        for modern{{- printf " "}}<br class="d-block d-sm-none" />full-stack developers
+        for modern<span class="d-block d-sm-none"></span>
+        full-stack developers
       </h1>
 
       <p style="z-index: 99" class="fw-medium mb-4 mt-3 text-white text-center opacity-50">
-        Everything you need <br class="d-block d-sm-none" />to build backends
-        <br class="d-block d-sm-none" />that scale to millions of users.
+        Everything you need <span class="d-block d-sm-none"></span>to build backends
+        <span class="d-block d-sm-none"></span>that scale to millions of users.
       </p>
 
       <div
@@ -71,26 +72,6 @@
         transform: translate(-50%, -50%);
       "
     ></div>
-
-    {{/*
-    <div
-      style="
-        position: absolute;
-        width: 100%;
-        height: 400px;
-        background-image: linear-gradient(
-            to right,
-            rgba(242, 123, 255, 0.3),
-            rgba(255, 255, 255, 0)
-          ),
-          linear-gradient(to left, rgba(0, 250, 164, 0.3), rgba(255, 255, 255, 0));
-        background-repeat: no-repeat, no-repeat;
-        background-position: left, right;
-      "
-    >
-      ww
-    </div>
-    */}}
 
     <div
       class="d-block d-sm-none mb-5"
@@ -287,9 +268,9 @@
         style="
           mix-blend-mode: screen;
           filter: grayscale(50%);
-          opacity: 0.4;
+          opacity: 0.3;
           position: absolute;
-          top: -125px;
+          top: -225px;
           left: 50%;
           transform: translateX(-50%);
           width: 100vw;
@@ -302,8 +283,8 @@
         style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
       >
         <h2 class="fw-bold text-white display-5 flow-breaker-header py-4 my-2 text-center">
-          Your app, <br class="d-block d-sm-none" />your code, <br class="d-block d-sm-none" />your
-          data!
+          Your app, <span class="d-block d-sm-none"></span>your code,
+          <span class="d-block d-sm-none"></span>your data!
         </h2>
         {{/* TODO: fix width */}}
         <p class="text-center opacity-50 fw-medium mt-1 w-50 px-4 flow-breaker-p">
@@ -527,10 +508,59 @@
       TESTIMONIALS
     </p>
     <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
-      Don't take our <br class="d-block d-sm-none" />word for it
+      Don't take our <span class="d-block d-sm-none"></span>word for it
     </h2>
 
     <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/images/testimonial2.webp"
+                  alt="testimonial-user-2"
+                  loading="lazy"
+                />
+
+                <div class="mx-3 me-0">
+                  <p class="mb-0 fw-semibold">Daniel M</p>
+                  <p style="font-size: 14px" class="mb-0">CEO @DeFiBuilder</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.g2.com/products/genezio/reviews/genezio-review-8869260"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="g2-logo"
+                  src="/images/g2-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-50">
+              Using their SDK, I was able to deploy complex functionalities with an ease that I
+              hadn't experienced before. The integration process is so streamlined and user-friendly
+              that even those with a basic understanding of JavaScript can navigate it with
+              confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
@@ -594,64 +624,19 @@
                 <img
                   style="height: 48px; width: 48px"
                   class="rounded-circle"
-                  src="/images/testimonial2.webp"
-                  alt="testimonial-user-2"
+                  src="/images/testimonial3.webp"
+                  alt="testimonial-user-3"
                   loading="lazy"
                 />
-
-                <div class="mx-3 me-0">
-                  <p class="mb-0 fw-semibold">Daniel M</p>
-                  <p style="font-size: 14px" class="mb-0">CEO @DeFiBuilder</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.g2.com/products/genezio/reviews/genezio-review-8869260"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="linkedin-logo"
-                  src="/images/linkedin-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-50">
-              Using their SDK, I was able to deploy complex functionalities with an ease that I
-              hadn't experienced before. The integration process is so streamlined and user-friendly
-              that even those with a basic understanding of JavaScript can navigate it with
-              confidence.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <div
-                  style="height: 48px; width: 48px; border: 1px solid red; border-radius: 200px"
-                ></div>
 
                 <div class="mx-3">
-                  <p class="mb-0 fw-semibold">Teri</p>
-                  <p style="font-size: 14px" class="mb-0">@terieynike</p>
+                  <p class="mb-0 fw-semibold">Laurentiu Ciobanu</p>
+                  <p style="font-size: 14px" class="mb-0">CTO @Sessions</p>
                 </div>
               </div>
 
               <a
-                href="https://www.g2.com/products/genezio/reviews/genezio-review-9015289"
+                href="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/?utm_source=share&utm_medium=member_desktop"
                 target="_blank"
                 rel="noopener nofollow"
               >
@@ -667,11 +652,9 @@
             </div>
 
             <p class="mt-4 opacity-50">
-              Very easy to use and reliable. The team was very responsive whenever I needed to
-              understand how to connect new services or build new integrations. Genezio gave me a
-              lot more time to focus on the app experience and on building multiple iterations of
-              the User Interface. This had a direct impact on our MVP costs and allowed us to gather
-              initial customer insights more quickly. It's what every founder strives for.
+              It was a pleasant and frictionless experience: from my TypeScript code to the cloud in
+              less than 3 minutes (including creating an account, installing the CLI, and logging in
+              with the CLI).
             </p>
           </div>
         </div>

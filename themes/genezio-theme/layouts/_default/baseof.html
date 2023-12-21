@@ -2,13 +2,22 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{- partial "head.html" . -}}
   <body>
-    {{- partial "header.html" . -}}
+    {{ if .Params.customHeader }}
+    <!-- Custom header content for pages with customHeader variable -->
+    {{- partial "blogHeader.html" . -}} {{ else }}
+    <!-- Default header content for other pages -->
+    {{- partial "header.html" . -}} {{ end }}
+
     <main>{{- block "main" . }}{{- end }}</main>
-    {{- partial "footer.html" . -}}
+
+    {{ if .Params.customFooter }} {{- partial "blogFooter.html" . -}} {{ else }} {{- partial
+    "footer.html" . -}} {{ end }}
+
     <!-- Start of HubSpot Embed Code -->
     <script
       type="text/javascript"
       id="hs-script-loader"
+      loading="lazy"
       async
       defer
       src="//js-eu1.hs-scripts.com/26189618.js"
