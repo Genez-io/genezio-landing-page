@@ -9,7 +9,23 @@ input::placeholder {
   color: white !important;
 }
 
+.blog-input::placeholder {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.blogGradientText {
+  background-color: #f3ec78;
+  cursor: pointer;
+  background-image: linear-gradient(91deg, #6f42c1 -0.01%, #ad00ff 21.68%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 h1,
+h2,
 h4,
 p,
 a,
@@ -74,6 +90,7 @@ $cyan: #0dcaf0 !default;
 // TODO: for a better performance let's import only the parts that we are using from bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./the-code.scss";
+@import "./navbar.scss";
 
 .border-gradient-green {
   border-image-source: linear-gradient(
