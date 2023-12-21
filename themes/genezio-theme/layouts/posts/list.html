@@ -3,6 +3,85 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
+
+<div class="px-3 ">
+
+ <div style="
+      border-left: 1px solid red;
+      border-right: 1px solid red;
+    " class="container">
+
+    <div class="container pb-6">
+
+      {{/*  Header  */}}
+
+      <div style="border: 1px solid red; height:303px;"></div>
+
+      {{/*  Articles listing  */}}
+      <div class="row">
+        <hr style="border: 1px solid red; margin: 0 -13px" />
+    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+
+    {{/*  Photo  */}}
+    <div class="col-12 col-md-6 col-lg-4 border">
+      <div>
+        {{ if .Params.thumbnail }}
+        <div class="border mb-4" style="height: 195px;">
+          w
+        </div>
+        {{ end }}
+
+        {{/*  Tag  */}}
+        <div>
+          {{ if .Params.tags }}
+          <div class="mb-2 pb-1">
+            {{ range .Params.tags }}
+            <a class="text-decoration-none fw-bold" style="font-size: 12px;" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{/*  Title & preview  */}}
+          <div class="mb-4"> 
+            <h4 class="text-black mb-0" style="height: 64px">{{ .Title }}</h4>
+            <p style="color: #525252; height: 72px; " class="mt-4 mb-0">{{ .Params.preview }}</p>
+          </div>
+
+          {{/*  Writer Details  */}}
+          <div class="border d-flex">
+            {{/*  TODO: avatar placeholder  */}}
+            <div style="height:  48px; width: 48px;" class="rounded-circle"></div>
+            <div class="d-flex flex-column mx-4">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">Radu Dumitrescu</p>
+              <p style="color: #525252;" class="mb-0 fw-medium">Dec 12, 2023</p>
+            </div>
+          </div>
+
+         {{/*  <div class="post-meta post-description">  */}}
+            {{/*  {{ .Params.preview }}  */}}
+            {{/*  {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}  */}}
+          {{/*  </div>    */}}
+         {{/*  <div class="post-date">
+            {{ if not .Date.IsZero }}
+            <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
+            {{ end }}
+          </div>    */}}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+    
+    <hr style="border: 1px solid red; margin: 0 -13px" />
+    <p>ww</p>
+    <p>ww</p>
+    <p>ww</p>
+    <p>ww</p>
+ </div>
+</div>
+
 <div class="intro">
   <div class="container">
     <div class="row">
@@ -28,47 +107,9 @@
     </div>
   </div>
 </div>
-<div class="container pb-6">
-  <div class="row">
-    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-    {{ range $paginator.Pages }}
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="post post-summary mb-4">
-        {{ if .Params.thumbnail }}
-        <div class="post-left">
-          <div class="post-image">
-            <a href="{{ .RelPermalink }}"><img class="img-fluid" alt={{ .Title }} src="{{ .Params.thumbnail | relURL }}" /></a>
-          </div>
-        </div>
-        {{ end }}
-        <div class="post-right">
-          {{ if .Params.tags }}
-          <div class="post-tags">
-            {{ range .Params.tags }}
-            <a class="post-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-          </div>
-          {{ end }}
-          <div class="post-title">
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          </div>
-          <div class="post-meta post-description">
-            {{ .Params.preview }}
-            {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
-          </div>
-          <div class="post-date">
-            {{ if not .Date.IsZero }}
-            <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-  <div class="row">
+
+  {{/*  <div class="row">
   
-  </div>
+  </div>  */}}
 </div>
 {{ end }}
