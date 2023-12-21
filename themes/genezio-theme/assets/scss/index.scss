@@ -74,6 +74,7 @@ $cyan: #0dcaf0 !default;
 // TODO: for a better performance let's import only the parts that we are using from bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./the-code.scss";
+@import "./navbar.scss";
 
 .border-gradient-green {
   border-image-source: linear-gradient(
