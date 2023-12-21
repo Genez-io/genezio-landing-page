@@ -39,13 +39,13 @@
       </div>
 
       <hr style="border: 1px solid #E2D9F3; margin: 0 -24px"  />
+      
       {{/*  Articles listing  */}}
       <div class="row mt-4 pt-3">
-    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-    {{ range $paginator.Pages }}
-
+      {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+      {{ range $paginator.Pages }}
     {{/*  Card  */}}
-    <div class="col-12 col-md-6 col-lg-4 p-0 bg-white mx-3" style="border-top-right-radius: 20px; margin-bottom: 40px;">
+    <div class="col-12 col-md-6 col-lg-3 p-0  bg-white" style="border-top-right-radius: 20px;  max-width: 390px; width: 100%;  margin: 0px 20px 40px 20px;">
         {{ if .Params.thumbnail }}
     {{/*  Photo  */}}
         <div class="mb-4 position-relative"  style="height: 195px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px">
