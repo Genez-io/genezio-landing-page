@@ -32,7 +32,7 @@
     {{ range $paginator.Pages }}
 
     {{/*  Card  */}}
-    <div class="col-12 col-md-6 col-lg-4 p-0 bg-white mx-3" style="border-top-right-radius: 20px;">
+    <div class="col-12 col-md-6 col-lg-4 p-0 bg-white mx-3" style="border-top-right-radius: 20px; margin-bottom: 40px;">
         {{ if .Params.thumbnail }}
     {{/*  Photo  */}}
         <div class="mb-4 position-relative"  style="height: 195px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px">
@@ -77,15 +77,6 @@
             </div>
           </div>
 
-         {{/*  <div class="post-meta post-description">
-            {{ .Params.preview }}
-            {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
-          </div>    */}}
-         {{/*  <div class="post-date">
-            {{ if not .Date.IsZero }}
-            <span class="post-date-date">{{ .Date.Format $dateFormat }}</span>
-            {{ end }}
-          </div>    */}}
         </div>  
     </div>
     {{ end }}
@@ -94,34 +85,5 @@
  </div>
 </div>
 
-{{/*  <div class="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 page-posts-list">
-        <h1>{{ .Title }}</h1>
-      </div>
-    </div>
-  </div>
-</div>  */}}
-{{/*  <div class="container pb-6">
-  <div class="row">
-    <div class="sidebar col-12 col-md-6 col-lg-4">
-      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-        {{ if gt (len $taxonomy) 0 }}
-        <h2>{{ $taxonomyname }}</h2>
-        <ul class="pt-1">
-          {{ range $name, $value := $taxonomy }}
-            <li class="pb-1"><a href="{{ printf "/%s/" $taxonomyname | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
-          {{ end }}
-        </ul>
-        {{ end }}
-      {{ end }}
-    </div>
-  </div>
-</div>  */}}
-
-  {{/*  <div class="row">
-  
-  </div>  */}}
 </div>
 {{ end }}
