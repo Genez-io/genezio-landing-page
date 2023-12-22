@@ -1,7 +1,7 @@
 .articlePost {
   p {
     color: #171717;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 
@@ -12,5 +12,20 @@
     color: #fff;
     border-radius: 8px;
     border: none;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    margin-top: 80px;
+  }
+
+  h3 {
+    color: #000;
+    /* Headings/H4 */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    margin-top: 24px;
   }
 }
