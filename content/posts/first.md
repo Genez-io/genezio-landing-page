@@ -12,9 +12,9 @@ description: "We will walk through the most common 10 mistakes in typescript and
 meta_og_url: "https://genez.io/blog/10-common-mistakes-in-typescript-development"
 meta_og_image: "https://genez.io/images/mistakesintypescript.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
-
-##
 
 This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
 
