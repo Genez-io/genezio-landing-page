@@ -1,7 +1,13 @@
 {{ define "main" }}
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8">{{ .Content }}</div>
+<div class="px-3" style="background-color: #f1ecf9">
+  <div style="border-left: 1px solid #e2d9f3; border-right: 1px solid #e2d9f3" class="container">
+    <div class="container pt-3"></div>
+    <div class="row">
+      {{/* TODO: tag */}}
+      <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 14px">Tutorials</a>
+      <h4 class="text-black mb-0" style="height: 64px">{{ .Title }}</h4>
+      <div class="col-lg-8">{{ .Content }}</div>
+    </div>
   </div>
 </div>
 {{ end }}
