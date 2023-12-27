@@ -240,7 +240,54 @@ export class ProductService {
                 aria-labelledby="database-support-tab"
                 tabindex="0"
               >
-                db support ...
+
+                <p class="opacity-50 m-0">
+                  Integrated database handling, everything you need to create, write and maintain a backend that scales with your app. We offer Redis or Postgres through our partners.  Or bring your own database and connect to it like you normally would
+                </p>
+                
+
+<div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { ProductService } from '@genezio-sdk/my-app';
+
+const ProductDetails = () => {
+  // rest of the code
+
+  const getUserDetails = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    const details = await ProductService.getDetails(product.id)
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+
+@GenezioDeploy()
+export class ProductService {
+  async getUserInfo(context: GnzContext, productId: number): Promise<ProductDetails> {
+    let product = await this.redisClient.get(`product:${productId}:details`);
+    if (result) {     
+      return result;
+    }
+
+    product = await this.postgressDb.find({where: {
+        id: productId 
+      }
+    })
+    await this.redisClient.set(`product:${productId}:details`, product);
+
+    return product
+  }
+} </code>
+                </pre>
+
               </div>
               <div
                 class="tab-pane fade"
