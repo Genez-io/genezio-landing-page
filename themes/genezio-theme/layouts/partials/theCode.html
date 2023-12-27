@@ -389,7 +389,29 @@ export class ProductService {
                 aria-labelledby="cron-jobs-tab"
                 tabindex="0"
               >
-                cron jobs ...
+                <p class="opacity-50 m-0">
+                  Support for configurable cron jobs to automate your application.
+                </p>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+
+@GenezioDeploy()
+export class OrderService {
+
+  @GenezioMethod({ type: "cron", cronString: '0 0 * * *' })
+  async checkForUnfinishedOrders() {
+    const unfinishedOrders = await this.orders.find({where: {
+      status: 'unfinished' 
+    }
+
+    await this.sendReminderEmails(orders)
+    })
+  }
+} </code>
               </div>
               <div
                 class="tab-pane fade"
