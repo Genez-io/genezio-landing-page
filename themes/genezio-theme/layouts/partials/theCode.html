@@ -231,7 +231,47 @@ export class ProductService {
                 aria-labelledby="storage-tab"
                 tabindex="0"
               >
-                storage ...
+                <p class="opacity-50 m-0">
+                  Store and retrieve user-generated content, application settings or multimedia files.
+                </p>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { ProductService } from '@genezio-sdk/my-app';
+
+const ProductDetails = () => {
+  // rest of the code
+
+  const getUserArticles = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    const details = await ProductService.getDetails(product.id)
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+import { getStorage } from '@genezio/storage';
+
+
+
+@GenezioDeploy()
+export class ProductService {
+  async saveProductReview(context: GnzContext, review: ProductReview): Promise<boolean> {
+    const storage: GStorage = getStorage('productReviewImages');
+      
+    for (const image of review.images) {
+      await storage.writeFile(image.name, image.content)
+    }
+  }
+}</code>
+                </pre>
               </div>
               <div
                 class="tab-pane fade"
