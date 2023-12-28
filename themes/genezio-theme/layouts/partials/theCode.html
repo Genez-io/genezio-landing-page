@@ -77,7 +77,106 @@
         aria-labelledby="genezio-rpc-tab"
         tabindex="0"
       >
-        ...
+        {{/* Start of genezio rpc */}}
+<div class="row mt-4">
+  <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+    <nav class="w-100">
+      <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+        <button class="nav-link nav-link-custom text-start active" id="build-apps-faster-tab" data-bs-toggle="pill" data-bs-target="#build-apps-faster" type="button" role="tab" aria-controls="build-apps-faster" aria-selected="true">
+          Build apps faster with typesafe APIs
+        </button>
+        <button class="nav-link nav-link-custom text-start" id="typesafe-api-in-any-language-tab" data-bs-toggle="pill" data-bs-target="#typesafe-api-in-any-language" type="button" role="tab" aria-controls="typesafe-api-in-any-language" aria-selected="false">
+          Typesafe APIs in any language
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="col-md-9 col-xs-12 px-4">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="build-apps-faster" role="tabpanel" aria-labelledby="build-apps-faster-tab" tabindex="0">
+                <ul class="opacity-50 m-0">
+                  <li>
+                    auto completion in your favorite IDE.  
+                  </li>
+                  <li>
+                    less error prone parameter passing than REST APIs. 
+                  </li>
+                  <li>
+                    a more natural paradigm in software design
+                  </li>
+                </ul>
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+type Person = {
+  firstName: string;
+  lastName: string;
+}
+
+@GenezioDeploy()
+class HelloWorldService {
+  hello(name: string): string {
+    return `Hello ${name}!`;
+  }
+
+  bye(person: Person): string {
+    return `Bye, ${person.firstName} ${person.lastName}!`;
+  }
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+
+const hi = await HelloworldService.hello('John');
+const person: Person = {firstName: 'John', lastName: 'Ronald'};
+const bye = await HelloworldService.hello(person);</code>
+                </pre>
+      </div>
+      <div class="tab-pane fade" id="typesafe-api-in-any-language" role="tabpanel" aria-labelledby="typesafe-api-in-any-language-tab" tabindex="0">
+        <p class="opacity-50 m-0">
+        We parse the backend code you write and store the AST in a database.  From there we generate client side stubs in any language.  It's like tRPC but for any backend language to any frontend language. Now supporting Javasript/Typescript, with support for DART/Flutter, Kotlin, Swift, GO, Python and others coming soon.
+        </p>
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+type Person = {
+  firstName: string;
+  lastName: string;
+}
+
+@GenezioDeploy()
+class HelloWorldService {
+  hello(name: string): string {
+    return `Hello ${name}!`;
+  }
+
+  bye(person: Person): string {
+    return `Bye, ${person.firstName} ${person.lastName}!`;
+  }
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+
+const hi = await HelloworldService.hello('John');
+const person: Person = {firstName: 'John', lastName: 'Ronald'};
+const bye = await HelloworldService.hello(person);</code>
+                </pre>
+      </div>
+    </div>
+  </div>
+</div>
+{{/* end of genezio rpc */}}
+
       </div>
       <div
         class="tab-pane fade show active"
