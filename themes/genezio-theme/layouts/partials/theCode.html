@@ -432,7 +432,196 @@ export class OrderService {
         aria-labelledby="genezio-serverless-tab"
         tabindex="0"
       >
-        ...
+      {{/*  Start genezio serverless  */}}
+         <div class="row mt-4">
+          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+            <nav class="w-100">
+              <div
+                class="nav flex-column nav-custom-left"
+                id="nav-tab"
+                role="tablist"
+              >
+                <button
+                  class="nav-link nav-link-custom text-start active"
+                  id="user-auth-tab2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#user-auth2"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-auth2"
+                  aria-selected="true"
+                >
+                  Zero Devops Deployment
+                </button>
+                <button
+                  class="nav-link nav-link-custom text-start"
+                  id="database-support-tab2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#database-support2"
+                  type="button"
+                  role="tab"
+                  aria-controls="database-support2"
+                  aria-selected="false"
+                >
+                  Multiple environments
+                </button>
+                <button
+                  class="nav-link nav-link-custom text-start"
+                  id="storage-tab2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#storage2"
+                  type="button"
+                  role="tab"
+                  aria-controls="storage2"
+                  aria-selected="false"
+                >
+                  Deploy frontend
+                </button>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-9 col-xs-12 px-4">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="user-auth2"
+                role="tabpanel"
+                aria-labelledby="user-auth-tab2"
+                tabindex="0"
+              >
+                <p class="opacity-50 m-0">
+                  Multi cloud support, now AWS and genezio.cloud (experimental).  Currently deploying on AWS Lambda, we're working to add long running servers. Support to deploy on your own AWS account.
+                </p>
+                <div class="code-title-genezio ms-4 px-3">genezio deploy</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio deploy
+Bundling your code...
+Deploying your server...
+
+The server was deployed and the SDK was successfully generated!
+You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
+
+Deploying your frontend...
+Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">testing locally</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio local
+Bundling your code...
+Starting your local server...
+
+Your local server is running and the SDK was successfully generated!
+Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
+                </pre>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="storage"
+                role="tabpanel"
+                aria-labelledby="storage-tab2"
+                tabindex="0"
+              >
+                <p class="opacity-50 m-0">
+                  Store and retrieve user-generated content, application settings or multimedia files.
+                </p>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { ProductService } from '@genezio-sdk/my-app';
+
+const ProductDetails = () => {
+  // rest of the code
+
+  const getUserArticles = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    const details = await ProductService.getDetails(product.id)
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+import { getStorage } from '@genezio/storage';
+
+
+
+@GenezioDeploy()
+export class ProductService {
+  async saveProductReview(context: GnzContext, review: ProductReview): Promise<boolean> {
+    const storage: GStorage = getStorage('productReviewImages');
+      
+    for (const image of review.images) {
+      await storage.writeFile(image.name, image.content)
+    }
+  }
+}</code>
+                </pre>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="database-support2"
+                role="tabpanel"
+                aria-labelledby="database-support-tab2"
+                tabindex="0"
+              >
+
+                <p class="opacity-50 m-0">
+                  Deploy to local, stage or production with one command.
+                </p>
+                
+
+<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio deploy
+Bundling your code...
+Deploying your server...
+
+The server was deployed and the SDK was successfully generated!
+You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">testing locally</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio local
+Bundling your code...
+Starting your local server...
+
+Your local server is running and the SDK was successfully generated!Test your code at https://dev.app.genez.io/test-interface/local?port=8083
+
+</code>
+                </pre>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      {{/*  end genezio serverless  */}}
       </div>
 
       <div
@@ -442,7 +631,57 @@ export class OrderService {
         aria-labelledby="genezio-cloud-tab"
         tabindex="0"
       >
-        ...
+      {{/*  start genezio cloud  */}}
+<div class="row mt-4">
+          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+            <nav class="w-100">
+              <div
+                class="nav flex-column nav-custom-left"
+                id="nav-tab"
+                role="tablist"
+              >
+                <button
+                  class="nav-link nav-link-custom text-start active"
+                  id="user-auth-tab2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#user-auth2"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-auth2"
+                  aria-selected="true"
+                >
+                  Cold start time
+                </button>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-9 col-xs-12 px-4">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="user-auth2"
+                role="tabpanel"
+                aria-labelledby="user-auth-tab2"
+                tabindex="0"
+              >
+                <p class="opacity-50 pb-3 m-0">
+                  Test parameters: <br />
+                  Hello World function <br />
+                  30 HTTPS requests for each scenario<br />
+                  Cached DNS records for functions domains to prevent additional time caused by DNS
+                </p>
+
+                <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
+
+              </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      {{/*  end genezio cloud  */}}
+        
       </div>
     </div>
   </div>
