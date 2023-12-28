@@ -16,6 +16,8 @@ customHeader: "White header"
 customFooter: "White footer"
 ---
 
+{{< external-link link="https://genez.io/">}}nvm{{< /external-link >}}
+
 ## Collaboration
 
 With the new collaboration feature, it is now easier than ever to work on a genezio project as a team. As an owner of the project, you have full control and you can invite your colleagues or revoke permissions anytime. Once people are invited and they accept the invitation, they can see the project details, use the test interface to test the project, or deploy new versions of the code.
