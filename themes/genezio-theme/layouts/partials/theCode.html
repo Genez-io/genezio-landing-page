@@ -180,21 +180,24 @@
                 tabindex="0"
               >
                 <p class="opacity-50 m-0">
-                  Manage and process large volumes of tasks and requests with
-                  ease and reliability. Extremely helpful when you need to do
-                  something asynchronously.
+                  Out of the box user auth. Currently supported methods are: email/password, google and github auth. Others are coming soon. What we do is generated the code for you as part of your project.
                 </p>
                 <div class="code-title-genezio ms-4 px-3">client</div>
                 <pre class="pre-code-wrapper-genezio px-4 py-1">
 <code>
-import { ProductService } from '@genezio-sdk/my-app';
+import { EmailAuthService, UserInfoService } from '@genezio-sdk/my-app'; 
 
-const ProductDetails = () => {
+const Signup = () => {
   // rest of the code
 
-  const buy = async (e) => {
+  const handleSignupSubmit = async (e) => {
     // Use the auto generated EmailAuthService to register the user
-    const details = await ProductService.buy(product)
+    await EmailAuthService.register(user.email, user.password, user.username)
+  }
+
+  const getUserInfo = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    await UserInfoService.getUserInfo()
   }
   
   // rest of the code
@@ -206,20 +209,13 @@ const ProductDetails = () => {
                 <pre class="pre-code-wrapper-genezio px-4 py-1">
 <code>
 import { GenezioDeploy, GnzContext } from '@genezio/types';
-import { getStorage } from '@genezio/storage';
 
 @GenezioDeploy()
-export class ProductService {
-  async buy(context: GnzContext, product: Product): Promise<boolean> {
-    this.queue.add('buyProduct', { product, user: context.user })
-  }
+export class UserInfoService {
+  async getUserInfo(context: GnzContext): Promise<UserInfo> {
+    const userInfo = await UserModel.getUserInfo(context.user.id)
 
-  @GenezioMethod({ type: "queue", queue: 'buyProduct' })
-  async buyQueue(context: GnzContext, product: Product): Promise<boolean> {
-    // charge the user
-    // check if the payment was successful
-    // send the confirmation email
-    // return true or false
+    return userInfo
   }
 }</code>
                 </pre>
