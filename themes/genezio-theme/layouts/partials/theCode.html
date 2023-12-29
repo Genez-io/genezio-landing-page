@@ -77,7 +77,106 @@
         aria-labelledby="genezio-rpc-tab"
         tabindex="0"
       >
-        ...
+        {{/* Start of genezio rpc */}}
+<div class="row mt-4">
+  <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+    <nav class="w-100">
+      <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+        <button class="nav-link nav-link-custom text-start active" id="build-apps-faster-tab" data-bs-toggle="pill" data-bs-target="#build-apps-faster" type="button" role="tab" aria-controls="build-apps-faster" aria-selected="true">
+          Build apps faster with typesafe APIs
+        </button>
+        <button class="nav-link nav-link-custom text-start" id="typesafe-api-in-any-language-tab" data-bs-toggle="pill" data-bs-target="#typesafe-api-in-any-language" type="button" role="tab" aria-controls="typesafe-api-in-any-language" aria-selected="false">
+          Typesafe APIs in any language
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="col-md-9 col-xs-12 px-4">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="build-apps-faster" role="tabpanel" aria-labelledby="build-apps-faster-tab" tabindex="0">
+                <ul class="opacity-50 m-0">
+                  <li>
+                    auto completion in your favorite IDE.  
+                  </li>
+                  <li>
+                    less error prone parameter passing than REST APIs. 
+                  </li>
+                  <li>
+                    a more natural paradigm in software design
+                  </li>
+                </ul>
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+type Person = {
+  firstName: string;
+  lastName: string;
+}
+
+@GenezioDeploy()
+class HelloWorldService {
+  hello(name: string): string {
+    return `Hello ${name}!`;
+  }
+
+  bye(person: Person): string {
+    return `Bye, ${person.firstName} ${person.lastName}!`;
+  }
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+
+const hi = await HelloworldService.hello('John');
+const person: Person = {firstName: 'John', lastName: 'Ronald'};
+const bye = await HelloworldService.hello(person);</code>
+                </pre>
+      </div>
+      <div class="tab-pane fade" id="typesafe-api-in-any-language" role="tabpanel" aria-labelledby="typesafe-api-in-any-language-tab" tabindex="0">
+        <p class="opacity-50 m-0">
+        We parse the backend code you write and store the AST in a database.  From there we generate client side stubs in any language.  It's like tRPC but for any backend language to any frontend language. Now supporting Javasript/Typescript, with support for DART/Flutter, Kotlin, Swift, GO, Python and others coming soon.
+        </p>
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+type Person = {
+  firstName: string;
+  lastName: string;
+}
+
+@GenezioDeploy()
+class HelloWorldService {
+  hello(name: string): string {
+    return `Hello ${name}!`;
+  }
+
+  bye(person: Person): string {
+    return `Bye, ${person.firstName} ${person.lastName}!`;
+  }
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+
+const hi = await HelloworldService.hello('John');
+const person: Person = {firstName: 'John', lastName: 'Ronald'};
+const bye = await HelloworldService.hello(person);</code>
+                </pre>
+      </div>
+    </div>
+  </div>
+</div>
+{{/* end of genezio rpc */}}
+
       </div>
       <div
         class="tab-pane fade show active"
@@ -180,10 +279,164 @@
                 tabindex="0"
               >
                 <p class="opacity-50 m-0">
+                  Out of the box user auth. Currently supported methods are: email/password, google and github auth. Others are coming soon. What we do is generated the code for you as part of your project.
+                </p>
+                <div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { EmailAuthService, UserInfoService } from '@genezio-sdk/my-app'; 
+
+const Signup = () => {
+  // rest of the code
+
+  const handleSignupSubmit = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    await EmailAuthService.register(user.email, user.password, user.username)
+  }
+
+  const getUserInfo = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    await UserInfoService.getUserInfo()
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+
+@GenezioDeploy()
+export class UserInfoService {
+  async getUserInfo(context: GnzContext): Promise<UserInfo> {
+    const userInfo = await UserModel.getUserInfo(context.user.id)
+
+    return userInfo
+  }
+}</code>
+                </pre>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="storage"
+                role="tabpanel"
+                aria-labelledby="storage-tab"
+                tabindex="0"
+              >
+                <p class="opacity-50 m-0">
+                  Store and retrieve user-generated content, application settings or multimedia files.
+                </p>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { ProductService } from '@genezio-sdk/my-app';
+
+const ProductDetails = () => {
+  // rest of the code
+
+  const getUserArticles = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    const details = await ProductService.getDetails(product.id)
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+import { getStorage } from '@genezio/storage';
+
+
+
+@GenezioDeploy()
+export class ProductService {
+  async saveProductReview(context: GnzContext, review: ProductReview): Promise<boolean> {
+    const storage: GStorage = getStorage('productReviewImages');
+      
+    for (const image of review.images) {
+      await storage.writeFile(image.name, image.content)
+    }
+  }
+}</code>
+                </pre>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="database-support"
+                role="tabpanel"
+                aria-labelledby="database-support-tab"
+                tabindex="0"
+              >
+
+                <p class="opacity-50 m-0">
+                  Integrated database handling, everything you need to create, write and maintain a backend that scales with your app. We offer Redis or Postgres through our partners.  Or bring your own database and connect to it like you normally would
+                </p>
+                
+
+<div class="code-title-genezio ms-4 px-3">client</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { ProductService } from '@genezio-sdk/my-app';
+
+const ProductDetails = () => {
+  // rest of the code
+
+  const getUserDetails = async (e) => {
+    // Use the auto generated EmailAuthService to register the user
+    const details = await ProductService.getDetails(product.id)
+  }
+  
+  // rest of the code
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+
+@GenezioDeploy()
+export class ProductService {
+  async getUserInfo(context: GnzContext, productId: number): Promise<ProductDetails> {
+    let product = await this.redisClient.get(`product:${productId}:details`);
+    if (result) {     
+      return result;
+    }
+
+    product = await this.postgressDb.find({where: {
+        id: productId 
+      }
+    })
+    await this.redisClient.set(`product:${productId}:details`, product);
+
+    return product
+  }
+} </code>
+                </pre>
+
+              </div>
+              <div
+                class="tab-pane fade"
+                id="queues"
+                role="tabpanel"
+                aria-labelledby="queues-tab"
+                tabindex="0"
+              >
+               <p class="opacity-50 m-0">
                   Manage and process large volumes of tasks and requests with
                   ease and reliability. Extremely helpful when you need to do
                   something asynchronously.
                 </p>
+
                 <div class="code-title-genezio ms-4 px-3">client</div>
                 <pre class="pre-code-wrapper-genezio px-4 py-1">
 <code>
@@ -221,35 +474,8 @@ export class ProductService {
     // send the confirmation email
     // return true or false
   }
-}</code>
+} </code>
                 </pre>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="storage"
-                role="tabpanel"
-                aria-labelledby="storage-tab"
-                tabindex="0"
-              >
-                storage ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="database-support"
-                role="tabpanel"
-                aria-labelledby="database-support-tab"
-                tabindex="0"
-              >
-                db support ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="queues"
-                role="tabpanel"
-                aria-labelledby="queues-tab"
-                tabindex="0"
-              >
-              queues ...
               </div>
               <div
                 class="tab-pane fade"
@@ -258,7 +484,29 @@ export class ProductService {
                 aria-labelledby="cron-jobs-tab"
                 tabindex="0"
               >
-                cron jobs ...
+                <p class="opacity-50 m-0">
+                  Support for configurable cron jobs to automate your application.
+                </p>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { GenezioDeploy, GnzContext } from '@genezio/types';
+
+@GenezioDeploy()
+export class OrderService {
+
+  @GenezioMethod({ type: "cron", cronString: '0 0 * * *' })
+  async checkForUnfinishedOrders() {
+    const unfinishedOrders = await this.orders.find({where: {
+      status: 'unfinished' 
+    }
+
+    await this.sendReminderEmails(orders)
+    })
+  }
+} </code>
               </div>
               <div
                 class="tab-pane fade"
@@ -267,22 +515,171 @@ export class ProductService {
                 aria-labelledby="real-time-tab"
                 tabindex="0"
               >
-                real time ...
+                <p class="opacity-50 m-0">
+                  We will support long running servers through genezio.deploy on AWS and we will provide real-time communication between the backend and the frontend.
+                </p>
               </div>
             </div>
           </div>
         </div>
         {{/* end genezio backend */}}
       </div>
-      <div
-        class="tab-pane fade"
-        id="genezio-serverless"
-        role="tabpanel"
-        aria-labelledby="genezio-serverless-tab"
-        tabindex="0"
-      >
-        ...
+      {{/* Start genezio serverless */}}
+<div class="tab-pane fade" id="genezio-serverless" role="tabpanel" aria-labelledby="genezio-serverless-tab" tabindex="0">
+  <div class="row mt-4">
+    <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+      <nav class="w-100">
+        <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+          <button class="nav-link nav-link-custom text-start active" id="user-auth-tab2" data-bs-toggle="tab" data-bs-target="#user-auth2" type="button" role="tab" aria-controls="user-auth2" aria-selected="true">
+            Zero Devops Deployment
+          </button>
+          <button class="nav-link nav-link-custom text-start" id="database-support-tab2" data-bs-toggle="tab" data-bs-target="#database-support2" type="button" role="tab" aria-controls="database-support2" aria-selected="false">
+            Multiple environments
+          </button>
+          <button class="nav-link nav-link-custom text-start" id="storage-tab2" data-bs-toggle="tab" data-bs-target="#storage2" type="button" role="tab" aria-controls="storage2" aria-selected="false">
+            Deploy frontend
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-9 col-xs-12 px-4">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="user-auth2" role="tabpanel" aria-labelledby="user-auth-tab2" tabindex="0">
+          <!-- Content for the "Zero Devops Deployment" tab -->
+         <p class="opacity-50 m-0">
+                 Multi cloud support, now AWS and genezio.cloud (experimental).  Currently deploying on AWS Lambda, we're working to add long running servers. Support to deploy on your own AWS account.
+          </p>
+                
+
+<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio deploy
+Bundling your code...
+Deploying your server...
+
+
+The server was deployed and the SDK was successfully generated!
+You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/
+a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
+
+
+Deploying your frontend...
+Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">testing locally</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio local
+Bundling your code...
+Starting your local server...
+
+Your local server is running and the SDK was successfully generated!
+Test your code at https://dev.app.genez.io/test-interface/local?port=8083
+</code>
+                </pre>
+
+        </div>
+        <div class="tab-pane fade" id="database-support2" role="tabpanel" aria-labelledby="database-support-tab2" tabindex="0">
+          <!-- Content for the "Multiple environments" tab -->
+         <p class="opacity-50 m-0">
+                Deploy to local, stage or production with one command.
+          </p>
+                
+
+<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio deploy
+Bundling your code...
+Deploying your server...
+
+
+The server was deployed and the SDK was successfully generated!
+You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/
+a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
+
+
+Deploying your frontend...
+Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">testing locally</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio local
+Bundling your code...
+Starting your local server...
+
+Your local server is running and the SDK was successfully generated!
+Test your code at https://dev.app.genez.io/test-interface/local?port=8083
+</code>
+                </pre>
+        </div>
+        <div class="tab-pane fade" id="storage2" role="tabpanel" aria-labelledby="storage-tab2" tabindex="0">
+          <!-- Content for the "Deploy frontend" tab -->
+         <p class="opacity-50 m-0">
+                Deploy to AWS Cloud Front now.  Working to integrate with Netlify.
+          </p>
+                
+
+<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio deploy
+Bundling your code...
+Deploying your server...
+
+
+The server was deployed and the SDK was successfully generated!
+You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/
+a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
+
+
+Deploying your frontend...
+Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">testing locally</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio local
+Bundling your code...
+Starting your local server...
+
+Your local server is running and the SDK was successfully generated!
+Test your code at https://dev.app.genez.io/test-interface/local?port=8083
+</code>
+                </pre>
+        </div>
       </div>
+    </div>
+  </div>
+  {{/* end genezio serverless */}}
+</div>
+
 
       <div
         class="tab-pane fade"
@@ -291,7 +688,57 @@ export class ProductService {
         aria-labelledby="genezio-cloud-tab"
         tabindex="0"
       >
-        ...
+      {{/*  start genezio cloud  */}}
+<div class="row mt-4">
+          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+            <nav class="w-100">
+              <div
+                class="nav flex-column nav-custom-left"
+                id="nav-tab"
+                role="tablist"
+              >
+                <button
+                  class="nav-link nav-link-custom text-start active"
+                  id="user-auth-tab2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#user-auth2"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-auth2"
+                  aria-selected="true"
+                >
+                  Cold start time
+                </button>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-9 col-xs-12 px-4">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="user-auth2"
+                role="tabpanel"
+                aria-labelledby="user-auth-tab2"
+                tabindex="0"
+              >
+                <p class="opacity-50 pb-3 m-0">
+                  Test parameters: <br />
+                  Hello World function <br />
+                  30 HTTPS requests for each scenario<br />
+                  Cached DNS records for functions domains to prevent additional time caused by DNS
+                </p>
+
+                <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
+
+              </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      {{/*  end genezio cloud  */}}
+        
       </div>
     </div>
   </div>
