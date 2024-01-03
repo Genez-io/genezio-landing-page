@@ -1,6 +1,7 @@
 ---
 title: test title
 date: 2023-11-16
+readTime: 20
 tags:
   - Tutorials
 author: Radu Dumitrescu
