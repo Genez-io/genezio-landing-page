@@ -4,7 +4,7 @@ date: 2023-11-16
 readTime: 20
 tags:
   - Tutorials
-author: TESTETEE
+author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/mistakesintypescript.webp
 preview: We will walk through the most common 10 mistakes in typescript and how to avoid them.
