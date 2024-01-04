@@ -5,14 +5,14 @@
     class="container px-2"
   >
     <div class="row px-4 pt-3">
-      {{/* TODO: tag */}}
+            <div class="mt-4">
+              {{ if .Params.tags }}
+            {{ range .Params.tags }}
+            <a class="text-decoration-none fw-semibold blogGradientText" style="font-size: 14px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          {{ end }}
 
-      <a class="text-decoration-none fw-bold pt-4 blogGradientText" style="font-size: 14px"
-        >Tutorials</a
-      >
-
-      <h2 class="text-black fw-bold mb-0 mt-2 mb-4 pt-1">{{ .Title }}</h2>
-
+      <h2 class="text-black fw-bold mb-0 mt-2 mb-4 pb-3 pt-1">{{ .Title }}</h2>
       {{/* TODO: replace with the photo */}}
       <div
         class="mb-4 mt-3 position-relative"
@@ -36,16 +36,17 @@
         >
           <div class="d-flex align-items-center">
             <img src="/images/clock-icon.svg" alt="clock-icon" />
-            <p style="font-size: 12px; margin-left: 4px" class="text-white mb-0">14 minutes read</p>
+            <p style="font-size: 12px; margin-left: 4px" class="text-white mb-0">
+              {{ .Params.readTime }} minutes read
+            </p>
           </div>
         </div>
       </div>
       {{/* writer + share on */}}
-      <div class="d-flex justify-content-between align-items-center mt-3">
-        {{/* TODO: avatar placeholder */}}
+      <div class="d-flex justify-content-between align-items-center mt-3 pt-3">
         <div class="d-flex">
           <img
-            src="/images/placeholderAvatar.png"
+            src="/images/writers/{{ .Params.author | urlize  }}.png"
             style="height: 48px; width: 48px"
             class="rounded-circle"
             alt="writer-avatar"
@@ -54,8 +55,9 @@
             <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold">
               {{ .Params.author }}
             </p>
-            {{/* TODO: format real date */}}
-            <p style="color: #525252" class="mb-0 fw-medium">Dec 12, 2023</p>
+            <p style="color: #525252" class="mb-0 fw-medium">
+              {{ dateFormat "Jan 02, 2006" .Params.date }}
+            </p>
           </div>
         </div>
         <div>
@@ -83,14 +85,127 @@
 
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
 
-    <div class="row px-4 pt-3">
-      {{/* TODO: add class for article content style */}}
+    <div class="row px-4 pt-3  pb-5"> 
       <div class="articlePost col-lg-8">{{ .Content }}</div>
       <div class="col-lg-1"></div>
-      <div class="articlePost col-lg-3">Content List</div>
+      <div class="articlePost col-lg-3">
+        <p class="fw-semibold" style="opacity: .6;">Article contents</p>
+      </div>
     </div>
 
-    {{/* TODO: subscribe section */}}
+    {{/* Start of Subscribe to our newsletter */}}
+    <div class="row px-4 pt-3">
+      <div class="col-lg-8">
+        <div
+          style="
+             background: radial-gradient(
+              circle at top left,
+            rgba(100, 100, 100, 0) -20%,
+            rgba(111, 66, 193, 1) -10%,
+            #21143a 100%                 
+            );
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+          "
+          class="text-white p-4 mb-3"
+        >
+          <div class="p-3">
+            <h4 class="mb-2">Subscribe to our newsletter</h4>
+            <p style="font-size: 14px" class="mt-1">
+              <span class="opacity-50">Genezio is a serverless platform for building</span>
+              <span style="color: #99fddb" class="fw-medium"> full-stack web and mobile</span>
+              <span class="d-block"></span>
+              <span class="opacity-50">applications in a scalable and cost-efficient way.</span>
+            </p>
+
+            <div
+              class="col-12 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row pt-4"
+            >
+              <form
+                id="subscribeForm"
+                class="d-flex w-100 align-items-start align-items-md-center flex-column flex-md-row"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control border-0 text-white ms-0 blog-input-white"
+                  id="emailSubscribeInput"
+                  placeholder="Enter your email"
+                  style="background-color: rgba(255, 255, 255, 0.1); height: 48px"
+                />
+                <button
+                  class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 footer-subscribe-btn-custom"
+                  style="height: 48px"
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{/* End of Subscribe to our newsletter */}}
+      </div>
+        
+        {{/* Start of last 3 articles listing */}} 
+        <div class="row px-1 mt-3 pt-5 w-100">
+          {{ $recentPosts := slice }}
+          {{ $allPosts := where site.RegularPages "Type" "posts" }}
+          {{ $sortedPosts := $allPosts.ByDate.Reverse }}
+          {{ range first 3 $sortedPosts }}
+            {{ $recentPosts = $recentPosts | append . }}
+          {{ end }}
+          {{ range $recentPosts }}
+                
+                  <div class="col-12 col-md-6 col-lg-3 p-0 bg-white" style="border-top-right-radius: 20px;  max-width: 367px; width: 100%;  margin: 0px 20px 40px 20px;">
+        {{ if .Params.thumbnail }}
+    {{/*  Photo  */}}
+    <a class="text-decoration-none" href="{{ .RelPermalink }}">
+        <div class="mb-4 position-relative"  style="height: 195px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px">
+          {{/*  read time  */}}
+          <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
+            <div class="d-flex align-items-center">
+              <img src="/images/clock-icon.svg" alt="clock-icon"/>
+                <p style="font-size: 12px; margin-left: 4px;" class="text-white mb-0">{{ .Params.readTime }} minutes read</p>
+            </div>
+          </div>
+        </div>
+    </a>
+
+        {{ end }}
+
+        {{/*  Tag  */}}
+        <div class="mx-4 mb-4">
+          {{ if .Params.tags }}
+          <div class="mb-2 pb-1">
+            {{ range .Params.tags }}
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{/*  Title & preview  */}}
+          <a class="text-decoration-none" href="{{ .RelPermalink }}">
+            <div class="mb-4"> 
+              <h4 class="text-black mb-0" style="height: 64px">{{ .Title }}</h4>
+              <p style="color: #525252; height: 72px;" class="mt-4 mb-0">{{ .Params.preview }}</p>
+            </div>
+          </a>
+
+          {{/*  Writer Details  */}}
+          <div class="d-flex">
+            <img src="/images/writers/{{ .Params.author | urlize  }}.png" style="height:  48px; width: 48px;" class="rounded-circle " alt="writer-avatar"/>
+            <div class="d-flex flex-column mx-4">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+            </div>
+          </div>
+        </div>  
+            </div>
+          {{ end }}
+        </div>
+        {{/* End of last 3 articles listing */}}
+    </div>
   </div>
 </div>
 {{ end }}

@@ -1,6 +1,7 @@
 ---
-title: test title
+title: test title3
 date: 2023-11-16
+readTime: 20
 tags:
   - Tutorials
 author: Radu Dumitrescu
@@ -16,4 +17,4 @@ customHeader: "White header"
 customFooter: "White footer"
 ---
 
-test content
+You can find the complete project on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/blockchain" >}}Github{{< /external-link >}}. Feel free to take a look at it to better understand how the complete project should look.🤩

@@ -1,5 +1,6 @@
 ---
 title: 10 Common Mistakes in Typescript Development
+readTime: 20
 date: 2023-11-16
 tags:
   - Tutorials

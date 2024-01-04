@@ -13,6 +13,10 @@ input::placeholder {
   color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.blog-input-white::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .blogGradientText {
   background-color: #f3ec78;
   cursor: pointer;
