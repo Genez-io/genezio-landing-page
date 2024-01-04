@@ -55,7 +55,6 @@
             <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold">
               {{ .Params.author }}
             </p>
-            {{/* TODO: format real date */}}
             <p style="color: #525252" class="mb-0 fw-medium">
               {{ dateFormat "Jan 02, 2006" .Params.date }}
             </p>
@@ -87,7 +86,6 @@
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
 
     <div class="row px-4 pt-3">
-      {{/* TODO: add class for article content style */}}
       <div class="articlePost col-lg-8">{{ .Content }}</div>
       <div class="col-lg-1"></div>
       <div class="articlePost col-lg-3">
@@ -95,8 +93,8 @@
       </div>
     </div>
 
-    {{/* TODO: subscribe section */}} {{/* Start of Subscribe to our newsletter */}}
-    <div class="row px-4 py-5">
+     {{/* Start of Subscribe to our newsletter */}}
+    <div class="row px-4 pt-5">
       <div class="col-lg-8">
         <div
           style="
@@ -145,8 +143,7 @@
       </div>
         
         {{/* Start of last 3 articles listing */}} 
-
-        <div class="row px-4 py-5 border">
+        <div class="row px-1 pt-5 w-100">
           {{ $recentPosts := slice }}
           {{ $allPosts := where site.RegularPages "Type" "posts" }}
           {{ $sortedPosts := $allPosts.ByDate.Reverse }}
@@ -154,15 +151,51 @@
             {{ $recentPosts = $recentPosts | append . }}
           {{ end }}
           {{ range $recentPosts }}
-            <div class="row my-4 pb-3">
-              <div class="col mx-3 d-flex flex-column justify-content-between">
-                <div>
-                  {{.Params.Title}}
-                  {{ if .Params.tags }}
-                    <!-- Your code for displaying post content here -->
-                  {{ end }}
-                </div>
-              </div>
+                
+                  <div class="col-12 col-md-6 col-lg-3 p-0 bg-white" style="border-top-right-radius: 20px;  max-width: 367px; width: 100%;  margin: 0px 20px 40px 20px;">
+        {{ if .Params.thumbnail }}
+    {{/*  Photo  */}}
+    <a class="text-decoration-none" href="{{ .RelPermalink }}">
+        <div class="mb-4 position-relative"  style="height: 195px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px">
+          {{/*  read time  */}}
+          <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
+            <div class="d-flex align-items-center">
+              <img src="/images/clock-icon.svg" alt="clock-icon"/>
+                <p style="font-size: 12px; margin-left: 4px;" class="text-white mb-0">{{ .Params.readTime }} minutes read</p>
+            </div>
+          </div>
+        </div>
+    </a>
+
+        {{ end }}
+
+        {{/*  Tag  */}}
+        <div class="mx-4 mb-4">
+          {{ if .Params.tags }}
+          <div class="mb-2 pb-1">
+            {{ range .Params.tags }}
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{/*  Title & preview  */}}
+          <a class="text-decoration-none" href="{{ .RelPermalink }}">
+            <div class="mb-4"> 
+              <h4 class="text-black mb-0" style="height: 64px">{{ .Title }}</h4>
+              <p style="color: #525252; height: 72px;" class="mt-4 mb-0">{{ .Params.preview }}</p>
+            </div>
+          </a>
+
+          {{/*  Writer Details  */}}
+          <div class="d-flex">
+            <img src="/images/writers/{{ .Params.author | urlize  }}.png" style="height:  48px; width: 48px;" class="rounded-circle " alt="writer-avatar"/>
+            <div class="d-flex flex-column mx-4">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+            </div>
+          </div>
+        </div>  
             </div>
           {{ end }}
         </div>
