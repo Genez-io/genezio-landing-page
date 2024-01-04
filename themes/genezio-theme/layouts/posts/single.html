@@ -90,7 +90,9 @@
       {{/* TODO: add class for article content style */}}
       <div class="articlePost col-lg-8">{{ .Content }}</div>
       <div class="col-lg-1"></div>
-      <div class="articlePost col-lg-3">Content List</div>
+      <div class="articlePost col-lg-3">
+        <p class="fw-semibold" style="opacity: .6;">Article contents</p>
+      </div>
     </div>
 
     {{/* TODO: subscribe section */}} {{/* Start of Subscribe to our newsletter */}}
@@ -139,9 +141,32 @@
             </div>
           </div>
         </div>
-        {{/* End of Subscribe to our newsletter */}} {{/* Start of last 3 articles listing */}} WIP
-        {{/* End of last 3 articles listing */}}
+        {{/* End of Subscribe to our newsletter */}}
       </div>
+        
+        {{/* Start of last 3 articles listing */}} 
+
+        <div class="row px-4 py-5 border">
+          {{ $recentPosts := slice }}
+          {{ $allPosts := where site.RegularPages "Type" "posts" }}
+          {{ $sortedPosts := $allPosts.ByDate.Reverse }}
+          {{ range first 3 $sortedPosts }}
+            {{ $recentPosts = $recentPosts | append . }}
+          {{ end }}
+          {{ range $recentPosts }}
+            <div class="row my-4 pb-3">
+              <div class="col mx-3 d-flex flex-column justify-content-between">
+                <div>
+                  {{.Params.Title}}
+                  {{ if .Params.tags }}
+                    <!-- Your code for displaying post content here -->
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+        {{/* End of last 3 articles listing */}}
     </div>
   </div>
 </div>
