@@ -15,7 +15,20 @@ meta_og_image: "https://genez.io/images/mistakesintypescript.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
+menuItems:
+  mistake1ID: "mistake1"
+  sectionIntroductionID: "custom-id"
 ---
+
+This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
+
+Genezio makes things easier for you, so you don’t need any additional npm library like node-cron.
+
+## Section 1: Introduction {#section-introduction}
+
+### Mistake 1: Lack of Types {#mistake1}
+
+### Mistake 2: ...
 
 This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
 
@@ -183,5 +196,8 @@ In conclusion, scheduling tasks with Node.js and Genezio is a powerful and flexi
 I hope you enjoyed this tutorial and I encourage you to check out our other for more tips and tricks on improving your software engineering skills. 🥷 💻
 
 Also, I invite you to check your examples from
+[Link with ID](#custom-id)
+
+## This is a heading with an ID {#custom-id}
 
 Start leveraging the power of Genezio for efficient task scheduling in your applications.
