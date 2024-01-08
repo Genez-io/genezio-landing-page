@@ -1,11 +1,31 @@
 {{ define "header_css" }}{{ end }} {{ define "body_classes" }}page-default-single{{ end }} {{ define
 "header_classes" }}{{ end }} {{ define "main" }}
-<div class="container pt-10 pb-6">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
+
+<div class="px-3 bg-dark">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0px 40px 0px 40px;
+    "
+    class="container text-white"
+  >
+  
+    <div class="pt-4 text-center">
+      <h1 class="mt-2 pt-5 fw-bold">
+        {{ if eq .Title "Terms & Conditions" }}
+            {{ .Title | replaceRE "&" "<span style=\"color: #00FAA4;\">&</span>" | safeHTML }}
+        {{ else }}
+            {{ .Title }}
+        {{ end }}
+    </h1>
+
+      <p style="font-size: 18px; margin-bottom: 120px" class="opacity-50 mt-2 pt-4">
+        Last updated: {{ .Params.lastUpdated }}
+      </p>
     </div>
+
+    <div class="eula">{{.Content}}</div>
   </div>
 </div>
 {{ end }}

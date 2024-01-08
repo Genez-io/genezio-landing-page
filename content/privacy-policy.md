@@ -1,32 +1,12 @@
 ---
-title: Privacy Policy
+title: Terms & Conditions
+lastUpdated: "October 3rd, 2023"
 # meta data start
 description: "Next gen. full-stack platform for modern software development"
 meta_og_url: "https://genez.io"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
 ---
-
-<!-----
-
-Yay, no errors, warnings, or alerts!
-
-Conversion time: 0.616 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β34
-* Tue Jan 03 2023 06:22:22 GMT-0800 (PST)
-* Source doc: Privacy policy_Genezio_01.12.2022
------>
 
 **Privacy Policy**
 
@@ -217,5 +197,3 @@ Data protection officer: Andrada Damian
 [andrada@simplecap.eu](mailto:andrada@simplecap.eu)
 
 We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.
-
-This document was last updated on October 3<sup>rd</sup>, 2023
