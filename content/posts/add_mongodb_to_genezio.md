@@ -14,6 +14,8 @@ description: "In this tutorial, I will show you the steps of integrating a Mongo
 meta_og_url: "https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project"
 meta_og_image: "https://genez.io/images/genezio_mongodb.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 In this tutorial, I will show you the steps of integrating a Mongo database into your genezio {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" >}}Getting Started project{{< /external-link >}}
@@ -26,7 +28,7 @@ Following this tutorial, you will be able to:
 - Integrate the Mongo database into your project using `mongoose`
 
 Any time you get stuck or have questions, please contact me on {{< external-link link="https://discord.gg/XmpKD9ytxS" >}}Discord{{< /external-link >}}
- or write me an email at radu@genez.io. I am more than happy to help you 😄
+or write me an email at radu@genez.io. I am more than happy to help you 😄
 
 ## **Contents**
 
@@ -64,7 +66,7 @@ As a cloud database service, MongoDB Atlas offers seamless scalability, high ava
 ### **Create a MongoDB Atlas account**
 
 Go to {{< external-link link="https://www.mongodb.com/cloud/atlas/register" >}}MongoDB Cloud Atlas{{< /external-link >}}
- and create an account. Personally, I recommend creating an account using Google Sign up.
+and create an account. Personally, I recommend creating an account using Google Sign up.
 
 ### **Create a free cluster**
 
@@ -102,7 +104,7 @@ A pop-up with the MongoDB connection string will appear. Replace `<password>` wi
 ### **Integrate your newly created cluster into the project**
 
 Now you can go to your {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" >}}Getting Started project{{< /external-link >}}
- and open an IDE of your choice. I recommend VS Code.
+and open an IDE of your choice. I recommend VS Code.
 
 In the ‘server’ folder, create a `.env` file and add a line with the `MONGO_DB_URI=<your_connection_string>` value. You can then use it all over your code using `process.env.MONGO_DB_URI`.
 
@@ -165,6 +167,6 @@ This is the most conventional method of establishing a connection to a database,
 #### **Data API**
 
 {{< external-link link="https://www.mongodb.com/docs/atlas/api/data-api/" >}}Mongo DB Atlas Data API{{< /external-link >}}
- offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.
+offers a solution where you can directly access the database through an API, eliminating the requirement of establishing an initial connection and reducing serverless cold-start significantly.
 
 &#x1F973; Congratulations on acquiring your own database that you can use to work on your projects!

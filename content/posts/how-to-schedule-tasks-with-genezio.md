@@ -12,6 +12,8 @@ description: "Schedulers are automated systems designed to carry out tasks at se
 meta_og_url: "https://genez.io/blog/how-to-schedule-tasks-with-genezio"
 meta_og_image: "https://genez.io/images/scheduletasks.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 ##

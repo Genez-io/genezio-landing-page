@@ -12,6 +12,8 @@ description: "Compare genezio with Express.js. Find out about writing code, test
 meta_og_url: "https://genez.io/blog/exploring-the-differences-between-genezio-and-express.js"
 meta_og_image: "https://genez.io/images/genezio_express.png"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 <!-----
@@ -41,23 +43,20 @@ Conversion notes:
 
 ----->
 
-
 APIs are one of the most important tools in software technology and are used for building modern and reliable software products. There are many ways of developing and exposing an API. Over time, frameworks were built, and doing this became much easier and user-friendlier. Today we will compare {{< external-link link="http://genez.io" >}}genezio{{< /external-link >}}
- with one of the major players in the market, Express. Let’s get started!
+with one of the major players in the market, Express. Let’s get started!
 
 Express is one of the most popular frameworks used for backend programming. Developed on top of Node, it provides a robust set of features for building RESTful APIs. It allows developers to set common web application settings and add additional “middleware” at any point in the request handling pipeline. It is easy to use, well maintained, and a great choice for building almost any kind of web application.
 
 {{< external-link link="http://genez.io" >}}genezio{{< /external-link >}}
- is a platform for developing serverless APIs. Compared with Express, or any other backend framework, it isn’t just a set of rules for writing server-side code, it is also a deployment mechanism for those who want to obtain performant and cost efficient serverless environments for their projects.
+is a platform for developing serverless APIs. Compared with Express, or any other backend framework, it isn’t just a set of rules for writing server-side code, it is also a deployment mechanism for those who want to obtain performant and cost efficient serverless environments for their projects.
 
 This may sound a bit complicated, so let’s break down this comparison using some sample code. We will take a look at:
 
-
-
-* Writing code
-* Testing the code
-* Calling the API from your client
-* Deployment
+- Writing code
+- Testing the code
+- Calling the API from your client
+- Deployment
 
 **Writing the Code**
 
@@ -65,33 +64,30 @@ Using Express.js, you will have to open an HTTP server, set up an endpoint for e
 
 Let’s write a simple app with a GET request and a POST request. The GET request will greet us with “Hello World!”, while the POST request will read a name from the request body and send back a greeting to that name.
 
-
 ```javascript
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-const port = 3000
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+const port = 3000;
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false  }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.post("/", (req, res) => {
-  const { name } = req.body
-  res.send("Hello, " + name + "!")
-})
+  const { name } = req.body;
+  res.send("Hello, " + name + "!");
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
 ```
 
-
 Writing the same logic in genezio would look something like this:
-
 
 ```javascript
 export class HelloWorld {
@@ -105,9 +101,7 @@ export class HelloWorld {
 }
 ```
 
-
 Notice how the code sample is smaller and easier to read. The logic itself is unchanged, but we do not have to worry about setting up the server, parsing data or dealing with request/response objects.
-
 
 A genezio project is structured with classes and functions, rather than routes and endpoints, making it easy to maintain.
 
@@ -120,78 +114,72 @@ The most common way of testing an Express application is by using an HTTP client
 
 genezio comes with a custom tool for testing your projects locally, as well as after they are deployed. The interface is aware of your project’s structure and autocompletes your testing environment with the corresponding function and parameter names. You don’t have to manually add your endpoints, just select the function you want to test, input the parameters and click SEND.
 
-
-
 ![test interface](/posts/test_interface.webp "image_tooltip")
-
 
 **Accessing Your API**
 
 Using an Express API is the same as using any RESTful API. The client has to make an HTTP request, making sure to add the correct headers, body, query params and request type. Let’s use JavaScript to call our POST endpoint defined earlier.
 
-
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 let data = JSON.stringify({
-  "name": "John"
+  name: "John",
 });
 
 let config = {
-  method: 'post',
-  url: 'http://localhost:3000/',
+  method: "post",
+  url: "http://localhost:3000/",
   headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   },
-  data : data
+  data: data,
 };
 
-axios.request(config)
-  .then((response) => { console.log(JSON.stringify(response.data)) })
-  .catch((error) => {  console.log(error) });
+axios
+  .request(config)
+  .then((response) => {
+    console.log(JSON.stringify(response.data));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 ```
-
 
 With{{< external-link link="http://genez.io" >}} genezio{{< /external-link >}}
 , you will access your functions using the autogenerated SDK provided when you deployed your project or ran it locally. The SDK contains the custom types (enums, classes, unions) you defined in your server code in order to provide a type-safe API. It also takes care of serializing and deserializing your data. You can import this SDK in your client-side project and call the functions just as if they were local functions.{{< external-link link="http://genez.io" >}} genezio{{< /external-link >}}
- takes care of accessing the server and providing you the response.
-
+takes care of accessing the server and providing you the response.
 
 For our 2 little functions, the generated SDK in JavaScript will look something like this:
 
-
 ```javascript
 /**
-* This is an auto generated code. This code should not be modified since the file can be overwritten
-* if new genezio commands are executed.
-*/
+ * This is an auto generated code. This code should not be modified since the file can be overwritten
+ * if new genezio commands are executed.
+ */
 
-import { Remote } from "./remote.js"
+import { Remote } from "./remote.js";
 
 export class HelloWorld {
- static remote = new Remote("http://127.0.0.1:8083/HelloWorld")
+  static remote = new Remote("http://127.0.0.1:8083/HelloWorld");
 
- static async greet() {
-   return HelloWorld.remote.call("HelloWorld.greet")
- }
+  static async greet() {
+    return HelloWorld.remote.call("HelloWorld.greet");
+  }
 
- static async greetName(name) {
-   return HelloWorld.remote.call("HelloWorld.greetName", name)
- }
-
+  static async greetName(name) {
+    return HelloWorld.remote.call("HelloWorld.greetName", name);
+  }
 }
 ```
 
-
 The Remote object from the `remote.js` file referenced at the beginning (also autogenerated in the SDK) will take care of calling your remote functions using the {{< external-link link="https://www.jsonrpc.org/specification" >}}JSON-RPC{{< /external-link >}}
- protocol (_stay tuned for a future article about JSON-RPC and HTTP_), as opposed to plain HTTP used by the Express application. All you have to do is import this class in your client and call the methods. Calling the equivalent function of the POST request we just made should look like this:
-
+protocol (_stay tuned for a future article about JSON-RPC and HTTP_), as opposed to plain HTTP used by the Express application. All you have to do is import this class in your client and call the methods. Calling the equivalent function of the POST request we just made should look like this:
 
 ```javascript
-import { HelloWorld } from "./sdk/hello.sdk.js"
+import { HelloWorld } from "./sdk/hello.sdk.js";
 
 console.log(HelloWorld.greetName("John"));
 ```
-
 
 A downside you may observe here is that the client application must be written in the same programming language as the generated SDK. Currently genezio supports JavaScript, TypeScript and Dart for backend programming, and JavaScript, TypeScript, Swift, Python and Dart for generating SDK. You can use any combination of these supported programming languages. Even though it may not have the complete language independence of HTTP, as time passes and genezio releases support for multiple programming languages, this barrier fades away.
 
@@ -203,7 +191,7 @@ With{{< external-link link="http://genez.io" >}} genezio{{< /external-link >}}
 , you are one command away from deploying your project to a serverless cloud. Type `genezio deploy` and we will automatically optimize your code and deploy each class on a separate, scalable and independently manageable cloud environment.
 
 You can use your personal dashboard in {{< external-link link="https://app.genez.io/" >}}The genezio WebApp{{< /external-link >}}
- to see all your projects, inspect logs, disable or activate individual classes, as well as test your deployed projects.
+to see all your projects, inspect logs, disable or activate individual classes, as well as test your deployed projects.
 
 **Conclusions**
 
@@ -211,22 +199,18 @@ There are many key takeaways from this comparison. Express remains one of the be
 
 Advantages of Express:
 
-
-
-* multitude of existing projects and examples
-* you can deploy your code anywhere you want
-* uses widely spread RESTful APIs
+- multitude of existing projects and examples
+- you can deploy your code anywhere you want
+- uses widely spread RESTful APIs
 
 Advantages of{{< external-link link="http://genez.io" >}} genezio{{< /external-link >}}
 :
 
-
-
-* you write cleaner and easier to maintain code
-* deployment is taken care of
-* functions are called seamlessly with the autogenerated SDK
-* it uses modern paradigm of serverless deployment
-* interactive dashboard for managing and testing projects
+- you write cleaner and easier to maintain code
+- deployment is taken care of
+- functions are called seamlessly with the autogenerated SDK
+- it uses modern paradigm of serverless deployment
+- interactive dashboard for managing and testing projects
 
 I hope you enjoyed reading this article! If you have any questions, don’t hesitate to reach out to us on our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord{{< /external-link >}}
- server. Happy coding!
+server. Happy coding!

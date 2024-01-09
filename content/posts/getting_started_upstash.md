@@ -10,6 +10,8 @@ preview: Caching, session storage and much more with Upstash Redis.
 description: "Learn how to integrate a Redis database into your project. Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures."
 meta_og_url: "https://genez.io/blog/now-available-upstash-redis"
 meta_og_image: "https://genez.io/images/announcing_upstash.jpg"
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures.
@@ -29,7 +31,7 @@ Use genezio classes to implement a boilerplate-free caching system that stores d
 
 ```typescript
 import { GenezioDeploy } from "@genezio/types";
-import Redis from "ioredis"
+import Redis from "ioredis";
 
 @GenezioDeploy()
 export class EcommerceCacheService {
@@ -41,7 +43,7 @@ export class EcommerceCacheService {
 
   cacheProductDetails(productId: string, productDetails: string): Promise<boolean> {
     const key = `product:${productId}`;
-    await this.client.set(key, productDetails, 'EX', expirationInSeconds);
+    await this.client.set(key, productDetails, "EX", expirationInSeconds);
 
     // the rest of the implementation goes here
   }
@@ -61,7 +63,7 @@ Storing session data in Redis is a common practice. Because of its speed, Redis 
 
 ```typescript
 import { GenezioDeploy } from "@genezio/types";
-import Redis from "ioredis"
+import Redis from "ioredis";
 
 @GenezioDeploy()
 export class EcommerceSessionService {
@@ -94,9 +96,11 @@ Redis has built-in support for publish/subscribe messaging patterns. It can be u
 Redis can be used to implement rate-limiting mechanisms. By tracking and controlling access rates for different operations, Redis helps prevent abuse and ensures the stability and performance of an application.
 
 # Connect your backend to Upstash Redis
+
 In this short guide, you will learn how to integrate a Redis database into your project.
 
 ## Step 1: Create a new genezio project
+
 If you already have a genezio project deployed, you can skip to [Step 2: Initialize an Upstash Redis database](#step-2-initialize-an-upstash-redis-database).
 
 Otherwise, you can create a new genezio project by running the following steps.
@@ -167,14 +171,14 @@ The following code snippet creates a new class that will be a minimal Redis serv
 
 ```ts
 import { GenezioDeploy } from "@genezio/types";
-import Redis from "ioredis"
+import Redis from "ioredis";
 
 @GenezioDeploy()
-export class ShoppingCartService{
+export class ShoppingCartService {
   client: Redis;
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error("UPSTASH_REDIS_URL is not set in the `.env` file.")
+      throw new Error("UPSTASH_REDIS_URL is not set in the `.env` file.");
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
@@ -187,11 +191,11 @@ Implement two methods to store and retrieve <key, value> pairs in the Redis data
 
 ```ts
 @GenezioDeploy()
-export class ShoppingCartService{
+export class ShoppingCartService {
   client: Redis;
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error("UPSTASH_REDIS_URL is not set in the `.env` file.")
+      throw new Error("UPSTASH_REDIS_URL is not set in the `.env` file.");
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }

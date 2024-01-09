@@ -14,6 +14,8 @@ meta_og_url: "https://genez.io/blog/database_in_serverless_world_comparison"
 meta_og_image: "https://genez.io/images/database-performance.webp"
 # meta data end
 # svg = “xyz”
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 ## Introduction

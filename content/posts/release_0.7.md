@@ -12,6 +12,8 @@ description: "We've been hard at work, and we're thrilled to introduce genezio v
 meta_og_url: "https://genez.io/blog/integrate_redis_and_postgres_plus_much_more_genezio_v0.6"
 meta_og_image: "https://genez.io/images/release0.7.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 ## Collaboration

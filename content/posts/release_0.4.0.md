@@ -12,6 +12,8 @@ description: "I’m excited to work with such a productive team! Since our last 
 meta_og_url: "https://genez.io/blog/genezio-new-release"
 meta_og_image: "https://genez.io/images/release.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 <!-----

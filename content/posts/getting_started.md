@@ -11,6 +11,8 @@ preview: This guide will get you up and running with genezio in less than five m
 description: "Start building full-stack web and mobile apps with genezio in less than 5 minutes. Follow this tutorial to install the CLI, create your project and deploy it to the genezio Cloud."
 meta_og_url: "https://genez.io/blog/getting-started-with-genezio"
 meta_og_image: "https://genez.io/images/GettingStarted.png"
+customHeader: "White header"
+customFooter: "White footer"
 # meta data end
 ---
 
@@ -46,11 +48,10 @@ Only a small part of genezio’s functionality is discussed in this article.
 
 For complete developer documentation, please go to our {{< external-link link="https://docs.genez.io" >}}Official Documentation.{{< /external-link >}}
 
-
 ### Support
 
 We invite you to join our community on {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord{{< /external-link >}}
- for further information and help.
+for further information and help.
 
 ## Let’s Get Started
 
@@ -136,4 +137,3 @@ Congratulations, you’ve now finished your first genezio application!
 - {{< external-link link="https://github.com/genez-io/genezio-examples" >}}Genezio Examples{{< /external-link >}}
 
 - {{< external-link link="https://discord.com/invite/uc9H5YKjXv" >}}Join Discord Community{{< /external-link >}}
-

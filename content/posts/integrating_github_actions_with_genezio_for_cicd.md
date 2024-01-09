@@ -12,6 +12,8 @@ description: "GitHub Actions provides a powerful and flexible way to set up CI/C
 meta_og_url: "https://genez.io/blog/how-to-add-a-mongodb-to-your-genezio-project"
 meta_og_image: "https://genez.io/genezio_cicd.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 ## Integrating GitHub Actions with genezio for CI/CD

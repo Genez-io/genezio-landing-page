@@ -12,6 +12,8 @@ description: "We are developing an application that generates a list of movies w
 meta_og_url: "https://genez.io/blog/unlocking-the-potential-of-prompt-engineering-with-genezio"
 meta_og_image: "https://genez.io/images/fromPromptToCloud.webp"
 # meta data end
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 <!-----
@@ -79,7 +81,6 @@ By the end of this tutorial you will be able to:
 
 - Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: {{< external-link link="https://docs.genez.io/genezio-documentation/" >}}docs.genez.io/genezio-documentation/{{< /external-link >}}
 
-
 ## Technical Tutorial
 
 ### Configuration & Prerequisites
@@ -88,9 +89,9 @@ By the end of this tutorial you will be able to:
 
 - Install genezio: `npm install genezio -g`
 - Get the API Key from {{< external-link link="https://openai.com/" >}}OpenAI{{< /external-link >}}
-:
+  :
 - Go to {{< external-link link="https://openai.com/" >}}openai.com{{< /external-link >}}
- and click on `Sign Up`
+  and click on `Sign Up`
 - After you log in go to: {{< external-link link="https://platform.openai.com/account/api-keys" >}}platform.openai.com/account/api-keys{{< /external-link >}}
 
 - Click `Create new secret key` and give it a name
@@ -98,9 +99,9 @@ By the end of this tutorial you will be able to:
 - Get API Key for {{< external-link link="https://www.themoviedb.org/" >}}The Movie Database{{< /external-link >}}
 
 - Go to {{< external-link link="https://www.themoviedb.org/signup" >}}themoviedb.org/signup{{< /external-link >}}
- and create an account
+  and create an account
 - After you log in go to {{< external-link link="https://www.themoviedb.org/settings/api/new?type=developer" >}}themoviedb.org/settings/api/new?type=developer{{< /external-link >}}
- and fill in the form
+  and fill in the form
 - Get the JWT from `API Read Access Token` and store it somewhere safe, we will need it later on
 
 ### Clone the Template
@@ -108,7 +109,7 @@ By the end of this tutorial you will be able to:
 Clone the following repo:
 
 ```
-git clone https://github.com/Genez-io/techsylvania_workshop 
+git clone https://github.com/Genez-io/techsylvania_workshop
 ```
 
 This repository contains 2 folders. I recommend you to open it with an IDE:
@@ -125,7 +126,7 @@ You have TODOs on each part of the code where you have to work on.
 - Create a file named `.env` and add `OPENAI_SECRET_KEY=&lt;your_openai_secret_key>` and `TMDB_API_KEY=&lt;your_key>`
 - Run genezio local test environment: `genezio local`
 - Go to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
- to test your backend. Keep in mind that it will not work on Safari
+  to test your backend. Keep in mind that it will not work on Safari
 
 ### Get Movies Recommendation by User Input
 
@@ -228,7 +229,7 @@ The `createChatCompletion` method takes a configuration object as parameter that
   - `role` - this represents the author of this message. It can be: `system`, `assistant` or `user`. This is useful when you have to send the entire conversation to OpenAI as context when a new message is received
   - `content` - the content of the message
 - `max_tokens` - maximum number of tokens in the output. You can control how long or short the message should be. To get a correlation between the number of words and the number of tokens refer to {{< external-link link="https://platform.openai.com/tokenizer" >}}this tool{{< /external-link >}}
-.
+  .
 
 Now we have to check the output of OpenAI, parse the output and return it. We have to properly validate the output since the API response is not deterministic and it can return, for example, wrongly formatted output.
 
@@ -324,4 +325,4 @@ Get ready to take your AI interactions to new heights!
 ## What’s Next?
 
 We at genezio aim to offer our users the best experience possible while having access to excellent time and money saving services. Stay tuned and join our {{< external-link link="https://discord.gg/uc9H5YKjXv" >}}Discord community{{< /external-link >}}
- to be the first to hear about new tutorials and features.
+to be the first to hear about new tutorials and features.

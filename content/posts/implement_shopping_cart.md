@@ -11,6 +11,8 @@ preview: Learn how to build a shopping cart app with Typescript, Redis, and Reac
 description: Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature.
 meta_og_url: "https://genez.io/blog/implement-shopping-cart-redis"
 meta_og_image: "https://genez.io/images/implement_shopping_cart_redis.jpg"
+customHeader: "White header"
+customFooter: "White footer"
 ---
 
 In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.
@@ -23,6 +25,7 @@ The best part of this tutorial is that you can easily extend it or integrate it 
 Let's get started! 🚀
 
 # Content
+
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
@@ -71,6 +74,7 @@ The result of this tutorial will be a web application that looks like this:
 ## Prerequisites
 
 If you don't already have them, you'll need to install the following tools:
+
 - {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
 - {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
 - {{< external-link link="https://genez.io" >}}Genezio{{< /external-link >}}
@@ -101,6 +105,7 @@ genezio
 The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
 
 Your terminal should look similar to the following output:
+
 ```
 ~ genezio
 Redirecting to the browser to complete authentication...
@@ -132,7 +137,6 @@ The output from the `genezio` command will contain a randomly-assigned subdomain
 
 Now that you have a template to start from, fire up your favorite code editor and open the project's directory.
 
-
 The following piece of code will connect you to a Redis database and allow you to store and retrieve items to the shopping cart based on a session ID.
 This approach will be useful to accommodate more than 1 user on your web app.
 
@@ -145,22 +149,22 @@ import Redis from "ioredis";
 export type CartItem = {
   title: string;
   count: string;
-}
+};
 
 @GenezioDeploy()
-export class ShoppingCartService{
+export class ShoppingCartService {
   client: Redis;
 
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error("It seems that UPSTASH_REDIS_URL is not set in the `.env` file.")
+      throw new Error("It seems that UPSTASH_REDIS_URL is not set in the `.env` file.");
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
 
   async addItemToCart(sessionId: string, item: string): Promise<string> {
     // increment item count by 1 for a given item corresponding to the sessionId
-    await this.client.hincrby('cart:' + sessionId, item, 1).catch((err) => {
+    await this.client.hincrby("cart:" + sessionId, item, 1).catch((err) => {
       throw new Error(err);
     });
 
@@ -169,7 +173,7 @@ export class ShoppingCartService{
 
   async getCart(sessionId: string): Promise<CartItem[]> {
     // get all items from the hashmap corresponding to the sessionId
-    const cart = await this.client.hgetall('cart:' + sessionId).catch((err) => {
+    const cart = await this.client.hgetall("cart:" + sessionId).catch((err) => {
       throw new Error(err);
     });
     // check if the cart is empty
@@ -245,7 +249,7 @@ From the genezio dashboard, you can send requests to your backend classes and se
 
 ![Alt text](/images/blog/shopping_cart_example/test_backend.png)
 
- You'll also need 2 more methods in the backend source code - a method to remove only one item from the cart and a method to delete the entire cart.
+You'll also need 2 more methods in the backend source code - a method to remove only one item from the cart and a method to delete the entire cart.
 
 Add the following methods to the `ShoppingCartService` class:
 
@@ -311,6 +315,7 @@ In this section of the tutorial, there are quite a few code snippets coming your
 {{< details "Expand for more details on how to structure a React project" >}}
 
 A typical React project has the following directory structure:
+
 ```
 .
 ├── README.md
@@ -340,10 +345,11 @@ The `App.tsx` file is the main component of your application. This component wil
 In the `models.tsx` file you can declare the interfaces that will be used in your application. This file will be useful to keep track of the data types used in your application.
 
 If you open up `App.tsx` in your IDE, you'll see the following code snippet:
+
 ```typescript
 // Import necessary dependencies
-import React from 'react';
-import './App.css'; // Import your styles if needed
+import React from "react";
+import "./App.css"; // Import your styles if needed
 
 // Define the App component
 const App: React.FC = () => {
@@ -355,22 +361,18 @@ const App: React.FC = () => {
     setCount(count + amount);
   };
 
-
   return (
     <div className="app">
       {/* Header component */}
       <Header />
-
       {/* Main content component */}
       <MainContent />
-
       // Use triggers to change the states
       <div>
         <p>Count: {count}</p>
         <button onClick={() => handleCounter(1)}>Add</button>
         <button onClick={() => handleCounter(-1)}>Subtract</button>
       </div>
-
       {/* Footer component */}
       <Footer />
     </div>
@@ -389,8 +391,9 @@ npm install axios reactstrap bootstrap
 ```
 
 Import Bootstrap in your frontend application by adding the following line in `client/src/index.tsx`:
+
 ```typescript
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 ```
 
 Create a new file named `client/src/models.tsx` to declare the interfaces that will be used in the application.
@@ -398,18 +401,18 @@ Create a new file named `client/src/models.tsx` to declare the interfaces that w
 ```typescript
 // The fields declared for the dummy data
 export interface Product {
-    id: number;
-    title: string;
-    description: string;
-    price: number;
-    rating: number;
-    thumbnail: string;
-  }
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  rating: number;
+  thumbnail: string;
+}
 
 // Information needed for a cart item
 export interface CartItem {
-    title: string;
-    count: string;
+  title: string;
+  count: string;
 }
 ```
 
@@ -448,13 +451,13 @@ Add a header with a shopping cart button.
 Create a state to keep track if the cart button was clicked. This state will be used to toggle the cart modal on and off.
 
 ```typescript
-  const [isCartVisible, setIsCartVisible] = useState(false);
+const [isCartVisible, setIsCartVisible] = useState(false);
 
-  // Toggle the cart modal
-  const toggleCartModal = (e: any) => {
-    e.preventDefault();
-    setIsCartVisible(!isCartVisible);
-  };
+// Toggle the cart modal
+const toggleCartModal = (e: any) => {
+  e.preventDefault();
+  setIsCartVisible(!isCartVisible);
+};
 ```
 
 To start the frontend on your localhost, run `npm run start`. This will initialize the frontend application on `localhost:3000`.
@@ -463,142 +466,147 @@ Keep the frontend running in the background and open `localhost:3000` in your br
 Add a list with the fetched products.
 
 ```typescript
-  <Container className="my-4">
-    <Row className="justify-content-around">
-      {productData.products.map((product) => (
-        <Col key={product.id} md="4" className="mb-4">
-          <div className="product-card">
-            <img src={product.thumbnail} alt={product.title} />
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
-            <p>Rating: {product.rating}</p>
-            <Button
-              color="primary"
-              onClick={(e) => handleBuyClick(e, product)}
-              disabled={addItemLoading[product.id]}
-            >
-              {addItemLoading[product.id] ? (
-                <Spinner size="sm" color="light" />
-              ) : (
-                'Buy Now'
-              )}
-            </Button>
-          </div>
-        </Col>
-      ))}
-    </Row>
-  </Container>
+<Container className="my-4">
+  <Row className="justify-content-around">
+    {productData.products.map((product) => (
+      <Col key={product.id} md="4" className="mb-4">
+        <div className="product-card">
+          <img src={product.thumbnail} alt={product.title} />
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+          <p>Price: ${product.price}</p>
+          <p>Rating: {product.rating}</p>
+          <Button
+            color="primary"
+            onClick={(e) => handleBuyClick(e, product)}
+            disabled={addItemLoading[product.id]}
+          >
+            {addItemLoading[product.id] ? <Spinner size="sm" color="light" /> : "Buy Now"}
+          </Button>
+        </div>
+      </Col>
+    ))}
+  </Row>
+</Container>
 ```
 
 Add a modal that opens when the shopping cart button is clicked. In the modal, we'll display the content of the shopping cart and allow the user to close the cart, clear the cart, or delete an item from it.
 
 ```typescript
-{isCartVisible && (
-  <div
-    className="cart-overlay d-flex justify-content-center align-items-center position-fixed top-0 left-0 w-100 h-100"
-    style={{ background: 'rgba(0, 0, 0, 0.7)' }}
-  >
-    <div className="cart-modal bg-white p-4 rounded shadow-lg">
-      <h2 className="mb-4 center">Shopping Cart</h2>
-      <ul className="list-unstyled">
+{
+  isCartVisible && (
+    <div
+      className="cart-overlay d-flex justify-content-center align-items-center position-fixed top-0 left-0 w-100 h-100"
+      style={{ background: "rgba(0, 0, 0, 0.7)" }}
+    >
+      <div className="cart-modal bg-white p-4 rounded shadow-lg">
+        <h2 className="mb-4 center">Shopping Cart</h2>
+        <ul className="list-unstyled">
+          {cartData.length > 0 ? (
+            cartData.map((cartItem, index) => (
+              <li key={index} className="mb-3">
+                <div>
+                  <span>{cartItem.title}</span>
+                  <span className="m-2">Quantity: {cartItem.count}</span>
+                  <Button color="danger" size="sm" className="m-2">
+                    {" "}
+                    <FaTrash />{" "}
+                  </Button>
+                </div>
+              </li>
+            ))
+          ) : (
+            <li className="empty-cart">Your cart is empty</li>
+          )}
+        </ul>
         {cartData.length > 0 ? (
-          cartData.map((cartItem, index) => (
-            <li key={index} className="mb-3">
-              <div>
-                <span>{cartItem.title}</span>
-                <span className="m-2">Quantity: {cartItem.count}</span>
-                <Button color="danger" size="sm" className="m-2"> <FaTrash /> </Button>
-              </div>
-            </li>
-          ))
-        ) : (
-          <li className="empty-cart">Your cart is empty</li>
-        )}
-      </ul>
-      {cartData.length > 0 ? (
-        <Button color="primary" className="m-2"> 'Clear Cart' </Button>
-      ) : null}
-      <Button color="primary" className="m-2"> 'Close' </Button>
+          <Button color="primary" className="m-2">
+            {" "}
+            'Clear Cart'{" "}
+          </Button>
+        ) : null}
+        <Button color="primary" className="m-2">
+          {" "}
+          'Close'{" "}
+        </Button>
+      </div>
     </div>
-  </div>
-)}
+  );
+}
 ```
 
 Add a token in local storage to keep track of the session id. This token will be used to identify the cart corresponding to the user.
 
 ```typescript
-  // Check if the token is set in localStorage
-  let token = localStorage.getItem('token') as string;
+// Check if the token is set in localStorage
+let token = localStorage.getItem("token") as string;
 
-  // If token is not set, generate a 32-character token
-  if (!token || token === '' || token === 'undefined') {
-    token =
-      Math.random().toString(36).substring(2, 15) +
-      Math.random().toString(36).substring(2, 15);
-    localStorage.setItem('token', token);
-  }
+// If token is not set, generate a 32-character token
+if (!token || token === "" || token === "undefined") {
+  token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  localStorage.setItem("token", token);
+}
 ```
 
 Send a request to the backend to add an item to the cart when the `Buy now` button is clicked.
 
 ```typescript
-  const handleBuyClick = async (e: any, product: Product) => {
-    e.preventDefault();
+const handleBuyClick = async (e: any, product: Product) => {
+  e.preventDefault();
 
-    // You can implement your buy logic here, e.g., add the product to a cart
-    await ShoppingCartService.addItemToCart(token, product.title);
-  };
+  // You can implement your buy logic here, e.g., add the product to a cart
+  await ShoppingCartService.addItemToCart(token, product.title);
+};
 ```
 
 Send a request to the backend to retrieve the cart data when the modal is opened.
 
 ```typescript
-  // Fetch the cart contents when the cart modal is visible
-  useEffect(() => {
-    if (isCartVisible) {
-      const fetchCartData = async () => {
-        try {
-          // Call your ShoppingCartService.getCart method to the contents of the cart
-          const cart = await ShoppingCartService.getCart(token);
-          setCartData(cart);
-        } catch (error) {
-          console.error('Error fetching or parsing cart data:', error);
-        }
-      };
+// Fetch the cart contents when the cart modal is visible
+useEffect(() => {
+  if (isCartVisible) {
+    const fetchCartData = async () => {
+      try {
+        // Call your ShoppingCartService.getCart method to the contents of the cart
+        const cart = await ShoppingCartService.getCart(token);
+        setCartData(cart);
+      } catch (error) {
+        console.error("Error fetching or parsing cart data:", error);
+      }
+    };
 
-      fetchCartData();
-    }
-  }, [isCartVisible, token]);
+    fetchCartData();
+  }
+}, [isCartVisible, token]);
 ```
 
 Send a request to the backend to delete an item from the cart when the `Delete` button is clicked.
 
 ```typescript
-  const handleDeleteItem = async (e: any, cartItem: CartItem) => {
-    e.preventDefault();
+const handleDeleteItem = async (e: any, cartItem: CartItem) => {
+  e.preventDefault();
 
-    await ShoppingCartService.removeItemFromCart(token, cartItem.title);
+  await ShoppingCartService.removeItemFromCart(token, cartItem.title);
 
-    // You can implement your delete logic here
-    const updatedCartData = await ShoppingCartService.getCart(token);
-    setCartData(updatedCartData);
-  };
+  // You can implement your delete logic here
+  const updatedCartData = await ShoppingCartService.getCart(token);
+  setCartData(updatedCartData);
+};
 ```
 
 Send a request to the backend to clear the cart when the `Clear Cart` button is clicked.
 
 ```typescript
-  const handleClearCart = async (e: any) => {
-    e.preventDefault();
+const handleClearCart = async (e: any) => {
+  e.preventDefault();
 
-    // You can implement your clear cart logic here
-    await ShoppingCartService.deleteCart(token);
+  // You can implement your clear cart logic here
+  await ShoppingCartService.deleteCart(token);
 
-    // Update the cart data
-    const updatedCartData = await ShoppingCartService.getCart(token);
-    setCartData(updatedCartData);
-  };
+  // Update the cart data
+  const updatedCartData = await ShoppingCartService.getCart(token);
+  setCartData(updatedCartData);
+};
 ```
 
 ## Deploying the application
@@ -630,43 +638,41 @@ This way, the user has a visual indication that the item was successfully added 
 Add a new state to keep track of the number of items in the cart.
 
 ```typescript
-  const [purchasedQuantity, setPurchasedQuantity] = useState(0);
+const [purchasedQuantity, setPurchasedQuantity] = useState(0);
 
-  const handleBuyClick = async (e: any, product: Product) => {
-    // ...
+const handleBuyClick = async (e: any, product: Product) => {
+  // ...
 
-    // Update the local state to reflect the purchased quantity
-    setPurchasedQuantity((prevQuantity) => prevQuantity + 1);
+  // Update the local state to reflect the purchased quantity
+  setPurchasedQuantity((prevQuantity) => prevQuantity + 1);
 
-    // ...
-  };
+  // ...
+};
 
-  const handleDeleteItem = async (e: any, cartItem: CartItem) => {
-    // ...
+const handleDeleteItem = async (e: any, cartItem: CartItem) => {
+  // ...
 
-    // Update the local state to reflect the purchased quantity
-    setPurchasedQuantity((prevQuantity) => prevQuantity - 1);
+  // Update the local state to reflect the purchased quantity
+  setPurchasedQuantity((prevQuantity) => prevQuantity - 1);
 
-    // ...
-  };
+  // ...
+};
 
-  const handleClearCart = async (e: any) => {
-    // ...
+const handleClearCart = async (e: any) => {
+  // ...
 
-    // Update the local state to reflect the purchased quantity
-    setPurchasedQuantity(0);
+  // Update the local state to reflect the purchased quantity
+  setPurchasedQuantity(0);
 
-    // ...
-  };
+  // ...
+};
 
-  return (
-    <Button color="primary" onClick={(e) => toggleCartModal(e)}>
-      <FaShoppingCart />
-      {purchasedQuantity > 0 && (
-        <span className="m-2">{purchasedQuantity}</span>
-      )}
-    </Button>
-  );
+return (
+  <Button color="primary" onClick={(e) => toggleCartModal(e)}>
+    <FaShoppingCart />
+    {purchasedQuantity > 0 && <span className="m-2">{purchasedQuantity}</span>}
+  </Button>
+);
 ```
 
 This state should be updated each time an item is added or removed from the cart. When the cart is cleared, the state should be reset to 0.
@@ -680,32 +686,28 @@ Each button should have its own loading state to indicate that the request is be
 Below is an example of how to add a loading state to the `Buy now` button.
 
 ```typescript
-  const [addItemLoading, setAddItemLoading] = useState<{
-    [key: number]: boolean;
-  }>({});
+const [addItemLoading, setAddItemLoading] = useState<{
+  [key: number]: boolean;
+}>({});
 
-  const handleBuyClick = async (e: any, product: Product) => {
-    // Set loading state to true to show the spinner
-    setAddItemLoading((prevStates) => ({ ...prevStates, [product.id]: true }));
+const handleBuyClick = async (e: any, product: Product) => {
+  // Set loading state to true to show the spinner
+  setAddItemLoading((prevStates) => ({ ...prevStates, [product.id]: true }));
 
-    // ...
+  // ...
 
-    // Set loading state to false to hide the spinner
-    setAddItemLoading((prevStates) => ({ ...prevStates, [product.id]: false }));
-  };
+  // Set loading state to false to hide the spinner
+  setAddItemLoading((prevStates) => ({ ...prevStates, [product.id]: false }));
+};
 
-  return (
-    <Button
-      color="primary"
-      onClick={(e) => handleBuyClick(e, product)}
-      disabled={addItemLoading[product.id]}
-    >
-      {addItemLoading[product.id] ? (
-        <Spinner size="sm" color="light" />
-      ) : (
-        'Buy Now'
-      )}
-    </Button>
+return (
+  <Button
+    color="primary"
+    onClick={(e) => handleBuyClick(e, product)}
+    disabled={addItemLoading[product.id]}
+  >
+    {addItemLoading[product.id] ? <Spinner size="sm" color="light" /> : "Buy Now"}
+  </Button>
 );
 ```
 
