@@ -88,7 +88,10 @@
     <!-- Output page numbers. -->
     {{ if eq ($.Scratch.Get "page_number_flag") true }}
     <li class="pagination-item{{ if eq . $paginator }} pagination-item-current{{ end }}">
-      <a href="{{ .URL }}" class="pagination-link mx-2 px-1 text-decoration-none">
+      <a
+        href="{{ .URL }}"
+        class="pagination-link mx-2 px-1 text-decoration-none{{ if eq . $paginator }} active-page{{ end }}"
+      >
         {{ .PageNumber }}
       </a>
     </li>
@@ -127,14 +130,8 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M8.25 5.25L15.75 12.75L8.25 20.25"
-          stroke="black"
-          stroke-opacity="0.6"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        path d="M8.25 5.25L15.75 12.75L8.25 20.25" stroke="black" stroke-opacity="0.6"
+        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </span>
     {{ end }}
