@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Genezio"  
 theme = "genezio-theme"  
 enableRobotsTXT = true
+paginate = 200 
 
 [params.footer]
         description = "genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
