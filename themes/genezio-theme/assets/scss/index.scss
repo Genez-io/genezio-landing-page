@@ -97,11 +97,13 @@ $cyan: #0dcaf0 !default;
 @import "./navbar.scss";
 @import "./terms.scss";
 @import "./article.scss";
+@import "./pagination.scss";
 
 .dropdown-menu a.dropdown-item:hover {
   background-color: transparent !important;
   color: inherit !important;
   text-decoration: none !important;
+  opacity: 0.7 !important;
 }
 
 .nav-link.dropdown-toggle::after {

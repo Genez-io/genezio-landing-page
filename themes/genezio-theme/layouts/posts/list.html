@@ -59,7 +59,7 @@
       {{ $paginator := .Paginate (where .Pages "Type" "posts")  }}
       {{ range $paginator.Pages }}
     {{/*  Card  */}}
-    <div class="col-12 col-md-6 col-lg-3 p-0  bg-white" style="border-top-right-radius: 20px;  max-width: 390px; width: 100%;  margin: 0px 20px 40px 20px;">
+    <div class="col-12 col-md-6 col-lg-3 p-0  bg-white" style="border-top-right-radius: 20px; border-bottom-left-radius: 20px; max-width: 390px; width: 100%;  margin: 0px 20px 40px 20px; ">
         {{ if .Params.thumbnail }}
     {{/*  Photo  */}}
     <a class="text-decoration-none" href="{{ .RelPermalink }}">
@@ -109,6 +109,15 @@
     </div>
     {{ end }}
   </div>
+
+  {{/*  start pagination  */}}
+  <hr style="border: 1px solid #E2D9F3; margin: 0 -24px"  />
+  <div class="row">
+    <div class="col-12">
+      {{ partial "paginator" . }}
+    </div>
+  </div>
+  {{/*  end pagination  */}}
 </div>
  </div>
 </div>
