@@ -98,6 +98,16 @@ $cyan: #0dcaf0 !default;
 @import "./terms.scss";
 @import "./article.scss";
 
+.dropdown-menu a.dropdown-item:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+
 .border-gradient-green {
   border-image-source: linear-gradient(
     to right,
