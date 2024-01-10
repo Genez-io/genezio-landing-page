@@ -75,6 +75,8 @@ As mentioned earlier, my focus was to examine how the database would handle a su
 
 I measured the response time for a query during the 'cold start' phase, as well as the query time for an already warmed-up function. Let’s analyze the results!
 
+{{< svg file="/posts/dbchart1.svg" >}}
+
 ###### Figure 1: Results of the experiment with 300 requests every 100 ms for all databases.
 
 The first thing we notice is the **Firebase** cold time which is quite huge. During the cold start phase, when the function initiates and establishes connections with the Firebase servers, it takes approximately 1200 ms to return a response for a query. However, once the function is already warm, its performance improves significantly, with an average query response time of around 20ms.
@@ -86,6 +88,8 @@ When using the **Atlas MongoDB Data API**, we observe a notably favorable respon
 **DynamoDB** performs exceptionally well with a good query time during cold start (~70ms) and an excellent warm query time similar to Mongo DB with connection (~5ms).
 
 Furthermore, I conducted the same set of experiments with the genezio application, which was now hosted in a different region (us-east-1) than the database (eu-central-1). This aspect becomes useful when considering scenarios such as deploying a multi-region application while using a single database.
+
+{{< svg file="/posts/dbchart2.svg" >}}
 
 ###### Figure 2: Results of the experiment with 300 requests every 100 ms for all databases when the app is hosted in a different region than the database.
 
