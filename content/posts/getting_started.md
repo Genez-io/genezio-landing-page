@@ -13,6 +13,7 @@ meta_og_url: "https://genez.io/blog/getting-started-with-genezio"
 meta_og_image: "https://genez.io/images/GettingStarted.png"
 customHeader: "White header"
 customFooter: "White footer"
+readTime: 24
 # meta data end
 ---
 
