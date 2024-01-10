@@ -16,6 +16,7 @@ meta_og_image: "https://genez.io/genezio_neon.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
+readTime: 24
 ---
 
 Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching. As such, Neon is an excellent choice as a database provider for serverless applications.

@@ -14,6 +14,7 @@ meta_og_image: "https://genez.io/images/release0.7.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
+readTime: 24
 ---
 
 ## Collaboration

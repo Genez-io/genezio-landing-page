@@ -16,6 +16,7 @@ meta_og_image: "https://genez.io/images/genezio_mongodb.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
+readTime: 24
 ---
 
 In this tutorial, I will show you the steps of integrating a Mongo database into your genezio {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/typescript/getting-started" >}}Getting Started project{{< /external-link >}}
