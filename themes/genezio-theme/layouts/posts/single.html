@@ -224,15 +224,77 @@
     
     <hr style="border: 1px solid #e2d9f3; margin: 0px -8px 40px -8px" />
     
-    <div class="row w-100 mx-4">
+    <div class="row w-100 mx-4 mb-2 pb-4">
       <h4 style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">More from Tutorials</h4>
-      <p class="mb-0 mt-5">placeholder text</p>
-      <p class="mb-0">placeholder text</p>
-      <p class="mb-0">placeholder text</p>
-      <p class="mb-0">placeholder text</p>
-      <p class="mb-0">placeholder text</p>
     </div>
+
+    {{/*  Start of More from ... section  */}}
+    <div class="row px-1 mx-4 justify-content-center">
+      {{/* Card */}}
+      <div  class="col-lg col-md-12 p-0 m-2">
+        <div
+          class="card border-0"
+          style="
+          border-radius: 0 20px 0 20px;
+           background-color: rgba(255, 255, 255, 0.07);background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);
+           "
+        >
+          <div class="card-body p-4">
+            <a class="text-decoration-none fw-semibold blogGradientText " style="font-size: 14px">Tutorials</a>
+            <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px">How to schedule tasks with genezio</h4>
+            {{/*  Writer details  */}}
+            <div class="d-flex flex-column mt-4">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div  class="col-lg col-md-12 p-0 m-2">
+        <div
+          class="card border-0"
+          style="
+          border-radius: 0 20px 0 20px;
+           background-color: rgba(255, 255, 255, 0.07);background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);
+           "
+        >
+          <div class="card-body p-4">
+            <a class="text-decoration-none fw-semibold blogGradientText " style="font-size: 14px">Tutorials</a>
+            <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px">test</h4>
+            {{/*  Writer details  */}}
+            <div class="d-flex flex-column">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div  class="col-lg col-md-12 p-0 m-2">
+        <div
+          class="card border-0"
+          style="
+          border-radius: 0 20px 0 20px;
+           background-color: rgba(255, 255, 255, 0.07);background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);
+           "
+        >
+          <div class="card-body p-4">
+            <a class="text-decoration-none fw-semibold blogGradientText " style="font-size: 14px">Tutorials</a>
+            <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px">WDAWDADA DWADA</h4>
+            {{/*  Writer details  */}}
+            <div class="d-flex flex-column">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{{/*  end of More of ... section  */}}
+
   
+<p class="mb-0">w</p>
     
 
 </div>
