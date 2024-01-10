@@ -157,6 +157,46 @@
         {{/* End of Subscribe to our newsletter */}}
       </div>
 
+    
+    <!-- Start of Navigation Links to Previous and Next Posts -->
+    <div class="row px-4 pt-3" style="border: 1px solid red;">
+        {{ $allPosts := where site.RegularPages "Type" "posts" }}
+        {{ $sortedPosts := $allPosts.ByDate.Reverse }}
+        {{ $currentIndex := 0 }}
+
+        {{ range $index, $post := $sortedPosts }}
+            {{ if eq .Permalink $.Permalink }}
+                {{ $currentIndex = $index }}
+            {{ end }}
+        {{ end }}
+
+        {{ $prevIndex := add $currentIndex -1 }}
+        {{ $nextIndex := add $currentIndex 1 }}
+
+        <div class="col-lg-6 p-0">
+            {{ with index $sortedPosts $prevIndex }}
+                <a href="{{ .Permalink }}" class="text-decoration-none d-flex">
+                    <div class="text-primary"><</div>
+                    <p style="color: #009662;" class="fw-medium">{{ .Title }}</p>
+                </a>
+            {{ end }}
+        </div>
+
+        <div class="col-lg-6 text-right border d-flex justify-content-end p-0">
+            {{ with index $sortedPosts $nextIndex }}
+                <a href="{{ .Permalink }}" class="text-decoration-none d-flex">
+                  <p style="color: #009662;" class="fw-medium">{{ .Title }}</p>
+                  <div class="text-primary">
+                    >
+                  </div>
+                </a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+ <!-- End of Navigation Links to Previous and Next Posts -->
+
+
       <div class="row mt-3 pt-5 w-100">
         <h4 style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">Related articles</h4>
       </div>
@@ -291,7 +331,7 @@
         </div>
       </div>
     </div>
-{{/*  end of More of ... section  */}}
+    {{/*  end of More of ... section  */}}
 
   
 <p class="mb-0">w</p>
