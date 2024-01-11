@@ -156,8 +156,12 @@
         </div>
         {{/* End of Subscribe to our newsletter */}}
       </div>
-      <!-- Start of Navigation Links to Previous and Next Posts -->
-      <div class="row px-4" >
+      </div>
+    </div>
+
+    <hr style="border: 1px solid #e2d9f3; margin: 24px -8px 40px -8px" />
+        <!-- Start of Navigation Links to Previous and Next Posts -->
+        <div class="row px-4 mx-3">
         {{ $allPosts := where site.RegularPages "Type" "posts" }}
         {{ $sortedPosts := $allPosts.ByDate.Reverse }}
         {{ $currentIndex := 0 }}
@@ -173,7 +177,7 @@
 
         <div class="col-lg-6 p-0">
             {{ with index $sortedPosts $prevIndex }}
-                <a href="{{ .Permalink }}" class="text-decoration-none d-flex">
+                <a href="{{ .Permalink }}" class="text-decoration-none d-flex align-items-center">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 19.5L8.25 12L15.75 4.5" stroke="black" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
@@ -184,7 +188,7 @@
 
         <div class="col-lg-6 text-right d-flex justify-content-end p-0">
             {{ with index $sortedPosts $nextIndex }}
-                <a href="{{ .Permalink }}" class="text-decoration-none d-flex">
+                <a href="{{ .Permalink }}" class="text-decoration-none d-flex align-items-center">
                   <p style="color: #009662;" class="fw-medium mx-4 px-3 mb-0">{{ .Title }}</p>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8.25 4.5L15.75 12L8.25 19.5" stroke="black" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -193,15 +197,13 @@
             {{ end }}
         </div>
     </div>
+    <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 40px -8px" />
  <!-- End of Navigation Links to Previous and Next Posts -->
-
-
-      <div class="row mt-3 pt-5 w-100">
-        <h4 style="color: rgba(0, 0, 0, 0.60)" class="m-0 pb-4 mb-2 fw-semibold">Related articles</h4>
-      </div>
-      </div>
+   <div class="row w-100 mx-4 mb-2 pb-4">
+      <h4 style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">
+        Related articles
+      </h4>
     </div>
-
 
    <div class="row px-1 mx-4 justify-content-center">
     {{ $recentPosts := slice }}
