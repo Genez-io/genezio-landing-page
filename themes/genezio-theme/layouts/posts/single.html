@@ -56,7 +56,7 @@
               {{ .Params.author }}
             </p>
             <p style="color: #525252" class="mb-0 fw-medium">
-              {{ dateFormat "Jan 02, 2006" .Params.date }}
+              {{ dateFormat "Jan 02, 2006 date" .Params.date }}
             </p>
           </div>
         </div>
@@ -250,7 +250,7 @@
             <img src="/images/writers/{{ .Params.author | urlize  }}.png" style="height:  48px; width: 48px;" class="rounded-circle " alt="writer-avatar"/>
             <div class="d-flex flex-column mx-4">
               <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
-              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
             </div>
           </div>
         </div>  
@@ -292,7 +292,7 @@
                 {{/* Writer details */}}
                 <div class="d-flex flex-column mt-4">
                   <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
-                  <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+                  <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
                 </div>
               </div>
             </div>
@@ -315,7 +315,7 @@
                 {{/* Writer details */}}
                 <div class="d-flex flex-column mt-4">
                   <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
-                  <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+                  <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
                 </div>
               </div>
             </div>
