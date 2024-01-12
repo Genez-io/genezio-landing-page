@@ -56,7 +56,7 @@
               {{ .Params.author }}
             </p>
             <p style="color: #525252" class="mb-0 fw-medium">
-              {{ dateFormat "Jan 02, 2006" .Params.date }}
+              {{ dateFormat "Jan 02, 2006 date" .Params.date }}
             </p>
           </div>
         </div>
@@ -200,9 +200,9 @@
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 40px -8px" />
  <!-- End of Navigation Links to Previous and Next Posts -->
    <div class="row w-100 mx-4 mb-2 pb-4">
-      <h4 style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">
+      <p style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">
         Related articles
-      </h4>
+      </p>
     </div>
 
    <div class="row px-1 mx-4 justify-content-center">
@@ -250,7 +250,7 @@
             <img src="/images/writers/{{ .Params.author | urlize  }}.png" style="height:  48px; width: 48px;" class="rounded-circle " alt="writer-avatar"/>
             <div class="d-flex flex-column mx-4">
               <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
-              <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
             </div>
           </div>
         </div>  
@@ -265,7 +265,7 @@
     <hr style="border: 1px solid #e2d9f3; margin: 32px -8px 40px -8px" />
     
    <div class="row w-100 mx-4 mb-2 pb-4">
-      <h4 style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">More from {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}{{ $tag }}{{ end }}</h4>
+      <p style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">More from {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}{{ $tag }}{{ end }}</p>
     </div>
 
     
@@ -285,14 +285,14 @@
               <div class="card-body p-4">
                 {{ with .Params.tags }}
                   {{ range . }}
-                    <a class="text-decoration-none fw-semibold blogGradientText" style="font-size: 14px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                   {{ end }}
                 {{ end }}
                 <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
                 {{/* Writer details */}}
                 <div class="d-flex flex-column mt-4">
                   <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
-                  <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+                  <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
                 </div>
               </div>
             </div>
@@ -308,14 +308,14 @@
               <div class="card-body p-4">
                 {{ with .Params.tags }}
                   {{ range . }}
-                    <a class="text-decoration-none fw-semibold blogGradientText" style="font-size: 14px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                   {{ end }}
                 {{ end }}
                 <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
                 {{/* Writer details */}}
                 <div class="d-flex flex-column mt-4">
                   <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
-                  <p style="color: #525252;" class="mb-0 fw-medium">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+                  <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
                 </div>
               </div>
             </div>
