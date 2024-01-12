@@ -2,7 +2,8 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{- partial "head.html" . -}}
   <body>
-    {{ if .Params.customHeader }}
+    {{ if or .Params.customHeader (eq .Params.title "Tutorials") (eq .Params.title "News") (eq
+    .Params.title "Learning") (eq .Params.title "use-cases") }}
     <!-- Custom header content for pages with customHeader variable -->
     {{- partial "blogHeader.html" . -}} {{ else }}
     <!-- Default header content for other pages -->
@@ -10,8 +11,12 @@
 
     <main>{{- block "main" . }}{{- end }}</main>
 
-    {{ if .Params.customFooter }} {{- partial "blogFooter.html" . -}} {{ else }} {{- partial
-    "footer.html" . -}} {{ end }}
+    {{ if or .Params.customFooter (eq .Params.title "Tutorials") (eq .Params.title "News") (eq
+    .Params.title "Learning") (eq .Params.title "use-cases") }}
+    <!-- Custom footer content for pages with customFooter variable or title equal to "Tutorials" or "News" -->
+    {{- partial "blogFooter.html" . -}} {{ else }}
+    <!-- Default footer content for other pages -->
+    {{- partial "footer.html" . -}} {{ end }}
 
     <!-- Start of HubSpot Embed Code -->
     <script
