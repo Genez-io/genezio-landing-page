@@ -41,8 +41,24 @@
           {{/*  Title & preview  */}}
           <a class="text-decoration-none" href="{{ .RelPermalink }}">
           <div class="mb-4"> 
-            <h4 class="text-black mb-0" style="height: 64px">{{ .Title }}</h4>
-            <p style="color: #525252; height: 72px;" class="mt-4 mb-0">{{ .Params.preview }}</p>
+            <h4 class="text-black mb-0" style="height: 64px">
+             {{ if gt (len .Title) 46 }}
+                    <script>
+                      document.write("{{ .Title | safeJS }}".slice(0, 46) + "...");
+                    </script>
+                {{ else }}
+                    {{ .Title }}
+                {{ end }}
+            </h4>
+            <p style="color: #525252; height: 72px;" class="mt-4 mb-0">
+            {{ if gt (len .Params.preview) 123 }}
+                    <script>
+                      document.write("{{ .Params.preview | safeJS }}".slice(0, 123) + "...");
+                    </script>
+                {{ else }}
+                    {{ .Params.preview }}
+                {{ end }}
+            </p>
           </div>
         </a>
         
