@@ -14,7 +14,7 @@
 
       {{/*  Header (Last article data)  */}}
       {{ with (index (where site.RegularPages "Type" "posts").ByDate.Reverse 0) }}
-      <div class="row my-4 pb-3 flex-column flex-md-row">
+      <div class="row my-4 flex-column flex-md-row pb-0 pb-md-3">
           <div class="col mx-md-3 mx-0 d-flex flex-column justify-content-between">
             <div>
               {{ if .Params.tags }}
@@ -67,7 +67,7 @@
       <hr style="border: 1px solid #E2D9F3; margin: 0 -24px"  />
       
       {{/*  Articles listing  */}}
-      <div class="row mt-4 pt-3">
+      <div class="row mt-4 pt-0 pt-md-3">
       {{ $paginator := .Paginate (where .Pages "Type" "posts")  }}
       {{ range $paginator.Pages }}
     {{/*  Card  */}}
