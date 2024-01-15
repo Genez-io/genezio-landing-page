@@ -14,8 +14,8 @@
 
       {{/*  Header (Last article data)  */}}
       {{ with (index (where site.RegularPages "Type" "posts").ByDate.Reverse 0) }}
-      <div  class="row my-4 pb-3">
-          <div class="col mx-3 d-flex flex-column justify-content-between">
+      <div class="row my-4 pb-3 flex-column flex-md-row">
+          <div class="col mx-md-3 mx-0 d-flex flex-column justify-content-between">
             <div>
               {{ if .Params.tags }}
             <div class="mb-2 pb-1">
@@ -26,6 +26,18 @@
           {{ end }}
               <a class="text-decoration-none" href="{{ .RelPermalink }}">
                 <h2 class="text-black fw-bold pt-2 mt-1 mb-0">{{ .Title }}</h2>
+                {{/*  start of mobile img preview  */}}
+                <div class="col mx-md-3 mx-0 d-block d-md-none d-lg-none">
+                <div class="position-relative" style="height: 168px; background-color: #a6b8c0; border-bottom-left-radius: 20px; border-top-right-radius: 20px;margin: 24px -24px 0px -24px ">
+                        <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left: 10px;">
+                            <div class="d-flex align-items-center">
+                                <img src="/images/clock-icon.svg" alt="clock-icon"/>
+                                <p style="font-size: 12px; margin-left: 4px;" class="text-white mb-0">{{ .Params.readTime }} minutes read</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 {{/*  end of mobile img preview  */}}
                 <p style="color: #525252; font-size:14px;" class="fw-medium mt-4">{{ .Params.Preview }}</p>
               </a>
             </div>
@@ -38,7 +50,7 @@
             </div>
           </div>
           </div>
-          <div class="col mx-3">            
+            <div class="col mx-md-3 mx-0 d-none d-md-block">
           <div  class="position-relative" style="height: 304px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px" >
                <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
             <div class="d-flex align-items-center">
