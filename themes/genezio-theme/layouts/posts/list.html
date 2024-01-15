@@ -59,7 +59,7 @@
       {{ $paginator := .Paginate (where .Pages "Type" "posts")  }}
       {{ range $paginator.Pages }}
     {{/*  Card  */}}
-    <div class="col-12 col-md-6 col-lg-3 p-0" style="border-top-right-radius: 20px; border-bottom-left-radius: 20px; max-width: 390px; width: 100%;  margin: 0px 20px 40px 20px; background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
+    <div class="col-12 col-md-6 col-lg-3 p-0 blogPost" style="border-top-right-radius: 20px; border-bottom-left-radius: 20px; max-width: 390px; width: 100%;  margin: 0px 20px 40px 20px; background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
         {{ if .Params.thumbnail }}
     {{/*  Photo  */}}
     <a class="text-decoration-none" href="{{ .RelPermalink }}">
