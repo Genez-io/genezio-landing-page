@@ -197,6 +197,12 @@ $cyan: #0dcaf0 !default;
     }
   }
 
+  .articlePhoto {
+    @media (max-width: 768px) {
+      margin: 0px -8px 0px -8px;
+    }
+  }
+
   h2 {
     font-size: 32px;
   }
