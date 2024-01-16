@@ -14,6 +14,12 @@ input::placeholder {
   color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.blogPost {
+  @media (max-width: 767.98px) {
+    margin: 12px 0 12px 0 !important;
+  }
+}
+
 .blog-input-white::placeholder {
   color: rgba(255, 255, 255, 0.2) !important;
 }
@@ -183,6 +189,18 @@ $cyan: #0dcaf0 !default;
   .footer-subscribe-btn-custom {
     margin-top: 1em;
     margin-bottom: 1.5em;
+  }
+
+  .newsletterBtn {
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
+  }
+
+  .articlePhoto {
+    @media (max-width: 768px) {
+      margin: 0px -8px 0px -8px;
+    }
   }
 
   h2 {

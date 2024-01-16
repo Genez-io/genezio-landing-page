@@ -4,7 +4,7 @@
     style="border-left: 1px solid #e2d9f3; border-right: 1px solid #e2d9f3"
     class="container px-2"
   >
-    <div class="row px-4 pt-3">
+    <div class="row pt-3 px-0 px-md-4">
             <div class="mt-4">
               {{ if .Params.tags }}
             {{ range .Params.tags }}
@@ -15,7 +15,7 @@
       <h2 class="text-black fw-bold mb-0 mt-2 mb-4 pb-3 pt-1">{{ .Title }}</h2>
       {{/* TODO: replace with the photo */}}
       <div
-        class="mb-4 mt-3 position-relative"
+        class="mb-4 mt-3 position-relative articlePhoto"
         style="
           height: 450px;
           background-color: #a6b8c0;
@@ -43,7 +43,7 @@
         </div>
       </div>
       {{/* writer + share on */}}
-      <div class="d-flex justify-content-between align-items-center mt-3 pt-3">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mt-3 pt-3">
         <div class="d-flex">
           <img
             src="/images/writers/{{ .Params.author | urlize  }}.png"
@@ -55,12 +55,14 @@
             <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold">
               {{ .Params.author }}
             </p>
-            <p style="color: #525252" class="mb-0 fw-medium">
-              {{ dateFormat "Jan 02, 2006 date" .Params.date }}
+            <p style="color: #525252" class="mb-0 fw-medium date">
+              {{ dateFormat "Jan 02, 2006" .Params.date }}
             </p>
           </div>
         </div>
-        <div>
+        <div class="d-flex align-items-center mt-4 mt-sm-0">
+          <p style="color: rgba(82, 82, 82, 1);" class="date mb-0 mx-0 mx-sm-2">Share on:</p>
+
           <img
             style="border: 1px solid #e2d9f3; cursor: pointer"
             class="rounded-circle p-2"
@@ -83,9 +85,10 @@
       </div>
     </div>
 
+    {{/*  TODO: fix:  */}}
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
 
-    <div class="row px-4 pt-3  pb-5"> 
+    <div class="row px-3 px-md-4 pt-3 pb-5"> 
       <div class="articlePost col-lg-8">{{ .Content }}</div>
 
       <div class="col-lg-1"></div>
@@ -119,12 +122,11 @@
           "
           class="text-white p-4 mb-3"
         >
-          <div class="p-3">
-            <h4 class="mb-2">Subscribe to our newsletter</h4>
-            <p style="font-size: 14px" class="mt-1">
+          <div class="p-0 p-sm-3"> 
+            <h4 class="mb-4">Subscribe to our newsletter</h4>
+            <p style="font-size: 14px">
               <span class="opacity-50">Genezio is a serverless platform for building</span>
               <span style="color: #99fddb" class="fw-medium"> full-stack web and mobile</span>
-              <span class="d-block"></span>
               <span class="opacity-50">applications in a scalable and cost-efficient way.</span>
             </p>
 
@@ -144,7 +146,7 @@
                   style="background-color: rgba(255, 255, 255, 0.1); height: 48px"
                 />
                 <button
-                  class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 footer-subscribe-btn-custom"
+                  class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 footer-subscribe-btn-custom newsletterBtn"
                   style="height: 48px"
                   type="submit"
                 >
@@ -240,7 +242,7 @@
           {{/*  Title & preview  */}}
           <a class="text-decoration-none" href="{{ .RelPermalink }}">
             <div class="mb-4"> 
-              <h4 class="text-black mb-0" style="height: 64px">
+              <h4 class="text-black mb-0" style="min-height: 64px">
                   {{ if gt (len .Title) 46 }}
                     <script>
                       document.write("{{ .Title | safeJS }}".slice(0, 46) + "...");
@@ -249,7 +251,7 @@
                     {{ .Title }}
                 {{ end }}
               </h4>
-              <p style="color: #525252; height: 72px;" class="mt-4 mb-0">
+              <p style="color: #525252; min-height: 72px;" class="mt-4 mb-0">
                {{ if gt (len .Params.preview) 123 }}
                     <script>
                       document.write("{{ .Params.preview | safeJS }}".slice(0, 123) + "...");
@@ -304,7 +306,7 @@
                     <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                   {{ end }}
                 {{ end }}
-                <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                <h4 class="text-black mb-0 mt-2 pt-1" style="min-height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
                 {{/* Writer details */}}
                 <div class="d-flex flex-column mt-4">
                   <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
