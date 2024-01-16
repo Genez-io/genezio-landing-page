@@ -3,7 +3,7 @@ title: "Comparison Between Databases in the Serverless World"
 url: /blog/database-in-serverless-world-comparison/
 date: 2023-07-20
 tags:
-  - Comparison
+  - Learning
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 thumbnail: /images/database-performance.webp

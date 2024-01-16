@@ -2,7 +2,6 @@
 title: "Implement a shopping cart using TypeScript, Redis and React"
 date: 2023-12-04
 tags:
-  - News
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/

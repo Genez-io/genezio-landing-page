@@ -2,7 +2,7 @@
 title: "The Evolution of APIs: A History of REST and RPC"
 date: 2023-06-15
 tags:
-  - Comparison
+  - Learning
 author: Bogdan Ciobanu
 linkedIn: https://www.linkedin.com/in/bogdan-calin-ciobanu-a966b2268/
 thumbnail: /images/rest-rpc.webp

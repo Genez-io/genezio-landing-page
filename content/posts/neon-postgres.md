@@ -2,7 +2,6 @@
 title: "Now Available: Neon Postgres"
 date: 2023-11-22
 tags:
-  - News
   - Tutorials
 author: Virgil Turcu
 # TODO:
