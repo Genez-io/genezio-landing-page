@@ -61,26 +61,47 @@
           </div>
         </div>
         <div class="d-flex align-items-center mt-4 mt-sm-0">
+          {{/*
+              <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+                  Share on Facebook
+              </a>
+          */}}
+
+          {{/*  https://www.linkedin.com/sharing/share-offsite/?url=www.google.com  */}}
+          {{/*  TODO: add whatsapp  */}}
+          {{/*  TODO: replace ig with X  */}}
+       
+
           <p style="color: rgba(82, 82, 82, 1);" class="date mb-0 mx-0 mx-sm-2">Share on:</p>
 
-          <img
+          <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text={{ .Permalink }}"
+          data-size="large"
+          target="_blank"
+              >
+          <p
             style="border: 1px solid #e2d9f3; cursor: pointer"
-            class="rounded-circle p-2"
-            src="/images/instagram-logo-green.svg"
-            alt="instagram-icon"
-          />
+            class="rounded-circle p-2 m-0">X</p>
+          </a>
+
+          <a href="https://www.linkedin.com/sharing/share-offsite/?{{ .Permalink }}" target="_blank">
           <img
             style="border: 1px solid #e2d9f3; cursor: pointer"
             class="rounded-circle p-2 mx-2"
             src="/images/linkedin-logo-green.svg"
             alt="linkedin-icon"
           />
+          </a>
+
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank">
           <img
             style="border: 1px solid #e2d9f3; cursor: pointer"
             class="rounded-circle p-2"
             src="/images/facebook-logo-green.svg"
             alt="facebook-icon"
           />
+          </a>
+
         </div>
       </div>
     </div>
