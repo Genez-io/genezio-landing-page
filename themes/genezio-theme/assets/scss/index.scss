@@ -191,6 +191,12 @@ $cyan: #0dcaf0 !default;
     margin-bottom: 1.5em;
   }
 
+  .newsletterBtn {
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
+  }
+
   h2 {
     font-size: 32px;
   }
