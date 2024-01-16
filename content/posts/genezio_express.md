@@ -2,7 +2,7 @@
 title: Exploring the Differences Between genezio and Express.js
 date: 2023-05-05
 tags:
-  - Comparison
+  - Learning
 author: Stefan Iordache
 linkedIn: https://www.linkedin.com/in/stefan-d-iordache/
 thumbnail: /images/genezio_express.png

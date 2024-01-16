@@ -2,7 +2,7 @@
 title: "Now Available: Upstash Redis"
 date: 2023-11-22
 tags:
-  - News
+  - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/announcing_upstash.jpg

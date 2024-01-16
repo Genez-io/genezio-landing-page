@@ -2,7 +2,7 @@
 title: 10 Common Mistakes in Typescript Development
 date: 2023-11-16
 tags:
-  - Tutorials
+  - Learning
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/mistakesintypescript.webp
