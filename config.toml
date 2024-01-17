@@ -5,6 +5,9 @@ theme = "genezio-theme"
 enableRobotsTXT = true
 paginate = 9
 
+[params]
+    primary_color = "#6f42c1"
+
 [params.footer]
         description = "genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
         facebook = "https://www.facebook.com/profile.php?id=100086667803855"
