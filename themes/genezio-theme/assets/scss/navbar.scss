@@ -1,3 +1,13 @@
+.navbarEffect {
+  position: sticky !important;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  // padding: 10px;
+  transition: top 0.1s ease-in-out;
+  z-index: 1000;
+}
+
 @media (min-width: 992px) {
   nav {
     .navbar-collapse,
