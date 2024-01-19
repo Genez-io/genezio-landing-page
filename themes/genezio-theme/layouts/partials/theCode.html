@@ -1,3 +1,44 @@
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script>
+     $(document).ready(function(){
+      function handleDropdown(dropdownToggle, dropdownClass) {
+        var defaultItem = $(dropdownToggle).next(".dropdown-menu").find(".dropdown-item:first");
+        var defaultText = defaultItem.text();
+        var defaultValue = defaultItem.attr("href"); 
+
+        $(dropdownToggle).text(defaultText);
+        $(dropdownToggle).data("value", defaultValue);
+
+        var defaultTabId = defaultItem.attr("href").substring(1); 
+        $("." + dropdownClass + " .tab-pane").removeClass("show active"); 
+        $("#" + defaultTabId).addClass("show active"); 
+
+        $(dropdownToggle).next(".dropdown-menu").on('click', '.dropdown-item', function() {
+          var selectedTabText = $(this).text();
+          var selectedTabValue = $(this).attr("href"); 
+
+          $(dropdownToggle).text(selectedTabText);
+          $(dropdownToggle).data("value", selectedTabValue);
+
+          var selectedTabId = selectedTabValue.substring(1); 
+          $("." + dropdownClass + " .tab-pane").removeClass("show active"); 
+          $("#" + selectedTabId).addClass("show active"); 
+        });
+      }
+
+      // Dropdown 1
+      handleDropdown("#selectedTab", "sectionDropdown");
+
+      // Dropdown 2
+      handleDropdown("#selectedRpcTab", "sectionDropdown");
+
+      // Dropdown 3
+      handleDropdown("#selectedServerlessTab", "sectionDropdown");
+
+      // Dropdown 4
+      handleDropdown("#selectedCloudTab", "sectionDropdown");
+    });
+  </script>
 <div
   class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area"
 >
