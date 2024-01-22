@@ -79,7 +79,7 @@
   <div class="text-white position-relative" id="accordionExample">
     <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
       <h2 class="accordion-header" id="headingBackend">
-        <button class="accordion-button shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBackend" aria-expanded="false" aria-controls="collapseBackend">
+        <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBackend" aria-expanded="false" aria-controls="collapseBackend">
           genezio.Backend
         </button>
       </h2>
@@ -322,7 +322,7 @@ export class OrderService {
 <div class="text-white position-relative" id="accordionExample2">
   <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
     <h2 class="accordion-header" id="headingRpc">
-      <button class="accordion-button shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRpc" aria-expanded="false" aria-controls="collapseRpc">
+      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRpc" aria-expanded="false" aria-controls="collapseRpc">
         genezio.Rpc
       </button>
     </h2>
@@ -426,7 +426,7 @@ const bye = await HelloworldService.bye(person);</code>
 <div class="text-white position-relative" id="accordionExample3">
   <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
     <h2 class="accordion-header" id="headingServerless">
-      <button class="accordion-button shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServerless" aria-expanded="false" aria-controls="collapseServerless">
+      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServerless" aria-expanded="false" aria-controls="collapseServerless">
         genezio.Serverless
       </button>
     </h2>
@@ -558,7 +558,7 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
 <div class="text-white position-relative" id="accordionExample4">
   <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
     <h2 class="accordion-header" id="headingCloud">
-      <button class="accordion-button shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCloud" aria-expanded="false" aria-controls="collapseCloud">
+      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCloud" aria-expanded="false" aria-controls="collapseCloud">
         genezio.Cloud
       </button>
     </h2>
@@ -1384,34 +1384,35 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var accordionButtons = document.querySelectorAll('.accordion-button');
+  var accordionButtons = document.querySelectorAll('.accordion-button.theCode');
 
-    accordionButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        accordionButtons.forEach(function (btn) {
-          btn.classList.remove('customDropdown');
-        });
-        
-        if (!button.classList.contains('customDropdown')) {
-          button.classList.add('customDropdown');
-        }
-
-        if (button.classList.contains('collapsed')) {
-          button.classList.remove('customDropdown');
-        }
+  accordionButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      accordionButtons.forEach(function (btn) {
+        btn.classList.remove('customDropdown');
       });
-    });
-  });
-
-   $(document).ready(function() {
-    $('.accordion-button').click(function() {
-      // Close all open accordion items
-      $('.accordion-collapse').collapse('hide');
       
-      // Open the clicked accordion item
-      $($(this).data('bs-target')).collapse('show');
+      if (!button.classList.contains('customDropdown')) {
+        button.classList.add('customDropdown');
+      }
+
+      if (button.classList.contains('collapsed')) {
+        button.classList.remove('customDropdown');
+      }
     });
   });
+});
+
+$(document).ready(function() {
+  $('.accordion-button.theCode').click(function() {
+    // Close all open accordion items
+    $('.accordion-collapse').collapse('hide');
+    
+    // Open the clicked accordion item
+    $($(this).data('bs-target')).collapse('show');
+  });
+});
+
   
 </script>
 
