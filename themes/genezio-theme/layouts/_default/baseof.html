@@ -125,12 +125,18 @@
   <script>
     let lastScrollTop = 0;
     const navbar = document.getElementById("navbar");
+    const navbarMobile = document.getElementById("navbarMobile");
 
     window.addEventListener("scroll", function () {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+      // Check if the navbarMobile has the "show" class
+      const isNavbarMobileVisible = navbarMobile.classList.contains("show");
+
       if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight) {
-        navbar.style.top = `-${navbar.offsetHeight}px`;
+        if (!isNavbarMobileVisible) {
+          navbar.style.top = `-${navbar.offsetHeight}px`;
+        }
       } else {
         navbar.style.top = "0";
       }
