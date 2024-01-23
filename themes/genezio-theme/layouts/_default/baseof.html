@@ -141,6 +141,13 @@
         navbar.style.top = "0";
       }
 
+      // Disable scrolling when the mobile navbar is active
+      if (isNavbarMobileVisible) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+
       lastScrollTop = scrollTop;
     });
   </script>
