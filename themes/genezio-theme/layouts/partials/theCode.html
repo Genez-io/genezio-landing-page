@@ -1,6 +1,11 @@
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
- 
+
+ {{/*  TODO: 
+  genezio.RPC keet it the same X
+  genezio.Backend -> rename to genezio.Services x
+  genezio.Serverless -> rename to genezio.Cloud and also add the current genezio cloud tab
+ */}}
 
  <script>
   
@@ -80,7 +85,7 @@
     <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
       <h2 class="accordion-header" id="headingBackend">
         <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBackend" aria-expanded="false" aria-controls="collapseBackend">
-          genezio.Backend
+          genezio.Services
         </button>
       </h2>
       <div id="collapseBackend" class="accordion-collapse collapse" aria-labelledby="headingBackend" data-bs-parent="#accordionExample">
@@ -427,7 +432,7 @@ const bye = await HelloworldService.bye(person);</code>
   <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
     <h2 class="accordion-header" id="headingServerless">
       <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServerless" aria-expanded="false" aria-controls="collapseServerless">
-        genezio.Serverless
+        genezio.Cloud
       </button>
     </h2>
     <div id="collapseServerless" class="accordion-collapse collapse" aria-labelledby="headingServerless" data-bs-parent="#accordionExample3">
@@ -443,6 +448,7 @@ const bye = await HelloworldService.bye(person);</code>
                 <a class="dropdown-item" id="serverlessTab1-tab" data-toggle="tab" href="#serverlessTab1">Zero Devops Deployment</a>
                 <a class="dropdown-item" id="serverlessTab2-tab" data-toggle="tab" href="#serverlessTab2">Multiple environments</a>
                 <a class="dropdown-item" id="serverlessTab3-tab" data-toggle="tab" href="#serverlessTab3">Deploy frontend</a>
+                <a class="dropdown-item" id="serverlessTab4-tab" data-toggle="tab" href="#serverlessTab4">Cold start time</a>
                 <!-- Add more tabs as needed -->
               </div>
             </li>
@@ -545,6 +551,12 @@ Your local server is running, and the SDK was successfully generated!
 Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
                 </pre>
             </div>
+            <div class="tab-pane fade" id="serverlessTab4">
+             <p class="text-white opacity-50 mt-4 mb-0">Test parameters: Hello World function
+30 HTTPS requests for each scenario Cached DNS records for functions domains to prevent additional time caused by DNS</p>
+              <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>test
+
+            </div>
             <!-- Add more content panes as needed -->
           </div>
         </div>
@@ -555,7 +567,7 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
 
 
   <!-- genezio Cloud -->
-<div class="text-white position-relative" id="accordionExample4">
+{{/*  <div class="text-white position-relative" id="accordionExample4">
   <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
     <h2 class="accordion-header" id="headingCloud">
       <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCloud" aria-expanded="false" aria-controls="collapseCloud">
@@ -591,7 +603,7 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
       </div>
     </div>
   </div>
-</div>
+</div>  */}}
 
 </div>
 
@@ -603,8 +615,8 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownTabs">
       <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')">genezio.Rpc</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')">genezio.Backend</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Serverless</a>
+      <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')">genezio.Services</a>
+      <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Cloud</a>
       <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')">genezio.Cloud</a>
     </div>
   </div>
@@ -638,7 +650,7 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
     Show me the code
   </h2>
 
-  <div class="col-lg-11 col-md-11 m-2">
+  <div class="col-lg-11 col-md-11 m-2 mx-auto">
     <nav>
       <div
         class="nav nav-tabs nav-fill"
@@ -668,7 +680,7 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
           aria-controls="genezio-backend"
           aria-selected="true"
         >
-          genezio.Backend
+          genezio.Services
         </button>
         <button
           class="nav-link nav-link-custom"
@@ -680,9 +692,9 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
           aria-controls="genezio-serverless"
           aria-selected="false"
         >
-          genezio.Serverless
+          genezio.Cloud
         </button>
-        <button
+        {{/*  <button
           class="nav-link nav-link-custom"
           id="genezio-cloud-tab"
           data-bs-toggle="tab"
@@ -693,7 +705,7 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
           aria-selected="false"
         >
           genezio.Cloud
-        </button>
+        </button>  */}}
       </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -1166,6 +1178,9 @@ export class OrderService {
           <button class="nav-link nav-link-custom text-start" id="storage-tab2" data-bs-toggle="tab" data-bs-target="#storage2" type="button" role="tab" aria-controls="storage2" aria-selected="false">
             Deploy frontend
           </button>
+          <button class="nav-link nav-link-custom text-start" id="storage-tab4" data-bs-toggle="tab" data-bs-target="#storage4" type="button" role="tab" aria-controls="storage4" aria-selected="false">
+            Cold start time
+          </button>
         </div>
       </nav>
     </div>
@@ -1301,6 +1316,14 @@ Test your code at https://dev.app.genez.io/test-interface/local?port=8083
 </code>
                 </pre>
         </div>
+        <div class="tab-pane fade" id="storage4" role="tabpanel" aria-labelledby="storage-tab4" tabindex="0">
+          <!-- Content for the "Deploy frontend" tab -->
+                       <p class="text-white opacity-50  mb-0">Test parameters: Hello World function
+30 HTTPS requests for each scenario Cached DNS records for functions domains to prevent additional time caused by DNS</p>
+                        <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
+                        </div>
+
+
       </div>
     </div>
   </div>
