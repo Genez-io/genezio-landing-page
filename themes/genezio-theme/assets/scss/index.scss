@@ -11,6 +11,10 @@ input::placeholder {
   color: white !important;
 }
 
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .blog-input::placeholder {
   color: rgba(0, 0, 0, 0.2) !important;
 }
