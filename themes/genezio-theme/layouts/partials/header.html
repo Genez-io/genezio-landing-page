@@ -28,42 +28,191 @@
       data-bs-toggle="collapse"
       data-bs-target="#navbarMobile"
     >
-      <img
-        src="/images/burger-menu.svg"
-        alt="burger-menu-icon"
-        height="24px"
-        width="24px"
-        style="z-index: 9; position: absolute"
-      />
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 6H20M4 12H20M4 18H20"
+          stroke="white"
+          stroke-opacity="0.7"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
     </button>
 
     <!-- Mobile Menu -->
     <div id="navbarMobile" class="collapse navbar-collapse full-display-menu">
-      <div class="container border">
+      <div class="container">
         {{/* Mobile dropdown header */}}
-        <div>
-          <p class="text-success">Features</p>
-          <p>wip</p>
-          <p>wip</p>
-          <p>wip</p>
-          <p>wip</p>
-          <p>wip</p>
-          <p class="text-success">Resources</p>
-          <p>Blog</p>
+        <div class="mt-3 mb-5 d-flex align-items-center justify-content-between">
+          <img
+            class="navbar-brand"
+            alt="genezio-logo"
+            src="/images/genezio-logo.svg"
+            height="45px"
+            width="135px"
+          />
+
+          <button
+            class="navbar-toggler shadow-none border-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMobile"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18L18 6M6 6L18 18"
+                stroke="white"
+                stroke-opacity="0.7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
 
-        {{/* Mobile dropdown links */}} {{/* Mobile dropdown getting started */}}
+        {{/* Mobile dropdown Links */}}
+        <div>
+          <a
+            href="/#features"
+            class="opacity-50 text-white text-decoration-none navbar-toggler shadow-none border-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMobile"
+            data-bs-dismiss="modal"
+            onclick="navigateToSection('/#features')"
+          >
+            <div class="d-flex">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="margin-right: 16px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 7.5H13.5M12 10.5H13.5M6 13.5H13.5M6 16.5H13.5M16.5 7.5H19.875C20.4963 7.5 21 8.00368 21 8.625V18C21 19.2426 19.9926 20.25 18.75 20.25M16.5 7.5V18C16.5 19.2426 17.5074 20.25 18.75 20.25M16.5 7.5V4.875C16.5 4.25368 15.9963 3.75 15.375 3.75H4.125C3.50368 3.75 3 4.25368 3 4.875V18C3 19.2426 4.00736 20.25 5.25 20.25H18.75M6 7.5H9V10.5H6V7.5Z"
+                  stroke="white"
+                  stroke-opacity="0.3"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <p style="font-size: 16px" class="mb-1 fw-semibold">Features</p>
+                <p style="font-weight: 500; font-size: 12px">
+                  A short description for this section
+                </p>
+              </div>
+            </div>
+          </a>
+          <p style="font-size: 12px" class="text-success fw-bold pb-2">Resources</p>
+          <a class="opacity-50 text-white text-decoration-none" href="/blog/">
+            <div class="d-flex">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="margin-right: 16px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 7.5H13.5M12 10.5H13.5M6 13.5H13.5M6 16.5H13.5M16.5 7.5H19.875C20.4963 7.5 21 8.00368 21 8.625V18C21 19.2426 19.9926 20.25 18.75 20.25M16.5 7.5V18C16.5 19.2426 17.5074 20.25 18.75 20.25M16.5 7.5V4.875C16.5 4.25368 15.9963 3.75 15.375 3.75H4.125C3.50368 3.75 3 4.25368 3 4.875V18C3 19.2426 4.00736 20.25 5.25 20.25H18.75M6 7.5H9V10.5H6V7.5Z"
+                  stroke="white"
+                  stroke-opacity="0.3"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <p class="mb-1 fw-semibold">Blog</p>
+                <p style="font-weight: 500; font-size: 12px">
+                  A short description for this section
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      {{/* Mobile dropdown getting started */}}
+      <div class="container">
         <div
-          class="additional-content"
-          style="border: 1px solid red; position: absolute; bottom: 30px; margin-bottom: 10px"
+          style="
+            border-radius: 12px;
+            background: radial-gradient(
+                97.22% 145.83% at 50% -52.08%,
+                #693fb3 0%,
+                rgba(105, 63, 179, 0) 100%
+              ),
+              var(--purple-purple_10, #2c1a4d);
+          "
+          class="container mb-3 d-flex align-items-center justify-content-center pt-3 pb-2"
         >
-          <p>wip</p>
-          <p>wip</p>
-          <p>wip</p>
+          <div class="w-100 d-flex align-items-center justify-content-center flex-column">
+            <a
+              href="https://github.com/Genez-io/genezio"
+              target="_blank"
+              rel="noopener nofollow"
+              class="nav-link text-white opacity-75 fw-normal mx-2 px-1 star-effect d-flex align-items-center"
+            >
+              <svg
+                class="star-effect"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.4807 3.4987C11.6729 3.03673 12.3273 3.03673 12.5195 3.4987L14.6454 8.61016C14.7264 8.80492 14.9096 8.93799 15.1199 8.95485L20.6381 9.39724C21.1369 9.43722 21.3391 10.0596 20.9591 10.3851L16.7548 13.9866C16.5946 14.1238 16.5246 14.3391 16.5736 14.5443L17.858 19.9292C17.9741 20.4159 17.4447 20.8005 17.0177 20.5397L12.2933 17.6541C12.1133 17.5441 11.8869 17.5441 11.7069 17.6541L6.98251 20.5397C6.55551 20.8005 6.02606 20.4159 6.14215 19.9292L7.42664 14.5443C7.47558 14.3391 7.40562 14.1238 7.24543 13.9866L3.04111 10.3851C2.66112 10.0596 2.86335 9.43722 3.36209 9.39724L8.88034 8.95485C9.0906 8.93799 9.27375 8.80492 9.35476 8.61016L11.4807 3.4987Z"
+                  stroke="white"
+                  stroke-opacity="0.3"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Star on GitHub</a
+            >
+
+            <a
+              class="btn btn-secondary fw-semibold px-4 py-2 border-0 ms-0 w-100 mt-4 mb-1 d-flex align-items-center justify-content-center"
+              style="height: 48px; color: rgba(255, 255, 255, 0.7)"
+              type="submit"
+              href="https://app.genez.io/auth/login"
+              target="_blank"
+            >
+              Login
+            </a>
+            <a
+              class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 newsletterBtn w-100 mt-2 mb-1 d-flex align-items-center justify-content-center"
+              style="height: 48px"
+              type="submit"
+              href="https://docs.genezio.com/genezio-documentation/getting-started"
+              target="_blank"
+            >
+              Start for free
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- Desktop Menu -->
     <div
       class="collapse navbar-collapse d-flex justify-content-between d-none d-lg-block"
@@ -194,3 +343,10 @@
     </div>
   </div>
 </nav>
+
+<script>
+  function navigateToSection(section) {
+    // Navigate to the specified section
+    window.location.href = section;
+  }
+</script>
