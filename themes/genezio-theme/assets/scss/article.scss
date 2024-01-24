@@ -1,4 +1,8 @@
 .articlePost {
+  .activeSection {
+    border-left: 1px solid rgba(0, 150, 98, 1) !important;
+  }
+
   p {
     color: #171717;
     font-size: 16px;

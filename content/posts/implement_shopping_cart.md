@@ -13,6 +13,20 @@ meta_og_image: "https://genez.io/images/implement_shopping_cart_redis.jpg"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 24
+
+menuItems:
+  - identifier: "introduction"
+    name: "Introduction"
+    url: "/introduction/"
+    weight: 1
+  - identifier: "prerequisites"
+    name: "Prerequisites"
+    url: "/prerequisites/"
+    weight: 2
+  - identifier: "getting-started"
+    name: "Getting Started"
+    url: "/getting-started/"
+    weight: 3
 ---
 
 In this tutorial, I'll show you how to use Redis, NodeJs, and React to easily implement a shopping cart for your online store.

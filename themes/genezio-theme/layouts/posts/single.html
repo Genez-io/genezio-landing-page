@@ -116,13 +116,15 @@
       <div class="articlePost col-lg-8">{{ .Content }}</div>
 
       <div class="col-lg-1"></div>
-
       <div class="articlePost col-lg-3">
-        <p class="fw-semibold" style="opacity: .6;">Article contents</p>
-      <ul style="list-style: none; padding: 0;">
-        WIP
-        {{ range $key, $value := .Params.menuItems }}
-          <li style="border-left: 1px solid #D9D9D9;" class="px-4" ><a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ $value }}">{{ $key }}</a></li>
+        <p class="fw-semibold " style="opacity: .6;">Article contents</p>
+        <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
+        {{ with .Params.menuItems }}
+          {{ range . }}
+            <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
+              <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
+            </li>
+          {{ end }}
         {{ end }}
       </ul>
       </div>
@@ -370,9 +372,69 @@
   {{ end }}
 </div> <!-- Close the main container row -->
 
-    {{/*  end of More of ... section  */}}
-
-  
 
 </div>
+
+<script>
+  function updateActiveSection() {
+  const activeSection = window.location.href.split("#")[1];
+
+  if (activeSection) {
+
+    const formattedActiveSection = formatSectionName(activeSection);
+    const activeLi = document.getElementById(formattedActiveSection);
+
+    if (activeLi) {
+    const allLiElements = document.querySelectorAll("ul#articleContentNavigation li");
+    allLiElements.forEach(li => {
+      li.classList.remove("activeSection");
+    });
+      activeLi.classList.add("activeSection");
+
+    }
+  }
+
+}
+
+function formatSectionName(section) {
+ return section
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('_');
+}
+
+// Initial run of the script
+updateActiveSection();
+
+// Add event listener for hash changes
+window.addEventListener("scroll", updateActiveSection);
+
+</script>
+
+{{/*  map each h2 as an id  */}}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("h2[id]");
+    const scrollOffsets = Array.from(sections).map((section) => section.offsetTop - 50);
+
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+
+      const currentSectionIndex = scrollOffsets.findIndex((offset) => offset > scrollPosition);
+
+      if(currentSectionIndex){
+
+      if (currentSectionIndex !== -1) {
+        const currentSectionId = sections[currentSectionIndex - 1].id;
+        window.history.replaceState({}, "", `#${currentSectionId}`);
+      } else {
+        // If at the bottom, set the URL to the last section
+        const lastSectionId = sections[sections.length - 1].id;
+        window.history.replaceState({}, "", `#${lastSectionId}`);
+      }
+      }
+
+    });
+  });
+</script>
 {{ end }}
