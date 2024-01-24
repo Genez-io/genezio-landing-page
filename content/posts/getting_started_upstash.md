@@ -150,19 +150,19 @@ Navigate the link in your terminal to open your project page in the genezio dash
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 
-![Alt text](/images/blog/getting_started_upstash_images/image-3.png)
+![Alt text](/posts/image-3.png)
 
 Connect with an Upstash account using the preferred login method:
 
-![Alt text](/images/blog/getting_started_upstash_images/image.png)
+![Alt text](/posts/image.png)
 
 Create a Redis database or select an already existing database:
 
-![Alt text](/images/blog/getting_started_upstash_images/image-1.png)
+![Alt text](/posts/image-1.png)
 
 Hit the `Save` button to set the database credentials as environment variables in your genezio project:
 
-![Alt text](/images/blog/getting_started_upstash_images/image-2.png)
+![Alt text](/posts/image-2.png)
 
 ## Step 3: Connect your backend to the Redis database
 

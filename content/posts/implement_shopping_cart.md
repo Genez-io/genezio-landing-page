@@ -83,7 +83,7 @@ We will use `genezio` to help you scaffold the web app and deploy it to the clou
 
 The result of this tutorial will be a web application that looks like this:
 
-![Alt text](/images/blog/shopping_cart_example/shopping_cart_preview.png)
+![Alt text](/posts//shopping_cart_preview.png)
 
 ## Prerequisites
 
@@ -215,7 +215,7 @@ At this point you are probably asking yourself what `hincrby` or `hgetall` are a
 
 The Redis database has the following structure - each entry is uniquely identified by a key `cart:uniqueSessionId` and it points to a hashmap that contains pairs of `item:count` for each item in the shopping cart.
 
-![Alt text](/images/blog/shopping_cart_example/redis_structure.png)
+![Alt text](/posts/redis_structure.png)
 
 `hincrby` is a command that increments the value of a hashmap key by a given amount - for this example, it means it increments the counter for a specific bought product. If the key does not exist, it is created and set to 0 before actually incrementing it. `hincrby` can also be used to decrement the value of a hashmap key by a given amount.
 
@@ -236,14 +236,14 @@ Let's create a Redis database and connect it to your web application using a `.e
 Luckily, genezio makes it very easy to add an {{< external-link link="https://upstash.com/?utm_source=genezio+&utm_medium=blog&utm_campaign=post" >}}Upstash Redis{{< /external-link >}} integration to your project.
 Go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
 
-![Alt text](/images/blog/shopping_cart_example/add_integration.png)
+![Alt text](/posts/add_integration.png)
 
 If you get stuck at this step, you can follow the {{< external-link link="https://docs.genez.io/genezio-documentation/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
 
 After adding the Upstash Redis integration, copy the environment variables from the `.env` section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
 Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
 
-![Alt text](/images/blog/shopping_cart_example/copy_env_vars.png)
+![Alt text](/posts/shopping_cart_example/copy_env_vars.png)
 
 To test the code, you can run `genezio local` in the project directory.
 This will start a fast local development server on your machine.
@@ -261,7 +261,7 @@ Test your code at https://app.genez.io/test-interface/local?port=8083
 
 From the genezio dashboard, you can send requests to your backend classes and see the response.
 
-![Alt text](/images/blog/shopping_cart_example/test_backend.png)
+![Alt text](/posts/test_backend.png)
 
 You'll also need 2 more methods in the backend source code - a method to remove only one item from the cart and a method to delete the entire cart.
 
