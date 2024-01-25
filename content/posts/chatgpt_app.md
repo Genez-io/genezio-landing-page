@@ -232,7 +232,9 @@ export class GptCaller {
       messages: [{ role: "user", content: "rephrase this:" + requestText }],
     });
 
-    console.log(`DEBUG: request: ${requestText}, response: ${completion.choices[0].message}`);
+    console.log(
+      `DEBUG: request: ${requestText}, response: ${completion.choices[0].message}`
+    );
     return completion.choices[0].message.content;
   }
 }
@@ -368,7 +370,11 @@ To finish, you need a form with an input text box where the user can enter the t
     value={requestText}
     onChange={(e) => setRequestText(e.target.value)}
   />
-  <button type="submit" className="msger-send-btn" onClick={(e) => sendRequest(e)}>
+  <button
+    type="submit"
+    className="msger-send-btn"
+    onClick={(e) => sendRequest(e)}
+  >
     {isRequesting ? "Sending..." : "Send"}
   </button>
 </form>
@@ -456,7 +462,11 @@ function App() {
             value={requestText}
             onChange={(e) => setRequestText(e.target.value)}
           />
-          <button type="submit" className="msger-send-btn" onClick={(e) => sendRequest(e)}>
+          <button
+            type="submit"
+            className="msger-send-btn"
+            onClick={(e) => sendRequest(e)}
+          >
             {isRequesting ? "Sending..." : "Send"}
           </button>
         </form>

@@ -42,7 +42,10 @@ export class EcommerceCacheService {
     this.client = new Redis(process.env.REDIS_URL);
   }
 
-  cacheProductDetails(productId: string, productDetails: string): Promise<boolean> {
+  cacheProductDetails(
+    productId: string,
+    productDetails: string
+  ): Promise<boolean> {
     const key = `product:${productId}`;
     await this.client.set(key, productDetails, "EX", expirationInSeconds);
 
@@ -115,36 +118,36 @@ npm install genezio -g
 Then, you can create a new genezio project by simply running `genezio` in your terminal:
 
 ```bash
-genezio
+genezio create backend --backend=ts --name=getting-started-with-upstash --region=us-east-1
 ```
 
-The `genezio` command will walk you through the process of creating a new genezio project.
-Your terminal should look similar to the following snippets:
+The command above will initialize a new Genezio project with the name `getting-started-with-upstash`. This project will only have a backend written in typescript and its deployment region will be `us-east-1`.
+
+After you successfully run the command, your terminal should look something like this:
 
 ```
-$ genezio
-Redirecting to browser to complete authentication...
+$ genezio create backend --backend=ts --name=getting-started-with-upstash --region=us-east-1
+Project initialized in \your-path\getting-started-with-upstash. Now run:
 
-? Choose a template for your genezio project Backend-Only
-Your project will start from the Backend-Only template.
+    For deployment of the backend, run:
+        cd getting-started-with-upstash
+        genezio deploy
 
-? Please enter a name for your project: getting-started-with-upstash
-Your project will be named getting-started-with-upstash.
 
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
+    For testing locally, run:
+        cd getting-started-with-upstash
+        genezio local
 
-? Please enter a name for your directory: getting-started-with-upstash
-We are creating the project in ./getting-started-with-upstash.
 ```
 
-After the deployment is complete, you should see the following message in your terminal:
+The next step is to integrate this small project with a Redis database provided by Upstash. To do that, we first need to deploy the project. We can do that by running the following commands in the root directory of the project:
 
-```bash
-Your backend project has been deployed and is available at https://app.genez.io/project/<project-id>/<environment-id>
+```
+npm install
+genezio deploy
 ```
 
-Navigate the link in your terminal to open your project page in the genezio dashboard.
+Once the deployment is complete, open your {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} and pick the project you created earlier.
 
 ## Step 2: Initialize an Upstash Redis database
 
@@ -201,7 +204,11 @@ export class ShoppingCartService {
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
 
-  addItemToCart(cartId: string, productId: string, quantity: number): Promise<boolean> {
+  addItemToCart(
+    cartId: string,
+    productId: string,
+    quantity: number
+  ): Promise<boolean> {
     const cartKey = `cart:${cartId}`;
     await this.client.set(`${cartKey}:${productId}`, quantity);
 

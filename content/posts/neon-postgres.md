@@ -32,11 +32,11 @@ Among the many features unlocked by this integration, Neon Postgres allows you t
 
 - Neon Pro Plan users also have access to autoscaling.
 
-All these features are optimized for applications which are based on a serverless infrastructure. As such, genezio’s serverless deployment is well suited for working with any Neon Postgres database.
+All these features are optimized for applications that are based on a serverless infrastructure. As such, genezio’s serverless deployment is well-suited for working with any Neon Postgres database.
 
 # Connect your backend to Neon Postgres
 
-In this tutorial you will learn how to create a simple genezio project and integrate it with a Postgres database using Neon.
+In this tutorial, you will learn how to create a simple genezio project and integrate it with a Postgres database using Neon.
 
 ## Prerequisites
 
@@ -48,57 +48,47 @@ If you already have a genezio project deployed and you just want to integrate Ne
 
 Install genezio by running the following command in your terminal:
 
-`npm install genezio -g`
+```
+npm install genezio -g
+```
 
 After that, you can initialize a brand new project by running `genezio` in your preferred directory:
 
-`genezio`
+```
+genezio create backend --backend=ts --name=getting-started-with-neon --region=us-east-1
+```
 
-This command will guide you through all the necessary steps to initialize and deploy your genezio project. After you successfully ran the command, your terminal should look something like this:
+The command above will initialize a new Genezio project with the name `getting-started-with-neon`. This project will only have a backend written in typescript and it's deployment region will be `us-east-1`.
+
+After you successfully run the command, your terminal should look something like this:
 
 ```
 
-Redirecting to browser to complete authentication...
-Loading...✅
-? Choose a template for your genezio project Backend-Only
-Your project will start from the Backend-Only template.
-? Please enter a name for your project: getting-started-with-neon
-Your project will be named getting-started-with-neon.
-? Choose a region for your project US East (Ohio)
-Your project will be deployed in US East (Ohio).
-? Please enter a name for your directory: getting-started-with-neon
-We are creating the project in ./getting-started-with-neon.
-Creating the project...✅
+$ genezio create backend --backend=ts --name=getting-started-with-neon --region=us-east-1
+Project initialized in \your-path\getting-started-with-neon. Now run:
 
-Deploying your project...
+    For deployment of the backend, run:
+        cd getting-started-with-neon
+        genezio deploy
 
-Bundling your code...✅
-Checking your credentials...✅
-Changing the plumbing of the pipeline...✅
-Doing the final touch-ups...✅
 
-Deploying your backend project to the genezio infrastructure...
-Your code was deployed and the SDK was successfully generated!
+    For testing locally, run:
+        cd getting-started-with-neon
+        genezio local
 
-To install the SDK in your client,
-run this command in your client's root:
-npm install @genezio-sdk/getting-started-with-neon_us-east-2@1.0.0-prod
-
-Then import your classes like this:
-import { HelloWorldService } from
-"@genezio-sdk/getting-started-with-neon_us-east-2"
-
-After deployment is complete, you should be able to access your project by following the link provided by the terminal in the following message:
-
-Your backend project has been deployed and is available at https://app.genez.io/project/<project-id>
-
-Navigate to the link to open your genezio dashboard and manage your project.
 
 ```
 
 ## Step 2: Initialize a Neon Postgres database
 
-The next step is to integrate this small project with a Postgres database provided by Neon. To do that, open your genezio dashboard at {{< external-link link="https://app.genez.io/dashboard" >}}dashboard{{< /external-link >}} and pick the project you created earlier. In the _Integrations_ tab you can select to install the Neon Postgres integration:
+The next step is to integrate this small project with a Postgres database provided by Neon. To do that, we first need to deploy the project. We can do that by running the following commands in the root directory of the project:
+
+```
+npm install
+genezio deploy
+```
+
+Once the deployment is complete, open your {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} and pick the project you created earlier. In the _Integrations_ tab you can select to install the Neon Postgres integration:
 
 ![alt_text](/posts/neon1.png)
 
@@ -193,7 +183,7 @@ After testing your application locally, you can deploy it again to update the pr
 genezio deploy
 ```
 
-Now you can test your deployed application by navigating to the genezio {{< external-link link="http://app.genez.io/test-interface" >}}testing interface{{< /external-link >}} in the dashboard.
+Now you can manage your deployed application by navigating to the {{< external-link link="http://app.genez.io" >}}Genezio dashboard{{< /external-link >}}.
 
 ## Conclusion
 

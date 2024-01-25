@@ -70,7 +70,7 @@ jobs:
 
 To use the _genezio deploy_ command, you need to authenticate to the genezio cloud. You should store your genezio token keys securely and not hard-code them in the workflow.
 
-You can generate your token using this link: <https://app.genez.io/settings/tokens>
+You can generate your token using this link: {{< external-link link="https://app.genez.io/settings/tokens" >}}app.genez.io/settings/tokens{{< /external-link >}}
 
 Go to your GitHub repository.
 
