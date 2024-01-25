@@ -15,7 +15,8 @@
         {{ if .Params.thumbnail }}
     {{/*  Photo  */}}
     <a class="text-decoration-none" href="{{ .RelPermalink }}">
-        <div class="mb-4 position-relative"  style="height: 195px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px">
+        <div  class="mb-4 position-relative">
+          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="max-height: 195px; border-bottom-left-radius: 20px; border-top-right-radius: 20px;" />
           {{/*  read time  */}}
           <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
             <div class="d-flex align-items-center">

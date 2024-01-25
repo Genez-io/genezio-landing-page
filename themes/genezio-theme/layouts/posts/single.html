@@ -14,15 +14,10 @@
 
       <h2 class="text-black fw-bold mb-0 mt-2 mb-4 pb-3 pt-1">{{ .Title }}</h2>
       {{/* TODO: replace with the photo */}}
-      <div
-        class="mb-4 mt-3 position-relative articlePhoto"
-        style="
-          height: 450px;
-          background-color: #a6b8c0;
-          border-bottom-left-radius: 20px;
-          border-top-right-radius: 20px;
-        "
-      >
+      <div class="mb-4 mt-3 position-relative articlePhoto">
+
+      <img src="{{ .Params.thumbnail | relURL }}"class="w-100" style="max-height: 630px; border-bottom-left-radius: 20px; border-top-right-radius: 20px;" />
+      
         {{/* read time */}}
         <div
           class="py-1 px-2 position-absolute"
@@ -245,7 +240,8 @@
         <div class="col-lg col-md-12 p-0 m-2">
             <div class="card border-0" style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07); background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
                <a class="text-decoration-none" href="{{ .RelPermalink }}">
-        <div class="position-relative"  style="height: 195px; background-color: #a6b8c0; border-bottom-left-radius: 20px;border-top-right-radius: 20px">
+        <div class="position-relative">
+          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="height: 205px; border-bottom-left-radius: 20px;border-top-right-radius: 20px;" />
           {{/*  read time  */}}
           <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
             <div class="d-flex align-items-center">

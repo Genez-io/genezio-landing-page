@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Stefan Iordache
 linkedIn: https://www.linkedin.com/in/stefan-d-iordache/
-thumbnail: /images/genezio_express.png
+thumbnail: /images/genezio_express.webp
 preview: Today we will compare genezio with one of the major players in the market, Express
 # meta data start
 description: "Compare genezio with Express.js. Find out about writing code, testing the code, calling the API from your client, and what it takes to deploy your code."
 meta_og_url: "https://genez.io/blog/exploring-the-differences-between-genezio-and-express.js"
-meta_og_image: "https://genez.io/images/genezio_express.png"
+meta_og_image: "https://genez.io/images/genezio_express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
