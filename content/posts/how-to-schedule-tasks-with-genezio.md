@@ -54,44 +54,42 @@ npm install -g genezio
 After installing `genezio`, you can create a new Genezio Node.js project by running the following command in an empty new folder:
 
 ```
-genezio
+genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
 ```
 
-The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
+The command above will initialize a new Genezio project with the name `scheduler-app`. This project will only have a backend written in typescript and it's deployment region will be `us-east-1`.
 
 Your terminal should look similar to the following output:
 
 ```
-~ genezio
-Redirecting to the browser to complete authentication...
+~ genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
+Project initialized in \your-path\scheduler-app. Now run:
 
-? Choose a template for your genezio project Backend-Only
-Your project will start from the Backend-Only template.
+    For deployment of the backend, run:
+        cd scheduler-app
+        genezio deploy
 
-? Please enter a name for your project: my-online-store
-Your project will be named scheduler-app.
 
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
-
-We are creating the project in the current directory.
-
-Deploying your backend project to genezio infrastructure...
-
-Your backend project has been deployed and is available at https://app.genez.io/project/<id>/<id>
+    For testing locally, run:
+        cd scheduler-app
+        genezio local
 ```
 
-This command will execute npm init (create package.json file) and install the only dependency we need for scheduled cron jobs(`@genezio/types`).
+Now go into the `scheduler-app` directory by using the following command:
+
+```
+cd scheduler-app
+```
+
+Install the necessary dependencies by running the command:
+
+```
+npm install
+```
 
 ## Setting up your Scheduler
 
-Next, you need to create a new class using the following command:
-
-```
-genezio addClass Scheduler.ts
-```
-
-This command will create a new typescript class file named `Scheduler.ts`.
+Next, create a new file called `scheduler.ts` in the root directory of your project.
 
 Open this newly created file in your preferred IDE and add the following code:
 
@@ -140,7 +138,7 @@ Next, the application is ready to be deployed to the cloud to be used in a produ
 genezio deploy
 ```
 
-This will deploy the whole project to the cloud and make it run the task every minute. You can continue to manage, test, update and monitor your project from the genezio dashboard.
+This will deploy the whole project to the cloud and make it run the task every minute. You can continue to manage, test, update and monitor your project from the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}}.
 
 **Note 1:** You can deploy your scheduler together with your API Node.js application.
 
@@ -176,7 +174,7 @@ public async everyDay8AMTask() {
 
 ### Do’s:
 
-1. **Schedule carefully**: Plan your cron schedule jobs carefully, considering factors like resource usage, the frequency of the task, server timezone and even the 29th of February.
+1. **Schedule carefully**: Plan your cron schedule jobs carefully, considering factors like resource usage, the frequency of the task, server timezone, and even the 29th of February.
 2. **Monitor and log:** Set up monitoring and logging for your cron jobs to receive notifications of any errors or unexpected behavior.
 3. **Use a clear and descriptive comment:** Include a comment at the beginning of your cron job to describe its purpose. This makes it easier for you and others to understand what the cron job does.
 4. **Keep it simple:** Keep your cron jobs as simple as possible. If a task becomes too complex for a cron job, consider breaking it down into smaller scripts.

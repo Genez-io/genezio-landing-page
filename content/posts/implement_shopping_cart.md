@@ -61,7 +61,7 @@ This tutorial will show you how to harness the speed of a Redis database to buil
 
 {{< details "Expand this section to get more information on what's Redis" >}}
 
-Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
+Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
 
 Upstash is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.
 
@@ -110,42 +110,52 @@ Later on, `genezio` comes in handy to deploy and host your web applications in t
 npm install -g genezio
 ```
 
-After installing `genezio`, you can scaffold the application by running the following command:
+After installing `genezio`, you can create a new genezio application by running the following command:
 
 ```bash
-genezio
+genezio create fullstack --backend=ts --frontend=react-ts  --name=my-online-store --region=us-east-1
 ```
 
-The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
+The command above will initialize a new Genezio project with the name `my-only-store`. This project will have a backend written in typescript and a frontend written in React typescript. Its deployment region will be `us-east-1`.
 
 Your terminal should look similar to the following output:
 
 ```
 ~ genezio
-Redirecting to the browser to complete authentication...
+Project initialized in \your-path\my-online-store.
 
-? Choose a template for your genezio project Fullstack
-Your project will start from the Fullstack template.
+    For deployment of both frontend and backend, run:
+        cd my-online-store
+        genezio deploy
 
-? Please enter a name for your project: my-online-store
-Your project will be named my-online-store.
 
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
+    For testing locally, run:
+      Terminal 1 (start the backend):
+        cd my-online-store
+        genezio local
 
-We are creating the project in the current directory.
+      Terminal 2 (start the frontend):
+        cd my-online-store/client
+        npm install
+        npm run dev
 
-Deploying your backend project to genezio infrastructure...
-
-Your backend project has been deployed and is available at https://app.genez.io/project/c7e163b7-d0c9-47f6-8520-0e546f2e7b07/cdfc6daf-2c9d-4fae-9c94-4f011c8a84f2
-
-Deploying your frontend to genezio infrastructure...
-
-No subdomain specified in the genezio.yaml configuration file. We will provide a random one for you.
-Frontend successfully deployed at https://amber-cooperative-blackbird.app.genez.io.
 ```
 
-The output from the `genezio` command will contain a randomly-assigned subdomain where your project was deployed for testing purposes.
+Now go into the `my-online-store` directory by using the following command:
+
+```
+cd my-online-store
+```
+
+Install the necessary dependencies by running the following commands:
+
+```
+cd server
+npm install ioredis
+npm --save-dev install @types/node
+cd ../client
+npm install axios reactstrap bootstrap react-icons
+```
 
 ## Setting up the backend
 
@@ -171,7 +181,9 @@ export class ShoppingCartService {
 
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error("It seems that UPSTASH_REDIS_URL is not set in the `.env` file.");
+      throw new Error(
+        "It seems that UPSTASH_REDIS_URL is not set in the `.env` file."
+      );
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
@@ -211,7 +223,7 @@ export class ShoppingCartService {
 }
 ```
 
-At this point you are probably asking yourself what `hincrby` or `hgetall` are actually doing.
+At this point, you are probably asking yourself what `hincrby` or `hgetall` are actually doing.
 
 The Redis database has the following structure - each entry is uniquely identified by a key `cart:uniqueSessionId` and it points to a hashmap that contains pairs of `item:count` for each item in the shopping cart.
 
@@ -223,18 +235,19 @@ The Redis database has the following structure - each entry is uniquely identifi
 
 Later in this tutorial, we are going to use `hexists` to check if an item exists in the hashmap and `hdel` to delete an item from the hashmap.
 
-Install the dependencies by running the following command in the `server` directory:
-
-```bash
-npm install ioredis
-npm --save-dev install @types/node
-```
-
 Right now, the backend won't work properly because there is no `UPSTASH_REDIS_URL` environment variable set in the `.env`.
 Let's create a Redis database and connect it to your web application using a `.env` file.
 
 Luckily, genezio makes it very easy to add an {{< external-link link="https://upstash.com/?utm_source=genezio+&utm_medium=blog&utm_campaign=post" >}}Upstash Redis{{< /external-link >}} integration to your project.
-Go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
+We first need to deploy our project. We can do this by running the following command in the root directory of the project:
+
+```
+genezio deploy
+```
+
+This will prompt you to log in to your Genezio account. After the login is successful, the deployment will continue.
+
+When the deployment is complete, go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
 
 ![Alt text](/posts/add_integration.png)
 
@@ -333,78 +346,35 @@ A typical React project has the following directory structure:
 ```
 .
 ├── README.md
-├── build/
+├── dist/
 ├── public/
 ├── src
 │   ├── App.css
 │   ├── App.tsx
 │   ├── index.css
-│   ├── index.tsx
-│   ├── models.tsx
-│   ├── react-app-env.d.ts
-│   └── reportWebVitals.ts
+│   ├── main.tsx
+│   ├── vite-env.d.ts
+├── index.html
 ├── package-lock.json
 ├── package.json
 └── tsconfig.json
 ```
 
-In the `build` directory there is the bundle source code for the web application. This directory is generated when you run `npm run build` in the project directory. This will also be uploaded and host in the cloud to be accessible for your users.
+In the `dist` directory, there is the bundle source code for the web application. This directory is generated when you run `npm run build` in the project directory. This will also be uploaded and hosted in the cloud to be accessible to your users.
 
-In the `public` directory you can store static files that will be used in your application. For example, you can store images, fonts, or other assets in this directory.
+In the `public` directory, you can store static files that will be used in your application. For example, you can store images, fonts, or other assets in this directory.
 
-In the `src` directory you can find the source code for your application. The `index.tsx` file is the entry point for your application. This file will be responsible for rendering the `App` component in the `public/index.html` file.
+In the `src` directory, you can find the source code for your application. The `main.tsx` file is the entry point for your application. This file will be responsible for rendering the `App` component in the `index.html` file.
 
 The `App.tsx` file is the main component of your application. This component will be responsible for rendering the other components in your application. This is where you'll write most of your code.
 
 In the `models.tsx` file you can declare the interfaces that will be used in your application. This file will be useful to keep track of the data types used in your application.
 
-If you open up `App.tsx` in your IDE, you'll see the following code snippet:
-
-```typescript
-// Import necessary dependencies
-import React from "react";
-import "./App.css"; // Import your styles if needed
-
-// Define the App component
-const App: React.FC = () => {
-  // Define the states of the app
-  const [count, setCount] = useState(0);
-
-  // Implement the different logic based on the states
-  const handleCounter = (amount: number) => {
-    setCount(count + amount);
-  };
-
-  return (
-    <div className="app">
-      {/* Header component */}
-      <Header />
-      {/* Main content component */}
-      <MainContent />
-      // Use triggers to change the states
-      <div>
-        <p>Count: {count}</p>
-        <button onClick={() => handleCounter(1)}>Add</button>
-        <button onClick={() => handleCounter(-1)}>Subtract</button>
-      </div>
-      {/* Footer component */}
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
-```
-
 {{< /details >}}
 
 Firstly, let's install the dependencies for the frontend by running the following command in the `client` directory of your project:
 
-```bash
-npm install axios reactstrap bootstrap
-```
-
-Import Bootstrap in your frontend application by adding the following line in `client/src/index.tsx`:
+Import Bootstrap in your frontend application by adding the following line in `client/src/main.tsx`:
 
 ```typescript
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -432,7 +402,260 @@ export interface CartItem {
 
 Open `client/src/App.tsx` in your IDE and remove the existing code. We'll start from scratch for a better understanding.
 
-Add a header with a shopping cart button.
+{{< details "Expand to see the final source code for the App.tsx file" >}}
+
+```typescript
+import React, { useState, useEffect } from "react";
+import { Button, Col, Container, Row, Spinner } from "reactstrap";
+import { FaShoppingCart, FaTrash } from "react-icons/fa";
+import axios from "axios";
+
+import "./App.css";
+import { CartItem, Product } from "./models";
+
+import { ShoppingCartService } from "@genezio-sdk/my-online-store_us-east-1";
+
+function App() {
+  const [clearCartLoading, setClearCartLoading] = useState(false);
+  const [deleteItemLoading, setDeleteItemLoading] = useState<{
+    [key: string]: boolean;
+  }>({});
+  const [addItemLoading, setAddItemLoading] = useState<{
+    [key: number]: boolean;
+  }>({});
+  const [productData, setProductData] = useState<{ products: Product[] }>({
+    products: [],
+  });
+  const [isCartVisible, setIsCartVisible] = useState(false);
+  const [cartData, setCartData] = useState<CartItem[]>([]);
+  const [purchasedQuantity, setPurchasedQuantity] = useState(0);
+
+  // Check if the token is set in localStorage
+  let token = localStorage.getItem("token") as string;
+
+  // If token is not set, generate a 32-character token
+  if (!token || token === "" || token === "undefined") {
+    token =
+      Math.random().toString(36).substring(2, 15) +
+      Math.random().toString(36).substring(2, 15);
+    localStorage.setItem("token", token);
+  }
+
+  // Fetch the dummy products from the dummyjson API
+  useEffect(() => {
+    axios
+      .get("https://dummyjson.com/products")
+      .then((response) => {
+        setProductData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+      });
+  }, []);
+
+  // Fetch the cart contents when the cart modal is visible
+  useEffect(() => {
+    if (isCartVisible) {
+      const fetchCartData = async () => {
+        try {
+          // Call your ShoppingCartService.getCart method to the contents of the cart
+          const cart = await ShoppingCartService.getCart(token);
+          setCartData(cart);
+        } catch (error) {
+          console.error("Error fetching or parsing cart data:", error);
+        }
+      };
+
+      fetchCartData();
+    }
+  }, [isCartVisible, token]);
+
+  // Toggle the cart modal
+  const toggleCartModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsCartVisible(!isCartVisible);
+  };
+
+  const handleBuyClick = async (e: React.MouseEvent, product: Product) => {
+    e.preventDefault();
+
+    // Set loading state to true to show the spinner
+    setAddItemLoading((prevStates) => ({ ...prevStates, [product.id]: true }));
+
+    // You can implement your buy logic here, e.g., add the product to a cart
+    await ShoppingCartService.addItemToCart(token, product.title);
+
+    // Update the local state to reflect the purchased quantity
+    setPurchasedQuantity((prevQuantity) => prevQuantity + 1);
+
+    // Set loading state to false to hide the spinner
+    setAddItemLoading((prevStates) => ({ ...prevStates, [product.id]: false }));
+  };
+
+  const handleDeleteItem = async (e: React.MouseEvent, cartItem: CartItem) => {
+    e.preventDefault();
+
+    // Set loading state to true to show the spinner
+    setDeleteItemLoading((prevState) => ({
+      ...prevState,
+      [cartItem.title]: true,
+    }));
+
+    await ShoppingCartService.removeItemFromCart(token, cartItem.title);
+
+    // You can implement your delete logic here
+    const updatedCartData = await ShoppingCartService.getCart(token);
+    setCartData(updatedCartData);
+
+    // Update the local state to reflect the purchased quantity
+    setPurchasedQuantity((prevQuantity) => prevQuantity - 1);
+
+    // Set loading state to false to hide the spinner
+    setDeleteItemLoading((prevState) => ({
+      ...prevState,
+      [cartItem.title]: false,
+    }));
+  };
+
+  const handleClearCart = async (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    // Set loading state to true to show the spinner
+    setClearCartLoading(true);
+
+    // You can implement your clear cart logic here
+    await ShoppingCartService.deleteCart(token);
+
+    // Update the cart data
+    const updatedCartData = await ShoppingCartService.getCart(token);
+    setCartData(updatedCartData);
+
+    // Update the local state to reflect the purchased quantity
+    setPurchasedQuantity(0);
+
+    // Set loading state to false to hide the spinner
+    setClearCartLoading(false);
+  };
+
+  return (
+    <div className="App">
+      <div className="bg-dark text-light p-3">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col">
+              <h1>Product List</h1>
+            </div>
+            <div className="col text-right">
+              <Button color="primary" onClick={(e) => toggleCartModal(e)}>
+                <FaShoppingCart />
+                {purchasedQuantity > 0 && (
+                  <span className="m-2">{purchasedQuantity}</span>
+                )}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Container className="my-4">
+        <Row className="justify-content-around">
+          {productData.products.map((product) => (
+            <Col key={product.id} md="4" className="mb-4">
+              <div className="product-card">
+                <img src={product.thumbnail} alt={product.title} />
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
+                <p>Price: ${product.price}</p>
+                <p>Rating: {product.rating}</p>
+                <Button
+                  color="primary"
+                  onClick={(e) => handleBuyClick(e, product)}
+                  disabled={addItemLoading[product.id]}
+                >
+                  {addItemLoading[product.id] ? (
+                    <Spinner size="sm" color="light" />
+                  ) : (
+                    "Buy Now"
+                  )}
+                </Button>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+
+      {isCartVisible && (
+        <div
+          className="cart-overlay d-flex justify-content-center align-items-center position-fixed top-0 left-0 w-100 h-100"
+          style={{ background: "rgba(0, 0, 0, 0.7)" }}
+        >
+          <div className="cart-modal bg-white p-4 rounded shadow-lg">
+            <h2 className="mb-4 center">Shopping Cart</h2>
+            <ul className="list-unstyled">
+              {cartData.length > 0 ? (
+                cartData.map((cartItem, index) => (
+                  <li key={index} className="mb-3">
+                    <div>
+                      <span>{cartItem.title}</span>
+                      <span className="m-2">Quantity: {cartItem.count}</span>
+                      <Button
+                        color="danger"
+                        size="sm"
+                        className="m-2"
+                        onClick={(e) => handleDeleteItem(e, cartItem)}
+                        disabled={deleteItemLoading[cartItem.title]}
+                      >
+                        {deleteItemLoading[cartItem.title] ? (
+                          <Spinner size="sm" color="light" />
+                        ) : (
+                          <FaTrash />
+                        )}
+                      </Button>
+                    </div>
+                  </li>
+                ))
+              ) : (
+                <li className="empty-cart">Your cart is empty</li>
+              )}
+            </ul>
+            {cartData.length > 0 ? (
+              <Button
+                color="primary"
+                className="m-2"
+                onClick={(e) => handleClearCart(e)}
+                disabled={clearCartLoading}
+              >
+                {clearCartLoading ? (
+                  <Spinner size="sm" color="light" />
+                ) : (
+                  "Clear Cart"
+                )}
+              </Button>
+            ) : null}
+            <Button
+              color="primary"
+              className="m-2"
+              onClick={(e) => toggleCartModal(e)}
+            >
+              Close
+            </Button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;
+```
+
+To start the frontend on your localhost, run `npm run dev`. This will initialize the frontend application on `localhost:5173`.
+Keep the frontend running in the background and open `localhost:5173` in your browser to see the changes in real-time every time you change the source code.
+
+{{< /details >}}
+
+We will discuss each step to better explain the way the React application works.
+We add a header with a shopping cart button.
 
 ```typescript
   // Toggle the cart modal
@@ -462,7 +685,7 @@ Add a header with a shopping cart button.
 
 ```
 
-Create a state to keep track if the cart button was clicked. This state will be used to toggle the cart modal on and off.
+We create a state to keep track if the cart button was clicked. This state will be used to toggle the cart modal on and off.
 
 ```typescript
 const [isCartVisible, setIsCartVisible] = useState(false);
@@ -474,10 +697,7 @@ const toggleCartModal = (e: any) => {
 };
 ```
 
-To start the frontend on your localhost, run `npm run start`. This will initialize the frontend application on `localhost:3000`.
-Keep the frontend running in the background and open `localhost:3000` in your browser to see the changes in real-time every time you change the source code.
-
-Add a list with the fetched products.
+Next, we add a list with the fetched products.
 
 ```typescript
 <Container className="my-4">
@@ -495,7 +715,11 @@ Add a list with the fetched products.
             onClick={(e) => handleBuyClick(e, product)}
             disabled={addItemLoading[product.id]}
           >
-            {addItemLoading[product.id] ? <Spinner size="sm" color="light" /> : "Buy Now"}
+            {addItemLoading[product.id] ? (
+              <Spinner size="sm" color="light" />
+            ) : (
+              "Buy Now"
+            )}
           </Button>
         </div>
       </Col>
@@ -504,7 +728,7 @@ Add a list with the fetched products.
 </Container>
 ```
 
-Add a modal that opens when the shopping cart button is clicked. In the modal, we'll display the content of the shopping cart and allow the user to close the cart, clear the cart, or delete an item from it.
+We add a modal that opens when the shopping cart button is clicked. In the modal, we'll display the content of the shopping cart and allow the user to close the cart, clear the cart, or delete an item from it.
 
 ```typescript
 {
@@ -549,7 +773,7 @@ Add a modal that opens when the shopping cart button is clicked. In the modal, w
 }
 ```
 
-Add a token in local storage to keep track of the session id. This token will be used to identify the cart corresponding to the user.
+We add a token in local storage to keep track of the session id. This token will be used to identify the cart corresponding to the user.
 
 ```typescript
 // Check if the token is set in localStorage
@@ -557,12 +781,14 @@ let token = localStorage.getItem("token") as string;
 
 // If token is not set, generate a 32-character token
 if (!token || token === "" || token === "undefined") {
-  token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  token =
+    Math.random().toString(36).substring(2, 15) +
+    Math.random().toString(36).substring(2, 15);
   localStorage.setItem("token", token);
 }
 ```
 
-Send a request to the backend to add an item to the cart when the `Buy now` button is clicked.
+We send a request to the backend to add an item to the cart when the `Buy now` button is clicked.
 
 ```typescript
 const handleBuyClick = async (e: any, product: Product) => {
@@ -573,7 +799,7 @@ const handleBuyClick = async (e: any, product: Product) => {
 };
 ```
 
-Send a request to the backend to retrieve the cart data when the modal is opened.
+We send a request to the backend to retrieve the cart data when the modal is opened.
 
 ```typescript
 // Fetch the cart contents when the cart modal is visible
@@ -594,7 +820,7 @@ useEffect(() => {
 }, [isCartVisible, token]);
 ```
 
-Send a request to the backend to delete an item from the cart when the `Delete` button is clicked.
+We send a request to the backend to delete an item from the cart when the `Delete` button is clicked.
 
 ```typescript
 const handleDeleteItem = async (e: any, cartItem: CartItem) => {
@@ -608,7 +834,7 @@ const handleDeleteItem = async (e: any, cartItem: CartItem) => {
 };
 ```
 
-Send a request to the backend to clear the cart when the `Clear Cart` button is clicked.
+Then, we send a request to the backend to clear the cart when the `Clear Cart` button is clicked.
 
 ```typescript
 const handleClearCart = async (e: any) => {
@@ -621,6 +847,44 @@ const handleClearCart = async (e: any) => {
   const updatedCartData = await ShoppingCartService.getCart(token);
   setCartData(updatedCartData);
 };
+```
+
+Finally, we still need to add a little bit of CSS to make sure everything looks nice and tidy. Add the following code snippet in the `App.css` file.
+
+```css
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.product-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Push content to the top and bottom */
+  height: 100%; /* Allow the card to take full height */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px; /* Adjust the height to your desired consistent height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 ```
 
 ## Deploying the application
@@ -720,7 +984,11 @@ return (
     onClick={(e) => handleBuyClick(e, product)}
     disabled={addItemLoading[product.id]}
   >
-    {addItemLoading[product.id] ? <Spinner size="sm" color="light" /> : "Buy Now"}
+    {addItemLoading[product.id] ? (
+      <Spinner size="sm" color="light" />
+    ) : (
+      "Buy Now"
+    )}
   </Button>
 );
 ```
