@@ -1,7 +1,36 @@
-<div class="container pt-4 pt-10">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <h1>404 Page Not Found</h1>
-    </div>
+{{ define "main" }}
+<!-- Include your navbar code here -->
+
+<!-- Content for the 404 page -->
+<div class="px-3 bg-dark" style="overflow: hidden">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      height: 60vh;
+    "
+    class="container d-flex align-items-center justify-content-center flex-column"
+  >
+    <h1 class="text-white m-0 display-1 fw-bold">404 Page Not Found</h1>
+    <p class="text-white opacity-50 m-0 mt-2">Sorry, we were unable to find that page.</p>
+
+    <img
+      class="pe-none d-none d-lg-block d-xl-block"
+      src="/images/wave.svg"
+      style="
+        mix-blend-mode: screen;
+        filter: grayscale(50%);
+        opacity: 0.3;
+        position: absolute;
+        bottom: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70vw;
+      "
+      alt="howGenezioWork"
+    />
   </div>
 </div>
+
+<!-- Include your footer code here -->
+{{ end }}
