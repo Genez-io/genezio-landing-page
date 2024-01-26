@@ -176,12 +176,14 @@ Open the newly created `gptCaller.js` file and start by adding the dependencies:
 ```javascript
 import OpenAI from "openai";
 import dotenv from "dotenv";
+import { GenezioDeploy } from "@genezio/types";
 dotenv.config();
 ```
 
 In the constructor of the class, instantiate the `openai` object:
 
 ```javascript
+@GenezioDeploy()
 export class GptCaller {
   openai = null;
 
@@ -200,8 +202,10 @@ Take a look at the complete file code:
 ```javascript
 import OpenAI from "openai";
 import dotenv from "dotenv";
+import { GenezioDeploy } from "@genezio/types";
 dotenv.config();
 
+@GenezioDeploy()
 export class GptCaller {
   openai = null;
 
