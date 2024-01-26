@@ -121,7 +121,7 @@ The command above will initialize a new Genezio project with the name `my-only-s
 Your terminal should look similar to the following output:
 
 ```
-~ genezio
+~ genezio create fullstack --backend=ts --frontend=react-ts  --name=my-online-store --region=us-east-1
 Project initialized in \your-path\my-online-store.
 
     For deployment of both frontend and backend, run:
