@@ -55,36 +55,7 @@ After installing `genezio`, you can create a new Genezio Node.js project by runn
 
 ```
 genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
-```
-
-The command above will initialize a new Genezio project with the name `scheduler-app`. This project will only have a backend written in typescript and it's deployment region will be `us-east-1`.
-
-Your terminal should look similar to the following output:
-
-```
-~ genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
-Project initialized in \your-path\scheduler-app. Now run:
-
-    For deployment of the backend, run:
-        cd scheduler-app
-        genezio deploy
-
-
-    For testing locally, run:
-        cd scheduler-app
-        genezio local
-```
-
-Now go into the `scheduler-app` directory by using the following command:
-
-```
-cd scheduler-app
-```
-
-Install the necessary dependencies by running the command:
-
-```
-npm install
+cd ./scheduler-app
 ```
 
 ## Setting up your Scheduler
