@@ -222,7 +222,7 @@ If you get stuck at this step, you can follow the {{< external-link link="https:
 After adding the Upstash Redis integration, copy the environment variables from the `.env` section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
 Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
 
-![Alt text](/posts/shopping_cart_example/copy_env_vars.png)
+![Alt text](/posts/copy_env_vars.png)
 
 To test the code, you can run `genezio local` in the project directory.
 This will start a fast local development server on your machine.
