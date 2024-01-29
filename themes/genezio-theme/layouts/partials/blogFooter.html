@@ -204,17 +204,6 @@
 </footer>
 
 <script>
-  document.getElementById("subscribeForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // reset input value .5 second later
-    setTimeout(function () {
-      document.getElementById("emailSubscribeInput").value = "";
-    }, 500);
-  });
-</script>
-
-<script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("subscribeForm");
     const emailInput = document.getElementById("emailSubscribeInput");
@@ -241,9 +230,11 @@
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
+          document.getElementById("emailSubscribeInput").value = "";
         })
         .catch((error) => {
           console.error("Error:", error);
+          document.getElementById("emailSubscribeInput").value = "";
         });
     });
   });
