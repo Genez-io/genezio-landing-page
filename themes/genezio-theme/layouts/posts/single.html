@@ -1,4 +1,5 @@
 {{ define "main" }}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <div class="px-3" style="background-color: #f1ecf9">
   <div
     style="border-left: 1px solid #e2d9f3; border-right: 1px solid #e2d9f3"
@@ -430,6 +431,42 @@ window.addEventListener("scroll", updateActiveSection);
       }
       }
 
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("subscribeForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var emailValue = document.getElementById("emailSubscribeInput").value;
+
+      // Set up the request headers
+      var headers = new Headers();
+      headers.append("Authorization", "Bearer pat-eu1-2d60e75f-51b7-4fec-83b4-ad3069b96581");
+      headers.append("Content-Type", "application/json");
+
+      // Set up the request body
+      var requestBody = JSON.stringify({
+        properties: {
+          email: emailValue
+        }
+      });
+
+      // Make the fetch POST request
+      fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+        method: "POST",
+        headers: headers,
+        body: requestBody
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Request successful:", data);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
     });
   });
 </script>
