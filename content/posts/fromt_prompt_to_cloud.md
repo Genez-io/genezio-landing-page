@@ -97,6 +97,7 @@ By the end of this tutorial you will be able to:
 
 - Click `Create new secret key` and give it a name
 - Save the generated secret key somewhere safe, we will need it later on
+- To be able to use this API Key, you will need to have funds in your OpenAI account. Go to {{< external-link link="https://www.themoviedb.org/" >}}platform.openai.com/account/billing/overview{{< /external-link >}} and add some funds to your account.
 - Get API Key for {{< external-link link="https://www.themoviedb.org/" >}}The Movie Database{{< /external-link >}}
 
 - Go to {{< external-link link="https://www.themoviedb.org/signup" >}}themoviedb.org/signup{{< /external-link >}}
@@ -124,7 +125,7 @@ You have TODOs on each part of the code where you have to work on.
 
 - Open a terminal and navigate to the server directory: `cd ./techsylvania_workshop/server`
 - Install the required dependencies: `npm install`
-- Create a file named `.env` and add `OPENAI_SECRET_KEY=&lt;your_openai_secret_key>` and `TMDB_API_KEY=&lt;your_key>`
+- Create a file named `.env` and add `OPENAI_SECRET_KEY=<your_openai_secret_key>` and `TMDB_API_KEY=<your_key>`
 - Run genezio local test environment: `genezio local`
 - Go to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
   to test your backend. Keep in mind that it will not work on Safari
@@ -242,7 +243,9 @@ if (
   completion.data.choices[0].message
 ) {
   try {
-    const movies = JSON.parse(completion.data.choices[0].message.content).movies;
+    const movies = JSON.parse(
+      completion.data.choices[0].message.content
+    ).movies;
     return movies;
   } catch (e) {
     console.log(e);
@@ -262,7 +265,9 @@ Now we will work in the function `getReviewSummary` from the `movie.ts `file. Th
 
 ```javascript
 prompt = `Here is a list of reviews for one movie. One review is delimited by ||| marks.
-${reviews.map((x: string) => `|||${x.length > 100 ? x.substring(0, 100) : x}|||`).join("\n")}
+${reviews
+  .map((x: string) => `|||${x.length > 100 ? x.substring(0, 100) : x}|||`)
+  .join("\n")}
 Your task is to analyze each review and give me a list of advantages and
 disadvantages of watching the movie.
 The result should be one JSON object with two fields "advantages" and "disadvantages".
@@ -301,7 +306,7 @@ We first check if there are reviews. If the `reviews` array is empty, it is usel
 
 Now we have the backend complete and it’s time to test the frontend application.
 
-- Open a terminal and navigate to the server directory: `cd ./../client`
+- Open a terminal and navigate to the client directory: `cd ./../client`
 - Install the required dependencies: `npm install`
 - Start the frontend application: `npm start`
 - Go to {{< external-link link="http://localhost:3000" >}}localhost:3000{{< /external-link >}} to try your app

@@ -121,35 +121,15 @@ Then, you can create a new genezio project by simply running `genezio` in your t
 genezio create backend --backend=ts --name=getting-started-with-upstash --region=us-east-1
 ```
 
-The command above will initialize a new Genezio project with the name `getting-started-with-upstash`. This project will only have a backend written in typescript and its deployment region will be `us-east-1`.
-
-After you successfully run the command, your terminal should look something like this:
-
-```
-$ genezio create backend --backend=ts --name=getting-started-with-upstash --region=us-east-1
-Project initialized in \your-path\getting-started-with-upstash. Now run:
-
-    For deployment of the backend, run:
-        cd getting-started-with-upstash
-        genezio deploy
-
-
-    For testing locally, run:
-        cd getting-started-with-upstash
-        genezio local
-
-```
-
 The next step is to integrate this small project with a Redis database provided by Upstash. To do that, we first need to deploy the project. We can do that by running the following commands in the root directory of the project:
 
 ```
-npm install
 genezio deploy
 ```
 
-Once the deployment is complete, open your {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} and pick the project you created earlier.
-
 ## Step 2: Initialize an Upstash Redis database
+
+Once the deployment is complete, open your {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} and pick the project you created earlier.
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 

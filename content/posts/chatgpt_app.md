@@ -92,6 +92,8 @@ Now, let’s dive in! You can find the complete project {{< external-link link="
 
 **Note**: Remember to keep your API key secure and do not share it with anyone.
 
+4. To be able to use this API Key, you will need to have funds in your OpenAI account. Go to {{< external-link link="https://www.themoviedb.org/" >}}platform.openai.com/account/billing/overview{{< /external-link >}} and add some funds to your account.
+
 ### **Set Up genezio**
 
 First, install genezio using npm:
@@ -109,32 +111,7 @@ genezio login
 Create a new project:
 
 ```
-genezio create fullstack --backend=js --frontend=react-js --name=chatgpt-project --region=us-east-1
-```
-
-The command above will initialize a new Genezio project with the name `chatgpt-project`. This project will have a backend written in javascript and a frontend written in React javascript. Its deployment region will be `us-east-1`.
-
-Your terminal should look similar to the following output:
-
-```
-~ genezio create fullstack --backend=js --frontend=react-js  --name=chatgpt-project --region=us-east-1
-Project initialized in \your-path\chatgpt-project.
-
-    For deployment of both frontend and backend, run:
-        cd chatgpt-project
-        genezio deploy
-
-
-    For testing locally, run:
-      Terminal 1 (start the backend):
-        cd chatgpt-project
-        genezio local
-
-      Terminal 2 (start the frontend):
-        cd chatgpt-project/client
-        npm install
-        npm run dev
-
+genezio create fullstack --backend=ts --frontend=react-ts --name=chatgpt-project --region=us-east-1
 ```
 
 ### **The Server-side Project**
@@ -142,7 +119,7 @@ Project initialized in \your-path\chatgpt-project.
 Change into the newly created `server` folder:
 
 ```
-cd chatgpt-project/server
+cd ./chatgpt-project/server
 ```
 
 Now, you’re ready to install `openai`:
@@ -157,27 +134,19 @@ npm install openai
 
 You will implement a class containing a function that you will deploy and then call it from the frontend application.
 
-You will need to install `dotenv` and create a `.env` file to securely store your secret key:
-
-```
-npm install dotenv
-```
-
 Create the `.env` file in the server directory and add the following variable that will store your OpenAI secret key from your OpenAI account:
 
 ```
 OPENAI_SECRET_KEY=<your_secret_key>
 ```
 
-Create a new file called `gptCaller.js` in the server directory.
+Create a new file called `gptCaller.ts` in the server directory.
 
-Open the newly created `gptCaller.js` file and start by adding the dependencies:
+Open the newly created `gptCaller.ts` file and start by adding the dependencies:
 
 ```javascript
 import OpenAI from "openai";
-import dotenv from "dotenv";
 import { GenezioDeploy } from "@genezio/types";
-dotenv.config();
 ```
 
 In the constructor of the class, instantiate the `openai` object:
@@ -185,7 +154,7 @@ In the constructor of the class, instantiate the `openai` object:
 ```javascript
 @GenezioDeploy()
 export class GptCaller {
-  openai = null;
+  openai: OpenAI | null = null;
 
   constructor() {
     this.openai = new OpenAI({
@@ -201,13 +170,11 @@ Take a look at the complete file code:
 
 ```javascript
 import OpenAI from "openai";
-import dotenv from "dotenv";
 import { GenezioDeploy } from "@genezio/types";
-dotenv.config();
 
 @GenezioDeploy()
 export class GptCaller {
-  openai = null;
+  openai: OpenAI | null = null;
 
   constructor() {
     this.openai = new OpenAI({
@@ -215,8 +182,8 @@ export class GptCaller {
     });
   }
   // send a request to the ChatGPT API to get the requestText
-  async askChatGPT(requestText) {
-    const completion = await this.openai.chat.completions.create({
+  async askChatGPT(requestText: string) {
+    const completion = await this.openai?.chat.completions.create({
       // the used model at the moment of writing this article
       model: "gpt-3.5-turbo",
       // tells ChatGPT to rephrase the requestText
@@ -224,43 +191,34 @@ export class GptCaller {
     });
 
     console.log(
-      `DEBUG: request: ${requestText}, response: ${completion.choices[0].message}`
+      `DEBUG: request: ${requestText}, response: ${completion?.choices[0].message}`
     );
-    return completion.choices[0].message.content;
+    return completion?.choices[0].message.content;
   }
 }
 ```
 
 **Note**: Please make sure to check out the OpenAI API {{< external-link link="https://platform.openai.com/docs/api-reference/completions" >}}Official Documentation{{< /external-link >}} for more information.
 
-Now, you can deploy your project from the root directory to the genezio infrastructure (this might take up to 3 minutes, so be patient):
+Now run the following command in the root directory to test your backend locally:
 
 ```
-genezio deploy --env server\.env
+genezio local
 ```
-
-After the deployment is done, you can go to the {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} to see more information and logs of your project.
 
 ### **The Client-side React Project**
 
-Now that the backend is deployed, you can start the React app:
-
-Go to the `client` folder:
+Go to the `client` folder in a **new terminal** and install the necessary dependencies:
 
 ```
 cd ./client
-```
-
-Start the development server by running the following command:
-
-```
-npm run dev
+npm install
 ```
 
 ### **Implement the User Interface**
 
-In this part of the article, you will create the UI for chatting with the backend. This is in the `src/App.js` file.
-Delete what is inside the `App.js` file so we can start from scratch and better explain our approach.
+In this part of the article, you will create the UI for chatting with the backend. This is in the `src/App.tsx` file.
+Delete what is inside the `App.tsx` file so we can start from scratch and better explain our approach.
 
 First, import the dependencies from `react`, `SDK`, and `CSS`:
 
@@ -272,17 +230,17 @@ import "./App.css";
 
 In the `App` component you will need 3 `useState` objects for the messages, requestText, and a boolean variable for the request - `isRequesting`:
 
-```javascript
+```typescript
 // each mesage format: {text: "message", isUser: true/false}
-const [messages, setMessages] = useState([]);
-const [requestText, setRequestText] = useState("");
-const [isRequesting, setIsRequesting] = useState(false);
+const [messages, setMessages] = useState<Array<any>>([]);
+const [requestText, setRequestText] = useState<string>("");
+const [isRequesting, setIsRequesting] = useState<boolean>(false);
 ```
 
 You will also need to write a method for sending the request:
 
-```javascript
-function sendRequest(e) {
+```typescript
+function sendRequest(e: any) {
   e.preventDefault();
   setIsRequesting(true);
   GptCaller.askChatGPT(requestText)
@@ -311,7 +269,7 @@ For displaying the user’s input text and the response generated by ChatGPT, yo
 
 This will be done in a `map` of the messages:
 
-```jsx
+```tsx
 {
   messages.map((message, index) => {
     if (message.isUser) {
@@ -345,7 +303,7 @@ This will be done in a `map` of the messages:
 
 To finish, you need a form with an input text box where the user can enter the text:
 
-```jsx
+```tsx
 <form className="msger-inputarea" onSubmit={(e) => sendRequest(e)}>
   <input
     type="text"
@@ -366,18 +324,18 @@ To finish, you need a form with an input text box where the user can enter the t
 
 Complete code file:
 
-```jsx
+```tsx
 import { useState } from "react";
 import { GptCaller } from "@genezio-sdk/chatgpt-project_us-east-1";
 import "./App.css";
 
 function App() {
   // each mesage format: {text: "message", isUser: true/false}
-  const [messages, setMessages] = useState([]);
-  const [requestText, setRequestText] = useState("");
-  const [isRequesting, setIsRequesting] = useState(false);
+  const [messages, setMessages] = useState<Array<any>>([]);
+  const [requestText, setRequestText] = useState<string>("");
+  const [isRequesting, setIsRequesting] = useState<boolean>(false);
 
-  function sendRequest(e) {
+  function sendRequest(e: any) {
     e.preventDefault();
     setIsRequesting(true);
     GptCaller.askChatGPT(requestText)
@@ -464,20 +422,23 @@ export default App;
 
 **Note:** We provide you with the complete CSS for this project in `src/App.css`.
 
-Now that your client side is complete as well, you can redeploy the project so that your production frontend stays up to date.
-Go into the root folder of the project and run:
+### Test your code
+
+On the `client` folder start the frontend:
+
+```
+npm run dev
+```
+
+Open your browser and go to `http://localhost:5173/` to see the app in action.
+
+### Deploy your project
+
+Go to the **root** folder of your project and run the following command:
 
 ```
 genezio deploy
 ```
-
-In your terminal, you should see a link similar to this:
-
-```
-Frontend successfully deployed at https://gray-nice-mollusk.app.genez.io
-```
-
-This link will take you to your deployed application where you can test it out at the production level.
 
 #### This is it!
 

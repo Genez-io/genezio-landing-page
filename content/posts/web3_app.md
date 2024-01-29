@@ -81,69 +81,20 @@ genezio login
 
 At any step, if you get stuck at any moment you can use `genezio help` or `genezio [command] help` to get more help with the tool.
 
-At the end of this tutorial, the folder hierarchy of your project should be similar to this:
+### **Create the project**
 
-```
-blockchain-project/
-├── .genezioignore
-├── genezio.yaml
-├── server/
-│   ├── models/
-│   │   └── event.js
-│   ├── blockchain.js
-│   ├── abi.js
-│   └── .env
-└── client/
-    ├── index.html
-    ├── src/
-    │   ├── App.css
-    │   ├── App.jsx
-    │   ├── index.css
-    │   └── main.jsx
-    └── build/
-```
-
-This is just a small spoiler to understand where things are going to fit in.
-
-### **Implement the server-side**
-
-To set up a new genezio project, run the following command:
+Create the folders hierarchy for the project:
 
 ```
 genezio create fullstack --backend=js --frontend=react-js --name=blockchain-project --region=us-east-1
 ```
 
-The command above will initialize a new Genezio project with the name `blockchain-project`. This project will have a backend written in javascript and a frontend written in React javascript. Its deployment region will be `us-east-1`.
-
-Your terminal should look similar to the following output:
-
-```
-~ genezio create fullstack --backend=js --frontend=react-js  --name=blockchain-project --region=us-east-1
-Project initialized in \your-path\blockchain-project.
-
-    For deployment of both frontend and backend, run:
-        cd blockchain-project
-        genezio deploy
-
-
-    For testing locally, run:
-      Terminal 1 (start the backend):
-        cd blockchain-project
-        genezio local
-
-      Terminal 2 (start the frontend):
-        cd blockchain-project/client
-        npm install
-        npm run dev
-
-```
-
-`
+### **Implement the server-side**
 
 Change into the newly created `server` folder:
 
 ```
-cd blockchain-project/server
+cd /blockchain-project/server
 ```
 
 Install the `web3` and `mongoose` npm packages by executing:
@@ -459,9 +410,13 @@ Lastly, add a method to get the saved events from the database.
 
 ### **Implement the client-side**
 
-In this section you’ll build the client side of the project. This is going to be a simple React app.
+In this section, you’ll build the client side of the project. This is going to be a simple React app.
 
-Go into the `blockchain-project/client` directory where you'll build the frontend application.
+Go to the `client` where you’ll build the frontend application.
+
+```
+cd ../client
+```
 
 Install the following packages to get Material React UI components:
 
@@ -469,7 +424,7 @@ Install the following packages to get Material React UI components:
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
-Modify `src/App.jsx` as follows:
+Modify `src/App.js` as follows:
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -564,6 +519,10 @@ export default App;
 It is recommended to test your project locally before deploying it to make sure that everything works as expected. Execute the following commands to change the directory and start a local testing process:
 
 Make sure that you are in the root directory:
+
+```
+cd ../server
+```
 
 Run the following command to start a local testing process:
 

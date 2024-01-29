@@ -58,33 +58,11 @@ After that, you can initialize a brand new project by running `genezio` in your 
 genezio create backend --backend=ts --name=getting-started-with-neon --region=us-east-1
 ```
 
-The command above will initialize a new Genezio project with the name `getting-started-with-neon`. This project will only have a backend written in typescript and it's deployment region will be `us-east-1`.
-
-After you successfully run the command, your terminal should look something like this:
-
-```
-
-$ genezio create backend --backend=ts --name=getting-started-with-neon --region=us-east-1
-Project initialized in \your-path\getting-started-with-neon. Now run:
-
-    For deployment of the backend, run:
-        cd getting-started-with-neon
-        genezio deploy
-
-
-    For testing locally, run:
-        cd getting-started-with-neon
-        genezio local
-
-
-```
-
 ## Step 2: Initialize a Neon Postgres database
 
 The next step is to integrate this small project with a Postgres database provided by Neon. To do that, we first need to deploy the project. We can do that by running the following commands in the root directory of the project:
 
 ```
-npm install
 genezio deploy
 ```
 
@@ -187,4 +165,6 @@ Now you can manage your deployed application by navigating to the {{< external-l
 
 ## Conclusion
 
-Congrats🥳! You successfully deployed a project that is fully integrated with a Neon Postgres database. To see a more flushed out tutorial that uses this integration, check out this article about how to create a full stack CRUD application.
+Congrats🥳! You successfully deployed a project that is fully integrated with a Neon Postgres database.
+
+<!-- To see a more flushed out tutorial that uses this integration, check out this article about how to create a full stack CRUD application. -->
