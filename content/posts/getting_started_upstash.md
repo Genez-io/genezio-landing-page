@@ -12,7 +12,7 @@ meta_og_url: "https://genez.io/blog/now-available-upstash-redis"
 meta_og_image: "https://genez.io/images/announcing_upstash.webp"
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 15
 ---
 
 Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures.

@@ -12,7 +12,7 @@ meta_og_url: "https://genez.io/blog/implement-shopping-cart-redis"
 meta_og_image: "https://genez.io/images/implement_shopping_cart_redis.webp"
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 30
 
 menuItems:
   - identifier: "introduction"

@@ -16,7 +16,7 @@ meta_og_image: "https://genez.io/images/database-performance.webp"
 # svg = “xyz”
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 10
 ---
 
 ## Introduction

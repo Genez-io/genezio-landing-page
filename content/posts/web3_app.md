@@ -14,7 +14,7 @@ meta_og_image: "https://genez.io/images/web3app.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 30
 ---
 
 In this tutorial, I am going to show you how to create your first Web3 application on Ethereum using genezio and Blast API. You don’t have to know anything beforehand to follow along. I will introduce you to the most basic blockchain concepts and tools to get you from zero to hero in Web3 development. Excited? Let’s get started 🤩

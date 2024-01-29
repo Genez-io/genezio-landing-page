@@ -14,7 +14,7 @@ meta_og_image: "https://genez.io/genezio_cicd.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 5
 ---
 
 ## Integrating GitHub Actions with genezio for CI/CD
