@@ -61,7 +61,7 @@ This tutorial will show you how to harness the speed of a Redis database to buil
 
 {{< details "Expand this section to get more information on what's Redis" >}}
 
-Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in-memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
+Redis is an open-source, in-memory database that stores key, value pairs. Redis is a highly versatile and performant database system. One of Redis's key features is its speed, as it primarily operates in memory, enabling rapid data access. It is widely used for caching, real-time analytics, message brokering, and other applications where low-latency and high-throughput data storage and retrieval are crucial. Redis also provides persistence options, allowing data to be saved to disk for durability. Its simplicity, efficiency, and support for advanced data structures make Redis a popular choice for applications requiring fast and scalable data storage and retrieval.
 
 Upstash is a cutting-edge platform for modern developers seeking seamless data management in serverless and cloud-native applications. Offering Redis-compatible, in-memory database services, Upstash simplifies data storage and access, making it a natural fit for serverless functions, web apps, and cloud-native architectures.
 
@@ -110,42 +110,11 @@ Later on, `genezio` comes in handy to deploy and host your web applications in t
 npm install -g genezio
 ```
 
-After installing `genezio`, you can scaffold the application by running the following command:
+After installing `genezio`, you can create a new genezio application by running the following command:
 
 ```bash
-genezio
+genezio create fullstack --backend=ts --frontend=react-ts  --name=my-online-store --region=us-east-1
 ```
-
-The command above will get you through a series of questions to help you customize and prepare your project for production deployment.
-
-Your terminal should look similar to the following output:
-
-```
-~ genezio
-Redirecting to the browser to complete authentication...
-
-? Choose a template for your genezio project Fullstack
-Your project will start from the Fullstack template.
-
-? Please enter a name for your project: my-online-store
-Your project will be named my-online-store.
-
-? Choose a region for your project US East (N. Virginia)
-Your project will be deployed in US East (N. Virginia).
-
-We are creating the project in the current directory.
-
-Deploying your backend project to genezio infrastructure...
-
-Your backend project has been deployed and is available at https://app.genez.io/project/c7e163b7-d0c9-47f6-8520-0e546f2e7b07/cdfc6daf-2c9d-4fae-9c94-4f011c8a84f2
-
-Deploying your frontend to genezio infrastructure...
-
-No subdomain specified in the genezio.yaml configuration file. We will provide a random one for you.
-Frontend successfully deployed at https://amber-cooperative-blackbird.app.genez.io.
-```
-
-The output from the `genezio` command will contain a randomly-assigned subdomain where your project was deployed for testing purposes.
 
 ## Setting up the backend
 
@@ -171,7 +140,9 @@ export class ShoppingCartService {
 
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error("It seems that UPSTASH_REDIS_URL is not set in the `.env` file.");
+      throw new Error(
+        "It seems that UPSTASH_REDIS_URL is not set in the `.env` file."
+      );
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
@@ -211,7 +182,7 @@ export class ShoppingCartService {
 }
 ```
 
-At this point you are probably asking yourself what `hincrby` or `hgetall` are actually doing.
+At this point, you are probably asking yourself what `hincrby` or `hgetall` are actually doing.
 
 The Redis database has the following structure - each entry is uniquely identified by a key `cart:uniqueSessionId` and it points to a hashmap that contains pairs of `item:count` for each item in the shopping cart.
 
@@ -225,7 +196,7 @@ Later in this tutorial, we are going to use `hexists` to check if an item exists
 
 Install the dependencies by running the following command in the `server` directory:
 
-```bash
+```
 npm install ioredis
 npm --save-dev install @types/node
 ```
@@ -234,7 +205,15 @@ Right now, the backend won't work properly because there is no `UPSTASH_REDIS_UR
 Let's create a Redis database and connect it to your web application using a `.env` file.
 
 Luckily, genezio makes it very easy to add an {{< external-link link="https://upstash.com/?utm_source=genezio+&utm_medium=blog&utm_campaign=post" >}}Upstash Redis{{< /external-link >}} integration to your project.
-Go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
+We first need to deploy our project. We can do this by running the following command in the root directory of the project:
+
+```
+genezio deploy
+```
+
+This will prompt you to log in to your Genezio account. After the login is successful, the deployment will continue.
+
+When the deployment is complete, go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
 
 ![Alt text](/posts/add_integration.png)
 
@@ -243,7 +222,7 @@ If you get stuck at this step, you can follow the {{< external-link link="https:
 After adding the Upstash Redis integration, copy the environment variables from the `.env` section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
 Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
 
-![Alt text](/posts/shopping_cart_example/copy_env_vars.png)
+![Alt text](/posts/copy_env_vars.png)
 
 To test the code, you can run `genezio local` in the project directory.
 This will start a fast local development server on your machine.
@@ -336,13 +315,13 @@ A typical React project has the following directory structure:
 ├── build/
 ├── public/
 ├── src
-│   ├── App.css
-│   ├── App.tsx
-│   ├── index.css
-│   ├── index.tsx
-│   ├── models.tsx
-│   ├── react-app-env.d.ts
-│   └── reportWebVitals.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── models.tsx
+│   ├── react-app-env.d.ts
+│   └── reportWebVitals.ts
 ├── package-lock.json
 ├── package.json
 └── tsconfig.json
@@ -352,59 +331,21 @@ In the `build` directory there is the bundle source code for the web application
 
 In the `public` directory you can store static files that will be used in your application. For example, you can store images, fonts, or other assets in this directory.
 
-In the `src` directory you can find the source code for your application. The `index.tsx` file is the entry point for your application. This file will be responsible for rendering the `App` component in the `public/index.html` file.
+In the `src` directory you can find the source code for your application. The index.tsx file is the entry point for your application. This file will be responsible for rendering the App component in the public/index.html file.
 
-The `App.tsx` file is the main component of your application. This component will be responsible for rendering the other components in your application. This is where you'll write most of your code.
+The `App.tsx` file is the main component of your application. This component will be responsible for rendering the other components in your application. This is where you’ll write most of your code.
 
 In the `models.tsx` file you can declare the interfaces that will be used in your application. This file will be useful to keep track of the data types used in your application.
-
-If you open up `App.tsx` in your IDE, you'll see the following code snippet:
-
-```typescript
-// Import necessary dependencies
-import React from "react";
-import "./App.css"; // Import your styles if needed
-
-// Define the App component
-const App: React.FC = () => {
-  // Define the states of the app
-  const [count, setCount] = useState(0);
-
-  // Implement the different logic based on the states
-  const handleCounter = (amount: number) => {
-    setCount(count + amount);
-  };
-
-  return (
-    <div className="app">
-      {/* Header component */}
-      <Header />
-      {/* Main content component */}
-      <MainContent />
-      // Use triggers to change the states
-      <div>
-        <p>Count: {count}</p>
-        <button onClick={() => handleCounter(1)}>Add</button>
-        <button onClick={() => handleCounter(-1)}>Subtract</button>
-      </div>
-      {/* Footer component */}
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
-```
 
 {{< /details >}}
 
 Firstly, let's install the dependencies for the frontend by running the following command in the `client` directory of your project:
 
-```bash
+```
 npm install axios reactstrap bootstrap
 ```
 
-Import Bootstrap in your frontend application by adding the following line in `client/src/index.tsx`:
+Import Bootstrap in your frontend application by adding the following line in `client/src/main.tsx`:
 
 ```typescript
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -474,9 +415,8 @@ const toggleCartModal = (e: any) => {
 };
 ```
 
-To start the frontend on your localhost, run `npm run start`. This will initialize the frontend application on `localhost:3000`.
-Keep the frontend running in the background and open `localhost:3000` in your browser to see the changes in real-time every time you change the source code.
-
+To start the frontend on your localhost, run `npm run dev`. This will initialize the frontend application on `localhost:5173`.
+Keep the frontend running in the background and open `localhost:5173` in your browser to see the changes in real-time every time you change the source code.
 Add a list with the fetched products.
 
 ```typescript
@@ -495,7 +435,11 @@ Add a list with the fetched products.
             onClick={(e) => handleBuyClick(e, product)}
             disabled={addItemLoading[product.id]}
           >
-            {addItemLoading[product.id] ? <Spinner size="sm" color="light" /> : "Buy Now"}
+            {addItemLoading[product.id] ? (
+              <Spinner size="sm" color="light" />
+            ) : (
+              "Buy Now"
+            )}
           </Button>
         </div>
       </Col>
@@ -557,7 +501,9 @@ let token = localStorage.getItem("token") as string;
 
 // If token is not set, generate a 32-character token
 if (!token || token === "" || token === "undefined") {
-  token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  token =
+    Math.random().toString(36).substring(2, 15) +
+    Math.random().toString(36).substring(2, 15);
   localStorage.setItem("token", token);
 }
 ```
@@ -623,12 +569,47 @@ const handleClearCart = async (e: any) => {
 };
 ```
 
+Finally, we still need to add a little bit of CSS to make sure everything looks nice and tidy. Add the following code snippet in the `App.css` file.
+
+```css
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.product-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Push content to the top and bottom */
+  height: 100%; /* Allow the card to take full height */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px; /* Adjust the height to your desired consistent height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+```
+
 ## Deploying the application
 
 Your application is now ready to be deployed to the cloud to be used by your clients.
-
-Before deploying your application, you can change the randomly assigned subdomain to something more meaningful for your application.
-To do that, go to the genezio config file - `genezio.yaml` - and modify the `subdomain` field.
 
 To deploy your application, run the following command in the root directory of your project:
 
@@ -720,7 +701,11 @@ return (
     onClick={(e) => handleBuyClick(e, product)}
     disabled={addItemLoading[product.id]}
   >
-    {addItemLoading[product.id] ? <Spinner size="sm" color="light" /> : "Buy Now"}
+    {addItemLoading[product.id] ? (
+      <Spinner size="sm" color="light" />
+    ) : (
+      "Buy Now"
+    )}
   </Button>
 );
 ```

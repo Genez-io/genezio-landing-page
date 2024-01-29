@@ -91,6 +91,7 @@ app.listen(port, () => {
 Writing the same logic in genezio would look something like this:
 
 ```javascript
+@GenezioDeploy()
 export class HelloWorld {
   greet() {
     return "Hello World!";
