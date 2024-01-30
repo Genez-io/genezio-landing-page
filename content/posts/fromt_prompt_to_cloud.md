@@ -126,7 +126,7 @@ You have TODOs on each part of the code where you have to work on.
 - Open a terminal and navigate to the server directory: `cd ./techsylvania_workshop/server`
 - Install the required dependencies: `npm install`
 - Create a file named `.env` and add `OPENAI_SECRET_KEY=<your_openai_secret_key>` and `TMDB_API_KEY=<your_key>`
-- Run genezio local test environment: `genezio local`
+- Run genezio local in the root directory to test the environment: `genezio local`
 - Go to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
   to test your backend. Keep in mind that it will not work on Safari
 
@@ -243,7 +243,10 @@ if (
   completion.data.choices[0].message
 ) {
   try {
-    const movies = JSON.parse(completion.data.choices[0].message.content).movies;
+    const movies = JSON.parse(
+      completion.data.choices[0].message.content!
+    ).movies;
+
     return movies;
   } catch (e) {
     console.log(e);
@@ -262,7 +265,7 @@ return [];
 Now we will work in the function `getReviewSummary` from the `movie.ts `file. This prompt is easier than the previous one because here we control the input and we don’t have the problem with prompt injection. We only give a list of reviews and give to OpenAI the task to analyze and summarize the advantages and disadvantages of watching that movie. Write the following prompt instead of **TODO3** in `movies.ts` file:
 
 ```javascript
-prompt = `Here is a list of reviews for one movie. One review is delimited by ||| marks.
+`Here is a list of reviews for one movie. One review is delimited by ||| marks.
 ${reviews
   .map((x: string) => `|||${x.length > 100 ? x.substring(0, 100) : x}|||`)
   .join("\n")}
@@ -278,43 +281,62 @@ We use the delimiter `|||` to help the model understand easier where the given r
 Now that we have the prompt, let’s test it. We write once again the request to send this prompt to OpenAI. Replace **TODO4** with this:
 
 ```javascript
-if (reviews.length === 0) {
-  console.log("No reviews found!")
-  return `{"advantages": "No reviews found.", "disadvantages": "No reviews found."}`;
-}
-
-const completion2 = await this.openai.createChatCompletion({
-  model: "gpt-3.5-turbo",
-  temperature: 0.3,
-  messages: [
-    {
-      'role': ChatCompletionRequestMessageRoleEnum.System,
-      'content': reviewSummaryPrompt(reviews),
+    if (reviews.length === 0) {
+      console.log("No reviews found!");
+      return {
+        title: title,
+        advantages: "No reviews found.",
+        disadvantages: "No reviews found.",
+      };
     }
-  ],
-  max_tokens: 1024
-});
 
-return completion2.data.choices[0].message!.content;
+    const completion2 = await this.openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      temperature: 0.3,
+      messages: [
+        {
+          role: ChatCompletionRequestMessageRoleEnum.System,
+          content: reviewSummaryPrompt(reviews),
+        },
+      ],
+      max_tokens: 1024,
+    });
+
+    const parsedResponse = JSON.parse(
+      completion2.data.choices[0].message!.content!
+    );
+    return {
+      title: title,
+      advantages: parsedResponse.advantages
+        ? parsedResponse.advantages
+        : "No advantages found",
+      disadvantages: parsedResponse.disadvantages
+        ? parsedResponse.disadvantages
+        : "No disadvantages found",
+    };
 ```
 
 We first check if there are reviews. If the `reviews` array is empty, it is useless to send it to OpenAI and we can return an answer directly. We then make the call using the chat completion API. Here we set the temperature to 0.3 because we want less creativity. Giving the same set of reviews, we are okay with getting the same summary each time. Then we check if the response is properly formatted and we return it.
 
-### Test the Full-stack App
+### Test your application locally
 
-Now we have the backend complete and it’s time to test the frontend application.
+To test the backend locally, we have to start the development server.
 
-- Open a terminal and navigate to the client directory: `cd ./../client`
+- Open a terminal and run `genezio local` in the root directory of your project.
+
+Now we have the backend set up, it’s time to test the frontend application.
+
+- Open a new terminal and navigate to the client directory: `cd client`
 - Install the required dependencies: `npm install`
-- Start the frontend application: `npm start`
-- Go to {{< external-link link="http://localhost:3000" >}}localhost:3000{{< /external-link >}} to try your app
+- Start the frontend application: `npm run dev`
+- Go to {{< external-link link="http://localhost:5173" >}}localhost:5173{{< /external-link >}} to try your app
 
 ### Deploy Your App
 
-If everything goes well you can now deploy your application on genezio’s infrastructure. In the server folder:
+If everything goes well you can now deploy your application on genezio’s infrastructure. In the root folder of your project:
 
 - Login your CLI to the genezio cloud: `genezio login`
-- Deploy your app to the genezio cloud: `genezio deploy`
+- Deploy your app to the genezio cloud: `genezio deploy --env server\.env`
 
 This action might take up to 2 minutes and after that a random genezio subdomain will be provided for you with your deployed application.
 
