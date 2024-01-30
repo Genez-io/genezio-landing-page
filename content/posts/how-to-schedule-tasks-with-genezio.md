@@ -14,7 +14,7 @@ meta_og_image: "https://genez.io/images/scheduletasks.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 5
 ---
 
 This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
@@ -47,13 +47,13 @@ First, you’ll need to create a new project.
 
 To get started with a template, install `genezio` using `npm` and run it in your terminal. Later on, genezio comes in handy to deploy and host your web applications in the cloud.
 
-```
+```bash
 npm install -g genezio
 ```
 
 After installing `genezio`, you can create a new Genezio Node.js project by running the following command in an empty new folder:
 
-```
+```bash
 genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
 cd ./scheduler-app
 ```
@@ -95,7 +95,7 @@ The schedule string follows the format `* * * * *`, representing minutes, hours,
 
 With genezio you can test your scheduler locally by running a genezio local server with the following command:
 
-```
+```bash
 genezio local
 ```
 
@@ -105,7 +105,7 @@ The task will run every minute and will print the output in the console of your 
 
 Next, the application is ready to be deployed to the cloud to be used in a production environment. To deploy your application, run the following command in the root directory of your project:
 
-```
+```bash
 genezio deploy
 ```
 

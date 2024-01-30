@@ -104,32 +104,31 @@
       </div>
     </div>
 
-    {{/*  TODO: fix:  */}}
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
 
-    <div class="row px-3 px-md-4 pt-3 pb-5"> 
+    <div class="px-3 px-md-4 pt-3 pb-5 d-lg-flex d-block"> 
+    {{/*  <div class="row px-3 px-md-4 pt-3 pb-5">   */}}
       <div class="articlePost col-lg-8">{{ .Content }}</div>
-
       <div class="col-lg-1"></div>
-      <div class="articlePost col-lg-3">
-        <p class="fw-semibold " style="opacity: .6;">Article contents</p>
-        <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
+      <div class="articlePost col-lg-3 d-none d-lg-block">
+    <p class="fw-semibold " style="opacity: .6;">Article contents</p>
+    <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
         {{ with .Params.menuItems }}
-          {{ range . }}
-            <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
-              <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
-            </li>
-          {{ end }}
+            {{ range . }}
+                <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
+                    <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
+                </li>
+            {{ end }}
         {{ end }}
-      </ul>
-      </div>
+    </ul>
+</div>
+
     </div>
 
 
     <!-- Navigation Menu -->
     {{/* Start of Subscribe to our newsletter */}}
-    {{/*  TODO: remove row  */}}
-    <div class="row px-4 pt-3"> 
+    <div class="px-4 pt-3"> 
       <div class="col-lg-8">
         <div
           style="
@@ -242,7 +241,7 @@
             <div class="card border-0" style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07); background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
                <a class="text-decoration-none" href="{{ .RelPermalink }}">
         <div class="position-relative">
-          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="height: 205px; border-bottom-left-radius: 20px;border-top-right-radius: 20px;" />
+          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="border-bottom-left-radius: 20px;border-top-right-radius: 20px;" />
           {{/*  read time  */}}
           <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
             <div class="d-flex align-items-center">
@@ -434,4 +433,71 @@ window.addEventListener("scroll", updateActiveSection);
     });
   });
 </script>
+
+{{/*  Hubspot add mail  */}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('subscribeForm');
+    const emailInput = document.getElementById('emailSubscribeInput');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const email = emailInput.value;
+
+      const data = {
+        email: email
+      };
+
+      const url = 'https://ahkxlexqszfsqoe33tl5im4b4y0umhdv.lambda-url.us-east-1.on.aws/HubSpotService/addContact';
+
+      fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+  });
+</script>
+
+{{/*  Add copy code snippet button   */}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const codeBlocks = document.querySelectorAll('pre code[data-lang="javascript"], pre code[data-lang="typescript"], pre code[data-lang="bash"], pre code[data-lang="css"], pre code[data-lang="ts"], pre code[data-lang="yaml"], pre code[data-lang="cli"], pre code[data-lang="env"], pre code[data-lang="tsx"]');
+
+        codeBlocks.forEach(codeBlock => {
+            const copyButton = document.createElement('button');
+            copyButton.className = 'copy-button';
+            copyButton.textContent = 'Copy';
+
+            copyButton.addEventListener('click', function () {
+                const codeText = codeBlock.textContent.trim();
+
+                const textarea = document.createElement('textarea');
+                textarea.value = codeText;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            });
+
+            codeBlock.parentElement.appendChild(copyButton);
+        });
+    });
+</script>
+
+
+
+
+
 {{ end }}

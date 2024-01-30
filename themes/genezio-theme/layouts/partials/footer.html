@@ -190,12 +190,38 @@
 </footer>
 
 <script>
-  document.getElementById("subscribeForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("subscribeForm");
+    const emailInput = document.getElementById("emailSubscribeInput");
 
-    // reset input value .5 second later
-    setTimeout(function () {
-      document.getElementById("emailSubscribeInput").value = "";
-    }, 500);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const email = emailInput.value;
+      const data = {
+        email: email,
+      };
+
+      const url =
+        "https://ahkxlexqszfsqoe33tl5im4b4y0umhdv.lambda-url.us-east-1.on.aws/HubSpotService/addContact";
+
+      fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+          document.getElementById("emailSubscribeInput").value = "";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          document.getElementById("emailSubscribeInput").value = "";
+        });
+    });
   });
 </script>
