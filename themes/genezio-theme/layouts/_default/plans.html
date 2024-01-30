@@ -17,9 +17,20 @@
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
 
     {{/* Monthly / Annual selector */}}
-    <div class="d-flex justify-content-end pt-3 mt-4">Monthly / Annual</div>
+    <div class="d-flex justify-content-end pt-3 mt-4 mb-4 pb-3 text-white opacity-75">
+      <a id="monthlyBtn" style="cursor: pointer" class="fw-semibold text-white text-decoration-none"
+        >Monthly</a
+      >
+      <p style="margin: 0 12px">/</p>
+      <a id="annualBtn" style="cursor: pointer" class="text-white text-decoration-none">Annual</a>
+    </div>
+    {{/* Start of plans */}}
 
-    {{/* start of used and trusted at */}}
+    <div class="row">
+      <div class="col">aa</div>
+      <div class="col">bb</div>
+    </div>
+    {{/* end of plans */}} {{/* start of used and trusted at */}}
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
     <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-3">
       USED AND TRUSTED AT
@@ -121,9 +132,6 @@
     <p>scroll</p>
     <p>scroll</p>
     <p>scroll</p>
-    <p>scroll</p>
-    <p>scroll</p>
-    <p>scroll</p>
     <p class="mb-0">scroll</p>
   </div>
 </div>
@@ -141,4 +149,26 @@
     "
   ></div>
 </div>
+
+<script>
+  const monthlyBtn = document.getElementById("monthlyBtn");
+  const annualBtn = document.getElementById("annualBtn");
+
+  // Function to handle button clicks
+  function handleButtonClick(btn, otherBtn) {
+    btn.classList.add("fw-semibold");
+    otherBtn.classList.remove("fw-semibold");
+  }
+
+  // Event listener for Monthly button
+  monthlyBtn.addEventListener("click", function () {
+    handleButtonClick(monthlyBtn, annualBtn);
+  });
+
+  // Event listener for Annual button
+  annualBtn.addEventListener("click", function () {
+    handleButtonClick(annualBtn, monthlyBtn);
+  });
+</script>
+
 {{ end }}
