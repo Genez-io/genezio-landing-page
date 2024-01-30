@@ -1,0 +1,144 @@
+{{ define "header_css" }}{{ end }} {{ define "body_classes" }}page-default-single{{ end }} {{ define
+"header_classes" }}{{ end }} {{ define "main" }}
+
+<div class="px-3 bg-dark">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0px 40px 0px 40px;
+    "
+    class="container text-white"
+  >
+    <div class="py-4">
+      <h2 style="font-size: 48px" class="fw-bold text-center py-5 my-2">Our pricing</h2>
+    </div>
+
+    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
+
+    {{/* Monthly / Annual selector */}}
+    <div class="d-flex justify-content-end pt-3 mt-4">Monthly / Annual</div>
+
+    {{/* start of used and trusted at */}}
+    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
+    <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-3">
+      USED AND TRUSTED AT
+    </p>
+    <div class="w-100 mx-auto d-flex justify-content-around mb-4 pb-3">
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="multiversx-logo"
+        src="/images/multiversx-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="294px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="google-logo"
+        src="/images/google-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="50px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="splunk-logo"
+        src="/images/splunk-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="168px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="uipath-logo"
+        src="/images/uipath-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="51px"
+      />
+
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide d-block d-sm-block d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              alt="multiversx-logo"
+              src="/images/multiversx-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="google-logo"
+              src="/images/google-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="splunk-logo"
+              src="/images/splunk-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="uipath-logo"
+              src="/images/uipath-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
+    {{/* end of used and trusted at */}}
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 pb-1">
+      COMPARISON TABLE
+    </p>
+
+    <h2 class="text-center fw-bold mb-4 pb-3">Compare our plans in detail</h2>
+
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p>scroll</p>
+    <p class="mb-0">scroll</p>
+  </div>
+</div>
+
+<div class="position-relative">
+  <div
+    class="position-absolute w-100 bottom-0 pe-none"
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      height: 1500px;
+    "
+  ></div>
+</div>
+{{ end }}
