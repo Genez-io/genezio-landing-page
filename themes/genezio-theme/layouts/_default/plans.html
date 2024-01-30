@@ -678,22 +678,6 @@
     `;
   });
 
-  {
-    {
-      /*  <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="#F9F5FF" />
-                <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#7F56D9" />
-                <circle cx="10" cy="10" r="4" fill="#7F56D9" />
-              </svg>  */
-    }
-  }
-
   const activeCheckBoxContent = `
   <svg
     width="20"
@@ -708,18 +692,22 @@
   </svg>
 `;
 
+  const defaultCheckBoxContent = `
+  <div id="hobbyCheckbox" class="checkBox"></div>
+`;
+
   const hobbyCheckbox = document.getElementById("hobbyCheckbox");
   const proCheckbox = document.getElementById("proCheckbox");
   const enterpriseCheckbox = document.getElementById("enterpriseCheckbox");
 
-  // Function to add the SVG content to a checkbox and remove from others
+  // Function to toggle the SVG content based on the active checkbox
   function toggleSVG(checkbox) {
-    // Remove the SVG from all checkboxes
+    // Remove the content from all checkboxes
     hobbyCheckbox.innerHTML = `<div id="hobbyCheckbox" class="checkBox"></div>`;
-    proCheckbox.innerHTML = `<div id="proCheckbox" class="checkBox"></div>`;
-    enterpriseCheckbox.innerHTML = `<div id="enterpriseCheckbox" class="checkBox"></div>`;
+    proCheckbox.innerHTML = `<div id="hobbyCheckbox" class="proCheckbox"></div>`;
+    enterpriseCheckbox.innerHTML = `<div id="hobbyCheckbox" class="enterpriseCheckbox"></div>`;
 
-    // Add the SVG to the clicked checkbox
+    // Add the content to the clicked checkbox
     checkbox.innerHTML = activeCheckBoxContent;
   }
 
