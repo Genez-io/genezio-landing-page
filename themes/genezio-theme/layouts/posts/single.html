@@ -434,6 +434,7 @@ window.addEventListener("scroll", updateActiveSection);
   });
 </script>
 
+{{/*  Hubspot add mail  */}}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('subscribeForm');
@@ -468,6 +469,34 @@ window.addEventListener("scroll", updateActiveSection);
     });
   });
 </script>
+
+{{/*  Add copy code snippet button   */}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const codeBlocks = document.querySelectorAll('pre code[data-lang="javascript"], pre code[data-lang="typescript"], pre code[data-lang="bash"], pre code[data-lang="css"], pre code[data-lang="ts"], pre code[data-lang="yaml"], pre code[data-lang="cli"], pre code[data-lang="env"], pre code[data-lang="tsx"]');
+
+        codeBlocks.forEach(codeBlock => {
+            const copyButton = document.createElement('button');
+            copyButton.className = 'copy-button';
+            copyButton.textContent = 'Copy';
+
+            copyButton.addEventListener('click', function () {
+                const codeText = codeBlock.textContent.trim();
+
+                const textarea = document.createElement('textarea');
+                textarea.value = codeText;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            });
+
+            codeBlock.parentElement.appendChild(copyButton);
+        });
+    });
+</script>
+
+
 
 
 

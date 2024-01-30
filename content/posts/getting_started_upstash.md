@@ -42,10 +42,7 @@ export class EcommerceCacheService {
     this.client = new Redis(process.env.REDIS_URL);
   }
 
-  cacheProductDetails(
-    productId: string,
-    productDetails: string
-  ): Promise<boolean> {
+  cacheProductDetails(productId: string, productDetails: string): Promise<boolean> {
     const key = `product:${productId}`;
     await this.client.set(key, productDetails, "EX", expirationInSeconds);
 
@@ -123,7 +120,7 @@ genezio create backend --backend=ts --name=getting-started-with-upstash --region
 
 The next step is to integrate this small project with a Redis database provided by Upstash. To do that, we first need to deploy the project. We can do that by running the following commands in the root directory of the project:
 
-```
+```bash
 genezio deploy
 ```
 
@@ -184,11 +181,7 @@ export class ShoppingCartService {
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
 
-  addItemToCart(
-    cartId: string,
-    productId: string,
-    quantity: number
-  ): Promise<boolean> {
+  addItemToCart(cartId: string, productId: string, quantity: number): Promise<boolean> {
     const cartKey = `cart:${cartId}`;
     await this.client.set(`${cartKey}:${productId}`, quantity);
 
@@ -214,7 +207,7 @@ You can find the environment variables in the `Integrations` tab of your project
 
 The `.env` file should look similar to the following snippet:
 
-```
+```bash
 UPSTASH_REDIS_URL="redis://default:sensitivepassword@cute-capybara-33897.upstash.io:33897"
 UPSTASH_REDIS_REST_URL="https://cute-capybara-33897.upstash.io"
 UPSTASH_REDIS_REST_TOKEN="sensitivetoken"
