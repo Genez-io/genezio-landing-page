@@ -174,26 +174,35 @@
           style="border-bottom-left-radius: 20px; border-top-right-radius: 20px"
           class="card mb-4 p-4 ActivePlanCard text-white"
         >
-          <div class="d-flex align-items-center">
-            <div id="hobbyCheckbox">
-              <svg
-                width="20"
-                style="margin-right: 24px"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="#F9F5FF" />
-                <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#7F56D9" />
-                <circle cx="10" cy="10" r="4" fill="#7F56D9" />
-              </svg>
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <div id="hobbyCheckbox">
+                <svg
+                  width="20"
+                  style="margin-right: 24px"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="#F9F5FF" />
+                  <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#7F56D9" />
+                  <circle cx="10" cy="10" r="4" fill="#7F56D9" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
+                <p class="text-white opacity-50 mb-0">
+                  free forever for personal, non-commercial use
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
-              <p class="text-white opacity-50 mb-0">
-                free forever for personal, non-commercial use
-              </p>
+
+            {{/* mobile perks */}}
+            <div class="d-sm-block d-md-none">
+              <p>www</p>
+              <p>www</p>
+              <p>www</p>
             </div>
           </div>
         </div>
@@ -202,11 +211,20 @@
           style="border-bottom-left-radius: 20px; border-top-right-radius: 20px"
           class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
         >
-          <div class="d-flex align-items-center">
-            <div id="proCheckbox" class="checkBox"></div>
-            <div>
-              <h2 class="mb-2 pb-1 fw-bold">Pro</h2>
-              <p class="text-white opacity-50 mb-0">for solo developers or small teams</p>
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <div id="proCheckbox" class="checkBox"></div>
+              <div>
+                <h2 class="mb-2 pb-1 fw-bold">Pro</h2>
+                <p class="text-white opacity-50 mb-0">for solo developers or small teams</p>
+              </div>
+            </div>
+
+            {{/* mobile perks */}}
+            <div class="d-sm-block d-md-none">
+              <p>www</p>
+              <p>www</p>
+              <p>www</p>
             </div>
           </div>
         </div>
@@ -215,13 +233,22 @@
           style="border-bottom-left-radius: 20px; border-top-right-radius: 20px"
           class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
         >
-          <div class="d-flex align-items-center">
-            <div id="enterpriseCheckbox" class="checkBox"></div>
-            <div>
-              <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
-              <p class="text-white opacity-50 mb-0">
-                for teams who need user management or governance
-              </p>
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <div id="enterpriseCheckbox" class="checkBox"></div>
+              <div>
+                <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
+                <p class="text-white opacity-50 mb-0">
+                  for teams who need user management or governance
+                </p>
+              </div>
+            </div>
+
+            {{/* mobile perks */}}
+            <div class="d-sm-block d-md-none">
+              <p>ww</p>
+              <p>ww</p>
+              <p>ww</p>
             </div>
           </div>
         </div>
