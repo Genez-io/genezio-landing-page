@@ -16,3 +16,16 @@
     ),
     rgba(255, 255, 255, 0.04);
 }
+
+.checkBox {
+  border-radius: 10px;
+  border: 1px solid var(--Brand-600, #7f56d9);
+  background: var(--Brand-50, #f9f5ff);
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+}
+
+.activeCheckBox {
+  margin-right: 24px;
+}
