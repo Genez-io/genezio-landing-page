@@ -48,13 +48,13 @@ If you already have a genezio project deployed and you just want to integrate Ne
 
 Install genezio by running the following command in your terminal:
 
-```
+```bash
 npm install genezio -g
 ```
 
 After that, you can initialize a brand new project by running `genezio` in your preferred directory:
 
-```
+```bash
 genezio create backend --backend=ts --name=getting-started-with-neon --region=us-east-1
 ```
 
@@ -62,7 +62,7 @@ genezio create backend --backend=ts --name=getting-started-with-neon --region=us
 
 The next step is to integrate this small project with a Postgres database provided by Neon. To do that, we first need to deploy the project. We can do that by running the following commands in the root directory of the project:
 
-```
+```bash
 genezio deploy
 ```
 
@@ -96,7 +96,7 @@ Create a new `postgres.ts` file in the root of your project. This file will cont
 
 In the root of your project, run the following command:
 
-```
+```bash
 npm install pg @types/pg @genezio/types
 ```
 
@@ -139,13 +139,13 @@ To locally test your Postgres service, you have to copy the environment variable
 
 The `.env` file should look similar to the following snippet:
 
-```
+```bash
 NEON_POSTGRES_URL="postgres://virgil:<your-password>@ep-fragrant-band-27497881.us-east-1.aws.neon.tech/neondb"
 ```
 
 After setting the environment variable, you can test your Postgres service by running the following command in your terminal:
 
-```
+```bash
 genezio local
 ```
 
@@ -157,7 +157,7 @@ Here you can send requests to your local backend server and receive appropriate 
 
 After testing your application locally, you can deploy it again to update the project by running the following command in the root directory of your project:
 
-```
+```bash
 genezio deploy
 ```
 

@@ -69,13 +69,13 @@ If you don't have node and npm installed on your machine, head over to their {{<
 
 Install genezio using npm:
 
-```
+```bash
 npm install genezio -g
 ```
 
 Start using genezio by running the following command in your terminal:
 
-```
+```bash
 genezio login
 ```
 
@@ -85,7 +85,7 @@ At any step, if you get stuck at any moment you can use `genezio help` or `genez
 
 Create the folders hierarchy for the project:
 
-```
+```bash
 genezio create fullstack --backend=js --frontend=react-js --name=blockchain-project --region=us-east-1
 ```
 
@@ -93,13 +93,13 @@ genezio create fullstack --backend=js --frontend=react-js --name=blockchain-proj
 
 Change into the newly created `server` folder:
 
-```
+```cli
 cd /blockchain-project/server
 ```
 
 Install the `web3` and `mongoose` npm packages by executing:
 
-```
+```bash
 npm install web3 mongoose
 ```
 
@@ -107,7 +107,7 @@ These npm packages will be used to interact with the blockchain and to save the 
 
 Create a `.env` file in the `blockchain-project/server` directory.
 
-```
+```env
 # blockchain-project/server/.env
 
 # Replace these values with your own
@@ -225,8 +225,7 @@ const eventSchema = new mongoose.Schema({
   blockNumber: Number,
   logIndex: Number,
 });
-export const EventModel =
-  mongoose.models.Event || mongoose.model("Event", eventSchema);
+export const EventModel = mongoose.models.Event || mongoose.model("Event", eventSchema);
 ```
 
 Create a `blockchain.js` file in the `blockchain-project/server` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
@@ -250,19 +249,14 @@ export class BlockchainServer {
     });
     try {
       this.web3 = new Web3(process.env.BLAST_API_RPC_ENDPOINT);
-      this.contract = new this.web3.eth.Contract(
-        JSON.parse(abi),
-        process.env.CONTRACT_ADDRESS
-      );
+      this.contract = new this.web3.eth.Contract(JSON.parse(abi), process.env.CONTRACT_ADDRESS);
     } catch (err) {
       console.log(err);
       throw err;
     }
-    this.knownEventTokens = this.contract.options.jsonInterface.filter(
-      (token) => {
-        return token.type === "event";
-      }
-    );
+    this.knownEventTokens = this.contract.options.jsonInterface.filter((token) => {
+      return token.type === "event";
+    });
   }
 }
 ```
@@ -414,13 +408,13 @@ In this section, you’ll build the client side of the project. This is going to
 
 Go to the `client` where you’ll build the frontend application.
 
-```
+```cli
 cd ../client
 ```
 
 Install the following packages to get Material React UI components:
 
-```
+```bash
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
@@ -485,26 +479,19 @@ function App() {
         {errorAlert != "" ? (
           <Alert severity="error">{errorAlert}</Alert>
         ) : (
-          <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          >
+          <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
             {events.map((event) => (
               <ListItem>
                 <ListItemText
                   primary={event.name}
-                  secondary={
-                    event.blockNumber + " " + JSON.stringify(event.parameters)
-                  }
+                  secondary={event.blockNumber + " " + JSON.stringify(event.parameters)}
                 />
               </ListItem>
             ))}
           </List>
         )}
         <div>
-          <Pagination
-            count={Math.floor(totalCount / CHUNKS)}
-            onChange={handleChange}
-          ></Pagination>
+          <Pagination count={Math.floor(totalCount / CHUNKS)} onChange={handleChange}></Pagination>
         </div>
       </header>
     </div>
@@ -520,13 +507,13 @@ It is recommended to test your project locally before deploying it to make sure 
 
 Make sure that you are in the root directory:
 
-```
+```cli
 cd ../server
 ```
 
 Run the following command to start a local testing process:
 
-```
+```cli
 genezio local
 ```
 
@@ -545,7 +532,7 @@ Right now the server side of your project is listening to port 8083. You can hea
 
 You can also test the client side of your project. Do not stop the `genezio local` process. Open up a new terminal and head over to the `blockchain-project/client` directory. There you can execute the following commands:
 
-```
+```bash
 npm install
 npm run dev
 ```
@@ -558,7 +545,7 @@ Prepare the configuration for your server before deploying it.
 
 To deploy both the backend and frontend of your app, go to the `blockchain-project` directory and deploy it with genezio. Hang in there because it might take a while.
 
-```
+```bash
 genezio deploy
 ```
 
