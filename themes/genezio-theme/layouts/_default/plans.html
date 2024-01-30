@@ -1135,6 +1135,16 @@
       document.getElementById("mobile-planPerks-enterprise").innerHTML = "";
 
       //set default desktop version
+      buttonsWrap.innerHTML = `
+      <a
+            class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
+            style="height: 48px"
+            type="submit"
+            href="https://docs.genezio.com/genezio-documentation/getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>`;
       document.getElementById("hobbyCheckbox").innerHTML = `<div id="hobbyCheckbox">
                 <svg
                   width="20"
@@ -1153,11 +1163,6 @@
         `<div id="hobbyCheckbox" class="proCheckbox"></div>`;
       document.getElementById("enterpriseCheckbox").innerHTML =
         `<div id="hobbyCheckbox" class="enterpriseCheckbox"></div>`;
-
-      // Add the content to the clicked checkbox
-      checkbox.innerHTML = activeCheckBoxContent;
-
-      const hobbyCheckbox = (document.getElementById("hobbyCheckbox").innerHTML = ``);
       planPerks.innerHTML = `
 <div class="d-flex perkWrap align-items-center">
             <svg
@@ -1257,6 +1262,11 @@
             </div>
           </div>
     `;
+
+      // Add the content to the clicked checkbox
+      checkbox.innerHTML = activeCheckBoxContent;
+
+      const hobbyCheckbox = (document.getElementById("hobbyCheckbox").innerHTML = ``);
 
       hasLogged = true; // Set the flag to true to indicate the message has been logged
     } else if (viewportWidth > 768) {
