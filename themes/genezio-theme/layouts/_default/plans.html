@@ -27,11 +27,10 @@
       <a id="annualBtn" style="cursor: pointer" class="text-white text-decoration-none">Annual</a>
     </div>
     */}} {{/* Start of plans cards */}}
+
     <div style="margin-top: 40px" class="row justify-content-between mx-0 pb-3">
-      <div class="col-5 p-0">
-        <h2 id="planTitle" class="fw-bold planTitle">
-          Your <span class="text-success">Hobbist</span> account
-        </h2>
+      <div class="col-5 p-0 d-md-block d-none">
+        <h2 id="planTitle" class="fw-bold planTitle">Your Hobby account</h2>
 
         <div id="planPerks">
           <div class="d-flex perkWrap align-items-center">
@@ -168,16 +167,18 @@
           </div>
         </div>
       </div>
-      <div class="col-6 p-0">
+
+      <div class="col-md-6 col-sm-12 p-0">
         <div
           id="hobbist"
           style="border-bottom-left-radius: 20px; border-top-right-radius: 20px"
           class="card mb-4 p-4 ActivePlanCard text-white"
         >
           <div class="d-flex align-items-center">
-            <div id="hobbyCheckbox" class="activeCheckBox">
+            <div id="hobbyCheckbox">
               <svg
                 width="20"
+                style="margin-right: 24px"
                 height="20"
                 viewBox="0 0 20 20"
                 fill="none"
@@ -189,7 +190,7 @@
               </svg>
             </div>
             <div>
-              <h2 class="mb-2 pb-1 fw-bold">Hobbist</h2>
+              <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
               <p class="text-white opacity-50 mb-0">free forever</p>
             </div>
           </div>
@@ -223,7 +224,7 @@
           </div>
         </div>
 
-        <div id="buttonsWrap" class="d-flex justify-content-end">
+        <div id="buttonsWrap" class="d-flex justify-content-sm-center justify-content-md-end">
           <a
             class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
             style="height: 48px"
@@ -372,7 +373,7 @@
 
   hobbistCard.addEventListener("click", () => {
     planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your <span class="text-success">Hobbist</span> account 
+        Your Hobbist account 
     </h2>`;
 
     buttonsWrap.innerHTML = `
@@ -490,7 +491,7 @@
 
   proCard.addEventListener("click", () => {
     planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your <span class="text-success">Pro</span> account
+        Your Pro account
     </h2>`;
 
     buttonsWrap.innerHTML = `
@@ -619,7 +620,7 @@
 
   enterpriseCard.addEventListener("click", () => {
     planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your <span class="text-success">Enterprise</span> account
+        Your Enterprise account
     </h2>`;
 
     buttonsWrap.innerHTML = `
@@ -682,6 +683,7 @@
   <svg
     width="20"
     height="20"
+    style="margin-right: 24px;"
     viewBox="0 0 20 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
