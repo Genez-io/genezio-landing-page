@@ -1,8 +1,94 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5ZPQL3Z");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      {{ .Site.Title }}{{ if ne .Params.title "genezio" }} | {{ with .Params.title }}{{ . }}{{ end
+      }}{{ end }}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{{ .Site.BaseURL }}apple-touch-icon-120x120-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{{ .Site.BaseURL }}apple-touch-icon-152x152-precomposed.png"
+    />
+
+    <!-- Add canonical URL -->
+    {{ if .IsHome }}
+    <link rel="canonical" href="{{ .Site.BaseURL }}" />
+    {{ else }}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ end }}
+
+    <!-- Meta tags for homepage start -->
+    <meta name="description" content="{{ .Params.Description }}" />
+    <meta property="og:title" content="{{ .Params.Title }}" />
+    <meta property="og:description" content="{{ .Params.Description }}" />
+    <meta property="og:image" content="{{ .Params.meta_og_image }}" />
+    <meta property="og:url" content="{{ .Params.meta_og_url }}" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GenezioNetwork" />
+    <meta name="twitter:creator" content="@GenezioNetwork" />
+    <meta name="twitter:title" content="{{ .Params.Title }}" />
+    <meta name="twitter:description" content="{{ .Params.Description }}" />
+    <meta name="robots" content="index,follow" />
+
+    {{ block "meta_tags" . }}{{end}}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR905VXGKC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-VR905VXGKC");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11377331429"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-11377331429");
+    </script>
+  </head>
   {{- partial "head.html" . -}}
   <body>
-    {{ if .Params.customHeader }}
+    {{ if or .Params.customHeader (eq .Params.title "Tutorials") (eq .Params.title "News") (eq
+    .Params.title "Learning") (eq .Params.title "use-cases") }}
     <!-- Custom header content for pages with customHeader variable -->
     {{- partial "blogHeader.html" . -}} {{ else }}
     <!-- Default header content for other pages -->
@@ -10,10 +96,15 @@
 
     <main>{{- block "main" . }}{{- end }}</main>
 
-    {{ if .Params.customFooter }} {{- partial "blogFooter.html" . -}} {{ else }} {{- partial
-    "footer.html" . -}} {{ end }}
+    {{ if or .Params.customFooter (eq .Params.title "Tutorials") (eq .Params.title "News") (eq
+    .Params.title "Learning") (eq .Params.title "use-cases") }}
+    <!-- Custom footer content for pages with customFooter variable or title equal to "Tutorials" or "News" -->
+    {{- partial "blogFooter.html" . -}} {{ else }}
+    <!-- Default footer content for other pages -->
+    {{- partial "footer.html" . -}} {{ end }}
 
     <!-- Start of HubSpot Embed Code -->
+    <link rel="preconnect" href="//js-eu1.hs-scripts.com" crossorigin />
     <script
       type="text/javascript"
       id="hs-script-loader"
@@ -23,5 +114,33 @@
       src="//js-eu1.hs-scripts.com/26189618.js"
     ></script>
     <!-- End of HubSpot Embed Code -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
+
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+    const navbarMobile = document.getElementById("navbarMobile");
+
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Check if the navbarMobile has the "show" class
+      const isNavbarMobileVisible = navbarMobile.classList.contains("show");
+
+      if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight) {
+        if (!isNavbarMobileVisible) {
+          navbar.style.top = `-${navbar.offsetHeight}px`;
+        }
+      } else {
+        navbar.style.top = "0";
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
 </html>

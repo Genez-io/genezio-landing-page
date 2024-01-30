@@ -1,0 +1,13 @@
+.pagination {
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  padding: 40px 16px;
+
+  .pagination-link {
+    color: #009662;
+  }
+
+  .active-page {
+    color: #525252;
+  }
+}

@@ -1,0 +1,437 @@
+{{ define "main" }}
+<div class="px-3" style="background-color: #f1ecf9">
+  <div
+    style="border-left: 1px solid #e2d9f3; border-right: 1px solid #e2d9f3"
+    class="container px-2"
+  >
+    <div class="row pt-3 px-0 px-md-4">
+            <div class="mt-4">
+              {{ if .Params.tags }}
+            {{ range .Params.tags }}
+            <a class="text-decoration-none fw-semibold blogGradientText" style="font-size: 14px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          {{ end }}
+
+      <h2 class="text-black fw-bold mb-0 mt-2 mb-4 pb-3 pt-1">{{ .Title }}</h2>
+      {{/* TODO: replace with the photo */}}
+      <div class="mb-4 mt-3 position-relative articlePhoto">
+
+      <img src="{{ .Params.thumbnail | relURL }}"class="w-100" style=" border-bottom-left-radius: 20px; border-top-right-radius: 20px;" />
+      
+        {{/* read time */}}
+        <div
+          class="py-1 px-2 position-absolute"
+          style="
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            border-radius: 999px;
+            bottom: 10px;
+            left: 10px;
+          "
+        >
+          <div class="d-flex align-items-center">
+            <img src="/images/clock-icon.svg" alt="clock-icon" />
+            <p style="font-size: 12px; margin-left: 4px" class="text-white mb-0">
+              {{ .Params.readTime }} minutes read
+            </p>
+          </div>
+        </div>
+      </div>
+      {{/* writer + share on */}}
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mt-3 pt-3">
+        <div class="d-flex">
+          <img
+            src="/images/writers/{{ .Params.author | urlize  }}.webp"
+            style="height: 48px; width: 48px; object-fit: cover;"
+            class="rounded-circle"
+            alt="writer-avatar"
+          />
+          <div class="d-flex flex-column mx-4">
+            <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold">
+              {{ .Params.author }}
+            </p>
+            <p style="color: #525252" class="mb-0 fw-medium date">
+              {{ dateFormat "Jan 02, 2006" .Params.date }}
+            </p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center mt-4 mt-sm-0">
+          {{/*
+              <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+                  Share on Facebook
+              </a>
+          */}}
+
+          {{/*  https://www.linkedin.com/sharing/share-offsite/?url=www.google.com  */}}
+          {{/*  TODO: add whatsapp  */}}
+       
+
+          {{/*  TODO: fix links for prod   */}}
+          <p style="color: rgba(82, 82, 82, 1);" class="date mb-0 mx-0 mx-sm-2">Share on:</p>
+
+          <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text={{ .Permalink }}"
+          data-size="large"
+          target="_blank"
+              >
+              <img
+            style="border: 1px solid #e2d9f3; cursor: pointer"
+            class="rounded-circle p-2 "
+            src="/images/twitter-logo-green.svg"
+            alt="twitter-icon"
+          />
+          </a>
+
+          <a href="https://www.linkedin.com/sharing/share-offsite/?{{ .Permalink }}" target="_blank">
+          <img
+            style="border: 1px solid #e2d9f3; cursor: pointer"
+            class="rounded-circle p-2 mx-2"
+            src="/images/linkedin-logo-green.svg"
+            alt="linkedin-icon"
+          />
+          </a>
+
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank">
+          <img
+            style="border: 1px solid #e2d9f3; cursor: pointer"
+            class="rounded-circle p-2"
+            src="/images/facebook-logo-green.svg"
+            alt="facebook-icon"
+          />
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    {{/*  TODO: fix:  */}}
+    <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
+
+    <div class="row px-3 px-md-4 pt-3 pb-5"> 
+      <div class="articlePost col-lg-8">{{ .Content }}</div>
+
+      <div class="col-lg-1"></div>
+      <div class="articlePost col-lg-3">
+        <p class="fw-semibold " style="opacity: .6;">Article contents</p>
+        <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
+        {{ with .Params.menuItems }}
+          {{ range . }}
+            <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
+              <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+      </div>
+    </div>
+
+
+    <!-- Navigation Menu -->
+    {{/* Start of Subscribe to our newsletter */}}
+    {{/*  TODO: remove row  */}}
+    <div class="row px-4 pt-3"> 
+      <div class="col-lg-8">
+        <div
+          style="
+             background: radial-gradient(
+              circle at top left,
+            rgba(100, 100, 100, 0) -20%,
+            -20%, rgb(111, 66, 193) -10%, 
+            #21143a 100%                 
+            );
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+          "
+          class="text-white p-4 mb-3"
+        >
+          <div class="p-0 p-sm-3"> 
+            <h4 class="mb-4">Subscribe to our newsletter</h4>
+            <p style="font-size: 14px">
+              <span class="opacity-50">Genezio is a serverless platform for building</span>
+              <span style="color: #99fddb" class="fw-medium"> full-stack web and mobile</span>
+              <span class="opacity-50">applications in a scalable and cost-efficient way.</span>
+            </p>
+
+            <div
+              class="col-12 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row pt-4"
+            >
+              <form
+                id="subscribeForm"
+                class="d-flex w-100 align-items-start align-items-md-center flex-column flex-md-row"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control text-white ms-0 blog-input-white"
+                  id="emailSubscribeInput"
+                  placeholder="Enter your email"
+                  style="background-color: transparent; height: 48px; border: 1px solid rgba(255, 255, 255, 0.2);"
+                />
+                <button
+                  class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 footer-subscribe-btn-custom newsletterBtn"
+                  style="height: 48px"
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{/* End of Subscribe to our newsletter */}}
+      </div>
+      </div>
+    </div>
+
+    <hr style="border: 1px solid #e2d9f3; margin: 24px -8px 40px -8px" />
+        <!-- Start of Navigation Links to Previous and Next Posts -->
+        <div class="row px-4 mx-3">
+        {{ $allPosts := where site.RegularPages "Type" "posts" }}
+        {{ $sortedPosts := $allPosts.ByDate.Reverse }}
+        {{ $currentIndex := 0 }}
+
+        {{ range $index, $post := $sortedPosts }}
+            {{ if eq .Permalink $.Permalink }}
+                {{ $currentIndex = $index }}
+            {{ end }}
+        {{ end }}
+
+        {{ $prevIndex := add $currentIndex -1 }}
+        {{ $nextIndex := add $currentIndex 1 }}
+
+        <div class="col-lg-6 p-0">
+            {{ with index $sortedPosts $prevIndex }}
+                <a href="{{ .Permalink }}" class="text-decoration-none d-flex align-items-center">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.75 19.5L8.25 12L15.75 4.5" stroke="black" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    <p  style="color: #009662;" class="fw-medium mx-4 px-3 mb-0">{{ .Title }}</p>
+                </a>
+            {{ end }}
+        </div>
+
+        <div class="col-lg-6 text-right d-flex justify-content-end p-0">
+            {{ with index $sortedPosts $nextIndex }}
+                <a href="{{ .Permalink }}" class="text-decoration-none d-flex align-items-center">
+                  <p style="color: #009662;" class="fw-medium mx-4 px-3 mb-0">{{ .Title }}</p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.25 4.5L15.75 12L8.25 19.5" stroke="black" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            {{ end }}
+        </div>
+    </div>
+    <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 40px -8px" />
+ <!-- End of Navigation Links to Previous and Next Posts -->
+   <div class="row w-100 mx-4 mb-2 pb-4">
+      <p style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">
+        Related articles
+      </p>
+    </div>
+
+    <div class="row px-1 mx-4 justify-content-center">
+    {{ $recentPosts := slice }}
+    {{ $allPosts := where site.RegularPages "Type" "posts" }}
+    {{ $sortedPosts := $allPosts.ByDate.Reverse }}
+    {{ range first 3 $sortedPosts }}
+        {{ $recentPosts = $recentPosts | append . }}
+    {{ end }}
+
+    {{ range $recentPosts }}
+        <div class="col-lg col-md-12 p-0 m-2">
+            <div class="card border-0" style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07); background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
+               <a class="text-decoration-none" href="{{ .RelPermalink }}">
+        <div class="position-relative">
+          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="height: 205px; border-bottom-left-radius: 20px;border-top-right-radius: 20px;" />
+          {{/*  read time  */}}
+          <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
+            <div class="d-flex align-items-center">
+              <img src="/images/clock-icon.svg" alt="clock-icon"/>
+                <p style="font-size: 12px; margin-left: 4px;" class="text-white mb-0">{{ .Params.readTime }} minutes read</p>
+            </div>
+          </div>
+        </div>
+    </a>
+                <div class="card-body p-4">
+                     <div>
+          {{ if .Params.tags }}
+          <div class="mb-2 pb-1">
+            {{ range .Params.tags }}
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{/*  Title & preview  */}}
+          <a class="text-decoration-none" href="{{ .RelPermalink }}">
+            <div class="mb-4"> 
+              <h4 class="text-black mb-0" style="min-height: 64px">
+                  {{ if gt (len .Title) 46 }}
+                    <script>
+                      document.write("{{ .Title | safeJS }}".slice(0, 46) + "...");
+                    </script>
+                {{ else }}
+                    {{ .Title }}
+                {{ end }}
+              </h4>
+              <p style="color: #525252; min-height: 72px;" class="mt-4 mb-0">
+               {{ if gt (len .Params.preview) 123 }}
+                    <script>
+                      document.write("{{ .Params.preview | safeJS }}".slice(0, 123) + "...");
+                    </script>
+                {{ else }}
+                    {{ .Params.preview }}
+                {{ end }}
+              </p>
+            </div>
+          </a>
+
+          {{/*  Writer Details  */}}
+          <div class="d-flex">
+            <img src="/images/writers/{{ .Params.author | urlize  }}.webp" style="height:  48px; width: 48px; object-fit: cover;" class="rounded-circle " alt="writer-avatar"/>
+            <div class="d-flex flex-column mx-4">
+              <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
+              <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+            </div>
+          </div>
+        </div>  
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+{{/*  END OF Related articles */}}
+
+    
+    <hr style="border: 1px solid #e2d9f3; margin: 32px -8px 40px -8px" />
+    
+   <div class="row w-100 mx-4 mb-2 pb-4">
+      <p style="color: rgba(0, 0, 0, 0.60)" class="m-0 fw-semibold">More from {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}{{ $tag }}{{ end }}</p>
+    </div>
+
+    
+    {{/*  Start of More from ... section  */}}
+    <div class="row px-1 mx-4 justify-content-center">
+  {{ if .Params.tags }}
+    {{ $tag := index .Params.tags 0 | lower }}
+    {{ $relatedPosts := $.Site.Taxonomies.tags.Get $tag }}
+
+    {{ if gt (len $relatedPosts.Pages) 0 }}
+      {{ $randomPosts := shuffle $relatedPosts.Pages | first 6 }}
+      
+      {{ range $index, $post := $randomPosts }}
+        {{ if lt $index 3 }}
+          <div class="col-lg col-md-12 p-0 m-2">
+            <div class="card border-0" style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07);background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
+              <div class="card-body p-4">
+                {{ with .Params.tags }}
+                  {{ range . }}
+                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                  {{ end }}
+                {{ end }}
+                <h4 class="text-black mb-0 mt-2 pt-1" style="min-height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                {{/* Writer details */}}
+                <div class="d-flex flex-column mt-4">
+                  <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
+                  <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ else }}
+          {{ if eq $index 3 }}
+            </div> <!-- Close the first row -->
+            <div class="d-none d-lg-block" style="height: 24px;"></div>
+            <div class="row px-1 mx-4 justify-content-center pb-4"> <!-- Start the second row -->
+          {{ end }}
+          <div class="col-lg col-md-12 p-0 m-2">
+            <div class="card border-0" style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07);background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
+              <div class="card-body p-4">
+                {{ with .Params.tags }}
+                  {{ range . }}
+                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                  {{ end }}
+                {{ end }}
+                <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                {{/* Writer details */}}
+                <div class="d-flex flex-column mt-4">
+                  <p style="font-size: 14px; color: #171717;" class="mb-0 mt-4 fw-semibold">{{ .Params.author }}</p>
+                  <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+      <div class="pb-2"></div>
+    </div> <!-- Close the second row -->
+    {{ end }}
+  {{ end }}
+</div> <!-- Close the main container row -->
+
+
+</div>
+
+<script>
+  function updateActiveSection() {
+  const activeSection = window.location.href.split("#")[1];
+
+  if (activeSection) {
+
+    const formattedActiveSection = formatSectionName(activeSection);
+    const activeLi = document.getElementById(formattedActiveSection);
+
+    if (activeLi) {
+    const allLiElements = document.querySelectorAll("ul#articleContentNavigation li");
+    allLiElements.forEach(li => {
+      li.classList.remove("activeSection");
+    });
+      activeLi.classList.add("activeSection");
+
+    }
+  }
+
+}
+
+function formatSectionName(section) {
+ return section
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('_');
+}
+
+// Initial run of the script
+updateActiveSection();
+
+// Add event listener for hash changes
+window.addEventListener("scroll", updateActiveSection);
+
+</script>
+
+{{/*  map each h2 as an id  */}}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("h2[id]");
+    const scrollOffsets = Array.from(sections).map((section) => section.offsetTop - 50);
+
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+
+      const currentSectionIndex = scrollOffsets.findIndex((offset) => offset > scrollPosition);
+
+      if(currentSectionIndex){
+
+      if (currentSectionIndex !== -1) {
+        const currentSectionId = sections[currentSectionIndex - 1].id;
+        window.history.replaceState({}, "", `#${currentSectionId}`);
+      } else {
+        // If at the bottom, set the URL to the last section
+        const lastSectionId = sections[sections.length - 1].id;
+        window.history.replaceState({}, "", `#${lastSectionId}`);
+      }
+      }
+
+    });
+  });
+</script>
+{{ end }}

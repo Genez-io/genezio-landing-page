@@ -1,6 +1,7 @@
 <nav
+  id="navbar"
   style="border-bottom: 1px solid #e2d9f3; z-index: 99999; background-color: #f1ecf9"
-  class="navbar navbar-expand-lg p-0 px-3"
+  class="navbar navbarEffect navbar-expand-lg p-0 px-3"
 >
   <div
     class="container px-4 py-4"
@@ -12,23 +13,13 @@
         <img class="navbar-brand" alt="genezio-logo" src="/images/genezio-logo-icon-black2.svg" />
       </a>
 
-      {{/* TODO: move svg to a new file */}}
-      <svg
-        width="12"
-        height="32"
-        viewBox="0 0 12 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          opacity="0.2"
-          d="M8.795 0.729629C8.91628 0.298431 9.3095 0.000480369 9.75743 0.000382141L10.1797 0.000289543C10.8424 0.000144206 11.322 0.633038 11.1426 1.27104L2.7051 31.2707C2.5838 31.702 2.19047 32 1.74247 32L1.32009 32C0.657414 32 0.177996 31.3671 0.357415 30.7292L8.795 0.729629Z"
-          fill="black"
-        />
-      </svg>
-
-      <h4 class="mx-2 px-1 mb-0 d-inline-block">Blog</h4>
+      <img  alt="genezio-logo-line" src="/images/blogHeaderLine.svg" />
+      <a class="text-decoration-none text-black"  href="/blog/">
+            <h4 class="mx-2 px-1 mb-0 d-inline-block">Blog</h4>
+          </a>
     </div>
+    <!-- Mobile Menu -->
+    <div id="navbarMobile" ></div>
     {{/* Desktop Links */}}
     <div
       class="collapse navbar-collapse d-flex justify-content-center d-none d-lg-block"
@@ -36,24 +27,24 @@
     >
       <ul class="navbar-nav mr-auto d-flex justify-content-center">
         <li class="nav-item active">
-          <a style="color: rgba(0, 0, 0, 0.7)" class="nav-link opacity-75 fw-semibold mx-3" href="#"
+          <a style="color: rgba(0, 0, 0, 0.7)" class="nav-link opacity-75 fw-semibold mx-3" href="/tags/news/"
             >NEWS</a
           >
         </li>
-          <a style="color: rgba(0, 0, 0, 0.7)" class="nav-link opacity-75 fw-semibold mx-3" href="#"
+          <a style="color: rgba(0, 0, 0, 0.7)" class="nav-link opacity-75 fw-semibold mx-3" href="/tags/tutorials/"
             >TUTORIALS</a
           >
         </li>
-          <a style="color: rgba(0, 0, 0, 0.7)" class="nav-link opacity-75 fw-semibold mx-3" href="#"
+        {{/*  TODO: add Use Cases back when we are going to have the first article with this tag  */}}
+          {{/*  <a style="color: rgba(0, 0, 0, 0.7)" class="nav-link opacity-75 fw-semibold mx-3" href="/tags/use-cases"
             >USE CASES</a
-          >
+          >  */}}
         </li>
         <li class="nav-item">
           <a
             style="color: rgba(0, 0, 0, 0.7)"
-            href="/blog/"
             class="nav-link opacity-75 fw-semibold mx-3"
-            href="#"
+            href="/tags/learning/"
             >LEARNING</a
           >
         </li>

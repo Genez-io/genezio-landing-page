@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
 
 // TODO: remove this
-body {
+body,
+main {
   overflow-x: hidden;
 }
 
@@ -9,8 +11,26 @@ input::placeholder {
   color: white !important;
 }
 
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .blog-input::placeholder {
   color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.blogPost {
+  @media (max-width: 767.98px) {
+    margin: 12px 0 12px 0 !important;
+  }
+}
+
+.blog-input-white::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.date {
+  font-family: "Inconsolata", monospace !important;
 }
 
 .blogGradientText {
@@ -22,6 +42,11 @@ input::placeholder {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.card-listing {
+  font-family: "Inter", sans-serif !important;
+  color: rgba(150, 143, 161, 1);
 }
 
 h1,
@@ -91,6 +116,24 @@ $cyan: #0dcaf0 !default;
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./the-code.scss";
 @import "./navbar.scss";
+@import "./terms.scss";
+@import "./article.scss";
+@import "./pagination.scss";
+
+.dropdown-menu a.dropdown-item:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  opacity: 0.7 !important;
+}
+
+.nav-link {
+  outline: none;
+}
+
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
 
 .border-gradient-green {
   border-image-source: linear-gradient(
@@ -104,6 +147,19 @@ $cyan: #0dcaf0 !default;
   border-left: 0 !important;
   border-right: 0 !important;
   border-bottom: 0 !important;
+}
+
+.star-effect {
+  svg {
+    transition: fill 0.5s ease-in-out;
+    margin-right: 12px;
+  }
+
+  &:hover {
+    svg {
+      fill: #ffd700;
+    }
+  }
 }
 
 .wrapper-logo-features {
@@ -147,6 +203,18 @@ $cyan: #0dcaf0 !default;
   .footer-subscribe-btn-custom {
     margin-top: 1em;
     margin-bottom: 1.5em;
+  }
+
+  .newsletterBtn {
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
+  }
+
+  .articlePhoto {
+    @media (max-width: 768px) {
+      margin: 0px -8px 0px -8px;
+    }
   }
 
   h2 {
