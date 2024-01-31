@@ -42,7 +42,7 @@ import { GenezioDeploy, GnzContext, GnzAuth } from '@genezio/types';
 export class UserInfoService {
 
   @GnzAuth
-  async getUserInfo(context: GnzContext): Promise {
+  async getUserInfo(context: GnzContext): Promise<void> {
     const userInfo = await UserModel.getUserInfo(context.user.id)
 
     return userInfo

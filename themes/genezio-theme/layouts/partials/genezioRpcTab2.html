@@ -39,7 +39,7 @@ import sdk.HelloWorldService
 import sdk.Person
 
 suspend fun sayHi() {
-  val hi = HelloWorldService().helloWorld()
+  val hi = HelloWorldService().hello("John")
   val person = Person(firstName = "John", lastName = "Ronald")
   val bye = HelloWorldService().bye(person)
 }</code>
