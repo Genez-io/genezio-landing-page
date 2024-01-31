@@ -18,6 +18,12 @@
   }
 }
 
+#buttonsWrap {
+  @media (max-width: 768px) {
+    margin: 40px;
+  }
+}
+
 .notActivePlanCard {
   background: radial-gradient(
       137.55% 131.52% at -10.58% 169.87%,
