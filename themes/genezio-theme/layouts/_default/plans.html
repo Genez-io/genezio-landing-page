@@ -990,13 +990,21 @@
   // Add click event listeners to each checkbox
   hobbistCard.addEventListener("click", function () {
     toggleSVG(hobbyCheckbox);
+
+    document.getElementById("enterpriseCheckbox").classList.add("checkBox");
+    document.getElementById("proCheckbox").classList.add("checkBox");
   });
 
   proCard.addEventListener("click", function () {
+    document.getElementById("proCheckbox").classList.remove("checkBox");
+    document.getElementById("enterpriseCheckbox").classList.add("checkBox");
+
     toggleSVG(proCheckbox);
   });
 
   enterpriseCard.addEventListener("click", function () {
+    document.getElementById("proCheckbox").classList.add("checkBox");
+    document.getElementById("enterpriseCheckbox").classList.remove("checkBox");
     toggleSVG(enterpriseCheckbox);
   });
 
@@ -1133,6 +1141,9 @@
       document.getElementById("enterprise").classList.remove("ActivePlanCard");
       document.getElementById("pro").classList.remove("ActivePlanCard");
       document.getElementById("mobile-planPerks-enterprise").innerHTML = "";
+
+      document.getElementById("enterpriseCheckbox").classList.add("checkBox");
+      document.getElementById("proCheckbox").classList.add("checkBox");
 
       //set default desktop version
       buttonsWrap.innerHTML = `
