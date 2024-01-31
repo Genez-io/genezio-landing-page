@@ -1,6 +1,19 @@
 .articlePost {
   .copy-button {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
+
   .activeSection {
     border-left: 1px solid rgba(0, 150, 98, 1) !important;
   }
@@ -12,12 +25,19 @@
   }
 
   pre {
+    position: relative;
     border: 1px solid green;
     padding: 20px;
     background-color: rgba(64, 64, 64, 1) !important;
     color: #fff;
     border-radius: 8px;
     border: none;
+
+    &:hover {
+      .copy-button {
+        opacity: 1; /* display copy button on hover */
+      }
+    }
   }
 
   code:not(pre code) {

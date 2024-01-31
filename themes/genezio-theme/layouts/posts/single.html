@@ -476,9 +476,14 @@ window.addEventListener("scroll", updateActiveSection);
         const codeBlocks = document.querySelectorAll('pre code[data-lang="javascript"], pre code[data-lang="typescript"], pre code[data-lang="bash"], pre code[data-lang="css"], pre code[data-lang="ts"], pre code[data-lang="yaml"], pre code[data-lang="cli"], pre code[data-lang="env"], pre code[data-lang="tsx"]');
 
         codeBlocks.forEach(codeBlock => {
-            const copyButton = document.createElement('button');
+            const copyButton = document.createElement('div');
             copyButton.className = 'copy-button';
-            copyButton.textContent = 'Copy';
+            copyButton.innerHTML = `
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9999 7.25C19.9999 6.08761 19.1185 5.1311 17.9875 5.0124C17.8688 3.88145 16.9123 3 15.7499 3H14.2499C13.0875 3 12.131 3.88145 12.0123 5.0124C11.1372 5.10424 10.4115 5.69769 10.1279 6.5H12.9999C14.3806 6.5 15.4999 7.61929 15.4999 9V16H17.7499C18.9925 16 19.9999 14.9926 19.9999 13.75V7.25ZM14.2499 4.5C13.8357 4.5 13.4999 4.83579 13.4999 5.25V5.5H16.4999V5.25C16.4999 4.83579 16.1641 4.5 15.7499 4.5H14.2499Z" fill="#404040"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8C4.44772 8 4 8.44771 4 9V19C4 19.5523 4.44772 20 5 20H13C13.5523 20 14 19.5523 14 19V9C14 8.44772 13.5523 8 13 8H5ZM11.874 12.166C12.1038 11.8214 12.0107 11.3557 11.666 11.126C11.3214 10.8962 10.8557 10.9893 10.626 11.334L8.13343 15.0728L7.28033 14.2197C6.98744 13.9268 6.51256 13.9268 6.21967 14.2197C5.92678 14.5126 5.92678 14.9874 6.21967 15.2803L7.71967 16.7803C7.87855 16.9392 8.1003 17.0185 8.3239 16.9963C8.5475 16.9742 8.7494 16.853 8.87404 16.666L11.874 12.166Z" fill="#404040"/>
+              </svg>
+            `;
 
             copyButton.addEventListener('click', function () {
                 const codeText = codeBlock.textContent.trim();
