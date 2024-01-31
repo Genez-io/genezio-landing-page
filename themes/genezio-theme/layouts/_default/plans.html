@@ -642,12 +642,7 @@
 
   function checkViewportWidth() {
     // Get the current viewport width
-    var viewportWidth = window.innerWidth;
-    {
-      {
-        /*  || document.documentElement.clientWidth;  */
-      }
-    }
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
     // Check if the viewport width is 768 pixels or smaller and the message hasn't been logged yet
     if (viewportWidth <= 768 && !hasLogged) {
