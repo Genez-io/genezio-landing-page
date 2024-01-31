@@ -1,62 +1,62 @@
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
 
  <script>
-  
-  $(document).ready(function(){
-      function handleDropdown(dropdownToggle, tabGroup) {
-        function showTab(tabId) {
-          // Hide all tab content for this group
-          $("." + tabGroup + " .tab-pane").removeClass("show active");
-          
-          // Show and activate the selected tab content
-          $("#" + tabId).addClass("show active");
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            function handleDropdown(dropdownToggle, tabGroup) {
+                function showTab(tabId) {
+                    // Hide all tab content for this group
+                    var tabs = document.querySelectorAll("." + tabGroup + " .tab-pane");
+                    tabs.forEach(function (tab) {
+                        tab.classList.remove("show", "active");
+                    });
 
-        function setDefaultTab() {
-          var defaultItem = $(dropdownToggle).next(".dropdown-menu").find(".dropdown-item:first");
-          var defaultTabId = defaultItem.attr("href").substring(1); // Remove the "#" from the href
+                    // Show and activate the selected tab content
+                    var selectedTab = document.getElementById(tabId);
+                    selectedTab.classList.add("show", "active");
+                }
 
-          // Set default tab text
-          $(dropdownToggle).text(defaultItem.text());
+                function setDefaultTab() {
+                    var defaultItem = document.querySelector(dropdownToggle + " + .dropdown-menu .dropdown-item:first-child");
+                    var defaultTabId = defaultItem.getAttribute("href").substring(1); // Remove the "#" from the href
 
-          // Show default tab content
-          showTab(defaultTabId);
-        }
+                    // Set default tab text
+                    document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
 
-        // Set default tab when the page loads
-        setDefaultTab();
+                    // Show default tab content
+                    showTab(defaultTabId);
+                }
 
-        $(dropdownToggle).on('click', '.dropdown-item', function() {
-          var selectedTabText = $(this).text();
-          var selectedTabValue = $(this).attr("href"); // Assuming the value is stored in the "href" attribute
+                // Set default tab when the page loads
+                setDefaultTab();
 
-          // Update dropdown text
-          $(dropdownToggle).text(selectedTabText);
+                document.querySelector(dropdownToggle).addEventListener('click', function (event) {
+                    if (event.target.classList.contains('dropdown-item')) {
+                        var selectedTabText = event.target.textContent;
+                        var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
 
-          var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
+                        // Update dropdown text
+                        document.querySelector(dropdownToggle).textContent = selectedTabText;
 
-          // Show and activate the selected tab content
-          showTab(selectedTabId);
+                        var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
+
+                        // Show and activate the selected tab content
+                        showTab(selectedTabId);
+                    }
+                });
+            }
+
+            // Dropdown 1
+            handleDropdown("#selectedTab", "tabGroup1");
+
+            // Dropdown 2
+            handleDropdown("#selectedRpcTab", "tabGroup2");
+
+            // Dropdown 3
+            handleDropdown("#selectedServerlessTab", "tabGroup3");
+
+            // Dropdown 4
+            handleDropdown("#selectedCloudTab", "tabGroup4");
         });
-      }
-
-      // Dropdown 1
-      handleDropdown("#selectedTab", "tabGroup1");
-
-      // Dropdown 2
-      handleDropdown("#selectedRpcTab", "tabGroup2");
-
-      // Dropdown 3
-      handleDropdown("#selectedServerlessTab", "tabGroup3");
-
-      // Dropdown 4
-      handleDropdown("#selectedCloudTab", "tabGroup4");
-    });
-
-    
-
-  </script>
+    </script>
 <div
   class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area"
 >
@@ -625,27 +625,45 @@
   });
 });
 
-$(document).ready(function() {
-  $('.accordion-button.theCode').click(function() {
-    // Close all open accordion items
-    $('.accordion-collapse').collapse('hide');
-    
-    // Open the clicked accordion item
-    $($(this).data('bs-target')).collapse('show');
-  });
-});
+  var accordionButtons = document.querySelectorAll('.accordion-button.theCode');
 
-  
+  accordionButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var isOpen = this.classList.contains('collapsed');
+
+      if (!isOpen) {
+        var openAccordions = document.querySelectorAll('.accordion-button.theCode:not(.collapsed)');
+        openAccordions.forEach(function(openAccordion) {
+          openAccordion.click(); 
+        });
+      }
+    });
+  });
+
+  var tabDropdownItems = document.querySelectorAll('.dropdown-item[data-toggle="tab"]');
+  tabDropdownItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var dropdownToggle = this.closest('.dropdown').querySelector('.sectionDropdown');
+      if (dropdownToggle) {
+        dropdownToggle.innerHTML = this.innerHTML;
+      }
+
+      tabDropdownItems.forEach(function(tabItem) {
+        tabItem.classList.remove('active-tab');
+      });
+
+      this.classList.add('active-tab');
+    });
+  });
+
 </script>
 
 <script>
-  // Get all dropdown triggers and items
   var dropdownItems = document.querySelectorAll('.dropdown-item');
 
-  // Add click event listener to each dropdown item
   dropdownItems.forEach(function(item) {
+    console.log("test")
     item.addEventListener('click', function() {
-      // Update the text for the dropdown trigger that was clicked
       var dropdownTrigger = this.closest('.dropdown').querySelector('.sectionDropdown.dropdown-toggle');
       dropdownTrigger.innerText = this.innerText;
     });
