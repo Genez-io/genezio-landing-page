@@ -1,0 +1,43 @@
+
+                <ul class="opacity-50 m-0">
+                  <li>
+                    auto completion in your favorite IDE.  
+                  </li>
+                  <li>
+                    less error prone parameter passing than REST APIs. 
+                  </li>
+                  <li>
+                    a more natural paradigm in software design
+                  </li>
+                </ul>
+                <div class="code-title-genezio ms-4 px-3">genezio server</div>
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+type Person = {
+  firstName: string;
+  lastName: string;
+}
+
+@GenezioDeploy()
+class HelloWorldService {
+  hello(name: string): string {
+    return `Hello ${name}!`;
+  }
+
+  bye(person: Person): string {
+    return `Bye, ${person.firstName} ${person.lastName}!`;
+  }
+}</code>
+                </pre>
+
+                <div class="code-title-genezio ms-4 px-3">client</div>
+
+                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+
+const hi = await HelloworldService.hello('John');
+const person: Person = {firstName: 'John', lastName: 'Ronald'};
+const bye = await HelloworldService.hello(person);</code>
+                </pre>
+     
