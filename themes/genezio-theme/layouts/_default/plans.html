@@ -638,7 +638,9 @@
     });
   }
 
-  var hasLogged = false;
+  {
+    {
+      /*  var hasLogged = false;
 
   function checkViewportWidth() {
     // Get the current viewport width
@@ -646,9 +648,7 @@
 
     // Check if the viewport width is 768 pixels or smaller and the message hasn't been logged yet
     if (viewportWidth <= 768 && !hasLogged) {
-      {
-        {
-          /*  document.getElementById("mobile-planPerks-hobby").innerHTML = hobbistCardContent;
+      document.getElementById("mobile-planPerks-hobby").innerHTML = hobbistCardContent;
       document.getElementById("mobile-planPerks-pro").innerHTML = "";
       document.getElementById("hobbist").classList.add("ActivePlanCard");
       document.getElementById("enterprise").classList.remove("ActivePlanCard");
@@ -697,9 +697,7 @@
 
       const hobbyCheckbox = (document.getElementById("hobbyCheckbox").innerHTML = ``);
 
-      hasLogged = true; // Set the flag to true to indicate the message has been logged  */
-        }
-      }
+      hasLogged = true; // Set the flag to true to indicate the message has been logged
     } else if (viewportWidth > 768) {
       hasLogged = false; // Reset the flag when the viewport width goes above 768 pixels
     }
@@ -709,7 +707,9 @@
   window.addEventListener("resize", checkViewportWidth);
 
   // Call the function initially to check the viewport width on page load
-  checkViewportWidth();
+  checkViewportWidth();  */
+    }
+  }
 </script>
 
 {{ end }}
