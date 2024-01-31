@@ -15,7 +15,7 @@ import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
 async function main() {
   const hi = await HelloworldService.hello('John');
   const person: Person = {firstName: 'John', lastName: 'Ronald'};
-  const bye = await HelloworldService.hello(person);
+  const bye = await HelloworldService.bye(person);
 }</code>
                 </pre>
 
@@ -28,7 +28,7 @@ import 'package:hello_world/sdk/hello_world_service.dart';
 void main() async {
   final hi = await HelloWorldService.hello('John');
   final person = Person(firstName: 'John', lastName: 'Ronald');
-  final bye = await HelloWorldService.hello(person);
+  final bye = await HelloWorldService.bye(person);
 }</code>
                 </pre>
 
@@ -41,7 +41,7 @@ import sdk.Person
 suspend fun sayHi() {
   val hi = HelloWorldService().helloWorld()
   val person = Person(firstName = "John", lastName = "Ronald")
-  val bye = HelloWorldService().hello(person)
+  val bye = HelloWorldService().bye(person)
 }</code>
                 </pre>
                 
