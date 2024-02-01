@@ -471,6 +471,7 @@ window.addEventListener("scroll", updateActiveSection);
         .then(response => response.json())
         .then(data => {
           console.log('Success:', data);
+          document.getElementById("emailSubscribeInput").value = "";
           successMessage.style.display = "block";
         })
         .catch(error => {
