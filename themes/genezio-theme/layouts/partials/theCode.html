@@ -16,10 +16,10 @@
 
                 function setDefaultTab() {
                     var defaultItem = document.querySelector(dropdownToggle + " + .dropdown-menu .dropdown-item:first-child");
-                    var defaultTabId = defaultItem.getAttribute("href").substring(1); // Remove the "#" from the href
+                    var defaultTabId = defaultItem?.getAttribute("href").substring(1); // Remove the "#" from the href
 
                     // Set default tab text
-                    document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
+                    document.querySelector(dropdownToggle)?.textContent = defaultItem?.textContent;
 
                     // Show default tab content
                     showTab(defaultTabId);
@@ -662,7 +662,6 @@
   var dropdownItems = document.querySelectorAll('.dropdown-item');
 
   dropdownItems.forEach(function(item) {
-    console.log("test")
     item.addEventListener('click', function() {
       var dropdownTrigger = this.closest('.dropdown').querySelector('.sectionDropdown.dropdown-toggle');
       dropdownTrigger.innerText = this.innerText;
