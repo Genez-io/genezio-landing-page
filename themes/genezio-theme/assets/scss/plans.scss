@@ -26,6 +26,40 @@
     margin: 40px;
   }
 }
+.fixed-width-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.fixed-width-row {
+  display: flex;
+  margin-left: 59px; // TODO: handle responsive
+}
+
+.fixed-width-col-space {
+  flex: 0 0 280px; /* Set a fixed width for each column */
+  padding: 12px 24px 12px 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fixed-width-col {
+  flex: 0 0 280px; /* Set a fixed width for each column */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px 12px 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+}
 
 .notActivePlanCard {
   opacity: 0.9;
