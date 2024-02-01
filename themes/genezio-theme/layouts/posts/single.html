@@ -156,8 +156,16 @@
             >
               <form
                 id="subscribeForm"
+                style="position: relative"
                 class="d-flex w-100 align-items-start align-items-md-center flex-column flex-md-row"
               >
+              <p
+                id="successMessage"
+                style="position: absolute; top: -30px; display: none;"
+                class="text-success"
+              >
+                Subscribed Successfully
+              </p>
                 <input
                   type="email"
                   name="email"
@@ -439,6 +447,7 @@ window.addEventListener("scroll", updateActiveSection);
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('subscribeForm');
     const emailInput = document.getElementById('emailSubscribeInput');
+    const successMessage = document.getElementById("successMessage");
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -462,6 +471,7 @@ window.addEventListener("scroll", updateActiveSection);
         .then(response => response.json())
         .then(data => {
           console.log('Success:', data);
+          successMessage.style.display = "block";
         })
         .catch(error => {
           console.error('Error:', error);
