@@ -33,7 +33,11 @@
 
 .fixed-width-row {
   display: flex;
-  margin-left: 59px; // TODO: handle responsive
+  margin-left: 59px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 }
 
 .fixed-width-col-space {
