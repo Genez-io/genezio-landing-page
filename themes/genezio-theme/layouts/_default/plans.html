@@ -104,11 +104,17 @@
                   <circle cx="10" cy="10" r="4" fill="#7F56D9" />
                 </svg>
               </div>
-              <div>
-                <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
-                <p class="text-white opacity-50 mb-0">
-                  free forever for personal, non-commercial use
-                </p>
+              <div class="d-flex justify-content-between w-100 align-items-center">
+                <div>
+                  <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
+                  <p class="text-white opacity-50 mb-0">
+                    free forever for personal, non-commercial use
+                  </p>
+                </div>
+
+                <div class="d-flex flex-column align-items-end">
+                  <h4 class="m-0">Free</h4>
+                </div>
               </div>
             </div>
 
@@ -116,6 +122,13 @@
             <div id="mobile-planPerks-hobby" class="d-sm-block d-md-none"></div>
           </div>
         </div>
+
+        {{/*
+        <div class="border d-flex flex-column align-items-end">
+          <p class="m-0 opacity-50">Starting at</p>
+          <h4>Free</h4>
+        </div>
+        */}}
         <div
           id="pro"
           style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
@@ -124,9 +137,16 @@
           <div class="d-flex flex-column">
             <div class="d-flex align-items-center">
               <div id="proCheckbox" class="checkBox"></div>
-              <div>
-                <h2 class="mb-2 pb-1 fw-bold">Pro</h2>
-                <p class="text-white opacity-50 mb-0">for solo developers or small teams</p>
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <h2 class="mb-2 pb-1 fw-bold">Pro</h2>
+                  <p class="text-white opacity-50 mb-0">for solo developers or small teams</p>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-end">
+                  <p class="m-0 opacity-50">Starting at</p>
+                  <h4>$50/project</h4>
+                </div>
               </div>
             </div>
 
@@ -142,11 +162,18 @@
           <div class="d-flex flex-column">
             <div class="d-flex align-items-center">
               <div id="enterpriseCheckbox" class="checkBox"></div>
-              <div>
-                <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
-                <p class="text-white opacity-50 mb-0">
-                  for teams who need user management or governance
-                </p>
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
+                  <p class="text-white opacity-50 mb-0">
+                    for teams who need user management or governance
+                  </p>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-end">
+                  <p class="m-0 opacity-50">Starting at</p>
+                  <h4>$2500</h4>
+                </div>
               </div>
             </div>
 
