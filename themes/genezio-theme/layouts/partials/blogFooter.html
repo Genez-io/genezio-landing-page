@@ -116,12 +116,12 @@
             class="col-12 col-md-9 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row"
           >
             <form
-              id="subscribeForm"
+              id="subscribeBlogForm"
               style="position: relative"
               class="d-flex w-100 align-items-start align-items-md-center flex-column flex-md-row"
             >
               <p
-                id="successMessage"
+                id="successMessageBlog"
                 style="position: absolute; top: -30px; display: none; color: #009662"
               >
                 Subscribed Successfully
@@ -130,7 +130,7 @@
                 type="email"
                 name="email"
                 class="form-control blog-input ms-0"
-                id="emailSubscribeInput"
+                id="blogEmailInput"
                 placeholder="Enter your email"
                 style="
                   background-color: transparent;
@@ -212,9 +212,9 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("subscribeForm");
-    const emailInput = document.getElementById("emailSubscribeInput");
-    const successMessage = document.getElementById("successMessage");
+    const form = document.getElementById("subscribeBlogForm");
+    const emailInput = document.getElementById("blogEmailInput");
+    const successMessage = document.getElementById("successMessageBlog");
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -239,11 +239,12 @@
         .then((data) => {
           console.log("Success:", data);
           successMessage.style.display = "block";
-          document.getElementById("emailSubscribeInput").value = "";
+          document.getElementById("blogEmailInput").value = "";
         })
         .catch((error) => {
           console.error("Error:", error);
-          document.getElementById("emailSubscribeInput").value = "";
+
+          document.getElementById("blogEmailInput").value = "";
         });
     });
   });
