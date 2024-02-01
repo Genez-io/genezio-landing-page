@@ -10,17 +10,20 @@
 
         // Show and activate the selected tab content
         var selectedTab = document.getElementById(tabId);
-        selectedTab.classList.add("show", "active");
+        selectedTab?.classList.add("show", "active");
       }
 
       function setDefaultTab() {
         var defaultItem = document.querySelector(
           dropdownToggle + " + .dropdown-menu .dropdown-item:first-child"
         );
-        var defaultTabId = defaultItem.getAttribute("href").substring(1); // Remove the "#" from the href
+        
+        var defaultTabId = defaultItem?.getAttribute("href")?.substring(1); // Remove the "#" from the href
 
         // Set default tab text
-        document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
+        if (document.querySelector(dropdownToggle)) {
+          document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
+        }
 
         // Show default tab content
         showTab(defaultTabId);
@@ -29,20 +32,22 @@
       // Set default tab when the page loads
       setDefaultTab();
 
-      document.querySelector(dropdownToggle).addEventListener("click", function (event) {
-        if (event.target.classList.contains("dropdown-item")) {
-          var selectedTabText = event.target.textContent;
-          var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
-
-          // Update dropdown text
-          document.querySelector(dropdownToggle).textContent = selectedTabText;
-
-          var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
-
-          // Show and activate the selected tab content
-          showTab(selectedTabId);
-        }
-      });
+      if (document.querySelector(dropdownToggle)) {
+        document.querySelector(dropdownToggle).addEventListener("click", function (event) {
+          if (event.target.classList.contains("dropdown-item")) {
+            var selectedTabText = event.target.textContent;
+            var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
+  
+            // Update dropdown text
+            document.querySelector(dropdownToggle).textContent = selectedTabText;
+  
+            var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
+  
+            // Show and activate the selected tab content
+            showTab(selectedTabId);
+          }
+        });
+      }
     }
 
     // Dropdown 1
@@ -817,9 +822,6 @@
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" async></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" async></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" async></script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
