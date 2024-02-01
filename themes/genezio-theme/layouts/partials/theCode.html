@@ -1,603 +1,820 @@
-
- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            function handleDropdown(dropdownToggle, tabGroup) {
-                function showTab(tabId) {
-                    // Hide all tab content for this group
-                    var tabs = document.querySelectorAll("." + tabGroup + " .tab-pane");
-                    tabs.forEach(function (tab) {
-                        tab.classList.remove("show", "active");
-                    });
-
-                    // Show and activate the selected tab content
-                    var selectedTab = document.getElementById(tabId);
-                    selectedTab.classList.add("show", "active");
-                }
-
-                function setDefaultTab() {
-                    var defaultItem = document.querySelector(dropdownToggle + " + .dropdown-menu .dropdown-item:first-child");
-                    var defaultTabId = defaultItem?.getAttribute("href").substring(1); // Remove the "#" from the href
-
-                    // Set default tab text
-                    document.querySelector(dropdownToggle)?.textContent = defaultItem?.textContent;
-
-                    // Show default tab content
-                    showTab(defaultTabId);
-                }
-
-                // Set default tab when the page loads
-                setDefaultTab();
-
-                document.querySelector(dropdownToggle).addEventListener('click', function (event) {
-                    if (event.target.classList.contains('dropdown-item')) {
-                        var selectedTabText = event.target.textContent;
-                        var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
-
-                        // Update dropdown text
-                        document.querySelector(dropdownToggle).textContent = selectedTabText;
-
-                        var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
-
-                        // Show and activate the selected tab content
-                        showTab(selectedTabId);
-                    }
-                });
-            }
-
-            // Dropdown 1
-            handleDropdown("#selectedTab", "tabGroup1");
-
-            // Dropdown 2
-            handleDropdown("#selectedRpcTab", "tabGroup2");
-
-            // Dropdown 3
-            handleDropdown("#selectedServerlessTab", "tabGroup3");
-
-            // Dropdown 4
-            handleDropdown("#selectedCloudTab", "tabGroup4");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleDropdown(dropdownToggle, tabGroup) {
+      function showTab(tabId) {
+        // Hide all tab content for this group
+        var tabs = document.querySelectorAll("." + tabGroup + " .tab-pane");
+        tabs.forEach(function (tab) {
+          tab.classList.remove("show", "active");
         });
-    </script>
-<div
-  class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area"
->
 
-{{/*  Mobile version  */}}
-<div class="d-md-none d-block">
-  {{/*  <p
-    style="font-size: 12px"
-    class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
-  >
-    THE CODE
-  </p>  */}}
-  <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">
-    Show me the code
-  </h2>
+        // Show and activate the selected tab content
+        var selectedTab = document.getElementById(tabId);
+        selectedTab.classList.add("show", "active");
+      }
 
- <div class="px-md-4 pb-3 mx-1">
-  <!-- genezio Backend -->
-  <div class="text-white position-relative" id="accordionExample">
-    <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-      <h2 class="accordion-header" id="headingBackend">
-        <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBackend" aria-expanded="false" aria-controls="collapseBackend">
-          genezio.Services
-        </button>
-      </h2>
-      <div id="collapseBackend" class="accordion-collapse collapse" aria-labelledby="headingBackend" data-bs-parent="#accordionExample">
-        <div style="color: #d4d4d4">
-          <!-- Tab Selector Dropdown -->
-          <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select a Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="tab1-tab" data-toggle="tab" href="#tab1">User authentication</a>
-                <a class="dropdown-item" id="tab2-tab" data-toggle="tab" href="#tab2">Database support</a>
-                <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab3">Queues</a>
-                <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab4">Cron jobs</a>
-                <a class="dropdown-item" id="tab3-tab" data-toggle="tab" href="#tab5">Storage (soon)</a>
-                <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab6">Real time (soon)</a>
-                <!-- Add more tabs as needed -->
+      function setDefaultTab() {
+        var defaultItem = document.querySelector(
+          dropdownToggle + " + .dropdown-menu .dropdown-item:first-child"
+        );
+        var defaultTabId = defaultItem.getAttribute("href").substring(1); // Remove the "#" from the href
+
+        // Set default tab text
+        document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
+
+        // Show default tab content
+        showTab(defaultTabId);
+      }
+
+      // Set default tab when the page loads
+      setDefaultTab();
+
+      document.querySelector(dropdownToggle).addEventListener("click", function (event) {
+        if (event.target.classList.contains("dropdown-item")) {
+          var selectedTabText = event.target.textContent;
+          var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
+
+          // Update dropdown text
+          document.querySelector(dropdownToggle).textContent = selectedTabText;
+
+          var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
+
+          // Show and activate the selected tab content
+          showTab(selectedTabId);
+        }
+      });
+    }
+
+    // Dropdown 1
+    handleDropdown("#selectedTab", "tabGroup1");
+
+    // Dropdown 2
+    handleDropdown("#selectedRpcTab", "tabGroup2");
+
+    // Dropdown 3
+    handleDropdown("#selectedServerlessTab", "tabGroup3");
+
+    // Dropdown 4
+    handleDropdown("#selectedCloudTab", "tabGroup4");
+  });
+</script>
+<div class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area">
+  {{/* Mobile version */}}
+  <div class="d-md-none d-block">
+    {{/*
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      THE CODE
+    </p>
+    */}}
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
+
+    <div class="px-md-4 pb-3 mx-1">
+      <!-- genezio Backend -->
+      <div class="text-white position-relative" id="accordionExample">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingBackend">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseBackend"
+              aria-expanded="false"
+              aria-controls="collapseBackend"
+            >
+              genezio.Services
+            </button>
+          </h2>
+          <div
+            id="collapseBackend"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingBackend"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select a Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" id="tab1-tab" data-toggle="tab" href="#tab1"
+                        >User authentication</a
+                      >
+                      <a class="dropdown-item" id="tab2-tab" data-toggle="tab" href="#tab2"
+                        >Database support</a
+                      >
+                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab3"
+                        >Queues</a
+                      >
+                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab4"
+                        >Cron jobs</a
+                      >
+                      <a class="dropdown-item" id="tab3-tab" data-toggle="tab" href="#tab5"
+                        >Storage (soon)</a
+                      >
+                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab6"
+                        >Real time (soon)</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="tab1">
+                    {{- partial "genezioServicesTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab2">
+                    {{- partial "genezioServicesTab2.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab3">
+                    {{- partial "genezioServicesTab3.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab4">
+                    {{- partial "genezioServicesTab4.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab5">
+                    {{- partial "genezioServicesTab5.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab6">
+                    {{- partial "genezioServicesTab6.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
               </div>
-            </li>
-          </ul>
 
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="tab1">
-
-              {{- partial "genezioServicesTab1.html" . -}}
-               </div>
-            <div class="tab-pane fade" id="tab2">
-              {{- partial "genezioServicesTab2.html" . -}}
+              {{/* end dropdown selector */}}
             </div>
-            <div class="tab-pane fade" id="tab3">
-              {{- partial "genezioServicesTab3.html" . -}}
-            </div>
-            <div class="tab-pane fade" id="tab4">
-              {{- partial "genezioServicesTab4.html" . -}}
-            </div>
-            <div class="tab-pane fade" id="tab5">
-              {{- partial "genezioServicesTab5.html" . -}}  
-            </div>
-            <div class="tab-pane fade" id="tab6">
-              {{- partial "genezioServicesTab6.html" . -}}
-            </div>
-            <!-- Add more content panes as needed -->
-          </div>
-        </div>
-
-  {{/*  end dropdown selector  */}}
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- genezio Rpc -->
-<div class="text-white position-relative" id="accordionExample2">
-  <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-    <h2 class="accordion-header" id="headingRpc">
-      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRpc" aria-expanded="false" aria-controls="collapseRpc">
-        genezio.RPC
-      </button>
-    </h2>
-    <div id="collapseRpc" class="accordion-collapse collapse" aria-labelledby="headingRpc" data-bs-parent="#accordionExample2">
-      <div style="color: #d4d4d4">
-        <!-- Tab Selector Dropdown -->
-        <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedRpcTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select an Rpc Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1">Build apps faster with typesafe APIs</a>
-                <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2">Typesafe APIs in any language</a>
-                <!-- Add more tabs as needed -->
-              </div>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="rpcTab1">
-              {{- partial "genezioRpcTab1.html" . -}}  
-            </div>
-            <div class="tab-pane fade" id="rpcTab2">
-              {{- partial "genezioRpcTab2.html" . -}}
-              
-            </div>
-            <!-- Add more content panes as needed -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- genezio Serverless -->
-<div class="text-white position-relative" id="accordionExample3">
-  <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-    <h2 class="accordion-header" id="headingServerless">
-      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServerless" aria-expanded="false" aria-controls="collapseServerless">
-        genezio.Cloud
-      </button>
-    </h2>
-    <div id="collapseServerless" class="accordion-collapse collapse" aria-labelledby="headingServerless" data-bs-parent="#accordionExample3">
-      <div style="color: #d4d4d4" class="accordion-body">
-        <!-- Tab Selector Dropdown -->
-        <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedServerlessTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select a Serverless Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="serverlessTab1-tab" data-toggle="tab" href="#serverlessTab1">Zero Devops Deployment</a>
-                <a class="dropdown-item" id="serverlessTab2-tab" data-toggle="tab" href="#serverlessTab2">Multiple environments</a>
-                <a class="dropdown-item" id="serverlessTab3-tab" data-toggle="tab" href="#serverlessTab3">Deploy frontend</a>
-                <a class="dropdown-item" id="serverlessTab4-tab" data-toggle="tab" href="#serverlessTab4">Cold start time</a>
-                <!-- Add more tabs as needed -->
-              </div>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="serverlessTab1">
-              {{- partial "genezioCloudTab1.html" . -}}
-            </div>
-            <div class="tab-pane fade" id="serverlessTab2">
-              {{- partial "genezioCloudTab2.html" . -}}  
-            </div>
-            <div class="tab-pane fade" id="serverlessTab3">
-              {{- partial "genezioCloudTab3.html" . -}}  
-            </div>
-            <div class="tab-pane fade" id="serverlessTab4">
-              {{- partial "genezioCloudTab4.html" . -}}
-            </div>
-            <!-- Add more content panes as needed -->
           </div>
         </div>
       </div>
+
+      <!-- genezio Rpc -->
+      <div class="text-white position-relative" id="accordionExample2">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingRpc">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseRpc"
+              aria-expanded="false"
+              aria-controls="collapseRpc"
+            >
+              genezio.RPC
+            </button>
+          </h2>
+          <div
+            id="collapseRpc"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingRpc"
+            data-bs-parent="#accordionExample2"
+          >
+            <div style="color: #d4d4d4">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedRpcTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select an Rpc Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1"
+                        >Build apps faster with typesafe APIs</a
+                      >
+                      <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2"
+                        >Typesafe APIs in any language</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="rpcTab1">
+                    {{- partial "genezioRpcTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="rpcTab2">
+                    {{- partial "genezioRpcTab2.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- genezio Serverless -->
+      <div class="text-white position-relative" id="accordionExample3">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingServerless">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseServerless"
+              aria-expanded="false"
+              aria-controls="collapseServerless"
+            >
+              genezio.Cloud
+            </button>
+          </h2>
+          <div
+            id="collapseServerless"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingServerless"
+            data-bs-parent="#accordionExample3"
+          >
+            <div style="color: #d4d4d4" class="accordion-body">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedServerlessTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select a Serverless Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab1-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab1"
+                        >Zero Devops Deployment</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab2-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab2"
+                        >Multiple environments</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab3-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab3"
+                        >Deploy frontend</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab4-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab4"
+                        >Cold start time</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="serverlessTab1">
+                    {{- partial "genezioCloudTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="serverlessTab2">
+                    {{- partial "genezioCloudTab2.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="serverlessTab3">
+                    {{- partial "genezioCloudTab3.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="serverlessTab4">
+                    {{- partial "genezioCloudTab4.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-
-
-
-</div>
-
-
-  {{/*  <div class="mt-5">
-  <div class="customDropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select a Tab
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownTabs">
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')">genezio.Rpc</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')">genezio.Services</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Cloud</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')">genezio.Cloud</a>
-    </div>
-  </div>
-
-
-  <div class="tab-content mt-2">
-    <div class="tab-pane fade" id="content1">
-      <h3>Content for Tab 1</h3>
-      <p>This is the content for the first tab.</p>
-    </div>
-    <div class="tab-pane fade" id="content2">
-      <h3>Content for Tab 2</h3>
-      <p>This is the content for the second tab.</p>
-    </div>
-    <div class="tab-pane fade" id="content3">
-      <h3>Content for Tab 3</h3>
-      <p>This is the content for the third tab.</p>
-    </div>
-    <div class="tab-pane fade" id="content4">
-      <h3>Content for Tab 3</h3>
-      <p>This is the content for the third tab.</p>
-    </div>
-  </div>
-</div>  */}}
-
-</div>
-
-{{/* Desktop version  */}}
-<div class="d-md-block d-none">
-  <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">
-    Show me the code
-  </h2>
-
-  <div class="col-lg-11 col-md-11 m-2 mx-auto">
-    <nav>
-      <div
-        class="nav nav-tabs nav-fill"
-        id="nav-tab"
-        role="tablist"
-        style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-      >
+    {{/*
+    <div class="mt-5">
+      <div class="customDropdown">
         <button
-          class="nav-link nav-link-custom"
-          id="genezio-rpc-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-rpc"
+          class="btn btn-secondary dropdown-toggle"
           type="button"
-          role="tab"
-          aria-controls="genezio-rpc"
-          aria-selected="false"
+          id="dropdownTabs"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
         >
-          genezio.RPC
+          Select a Tab
         </button>
-        <button
-          class="nav-link nav-link-custom active"
-          id="nav-profile-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-backend"
-          type="button"
-          role="tab"
-          aria-controls="genezio-backend"
-          aria-selected="true"
-        >
-          genezio.Services
-        </button>
-        <button
-          class="nav-link nav-link-custom"
-          id="genezio-serverless-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-serverless"
-          type="button"
-          role="tab"
-          aria-controls="genezio-serverless"
-          aria-selected="false"
-        >
-          genezio.Cloud
-        </button>
-        {{/*  <button
-          class="nav-link nav-link-custom"
-          id="genezio-cloud-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-cloud"
-          type="button"
-          role="tab"
-          aria-controls="genezio-cloud"
-          aria-selected="false"
-        >
-          genezio.Cloud
-        </button>  */}}
+        <div class="dropdown-menu" aria-labelledby="dropdownTabs">
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')">genezio.Rpc</a>
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')"
+            >genezio.Services</a
+          >
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Cloud</a>
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')">genezio.Cloud</a>
+        </div>
       </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div
-        class="tab-pane fade"
-        id="genezio-rpc"
-        role="tabpanel"
-        aria-labelledby="genezio-rpc-tab"
-        tabindex="0"
-      >
-        {{/* Start of genezio rpc */}}
-<div class="row mt-4">
-  <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-    <nav class="w-100">
-      <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
-        <button class="nav-link nav-link-custom text-start active" id="build-apps-faster-tab" data-bs-toggle="pill" data-bs-target="#build-apps-faster" type="button" role="tab" aria-controls="build-apps-faster" aria-selected="true">
-          Build apps faster with typesafe APIs
-        </button>
-        <button class="nav-link nav-link-custom text-start" id="typesafe-api-in-any-language-tab" data-bs-toggle="pill" data-bs-target="#typesafe-api-in-any-language" type="button" role="tab" aria-controls="typesafe-api-in-any-language" aria-selected="false">
-          Typesafe APIs in any language
-        </button>
-      </div>
-    </nav>
-  </div>
 
-  <div class="col-md-9 col-xs-12 px-4">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="build-apps-faster" role="tabpanel" aria-labelledby="build-apps-faster-tab" tabindex="0">
-        
-        {{- partial "genezioRpcTab1.html" . -}}
-      </div>
-      <div class="tab-pane fade" id="typesafe-api-in-any-language" role="tabpanel" aria-labelledby="typesafe-api-in-any-language-tab" tabindex="0">
-      
-        {{- partial "genezioRpcTab2.html" . -}}
-        
+      <div class="tab-content mt-2">
+        <div class="tab-pane fade" id="content1">
+          <h3>Content for Tab 1</h3>
+          <p>This is the content for the first tab.</p>
+        </div>
+        <div class="tab-pane fade" id="content2">
+          <h3>Content for Tab 2</h3>
+          <p>This is the content for the second tab.</p>
+        </div>
+        <div class="tab-pane fade" id="content3">
+          <h3>Content for Tab 3</h3>
+          <p>This is the content for the third tab.</p>
+        </div>
+        <div class="tab-pane fade" id="content4">
+          <h3>Content for Tab 3</h3>
+          <p>This is the content for the third tab.</p>
+        </div>
       </div>
     </div>
+    */}}
   </div>
-</div>
-{{/* end of genezio rpc */}}
 
-      </div>
-      <div
-        class="tab-pane fade show active"
-        id="genezio-backend"
-        role="tabpanel"
-        aria-labelledby="genezio-backend-tab"
-        tabindex="0"
-      >
-        {{/* start genezio backend */}}
-        <div class="row mt-4">
-          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-            <nav class="w-100">
-              <div
-                class="nav flex-column nav-custom-left"
-                id="nav-tab"
-                role="tablist"
-              >
-                <button
-                  class="nav-link nav-link-custom text-start active"
-                  id="user-auth-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#user-auth"
-                  type="button"
-                  role="tab"
-                  aria-controls="user-auth"
-                  aria-selected="true"
-                >
-                  User authentication
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="database-support-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#database-support"
-                  type="button"
-                  role="tab"
-                  aria-controls="database-support"
-                  aria-selected="false"
-                >
-                  Database support
-                </button>
-               
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="queues-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#queues"
-                  type="button"
-                  role="tab"
-                  aria-controls="queues"
-                  aria-selected="false"
-                >
-                  Queues
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="cron-jobs-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#cron-jobs"
-                  type="button"
-                  role="tab"
-                  aria-controls="cron-jobs"
-                  aria-selected="false"
-                >
-                  Cron jobs
-                </button>
-                <button
-                class="nav-link nav-link-custom text-start"
-                id="storage-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#storage"
-                type="button"
-                role="tab"
-                aria-controls="storage"
-                aria-selected="false"
-              >
-                Storage (soon)
-              </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="real-time-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#real-time"
-                  type="button"
-                  role="tab"
-                  aria-controls="real-time"
-                  aria-selected="false"
-                >
-                  Real time (soon)
-                </button>
-              </div>
-            </nav>
-          </div>
-          <div class="col-md-9 col-xs-12 px-4">
-            <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active"
-                id="user-auth"
-                role="tabpanel"
-                aria-labelledby="user-auth-tab"
-                tabindex="0">
+  {{/* Desktop version */}}
+  <div class="d-md-block d-none">
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
 
-                {{- partial "genezioServicesTab1.html" . -}}
-              </div>
-              <div class="tab-pane fade" id="database-support" role="tabpanel" aria-labelledby="database-support-tab" tabindex="0">
-                {{- partial "genezioServicesTab2.html" . -}}
-              </div>
-              <div class="tab-pane fade" id="queues" role="tabpanel" aria-labelledby="queues-tab" tabindex="0">
-                {{- partial "genezioServicesTab3.html" . -}}
-              </div>
-              <div class="tab-pane fade" id="cron-jobs" role="tabpanel" aria-labelledby="cron-jobs-tab" tabindex="0">
-                {{- partial "genezioServicesTab4.html" . -}}  
-              </div>
-              <div class="tab-pane fade" id="storage" role="tabpanel" aria-labelledby="storage-tab" tabindex="0">
-                {{- partial "genezioServicesTab5.html" . -}}  
-              </div>
-              <div class="tab-pane fade" id="real-time" role="tabpanel" aria-labelledby="real-time-tab" tabindex="0">
-                {{- partial "genezioServicesTab6.html" . -}}
-              </div>
-            </div>
-          </div>
-        </div>
-        {{/* end genezio backend */}}
-      </div>
-      {{/* Start genezio serverless */}}
-<div class="tab-pane fade" id="genezio-serverless" role="tabpanel" aria-labelledby="genezio-serverless-tab" tabindex="0">
-  <div class="row mt-4">
-    <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-      <nav class="w-100">
-        <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
-          <button class="nav-link nav-link-custom text-start active" id="user-auth-tab2" data-bs-toggle="tab" data-bs-target="#user-auth2" type="button" role="tab" aria-controls="user-auth2" aria-selected="true">
-            Zero Devops Deployment
+    <div class="col-lg-11 col-md-11 m-2 mx-auto">
+      <nav>
+        <div
+          class="nav nav-tabs nav-fill"
+          id="nav-tab"
+          role="tablist"
+          style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <button
+            class="nav-link nav-link-custom"
+            id="genezio-rpc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-rpc"
+            type="button"
+            role="tab"
+            aria-controls="genezio-rpc"
+            aria-selected="false"
+          >
+            genezio.RPC
           </button>
-          <button class="nav-link nav-link-custom text-start" id="database-support-tab2" data-bs-toggle="tab" data-bs-target="#database-support2" type="button" role="tab" aria-controls="database-support2" aria-selected="false">
-            Multiple environments
+          <button
+            class="nav-link nav-link-custom active"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-backend"
+            type="button"
+            role="tab"
+            aria-controls="genezio-backend"
+            aria-selected="true"
+          >
+            genezio.Services
           </button>
-          <button class="nav-link nav-link-custom text-start" id="storage-tab2" data-bs-toggle="tab" data-bs-target="#storage2" type="button" role="tab" aria-controls="storage2" aria-selected="false">
-            Deploy frontend
+          <button
+            class="nav-link nav-link-custom"
+            id="genezio-serverless-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-serverless"
+            type="button"
+            role="tab"
+            aria-controls="genezio-serverless"
+            aria-selected="false"
+          >
+            genezio.Cloud
           </button>
-          <button class="nav-link nav-link-custom text-start" id="storage-tab4" data-bs-toggle="tab" data-bs-target="#storage4" type="button" role="tab" aria-controls="storage4" aria-selected="false">
-            Cold start time
+          {{/*
+          <button
+            class="nav-link nav-link-custom"
+            id="genezio-cloud-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-cloud"
+            type="button"
+            role="tab"
+            aria-controls="genezio-cloud"
+            aria-selected="false"
+          >
+            genezio.Cloud
           </button>
+          */}}
         </div>
       </nav>
-    </div>
-    <div class="col-md-9 col-xs-12 px-4">
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="user-auth2" role="tabpanel" aria-labelledby="user-auth-tab2" tabindex="0">
-          {{- partial "genezioCloudTab1.html" . -}}  
-        </div>
-        <div class="tab-pane fade" id="database-support2" role="tabpanel" aria-labelledby="database-support-tab2" tabindex="0">
-          {{- partial "genezioCloudTab2.html" . -}}
-        </div>
-        <div class="tab-pane fade" id="storage2" role="tabpanel" aria-labelledby="storage-tab2" tabindex="0">
-          {{- partial "genezioCloudTab3.html" . -}}  
-        </div>
-        <div class="tab-pane fade" id="storage4" role="tabpanel" aria-labelledby="storage-tab4" tabindex="0">
-          {{- partial "genezioCloudTab4.html" . -}}  
-        </div>
+        <div
+          class="tab-pane fade"
+          id="genezio-rpc"
+          role="tabpanel"
+          aria-labelledby="genezio-rpc-tab"
+          tabindex="0"
+        >
+          {{/* Start of genezio rpc */}}
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="build-apps-faster-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#build-apps-faster"
+                    type="button"
+                    role="tab"
+                    aria-controls="build-apps-faster"
+                    aria-selected="true"
+                  >
+                    Build apps faster with typesafe APIs
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="typesafe-api-in-any-language-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#typesafe-api-in-any-language"
+                    type="button"
+                    role="tab"
+                    aria-controls="typesafe-api-in-any-language"
+                    aria-selected="false"
+                  >
+                    Typesafe APIs in any language
+                  </button>
+                </div>
+              </nav>
+            </div>
 
-
-      </div>
-    </div>
-  </div>
-  {{/* end genezio serverless */}}
-</div>
-
-
-      <div
-        class="tab-pane fade"
-        id="genezio-cloud"
-        role="tabpanel"
-        aria-labelledby="genezio-cloud-tab"
-        tabindex="0"
-      >
-      {{/*  start genezio cloud  */}}
-<div class="row mt-4">
-          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-            <nav class="w-100">
-              <div
-                class="nav flex-column nav-custom-left"
-                id="nav-tab"
-                role="tablist"
-              >
-                <button
-                  class="nav-link nav-link-custom text-start active"
-                  id="user-auth-tab2"
-                  data-bs-toggle="tab"
-                  data-bs-target="#user-auth2"
-                  type="button"
-                  role="tab"
-                  aria-controls="user-auth2"
-                  aria-selected="true"
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="build-apps-faster"
+                  role="tabpanel"
+                  aria-labelledby="build-apps-faster-tab"
+                  tabindex="0"
                 >
-                  Cold start time
-                </button>
+                  {{- partial "genezioRpcTab1.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="typesafe-api-in-any-language"
+                  role="tabpanel"
+                  aria-labelledby="typesafe-api-in-any-language-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioRpcTab2.html" . -}}
+                </div>
               </div>
-            </nav>
-          </div>
-          <div class="col-md-9 col-xs-12 px-4">
-            <div class="tab-content" id="nav-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="user-auth2"
-                role="tabpanel"
-                aria-labelledby="user-auth-tab2"
-                tabindex="0"
-              >
-                <p class="opacity-50 pb-3 m-0">
-                  Test parameters: <br />
-                  Hello World function <br />
-                  30 HTTPS requests for each scenario<br />
-                  Cached DNS records for functions domains to prevent additional time caused by DNS
-                </p>
-
-                <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
-
-              </div>
-              
-              
-              
             </div>
           </div>
+          {{/* end of genezio rpc */}}
         </div>
-      {{/*  end genezio cloud  */}}
-        
+        <div
+          class="tab-pane fade show active"
+          id="genezio-backend"
+          role="tabpanel"
+          aria-labelledby="genezio-backend-tab"
+          tabindex="0"
+        >
+          {{/* start genezio backend */}}
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="user-auth-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-auth"
+                    type="button"
+                    role="tab"
+                    aria-controls="user-auth"
+                    aria-selected="true"
+                  >
+                    User authentication
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="database-support-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#database-support"
+                    type="button"
+                    role="tab"
+                    aria-controls="database-support"
+                    aria-selected="false"
+                  >
+                    Database support
+                  </button>
+
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="queues-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#queues"
+                    type="button"
+                    role="tab"
+                    aria-controls="queues"
+                    aria-selected="false"
+                  >
+                    Queues
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="cron-jobs-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#cron-jobs"
+                    type="button"
+                    role="tab"
+                    aria-controls="cron-jobs"
+                    aria-selected="false"
+                  >
+                    Cron jobs
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="storage-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#storage"
+                    type="button"
+                    role="tab"
+                    aria-controls="storage"
+                    aria-selected="false"
+                  >
+                    Storage (soon)
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="real-time-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#real-time"
+                    type="button"
+                    role="tab"
+                    aria-controls="real-time"
+                    aria-selected="false"
+                  >
+                    Real time (soon)
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="user-auth"
+                  role="tabpanel"
+                  aria-labelledby="user-auth-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab1.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="database-support"
+                  role="tabpanel"
+                  aria-labelledby="database-support-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab2.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="queues"
+                  role="tabpanel"
+                  aria-labelledby="queues-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab3.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="cron-jobs"
+                  role="tabpanel"
+                  aria-labelledby="cron-jobs-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab4.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="storage"
+                  role="tabpanel"
+                  aria-labelledby="storage-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab5.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="real-time"
+                  role="tabpanel"
+                  aria-labelledby="real-time-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab6.html" . -}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/* end genezio backend */}}
+        </div>
+        {{/* Start genezio serverless */}}
+        <div
+          class="tab-pane fade"
+          id="genezio-serverless"
+          role="tabpanel"
+          aria-labelledby="genezio-serverless-tab"
+          tabindex="0"
+        >
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="user-auth-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-auth2"
+                    type="button"
+                    role="tab"
+                    aria-controls="user-auth2"
+                    aria-selected="true"
+                  >
+                    Zero Devops Deployment
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="database-support-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#database-support2"
+                    type="button"
+                    role="tab"
+                    aria-controls="database-support2"
+                    aria-selected="false"
+                  >
+                    Multiple environments
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="storage-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#storage2"
+                    type="button"
+                    role="tab"
+                    aria-controls="storage2"
+                    aria-selected="false"
+                  >
+                    Deploy frontend
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="storage-tab4"
+                    data-bs-toggle="tab"
+                    data-bs-target="#storage4"
+                    type="button"
+                    role="tab"
+                    aria-controls="storage4"
+                    aria-selected="false"
+                  >
+                    Cold start time
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="user-auth2"
+                  role="tabpanel"
+                  aria-labelledby="user-auth-tab2"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab1.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="database-support2"
+                  role="tabpanel"
+                  aria-labelledby="database-support-tab2"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab2.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="storage2"
+                  role="tabpanel"
+                  aria-labelledby="storage-tab2"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab3.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="storage4"
+                  role="tabpanel"
+                  aria-labelledby="storage-tab4"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab4.html" . -}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/* end genezio serverless */}}
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="genezio-cloud"
+          role="tabpanel"
+          aria-labelledby="genezio-cloud-tab"
+          tabindex="0"
+        >
+          {{/* start genezio cloud */}}
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="user-auth-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-auth2"
+                    type="button"
+                    role="tab"
+                    aria-controls="user-auth2"
+                    aria-selected="true"
+                  >
+                    Cold start time
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="user-auth2"
+                  role="tabpanel"
+                  aria-labelledby="user-auth-tab2"
+                  tabindex="0"
+                >
+                  <p class="opacity-50 pb-3 m-0">
+                    Test parameters: <br />
+                    Hello World function <br />
+                    30 HTTPS requests for each scenario<br />
+                    Cached DNS records for functions domains to prevent additional time caused by
+                    DNS
+                  </p>
+
+                  <img
+                    class="mt-4 w-100"
+                    style="max-width: 512px"
+                    src="/images/cold-start-chart.webp"
+                    alt="cold-start-chart"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/* end genezio cloud */}}
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" async></script>
@@ -605,65 +822,66 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" async></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  var accordionButtons = document.querySelectorAll('.accordion-button.theCode');
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionButtons = document.querySelectorAll(".accordion-button.theCode");
 
-  accordionButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      accordionButtons.forEach(function (btn) {
-        btn.classList.remove('customDropdown');
+    accordionButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        accordionButtons.forEach(function (btn) {
+          btn.classList.remove("customDropdown");
+        });
+
+        if (!button.classList.contains("customDropdown")) {
+          button.classList.add("customDropdown");
+        }
+
+        if (button.classList.contains("collapsed")) {
+          button.classList.remove("customDropdown");
+        }
       });
-      
-      if (!button.classList.contains('customDropdown')) {
-        button.classList.add('customDropdown');
-      }
-
-      if (button.classList.contains('collapsed')) {
-        button.classList.remove('customDropdown');
-      }
     });
   });
-});
 
-  var accordionButtons = document.querySelectorAll('.accordion-button.theCode');
+  var accordionButtons = document.querySelectorAll(".accordion-button.theCode");
 
-  accordionButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      var isOpen = this.classList.contains('collapsed');
+  accordionButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var isOpen = this.classList.contains("collapsed");
 
       if (!isOpen) {
-        var openAccordions = document.querySelectorAll('.accordion-button.theCode:not(.collapsed)');
-        openAccordions.forEach(function(openAccordion) {
-          openAccordion.click(); 
+        var openAccordions = document.querySelectorAll(".accordion-button.theCode:not(.collapsed)");
+        openAccordions.forEach(function (openAccordion) {
+          openAccordion.click();
         });
       }
     });
   });
 
   var tabDropdownItems = document.querySelectorAll('.dropdown-item[data-toggle="tab"]');
-  tabDropdownItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      var dropdownToggle = this.closest('.dropdown').querySelector('.sectionDropdown');
+  tabDropdownItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var dropdownToggle = this.closest(".dropdown").querySelector(".sectionDropdown");
       if (dropdownToggle) {
         dropdownToggle.innerHTML = this.innerHTML;
       }
 
-      tabDropdownItems.forEach(function(tabItem) {
-        tabItem.classList.remove('active-tab');
+      tabDropdownItems.forEach(function (tabItem) {
+        tabItem.classList.remove("active-tab");
       });
 
-      this.classList.add('active-tab');
+      this.classList.add("active-tab");
     });
   });
-
 </script>
 
 <script>
-  var dropdownItems = document.querySelectorAll('.dropdown-item');
+  var dropdownItems = document.querySelectorAll(".dropdown-item");
 
-  dropdownItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      var dropdownTrigger = this.closest('.dropdown').querySelector('.sectionDropdown.dropdown-toggle');
+  dropdownItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var dropdownTrigger = this.closest(".dropdown").querySelector(
+        ".sectionDropdown.dropdown-toggle"
+      );
       dropdownTrigger.innerText = this.innerText;
     });
   });
