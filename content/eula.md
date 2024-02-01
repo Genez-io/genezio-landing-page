@@ -1,6 +1,6 @@
 ---
 title: "End-User License Agreement"
-lastUpdated: "October 3rd, 2023"
+lastUpdated: "January 1st, 2024"
 # meta data start
 description: "genezio simplifies API development, deployment, and SDK generation for seamless integration on your website or mobile app."
 meta_og_url: "https://genez.io"
@@ -111,7 +111,7 @@ Termination of this Agreement will not limit any of the Company's rights or reme
 
 # Indemnification
 
-You agree to indemnify and hold the Company and its parents, subsidiaries, affiliates, officers, employees, agents, partners and licensors (if any) harmless from any claim or demand, including reasonable attorneys' fees, due to or arising out of your: (a) use of the Application; (b) violation of this Agreement or any law or regulation; or (c) violation of any right of a third party.
+The Company is in no way liable for any use of the Application that represents a breach of this Agreement or any law or regulation, or in violation to any third party’s rights. The Company reserves the right to use any and all remedies against any such use of the Application, including but not limited to terminating this Agreement, have your account deleted, taking actions as to eliminate / delete / take down any content resulting from such use of the Application and report to the relevant authorities.
 
 ---
 
