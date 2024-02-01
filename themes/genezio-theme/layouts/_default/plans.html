@@ -717,11 +717,11 @@
     // Add 'ActivePlanCard' class to the clicked card
     activeCard.classList.add("ActivePlanCard");
 
-    // Add 'notActivePlanCard' class to the other cards
+    // Add 'notActivePlanCard' class and 'border-gradient-green' class to the other cards
     const otherCards = [hobbistCard, proCard, enterpriseCard].filter((card) => card !== activeCard);
     otherCards.forEach((card) => {
-      card.classList.add("notActivePlanCard");
-      card.classList.remove("border-gradient-green");
+      card.classList.add("notActivePlanCard", "border-gradient-green");
+      card.classList.remove("ActivePlanCard");
     });
   }
 </script>
