@@ -33,7 +33,7 @@
 
 .fixed-width-row {
   display: flex;
-  margin-left: 59px;
+  // margin-left: 59px;
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -41,7 +41,7 @@
 }
 
 .biggerCol {
-  flex: 0 0 320px !important; /* Set a fixed width for each column */
+  flex: 0 0 340px !important; /* Set a fixed width for each column */
 }
 
 .fixed-width-col-space {
