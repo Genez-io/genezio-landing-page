@@ -5,9 +5,8 @@
 </p>
 
 <div class="code-title-genezio ms-4 px-3">genezio server</div>
-<pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-type Person = {
+<div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+  {{ $input := (print `type Person = {
   firstName: string;
   lastName: string;
 }
@@ -15,22 +14,28 @@ type Person = {
 @GenezioDeploy()
 class HelloWorldService {
   hello(name: string): string {
-    return `Hello ${name}!`;
+    ` "return `Hello ${name}!`;" `
   }
 
   bye(person: Person): string {
-    return `Bye, ${person.firstName} ${person.lastName}!`;
+    ` "return `Bye, ${person.firstName} ${person.lastName}!`;" `
   }
-}</code>
-                </pre>
+}`) }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
 
 <div class="code-title-genezio ms-4 px-3">client</div>
 
-<pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+<div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+  {{ $input := `import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
 
 const hi = await HelloworldService.hello('John');
 const person: Person = {firstName: 'John', lastName: 'Ronald'};
-const bye = await HelloworldService.bye(person);</code>
-                </pre>
+const bye = await HelloworldService.bye(person);` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>

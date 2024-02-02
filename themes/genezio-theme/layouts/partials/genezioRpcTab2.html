@@ -7,42 +7,51 @@
 
               <div class="code-title-genezio ms-4 px-3">client TypeScript</div>
 
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+                <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
 
 async function main() {
   const hi = await HelloworldService.hello('John');
   const person: Person = {firstName: 'John', lastName: 'Ronald'};
   const bye = await HelloworldService.bye(person);
-}</code>
-                </pre>
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
 
 
-                <div class="code-title-genezio ms-4 px-3">FLutter</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import 'package:hello_world/sdk/hello_world_service.dart';
+
+                <div class="code-title-genezio ms-4 px-3">Flutter</div>
+                <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import 'package:hello_world/sdk/hello_world_service.dart';
 
 void main() async {
   final hi = await HelloWorldService.hello('John');
   final person = Person(firstName: 'John', lastName: 'Ronald');
   final bye = await HelloWorldService.bye(person);
-}</code>
-                </pre>
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
 
                 <div class="code-title-genezio ms-4 px-3">client Kotlin</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import sdk.HelloWorldService
+                <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import sdk.HelloWorldService
 import sdk.Person
 
 suspend fun sayHi() {
   val hi = HelloWorldService().hello("John")
   val person = Person(firstName = "John", lastName = "Ronald")
   val bye = HelloWorldService().bye(person)
-}</code>
-                </pre>
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
                 
               <!-- Add code examples or content specific to Rpc Tab 2 -->
           

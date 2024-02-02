@@ -1,9 +1,8 @@
 
               <p class="text-white opacity-50 mb-0">Support for configurable cron jobs to automate your application.</p>
               <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy } from '@genezio/types';
+              <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import { GenezioDeploy } from '@genezio/types';
 
 @GenezioDeploy()
 export class OrderService {
@@ -19,6 +18,8 @@ export class OrderService {
 
     await this.sendReminderEmails(orders);
   }
-}</code>
-                </pre>
-            
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>

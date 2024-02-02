@@ -3,9 +3,8 @@
 
 
               <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GenezioMethod,
+              <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := (print `import { GenezioDeploy, GenezioMethod,
   GenezioHttpRequest, GenezioHttpResponse } from "@genezio/types";
 import axios from 'axios';
 
@@ -13,13 +12,13 @@ import axios from 'axios';
 export class QstashService{
 
   async chatbot(): Promise<boolean> {
-    const url = `https://qstash.upstash.io/v2/publish/${process.env.QUEUE_WEBHOOK_URL}`;
+    ` "const url = `https://qstash.upstash.io/v2/publish/${process.env.QUEUE_WEBHOOK_URL}`;" `
     const payload = {
       "message": "I am your trusty chatbot! I'll help you process your tasks.",
     };
 
     const headers = {
-      Authorization: `Bearer ${process.env.QSTASH_TOKEN}`,
+      ` "Authorization: `Bearer ${process.env.QSTASH_TOKEN}`," `
       'Content-Type': 'application/json',
     };
 
@@ -41,6 +40,9 @@ export class QstashService{
     };
     return response;
   }
-}</code>
-                </pre>
-           
+}`) }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
