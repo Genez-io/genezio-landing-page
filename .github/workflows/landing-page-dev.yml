@@ -63,4 +63,4 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Deploy deploy
         working-directory: ./
-        run: genezio deploy --frontend
+        run: genezio deploy --frontend --stage dev
