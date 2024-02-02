@@ -2,4 +2,4 @@ name: genezio-landing-page
 region: us-east-1
 frontend:
   path: ./public
-  subdomain: genezio-dev-landing-page
+  subdomain: genezio-landing-page
