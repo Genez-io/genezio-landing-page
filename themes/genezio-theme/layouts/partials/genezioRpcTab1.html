@@ -1,0 +1,41 @@
+<p class="text-white opacity-50 mb-0">
+  A more natural paradigm in software design, leading to less error prone parameter passing than
+  REST APIs and auto completion in your favorite IDE. Here we define the "bye" method in the
+  HelloWorldService backend class, and we call it from the frontend using the auto-generated SDK.
+</p>
+
+<div class="code-title-genezio ms-4 px-3">genezio server</div>
+<div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+  {{ $input := (print `type Person = {
+  firstName: string;
+  lastName: string;
+}
+
+@GenezioDeploy()
+class HelloWorldService {
+  hello(name: string): string {
+    ` "return `Hello ${name}!`;" `
+  }
+
+  bye(person: Person): string {
+    ` "return `Bye, ${person.firstName} ${person.lastName}!`;" `
+  }
+}`) }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
+
+<div class="code-title-genezio ms-4 px-3">client</div>
+
+<div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+  {{ $input := `import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
+
+const hi = await HelloworldService.hello('John');
+const person: Person = {firstName: 'John', lastName: 'Ronald'};
+const bye = await HelloworldService.bye(person);` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>

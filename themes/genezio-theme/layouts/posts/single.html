@@ -70,7 +70,7 @@
           <p style="color: rgba(82, 82, 82, 1);" class="date mb-0 mx-0 mx-sm-2">Share on:</p>
 
           <a class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text={{ .Permalink }}"
+          href="https://twitter.com/intent/tweet?text=https:{{ .Permalink | urlquery }}"
           data-size="large"
           target="_blank"
               >
@@ -82,54 +82,46 @@
           />
           </a>
 
-          <a href="https://www.linkedin.com/sharing/share-offsite/?{{ .Permalink }}" target="_blank">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank">
           <img
             style="border: 1px solid #e2d9f3; cursor: pointer"
             class="rounded-circle p-2 mx-2"
             src="/images/linkedin-logo-green.svg"
             alt="linkedin-icon"
           />
-          </a>
+        </a>
 
-          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank">
-          <img
-            style="border: 1px solid #e2d9f3; cursor: pointer"
-            class="rounded-circle p-2"
-            src="/images/facebook-logo-green.svg"
-            alt="facebook-icon"
-          />
-          </a>
 
         </div>
       </div>
     </div>
 
-    {{/*  TODO: fix:  */}}
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
 
-    <div class="row px-3 px-md-4 pt-3 pb-5"> 
+    <div class="px-3 px-md-4 pt-3 pb-5 d-lg-flex d-block"> 
+    {{/*  <div class="row px-3 px-md-4 pt-3 pb-5">   */}}
       <div class="articlePost col-lg-8">{{ .Content }}</div>
-
       <div class="col-lg-1"></div>
-      <div class="articlePost col-lg-3">
-        <p class="fw-semibold " style="opacity: .6;">Article contents</p>
-        <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
+      {{/*  TODO: high priority fix this menu   */}}
+      {{/*  <div class="articlePost col-lg-3 d-none d-lg-block">
+    <p class="fw-semibold " style="opacity: .6;">Article contents</p>
+    <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
         {{ with .Params.menuItems }}
-          {{ range . }}
-            <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
-              <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
-            </li>
-          {{ end }}
+            {{ range . }}
+                <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
+                    <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
+                </li>
+            {{ end }}
         {{ end }}
-      </ul>
-      </div>
+    </ul>
+</div>  */}}
+
     </div>
 
 
     <!-- Navigation Menu -->
     {{/* Start of Subscribe to our newsletter */}}
-    {{/*  TODO: remove row  */}}
-    <div class="row px-4 pt-3"> 
+    <div class="px-4 pt-3"> 
       <div class="col-lg-8">
         <div
           style="
@@ -157,8 +149,16 @@
             >
               <form
                 id="subscribeForm"
+                style="position: relative"
                 class="d-flex w-100 align-items-start align-items-md-center flex-column flex-md-row"
               >
+              <p
+                id="successMessage"
+                style="position: absolute; top: -30px; display: none;"
+                class="text-success"
+              >
+                Subscribed Successfully
+              </p>
                 <input
                   type="email"
                   name="email"
@@ -242,7 +242,7 @@
             <div class="card border-0" style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07); background: radial-gradient(126.84% 129.78% at 0% 40.3%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 100%);">
                <a class="text-decoration-none" href="{{ .RelPermalink }}">
         <div class="position-relative">
-          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="height: 205px; border-bottom-left-radius: 20px;border-top-right-radius: 20px;" />
+          <img src="{{ .Params.thumbnail | relURL }}" class="w-100" style="border-bottom-left-radius: 20px;border-top-right-radius: 20px;" />
           {{/*  read time  */}}
           <div class="py-1 px-2 position-absolute" style="background: rgba(0, 0, 0, 0.20); display: inline-block; border-radius: 999px; bottom: 10px; left:10px;">
             <div class="d-flex align-items-center">
@@ -434,4 +434,79 @@ window.addEventListener("scroll", updateActiveSection);
     });
   });
 </script>
+
+{{/*  Hubspot add mail  */}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('subscribeForm');
+    const emailInput = document.getElementById('emailSubscribeInput');
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const email = emailInput.value;
+
+      const data = {
+        email: email
+      };
+
+      const url = 'https://ahkxlexqszfsqoe33tl5im4b4y0umhdv.lambda-url.us-east-1.on.aws/HubSpotService/addContact';
+
+      fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          document.getElementById("emailSubscribeInput").value = "";
+          successMessage.style.display = "block";
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+  });
+</script>
+
+{{/*  Add copy code snippet button   */}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const codeBlocks = document.querySelectorAll('pre code[data-lang="javascript"], pre code[data-lang="typescript"], pre code[data-lang="bash"], pre code[data-lang="css"], pre code[data-lang="ts"], pre code[data-lang="yaml"], pre code[data-lang="cli"], pre code[data-lang="env"], pre code[data-lang="tsx"]');
+
+        codeBlocks.forEach(codeBlock => {
+            const copyButton = document.createElement('div');
+            copyButton.className = 'copy-button';
+            copyButton.innerHTML = `
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9999 7.25C19.9999 6.08761 19.1185 5.1311 17.9875 5.0124C17.8688 3.88145 16.9123 3 15.7499 3H14.2499C13.0875 3 12.131 3.88145 12.0123 5.0124C11.1372 5.10424 10.4115 5.69769 10.1279 6.5H12.9999C14.3806 6.5 15.4999 7.61929 15.4999 9V16H17.7499C18.9925 16 19.9999 14.9926 19.9999 13.75V7.25ZM14.2499 4.5C13.8357 4.5 13.4999 4.83579 13.4999 5.25V5.5H16.4999V5.25C16.4999 4.83579 16.1641 4.5 15.7499 4.5H14.2499Z" fill="#404040"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8C4.44772 8 4 8.44771 4 9V19C4 19.5523 4.44772 20 5 20H13C13.5523 20 14 19.5523 14 19V9C14 8.44772 13.5523 8 13 8H5ZM11.874 12.166C12.1038 11.8214 12.0107 11.3557 11.666 11.126C11.3214 10.8962 10.8557 10.9893 10.626 11.334L8.13343 15.0728L7.28033 14.2197C6.98744 13.9268 6.51256 13.9268 6.21967 14.2197C5.92678 14.5126 5.92678 14.9874 6.21967 15.2803L7.71967 16.7803C7.87855 16.9392 8.1003 17.0185 8.3239 16.9963C8.5475 16.9742 8.7494 16.853 8.87404 16.666L11.874 12.166Z" fill="#404040"/>
+              </svg>
+            `;
+
+            copyButton.addEventListener('click', function () {
+                const codeText = codeBlock.textContent.trim();
+
+                const textarea = document.createElement('textarea');
+                textarea.value = codeText;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            });
+
+            codeBlock.parentElement.appendChild(copyButton);
+        });
+    });
+</script>
+
+
+
+
+
 {{ end }}

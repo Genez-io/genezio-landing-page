@@ -14,7 +14,7 @@ meta_og_image: "https://genez.io/images/chatgptapp.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 15
 ---
 
 <!-----
@@ -98,19 +98,19 @@ Now, let’s dive in! You can find the complete project {{< external-link link="
 
 First, install genezio using npm:
 
-```
+```bash
 npm install genezio -g
 ```
 
 Then, use this command to log in:
 
-```
+```bash
 genezio login
 ```
 
 Create a new project:
 
-```
+```bash
 genezio create fullstack --backend=ts --frontend=react-ts --name=chatgpt-project --region=us-east-1
 ```
 
@@ -118,13 +118,13 @@ genezio create fullstack --backend=ts --frontend=react-ts --name=chatgpt-project
 
 Change into the newly created `server` folder:
 
-```
+```cli
 cd ./chatgpt-project/server
 ```
 
 Now, you’re ready to install `openai`:
 
-```
+```bash
 npm install openai
 ```
 
@@ -136,7 +136,7 @@ You will implement a class containing a function that you will deploy and then c
 
 Create the `.env` file in the server directory and add the following variable that will store your OpenAI secret key from your OpenAI account:
 
-```
+```env
 OPENAI_SECRET_KEY=<your_secret_key>
 ```
 
@@ -202,7 +202,7 @@ export class GptCaller {
 
 Now run the following command in the root directory to test your backend locally:
 
-```
+```bash
 genezio local
 ```
 
@@ -210,7 +210,7 @@ genezio local
 
 Go to the `client` folder in a **new terminal** and install the necessary dependencies:
 
-```
+```bash
 cd ./client
 npm install
 ```
@@ -312,11 +312,7 @@ To finish, you need a form with an input text box where the user can enter the t
     value={requestText}
     onChange={(e) => setRequestText(e.target.value)}
   />
-  <button
-    type="submit"
-    className="msger-send-btn"
-    onClick={(e) => sendRequest(e)}
-  >
+  <button type="submit" className="msger-send-btn" onClick={(e) => sendRequest(e)}>
     {isRequesting ? "Sending..." : "Send"}
   </button>
 </form>
@@ -404,11 +400,7 @@ function App() {
             value={requestText}
             onChange={(e) => setRequestText(e.target.value)}
           />
-          <button
-            type="submit"
-            className="msger-send-btn"
-            onClick={(e) => sendRequest(e)}
-          >
+          <button type="submit" className="msger-send-btn" onClick={(e) => sendRequest(e)}>
             {isRequesting ? "Sending..." : "Send"}
           </button>
         </form>
@@ -426,7 +418,7 @@ export default App;
 
 On the `client` folder start the frontend:
 
-```
+```bash
 npm run dev
 ```
 
@@ -436,7 +428,7 @@ Open your browser and go to `http://localhost:5173/` to see the app in action.
 
 Go to the **root** folder of your project and run the following command:
 
-```
+```bash
 genezio deploy
 ```
 

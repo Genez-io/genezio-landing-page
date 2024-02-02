@@ -1,0 +1,36 @@
+<p class="text-white opacity-50 mb-0">
+  Genezio offers multi-cloud support, including AWS and the new Genezio.Cloud that's still being
+  tested. We're using AWS Lambda right now, and we're working to add long running servers. Plus, we
+  provide support to deploy on your own AWS account.
+</p>
+
+<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
+<pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio deploy
+Bundling your code...
+Deploying your server...
+
+The server was deployed and the SDK was successfully generated!
+You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
+
+Deploying your frontend...
+Frontend successfully deployed at https://happy-purple-capybara.app.genez.io</code>
+                </pre>
+
+<div class="code-title-genezio ms-4 px-3">testing locally</div>
+<pre class="pre-code-wrapper-genezio px-4 py-1">
+<code>
+% ls
+client/      server/      genezio.yaml
+
+% genezio local
+Bundling your code...
+Starting your local server...
+
+Your local server is running, and the SDK was successfully generated!
+Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
+                </pre>

@@ -12,7 +12,7 @@ meta_og_url: "https://genez.io/blog/implement-shopping-cart-redis"
 meta_og_image: "https://genez.io/images/implement_shopping_cart_redis.webp"
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 30
 
 menuItems:
   - identifier: "introduction"
@@ -140,9 +140,7 @@ export class ShoppingCartService {
 
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error(
-        "It seems that UPSTASH_REDIS_URL is not set in the `.env` file."
-      );
+      throw new Error("It seems that UPSTASH_REDIS_URL is not set in the `.env` file.");
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
@@ -196,7 +194,7 @@ Later in this tutorial, we are going to use `hexists` to check if an item exists
 
 Install the dependencies by running the following command in the `server` directory:
 
-```
+```bash
 npm install ioredis
 npm --save-dev install @types/node
 ```
@@ -207,7 +205,7 @@ Let's create a Redis database and connect it to your web application using a `.e
 Luckily, genezio makes it very easy to add an {{< external-link link="https://upstash.com/?utm_source=genezio+&utm_medium=blog&utm_campaign=post" >}}Upstash Redis{{< /external-link >}} integration to your project.
 We first need to deploy our project. We can do this by running the following command in the root directory of the project:
 
-```
+```bash
 genezio deploy
 ```
 
@@ -341,7 +339,7 @@ In the `models.tsx` file you can declare the interfaces that will be used in you
 
 Firstly, let's install the dependencies for the frontend by running the following command in the `client` directory of your project:
 
-```
+```bash
 npm install axios reactstrap bootstrap
 ```
 
@@ -501,9 +499,7 @@ let token = localStorage.getItem("token") as string;
 
 // If token is not set, generate a 32-character token
 if (!token || token === "" || token === "undefined") {
-  token =
-    Math.random().toString(36).substring(2, 15) +
-    Math.random().toString(36).substring(2, 15);
+  token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   localStorage.setItem("token", token);
 }
 ```

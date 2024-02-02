@@ -1,0 +1,55 @@
+
+              <p class="text-white opacity-50 mb-0">We offer <b>Redis</b> or <b>Postgres</b> through our partners. Or bring your own database and connect it to your backend like you normally would.</p>
+
+              <div class="code-title-genezio ms-4 px-3">genezio server with Neon Postgres</div>
+              <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import { GenezioDeploy } from "@genezio/types";
+import pg from 'pg'
+const { Pool } = pg
+
+@GenezioDeploy()
+export class PostgresService {
+  pool = new Pool({
+    connectionString: process.env.NEON_POSTGRES_URL,
+    ssl: true,
+  });
+
+  async insertUser(name: string): Promise<string> {
+    await this.pool.query(
+      "CREATE TABLE IF NOT EXISTS users (id serial PRIMARY KEY,name VARCHAR(255))"
+    );
+
+    await this.pool.query("INSERT INTO users (name) VALUES ($1)", [name]);
+    const result = await this.pool.query("select * from users");
+
+    return JSON.stringify(result.rows);
+  }
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
+                <div class="code-title-genezio ms-4 px-3">genezio server with Upstash Redis</div>
+                <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                  {{ $input := `import { GenezioDeploy } from '@genezio/types';
+import { Redis } from '@upstash/redis'
+
+@GenezioDeploy()
+export class RedisService{
+  client = new Redis({
+    url: process.env.UPSTASH_REDIS_URL,
+    token: process.env.UPSTASH_REDIS_TOKEN,
+  })
+
+  async insertUser(name: string): Promise<string> {
+    await this.client.set('user', name);
+    const result = await this.client.get('user');
+    return JSON.stringify(result);
+  }
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+            

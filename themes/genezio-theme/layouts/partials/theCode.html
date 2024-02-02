@@ -1,1441 +1,887 @@
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleDropdown(dropdownToggle, tabGroup) {
+      function showTab(tabId) {
+        // Hide all tab content for this group
+        var tabs = document.querySelectorAll("." + tabGroup + " .tab-pane");
+        tabs.forEach(function (tab) {
+          tab.classList.remove("show", "active");
+        });
 
+        // Show and activate the selected tab content
+        var selectedTab = document.getElementById(tabId);
+        selectedTab?.classList.add("show", "active");
+      }
 
- <script>
-  
-  $(document).ready(function(){
-      function handleDropdown(dropdownToggle, tabGroup) {
-        function showTab(tabId) {
-          // Hide all tab content for this group
-          $("." + tabGroup + " .tab-pane").removeClass("show active");
-          
-          // Show and activate the selected tab content
-          $("#" + tabId).addClass("show active");
+      function setDefaultTab() {
+        var defaultItem = document.querySelector(
+          dropdownToggle + " + .dropdown-menu .dropdown-item:first-child"
+        );
+
+        var defaultTabId = defaultItem?.getAttribute("href")?.substring(1); // Remove the "#" from the href
+
+        // Set default tab text
+        if (document.querySelector(dropdownToggle)) {
+          document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
         }
 
-        function setDefaultTab() {
-          var defaultItem = $(dropdownToggle).next(".dropdown-menu").find(".dropdown-item:first");
-          var defaultTabId = defaultItem.attr("href").substring(1); // Remove the "#" from the href
+        // Show default tab content
+        showTab(defaultTabId);
+      }
 
-          // Set default tab text
-          $(dropdownToggle).text(defaultItem.text());
+      // Set default tab when the page loads
+      setDefaultTab();
 
-          // Show default tab content
-          showTab(defaultTabId);
-        }
+      if (document.querySelector(dropdownToggle)) {
+        document.querySelector(dropdownToggle).addEventListener("click", function (event) {
+          if (event.target.classList.contains("dropdown-item")) {
+            var selectedTabText = event.target.textContent;
+            var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
 
-        // Set default tab when the page loads
-        setDefaultTab();
+            // Update dropdown text
+            document.querySelector(dropdownToggle).textContent = selectedTabText;
 
-        $(dropdownToggle).on('click', '.dropdown-item', function() {
-          var selectedTabText = $(this).text();
-          var selectedTabValue = $(this).attr("href"); // Assuming the value is stored in the "href" attribute
+            var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
 
-          // Update dropdown text
-          $(dropdownToggle).text(selectedTabText);
-
-          var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
-
-          // Show and activate the selected tab content
-          showTab(selectedTabId);
+            // Show and activate the selected tab content
+            showTab(selectedTabId);
+          }
         });
       }
-
-      // Dropdown 1
-      handleDropdown("#selectedTab", "tabGroup1");
-
-      // Dropdown 2
-      handleDropdown("#selectedRpcTab", "tabGroup2");
-
-      // Dropdown 3
-      handleDropdown("#selectedServerlessTab", "tabGroup3");
-
-      // Dropdown 4
-      handleDropdown("#selectedCloudTab", "tabGroup4");
-    });
-
-    
-
-  </script>
-<div
-  class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area"
->
-
-{{/*  Mobile version  */}}
-<div class="d-md-none d-block">
-  {{/*  <p
-    style="font-size: 12px"
-    class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
-  >
-    THE CODE
-  </p>  */}}
-  <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">
-    Show me the code
-  </h2>
-
- <div class="px-md-4 pb-3 mx-1">
-  <!-- genezio Backend -->
-  <div class="text-white position-relative" id="accordionExample">
-    <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-      <h2 class="accordion-header" id="headingBackend">
-        <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBackend" aria-expanded="false" aria-controls="collapseBackend">
-          genezio.Services
-        </button>
-      </h2>
-      <div id="collapseBackend" class="accordion-collapse collapse" aria-labelledby="headingBackend" data-bs-parent="#accordionExample">
-        <div style="color: #d4d4d4">
-          <!-- Tab Selector Dropdown -->
-          <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select a Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="tab1-tab" data-toggle="tab" href="#tab1">User authentication</a>
-                <a class="dropdown-item" id="tab2-tab" data-toggle="tab" href="#tab2">Database support</a>
-                <a class="dropdown-item" id="tab3-tab" data-toggle="tab" href="#tab3">Storage</a>
-                <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab4">Queues</a>
-                <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab5">Cron jobs</a>
-                <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab6">Real time (soon)</a>
-                <!-- Add more tabs as needed -->
-              </div>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="tab1">
-              <p class="text-white opacity-50 mt-4 mb-0"> Out of the box user auth. Currently supported methods are: email/password, google and github auth. Others are coming soon. What we do is generated the code for you as part of your project.</p>
-
-              <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { EmailAuthService, UserInfoService } from '@genezio-sdk/my-app';
-
-const Signup = () => {
-  // rest of the code
-
-  const handleSignupSubmit = async (e) => {
-    // Use the auto-generated EmailAuthService to register the user
-    await EmailAuthService.register(user.email, user.password, user.username);
-  };
-
-  const getUserInfo = async (e) => {
-    // Use the auto-generated UserInfoService to get user information
-    await UserInfoService.getUserInfo();
-  };
-
-  // rest of the code
-};</code>
-                </pre>
-
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-import { getStorage } from '@genezio/storage';
-
-@GenezioDeploy()
-export class ProductService {
-  async buy(context: GnzContext, product: Product): Promise<boolean> {
-    this.queue.add('buyProduct', { product, user: context.user });
-  }
-
-  @GenezioMethod({ type: "queue", queue: 'buyProduct' })
-  async buyQueue(context: GnzContext, product: Product): Promise<boolean> {
-    // charge the user
-    // check if the payment was successful
-    // send the confirmation email
-    // return true or false
-  }
-}</code>
-                </pre>
-
-
-            </div>
-            <div class="tab-pane fade" id="tab2">
-              <p class="text-white opacity-50 mt-4 mb-0">Integrated database handling, everything you need to create, write and maintain a backend that scales with your app. We offer Redis or Postgres through our partners. Or bring your own database and connect to it like you normally would</p>
-
-              <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { ProductService } from '@genezio-sdk/my-app';
-
-const ProductDetails = () => {
-  // rest of the code
-
-  const getUserArticles = async (e) => {
-    // Use the auto-generated ProductService to get product details
-    const details = await ProductService.getDetails(product.id);
-  };
-
-  // rest of the code
-};</code>
-                </pre>
-
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-
-@GenezioDeploy()
-export class ProductService {
-  async getUserInfo(context: GnzContext, productId: number): Promise<ProductDetails> {
-    let product = await this.redisClient.get(`product:${productId}:details`);
-
-    if (product) {
-      return product;
     }
 
-    product = await this.postgressDb.find({
-      where: {
-        id: productId
-      }
-    });
-
-    await this.redisClient.set(`product:${productId}:details`, product);
-
-    return product;
-  }
-}</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="tab3">
-              <p class="text-white opacity-50 mt-4 mb-0"> Store and retrieve user-generated content, application settings or multimedia files.</p>
-
-              <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { ProductService } from '@genezio-sdk/my-app';
-
-const ProductDetails = () => {
-  // rest of the code
-
-  const getUserArticles = async (e) => {
-    // Use the auto-generated ProductService to get product details
-    const details = await ProductService.getDetails(product.id);
-  };
-
-  // rest of the code
-};</code>
-                </pre>
-
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-import { getStorage } from '@genezio/storage';
-
-@GenezioDeploy()
-export class ProductService {
-  async saveProductReview(context: GnzContext, review: ProductReview): Promise<boolean> {
-    const storage: GStorage = getStorage('productReviewImages');
-
-    for (const image of review.images) {
-      await storage.writeFile(image.name, image.content);
-    }
-  }
-}</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="tab4">
-              <p class="text-white opacity-50 mt-4 mb-0">Manage and process large volumes of tasks and requests with ease and reliability. Extremely helpful when you need to do something asynchronously.</p>
-
-              <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { ProductService } from '@genezio-sdk/my-app';
-
-const ProductDetails = () => {
-  // rest of the code
-
-  const buy = async (e) => {
-    // Use the auto-generated ProductService to buy the product
-    const details = await ProductService.buy(product);
-  };
-
-  // rest of the code
-};</code>
-                </pre>
-
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-import { getStorage } from '@genezio/storage';
-
-@GenezioDeploy()
-export class ProductService {
-  async buy(context: GnzContext, product: Product): Promise<boolean> {
-    this.queue.add('buyProduct', { product, user: context.user });
-  }
-
-  @GenezioMethod({ type: "queue", queue: 'buyProduct' })
-  async buyQueue(context: GnzContext, product: Product): Promise<boolean> {
-    // charge the user
-    // check if the payment was successful
-    // send the confirmation email
-    // return true or false
-  }
-}</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="tab5">
-              <p class="text-white opacity-50 mt-4 mb-0">Support for configurable cron jobs to automate your application.</p>
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy } from '@genezio/types';
-
-@GenezioDeploy()
-export class OrderService {
-
-  @GenezioMethod({ type: "cron", cronString: '0 0 * * *' })
-  async checkForUnfinishedOrders() {
-    const unfinishedOrders = await this.orders.find({
-      where: {
-        status: 'unfinished'
-      }
-    });
-
-    await this.sendReminderEmails(orders);
-  }
-}</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="tab6">
-              <p class="text-white opacity-50 mt-4 mb-0">We will support long running servers through genezio.deploy on AWS and we will provide real-time communication between the backend and the frontend.</p>
-            </div>
-            <!-- Add more content panes as needed -->
-          </div>
-        </div>
-
-  {{/*  end dropdown selector  */}}
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- genezio Rpc -->
-<div class="text-white position-relative" id="accordionExample2">
-  <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-    <h2 class="accordion-header" id="headingRpc">
-      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRpc" aria-expanded="false" aria-controls="collapseRpc">
-        genezio.RPC
-      </button>
-    </h2>
-    <div id="collapseRpc" class="accordion-collapse collapse" aria-labelledby="headingRpc" data-bs-parent="#accordionExample2">
-      <div style="color: #d4d4d4">
-        <!-- Tab Selector Dropdown -->
-        <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedRpcTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select an Rpc Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1">Build apps faster with typesafe APIs</a>
-                <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2">Typesafe APIs in any language</a>
-                <!-- Add more tabs as needed -->
-              </div>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="rpcTab1">
-               <p class="text-white opacity-50 mt-4 mb-0">auto completion in your favorite IDE.  
-less error prone parameter passing than REST APIs. 
-a more natural paradigm in software design</p>
-
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-type Person = {
-  firstName: string;
-  lastName: string;
-};
-
-@GenezioDeploy()
-class HelloWorldService {
-  hello(name: string): string {
-    return `Hello ${name}!`;
-  }
-
-  bye(person: Person): string {
-    return `Bye, ${person.firstName} ${person.lastName}!`;
-  }
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
-
-const hi = await HelloworldService.hello('John');
-const person: Person = { firstName: 'John', lastName: 'Ronald' };
-const bye = await HelloworldService.hello(person);</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="rpcTab2">
-              <p class="text-white opacity-50 mt-4 mb-0">We parse the backend code you write and store the AST in a database.  From there we generate client side stubs in any language.  It's like tRPC but for any backend language to any frontend language. Now supporting Javasript/Typescript, with support for DART/Flutter, Kotlin, Swift, GO, Python and others coming soon.</p>
-
-              <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-type Person = {
-  firstName: string;
-  lastName: string;
-};
-
-@GenezioDeploy()
-class HelloWorldService {
-  hello(name: string): string {
-    return `Hello ${name}!`;
-  }
-
-  bye(person: Person): string {
-    return `Bye, ${person.firstName} ${person.lastName}!`;
-  }
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
-
-const hi = await HelloworldService.hello('John');
-const person: Person = { firstName: 'John', lastName: 'Ronald' };
-const bye = await HelloworldService.bye(person);</code>
-                </pre>
-              <!-- Add code examples or content specific to Rpc Tab 2 -->
-            </div>
-            <!-- Add more content panes as needed -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- genezio Serverless -->
-<div class="text-white position-relative" id="accordionExample3">
-  <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-    <h2 class="accordion-header" id="headingServerless">
-      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServerless" aria-expanded="false" aria-controls="collapseServerless">
-        genezio.Cloud
-      </button>
-    </h2>
-    <div id="collapseServerless" class="accordion-collapse collapse" aria-labelledby="headingServerless" data-bs-parent="#accordionExample3">
-      <div style="color: #d4d4d4" class="accordion-body">
-        <!-- Tab Selector Dropdown -->
-        <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedServerlessTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select a Serverless Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="serverlessTab1-tab" data-toggle="tab" href="#serverlessTab1">Zero Devops Deployment</a>
-                <a class="dropdown-item" id="serverlessTab2-tab" data-toggle="tab" href="#serverlessTab2">Multiple environments</a>
-                <a class="dropdown-item" id="serverlessTab3-tab" data-toggle="tab" href="#serverlessTab3">Deploy frontend</a>
-                <a class="dropdown-item" id="serverlessTab4-tab" data-toggle="tab" href="#serverlessTab4">Cold start time</a>
-                <!-- Add more tabs as needed -->
-              </div>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="serverlessTab1">
-              <p class="text-white opacity-50 mt-4 mb-0">Multi cloud support, now AWS and genezio.cloud (experimental).  Currently deploying on AWS Lambda, we're working to add long running servers. Support to deploy on your own AWS account.</p>
-
-              <div class="code-title-genezio ms-4 px-3">genezio deploy</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio deploy
-Bundling your code...
-Deploying your server...
-
-The server was deployed and the SDK was successfully generated!
-You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
-
-Deploying your frontend...
-Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">testing locally</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running, and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interf</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="serverlessTab2">
-              <p class="text-white opacity-50 mt-4 mb-0">Deploy to local, stage or production with one command.</p>
-
-              <div class="code-title-genezio ms-4 px-3">genezio deploy</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio deploy
-Bundling your code...
-Deploying your server...
-
-The server was deployed, and the SDK was successfully generated!
-You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/a1b2c3d4-e5f6-7890-g1h2-i3j4</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">testing locally</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running, and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="serverlessTab3">
-              <p class="text-white opacity-50 mt-4 mb-0">Deploy to AWS Cloud Front now.  Working to integrate with Netlify.</p>
-
-              <div class="code-title-genezio ms-4 px-3">genezio deploy</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running, and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">testing locally</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running, and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interface/local?port=8083</code>
-                </pre>
-            </div>
-            <div class="tab-pane fade" id="serverlessTab4">
-             <p class="text-white opacity-50 mt-4 mb-0">Test parameters: Hello World function
-30 HTTPS requests for each scenario Cached DNS records for functions domains to prevent additional time caused by DNS</p>
-              <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>test
-
-            </div>
-            <!-- Add more content panes as needed -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- genezio Cloud -->
-{{/*  <div class="text-white position-relative" id="accordionExample4">
-  <div class="accordion-item py-2 my-2 text-white" style="border-top: 1px solid rgba(255, 255, 255, 0.1)">
-    <h2 class="accordion-header" id="headingCloud">
-      <button class="accordion-button theCode shadow-none collapsed fw-medium py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCloud" aria-expanded="false" aria-controls="collapseCloud">
-        genezio.Cloud
-      </button>
-    </h2>
-    <div id="collapseCloud" class="accordion-collapse collapse" aria-labelledby="headingCloud" data-bs-parent="#accordionExample4">
-      <div style="color: #d4d4d4" class="accordion-body">
-        <!-- Tab Selector Dropdown -->
-        <div class="container mt-5">
-          <ul class="nav nav-tabs">
-            <li class="nav-item dropdown w-100">
-              <a class="sectionDropdown dropdown-toggle" id="selectedCloudTab" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Select a Cloud Tab
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="cloudTab1-tab" data-toggle="tab" href="#cloudTab1">Cold start time</a>
-                <!-- Add more tabs as needed -->
-              </div>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade" id="cloudTab1">
-              <p class="text-white opacity-50 mt-4 mb-0">Test parameters: Hello World function
-30 HTTPS requests for each scenario Cached DNS records for functions domains to prevent additional time caused by DNS</p>
-              <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
-              <!-- Add code examples or content specific to Cloud Tab 1 -->
-            </div>
-            <!-- Add more content panes as needed -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>  */}}
-
-</div>
-
-
-  {{/*  <div class="mt-5">
-  <div class="customDropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select a Tab
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownTabs">
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')">genezio.Rpc</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')">genezio.Services</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Cloud</a>
-      <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')">genezio.Cloud</a>
-    </div>
-  </div>
-
-
-  <div class="tab-content mt-2">
-    <div class="tab-pane fade" id="content1">
-      <h3>Content for Tab 1</h3>
-      <p>This is the content for the first tab.</p>
-    </div>
-    <div class="tab-pane fade" id="content2">
-      <h3>Content for Tab 2</h3>
-      <p>This is the content for the second tab.</p>
-    </div>
-    <div class="tab-pane fade" id="content3">
-      <h3>Content for Tab 3</h3>
-      <p>This is the content for the third tab.</p>
-    </div>
-    <div class="tab-pane fade" id="content4">
-      <h3>Content for Tab 3</h3>
-      <p>This is the content for the third tab.</p>
-    </div>
-  </div>
-</div>  */}}
-
-</div>
-
-{{/* Desktop version  */}}
-<div class="d-md-block d-none">
-  <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">
-    Show me the code
-  </h2>
-
-  <div class="col-lg-11 col-md-11 m-2 mx-auto">
-    <nav>
-      <div
-        class="nav nav-tabs nav-fill"
-        id="nav-tab"
-        role="tablist"
-        style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-      >
-        <button
-          class="nav-link nav-link-custom"
-          id="genezio-rpc-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-rpc"
-          type="button"
-          role="tab"
-          aria-controls="genezio-rpc"
-          aria-selected="false"
+    // Dropdown 1
+    handleDropdown("#selectedTab", "tabGroup1");
+
+    // Dropdown 2
+    handleDropdown("#selectedRpcTab", "tabGroup2");
+
+    // Dropdown 3
+    handleDropdown("#selectedServerlessTab", "tabGroup3");
+
+    // Dropdown 4
+    handleDropdown("#selectedCloudTab", "tabGroup4");
+  });
+</script>
+<div class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area">
+  {{/* Mobile version */}}
+  <div class="d-md-none d-block">
+    {{/*
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      THE CODE
+    </p>
+    */}}
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
+
+    <div class="px-md-4 pb-3 mx-1">
+      <!-- genezio Rpc -->
+      <div class="text-white position-relative" id="accordionExample2">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
         >
-          genezio.RPC
-        </button>
-        <button
-          class="nav-link nav-link-custom active"
-          id="nav-profile-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-backend"
-          type="button"
-          role="tab"
-          aria-controls="genezio-backend"
-          aria-selected="true"
-        >
-          genezio.Services
-        </button>
-        <button
-          class="nav-link nav-link-custom"
-          id="genezio-serverless-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-serverless"
-          type="button"
-          role="tab"
-          aria-controls="genezio-serverless"
-          aria-selected="false"
-        >
-          genezio.Cloud
-        </button>
-        {{/*  <button
-          class="nav-link nav-link-custom"
-          id="genezio-cloud-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#genezio-cloud"
-          type="button"
-          role="tab"
-          aria-controls="genezio-cloud"
-          aria-selected="false"
-        >
-          genezio.Cloud
-        </button>  */}}
-      </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div
-        class="tab-pane fade"
-        id="genezio-rpc"
-        role="tabpanel"
-        aria-labelledby="genezio-rpc-tab"
-        tabindex="0"
-      >
-        {{/* Start of genezio rpc */}}
-<div class="row mt-4">
-  <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-    <nav class="w-100">
-      <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
-        <button class="nav-link nav-link-custom text-start active" id="build-apps-faster-tab" data-bs-toggle="pill" data-bs-target="#build-apps-faster" type="button" role="tab" aria-controls="build-apps-faster" aria-selected="true">
-          Build apps faster with typesafe APIs
-        </button>
-        <button class="nav-link nav-link-custom text-start" id="typesafe-api-in-any-language-tab" data-bs-toggle="pill" data-bs-target="#typesafe-api-in-any-language" type="button" role="tab" aria-controls="typesafe-api-in-any-language" aria-selected="false">
-          Typesafe APIs in any language
-        </button>
-      </div>
-    </nav>
-  </div>
-
-  <div class="col-md-9 col-xs-12 px-4">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="build-apps-faster" role="tabpanel" aria-labelledby="build-apps-faster-tab" tabindex="0">
-                <ul class="opacity-50 m-0">
-                  <li>
-                    auto completion in your favorite IDE.  
-                  </li>
-                  <li>
-                    less error prone parameter passing than REST APIs. 
-                  </li>
-                  <li>
-                    a more natural paradigm in software design
+          <h2 class="accordion-header" id="headingRpc">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseRpc"
+              aria-expanded="false"
+              aria-controls="collapseRpc"
+            >
+              Genezio.RPC
+            </button>
+          </h2>
+          <div
+            id="collapseRpc"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingRpc"
+            data-bs-parent="#accordionExample2"
+          >
+            <div style="color: #d4d4d4">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedRpcTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select an Rpc Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1"
+                        >Build apps faster with type safe APIs</a
+                      >
+                      <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2"
+                        >Type safe APIs in any language</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
                   </li>
                 </ul>
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-type Person = {
-  firstName: string;
-  lastName: string;
-}
 
-@GenezioDeploy()
-class HelloWorldService {
-  hello(name: string): string {
-    return `Hello ${name}!`;
-  }
-
-  bye(person: Person): string {
-    return `Bye, ${person.firstName} ${person.lastName}!`;
-  }
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">client</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
-
-const hi = await HelloworldService.hello('John');
-const person: Person = {firstName: 'John', lastName: 'Ronald'};
-const bye = await HelloworldService.hello(person);</code>
-                </pre>
-      </div>
-      <div class="tab-pane fade" id="typesafe-api-in-any-language" role="tabpanel" aria-labelledby="typesafe-api-in-any-language-tab" tabindex="0">
-        <p class="opacity-50 m-0">
-        We parse the backend code you write and store the AST in a database.  From there we generate client side stubs in any language.  It's like tRPC but for any backend language to any frontend language. Now supporting Javasript/Typescript, with support for DART/Flutter, Kotlin, Swift, GO, Python and others coming soon.
-        </p>
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-type Person = {
-  firstName: string;
-  lastName: string;
-}
-
-@GenezioDeploy()
-class HelloWorldService {
-  hello(name: string): string {
-    return `Hello ${name}!`;
-  }
-
-  bye(person: Person): string {
-    return `Bye, ${person.firstName} ${person.lastName}!`;
-  }
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">client</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
-
-const hi = await HelloworldService.hello('John');
-const person: Person = {firstName: 'John', lastName: 'Ronald'};
-const bye = await HelloworldService.hello(person);</code>
-                </pre>
-      </div>
-    </div>
-  </div>
-</div>
-{{/* end of genezio rpc */}}
-
-      </div>
-      <div
-        class="tab-pane fade show active"
-        id="genezio-backend"
-        role="tabpanel"
-        aria-labelledby="genezio-backend-tab"
-        tabindex="0"
-      >
-        {{/* start genezio backend */}}
-        <div class="row mt-4">
-          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-            <nav class="w-100">
-              <div
-                class="nav flex-column nav-custom-left"
-                id="nav-tab"
-                role="tablist"
-              >
-                <button
-                  class="nav-link nav-link-custom text-start active"
-                  id="user-auth-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#user-auth"
-                  type="button"
-                  role="tab"
-                  aria-controls="user-auth"
-                  aria-selected="true"
-                >
-                  User authentication
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="database-support-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#database-support"
-                  type="button"
-                  role="tab"
-                  aria-controls="database-support"
-                  aria-selected="false"
-                >
-                  Database support
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="storage-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#storage"
-                  type="button"
-                  role="tab"
-                  aria-controls="storage"
-                  aria-selected="false"
-                >
-                  Storage
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="queues-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#queues"
-                  type="button"
-                  role="tab"
-                  aria-controls="queues"
-                  aria-selected="false"
-                >
-                  Queues
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="cron-jobs-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#cron-jobs"
-                  type="button"
-                  role="tab"
-                  aria-controls="cron-jobs"
-                  aria-selected="false"
-                >
-                  Cron jobs
-                </button>
-                <button
-                  class="nav-link nav-link-custom text-start"
-                  id="real-time-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#real-time"
-                  type="button"
-                  role="tab"
-                  aria-controls="real-time"
-                  aria-selected="false"
-                >
-                  Real time (soon)
-                </button>
-              </div>
-            </nav>
-          </div>
-          <div class="col-md-9 col-xs-12 px-4">
-            <div class="tab-content" id="nav-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="user-auth"
-                role="tabpanel"
-                aria-labelledby="user-auth-tab"
-                tabindex="0"
-              >
-                <p class="opacity-50 m-0">
-                  Out of the box user auth. Currently supported methods are: email/password, google and github auth. Others are coming soon. What we do is generated the code for you as part of your project.
-                </p>
-                <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { EmailAuthService, UserInfoService } from '@genezio-sdk/my-app'; 
-
-const Signup = () => {
-  // rest of the code
-
-  const handleSignupSubmit = async (e) => {
-    // Use the auto generated EmailAuthService to register the user
-    await EmailAuthService.register(user.email, user.password, user.username)
-  }
-
-  const getUserInfo = async (e) => {
-    // Use the auto generated EmailAuthService to register the user
-    await UserInfoService.getUserInfo()
-  }
-  
-  // rest of the code
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-
-@GenezioDeploy()
-export class UserInfoService {
-  async getUserInfo(context: GnzContext): Promise<UserInfo> {
-    const userInfo = await UserModel.getUserInfo(context.user.id)
-
-    return userInfo
-  }
-}</code>
-                </pre>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="storage"
-                role="tabpanel"
-                aria-labelledby="storage-tab"
-                tabindex="0"
-              >
-                <p class="opacity-50 m-0">
-                  Store and retrieve user-generated content, application settings or multimedia files.
-                </p>
-
-                <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { ProductService } from '@genezio-sdk/my-app';
-
-const ProductDetails = () => {
-  // rest of the code
-
-  const getUserArticles = async (e) => {
-    // Use the auto generated EmailAuthService to register the user
-    const details = await ProductService.getDetails(product.id)
-  }
-  
-  // rest of the code
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-import { getStorage } from '@genezio/storage';
-
-
-
-@GenezioDeploy()
-export class ProductService {
-  async saveProductReview(context: GnzContext, review: ProductReview): Promise<boolean> {
-    const storage: GStorage = getStorage('productReviewImages');
-      
-    for (const image of review.images) {
-      await storage.writeFile(image.name, image.content)
-    }
-  }
-}</code>
-                </pre>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="database-support"
-                role="tabpanel"
-                aria-labelledby="database-support-tab"
-                tabindex="0"
-              >
-
-                <p class="opacity-50 m-0">
-                  Integrated database handling, everything you need to create, write and maintain a backend that scales with your app. We offer Redis or Postgres through our partners.  Or bring your own database and connect to it like you normally would
-                </p>
-                
-
-<div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { ProductService } from '@genezio-sdk/my-app';
-
-const ProductDetails = () => {
-  // rest of the code
-
-  const getUserDetails = async (e) => {
-    // Use the auto generated EmailAuthService to register the user
-    const details = await ProductService.getDetails(product.id)
-  }
-  
-  // rest of the code
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-
-@GenezioDeploy()
-export class ProductService {
-  async getUserInfo(context: GnzContext, productId: number): Promise<ProductDetails> {
-    let product = await this.redisClient.get(`product:${productId}:details`);
-    if (result) {     
-      return result;
-    }
-
-    product = await this.postgressDb.find({where: {
-        id: productId 
-      }
-    })
-    await this.redisClient.set(`product:${productId}:details`, product);
-
-    return product
-  }
-} </code>
-                </pre>
-
-              </div>
-              <div
-                class="tab-pane fade"
-                id="queues"
-                role="tabpanel"
-                aria-labelledby="queues-tab"
-                tabindex="0"
-              >
-               <p class="opacity-50 m-0">
-                  Manage and process large volumes of tasks and requests with
-                  ease and reliability. Extremely helpful when you need to do
-                  something asynchronously.
-                </p>
-
-                <div class="code-title-genezio ms-4 px-3">client</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { ProductService } from '@genezio-sdk/my-app';
-
-const ProductDetails = () => {
-  // rest of the code
-
-  const buy = async (e) => {
-    // Use the auto generated EmailAuthService to register the user
-    const details = await ProductService.buy(product)
-  }
-  
-  // rest of the code
-}</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-import { getStorage } from '@genezio/storage';
-
-@GenezioDeploy()
-export class ProductService {
-  async buy(context: GnzContext, product: Product): Promise<boolean> {
-    this.queue.add('buyProduct', { product, user: context.user })
-  }
-
-  @GenezioMethod({ type: "queue", queue: 'buyProduct' })
-  async buyQueue(context: GnzContext, product: Product): Promise<boolean> {
-    // charge the user
-    // check if the payment was successful
-    // send the confirmation email
-    // return true or false
-  }
-} </code>
-                </pre>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="cron-jobs"
-                role="tabpanel"
-                aria-labelledby="cron-jobs-tab"
-                tabindex="0"
-              >
-                <p class="opacity-50 m-0">
-                  Support for configurable cron jobs to automate your application.
-                </p>
-
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-import { GenezioDeploy, GnzContext } from '@genezio/types';
-
-@GenezioDeploy()
-export class OrderService {
-
-  @GenezioMethod({ type: "cron", cronString: '0 0 * * *' })
-  async checkForUnfinishedOrders() {
-    const unfinishedOrders = await this.orders.find({where: {
-      status: 'unfinished' 
-    }
-
-    await this.sendReminderEmails(orders)
-    })
-  }
-} </code>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="real-time"
-                role="tabpanel"
-                aria-labelledby="real-time-tab"
-                tabindex="0"
-              >
-                <p class="opacity-50 m-0">
-                  We will support long running servers through genezio.deploy on AWS and we will provide real-time communication between the backend and the frontend.
-                </p>
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="rpcTab1">
+                    {{- partial "genezioRpcTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="rpcTab2">
+                    {{- partial "genezioRpcTab2.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
               </div>
             </div>
           </div>
         </div>
-        {{/* end genezio backend */}}
       </div>
-      {{/* Start genezio serverless */}}
-<div class="tab-pane fade" id="genezio-serverless" role="tabpanel" aria-labelledby="genezio-serverless-tab" tabindex="0">
-  <div class="row mt-4">
-    <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-      <nav class="w-100">
-        <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
-          <button class="nav-link nav-link-custom text-start active" id="user-auth-tab2" data-bs-toggle="tab" data-bs-target="#user-auth2" type="button" role="tab" aria-controls="user-auth2" aria-selected="true">
-            Zero Devops Deployment
+      <!-- genezio Backend -->
+      <div class="text-white position-relative" id="accordionExample">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingBackend">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseBackend"
+              aria-expanded="false"
+              aria-controls="collapseBackend"
+            >
+              Genezio.Services
+            </button>
+          </h2>
+          <div
+            id="collapseBackend"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingBackend"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select a Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" id="tab1-tab" data-toggle="tab" href="#tab1"
+                        >User authentication</a
+                      >
+                      <a class="dropdown-item" id="tab2-tab" data-toggle="tab" href="#tab2"
+                        >Database support</a
+                      >
+                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab3"
+                        >Queues</a
+                      >
+                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab4"
+                        >Cron jobs</a
+                      >
+                      <a class="dropdown-item" id="tab3-tab" data-toggle="tab" href="#tab5"
+                        >Storage (soon)</a
+                      >
+                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab6"
+                        >Real time (soon)</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="tab1">
+                    {{- partial "genezioServicesTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab2">
+                    {{- partial "genezioServicesTab2.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab3">
+                    {{- partial "genezioServicesTab3.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab4">
+                    {{- partial "genezioServicesTab4.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab5">
+                    {{- partial "genezioServicesTab5.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="tab6">
+                    {{- partial "genezioServicesTab6.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
+              </div>
+
+              {{/* end dropdown selector */}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- genezio Serverless -->
+      <div class="text-white position-relative" id="accordionExample3">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingServerless">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseServerless"
+              aria-expanded="false"
+              aria-controls="collapseServerless"
+            >
+              Genezio.Cloud
+            </button>
+          </h2>
+          <div
+            id="collapseServerless"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingServerless"
+            data-bs-parent="#accordionExample3"
+          >
+            <div style="color: #d4d4d4" class="accordion-body">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedServerlessTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select a Serverless Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab1-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab1"
+                        >Zero Devops Deployment</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab2-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab2"
+                        >Multiple environments</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab3-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab3"
+                        >Deploy frontend</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        id="serverlessTab4-tab"
+                        data-toggle="tab"
+                        href="#serverlessTab4"
+                        >Cold start time</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="serverlessTab1">
+                    {{- partial "genezioCloudTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="serverlessTab2">
+                    {{- partial "genezioCloudTab2.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="serverlessTab3">
+                    {{- partial "genezioCloudTab3.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="serverlessTab4">
+                    {{- partial "genezioCloudTab4.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/*
+    <div class="mt-5">
+      <div class="customDropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownTabs"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Select a Tab
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownTabs">
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')">genezio.Rpc</a>
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')"
+            >genezio.Services</a
+          >
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Cloud</a>
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')">genezio.Cloud</a>
+        </div>
+      </div>
+
+      <div class="tab-content mt-2">
+        <div class="tab-pane fade" id="content1">
+          <h3>Content for Tab 1</h3>
+          <p>This is the content for the first tab.</p>
+        </div>
+        <div class="tab-pane fade" id="content2">
+          <h3>Content for Tab 2</h3>
+          <p>This is the content for the second tab.</p>
+        </div>
+        <div class="tab-pane fade" id="content3">
+          <h3>Content for Tab 3</h3>
+          <p>This is the content for the third tab.</p>
+        </div>
+        <div class="tab-pane fade" id="content4">
+          <h3>Content for Tab 3</h3>
+          <p>This is the content for the third tab.</p>
+        </div>
+      </div>
+    </div>
+    */}}
+  </div>
+
+  {{/* Desktop version */}}
+  <div class="d-md-block d-none">
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
+
+    <div class="col-lg-11 col-md-11 m-2 mx-auto">
+      <nav>
+        <div
+          class="nav nav-tabs nav-fill"
+          id="nav-tab"
+          role="tablist"
+          style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <button
+            class="nav-link nav-link-custom"
+            id="genezio-rpc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-rpc"
+            type="button"
+            role="tab"
+            aria-controls="genezio-rpc"
+            aria-selected="false"
+          >
+            Genezio.RPC
           </button>
-          <button class="nav-link nav-link-custom text-start" id="database-support-tab2" data-bs-toggle="tab" data-bs-target="#database-support2" type="button" role="tab" aria-controls="database-support2" aria-selected="false">
-            Multiple environments
+          <button
+            class="nav-link nav-link-custom active"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-backend"
+            type="button"
+            role="tab"
+            aria-controls="genezio-backend"
+            aria-selected="true"
+          >
+            Genezio.Services
           </button>
-          <button class="nav-link nav-link-custom text-start" id="storage-tab2" data-bs-toggle="tab" data-bs-target="#storage2" type="button" role="tab" aria-controls="storage2" aria-selected="false">
-            Deploy frontend
+          <button
+            class="nav-link nav-link-custom"
+            id="genezio-serverless-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-serverless"
+            type="button"
+            role="tab"
+            aria-controls="genezio-serverless"
+            aria-selected="false"
+          >
+            Genezio.Cloud
           </button>
-          <button class="nav-link nav-link-custom text-start" id="storage-tab4" data-bs-toggle="tab" data-bs-target="#storage4" type="button" role="tab" aria-controls="storage4" aria-selected="false">
-            Cold start time
+          {{/*
+          <button
+            class="nav-link nav-link-custom"
+            id="genezio-cloud-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#genezio-cloud"
+            type="button"
+            role="tab"
+            aria-controls="genezio-cloud"
+            aria-selected="false"
+          >
+            Genezio.Cloud
           </button>
+          */}}
         </div>
       </nav>
-    </div>
-    <div class="col-md-9 col-xs-12 px-4">
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="user-auth2" role="tabpanel" aria-labelledby="user-auth-tab2" tabindex="0">
-          <!-- Content for the "Zero Devops Deployment" tab -->
-         <p class="opacity-50 m-0">
-                 Multi cloud support, now AWS and genezio.cloud (experimental).  Currently deploying on AWS Lambda, we're working to add long running servers. Support to deploy on your own AWS account.
-          </p>
-                
+        <div
+          class="tab-pane fade"
+          id="genezio-rpc"
+          role="tabpanel"
+          aria-labelledby="genezio-rpc-tab"
+          tabindex="0"
+        >
+          {{/* Start of genezio rpc */}}
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="build-apps-faster-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#build-apps-faster"
+                    type="button"
+                    role="tab"
+                    aria-controls="build-apps-faster"
+                    aria-selected="true"
+                  >
+                    Build apps faster with type safe APIs
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="typesafe-api-in-any-language-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#typesafe-api-in-any-language"
+                    type="button"
+                    role="tab"
+                    aria-controls="typesafe-api-in-any-language"
+                    aria-selected="false"
+                  >
+                    Type safe APIs in any language
+                  </button>
+                </div>
+              </nav>
+            </div>
 
-<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio deploy
-Bundling your code...
-Deploying your server...
-
-
-The server was deployed and the SDK was successfully generated!
-You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/
-a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
-
-
-Deploying your frontend...
-Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">testing locally</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interface/local?port=8083
-</code>
-                </pre>
-
-        </div>
-        <div class="tab-pane fade" id="database-support2" role="tabpanel" aria-labelledby="database-support-tab2" tabindex="0">
-          <!-- Content for the "Multiple environments" tab -->
-         <p class="opacity-50 m-0">
-                Deploy to local, stage or production with one command.
-          </p>
-                
-
-<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio deploy
-Bundling your code...
-Deploying your server...
-
-
-The server was deployed and the SDK was successfully generated!
-You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/
-a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
-
-
-Deploying your frontend...
-Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">testing locally</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interface/local?port=8083
-</code>
-                </pre>
-        </div>
-        <div class="tab-pane fade" id="storage2" role="tabpanel" aria-labelledby="storage-tab2" tabindex="0">
-          <!-- Content for the "Deploy frontend" tab -->
-         <p class="opacity-50 m-0">
-                Deploy to AWS Cloud Front now.  Working to integrate with Netlify.
-          </p>
-                
-
-<div class="code-title-genezio ms-4 px-3">genezio deploy</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio deploy
-Bundling your code...
-Deploying your server...
-
-
-The server was deployed and the SDK was successfully generated!
-You can test it at https://app.genez.io/project/a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8/
-a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n9
-
-
-Deploying your frontend...
-Frontend successfully deployed at https://happy-purple-capybara.app.genez.io.</code>
-                </pre>
-
-                <div class="code-title-genezio ms-4 px-3">testing locally</div>
-
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
-<code>
-% ls
-client/      server/      genezio.yaml
-
-% genezio local
-Bundling your code...
-Starting your local server...
-
-Your local server is running and the SDK was successfully generated!
-Test your code at https://dev.app.genez.io/test-interface/local?port=8083
-</code>
-                </pre>
-        </div>
-        <div class="tab-pane fade" id="storage4" role="tabpanel" aria-labelledby="storage-tab4" tabindex="0">
-          <!-- Content for the "Deploy frontend" tab -->
-                       <p class="text-white opacity-50  mb-0">Test parameters: Hello World function
-30 HTTPS requests for each scenario Cached DNS records for functions domains to prevent additional time caused by DNS</p>
-                        <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
-                        </div>
-
-
-      </div>
-    </div>
-  </div>
-  {{/* end genezio serverless */}}
-</div>
-
-
-      <div
-        class="tab-pane fade"
-        id="genezio-cloud"
-        role="tabpanel"
-        aria-labelledby="genezio-cloud-tab"
-        tabindex="0"
-      >
-      {{/*  start genezio cloud  */}}
-<div class="row mt-4">
-          <div class="col-md-3 col-xs-12 d-flex text-left px-4">
-            <nav class="w-100">
-              <div
-                class="nav flex-column nav-custom-left"
-                id="nav-tab"
-                role="tablist"
-              >
-                <button
-                  class="nav-link nav-link-custom text-start active"
-                  id="user-auth-tab2"
-                  data-bs-toggle="tab"
-                  data-bs-target="#user-auth2"
-                  type="button"
-                  role="tab"
-                  aria-controls="user-auth2"
-                  aria-selected="true"
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="build-apps-faster"
+                  role="tabpanel"
+                  aria-labelledby="build-apps-faster-tab"
+                  tabindex="0"
                 >
-                  Cold start time
-                </button>
+                  {{- partial "genezioRpcTab1.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="typesafe-api-in-any-language"
+                  role="tabpanel"
+                  aria-labelledby="typesafe-api-in-any-language-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioRpcTab2.html" . -}}
+                </div>
               </div>
-            </nav>
-          </div>
-          <div class="col-md-9 col-xs-12 px-4">
-            <div class="tab-content" id="nav-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="user-auth2"
-                role="tabpanel"
-                aria-labelledby="user-auth-tab2"
-                tabindex="0"
-              >
-                <p class="opacity-50 pb-3 m-0">
-                  Test parameters: <br />
-                  Hello World function <br />
-                  30 HTTPS requests for each scenario<br />
-                  Cached DNS records for functions domains to prevent additional time caused by DNS
-                </p>
-
-                <img class="mt-4 w-100" style="max-width: 512px;" src="/images/cold-start-chart.webp" alt="cold-start-chart"/>
-
-              </div>
-              
-              
-              
             </div>
           </div>
+          {{/* end of genezio rpc */}}
         </div>
-      {{/*  end genezio cloud  */}}
-        
+        <div
+          class="tab-pane fade show active"
+          id="genezio-backend"
+          role="tabpanel"
+          aria-labelledby="genezio-backend-tab"
+          tabindex="0"
+        >
+          {{/* start genezio backend */}}
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="user-auth-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-auth"
+                    type="button"
+                    role="tab"
+                    aria-controls="user-auth"
+                    aria-selected="true"
+                  >
+                    User authentication
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="database-support-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#database-support"
+                    type="button"
+                    role="tab"
+                    aria-controls="database-support"
+                    aria-selected="false"
+                  >
+                    Database support
+                  </button>
+
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="queues-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#queues"
+                    type="button"
+                    role="tab"
+                    aria-controls="queues"
+                    aria-selected="false"
+                  >
+                    Queues
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="cron-jobs-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#cron-jobs"
+                    type="button"
+                    role="tab"
+                    aria-controls="cron-jobs"
+                    aria-selected="false"
+                  >
+                    Cron jobs
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="storage-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#storage"
+                    type="button"
+                    role="tab"
+                    aria-controls="storage"
+                    aria-selected="false"
+                  >
+                    Storage (soon)
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="real-time-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#real-time"
+                    type="button"
+                    role="tab"
+                    aria-controls="real-time"
+                    aria-selected="false"
+                  >
+                    Real time (soon)
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="user-auth"
+                  role="tabpanel"
+                  aria-labelledby="user-auth-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab1.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="database-support"
+                  role="tabpanel"
+                  aria-labelledby="database-support-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab2.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="queues"
+                  role="tabpanel"
+                  aria-labelledby="queues-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab3.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="cron-jobs"
+                  role="tabpanel"
+                  aria-labelledby="cron-jobs-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab4.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="storage"
+                  role="tabpanel"
+                  aria-labelledby="storage-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab5.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="real-time"
+                  role="tabpanel"
+                  aria-labelledby="real-time-tab"
+                  tabindex="0"
+                >
+                  {{- partial "genezioServicesTab6.html" . -}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/* end genezio backend */}}
+        </div>
+        {{/* Start genezio serverless */}}
+        <div
+          class="tab-pane fade"
+          id="genezio-serverless"
+          role="tabpanel"
+          aria-labelledby="genezio-serverless-tab"
+          tabindex="0"
+        >
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="user-auth-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-auth2"
+                    type="button"
+                    role="tab"
+                    aria-controls="user-auth2"
+                    aria-selected="true"
+                  >
+                    Zero Devops Deployment
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="database-support-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#database-support2"
+                    type="button"
+                    role="tab"
+                    aria-controls="database-support2"
+                    aria-selected="false"
+                  >
+                    Multiple environments
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="storage-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#storage2"
+                    type="button"
+                    role="tab"
+                    aria-controls="storage2"
+                    aria-selected="false"
+                  >
+                    Deploy frontend
+                  </button>
+                  <button
+                    class="nav-link nav-link-custom text-start"
+                    id="storage-tab4"
+                    data-bs-toggle="tab"
+                    data-bs-target="#storage4"
+                    type="button"
+                    role="tab"
+                    aria-controls="storage4"
+                    aria-selected="false"
+                  >
+                    Cold start time
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="user-auth2"
+                  role="tabpanel"
+                  aria-labelledby="user-auth-tab2"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab1.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="database-support2"
+                  role="tabpanel"
+                  aria-labelledby="database-support-tab2"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab2.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="storage2"
+                  role="tabpanel"
+                  aria-labelledby="storage-tab2"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab3.html" . -}}
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="storage4"
+                  role="tabpanel"
+                  aria-labelledby="storage-tab4"
+                  tabindex="0"
+                >
+                  {{- partial "genezioCloudTab4.html" . -}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/* end genezio serverless */}}
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="genezio-cloud"
+          role="tabpanel"
+          aria-labelledby="genezio-cloud-tab"
+          tabindex="0"
+        >
+          {{/* start genezio cloud */}}
+          <div class="row mt-4">
+            <div class="col-md-3 col-xs-12 d-flex text-left px-4">
+              <nav class="w-100">
+                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link nav-link-custom text-start active"
+                    id="user-auth-tab2"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-auth2"
+                    type="button"
+                    role="tab"
+                    aria-controls="user-auth2"
+                    aria-selected="true"
+                  >
+                    Cold start time
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-md-9 col-xs-12 px-4">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="user-auth2"
+                  role="tabpanel"
+                  aria-labelledby="user-auth-tab2"
+                  tabindex="0"
+                >
+                  <p class="opacity-50 pb-3 m-0">
+                    Test parameters: <br />
+                    Hello World function <br />
+                    30 HTTPS requests for each scenario<br />
+                    Cached DNS records for functions domains to prevent additional time caused by
+                    DNS
+                  </p>
+
+                  <img
+                    class="mt-4 w-100"
+                    style="max-width: 512px"
+                    src="/images/cold-start-chart.webp"
+                    alt="cold-start-chart"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/* end genezio cloud */}}
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  var accordionButtons = document.querySelectorAll('.accordion-button.theCode');
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordionButtons = document.querySelectorAll(".accordion-button.theCode");
+
+    accordionButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        accordionButtons.forEach(function (btn) {
+          btn.classList.remove("customDropdown");
+        });
+
+        if (!button.classList.contains("customDropdown")) {
+          button.classList.add("customDropdown");
+        }
+
+        if (button.classList.contains("collapsed")) {
+          button.classList.remove("customDropdown");
+        }
+      });
+    });
+  });
+
+  var accordionButtons = document.querySelectorAll(".accordion-button.theCode");
 
   accordionButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      accordionButtons.forEach(function (btn) {
-        btn.classList.remove('customDropdown');
-      });
-      
-      if (!button.classList.contains('customDropdown')) {
-        button.classList.add('customDropdown');
-      }
+    button.addEventListener("click", function () {
+      var isOpen = this.classList.contains("collapsed");
 
-      if (button.classList.contains('collapsed')) {
-        button.classList.remove('customDropdown');
+      if (!isOpen) {
+        var openAccordions = document.querySelectorAll(".accordion-button.theCode:not(.collapsed)");
+        openAccordions.forEach(function (openAccordion) {
+          openAccordion.click();
+        });
       }
     });
   });
-});
 
-$(document).ready(function() {
-  $('.accordion-button.theCode').click(function() {
-    // Close all open accordion items
-    $('.accordion-collapse').collapse('hide');
-    
-    // Open the clicked accordion item
-    $($(this).data('bs-target')).collapse('show');
+  var tabDropdownItems = document.querySelectorAll('.dropdown-item[data-toggle="tab"]');
+  tabDropdownItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var dropdownToggle = this.closest(".dropdown").querySelector(".sectionDropdown");
+      if (dropdownToggle) {
+        dropdownToggle.innerHTML = this.innerHTML;
+      }
+
+      tabDropdownItems.forEach(function (tabItem) {
+        tabItem.classList.remove("active-tab");
+      });
+
+      this.classList.add("active-tab");
+    });
   });
-});
-
-  
 </script>
 
 <script>
-  // Get all dropdown triggers and items
-  var dropdownItems = document.querySelectorAll('.dropdown-item');
+  var dropdownItems = document.querySelectorAll(".dropdown-item");
 
-  // Add click event listener to each dropdown item
-  dropdownItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      // Update the text for the dropdown trigger that was clicked
-      var dropdownTrigger = this.closest('.dropdown').querySelector('.sectionDropdown.dropdown-toggle');
+  dropdownItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var dropdownTrigger = this.closest(".dropdown").querySelector(
+        ".sectionDropdown.dropdown-toggle"
+      );
       dropdownTrigger.innerText = this.innerText;
     });
   });

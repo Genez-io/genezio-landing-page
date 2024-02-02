@@ -16,7 +16,7 @@ meta_og_image: "https://genez.io/images/genezio_xday.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 24
+readTime: 4
 ---
 
 This article will present DeFiBuilder and GiveCup, two emerging Web3 startups that started their journey at the xDay.2023 Hackathon, one of Europe’s largest Web3 developers competitions.

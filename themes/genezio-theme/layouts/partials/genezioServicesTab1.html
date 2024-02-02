@@ -1,0 +1,55 @@
+
+              <p class="text-white opacity-50 mb-0">Authenticate users securely with multiple login methods, such as Email/Password, Google, and more coming soon. Use PostgreSQL or MongoDB provisioned from the Genezio Dashboard, or bring your own database. No vendor lock-in; take control of your code at any time.</p>
+
+              <div class="code-title-genezio ms-4 px-3">client</div>
+ <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+  {{ $input := `import { AuthService } from '@genezio/auth';
+
+  AuthService.get().setTokenAndRegion("1-xyz", "us-east-1")
+  
+  const Signup = () => {
+    // rest of the code
+  
+    const handleSignupSubmit = async (e) => {
+      // Use the auto generated EmailAuthService to register the user
+      const response = await AuthService.get().register(user.email, user.password, user.username)
+      if (response.success) { ... }
+    }
+  
+    const handleLoginSubmit = async (e) => {
+      // Use the auto generated EmailAuthService to register the user
+      const response = await AuthService.get().login(user.email, user.password)
+      if (response.success) { ... }
+    }
+  
+    const getUserInfo = async (e) => {
+      // Use the auto generated EmailAuthService to register the user
+      const userInfo = await AuthService.get().getUserInfo()
+      ...
+    }
+    
+    // rest of the code
+  }` }}
+  {{ $opts := dict "style" "base16-snazzy" }}
+
+  {{ transform.Highlight $input "typescript" $opts }}
+ </div>
+
+              <div class="code-title-genezio ms-4 px-3">genezio server</div>
+              <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import { GenezioDeploy, GnzContext, GnzAuth } from '@genezio/types';
+
+@GenezioDeploy()
+export class UserInfoService {
+
+  @GnzAuth
+  async getUserInfo(context: GnzContext): Promise<void> {
+    const userInfo = await UserModel.getUserInfo(context.user.id)
+
+    return userInfo
+  }
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>

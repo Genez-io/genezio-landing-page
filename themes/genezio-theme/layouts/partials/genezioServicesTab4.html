@@ -1,0 +1,25 @@
+
+              <p class="text-white opacity-50 mb-0">Support for configurable cron jobs to automate your application.</p>
+              <div class="code-title-genezio ms-4 px-3">genezio server</div>
+              <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := `import { GenezioDeploy } from '@genezio/types';
+
+@GenezioDeploy()
+export class OrderService {
+
+  // this method will run every day at midnight
+  @GenezioMethod({ type: "cron", cronString: '0 0 * * *' })
+  async checkForUnfinishedOrders() {
+    const unfinishedOrders = await this.orders.find({
+      where: {
+        status: 'unfinished'
+      }
+    });
+
+    await this.sendReminderEmails(orders);
+  }
+}` }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>

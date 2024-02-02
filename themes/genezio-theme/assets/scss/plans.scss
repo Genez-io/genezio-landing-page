@@ -1,0 +1,141 @@
+.plansWrap {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0px 40px 0px 40px;
+
+  @media (max-width: 768px) {
+    padding: 0px 12px 0px 12px;
+
+    hr {
+      margin: -12px !important;
+    }
+
+    .perkTitle {
+      h4 {
+        font-size: 18px;
+      }
+    }
+    .hobbyCheckbox {
+      padding-right: 20px;
+    }
+  }
+}
+
+#buttonsWrap {
+  @media (max-width: 768px) {
+    margin: 40px;
+  }
+}
+.fixed-width-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.fixed-width-row {
+  display: flex;
+  // margin-left: 59px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.biggerCol {
+  flex: 0 0 340px !important; /* Set a fixed width for each column */
+}
+
+.fixed-width-col-space {
+  flex: 0 0 280px; /* Set a fixed width for each column */
+  padding: 12px 24px 12px 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fixed-width-col {
+  flex: 0 0 280px; /* Set a fixed width for each column */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px 12px 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+}
+
+.notActivePlanCard {
+  opacity: 0.9;
+  background: radial-gradient(
+      137.55% 131.52% at -10.58% 169.87%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.04);
+}
+.ActivePlanCard {
+  opacity: 1 !important;
+  border-radius: 0px 20px;
+  border: 1px solid #00faa4;
+  background: radial-gradient(
+      159.07% 124.02% at -3.71% 122.58%,
+      rgba(111, 66, 193, 0.6) 0%,
+      rgba(111, 66, 193, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.04);
+}
+
+.checkBox {
+  border-radius: 10px;
+  border: 1px solid var(--Brand-600, #7f56d9);
+  background: var(--Brand-50, #f9f5ff);
+  margin-right: 24px;
+  width: 20px;
+  height: 20px;
+
+  @media (max-width: 768px) {
+    max-width: 20px !important;
+    width: 100% !important;
+  }
+}
+
+.activeCheckBox {
+  margin-right: 24px;
+}
+
+.perkWrap {
+  margin-bottom: 24px;
+  h4 {
+    font-size: 18px;
+  }
+}
+
+.planTitle {
+  margin-bottom: 40px;
+}
+
+.perkTitle {
+  margin-left: 40px;
+}
+
+#mobile-planPerks-pro,
+#mobile-planPerks-hobby,
+#mobile-planPerks-enterprise {
+  > div {
+    margin-top: 40px;
+  }
+
+  .perkTitle {
+    margin-left: 24px;
+  }
+
+  .perkWrap {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+}

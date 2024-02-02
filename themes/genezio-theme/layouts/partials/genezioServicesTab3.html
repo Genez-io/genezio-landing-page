@@ -1,0 +1,48 @@
+
+              <p class="text-white opacity-50 mb-0">Manage and process large volumes of tasks and requests with ease and reliability. Extremely helpful when you need to do something asynchronously.</p>
+
+
+              <div class="code-title-genezio ms-4 px-3">genezio server</div>
+              <div class="pre-code-wrapper-genezio px-4 pt-4 py-1">
+                {{ $input := (print `import { GenezioDeploy, GenezioMethod,
+  GenezioHttpRequest, GenezioHttpResponse } from "@genezio/types";
+import axios from 'axios';
+
+@GenezioDeploy()
+export class QstashService{
+
+  async chatbot(): Promise<boolean> {
+    ` "const url = `https://qstash.upstash.io/v2/publish/${process.env.QUEUE_WEBHOOK_URL}`;" `
+    const payload = {
+      "message": "I am your trusty chatbot! I'll help you process your tasks.",
+    };
+
+    const headers = {
+      ` "Authorization: `Bearer ${process.env.QSTASH_TOKEN}`," `
+      'Content-Type': 'application/json',
+    };
+
+    await axios.post(url, payload, { headers: headers })
+
+    return true
+  }
+
+  @GenezioMethod({ type: 'http' })
+  async sendReplyToChatApp(request: GenezioHttpRequest): Promise<GenezioHttpResponse> {
+    const message: string = request.body.message;
+
+    await this.#sendReplyToChatApp(message);
+
+    const response: GenezioHttpResponse = {
+      body: {"status":"ok"},
+      headers: { 'content-type': 'application/json' },
+      statusCode: '200',
+    };
+    return response;
+  }
+}`) }}
+{{ $opts := dict "style" "base16-snazzy" }}
+
+{{ transform.Highlight $input "typescript" $opts }}
+</div>
+
