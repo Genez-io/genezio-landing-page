@@ -17,7 +17,7 @@
         var defaultItem = document.querySelector(
           dropdownToggle + " + .dropdown-menu .dropdown-item:first-child"
         );
-        
+
         var defaultTabId = defaultItem?.getAttribute("href")?.substring(1); // Remove the "#" from the href
 
         // Set default tab text
@@ -37,12 +37,12 @@
           if (event.target.classList.contains("dropdown-item")) {
             var selectedTabText = event.target.textContent;
             var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
-  
+
             // Update dropdown text
             document.querySelector(dropdownToggle).textContent = selectedTabText;
-  
+
             var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
-  
+
             // Show and activate the selected tab content
             showTab(selectedTabId);
           }
@@ -209,10 +209,10 @@
                     </a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1"
-                        >Build apps faster with typesafe APIs</a
+                        >Build apps faster with type safe APIs</a
                       >
                       <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2"
-                        >Typesafe APIs in any language</a
+                        >Type safe APIs in any language</a
                       >
                       <!-- Add more tabs as needed -->
                     </div>
@@ -462,7 +462,7 @@
                     aria-controls="build-apps-faster"
                     aria-selected="true"
                   >
-                    Build apps faster with typesafe APIs
+                    Build apps faster with type safe APIs
                   </button>
                   <button
                     class="nav-link nav-link-custom text-start"
@@ -474,7 +474,7 @@
                     aria-controls="typesafe-api-in-any-language"
                     aria-selected="false"
                   >
-                    Typesafe APIs in any language
+                    Type safe APIs in any language
                   </button>
                 </div>
               </nav>
@@ -821,7 +821,6 @@
     </div>
   </div>
 </div>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
