@@ -1,7 +1,7 @@
 ---
 title: Tag
 # meta data start
-description: "Next gen. full-stack platform for modern software development"
+description: "The type safe serverless platform for modern full-stack developers Everything you need to build apps that scale up to millions of users."
 meta_og_url: "https://genez.io"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
