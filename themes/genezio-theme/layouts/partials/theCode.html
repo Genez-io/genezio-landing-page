@@ -74,6 +74,72 @@
     <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
 
     <div class="px-md-4 pb-3 mx-1">
+      <!-- genezio Rpc -->
+      <div class="text-white position-relative" id="accordionExample2">
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingRpc">
+            <button
+              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseRpc"
+              aria-expanded="false"
+              aria-controls="collapseRpc"
+            >
+              Genezio.RPC
+            </button>
+          </h2>
+          <div
+            id="collapseRpc"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingRpc"
+            data-bs-parent="#accordionExample2"
+          >
+            <div style="color: #d4d4d4">
+              <!-- Tab Selector Dropdown -->
+              <div class="container mt-5">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown w-100">
+                    <a
+                      class="sectionDropdown dropdown-toggle"
+                      id="selectedRpcTab"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Select an Rpc Tab
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1"
+                        >Build apps faster with type safe APIs</a
+                      >
+                      <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2"
+                        >Type safe APIs in any language</a
+                      >
+                      <!-- Add more tabs as needed -->
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-2">
+                  <div class="tab-pane fade" id="rpcTab1">
+                    {{- partial "genezioRpcTab1.html" . -}}
+                  </div>
+                  <div class="tab-pane fade" id="rpcTab2">
+                    {{- partial "genezioRpcTab2.html" . -}}
+                  </div>
+                  <!-- Add more content panes as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- genezio Backend -->
       <div class="text-white position-relative" id="accordionExample">
         <div
@@ -162,73 +228,6 @@
               </div>
 
               {{/* end dropdown selector */}}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- genezio Rpc -->
-      <div class="text-white position-relative" id="accordionExample2">
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingRpc">
-            <button
-              class="accordion-button theCode shadow-none collapsed fw-medium py-3"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseRpc"
-              aria-expanded="false"
-              aria-controls="collapseRpc"
-            >
-              Genezio.RPC
-            </button>
-          </h2>
-          <div
-            id="collapseRpc"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingRpc"
-            data-bs-parent="#accordionExample2"
-          >
-            <div style="color: #d4d4d4">
-              <!-- Tab Selector Dropdown -->
-              <div class="container mt-5">
-                <ul class="nav nav-tabs">
-                  <li class="nav-item dropdown w-100">
-                    <a
-                      class="sectionDropdown dropdown-toggle"
-                      id="selectedRpcTab"
-                      data-toggle="dropdown"
-                      href="#"
-                      role="button"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Select an Rpc Tab
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1"
-                        >Build apps faster with type safe APIs</a
-                      >
-                      <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2"
-                        >Type safe APIs in any language</a
-                      >
-                      <!-- Add more tabs as needed -->
-                    </div>
-                  </li>
-                </ul>
-
-                <div class="tab-content mt-2">
-                  <div class="tab-pane fade" id="rpcTab1">
-                    {{- partial "genezioRpcTab1.html" . -}}
-                  </div>
-                  <div class="tab-pane fade" id="rpcTab2">
-                    {{- partial "genezioRpcTab2.html" . -}}
-                  </div>
-                  <!-- Add more content panes as needed -->
-                </div>
-              </div>
             </div>
           </div>
         </div>
