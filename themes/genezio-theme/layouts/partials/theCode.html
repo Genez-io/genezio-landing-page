@@ -387,26 +387,26 @@
           style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
         >
           <button
-            class="nav-link nav-link-custom"
+            class="nav-link nav-link-custom active"
             id="genezio-rpc-tab"
             data-bs-toggle="tab"
             data-bs-target="#genezio-rpc"
             type="button"
             role="tab"
             aria-controls="genezio-rpc"
-            aria-selected="false"
+            aria-selected="true"
           >
             Genezio.RPC
           </button>
           <button
-            class="nav-link nav-link-custom active"
+            class="nav-link nav-link-custom"
             id="nav-profile-tab"
             data-bs-toggle="tab"
             data-bs-target="#genezio-backend"
             type="button"
             role="tab"
             aria-controls="genezio-backend"
-            aria-selected="true"
+            aria-selected="false"
           >
             Genezio.Services
           </button>
@@ -440,7 +440,7 @@
       </nav>
       <div class="tab-content" id="nav-tabContent">
         <div
-          class="tab-pane fade"
+          class="tab-pane fade active show"
           id="genezio-rpc"
           role="tabpanel"
           aria-labelledby="genezio-rpc-tab"
@@ -461,8 +461,9 @@
                     aria-controls="build-apps-faster"
                     aria-selected="true"
                   >
-                    Build apps faster with type safe APIs
+                    Build apps faster with type safe APIsw
                   </button>
+                  {{/* aici */}}
                   <button
                     class="nav-link nav-link-custom text-start"
                     id="typesafe-api-in-any-language-tab"
@@ -505,7 +506,7 @@
           {{/* end of genezio rpc */}}
         </div>
         <div
-          class="tab-pane fade show active"
+          class="tab-pane fade"
           id="genezio-backend"
           role="tabpanel"
           aria-labelledby="genezio-backend-tab"
@@ -528,6 +529,7 @@
                   >
                     User authentication
                   </button>
+                  {{/* AICI */}}
                   <button
                     class="nav-link nav-link-custom text-start"
                     id="database-support-tab"
