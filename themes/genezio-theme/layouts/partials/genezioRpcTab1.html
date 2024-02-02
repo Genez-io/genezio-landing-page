@@ -1,17 +1,11 @@
+<p class="text-white opacity-50 mb-0">
+  A more natural paradigm in software design, leading to less error prone parameter passing than
+  REST APIs and auto completion in your favorite IDE. Here we define the "bye" method in the
+  HelloWorldService backend class, and we call it from the frontend using the auto-generated SDK.
+</p>
 
-                <ul class="opacity-50 m-0">
-                  <li>
-                    Auto completion in your favorite IDE.  
-                  </li>
-                  <li>
-                    Less error prone parameter passing than REST APIs. 
-                  </li>
-                  <li>
-                    A more natural paradigm in software design
-                  </li>
-                </ul>
-                <div class="code-title-genezio ms-4 px-3">genezio server</div>
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<div class="code-title-genezio ms-4 px-3">genezio server</div>
+<pre class="pre-code-wrapper-genezio px-4 py-1">
 <code>
 type Person = {
   firstName: string;
@@ -30,9 +24,9 @@ class HelloWorldService {
 }</code>
                 </pre>
 
-                <div class="code-title-genezio ms-4 px-3">client</div>
+<div class="code-title-genezio ms-4 px-3">client</div>
 
-                <pre class="pre-code-wrapper-genezio px-4 py-1">
+<pre class="pre-code-wrapper-genezio px-4 py-1">
 <code>
 import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
 
@@ -40,4 +34,3 @@ const hi = await HelloworldService.hello('John');
 const person: Person = {firstName: 'John', lastName: 'Ronald'};
 const bye = await HelloworldService.bye(person);</code>
                 </pre>
-     
