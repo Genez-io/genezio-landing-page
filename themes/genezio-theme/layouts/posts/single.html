@@ -70,7 +70,7 @@
           <p style="color: rgba(82, 82, 82, 1);" class="date mb-0 mx-0 mx-sm-2">Share on:</p>
 
           <a class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text={{ .Permalink }}"
+          href="https://twitter.com/intent/tweet?text=https:{{ .Permalink | urlquery }}"
           data-size="large"
           target="_blank"
               >
@@ -82,23 +82,15 @@
           />
           </a>
 
-          <a href="https://www.linkedin.com/sharing/share-offsite/?{{ .Permalink }}" target="_blank">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank">
           <img
             style="border: 1px solid #e2d9f3; cursor: pointer"
             class="rounded-circle p-2 mx-2"
             src="/images/linkedin-logo-green.svg"
             alt="linkedin-icon"
           />
-          </a>
+        </a>
 
-          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank">
-          <img
-            style="border: 1px solid #e2d9f3; cursor: pointer"
-            class="rounded-circle p-2"
-            src="/images/facebook-logo-green.svg"
-            alt="facebook-icon"
-          />
-          </a>
 
         </div>
       </div>
