@@ -16,3 +16,5 @@ paginate = 9
         discord = "https://discord.com/invite/uc9H5YKjXv"
         linkedin = "https://www.linkedin.com/company/genez-io/"
         
+[permalinks]
+    posts = "/blog/:title/"
