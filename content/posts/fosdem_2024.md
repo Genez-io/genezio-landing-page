@@ -9,7 +9,7 @@ thumbnail: /images/fosdem-2024.webp
 preview: "Check out our technical presentation at FOSDEM 2024 on running Node.js applications over unikernels"
 # meta data start
 description: "This weekend, the Genezio team was present at FOSDEM 2024 - an amazing open-source conference held in Belgium where thousands of contributors gather every year to meet and share ideas. Check out our technical presentation on running Node.js applications over unikernels."
-meta_og_url: "https://genezio.com/blog/fosdem-2024-highlights-running-node-js-in-unikernels"
+meta_og_url: "https://genezio.com/blog/fosdem-2024-highlights-running-node.js-in-unikernels"
 meta_og_image: "https://genezio.com/images/fosdem-2024.webp"
 # meta data end
 customHeader: "White header"
@@ -31,7 +31,7 @@ Creating a base snapshot after booting OSv and loading the Node.js runtime
 Having a pool of warmed-up instances waiting for requests
 Attaching the user’s source code as a second filesystem to avoid rebuilding the application image for every infrastructure patch or update.
 
-By working within a single-spaced kernel where the process that is running is always in privileged mode, we’ve come across a bug in Node.js. Specifically, we fixed the behavior of the `popf`instruction that incorrectly disabled interrupts in privileged mode.
+By working within a single-spaced kernel where the process that is running is always in privileged mode, we’ve come across a bug in Node.js. Specifically, we fixed the behavior of the `popf` instruction that incorrectly disabled interrupts in privileged mode.
 
 On the OSv side, we made several {{< external-link link="https://github.com/cloudius-systems/osv/pulls?q=author%3Avalighita">}}upstream contributions{{< /external-link >}}, addressing issues such as: resolving a cache bug triggered when using more filesystems and fixing a `pthreads` interface that was not compliant with POSIX and caused deadlocks.
 
