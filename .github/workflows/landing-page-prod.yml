@@ -61,6 +61,17 @@ jobs:
           hugo \
             --minify \
             --baseURL "https://genezio.com/"
+      - name: Clone https://github.com/Genez-io/genezio-documentation
+        run: git clone https://github.com/Genez-io/genezio-documentation
+      - name: Install and build Documentation
+        run: |
+          cd genezio-documentation
+          npm ci
+          npm run build
+      - name: Copy Documentation to public
+        run: |
+          mkdir -p public/docs/
+          cp -r genezio-documentation/build/* public/docs/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend
