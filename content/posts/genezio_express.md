@@ -1,5 +1,5 @@
 ---
-title: Exploring the Differences Between genezio and Express.js
+title: Exploring genezio and Express.js
 date: 2023-05-05
 tags:
   - Learning
@@ -15,6 +15,8 @@ meta_og_image: "https://genez.io/images/genezio_express.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
+# url: how-to-schedule-tasks-with-genezio
+url: exploring-the-differences-between-genezio-and-express-js
 ---
 
 <!-----

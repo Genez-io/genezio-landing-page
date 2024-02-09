@@ -83,7 +83,7 @@ We will use `genezio` to help you scaffold the web app and deploy it to the clou
 
 The result of this tutorial will be a web application that looks like this:
 
-![Alt text](/posts//shopping_cart_preview.png)
+![Alt text](/posts/shopping_cart_preview.png)
 
 ## Prerequisites
 
