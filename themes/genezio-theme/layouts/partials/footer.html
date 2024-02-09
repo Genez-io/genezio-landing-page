@@ -1,4 +1,7 @@
-<footer style="border-top: 1px solid rgba(255, 255, 255, 0.1)" class="bg-dark px-3">
+<footer
+  style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+  class="bg-dark px-3"
+>
   <div
     style="
       border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -22,16 +25,20 @@
       <div class="col-md-4 p-1 pb-0">
         <div class="row text-white">
           <div class="col-md-6">
-            <p class="fw-medium mb-2 fw-semibold text-white opacity-50">Resources</p>
+            <p class="fw-medium mb-2 fw-semibold text-white opacity-50">
+              Resources
+            </p>
             <ul class="list-unstyled">
               <li>
-                <a style="font-size: 14px" class="nav-link" href="/blog/">Blog</a>
+                <a style="font-size: 14px" class="nav-link" href="/blog/"
+                  >Blog</a
+                >
               </li>
               <li>
                 <a
                   style="font-size: 14px"
                   class="nav-link"
-                  href="https://docs.genez.io/"
+                  href="https://genezio.com/docs/"
                   target="_blank"
                   rel="noopener nofollow"
                   >Docs</a
@@ -50,20 +57,30 @@
             </ul>
           </div>
           <div class="col-md-6">
-            <p class="fw-medium mb-2 fw-semibold text-white opacity-50">Support</p>
+            <p class="fw-medium mb-2 fw-semibold text-white opacity-50">
+              Support
+            </p>
             <ul class="list-unstyled mt-1">
               <li>
-                <a style="font-size: 14px" class="nav-link" href="mailto:contact@genez.io"
+                <a
+                  style="font-size: 14px"
+                  class="nav-link"
+                  href="mailto:contact@genez.io"
                   >Contact Us</a
                 >
               </li>
               <li>
-                <a style="font-size: 14px" class="nav-link" href="/privacy-policy/"
+                <a
+                  style="font-size: 14px"
+                  class="nav-link"
+                  href="/privacy-policy/"
                   >Privacy Policy</a
                 >
               </li>
               <li>
-                <a style="font-size: 14px" class="nav-link" href="/eula/">Terms & Conditions</a>
+                <a style="font-size: 14px" class="nav-link" href="/eula/"
+                  >Terms & Conditions</a
+                >
               </li>
               <li>
                 <a
@@ -89,14 +106,21 @@
     {{/* Footer Section 2 */}}
     <div class="row px-3 d-flex justify-content-between">
       <div class="col-md-6 p-1">
-        <p class="fw-medium text-white opacity-50">Subscribe to our newsletter</p>
+        <p class="fw-medium text-white opacity-50">
+          Subscribe to our newsletter
+        </p>
         <p style="font-size: 14px; color: #ffffff80">
           Genezio is a serverless platform for building
-          <span style="color: rgba(153, 253, 219, 1)">full-stack web and mobile</span>
-          <span class="d-block"></span> applications in a scalable and cost-efficient way.
+          <span style="color: rgba(153, 253, 219, 1)"
+            >full-stack web and mobile</span
+          >
+          <span class="d-block"></span> applications in a scalable and
+          cost-efficient way.
         </p>
       </div>
-      <div class="col-md-6 px-1 ms-0 justify-content-center d-flex flex-sm-column">
+      <div
+        class="col-md-6 px-1 ms-0 justify-content-center d-flex flex-sm-column"
+      >
         <div class="row justify-content-end w-100">
           <div
             class="col-12 col-md-9 d-flex p-0 mx-1 ms-0 align-items-start align-items-md-center flex-column flex-md-row"
@@ -147,12 +171,18 @@
     {{/* Footer Section 3 */}}
     <div class="row px-1 pt-2 pb-4 d-flex justify-content-between">
       <div class="col-md-10 px-1">
-        <p style="font-size: 14px" class="opacity-50 mt-3">© {{ now.Year }} Genezio Corp.</p>
+        <p style="font-size: 14px" class="opacity-50 mt-3">
+          © {{ now.Year }} Genezio Corp.
+        </p>
       </div>
       <div
         class="col-md-2 px-0 d-flex align-items-center justify-content-md-end justify-content-sm-start"
       >
-        <a href="{{ .Site.Params.footer.instagram }}" target="_blank" rel="noopener nofollow">
+        <a
+          href="{{ .Site.Params.footer.instagram }}"
+          target="_blank"
+          rel="noopener nofollow"
+        >
           <img
             class="mx-2 footer-social-logo"
             alt="instagram-logo"
@@ -162,7 +192,11 @@
             height="24px"
           />
         </a>
-        <a href="{{ .Site.Params.footer.linkedin }}" target="_blank" rel="noopener nofollow">
+        <a
+          href="{{ .Site.Params.footer.linkedin }}"
+          target="_blank"
+          rel="noopener nofollow"
+        >
           <img
             class="mx-2 footer-social-logo"
             alt="linkedin-logo"
@@ -172,7 +206,11 @@
             height="24px"
           />
         </a>
-        <a href="{{ .Site.Params.footer.facebook }}" target="_blank" rel="noopener nofollow">
+        <a
+          href="{{ .Site.Params.footer.facebook }}"
+          target="_blank"
+          rel="noopener nofollow"
+        >
           <img
             class="mx-2 footer-social-logo"
             alt="facebook-logo"
@@ -182,7 +220,11 @@
             height="24px"
           />
         </a>
-        <a href="{{ .Site.Params.footer.discord }}" target="_blank" rel="noopener nofollow">
+        <a
+          href="{{ .Site.Params.footer.discord }}"
+          target="_blank"
+          rel="noopener nofollow"
+        >
           <img
             class="mx-2 footer-social-logo"
             alt="discord-logo"
@@ -208,7 +250,7 @@
 
       const email = emailInput.value;
       const data = {
-        email: email,
+        email: email
       };
 
       const url =
@@ -218,9 +260,9 @@
         method: "POST",
         mode: "cors",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       })
         .then((response) => response.json())
         .then((data) => {

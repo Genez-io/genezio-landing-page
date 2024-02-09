@@ -1,5 +1,6 @@
-{{ define "header_css" }}{{ end }} {{ define "body_classes" }}page-default-single{{ end }} {{ define
-"header_classes" }}{{ end }} {{ define "main" }}
+{{ define "header_css" }}{{ end }} {{ define "body_classes"
+}}page-default-single{{ end }} {{ define "header_classes" }}{{ end }} {{ define
+"main" }}
 
 <div class="px-3 bg-dark" style="overflow: hidden">
   <div class="container plansWrap text-white">
@@ -9,7 +10,10 @@
       </h2>
     </div>
 
-    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
+    <hr
+      class="mt-4"
+      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px"
+    />
 
     <div style="margin-top: 40px" class="row justify-content-between mx-0 pb-3">
       <div class="col-5 p-0 d-md-block d-none">
@@ -68,7 +72,9 @@
           <div class="d-flex perkWrap align-items-center">
             <img src="/images/auth-icon.svg" />
             <div class="perkTitle">
-              <h4 class="m-0">User Authentication, Cron jobs, Queues, Email Service</h4>
+              <h4 class="m-0">
+                User Authentication, Cron jobs, Queues, Email Service
+              </h4>
             </div>
           </div>
 
@@ -85,7 +91,11 @@
       <div class="col-md-6 col-sm-12 p-0">
         <div
           id="hobbist"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
+          style="
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            cursor: pointer;
+          "
           class="card mb-4 p-4 ActivePlanCard text-white"
         >
           <div class="d-flex flex-column">
@@ -99,15 +109,33 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="#F9F5FF" />
-                  <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#7F56D9" />
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="#F9F5FF"
+                  />
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="#7F56D9"
+                  />
                   <circle cx="10" cy="10" r="4" fill="#7F56D9" />
                 </svg>
               </div>
-              <div class="d-flex justify-content-between w-100 align-items-center">
+              <div
+                class="d-flex justify-content-between w-100 align-items-center"
+              >
                 <div>
                   <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
-                  <p class="text-white opacity-50 mb-0">for personal, non-commercial use</p>
+                  <p class="text-white opacity-50 mb-0">
+                    for personal, non-commercial use
+                  </p>
                 </div>
 
                 <div class="d-flex flex-column align-items-end">
@@ -129,7 +157,11 @@
         */}}
         <div
           id="pro"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
+          style="
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            cursor: pointer;
+          "
           class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
         >
           <div class="d-flex flex-column">
@@ -138,10 +170,14 @@
               <div class="d-flex justify-content-between w-100">
                 <div>
                   <h2 class="mb-2 pb-1 fw-bold">Pro</h2>
-                  <p class="text-white opacity-50 mb-0">for solo developers or small teams</p>
+                  <p class="text-white opacity-50 mb-0">
+                    for solo developers or small teams
+                  </p>
                 </div>
 
-                <div class="d-flex flex-column justify-content-center align-items-end">
+                <div
+                  class="d-flex flex-column justify-content-center align-items-end"
+                >
                   <p class="m-0 opacity-50">Starting at</p>
                   <h4>$50/project</h4>
                 </div>
@@ -154,7 +190,11 @@
         </div>
         <div
           id="enterprise"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
+          style="
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            cursor: pointer;
+          "
           class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
         >
           <div class="d-flex flex-column">
@@ -168,7 +208,9 @@
                   </p>
                 </div>
 
-                <div class="d-flex flex-column justify-content-center align-items-end">
+                <div
+                  class="d-flex flex-column justify-content-center align-items-end"
+                >
                   <p class="m-0 opacity-50">Starting at</p>
                   <h4>$2500</h4>
                 </div>
@@ -176,16 +218,22 @@
             </div>
 
             {{/* mobile perks */}}
-            <div id="mobile-planPerks-enterprise" class="d-sm-block d-md-none"></div>
+            <div
+              id="mobile-planPerks-enterprise"
+              class="d-sm-block d-md-none"
+            ></div>
           </div>
         </div>
 
-        <div id="buttonsWrap" class="d-flex justify-content-center justify-content-md-end">
+        <div
+          id="buttonsWrap"
+          class="d-flex justify-content-center justify-content-md-end"
+        >
           <a
             class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
             style="height: 48px"
             type="submit"
-            href="https://docs.genezio.com/genezio-documentation/getting-started"
+            href="https://genezio.com/docs/getting-started"
             target="_blank"
           >
             Get started
@@ -195,8 +243,14 @@
     </div>
     {{/* end of plans cards */}}
 
-    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
-    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 pb-1">
+    <hr
+      class="mt-4"
+      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px"
+    />
+    <p
+      style="font-size: 12px"
+      class="text-success fw-bold text-center mt-4 pt-3 pb-1"
+    >
       COMPARISON TABLE
     </p>
     <h2 class="text-center fw-bold mb-4 pb-3">Compare our plans in detail</h2>
@@ -238,23 +292,32 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Free projects - unlimited in any plan - experience the power of type safe SDK generation
-            and seamless deployment with genezio for your personal projects
+            Free projects - unlimited in any plan - experience the power of type
+            safe SDK generation and seamless deployment with genezio for your
+            personal projects
           </p>
         </div>
-        <div class="fixed-width-col"><p class="m-0 text-center">unlimited</p></div>
-        <div class="fixed-width-col"><p class="m-0 text-center">unlimited</p></div>
-        <div class="fixed-width-col"><p class="m-0 text-center">unlimited</p></div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">unlimited</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">unlimited</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">unlimited</p>
+        </div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Paid projects - upgrade your free projects to paid when they need to scale with 30 days
-            grace period
+            Paid projects - upgrade your free projects to paid when they need to
+            scale with 30 days grace period
           </p>
         </div>
-        <div class="fixed-width-col"><img src="/images/table-x-icon.svg" alt="table-x" /></div>
+        <div class="fixed-width-col">
+          <img src="/images/table-x-icon.svg" alt="table-x" />
+        </div>
         <div class="fixed-width-col">
           <p class="m-0 text-center">unlimited starting at $50/project</p>
         </div>
@@ -266,12 +329,16 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Collaboration - work alone or as a team - share the projects and dashboard features
-            between team members.
+            Collaboration - work alone or as a team - share the projects and
+            dashboard features between team members.
           </p>
         </div>
-        <div class="fixed-width-col"><p class="m-0 text-center">unlimited team members</p></div>
-        <div class="fixed-width-col"><p class="m-0 text-center">unlimited team members</p></div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">unlimited team members</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">unlimited team members</p>
+        </div>
         <div class="fixed-width-col">
           <p class="m-0 text-center">unlimited w/ account management</p>
         </div>
@@ -281,34 +348,39 @@
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">Logs retention</p>
         </div>
-        <div class="fixed-width-col"><p class="m-0 text-center">one week per project</p></div>
-        <div class="fixed-width-col"><p class="m-0 text-center">one year per project</p></div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">one week per project</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="m-0 text-center">one year per project</p>
+        </div>
         <div class="fixed-width-col"><p class="m-0 text-center">custom</p></div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Support - we are dedicated to our customers and are providing best in class support
-            services to help you succeed build the apps that your users will love
+            Support - we are dedicated to our customers and are providing best
+            in class support services to help you succeed build the apps that
+            your users will love
           </p>
         </div>
         <div class="fixed-width-col">
           <p class="m-0 text-center">
-            best effort support - and we do put effort in replying timely on chat, email, discord,
-            etc
+            best effort support - and we do put effort in replying timely on
+            chat, email, discord, etc
           </p>
         </div>
         <div class="fixed-width-col">
           <p class="m-0 text-center">
-            priority support on any channel - we will help you fix the issues you have with priority
-            on paid projects
+            priority support on any channel - we will help you fix the issues
+            you have with priority on paid projects
           </p>
         </div>
         <div class="fixed-width-col">
           <p class="m-0 text-center">
-            dedicated 24x7 support and professional services - one hour per week included for
-            onboarding or other issues
+            dedicated 24x7 support and professional services - one hour per week
+            included for onboarding or other issues
           </p>
         </div>
       </div>
@@ -357,24 +429,8 @@
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Full dynamic type safety support using Zod as middleware</p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Type safe RPC implemented by parsing the backend code, storing the AST - to generate the
-            SDK in any frontend language with no dependencies
+            Full dynamic type safety support using Zod as middleware
           </p>
         </div>
         <div class="fixed-width-col">
@@ -391,8 +447,9 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Tested and production ready for TypeScript BE/FE. Beta support for: Kotlin and DART.
-            Under development: GoLang and Swift
+            Type safe RPC implemented by parsing the backend code, storing the
+            AST - to generate the SDK in any frontend language with no
+            dependencies
           </p>
         </div>
         <div class="fixed-width-col">
@@ -409,8 +466,26 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Export the resulting SDK using dependency managers such as NPM Registry - private to
-            your team or public for anybody to use
+            Tested and production ready for TypeScript BE/FE. Beta support for:
+            Kotlin and DART. Under development: GoLang and Swift
+          </p>
+        </div>
+        <div class="fixed-width-col">
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+        <div class="fixed-width-col">
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+        <div class="fixed-width-col">
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <p class="mb-0 py-4">
+            Export the resulting SDK using dependency managers such as NPM
+            Registry - private to your team or public for anybody to use
           </p>
         </div>
         <div class="fixed-width-col">
@@ -451,15 +526,20 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Type safe RPC implemented by parsing the backend code, storing the AST - to generate the
-            SDK in any frontend language with no dependencies
+            Type safe RPC implemented by parsing the backend code, storing the
+            AST - to generate the SDK in any frontend language with no
+            dependencies
           </p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">one production environment per project</p>
+          <p class="mb-0 py-4 text-center">
+            one production environment per project
+          </p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">one production environment per project</p>
+          <p class="mb-0 py-4 text-center">
+            one production environment per project
+          </p>
         </div>
         <div class="fixed-width-col">
           <p class="mb-0 py-4 text-center">can deploy on own cloud</p>
@@ -468,7 +548,9 @@
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Production environment as well as local development environments</p>
+          <p class="mb-0 py-4">
+            Production environment as well as local development environments
+          </p>
         </div>
         <div class="fixed-width-col">
           <img src="/images/table-check-icon.svg" alt="table-check" />
@@ -484,7 +566,8 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Multiple staging environments supported for better collaboration and integration testing
+            Multiple staging environments supported for better collaboration and
+            integration testing
           </p>
         </div>
         <div class="fixed-width-col">
@@ -504,16 +587,20 @@
           <p class="mb-0 py-4">Type safe backend function invocations</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">up to 1,000,000 total per year for all free projects</p>
-        </div>
-        <div class="fixed-width-col">
           <p class="mb-0 py-4 text-center">
-            up to 10,000,000 per project per year + $10 each aditional 10,000,000
+            up to 1,000,000 total per year for all free projects
           </p>
         </div>
         <div class="fixed-width-col">
           <p class="mb-0 py-4 text-center">
-            up to 20,000,000 per project per year + $10 each additional 20,000,000
+            up to 10,000,000 per project per year + $10 each aditional
+            10,000,000
+          </p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mb-0 py-4 text-center">
+            up to 20,000,000 per project per year + $10 each additional
+            20,000,000
           </p>
         </div>
       </div>
@@ -529,15 +616,18 @@
           <p class="mb-0 py-4 text-center">custom domain</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">integration with enterprise domain</p>
+          <p class="mb-0 py-4 text-center">
+            integration with enterprise domain
+          </p>
         </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            For new and old projects - start from our examples in minutes or bring your existing
-            ExpressJS app and add Genezio classes and features
+            For new and old projects - start from our examples in minutes or
+            bring your existing ExpressJS app and add Genezio classes and
+            features
           </p>
         </div>
         <div class="fixed-width-col">
@@ -554,7 +644,8 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Framework agnostic, works with React, Vue, Angular, Svelte, ExpressJS, Fastify, etc.s
+            Framework agnostic, works with React, Vue, Angular, Svelte,
+            ExpressJS, Fastify, etc.s
           </p>
         </div>
         <div class="fixed-width-col">
@@ -571,7 +662,8 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Developer experience enhanced bundling - minimal package generated automatically.
+            Developer experience enhanced bundling - minimal package generated
+            automatically.
           </p>
         </div>
         <div class="fixed-width-col">
@@ -610,7 +702,9 @@
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Cron jobs - scheduled to be executed up to a minute granularity</p>
+          <p class="mb-0 py-4">
+            Cron jobs - scheduled to be executed up to a minute granularity
+          </p>
         </div>
         <div class="fixed-width-col">
           <p class="mb-0 py-4 text-center">up to 10 total</p>
@@ -640,10 +734,14 @@
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">User authentication module - works on PostgreSQL database</p>
+          <p class="mb-0 py-4">
+            User authentication module - works on PostgreSQL database
+          </p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">10,000 sign-ins/ year (for all free projects)</p>
+          <p class="mb-0 py-4 text-center">
+            10,000 sign-ins/ year (for all free projects)
+          </p>
         </div>
         <div class="fixed-width-col">
           <p class="mb-0 py-4 text-center">unlimited</p>
@@ -656,8 +754,8 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Bring your own OAuth 2.0 app - enhance security & control over how users interact with
-            your app
+            Bring your own OAuth 2.0 app - enhance security & control over how
+            users interact with your app
           </p>
         </div>
         <div class="fixed-width-col">
@@ -675,7 +773,8 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Email service - use this from your code to send emails to your users securely
+            Email service - use this from your code to send emails to your users
+            securely
           </p>
         </div>
         <div class="fixed-width-col">
@@ -691,7 +790,9 @@
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Databases - through easy to use third party integrations</p>
+          <p class="mb-0 py-4">
+            Databases - through easy to use third party integrations
+          </p>
         </div>
         <div class="fixed-width-col"></div>
         <div class="fixed-width-col"></div>
@@ -762,8 +863,9 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">
-            Databases provisioned by us. With Genezio, the database is not exposed to the frontend
-            directly. Table creation and CRUD boilerplate functions generated through LLM
+            Databases provisioned by us. With Genezio, the database is not
+            exposed to the frontend directly. Table creation and CRUD
+            boilerplate functions generated through LLM
           </p>
         </div>
         <div class="fixed-width-col">
@@ -805,9 +907,10 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
-              You don't need a credit card to create personal and hobby projects. Just pick the
-              Hobby plan and get started with Genezio. A credit card is only required when you'll
-              create your first Pro project, at which moment your account will be automatically
+              You don't need a credit card to create personal and hobby
+              projects. Just pick the Hobby plan and get started with Genezio. A
+              credit card is only required when you'll create your first Pro
+              project, at which moment your account will be automatically
               upgraded to Professional.
             </div>
           </div>
@@ -836,9 +939,10 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You have the flexibility to upgrade from Hobby to Pro at any time. Upgrade a Free
-              project to a Pro one and the account will be automatically upgraded. You will only be
-              charged when you decide to start a Pro project.
+              You have the flexibility to upgrade from Hobby to Pro at any time.
+              Upgrade a Free project to a Pro one and the account will be
+              automatically upgraded. You will only be charged when you decide
+              to start a Pro project.
             </div>
           </div>
         </div>
@@ -885,7 +989,8 @@
               aria-expanded="false"
               aria-controls="collapse4"
             >
-              Is there a limit for how many people I can work with on a free or Pro project?
+              Is there a limit for how many people I can work with on a free or
+              Pro project?
             </button>
           </h2>
           <div
@@ -895,8 +1000,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Unlike other similar platforms, Genezio offers unlimited team members, promoting
-              teamwork and collaboration.
+              Unlike other similar platforms, Genezio offers unlimited team
+              members, promoting teamwork and collaboration.
             </div>
           </div>
         </div>
@@ -924,9 +1029,10 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You can create an unlimited number of free projects, and you'll only be charged for
-              each Pro project. There are also no limits on the number of Pro projects you can
-              create. Having at least one Pro project automatically upgrades your account to Pro.
+              You can create an unlimited number of free projects, and you'll
+              only be charged for each Pro project. There are also no limits on
+              the number of Pro projects you can create. Having at least one Pro
+              project automatically upgrades your account to Pro.
             </div>
           </div>
         </div>
@@ -944,8 +1050,9 @@
               aria-expanded="false"
               aria-controls="collapse6"
             >
-              If I have multiple free projects and I want to upgrade one of them to a Pro project,
-              what happens to my other free projects when I switch to a Pro account?
+              If I have multiple free projects and I want to upgrade one of them
+              to a Pro project, what happens to my other free projects when I
+              switch to a Pro account?
             </button>
           </h2>
           <div
@@ -955,10 +1062,11 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Genezio's pricing model operates on a per-project basis. When you decide to upgrade a
-              project, you'll become a pro user and will only be charged for that specific project.
-              Your other free projects will continue to be free, and you won't incur any charges for
-              them.
+              Genezio's pricing model operates on a per-project basis. When you
+              decide to upgrade a project, you'll become a pro user and will
+              only be charged for that specific project. Your other free
+              projects will continue to be free, and you won't incur any charges
+              for them.
             </div>
           </div>
         </div>
@@ -976,7 +1084,8 @@
               aria-expanded="false"
               aria-controls="collapse7"
             >
-              What happens if I have a Professional account and I delete my Pro project?
+              What happens if I have a Professional account and I delete my Pro
+              project?
             </button>
           </h2>
           <div
@@ -986,8 +1095,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Your Pro account remains active, but no further invoices will be issued for the
-              recently deleted project.
+              Your Pro account remains active, but no further invoices will be
+              issued for the recently deleted project.
             </div>
           </div>
         </div>
@@ -1015,8 +1124,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Yes, we will email you when you are within 20% of your Pro project limits. If you need
-              customized project limits to better suit your needs, feel free to contact us.
+              Yes, we will email you when you are within 20% of your Pro project
+              limits. If you need customized project limits to better suit your
+              needs, feel free to contact us.
             </div>
           </div>
         </div>
@@ -1044,10 +1154,11 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              We will notify you via email when you are approaching your free project limits. You
-              will have a grace period in which you can go over those limits. During the grace
-              period you will need to enter a CC and upgrade the project to Pro. Failure to do that
-              will result in throttling your project to the free limits.
+              We will notify you via email when you are approaching your free
+              project limits. You will have a grace period in which you can go
+              over those limits. During the grace period you will need to enter
+              a CC and upgrade the project to Pro. Failure to do that will
+              result in throttling your project to the free limits.
             </div>
           </div>
         </div>
@@ -1075,8 +1186,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You will be billed an extra $10 for each additional 10,000,000 function invocations
-              per project in the next billing cycle.
+              You will be billed an extra $10 for each additional 10,000,000
+              function invocations per project in the next billing cycle.
             </div>
           </div>
         </div>
@@ -1094,7 +1205,8 @@
               aria-expanded="false"
               aria-controls="collapse11"
             >
-              I'm worried I could end up with a huge bill at the end of the month.
+              I'm worried I could end up with a huge bill at the end of the
+              month.
             </button>
           </h2>
           <div
@@ -1104,8 +1216,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              No need to worry about surprise bills. Genezio has a simple pricing model – a flat
-              cost for each project. You'll always know what to expect, making it budget-friendly.
+              No need to worry about surprise bills. Genezio has a simple
+              pricing model – a flat cost for each project. You'll always know
+              what to expect, making it budget-friendly.
             </div>
           </div>
         </div>
@@ -1133,7 +1246,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Yes, you can pause a Pro project at any time. Billing will be suspended for that time.
+              Yes, you can pause a Pro project at any time. Billing will be
+              suspended for that time.
             </div>
           </div>
         </div>
@@ -1161,8 +1275,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Free projects that do not receive any request (front-end or back-end function calls)
-              for a full month are set to idle. Pro projects can never become idle.
+              Free projects that do not receive any request (front-end or
+              back-end function calls) for a full month are set to idle. Pro
+              projects can never become idle.
             </div>
           </div>
         </div>
@@ -1190,9 +1305,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              If a project is idle for a month, it will be paused, and you will be notified about
-              this. If you do not reactivate the project, we reserve the right to delete it six
-              months later.
+              If a project is idle for a month, it will be paused, and you will
+              be notified about this. If you do not reactivate the project, we
+              reserve the right to delete it six months later.
             </div>
           </div>
         </div>
@@ -1219,9 +1334,10 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              We provide support for all our plans, offering best-effort support for hobby, priority
-              support for professional, and dedicated 24x7 support with professional services hours
-              included for enterprise accounts.
+              We provide support for all our plans, offering best-effort support
+              for hobby, priority support for professional, and dedicated 24x7
+              support with professional services hours included for enterprise
+              accounts.
             </div>
           </div>
         </div>
@@ -1248,7 +1364,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You can try the Pro features of a project for a month, once every 6 months.
+              You can try the Pro features of a project for a month, once every
+              6 months.
             </div>
           </div>
         </div>
@@ -1279,7 +1396,7 @@
               <a
                 style="text-decoration: none"
                 class="text-success"
-                href="https://docs.genezio.com/genezio-documentation/getting-started"
+                href="https://genezio.com/docs/getting-started"
                 target="_blank"
                 >here</a
               >.
@@ -1294,10 +1411,16 @@
     {{/* start of used and trusted at */}} {{/*
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0px -40px" />
     */}}
-    <p style="font-size: 12px" class="text-success fw-bold text-center mb-4 pb-3">
+    <p
+      style="font-size: 12px"
+      class="text-success fw-bold text-center mb-4 pb-3"
+    >
       USED AND TRUSTED AT
     </p>
-    <div style="margin-bottom: 260px" class="w-100 mx-auto d-flex justify-content-around pb-3">
+    <div
+      style="margin-bottom: 260px"
+      class="w-100 mx-auto d-flex justify-content-around pb-3"
+    >
       <img
         class="navbar-brand d-none d-md-block"
         alt="multiversx-logo"
@@ -1376,7 +1499,10 @@
         </div>
       </div>
     </div>
-    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
+    <hr
+      class="mt-4"
+      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px"
+    />
     {{/* end of used and trusted at */}}
   </div>
 </div>
@@ -1641,13 +1767,15 @@
 
   // cards actions
   const planTitle = document.getElementById("planTitle");
-  document.getElementById("mobile-planPerks-hobby").innerHTML = hobbistCardContent;
+  document.getElementById("mobile-planPerks-hobby").innerHTML =
+    hobbistCardContent;
   hobbistCard.addEventListener("click", () => {
     planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
         Your Hobby account
     </h2>`;
 
-    document.getElementById("mobile-planPerks-hobby").innerHTML = hobbistCardContent;
+    document.getElementById("mobile-planPerks-hobby").innerHTML =
+      hobbistCardContent;
     document.getElementById("mobile-planPerks-pro").innerHTML = "";
     document.getElementById("mobile-planPerks-enterprise").innerHTML = "";
 
@@ -1656,7 +1784,7 @@
             class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
             style="height: 48px"
             type="submit"
-            href="https://docs.genezio.com/genezio-documentation/getting-started"
+            href="https://genezio.com/docs/getting-started"
             target="_blank"
           >
             Get started
@@ -1676,7 +1804,7 @@
             class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
             style="height: 48px"
             type="submit"
-            href="https://docs.genezio.com/genezio-documentation/getting-started"
+            href="https://genezio.com/docs/getting-started"
             target="_blank"
           >
             Try then buy
@@ -1695,7 +1823,8 @@
         Your Enterprise account
     </h2>`;
 
-    document.getElementById("mobile-planPerks-enterprise").innerHTML = enterpriseCardContent;
+    document.getElementById("mobile-planPerks-enterprise").innerHTML =
+      enterpriseCardContent;
     document.getElementById("mobile-planPerks-hobby").innerHTML = "";
     document.getElementById("mobile-planPerks-pro").innerHTML = "";
 
@@ -1784,7 +1913,9 @@
     activeCard.classList.add("ActivePlanCard");
 
     // Add 'notActivePlanCard' class and 'border-gradient-green' class to the other cards
-    const otherCards = [hobbistCard, proCard, enterpriseCard].filter((card) => card !== activeCard);
+    const otherCards = [hobbistCard, proCard, enterpriseCard].filter(
+      (card) => card !== activeCard
+    );
     otherCards.forEach((card) => {
       card.classList.add("notActivePlanCard", "border-gradient-green");
       card.classList.remove("ActivePlanCard");
