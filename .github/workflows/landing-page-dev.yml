@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - uses: Genez-io/genezio-github-action@main
         with:
           token: ${{ secrets.GENEZIO_TOKEN }}
@@ -61,6 +61,18 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Clone https://github.com/Genez-io/genezio-documentation
+        run: git clone https://github.com/Genez-io/genezio-documentation
+      - name: Install and build Documentation
+        run: |
+          cd genezio-documentation
+          git checkout dev
+          npm ci
+          npm run build
+      - name: Copy Documentation to public
+        run: |
+          mkdir -p public/docs/
+          cp -r genezio-documentation/build/* public/docs/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend --stage dev

@@ -140,7 +140,9 @@ export class ShoppingCartService {
 
   constructor() {
     if (!process.env.UPSTASH_REDIS_URL) {
-      throw new Error("It seems that UPSTASH_REDIS_URL is not set in the `.env` file.");
+      throw new Error(
+        "It seems that UPSTASH_REDIS_URL is not set in the `.env` file."
+      );
     }
     this.client = new Redis(process.env.UPSTASH_REDIS_URL);
   }
@@ -170,7 +172,7 @@ export class ShoppingCartService {
     for (const key in cart) {
       const item = {
         title: key,
-        count: cart[key],
+        count: cart[key]
       };
       cartItems.push(item);
     }
@@ -215,7 +217,7 @@ When the deployment is complete, go to the {{< external-link link="https://app.g
 
 ![Alt text](/posts/add_integration.png)
 
-If you get stuck at this step, you can follow the {{< external-link link="https://docs.genez.io/genezio-documentation/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
+If you get stuck at this step, you can follow the {{< external-link link="https://genezio.com/docs/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
 
 After adding the Upstash Redis integration, copy the environment variables from the `.env` section. Use the copy button to disclose the contents of the environment variables and copy them to your clipboard.
 Go back to your `server` directory, create a new file called `.env`, and paste the contents there.
@@ -499,7 +501,9 @@ let token = localStorage.getItem("token") as string;
 
 // If token is not set, generate a 32-character token
 if (!token || token === "" || token === "undefined") {
-  token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  token =
+    Math.random().toString(36).substring(2, 15) +
+    Math.random().toString(36).substring(2, 15);
   localStorage.setItem("token", token);
 }
 ```
