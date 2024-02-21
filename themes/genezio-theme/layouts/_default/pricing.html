@@ -4,14 +4,36 @@
 <div class="px-3 bg-dark" style="overflow: hidden">
   <div class="container plansWrap text-white">
     <div class="py-4">
-      <h2 style="font-size: 48px" class="fw-bold text-center py-5 my-2">
+      <h1 style="font-size: 48px" class="fw-bold text-center py-5 my-2">
         Get started at no cost, then pay per project
-      </h2>
+      </h1>
     </div>
 
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
 
     <div style="margin-top: 40px" class="row justify-content-between mx-0 pb-3">
+      {{/* Start of Monthly / Yearly */}}
+      <div
+        class="d-flex align-items-center justify-content-center justify-content-lg-end mb-4 pb-3 px-0"
+      >
+        <button
+          id="monthlyButton"
+          class="btn btn-secondary text-white fw-semibold mx-1 px-4 py-2 mt-2"
+        >
+          Monthly
+        </button>
+        <button
+          id="yearlyButton"
+          style="border: 1px solid rgba(153, 173, 203, 0.4)"
+          class="btn fw-semibold mx-1 px-4 py-2 text-white mt-2 d-flex align-items-center justify-content-center"
+        >
+          Yearly
+          <span style="margin-left: 10px" class="badge bg-primary text-white badge-primary"
+            >20% OFF</span
+          >
+        </button>
+      </div>
+
       <div class="col-5 p-0 d-md-block d-none">
         <h2 id="planTitle" class="fw-bold planTitle">Your Hobby account</h2>
 
@@ -143,7 +165,11 @@
 
                 <div class="d-flex flex-column justify-content-center align-items-end">
                   <p class="m-0 opacity-50">Starting at</p>
-                  <h4>$50/project</h4>
+                  <p id="yearlyPriceParagraph" class="m-0 fs-4 opacity-50" style="display: none">
+                    <span style="text-decoration: line-through">$50</span>
+                  </p>
+
+                  <h4 id="proPriceHeading">$50<span class="fs-6">/project/month</span></h4>
                 </div>
               </div>
             </div>
@@ -163,14 +189,12 @@
               <div class="d-flex justify-content-between w-100">
                 <div>
                   <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
-                  <p class="text-white opacity-50 mb-0">
-                    for teams who need user management or governance
-                  </p>
+                  <p class="text-white opacity-50 mb-0">for large organizations and businesses</p>
                 </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-end">
                   <p class="m-0 opacity-50">Starting at</p>
-                  <h4>$2500</h4>
+                  <h4>$2500 <span class="fs-6">/month</span></h4>
                 </div>
               </div>
             </div>
@@ -210,7 +234,7 @@
         </div>
         <div class="fixed-width-col">
           <h4 class="text-center mb-2 pb-1">Professional</h4>
-          <p class="text-center m-0">Starting at $50/project</p>
+          <p class="text-center m-0">Starting at $50/project/month</p>
         </div>
         <div class="fixed-width-col">
           <h4 class="text-center mb-2 pb-1">Enterprise</h4>
@@ -348,9 +372,18 @@
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">Genezio RPC</p>
         </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Hobby</h4>
+          <p class="text-center m-0">Free</p>
+        </div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Professional</h4>
+          <p class="text-center m-0">Starting at $50/project/month</p>
+        </div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Enterprise</h4>
+          <p class="text-center m-0">Starting at $2500</p>
+        </div>
       </div>
 
       {{/* Row */}}
@@ -459,9 +492,18 @@
         <div class="fixed-width-col biggerCol biggerCol">
           <p class="mb-0 py-4">Genezio Cloud</p>
         </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Hobby</h4>
+          <p class="text-center m-0">Free</p>
+        </div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Professional</h4>
+          <p class="text-center m-0">Starting at $50/project/month</p>
+        </div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Enterprise</h4>
+          <p class="text-center m-0">Starting at $2500</p>
+        </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
@@ -619,9 +661,18 @@
         <div class="fixed-width-col biggerCol">
           <p class="mb-0 py-4">Genezio Services</p>
         </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Hobby</h4>
+          <p class="text-center m-0">Free</p>
+        </div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Professional</h4>
+          <p class="text-center m-0">Starting at $50/project/month</p>
+        </div>
+        <div class="fixed-width-col">
+          <h4 class="text-center mb-2 pb-1">Enterprise</h4>
+          <p class="text-center m-0">Starting at $2500</p>
+        </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
@@ -1817,6 +1868,41 @@
       card.classList.remove("ActivePlanCard");
     });
   }
+
+  // Start of yearly / monthly handle
+
+  // Get references to the Monthly and Yearly buttons
+  const monthlyButton = document.querySelector("#monthlyButton");
+  const yearlyButton = document.querySelector("#yearlyButton");
+  const yearlyPriceParagraph = document.getElementById("yearlyPriceParagraph");
+  const proPrice = document.getElementById("proPriceHeading");
+  // Function to toggle active state and yearly price visibility
+  function toggleActive(button) {
+    const inactiveButton = button === monthlyButton ? yearlyButton : monthlyButton;
+    button.style.backgroundColor = "var(--bs-secondary)";
+    button.style.color = "#fff";
+    button.style.borderColor = "transparent";
+    inactiveButton.style.backgroundColor = "transparent";
+    inactiveButton.style.color = "var(--bs-secondary)";
+    inactiveButton.style.borderColor = "rgba(153, 173, 203, 0.4)";
+
+    if (button === yearlyButton) {
+      yearlyPriceParagraph.style.display = "block";
+      proPrice.innerHTML = "$40<span class='fs-6'>/project/month</span>";
+    } else {
+      yearlyPriceParagraph.style.display = "none";
+      proPrice.innerHTML = "$50<span class='fs-6'>/project/month</span>";
+    }
+  }
+
+  // Add click event listeners to the buttons
+  monthlyButton.addEventListener("click", function () {
+    toggleActive(monthlyButton);
+  });
+
+  yearlyButton.addEventListener("click", function () {
+    toggleActive(yearlyButton);
+  });
 </script>
 
 {{ end }}
