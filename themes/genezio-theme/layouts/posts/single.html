@@ -231,11 +231,18 @@
     </div>
 
     <div class="row px-1 mx-4 justify-content-center">
+    {{ $currentPost := . }}
     {{ $recentPosts := slice }}
     {{ $allPosts := where site.RegularPages "Type" "posts" }}
     {{ $sortedPosts := $allPosts.ByDate.Reverse }}
-    {{ range first 3 $sortedPosts }}
-        {{ $recentPosts = $recentPosts | append . }}
+    {{ $skipCurrent := false }}
+    {{ range $sortedPosts }}
+        {{ if and (not $skipCurrent) (ne . $currentPost) }}
+            {{ $recentPosts = $recentPosts | append . }}
+            {{ if eq (len $recentPosts) 3 }}
+                {{ $skipCurrent = true }}
+            {{ end }}
+        {{ end }}
     {{ end }}
 
     {{ range $recentPosts }}
