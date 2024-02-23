@@ -60,8 +60,8 @@ Where this gets complicated is when types are not abundantly clear or well-defin
 // Incorrectly defined date as a string
 let date: string = "2024-02-19";
 
-> // Function expecting a tuplet of integers for date processing
-> function processDate(year: number, month: number, day: number): void {
+ // Function expecting a tuplet of integers for date processing
+ function processDate(year: number, month: number, day: number): void {
 
     console.log(`Processing date: ${year}-${month}-${day}`);
 
