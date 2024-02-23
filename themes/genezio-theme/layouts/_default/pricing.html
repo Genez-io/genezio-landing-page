@@ -165,11 +165,12 @@
 
                 <div class="d-flex flex-column justify-content-center align-items-end">
                   <p class="m-0 opacity-50">Starting at</p>
-                  <p id="yearlyPriceParagraph" class="m-0 fs-4 opacity-50" style="display: none">
-                    <span style="text-decoration: line-through">$50</span>
-                  </p>
 
-                  <h4 id="proPriceHeading">$50<span class="fs-6">/project/month</span></h4>
+                  <p id="yearlyPriceParagraph" class="m-0 fs-4">50$</p>
+
+                  <h4 style="text-align: right" id="proPriceHeading">
+                    <span class="fs-6">/project/month</span>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -194,7 +195,16 @@
 
                 <div class="d-flex flex-column justify-content-center align-items-end">
                   <p class="m-0 opacity-50">Starting at</p>
-                  <h4>$2500<span class="fs-6">/month</span></h4>
+                  <h4
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: end;
+                      align-items: end;
+                    "
+                  >
+                    $2500<span class="fs-6 mt-2">/month</span>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -2044,11 +2054,11 @@
     inactiveButton.style.borderColor = "rgba(153, 173, 203, 0.4)";
 
     if (button === yearlyButton) {
-      yearlyPriceParagraph.style.display = "block";
-      proPrice.innerHTML = "$40<span class='fs-6'>/project/month</span>";
+      yearlyPriceParagraph.innerHTML = `
+    <span style="text-decoration: line-through;" class="opacity-50">$50</span> $40
+  `;
     } else {
-      yearlyPriceParagraph.style.display = "none";
-      proPrice.innerHTML = "$50<span class='fs-6'>/project/month</span>";
+      yearlyPriceParagraph.innerHTML = "$50";
     }
   }
 
