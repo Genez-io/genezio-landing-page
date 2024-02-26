@@ -4,7 +4,9 @@
   <meta name="description" content="Genezio is a serverless platform for building full-stack web and mobile applications in a scalable and cost-efficient way." />
   <meta name="keywords" content="genezio, serverless, platform, full-stack, web, mobile, applications, scalable, cost-efficient" />
   <meta name="author" content="Genezio" />
-  <meta name="robots" content="index, follow" />
+  {{ if eq .Site.BaseURL "https://genezio.com/" }}
+    <meta name="robots" content="index, follow" />
+    {{ end }}
 
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />

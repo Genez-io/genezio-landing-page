@@ -39,7 +39,10 @@
     <meta name="twitter:creator" content="@GenezioNetwork" />
     <meta name="twitter:title" content="{{ .Params.Title }}" />
     <meta name="twitter:description" content="{{ .Params.Description }}" />
+
+    {{ if eq .Site.BaseURL "https://genezio.com/" }}
     <meta name="robots" content="index,follow" />
+    {{ end }}
 
     {{ block "meta_tags" . }}{{end}}
 
