@@ -44,6 +44,56 @@
   flex: 0 0 340px !important; /* Set a fixed width for each column */
 }
 
+.mobilePlanTitle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobilePlanTitle {
+    display: block;
+  }
+  .fixed-width-container {
+    overflow-x: visible;
+  }
+  .fixed-width-row {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+    &:first-child {
+      display: none;
+    }
+  }
+  .fixed-width-col-space {
+    border: 1px solid blue !important;
+  }
+  .fixed-width-col {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    border: none !important;
+    flex: 0 0 28px !important;
+    p {
+      padding: 0 !important;
+    }
+
+    .custom-tooltip-container {
+      margin: 0 0 0 20px !important;
+    }
+
+    .mobilePlanTitle {
+      margin: 0;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    img {
+      margin: 0 !important;
+    }
+  }
+}
+
 .fixed-width-col-space {
   flex: 0 0 280px; /* Set a fixed width for each column */
   padding: 12px 24px 12px 24px;
