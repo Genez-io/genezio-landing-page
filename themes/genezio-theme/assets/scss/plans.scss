@@ -40,8 +40,24 @@
   }
 }
 
+.fixed-width-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  height: 1000px;
+}
+.colBg {
+  background-color: #21143a !important;
+}
+
+.stickyHeader {
+  background-color: #21143a !important;
+  z-index: 9999;
+  position: sticky;
+  top: 0px;
+}
+
 .biggerCol {
-  flex: 0 0 340px !important; /* Set a fixed width for each column */
+  flex: 0 0 395px !important; /* Set a fixed width for each column */
 }
 
 .mobilePlanTitle {
@@ -54,6 +70,7 @@
   }
   .fixed-width-container {
     overflow-x: visible;
+    height: auto !important;
   }
   .fixed-width-row {
     border: 2px solid rgba(255, 255, 255, 0.1);
