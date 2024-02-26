@@ -129,8 +129,31 @@ $cyan: #0dcaf0 !default;
   transition: opacity 0.3s;
 }
 
+.custom-tooltip-text-left {
+  visibility: hidden;
+  width: 280px;
+  background-color: rgba(226, 217, 243, 1);
+  color: #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  right: calc(100% + 10px) !important;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 /* Show the custom tooltip text when hovering */
 .custom-tooltip-container:hover .custom-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-tooltip-container:hover .custom-tooltip-text-left {
   visibility: visible;
   opacity: 1;
 }
