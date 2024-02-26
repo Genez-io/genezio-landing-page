@@ -60,7 +60,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://genezio-landing-page-dev.app.genez.io"
       - name: Clone https://github.com/Genez-io/genezio-documentation
         run: git clone https://github.com/Genez-io/genezio-documentation
       - name: Install and build Documentation

@@ -8,6 +8,10 @@
       }}{{ end }}
     </title>
 
+    {{ if eq .Site.BaseURL "https://genezio-landing-page-dev.app.genez.io" }}
+    <meta name="robots" content="noindex, nofollow" />
+    {{ end }}
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#6f42c1" media="(prefers-color-scheme: dark)" />
