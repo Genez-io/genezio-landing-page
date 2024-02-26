@@ -4,14 +4,36 @@
 <div class="px-3 bg-dark" style="overflow: hidden">
   <div class="container plansWrap text-white">
     <div class="py-4">
-      <h2 style="font-size: 48px" class="fw-bold text-center py-5 my-2">
+      <h1 style="font-size: 48px" class="fw-bold text-center py-5 my-2">
         Get started at no cost, then pay per project
-      </h2>
+      </h1>
     </div>
 
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
 
     <div style="margin-top: 40px" class="row justify-content-between mx-0 pb-3">
+      {{/* Start of Monthly / Yearly */}}
+      <div
+        class="d-flex align-items-center justify-content-center justify-content-lg-end mb-4 pb-3 px-0"
+      >
+        <button
+          id="monthlyButton"
+          class="btn btn-secondary text-white fw-semibold mx-1 px-4 py-2 mt-2"
+        >
+          Monthly
+        </button>
+        <button
+          id="yearlyButton"
+          style="border: 1px solid rgba(153, 173, 203, 0.4)"
+          class="btn fw-semibold mx-1 px-4 py-2 text-white mt-2 d-flex align-items-center justify-content-center"
+        >
+          Yearly
+          <span style="margin-left: 10px" class="badge bg-primary text-white badge-primary"
+            >20% OFF</span
+          >
+        </button>
+      </div>
+
       <div class="col-5 p-0 d-md-block d-none">
         <h2 id="planTitle" class="fw-bold planTitle">Your Hobby account</h2>
 
@@ -143,7 +165,12 @@
 
                 <div class="d-flex flex-column justify-content-center align-items-end">
                   <p class="m-0 opacity-50">Starting at</p>
-                  <h4>$50/project</h4>
+
+                  <p id="yearlyPriceParagraph" class="m-0 fs-4">50$</p>
+
+                  <h4 style="text-align: right" id="proPriceHeading">
+                    <span class="fs-6">/project/month</span>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -163,14 +190,21 @@
               <div class="d-flex justify-content-between w-100">
                 <div>
                   <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
-                  <p class="text-white opacity-50 mb-0">
-                    for teams who need user management or governance
-                  </p>
+                  <p class="text-white opacity-50 mb-0">for large organizations and businesses</p>
                 </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-end">
                   <p class="m-0 opacity-50">Starting at</p>
-                  <h4>$2500</h4>
+                  <h4
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: end;
+                      align-items: end;
+                    "
+                  >
+                    $2500<span class="fs-6 mt-2">/month</span>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -202,17 +236,17 @@
     <h2 class="text-center fw-bold mb-4 pb-3">Compare our plans in detail</h2>
 
     <div class="fixed-width-container">
-      <div class="fixed-width-row">
+      <div class="fixed-width-row stickyHeader">
         <div class="fixed-width-col biggerCol"></div>
-        <div class="fixed-width-col">
+        <div class="fixed-width-col colBg">
           <h4 class="text-center mb-2 pb-1">Hobby</h4>
           <p class="text-center m-0">Free</p>
         </div>
-        <div class="fixed-width-col">
+        <div class="fixed-width-col colBg">
           <h4 class="text-center mb-2 pb-1">Professional</h4>
-          <p class="text-center m-0">Starting at $50/project</p>
+          <p class="text-center m-0">Starting at $50/project/month</p>
         </div>
-        <div class="fixed-width-col">
+        <div class="fixed-width-col colBg">
           <h4 class="text-center mb-2 pb-1">Enterprise</h4>
           <p class="text-center m-0">Starting at $2500</p>
         </div>
@@ -225,67 +259,121 @@
           <p class="mb-0 py-4">Credit card required</p>
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-x-icon.svg" alt="table-x" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <p class="m-0 text-center">enterprise account</p>
         </div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Free projects - unlimited in any plan - experience the power of type safe SDK generation
-            and seamless deployment with genezio for your personal projects
-          </p>
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Free projects</p>
+
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >test, personal, non-commercial, academic, open-source projects</span
+              >
+            </div>
+          </div>
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <p class="m-0 text-center">unlimited</p>
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+
           <p class="m-0 text-center">unlimited</p>
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <p class="m-0 text-center">unlimited</p>
         </div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Paid projects - upgrade your free projects to paid when they need to scale with 30 days
-            grace period
-          </p>
+          <p class="mb-0 py-4">Commercial projects</p>
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-x-icon.svg" alt="table-x" />
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">unlimited starting at $50/project</p>
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="m-0 text-center">$50/project/month</p>
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">unlimited starting at $30/project</p>
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="m-0 text-center">$30/project/month</p>
         </div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Collaboration - work alone or as a team - share the projects and dashboard features
-            between team members.
-          </p>
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Collaboration</p>
+          </div>
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">unlimited team members</p>
+          <p class="mobilePlanTitle">Hobby</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">unlimited team members</p>
+          <p class="mobilePlanTitle">Professional</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">unlimited w/ account management</p>
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="mb-0 py-4">account management</p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text-left"
+                >AD integration, manage project contributors, audit logs, governance centralized
+                billing</span
+              >
+            </div>
+          </div>
         </div>
       </div>
       {{/* ROW */}}
@@ -294,42 +382,38 @@
           <p class="mb-0 py-4">Logs retention</p>
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">one week per project</p>
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="m-0 text-center">one week</p>
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">one year per project</p>
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="m-0 text-center">one year</p>
         </div>
-        <div class="fixed-width-col"><p class="m-0 text-center">custom</p></div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="m-0 text-center">custom</p>
+        </div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Support - we are dedicated to our customers and are providing best in class support
-            services to help you succeed build the apps that your users will love
-          </p>
+          <p class="mb-0 py-4">Local & Production environments</p>
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">
-            best effort support - and we do put effort in replying timely on chat, email, discord,
-            etc
-          </p>
+          <p class="mobilePlanTitle">Hobby</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">
-            priority support on any channel - we will help you fix the issues you have with priority
-            on paid projects
-          </p>
+          <p class="mobilePlanTitle">Professional</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <p class="m-0 text-center">
-            dedicated 24x7 support and professional services - one hour per week included for
-            onboarding or other issues
-          </p>
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
 
-      {{/* separator ROW */}}
+      {{/* separator ROW */}} {{/*
       <div style="height: 100px" class="fixed-width-row">
         <div
           class="fixed-width-col-space biggerCol"
@@ -342,174 +426,45 @@
           style="border-right: 1px solid rgba(255, 255, 255, 0.1)"
         ></div>
       </div>
+      */}} {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Multiple cloud environments</p>
 
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Genezio RPC</p>
-        </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-      </div>
-
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Full static type safety with auto-completion in your favorite editor
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Full dynamic type safety support using Zod as middleware</p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Besides production, enable test, staging, or other environments</span
+              >
+            </div>
+          </div>
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Type safe RPC implemented by parsing the backend code, storing the AST - to generate the
-            SDK in any frontend language with no dependencies
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Tested and production ready for TypeScript BE/FE. Beta support for: Kotlin and DART.
-            Under development: GoLang and Swift
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Export the resulting SDK using dependency managers such as NPM Registry - private to
-            your team or public for anybody to use
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-
-      {{/* separator ROW */}}
-      <div style="height: 100px" class="fixed-width-row">
-        <div
-          class="fixed-width-col-space biggerCol"
-          style="border-left: 1px solid rgba(255, 255, 255, 0.1)"
-        ></div>
-        <div style="border: none" class="fixed-width-col"></div>
-        <div style="border: none" class="fixed-width-col"></div>
-        <div
-          class="fixed-width-col-space"
-          style="border-right: 1px solid rgba(255, 255, 255, 0.1)"
-        ></div>
-      </div>
-
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol biggerCol">
-          <p class="mb-0 py-4">Genezio Cloud</p>
-        </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Type safe RPC implemented by parsing the backend code, storing the AST - to generate the
-            SDK in any frontend language with no dependencies
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">one production environment per project</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">one production environment per project</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">can deploy on own cloud</p>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Production environment as well as local development environments</p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Multiple staging environments supported for better collaboration and integration testing
-          </p>
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-x-icon.svg" alt="table-x" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
@@ -520,88 +475,177 @@
           <p class="mb-0 py-4">Type safe backend function invocations</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">up to 1,000,000 total per year for all free projects</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">
-            up to 10,000,000 per project per year + $10 each additional 10,000,000
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="mb-0 text-center">
+            1,000,000 calls/year <br />
+            <span style="opacity: 0.6">for all free projects</span>
           </p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">
-            up to 20,000,000 per project per year + $10 each additional 20,000,000
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="mb-0 text-center">
+            10,000,000/project/year<br />
+            <span style="opacity: 0.6"> then $10 per 10,000,000</span>
+          </p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="mb-0 text-center">
+            20,000,000/project/year<br />
+            <span style="opacity: 0.6"> then $10 per 20,000,000</span>
           </p>
         </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Frontend deployment with CDN on Genezio</p>
+          <p class="mb-0 py-4">Custom domain</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">no custom domain</p>
+          <p class="mobilePlanTitle">Hobby</p>
+          <img src="/images/table-x-icon.svg" alt="table-x" />
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">custom domain</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">integration with enterprise domain</p>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            For new and old projects - start from our examples in minutes or bring your existing
-            ExpressJS app and add Genezio classes and features
-          </p>
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Framework agnostic, works with React, Vue, Angular, Svelte, ExpressJS, Fastify, etc.s
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Cron jobs service</p>
+
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Function scheduler, defined with up to a minute granularity</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="mb-0 text-center">
+            up to 10 <br />
+            for all free projects
           </p>
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="mb-0 text-center">unlimited</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="mb-0 text-center">unlimited</p>
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Email service</p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Use our email module from your code to send emails to your users securely</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="mb-0 text-center">w/ genezio branding</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Developer experience enhanced bundling - minimal package generated automatically.
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">User authentication service</p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Build your own auth flows, works on top of PostgreSQL</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="mb-0 text-center">
+            10,000 sign-ins/year <br />
+            for all free projects
           </p>
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="mb-0 text-center">unlimited</p>
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="mb-0 text-center">unlimited</p>
         </div>
       </div>
 
-      {{/* separator ROW */}}
+      {{/* separator ROW */}} {{/*
       <div style="height: 100px" class="fixed-width-row">
         <div
           class="fixed-width-col-space biggerCol"
@@ -614,75 +658,101 @@
           style="border-right: 1px solid rgba(255, 255, 255, 0.1)"
         ></div>
       </div>
-      {{/* Row */}}
+      */}} {{/* Row */}} {{/*
       <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Genezio Services</p>
-        </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Cron jobs - scheduled to be executed up to a minute granularity</p>
+        <div class="fixed-width-col biggerCol biggerCol">
+          <p class="mb-0 py-4">Genezio Cloud</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">up to 10 total</p>
+          <h4 class="text-center mb-2 pb-1">Hobby</h4>
+          <p class="text-center m-0">Free</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">unlimited</p>
+          <h4 class="text-center mb-2 pb-1">Professional</h4>
+          <p class="text-center m-0">Starting at $50/project/month</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">unlimited</p>
+          <h4 class="text-center mb-2 pb-1">Enterprise</h4>
+          <p class="text-center m-0">Starting at $2500</p>
         </div>
       </div>
-      {{/* Row */}}
+      */}} {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Queues - use them for your automation apps</p>
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Custom OAuth 2.0 app</p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Bring your own OAuth 2.0 app. Enhance security & control over how users interact
+                with your app</span
+              >
+            </div>
+          </div>
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">User authentication module - works on PostgreSQL database</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">10,000 sign-ins/ year (for all free projects)</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">unlimited</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">unlimited</p>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Bring your own OAuth 2.0 app - enhance security & control over how users interact with
-            your app
-          </p>
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-x-icon.svg" alt="table-x" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+          <img src="/images/table-x-icon.svg" alt="table-x" />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <p class="mb-0 py-4">Queue connector - via Upstash</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">PostgreSQL connector - via Neon</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img src="/images/table-check-icon.svg" alt="table-x" />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
@@ -690,106 +760,122 @@
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Email service - use this from your code to send emails to your users securely
-          </p>
+          <p class="mb-0 py-4">Redis connector - via Upstash</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">genezio branding</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">no branding</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">no branding</p>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Databases - through easy to use third party integrations</p>
-        </div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-        <div class="fixed-width-col"></div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">PostgreSQL - Neon integration</p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-x" />
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+          <img src="/images/table-check-icon.svg" alt="table-check" />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">MongoDB - Mongo Atlas</p>
+          <p class="mb-0 py-4">Bring your own database/connector</p>
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-x" />
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Redis - Upstash integration</p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-x" />
-        </div>
-        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
         <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
           <img src="/images/table-check-icon.svg" alt="table-check" />
         </div>
       </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">bring your own database</p>
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-x" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4">Genezio-provisioned databases</p>
 
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >No need to worry about 3rd party database provisioning. Get fast, reliable Genezio
+                databases. SQL, NoSQL, Cache</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0">coming soon</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="text-center mb-0">coming soon</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0">coming soon</p>
+        </div>
+      </div>
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">
-            Databases provisioned by us. With Genezio, the database is not exposed to the frontend
-            directly. Table creation and CRUD boilerplate functions generated through LLM
-          </p>
+          <p class="mb-0 py-4">Support</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">coming soon</p>
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0">best effort</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">coming soon</p>
+          <p class="mobilePlanTitle">Professional</p>
+          <p class="text-center mb-0">priority</p>
         </div>
         <div class="fixed-width-col">
-          <p class="mb-0 py-4 text-center">coming soon</p>
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0">dedicated</p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text-left"
+                >24x7 support and professional services one hour per week included for onboarding or
+                other issues</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1817,6 +1903,41 @@
       card.classList.remove("ActivePlanCard");
     });
   }
+
+  // Start of yearly / monthly handle
+
+  // Get references to the Monthly and Yearly buttons
+  const monthlyButton = document.querySelector("#monthlyButton");
+  const yearlyButton = document.querySelector("#yearlyButton");
+  const yearlyPriceParagraph = document.getElementById("yearlyPriceParagraph");
+  const proPrice = document.getElementById("proPriceHeading");
+  // Function to toggle active state and yearly price visibility
+  function toggleActive(button) {
+    const inactiveButton = button === monthlyButton ? yearlyButton : monthlyButton;
+    button.style.backgroundColor = "var(--bs-secondary)";
+    button.style.color = "#fff";
+    button.style.borderColor = "transparent";
+    inactiveButton.style.backgroundColor = "transparent";
+    inactiveButton.style.color = "var(--bs-secondary)";
+    inactiveButton.style.borderColor = "rgba(153, 173, 203, 0.4)";
+
+    if (button === yearlyButton) {
+      yearlyPriceParagraph.innerHTML = `
+    <span style="text-decoration: line-through;" class="opacity-50">$50</span> $40
+  `;
+    } else {
+      yearlyPriceParagraph.innerHTML = "$50";
+    }
+  }
+
+  // Add click event listeners to the buttons
+  monthlyButton.addEventListener("click", function () {
+    toggleActive(monthlyButton);
+  });
+
+  yearlyButton.addEventListener("click", function () {
+    toggleActive(yearlyButton);
+  });
 </script>
 
 {{ end }}

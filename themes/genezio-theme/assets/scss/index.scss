@@ -103,6 +103,61 @@ $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
 
+/* Custom Tooltip container */
+.custom-tooltip-container {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+}
+
+/* Custom Tooltip text */
+.custom-tooltip-text {
+  visibility: hidden;
+  width: 280px;
+  background-color: rgba(226, 217, 243, 1);
+  color: #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.custom-tooltip-text-left {
+  visibility: hidden;
+  width: 280px;
+  background-color: rgba(226, 217, 243, 1);
+  color: #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  right: calc(100% + 10px) !important;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the custom tooltip text when hovering */
+.custom-tooltip-container:hover .custom-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-tooltip-container:hover .custom-tooltip-text-left {
+  visibility: visible;
+  opacity: 1;
+}
+
 .custom-brand-img-item {
   height: 50px;
 }
@@ -110,7 +165,8 @@ $cyan: #0dcaf0 !default;
 .ourLatestArticle {
   .lastArticleBackground {
     position: relative;
-    background: linear-gradient(0deg, #000 0.03%, rgba(0, 0, 0, 0) 50.03%),
+    background:
+      linear-gradient(0deg, #000 0.03%, rgba(0, 0, 0, 0) 50.03%),
       url("/images/lastArticle.webp") center center no-repeat;
     background-size: cover;
     height: 344px;
