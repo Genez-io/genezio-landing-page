@@ -10,6 +10,15 @@ tags = []
 features = []
 min_version = "0.41.0"
 
+[outputFormats.imagessitemap]
+  baseName  = 'imagessitemap'
+  mediaType = 'application/xml'
+  noUgly = true # de
+
+[outputs]
+  page = [ "html"]
+  home = [ "html", "rss", "imagessitemap"]
+
 [author]
   name = ""
   homepage = ""
