@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://genezio.com/sitemap.xml
+
+Sitemap: https://genezio.com/docs/sitemap.xml 
