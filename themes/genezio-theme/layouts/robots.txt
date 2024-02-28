@@ -5,3 +5,5 @@ Allow: /
 Sitemap: https://genezio.com/sitemap.xml
 
 Sitemap: https://genezio.com/docs/sitemap.xml 
+
+Sitemap: https://genezio.com/home.imagessitemap.xml
