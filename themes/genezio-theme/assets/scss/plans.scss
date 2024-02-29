@@ -28,6 +28,7 @@
 }
 .fixed-width-container {
   width: 100%;
+  font-family: Inter;
   overflow-x: auto;
 }
 
@@ -54,6 +55,12 @@
   z-index: 9999;
   position: sticky;
   top: 0px;
+
+  @media (max-width: 768px) {
+    .tableTitleBorder {
+      display: none !important;
+    }
+  }
 }
 
 .biggerCol {
