@@ -15,7 +15,7 @@ meta_og_image: "https://genez.io/images/release0.8.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 1
-url: /auth-postgresql-go-genezio-v0.8
+url: /blog/auth-postgresql-go-genezio-v0.8
 ---
 
 We're super excited to share that Genezio v0.8 is here. Our latest update is all about making your life easier, whether you're building the next big thing or just playing around with new tech. Let's take a look at what’s new.
