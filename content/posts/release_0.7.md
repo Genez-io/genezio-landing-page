@@ -17,6 +17,8 @@ customFooter: "White footer"
 readTime: 1
 ---
 
+We've been hard at work, and we're thrilled to introduce genezio v0.7, loaded with features designed to make your development experience smoother and more collaborative! In this release, we’ve added a collaboration feature, simplified the process of creating a new project, and introduced a new integration. Let’s explore the updates:
+
 ## Collaboration
 
 With the new collaboration feature, it is now easier than ever to work on a genezio project as a team. As an owner of the project, you have full control and you can invite your colleagues or revoke permissions anytime. Once people are invited and they accept the invitation, they can see the project details, use the test interface to test the project, or deploy new versions of the code.
