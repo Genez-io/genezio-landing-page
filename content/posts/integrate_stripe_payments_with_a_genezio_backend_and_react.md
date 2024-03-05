@@ -10,7 +10,7 @@ preview: This guide will walk you through integrating Stripe payments using a ge
 # meta data start
 description: "This guide will walk you through integrating Stripe payments using a genezio backend and a React frontend. Integrating a web app with a payment gateway can be challenging, even if Stripe provides most of the functionality out of the box."
 meta_og_url: "https://genez.io/blog/integrate_stripe_payments_with_a_genezio_backend_and_react"
-meta_og_image: "https://genez.io/integrate_stripe_payments_with_a_genezio_backend_and_react.webp"
+meta_og_image: "https://genez.io/images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
