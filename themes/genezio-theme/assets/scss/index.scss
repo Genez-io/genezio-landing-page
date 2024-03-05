@@ -127,6 +127,10 @@ $cyan: #0dcaf0 !default;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s;
+  @media (max-width: 768px) {
+    left: calc(100% + -205px) !important;
+    top: 80px;
+  }
 }
 
 .custom-tooltip-text-left {
@@ -145,6 +149,11 @@ $cyan: #0dcaf0 !default;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s;
+  @media (max-width: 768px) {
+    left: calc(100% + -210px) !important;
+    z-index: 99999;
+    top: 80px;
+  }
 }
 
 /* Show the custom tooltip text when hovering */
@@ -282,6 +291,9 @@ $cyan: #0dcaf0 !default;
 }
 
 @media (max-width: 768px) {
+  .dbPricing {
+    margin-top: 80px !important;
+  }
   .flow-breaker-header {
     text-align: center;
     font-family: Inter;
