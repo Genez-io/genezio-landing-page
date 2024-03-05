@@ -21,7 +21,7 @@ This guide will walk you through integrating Stripe payments using a genezio bac
 There are numerous approaches to managing Stripe API integration on the backend. In this tutorial, I'll share with you the method I believe to be most efficient and in line with Stripe API official recommendations.
 Genezio significantly simplifies the process, freeing you from concerns about deployment and ensuring smooth communication between the backend and frontend.
 
-## content
+## Content
 
 1. [Prerequisites](#prerequisites)
 2. [Getting Started](#getting-started)
