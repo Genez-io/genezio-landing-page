@@ -212,6 +212,7 @@ You can find the environment variables in the `Integrations` tab of your project
 The `.env` file should look similar to the following snippet:
 
 ```bash
+{{< filePath >}}server/.env{{< /filePath >}}
 UPSTASH_REDIS_URL="redis://default:sensitivepassword@cute-capybara-33897.upstash.io:33897"
 UPSTASH_REDIS_REST_URL="https://cute-capybara-33897.upstash.io"
 UPSTASH_REDIS_REST_TOKEN="sensitivetoken"

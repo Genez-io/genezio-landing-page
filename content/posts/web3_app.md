@@ -108,8 +108,7 @@ These npm packages will be used to interact with the blockchain and to save the 
 Create a `.env` file in the `blockchain-project/server` directory.
 
 ```env
-# blockchain-project/server/.env
-
+{{< filePath >}}server/.env{{< /filePath >}}
 # Replace these values with your own
 CONTRACT_ADDRESS = <todo-paste-the-contract-address-here>
 BLAST_API_RPC_ENDPOINT = <todo-paste-the-blast-api-rpc-endpoint-here>
