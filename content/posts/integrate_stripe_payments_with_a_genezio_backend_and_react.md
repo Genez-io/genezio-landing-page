@@ -81,9 +81,8 @@ We will use `stripe-js` to create new Stripe checkout sessions and to verify pay
 Now let’s create a server-side service in the `backend` folder called `StripeService.ts`.
 For this tutorial, we will use TypeScript, but you can also use JavaScript and Go (experimental).
 
-`server/StripeService.ts`
-
 ```ts
+{{< filePath >}}server/StripeService.ts{{< /filePath >}}
 import {
   GenezioDeploy,
   GenezioMethod,
@@ -147,9 +146,8 @@ To do that, we will set up a {{< external-link link="https://docs.stripe.com/web
 
 Add a new function in your **backend service class.**
 
-`backend/StripeService.ts`
-
 ```ts
+{{< filePath >}}server/StripeService.ts{{< /filePath >}}
 @GenezioMethod({ type: "http" })
 async webhook(req: GenezioHttpRequest): Promise<GenezioHttpResponse> {
   let event: Stripe.Event;
@@ -195,9 +193,8 @@ The React application frontend features a straightforward view with a button and
 This button initiates a request to the backend to retrieve the Checkout URL.
 The messages component indicates whether the payment was successful or not.
 
-`client/src/App.tsx`
-
 ```ts
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";

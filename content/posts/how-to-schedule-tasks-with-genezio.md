@@ -66,6 +66,7 @@ Next, create a new file called `scheduler.ts` in the root directory of your proj
 Open this newly created file in your preferred IDE and add the following code:
 
 ```javascript
+{{< filePath >}}scheduler.ts{{< /filePath >}}
 import { GenezioDeploy, GenezioMethod } from "@genezio/types";
 
 /**
@@ -123,6 +124,7 @@ This will deploy the whole project to the cloud and make it run the task every m
 Cron expression: `*/10 * * * *`
 
 ```javascript
+{{< filePath >}}scheduler.ts{{< /filePath >}}
 @GenezioMethod({ type: "cron", cronString: "*/10 * * * *" })
 public async every10MinuteTask() {
   const output = "Every 10 minutes " + new Date().toISOString();
@@ -135,6 +137,7 @@ public async every10MinuteTask() {
 Cron expression: `0 8 * * *`
 
 ```javascript
+{{< filePath >}}scheduler.ts{{< /filePath >}}
 @GenezioMethod({ type: "cron", cronString: "0 8 * * *" })
 public async everyDay8AMTask() {
   const output = "Every day at 8 AM" + new Date().toISOString();

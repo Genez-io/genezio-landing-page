@@ -31,6 +31,7 @@ Redis is often used as a caching layer to store frequently accessed data in memo
 Use genezio classes to implement a boilerplate-free caching system that stores data in Redis.
 
 ```typescript
+{{< filePath >}}server/ecommerceService.ts{{< /filePath >}}
 import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis";
 
@@ -63,6 +64,7 @@ export class EcommerceCacheService {
 Storing session data in Redis is a common practice. Because of its speed, Redis is well-suited for managing user sessions in web applications. It allows for quick and efficient retrieval of user-specific information.
 
 ```typescript
+{{< filePath >}}server/ecommerceService.ts{{< /filePath >}}
 import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis";
 
@@ -151,6 +153,7 @@ To connect to the Redis database from your NodeJs backend, create a new file cal
 The following code snippet creates a new class that will be a minimal Redis service. In the constructor, we initialize the Redis client using the `UPSTASH_REDIS_URL` environment variable. This variable is already set remotely in your project by the Upstash Redis integration.
 
 ```ts
+{{< filePath >}}server/shoppingCartService.ts{{< /filePath >}}
 import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis";
 
@@ -171,6 +174,7 @@ export class ShoppingCartService {
 Implement two methods to store and retrieve <key, value> pairs in the Redis database:
 
 ```ts
+{{< filePath >}}server/shoppingCartService.ts{{< /filePath >}}
 @GenezioDeploy()
 export class ShoppingCartService {
   client: Redis;

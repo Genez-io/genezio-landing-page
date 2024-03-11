@@ -209,6 +209,7 @@ Now let’s make the modification in our code. The final prompt with delimiters 
 To test this prompt we have to make a request to OpenAI API. We use the Open AI SDK for this. The following code is what you need. Replace **TODO2** with this:
 
 ```javascript
+{{< filePath >}}server/createChatCompletion.js{{< /filePath >}}
 const completion = await this.openai.createChatCompletion({
   model: "gpt-3.5-turbo",
   temperature: 0.8,
@@ -236,6 +237,7 @@ The `createChatCompletion` method takes a configuration object as parameter that
 Now we have to check the output of OpenAI, parse the output and return it. We have to properly validate the output since the API response is not deterministic and it can return, for example, wrongly formatted output.
 
 ```javascript
+{{< filePath >}}server/createChatCompletion.js{{< /filePath >}}
 if (
   completion.data &&
   completion.data.choices &&
@@ -281,6 +283,7 @@ We use the delimiter `|||` to help the model understand easier where the given r
 Now that we have the prompt, let’s test it. We write once again the request to send this prompt to OpenAI. Replace **TODO4** with this:
 
 ```javascript
+{{< filePath >}}server/createChatCompletion.js{{< /filePath >}}
     if (reviews.length === 0) {
       console.log("No reviews found!");
       return {

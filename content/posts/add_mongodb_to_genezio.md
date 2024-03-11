@@ -116,6 +116,7 @@ Now that we have the connection string, you can integrate MongoDB into your clas
 First, you have to import `mongoose`:
 
 ```javascript
+{{< filePath >}}server/backendService.ts{{< /filePath >}}
 import mongoose from "mongoose";
 
 export class TutorialClass {
