@@ -105,6 +105,7 @@ This package will allow you to use the `pg` module so that you can connect to yo
 In the `postgres.ts` file, add the following code snippet:
 
 ```javascript
+{{< filePath >}}postgres.ts{{< /filePath >}}
 import { GenezioDeploy } from "@genezio/types";
 import pg from "pg";
 const { Pool } = pg;

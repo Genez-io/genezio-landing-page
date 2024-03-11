@@ -126,6 +126,7 @@ This approach will be useful to accommodate more than 1 user on your web app.
 Create a new file called `shoppingCartService.ts` in the `server` directory and paste the following code snippet into it.
 
 ```typescript
+{{< filePath >}}server/shoppingCartService.ts{{< /filePath >}}
 import { GenezioDeploy } from "@genezio/types";
 import Redis from "ioredis";
 
@@ -247,6 +248,7 @@ You'll also need 2 more methods in the backend source code - a method to remove 
 Add the following methods to the `ShoppingCartService` class:
 
 ```ts
+{{< filePath >}}server/shoppingCartService.ts{{< /filePath >}}
   async removeItemFromCart(sessionId: string, item: string): Promise<string> {
     // check if the item exists in the hashmap
     const itemExists = await this.client.hexists('cart:' + sessionId, item).catch((err) => {
@@ -354,6 +356,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 Create a new file named `client/src/models.tsx` to declare the interfaces that will be used in the application.
 
 ```typescript
+{{< filePath >}}client/src/models.tsx{{< /filePath >}}
 // The fields declared for the dummy data
 export interface Product {
   id: number;
@@ -376,6 +379,7 @@ Open `client/src/App.tsx` in your IDE and remove the existing code. We'll start 
 Add a header with a shopping cart button.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
   // Toggle the cart modal
   const toggleCartModal = (e: any) => {
     e.preventDefault();
@@ -406,6 +410,7 @@ Add a header with a shopping cart button.
 Create a state to keep track if the cart button was clicked. This state will be used to toggle the cart modal on and off.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const [isCartVisible, setIsCartVisible] = useState(false);
 
 // Toggle the cart modal
@@ -420,6 +425,7 @@ Keep the frontend running in the background and open `localhost:5173` in your br
 Add a list with the fetched products.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 <Container className="my-4">
   <Row className="justify-content-around">
     {productData.products.map((product) => (
@@ -451,6 +457,7 @@ Add a list with the fetched products.
 Add a modal that opens when the shopping cart button is clicked. In the modal, we'll display the content of the shopping cart and allow the user to close the cart, clear the cart, or delete an item from it.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 {
   isCartVisible && (
     <div
@@ -496,14 +503,13 @@ Add a modal that opens when the shopping cart button is clicked. In the modal, w
 Add a token in local storage to keep track of the session id. This token will be used to identify the cart corresponding to the user.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 // Check if the token is set in localStorage
 let token = localStorage.getItem("token") as string;
 
 // If token is not set, generate a 32-character token
 if (!token || token === "" || token === "undefined") {
-  token =
-    Math.random().toString(36).substring(2, 15) +
-    Math.random().toString(36).substring(2, 15);
+  token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   localStorage.setItem("token", token);
 }
 ```
@@ -511,6 +517,7 @@ if (!token || token === "" || token === "undefined") {
 Send a request to the backend to add an item to the cart when the `Buy now` button is clicked.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const handleBuyClick = async (e: any, product: Product) => {
   e.preventDefault();
 
@@ -522,6 +529,7 @@ const handleBuyClick = async (e: any, product: Product) => {
 Send a request to the backend to retrieve the cart data when the modal is opened.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 // Fetch the cart contents when the cart modal is visible
 useEffect(() => {
   if (isCartVisible) {
@@ -543,6 +551,7 @@ useEffect(() => {
 Send a request to the backend to delete an item from the cart when the `Delete` button is clicked.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const handleDeleteItem = async (e: any, cartItem: CartItem) => {
   e.preventDefault();
 
@@ -557,6 +566,7 @@ const handleDeleteItem = async (e: any, cartItem: CartItem) => {
 Send a request to the backend to clear the cart when the `Clear Cart` button is clicked.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const handleClearCart = async (e: any) => {
   e.preventDefault();
 
@@ -572,6 +582,7 @@ const handleClearCart = async (e: any) => {
 Finally, we still need to add a little bit of CSS to make sure everything looks nice and tidy. Add the following code snippet in the `App.css` file.
 
 ```css
+{{< filePath >}}client/src/App.css{{< /filePath >}}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -633,6 +644,7 @@ This way, the user has a visual indication that the item was successfully added 
 Add a new state to keep track of the number of items in the cart.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const [purchasedQuantity, setPurchasedQuantity] = useState(0);
 
 const handleBuyClick = async (e: any, product: Product) => {
@@ -681,6 +693,7 @@ Each button should have its own loading state to indicate that the request is be
 Below is an example of how to add a loading state to the `Buy now` button.
 
 ```typescript
+{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const [addItemLoading, setAddItemLoading] = useState<{
   [key: number]: boolean;
 }>({});
