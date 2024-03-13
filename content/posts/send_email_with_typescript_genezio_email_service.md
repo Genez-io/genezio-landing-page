@@ -21,6 +21,7 @@ customFooter: "White footer"
 readTime: 20
 ---
 
+
 In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript.
 
 Whether you're confirming user registrations or sending weekly newsletters, this guide will ensure you can implement a robust email solution with ease.
