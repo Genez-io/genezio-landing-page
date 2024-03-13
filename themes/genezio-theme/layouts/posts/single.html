@@ -501,9 +501,44 @@ window.addEventListener("scroll", updateActiveSection);
 
         copyButton.addEventListener('click', function () {
             const codeText = codeBlock.textContent.trim();
+            const lines = codeText.split('\n');
+
+            const pathLines = [
+              "server/StripeService.ts",
+              "backend/StripeService.ts",
+              "client/src/App.tsx",
+              "scheduler.ts",
+              "server/shoppingCartService.ts",
+              "client/src/models.tsx",
+              "client/src/App.css",
+              "postgres.ts",
+              "server/shoppingCartService.ts",
+              "server/ecommerceService.ts",
+              "server/backendService.ts",
+              "server/gptCaller.ts",
+              "server/abi.js",
+              "server/models/event.js",
+              "server/blockchain.js",
+              "src/App.js",
+              "server/createChatCompletion.js",
+              "server/.env",
+              ".env",
+              "backend.ts"
+              // Add more exclusion conditions here if needed
+            ];
+
+            const shouldExclude = pathLines.includes(lines[0]?.trim());
+
+            // Check if the first line is a file path and if is a path exclude it from copy
+            if (lines.length > 0 && shouldExclude) {
+              lines.shift(); // Remove the first line
+            }
+
+            const filteredCodeText = lines.join('\n'); // Join the remaining lines
 
             const textarea = document.createElement('textarea');
-            textarea.value = codeText;
+            textarea.textContent = filteredCodeText;
+
             document.body.appendChild(textarea);
             textarea.select();
             document.execCommand('copy');

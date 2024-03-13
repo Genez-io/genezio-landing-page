@@ -108,8 +108,7 @@ These npm packages will be used to interact with the blockchain and to save the 
 Create a `.env` file in the `blockchain-project/server` directory.
 
 ```env
-# blockchain-project/server/.env
-
+{{< filePath >}}server/.env{{< /filePath >}}
 # Replace these values with your own
 CONTRACT_ADDRESS = <todo-paste-the-contract-address-here>
 BLAST_API_RPC_ENDPOINT = <todo-paste-the-blast-api-rpc-endpoint-here>
@@ -119,7 +118,7 @@ MONGO_DB_URI = <todo-paste-the-mongo-db-uri-here>
 Create an `abi.js` in the `blockchain-project/server` directory and paste there the Ethereum bytecode of the smart contract:
 
 ```javascript
-// blockchain-project/server/abi.js
+{{< filePath >}}server/abi.js{{< /filePath >}}
 export const abi = <todo-paste-the-abi-here>
 ```
 
@@ -216,7 +215,7 @@ Create a new `models` folder in the `blockchain-project/server` directory.
 Inside the `models` folder, create an `event.js` file and add the following code snippet:
 
 ```javascript
-// blockchain-project/server/models/event.js
+{{< filePath >}}server/models/event.js{{< /filePath >}}
 import mongoose from "mongoose";
 const eventSchema = new mongoose.Schema({
   id: String,
@@ -231,7 +230,7 @@ export const EventModel = mongoose.models.Event || mongoose.model("Event", event
 Create a `blockchain.js` file in the `blockchain-project/server` directory with a class name `BlockchainServer`. The class will have a constructor that will initialize the services used by the application - the endpoint to the Ethereum Blockchain using Blast API and it will set up the smart contract of your selected NFT.
 
 ```javascript
-// blockchain-project/server/blockchain.js
+{{< filePath >}}server/blockchain.js{{< /filePath >}}
 import Web3 from "web3";
 import { abi } from "./abi.js";
 import { EventModel } from "./models/event.js";
@@ -264,6 +263,7 @@ export class BlockchainServer {
 Add a method in the class `BlockchainServer` to decode events from the blockchain. This method is going to be private.
 
 ```javascript
+{{< filePath >}}server/blockchain.js{{< /filePath >}}
 /**
  * Private method that decodes an event and returns the name and the parameters.
  *
@@ -303,6 +303,7 @@ Add a method that will sync the events triggered on the smart contract and index
 This method will be called periodically by configuring a scheduled expression (cron).
 
 ```javascript
+{{< filePath >}}server/blockchain.js{{< /filePath >}}
   /**
    * Method that will be called periodically by the genezio infrastructure to index the events.
    *
@@ -364,6 +365,7 @@ This method will be called periodically by configuring a scheduled expression (c
 Lastly, add a method to get the saved events from the database.
 
 ```javascript
+{{< filePath >}}server/blockchain.js{{< /filePath >}}
   /**
    * Method used to get all the events in a paginated way.
    *
@@ -421,6 +423,7 @@ npm install @mui/material @emotion/react @emotion/styled
 Modify `src/App.js` as follows:
 
 ```javascript
+{{< filePath >}}src/App.js{{< /filePath >}}
 import { useEffect, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import List from "@mui/material/List";

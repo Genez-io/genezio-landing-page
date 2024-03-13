@@ -46,7 +46,7 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR905VXGKC"></script>
-    <script>
+    <script async defer>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -67,7 +67,7 @@
     </script>
 
     <!-- Google Tag Manager -->
-    <script>
+    <script async defer>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -84,7 +84,7 @@
   {{- partial "head.html" . -}}
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
+    <noscript async defer>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-PP95P9BW"
         height="0"
