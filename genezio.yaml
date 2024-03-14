@@ -4,5 +4,5 @@ yamlVersion: 2
 frontend:
   path: ./public
   subdomain: genezio-landing-page
-  publish: ./public
+  publish: ./
   scripts: {}
