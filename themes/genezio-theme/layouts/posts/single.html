@@ -462,7 +462,7 @@ window.addEventListener("scroll", updateActiveSection);
       };
 
       const url = 'https://ahkxlexqszfsqoe33tl5im4b4y0umhdv.lambda-url.us-east-1.on.aws/HubSpotService/addContact';
-
+if(email){
       fetch(url, {
         method: 'POST',
         mode: 'cors',
@@ -480,6 +480,8 @@ window.addEventListener("scroll", updateActiveSection);
         .catch(error => {
           console.error('Error:', error);
         });
+}
+
     });
   });
 </script>
