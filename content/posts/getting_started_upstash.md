@@ -224,7 +224,7 @@ After setting the environment variables, you can test your Redis service by runn
 genezio local
 ```
 
-Open the testing page in your browser by navigating to {{< external-link link="http://localhost:8083/explore" >}}`http://localhost:8083/explore`{{< /external-link >}}.
+Open the testing page in your browser by navigating to {{< external-link link="http://localhost:8083/explore" >}}`localhost:8083/explore`{{< /external-link >}}.
 
 Here you can create and send a request to your backend to test if it works as expected.
 
