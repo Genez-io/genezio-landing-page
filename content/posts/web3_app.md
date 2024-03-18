@@ -523,12 +523,16 @@ genezio local
 Your screen should look like this:
 
 ```
-Generating your SDK...✅
-Your code was deployed and the SDK was successfully generated!
+Server listening on port 8083
+Your local server is running and the SDK was successfully generated!
+   ╭──────────────────────────────────────────────────────────────────────╮
+   │                                                                      │
+   │   Import your classes like this:                                     │
+   │   import { BlockchainServer } from "@genezio-sdk/blockchain-project" │
+   │                                                                      │
+   ╰──────────────────────────────────────────────────────────────────────╯
 
 Test your code at http://localhost:8083/explore
-
-Server listening on port 8083
 ```
 
 Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="http://localhost:8083/explore" >}}localhost:8083/explore{{< /external-link >}} to interact with it from the GUI.
