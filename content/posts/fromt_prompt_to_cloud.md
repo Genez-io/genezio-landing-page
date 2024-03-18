@@ -127,7 +127,7 @@ You have TODOs on each part of the code where you have to work on.
 - Install the required dependencies: `npm install`
 - Create a file named `.env` and add `OPENAI_SECRET_KEY=<your_openai_secret_key>` and `TMDB_API_KEY=<your_key>`
 - Run genezio local in the root directory to test the environment: `genezio local`
-- Go to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}}
+- Go to {{< external-link link="http://localhost:8083/explore" >}}localhost:8083/explore{{< /external-link >}}
   to test your backend. Keep in mind that it will not work on Safari
 
 ### Get Movies Recommendation by User Input
