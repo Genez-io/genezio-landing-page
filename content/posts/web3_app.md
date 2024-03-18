@@ -526,12 +526,12 @@ Your screen should look like this:
 Generating your SDK...✅
 Your code was deployed and the SDK was successfully generated!
 
-Test your code at https://app.genez.io/test-interface/local?port=8083
+Test your code at http://localhost:8083/explore
 
 Server listening on port 8083
 ```
 
-Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}app.genez.io/test-interface/local?port=8083{{< /external-link >}} to interact with it from the GUI.
+Right now the server side of your project is listening to port 8083. You can head to {{< external-link link="http://localhost:8083/explore" >}}localhost:8083/explore{{< /external-link >}} to interact with it from the GUI.
 
 You can also test the client side of your project. Do not stop the `genezio local` process. Open up a new terminal and head over to the `blockchain-project/client` directory. There you can execute the following commands:
 
