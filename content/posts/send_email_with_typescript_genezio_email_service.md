@@ -154,7 +154,7 @@ Simply run the following command in your project root directory:
 genezio local
 ```
 
-Now you can test your method using the {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}genezio test interface{{< /external-link >}}.
+Now you can test your method using the {{< external-link link="http://localhost:8083/explore" >}}genezio test interface{{< /external-link >}}.
 
 ![Alt text](/posts/mail-in-ts-with-nodemailer2.webp)
 

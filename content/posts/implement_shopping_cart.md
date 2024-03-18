@@ -236,7 +236,7 @@ You can test your application from the genezio dashboard by following the URL ex
 
 ```
 ~ genezio local
-Test your code at https://app.genez.io/test-interface/local?port=8083
+Test your code at http://localhost:8083/explore
 ```
 
 From the genezio dashboard, you can send requests to your backend classes and see the response.
@@ -295,7 +295,7 @@ Add the following methods to the `ShoppingCartService` class:
 
 Note: There is no need to restart `genezio local`. The process will detect any changes in your code and restart automatically.
 
-Now that your backend logic is ready, you can thoroughly test it by sending requests to it from the {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}genezio dashboard{{< /external-link >}}.
+Now that your backend logic is ready, you can thoroughly test it by sending requests to it from the {{< external-link link="http://localhost:8083/explore" >}}genezio dashboard{{< /external-link >}}.
 
 ## Setting up the frontend
 

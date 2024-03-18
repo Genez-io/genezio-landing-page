@@ -150,7 +150,7 @@ After setting the environment variable, you can test your Postgres service by ru
 genezio local
 ```
 
-Open the testing page in your browser by navigating to {{< external-link link="https://app.genez.io/test-interface/local?port=8083" >}}test interface{{< /external-link >}}.
+Open the testing page in your browser by navigating to {{< external-link link="http://localhost:8083/explore" >}}test interface{{< /external-link >}}.
 
 Here you can send requests to your local backend server and receive appropriate responses to check if your service is working properly.
 
