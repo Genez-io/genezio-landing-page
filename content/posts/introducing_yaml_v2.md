@@ -1,8 +1,10 @@
 ---
 title: Introducing YAML v2
+# TODO: update date update photos and remove draft
 date: 2024-03-15
+draft: true
 tags:
-    - News
+  - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
 thumbnail: /images/database-performance.webp
@@ -44,32 +46,32 @@ region: us-east-1
 yamlVersion: 2
 # The backend settings
 backend:
-    # Where the code is located
-    path: server
-    # Language options
-    language:
-        name: go
-    # The classes that will be deployed
-    classes:
-        # Deploys the "exported genezio class" found in `server/users.go`
-        - path: users.go
-        # Deploys the "exported genezio class" found in `server/cron.go`
-        - path: cron.go
-          methods:
-              # Sets the `SendEmail` method to be deployed as a cron job that runs at 12:00 PM
-              - name: SendEmail
-                type: cron
-                cronString: 0 12 * * *
+  # Where the code is located
+  path: server
+  # Language options
+  language:
+    name: go
+  # The classes that will be deployed
+  classes:
+    # Deploys the "exported genezio class" found in `server/users.go`
+    - path: users.go
+    # Deploys the "exported genezio class" found in `server/cron.go`
+    - path: cron.go
+      methods:
+        # Sets the `SendEmail` method to be deployed as a cron job that runs at 12:00 PM
+        - name: SendEmail
+          type: cron
+          cronString: 0 12 * * *
 # The frontend settings
 frontend:
-    # Where the code is located
-    path: client
-    # The directory that will be deployed. Must contain an `index.html` file.
-    publish: dist # resolves to `client/dist`
-    # Settings for the SDK
-    sdk:
-        # A TypeScript SDK will be generated out of the deployed Go classes
-        language: ts
+  # Where the code is located
+  path: client
+  # The directory that will be deployed. Must contain an `index.html` file.
+  publish: dist # resolves to `client/dist`
+  # Settings for the SDK
+  sdk:
+    # A TypeScript SDK will be generated out of the deployed Go classes
+    language: ts
 ```
 
 ## Conclusion
