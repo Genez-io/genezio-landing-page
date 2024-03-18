@@ -565,7 +565,7 @@ Your backend code was deployed and the SDK was successfully generated
    │   npm add @genezio-sdk/blockchain-project@1.0.0-prod                           │
    │                                                                                │
    │   Then import your classes like this:                                          │
-   │   import { BlockchainServer } from "@genezio-sdk/blockchain-project"            │
+   │   import { BlockchainServer } from "@genezio-sdk/blockchain-project"           │
    │                                                                                │
    ╰────────────────────────────────────────────────────────────────────────────────╯
 
