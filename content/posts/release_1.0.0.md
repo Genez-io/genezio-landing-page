@@ -1,5 +1,5 @@
 ---
-title: "Genezio V1.0 is here: Improved CLI Experience, YAML V2, and more!"
+title: "Genezio V1.0 is here"
 date: 2024-03-19
 tags:
   - News
