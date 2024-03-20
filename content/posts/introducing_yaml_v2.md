@@ -1,41 +1,38 @@
 ---
-title: Introducing YAML v2
-# TODO: update date update photos and remove draft
-date: 2024-03-15
-draft: true
+title: Introducing a new configuration file for your projects
+date: 2024-03-20
 tags:
   - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /images/database-performance.webp
+thumbnail: /images/introducingyamlv2.webp
 preview: Check out why we decide to revamp our YAML configuration format and what changes you should expect.
 # meta data start
 description: "Greetings to all! We’re thrilled to share our inaugural major release with you. This significant update brings with it some changes that may affect existing projects. "
-meta_og_url: "https://genezio.com/blog/introducing-yaml-v2/"
-meta_og_image: "https://genez.io/genezio_cicd.webp"
+meta_og_url: "https://genezio.com/blog/introducing_yaml_v2"
+meta_og_image: "https://genez.io/images/introducingyamlv2.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
+url: /blog/new-config-file/
 ---
 
-# Introducing YAML v2
-
-Greetings to all! We’re thrilled to share our inaugural major release with you. This significant update brings with it some changes that may affect existing projects. You can find more details about these changes and how to update your projects [here](/docs/learn-more/upgrading-to-v1).
+Greetings to all! We're thrilled to share our inaugural major release with you. This significant update brings with it some changes that may affect existing projects. You can find more details about these changes and how to update your projects {{< external-link link="https://genezio.com/docs/learn-more/upgrading-to-v1" >}}here{{< /external-link >}}.
 
 A notable change in this release is the modification of our YAML configuration format.
 
 ## The Reason
 
-We’ve been listening to your feedback and it became clear that the previous YAML format could be a bit perplexing. It lacked distinct separation between settings for backend, frontend, and upcoming (hint hint) database deployments. We believe our revamped design will simplify deployment settings for both current and future users.
+We've been listening to your feedback and it became clear that the previous YAML format could be a bit perplexing. It lacked distinct separation between settings for backend, frontend, and upcoming (hint hint) database deployments. We believe our revamped design will simplify deployment settings for both current and future users.
 
-To aid in your transition, we’ve incorporated a tool in our CLI that will assist in migrating your configuration. While we’ve aimed to make the process as smooth as possible, the new format does contain more details than the old one, so the transition might not be flawless. We recommend checking the configuration file after using the tool to ensure everything is in order.
+Don’t worry, we’ll update existing projects semi-automatically. To aid in your transition, we've incorporated a tool in our CLI that will assist in migrating your configuration. While we've aimed to make the process as smooth as possible, the new format does contain more details than the old one, so the transition might not be flawless. We recommend checking the configuration file after using the tool to ensure everything is in order.
 
 ## The New Format
 
-To give you a taste of the new format, here’s a simple example that decales a project with a backend written in Go and a frontend written in TypeScript.
+To give you a taste of the new format, here's a simple example that decales a project with a backend written in Go and a frontend written in TypeScript.
 
-The backend contains two classes, loacted in `users.go` and `cron.go`, and the frontend is located in the `client` directory. The `SendEmail` method from the `cron.go` class is set to be deployed as a cron job that runs at 12:00 PM. The TypeScript SDK will be generated out of the deployed Go classes, and will be accessible in the `client` frontend.
+The backend contains two classes, located in `users.go` and `cron.go`, and the frontend is located in the `client` directory. The `SendEmail` method from the `cron.go` class is set to be deployed as a cron job that runs at 12:00 PM. The TypeScript SDK will be generated out of the deployed Go classes, and will be accessible in the `client` frontend.
 
 ```yaml
 # The name of the project
@@ -76,4 +73,4 @@ frontend:
 
 ## Conclusion
 
-We hope you’re as excited about this change as we are. We believe the new YAML format will make it easier for you to deploy your projects. We’re looking forward to hearing your thoughts and feedback on the new format. If you have any questions or need assistance, please don’t hesitate to reach out to us at [contact@genez.io](mailto:contact@genez.io)
+We hope you're as excited about this change as we are. We believe the new YAML format will make it easier for you to deploy your projects. We're looking forward to hearing your thoughts and feedback on the new format. If you have any questions or need assistance, please don't hesitate to reach out to us at [contact@genez.io](mailto:contact@genez.io)
