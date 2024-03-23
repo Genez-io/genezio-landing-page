@@ -561,19 +561,24 @@ After the project has been successfully deployed, your terminal should look like
 ```
 Deploying your backend project to genezio infrastructure...
 
-Bundling your code and uploading it...✅
-Checking your credentials...✅
-Doing the final touch-ups...✅
+Your backend code was deployed and the SDK was successfully generated
 
-Your code was deployed and the SDK was successfully generated!
-
-Your backend project has been deployed and is available at https://app.genez.io/project/<project-id-here>
+   ╭────────────────────────────────────────────────────────────────────────────────╮
+   │                                                                                │
+   │   To install the SDK in your client, run this command in your client's root:   │
+   │   npm add @genezio-sdk/blockchain-project@1.0.0-prod                           │
+   │                                                                                │
+   │   Then import your classes like this:                                          │
+   │   import { BlockchainServer } from "@genezio-sdk/blockchain-project"           │
+   │                                                                                │
+   ╰────────────────────────────────────────────────────────────────────────────────╯
 
 Deploying your frontend to genezio infrastructure...
 
-No subdomain specified in the genezio.yaml configuration file. We will provide a random one for you.
+No subdomain is specified in the genezio.yaml configuration file. We will provide a random one for you.
 
-Frontend successfully deployed at https://cyan-light-owl.app.genez.io.
+App Dashboard URL: https://app.genez.io/project/<projectId>/<projectEnvId>
+Frontend URL: https://<subdomain>.dev.app.genez.io
 ```
 
 Congrats again 🥳 Now you can manage your project from the genezio Dashboard - you can test it, check the logs, or delete it if you don’t need it anymore.
