@@ -1,14 +1,14 @@
 ---
-title: CloudNativeCon + Kubecon Europe 2024
+title: KubeCon + CloudNativeCon Europe 2024
 date: 2024-03-25
 tags:
   - News
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/fosdem-2024.webp
-preview: "The Genezio team is still buzzing after an incredible week at CloudNativeCon + Kubecon Europe 2024!"
+preview: "The Genezio team is still buzzing after an incredible week at KubeCon + CloudNativeCon Europe 2024!"
 # meta data start
-description: "The Genezio team is still buzzing after an incredible week at CloudNativeCon + Kubecon Europe 2024!"
+description: "The Genezio team is still buzzing after an incredible week at KubeCon + CloudNativeCon Europe 2024!"
 meta_og_url: "https://genezio.com/blog/cloudnativecon_kubecon_europe_2024"
 meta_og_image: "https://genezio.com/images/fosdem-2024.webp"
 # meta data end
@@ -18,7 +18,7 @@ readTime: 2
 url: /blog/kubecon-cloudnativecon-paris/
 ---
 
-The Genezio team is still buzzing after an incredible week at {{< external-link link="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/" >}}CloudNativeCon + Kubecon Europe 2024{{< /external-link >}}! This huge gathering of open-source enthusiasts, amazing products, and software engineers was an opportunity to connect, learn, and share our passion for cloud development.
+The Genezio team is still buzzing after an incredible week at {{< external-link link="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/" >}}KubeCon + CloudNativeCon Europe 2024{{< /external-link >}}! This huge gathering of open-source enthusiasts, amazing products, and software engineers was an opportunity to connect, learn, and share our passion for cloud development.
 
 ## Meaningful Connections
 
