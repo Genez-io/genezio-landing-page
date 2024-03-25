@@ -5,12 +5,12 @@ tags:
   - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /images/introducingupdatedyaml.webp
+thumbnail: /images/introducing_yaml_v2.webp
 preview: Check out why we decide to revamp our YAML configuration format and what changes you should expect.
 # meta data start
 description: "Greetings to all! We’re thrilled to share our inaugural major release with you. This significant update brings with it some changes that may affect existing projects. "
 meta_og_url: "https://genezio.com/blog/introducing_yaml_v2"
-meta_og_image: "https://genez.io/images/introducingupdatedyaml.webp"
+meta_og_image: "https://genez.io/images/introducing_yaml_v2.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
