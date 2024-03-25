@@ -15,7 +15,7 @@ meta_og_image: "https://genez.io/images/introducing_yaml_v2.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/new-config-file/
+url: /blog/updated-config-file/
 ---
 
 Greetings to all! We're thrilled to share our inaugural major release with you. This significant update brings with it some changes that may affect existing projects. You can find more details about these changes and how to update your projects {{< external-link link="https://genezio.com/docs/learn-more/upgrading-to-v1" >}}here{{< /external-link >}}.
