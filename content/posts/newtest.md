@@ -1,7 +1,6 @@
 ---
 title: "TEst remove later"
-date: 2024-04-01
-publishdate: 2024-04-02
+date: 2024-04-02
 tags:
   - Tutorials
 author: Virgil Turcu
@@ -17,6 +16,7 @@ meta_og_image: "https://genez.io/genezio_neon.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 15
+url: /blog/test/
 ---
 
 AA
