@@ -17,6 +17,7 @@ customHeader: "White header"
 customFooter: "White footer"
 readTime: 15
 url: /blog/test/
+slug: /blog/test/
 ---
 
 AA
