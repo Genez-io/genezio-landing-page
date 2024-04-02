@@ -5,17 +5,17 @@ tags:
   - Tutorials
 author: Tudor Anghelescu
 linkedIn: https://www.linkedin.com/in/anghelescu-tudor-b73739193/
-thumbnail: /images/web-scrape.webp
+thumbnail: /images/web_scrape.webp
 preview: In this article, I’ll show you how to track stars from a GitHub repository in under 10 minutes. However, this code can be easily adapted to track various other metrics like social media likes, followers numbers, or stock market prices.
 # meta data start
 description: "In this article, I’ll show you how to track stars from a GitHub repository in under 10 minutes. However, this code can be easily adapted to track various other metrics like social media likes, followers numbers, or stock market prices."
-meta_og_url: "https://genez.io/blog/web-scraping"
-meta_og_image: "https://genez.io/images/web-scrape.webp"
+meta_og_url: "https://genez.io/blog/web_scraping"
+meta_og_image: "https://genez.io/images/web_scrape.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/web-scraping/
+url: /blog/web-scraping-app/
 ---
 
 Hey everyone! I’m Tudor, and recently, I found myself faced with a challenge: I needed to create a small React app to fetch data from GitHub, specifically the number of stars for our repository. With numerous solutions available, I started on finding the quickest and most efficient method.
