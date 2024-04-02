@@ -9,7 +9,7 @@ thumbnail: /images/web_scrape.webp
 preview: In this article, I’ll show you how to track stars from a GitHub repository in under 10 minutes. However, this code can be easily adapted to track various other metrics like social media likes, followers numbers, or stock market prices.
 # meta data start
 description: "In this article, I’ll show you how to track stars from a GitHub repository in under 10 minutes. However, this code can be easily adapted to track various other metrics like social media likes, followers numbers, or stock market prices."
-meta_og_url: "https://genez.io/blog/web_scraping"
+meta_og_url: "https://genez.io/blog/web_scraping_app"
 meta_og_image: "https://genez.io/images/web_scrape.webp"
 # meta data end
 customHeader: "White header"
