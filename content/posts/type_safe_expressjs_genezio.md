@@ -25,7 +25,7 @@ We are going to use genezio to make the communication between server and clients
 
 To better illustrate the problem and its solution, I propose anchoring the discussion in a very simple example. Take a look at [this](https://github.com/Genez-io/adapter_examples/tree/express) repository. It is a mono repo project that contains a server written with ExpressJS and two clients: one written in React and another one in Flutter. The application keeps track of a list of books in memory.
 
-Let's first explore a bit the backend. This is a very simple Express.JS applications that has a way to create books and retrieve a list of books from an in-memory store.
+Let's first explore the backend a bit. This is a very simple Express.JS application that has a way to create books and retrieve a list of books from an in-memory store.
 
 ```ts
 // Define a type for the book structure
@@ -102,13 +102,13 @@ const createBook = async (newBook: Book) => {
 };
 ```
 
-In Flutter, we have something similar: we define a Book class, we handle the serialisation, and we have two methods `fetchBooks` and `createBook`. You can explore the Flutter code [here](https://github.com/Genez-io/adapter_examples/blob/express/client-flutter/lib/main.dart).
+In Flutter, we have something similar: we define a Book class, we handle the serialization, and we have two methods `fetchBooks` and `createBook`. You can explore the Flutter code [here](https://github.com/Genez-io/adapter_examples/blob/express/client-flutter/lib/main.dart).
 
 Now, let's see what the problems we might get into:
 
 1. How do we keep in sync the API in all of our clients? If we add a new request on the backend side, we have to implement the call on all clients. Even worse, if a new property is added to the  `Book` request model, this change has to be propagated and communicated to all clients. This can become tedious especially with larger teams.
-2. How do we document the code? Of course, there are solutions: we could create a Swagger file or a Postman collection, but this adds one more item on the list of tasks that your have to do.
-3. How do we perform error handling? This is tightly coupled to the previous point meaning that we have to document how we return errors (e.g: which ones are 400, which ones are 500 and what body they return).
+2. How do we document the code? Of course, there are solutions: we could create a Swagger file or a Postman collection, but this adds one more item on the list of tasks that you have to do.
+3. How do we perform error handling? This is tightly coupled to the previous point, meaning that we have to document how we return errors (e.g: which ones are 400, which ones are 500 and what body they return).
 
 ## The Genezio Way
 
@@ -244,7 +244,7 @@ What is great now is that we can leverage the IDE capabilities. Hover over the `
 
 ![Alt text](/posts/demo-express-genezio.gif)
 
-Let's see one more thing: how do we handle errors. Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
+Let's see one more thing: how do we handle errors? Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
 
 ```ts
 try {
