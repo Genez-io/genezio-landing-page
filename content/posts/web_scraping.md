@@ -184,9 +184,9 @@ genezio deploy
 After the deployment process completes in your terminal, you'll find the URL for your frontend as well as a link to the dashboard where you can manage your project.
 
 ```
-App Dashboard URL: https://dev.app.genez.io/project/cc5086af-1320-43a4-94a1-fe5038aac775/26a17f24-b46f-492c-857f-0126d14b407b
+App Dashboard URL: https://app.genez.io/project/cc5086af-1320-43a4-94a1-fe5038aac775/26a17f24-b46f-492c-857f-0126d14b407b
 
-Frontend URL: https://harlequin-private-booby.dev.app.genez.io
+Frontend URL: https://harlequin-private-booby.app.genez.io
 ```
 
 ## Conclusion
