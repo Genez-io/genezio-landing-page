@@ -29,7 +29,6 @@ The code snippets used in this article are available in {{< external-link link=h
 
 ```bash
 git clone https://github.com/Genez-io/genezio-express-integration
-git checkout express
 ```
 
 Let's first explore the backend a bit. This is a very simple express application that has a way to create books and retrieve a list of books from an in-memory store.
