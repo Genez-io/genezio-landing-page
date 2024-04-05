@@ -4,4 +4,3 @@ yamlVersion: 2
 frontend:
   path: ./
   publish: ./public
-  subdomain: indigo-delighted-worm
