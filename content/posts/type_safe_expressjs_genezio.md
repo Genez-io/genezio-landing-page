@@ -1,6 +1,6 @@
 ---
 title: How to Use Genezio with Express for Easy and Error-Free API Management
-date: 2024-04-02
+date: 2024-04-08
 tags:
   - Tutorials
 author: Bogdan Vlad 
@@ -18,7 +18,13 @@ readTime: 10
 url: /blog/express-genezio-easy-error-free-api-management/
 ---
 
-Maintaining an API across multiple clients can be a tedious task. The task of synchronizing documentation with the underlying code, maintaining consistent data types in requests and responses across the entire system, and managing errors consistently are common hurdles encountered by both backend and frontend software engineers. I want to present to you in this article, a very simple yet effective way to answer these questions.
+Maintaining an API across multiple clients can be a tedious task. Some common hurdles are encountered by both backend and frontend software engineers:
+
+- Synchronizing documentation with the underlying code
+- Maintaining consistent data types in requests and responses across the entire system
+- Managing errors consistently
+
+In this article, I'll share a really simple but effective method to help you solve these problems.
 We are going to use genezio to make the communication between server and clients easier to use, easier to maintain and less error prone.
 
 ## The Classic Way
@@ -206,14 +212,14 @@ app.listen(port, () => {
 ```
 
 Excellent! But how do we call `BookService.getAllBooks` from our clients? This is where the genezio CLI comes into the picture. We will illustrate how to convert the TypeScript client to genezio. The process for Flutter is very similar. Run the following command in the `server/` folder.
-This command will scan for genezio classes marked with the comment `//genezio: deploy` and it generates the SDK, which you can then use to invoke the backend methods.
+This command will scan for genezio classes marked with the comment `//genezio: deploy` and it generates the SDK in the language that you desire, which you can then use to invoke the backend methods.
 
 
 ```bash
 genezio sdk --tarball --source local --packageName genezio-sdk  --output ../client-ts/sdk --language ts --url http://localhost:8881/genezio
 ```
 
-If you're curious, take a look at what was generated at path `../client-ts/sdk`. It’s a tarball NPM package, which means it can be installed locally just like any other NPM package. It could also be published to a public registry such as the NPM Registry, or to a private registry. You can also export the SDK as raw files by omitting the --tarball option. This allows you to use npm link if you wish, or to add a README, or modify the package.json before publishing it.
+If you're curious, take a look at what was generated at path `../client-ts/sdk`. It’s a tarball NPM package, which means it can be installed locally just like any other NPM package. It could also be published to a public registry such as the NPM Registry, or to a private registry. You can also export the SDK as raw files by omitting the `--tarball` option. This allows you to use `npm link` if you wish, or to add a README, or modify the package.json before publishing it.
 
 For the sake of this tutorial, we are going to install the SDK locally. In `./client-ts` folder, we can run `npm install ./sdk/genezio-sdk.tar.gz` which will install the SDK in your `node_modules` folder. 
 
@@ -258,7 +264,7 @@ What is great now is that we can leverage the IDE capabilities. Hover over the `
 
 ![Alt text](/posts/demo-express-genezio.webp)
 
-Let's see how do we handle errors? Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
+Let's see how we handle errors. Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
 
 ```ts
 {{< filePath >}}client-ts/src/App.tsx{{< /filePath >}}
@@ -281,7 +287,7 @@ That's it for today! To test the application end-to-end you'll need to start the
 npm install && npm run build && npm start
 ```
 
-To start the React client, navigate to the `client-ts/` directory and run command below. Your frontend will be rendered locally at the given URL.
+To start the React client, navigate to the `client-ts/` directory and run the command below. Your frontend will be rendered locally at the given URL.
 
 ```bash
 npm install && npm run dev
@@ -295,7 +301,7 @@ flutter run
 
 ## Conclusion
 
-We now can write the backend code once and generate the code responsible with making the calls directly from it. We have a documented, typed safe API that is easy to use and keep in sync.
+We now can write the backend code once and generate the code responsible for making the calls directly from it. We have a documented, typed safe API that is easy to use and keep in sync.
 
 If you want the full code version to play around with it, check out  {{< external-link link=https://github.com/Genez-io/genezio-express-integration >}}this repository {{</external-link>}}. It contains two branches: "express" and "genezio" and you can switch between them to compare the two approaches. I hope this was useful and if you have any feedback you can reach out at bogdan@genez.io.
 
