@@ -11,7 +11,6 @@ preview: Business logic drives business success – but for some reason, it’s 
 description: "Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation."
 meta_og_url: "https://genez.io/blog/business-logic"
 meta_og_image: "https://genez.io/images/business-logic-in-the-backend.webp"
-url: "/blog/business-logic-in-the-backend/"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
