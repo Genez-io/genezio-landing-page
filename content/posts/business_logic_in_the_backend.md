@@ -5,18 +5,18 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/company/genezio/
-thumbnail: /images/business-logic.webp
+thumbnail: /images/business-logic-in-the-backend.webp
 preview: Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation.
 # meta data start
 description: "Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation."
 meta_og_url: "https://genez.io/blog/business-logic"
-meta_og_image: "https://genez.io/images/business-logic.webp"
+meta_og_image: "https://genez.io/images/business-logic-in-the-backend.webp"
 url: "/blog/business-logic-in-the-backend/"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/business-logic-in-the-backend
+url: /blog/business-logic
 ---
 
 Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation. This is a shame, as **proper implementation of business logic is perhaps the largest driver of business success in the online marketplace.** Effectively implementation of well-thought out and designed business logic can deliver massive benefits at scale.
