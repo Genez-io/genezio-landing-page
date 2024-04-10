@@ -1,33 +1,46 @@
 ---
 title: How to Use Genezio with Express for Easy and Error-Free API Management
-date: 2024-04-10
+date: 2024-04-08
 tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
 thumbnail: /images/express.webp
-preview: Maintaining an API across multiple clients can be a tedious task. Keeping the documentation in sync with the code, making sure that the data types passed in requests and response are the same in backend and frontend and handling errors in a consistent way are problems that any backend and frontend software engineer encountered at least once.
+preview: Check ou how to integrate genezio in express for an easier and safer integration between backends and clients.
 # meta data start
-description: "Maintaining an API across multiple clients can be a tedious task. Keeping the documentation in sync with the code, making sure that the data types passed in requests and response are the same in backend and frontend and handling errors in a consistent way are problems that any backend and frontend software engineer encountered at least once."
+description: "Check ou how to integrate genezio in express for an easier and safer integration between backends and clients."
 meta_og_url: "https://genez.io/blog/web_scraping_app"
 meta_og_image: "https://genez.io/images/express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 13
-url: /blog/express-genezio/
+url: /blog/express-genezio-easy-error-free-api-management/
 ---
 
-Maintaining an API across multiple clients can be a tedious task. The task of synchronizing documentation with the underlying code, maintaining consistent data types in requests and responses across the entire system, and managing errors consistently are common hurdles encountered by both backend and frontend software engineers. I want to present to you in this article, a very simple yet effective way to answer these questions.
+Maintaining an API across multiple clients can be a tedious task. Some common hurdles are encountered by both backend and frontend software engineers:
+
+- Synchronizing documentation with the underlying code
+- Maintaining consistent data types in requests and responses across the entire system
+- Managing errors consistently
+
+In this article, I'll share a really simple but effective method to help you solve these problems.
 We are going to use genezio to make the communication between server and clients easier to use, easier to maintain and less error prone.
 
 ## The Classic Way
 
-To better illustrate the problem and its solution, I propose anchoring the discussion in a very simple example. Take a look at {{< external-link link="https://github.com/Genez-io/adapter_examples/tree/express" >}}this{{< /external-link >}} repository. It is a mono repo project that contains a server written with ExpressJS and two clients: one written in React and another one in Flutter. The application keeps track of a list of books in memory.
+To better illustrate the problem and its solution, I propose anchoring the discussion in a very simple example: a mono repo project that contains a server written with ExpressJS and two clients: one written in React and another one in Flutter. The application keeps track of a list of books in memory.
 
-Let's first explore the backend a bit. This is a very simple Express.JS application that has a way to create books and retrieve a list of books from an in-memory store.
+The code snippets used in this article are available in {{< external-link link=https://github.com/Genez-io/genezio-express-integration/tree/express >}}this{{< /external-link >}} repository. To code alongside, clone the repository with the following commands:
+
+```bash
+git clone https://github.com/Genez-io/genezio-express-integration
+```
+
+Let's first explore the backend a bit. This is a very simple express application that has a way to create books and retrieve a list of books from an in-memory store.
 
 ```ts
+{{< filePath >}}server/src/index.ts{{< /filePath >}}
 // Define a type for the book structure
 type Book = {
   id: number;
@@ -73,7 +86,8 @@ app.post("/books", (req: Request, res: Response) => {
 
 To call the two endpoints from a typescript React application, we would have to do something like this:
 
-```dart
+```ts
+{{< filePath >}}client-ts/src/requests.ts{{< /filePath >}}
 // Define the interface for a book
 type Book = {
   id?: number;
@@ -102,7 +116,7 @@ const createBook = async (newBook: Book) => {
 };
 ```
 
-In Flutter, we have something similar: we define a Book class, we handle the serialization, and we have two methods `fetchBooks` and `createBook`. You can explore the Flutter code {{< external-link link="https://github.com/Genez-io/adapter_examples/blob/express/client-flutter/lib/main.dart" >}}here{{< /external-link >}}.
+In Flutter, we have something similar: we define a Book class, we handle the serialization, and we have two methods `fetchBooks` and `createBook`. You can explore the Flutter code {{< external-link link=https://github.com/Genez-io/genezio-express-integration/blob/express/client-flutter/lib/main.dart >}}here{{< /external-link >}}.
 
 Now, let's see what the problems we might get into:
 
@@ -123,9 +137,10 @@ To convert the book app to user genezio we have to do a couple of steps. First o
 npm install genezio -g
 ```
 
-Next, we rewrite the 'books' business logic like this:
+Next, create a new file `server/src/book.ts` and implement the 'books' business logic there:
 
 ```ts
+{{< filePath >}}server/src/book.ts{{< /filePath >}}
 type Book = {
   id: number;
   title: string;
@@ -178,7 +193,8 @@ npm install @genezio/adapters
 ```
 
 ```ts
-import express from "express";
+{{< filePath >}}server/src/index.ts{{< /filePath >}}
+import  express from 'express';
 import * as genezioAdapters from "@genezio/adapters";
 import { BookService } from "./bookService.ts";
 import cors from "cors";
@@ -194,13 +210,14 @@ app.listen(port, () => {
 });
 ```
 
-Excellent! But how do we call `BookService.getAllBooks` from our clients? This is where the genezio CLI comes into the picture. We will illustrate how to convert the TypeScript client to genezio. The process for Flutter is very similar. Run the following command in the `server/` folder to generate the SDK, which you can then use to invoke the backend methods:
+Excellent! But how do we call `BookService.getAllBooks` from our clients? This is where the genezio CLI comes into the picture. We will illustrate how to convert the TypeScript client to genezio. The process for Flutter is very similar. Run the following command in the `server/` folder.
+This command will scan for genezio classes marked with the comment `//genezio: deploy` and it generates the SDK in the language that you desire, which you can then use to invoke the backend methods.
 
 ```bash
 genezio sdk --tarball --source local --packageName genezio-sdk  --output ../client-ts/sdk --language ts --url http://localhost:8881/genezio
 ```
 
-If you're curious, take a look at what was generated. It’s a tarball NPM package, which means it can be installed locally just like any other NPM package. It could also be published to a public registry such as the NPM Registry, or to a private registry. You can also export the SDK as raw files by omitting the --tarball option. This allows you to use npm link if you wish, or to add a README, or modify the package.json before publishing it.
+If you're curious, take a look at what was generated at path `../client-ts/sdk`. It’s a tarball NPM package, which means it can be installed locally just like any other NPM package. It could also be published to a public registry such as the NPM Registry, or to a private registry. You can also export the SDK as raw files by omitting the `--tarball` option. This allows you to use `npm link` if you wish, or to add a README, or modify the package.json before publishing it.
 
 For the sake of this tutorial, we are going to install the SDK locally. In `./client-ts` folder, we can run `npm install ./sdk/genezio-sdk.tar.gz` which will install the SDK in your `node_modules` folder.
 
@@ -208,21 +225,23 @@ For the sake of this tutorial, we are going to install the SDK locally. In `./cl
 npm install ./sdk/genezio-sdk.tar.gz
 ```
 
-We are now ready to change the communication between React and the server to use genezio. Go to `src/views.tsx` and import the `BookService` and the `Book` model.
+We are now ready to change the communication between React and the server to use genezio. Go to `src/App.tsx` and import the `BookService` and the `Book` model.
 
 ```ts
-import { BookService, Book } from "genezio-sdk";
+{{< filePath >}}client-ts/src/App.tsx{{< /filePath >}}
+import { BookService, Book } from "genezio-sdk"
 ```
 
 You can remove the `requests.ts` file from the project and you can uninstall `axios`. It feels great when you remove code, doesn't it? Now we just have to use `BookService.getAllBooks` and `BookService.createBook` from the genezio SDK to call our backend methods.
 
 ```ts
-// Fetch all books when the component mounts
-useEffect(() => {
-  const loadBooks = async () => {
-    const allBooks = await BookService.getAllBooks();
-    setBooks(allBooks);
-  };
+{{< filePath >}}client-ts/src/App.tsx{{< /filePath >}}
+  // Fetch all books when the component mounts
+  useEffect(() => {
+    const loadBooks = async () => {
+      const allBooks = await BookService.getAllBooks();
+      setBooks(allBooks);
+    };
 
   loadBooks();
 }, []);
@@ -241,11 +260,12 @@ const handleCreateBook = async (e: any) => {
 
 What is great now is that we can leverage the IDE capabilities. Hover over the `BookService.getAllBooks()` method and you can see: the documentation, the parameter types and the return type of the method. Pass a wrong parameter to `BookService.createBook()` and your IDE will shout that there is something wrong.
 
-![Alt text](/posts/demo-express-genezio.gif)
+![Alt text](/posts/demo-express-genezio.webp)
 
-Let's see one more thing: how do we handle errors? Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
+Let's see how we handle errors. Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
 
 ```ts
+{{< filePath >}}client-ts/src/App.tsx{{< /filePath >}}
 try {
   const newBook = await BookService.createBook(title, author);
   setBooks([...books, newBook]); // Add the new book to the local state
@@ -259,8 +279,26 @@ try {
 }
 ```
 
+That's it for today! To test the application end-to-end you'll need to start the backend and client, as well. Navigate to the `server` directory and run the following commands:
+
+```bash
+npm install && npm run build && npm start
+```
+
+To start the React client, navigate to the `client-ts/` directory and run the command below. Your frontend will be rendered locally at the given URL.
+
+```bash
+npm install && npm run dev
+```
+
+To start the Flutter client, navigate to the `client-flutter/` folder and run the corresponding command:
+
+```bash
+flutter run
+```
+
 ## Conclusion
 
-We now can write the backend code once and generate the code responsible with making the calls directly from it. We have a documented, typed safe API that is easy to use and keep in sync.
+We now can write the backend code once and generate the code responsible for making the calls directly from it. We have a documented, typed safe API that is easy to use and keep in sync.
 
-If you want the full code version to play around with it, check out {{< external-link link="https://github.com/Genez-io/adapter_examples" >}}the repository{{< /external-link >}}. It contains two branches: "express" and "genezio" and you can switch between them to compare the two approaches. I hope this was useful and if you have any feedback you can reach out at bogdan@genez.io.
+If you want the full code version to play around with it, check out {{< external-link link=https://github.com/Genez-io/genezio-express-integration >}}this repository {{</external-link>}}. It contains two branches: "express" and "genezio" and you can switch between them to compare the two approaches. I hope this was useful and if you have any feedback you can reach out at bogdan@genez.io.
