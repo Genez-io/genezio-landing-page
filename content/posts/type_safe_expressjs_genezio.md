@@ -1,6 +1,6 @@
 ---
 title: How to Use Genezio with Express for Easy and Error-Free API Management
-date: 2024-04-08
+date: 2024-04-10
 tags:
   - Tutorials
 author: Bogdan Vlad
