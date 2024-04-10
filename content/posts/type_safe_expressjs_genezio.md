@@ -1,20 +1,20 @@
 ---
-title: Type safe communication between multiple clients using ExpressJS and genezio
-date: 2024-04-02
+title: How to Use Genezio with Express for Easy and Error-Free API Management
+date: 2024-04-10
 tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-/thumbnail: /images/web_scrape.webp
-preview: Maintaining an API across multiple clients can be a tedious task. Keeping the documentation in sync with the code, making sure that the data types passed in requests and response are the same in backend and frontend and handling errors in a consistent way are problems that any backend and frontend software engineer encountered at least once. What I want to present to you in this article, is a a zero config way using the genezio tool that can make things easier.
+thumbnail: /images/express.webp
+preview: Maintaining an API across multiple clients can be a tedious task. Keeping the documentation in sync with the code, making sure that the data types passed in requests and response are the same in backend and frontend and handling errors in a consistent way are problems that any backend and frontend software engineer encountered at least once.
 # meta data start
-description: "Maintaining an API across multiple clients can be a tedious task. Keeping the documentation in sync with the code, making sure that the data types passed in requests and response are the same in backend and frontend and handling errors in a consistent way are problems that any backend and frontend software engineer encountered at least once. What I want to present to you in this article, is a a zero config way using the genezio tool that can make things easier."
+description: "Maintaining an API across multiple clients can be a tedious task. Keeping the documentation in sync with the code, making sure that the data types passed in requests and response are the same in backend and frontend and handling errors in a consistent way are problems that any backend and frontend software engineer encountered at least once."
 meta_og_url: "https://genez.io/blog/web_scraping_app"
-meta_og_image: "https://genez.io/images/web_scrape.webp"
+meta_og_image: "https://genez.io/images/express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 10
+readTime: 13
 url: /blog/express-genezio/
 ---
 
