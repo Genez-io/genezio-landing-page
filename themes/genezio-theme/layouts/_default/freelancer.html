@@ -57,51 +57,7 @@
       </div>
     </div>
 
-    {{/* TODO: handle responsive remove this later */}}
-    <div style="z-index: 99; position: relative" class="d-none d-sm-block mt-5">
-      <img
-        class="w-100 mb-5"
-        src="/images/hero-3-terminals.webp"
-        alt="her0-3-terminals"
-        width="1294px"
-        height="459px"
-        style="filter: drop-shadow(0px 50px 30px rgb(0 0 0 / 0.8)); object-fit: contain"
-      />
-    </div>
-
-    {{/* big circle */}} {{/*
-    <div
-      class="pe-none d-none d-lg-block d-xl-block"
-      style="
-        opacity: 30%;
-        position: absolute;
-        background: #8c68cd;
-        box-shadow: 0px 4px 250px 20px #c5b3e6;
-        filter: blur(500px);
-        max-width: 1000px;
-        width: 100%;
-        height: 718px;
-        top: 625px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      "
-    ></div>
-    */}}
-
-    <div
-      class="pe-none d-none d-lg-block d-xl-block"
-      style="
-        position: absolute;
-        background: rgba(140, 104, 205, 0.3);
-        filter: blur(500px);
-        max-width: 1000px;
-        width: 100%;
-        height: 718px;
-        top: 625px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      "
-    ></div>
+    <div class="d-flex align-items-center justify-content-center text-center" style="color: white;">Carousel WIP</div>
 
     <div
       class="d-block d-sm-none mb-5"
@@ -329,6 +285,165 @@
         </div>
       </div>
     </div>
+
+    {{/* Testimonials */}}
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      TESTIMONIALS
+    </p>
+    <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
+      Don't take our <span class="d-block d-sm-none"></span>word for it
+    </h2>
+
+    <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/images/testimonial2.webp"
+                  alt="testimonial-user-2"
+                  loading="lazy"
+                />
+
+                <div class="mx-3 me-0">
+                  <p class="mb-0 fw-semibold">Daniel M</p>
+                  <p style="font-size: 14px" class="mb-0">CEO @DeFiBuilder</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.g2.com/products/genezio/reviews/genezio-review-8869260"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="g2-logo"
+                  src="/images/g2-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-75">
+              Using their SDK, I was able to deploy complex functionalities with an ease that I
+              hadn't experienced before. The integration process is so streamlined and user-friendly
+              that even those with a basic understanding of JavaScript can navigate it with
+              confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/images/testimonial1.webp"
+                  loading="lazy"
+                  alt="testimonial-user-1"
+                />
+
+                <div class="mx-3 me-0">
+                  <p class="mb-0 fw-semibold">Bogdan Ripa</p>
+                  <p style="font-size: 14px" class="mb-0">SVP @UiPath</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7048404599744905216?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7048404599744905216%29"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="linkedin-logo"
+                  src="/images/linkedin-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-75">
+              I used the genezio platform for building and deploying my app - I build a node.js
+              module on top of Huawei’s FusionSolar website as their official API does not allow for
+              real-time data, and used Tesla’s unofficial API to change the charging amps in real
+              time. The genezio platform was easy to work with and the fact that I could build and
+              host it (for now it’s free) in such a short time says quite a lot about them.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/images/testimonial3.webp"
+                  alt="testimonial-user-3"
+                  loading="lazy"
+                />
+
+                <div class="mx-3">
+                  <p class="mb-0 fw-semibold">Laurentiu Ciobanu</p>
+                  <p style="font-size: 14px" class="mb-0">CTO @Sessions</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/?utm_source=share&utm_medium=member_desktop"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="linkedin-logo"
+                  src="/images/linkedin-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-75">
+              It was a pleasant and frictionless experience: from my TypeScript code to the cloud in
+              less than 3 minutes (including creating an account, installing the CLI, and logging in
+              with the CLI).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
     {{/* Enhance yourself */}}
     <p
       id="features"
@@ -505,164 +620,6 @@
 
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" class="mt-4" />
 
-    {{/* Testimonials */}}
-    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
-      TESTIMONIALS
-    </p>
-    <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
-      Don't take our <span class="d-block d-sm-none"></span>word for it
-    </h2>
-
-    <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <img
-                  style="height: 48px; width: 48px"
-                  class="rounded-circle"
-                  src="/images/testimonial2.webp"
-                  alt="testimonial-user-2"
-                  loading="lazy"
-                />
-
-                <div class="mx-3 me-0">
-                  <p class="mb-0 fw-semibold">Daniel M</p>
-                  <p style="font-size: 14px" class="mb-0">CEO @DeFiBuilder</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.g2.com/products/genezio/reviews/genezio-review-8869260"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="g2-logo"
-                  src="/images/g2-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-75">
-              Using their SDK, I was able to deploy complex functionalities with an ease that I
-              hadn't experienced before. The integration process is so streamlined and user-friendly
-              that even those with a basic understanding of JavaScript can navigate it with
-              confidence.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <img
-                  style="height: 48px; width: 48px"
-                  class="rounded-circle"
-                  src="/images/testimonial1.webp"
-                  loading="lazy"
-                  alt="testimonial-user-1"
-                />
-
-                <div class="mx-3 me-0">
-                  <p class="mb-0 fw-semibold">Bogdan Ripa</p>
-                  <p style="font-size: 14px" class="mb-0">SVP @UiPath</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.linkedin.com/feed/update/urn:li:activity:7048404599744905216?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7048404599744905216%29"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="linkedin-logo"
-                  src="/images/linkedin-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-75">
-              I used the genezio platform for building and deploying my app - I build a node.js
-              module on top of Huawei’s FusionSolar website as their official API does not allow for
-              real-time data, and used Tesla’s unofficial API to change the charging amps in real
-              time. The genezio platform was easy to work with and the fact that I could build and
-              host it (for now it’s free) in such a short time says quite a lot about them.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <img
-                  style="height: 48px; width: 48px"
-                  class="rounded-circle"
-                  src="/images/testimonial3.webp"
-                  alt="testimonial-user-3"
-                  loading="lazy"
-                />
-
-                <div class="mx-3">
-                  <p class="mb-0 fw-semibold">Laurentiu Ciobanu</p>
-                  <p style="font-size: 14px" class="mb-0">CTO @Sessions</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/?utm_source=share&utm_medium=member_desktop"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="linkedin-logo"
-                  src="/images/linkedin-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-75">
-              It was a pleasant and frictionless experience: from my TypeScript code to the cloud in
-              less than 3 minutes (including creating an account, installing the CLI, and logging in
-              with the CLI).
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
 
     {{/* FAQ */}}
     <p
