@@ -119,6 +119,7 @@ First, you have to import `mongoose`:
 {{< filePath >}}server/backendService.ts{{< /filePath >}}
 import mongoose from "mongoose";
 
+@GenezioDeploy()
 export class TutorialClass {
   constructor() {
     this.#connect();
