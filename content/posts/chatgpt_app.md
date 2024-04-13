@@ -92,7 +92,7 @@ Now, let’s dive in! You can find the complete project {{< external-link link="
 
 **Note**: Remember to keep your API key secure and do not share it with anyone.
 
-4. To be able to use this API Key, you will need to have funds in your OpenAI account. Go to {{< external-link link="https://www.themoviedb.org/" >}}platform.openai.com/account/billing/overview{{< /external-link >}} and add some funds to your account.
+4. To be able to use this API Key, you will need to have funds in your OpenAI account. Go to {{< external-link link="https://platform.openai.com/account/billing/overview/" >}}platform.openai.com/account/billing/overview{{< /external-link >}} and add some funds to your account.
 
 ### **Set Up genezio**
 
