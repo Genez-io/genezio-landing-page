@@ -14,7 +14,7 @@ meta_og_image: "https://genez.io/images/communicationbreakdown.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 13
+readTime: 5
 # url: /blog/express-genezio-easy-error-free-api-management/
 ---
 
