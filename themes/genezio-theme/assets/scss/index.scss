@@ -341,3 +341,24 @@ $cyan: #0dcaf0 !default;
     font-size: 32px;
   }
 }
+
+.swiper {
+  border: 1px solid red;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 -10px 0 -10px !important;
+  // padding: 0px !important;
+  width: 100%;
+}
+
+.swiper-slide {
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.swiper-slide img {
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid green;
+}
