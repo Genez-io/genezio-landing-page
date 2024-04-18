@@ -430,7 +430,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import "./App.css";
-import { BlockchainServer } from "@genezio-sdk/blockchain-project_us-east-1";
+import { BlockchainServer } from "@genezio-sdk/blockchain-project";
 import { Alert } from "@mui/material";
 
 const CHUNKS = 10;
