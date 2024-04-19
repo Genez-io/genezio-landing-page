@@ -199,7 +199,7 @@ import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 
-import { StripeService } from "@genezio-sdk/stripe-integration_us-east-1";
+import { StripeService } from "@genezio-sdk/stripe-integration";
 
 const ProductDisplay = ({ handleSubmit }: { handleSubmit: () => void; }) => (
   <>
@@ -270,7 +270,7 @@ export default function App() {
 ```
 
 The function `handleSubmit` calls the backend through the genezio SDK imported on the top of the file
-`import { StripeService } from "@genezio-sdk/stripe-integration_us-east-1";.`
+`import { StripeService } from "@genezio-sdk/stripe-integration";.`
 
 ## Deploy the application
 
