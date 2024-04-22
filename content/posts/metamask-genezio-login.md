@@ -19,7 +19,7 @@ url: /blog/metamask-genezio-login/
 ---
 
 Have you ever wondered what happens when you click that "Login with Metamask" button on a web app?
-In today's world, where security and user control over data are paramount, leveraging crypto wallets like Metamask for logins is becoming increasingly popular.
+In today's world, where security and user control over data are critical, leveraging crypto wallets like Metamask for logins is becoming increasingly popular.
 But what goes on behind the scenes to make this seamless experience possible? This article dives deep into the inner workings of logging in with Metamask on your web app.
 We'll dissect the four-step process involved and explore how Genezio's user-friendly authentication service handles the heavy lifting, allowing you to focus on building amazing features for your application.
 
