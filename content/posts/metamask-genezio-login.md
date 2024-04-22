@@ -59,7 +59,7 @@ genezio create fullstack --backend=ts --frontend=react-ts --name=genezio-login-m
 
 Run `genezio deploy` to deploy the project.
 
-Go to the Genezio Dashboard, select your project, and navigate to the Authentication section to enable the feature. You will be asked which database you want to use for storing user and session information.
+Go to the Genezio Dashboard, select your project, and navigate to the Authentication section to enable the feature. Follow the instructions on screen and create a Postgres database to store user and session information.
 Proceed to create a new Postgres database. Then, go to 'Providers' and enable the "Web3" provider. Now, you have an authentication service that can perform the "Login with Metamask" flow described in the previous section. We just have to implement the frontend.
 
 ![Enable auth genezio](/posts/demo-web3-article.webp)
