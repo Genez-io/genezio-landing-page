@@ -1,5 +1,5 @@
 ---
-title: Seamless Web3 Authentication - A Deep Dive into Metamask Logins with Genezio
+title: Seamless Web3 Authentication - Add Metamask Login to Your App in a Few Clicks with Genezio
 date: 2024-04-16
 tags:
   - Tutorials
@@ -20,7 +20,9 @@ url: /blog/metamask-genezio-login/
 
 Have you ever wondered what happens when you click that "Login with Metamask" button on a web app?
 In today's world, where security and user control over data are critical, leveraging crypto wallets like Metamask for logins is becoming increasingly popular.
-But what goes on behind the scenes to make this seamless experience possible? This article dives deep into the inner workings of logging in with Metamask on your web app.
+But what goes on behind the scenes to make this seamless experience possible?
+
+This article dives deep into the inner workings of logging in with Metamask on your web app.
 We'll break down the four-step process involved and explore how Genezio's user-friendly authentication service handles the heavy lifting, allowing you to focus on building amazing features for your application.
 
 
@@ -51,13 +53,19 @@ Note: I recommend you to use {{< external-link link="https://github.com/nvm-sh/n
 After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
 `nvm` will automatically install the corresponding `npm` version.
 
+### Setup your project
+
+Clone the {{< external-link link="https://github.com/Genez-io/genezio-examples" >}}this{{< /external-link >}} repository and then navigate to `typescript/metamask-auth`.
 The command below will create a new directory with the name you provide and set up a full-stack project with the backend in TypeScript and the frontend in React.
 
 ```cli
-genezio create fullstack --backend=ts --frontend=react-ts --name=genezio-login-metamask --region=us-east-1
+git clone https://github.com/Genez-io/genezio-examples
+cd typescript/metamask-auth
 ```
 
-Run `genezio deploy` to deploy the project.
+Run `genezio deploy` to deploy the project in your genezio account. Now, let's configure it.
+
+### Configure authentication
 
 Go to the Genezio Dashboard, select your project, and navigate to the Authentication section to enable the feature. Follow the instructions on screen and create a Postgres database to store user and session information.
 To enable `Web3` login, go to `Providers` and toggle the enable button. Now, you have an authentication service that can perform the "Login with Metamask" flow described in the previous section. We just have to implement the frontend.
@@ -66,10 +74,9 @@ To enable `Web3` login, go to `Providers` and toggle the enable button. Now, you
 
 Remember the "token" and "region" values as we are going to use them later.
 
-### The frontend side
+### Frontend implementation
 
 To keep things short and focused, we will not cover the boring React stuff. Instead, we'll jump straight to the point, explaining how to communicate with the Genezio Authentication Service.
-Starting from the template, the only file we change on the frontend side is `App.tsx`, and you can check the full implementation [here](https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth/client/src).
 
 Let's start from the beginning. To interact with your authentication service, you need to install and import `@genezio/auth` and initialize the `AuthService` class.
 Replace the `<token>` and `<region>` placeholders with the values from the Authentication section.
@@ -92,6 +99,7 @@ If the user is logged in, we retrieve the user’s details. Otherwise, the funct
 ```typescript
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
 useEffect(() => {
+    // Check if user is logged in
     AuthService.getInstance().userInfo().then((user) => {
         if (user.address) {
             getBalance(user.address)
@@ -149,6 +157,7 @@ Our app also has a small backend with one function which can be invoked only by 
 
 ```typescript
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
+// Calling the backend method. Only authenticated users can get the sensitive information.
 BackendService.hello("Friend").then((res) => {
     setSecuredInfo(res)
 }).catch((e) => {
@@ -159,7 +168,7 @@ BackendService.hello("Friend").then((res) => {
 
 Once again, you can explore the full code of the frontend [here](https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth/client). It is straight forward React code and you can follow the comments for more information.
 
-## The backend side
+## Backend overview
 
 The backend side is composed of a genezio class called `BackendService` which has only one method `hello` that can be called only by authenticated users.
 When a request is received, the `@GenezioAuth` middleware will check if the user is authenticated and if it is, it will populate the `context.user` property
@@ -195,7 +204,7 @@ export class BackendService {
 }
 ```
 
-## Deploy your application
+## Deploy your full-stack app and test it live
 
 To deploy your application, run the following command in the root directory of your project:
 
@@ -208,7 +217,7 @@ Access it and try to login. Metamask should pop out, asking you to sign the mess
 
 ## Conclusion
 
-Congratulations! You have a full stack application with Metamask! You can check the full working code [here](https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth).
+Congratulations! You have a full stack application with Metamask! You can check the full working code {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth" >}}here{{< /external-link >}}.
 
 From here sky is the limit. You can change the backend to do more awesome stuff than just returning a string: build a wallet alert notification system, 
 an application that shows the historical balance data or build an auction for NFTs. Upcoming articles will cover more advanced topics and use cases so subscribe
