@@ -145,7 +145,7 @@ const loginWithMetamask = async () => {
 }
 ```
 
-Our app also has a small backend with one function which can be invoked only by authenticated users. If the method is invoked by an authenticated users, it will throw an error and we redirect the user to the login screen.
+Our app also has a small backend with one function which can be invoked only by authenticated users. If the method is invoked by unauthenticated users, it will throw an error and we will redirect the user to the login screen.
 
 ```typescript
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
