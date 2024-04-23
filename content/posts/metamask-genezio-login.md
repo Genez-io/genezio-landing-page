@@ -56,7 +56,7 @@ After installing `nvm`, you can easily get any version of `node` by running `nvm
 ### Setup your project
 
 Clone the {{< external-link link="https://github.com/Genez-io/genezio-examples" >}}this{{< /external-link >}} repository and then navigate to `typescript/metamask-auth`.
-The command below will create a new directory with the name you provide and set up a full-stack project with the backend in TypeScript and the frontend in React.
+In this folder, you already have a working application. You just have to configure a few things and in the following sections we will explain the code.
 
 ```cli
 git clone https://github.com/Genez-io/genezio-examples
