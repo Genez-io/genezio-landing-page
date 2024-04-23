@@ -1,69 +1,129 @@
 ---
-title: Build a custom-data LLM application with Genezio, Langchain and LanceDB
+title: Use Langchain, LanceDB and Genezio to chat with your own data
 date: 2024-04-01
 tags:
   - Tutorial
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/kubecon.webp
-preview: "Build a custom-data LLM application that will answer questions based on your custom data using Langchain and LanceDB."
-description: "This tutorial will guide you through building a simple LLM-based application using Genezio, Langchain and LanceDB.
-The ultimate goal is to be able to feed custom data to an OpenAI model and generate responses based on the custom data."
+preview: "Build an LLM application that will answer questions based on your personal data using Langchain, LanceDB and Genezio."
+description: "This article will help you get the grasp of the novel AI/LLM concepts and tools that are on the rise right now. The ultimate goal is to create a project that takes your own data and feeds it to an OpenAI model and generate responses based on it."
 meta_og_url: "https://genez.io/blog/langchain_starter"
 meta_og_image: "https://genez.io/images/kubecon.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
-url: /blog/custom-data-llm-application
+url: /blog/langchain-genezio-project
 ---
 
-This tutorial will guide you through building a simple LLM-based application using Genezio, Langchain and LanceDB.
-The ultimate goal is to be able to feed custom data to an OpenAI model and generate responses based on the custom data.
+The last couple of months brought a new set of keywords and concepts that are concerning every software developer out there.
+As a curious individual, I wanted to understand the AI landscape more in-depth and see how can I leverage it for my own personal projects and work productivity as fullstack engineer.
+
+This article is a summary of the first steps I took into the AI-journey and what I've learned so far.
+I hope it will help you get the grasp of the novel concepts and tools that are on the rise right now.
+Most importantly, I'll emphasize how you can use them to build your own AI-powered applications.
+
+My goal is to build an application that feeds my own data to an OpenAI model and generates responses taking into account this data.
+More specifically, I want to build a bot that can answer questions based on the documentation pages of genezio.
 
 You can use this project as a starting point to build more complex applications such as:
 - FAQ bots for customer support
 - Q&A bots for educational purposes
 - AI-powered documentation search engines
 
-If you want to directly jump to a working project, you can clone the {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/langchain-starter" >}}following repository{{< /external-link >}} and paste your custom data in `server/data`.
-Follow the instructions in the `README` to deploy your project and you'll have a working application that can generate responses based on your custom data.
+If you want to directly jump to a working project, you can clone the {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/langchain-starter" >}} following repository{{< /external-link >}} and paste your custom data in `server/data`.
+Follow the instructions in the `README` to deploy your project and you'll have a bot that can answer questions based on your custom data.
 
-## Prerequisites
+## The concepts
 
-If you don't already have them, you'll need to install the following tools:
+Some of the main issues of out-of-the-box models are:
+- Outdated information - being trained on old data they can easily provide old fashioned answers. For example, ChatGPT will tell you to use `create-react-app` for starting a new project, even though the library has been deprecated for a while now.
+- Lack of new information - it can't provide answer for new technologies or concepts that are not present in the training data.
+- Hallucinating - making up false information when it doesn't find an answer.
 
-- {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
-- {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
-- {{< external-link link="https://genez.io" >}}Genezio{{< /external-link >}}
+To solve these points, you can provide the information needed to a pre-trained model. There are two approaches on feeding custom data to an LLM:
+* **Fine-tuning**: This approach involves training the model on your custom data. The model will learn to generate responses based on the custom data you provide. This approach requires AI/ML knowledge and a lot of computational resources.
+* **Retrieval-based or RAG**: This approach involves querying a database with your custom data and feeding the retrieved data to the model. The model will generate responses based on the retrieved data. This approach is simpler, requires less computational resources and can be used with pre-trained models such as OpenAI, Gemini or Llama.
 
-Note: I recommend you to use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions.
-After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
-`nvm` will automatically install the corresponding `npm` version.
+In this article, we will use the retrieval-based approach because it's simpler, faster to implement and great for prototyping a product based on LLM.
 
-## Setup your project
+### Vector databases
 
-### Start from a template
+The first step in creating a RAG application is to gather and create the external data that will be used to enhance the model's responses.
 
-The command below will create a new directory with the name you provide and set up a fullstack project with the backend in TypeScript and the frontend in React.
+The brute-force approach is to append the data to the prompt each time and let the model figure out how to use it.
+This can get quite expensive and the prompts can get so large that they'll max out the model's input size.
 
-```bash
-genezio create fullstack --backend=ts --frontend=react-ts --name=custom-data-llm --region=us-east-1`
+To optimize this process, we can use a vector database - a database that stores your custom text data into LLM embeddings and it's able to retrieve the most similar context to a given query.
+To better understand how this works, let's take a look at the following code snippet:
+
+```typescript
+  const loader = new TextLoader("./genezio_docs.txt");
+  // Load the data into documents
+  const documents = await loader.load();
+  // Save the data as OpenAI embeddings in a table
+  const vectorStore = await vector_database.fromDocuments(
+    documents,
+    embeddings,
+    {table},
+  );
+
+  // Query the database for the most similar context to the word "genezio"
+  const genezio_info = await vectorStore.similaritySearch("genezio", 1);
+
+  // This will output the sentences that are most similar to the word "genezio" from the file loaded
+  console.log(genezio_info);
 ```
 
-The file structure will look similar to this:
+On asking the question "What is Genezio?", the input fed to the LLM will be `Answer the question based on only the following context: genezio_info + "What is Genezio?"`.
+
+### How to feed personal data to an LLM
+
+To be able to easily build tailored LLM applications, you can use the LangChain framework.
+This framework provides a set of tools that allow you to do the following:
+* Easily query the vector database for the most similar context to a given question.
+* Feed the retrieved context to an LLM model.
+* Chain multiple contexts from different sources (multiple databases, web scraping, multiple prompt) and feed them to the model.
+
+The simplified flow of the application is as follows:
+```typescript
+  // Create a retriever that will query the database for the most similar document to the input question
+  const vectorStore = new LanceDB(new OpenAIEmbeddings, { table })
+  // Retrieve the most similar context to the input question
+  const retriever = vectorStore.asRetriever(1);
+  // Create an output parser that will convert the model's response to a string
+  const outputParser = new StringOutputParser();
+
+  // Create a pipeline that will feed the input question and the database retrieved context to the model
+  const setupAndRetrieval = RunnableMap.from({
+    context: new RunnableLambda({
+      func: (input: string) =>
+        retriever.invoke(input).then((response) => response[0].pageContent),
+    }).withConfig({ runName: "contextRetriever" }),
+    question: new RunnablePassthrough(),
+  });
+
+  // Feed the input question and the database retrieved context to the model
+  const chain = setupAndRetrieval.pipe(prompt).pipe(model).pipe(outputParser)
+  // Get the model's response
+  const response = await chain.invoke(question);
+  console.log("Answer:", response)
+  return response;
+```
+
+## Deploy your own LLM application
+
+Your projects will bring you more value when they are accessible from all over the internet.
+
+To help you easily deploy without managing servers on your own, we will use `genezio` - a cloud platform designed for web and mobile developers.
+
+### Clone the example
+
+Clone the following repository and navigate to the `typescript/langchain-starter` directory:
+
 ```bash
-├── server/
-│   ├── backend.ts
-│   ├── package.json
-│   └── tsconfig.json
-├── client/
-│   ├── src/
-│   │   ├── App.tsx
-│   ├── package.json
-|   └── tsconfig.json
-├── genezio.yaml
-├── .genezioignore
-├── README.md
+git clone http://genez-io/genezio-examples
+cd genezio-examples/typescript/langchain-starter
 ```
 
 ### Get an OpenAI API key
@@ -77,13 +137,44 @@ Paste the key in the `.env` file in the `server` directory.
 OPENAI_API_KEY=<your_openai_api_key>
 ```
 
-### Get your custom data
+## Try out the application locally
 
-For the purpose of this tutorial, we will use a simple dataset with a few sentences.
+{{< details "Expand this section to install genezio" >}}
+If you don't already have it on your machine, you can install `genezio` with your favorite package manager:
+
+```bash
+npm install -g genezio
+```
+
+And login to your account:
+
+```bash
+genezio login
+```
+{{< /details >}}
+
+To test the application locally run the following command:
+
+```bash
+genezio local
+```
+
+This command will start your fullstack application locally.
+You can send requests to the backend API directly by navigating to `http://localhost:8083/explore`:
+
+![Test Interface Screenshot](/posts/langchain_starter/langchain_starter_test_interface.webp)
+
+You can also test the application directly from the frontend at `http://localhost:5173/`.
+
+![Test Interface Screenshot](/posts/langchain_starter/langchain_starter_local_frontend.webp)
+
+Initially, the bot will provide information about `genezio`. You can customize the bot with your own data in the next step.
+
+### Set your custom data
+
 You can use your own dataset provided either in local markdown files, S3 buckets, as a webpage or GitHub repository.
 
-Create a directory named `data` and a file named `data.txt` and fill it with custom data.
-The one I used for this tutorial can be found in the [project's repository]().
+For this tutorial, I advise you to create a directory named `data` and a file named `data.txt` and fill it with custom data.
 
 ```
 ├── server/
@@ -95,150 +186,91 @@ The one I used for this tutorial can be found in the [project's repository]().
     └── tsconfig.json
 ```
 
-{{< details "Expand this section to copy dummy data for this tutorial" >}}
+### Create and populate the vector database with your data
 
-Feel free to copy the following piece of text to `server/data/data.txt`.
-You can also add your own data to the file to test the application with your custom data.
+Initially, you need to create and populate the vector database with your data. We will use LanceDB to store the data in a vector database.
 
-```txt
-Genezio is a powerful cloud platform designed for full-stack developers, offering auto-scalable backends and seamlessly connected frontends through a type-safe interface. Whether you're a seasoned developer or just getting started, Genezio has you covered.
-
-Genezio supports various programming languages, including Typescript, Go, and more. You can write your backend code in your preferred language, making it accessible and versatile for developers of all backgrounds.
-
-Make Type-Safe Calls from Any Frontend Frameworks
-
-Genezio offers the flexibility to connect to frontends across various platforms, both web and mobile. You can create powerful applications while maintaining a type-safe interface to ensure robust and reliable interactions.
-
-What Can You Build with Genezio?
-
-Genezio empowers you to bring your ideas to life. Here are some of the exciting possibilities:
-
-Websites: Create responsive websites with Genezio's scalable infrastructure.
-Web Applications: Develop feature-rich web applications with ease, leveraging Genezio's powerful backend services.
-Applications with Multiple Frontends: Build applications that serve multiple front-ends, including APIs, web, and mobile interfaces, all while maintaining a type-safe interface for seamless interactions.
-Web3 Applications: Dive into the world of Web3 and build decentralized applications on Genezio's secure and scalable platform.
-Backends for Mobile Apps: Power your mobile applications with robust and scalable backends, ensuring a smooth user experience.
-Full-Code Enterprise Process Automation: Streamline your enterprise processes with Genezio's automation capabilities, offering full control and customization.
-LLM-Backed Apps: Create applications backed by the latest technology and best practices, making your projects future-proof.
-Start your journey with Genezio today and unlock the potential to build, deploy, and scale your applications like never before. Whether you're a solo developer or part of a team, Genezio is your trusted partner for turning your ideas into reality.
-```
-{{< /details >}}
-
-## Create and populate the vector database
-
-We will use LanceDB to store the data in a vector database.
-The advantage of using LanceDB is that it's an embedded vector database - meaning it will be bundled alongside your source code and the code can access it directly without needing to connect to a separate server.
+The advantage of using LanceDB is that it's an embedded vector database - meaning it will be bundled alongside your source code and it can be accessed directly without needing to connect to a separate server.
 This approach makes the querying process faster for large amounts of data.
 
-Initially, you need to create and populate the vector database with your data.
-Create a new file named `createVectorDatabase.ts` in the `server` directory and paste the following code snippet there.
-All of the following code snippets will be added to this file in `createVectorDatabase()` function.
+Let's explore the {{ < external-link >} link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/createVectorDatabase.ts"}}`createVectorDatabase()`{{< /external-link >}} function that will create the vector database and fill it with the data from `data/data.txt`:
 
 ```typescript
-{{< filePath >}}server/createVectorDatabase.ts{{< /filePath >}}
-import * as fs from "fs";
-import dotenv from "dotenv";
-dotenv.config();
-
 export async function createVectorDatabase() {
+  // Use the OpenAIEmbeddings model to create embeddings from text
   const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-  if (!OPENAI_API_KEY) {
-    throw new Error(
-      "You need to provide an OpenAI API key. Go to https://platform.openai.com/account/api-keys to get one.",
-    );
-  }
   const embeddings = new OpenAIEmbeddings({ openAIApiKey: OPENAI_API_KEY });
 
-  // Paste the following code snippets here
-}
-```
-
-Create a directory to store the database and connect to it:
-
-```typescript
-{{< filePath >}}server/createVectorDatabase.ts{{< /filePath >}}
+  // Point to the database directory
   const databasePath = "./lancedb";
   // Create the database directory if it doesn't exist
   if (!fs.existsSync(databasePath)) {
       fs.mkdirSync(databasePath);
   }
-
   // Connect to the database
   const database = await lancedb.connect(databasePath);
-```
 
-Create a table in the database to store the vectors.
-To create a table, you need to provide the table name and the schema.
-The schema is usually based on the type of data loader you are using.
-For this tutorial, we are keeping it simple and use the `TextLoader` with it's corresponding schema.
-
-```typescript
-{{< filePath >}}server/createVectorDatabase.ts{{< /filePath >}}
+  // Create a table in the database called "vectors" with the schema corresponding to a TextLoader
   const table = await db.createTable(
     "vectors",
     [{ vector: Array(1536), text: "text-sample", id: 1 }],
+    // Overwrite the database if it already exists
     { writeMode: lancedb.WriteMode.Overwrite }
   );
+}
 ```
 
-Note: By default, LanceDB gives an error if the database already exists.
-To overwrite the database contents, you can set the `writeMode` to `Overwrite`.
-This will allow you to run `createVectorDatabase` multiple times to append new data to the database.
-
-
-Now, we are ready to read and load the data into the database:
+Now, you are ready to read and load the data into the database:
 
 ```typescript
-{{< filePath >}}server/createVectorDatabase.ts{{< /filePath >}}
   const loader = new TextLoader("./data/data.txt");
+  // Load the data into documents
   const documents = await loader.load();
-  const vectorStore = await LanceDB.fromDocuments(
+  // Save the data as OpenAI embeddings in a table
+  const vectorStore = await vector_database.fromDocuments(
     documents,
     embeddings,
     {table},
   );
 ```
 
-To test that the database has been populated with the data, you can run the following code:
+To test that the database has been populated with the data, you can add the following code:
 
 ```typescript
-{{< filePath >}}server/createVectorDatabase.ts{{< /filePath >}}
-  const result = await vectorStore.similaritySearch("genezio", 1);
-  console.log(result);
+  // Query the database for the most similar context to the word "genezio"
+  const genezio_info = await vectorStore.similaritySearch("genezio", 1);
+
+  // This will output the sentences that are most similar to the word "genezio" from the file loaded
+  console.log(genezio_info);
 ```
 
-This will output all the documents that are similar to the word `genezio` from `data/data.txt`.
-
-Before getting to the next step of the tutorial, you have to run the `createVectorDatabase` nodejs script.
-
-Append this code snippet at the end of the file:
+Before getting to the next step of the tutorial, you have to run the `createVectorDatabase`as a Node.js script.
+This code snippet appended at the end of the file will do the trick for you:
 
 ```typescript
-{{< filePath >}}server/createVectorDatabase.ts{{< /filePath >}}
 (async () => {
   console.log("Creating the LanceDB vector table.");
+  // Create the LanceDB vector table
   await createVectorDatabase();
   console.log("Successfully created the LanceDB vector table.");
 })();
 ```
 
-And run the script with:
+You can run the script `createVectorDatabase.ts` by executing the following command in the terminal:
 ```bash
 cd server && npx tsx createVectorDatabase.ts
 ```
 
 The vector database is now populated with the data from `data/data.txt` and can be used to create a custom-data LLM-based application.
 
-## Implement the custom-data application
+### Implement the bot service
 
-To implement the bot itself, remove the `hello` method from the `BackendService` class in `server/backend.ts` and replace it with the following code snippets:
+Let's explore how to implement the bot itself. The complete code is available in the {{< external-link link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/backend.ts" >}}
+`server/backend.ts`{{< /external-link >}} file.
+
+The first steps are to set up the OpenAI model and the prompt that will be fed to the model:
 
 ``` typescript
-{{< filePath >}}server/backend.ts{{< /filePath >}}
-import { GenezioDeploy } from "@genezio/types";
-import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { OpenAI, OpenAIEmbeddings } from "@langchain/openai";
-
 @GenezioDeploy()
 export class BackendService {
   constructor() {}
@@ -249,6 +281,7 @@ export class BackendService {
 			throw new Error("You need to provide an OpenAI API key. Go to https://platform.openai.com/account/api-keys to get one.");
 		}
 
+    // Define the OpenAI model
     const model = new OpenAI({
 			modelName: "gpt-4",
 			openAIApiKey: OPENAI_API_KEY,
@@ -256,6 +289,7 @@ export class BackendService {
 			verbose: true
 		});
 
+    // Define the prompt that will be fed to the model
     const prompt = ChatPromptTemplate.fromMessages([
       [
         "ai",
@@ -267,29 +301,28 @@ If the information is not in the context, use your previous knowledge to answer 
       ["human", "{question}"],
     ]);
 
-    // Paste the following code snippets here
+    const database = "./lancedb";
+    // connect to the database
+    const db = await connect(database);
+    // open the table
+    const table = await db.openTable('vectors')
 
     return "";
   }
 }
 ```
 
-Open and connect to the database you've previously created:
-```typescript
-{{< filePath >}}server/backend.ts{{< /filePath >}}
-    const database = "./lancedb";
-    const db = await connect(database);
-    const table = await db.openTable('vectors')
-```
-
 Now, you need to create a retriever that will query the database for the most similar document to the input question.
 
 ```typescript
-{{< filePath >}}server/backend.ts{{< /filePath >}}
+    // Initialize the vector store object with the OpenAI embeddings and the table
     const vectorStore = new LanceDB(new OpenAIEmbeddings, { table })
+    // Retrieve the most similar context to the input question
     const retriever = vectorStore.asRetriever(1);
+    // Create an output parser that will convert the model's response to a string
     const outputParser = new StringOutputParser();
 
+    // Create a pipeline that will feed the input question and the database retrieved context to the model
     const setupAndRetrieval = RunnableMap.from({
       context: new RunnableLambda({
         func: (input: string) =>
@@ -300,51 +333,34 @@ Now, you need to create a retriever that will query the database for the most si
 ```
 
 Next, it will feed into the OpenAI model the input question and the database retrieved context:
+
 ```typescript
-{{< filePath >}}server/backend.ts{{< /filePath >}}
+    // Feed the input question and the database retrieved context to the model
     const chain = setupAndRetrieval.pipe(prompt).pipe(model).pipe(outputParser)
+    // Invoke the model to answer the question
     const response = await chain.invoke(question);
     console.log("Answer:", response)
     return response;
 ```
 
+### Create a simple frontend to interact with your application
 
-You can test the application locally by running the following command in the project's root directory:
-```bash
-genezio local
-```
-
-Your terminal should look similar to this:
-```
-✔ Running backend local scripts
-| Change detected, reloading...
-| Server listening on port 8083
-| Your local server is running and the SDK was successfully generated!
-
-| Test your code at http://localhost:8083/explore
-```
-
-You can navigate to `http://localhost:8083/explore` to test the API:
-
-![Test Interface Screenshot](posts/langchain_starter/langchain_starter_test_interface.webp)
-
-## Create a simple frontend to interact with your application
-
-Open the `client/src/App.tsx` file and replace the content with the following code snippet:
-This will simply create an input box where you can ask your question and a button to get the answer from the bot.
+To query the bot, a simple React page is available in the `client/` directory.
 
 ```typescript
-{{< filePath >}}client/src/App.tsx{{< /filePath >}}
 import { useState } from "react";
-import { BackendService } from "@genezio-sdk/custom-data-llm";
 import "./App.css";
+// Import the BackendService class from the server
+import { BackendService } from "@genezio-sdk/langchain-starter";
 
 export default function App() {
   const [question, setQuestion] = useState("");
   const [response, setResponse] = useState("");
 
+  // Define the askOpenAI function that will call the askBot method from the BackendService class
   async function askOpenAI() {
     setTimeout(async () => {
+      // Call the askBot method from the BackendService class
       setResponse(await BackendService.askBot(question));
     }, 10000);
   }
@@ -392,6 +408,7 @@ The codebase for this tutorial is open-source, and you can find it in this {{< e
 Upcoming tutorials and articles about LLM, Langchain, LanceDB, and Genezio will cover more advanced topics and use cases such as creating a chatbot with memory, scraping custom data from GitHub, and keeping your vector database in sync with your data.
 
 Subscribe to our newsletter to stay in the loop with the latest updates and tutorials.
+
 ## Resources
 
 This article contains a lot of new concepts and information. If you want a more in-depth understanding of the topics covered, I recommend the following resources:
