@@ -1,21 +1,21 @@
 ---
 title: Seamless Web3 Authentication - Add MetaMask Login to Your App in a Few Clicks with Genezio
-date: 2024-04-16
+date: 2024-04-24
 tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-thumbnail: /images/express.webp
-preview: Check ou how to integrate genezio in express for an easier and safer integration between backends and clients.
+thumbnail: /images/metamask.webp
+preview: This article dives deep into the inner workings of logging in with MetaMask on your web app.
 # meta data start
-description: "Check ou how to integrate genezio in express for an easier and safer integration between backends and clients."
+description: "This article dives deep into the inner workings of logging in with MetaMask on your web app."
 meta_og_url: "https://genez.io/blog/web_scraping_app"
-meta_og_image: "https://genez.io/images/express.webp"
+meta_og_image: "https://genez.io/images/metamask.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 13
-url: /blog/metamask-genezio-login/
+# url: /blog/metamask-genezio-login/
 ---
 
 Have you ever wondered what happens when you click that "Login with MetaMask" button on a web app?
@@ -25,7 +25,6 @@ But what goes on behind the scenes to make this seamless experience possible?
 This article dives deep into the inner workings of logging in with MetaMask on your web app.
 We'll break down the four-step process involved and explore how Genezio's user-friendly authentication service handles the heavy lifting, allowing you to focus on building amazing features for your application.
 
-
 ## MetaMask Login Explained
 
 When the user clicks on 'Login with MetaMask', the flow goes like this:
@@ -33,9 +32,9 @@ When the user clicks on 'Login with MetaMask', the flow goes like this:
 1. The web app will pop up MetaMask and ask the user to connect their wallet.
 2. The web app sends the public address of the wallet to the backend and asks for a nonce.
 3. Upon receiving the request, the server checks if the public address belongs to an existing user. If it doesn't, it will create a new `user` row for that public address in the database.
-Once the nonce is returned, the user will be prompted to sign the nonce to prove they have control over that public address.
+   Once the nonce is returned, the user will be prompted to sign the nonce to prove they have control over that public address.
 4. The signature and the public address are sent back to the server, which checks if the signature is correct. If so, an auth token is generated and returned to the web app.
-A new nonce will be generated for that user for the next time the user will want to login.
+   A new nonce will be generated for that user for the next time the user will want to login.
 
 Don't worry, you don't have to handle all these things since the Genezio authentication service will do all the heavy lifting. Let's move forward with developing an app that features MetaMask for signing in.
 
@@ -93,7 +92,7 @@ AuthService.getInstance().setTokenAndRegion("<token>", "<region>");
 ```
 
 When the component loads, the first check we perform is for the user's login status using the `AuthService.getInstance().userInfo()` function.
-This function will check if a token is currently stored in the browser and it will send a request for the user details to the `AuthService`. 
+This function will check if a token is currently stored in the browser and it will send a request for the user details to the `AuthService`.
 If the user is logged in, we retrieve the user’s details. Otherwise, the function throws an error, prompting us to display the ‘Login with MetaMask’ button.
 
 ```typescript
@@ -162,11 +161,11 @@ BackendService.hello("Friend").then((res) => {
     setSecuredInfo(res)
 }).catch((e) => {
     console.error(e)
-    logout() 
+    logout()
 })
 ```
 
-Once again, you can explore the full code of the frontend [here](https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth/client). It is straightforward React code and you can follow the comments for more information.
+Once again, you can explore the full code of the frontend {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth/client" >}}here{{< /external-link >}}. It is straightforward React code and you can follow the comments for more information.
 
 ## Backend overview
 
@@ -219,9 +218,6 @@ Access it and try to login. MetaMask should pop out, asking you to sign the mess
 
 Congratulations! You have a full stack application with MetaMask! You can check the full working code {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth" >}}here{{< /external-link >}}.
 
-From here sky is the limit. You can change the backend to do more awesome stuff than just returning a string: build a wallet alert notification system, 
+From here sky is the limit. You can change the backend to do more awesome stuff than just returning a string: build a wallet alert notification system,
 an application that shows the historical balance data or build an auction for NFTs. Upcoming articles will cover more advanced topics and use cases so subscribe
 to our newsletter to not miss anything!
-
-
-
