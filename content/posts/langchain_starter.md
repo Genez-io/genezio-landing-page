@@ -24,7 +24,9 @@ I hope it will help you get the grasp of the novel concepts and tools that are o
 Most importantly, I'll emphasize how you can use them to build your own AI-powered applications.
 
 My goal is to build an application that feeds my own data to an OpenAI model and generates responses taking into account this data.
-More specifically, I want to build a bot that can answer questions based on the documentation pages of genezio.
+More specifically, I want to build a bot that can answer questions based on the documentation pages of genezio like in the preview below:
+
+![Langchain Starter Preview](/posts/langchain_starter/langchain_starter_demo.gif)
 
 You can use this project as a starting point to build more complex applications such as:
 - FAQ bots for customer support
@@ -401,7 +403,9 @@ You can continue to manage, test, update and monitor your project from the genez
 
 ## Conclusions
 
-Congratulations! 🥳 You've implemented and deployed your own custom-data bot.
+Congratulations! 🥳 You've implemented and deployed an application that can handle questions based on your own personal data.
+
+From here, the sky is the limit. You can customize the bot with your own data, add more sources of information, and create more complex applications.
 
 The codebase for this tutorial is open-source, and you can find it in this {{< external-link link="https://github.com/genez-io/genezio-examples/tree/main/typescript/langchain-starter" >}}GitHub repository{{< /external-link >}}.
 
@@ -415,4 +419,3 @@ This article contains a lot of new concepts and information. If you want a more 
 
 - {{< external-link link="https://github.com/microsoft/generative-ai-for-beginners" >}}https://github.com/microsoft/generative-ai-for-beginners{{< /external-link >}}
 - {{< external-link link="https://learn.deeplearning.ai/courses/langchain-chat-with-your-data" >}}https://learn.deeplearning.ai/courses/langchain-chat-with-your-data{{< /external-link >}}
-- {{< external-link link="https://medium.com/@onkarmishra/using-langchain-for-question-answering-on-own-data-3af0a82789ed" >}}https://medium.com/@onkarmishra/using-langchain-for-question-answering-on-own-data-3af0a82789ed{{< /external-link >}}
