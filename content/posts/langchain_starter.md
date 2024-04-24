@@ -193,7 +193,7 @@ Initially, you need to create and populate the vector database with your data. W
 The advantage of using LanceDB is that it's an embedded vector database - meaning it will be bundled alongside your source code and it can be accessed directly without needing to connect to a separate server.
 This approach makes the querying process faster for large amounts of data.
 
-Let's explore the {{ < external-link >} link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/createVectorDatabase.ts"}}`createVectorDatabase()`{{< /external-link >}} function that will create the vector database and fill it with the data from `data/data.txt`:
+Let's explore the {{< external-link link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/createVectorDatabase.ts" >}}`createVectorDatabase()`{{< /external-link >}} function that will create the vector database and fill it with the data from `data/data.txt`:
 
 ```typescript
 export async function createVectorDatabase() {
