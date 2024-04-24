@@ -54,15 +54,15 @@ jobs:
   deploy-backend:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
-      - uses: Genez-io/genezio-github-action@main
+          node-version: 20
+      - uses: Genez-io/genezio-github-action@v1
         with:
           token: ${{ secrets.GENEZIO_TOKEN }}
       - name: Deploy backend
-        working-directory: ./server
+        working-directory: ./
         run: genezio deploy —stage prod
 ```
 
