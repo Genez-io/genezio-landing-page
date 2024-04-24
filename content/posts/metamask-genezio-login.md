@@ -1,5 +1,5 @@
 ---
-title: Seamless Web3 Authentication - Add Metamask Login to Your App in a Few Clicks with Genezio
+title: Seamless Web3 Authentication - Add MetaMask Login to Your App in a Few Clicks with Genezio
 date: 2024-04-16
 tags:
   - Tutorials
@@ -18,15 +18,15 @@ readTime: 13
 url: /blog/metamask-genezio-login/
 ---
 
-Have you ever wondered what happens when you click that "Login with Metamask" button on a web app?
-In today's world, where security and user control over data are critical, leveraging crypto wallets like Metamask for logins is becoming increasingly popular.
+Have you ever wondered what happens when you click that "Login with MetaMask" button on a web app?
+In today's world, where security and user control over data are critical, leveraging crypto wallets like MetaMask for logins is becoming increasingly popular.
 But what goes on behind the scenes to make this seamless experience possible?
 
-This article dives deep into the inner workings of logging in with Metamask on your web app.
+This article dives deep into the inner workings of logging in with MetaMask on your web app.
 We'll break down the four-step process involved and explore how Genezio's user-friendly authentication service handles the heavy lifting, allowing you to focus on building amazing features for your application.
 
 
-## Metamask Login Explained
+## MetaMask Login Explained
 
 When the user clicks on 'Login with MetaMask', the flow goes like this:
 
@@ -37,7 +37,7 @@ Once the nonce is returned, the user will be prompted to sign the nonce to prove
 4. The signature and the public address are sent back to the server, which checks if the signature is correct. If so, an auth token is generated and returned to the web app.
 A new nonce will be generated for that user for the next time the user will want to login.
 
-Don't worry, you don't have to handle all these things since genezio authentication service will do all the heavy lifting. Let's move forward with developing an app that features Metamask for signing in.
+Don't worry, you don't have to handle all these things since the Genezio authentication service will do all the heavy lifting. Let's move forward with developing an app that features MetaMask for signing in.
 
 ## Implementation
 
@@ -53,9 +53,9 @@ Note: I recommend you to use {{< external-link link="https://github.com/nvm-sh/n
 After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
 `nvm` will automatically install the corresponding `npm` version.
 
-### Setup your project
+### Set up your project
 
-Clone the {{< external-link link="https://github.com/Genez-io/genezio-examples" >}}this{{< /external-link >}} repository and then navigate to `typescript/metamask-auth`.
+Clone {{< external-link link="https://github.com/Genez-io/genezio-examples" >}}this{{< /external-link >}} repository and then navigate to `typescript/metamask-auth`.
 In this folder, you already have a working application. You just have to configure a few things and in the following sections we will explain the code.
 
 ```cli
@@ -68,7 +68,7 @@ Run `genezio deploy` to deploy the project in your genezio account. Now, let's c
 ### Configure authentication
 
 Go to the Genezio Dashboard, select your project, and navigate to the Authentication section to enable the feature. Follow the instructions on screen and create a Postgres database to store user and session information.
-To enable `Web3` login, go to `Providers` and toggle the enable button. Now, you have an authentication service that can perform the "Login with Metamask" flow described in the previous section. We just have to implement the frontend.
+To enable `Web3` login, go to `Providers` and toggle the enable button. Now, you have an authentication service that can perform the "Login with MetaMask" flow described in the previous section. We just have to implement the frontend.
 
 ![Enable auth genezio](/posts/demo-web3-article.webp)
 
@@ -94,7 +94,7 @@ AuthService.getInstance().setTokenAndRegion("<token>", "<region>");
 
 When the component loads, the first check we perform is for the user's login status using the `AuthService.getInstance().userInfo()` function.
 This function will check if a token is currently stored in the browser and it will send a request for the user details to the `AuthService`. 
-If the user is logged in, we retrieve the user’s details. Otherwise, the function throws an error, prompting us to display the ‘Login with Metamask’ button.
+If the user is logged in, we retrieve the user’s details. Otherwise, the function throws an error, prompting us to display the ‘Login with MetaMask’ button.
 
 ```typescript
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
@@ -116,10 +116,10 @@ useEffect(() => {
 }, [getBalance])
 ```
 
-Let's see how we implement what happens when the user clicks the 'Login with Metamask' button.
+Let's see how we implement what happens when the user clicks the 'Login with MetaMask' button.
 This action initiates the flow we discussed at the beginning of the article.
-A prerequisite step involves checking whether the user has the Metamask extension installed.
-If the extension is present, it adds the 'ethereum' object to the window property, which we then use to communicate with the Metamask extension.
+A prerequisite step involves checking whether the user has the MetaMask extension installed.
+If the extension is present, it adds the 'ethereum' object to the window property, which we then use to communicate with the MetaMask extension.
 
 The first step is to request the wallet's public address using the `eth_requestAccounts` method.
 Once we have it, we send it to the `AuthService` and request a nonce in return.
@@ -129,7 +129,7 @@ After sending the signature to the `AuthService`, if it is verified as correct, 
 ```typescript
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
 const loginWithMetamask = async () => {
-    // Check if Metamask is installed
+    // Check if MetaMask is installed
     if (window.ethereum) {
         // Fetch the accounts
         const addresses = await window.ethereum.request({ method: "eth_requestAccounts" })
@@ -148,7 +148,7 @@ const loginWithMetamask = async () => {
         await AuthService.getInstance().web3Login(address, signature)
         await getBalance(address)
     } else {
-        alert("Install Metamask extension!");
+        alert("Install MetaMask extension!");
 	}
 }
 ```
@@ -166,7 +166,7 @@ BackendService.hello("Friend").then((res) => {
 })
 ```
 
-Once again, you can explore the full code of the frontend [here](https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth/client). It is straight forward React code and you can follow the comments for more information.
+Once again, you can explore the full code of the frontend [here](https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth/client). It is straightforward React code and you can follow the comments for more information.
 
 ## Backend overview
 
@@ -213,11 +213,11 @@ genezio deploy
 ```
 
 Your app will be available at `https://<custom-subdomain>.app.genez.io`. The custom subdomain is specified in the `genezio.yaml` file.
-Access it and try to login. Metamask should pop out, asking you to sign the message. When the process finished, you should see your balance.
+Access it and try to login. MetaMask should pop out, asking you to sign the message. When the process is finished, you should see your balance.
 
 ## Conclusion
 
-Congratulations! You have a full stack application with Metamask! You can check the full working code {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth" >}}here{{< /external-link >}}.
+Congratulations! You have a full stack application with MetaMask! You can check the full working code {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main/typescript/metamask-auth" >}}here{{< /external-link >}}.
 
 From here sky is the limit. You can change the backend to do more awesome stuff than just returning a string: build a wallet alert notification system, 
 an application that shows the historical balance data or build an auction for NFTs. Upcoming articles will cover more advanced topics and use cases so subscribe
