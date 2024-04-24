@@ -9,7 +9,7 @@ thumbnail: /images/metamask.webp
 preview: This article dives deep into the inner workings of logging in with MetaMask on your web app.
 # meta data start
 description: "This article dives deep into the inner workings of logging in with MetaMask on your web app."
-meta_og_url: "https://genez.io/blog/web_scraping_app"
+meta_og_url: "https://genez.io/blog/metamask_genezio_login"
 meta_og_image: "https://genez.io/images/metamask.webp"
 # meta data end
 customHeader: "White header"
