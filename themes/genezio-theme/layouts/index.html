@@ -17,7 +17,6 @@
 
 {{ end }} {{ define "main" }}
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <div class="px-3 bg-dark">
   <div
@@ -68,40 +67,66 @@
       id="features"
       style="font-size: 12px"
       class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
+      data-aos="fade-down"
     >
-      TODO:
+      Get Started Faster
     </p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-3">Start from a template</h2>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3" data-aos="fade-down">
+      Start from a template
+    </h2>
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
+    <div
+      id="carouselExampleControls"
+      style="max-width: 900px; margin: 0 auto; margin-bottom: 30px"
+      class="carousel slide"
+      data-ride="carousel"
+      data-aos="fade-down"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div>
+            <h2 class="text-white">Tudor Anghelescu</h2>
+            <p class="text-white">ChatGPT App</p>
+          </div>
           <img
+            class="d-block w-100"
             src="https://i.pcmag.com/imagery/articles/07x3Qi118xyGJz8uN8v6tHm-1..v1616686921.jpg"
+            alt="First slide"
           />
         </div>
-        <div class="swiper-slide">
+        <div class="carousel-item">
+          wasd
           <img
+            class="d-block w-100"
             src="https://i.pcmag.com/imagery/articles/07x3Qi118xyGJz8uN8v6tHm-1..v1616686921.jpg"
+            alt="Second slide"
           />
         </div>
-        <div class="swiper-slide">
+        <div class="carousel-item">
+          wasd
           <img
+            class="d-block w-100"
             src="https://i.pcmag.com/imagery/articles/07x3Qi118xyGJz8uN8v6tHm-1..v1616686921.jpg"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://i.pcmag.com/imagery/articles/07x3Qi118xyGJz8uN8v6tHm-1..v1616686921.jpg"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://i.pcmag.com/imagery/articles/07x3Qi118xyGJz8uN8v6tHm-1..v1616686921.jpg"
+            alt="Third slide"
           />
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
     </div>
 
     <div
@@ -119,12 +144,6 @@
       "
     ></div>
 
-    <div
-      class="d-block d-sm-none mb-5"
-      style="margin-left: -2em !important; margin-right: -1.8em !important"
-    >
-      <img class="w-100" src="/images/hero-3-terminals-mobile.webp" alt="hero-3-terminals-mobile" />
-    </div>
     {{/* Hosting included for all plans */}}
     <div class="d-flex align-items-center justify-content-center" data-aos="fade-up">
       <div
@@ -1253,21 +1272,6 @@
 <script>
   AOS.init({
     duration: 1200,
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    centeredSlides: true,
-    spaceBetween: 30,
-    grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
   });
 </script>
 
