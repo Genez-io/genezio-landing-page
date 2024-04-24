@@ -63,7 +63,7 @@ jobs:
           token: ${{ secrets.GENEZIO_TOKEN }}
       - name: Deploy backend
         working-directory: ./
-        run: genezio deploy —stage prod
+        run: genezio deploy --stage prod
 ```
 
 #### 3. Store genezio Token securely:
