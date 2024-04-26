@@ -83,7 +83,7 @@ To be able to easily build tailored LLM applications, you can use the LangChain 
 This framework provides a set of tools that allow you to do the following:
 * Easily query the vector database for the most similar context to a given question.
 * Feed the retrieved context to an LLM model.
-* Chain multiple contexts from different sources (multiple databases, web scraping, multiple prompt) and feed them to the model.
+* Chain multiple contexts from different sources (multiple databases, web scraping, multiple prompts) and feed them to the model.
 
 The simplified flow of the application is as follows:
 ```typescript
@@ -146,7 +146,7 @@ If you don't already have it on your machine, you can install `genezio` with you
 npm install -g genezio
 ```
 
-And login to your account:
+And log in to your account:
 
 ```bash
 genezio login
