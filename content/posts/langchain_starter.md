@@ -6,8 +6,8 @@ tags:
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/kubecon.webp
-preview: "Build an LLM application that will answer questions based on your personal data using Langchain, LanceDB and Genezio."
-description: "This article will help you get the grasp of the novel AI/LLM concepts and tools that are on the rise right now. The ultimate goal is to create a project that takes your own data and feeds it to an OpenAI model and generate responses based on it."
+preview: "Build an LLM application that will answer questions based on your external data using Langchain, LanceDB and Genezio."
+description: "This article will help you get the grasp of the novel AI/LLM concepts and tools that are on the rise right now. The ultimate goal is to create a project that takes your own data and feeds it to an OpenAI model and generates responses based on it."
 meta_og_url: "https://genez.io/blog/langchain_starter"
 meta_og_image: "https://genez.io/images/kubecon.webp"
 customHeader: "White header"
@@ -16,14 +16,12 @@ readTime: 30
 url: /blog/langchain-genezio-project
 ---
 
-The last couple of months brought a new set of keywords and concepts that are concerning every software developer out there.
-As a curious individual, I wanted to understand the AI landscape more in-depth and see how can I leverage it for my own personal projects and work productivity as fullstack engineer.
+The last couple of months brought a new wave of keywords and concepts that are concerning every software developer out there.
 
-This article is a summary of the first steps I took into the AI-journey and what I've learned so far.
-I hope it will help you get the grasp of the novel concepts and tools that are on the rise right now.
-Most importantly, I'll emphasize how you can use them to build your own AI-powered applications.
+As a curious individual, I started exploring the novel AI landscape to uncover how I can leverage these technologies for my personal projects and enhance my work productivity as a software engineer.
 
-My goal is to build an application that feeds my own data to an OpenAI model and generates responses taking into account this data.
+In this article, I delve into how you can feed external data to an already trained LLM model to enable more accurate and reliable answers.
+
 More specifically, I want to build a bot that can answer questions based on the documentation pages of genezio like in the preview below:
 
 ![Langchain Starter Preview](/posts/langchain_starter/langchain_starter_demo.gif)
@@ -40,12 +38,12 @@ Follow the instructions in the `README` to deploy your project and you'll have a
 
 Some of the main issues of out-of-the-box models are:
 - Outdated information - being trained on old data they can easily provide old fashioned answers. For example, ChatGPT will tell you to use `create-react-app` for starting a new project, even though the library has been deprecated for a while now.
-- Lack of new information - it can't provide answer for new technologies or concepts that are not present in the training data.
-- Hallucinating - making up false information when it doesn't find an answer.
+- Lack of new information - it can't provide answers for new technologies or concepts that are not present in the training data.
+- Hallucinations - making up false information when it doesn't find an answer.
 
 To solve these points, you can provide the information needed to a pre-trained model. There are two approaches on feeding custom data to an LLM:
 * **Fine-tuning**: This approach involves training the model on your custom data. The model will learn to generate responses based on the custom data you provide. This approach requires AI/ML knowledge and a lot of computational resources.
-* **Retrieval-based or RAG**: This approach involves querying a database with your custom data and feeding the retrieved data to the model. The model will generate responses based on the retrieved data. This approach is simpler, requires less computational resources and can be used with pre-trained models such as OpenAI, Gemini or Llama.
+* **Retrieval-based or RAG**: This technique enables generative AI/LLM to process data from external resources. This involves querying the external resources to extract only the relevant context for the question asked. This context will be appended to the prompt such that the model will make use of more information and can give up to date and accurate responses. This approach is simpler, requires less computational resources and can be used with pre-trained models such as OpenAI, Gemini or Llama.
 
 In this article, we will use the retrieval-based approach because it's simpler, faster to implement and great for prototyping a product based on LLM.
 
@@ -77,7 +75,7 @@ To better understand how this works, let's take a look at the following code sni
   console.log(genezio_info);
 ```
 
-On asking the question "What is Genezio?", the input fed to the LLM will be `Answer the question based on only the following context: genezio_info + "What is Genezio?"`.
+Thus, by asking the question "What is Genezio?", you would not feed the entire documentation page to the model (that would be too expensive). Instead, you would query the vector database for the most similar context to the word "genezio" and feed that context to the model. This way, you can provide the model with the most relevant information to generate a response in the most optimal way.
 
 ### How to feed personal data to an LLM
 
@@ -246,7 +244,7 @@ To test that the database has been populated with the data, you can add the foll
   console.log(genezio_info);
 ```
 
-Before getting to the next step of the tutorial, you have to run the `createVectorDatabase`as a Node.js script.
+Before getting to the next step of the tutorial, you have to run the `createVectorDatabase` as a Node.js script.
 This code snippet appended at the end of the file will do the trick for you:
 
 ```typescript
