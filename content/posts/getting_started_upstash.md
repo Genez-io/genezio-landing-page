@@ -132,7 +132,7 @@ Once the deployment is complete, open your {{< external-link link="https://app.g
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 
-![Alt text](/posts/image-3.png)
+![Alt text](/posts/integrations.webp)
 
 Connect with an Upstash account using the preferred login method:
 

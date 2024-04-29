@@ -21,7 +21,6 @@ customFooter: "White footer"
 readTime: 20
 ---
 
-
 In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript.
 
 Whether you're confirming user registrations or sending weekly newsletters, this guide will ensure you can implement a robust email solution with ease.
@@ -82,12 +81,12 @@ We deploy our project to the cloud using genezio, and then gain access to the em
 
 ## Set up the email service
 
-Navigate to the {{< external-link link="https://app.genez.io/" >}}genezio dashboard{{< /external-link >}}, locate your project, and open its project page. Then, head to the integrations tab, look for `EMAIL-SERVICE` and click `Install`.
+Navigate to the {{< external-link link="https://app.genez.io/" >}}genezio dashboard{{< /external-link >}}, locate your project, and open its project page. Then, head to the services section on the sidebar, look for `Email Service` and click on it.
 
 After you are redirected to the email service page, press the `Install` button.
 Now your page should look like this one:
 
-![Alt text](/posts/mail-in-ts-with-nodemailer1.webp)
+![Alt text](/posts/add_email_integration.webp)
 
 ## Set up the env
 
@@ -156,7 +155,7 @@ genezio local
 
 Now you can test your method using the {{< external-link link="http://localhost:8083/explore" >}}genezio test interface{{< /external-link >}}.
 
-![Alt text](/posts/mail-in-ts-with-nodemailer2.webp)
+![Alt text](/posts/mail-in-ts-with-nodemailer3.webp)
 
 After everything goes well, you can deploy your app to the genezio cloud.
 
