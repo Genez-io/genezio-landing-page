@@ -228,7 +228,7 @@ First, import the dependencies from `react`, `SDK`, and `CSS`:
 ```javascript
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
 import { useState } from "react";
-import { GptCaller } from "@genezio-sdk/chatgpt-project_us-east-1";
+import { GptCaller } from "@genezio-sdk/chatgpt-project";
 import "./App.css";
 ```
 
@@ -331,7 +331,7 @@ Complete code file:
 ```tsx
 {{< filePath >}}client/src/App.tsx{{< /filePath >}}
 import { useState } from "react";
-import { GptCaller } from "@genezio-sdk/chatgpt-project_us-east-1";
+import { GptCaller } from "@genezio-sdk/chatgpt-project";
 import "./App.css";
 
 function App() {
