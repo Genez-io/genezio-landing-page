@@ -1,15 +1,15 @@
 ---
 title: Use Langchain, LanceDB and Genezio to chat with your own data
-date: 2024-04-01
+date: 2024-04-30
 tags:
   - Tutorial
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/kubecon.webp
+thumbnail: /images/custom_data_llm.webp
 preview: "Build an LLM application that will answer questions based on your external data using Langchain, LanceDB and Genezio."
 description: "This article will help you get the grasp of the novel AI/LLM concepts and tools that are on the rise right now. The ultimate goal is to create a project that takes your own data and feeds it to an OpenAI model and generates responses based on it."
 meta_og_url: "https://genez.io/blog/langchain_starter"
-meta_og_image: "https://genez.io/images/kubecon.webp"
+meta_og_image: "https://genez.io/images/custom_data_llm.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
@@ -27,6 +27,7 @@ More specifically, I want to build a bot that can answer questions based on the 
 ![Langchain Starter Preview](/posts/langchain_starter/langchain_starter_demo.gif)
 
 You can use this project as a starting point to build more complex applications such as:
+
 - FAQ bots for customer support
 - Q&A bots for educational purposes
 - AI-powered documentation search engines
@@ -37,13 +38,15 @@ Follow the instructions in the `README` to deploy your project and you'll have a
 ## The concepts
 
 Some of the main issues of out-of-the-box models are:
+
 - Outdated information - being trained on old data they can easily provide old fashioned answers. For example, ChatGPT will tell you to use `create-react-app` for starting a new project, even though the library has been deprecated for a while now.
 - Lack of new information - it can't provide answers for new technologies or concepts that are not present in the training data.
 - Hallucinations - making up false information when it doesn't find an answer.
 
 To solve these points, you can provide the information needed to a pre-trained model. There are two approaches on feeding custom data to an LLM:
-* **Fine-tuning**: This approach involves training the model on your custom data. The model will learn to generate responses based on the custom data you provide. This approach requires AI/ML knowledge and a lot of computational resources.
-* **Retrieval-based or RAG**: This technique enables generative AI/LLM to process data from external resources. This involves querying the external resources to extract only the relevant context for the question asked. This context will be appended to the prompt such that the model will make use of more information and can give up to date and accurate responses. This approach is simpler, requires less computational resources and can be used with pre-trained models such as OpenAI, Gemini or Llama.
+
+- **Fine-tuning**: This approach involves training the model on your custom data. The model will learn to generate responses based on the custom data you provide. This approach requires AI/ML knowledge and a lot of computational resources.
+- **Retrieval-based or RAG**: This technique enables generative AI/LLM to process data from external resources. This involves querying the external resources to extract only the relevant context for the question asked. This context will be appended to the prompt such that the model will make use of more information and can give up to date and accurate responses. This approach is simpler, requires less computational resources and can be used with pre-trained models such as OpenAI, Gemini or Llama.
 
 In this article, we will use the retrieval-based approach because it's simpler, faster to implement and great for prototyping a product based on LLM.
 
@@ -58,21 +61,17 @@ To optimize this process, we can use a vector database - a database that stores 
 To better understand how this works, let's take a look at the following code snippet:
 
 ```typescript
-  const loader = new TextLoader("./genezio_docs.txt");
-  // Load the data into documents
-  const documents = await loader.load();
-  // Save the data as OpenAI embeddings in a table
-  const vectorStore = await vector_database.fromDocuments(
-    documents,
-    embeddings,
-    {table},
-  );
+const loader = new TextLoader("./genezio_docs.txt");
+// Load the data into documents
+const documents = await loader.load();
+// Save the data as OpenAI embeddings in a table
+const vectorStore = await vector_database.fromDocuments(documents, embeddings, { table });
 
-  // Query the database for the most similar context to the word "genezio"
-  const genezio_info = await vectorStore.similaritySearch("genezio", 1);
+// Query the database for the most similar context to the word "genezio"
+const genezio_info = await vectorStore.similaritySearch("genezio", 1);
 
-  // This will output the sentences that are most similar to the word "genezio" from the file loaded
-  console.log(genezio_info);
+// This will output the sentences that are most similar to the word "genezio" from the file loaded
+console.log(genezio_info);
 ```
 
 Thus, by asking the question "What is Genezio?", you would not feed the entire documentation page to the model (that would be too expensive). Instead, you would query the vector database for the most similar context to the word "genezio" and feed that context to the model. This way, you can provide the model with the most relevant information to generate a response in the most optimal way.
@@ -81,34 +80,35 @@ Thus, by asking the question "What is Genezio?", you would not feed the entire d
 
 To be able to easily build tailored LLM applications, you can use the LangChain framework.
 This framework provides a set of tools that allow you to do the following:
-* Easily query the vector database for the most similar context to a given question.
-* Feed the retrieved context to an LLM model.
-* Chain multiple contexts from different sources (multiple databases, web scraping, multiple prompts) and feed them to the model.
+
+- Easily query the vector database for the most similar context to a given question.
+- Feed the retrieved context to an LLM model.
+- Chain multiple contexts from different sources (multiple databases, web scraping, multiple prompts) and feed them to the model.
 
 The simplified flow of the application is as follows:
+
 ```typescript
-  // Create a retriever that will query the database for the most similar document to the input question
-  const vectorStore = new LanceDB(new OpenAIEmbeddings, { table })
-  // Retrieve the most similar context to the input question
-  const retriever = vectorStore.asRetriever(1);
-  // Create an output parser that will convert the model's response to a string
-  const outputParser = new StringOutputParser();
+// Create a retriever that will query the database for the most similar document to the input question
+const vectorStore = new LanceDB(new OpenAIEmbeddings(), { table });
+// Retrieve the most similar context to the input question
+const retriever = vectorStore.asRetriever(1);
+// Create an output parser that will convert the model's response to a string
+const outputParser = new StringOutputParser();
 
-  // Create a pipeline that will feed the input question and the database retrieved context to the model
-  const setupAndRetrieval = RunnableMap.from({
-    context: new RunnableLambda({
-      func: (input: string) =>
-        retriever.invoke(input).then((response) => response[0].pageContent),
-    }).withConfig({ runName: "contextRetriever" }),
-    question: new RunnablePassthrough(),
-  });
+// Create a pipeline that will feed the input question and the database retrieved context to the model
+const setupAndRetrieval = RunnableMap.from({
+  context: new RunnableLambda({
+    func: (input: string) => retriever.invoke(input).then((response) => response[0].pageContent),
+  }).withConfig({ runName: "contextRetriever" }),
+  question: new RunnablePassthrough(),
+});
 
-  // Feed the input question and the database retrieved context to the model
-  const chain = setupAndRetrieval.pipe(prompt).pipe(model).pipe(outputParser)
-  // Get the model's response
-  const response = await chain.invoke(question);
-  console.log("Answer:", response)
-  return response;
+// Feed the input question and the database retrieved context to the model
+const chain = setupAndRetrieval.pipe(prompt).pipe(model).pipe(outputParser);
+// Get the model's response
+const response = await chain.invoke(question);
+console.log("Answer:", response);
+return response;
 ```
 
 ## Deploy your own LLM application
@@ -132,6 +132,7 @@ Go to {{< external-link link="https://platform.openai.com/api-keys" >}}the OpenA
 This key will be used to interact with the OpenAI API to create embeddings and generate responses.
 
 Paste the key in the `.env` file in the `server` directory.
+
 ```
 {{< filePath >}}server/.env{{< /filePath >}}
 OPENAI_API_KEY=<your_openai_api_key>
@@ -151,6 +152,7 @@ And log in to your account:
 ```bash
 genezio login
 ```
+
 {{< /details >}}
 
 To test the application locally run the following command:
@@ -205,7 +207,7 @@ export async function createVectorDatabase() {
   const databasePath = "./lancedb";
   // Create the database directory if it doesn't exist
   if (!fs.existsSync(databasePath)) {
-      fs.mkdirSync(databasePath);
+    fs.mkdirSync(databasePath);
   }
   // Connect to the database
   const database = await lancedb.connect(databasePath);
@@ -223,25 +225,21 @@ export async function createVectorDatabase() {
 Now, you are ready to read and load the data into the database:
 
 ```typescript
-  const loader = new TextLoader("./data/data.txt");
-  // Load the data into documents
-  const documents = await loader.load();
-  // Save the data as OpenAI embeddings in a table
-  const vectorStore = await vector_database.fromDocuments(
-    documents,
-    embeddings,
-    {table},
-  );
+const loader = new TextLoader("./data/data.txt");
+// Load the data into documents
+const documents = await loader.load();
+// Save the data as OpenAI embeddings in a table
+const vectorStore = await vector_database.fromDocuments(documents, embeddings, { table });
 ```
 
 To test that the database has been populated with the data, you can add the following code:
 
 ```typescript
-  // Query the database for the most similar context to the word "genezio"
-  const genezio_info = await vectorStore.similaritySearch("genezio", 1);
+// Query the database for the most similar context to the word "genezio"
+const genezio_info = await vectorStore.similaritySearch("genezio", 1);
 
-  // This will output the sentences that are most similar to the word "genezio" from the file loaded
-  console.log(genezio_info);
+// This will output the sentences that are most similar to the word "genezio" from the file loaded
+console.log(genezio_info);
 ```
 
 Before getting to the next step of the tutorial, you have to run the `createVectorDatabase` as a Node.js script.
@@ -257,6 +255,7 @@ This code snippet appended at the end of the file will do the trick for you:
 ```
 
 You can run the script `createVectorDatabase.ts` by executing the following command in the terminal:
+
 ```bash
 cd server && npx tsx createVectorDatabase.ts
 ```
@@ -270,7 +269,7 @@ Let's explore how to implement the bot itself. The complete code is available in
 
 The first steps are to set up the OpenAI model and the prompt that will be fed to the model:
 
-``` typescript
+```typescript
 @GenezioDeploy()
 export class BackendService {
   constructor() {}
@@ -278,16 +277,18 @@ export class BackendService {
   async askBot(question: string): Promise<string> {
     const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
     if (!OPENAI_API_KEY) {
-			throw new Error("You need to provide an OpenAI API key. Go to https://platform.openai.com/account/api-keys to get one.");
-		}
+      throw new Error(
+        "You need to provide an OpenAI API key. Go to https://platform.openai.com/account/api-keys to get one."
+      );
+    }
 
     // Define the OpenAI model
     const model = new OpenAI({
-			modelName: "gpt-4",
-			openAIApiKey: OPENAI_API_KEY,
+      modelName: "gpt-4",
+      openAIApiKey: OPENAI_API_KEY,
       temperature: 0.5,
-			verbose: true
-		});
+      verbose: true,
+    });
 
     // Define the prompt that will be fed to the model
     const prompt = ChatPromptTemplate.fromMessages([
@@ -305,7 +306,7 @@ If the information is not in the context, use your previous knowledge to answer 
     // connect to the database
     const db = await connect(database);
     // open the table
-    const table = await db.openTable('vectors')
+    const table = await db.openTable("vectors");
 
     return "";
   }
@@ -315,32 +316,31 @@ If the information is not in the context, use your previous knowledge to answer 
 Now, you need to create a retriever that will query the database for the most similar document to the input question.
 
 ```typescript
-    // Initialize the vector store object with the OpenAI embeddings and the table
-    const vectorStore = new LanceDB(new OpenAIEmbeddings, { table })
-    // Retrieve the most similar context to the input question
-    const retriever = vectorStore.asRetriever(1);
-    // Create an output parser that will convert the model's response to a string
-    const outputParser = new StringOutputParser();
+// Initialize the vector store object with the OpenAI embeddings and the table
+const vectorStore = new LanceDB(new OpenAIEmbeddings(), { table });
+// Retrieve the most similar context to the input question
+const retriever = vectorStore.asRetriever(1);
+// Create an output parser that will convert the model's response to a string
+const outputParser = new StringOutputParser();
 
-    // Create a pipeline that will feed the input question and the database retrieved context to the model
-    const setupAndRetrieval = RunnableMap.from({
-      context: new RunnableLambda({
-        func: (input: string) =>
-          retriever.invoke(input).then((response) => response[0].pageContent),
-      }).withConfig({ runName: "contextRetriever" }),
-      question: new RunnablePassthrough(),
-    });
+// Create a pipeline that will feed the input question and the database retrieved context to the model
+const setupAndRetrieval = RunnableMap.from({
+  context: new RunnableLambda({
+    func: (input: string) => retriever.invoke(input).then((response) => response[0].pageContent),
+  }).withConfig({ runName: "contextRetriever" }),
+  question: new RunnablePassthrough(),
+});
 ```
 
 Next, it will feed into the OpenAI model the input question and the database retrieved context:
 
 ```typescript
-    // Feed the input question and the database retrieved context to the model
-    const chain = setupAndRetrieval.pipe(prompt).pipe(model).pipe(outputParser)
-    // Invoke the model to answer the question
-    const response = await chain.invoke(question);
-    console.log("Answer:", response)
-    return response;
+// Feed the input question and the database retrieved context to the model
+const chain = setupAndRetrieval.pipe(prompt).pipe(model).pipe(outputParser);
+// Invoke the model to answer the question
+const response = await chain.invoke(question);
+console.log("Answer:", response);
+return response;
 ```
 
 ### Create a simple frontend to interact with your application
@@ -388,6 +388,7 @@ export default function App() {
 }
 
 ```
+
 ## Deploy your application
 
 To deploy your application, run the following command in the root directory of your project:
@@ -395,6 +396,7 @@ To deploy your application, run the following command in the root directory of y
 ```bash
 genezio deploy
 ```
+
 Your app will be available at `https://<custom-subdomain>.app.genez.io`. The custom subdomain is specified in the `genezio.yaml` file.
 
 You can continue to manage, test, update and monitor your project from the genezio dashboard.
