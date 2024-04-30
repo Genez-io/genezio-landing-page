@@ -216,7 +216,7 @@ This will prompt you to log in to your Genezio account. After the login is succe
 
 When the deployment is complete, go to the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}} and add an Upstash Redis integration to your project.
 
-![Alt text](/posts/add_integration.png)
+![Alt text](/posts/add_integration.webp)
 
 If you get stuck at this step, you can follow the {{< external-link link="https://genezio.com/docs/integrations/upstash-redis" >}}Upstash Redis integration tutorial{{< /external-link >}}.
 

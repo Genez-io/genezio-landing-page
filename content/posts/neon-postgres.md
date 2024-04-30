@@ -68,7 +68,7 @@ genezio deploy
 
 Once the deployment is complete, open your {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} and pick the project you created earlier. In the _Integrations_ tab you can select to install the Neon Postgres integration:
 
-![alt_text](/posts/neon1.png)
+![alt_text](/posts/integrations.webp)
 
 Connect with a Neon account, or if you don’t have one, create a new one by going to the Neon website:
 
