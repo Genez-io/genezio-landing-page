@@ -2,7 +2,7 @@
 title: "Mastering Automation: A Step-by-Step Guide to Creating a WhatsApp Bot with Genezio"
 date: 2024-05-07
 tags:
-  - Tutorial
+  - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/whatsapp.webp
