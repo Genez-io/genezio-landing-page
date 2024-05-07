@@ -2,7 +2,7 @@
 title: Use Langchain, LanceDB and Genezio to chat with your own data
 date: 2024-04-30
 tags:
-  - Tutorial
+  - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/custom_data_llm.webp
