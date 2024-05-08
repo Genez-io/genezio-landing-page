@@ -122,7 +122,7 @@ To help you easily deploy without managing servers on your own, we will use `gen
 Clone the following repository and navigate to the `typescript/langchain-starter` directory:
 
 ```bash
-git clone http://genez-io/genezio-examples
+git clone https://github.com/genez-io/genezio-examples
 cd genezio-examples/typescript/langchain-starter
 ```
 
@@ -131,11 +131,11 @@ cd genezio-examples/typescript/langchain-starter
 Go to {{< external-link link="https://platform.openai.com/api-keys" >}}the OpenAI Dashboard{{< /external-link >}} and create an OpenAI API key.
 This key will be used to interact with the OpenAI API to create embeddings and generate responses.
 
-Paste the key in the `.env` file in the `server` directory.
+To keep your API key secure, store it as an environment variable in the `server/.env` file:
 
 ```
 {{< filePath >}}server/.env{{< /filePath >}}
-OPENAI_API_KEY=<your_openai_api_key>
+OPENAI_API_KEY="<your_openai_api_key>"
 ```
 
 ## Try out the application locally
@@ -188,27 +188,33 @@ For this tutorial, I advise you to create a directory named `data` and a file na
     └── tsconfig.json
 ```
 
-### Create and populate the vector database with your data
+### How the vector database is populated
 
 Initially, you need to create and populate the vector database with your data. We will use LanceDB to store the data in a vector database.
 
 The advantage of using LanceDB is that it's an embedded vector database - meaning it will be bundled alongside your source code and it can be accessed directly without needing to connect to a separate server.
 This approach makes the querying process faster for large amounts of data.
 
-Let's explore the {{< external-link link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/createVectorDatabase.ts" >}}`createVectorDatabase()`{{< /external-link >}} function that will create the vector database and fill it with the data from `data/data.txt`:
+Let's explore what's in {{< external-link link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/createVectorDatabase.ts" >}}`server/createVectorDatabase.ts`{{< /external-link >}} file. The method `createVectorDatabase()` is responsible for creating vector database and fill it with the data from `data/data.txt`.
+
+The first steps performed in the code flow are (1) initializing the embeddings model the and (2) creating a table in the vector database:
 
 ```typescript
 export async function createVectorDatabase() {
-  // Use the OpenAIEmbeddings model to create embeddings from text
+  // Set the OpenAI API key
   const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+  // Use the OpenAIEmbeddings model to create embeddings from text
   const embeddings = new OpenAIEmbeddings({ openAIApiKey: OPENAI_API_KEY });
 
-  // Point to the database directory
+  // Set the database path
   const databasePath = "./lancedb";
+
   // Create the database directory if it doesn't exist
   if (!fs.existsSync(databasePath)) {
     fs.mkdirSync(databasePath);
   }
+
   // Connect to the database
   const database = await lancedb.connect(databasePath);
 
@@ -222,17 +228,18 @@ export async function createVectorDatabase() {
 }
 ```
 
-Now, you are ready to read and load the data into the database:
+Now, the data can be loaded from the text file `./data/data.txt` and saved as OpenAI embeddings in the table:
 
 ```typescript
+// Load the data from a text file
 const loader = new TextLoader("./data/data.txt");
 // Load the data into documents
 const documents = await loader.load();
 // Save the data as OpenAI embeddings in a table
-const vectorStore = await vector_database.fromDocuments(documents, embeddings, { table });
+const vectorStore = await LanceDB.fromDocuments(documents, embeddings, { table });
 ```
 
-To test that the database has been populated with the data, you can add the following code:
+To test that the database has been populated correctly, you can add the following code that queries the database for the most similar context to the word "genezio":
 
 ```typescript
 // Query the database for the most similar context to the word "genezio"
@@ -242,9 +249,7 @@ const genezio_info = await vectorStore.similaritySearch("genezio", 1);
 console.log(genezio_info);
 ```
 
-Before getting to the next step of the tutorial, you have to run the `createVectorDatabase` as a Node.js script.
-This code snippet appended at the end of the file will do the trick for you:
-
+This code snippet appended at the end of the file will actually create the vector database when the Node.js script is run:
 ```typescript
 (async () => {
   console.log("Creating the LanceDB vector table.");
@@ -254,7 +259,8 @@ This code snippet appended at the end of the file will do the trick for you:
 })();
 ```
 
-You can run the script `createVectorDatabase.ts` by executing the following command in the terminal:
+Before deploying or test locally, you have to run the `createVectorDatabase.ts` as a Node.js script.
+You can run the script by executing the following command in the terminal:
 
 ```bash
 cd server && npx tsx createVectorDatabase.ts
@@ -262,12 +268,12 @@ cd server && npx tsx createVectorDatabase.ts
 
 The vector database is now populated with the data from `data/data.txt` and can be used to create a custom-data LLM-based application.
 
-### Implement the bot service
+### Explore the bot implementation
 
-Let's explore how to implement the bot itself. The complete code is available in the {{< external-link link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/backend.ts" >}}
+Let's explore how to the bot itself is implemented. The complete code is available in the {{< external-link link="https://github.com/Genez-io/genezio-examples/blob/main/typescript/langchain-starter/server/backend.ts" >}}
 `server/backend.ts`{{< /external-link >}} file.
 
-The first steps are to set up the OpenAI model and the prompt that will be fed to the model:
+Firstly, the OpenAI API key is set and the OpenAI model is initialized:
 
 ```typescript
 @GenezioDeploy()
@@ -302,10 +308,11 @@ If the information is not in the context, use your previous knowledge to answer 
       ["human", "{question}"],
     ]);
 
+    // Set the database path
     const database = "./lancedb";
-    // connect to the database
+    // Connect to the database
     const db = await connect(database);
-    // open the table
+    // Open the table
     const table = await db.openTable("vectors");
 
     return "";
@@ -343,9 +350,14 @@ console.log("Answer:", response);
 return response;
 ```
 
-### Create a simple frontend to interact with your application
+### Easily query the bot using the auto-generated SDK
 
-To query the bot, a simple React page is available in the `client/` directory.
+For querying the bot, a simple React page is created in the `client/src/App.tsx` file.
+The page will have an input box where you can type your question and a button to get the answer.
+
+What is important to notice here is that the `BackendService` class is already available in the client as an imported package.
+The npm package `@genezio-sdk/langchain-starter` generated by genezio includes all the methods defined in the `BackendService` class.
+This approach makes it easier to call `askBot` method on the client side.
 
 ```typescript
 import { useState } from "react";
