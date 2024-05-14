@@ -58,7 +58,7 @@ Genezio also lets you deploy your backend how you need it deployed. Have your ow
 
 ### The Serverless Puzzle Piece
 
-One of the main aspects of Genezio that unlocks successful scaling is the fact that it is a fully [serverless solution](https://genezio.com/blog/what-serverless-is/#genezio--serverless). Serverless is a simple concept – you spin up servers only to fit the need instead of investing heavily in static resourcing. For the end developer, this means scaling resources to meet scaling demand, driving costs down through server automation, which brings major savings in resource and opportunity cost.
+One of the main aspects of Genezio that unlocks successful scaling is the fact that it is a fully {{< external-link link="https://genezio.com/blog/what-serverless-is/#genezio--serverless" >}}serverless solution{{< /external-link >}}. Serverless is a simple concept – you spin up servers only to fit the need instead of investing heavily in static resourcing. For the end developer, this means scaling resources to meet scaling demand, driving costs down through server automation, which brings major savings in resource and opportunity cost.
 
 Genezio not only provides a serverless framework, it does so with zero cold start penalty – in effect, you get to reap the rewards of a serverless approach without incurring the typical penalties of the approach at scale.
 
@@ -66,4 +66,4 @@ Genezio not only provides a serverless framework, it does so with zero cold star
 
 Ultimately, Genezio unlocks growth by allowing you to focus on the code, and not the tooling. So many solutions in the market demand that you implement your solution in adherence to their point of view or approach – Genezio allows you to develop your code for your purposes while still unlocking autoscaling and extensibility.
 
-Interested in seeing the power of Genezio for yourself? [Sign up today](https://app.genez.io/auth/signup) and check it out!
+Interested in seeing the power of Genezio for yourself? {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up today{{< /external-link >}} and check it out!
