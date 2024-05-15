@@ -1,5 +1,5 @@
 ---
-title: "Effortless Scaling - Genezio Handles Growth"
+title: "Auto Scaling - Genezio Handles Growth"
 date: 2024-05-14
 tags:
   - Learning
@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-# url: /blog/whatsapp-genezio-project
+url: /blog/effortless-scaling-genezio-handles-growth/
 ---
 
 The modern web thrives on efficiency and effectiveness – the difference between being somewhat efficient and very efficient can be fundamentally impactful to business success, with even small gaps adding to major business opportunities.
