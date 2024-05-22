@@ -67,8 +67,6 @@
           {{/*  https://www.linkedin.com/sharing/share-offsite/?url=www.google.com  */}}
           {{/*  TODO: add whatsapp  */}}
        
-
-          {{/*  TODO: fix links for prod   */}}
           <p style="color: rgba(82, 82, 82, 1);" class="date mb-0 mx-0 mx-sm-2">Share on:</p>
 
           <a class="twitter-share-button"
@@ -101,26 +99,37 @@
     <hr style="border: 1px solid #e2d9f3; margin: 40px -8px 24px -8px" />
 
     <div class="px-3 px-md-4 pt-3 pb-5 d-lg-flex d-block"> 
-    {{/*  <div class="row px-3 px-md-4 pt-3 pb-5">   */}}
-      {{/*  TODO: change back to col-lg-8 when we will have menu  */}}
-      <div class="articlePost col-lg-12">{{ .Content }}</div> 
+    {{/* <div class="row px-3 px-md-4 pt-3 pb-5"> */}}
+      <div class="articlePost col-lg-8">{{ .Content }}</div> 
       <div class="col-lg-1"></div>
-      {{/*  TODO: high priority fix this menu   */}}
-      {{/*  <div class="articlePost col-lg-3 d-none d-lg-block">
-    <p class="fw-semibold " style="opacity: .6;">Article contents</p>
-    <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
-        {{ with .Params.menuItems }}
-            {{ range . }}
-                <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ replaceRE "[^a-zA-Z0-9-_]" "_" .name }}">
-                    <a class="pb-2" style="color: #009662; text-decoration: none;" href="#{{ .identifier }}">{{ .name }}</a>
-                </li>
-            {{ end }}
-        {{ end }}
-    </ul>
-</div>  */}}
+        {{/* Content Sections Menu */}}
+        <div id="contentSection" class="articlePost col-lg-3 d-none d-lg-block" style="position: sticky; top: 200px; right: 0; height: 200px; max-width:310px; width: 100%;">
+        <p class="fw-semibold" style="opacity: .6;">Article contents</p>
+        {{- $headings := findRE "<h2.*?>(.*?)</h2>" .Page.Content -}}
+        {{- $counter := 0 -}}
+        <ul id="articleContentNavigation" style="list-style: none; padding: 0;">
+        
+         {{- range $index, $heading := $headings -}}
+          {{- $headingText := replaceRE "<.*?>" "" $heading -}} <!-- Remove HTML tags to get the plain text -->
+          {{- $headingTextTrimmed := trim $headingText " " -}} <!-- Trim leading and trailing spaces -->
+          {{- $headingTextNormalized := replaceRE ":" "" (lower $headingTextTrimmed) -}} <!-- Remove colons and convert to lowercase -->
+          {{- $headingTextNormalized := replaceRE "\\s+" "-" $headingTextNormalized -}} <!-- Replace spaces with hyphens -->
+          {{- $headingTextNormalized := replaceRE "\\?" "" $headingTextNormalized -}} <!-- Remove question marks -->
+          {{- $headingTextNormalized := replaceRE "’" "" $headingTextNormalized -}} <!-- Remove single quotes -->
+          {{- $headingTextNormalized := replaceRE "/" "" $headingTextNormalized -}} <!-- Remove single quotes -->
+          {{- $headingTextNormalized := replaceRE "!" "" $headingTextNormalized -}} <!-- Remove exclamation marks -->
+          {{- $headingTextNormalized := replaceRE "\\(" "" $headingTextNormalized -}} <!-- Remove left parentheses -->
+          {{- $headingTextNormalized := replaceRE "\\)" "" $headingTextNormalized -}} <!-- Remove right parentheses -->
+          {{- $headingTextNormalized := replaceRE "\\." "" $headingTextNormalized -}} <!-- Remove dots -->
+          <li style="border-left: 1px solid #D9D9D9;" class="px-4" id="{{ $headingTextNormalized }}">
+              <a class="pb-2" style="color: grey; text-decoration: none; font-size: 16px;" href="#{{ $headingTextNormalized }}">{{ $headingText | safeHTML }}</a>
+          </li>
+          {{- end -}}
+
+        </ul>
+        </div>
 
     </div>
-
 
     <!-- Navigation Menu -->
     {{/* Start of Subscribe to our newsletter */}}
@@ -378,70 +387,77 @@
     {{ end }}
   {{ end }}
 </div> <!-- Close the main container row -->
-
-
 </div>
-
-<script>
-  function updateActiveSection() {
-  const activeSection = window.location.href.split("#")[1];
-
-  if (activeSection) {
-
-    const formattedActiveSection = formatSectionName(activeSection);
-    const activeLi = document.getElementById(formattedActiveSection);
-
-    if (activeLi) {
-    const allLiElements = document.querySelectorAll("ul#articleContentNavigation li");
-    allLiElements.forEach(li => {
-      li.classList.remove("activeSection");
-    });
-      activeLi.classList.add("activeSection");
-
-    }
-  }
-
-}
-
-function formatSectionName(section) {
- return section
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('_');
-}
-
-// Initial run of the script
-updateActiveSection();
-
-// Add event listener for hash changes
-window.addEventListener("scroll", updateActiveSection);
-
-</script>
 
 {{/*  map each h2 as an id  */}}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("h2[id]");
-    const scrollOffsets = Array.from(sections).map((section) => section.offsetTop - 50);
 
-    window.addEventListener("scroll", function () {
+    function adjustContentPosition() { 
+      const sections = document.querySelectorAll("h2[id]");
+      const contentSection = document.getElementById("contentSection");
+      const scrollOffsets = Array.from(sections).map((section) => section.offsetTop - 50);
+      const pageWidth = document.documentElement.clientWidth;
+
+    const maxScrollHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+    );
+
       const scrollPosition = window.scrollY;
-
       const currentSectionIndex = scrollOffsets.findIndex((offset) => offset > scrollPosition);
 
-      if(currentSectionIndex){
+      if(scrollPosition > 1100 && scrollPosition < maxScrollHeight - 2500){
+        contentSection.style.position = "fixed";
+        contentSection.style.top = "90px";
+        const width = window.innerWidth;
+        if(width < 1660){
+          contentSection.style.right = "calc(7% - 50px)"; 
+        }else{
+          contentSection.style.right = "calc(20% - 50px)";
+        }
 
-      if (currentSectionIndex !== -1) {
-        const currentSectionId = sections[currentSectionIndex - 1].id;
-        window.history.replaceState({}, "", `#${currentSectionId}`);
-      } else {
-        // If at the bottom, set the URL to the last section
-        const lastSectionId = sections[sections.length - 1].id;
-        window.history.replaceState({}, "", `#${lastSectionId}`);
-      }
+      }else{
+        contentSection.style.position = "static";
       }
 
-    });
+        if (currentSectionIndex) {
+        if (currentSectionIndex !== -1) {
+            const currentSectionId = sections[currentSectionIndex - 1].id;
+            updateUrlSectionId(currentSectionId); // Update URL only if section changes
+        } else {
+            // If at the bottom, set the URL to the last section
+            const lastSectionId = sections[sections.length - 1].id;
+            updateUrlSectionId(lastSectionId); // Update URL only if section changes
+        }
+    }
+
+      {{/*  Add active class for the active li  */}}
+      const activeSection = window.location.href.split("#")[1];
+      if (activeSection) {
+        const activeLi = document.querySelector(`#contentSection ul#articleContentNavigation li#${activeSection}`);
+        const allLiElements = document.querySelectorAll("ul#articleContentNavigation li");
+        if (activeLi) {
+          allLiElements.forEach(li => {
+          li.classList.remove("activeSection");
+        });
+          activeLi.classList.add("activeSection");
+        }
+      }
+    }
+
+    {{/* Track the Previous id and update only if a new one is pushed*/}}
+    let currentUrlSectionId = ''; // Variable to store current URL section ID
+    // Function to update URL section ID
+    function updateUrlSectionId(newSectionId) {
+        if (currentUrlSectionId !== newSectionId) {
+            window.history.replaceState({}, "", `#${newSectionId}`);
+            currentUrlSectionId = newSectionId;
+        }
+    }
+
+    window.addEventListener("scroll",adjustContentPosition);
+    window.addEventListener("resize",adjustContentPosition);
   });
 </script>
 
