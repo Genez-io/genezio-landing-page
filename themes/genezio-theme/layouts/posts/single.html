@@ -114,6 +114,7 @@
           {{- $headingTextTrimmed := trim $headingText " " -}} <!-- Trim leading and trailing spaces -->
           {{- $headingTextNormalized := replaceRE ":" "" (lower $headingTextTrimmed) -}} <!-- Remove colons and convert to lowercase -->
           {{- $headingTextNormalized := replaceRE "\\s+" "-" $headingTextNormalized -}} <!-- Replace spaces with hyphens -->
+          {{- $headingTextNormalized := replaceRE "," "" $headingTextNormalized -}} <!-- Replace spaces with hyphens -->
           {{- $headingTextNormalized := replaceRE "\\?" "" $headingTextNormalized -}} <!-- Remove question marks -->
           {{- $headingTextNormalized := replaceRE "’" "" $headingTextNormalized -}} <!-- Remove single quotes -->
           {{- $headingTextNormalized := replaceRE "/" "" $headingTextNormalized -}} <!-- Remove single quotes -->
