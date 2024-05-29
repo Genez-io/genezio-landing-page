@@ -1,5 +1,5 @@
 ---
-title: "Genezio - The type safe serverless platform for full-stack developers" 
+title: "The type safe serverless platform for full-stack developers" 
 date: 2019-02-22
 leadTitle: "The type safe serverless platform for modern full-stack developers Everything you need to build apps that scale up to millions of users."
 leadSubTitle: "MOVED INLINE"
