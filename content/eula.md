@@ -2,8 +2,8 @@
 title: "End-User License Agreement"
 lastUpdated: "January 1st, 2024"
 # meta data start
-description: "genezio simplifies API development, deployment, and SDK generation for seamless integration on your website or mobile app."
-meta_og_url: "https://genez.io"
+description: "Read Genezio’s End-User License Agreement (EULA) to understand the terms and conditions for using our application and services."
+meta_og_url: "https://genezio.com/eula/"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
 ---
