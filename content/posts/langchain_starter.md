@@ -7,9 +7,9 @@ author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/custom_data_llm.webp
 preview: "Build an LLM application that will answer questions based on your external data using Langchain, LanceDB and Genezio."
-description: "This article will help you get the grasp of the novel AI/LLM concepts and tools that are on the rise right now. The ultimate goal is to create a project that takes your own data and feeds it to an OpenAI model and generates responses based on it."
-meta_og_url: "https://genez.io/blog/langchain_starter"
-meta_og_image: "https://genez.io/images/custom_data_llm.webp"
+description: "Learn how to use LangChain, LanceDB, and Genezio to create a bot that chats with your own data. Follow our detailed guide."
+meta_og_url: "https://genezio.com/blog/langchain-genezio-project/"
+meta_og_image: "https://genezio.com/images/custom_data_llm.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
