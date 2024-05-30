@@ -7,9 +7,9 @@ author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/effortless.webp
 preview: "The modern web thrives on efficiency and effectiveness – the difference between being somewhat efficient and very efficient can be fundamentally impactful to business success, with even small gaps adding to major business opportunities."
-description: "The modern web thrives on efficiency and effectiveness – the difference between being somewhat efficient and very efficient can be fundamentally impactful to business success, with even small gaps adding to major business opportunities."
-meta_og_url: "https://genez.io/blog/effortless"
-meta_og_image: "https://genez.io/images/effortless.webp"
+description: "Unlock business success with Genezio’s auto scaling solutions. The difference between somewhat efficient and very efficient can impact your business succes"
+meta_og_url: "https://genezio.com/blog/effortless-scaling-genezio-handles-growth/"
+meta_og_image: "https://genezio.com/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
