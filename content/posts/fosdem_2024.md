@@ -8,7 +8,7 @@ linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/fosdem-2024.webp
 preview: "Check out our technical presentation at FOSDEM 2024 on running Node.js applications over unikernels"
 # meta data start
-description: "This weekend, the Genezio team was present at FOSDEM 2024 - an amazing open-source conference held in Belgium where thousands of contributors gather every year to meet and share ideas. Check out our technical presentation on running Node.js applications over unikernels."
+description: "Read about Genezio’s presentation at FOSDEM 2024 on Node.js in unikernels. Learn about technical challenges and the benefits of unikernel architecture."
 meta_og_url: "https://genezio.com/blog/fosdem-2024-highlights-running-node.js-in-unikernels"
 meta_og_image: "https://genezio.com/images/fosdem-2024.webp"
 # meta data end
