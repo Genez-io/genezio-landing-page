@@ -8,8 +8,8 @@ linkedIn: https://www.linkedin.com/company/genezio/
 thumbnail: /images/type-safety.webp
 preview: "Whenever we talk about technology, it’s easy to get lost in the myriad of terms, phrases, and buzzwords. These terms are often taken for granted by those in the industry, but truly understanding what these phrases mean is a huge step to ensuring that you are leveraging the appropriate solutions with the right product fit."
 # meta data start
-description: "Whenever we talk about technology, it’s easy to get lost in the myriad of terms, phrases, and buzzwords. These terms are often taken for granted by those in the industry, but truly understanding what these phrases mean is a huge step to ensuring that you are leveraging the appropriate solutions with the right product fit."
-meta_og_url: "https://genezio.com/blog/whats-your-type"
+description: "Explore the importance of type safety in development. Learn how Genezio ensures stable, secure, and efficient code with type-safe solutions."
+meta_og_url: "https://genezio.com/blog/what-is-type-safety/"
 meta_og_image: "https://genezio.com/images/type-safety.webp"
 # meta data end
 customHeader: "White header"
