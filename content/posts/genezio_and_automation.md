@@ -8,9 +8,9 @@ linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/genezioandautomation.webp
 preview: In the modern digital landscape, APIs (Application Programming Interfaces) and web services have become the backbone of many business operations, facilitating seamless communication between different software systems and enabling the delivery of business logic at scale.
 # meta data start
-description: "In the modern digital landscape, APIs (Application Programming Interfaces) and web services have become the backbone of many business operations, facilitating seamless communication between different software systems and enabling the delivery of business logic at scale."
-meta_og_url: "https://genez.io/blog/genezio-and-automation"
-meta_og_image: "https://genez.io/images/genezioandautomation.webp"
+description: "APIs and web services drive automation and seamless communication in modern business operations, enabling scalable delivery of business logic."
+meta_og_url: "https://genezio.com/blog/genezio-and-automation/"
+meta_og_image: "https://genezio.com/images/genezioandautomation.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
