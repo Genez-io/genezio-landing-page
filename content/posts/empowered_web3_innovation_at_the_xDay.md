@@ -9,10 +9,10 @@ thumbnail: /images/genezio_xday.webp
 
 preview: This article will present DeFiBuilder and GiveCup, two emerging Web3 startups that started their journey at the xDay.2023 Hackathon, one of Europe’s largest Web3 developers competitions.
 # meta data start
-description: "Genezio is a powerful full-stack infrastructure that can help Web3 developers build and deploy their applications quickly and easily. Learn more about the benefits of Genezio for Web3 developers and how to get started today."
+description: "Explore Genezio’s impact on Web3 projects at xDay.2023. Learn more about the benefits of Genezio for Web3 developers and how to get started today"
 
-meta_og_url: "https://genez.io/blog/empowered_web3_innovation_at_the_xDay"
-meta_og_image: "https://genez.io/images/genezio_xday.webp"
+meta_og_url: "https://genezio.com/blog/genezio-empowered-web3-innovation-at-the-xday.2023-hackathon/"
+meta_og_image: "https://genezio.com/images/genezio_xday.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
