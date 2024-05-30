@@ -1,9 +1,9 @@
 ---
 title: Tag
 # meta data start
-description: "The type safe serverless platform for modern full-stack developers Everything you need to build apps that scale up to millions of users."
-meta_og_url: "https://genez.io"
-meta_og_image: "https://genez.io/images/og.jpg"
+description: "Explore Genezio for learning resources, articles, and tutorials on full-stack development. Stay updated with the latest news, releases, and industry events."
+meta_og_url: "https://genezio.com/"
+meta_og_image: "https://genezio.com/images/og.jpg"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
