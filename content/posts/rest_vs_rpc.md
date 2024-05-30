@@ -8,9 +8,9 @@ linkedIn: https://www.linkedin.com/in/bogdan-calin-ciobanu-a966b2268/
 thumbnail: /images/rest-rpc.webp
 preview: REST and RPC are two distinct approaches to web services and distributed computing
 # meta data start
-description: "REST is focused on resource manipulation and provides a uniform interface for accessing and modifying resources, while RPC is focused on method invocation and provides a way for applications to access remote services and resources."
-meta_og_url: "https://genez.io/blog/the_evolution_of_apis_a_history_of_rest_and_rpc"
-meta_og_image: "https://genez.io/images/rest-rpc.webp"
+description: "Explore the history and evolution of APIs, from RPC to REST, and learn how Genezio implements both paradigms for modern web services."
+meta_og_url: "https://genezio.com/blog/the-evolution-of-apis-a-history-of-rest-and-rpc/"
+meta_og_image: "https://genezio.com/images/rest-rpc.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
