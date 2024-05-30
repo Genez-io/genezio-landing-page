@@ -8,9 +8,9 @@ linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/release0.8.webp
 preview: "We've rolled out new features including a user-friendly authentication module, direct PostgreSQL database provision, and beta support for Golang, making your development process smoother."
 # meta data start
-description: "We've rolled out new features including a user-friendly authentication module, direct PostgreSQL database provision, and beta support for Golang, making your development process smoother."
-meta_og_url: "https://genez.io/blog/auth-postgresql-go-genezio-v0.8"
-meta_og_image: "https://genez.io/images/release0.8.webp"
+description: "Explore the new features in Genezio v0.8, including easy authentication, Postgres support, and beta Golang integration."
+meta_og_url: "https://genezio.com/blog/out-of-the-box-auth-postgres-and-go-support-genezio-v0.8/"
+meta_og_image: "https://genezio.com/images/release0.8.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
