@@ -328,32 +328,111 @@
           class=" mx-2 card p-2 p-md-4 text-white"
           style=" background-color: #282A36"
         >
-      <pre><code>{{ $input := `import { HelloworldService, Person } from '@genezio-sdk/helloworld-app';
-async function main() {
-  const hi = await HelloworldService.hello('John');
-  const person: Person = {firstName: 'John', lastName: 'Ronald'};
-  const bye = await HelloworldService.bye(person);
-}` }}
-{{ $opts := dict "style" "base16-snazzy" }}
-{{ transform.Highlight $input "typescript" $opts }}
-      </code></pre>
+      <pre><code>{{ $input := `npm install serverless-http` }}
+{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
       </div>
       
       </div>
         <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
           <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">1</span> Define your procedures
+            <span class="text-success" style="margin-right: 10px">1</span> Prerequisites
           </h4>
           <p class="text-white">
-            The first step to creating a tRPC API is to define your procedures.
+            First, you need to install the serverless-http package. Open your terminal and run the following command:
           </p>
+        </div>
+      </div>
+    <div class="row mt-4">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+        
+        <div
+          class=" mx-2 card p-2 p-md-4 text-white"
+          style=" background-color: #282A36"
+        >
+      <pre><code>{{ $input := `import serverless from 'serverless-http';
+import express from 'express';
+
+const app = express();
+
+// here you define your routes and middleware
+
+export const handler = serverless(app, { provider: "aws" });`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
+      </div>
+      
+      </div>
+        <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+          <h4 class="text-white fw-bold">
+            <span class="text-success" style="margin-right: 10px">2</span> Export the Handler
+          </h4>
           <p class="text-white">
-            Procedures are the functions we will use to build your backend. They're composable and
-            can be queries, mutations, or subscriptions. Routers contain multiple procedures.
+            Next, you need to export the handler function for your Express.js app. In your main application file (e.g., app.js).
           </p>
+        </div>
+      </div>
+    <div class="row mt-4">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+        
+        <div
+          class=" mx-2 card p-2 p-md-4 text-white"
+          style=" background-color: #282A36"
+        >
+      <pre><code>{{ $input := `
+name: express-app
+
+region: us-east-1
+
+yamlVersion: 2
+backend:
+  # The root directory of the backend.
+  path: ./
+
+  language:
+    name: js
+    packageManager: npm
+
+  scripts:
+    deploy:
+      - npm install
+    local:
+      - npm install
+
+  functions:
+    - name: test-fn
+      path: ./
+      handler: handler
+      entry: app.js
+      provider: aws
+
+  cloudProvider: genezio-cloud`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code></pre>
+      </div>
+      
+      </div>
+        <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+          <h4 class="text-white fw-bold">
+            <span class="text-success" style="margin-right: 10px">3</span> Create genezio.yaml
+          </h4>
           <p class="text-white">
-            At the end of the file, we export the type of the router so we can use it in our
-            frontend code in just a few moments.
+            Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.
+          </p>
+        </div>
+      </div>
+    <div class="row mt-4">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+        
+        <div
+          class=" mx-2 card p-2 p-md-4 text-white"
+          style=" background-color: #282A36"
+        >
+      <pre><code>{{ $input := `genezio deploy`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code></pre>
+      </div>
+      
+      </div>
+        <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+          <h4 class="text-white fw-bold">
+            <span class="text-success" style="margin-right: 10px">4</span> Deploy your project
+          </h4>
+          <p class="text-white">
+            Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.
           </p>
         </div>
       </div>
@@ -722,9 +801,8 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
           class="col-lg col-md-12 m-2 d-flex align-items-center justify-content-center flex-column mt-5"
         >
           <h3 class="text-white">Still Have Questions?</h3>
-          <p class="text-white opacity-75 w-75 text-center">
-            We hope our answers to some of your frequently asked questions help, but if you have any
-            further queries, please don't hesitate to get in touch today.
+          <p class="text-white  text-center">
+            Write us at <a class="text-success" href="mailto:example@example.com">contact@genezio.com</a>  or chat in the dashboard chat.
           </p>
         </div>
       </div>
