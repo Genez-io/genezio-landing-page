@@ -24,7 +24,7 @@ In this article, I delve into how you can feed external data to an already train
 
 More specifically, I want to build a bot that can answer questions based on the documentation pages of genezio like in the preview below:
 
-![Langchain Starter Preview](/posts/langchain_starter/langchain_starter_demo.webm)
+![Langchain Starter Preview](/posts/langchain_starter/langchain_starter_demo.gif)
 
 You can use this project as a starting point to build more complex applications such as:
 
