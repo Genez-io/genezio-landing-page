@@ -323,7 +323,7 @@ After the Endpoint is created, press **Reveal Signing Secret** and copy it for t
 
 This is a look at our environment variables page after all the setup is complete.
 
-![Alt text](/posts/stripe-post-img2.webp)
+![Alt text](/posts/env-variables-stripe.webp)
 
 Simply hit 'save' and you're all set to test your application in a cloud environment.
 Go to the frontend URL and test your app.
