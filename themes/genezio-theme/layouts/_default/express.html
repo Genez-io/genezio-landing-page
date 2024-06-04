@@ -64,16 +64,11 @@
         <div
           class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
         >
-            {{/*  <video width="100%" muted autoplay loop playsinline>
+          <video width="100%" muted loop autoplay playsinline>
             <source src="/images/gif-express.webm" type="video/webm">
-              Your browser does not support the video tag.
-            </video>  */}}
-
-            <video width="100%" muted loop autoplay playsinline>
-  <source src="/images/gif-express.webm" type="video/webm">
-  <source src="/images/gif-express.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+            <source src="/images/gif-express.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -469,7 +464,7 @@ backend:
                             style=" background-color: #170d29;
     border: 1px solid #5b5b5b;" 
         >
-            <code>{{$input:=`genezio deploy`}}
+            <code class="py-2">{{$input:=`genezio deploy`}}
 {{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
       </div>
       
