@@ -27,7 +27,7 @@
   >
     <div style="padding-top: 100px; padding-bottom: 120px">
       <div class="row justify-content-between">
-        <div class="col-12 col-lg-8 col-md-12 col-sm-12">
+        <div class="col-12 col-lg-7 col-md-12 col-sm-12">
           <h1 style="z-index: 99" class="fw-bold pt-4 text-white display-6">
             Stop worrying about servers,<br /> 
             Deploy your <span class="text-success">Express</span> on serverless.
@@ -62,9 +62,12 @@
         </div>
 
         <div
-          class="col-12 col-lg-4 col-md-12 col-sm-12 border d-flex align-items-center justify-content-center"
+          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
         >
-          <p class="text-white">GIF</p>
+            <video width="100%" muted autoplay loop>
+            <source src="/images/gif-express.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
         </div>
       </div>
     </div>
@@ -323,18 +326,30 @@
       <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+          style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
         >
-      <pre class="m-0"><code>{{ $input := `npm install genezio
-npm install serverless-http` }}
-{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
+      <code>{{$input := `npm install genezio
+npm install serverless-http`}}{{$opts := dict "style" "base16-snazzy"}}{{ transform.Highlight $input "typescript" $opts}}</code>
       </div>
       
       </div>
         <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">1</span> Prerequisites
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">1</span> Prerequisites
           </h4>
           <p class="text-white">
             First, you need to install the serverless-http package. Open your terminal and run the following command:
@@ -345,23 +360,37 @@ npm install serverless-http` }}
       <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
+    
         >
-      <pre class="m-0"><code>{{ $input := `import serverless from 'serverless-http';
+      <code>{{ $input := `import serverless from 'serverless-http';
 import express from 'express';
 
 const app = express();
 
 // here you define your routes and middleware
 
-export const handler = serverless(app, { provider: "aws" });`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
+export const handler = serverless(app);`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
       </div>
       
       </div>
         <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">2</span> Export the Handler
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">2</span> Export the Handler
           </h4>
           <p class="text-white">
             Next, you need to export the handler function for your Express.js app. In your main application file (e.g., app.js).
@@ -372,10 +401,11 @@ export const handler = serverless(app, { provider: "aws" });`}}{{ $opts := dict 
       <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                      style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
         >
-      <pre class="m-0"><code>{{ $input := `name: express-app
+      <code>{{ $input := `name: express-app
 
 region: us-east-1
 
@@ -398,15 +428,27 @@ backend:
     - name: test-fn
       path: ./
       handler: handler
-      entry: app.js
+      entry: app.mjs
 
-  cloudProvider: genezio-cloud`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code></pre>
+  cloudProvider: genezio-cloud`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code>
       </div>
       
       </div>
         <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">3</span> Create genezio.yaml
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">3</span> Create genezio.yaml
           </h4>
           <p class="text-white">
             Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.
@@ -417,18 +459,31 @@ backend:
       <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                            style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
         >
-            <pre class="m-0"><code>{{$input:=`genezio deploy`}}
-{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
+            <code>{{$input:=`genezio deploy`}}
+{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
       </div>
       
       
       </div>
         <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">4</span> Deploy your project
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">4</span> Deploy your project
           </h4>
           <p class="text-white">
             Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.

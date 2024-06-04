@@ -341,3 +341,12 @@ $cyan: #0dcaf0 !default;
     font-size: 32px;
   }
 }
+
+.expressCode {
+  pre {
+    margin: 0;
+  }
+  span {
+    background-color: #170d29;
+  }
+}
