@@ -40,7 +40,7 @@
             <div class="d-flex mt-0 mb-3">
             <a
               class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
-              href="https://app.genez.io/auth/signup"
+              href="https://app.genez.io/auth/signup?redirect=express-getting-started"
               target="_blank"
             >
               Start for free
@@ -64,7 +64,15 @@
         <div
           class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
         >
-          <video width="100%" muted loop autoplay playsinline>
+
+          <video width="100%" muted loop autoplay playsinline 
+          class="rounded"
+          style="
+             box-shadow: 
+              0px 4px 15px rgba(166, 105, 182, 0.4),  
+              inset 24px 24px 10px rgba(45, 161, 135, 0.6),  
+              inset -4px -4px 5px rgba(255, 255, 255, 0.6); 
+">
             <source src="/images/gif-express.webm" type="video/webm">
             <source src="/images/gif-express.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -173,7 +181,7 @@
         >
           <a
             class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
-            href="https://app.genez.io/auth/signup"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
             target="_blank"
             >Start for free</a
           >
@@ -362,18 +370,30 @@ npm install serverless-http`}}{{$opts := dict "style" "base16-snazzy"}}{{ transf
         
         <div
           class=" mx-2 card p-2 p-md-4 text-white expressCode"
-                style=" background-color: #170d29;
-    border: 1px solid #5b5b5b;" 
+          style="background-color: #170d29; border: 1px solid #5b5b5b;" 
     
         >
-      <code>{{ $input := `import serverless from 'serverless-http';
-import express from 'express';
+        <p class="border-bottom opacity-50 pb-1">filename.js</p>
+      <code>{{ $input := `import express from "express";
+import Serverless from "serverless-http";
 
 const app = express();
 
-// here you define your routes and middleware
+app.get("/", (req, res) => {
+  res.send("Hello World from Express serverless!");
+});
 
-export const handler = serverless(app);`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
+// You don't need to listen to the port when using serverless functions in production 
+if (process.env.NODE_ENV === "development") {
+  app.listen(8080, () => {
+    console.log(
+      "Server is running on port 8080. Check the app on http://localhost:8080"
+    );
+  });
+}
+
+export const handler = Serverless(app);`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
+
       </div>
       
       </div>
@@ -467,7 +487,14 @@ backend:
         >
             <code class="py-2">{{$input:=`genezio deploy`}}
 {{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
-      </div>
+</div>
+<a
+            class="btn btn-primary fw-semibold mx-2 px-4 py-2 border-0 mt-4"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
+            target="_blank"
+            >Start for free</a
+          >
+
       
       
       </div>
