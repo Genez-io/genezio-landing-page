@@ -30,7 +30,7 @@
         <div class="col-12 col-lg-7 col-md-12 col-sm-12">
           <h1 style="z-index: 99" class="fw-bold pt-4 text-white display-6">
             Stop worrying about servers,<br /> 
-            Deploy your <span class="text-success">Express</span> on serverless.
+            Deploy your <span class="text-success">Express JS</span> on serverless.
           </h1>
           <h2 style="z-index: 99;"  class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6">
             Enjoy seamless scalability, lower and predictable costs,<br />
@@ -65,12 +65,12 @@
           class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
         >
 
-          <video width="100%" muted loop autoplay playsinline 
-          
+          <video id="presentationVideo" width="100%" muted loop autoplay playsinline 
           style="
             border: 1px solid #363636;
             box-shadow: 0 4px 15px rgb(0 0 0 / 40%), inset 24px 24px 10px rgb(0 0 0 / 60%), inset -4px -4px 5px rgba(255, 255, 255, .6);
             border-radius: 10px !important;
+            cursor: pointer;
 ">
             <source src="/images/gif-express.webm" type="video/webm">
             <source src="/images/gif-express.mp4" type="video/mp4">
@@ -338,7 +338,7 @@
           style=" background-color: #170d29;
     border: 1px solid #5b5b5b;" 
         >
-      <code>{{$input := `npm install genezio
+      <code>{{$input := `npm install genezio -g 
 npm install serverless-http`}}{{$opts := dict "style" "base16-snazzy"}}{{ transform.Highlight $input "typescript" $opts}}</code>
       </div>
       
@@ -907,4 +907,16 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
   ></div>
 </div>
 
+<script>
+    document.getElementById('presentationVideo').addEventListener('click', function() {
+        var video = document.getElementById('presentationVideo');
+        {{/*  if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+          }  */}}
+          video.currentTime = 0; // Reset to beginning
+    });
+</script>
 {{ end }}
+
