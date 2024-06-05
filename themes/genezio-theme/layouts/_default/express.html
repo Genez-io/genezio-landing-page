@@ -384,6 +384,13 @@ app.get("/", (req, res) => {
   res.send("Hello World from Express serverless!");
 });
 
+app.get("/users", (req, res) => {
+  res.json([
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+  ]);
+});
+
 // You don’t need to listen to the port when using serverless functions in production 
 if (process.env.NODE_ENV === "development") {
   app.listen(8080, () => {
@@ -414,7 +421,7 @@ export const handler = Serverless(app);`}}{{ $opts := dict "style" "base16-snazz
             ">2</span> Export the Handler
           </h4>
           <p class="text-white">
-            Next, you need to export the handler function for your Express.js app. In your main application file (e.g., app.js).
+            Next, you need to export the handler function for your Express.js app. In your main application file (e.g., app.mjs).
           </p>
         </div>
       </div>
