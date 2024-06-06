@@ -29,12 +29,12 @@
       <div class="row justify-content-between">
         <div class="col-12 col-lg-7 col-md-12 col-sm-12">
           <h1 style="z-index: 99" class="fw-bold pt-4 text-white display-6">
-            Stop worrying about servers,<br /> 
+            Stop worrying about servers<br /> 
             Deploy your <span class="text-success">Express JS</span> on serverless.
           </h1>
           <h2 style="z-index: 99;"  class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6">
-            Enjoy seamless scalability, lower and predictable costs,<br />
-            Enhance your NodeJS Express app performance with Genezio's serverless infrastructure
+            Enjoy seamless scalability, lower and predictable costs<br />
+            Enhance your NodeJS Express app performance with Genezio's serverless infrastructure.
           </h2>
 
             <div class="d-flex mt-0 mb-3">
@@ -474,6 +474,40 @@ backend:
           </p>
         </div>
       </div>
+      <div class="row mt-4">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+        <div
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                            style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
+        >
+            <code class="py-2">{{$input:=`NODE_ENV=dev node app.mjs`}}
+{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
+</div>
+
+</div>
+        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">4</span> Test Your App Locally
+          </h4>
+          <p class="text-white">
+            Before deploying your app, you can test it locally to ensure it's working correctly.
+          </p>
+        </div>
+        
+      </div>
     <div class="row mt-4">
       <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
         
@@ -501,7 +535,7 @@ backend:
                 background: #09faa4;
                 color: #21143a !important;
                 font-size: 1.2rem !important;
-            ">4</span> Deploy your project
+            ">5</span> Deploy your project
           </h4>
           <p class="text-white">
             Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.
@@ -877,18 +911,14 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
           </div>
         </div>
 
-        <div
-          class="col-lg col-md-12 m-2 d-flex align-items-center justify-content-center flex-column mt-5"
-        >
+        <div class="col-lg col-md-12 m-2 d-flex align-items-center justify-content-center flex-column mt-5">
           <h3 class="text-white">Still Have Questions?</h3>
           <p class="text-white text-center">
-            {{/*  Write us at <a class="text-success" href="mailto:example@example.com">contact@genezio.com</a>  or chat in the dashboard chat.  */}}
             Feel free to get in touch with us by emailing <a class="text-success" href="mailto:example@example.com">contact@genezio.com</a>, or if you prefer, you can chat with us directly through the chat feature available on the dashboard.
           </p>
         </div>
       </div>
     </div>
-
     {{/* End of main container */}}
   </div>
 </div>
@@ -910,11 +940,6 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
 <script>
     document.getElementById('presentationVideo').addEventListener('click', function() {
         var video = document.getElementById('presentationVideo');
-        {{/*  if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
-          }  */}}
           video.currentTime = 0; // Reset to beginning
     });
 </script>
