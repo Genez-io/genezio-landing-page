@@ -385,3 +385,35 @@ $cyan: #0dcaf0 !default;
     }
   }
 }
+
+.expressWrapper {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .expressWrapper {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  #headerExpressStartForFree {
+    flex-direction: column;
+    a {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  #expressDescription {
+    font-size: 14px !important;
+  }
+
+  #simplifyDeployment {
+    font-size: 38px !important;
+  }
+
+  #stepWrap {
+    padding: 0 19px 0 19px !important;
+  }
+}
