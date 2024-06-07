@@ -25,29 +25,29 @@
     "
     class="container"
   >
-    <div style="padding-top: 100px; padding-bottom: 120px">
+    <div class="expressWrapper">
       <div class="row justify-content-between">
-        <div class="col-12 col-lg-8 col-md-12 col-sm-12">
+        <div class="col-12 col-lg-7 col-md-12 col-sm-12">
           <h1 style="z-index: 99" class="fw-bold pt-4 text-white display-6">
-            Stop worrying about servers,<br /> 
-            Deploy your <span class="text-success">Express</span> on serverless.
+            Stop worrying about servers<br /> 
+            Deploy your <span class="text-success">Express JS</span> on serverless.
           </h1>
-          <h2 style="z-index: 99;"  class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6">
-            Enjoy seamless scalability, lower and predictable costs,<br />
-            Enhance your NodeJS Express app performance with Genezio's managed serverless infrastructure
+          <h2 style="z-index: 99;"  class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6" id="expressDescription">
+            Enjoy seamless scalability, lower and predictable costs<br />
+            Enhance your NodeJS Express app performance with Genezio's serverless infrastructure.
           </h2>
 
-            <div class="d-flex mt-0 mb-3">
+            <div id="headerExpressStartForFree" class="d-flex mt-0 mb-3">
             <a
               class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
-              href="https://app.genez.io/auth/signup"
+              href="https://app.genez.io/auth/signup?redirect=express-getting-started"
               target="_blank"
             >
               Start for free
             </a>
             <a
               class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
-              href="https://genezio.com/docs/getting-started"
+              href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/"
               target="_blank"
             >
               Check our Docs
@@ -55,16 +55,87 @@
           </div>
 
           <ul style="list-style-type: none;" class="text-white p-0">
-            <li class="d-flex"><img alt="checkMarkIcon" src="/images/table-check-icon.svg" /> <p class="opacity-75 mb-0 mx-2">Up to 4x Faster Response Times</p></li>
-            <li class="d-flex"> <img alt="checkMarkIcon" src="/images/table-check-icon.svg" /> <p class="opacity-75 mb-0 mx-2">Up to 6x Lower Costs</p></li>
-            <li class="d-flex"> <img alt="checkMarkIcon" src="/images/table-check-icon.svg" /> <p class="opacity-75 mb-0 mx-2">Auto-scaling for optimal performance</p></li>
+            <li class="d-flex"><img alt="checkMarkIcon" src="/images/table-check-icon.svg" /> <a style="text-decoration: none;" class="opacity-75 mb-0 mx-2 text-white">Up to 4x Faster Response Times</a> <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Benefit from response times up to 4x faster than the competition, enhancing user experience and operational efficiency.</span
+              >
+            </div></li>
+            <li class="d-flex my-1"> <img alt="checkMarkIcon" src="/images/table-check-icon.svg" /> <a style="text-decoration: none;" class="opacity-75 mb-0 mx-2 text-white" href="#lower-cost">Up to 6x Lower Costs</a>  <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Optimize your budget with our solutions, offering up to 6x cost savings while maintaining top-tier performance and reliability.</span
+              >
+            </div></li>
+            <li class="d-flex"> <img alt="checkMarkIcon" src="/images/table-check-icon.svg" /> <a style="text-decoration: none;" class="opacity-75 mb-0 mx-2 text-white" href="#auto-scaling">Auto-scaling for 100% Uptime</a>  <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >Our auto-scaling ensures real-time adaptation to traffic, delivering seamless performance and 100% uptime for your business.</span
+              >
+            </div></li>
           </ul>
         </div>
 
         <div
-          class="col-12 col-lg-4 col-md-12 col-sm-12 border d-flex align-items-center justify-content-center"
+          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
         >
-          <p class="text-white">GIF</p>
+
+          <video id="presentationVideo" width="100%" muted loop autoplay playsinline 
+          style="
+            border: 1px solid #363636;
+            box-shadow: 0 4px 15px rgb(0 0 0 / 40%), inset 24px 24px 10px rgb(0 0 0 / 60%), inset -4px -4px 5px rgba(255, 255, 255, .6);
+            border-radius: 10px !important;
+            cursor: pointer;
+">
+            <source src="/images/gif-express.webm" type="video/webm">
+            <source src="/images/gif-express.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -153,7 +224,7 @@
         class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
         style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
       >
-        <h2 class="fw-bold text-white display-6 flow-breaker-header py-4 my-2 text-center">
+        <h2 id="simplifyDeployment" class="fw-bold text-white display-6 flow-breaker-header py-4 my-2 text-center">
           Simplify Your App Deployment
         </h2>
 
@@ -169,13 +240,13 @@
         >
           <a
             class="btn btn-primary fw-semibold mx-1 px-4 py-2 border-0 mt-2"
-            href="https://app.genez.io/auth/signup"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
             target="_blank"
             >Start for free</a
           >
           <a
             class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-            href="https://genezio.com/docs/getting-started"
+            href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/"
             target="_blank"
           >
             Check our Docs
@@ -207,18 +278,25 @@
             <h3 class="card-title pt-2 mb-0 pb-1" >Faster Deployment</h3>
 
             <ul class="p-0 card-listing">
-              <p class="m-0 fs-5">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa;" class="m-0">
                 With Genezio, your deployment time is significantly reduced. Our platform is
                 optimized for quick and seamless integration, allowing you to focus on building your
                 app rather than managing servers.
               </p>
             </ul>
+              <a
+            href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            >Read more -></a
+          >
           </div>
         </div>
       </div>
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
+        id="lower-cost"
           class="card p-2 p-md-4 text-white border-gradient-green"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
@@ -238,12 +316,18 @@
             <h3 class="card-title pt-2 mb-0 pb-1">Lower Costs</h3>
 
             <ul class="p-0 card-listing">
-              <p class="m-0 fs-5">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa;" class="m-0 fs-5">
                 Reduce your operational costs with Genezio. Our efficient infrastructure and
                 scalable solutions ensure that you only pay for what you use, saving you money while
                 maintaining top performance.
               </p>
             </ul>
+              <a
+            href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            >Read more -></a
+          >
           </div>
         </div>
       </div>
@@ -272,17 +356,23 @@
             <h3 class="card-title pt-2 mb-0 pb-1">Easy Migration</h3>
 
             <ul class="p-0 card-listing">
-              <p class="m-0 fs-5">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa;" class="m-0">
                 Migrating your existing Express app to Genezio is straightforward. Our comprehensive
                 documentation and support make the process hassle-free so you can get up and running
                 quickly.
               </p>
             </ul>
+              <a
+            href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            >Read more -></a
+          >
           </div>
         </div>
       </div>
       {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
+      <div id="auto-scaling" class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
@@ -303,12 +393,18 @@
             <h3 class="card-title pt-2 pb-1 m-0">Reliable and Scalable</h3>
 
             <ul class="p-0 card-listing">
-              <p class="m-0 fs-5">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa" class="m-0">
                 Genezio provides a robust and auto-scalable environment for your applications.
                 Whether you're handling a few users or thousands, our platform scales effortlessly
                 to meet your needs.
               </p>
             </ul>
+              <a
+            href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            >Read more -></a
+          >
           </div>
         </div>
       </div>
@@ -317,24 +413,36 @@
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
       MIGRATION
     </p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-3">Simple steps to migrate your Express Js App in 5 minutes</h2>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3">Simple steps to deploy your Express Js App in 5 minutes</h2>
 
     <div class="row">
-      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12  order-last order-lg-first">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+          style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
         >
-      <pre class="m-0"><code>{{ $input := `npm install genezio
-npm install serverless-http` }}
-{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
+      <code>{{$input := `npm install genezio -g 
+npm install serverless-http`}}{{$opts := dict "style" "base16-snazzy"}}{{ transform.Highlight $input "typescript" $opts}}</code>
       </div>
       
       </div>
-        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">1</span> Prerequisites
+        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last" id="stepWrap">
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">1</span> Prerequisites
           </h4>
           <p class="text-white">
             First, you need to install the serverless-http package. Open your terminal and run the following command:
@@ -342,98 +450,191 @@ npm install serverless-http` }}
         </div>
       </div>
     <div class="row mt-4">
-      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
+    
         >
-      <pre class="m-0"><code>{{ $input := `import serverless from 'serverless-http';
-import express from 'express';
+<p style="margin: -10px 0 10px 0; font-size: 14px" class="opacity-50">app.mjs</p>
+
+      <code class="highlighted-code">{{ $input := `import express from "express";
+import Serverless from "serverless-http";
 
 const app = express();
 
-// here you define your routes and middleware
+app.get("/", (req, res) => {
+  res.send("Hello World from Express serverless!");
+});
 
-export const handler = serverless(app, { provider: "aws" });`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
+app.get("/users", (req, res) => {
+  res.json([
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+  ]);
+});
+
+// You don’t need to listen to the port when using serverless functions in production 
+if (process.env.NODE_ENV === "dev") {
+  app.listen(8080, () => {
+    console.log(
+      "Server is running on port 8080. Check the app on http://localhost:8080"
+    );
+  });
+}
+
+export const handler = Serverless(app);`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
       </div>
       
       </div>
-        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">2</span> Export the Handler
+        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last" id="stepWrap">
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">2</span> Export the Handler
           </h4>
           <p class="text-white">
-            Next, you need to export the handler function for your Express.js app. In your main application file (e.g., app.js).
+            Next, you need to export the handler function for your Express.js app. In your main application file (e.g. app.mjs).
           </p>
         </div>
       </div>
     <div class="row mt-4">
-      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                      style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
         >
-      <pre class="m-0"><code>{{ $input := `name: express-app
-
+<p style="margin: -10px 0 10px 0; font-size: 14px" class="opacity-50">genezio.yaml</p>
+      <code>{{ $input := `name: express-app
 region: us-east-1
-
 yamlVersion: 2
 backend:
   # The root directory of the backend.
   path: ./
-
   language:
     name: js
     packageManager: npm
-
-  scripts:
-    deploy:
-      - npm install
-    local:
-      - npm install
-
   functions:
     - name: test-fn
       path: ./
+      type: aws
       handler: handler
-      entry: app.js
-
-  cloudProvider: genezio-cloud`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code></pre>
+      entry: app.mjs
+`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code>
       </div>
       
       </div>
-        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">3</span> Create genezio.yaml
+        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last" id="stepWrap">
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">3</span> Create Genezio Config File
           </h4>
           <p class="text-white">
             Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.
           </p>
         </div>
+      </div>
+      <div class="row mt-4">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
+        <div
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                            style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
+        >
+            <code class="py-2">{{$input:=`NODE_ENV=dev node app.mjs`}}
+{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
+</div>
+
+</div>
+        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last" id="stepWrap">
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">4</span> Test Your App Locally
+          </h4>
+          <p class="text-white">
+            Before deploying your app, you can test it locally to ensure it's working correctly.
+          </p>
+        </div>
+        
       </div>
     <div class="row mt-4">
-      <div class=" col-12 col-lg-6 col-md-12 col-sm-12">
+      <div class=" col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
         
         <div
-          class=" mx-2 card p-2 p-md-4 text-white"
-          style=" background-color: #282A36"
+          class=" mx-2 card p-2 p-md-4 text-white expressCode"
+                            style=" background-color: #170d29;
+    border: 1px solid #5b5b5b;" 
         >
-            <pre class="m-0"><code>{{$input:=`genezio deploy`}}
-{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code></pre>
-      </div>
-      
-      
-      </div>
-        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12">
-          <h4 class="text-white fw-bold">
-            <span class="text-success" style="margin-right: 10px">4</span> Deploy your project
+            <code class="py-2">{{$input:=`genezio deploy`}}
+{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
+</div>
+
+</div>
+        <div class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last" id="stepWrap">
+          <h4 class="text-white fw-bold d-flex">
+            <span class="text-success" style="
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                border-radius: 50%;
+                background: #09faa4;
+                color: #21143a !important;
+                font-size: 1.2rem !important;
+            ">5</span> Deploy your project
           </h4>
           <p class="text-white">
             Now, create a genezio.yaml file in the root directory of your project. This file will contain the configuration needed to deploy your backend using Genezio.
           </p>
         </div>
+        {{/*  <h2 class="text-center text-white mt-4">Feel Free to Get Started</h2>  */}}
+      </div>
+      <div class="col d-flex justify-content-center my-4">
+        <a
+        class="btn btn-primary fw-semibold mx-2 px-4 py-2 border-0 "
+        href="https://app.genez.io/auth/signup?redirect=express-getting-started"
+        target="_blank"
+        >Start for free</a
+        >
       </div>
 
       <h2 class="text-center text-white mt-5">Frequently Asked Questions</h2>
@@ -496,7 +697,7 @@ backend:
                   data-bs-parent="#accordionExample"
                 >
                   <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-                    Migrating your Express app to Genezio provides numerous benefits, including faster deployment times, lower costs, automated scaling, and zero server management overhead. Genezio also offers built-in security and high availability, ensuring your app performs reliably and securely.
+                    Migrating your Express app to Genezio provides numerous benefits, including faster deployment times, lower costs, automated scaling, faster cold start times and zero server management overhead. Genezio also offers built-in security and high availability, ensuring your app performs reliably and securely.
                   </div>
                 </div>
               </div>
@@ -664,7 +865,12 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Migrating your Express app to Genezio usually requires minimal changes. Our migration guide provides detailed instructions for making necessary compatibility adjustments.
+              Migrating your Express app to Genezio usually requires minimal changes.     <a
+                style="text-decoration: none"
+                class="text-success"
+                href="https://genezio.com/docs/tutorials/how-to-deploy-an-express-app/#do-i-need-to-modify-my-express-app-code"
+                target="_blank"
+              > Our migration guide</a> provides detailed instructions for making necessary compatibility adjustments.
             </div>
           </div>
         </div>
@@ -796,18 +1002,14 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
           </div>
         </div>
 
-        <div
-          class="col-lg col-md-12 m-2 d-flex align-items-center justify-content-center flex-column mt-5"
-        >
+        <div class="col-lg col-md-12 m-2 d-flex align-items-center justify-content-center flex-column mt-5">
           <h3 class="text-white">Still Have Questions?</h3>
           <p class="text-white text-center">
-            {{/*  Write us at <a class="text-success" href="mailto:example@example.com">contact@genezio.com</a>  or chat in the dashboard chat.  */}}
             Feel free to get in touch with us by emailing <a class="text-success" href="mailto:example@example.com">contact@genezio.com</a>, or if you prefer, you can chat with us directly through the chat feature available on the dashboard.
           </p>
         </div>
       </div>
     </div>
-
     {{/* End of main container */}}
   </div>
 </div>
@@ -826,4 +1028,11 @@ Genezio is suitable for both small projects and large-scale applications. Its sc
   ></div>
 </div>
 
+<script>
+    document.getElementById('presentationVideo').addEventListener('click', function() {
+        var video = document.getElementById('presentationVideo');
+          video.currentTime = 0; // Reset to beginning
+    });
+</script>
 {{ end }}
+
