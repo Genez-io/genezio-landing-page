@@ -129,7 +129,8 @@ If you want to learn more about typescript decorators, you can check out their o
 
 ## Create more complex middleware
 
-Parameter validation
+### Parameter validation
+
 Now that we have seen how decorators work, we can implement a complex middleware that checks if the incoming calls to the Genezio methods have valid parameters. For the purpose of this example, we will use Zod which is a schema validation library in typescript. If you want to learn more about Zod check out their {{< external-link link="https://zod.dev/" >}}documentation{{< /external-link >}}.
 
 The decorator definition is as follows:
@@ -214,7 +215,7 @@ Here, we defined the `Person` and the `PersonDetails` objects that are used as p
 
 This error was thrown by our decorator, and more specifically by the Zod validator. As such, any incoming request with a parameter which does not have the required type will be dropped and the function will not run. In our case, this is the desired outcome.
 
-## Using the GnzContext object
+### Using the GnzContext object
 
 Parameter validation is just one of the many middleware which you can implement that does not require any network information. However, what happens when you need to process information regarding the network request? Well, we can use the GnzContext object. The GnzContext object provided by the `@genezio/types` library is used by our own middleware integration to handle certain incoming requests. As such, if you set the first parameter of your function as a GnzContext object, then we will populate that parameter with all the necessary information about the request. The context object usually has the following structure:
 
