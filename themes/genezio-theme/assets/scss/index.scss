@@ -386,6 +386,20 @@ $cyan: #0dcaf0 !default;
   }
 }
 
+.highlighted-code-faas{
+  code {
+    > span {
+      &:nth-child(1) {
+        background-color: #2c2042;
+        span {
+          background-color: #2c2042;
+        }
+      }
+      
+    }
+  }
+}
+
 .expressWrapper {
   padding-top: 100px;
   padding-bottom: 120px;
