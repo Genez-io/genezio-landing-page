@@ -462,7 +462,6 @@
       <code class="highlighted-code-faas">{{ $input := `export const handler = async (event) => {
         try {
           console.log("Hello World from serverless function!");
-          console.log("EVENT: \n" + JSON.stringify(event, null, 2));
         } catch (e) {
           console.error(e);
           return {
