@@ -465,9 +465,15 @@
           console.log("EVENT: \n" + JSON.stringify(event, null, 2));
         } catch (e) {
           console.error(e);
-          return 500;
+          return {
+            statusCode: 500,
+            body: JSON.stringify(e),
+          };
         }
-        return 200;
+        return {
+          statusCode: 200,
+          body: "Hello World from serverless function!",
+        };
       };`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
       </div>
       
