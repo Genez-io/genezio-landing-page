@@ -460,18 +460,11 @@
 <p style="margin: -10px 0 10px 0; font-size: 14px" class="opacity-50">app.mjs</p>
 
       <code class="highlighted-code-faas">{{ $input := `export const handler = async (event) => {
-        try {
-          console.log("Hello World from serverless function!");
-        } catch (e) {
-          console.error(e);
-          return {
-            statusCode: 500,
-            body: JSON.stringify(e),
-          };
-        }
+        console.log('Function was called');
+        let name = event.queryStringParameters?.name || 'World';
         return {
           statusCode: 200,
-          body: "Hello World from serverless function!",
+          body: `Hello ${name} from serverless function!`,
         };
       };`}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "typescript" $opts }}</code>
       </div>
