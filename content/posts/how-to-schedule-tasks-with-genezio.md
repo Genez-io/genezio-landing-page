@@ -8,9 +8,9 @@ linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/scheduletasks.webp
 preview: This guide will walk you through the steps of building a scheduler with genezio.
 # meta data start
-description: "Schedulers are automated systems designed to carry out tasks at set intervals or specific times."
-meta_og_url: "https://genez.io/blog/how-to-schedule-tasks-with-genezio"
-meta_og_image: "https://genez.io/images/scheduletasks.webp"
+description: "Learn how to set up cron jobs with Genezio. Follow our guide to schedule tasks and automate processes in your projects."
+meta_og_url: "https://genezio.com/how-to-schedule-tasks-with-genezio/"
+meta_og_image: "https://genezio.com/images/scheduletasks.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

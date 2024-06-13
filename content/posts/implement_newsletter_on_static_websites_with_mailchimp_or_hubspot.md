@@ -9,8 +9,8 @@ thumbnail: /images/implementing_newsletter_section.webp
 preview: "In this blog, I'll take you through a practical solution for effortlessly integrating newsletter sections into your website."
 # meta data start
 description: "In this blog, I'll take you through a practical solution for effortlessly integrating newsletter sections into your website."
-meta_og_url: "https://genez.io/blog/implementing_newsletter_section"
-meta_og_image: "https://genez.io/images/implementing_newsletter_section.webp"
+meta_og_url: "https://genezio.com/blog/implement-newsletter-section/"
+meta_og_image: "https://genezio.com/images/implementing_newsletter_section.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

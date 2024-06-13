@@ -7,9 +7,9 @@ author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/announcing_upstash.webp
 preview: Caching, session storage and much more with Upstash Redis.
-description: "Learn how to integrate a Redis database into your project. Upstash Redis simplifies data storage and access, making it a natural fit for serverless web applications and cloud-native architectures."
-meta_og_url: "https://genez.io/blog/now-available-upstash-redis"
-meta_og_image: "https://genez.io/images/announcing_upstash.webp"
+description: "Learn to integrate Upstash Redis with Genezio. Follow our guide for setting up and managing Redis databases in your projects"
+meta_og_url: "https://genezio.com/blog/now-available-upstash-redis/"
+meta_og_image: "https://genezio.com/images/announcing_upstash.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 15

@@ -8,9 +8,9 @@ linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/kubecon.webp
 preview: "The Genezio team is still buzzing after an incredible week at KubeCon + CloudNativeCon Europe 2024!"
 # meta data start
-description: "The Genezio team is still buzzing after an incredible week at KubeCon + CloudNativeCon Europe 2024!"
-meta_og_url: "https://genez.io/blog/cloudnativecon_kubecon_europe_2024"
-meta_og_image: "https://genez.io/images/kubecon.webp"
+description: "Learn about Genezio’s participation in KubeCon + CloudNativeCon 2024, including key takeaways on cloud-native development trends"
+meta_og_url: "https://genezio.com/blog/kubecon-cloudnativecon-paris/"
+meta_og_image: "https://genezio.com/images/kubecon.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

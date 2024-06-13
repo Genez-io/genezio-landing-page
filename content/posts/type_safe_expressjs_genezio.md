@@ -9,8 +9,8 @@ thumbnail: /images/express.webp
 preview: Check ou how to integrate genezio in express for an easier and safer integration between backends and clients.
 # meta data start
 description: "Check ou how to integrate genezio in express for an easier and safer integration between backends and clients."
-meta_og_url: "https://genez.io/blog/web_scraping_app"
-meta_og_image: "https://genez.io/images/express.webp"
+meta_og_url: "https://genezio.com/blog/express-genezio-easy-error-free-api-management/"
+meta_og_image: "https://genezio.com/images/express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

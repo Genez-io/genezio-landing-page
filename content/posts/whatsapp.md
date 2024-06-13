@@ -1,5 +1,5 @@
 ---
-title: "Mastering Automation: A Step-by-Step Guide to Creating a WhatsApp Bot with Genezio"
+title: "Mastering Automation: A Step-by-Step Guide to Creating a WhatsApp Bot"
 date: 2024-05-07
 tags:
   - Tutorials
@@ -7,13 +7,13 @@ author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/whatsapp.webp
 preview: "This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more."
-description: "This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more."
-meta_og_url: "https://genez.io/blog/whatsapp"
+description: "Genezio blog: Step-by-step tutorial on creating a WhatsApp bot. Integrate the bot with WhatsApp API and automate responses."
+meta_og_url: "https://genezio.com/blog/whatsapp-genezio-project/"
 meta_og_image: "https://genez.io/images/whatsapp.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
-url: /blog/whatsapp-genezio-project
+url: /blog/whatsapp-genezio-project/
 ---
 
 Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating a WhatsApp bot and implementing a simple 'ping pong' interaction. This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more.

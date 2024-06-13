@@ -8,9 +8,9 @@ author: Kristopher Sandoval
 thumbnail: /images/communicationbreakdown.webp
 preview: One of the most difficult parts of developing a service is managing the sheer number of connected parts.
 # meta data start
-description: "One of the most difficult parts of developing a service is managing the sheer number of connected parts."
-meta_og_url: "https://genez.io/blog/web_scraping_app"
-meta_og_image: "https://genez.io/images/communicationbreakdown.webp"
+description: "Explore the importance of backend-to-frontend communication and learn how to manage it effectively in full-stack development."
+meta_og_url: "https://genezio.com/blog/communication-breakdown-why-backend-to-frontend-communication-matters/"
+meta_og_image: "https://genezio.com/images/communicationbreakdown.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

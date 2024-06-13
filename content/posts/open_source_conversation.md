@@ -8,9 +8,9 @@ linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 thumbnail: /images/opensourceconversation.webp
 preview: The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a critical driver of massive growth.
 # meta data start
-description: "The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a critical driver of massive growth."
-meta_og_url: "https://genez.io/blog/open-source-conversation"
-meta_og_image: "https://genez.io/images/opensourceconversation.webp"
+description: "The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a driver of growth."
+meta_og_url: "https://genezio.com/blog/an-open-conversation-about-open-source/"
+meta_og_image: "https://genezio.com/images/opensourceconversation.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
