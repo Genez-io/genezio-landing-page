@@ -10,8 +10,8 @@ thumbnail: /images/genezio_middleware.webp
 preview: Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database.
 # meta data start
 description: "Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database."
-meta_og_url: "https://genez.io/blog/how_to_implement_the_first_middleware_in_a_genezio_project"
-meta_og_image: "https://genez.io/genezio_middleware.webp"
+meta_og_url: "https://genezio.com/blog/how_to_implement_the_first_middleware_in_a_genezio_project"
+meta_og_image: "https://genezio.com/images/genezio_middleware.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
