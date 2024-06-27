@@ -1,5 +1,5 @@
 ---
-title: "Serverless Computing: When to Go Serverless?"
+title: Serverless Computing When to Go Serverless
 date: 2024-06-26
 tags:
   - Learning
@@ -8,14 +8,14 @@ linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
 thumbnail: /images/whentogoserverless.webp
 preview: Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption
 # meta data start
-description: "Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage."
-meta_og_url: "https://genezio.com/blog/serverless-genezio-project/"
+description: "Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption"
+meta_og_url: "https://genezio.com/blog/serverless-computing-when-to-go-serverless/"
 meta_og_image: "https://genezio.com/images/whentogoserverless.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/serverless-genezio-project
+# url: /blog/serverless-genezio-project
 ---
 
 Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption: {{< external-link link="https://www.datadoghq.com/state-of-serverless/" >}}More than half{{< /external-link >}} of all organizations running through the three major cloud vendors had already adopted serverless models.
