@@ -10,7 +10,7 @@ thumbnail: /images/whentogoserverless.webp
 preview: Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage.
 # meta data start
 description: "Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage."
-meta_og_url: "https://genezio.com/blog/when-to-go-serverless"
+meta_og_url: "https://genezio.com/blog/when-to-go-serverless/"
 meta_og_image: "https://genezio.com/images/whentogoserverless.webp"
 # meta data end
 customHeader: "White header"
