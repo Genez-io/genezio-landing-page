@@ -19,6 +19,7 @@ readTime: 5
 url: /blog/when-to-go-serverless
 ---
 
+
 Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption: {{< external-link link="https://www.datadoghq.com/state-of-serverless/" >}}More than half{{< /external-link >}} of all organizations running through the three major cloud vendors had already adopted serverless models.
 
 Not every company adopts serverless for the same reasons. And not every company might be best suited to run serverless with gigantic cloud vendors. According to an IEEE Software {{< external-link link="https://www.researchgate.net/publication/344766331_Serverless_Applications_Why_When_and_How" >}}report{{< /external-link >}}, of the 89 serverless applications looked at, 47% chose serverless to save costs, 34% went serverless for its built-in scalability, and another 34% were motivated by the fact that serverless means no longer dealing with server management concerns. If those priorities weren’t true of major vendors, then seeking niche, easy-to-run platforms might be the best alternative for entrepreneurs needing to scale fast and frugally.
