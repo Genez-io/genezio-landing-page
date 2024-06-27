@@ -11,8 +11,6 @@ preview: Serverless has become a mainstay in cloud computing for a few years now
 description: "Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage."
 meta_og_url: "https://genezio.com/blog/serverless-genezio-project/"
 meta_og_image: "https://genezio.com/images/whentogoserverless.webp"
-meta_og_title: "Serverless Computing: When to Go Serverless?"
-meta_og_description: "Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage."
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
