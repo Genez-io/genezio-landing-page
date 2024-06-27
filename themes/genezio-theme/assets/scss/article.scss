@@ -1,4 +1,11 @@
 .articlePost {
+  td {
+    text-align: left !important;
+    border: 1px solid #e2d9f3 !important;
+  }
+  th {
+    text-align: left !important;
+  }
   .copy-button {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.8);

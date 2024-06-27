@@ -391,7 +391,37 @@ $cyan: #0dcaf0 !default;
   padding-bottom: 120px;
 }
 
+.languageBadge {
+  background-color: #666670;
+  padding: 6px 12px 6px 12px;
+  border-radius: 360px;
+  margin-right: 10px;
+}
+
+.nextPerksWrap {
+  margin-top: 40px;
+  .nextPerksGreenBorder {
+    border-left: 2px solid #00faa4;
+    border-right: 2px solid #00faa4;
+    padding: 0 20px 0 20px;
+    margin: 0 20px 0 20px;
+  }
+}
+
 @media (max-width: 768px) {
+  .nextPerksWrap {
+    flex-direction: column;
+    align-items: center;
+
+    .nextPerksGreenBorder {
+      border-left: none;
+      border-right: none;
+      border-top: 2px solid #00faa4;
+      border-bottom: 2px solid #00faa4;
+      padding: 10px 20px 10px 20px;
+      margin: 10px 20px 10px 20px;
+    }
+  }
   #presentationVideo {
     margin-top: 30px;
   }

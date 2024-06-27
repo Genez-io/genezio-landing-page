@@ -91,7 +91,7 @@ You must comply with applicable Third parties' Terms of agreement when using the
 
 # Privacy Policy
 
-The Company collects, stores, maintains, and shares information about You in accordance with [Our Privacy Policy](https://genez.io/privacy/).
+The Company collects, stores, maintains, and shares information about You in accordance with [Our Privacy Policy](https://genezio.com/privacy-policy/).
 
 By accepting this Agreement, You acknowledge that You hereby agree and consent to the terms and conditions of Our Privacy Policy.
 
