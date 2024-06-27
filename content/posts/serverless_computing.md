@@ -4,10 +4,9 @@ date: 2024-06-26
 tags:
   - Learning
 author: Luis Minvielle
-# TODO:
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
 thumbnail: /images/whentogoserverless.webp
-preview: Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage.
+preview: Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption
 # meta data start
 description: "Use serverless infrastructure if you want to create a lightweight and fast app that needs to be updated often and adjust to changing usage."
 meta_og_url: "https://genezio.com/blog/serverless-genezio-project/"
