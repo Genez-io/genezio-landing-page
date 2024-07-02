@@ -356,7 +356,9 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">Easy deployment</h3>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              One command-line deployment.
+            </h3>
             <p class="card-text opacity-75 mb-4 pb-3">
               Spend less time on setup and more time on development. Run one command and get your
               app up and running in minutes.
@@ -390,11 +392,13 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">Fast Performance</h3>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              Up to 4x Faster Response Times.
+            </h3>
 
             <p class="card-text opacity-75 mb-4 pb-3">
-              Take advantage of a FaaS platform designed and built with performance and security in
-              mind.
+              Take advantage of a Function-as-a-Service platform designed and built with performance
+              and security in mind.
             </p>
             <a
               href="https://genezio.com/docs/getting-started"
@@ -424,7 +428,9 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">Scalability</h3>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              Auto-scaling for 100% Uptime. 
+            </h3>
 
             <p class="card-text opacity-75 mb-2 pb-2">
               Whether you're serving a handful of users or millions, our platform scales
@@ -826,7 +832,7 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              What are some type of apps that can be built on Genezio?
+              How do I set a custom subdomain for my Next.js application?
             </button>
           </h2>
           <div
@@ -836,18 +842,10 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
-              Genezio is used by our clients to build and host full-stack apps. These include a
-              variety of full-stack Web Apps, Mobile Apps, Enterprise automation apps, and
-              Blockchain enabled apps. Also, some developers use Genezio just to set up scheduled
-              tasks or to keep an API key private in a part of their app that runs in the
-              background. To learn more and see examples, check out our
-              <a
-                style="text-decoration: none"
-                class="text-success"
-                href="https://genezio.com/docs/examples/"
-                target="_blank"
-                >docs</a
-              >.
+              The subdomain assigned for your deployed Next.js application is generated
+              automatically by concatenating the name of your project with a random short string.
+              For example, if your project is named my-nextjs-app, the subdomain will look like
+              my-nextjs-app-iyjFxz.app.genez.io.
             </div>
           </div>
         </div>
@@ -865,7 +863,7 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              I already have a DevOps team, do I still need Genezio?
+              How do I check the logs of a Next.js application?
             </button>
           </h2>
           <div
@@ -875,8 +873,11 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Your DevOps team is probably pretty busy, so in order to try out a pilot project, it's
-              much easier to use our serverless approach.
+              Your Next.js application is deployed on our Function as a Service platform as multiple
+              serverless functions. When opening the project dashboard, you can see the logs of each
+              function separately. Usually, the main logic of your application is deployed in the
+              serverless function named function-server. Check the logs of this function to see the
+              output of your application.
             </div>
           </div>
         </div>
@@ -895,7 +896,7 @@
               aria-expanded="false"
               aria-controls="collapse3"
             >
-              Is Genezio.RPC better than tRPC?
+              How do I set environment variables for my Next.js application?
             </button>
           </h2>
           <div
@@ -905,9 +906,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              tRPC is an amazing library to add type safe calls to TypeScript frontends and
-              backends. Genezio.RPC allows developers to write the backend in, say, Go, and call the
-              exported type safe API from a react frontend.
+              Environment variables for a Next.js project hosted on Genezio are set in the same way
+              as any other Genezio project. Visit the Environment Variables tab in the project
+              dashboard to set your environment variables.
             </div>
           </div>
         </div>
@@ -925,7 +926,7 @@
               aria-expanded="false"
               aria-controls="collapse4"
             >
-              Why not stick with REST?
+              How do I test locally?
             </button>
           </h2>
           <div
@@ -935,11 +936,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              REST is a flexible standard that is very well suited to open APIs. We have created
-              Genezio.RPC to allow developers to design a backend that doesn't necessarily fit into
-              the REST paradigm. We see more and more developers interested in ensuring type safety
-              and consistent design for the frontend-backend communication. This is the best way to
-              ensure less things break as they change things.
+              We recommend using the provided Next.js scripts to run your application locally. You
+              can use "npm run dev" command to start your application:
             </div>
           </div>
         </div>
@@ -957,7 +955,7 @@
               aria-expanded="false"
               aria-controls="collapse5"
             >
-              Is Genezio a Backend-as-a-Service?
+              Do I need a Docker/Dockerfile?
             </button>
           </h2>
           <div
@@ -967,290 +965,12 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Genezio.Services is similar to a BaaS in the sense that offers a wide variety of
-              out-of-the-box services to help you be more productive. Implementing authentication,
-              setting up cron jobs and working with databases and queues are one click away. They
-              are designed to save you time and effort when developing and maintaining your
-              applications. The differences steam from the fact that Genezio enables you to write
-              your own backend business logic. Also, in Genezio the database is not exposed directly
-              to the frontend, enhancing security and separation of concern.
+              No, you don't need a Dockerfile to deploy a Next.js application with Genezio. Genezio
+              builds your application using a serverless architecture, which means that you don't
+              need to worry about Docker, Dockerfiles or scaling.
             </div>
           </div>
         </div>
-        {{/* Question 6 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse6"
-              aria-expanded="false"
-              aria-controls="collapse6"
-            >
-              Is Genezio a Serverless Paradigm?
-            </button>
-          </h2>
-          <div
-            id="collapse6"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Genezio.Cloud ensures that you can deploy applications in a serverless fashion, and
-              instantly have a secure, publicly available deployment. After you create, build, and
-              test your application locally, you can deploy it to Genezio Cloud. You can now deploy
-              on production on our managed AWS account. You can also start experimenting on our own
-              serverless cloud that offers zero cold start penalty for backend functions and lower,
-              predictable cost.
-            </div>
-          </div>
-        </div>
-        {{/* Question 7 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse7"
-              aria-expanded="false"
-              aria-controls="collapse7"
-            >
-              What programming languages can be used to build apps with Genezio?
-            </button>
-          </h2>
-          <div
-            id="collapse7"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You can build your apps using TypeScript for both backend and frontend, which is
-              tested and production-ready. We also offer beta support for Kotlin and DART, and are
-              working towards enabling support for GoLang and Swift.
-            </div>
-          </div>
-        </div>
-        {{/* Question 8 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse8"
-              aria-expanded="false"
-              aria-controls="collapse8"
-            >
-              Which web frameworks are compatible with Genezio?
-            </button>
-          </h2>
-          <div
-            id="collapse8"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Genezio is compatible with various frameworks like React, Vue, Angular, Svelte,
-              Flutter, ExpressJS, Fastify, and more, thanks to its framework-agnostic nature.
-            </div>
-          </div>
-        </div>
-        {{/* Question 9 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse9"
-              aria-expanded="false"
-              aria-controls="collapse9"
-            >
-              I have a simple app that uses a Firebase or Supabase backend. Do I need Genezio?
-            </button>
-          </h2>
-          <div
-            id="collapse9"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              If all you need is a database exposed to the frontend, then Genezio is not very
-              useful. However, when your business logic becomes more complex, you will need to
-              implement it in a backend, and Genezio is a perfect solution for that.
-            </div>
-          </div>
-        </div>
-        {{/* Question 11 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse11"
-              aria-expanded="false"
-              aria-controls="collapse11"
-            >
-              Can I use Genezio without creating an account?
-            </button>
-          </h2>
-          <div
-            id="collapse11"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Yes, you can try out Genezio locally without an account. An account is only required
-              if you wish to deploy a project on our platform. See
-              <a
-                style="text-decoration: none"
-                class="text-success"
-                href="https://genezio.com/docs/"
-                target="_blank"
-              >
-                our docs
-              </a>
-              for how to do this.
-            </div>
-          </div>
-        </div>
-        {{/* Question 12 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse12"
-              aria-expanded="false"
-              aria-controls="collapse12"
-            >
-              What are the advantages of Genezio vs other cloud platforms?
-            </button>
-          </h2>
-          <div
-            id="collapse12"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              If your application requires more than a database, Genezio is the ideal solution. Here
-              are some key benefits:
-              <ol class="p-0">
-                <li>
-                  Flexibility: Genezio supports various programming languages, making it more
-                  versatile for developers with different tech stacks.
-                </li>
-                <li>
-                  Type Safety: Genezio provides a type safe interface, reducing errors and enhancing
-                  code quality.
-                </li>
-                <li>
-                  Full-Stack Support: You can connect Genezio with any frontend, whether it's for
-                  web, mobile, or desktop applications, and still maintain type safety.
-                </li>
-                <li>
-                  Productivity: Genezio offers a range of built-in services like authentication,
-                  cron jobs and database integration, making development faster and more efficient.
-                </li>
-                <li>
-                  Scalability: Genezio ensures auto-scalability for your applications, adapting to
-                  traffic demands effortlessly.
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        {{/* Question 13 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse13"
-              aria-expanded="false"
-              aria-controls="collapse13"
-            >
-              Can I use my own AWS account with Genezio?
-            </button>
-          </h2>
-          <div
-            id="collapse13"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Yes. Genezio provides the option to integrate your AWS account in place of using our
-              managed AWS for Genezio Cloud. This feature is present in our open source command line
-              tools.
-            </div>
-          </div>
-        </div>
-        {{/* Question 14 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse14"
-              aria-expanded="false"
-              aria-controls="collapse14"
-            >
-              What type of content can I host?
-            </button>
-          </h2>
-          <div
-            id="collapse14"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You are fully responsible for the content you host with us. Any type of illegal or
-              offensive content is forbidden. Please refer to our terms of use for further details.
-              We reserve the right to take down your app if it violates our terms of use without any
-              notice.
-            </div>
-          </div>
-        </div>
-
-        {{/* */}}
       </div>
     </div>
   </div>
@@ -1265,7 +985,7 @@
         rgba(0, 250, 164, 0) 77.17%,
         rgba(0, 250, 164, 0.47) 100%
       );
-      height: 5200px;
+      height: 3200px;
     "
   ></div>
 </div>
