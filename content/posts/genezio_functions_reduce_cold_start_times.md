@@ -18,7 +18,7 @@ customFooter: "White footer"
 readTime: 10
 ---
 
-We are excited to announce that after two years of dedicated development, our team has launched {{< external-link link="https://genezio.com/faas" >}}Genezio Functions{{< /external-link >}} - a fast, secure, and robust next-generation Function-as-a-Service (FaaS) platform. With Genezio Functions, developers can deploy and run code effortlessly without the need to provision or manage servers. Compared with existing platforms, Genezio FaaS reduces cold start up times and improves throughput and compute density.
+We are excited to announce that after two years of dedicated research and development, our team has launched {{< external-link link="https://genezio.com/faas" >}}Genezio Functions{{< /external-link >}} - a fast, secure, and robust next-generation Function-as-a-Service (FaaS) platform. With Genezio Functions, developers can deploy and run code effortlessly without the need to provision or manage servers. Compared with existing platforms, Genezio FaaS reduces cold start up times and improves throughput and compute density.
 
 ## Genezio Functions vs AWS Lambda vs GCP vs Vercel vs Netlify
 
@@ -71,13 +71,17 @@ Function-as-a-Service (FaaS) platforms have remarkable advantages, making them a
 
 When using a FaaS platform, you no longer have to worry about setting up or managing servers, as FaaS abstracts away the underlying infrastructure. Furthermore, FaaS enables automatic scaling, allowing your applications to handle requests efficiently without engineer intervention. Lastly, FaaS provides cost-effective solutions by billing based on actual usage, meaning you only pay for the compute time your functions consume.
 
-Genezio Functions take FaaS to the next level, reducing cold starts and providing an optimized and cost effective solution for your application needs.
+Genezio Functions take FaaS to the next level, reducing cold starts and providing an optimized and cost effective solution for your full stack application needs.
+
+Genezio Functions leverage various VM and system level optimization techniques, to reduce the cold start overhead. In addition, VM level isolation provides a more secure cloud environment by design, as compared for instance with V8 isolates.
 
 ## Enhancing Developer Experience with Genezio
 
-Deploying your Express or Next.js applications on Genezio is incredibly straightforward. Our platform supports these popular frameworks, enabling you to launch your projects effortlessly. Multiple developers can collaborate with no additional cost, and get access to the project dashboard - logs, function calls, deployment, databases and other shared resources.
+Deploying your Express or Next.js applications on Genezio is incredibly straightforward. Our platform supports automatic deployment and log monitoring, enabling you to develop, test and launch to production effortlessly.
 
-Genezio Functions leverage various VM and system level optimization techniques, to reduce the cold start overhead. In addition, VM level isolation provides a more secure cloud environment by design, as compared for instance with V8 isolates. With Genezio, you can focus on building and optimizing your applications while we handle the infrastructure, ensuring a smooth and efficient deployment process.
+Using our Pro license, multiple developers can collaborate with no additional cost, and get access to the project dashboard - logs, function calls, deployment, databases and other shared resources.
+
+With Genezio, you can focus on building and optimizing your applications while we handle the infrastructure, ensuring a smooth and efficient deployment process.
 
 ## Get Started Today
 
