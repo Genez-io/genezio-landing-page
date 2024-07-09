@@ -1,8 +1,8 @@
 ---
-title: "The type safe serverless platform for full-stack developers" 
+title: "Deploy your faas App on Serverless" 
 date: 2019-02-22
-layout: genezio-typesafe
-leadTitle: "The type safe serverless platform for modern full-stack developers Everything you need to build apps that scale up to millions of users."
+layout: faas
+leadTitle: "Effortlessly deploy faas apps on Genezio, eliminating server management. Enjoy seamless scaling, reduced costs, and increased flexibility with serverless."
 leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
 leadButtonOneText: 'Start for Free'
@@ -17,7 +17,7 @@ code in your favorite language - be it Swift, Kotlin, etc."
 productTextP3: "Because you care about the environment, just as we do.  We are passionate about 
 power consumption, and we are optimizing the way the code is run towards our goal of zero overhead, fastest cold start delay, best CPU and memory resource allocation."
 # meta data start
-description: "The type safe serverless platform for modern full-stack developers Everything you need to build apps that scale up to millions of users."
+description: "Effortlessly deploy faas apps on Genezio, eliminating server management. Enjoy seamless scaling, reduced costs, and increased flexibility with serverless."
 meta_og_url: "https://genez.io"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
