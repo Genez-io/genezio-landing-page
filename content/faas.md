@@ -1,5 +1,5 @@
 ---
-title: "Deploy your faas App on Serverless"
+title: "Deploy serverless apps"
 layout: "faas"
 summary: "faas"
 description: "Effortlessly deploy faas apps on Genezio, eliminating server management. Enjoy seamless scaling, reduced costs, and increased flexibility with serverless."
