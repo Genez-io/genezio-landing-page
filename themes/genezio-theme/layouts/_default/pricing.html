@@ -3,255 +3,184 @@
 
 <div class="px-3 bg-dark" style="overflow: hidden">
   <div class="container plansWrap text-white">
-    <div class="py-4">
-      <h1 style="font-size: 48px" class="fw-bold text-center py-5 my-2">
-        Get started for free, with everything you need
-      </h1>
-    </div>
+    <h1 class="fw-bold text-center py-5 mt-1 mb-4 fs-1">
+      Start for free. Collaborate.<br />
+      Deploy any git repo. No hidden fees.
+    </h1>
 
-    <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
-
-    <div style="margin-top: 40px" class="row justify-content-between mx-0 pb-3">
-      {{/* Start of Monthly / Yearly */}}
+    <div class="row align-items-start">
       <div
-        class="d-flex align-items-center justify-content-center justify-content-lg-end mb-4 pb-3 px-0"
+        style="
+          border: 1px solid rgba(0, 250, 164, 0.3);
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 0px 20px 0px 20px;
+        "
+        class="col-12 col-md p-4"
       >
-        <button
-          id="monthlyButton"
-          class="btn btn-secondary text-white fw-semibold mx-1 px-4 py-2 mt-2"
-        >
-          Monthly
-        </button>
-        <button
-          id="yearlyButton"
-          style="border: 1px solid rgba(153, 173, 203, 0.4)"
-          class="btn fw-semibold mx-1 px-4 py-2 text-white mt-2 d-flex align-items-center justify-content-center"
-        >
-          Yearly
-          <span style="margin-left: 10px" class="badge bg-primary text-white badge-primary"
-            >20% OFF</span
-          >
-        </button>
-      </div>
+        <div class="d-flex justify-content-between">
+          <h2 class="fw-bold">Hobby</h2>
+          <h2>Free <span class="fs-6 opacity-50 fw-normal">forever</span></h2>
+        </div>
 
-      <div class="col-5 p-0 d-md-block d-none">
-        <h2 id="planTitle" class="fw-bold planTitle">Your Hobby account</h2>
+        <p class="mt-3 mb-4 pb-2">perfect for prototyping and showcasing side projects</p>
 
-        <div id="planPerks">
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/cost-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">No credit card required</h4>
-              <p class="opacity-50 mb-0">free forever</p>
-            </div>
-          </div>
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/unlimited-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Unlimited projects</h4>
-              <p class="opacity-50 mb-0">non-commercial, academic, personal</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/deploy-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Deploy to production with 1 click</h4>
-              <p class="opacity-50 mb-0">auto-scaling backends and CDN frontends</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/env-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Local environments</h4>
-              <p class="opacity-50 mb-0">per project</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
+        <div>
+          <div class="d-flex align-items-center mb-4">
             <img src="/images/collaboration-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Collaboration</h4>
-              <p class="opacity-50 mb-0">unlimited</p>
+            <p class="m-0 mx-3">2 seats across all projects</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">1M function invocations</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">15 min Function Timeout</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Postgres Database</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Genezio services: Typesafe, Authentication, Cron Jobs</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Automatic CI/CD</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <div>
+              <p class="m-0 mx-3">Standard support</p>
+              <p class="opacity-50 mx-3 m-0">Community</p>
             </div>
           </div>
+        </div>
 
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/database-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Free database - PostgreSQL, MongoDB, Redis</h4>
-              <p class="opacity-50 mb-0">one per project, free tier</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/auth-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">User Authentication, Cron jobs, Queues, Email Service</h4>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/community-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Community support</h4>
-            </div>
-          </div>
+        <div class="pt-2">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-normal"
+            style="height: 48px"
+            type="submit"
+            href="https://genezio.com/docs/getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>
         </div>
       </div>
+      <div
+        style="
+          border: 1px solid rgba(0, 250, 164, 1);
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 0px 20px 0px 20px;
+        "
+        class="col-12 col-md p-4 mx-0 mx-md-4 my-md-0 my-4"
+      >
+        <div class="d-flex justify-content-between">
+          <h2 class="fw-bold">Pro</h2>
+          <h2>15$ <span class="fs-6 opacity-50 fw-normal">/month</span></h2>
+        </div>
 
-      <div class="col-md-6 col-sm-12 p-0">
-        <div
-          id="hobbist"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
-          class="card mb-4 p-4 ActivePlanCard text-white"
-        >
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <div id="hobbyCheckbox">
-                <svg
-                  width="20"
-                  style="margin-right: 24px"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="#F9F5FF" />
-                  <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#7F56D9" />
-                  <circle cx="10" cy="10" r="4" fill="#7F56D9" />
-                </svg>
-              </div>
-              <div class="d-flex justify-content-between w-100 align-items-center">
-                <div>
-                  <h2 class="mb-2 pb-1 fw-bold">Hobby</h2>
-                  <p class="text-white opacity-50 mb-0">
-                    perfect for prototyping and side projects
-                  </p>
-                </div>
+        <p class="mt-3">
+          for professionals or teams up to 10 people who deploy to production for
+          <span class="fw-bold">$15/month</span>
+        </p>
 
-                <div class="d-flex flex-column align-items-end">
-                  <h4 class="m-0">Free forever</h4>
-                </div>
-              </div>
+        <p class="pt-3">Everything in Hobby, plus:</p>
+
+        <div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">10 seats across all projects</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">2M function invocations</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">1 hour Function Timeout</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Daily website vulnerability scan</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">1 month history log retention</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Automatic CI/CD</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <div>
+              <p class="m-0 mx-3">Premium support</p>
+              <p class="opacity-50 mx-3 m-0">Email/chat</p>
             </div>
-
-            {{/* mobile perks */}}
-            <div id="mobile-planPerks-hobby" class="d-sm-block d-md-none"></div>
           </div>
         </div>
 
-        {{/*
-        <div class="border d-flex flex-column align-items-end">
-          <p class="m-0 opacity-50">Starting at</p>
-          <h4>Free</h4>
-        </div>
-        */}}
-        <div
-          id="pro"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
-          class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
-        >
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <div id="proCheckbox" class="checkBox"></div>
-              <div class="d-flex justify-content-between w-100">
-                <div>
-                  <h2 class="mb-2 pb-1 fw-bold">Pro</h2>
-                  <p class="text-white opacity-50 mb-0">build and host commercial applications</p>
-                </div>
-
-                <div class="d-flex flex-column justify-content-center align-items-end">
-                  <p class="m-0 opacity-50">Starting at</p>
-
-                  <p id="yearlyPriceParagraph" class="m-0 fs-4">$29</p>
-
-                  <h4 style="text-align: right" id="proPriceHeading">
-                    <span class="fs-6">/month</span>
-                  </h4>
-                </div>
-              </div>
-            </div>
-
-            {{/* mobile perks */}}
-            <div id="mobile-planPerks-pro" class="d-sm-block d-md-none"></div>
-          </div>
-        </div>
-        {{/* start of expert */}}
-        <div
-          id="expert"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
-          class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
-        >
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <div id="expertCheckbox" class="checkBox"></div>
-              <div class="d-flex justify-content-between w-100">
-                <div>
-                  <h2 class="mb-2 pb-1 fw-bold">Expert</h2>
-                  <p class="text-white opacity-50 mb-0">
-                    bump up your limits and get priority support
-                  </p>
-                </div>
-
-                <div class="d-flex flex-column justify-content-center align-items-end">
-                  <p class="m-0 opacity-50">Starting at</p>
-
-                  <p id="expertYearlyPriceParagraph" class="m-0 fs-4">$99</p>
-
-                  <h4 style="text-align: right" id="proPriceHeading">
-                    <span class="fs-6">/month</span>
-                  </h4>
-                </div>
-              </div>
-            </div>
-
-            {{/* mobile perks */}}
-            <div id="mobile-planPerks-expert" class="d-sm-block d-md-none"></div>
-          </div>
-        </div>
-        {{/* end of expert */}}
-        <div
-          id="enterprise"
-          style="border-bottom-left-radius: 20px; border-top-right-radius: 20px; cursor: pointer"
-          class="card mb-4 p-4 notActivePlanCard border-gradient-green text-white"
-        >
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center">
-              <div id="enterpriseCheckbox" class="checkBox"></div>
-              <div class="d-flex justify-content-between w-100">
-                <div>
-                  <h2 class="mb-2 pb-1 fw-bold">Enterprise</h2>
-                  <p class="text-white opacity-50 mb-0">for large organizations and businesses</p>
-                </div>
-
-                <div class="d-flex flex-column justify-content-center align-items-end">
-                  <h4
-                    style="
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: end;
-                      align-items: end;
-                    "
-                  >
-                    Contact us
-                  </h4>
-                </div>
-              </div>
-            </div>
-
-            {{/* mobile perks */}}
-            <div id="mobile-planPerks-enterprise" class="d-sm-block d-md-none"></div>
-          </div>
-        </div>
-
-        <div id="buttonsWrap" class="d-flex justify-content-center justify-content-md-end">
+        <div class="pt-2">
           <a
-            class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-normal"
+            style="height: 48px"
+            type="submit"
+            href="https://genezio.com/docs/getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+      <div
+        style="
+          border: 1px solid rgba(0, 250, 164, 0.3);
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 0px 20px 0px 20px;
+        "
+        class="col-12 col-md p-4"
+      >
+        <div class="d-flex justify-content-between">
+          <h2 class="fw-bold">Enterprise</h2>
+        </div>
+        <p class="mt-3">large organizations and businesses</p>
+
+        <p class="pt-3">Everything in Pro, plus:</p>
+
+        <div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Unlimited seats</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Configurable</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">99.99% uptime SLA</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Audit logs</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Full history log retention</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/collaboration-icon.svg" />
+            <p class="m-0 mx-3">Advanced support</p>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-normal"
             style="height: 48px"
             type="submit"
             href="https://genezio.com/docs/getting-started"
@@ -262,55 +191,101 @@
         </div>
       </div>
     </div>
-    {{/* end of plans cards */}}
 
     <hr class="mt-4" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
-    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 pb-1">
+
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative"
+      style="z-index: 99"
+    >
       COMPARISON TABLE
     </p>
-    <h2 class="text-center fw-bold mb-4 pb-3">Compare our plans in detail</h2>
 
     <div class="fixed-width-container">
       <div class="fixed-width-row stickyHeader">
-        <div class="fixed-width-col biggerCol"></div>
-        <div class="fixed-width-col colBg">
-          <h4 class="text-center mb-2 pb-1">Hobby</h4>
-          <p class="text-center m-0">Free</p>
+        <div style="border: none" class="fixed-width-col biggerCol">
+          <h2 class="fw-bold">
+            Compare<br />
+            our monthly<br />
+            plans in detail
+          </h2>
         </div>
-        <div class="fixed-width-col colBg">
-          <h4 class="text-center mb-2 pb-1">Pro</h4>
-          <p class="text-center m-0">$29/month</p>
+        <div style="border: none" class="fixed-width-col">
+          <div class="colBg">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="fw-bold m-0">Hobby</h2>
+              <div class="d-flex flex-column align-items-end">
+                <h2 class="m-0">Free</h2>
+                {{/*
+                <p class="m-0 opacity-50">forever</p>
+                */}}
+              </div>
+            </div>
+
+            <p class="mb-0 mt-3 opacity-50 text-center" style="font-size: 14px">
+              perfect for prototyping and showcasing side projects
+            </p>
+          </div>
         </div>
-        <div class="fixed-width-col colBg">
-          <h4 class="text-center mb-2 pb-1">Expert</h4>
-          <p class="text-center m-0">$99/month</p>
+        <div style="border: none" class="fixed-width-col">
+          <div class="colBg">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="fw-bold m-0">Pro</h2>
+              <div class="d-flex align-items-end">
+                <h2 class="m-0">15$</h2>
+                <p class="m-0 opacity-50">/month</p>
+              </div>
+            </div>
+
+            <p class="mb-0 mt-3 opacity-50 text-center" style="font-size: 14px">
+              perfect for teams up to 10 people who deploy to production
+            </p>
+          </div>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <div class="colBg">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="fw-bold m-0">Enterprise</h2>
+            </div>
+            <p class="mb-0 mt-3 opacity-50 text-center" style="font-size: 14px">
+              large organizations and businesses
+            </p>
+          </div>
         </div>
         <!-- Add more columns as needed -->
       </div>
 
+      <p class="mt-1 mb-3 text-success fw-bold">BUILD FASTER</p>
+
       {{/* Row */}}
       <div class="fixed-width-row">
         <div class="biggerCol fixed-width-col">
-          <p class="mb-0 py-4">Credit card required</p>
+          <p class="mb-0 py-4" style="font-weight: 500">Projects</p>
         </div>
         <div class="fixed-width-col">
           <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-x-icon.svg" alt="table-x" />
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">Unlimited</p>
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              non-commercial or academic
+            </p>
+          </div>
         </div>
         <div class="fixed-width-col">
           <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
+          <p class="text-center mb-1" style="font-weight: 500">Unlimited</p>
         </div>
         <div class="fixed-width-col">
           <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
+          <p class="text-center mb-1" style="font-weight: 500">Unlimited</p>
         </div>
       </div>
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Free projects</p>
+            <p class="mb-0 py-4" style="font-weight: 500">Free projects</p>
 
             <div class="custom-tooltip-container mx-2">
               <svg
@@ -352,7 +327,7 @@
       {{/* ROW */}}
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Commercial projects</p>
+          <p class="mb-0 py-4" style="font-weight: 500">Commercial projects</p>
         </div>
         <div class="fixed-width-col">
           <p class="mobilePlanTitle">Hobby</p>
@@ -371,7 +346,7 @@
       <div class="fixed-width-row">
         <div class="fixed-width-col biggerCol">
           <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Collaboration</p>
+            <p class="mb-0 py-4" style="font-weight: 500">Collaboration</p>
           </div>
         </div>
         <div class="fixed-width-col">
@@ -389,562 +364,44 @@
           </div>
         </div>
       </div>
-      {{/* ROW */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Logs retention</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="m-0 text-center">one week</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="m-0 text-center">one year</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <p class="m-0 text-center">one year</p>
-        </div>
-      </div>
-      {{/* ROW */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Local & Production environments</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-
-      {{/* separator ROW */}} {{/*
-      <div style="height: 100px" class="fixed-width-row">
-        <div
-          class="fixed-width-col-space biggerCol"
-          style="border-left: 1px solid rgba(255, 255, 255, 0.1)"
-        ></div>
-        <div style="border: none" class="fixed-width-col"></div>
-        <div style="border: none" class="fixed-width-col"></div>
-        <div
-          class="fixed-width-col-space"
-          style="border-right: 1px solid rgba(255, 255, 255, 0.1)"
-        ></div>
-      </div>
-      */}} {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Multiple cloud environments</p>
-
-            <div class="custom-tooltip-container mx-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
-                  stroke="white"
-                  stroke-opacity="0.7"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="custom-tooltip-text"
-                >Besides production, enable test, staging, or other environments</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-x-icon.svg" alt="table-x" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Type safe backend function invocations</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center">
-            1,000,000 calls/year <br />
-            <span style="opacity: 0.6">for all free projects</span>
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="mb-0 text-center">
-            10,000,000 calls/year<br />
-            <span style="opacity: 0.6"> contact us for more</span>
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <p class="mb-0 text-center">
-            50,000,000 calls/year<br />
-            <span style="opacity: 0.6">contact us for more</span>
-          </p>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Custom domain</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Cron jobs service</p>
-
-            <div class="custom-tooltip-container mx-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
-                  stroke="white"
-                  stroke-opacity="0.7"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="custom-tooltip-text"
-                >Function scheduler, defined with up to a minute granularity</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center">
-            up to 10 <br />
-            <span style="opacity: 0.6"> for all free projects </span>
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="mb-0 text-center">unlimited</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <p class="mb-0 text-center">unlimited</p>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Email service</p>
-            <div class="custom-tooltip-container mx-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
-                  stroke="white"
-                  stroke-opacity="0.7"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="custom-tooltip-text"
-                >Use our email module from your code to send emails to your users securely</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center">w/ genezio branding</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">User authentication service</p>
-            <div class="custom-tooltip-container mx-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
-                  stroke="white"
-                  stroke-opacity="0.7"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="custom-tooltip-text"
-                >Build your own auth flows, works on top of PostgreSQL</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center">
-            10,000 sign-ins/year <br />
-            <span style="opacity: 0.6"> for all free projects </span>
-          </p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="mb-0 text-center">unlimited</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <p class="mb-0 text-center">unlimited</p>
-        </div>
-      </div>
-
-      {{/* separator ROW */}} {{/*
-      <div style="height: 100px" class="fixed-width-row">
-        <div
-          class="fixed-width-col-space biggerCol"
-          style="border-left: 1px solid rgba(255, 255, 255, 0.1)"
-        ></div>
-        <div style="border: none" class="fixed-width-col"></div>
-        <div style="border: none" class="fixed-width-col"></div>
-        <div
-          class="fixed-width-col-space"
-          style="border-right: 1px solid rgba(255, 255, 255, 0.1)"
-        ></div>
-      </div>
-      */}} {{/* Row */}} {{/*
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol biggerCol">
-          <p class="mb-0 py-4">Genezio Cloud</p>
-        </div>
-        <div class="fixed-width-col">
-          <h4 class="text-center mb-2 pb-1">Hobby</h4>
-          <p class="text-center m-0">Free</p>
-        </div>
-        <div class="fixed-width-col">
-          <h4 class="text-center mb-2 pb-1">Professional</h4>
-          <p class="text-center m-0">Starting at $50/project/month</p>
-        </div>
-        <div class="fixed-width-col">
-          <h4 class="text-center mb-2 pb-1">Enterprise</h4>
-          <p class="text-center m-0">Starting at $2500</p>
-        </div>
-      </div>
-      */}} {{/* ROW */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Number of Databases</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center">1</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="mb-0 text-center">5</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <p class="mb-0 text-center">10</p>
-        </div>
-      </div>
-      {{/* ROW */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Database Storage</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center">0.5 GiB</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="mb-0 text-center">10 GiB</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <p class="mb-0 text-center">50 GiB</p>
-        </div>
-      </div>
-
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-start flex-column">
-            <p class="mb-0 pt-4">Database Compute (monthly)</p>
-
-            <p class="opacity-50">Based on 0.5 vCPU, 1GB RAM</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <div class="d-flex flex-column align-items-end align-items-md-center">
-            <p class="mb-0 text-center">90 hours</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <div class="d-flex flex-column align-items-end align-items-md-center">
-            <p class="mb-0 text-center">300 hours</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <div>
-            <p class="mb-0 text-center">750 hours</p>
-          </div>
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Database Compute Size</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="mb-0 text-center"></p>
-          <div class="d-flex flex-column align-items-end align-items-md-center">
-            <p class="mb-0 text-center">0.5 vCPU, 1 GB RAM</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <div class="d-flex flex-column align-items-end align-items-md-center">
-            <p class="mb-0 text-center">Up to 4 vCPU, 16 GB RAM</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <div class="d-flex flex-column align-items-end align-items-md-center">
-            <p class="mb-0 text-center">Up to 8 vCPU, 32 GB RAM</p>
-          </div>
-        </div>
-      </div>
-
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Queue connector - via Upstash</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">PostgreSQL connector - via Neon</p>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-check-icon.svg" alt="table-x" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Redis connector - via Upstash</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Bring your own database/connector</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <img src="/images/table-check-icon.svg" alt="table-check" />
-        </div>
-      </div>
-      {{/* Row */}} {{/*
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <div class="d-flex align-items-center">
-            <p class="mb-0 py-4">Genezio-provisioned databases</p>
-
-            <div class="custom-tooltip-container mx-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
-                  stroke="white"
-                  stroke-opacity="0.7"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="custom-tooltip-text"
-                >No need to worry about 3rd party database provisioning. Get fast, reliable Genezio
-                databases. SQL, NoSQL, Cache</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="text-center mb-0">coming soon</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Professional</p>
-          <p class="text-center mb-0">coming soon</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Enterprise</p>
-          <p class="text-center mb-0">coming soon</p>
-        </div>
-      </div>
-      */}} {{/* Row */}}
-      <div class="fixed-width-row">
-        <div class="fixed-width-col biggerCol">
-          <p class="mb-0 py-4">Support</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Hobby</p>
-          <p class="text-center mb-0">best effort</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Pro</p>
-          <p class="text-center mb-0">premium</p>
-        </div>
-        <div class="fixed-width-col">
-          <p class="mobilePlanTitle">Expert</p>
-          <div class="d-flex align-items-center justify-content-center">
-            <p class="text-center mb-0">priority</p>
-            <div class="custom-tooltip-container mx-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
-                  stroke="white"
-                  stroke-opacity="0.7"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span class="custom-tooltip-text-left"
-                >24x7 support and professional services one hour per week included for onboarding or
-                other issues</span
-              >
-            </div>
-          </div>
-        </div>
+      <div class="fixed-width-row stickyHeader">
+        <div style="border: none" class="fixed-width-col biggerCol"></div>
+        <div style="border: none" class="fixed-width-col">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-normal"
+            style="height: 48px"
+            type="submit"
+            href="https://genezio.com/docs/getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-semibold"
+            style="height: 48px"
+            type="submit"
+            href="https://app.genez.io/dashboard"
+            target="_blank"
+          >
+            Start your free trial
+          </a>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-semibold"
+            style="height: 48px"
+            type="submit"
+            href="mailto:contact@genez.io"
+            target="_blank"
+          >
+            Contact Us
+          </a>
+        </div>
+        <!-- Add more columns as needed -->
       </div>
     </div>
-
-    {{/* Db pricing */}}
 
     <div style="margin-top: 40px" class="px-md-0 pb-3 mx-1">
       <p
@@ -1349,14 +806,10 @@
             </div>
           </div>
         </div>
-
-        {{/* */}}
       </div>
     </div>
 
-    {{/* start of used and trusted at */}} {{/*
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0px -40px" />
-    */}}
+    {{/* start of used and trusted at */}}
     <p style="font-size: 12px" class="text-success fw-bold text-center mb-4 pb-3">
       USED AND TRUSTED AT
     </p>
@@ -1444,26 +897,6 @@
   </div>
 </div>
 
-{{/*
-<div class="position-relative">
-  <img
-    class="pe-none d-none d-lg-block d-xl-block"
-    src="/images/wave.svg"
-    style="
-      mix-blend-mode: screen;
-      filter: grayscale(50%);
-      opacity: 0.3;
-      position: absolute;
-      top: 0px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
-    "
-    alt="howGenezioWork"
-  />
-</div>
-*/}}
-
 <div class="position-relative">
   <img
     class="pe-none d-lg-block d-xl-block"
@@ -1492,535 +925,5 @@
     "
   ></div>
 </div>
-
-<script>
-  const hobbistCardContent = `
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/cost-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">No credit card required</h4>
-              <p class="opacity-50 mb-0">free forever</p>
-            </div>
-          </div>
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/unlimited-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Unlimited projects</h4>
-              <p class="opacity-50 mb-0">non-commercial, academic, personal</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/deploy-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Deploy to production with 1 click</h4>
-              <p class="opacity-50 mb-0">auto-scaling backends and CDN frontends</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/env-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Local environments</h4>
-              <p class="opacity-50 mb-0">per project</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/collaboration-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Collaboration</h4>
-              <p class="opacity-50 mb-0">unlimited</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/database-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Free database - PostgreSQL, MongoDB, Redis</h4>
-              <p class="opacity-50 mb-0">one per project, free tier</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/auth-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">User Authentication, Cron jobs, Queues, Email Service</h4>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/community-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Community support</h4>
-            </div>
-          </div>
-    `;
-
-  const proCardContent = `
-<div class="d-flex perkWrap align-items-center">
-            <img src="/images/cost-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Flat fee</h4>
-              <p class="opacity-50 mb-0">no surprises</p>
-            </div>
-          </div>
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/unlimited-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Projects</h4>
-              <p class="opacity-50 mb-0">1 commercial, unlimited non-commercial</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/deploy-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Deploy to production with 1 click</h4>
-              <p class="opacity-50 mb-0">auto-scaling backends and CDN frontends</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/env-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Multiple staging and local environments</h4>
-              <p class="opacity-50 mb-0">per project with CI/CD</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/collaboration-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Collaboration</h4>
-              <p class="opacity-50 mb-0">unlimited</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/database-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">PostgreSQL, MongoDB, Redis</h4>
-              
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/auth-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">User Authentication, Cron jobs, Queues, Email Service</h4>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/community-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Premium support</h4>
-            </div>
-          </div>
-    `;
-
-  const enterpriseCardContent = `
-<div class="d-flex perkWrap align-items-center">
-            <img src="/images/cost-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Enterprise account</h4>
-              <p class="opacity-50 mb-0">custom price</p>
-            </div>
-          </div>
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/unlimited-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Unlimited projects</h4>
-              <p class="opacity-50 mb-0">enterprise, commercial</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/deploy-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Deploy to production with 1 click</h4>
-              <p class="opacity-50 mb-0">on your infrastructure</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/env-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Multiple staging and local environments</h4>
-              <p class="opacity-50 mb-0">per project w/ account management and audit</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/collaboration-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Collaboration</h4>
-              <p class="opacity-50 mb-0">unlimited w/ account management and audit</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/database-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">PostgreSQL, MongoDB, Redis</h4>
-              <p class="opacity-50 mb-0">pay-as-you-go integrations</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/auth-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">User Authentication, Cron jobs, Queues, Email Service</h4>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/community-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Platinum support</h4>
-            </div>
-          </div>
-    `;
-
-  const expertCardContent = `
-  <div class="d-flex perkWrap align-items-center">
-            <img src="/images/cost-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Flat fee</h4>
-              <p class="opacity-50 mb-0">no surprises</p>
-            </div>
-          </div>
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/unlimited-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Projects</h4>
-              <p class="opacity-50 mb-0">5 commercial, unlimited non-commercial</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/deploy-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">Deploy to production with 1 click</h4>
-              <p class="opacity-50 mb-0">auto-scaling backends and CDN frontends</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/env-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Multiple staging and local environments</h4>
-              <p class="opacity-50 mb-0">per project with CI/CD</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/collaboration-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Collaboration</h4>
-              <p class="opacity-50 mb-0">unlimited</p>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/database-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">PostgreSQL, MongoDB, Redis</h4>
-              
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/auth-icon.svg" />
-            <div class="perkTitle">
-              <h4 class="m-0">User Authentication, Cron jobs, Queues, Email Service</h4>
-            </div>
-          </div>
-
-          <div class="d-flex perkWrap align-items-center">
-            <img src="/images/community-icon.svg" />
-
-            <div class="perkTitle">
-              <h4 class="m-0">Priority support</h4>
-            </div>
-          </div>
-  `;
-
-  const hobbistCard = document.getElementById("hobbist");
-  const proCard = document.getElementById("pro");
-  const enterpriseCard = document.getElementById("enterprise");
-  const expertCard = document.getElementById("expert");
-
-  // buttons wrap
-  const buttonsWrap = document.getElementById("buttonsWrap");
-
-  // plan perks wrap
-  const planPerks = document.getElementById("planPerks");
-
-  // cards actions
-  const planTitle = document.getElementById("planTitle");
-  document.getElementById("mobile-planPerks-hobby").innerHTML = hobbistCardContent;
-  hobbistCard.addEventListener("click", () => {
-    planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your Hobby account
-    </h2>`;
-
-    document.getElementById("mobile-planPerks-hobby").innerHTML = hobbistCardContent;
-    document.getElementById("mobile-planPerks-pro").innerHTML = "";
-    document.getElementById("mobile-planPerks-enterprise").innerHTML = "";
-    document.getElementById("mobile-planPerks-expert").innerHTML = "";
-
-    buttonsWrap.innerHTML = `
-      <a
-            class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
-            style="height: 48px"
-            type="submit"
-            href="https://genezio.com/docs/getting-started"
-            target="_blank"
-          >
-            Get started
-          </a>`;
-    setActiveCard(hobbistCard);
-
-    planPerks.innerHTML = hobbistCardContent;
-  });
-
-  {
-    {
-      /*  Click on pro card  */
-    }
-  }
-  proCard.addEventListener("click", () => {
-    planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your Pro account
-    </h2>`;
-
-    buttonsWrap.innerHTML = `
-      <a
-            class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
-            style="height: 48px"
-            type="submit"
-            href="https://genezio.com/docs/getting-started"
-            target="_blank"
-          >
-            Try then buy
-          </a>`;
-    setActiveCard(proCard);
-
-    document.getElementById("mobile-planPerks-hobby").innerHTML = "";
-    document.getElementById("mobile-planPerks-pro").innerHTML = proCardContent;
-    document.getElementById("mobile-planPerks-enterprise").innerHTML = "";
-    document.getElementById("mobile-planPerks-expert").innerHTML = "";
-
-    planPerks.innerHTML = proCardContent;
-  });
-
-  {
-    {
-      /*  Click on expert card  */
-    }
-  }
-  expertCard.addEventListener("click", () => {
-    planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your Expert account
-    </h2>`;
-
-    buttonsWrap.innerHTML = `
-      <a
-            class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
-            style="height: 48px"
-            type="submit"
-            href="https://genezio.com/docs/getting-started"
-            target="_blank"
-          >
-            Try then buy
-          </a>`;
-    setActiveCard(proCard);
-
-    document.getElementById("mobile-planPerks-hobby").innerHTML = "";
-    document.getElementById("mobile-planPerks-pro").innerHTML = "";
-    document.getElementById("mobile-planPerks-enterprise").innerHTML = "";
-    document.getElementById("mobile-planPerks-expert").innerHTML = expertCardContent;
-
-    setActiveCard(expertCard);
-    planPerks.innerHTML = expertCardContent;
-  });
-
-  {
-    {
-      /*  Click on enterprise card card  */
-    }
-  }
-  enterpriseCard.addEventListener("click", () => {
-    planTitle.innerHTML = `<h2 id="planTitle" class="fw-bold">
-        Your Enterprise account
-    </h2>`;
-
-    document.getElementById("mobile-planPerks-enterprise").innerHTML = enterpriseCardContent;
-    document.getElementById("mobile-planPerks-hobby").innerHTML = "";
-    document.getElementById("mobile-planPerks-pro").innerHTML = "";
-    document.getElementById("mobile-planPerks-expert").innerHTML = "";
-
-    buttonsWrap.innerHTML = `
-      <a
-            class="btn btn-primary d-flex justify-content-center align-items-center fw-semibold border-0 px-4"
-            style="height: 48px"
-            type="submit"
-            href="mailto:contact@genez.io"
-            target="_blank"
-          >
-            Contact us
-          </a>`;
-    setActiveCard(enterpriseCard);
-
-    planPerks.innerHTML = enterpriseCardContent;
-  });
-
-  const activeCheckBoxContent = `
-  <svg
-    width="20"
-    height="20"
-    style="margin-right: 24px;"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="#F9F5FF" />
-    <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#7F56D9" />
-    <circle cx="10" cy="10" r="4" fill="#7F56D9" />
-  </svg>
-`;
-
-  const defaultCheckBoxContent = `
-  <div id="hobbyCheckbox" class="checkBox"></div>
-`;
-
-  const hobbyCheckbox = document.getElementById("hobbyCheckbox");
-  const proCheckbox = document.getElementById("proCheckbox");
-  const enterpriseCheckbox = document.getElementById("enterpriseCheckbox");
-  const expertCheckbox = document.getElementById("expertCheckbox");
-
-  // Function to toggle the SVG content based on the active checkbox
-  function toggleSVG(checkbox) {
-    // Remove the content from all checkboxes
-    hobbyCheckbox.innerHTML = `<div class="hobbyCheckbox"><div id="hobbyCheckbox" class="checkBox"></div></div>`;
-    proCheckbox.innerHTML = `<div id="hobbyCheckbox" class="proCheckbox"></div>`;
-    enterpriseCheckbox.innerHTML = `<div id="hobbyCheckbox" class="enterpriseCheckbox"></div>`;
-    expertCheckbox.innerHTML = `<div id="hobbyCheckbox" class="enterpriseCheckbox"></div>`;
-
-    // Add the content to the clicked checkbox
-    checkbox.innerHTML = activeCheckBoxContent;
-  }
-
-  // Add click event listeners to each checkbox
-  hobbistCard.addEventListener("click", function () {
-    toggleSVG(hobbyCheckbox);
-
-    document.getElementById("enterpriseCheckbox").classList.add("checkBox");
-    document.getElementById("proCheckbox").classList.add("checkBox");
-    document.getElementById("expertCheckbox").classList.add("checkBox");
-  });
-
-  proCard.addEventListener("click", function () {
-    document.getElementById("proCheckbox").classList.remove("checkBox");
-    document.getElementById("enterpriseCheckbox").classList.add("checkBox");
-    document.getElementById("expertCheckbox").classList.add("checkBox");
-
-    toggleSVG(proCheckbox);
-  });
-
-  expertCard.addEventListener("click", function () {
-    document.getElementById("expertCheckbox").classList.remove("checkBox");
-    document.getElementById("proCheckbox").classList.add("checkBox");
-    document.getElementById("enterpriseCheckbox").classList.add("checkBox");
-    toggleSVG(expertCheckbox);
-  });
-
-  enterpriseCard.addEventListener("click", function () {
-    document.getElementById("proCheckbox").classList.add("checkBox");
-    document.getElementById("enterpriseCheckbox").classList.remove("checkBox");
-    document.getElementById("expertCheckbox").classList.add("checkBox");
-    toggleSVG(enterpriseCheckbox);
-  });
-
-  function setActiveCard(activeCard) {
-    // Remove 'ActivePlanCard' class from all cards
-    hobbistCard.classList.remove("ActivePlanCard");
-    proCard.classList.remove("ActivePlanCard");
-    enterpriseCard.classList.remove("ActivePlanCard");
-    expertCard.classList.remove("ActivePlanCard");
-
-    // Remove 'border-gradient-green' class from all cards
-    hobbistCard.classList.remove("border-gradient-green");
-    proCard.classList.remove("border-gradient-green");
-    enterpriseCard.classList.remove("border-gradient-green");
-    expertCard.classList.remove("border-gradient-green");
-
-    // Add 'ActivePlanCard' class to the clicked card
-    activeCard.classList.add("ActivePlanCard");
-
-    // Add 'notActivePlanCard' class and 'border-gradient-green' class to the other cards
-    const otherCards = [hobbistCard, proCard, enterpriseCard, expertCard].filter(
-      (card) => card !== activeCard
-    );
-    otherCards.forEach((card) => {
-      card.classList.add("notActivePlanCard", "border-gradient-green");
-      card.classList.remove("ActivePlanCard");
-    });
-  }
-
-  // Start of yearly / monthly handle
-
-  // Get references to the Monthly and Yearly buttons
-  const monthlyButton = document.querySelector("#monthlyButton");
-  const yearlyButton = document.querySelector("#yearlyButton");
-  const yearlyPriceParagraph = document.getElementById("yearlyPriceParagraph");
-  const expertYearlyPriceParagraph = document.getElementById("expertYearlyPriceParagraph");
-  const proPrice = document.getElementById("proPriceHeading");
-  // Function to toggle active state and yearly price visibility
-  function toggleActive(button) {
-    const inactiveButton = button === monthlyButton ? yearlyButton : monthlyButton;
-    button.style.backgroundColor = "var(--bs-secondary)";
-    button.style.color = "#fff";
-    button.style.borderColor = "transparent";
-    inactiveButton.style.backgroundColor = "transparent";
-    inactiveButton.style.color = "var(--bs-secondary)";
-    inactiveButton.style.borderColor = "rgba(153, 173, 203, 0.4)";
-
-    if (button === yearlyButton) {
-      yearlyPriceParagraph.innerHTML = `
-    <span style="text-decoration: line-through;" class="opacity-50">$29</span> $23
-  `;
-
-      expertYearlyPriceParagraph.innerHTML = `
-    <span style="text-decoration: line-through;" class="opacity-50">$99</span> $79
-  `;
-    } else {
-      yearlyPriceParagraph.innerHTML = "$29";
-      expertYearlyPriceParagraph.innerHTML = "$99";
-    }
-  }
-
-  // Add click event listeners to the buttons
-  monthlyButton.addEventListener("click", function () {
-    toggleActive(monthlyButton);
-  });
-
-  yearlyButton.addEventListener("click", function () {
-    toggleActive(yearlyButton);
-  });
-</script>
 
 {{ end }}
