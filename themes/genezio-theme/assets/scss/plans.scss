@@ -76,6 +76,18 @@
 }
 
 @media (max-width: 768px) {
+  .tableMobileTitle {
+    margin-top: 50px !important;
+  }
+  .fixed-width-col div {
+    p {
+      text-align: end !important;
+    }
+  }
+  .pricingTitle {
+    margin-bottom: -30px !important;
+    margin-top: 50px !important;
+  }
   .biggerCol {
     padding-left: 24px !important;
     padding-top: 20px !important;
