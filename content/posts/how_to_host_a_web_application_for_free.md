@@ -16,7 +16,7 @@ meta_og_title: "How to Host a Web Application for Free"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/how to host a web app, host application, hosting an app, application server hosting, web application hosting server, free application hosting
+url: /blog/how-to-host-a-web-app-host-application-hosting-an-app-application-server-hosting-web-application-hosting-server-free-application-hosting
 ---
 
 Ever poured your heart and soul into building an awesome web app, only to hit a wall when it comes to sharing it with the world? You're not alone.
