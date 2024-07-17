@@ -81,7 +81,8 @@
   }
   .fixed-width-col div {
     p {
-      text-align: end !important;
+      // text-align: end !important;
+      text-align: start !important;
     }
   }
   .pricingTitle {
@@ -91,6 +92,8 @@
   .biggerCol {
     padding-left: 24px !important;
     padding-top: 20px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
   }
   .mobilePlanTitle {
     display: block;
