@@ -8,7 +8,7 @@ linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/communicationbreakdown.webp
 preview: Ever poured your heart and soul into building an awesome web app, only to hit a wall when it comes to sharing it with the world? You're not alone.
 # meta data start
-description: "Ever poured your heart and soul into building an awesome web app, only to hit a wall when it comes to sharing it with the world? You're not alone."
+description: "Discover how to host your web app for free with our step-by-step guide. Learn about free hosting platforms, including Genezio, and how to prepare your app for launch."
 meta_og_url: "https://genezio.com/blog/genezio-functions-reduce-cold-start-times/"
 meta_og_image: "https://genezio.com/images/communicationbreakdown.webp"
 meta_og_title: "How to Host a Web Application for Free"
