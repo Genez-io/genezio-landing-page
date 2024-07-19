@@ -28,7 +28,7 @@ Better cold start performance translates to a better user experience, as applica
 
 **Key takeaways:**
 
-- For Genezio Functions, the cold start response times are significantly lower than those of other platforms. The distribution is tight, and the median is around 78ms, indicating very fast cold start times.
+- For Genezio Functions, the cold start response times are significantly lower than those of other platforms. The distribution is tight, and the median is around 54ms, indicating very fast cold start times.
 
 - Compared to GCP, Vercel, and Netlify, Genezio has a narrower distribution (the height of the box), indicating reliability and predictability.
 
