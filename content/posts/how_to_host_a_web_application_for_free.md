@@ -57,7 +57,7 @@ It's like renting a space for your storefront in a bustling marketplace (the int
 
 **How to host a web app: A world of options**
 
-There are {{< external-link link="https://www.techradar.com/web-hosting/what-are-the-different-types-of-web-hosting" >}}several ways to host your web app{{< /external-link >}} , each with its own pros and cons:
+There are {{< external-link nofollow="true" link="https://www.techradar.com/web-hosting/what-are-the-different-types-of-web-hosting" >}}several ways to host your web app{{< /external-link >}} , each with its own pros and cons:
 
 - **Traditional web hosting:** This is like renting a physical storefront. You get a dedicated space on a server, but you're responsible for managing the infrastructure, security, and maintenance. This can be a good option for larger businesses with the resources to handle server management, but it can be overwhelming for smaller projects or beginners.
 
@@ -69,15 +69,15 @@ There are {{< external-link link="https://www.techradar.com/web-hosting/what-are
 
 - **Serverless Hosting:** This is the new kid on the block when it comes to how to host a web app, and it's a game-changer for many developers. With serverless hosting, you don't have to worry about managing servers at all. Your app's code runs on demand, triggered by events like user requests. This is incredibly cost-effective, as you only pay for the actual execution time of your code.
 
-{{< external-link link="https://www.youtube.com/watch?v=ep3FPI3Iw-4" >}}5 Different Types of Web Hosting {{< /external-link >}}
+{{< external-link nofollow="true" link="https://www.youtube.com/watch?v=ep3FPI3Iw-4" >}}5 Different Types of Web Hosting {{< /external-link >}}
 
 ## Can I host my own web app?
 
-Technically, yes, {{< external-link link="https://stablepoint.com/blog/how-to-host-your-own-website" >}}you can host your own web app{{< /external-link >}} on your personal computer or a server you own.
+Technically, yes, {{< external-link nofollow="true" link="https://stablepoint.com/blog/how-to-host-your-own-website" >}}you can host your own web app{{< /external-link >}} on your personal computer or a server you own.
 
 However, this isn't recommended for most people, especially beginners.
 
-{{< external-link link="https://directus.io/blog/pros-and-cons-of-self-hosting-vs-cloud" >}}Self-hosting requires{{< /external-link >}} technical expertise, a reliable internet connection, and the ability to handle security, maintenance, and potential downtime.
+{{< external-link nofollow="true" link="https://directus.io/blog/pros-and-cons-of-self-hosting-vs-cloud" >}}Self-hosting requires{{< /external-link >}} technical expertise, a reliable internet connection, and the ability to handle security, maintenance, and potential downtime.
 
 It's like building your own storefront from scratch using bricks and mortar. Sure, you can build your own building, but you need to know what you're doing, and it's never not going to be a lot of work.
 
@@ -103,7 +103,7 @@ First and foremost, your code needs to be in tip-top shape. This means:
 
 **Version control: Your app's time machine**
 
-If you're not already using a version {{< external-link link="https://git-scm.com/" >}}control system like Git{{< /external-link >}}, now's the time to start.
+If you're not already using a version {{< external-link nofollow="true" link="https://git-scm.com/" >}}control system like Git{{< /external-link >}}, now's the time to start.
 
 Git is like a time machine for your code, allowing you to track changes, revert to previous versions, and collaborate with others seamlessly. It's an essential tool for any developer, especially when working on a web app that will be deployed to a live environment.
 
@@ -197,12 +197,12 @@ Snagging the ideal domain takes a bit of thought, but it's worth the effort:
 
 Tools for this include:
 
-- {{< external-link link="https://www.godaddy.com/" >}} GoDaddy: {{< /external-link >}} The big kahuna of domain registrars, offering a massive selection of domains and additional services like hosting and website builders.
-- {{< external-link link="https://www.namecheap.com/" >}} Namecheap: {{< /external-link >}} Known for its competitive pricing and excellent customer support, Namecheap is a popular choice for budget-conscious users.
-- {{< external-link link="https://domains.google.com/" >}} Google Domains: {{< /external-link >}} Google's own domain registrar, offering a simple, user-friendly interface and seamless integration with other Google services.
-- {{< external-link link="https://www.hover.com/" >}} Hover: {{< /external-link >}} A no-frills registrar that focuses on domains and email, perfect for those who want a straightforward experience.
-- {{< external-link link="http://Domain.com" >}}Domain.com: {{< /external-link >}} A well-established registrar with a wide range of domain extensions and additional services like web hosting and SSL certificates.
-- {{< external-link link="https://porkbun.com/" >}}Porkbun: {{< /external-link >}} A quirky registrar known for its playful branding and unique domain auctions, offering a fun and affordable way to find your perfect domain.
+- {{< external-link nofollow="true" link="https://www.godaddy.com/" >}} GoDaddy: {{< /external-link >}} The big kahuna of domain registrars, offering a massive selection of domains and additional services like hosting and website builders.
+- {{< external-link nofollow="true" link="https://www.namecheap.com/" >}} Namecheap: {{< /external-link >}} Known for its competitive pricing and excellent customer support, Namecheap is a popular choice for budget-conscious users.
+- {{< external-link nofollow="true" link="https://domains.google.com/" >}} Google Domains: {{< /external-link >}} Google's own domain registrar, offering a simple, user-friendly interface and seamless integration with other Google services.
+- {{< external-link nofollow="true" link="https://www.hover.com/" >}} Hover: {{< /external-link >}} A no-frills registrar that focuses on domains and email, perfect for those who want a straightforward experience.
+- {{< external-link nofollow="true" link="http://Domain.com" >}}Domain.com: {{< /external-link >}} A well-established registrar with a wide range of domain extensions and additional services like web hosting and SSL certificates.
+- {{< external-link nofollow="true" link="https://porkbun.com/" >}}Porkbun: {{< /external-link >}} A quirky registrar known for its playful branding and unique domain auctions, offering a fun and affordable way to find your perfect domain.
 
 **Connecting your domain**
 
@@ -220,11 +220,11 @@ Now you're prepped and ready, let's dive into the free hosting options out there
 
 Many popular application server hosting providers offer free tiers to entice you into their ecosystem. These can be a great way to dip your toes into the water and test out their features before committing to a paid plan. Some popular options include:
 
-- {{< external-link link="https://www.heroku.com/" >}}Heroku: {{< /external-link >}} Heroku's free tier is perfect for hobby projects and experimentation. It's easy to use and offers a seamless deployment experience. However, it comes with resource limitations and may not be suitable for high-traffic or resource-intensive apps.
+- {{< external-link nofollow="true" link="https://www.heroku.com/" >}}Heroku: {{< /external-link >}} Heroku's free tier is perfect for hobby projects and experimentation. It's easy to use and offers a seamless deployment experience. However, it comes with resource limitations and may not be suitable for high-traffic or resource-intensive apps.
 
-- {{< external-link link="https://www.netlify.com/" >}}Netlify: {{< /external-link >}} If your app is primarily frontend-focused or a static site, Netlify's free tier is a fantastic option. It offers continuous deployment, a global CDN, and even serverless functions for adding dynamic elements. However, it might not be the best fit for complex backend applications.
+- {{< external-link nofollow="true" link="https://www.netlify.com/" >}}Netlify: {{< /external-link >}} If your app is primarily frontend-focused or a static site, Netlify's free tier is a fantastic option. It offers continuous deployment, a global CDN, and even serverless functions for adding dynamic elements. However, it might not be the best fit for complex backend applications.
 
-- {{< external-link link="https://vercel.com/" >}}Vercel: {{< /external-link >}} Similar to Netlify, Vercel excels at hosting frontend projects and serverless functions. Its free tier is generous and includes features like image optimization and preview deployments. However, like Netlify, it might not be ideal for apps with extensive backend requirements.
+- {{< external-link nofollow="true" link="https://vercel.com/" >}}Vercel: {{< /external-link >}} Similar to Netlify, Vercel excels at hosting frontend projects and serverless functions. Its free tier is generous and includes features like image optimization and preview deployments. However, like Netlify, it might not be ideal for apps with extensive backend requirements.
 
 **Dedicated free hosting platforms: No frills, just hosting**
 
