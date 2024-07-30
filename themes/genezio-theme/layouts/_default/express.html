@@ -517,7 +517,6 @@ backend:
   functions:
     - name: test-fn
       path: ./
-      type: aws
       handler: handler
       entry: app.mjs
 `}}{{ $opts := dict "style" "base16-snazzy" }}{{ transform.Highlight $input "yaml" $opts }}</code>
