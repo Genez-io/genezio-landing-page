@@ -742,22 +742,42 @@
 
     {{/* Our latest article */}} {{ with (index (where site.RegularPages "Type"
     "posts").ByDate.Reverse 0) }}
+<!--    <div class="ourLatestArticle row mx-2 px-0 px-md-3 text-white justify-content-center pb-5">-->
+<!--      <div class="px-1">-->
+<!--        <div class="col-lg col-md-12 lastArticleBackground">-->
+<!--          <a-->
+<!--            href="{{ .RelPermalink }}"-->
+<!--            target="_blank"-->
+<!--            class="card-link text-white text-decoration-none fw-semibold"-->
+<!--          >-->
+<!--            <h3>{{.Title}}</h3>-->
+<!--          </a>-->
+
+<!--          <a-->
+<!--            href="{{ .RelPermalink }}"-->
+<!--            target="_blank"-->
+<!--            class="card-link text-white text-decoration-none fw-semibold"-->
+<!--            >Read more -></a-->
+<!--          >-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <div class="ourLatestArticle row mx-2 px-0 px-md-3 text-white justify-content-center pb-5">
       <div class="px-1">
         <div class="col-lg col-md-12 lastArticleBackground">
           <a
-            href="{{ .RelPermalink }}"
-            target="_blank"
-            class="card-link text-white text-decoration-none fw-semibold"
+                  href="/blog/nextj-hosting-provider/"
+                  target="_blank"
+                  class="card-link text-white text-decoration-none fw-semibold"
           >
-            <h3>{{.Title}}</h3>
+            <h3>Best Nextjs Hosting Platforms for 2024</h3>
           </a>
 
           <a
-            href="{{ .RelPermalink }}"
-            target="_blank"
-            class="card-link text-white text-decoration-none fw-semibold"
-            >Read more -></a
+                  href="/blog/nextj-hosting-provider/"
+                  target="_blank"
+                  class="card-link text-white text-decoration-none fw-semibold"
+          >Read more -></a
           >
         </div>
       </div>
