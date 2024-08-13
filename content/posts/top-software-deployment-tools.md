@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/top_software_deployment_tools.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-# url: /top-software-deployment-tools
+url: /top-software-deployment-tools
 ---
 
 Having the right software deployment tool can save companies {{< external-link link="https://cloud.google.com/resources/roi-of-devops-transformation-whitepaper?hl=en" >}}millions of dollars{{< /external-link >}} . A whitepaper commissioned by Google even estimated that a company of 8,500 technical workers could save close to {{< external-link link="https://cloud.google.com/blog/products/application-development/show-me-the-money-how-you-can-see-returns-up-to-259m-with-a-devops-transformation" >}}$10 million a year{{< /external-link >}} just because a good DevOps and deployment strategy would cut down their downtime. And that’s not counting the actual business gains that come from a good software deployment tool.
