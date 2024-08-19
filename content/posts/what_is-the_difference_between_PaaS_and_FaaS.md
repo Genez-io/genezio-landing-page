@@ -192,4 +192,4 @@ Both models serve different business and project needs. In any case, a niche, se
 
 Genezio offers a true pay-as-you-go serverless model with typesafe methods, so that users can focus on running their business or making sure their solution is better than the competition. And that’s precisely what investors and users will demand, but crashes and bugs won’t allow doing. {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up{{< /external-link >}} now to try the platform and start deploying for free. It only takes a few clicks to get started building your serverless application, and you can build an unlimited number of projects with the Hobby account.
 
-To learn more about the advantages of FaaS, typesafe serverless platforms with unlimited builds, visit {{< external-link link="http://genezio.com" >}}Genezio.com{{< /external-link >}}.
+To learn more about the advantages of FaaS, typesafe serverless platforms with unlimited builds, visit {{< external-link link="https://genezio.com" >}}Genezio.com{{< /external-link >}}.
