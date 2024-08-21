@@ -8,19 +8,19 @@ linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/effortlessly-import-your-github-projects-with-genezio.webp
 preview: "At Genezio, we’re all about making the deployment process as seamless as possible. Whether you're a seasoned developer or just getting started, deploying your projects should be quick, easy, and efficient."
 description: "Effortlessly import from Github and deploy your full-stack projects (Next.js, Express.js, React, Vue, Angular)"
-meta_og_url: "https://genezio.com/blog/import-github-projects/"
+meta_og_url: "https://genezio.com/blog/import-github-projects-genezio/"
 meta_og_image: "https://genez.io/images/effortlessly-import-your-github-projects-with-genezio.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /import-github-projects/
+url: /import-github-projects-genezio/
 ---
 
 At Genezio, we’re all about making the deployment process as seamless as possible. Whether you're a seasoned developer or just getting started, deploying your projects should be quick, easy, and efficient. That’s why we’ve made it incredibly simple to import your existing projects into Genezio.
 
-In this article, we'll guide you through the steps to bring your GitHub projects to Genezio, so you can spend more time building and less time on deployment.
-
 Genezio provides a powerful platform that’s optimized for deploying full-stack projects, including frameworks like Next.js, Express.js, React, Vue, Angular. When you use one of Genezio's {{< external-link link="https://genezio.com/docs/learn-more/supported-languages/" >}}supported frameworks{{< /external-link >}}, we’ll automatically detect your setup and apply the best build and deployment configurations for your project.
+
+In this article, we'll guide you through the steps to bring your GitHub projects to Genezio, so you can spend more time building and less time on deployment.
 
 ## Step-by-Step Guide to Importing and Deploying Your Project
 
