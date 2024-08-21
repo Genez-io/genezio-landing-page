@@ -22,7 +22,7 @@ In this article, we'll guide you through the steps to bring your GitHub projects
 
 Genezio provides a powerful platform that’s optimized for deploying full-stack projects, including frameworks like Next.js, Express.js, React, Vue, Angular. When you use one of Genezio's {{< external-link link="https://genezio.com/docs/learn-more/supported-languages/" >}}supported frameworks{{< /external-link >}}, we’ll automatically detect your setup and apply the best build and deployment configurations for your project.
 
-### Step-by-Step Guide to Importing and Deploying Your Project
+## Step-by-Step Guide to Importing and Deploying Your Project
 
 1. **Connect to Your GitHub Account**
    Getting started is simple. Navigate to the {{< external-link link="http://app.genez.io/auth/login?redirect=new-project" >}}New Project page{{< /external-link >}} on Genezio, and under the "Import Git Repository" section, connect the GitHub account that you would like to import your project from. Follow the prompts to securely sign in to your GitHub account.
