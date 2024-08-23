@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
-thumbnail: /images/fosdem-2024.webp
+thumbnail: /images/optimize_expressjs_apps.webp
 preview: "Discover best practices for optimizing Express.js development with serverless architecture and CDN deployment on Genezio"
 # meta data start
 description: "Learn how to optimize your Express.js development by implementing serverless architecture and CDN deployment. Explore how Genezio’s platform enhances performance, scalability, and cost-efficiency, making it easier to build and deploy modern web applications"
 meta_og_url: "https://genezio.com/blog/optimize-expressjs-apps"
-meta_og_image: "https://genezio.com/images/fosdem-2024.webp"
+meta_og_image: "https://genezio.com/images/optimize_expressjs_apps.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
