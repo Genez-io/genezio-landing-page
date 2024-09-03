@@ -975,15 +975,14 @@
     return url.slice(0, qIndex + 1) + addQueryParams.toString();
   }
 
-  const loginButton = document.getElementById('login-navbar');
-  loginButton.href = mergeQueryParams(loginButton.href, new URLSearchParams(window.location.search));
+  window.addEventListener("DOMContentLoaded", () => {
+    const allAnchorTags = document.querySelectorAll('a');
+    for (const anchorTag of allAnchorTags) {
+      if (!anchorTag.href.startsWith('https://') && !anchorTag.href.startsWith('http://')) {
+        continue;
+      }
 
-  const startForFreeButton = document.getElementById('start-for-free-navbar');
-  startForFreeButton.href = mergeQueryParams(startForFreeButton.href, new URLSearchParams(window.location.search));
-
-  const loginButtonMobile = document.getElementById('login-navbar-mobile');
-  loginButtonMobile.href = mergeQueryParams(loginButtonMobile.href, new URLSearchParams(window.location.search));
-
-  const startForFreeButtonMobile = document.getElementById('start-for-free-navbar-mobile');
-  startForFreeButtonMobile.href = mergeQueryParams(startForFreeButtonMobile.href, new URLSearchParams(window.location.search));
+      anchorTag.href = mergeQueryParams(anchorTag.href, new URLSearchParams(window.location.search));
+    }
+  });
 </script>
