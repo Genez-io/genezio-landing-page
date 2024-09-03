@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/genezioandautomation.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /best-serverless-platforms-providers/
+url: /blog/best-serverless-platforms-providers/
 ---
 
 The switch to serverless computing can help startups save thousands of dollars on cloud costs. A recent case study reported how a startup was spending {{< external-link link="https://www.samo.is/blog/case-study/how-serverless-computing-saved-a-statup-thousands-oncloud-cost?utm_source=blog-index" >}}$5,000{{< /external-link >}} per month on a {{< external-link link="https://github.com/kubernetes/kubernetes" >}}Kubernetes{{< /external-link >}} cluster to manage their microservices. By moving to a serverless architecture, the startup cut their cloud bill to $400-$600 per month.
