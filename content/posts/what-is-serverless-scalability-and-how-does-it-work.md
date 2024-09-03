@@ -115,4 +115,4 @@ Also, if you don't have to do things like restarting servers, fixing problems wi
 
 {{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}}, a serverless platform that can run as a FaaS provider as well, is a practical example of serverless scalability. It automatically scales applications based on the volume of traffic. Applications running on Genezio can handle sudden increases in users without issues. Developers have deployed their full-stack web apps **on Genezio in minutes**. And the serverless scalability of these typesafe web apps occurs in an instant.
 
-**To learn more about serverless scalability and its benefits, visit** {{< external-link link="http://genezio.com" >}} Genezio.com{{< /external-link >}}.
+**To learn more about serverless scalability and its benefits, visit** {{< external-link link="https://genezio.com" >}} Genezio.com{{< /external-link >}}.
