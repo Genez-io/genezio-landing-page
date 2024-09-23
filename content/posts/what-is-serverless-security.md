@@ -102,4 +102,4 @@ Genezio is a type-safe serverless platform so that developers can build full-sta
 
 Genezio also throws the business logic to the backend so that accessing it becomes harder for attackers. And even the {{< external-link link="https://genezio.com/docs/cli-tool/#cli-environment-variables" >}}Analytics tool{{< /external-link >}} is anonymised. That's how Genezio solves security — it has brought it to the table by design, and, like a good serverless platform should do, it takes care of it so that developers can focus on building their business.
 
-**Find out more about the benefits of serverless security and type-safe serverless development with multiple builds at {{< external-link link="http://Genezio.com" >}}Genezio.com{{< /external-link >}}.**
+**Find out more about the benefits of serverless security and type-safe serverless development with multiple builds at {{< external-link link="https://Genezio.com" >}}Genezio.com{{< /external-link >}}.**
