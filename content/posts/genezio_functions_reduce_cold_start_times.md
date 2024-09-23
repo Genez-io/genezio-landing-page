@@ -85,6 +85,6 @@ With Genezio, you can focus on building and optimizing your applications while w
 
 ## Get Started Today
 
-We invite you to try {{< external-link link="https://genezio.com/faas" >}}Genezio Functions{{< /external-link >}} and experience the future of serverless deployment.
+We invite you to try {{< external-link link="https://genezio.com/" >}}Genezio Functions{{< /external-link >}} and experience the future of serverless deployment.
 
 {{< external-link link="https://genezio.com" >}}Sign up on our platform{{< /external-link >}} and start building your first function today.
