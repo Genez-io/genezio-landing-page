@@ -18,7 +18,7 @@ url: /blog/genezio-single-click-deployments/
 
 # Streamline Your Development with Genezio’s Enhanced YAML Configuration
 
-We’re excited to announce a major update to Genezio - the ability to configure and create all your resources using a single `genezio.yaml` file. This new feature aims to simplify the deployment process, allowing developers to define functions settings, create databases, frontend setups and enable authentication. In this article, we’ll walk you through the new features and provide practical examples to enable single-click deployments for your projects.
+We’re excited to announce a major update to Genezio - the ability to configure and create all your resources using a single `genezio.yaml` file. This new feature aims to simplify the deployment process, allowing developers to define functions settings, create databases, set up frontends and enable authentication. In this article, we’ll walk you through the new features and provide practical examples to enable single-click deployments for your projects.
 
 ## Key Features
 
@@ -84,7 +84,7 @@ genezio deploy
 For a complete list of configuration options and examples, refer to the [Genezio documentation](https://genezio.com/docs/project-structure/genezio-configuration-file/).
 
 
-Genezio will automatically provision the necessary resources, deploy your backend and frontend, and set up databases and authentication as defined in the configuration file.
+Genezio will automatically provide the necessary resources, deploy your backend and frontend, and set up databases and authentication as defined in the configuration file.
 
 ## Conclusion
 
