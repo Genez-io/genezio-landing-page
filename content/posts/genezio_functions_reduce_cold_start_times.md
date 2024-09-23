@@ -18,7 +18,7 @@ customFooter: "White footer"
 readTime: 10
 ---
 
-We are excited to announce that after two years of dedicated research and development, our team has launched {{< external-link link="https://genezio.com/faas" >}}Genezio Functions{{< /external-link >}} - a fast, secure, and robust next-generation Function-as-a-Service (FaaS) platform. With Genezio Functions, developers can deploy and run code effortlessly without the need to provision or manage servers. Compared with existing platforms, Genezio FaaS reduces cold start up times and improves throughput and compute density.
+We are excited to announce that after two years of dedicated research and development, our team has launched {{< external-link link="https://genezio.com/" >}}Genezio Functions{{< /external-link >}} - a fast, secure, and robust next-generation Function-as-a-Service (FaaS) platform. With Genezio Functions, developers can deploy and run code effortlessly without the need to provision or manage servers. Compared with existing platforms, Genezio FaaS reduces cold start up times and improves throughput and compute density.
 
 ## Genezio Functions vs AWS Lambda vs GCP vs Vercel vs Netlify
 
