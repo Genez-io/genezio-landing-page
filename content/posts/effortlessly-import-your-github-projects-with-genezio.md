@@ -4,7 +4,7 @@ date: 2024-08-21
 tags:
   - Tutorials
 author: Paula Cionca
-linkedIn: https://www.linkedin.com/in/luisminv/
+linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/effortlessly-import-your-github-projects-with-genezio.webp
 preview: "At Genezio, we’re all about making the deployment process as seamless as possible. Whether you're a seasoned developer or just getting started, deploying your projects should be quick, easy, and efficient."
 description: "Effortlessly import from Github and deploy your full-stack projects (Next.js, Express.js, React, Vue, Angular)"

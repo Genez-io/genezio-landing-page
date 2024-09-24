@@ -4,7 +4,7 @@ date: 2024-04-16
 tags:
   - Learning
 author: Kristopher Sandoval
-# linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
+linkedIn: https://www.linkedin.com/in/krsando/
 thumbnail: /images/communicationbreakdown.webp
 preview: One of the most difficult parts of developing a service is managing the sheer number of connected parts.
 # meta data start

@@ -4,7 +4,6 @@ date: 2024-06-10
 tags:
   - Tutorials
 author: Virgil Turcu
-# TODO:
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
 thumbnail: /images/genezio_middleware.webp
 preview: Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database.
@@ -88,10 +87,18 @@ export function LogBeforeAndAfter(logDate: boolean) {
   return function (target: Function, context: any) {
     return function (...args: any[]) {
       const date = new Date();
-      console.log(`Before call on method ${context.name} with date: ${logDate ? date : "no date"}`);
+      console.log(
+        `Before call on method ${context.name} with date: ${
+          logDate ? date : "no date"
+        }`
+      );
       // @ts-expect-error
       const result = target.apply(this, args);
-      console.log(`After call on method ${context.name} with date: ${logDate ? date : "no date"}`);
+      console.log(
+        `After call on method ${context.name} with date: ${
+          logDate ? date : "no date"
+        }`
+      );
       return result;
     };
   };

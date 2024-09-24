@@ -4,7 +4,7 @@ date: 2024-07-08
 tags:
   - News
 author: Andreia Ocanoaia
-linkedIn: https://www.linkedin.com/in/luisminv/
+linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
 thumbnail: /images/genezio-functions-reduce-cold-start-times-compared-to-Lambda.webp
 preview: We are excited to announce that after two years of dedicated development, our team has launched Genezio Functions
 # meta data start
