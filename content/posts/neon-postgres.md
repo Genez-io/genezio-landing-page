@@ -4,7 +4,6 @@ date: 2023-11-22
 tags:
   - Tutorials
 author: Virgil Turcu
-# TODO:
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
 thumbnail: /images/genezio_neon.webp
 preview: Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching.

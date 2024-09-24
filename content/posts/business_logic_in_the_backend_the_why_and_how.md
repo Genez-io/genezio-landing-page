@@ -4,7 +4,7 @@ date: 2024-04-09
 tags:
   - Learning
 author: Kristopher Sandoval
-linkedIn: https://www.linkedin.com/company/genezio/
+linkedIn: https://www.linkedin.com/in/krsando/
 thumbnail: /images/business-logic-in-the-backend-the-why-and-how.webp
 preview: Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation.
 # meta data start

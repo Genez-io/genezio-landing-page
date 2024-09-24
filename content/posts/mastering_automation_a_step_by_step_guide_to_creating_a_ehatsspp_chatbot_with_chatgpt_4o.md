@@ -4,7 +4,7 @@ date: 2024-06-03
 tags:
   - Tutorials
 author: Cristi Miloiu
-linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
+linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
 thumbnail: /images/whatsappchatgptphoto.webp
 preview: "Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o."
 description: "Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o."

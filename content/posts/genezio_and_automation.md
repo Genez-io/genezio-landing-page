@@ -4,7 +4,7 @@ date: 2024-05-22
 tags:
   - Learning
 author: Kristopher Sandoval
-linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
+linkedIn: https://www.linkedin.com/in/krsando/
 thumbnail: /images/genezioandautomation.webp
 preview: In the modern digital landscape, APIs (Application Programming Interfaces) and web services have become the backbone of many business operations, facilitating seamless communication between different software systems and enabling the delivery of business logic at scale.
 # meta data start

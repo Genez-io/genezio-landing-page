@@ -4,7 +4,7 @@ date: 2024-05-28
 tags:
   - Learning
 author: Kristopher Sandoval
-linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
+linkedIn: https://www.linkedin.com/in/krsando/
 thumbnail: /images/opensourceconversation.webp
 preview: The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a critical driver of massive growth.
 # meta data start

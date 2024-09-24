@@ -14,11 +14,11 @@
             {{ end }}
           {{ end }}
 
-      <h1 class="text-black fw-bold mb-0 mt-2 mb-4 pb-3 pt-1">{{ .Title }}</h1>
+      <h1 class="text-black fw-bold mb-0 mt-2 mb-4 pb-3 pt-1" id="title-headline">{{ .Title }}</h1>
       {{/* TODO: replace with the photo */}}
       <div class="mb-4 mt-3 position-relative articlePhoto">
 
-      <img src="{{ .Params.thumbnail | relURL }}"class="w-100" style=" border-bottom-left-radius: 20px; border-top-right-radius: 20px;" />
+      <img src="{{ .Params.thumbnail | relURL }}"class="w-100" id="thumbnail" style=" border-bottom-left-radius: 20px; border-top-right-radius: 20px;" />
       
         {{/* read time */}}
         <div
@@ -49,10 +49,13 @@
             alt="writer-avatar"
           />
           <div class="d-flex flex-column mx-4">
-            <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold">
+            <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold" id="author">
               {{ .Params.author }}
             </p>
-            <p style="color: #525252" class="mb-0 fw-medium date">
+            <p id="linkedin-url" style="display: none;">
+              {{ .Params.linkedin }}
+            </p>
+            <p style="color: #525252" class="mb-0 fw-medium date" id="publish-date">
               {{ dateFormat "Jan 02, 2006" .Params.date }}
             </p>
           </div>
@@ -594,6 +597,44 @@ if(email){
 
 
 </script>
+
+{{/* Add post info for SEO */}}
+<script>
+  function generateJSON() {
+    const headline = document.getElementById('title-headline').textContent;
+    const image = document.getElementById("thumbnail").src;
+    const date = document.getElementById('publish-date').textContent;
+    const author = document.getElementById('author').textContent.trim();
+    const linkedInUrl = document.getElementById('linkedin-url').textContent.trim();
+    const dateHour = new Date(date).setHours(12,0,0);
+    const dateISO = new Date(dateHour).toISOString().split('.')[0] + "+03:00";
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": headline,
+      "image": [
+        image
+      ],
+      "datePublished": dateISO,
+      "dateModified": dateISO,
+      "author": [{
+      "@type": "Person",
+      "name": author,
+      "url": linkedInUrl
+      }],
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text= JSON.stringify(jsonLd);
+
+    document.head.appendChild(script);
+  }
+
+  document.addEventListener('DOMContentLoaded', generateJSON);
+</script>
+
 
 
 

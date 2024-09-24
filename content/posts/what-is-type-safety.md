@@ -4,7 +4,7 @@ date: 2024-02-21
 tags:
   - Learning
 author: Kristopher Sandoval
-linkedIn: https://www.linkedin.com/company/genezio/
+linkedIn: https://www.linkedin.com/in/krsando/
 thumbnail: /images/type-safety.webp
 preview: "Whenever we talk about technology, it’s easy to get lost in the myriad of terms, phrases, and buzzwords. These terms are often taken for granted by those in the industry, but truly understanding what these phrases mean is a huge step to ensuring that you are leveraging the appropriate solutions with the right product fit."
 # meta data start
@@ -60,11 +60,9 @@ Where this gets complicated is when types are not abundantly clear or well-defin
 // Incorrectly defined date as a string
 let date: string = "2024-02-19";
 
- // Function expecting a tuplet of integers for date processing
- function processDate(year: number, month: number, day: number): void {
-
-    console.log(`Processing date: ${year}-${month}-${day}`);
-
+// Function expecting a tuplet of integers for date processing
+function processDate(year: number, month: number, day: number): void {
+  console.log(`Processing date: ${year}-${month}-${day}`);
 }
 
 // Uncommenting the following line would result in a compilation error
