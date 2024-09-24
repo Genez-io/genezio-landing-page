@@ -4,7 +4,7 @@ date: 2024-05-07
 tags:
   - Tutorials
 author: Cristi Miloiu
-linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
+linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267
 thumbnail: /images/whatsapp.webp
 preview: "This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more."
 description: "Genezio blog: Step-by-step tutorial on creating a WhatsApp bot. Integrate the bot with WhatsApp API and automate responses."
@@ -94,7 +94,11 @@ export class BackendService {
   BUSINESS_PHONE_NUMBER_ID = process.env.BUSINESS_PHONE_NUMBER_ID;
 
   constructor() {
-    if (!this.GRAPH_API_TOKEN || !this.WEBHOOK_VERIFY_TOKEN || !this.BUSINESS_PHONE_NUMBER_ID) {
+    if (
+      !this.GRAPH_API_TOKEN ||
+      !this.WEBHOOK_VERIFY_TOKEN ||
+      !this.BUSINESS_PHONE_NUMBER_ID
+    ) {
       throw new Error("Missing environment variables");
     }
   }
