@@ -66,7 +66,7 @@ export class NewsLetterService {
 }
 ```
 
-In this example, we're creating a function and we expose an HTTP endpoint that we will later call from our static website. If you want to learn more about HTTP Calls with Genezio check our {{< external-link link="https://genezio.com/docs/features/http-methods-webhooks/" >}}docs{{< /external-link >}}.
+In this example, we're creating a function and we expose an HTTP endpoint that we will later call from our static website. If you want to learn more about HTTP Calls with Genezio check our {{< external-link link="https://genezio.com/docs/genezio-typesafe/http-methods-webhooks/" >}}docs{{< /external-link >}}.
 
 ## Handle Mailchimp API
 

@@ -506,6 +506,7 @@
               type="submit"
               href="https://app.genez.io/auth/login"
               target="_blank"
+              id="login-navbar-mobile"
             >
               Login
             </a>
@@ -515,7 +516,7 @@
               type="submit"
               href="{{ if eq .RelPermalink "/deploy-nodejs-express-on-genezio-serverless/" }}https://app.genez.io/auth/signup?redirect=express-getting-started{{ else }}https://app.genez.io/auth/signup{{ end }}"
               target="_blank"
-              id="start-for-free-navbar"
+              id="start-for-free-navbar-mobile"
             >
               Start for free
             </a>
@@ -958,6 +959,7 @@
           class="nav-link text-white opacity-75 fw-semibold mx-5"
           href="https://app.genez.io/auth/login"
           target="_blank"
+          id="login-navbar"
           rel="noopener nofollow"
           >Login</a
         >
@@ -981,4 +983,32 @@
     // Navigate to the specified section
     window.location.href = section;
   }
+
+  function mergeQueryParams(url, addQueryParams) {
+    const qIndex = url.indexOf('?');
+    if (qIndex === -1) {
+      if (addQueryParams.toString() === '') return url;
+
+      return url + '?' + addQueryParams.toString();
+    }
+
+    const urlParams = new URLSearchParams(url.slice(qIndex));
+      urlParams.forEach((value, key) => {
+      // Set or overwrite addQueryParams from urlParams
+      addQueryParams.set(key, value);
+    });
+
+    return url.slice(0, qIndex + 1) + addQueryParams.toString();
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const allAnchorTags = document.querySelectorAll('a');
+    for (const anchorTag of allAnchorTags) {
+      if (!anchorTag.href.startsWith('https://') && !anchorTag.href.startsWith('http://')) {
+        continue;
+      }
+
+      anchorTag.href = mergeQueryParams(anchorTag.href, new URLSearchParams(window.location.search));
+    }
+  });
 </script>

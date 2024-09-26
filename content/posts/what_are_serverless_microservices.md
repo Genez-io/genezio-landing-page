@@ -136,8 +136,8 @@ If you’re a first-timer, it can be hard to keep track of request flows, find d
 
 ## Start using serverless microservices now
 
-Serverless microservices have become a fundamental tool in today’s developing environment, as they help build applications that are easier to manage and scale. This is why we encourage you to make a step forward and begin your journey into serverless microservices. {{< external-link link="http://genezio.com" >}}Genezio{{< /external-link >}} is a strong starting point.
+Serverless microservices have become a fundamental tool in today’s developing environment, as they help build applications that are easier to manage and scale. This is why we encourage you to make a step forward and begin your journey into serverless microservices. {{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}} is a strong starting point.
 
 As a specialised serverless provider, Genezio easily guides businesses and developers in selecting the right serverless architecture for their current and future needs. With a true pay-as-you-go model and type-safe methods, our platform motivates developers to focus on innovation rather than infrastructure management. {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up{{< /external-link >}} now to try the platform and start building your serverless application for free. You can get started in seconds!
 
-**To learn more about the advantages of typesafe serverless platforms with unlimited builds, visit {{< external-link link="http://Genezio.com" >}}Genezio{{< /external-link >}}.**
+**To learn more about the advantages of typesafe serverless platforms with unlimited builds, visit {{< external-link link="https://Genezio.com" >}}Genezio{{< /external-link >}}.**

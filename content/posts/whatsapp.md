@@ -178,7 +178,7 @@ This structure defines the following components:
 
 This method serves as the main logic for handling incoming api requests from WhatsApp Business API, verifying the webhook, processing messages, and responding accordingly.
 
-The method uses `GenezioHttpRequest and  GenezioHttpResponse` types to answer and receive the message more easily. If you want to read more about this, I recommend you to look at the {{< external-link link="https://genezio.com/docs/features/http-methods-webhooks/" >}} documentation{{< /external-link >}}.
+The method uses `GenezioHttpRequest and  GenezioHttpResponse` types to answer and receive the message more easily. If you want to read more about this, I recommend you to look at the {{< external-link link="https://genezio.com/docs/genezio-typesafe/http-methods-webhooks/" >}} documentation{{< /external-link >}}.
 
 10. Implement the sendMessage method
 

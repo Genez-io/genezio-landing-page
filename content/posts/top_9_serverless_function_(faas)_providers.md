@@ -116,4 +116,4 @@ Serverless and FaaS providers have similar strengths — pay-per-use, scalabilit
 
 With Genezio’s predictable, affordable, true pay-as-you-go model, and typesafe methods, developers can focus on creative problem-solving without worrying about infrastructure or how the servers scale. It’s the most flexible serverless provider.
 
-**Learn more about serverless deployment and FaaS solutions at {{< external-link link="http://Genezio.com">}}Genezio{{< /external-link >}}.**
+**Learn more about serverless deployment and FaaS solutions at {{< external-link link="https://Genezio.com">}}Genezio{{< /external-link >}}.**

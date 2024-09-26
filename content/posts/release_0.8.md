@@ -40,7 +40,7 @@ Follow our step-by-step {{< external-link link="https://genezio.com/docs/feature
 
 And for the Go fans out there, we've got some good news. Genezio now has beta support for Golang. That means you can start using all our cool features with Go, trying out new things and building faster, more reliable apps. It's still in beta, but we're eager to see what you'll create.
 
-Get started {{< external-link link="https://genezio.com/docs/examples/go-experimental/getting-started" >}}here{{< /external-link >}}.
+Golang support has been temporarily suspended. However, you can explore examples for other  {{< external-link link="https://genezio.com/docs/examples/" >}}supported languages here{{< /external-link >}}.
 
 ## Enhanced Developer Documentation in SDKs
 

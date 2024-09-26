@@ -25,7 +25,7 @@ Middleware is software that acts as an intermediary layer between different appl
 
 ![alt_text](/posts/middlewareexplication.webp)
 
-Some common examples of middleware are {{< external-link link="https://genezio.com/docs/features/authentication/" >}}authentication{{< /external-link >}}, type validation, connection management, {{< external-link link="https://genezio.com/docs/features/rate-limiter/" >}}rate limiting{{< /external-link >}} etc. The importance of middleware integration is paramount in any software development process to ensure that any cross-integration problems are solved seamlessly.
+Some common examples of middleware are {{< external-link link="https://genezio.com/docs/features/authentication/" >}}authentication{{< /external-link >}}, type validation, connection management, {{< external-link link="https://genezio.com/docs/genezio-typesafe/rate-limiter/" >}}rate limiting{{< /external-link >}} etc. The importance of middleware integration is paramount in any software development process to ensure that any cross-integration problems are solved seamlessly.
 
 ## Genezio is designed for full-stack developers
 
