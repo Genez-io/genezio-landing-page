@@ -1,5 +1,5 @@
 ---
-title: Use FerretDB with Genezio
+title: "FerretDB + Genezio: Use MongoDB Drivers with PostgreSQL"
 date: 2024-09-25
 tags:
     - Tutorials
@@ -22,19 +22,23 @@ FerretDB is an open-source alternative to MongoDB that allows you to use MongoDB
 
 This tutorial will guide you through setting up FerretDB with Genezio Functions and connecting to a PostgreSQL database provided by Genezio.
 
+**TL;DR**
+
+You’ll deploy FerretDB on Genezio, connect it to a PostgreSQL database, and interact with it using MongoDB drivers—no code changes needed!
+
 ## Prerequisites
 
 -   A Genezio account. Follow this link to [sign up](https://app.genez.io/auth/signup?utm_source=genezio&utm_medium=blog&utm_campaign=ferretdb).
--   Clone or open in the browser the [FerretDB example repository](https://github.com/Genez-io/ferretdb-example)
+-   Access to the [FerretDB example repository](https://github.com/Genez-io/ferretdb-example)
 
 It is important to **open the example code** in either **the browser** or a **code editor** because this tutorial will reference the code in the repository. The example is **ready to be deployed to Genezio**, so no additional code changes from your side will be necessary.
 
 ## Deployment
 
-If you would like to deploy the example code to Genezio, you can either:
+There are two ways to deploy the FerretDB example:
 
--   Deploy the code directly from browser with our [one-click deployment button](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/ferretdb-example&utm_source=genezio&utm_medium=blog&utm_campaign=ferretdb).
--   Clone the repository, install the genezio CLI and then run `genezio deploy` in the repository root.
+-   **Automatic deployment**: Deploy the code directly from browser with our [one-click deployment button](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/ferretdb-example&utm_source=genezio&utm_medium=blog&utm_campaign=ferretdb).
+-   **Manual deployment**: Clone the repository, install the genezio CLI and then run `genezio deploy` in the repository root.
 
     ```bash
     git clone https://github.com/Genez-io/ferretdb-example.git && cd ferretdb-example
@@ -43,6 +47,8 @@ If you would like to deploy the example code to Genezio, you can either:
     ```
 
 ## Project architecture explanation
+
+The example contains a simple **Genezio serverless function** that opens a **FerretDB proxy**, connects to the proxy using **MongoDB drivers**, inserts a new document into a collection, and queries the collection for all documents. The function returns **the list of documents** as a response.
 
 ### Packing the FerretDB executable alongside your functions
 
@@ -146,12 +152,30 @@ export const handler = async (_event) => {
 
 ## Downsides of using this approach
 
--   Because the FerretDB proxy is started as a separate process when the function instance starts, it will not be automatically restarted if it crashes. This means that you need to implement a mechanism to monitor the FerretDB process and restart it if necessary.
--   Because the FerretDB proxy is started inside the function instance, you won't be able to access the connection string endpoint from the outside. This means that you won't be able to connect to the FerretDB proxy from your local machine or from a different environment. You can't use database clients such as MongoDB Compass, DBeaver or TablePlus to connect to the FerretDB proxy and inspect the database.
+-   The FerretDB proxy runs as a separate process and **won’t restart automatically** if it crashes, requiring you to implement monitoring and restart mechanisms.
+-   Since the proxy runs inside the function instance, it’s **inaccessible externally**, preventing connections from local machines or other environments. This limits the use of database clients like **MongoDB Compass**, **DBeaver**, or **TablePlus** for database inspection.
+
+## Benefits of Using FerretDB with PostgreSQL
+
+While MongoDB is a powerful database, there are several reasons why developers might prefer FerretDB, especially when working with PostgreSQL:
+
+-   Open-Source Flexibility: FerretDB is fully open-source, avoiding the licensing restrictions tied to proprietary MongoDB versions.
+
+-   Familiar MongoDB Ecosystem: FerretDB allows you to keep using MongoDB drivers and tools, meaning existing codebases can be easily migrated with minimal changes.
+
+-   PostgreSQL Stability: FerretDB leverages PostgreSQL’s stability, reliability, and powerful relational database features like ACID compliance, mature tools, and excellent performance.
+
+-   No Vendor Lock-In: With FerretDB, you’re not tied to MongoDB-specific infrastructure, giving you greater flexibility. PostgreSQL is widely supported across platforms and cloud providers.
+
+-   Cost Efficiency: PostgreSQL’s open-source nature makes it cost-effective for long-term projects, and using FerretDB helps you benefit from MongoDB’s API without the associated costs.
+
+-   Lower Latency in Some Setups: By hosting both the application and database in the same region through Genezio, you reduce latency, leading to faster query times and improved performance.
+
+-   FerretDB offers the best of both worlds by combining the flexibility of MongoDB drivers with the power of PostgreSQL, making it a powerful option for teams that want the performance and reliability of relational databases without giving up MongoDB’s document model.
 
 ## Conclusion
 
-In this tutorial, we have shown you how to set up FerretDB with Genezio Functions and connect to a PostgreSQL database provided by Genezio. We have explained the project architecture and the steps needed to deploy the example code to Genezio.
+With this setup, you can run MongoDB drivers on top of a PostgreSQL backend using FerretDB and Genezio Functions—without any heavy lifting. This solution lets you combine the scalability of Genezio with the flexibility of MongoDB drivers and the power of PostgreSQL.
 
 If you have any questions or need help with the example code, feel free to reach out to us on the [Genezio Discord server](https://discord.gg/uc9H5YKjXv).
 
