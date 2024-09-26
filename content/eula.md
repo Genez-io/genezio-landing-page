@@ -60,6 +60,8 @@ The license that is granted to You by the Company is free, solely for your perso
 - ephemeral storage 512 MB;
 - request limit size 50 MB.
 
+notwithstanding the above, users subscribed to the Free Plan are subject to certain usage limitations, which include a maximum of 3 databases per user account, a limit of 10 instances per function, and a cap of 10 parallel calls within the same function. Additionally, each function may not exceed 10,000 calls per minute. Genezio reserves the right to restrict or suspend service for any Free Plan account that exceeds these limitations or otherwise engages in activities that negatively impact the service performance or availability.
+
 ## License Restrictions
 
 You agree not to, and You will not permit others to:
