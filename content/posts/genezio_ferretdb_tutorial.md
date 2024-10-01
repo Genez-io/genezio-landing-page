@@ -1,6 +1,6 @@
 ---
 title: "FerretDB + Genezio: Use MongoDB Drivers with PostgreSQL"
-date: 2024-09-25
+date: 2024-10-01
 tags:
     - Tutorials
 author: Costin Sin
@@ -14,7 +14,7 @@ meta_og_image: "https://genezio.com/images/ferretdb-genezio.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 12
+readTime: 14
 url: /blog/use-ferretdb-with-genezio/
 ---
 
