@@ -1,6 +1,6 @@
 ---
 title: Accessing Google Sheets Data from Genezio Using a Service Account
-date: 2024-10-15
+date: 2024-10-11
 tags:
   - Tutorials
 author: Bogdan Ripa
