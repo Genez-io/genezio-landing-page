@@ -1,6 +1,6 @@
 ---
 title: How to Access Google Sheets Data Using a Service Account
-date: 2024-10-11
+date: 2024-10-14
 tags:
   - Tutorials
 author: Bogdan Ripa
