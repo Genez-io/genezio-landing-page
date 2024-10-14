@@ -57,4 +57,4 @@ The pay-as-you-go model also makes it affordable for projects with limited budge
 
 This is just one of the use cases for Genezio. Any app can be written and deployed from scratch. Unlike other tools that lock you into specific workflows, Genezio gives you the freedom to build and deploy your way. So, no matter the size of your team, if you are ready to simplify your development projects, visit our website and {{< external-link link="https://app.genez.io/auth/signup" >}}sign up{{< /external-link >}} for a free account today. In just a few clicks, you can start building full-stack applications that grow with your business.
 
-**You can start for free. To learn more about how Genezio and Neon can help you deploy quickly and affordably, visit {{< external-link link="http://Genezio.com" >}}Genezio{{< /external-link >}}.**
+**You can start for free. To learn more about how Genezio and Neon can help you deploy quickly and affordably, visit {{< external-link link="https://Genezio.com" >}}Genezio{{< /external-link >}}.**
