@@ -22,6 +22,8 @@ This tutorial will guide you through accessing a Google Sheet's data from Genezi
 
 ## Prerequisites
 
+Before you start, ensure you have the following:
+
 - A **Genezio** account.
 - A **Google Account**: Access to the Google Cloud Console.
 - An **Existing Google Spreadsheet**: A Google Sheet that you want to access.
@@ -100,7 +102,7 @@ A Service Account allows server-side applications to authenticate without user i
 
 6. **Secure the Key File**:
 
-   - **Important**: Do not commit this file to version control. It's sensitive information.
+**Important**: Do not commit this file to version control. It's sensitive information.
 
 ## Step 3: Share the Spreadsheet with the Service Account Email
 
