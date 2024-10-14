@@ -1,30 +1,32 @@
 ---
-title: Accessing Google Sheets Data from Genezio Using a Service Account
+title: How to Access Google Sheets Data Using a Service Account
 date: 2024-10-11
 tags:
   - Tutorials
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
-thumbnail: /images/full-stack-developer-tools.webp
+thumbnail: /images/google-sheets.webp
 preview: "Expose data stored in google sheets as APIs to be used in your Genezio projects."
 description: "Learn how to use Google Sheets APIs to create API endpoints. Follow our detailed guide."
 meta_og_url: "https://genezio.com/blog/google-sheets-as-apis/"
-meta_og_image: "https://genezio.com/images/full-stack-developer-tools.webp"
+meta_og_image: "https://genezio.com/images/google-sheets.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
 url: /blog/google-sheets-as-apis
 ---
 
-Accessing Google Sheets data programmatically can be essential for server-side applications that need to read or manipulate spreadsheet data without human interaction. This tutorial will guide you through accessing a Google Sheet's data from Genezio using a Service Account, which is ideal for server environments.
+Accessing Google Sheets data programmatically can be essential for server-side applications that need to read or manipulate spreadsheet data without human interaction. Whether you're automating reports, synchronizing data, or managing inventory systems, accessing Google Sheets through a Service Account provides a secure and efficient solution for backend environments.
+
+This tutorial will guide you through accessing a Google Sheet's data from Genezio using a Service Account, which is ideal for server environments.
 
 ## Prerequisites
 
 - A **Genezio** account.
-- **Google Account**: Access to the Google Cloud Console.
-- **Existing Google Spreadsheet**: A Google Sheet that you want to access.
+- A **Google Account**: Access to the Google Cloud Console.
+- An **Existing Google Spreadsheet**: A Google Sheet that you want to access.
 
-## Overview
+## Step-by-Step Guide to Access Google Sheets Data
 
 We'll cover the following steps:
 
@@ -37,7 +39,7 @@ We'll cover the following steps:
 
 ## Step 1: Enable the Google Sheets API
 
-First, enable the Google Sheets API for your project.
+To access Google Sheets programmatically, you first need to enable the Google Sheets API in your Google Cloud project.
 
 1. **Go to the [Google Cloud Console](https://console.cloud.google.com/).**
 
@@ -58,6 +60,8 @@ First, enable the Google Sheets API for your project.
    - Click **Enable APIs and Services**.
    - Search for **Google Sheets API**.
    - Click on **Google Sheets API** and then click **Enable**.
+
+   With the API enabled, your project can now interact with Google Sheets data programmatically, preparing for the next steps.
 
 ## Step 2: Create a Service Account and Generate a Key File
 
@@ -117,19 +121,24 @@ The Service Account acts like a virtual user. You need to share the spreadsheet 
 
 ## Step 4: Create a new Genezio project
 
+Genezio simplifies server-side development by providing pre-built templates that can quickly be deployed to work with various services, including Google Sheets. This makes it a great option for developers looking to build scalable, serverless applications without dealing with complex configurations.
+
 We have prepared a couple of templates for you, depending what technology you want to use. Pick one of them, then click on the "Deploy now" button from one of the following Github repositories:
 
 - [Express.js - Google Spreadsheet App](https://github.com/Genez-io/google-sheets-as-apis-expressjs?tab=readme-ov-file#deploy)
 - [Genezio Typescript - Google Spreadsheet App](https://github.com/Genez-io/google-sheets-as-apis-typesafe?tab=readme-ov-file#deploy)
+
+Pro tip: With Genezio’s serverless infrastructure, you don’t need to worry about maintaining servers or scaling your backend, making it perfect for projects where you need to scale quickly.
 
 ## Step 5: Configure your project to access the spreadsheet data
 
 With the project deployed, go in the **Edit Code** interface in the browser and open the `server/service-account-key.json` file, and paste the contents of the `service-account-key.json` file you downloaded at Step 2.5.
 
 You will now need your Spreadsheet ID. Find it by:
-  - Open your Google Sheet.
-  - The URL will look like `https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=0`.
-  - Copy the `SPREADSHEET_ID` part from the URL.
+
+- Open your Google Sheet.
+- The URL will look like `https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=0`.
+- Copy the `SPREADSHEET_ID` part from the URL.
 
 Open the `server/backend.ts` file in the **Edit Code** interface and set the `SPREADSHEET_ID` variable to your Spreadsheet ID that you just copied.
 
@@ -140,6 +149,10 @@ You can now re-deploy your project from the same **Edit Code** interface. Once t
 ## Step 7: See how this works
 
 Explore the `server/` and the `client/` folders to see how the data is being read and exposed in the application.
+
+## Conclusion
+
+By following this guide, you can programmatically access Google Sheets data through Genezio using a Service Account, a secure and scalable solution for server-side applications. Whether you’re working with Node.js, Express.js, or Typescript, these steps provide a straightforward way to connect your app to Google Sheets.
 
 ## References
 
