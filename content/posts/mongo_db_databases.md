@@ -1,11 +1,11 @@
 ---
 title: "Genezio Partners with MongoDB Atlas: Effortless NoSQL Database Creation"
-date: 2024-10-14
+date: 2024-10-15
 tags:
     - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /images/ferretdb-genezio.webp
+thumbnail: /images/mongodb-genezio.webp
 preview: Genezio users can now set up MongoDB databases! You can now easily manage your MongoDB databases alongside your serverless functions. Learn how to deploy scalable, secure NoSQL databases effortlessly!
 # meta data start
 description: Learn about the new MongoDB database feature in Genezio. Easily set up and manage MongoDB databases alongside your serverless functions.
