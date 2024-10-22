@@ -1,6 +1,6 @@
 ---
 title: "Genezio Partners with MongoDB Atlas: Effortless NoSQL Database Creation"
-date: 2024-10-15
+date: 2024-10-22
 tags:
   - News
 author: Costin Sin
@@ -16,7 +16,6 @@ customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
 url: /blog/mongo_db_databases/
-draft: true
 ---
 
 Hey developers! We’ve got some exciting news—Genezio now supports MongoDB Atlas databases! As a developer, I know how important it is to have a reliable, scalable database, and now you can easily set up and manage NoSQL databases right from the Genezio platform.

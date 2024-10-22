@@ -11,22 +11,36 @@
     <div class="row align-items-start">
       <div
         style="
-          border: 1px solid rgba(0, 250, 164, 0.3);
           background-color: rgba(255, 255, 255, 0.04);
           border-radius: 0px 20px 0px 20px;
+          border: 4px solid transparent;
         "
         class="col-12 col-md p-4"
       >
         <div class="d-flex justify-content-between">
-          <h2 class="fw-bold">Hobby</h2>
-          {{/*
-          <h2>Free <span class="fs-6 opacity-50 fw-normal">forever</span></h2>
-          */}}
+          <h2 class="fw-bold m-0">Hobby</h2>
         </div>
 
-        <p class="mt-3 mb-4 pb-2">
-          perfect for prototyping, side projects, academic work, or non-commercial projects
+        <p style="color: rgba(255, 255, 255, 0.7)" class="mt-3 mb-4 pb-2">
+          Perfect for prototyping and <br class="d-none d-md-block" />
+          showcasing side projects
         </p>
+
+        <a
+          class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-normal bg-transparent border-2"
+          style="height: 48px"
+          type="submit"
+          href="https://app.genez.io/auth/signup"
+          target="_blank"
+        >
+          Get started
+        </a>
+
+        <div class="mt-2 pt-4 d-none d-md-block">
+          <div class="pt-4 mt-4"></div>
+        </div>
+
+        <div class="mt-4 pt-2 d-md-none d-block"></div>
 
         <div>
           <div class="d-flex align-items-center mb-4">
@@ -57,46 +71,37 @@
             <img src="/images/community-icon.svg" />
             <div>
               <p class="m-0 mx-3">Community support</p>
-              {{/*
-              <p class="opacity-50 mx-3 m-0">Community</p>
-              */}}
             </div>
           </div>
         </div>
-
-        <div class="pt-2">
-          <a
-            class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-normal bg-transparent border-3"
-            style="height: 48px"
-            type="submit"
-            href="https://app.genez.io/auth/signup"
-            target="_blank"
-          >
-            Get started
-          </a>
-        </div>
       </div>
+
       <div
-        style="
-          border: 1px solid rgba(0, 250, 164, 1);
-          background-color: rgba(255, 255, 255, 0.04);
-          border-radius: 0px 20px 0px 20px;
-        "
-        class="col-12 col-md p-4 mx-0 mx-md-4 my-md-0 my-4"
+        style="background-color: rgba(255, 255, 255, 0.09); border: 4px solid transparent"
+        class="col-12 col-md p-4 mx-0 mx-md-4 my-md-0 my-4 pricing-plan-gradient-border"
       >
         <div class="d-flex justify-content-between">
-          <h2 class="fw-bold">Pro</h2>
-          {{/*
-          <h2>15$ <span class="fs-6 opacity-50 fw-normal">/month</span></h2>
-          */}}
+          <h2 class="fw-bold m-0">Pro</h2>
         </div>
 
-        <p class="mt-3">
-          for professionals or teams up to 10 people who deploy to production for
-          <span class="fw-bold">$15/month</span>
+        <p style="color: rgba(255, 255, 255, 0.7)" class="mt-3 mb-4 pb-2">
+          For professionals or teams up to 10 people who deploy to production for
+          <span style="color: rgba(255, 255, 255, 1)" class="fw-bold">$15/month</span>
         </p>
 
-        <p class="pt-3">Everything in Hobby, plus:</p>
+        <div>
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-normal"
+            style="height: 48px"
+            type="submit"
+            href="https://app.genez.io/auth/login?redirect=upgrade-now-pro"
+            target="_blank"
+          >
+            Start Now
+          </a>
+        </div>
+
+        <p class="pt-4 mt-2 mb-4 fw-bold">Everything in Hobby, plus:</p>
 
         <div>
           <div class="d-flex align-items-center mb-4">
@@ -110,6 +115,10 @@
           <div class="d-flex align-items-center mb-4">
             <img src="/images/cron-icon.svg" />
             <p class="m-0 mx-3">1 hour function timeout</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/database-icon.svg" />
+            <p class="m-0 mx-3">10 PostgreSQL/MongoDB Databases</p>
           </div>
           <div class="d-flex align-items-center mb-4">
             <img src="/images/unlimited-icon.svg" />
@@ -126,34 +135,39 @@
               <p class="m-0 mx-3">Email/chat support</p>
             </div>
           </div>
-        </div>
 
-        <div class="pt-2">
-          <a
-            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-normal"
-            style="height: 48px"
-            type="submit"
-            href="https://app.genez.io/auth/login?redirect=upgrade-now-pro"
-            target="_blank"
-          >
-            Upgrade now
-          </a>
+          <div class="mt-4 pt-4 d-none d-md-block"></div>
         </div>
       </div>
       <div
         style="
-          border: 1px solid rgba(0, 250, 164, 0.3);
           background-color: rgba(255, 255, 255, 0.04);
           border-radius: 0px 20px 0px 20px;
+          border: 4px solid transparent;
         "
         class="col-12 col-md p-4"
       >
         <div class="d-flex justify-content-between">
-          <h2 class="fw-bold">Enterprise</h2>
+          <h2 class="fw-bold m-0">Enterprise</h2>
         </div>
-        <p class="mt-3">large organizations and businesses</p>
+        <p style="color: rgba(255, 255, 255, 0.7)" class="mt-3 mb-4 pb-2">
+          large organizations<br class="d-none d-md-block" />
+          and businesses
+        </p>
 
-        <p class="pt-3">Everything in Pro, plus:</p>
+        <div>
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-normal bg-transparent border-2"
+            style="height: 48px"
+            type="submit"
+            href="mailto:contact@genez.io"
+            target="_blank"
+          >
+            Contact us
+          </a>
+        </div>
+
+        <p class="pt-4 mt-2 mb-4 fw-bold">Everything in Pro, plus:</p>
 
         <div>
           <div class="d-flex align-items-center mb-4">
@@ -163,6 +177,10 @@
           <div class="d-flex align-items-center mb-4">
             <img src="/images/deploy-icon.svg" />
             <p class="m-0 mx-3">Configurable</p>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <img src="/images/cron-icon.svg" />
+            <p class="m-0 mx-3">Log drains</p>
           </div>
           <div class="d-flex align-items-center mb-4">
             <img src="/images/unlimited-icon.svg" />
@@ -180,23 +198,10 @@
             <img src="/images/community-icon.svg" />
             <p class="m-0 mx-3">Advanced support</p>
           </div>
-        </div>
-
-        <div class="pt-2">
-          <a
-            class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-normal bg-transparent border-3"
-            style="height: 48px"
-            type="submit"
-            href="mailto:contact@genez.io"
-            target="_blank"
-          >
-            Contact us
-          </a>
+          <div class="mt-4 pt-4 d-none d-md-block"></div>
         </div>
       </div>
     </div>
-
-    <hr class="mt-5" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px" />
 
     <p
       style="font-size: 12px"
