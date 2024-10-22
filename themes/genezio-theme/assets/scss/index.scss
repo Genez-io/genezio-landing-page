@@ -174,8 +174,9 @@ $cyan: #0dcaf0 !default;
 .ourLatestArticle {
   .lastArticleBackground {
     position: relative;
-    background: linear-gradient(0deg, #000 0.03%, rgba(0, 0, 0, 0) 50.03%),
-    url("/images/lastArticle.webp") center center no-repeat;
+    background:
+      linear-gradient(0deg, #000 0.03%, rgba(0, 0, 0, 0) 50.03%),
+      url("/images/lastArticle.webp") center center no-repeat;
     background-size: cover;
     height: 344px;
     border-radius: 0px 20px;
@@ -257,10 +258,10 @@ $cyan: #0dcaf0 !default;
 
 .border-gradient-green {
   border-image-source: linear-gradient(
-                  to right,
-                  #ffffff00 5%,
-                  rgba(0, 250, 164, 0.4) 20%,
-                  #ffffff00 60%
+    to right,
+    #ffffff00 5%,
+    rgba(0, 250, 164, 0.4) 20%,
+    #ffffff00 60%
   ) !important;
   border-image-slice: 1 !important;
   border-width: 1px !important;
@@ -489,11 +490,36 @@ $cyan: #0dcaf0 !default;
   margin-top: 6rem;
 }
 
-
 .mt-7 {
   margin-top: 7rem;
 }
 
 .mt-8 {
   margin-top: 8rem;
+}
+
+.pricing-plan-gradient-border {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.pricing-plan-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 4px; /* Border width */
+  background: linear-gradient(140deg, #6f42c1 0%, #00faa4 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
