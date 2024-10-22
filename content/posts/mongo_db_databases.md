@@ -1,8 +1,8 @@
 ---
 title: "Genezio Partners with MongoDB Atlas: Effortless NoSQL Database Creation"
-date: 2024-10-15
+date: 2024-10-22
 tags:
-    - News
+  - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
 thumbnail: /images/mongodb-genezio.webp
@@ -40,9 +40,9 @@ The MongoDB database feature is also available in our YAML configuration file. Y
 
 ```yaml
 databases:
-    - name: my-mongodb
-      type: mongo-atlas
-      region: us-east-1
+  - name: my-mongodb
+    type: mongo-atlas
+    region: us-east-1
 ```
 
 By following these steps, you’ll have a fully operational, scalable, and secure NoSQL database powering your serverless apps, without any complex setup or manual configurations.
