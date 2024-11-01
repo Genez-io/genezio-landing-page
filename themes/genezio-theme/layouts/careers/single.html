@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<div class="px-3 bg-dark">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0px 40px 0px 40px;
+    "
+    class="container text-white"
+  >
+    <h1 class="text-center pt-5">{{ .Title }}</h1>
+
+    <div class="d-flex justify-content-center my-4">
+      {{ with .Params.location }}
+      <div>📍 {{ . }}</div>
+      {{ end }}
+    </div>
+
+    <div class="jobDetails">{{ .Content }}</div>
+
+    <div>
+      <h2 class="fw-bold mb-4 pb-3">Apply now</h2>
+      <p class="mb-4 pb-3 text-white">Tell us why you are a great fit for this role.</p>
+      <a class="btn btn-primary mb-4 py-2 px-4" href="{{ .Params.application_url }}"> Apply Now </a>
+    </div>
+  </div>
+</div>
+
+{{ end }}
