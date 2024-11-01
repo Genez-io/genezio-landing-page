@@ -48,7 +48,7 @@ That's where Firebase alternatives step in, offering a wider range of options to
 
 So, let's explore what else is out there.
 
-## 10 Top Firebase Alternatives You Need to Know
+## Top 10 Firebase Alternatives You Need to Know
 
 ### 1. Genezio: Your Framework-Agnostic Powerhouse
 
