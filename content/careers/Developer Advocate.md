@@ -3,7 +3,7 @@ title: "Developer Advocate"
 location: "Remote (San Francisco)"
 ---
 
-## About the Role
+## About Genezio
 
 At Genezio (genezio.com), we’re transforming cloud deployment by building a developer-first platform that’s fast, intuitive, and powerful. We believe in empowering developers to achieve more, and we’re looking for a passionate Developer Advocate to join us in spreading the word about Genezio to the developer community.
 
