@@ -3,7 +3,7 @@ title: "Software Engineer, Deployment Experience"
 location: "Remote (UK)"
 ---
 
-## About the Role
+## About Genezio
 
 At Genezio (genezio.com), we are redefining the developer experience with a platform that simplifies deployments and maximizes performance. Our cutting-edge infrastructure delivers unmatched speed and scalability, empowering developers to seamlessly deploy their applications. Join us on our mission to transform the way developers interact with cloud infrastructure.
 
