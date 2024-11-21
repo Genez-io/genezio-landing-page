@@ -43,7 +43,7 @@ Now, imagine deploying a fully functional MERN application from scratch—within
 
 Click the button below to start the process of deploying a template application.
 
-{{< external-link link="https://app.genez.io/fork?repository=https://github.com/Genez-io/mern-getting-started" >}}
+{{< external-link link="https://app.genez.io/auth/signup?redirect=mern-getting-started" >}}
 ![alt_text](/posts/deploybtn.webp)
 {{< /external-link >}}
 
