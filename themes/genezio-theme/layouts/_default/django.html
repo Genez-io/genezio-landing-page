@@ -1,0 +1,778 @@
+{{ define "meta_tags" }}
+
+
+{{ end }} {{ define "main" }}
+
+<div class="px-3 bg-dark">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    "
+    class="container"
+  >
+    <div class="expressWrapper">
+      <div class="row justify-content-between">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <h1 style="z-index: 99; text-align: center" class="fw-bold pt-4 text-white display-6">
+            Stop worrying about servers
+            <div>
+            Deploy your <span class="text-success">Django</span> on serverless.
+            <div>
+          </h1 >
+          <h2 style="z-index: 99; text-align: center"  class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6" id="expressDescription">
+            Enjoy seamless scalability, with lower and predictable costs.<br />
+            Enhance your Python Django app performance with Genezio's serverless infrastructure.
+          </h2>
+
+            <div id="headerExpressStartForFree" class="d-flex mt-0 mb-3">
+            <a
+              class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
+              href="https://app.genez.io/auth/signup?redirect=django-getting-started"
+              target="_blank"
+              id="start-for-free-hero-express"
+            >
+              Start for free
+            </a>
+            <a
+              class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
+              href="https://genezio.com/docs/frameworks/django/"
+              target="_blank"
+              id="check-our-docs-hero-express"
+            >
+              Check our Docs
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="position-relative mt-5">
+      {{/* Header Colors */}} {{/* Left Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: -35%;
+          transform: translateX(-30%);
+          background-image: radial-gradient(
+              ellipse at center,
+              rgba(242, 123, 255, 0.7),
+              transparent
+            ),
+            radial-gradient(ellipse at left, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          width: 100%;
+          height: 600px;
+          top: -140px;
+          left: 100%;
+          width: 150vw;
+          transform: translateX(-33%);
+          filter: blur(325px);
+          background-image: linear-gradient(
+            to right,
+            rgba(242, 123, 255, 0.2),
+            rgba(255, 255, 255, 0) 25%
+          );
+          background-repeat: no-repeat, no-repeat;
+          background-position: center;
+        "
+      ></div>
+
+      {{/* Right Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: 125%;
+          transform: translateX(-40%);
+          background-image: radial-gradient(ellipse at center, rgba(0, 250, 164, 0.7), transparent),
+            radial-gradient(ellipse at right, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      <img
+        class="pe-none d-none d-lg-block d-xl-block"
+        src="/images/wave.svg"
+        style="
+          mix-blend-mode: screen;
+          filter: grayscale(50%);
+          opacity: 0.3;
+          position: absolute;
+          top: -225px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100vw;
+        "
+        alt="howGenezioWork"
+      />
+
+      <div
+        class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
+        style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
+      >
+        <h2 id="simplifyDeployment" class="fw-bold text-white display-6 flow-breaker-header py-4 my-2 text-center">
+          Simplify Your App Deployment
+        </h2>
+
+        <p class="text-center opacity-75 fw-medium mt-1 w-75 px-4 flow-breaker-p">
+          Migrating your Python Django app to Genezio is a game-changer. Genezio streamlines the
+          deployment process, making it faster, easier, and more cost-effective. Say goodbye to the
+          complexities of traditional deployment and embrace a more efficient way to manage your
+          apps.
+        </p>
+
+        <div
+          class="d-flex mt-4 pt-2 pb-4 mb-1 flex-column flex-md-row w-100 px-4 justify-content-center"
+        >
+<ul style="list-style-type: none; display: flex; gap: 10px; padding: 0; margin: 0; align-items: center;" class="text-white">
+  <li class="d-flex">
+    <a style="text-decoration: none;" class="opacity-75 mb-0 mx-2 text-white">Up to 4x Faster Cold Start Response Times</a>
+    <div class="custom-tooltip-container mx-2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+          stroke="white"
+          stroke-opacity="0.7"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="custom-tooltip-text">Up to 4x Faster Cold Start Response Times than the competition, enhancing user experience and operational efficiency.</span>
+    </div>
+  </li>
+  <div style="height: 30px; width: 2px; background-color: #00FAA4;"></div>
+  <li class="d-flex">
+    <a style="text-decoration: none;" class="opacity-75 mb-0 mx-2 text-white" href="#lower-cost">Up to 6x Lower Costs</a>
+    <div class="custom-tooltip-container mx-2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+          stroke="white"
+          stroke-opacity="0.7"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="custom-tooltip-text">Optimize your budget with our solutions, offering up to 6x cost savings while maintaining top-tier performance and reliability.</span>
+    </div>
+  </li>
+  <div style="height: 30px; width: 2px; background-color: #00FAA4;"></div>
+  <li class="d-flex">
+    <a style="text-decoration: none;" class="opacity-75 mb-0 mx-2 text-white" href="#auto-scaling">Auto-scaling for 100% Uptime</a>
+    <div class="custom-tooltip-container mx-2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+          stroke="white"
+          stroke-opacity="0.7"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="custom-tooltip-text">Our auto-scaling ensures real-time adaptation to traffic, delivering seamless performance and 100% uptime for your business.</span>
+    </div>
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center mt-5">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-0 pb-1" >Reliable and Scalable</h3>
+
+            <ul class="p-0 card-listing">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa;" class="m-0">
+                Genezio provides a robust and auto-scalable environment for your applications. Whether you're handling a few users or thousands, our platform scales effortlessly to meet your needs.
+              </p>
+            </ul>
+              <a
+            href="https://genezio.com/docs/frameworks/django/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            id="faster-deployment-read-more"
+            >Read more -></a
+          >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+        id="lower-cost"
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-0 pb-1">Lower Costs</h3>
+
+            <ul class="p-0 card-listing">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa;" class="m-0 fs-5">
+                Reduce your operational costs with Genezio. Our efficient infrastructure and
+                scalable solutions ensure that you only pay for what you use, saving you money while
+                maintaining top performance.
+              </p>
+            </ul>
+              <a
+            href="https://genezio.com/docs/frameworks/django/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            id="lower-costs-read-more"
+            >Read more -></a
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-0 pb-1">Infrastructure from code</h3>
+
+            <ul class="p-0 card-listing">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa;" class="m-0">
+Need a database or a cache? Just declare it in your code, and our platform takes care of the rest. From provisioning to scaling, we transform your code into fully managed, production-ready infrastructure effortlessly.
+              </p>
+            </ul>
+              <a
+            href="https://genezio.com/docs/frameworks/django/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            id="easy-migration-read-more"
+            >Read more -></a
+          >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div id="auto-scaling" class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 pb-1 m-0">Git Connected Deploys</h3>
+
+            <ul class="p-0 card-listing">
+              <p style="font-size: 1.15rem !important; color: #aaaaaa" class="m-0">
+With Genezio's Git-powered auto-deployments, your app updates instantly with every commit. Streamline your workflow and focus on coding while we handle seamless, automated deployments.
+
+              </p>
+            </ul>
+              <a
+            href="https://genezio.com/docs/frameworks/django/"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            id="reliable-and-scalable-read-more"
+            >Read more -></a
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+
+         <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative"
+      style="z-index: 99"
+    >
+      FAQ
+    </p>
+
+          <h2 class="text-white text-center fw-bold mb-4 pb-3 position-relative" style="z-index: 99">
+      Your questions answered
+    </h2>
+
+      <div class="row align-items-start">
+        <div class="col-lg col-md-12 m-2">
+          <div
+            class="accordion text-white pb-4 position-relative"
+            style="border-top: 1px solid rgba(255, 255, 255, 0.1); z-index: 99"
+            id="accordionExample"
+          >
+            <div class="accordion-item py-2 my-2 text-white">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button shadow-none collapsed fw-medium"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  What is Genezio?
+                </button>
+              </h2>
+              {{/* Question 1 */}}
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
+                  Genezio is a cutting-edge Function as a Service (FaaS) platform that simplifies application deployment and management. It offers automated scaling, cost efficiency, and enhanced security to streamline the app deployment process.
+                </div>
+              </div>
+              {{/* Question 2 */}}
+              <div
+                class="accordion-item py-2 my-2 text-white"
+                style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+              >
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button shadow-none collapsed fw-medium"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Why should I migrate my Django to Genezio?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+                    Migrating your Django app to Genezio provides numerous benefits, including faster deployment times, lower costs, automated scaling, faster cold start times and zero server management overhead. Genezio also offers built-in security and high availability, ensuring your app performs reliably and securely.
+                  </div>
+                </div>
+              </div>
+
+              {{/* Question 3 */}}
+              <div
+                class="accordion-item py-2 my-2 text-white"
+                style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+              >
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button shadow-none collapsed fw-medium"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    What are the cost benefits of using Genezio over traditional VPS?
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+                   Genezio’s pricing model ensures you only pay for the resources you need. This makes Genezio a more cost-effective solution for your deployment needs and you don't have to worry about unpredictable costs at the end of the month. In terms of the size, Genezio is 6x cheaper than the competitors on big scale applications.
+                  </div>
+                </div>
+              </div>
+              <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              Can Genezio handle high traffic for my Django app?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+             Yes, Genezio is designed to scale your application to handle varying levels of traffic automatically. This means your app can accommodate high loads without performance degradation, ensuring a smooth user experience.
+            </div>
+          </div>
+        </div>
+        {{/* Question 5 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              What kind of support does Genezio offer?
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+          Genezio provides 24/7 support (paid plans only) to assist you with any questions or issues you might encounter. Our dedicated support team is always available to make sure your app runs smoothly on our plaform.
+            </div>
+          </div>
+        </div>
+        {{/* Question 6 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse6"
+              aria-expanded="false"
+              aria-controls="collapse6"
+            >
+              How does Genezio's FaaS platform compare to traditional server-based deployments?
+            </button>
+          </h2>
+          <div
+            id="collapse6"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Genezio’s FaaS platform offers automated scaling, easier management, cost efficiency, and enhanced security compared to traditional server-based deployments. This allows you to focus on developing your app rather than managing infrastructure.
+            </div>
+          </div>
+        </div>
+        {{/* Question 7 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse7"
+              aria-expanded="false"
+              aria-controls="collapse7"
+            >
+              Is Genezio suitable for small projects or only for large-scale applications?
+            </button>
+          </h2>
+          <div
+            id="collapse7"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+Genezio is suitable for both small projects and large-scale applications. Its scalable infrastructure allows you to start small and grow seamlessly, ensuring optimal performance and cost efficiency at any scale.
+            </div>
+          </div>
+        </div>
+        {{/* Question 8 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse8"
+              aria-expanded="false"
+              aria-controls="collapse8"
+            >
+              Do I need to modify my Django app code to migrate to Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapse8"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Migrating your Django app to Genezio requires no code changes. You can import your Github project directly from the dashboard.
+            </div>
+          </div>
+        </div>
+        {{/* Question 9 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse9"
+              aria-expanded="false"
+              aria-controls="collapse9"
+            >
+              Can I use my existing database with Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapse9"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Yes, you can connect your existing database to your Django app on Genezio.
+            </div>
+          </div>
+        </div>
+        {{/* Question 11 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse11"
+              aria-expanded="false"
+              aria-controls="collapse11"
+            >
+              How does Genezio manage scaling for unpredictable traffic spikes?
+            </button>
+          </h2>
+          <div
+            id="collapse11"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Genezio automatically scales your application based on traffic demands. This ensures your app remains responsive and performs well during unexpected traffic spikes.
+            </div>
+          </div>
+        </div>
+        {{/* Question 12 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse12"
+              aria-expanded="false"
+              aria-controls="collapse12"
+            >
+              Can I run background jobs or scheduled tasks on Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapse12"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Yes, Genezio supports background jobs and scheduled tasks. You can configure and manage these tasks easily.
+                <a
+                style="text-decoration: none"
+                class="text-success"
+                href="https://genezio.com/docs/integrations/github-action/"
+                target="_blank"
+              > Learn more</a>
+            </div>
+          </div>
+        </div>
+        {{/* Question 13 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse13"
+              aria-expanded="false"
+              aria-controls="collapse13"
+            >
+              Can Genezio integrate with CI/CD pipelines?
+            </button>
+          </h2>
+          <div
+            id="collapse13"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+          Yes, Genezio integrates seamlessly with popular CI/CD tools and pipelines. This allows you to automate your deployment process and ensure consistent and reliable app updates. 
+              <a
+                style="text-decoration: none"
+                class="text-success"
+                href="https://genezio.com/docs/integrations/github-action/"
+                target="_blank"
+              >Learn more</a>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg col-md-6 m-2 mb-0 d-flex align-items-center justify-content-center flex-column mt-5 w-100">
+        <h3 class="text-white">Still Have Questions?</h3>
+        <p class="text-white text-center mb-5 pb-5 p-0">
+          Feel free to get in touch with us by emailing us at <a class="text-success" href="mailto:example@example.com">contact@genezio.com</a>. <br /> If you prefer, you can chat with us directly through the chat feature available in your dashboard.
+        </p>
+      </div>
+    </div>
+    {{/* End of main container */}}
+  </div>
+</div>
+
+<div class="position-relative">
+  <div
+    class="position-absolute w-100 bottom-0 pe-none"
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      height: 2000px;
+    "
+  ></div>
+</div>
+
+<script>
+    document.getElementById('presentationVideo').addEventListener('click', function() {
+        var video = document.getElementById('presentationVideo');
+          video.currentTime = 0; // Reset to beginning
+    });
+</script>
+{{ end }}
+
