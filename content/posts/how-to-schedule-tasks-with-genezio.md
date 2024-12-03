@@ -29,7 +29,7 @@ Genezio makes things easier for you, so you don’t need any additional npm libr
   1. [Getting Started](#getting-started-1)
   2. [Setting up your Scheduler](#setting-up-your-scheduler-1)
   3. [Modify the `genezio.yaml` file](#modify-the-genezioyaml-file)
-- [Genezio Typesafe](#genezio-typesafe)
+- [Genezio Classes](#genezio-classes)
   1. [Getting Started](#getting-started)
   2. [Setting up your Scheduler](#setting-up-your-scheduler)
 - [Test your Scheduler](#test-your-scheduler)
@@ -55,7 +55,7 @@ To get started with a template, install `genezio` using `npm` and run it in your
 npm install -g genezio
 ```
 
-There are two ways to create crons. One follows the typesafe approach, and the other uses functions. Let’s start with the functions approach.
+There are two ways to create crons. One follows the classes approach, and the other uses functions. Let’s start with the functions approach.
 
 ## Genezio Functions
 
@@ -118,11 +118,11 @@ The schedule string follows the format `* * * * *`, representing minutes, hours,
 
 **Note 2:** The crontab syntax is agnostic of the operating system.
 
-## Genezio Typesafe
+## Genezio Classes
 
 ### Getting Started
 
-Create a new typesafe project by running the following command in an empty new folder:
+Create a new project by running the following command in an empty new folder:
 
 ```bash
 genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
@@ -212,7 +212,7 @@ services:
       schedule: "*/10 * * * *"
 ```
 
-- Genezio Typesafe:
+- Genezio Classes:
 
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}
@@ -246,7 +246,7 @@ services:
       schedule: "0 8 * * *"
 ```
 
-- Genezio Typesafe:
+- Genezio Classes:
 
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}
