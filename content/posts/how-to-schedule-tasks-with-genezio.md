@@ -25,13 +25,13 @@ Genezio makes things easier for you, so you don’t need any additional npm libr
 ## Content
 
 - [Prerequisites](#prerequisites)
-- [Genezio Typesafe](#genezio-typesafe)
-  1. [Getting Started](#getting-started)
-  2. [Setting up your Scheduler](#setting-up-your-scheduler)
 - [Genezio Functions](#genezio-functions)
   1. [Getting Started](#getting-started-1)
   2. [Setting up your Scheduler](#setting-up-your-scheduler-1)
   3. [Modify the `genezio.yaml` file](#modify-the-genezioyaml-file)
+- [Genezio Classes](#genezio-classes)
+  1. [Getting Started](#getting-started)
+  2. [Setting up your Scheduler](#setting-up-your-scheduler)
 - [Test your Scheduler](#test-your-scheduler)
 - [Deploy your Scheduler](#deploy-your-scheduler)
 - [Create more complex schedules](#create-more-complex-schedulers)
@@ -55,54 +55,7 @@ To get started with a template, install `genezio` using `npm` and run it in your
 npm install -g genezio
 ```
 
-There are two ways to create crons. One follows the typesafe approach, and the other uses functions. Let’s start with the typesafe approach.
-
-## Genezio Typesafe
-
-### Getting Started
-
-First, you’ll need to create a new project.
-
-After installing `genezio`, you can create a new Genezio Node.js project by running the following command in an empty new folder:
-
-```bash
-genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
-cd ./scheduler-app
-```
-
-### Setting up your Scheduler
-
-Next, create a new file called `scheduler.ts` in the root directory of your project.
-
-Open this newly created file in your preferred IDE and add the following code:
-
-```javascript
-{{< filePath >}}scheduler.ts{{< /filePath >}}
-import { GenezioDeploy, GenezioMethod } from "@genezio/types";
-
-/**
- * This class can be deployed on genezio infrastructure
- * using the "genezio deploy" command or tested locally using "genezio local".
- */
-@GenezioDeploy()
-export class Scheduler {
-  @GenezioMethod({ type: "cron", cronString: "* * * * *" })
-  public async everyMinuteTask() {
-    const output = "Every minute task executed at " + new Date().toISOString();
-    console.log(output);
-  }
-}
-```
-
-In this example, we're creating a task function that will execute every minute, logging the current time to the console. The `everyMinuteTask` function doesn’t need any parameter, but it is used with the decorator `@GenezioMethod({ type: "cron", cronString: "* * * * *" })` with a cron-style schedule string.
-
-The schedule string follows the format `* * * * *`, representing minutes, hours, days of the month, months, and days of the week, respectively. An asterisk means “**every interval**”.
-
-**Note 1:** I recommend using {{< external-link link="https://crontab.guru/" >}}Crontab Guru{{< /external-link >}} to generate and check your cron syntax.
-
-**Note 2:** You can also use JavaScript for your code. Just change the extension of your file to `js`.
-
-**Note 3:** The crontab syntax is agnostic of the operating system.
+There are two ways to create crons. One follows the classes approach, and the other uses functions. Let’s start with the functions approach.
 
 ## Genezio Functions
 
@@ -165,6 +118,51 @@ The schedule string follows the format `* * * * *`, representing minutes, hours,
 
 **Note 2:** The crontab syntax is agnostic of the operating system.
 
+## Genezio Classes
+
+### Getting Started
+
+Create a new project by running the following command in an empty new folder:
+
+```bash
+genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
+cd ./scheduler-app
+```
+
+### Setting up your Scheduler
+
+Next, create a new file called `scheduler.ts` in the root directory of your project.
+
+Open this newly created file in your preferred IDE and add the following code:
+
+```javascript
+{{< filePath >}}scheduler.ts{{< /filePath >}}
+import { GenezioDeploy, GenezioMethod } from "@genezio/types";
+
+/**
+ * This class can be deployed on genezio infrastructure
+ * using the "genezio deploy" command or tested locally using "genezio local".
+ */
+@GenezioDeploy()
+export class Scheduler {
+  @GenezioMethod({ type: "cron", cronString: "* * * * *" })
+  public async everyMinuteTask() {
+    const output = "Every minute task executed at " + new Date().toISOString();
+    console.log(output);
+  }
+}
+```
+
+In this example, we're creating a task function that will execute every minute, logging the current time to the console. The `everyMinuteTask` function doesn’t need any parameter, but it is used with the decorator `@GenezioMethod({ type: "cron", cronString: "* * * * *" })` with a cron-style schedule string.
+
+The schedule string follows the format `* * * * *`, representing minutes, hours, days of the month, months, and days of the week, respectively. An asterisk means “**every interval**”.
+
+**Note 1:** I recommend using {{< external-link link="https://crontab.guru/" >}}Crontab Guru{{< /external-link >}} to generate and check your cron syntax.
+
+**Note 2:** You can also use JavaScript for your code. Just change the extension of your file to `js`.
+
+**Note 3:** The crontab syntax is agnostic of the operating system.
+
 ## Test your Scheduler
 
 With genezio you can test your scheduler locally by running a genezio local server with the following command:
@@ -195,17 +193,6 @@ This will deploy the whole project to the cloud and make it run the task every m
 
 Cron expression: `*/10 * * * *`
 
-- Genezio Typesafe:
-
-```javascript
-{{< filePath >}}scheduler.ts{{< /filePath >}}
-@GenezioMethod({ type: "cron", cronString: "*/10 * * * *" })
-public async every10MinuteTask() {
-  const output = "Every 10 minutes " + new Date().toISOString();
-  console.log(output);
-}
-```
-
 - Genezio Functions:
 
 ```javascript
@@ -225,20 +212,20 @@ services:
       schedule: "*/10 * * * *"
 ```
 
-### Run a task every day at 8 AM:
-
-Cron expression: `0 8 * * *`
-
-- Genezio Typesafe:
+- Genezio Classes:
 
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}
-@GenezioMethod({ type: "cron", cronString: "0 8 * * *" })
-public async everyDay8AMTask() {
-  const output = "Every day at 8 AM" + new Date().toISOString();
+@GenezioMethod({ type: "cron", cronString: "*/10 * * * *" })
+public async every10MinuteTask() {
+  const output = "Every 10 minutes " + new Date().toISOString();
   console.log(output);
 }
 ```
+
+### Run a task every day at 8 AM:
+
+Cron expression: `0 8 * * *`
 
 - Genezio Functions:
 
@@ -257,6 +244,17 @@ services:
     - name: scheduler
       function: ${{backend.functions.scheduler.name}}
       schedule: "0 8 * * *"
+```
+
+- Genezio Classes:
+
+```javascript
+{{< filePath >}}scheduler.ts{{< /filePath >}}
+@GenezioMethod({ type: "cron", cronString: "0 8 * * *" })
+public async everyDay8AMTask() {
+  const output = "Every day at 8 AM" + new Date().toISOString();
+  console.log(output);
+}
 ```
 
 ## Do’s and Don’ts Tips
