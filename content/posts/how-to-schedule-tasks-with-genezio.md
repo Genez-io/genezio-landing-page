@@ -24,14 +24,19 @@ Genezio makes things easier for you, so you don’t need any additional npm libr
 
 ## Content
 
-1. [Prerequisites](#prerequisites)
-2. [Getting Started](#getting-started)
-3. [Setting up your Scheduler](#setting-up-your-scheduler)
-4. [Test your Scheduler](#test-your-scheduler)
-5. [Deploy your Scheduler](#deploy-your-scheduler)
-6. [Create more complex schedules](#create-more-complex-schedulers)
-7. [Do’s and Don’ts Tips](#do’s-and-don’ts-tips)
-8. [Conclusion](#conclusion)
+- [Prerequisites](#prerequisites)
+- [Genezio Functions](#genezio-functions)
+  1. [Getting Started](#getting-started-1)
+  2. [Setting up your Scheduler](#setting-up-your-scheduler-1)
+  3. [Modify the `genezio.yaml` file](#modify-the-genezioyaml-file)
+- [Genezio Classes](#genezio-classes)
+  1. [Getting Started](#getting-started)
+  2. [Setting up your Scheduler](#setting-up-your-scheduler)
+- [Test your Scheduler](#test-your-scheduler)
+- [Deploy your Scheduler](#deploy-your-scheduler)
+- [Create more complex schedules](#create-more-complex-schedulers)
+- [Do’s and Don’ts Tips](#do’s-and-don’ts-tips)
+- [Conclusion](#conclusion)
 
 ## Prerequisites
 
@@ -42,8 +47,6 @@ If you don’t already have them, you’ll need to install the following tools:
 
 **Note:** I recommend you use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions. After installing `nvm`, you can easily get any node version by running `nvm install <node_version>`.
 
-## Getting Started
-
 First, you’ll need to create a new project.
 
 To get started with a template, install `genezio` using `npm` and run it in your terminal. Later on, genezio comes in handy to deploy and host your web applications in the cloud.
@@ -52,14 +55,81 @@ To get started with a template, install `genezio` using `npm` and run it in your
 npm install -g genezio
 ```
 
-After installing `genezio`, you can create a new Genezio Node.js project by running the following command in an empty new folder:
+There are two ways to create crons. One follows the classes approach, and the other uses functions. Let’s start with the functions approach.
+
+## Genezio Functions
+
+### Getting Started
+
+Create a new functions project using the following command:
+
+```bash
+genezio create serverless --name scheduler-app --region us-east-1
+cd ./scheduler-app
+```
+
+### Setting up your Scheduler
+
+Next, create a new file `scheduler.mjs` in the root directory of your project.
+
+Open this newly created file in your preferred IDE and add the following code:
+
+```javascript
+{{< filePath >}}scheduler.mjs{{< /filePath >}}
+export const handler = async (event) => {
+  const output = "Every minute task executed at " + new Date().toISOString();
+  console.log(output);
+};
+```
+
+In this example, we're creating a task function that will execute every minute, logging the current time to the console. The `handler` function will
+be used as the entry point for the task.
+
+### Modify the `genezio.yaml` file
+
+Next, you need to modify the `genezio.yaml` file to include the schedule for the task. Open the `genezio.yaml` file in the root directory of your project and copy the following code:
+
+```yaml
+{{< filePath >}}genezio.yaml{{< /filePath >}}
+name: scheduler-app
+region: us-east-1
+yamlVersion: 2
+backend:
+  path: .
+  language:
+    name: js
+  functions:
+    - name: scheduler
+      path: .
+      entry:
+      handler: handler
+services:
+  crons:
+    - name: scheduler
+      function: ${{backend.functions.scheduler.name}}
+      schedule: "* * * * *"
+```
+
+This configuration file adds a new service called `crons` that defines a schedule for the `scheduler` function. The `schedule` field uses a cron-style schedule string to specify when the task should run.
+
+The schedule string follows the format `* * * * *`, representing minutes, hours, days of the month, months, and days of the week, respectively. An asterisk means “**every interval**”.
+
+**Note 1:** I recommend using {{< external-link link="https://crontab.guru/" >}}Crontab Guru{{< /external-link >}} to generate and check your cron syntax.
+
+**Note 2:** The crontab syntax is agnostic of the operating system.
+
+## Genezio Classes
+
+### Getting Started
+
+Create a new project by running the following command in an empty new folder:
 
 ```bash
 genezio create backend --backend=ts --name=scheduler-app --region=us-east-1
 cd ./scheduler-app
 ```
 
-## Setting up your Scheduler
+### Setting up your Scheduler
 
 Next, create a new file called `scheduler.ts` in the root directory of your project.
 
@@ -123,6 +193,27 @@ This will deploy the whole project to the cloud and make it run the task every m
 
 Cron expression: `*/10 * * * *`
 
+- Genezio Functions:
+
+```javascript
+{{< filePath >}}scheduler.mjs{{< /filePath >}}
+export const handler = async (event) => {
+  const output = "Every 10 minutes " + new Date().toISOString();
+  console.log(output);
+};
+```
+
+```yaml
+{{< filePath >}}genezio.yaml{{< /filePath >}}
+services:
+  crons:
+    - name: scheduler
+      function: ${{backend.functions.scheduler.name}}
+      schedule: "*/10 * * * *"
+```
+
+- Genezio Classes:
+
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}
 @GenezioMethod({ type: "cron", cronString: "*/10 * * * *" })
@@ -135,6 +226,27 @@ public async every10MinuteTask() {
 ### Run a task every day at 8 AM:
 
 Cron expression: `0 8 * * *`
+
+- Genezio Functions:
+
+```javascript
+{{< filePath >}}scheduler.mjs{{< /filePath >}}
+export const handler = async (event) => {
+  const output = "Every day at 8 AM" + new Date().toISOString();
+  console.log(output);
+};
+```
+
+```yaml
+{{< filePath >}}genezio.yaml{{< /filePath >}}
+services:
+  crons:
+    - name: scheduler
+      function: ${{backend.functions.scheduler.name}}
+      schedule: "0 8 * * *"
+```
+
+- Genezio Classes:
 
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}

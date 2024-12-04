@@ -1,0 +1,962 @@
+{{ define "meta_tags" }} {{ end }} {{ define "main" }}
+
+<div class="px-3 bg-dark">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    "
+    class="container"
+  >
+    <div class="expressWrapper">
+      <div class="row justify-content-between">
+        <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+          <h1 style="z-index: 99" class="fw-bold pt-4 text-white display-6">
+            Deploy your <span class="text-success">Python</span> Apps on <br />
+            The Fastest Serverless Infrastructure
+          </h1>
+
+          <h2
+            style="z-index: 99"
+            class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6"
+            id="expressDescription"
+          >
+            Build and deploy Python web applications in minutes. 
+            </h2>
+            <h2 tyle="z-index: 99"
+            class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6"
+            id="expressDescription">
+            Perfect for Django, Flask, FastAPI, and any other Python web framework.
+          </h2>
+
+          <ul style="list-style-type: none" class="text-white p-0">
+            <li class="d-flex">
+              <img alt="checkMarkIcon" src="/images/table-check-icon.svg" />
+              <a style="text-decoration: none" class="opacity-75 mb-0 mx-2 text-white"
+                >Framework Agnostic</a
+              >
+              <div class="custom-tooltip-container mx-2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                    stroke="white"
+                    stroke-opacity="0.7"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="custom-tooltip-text"
+                  >Support for Django, Flask, FastAPI and any WSGI/ASGI compatible framework.</span
+                >
+              </div>
+            </li>
+            <li class="d-flex my-1">
+              <img alt="checkMarkIcon" src="/images/table-check-icon.svg" />
+              <a style="text-decoration: none" class="opacity-75 mb-0 mx-2 text-white"
+                >Predictable and Competitive Pricing</a
+              >
+              <div class="custom-tooltip-container mx-2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                    stroke="white"
+                    stroke-opacity="0.7"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="custom-tooltip-text"
+                  >Benefit from transparent, affordable pricing tailored for your Python apps.
+                </span>
+              </div>
+            </li>
+            <li class="d-flex">
+              <img alt="checkMarkIcon" src="/images/table-check-icon.svg" />
+              <a style="text-decoration: none" class="opacity-75 mb-0 mx-2 text-white"
+                >Auto-scaling</a
+              >
+              <div class="custom-tooltip-container mx-2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                    stroke="white"
+                    stroke-opacity="0.7"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="custom-tooltip-text"
+                  >Seamlessly handle traffic spikes with automatic scaling for your Python
+                  apps.</span
+                >
+              </div>
+            </li>
+          </ul>
+
+          <div id="headerExpressStartForFree" class="d-flex mt-0 mb-3">
+            <a
+              class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-3 mb-md-1"
+              href="https://app.genez.io/auth/signup?redirect=faas-python-getting-started"
+              target="_blank"
+              id="start-for-free-hero-python"
+            >
+              Start for free
+            </a>
+            <a
+              class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-3 mb-md-1"
+              href="https://genezio.com/docs/frameworks/"
+              target="_blank"
+              id="check-our-docs-hero-python"
+            >
+              Check our Docs
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
+        >
+          <img
+            class="w-100"
+            alt="next-template1"
+            src="/images/capy.svg"
+            style="object-fit: contain"
+            loading="lazy"
+            height="350px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-5 mb-4 pb-3">
+      USED AND TRUSTED AT
+    </p>
+
+    <div class="w-100 mx-auto d-flex justify-content-around mb-4 pb-3">
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="multiversx-logo"
+        src="/images/multiversx-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="294px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="google-logo"
+        src="/images/google-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="50px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="splunk-logo"
+        src="/images/splunk-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="168px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="uipath-logo"
+        src="/images/uipath-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="51px"
+      />
+
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide d-block d-sm-block d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              alt="multiversx-logo"
+              src="/images/multiversx-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="google-logo"
+              src="/images/google-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="splunk-logo"
+              src="/images/splunk-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="uipath-logo"
+              src="/images/uipath-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-relative mt-5">
+      {{/* Header Colors */}} {{/* Left Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: -35%;
+          transform: translateX(-30%);
+          background-image: radial-gradient(
+              ellipse at center,
+              rgba(242, 123, 255, 0.7),
+              transparent
+            ),
+            radial-gradient(ellipse at left, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          width: 100%;
+          height: 600px;
+          top: -140px;
+          left: 100%;
+          width: 150vw;
+          transform: translateX(-33%);
+          filter: blur(325px);
+          background-image: linear-gradient(
+            to right,
+            rgba(242, 123, 255, 0.2),
+            rgba(255, 255, 255, 0) 25%
+          );
+          background-repeat: no-repeat, no-repeat;
+          background-position: center;
+        "
+      ></div>
+
+      {{/* Right Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 800px;
+          filter: blur(325.484375px);
+          top: -180px;
+          left: 125%;
+          transform: translateX(-40%);
+          background-image: radial-gradient(ellipse at center, rgba(0, 250, 164, 0.7), transparent),
+            radial-gradient(ellipse at right, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 80em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      <img
+        class="pe-none d-none d-lg-block d-xl-block"
+        src="/images/wave.svg"
+        style="
+          mix-blend-mode: screen;
+          filter: grayscale(50%);
+          opacity: 0.3;
+          position: absolute;
+          top: -225px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100vw;
+        "
+        alt="howGenezioWork"
+      />
+
+      <div
+        class="text-white d-flex align-items-center justify-content-center flex-column mb-4 py-5"
+        style="background-color: #422f6a; margin: 0 -12px 0 -12px; position: relative"
+      >
+        <h2
+          id="simplifyDeployment"
+          class="fw-bold text-white display-6 flow-breaker-header py-4 my-2 text-center"
+        >
+          Your Python Apps on <span class="text-success">Genezio's</span> Function-as-a-Service Platform
+        </h2>
+
+        <p class="text-center mt-1 w-75 px-4 flow-breaker-p mb-0 fs-5" style="color: #d7d3e0">
+          Genezio is a serverless cloud featuring the most efficient <b>Function-as-a-Service</b> platform for Python applications, 
+          supporting popular frameworks like Django, Flask, and FastAPI through WSGI/ASGI compatibility.
+        </p>
+      </div>
+    </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-5 mb-3">
+      CAPABILITIES
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3">Key features</h2>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              One command-line deployment.
+            </h3>
+            <p class="card-text opacity-75 mb-4 pb-3">
+              Spend less time on setup and more time on development. Run one command and get your
+              app up and running in minutes.
+            </p>
+
+            <a
+              href="https://genezio.com/docs/frameworks/"
+              target="_blank"
+              class="card-link text-white text-decoration-none fw-semibold"
+              id="one-command-line-deployment-learn-more"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              Enjoy Faster Response Times
+            </h3>
+
+            <p class="card-text opacity-75 mb-4 pb-3">
+              Take advantage of a Function-as-a-Service platform designed and built with performance
+              and security in mind.
+            </p>
+            <a
+              href="https://genezio.com/docs/frameworks/"
+              target="_blank"
+              class="card-link text-white text-decoration-none fw-semibold"
+              id="enjoy-faster-response-times-learn-more"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              DevOps-less auto-scaling
+            </h3>
+
+            <p class="card-text opacity-75 mb-2 pb-2">
+              Whether you're serving a handful of users or millions, our platform scales
+              effortlessly to meet your needs without any hassle.
+            </p>
+            <a
+              href="https://genezio.com/docs/frameworks/"
+              target="_blank"
+              class="card-link text-white text-decoration-none fw-semibold"
+              id="devops-less-auto-scaling-learn-more"
+              >Learn more -></a
+            >
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body d-flex flex-column flex-md-row">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+              style="margin-right: 48px"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex-grow-1">
+              <h3 class="card-title pt-2 mb-2 pb-1">Cost Control</h3>
+              <p class="card-text opacity-75 m-0">
+                No more unpredictable bills at the end of the month.
+              </p>
+              <a
+                href="/pricing/"
+                target="_blank"
+                class="card-link text-white text-decoration-none fw-semibold"
+                id="cost-control-learn-more"
+                >Learn more -></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-5 mb-3">
+      MIGRATIONS
+    </p>
+
+    <h2 class="text-white text-center fw-bold m-0 pb-3">
+      Simple steps to deploy your Python App in 5 minutes
+    </h2>
+    <p class="text-white text-center mb-3 pb-3">
+      Choose a high-performing Python template that fits your needs and get started with just one
+      click.
+    </p>
+
+    <div class="row mb-3">
+      <div class="col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
+        <div
+          class="mx-2 card p-2 p-md-4 text-white expressCode"
+          style="background-color: #170d29; border: 1px solid #5b5b5b"
+        >
+          <code
+            >{{$input := `npm install genezio -g`}}{{$opts := dict "style" "base16-snazzy"}}{{
+            transform.Highlight $input "typescript" $opts}}</code
+          >
+        </div>
+      </div>
+      <div
+        class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last"
+        id="stepWrap"
+      >
+        <h4 class="text-white fw-bold d-flex">
+          <span
+            class="text-success"
+            style="
+              margin-right: 10px;
+              height: 30px;
+              width: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              align-content: center;
+              border-radius: 50%;
+              background: #09faa4;
+              color: #21143a !important;
+              font-size: 1.2rem !important;
+            "
+            >1</span
+          >
+          Prerequisites
+        </h4>
+        <p class="text-white">
+          First, you need to install the genezio package. Open your terminal and run the
+          following command.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
+        <div
+          class="mx-2 card p-2 p-md-4 text-white expressCode"
+          style="background-color: #170d29; border: 1px solid #5b5b5b"
+        >
+          <code
+            >{{$input := `genezio analyze`}}{{$opts := dict "style" "base16-snazzy"}}{{
+            transform.Highlight $input "typescript" $opts}}</code
+          >
+        </div>
+      </div>
+      <div
+        class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last"
+        id="stepWrap"
+      >
+        <h4 class="text-white fw-bold d-flex">
+          <span
+            class="text-success"
+            style="
+              margin-right: 10px;
+              height: 30px;
+              width: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              align-content: center;
+              border-radius: 50%;
+              background: #09faa4;
+              color: #21143a !important;
+              font-size: 1.2rem !important;
+            "
+            >2</span
+          >
+          Generate Configuration
+        </h4>
+        <p class="text-white">
+          Run the analyze command to automatically generate a configuration file for your Python application.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-12 col-sm-12 order-last order-lg-first">
+        <div
+          class="mx-2 card p-2 p-md-4 text-white expressCode"
+          style="background-color: #170d29; border: 1px solid #5b5b5b"
+        >
+          <code
+            >{{$input := `genezio deploy`}}{{$opts := dict "style" "base16-snazzy"}}{{
+            transform.Highlight $input "typescript" $opts}}</code
+          >
+        </div>
+      </div>
+      <div
+        class="mt-3 mt-md-0 col-12 col-lg-6 col-md-12 col-sm-12 order-first order-lg-last"
+        id="stepWrap"
+      >
+        <h4 class="text-white fw-bold d-flex">
+          <span
+            class="text-success"
+            style="
+              margin-right: 10px;
+              height: 30px;
+              width: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              align-content: center;
+              border-radius: 50%;
+              background: #09faa4;
+              color: #21143a !important;
+              font-size: 1.2rem !important;
+            "
+            >3</span
+          >
+          Deploy your project
+        </h4>
+        <p class="text-white">
+          Deploy your app to our serverless infrastructure to benefit from our seamless deployment
+          process.
+        </p>
+      </div>
+    </div>
+
+    <div class="w-100 d-flex justify-content-center mt-3 pt-1">
+      <a
+        class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
+        href="https://app.genez.io/auth/signup?redirect=faas-python-getting-started"
+        target="_blank"
+        id="deploy-next-in-5-minutes-start-for-free"
+      >
+        Start for free
+      </a>
+    </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-5 mb-3">
+      ONE-CLICK STARTERS
+    </p>
+    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5">Getting Started Templates</h2>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-light m-0">Genez-io/</p>
+            <p class="fw-bold fs-5">django-getting-started</p>
+
+            <p>Django starter template.</p>
+
+            <img
+              class="w-100 mb-4"
+              alt="next-template1"
+              src="/images/django-getting-started.webp"
+              style="max-height: 195px; object-fit: contain"
+              loading="lazy"
+            />
+
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">django</div>
+              <div class="languageBadge mb-2">wsgi</div>
+              <div class="languageBadge mb-2">asgi</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/django-getting-started"
+                target="_blank"
+                style="margin-right: 5px"
+                id="django-getting-started-deploy-now"
+              >
+                Deploy now
+              </a>
+              {{/*
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+              */}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-light m-0">Genez-io/</p>
+            <p class="fw-bold fs-5">flask-getting-started</p>
+
+            <p>Flask starter template.</p>
+
+            <img
+              class="w-100 mb-4"
+              alt="next-template2"
+              style="max-height: 195px; object-fit: contain"
+              src="/images/flask-getting-started.webp"
+              loading="lazy"
+            />
+
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">flask</div>
+              <div class="languageBadge mb-2">wsgi</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/flask-getting-started"
+                target="_blank"
+                style="margin-right: 5px"
+                id="flask-getting-started-deploy-now"
+              >
+                Deploy now
+              </a>
+              {{/*
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+              */}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-light m-0">Genez-io/</p>
+            <p class="fw-bold fs-5">fastapi-getting-started</p>
+
+            <p>FastAPI starter template.</p>
+
+            <img
+              class="w-100 mb-4"
+              style="max-height: 195px; object-fit: contain"
+              alt="next-template3"
+              src="/images/fastapi-getting-started.webp"
+              loading="lazy"
+            />
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">fastapi</div>
+              <div class="languageBadge mb-2">asgi</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/fastapi-getting-started"
+                target="_blank"
+                style="margin-right: 5px"
+                id="fastapi-getting-started-deploy-now"
+              >
+                Deploy now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative"
+      style="z-index: 99"
+    >
+      FAQ
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 position-relative" style="z-index: 99">
+      Your questions answered
+    </h2>
+
+    <div class="px-md-4 pb-3 mx-1">
+      <div
+        class="accordion text-white pb-4 position-relative"
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1); z-index: 99"
+        id="accordionExample"
+      >
+        {{/* Question 1 */}}
+        <div class="accordion-item py-2 my-2 text-white">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              How do I set a custom domain for my Python application?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
+              You can assign your custom domain in our platform. Simply go to your project dashboard, navigate to the "Domain" section, and follow the instructions to add and verify your domain. We'll provide you with the necessary DNS records to configure with your domain provider.
+            </div>
+          </div>
+        </div>
+        {{/* Question 2 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              How do I check the logs of a Python application?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Your Python application is deployed on our Function as a Service platform as multiple
+              serverless functions. When opening the project dashboard, you can see the logs of each
+              function separately.
+            </div>
+          </div>
+        </div>
+
+        {{/* Question 3 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              How do I set environment variables for my Python application?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Environment variables for a Python project hosted on Genezio are set in the same way
+              as any other Genezio project. Visit the Environment Variables tab in the project
+              dashboard to set your environment variables.
+            </div>
+          </div>
+        </div>
+        {{/* Question 4 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              How do I test locally?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              We recommend using the provided Python scripts to run your application locally. You can also use the <code>genezio local</code> command to test your serverless functions in a local environment that simulates the production setup.
+            </div>
+          </div>
+        </div>
+        {{/* Question 5 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              Do I need a Docker/Dockerfile?
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              No, you don't need a Dockerfile to deploy a Python application with Genezio. Genezio
+              builds your application using a serverless architecture, which means that you don't
+              need to worry about Docker, Dockerfiles or scaling.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-relative">
+  <div
+    class="position-absolute w-100 bottom-0 pe-none"
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      height: 3200px;
+    "
+  ></div>
+</div>
+{{ end }}
