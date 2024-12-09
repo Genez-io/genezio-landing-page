@@ -151,7 +151,7 @@ $cyan: #0dcaf0 !default;
   transition: opacity 0.3s;
   @media (max-width: 768px) {
     left: calc(100% + -210px) !important;
-    z-index: 99999;
+    z-index: 2000;
     top: 80px;
   }
 }
@@ -241,6 +241,7 @@ $cyan: #0dcaf0 !default;
 @import "./job.scss";
 @import "./pagination.scss";
 @import "./plans.scss";
+@import "./modal.scss";
 
 .dropdown-menu a.dropdown-item:hover {
   background-color: transparent !important;

@@ -156,15 +156,16 @@
         </p>
 
         <div>
-          <a
-            class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-normal bg-transparent border-2"
+
+          <button
+            class="btn btn-primary open-modal-btn w-100 d-flex justify-content-center align-items-center px-4 fw-normal bg-transparent border-2"
             style="height: 48px"
             type="submit"
-            href="mailto:contact@genez.io"
-            target="_blank"
           >
             Contact us
-          </a>
+
+        </button>
+        {{ partial "contactUsModal.html" . }}
         </div>
 
         <p class="pt-4 mt-2 mb-4 fw-bold">Everything in Pro, plus:</p>
@@ -1031,15 +1032,13 @@
           </a>
         </div>
         <div style="border: none" class="fixed-width-col">
-          <a
-            class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-semibold bg-transparent border-3"
+          <button
+            class="btn btn-primary open-modal-btn d-flex justify-content-center align-items-center px-4 fw-semibold bg-transparent border-3"
             style="height: 48px"
             type="submit"
-            href="mailto:contact@genez.io"
-            target="_blank"
           >
             Contact Us
-          </a>
+        </button>
         </div>
         <!-- Add more columns as needed -->
       </div>
