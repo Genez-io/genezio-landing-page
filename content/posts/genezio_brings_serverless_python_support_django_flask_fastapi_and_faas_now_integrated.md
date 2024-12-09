@@ -26,7 +26,7 @@ Whether you’re developing scalable web applications, high-performance APIs, or
 
 **Get started** {{< external-link link="https://app.genez.io/auth/signup?redirect=faas-python-getting-started" >}}right now{{< /external-link >}} or learn more about the platform below.
 
-# Why choose Genezio for Serverless Python development?
+## Why choose Genezio for Serverless Python development?
 
 ## Out-of-the-Box Framework Detection and Deployment
 
@@ -60,7 +60,7 @@ By combining reduced cold start delays with robust **support for parallel calls*
 
 Genezio offers seamless autoscaling, ensuring your applications can handle spikes in demand while maintaining optimal performance. Whether your app sees sudden surges or fluctuating workloads, Genezio's autoscaling capabilities keep your applications running smoothly, so you can focus on building features rather than worrying about infrastructure.
 
-# Genezio vs. Competitors
+## Genezio vs. Competitors
 
 When comparing Genezio to competitors like **AWS Lambda**, **Heroku**, or **Google Cloud**, it stands out with a focus on **developer-centric simplicity** and **performance optimization**:
 
@@ -74,7 +74,7 @@ When comparing Genezio to competitors like **AWS Lambda**, **Heroku**, or **Goog
 
 These advantages make Genezio the preferred choice for Python developers seeking **speed**, **flexibility**, and **ease of use** without compromising on scalability.
 
-# Getting started with Python on Genezio
+## Getting started with Python on Genezio
 
 Ready to deploy your Python app? Genezio provides step-by-step guides tailored for every supported framework:
 
@@ -88,7 +88,7 @@ Ready to deploy your Python app? Genezio provides step-by-step guides tailored f
 
 With these resources, you’ll have your Python application live in minutes, with zero hassle.
 
-# Genezio, the go-to platform for Python developers
+## Genezio, the go-to platform for Python developers
 
 This release marks a significant milestone for Genezio, bridging the gap between traditional and modern Python frameworks. With support for Django, Flask, FastAPI, and serverless functions, coupled with WSGI and ASGI compatibility, Genezio empowers developers to deploy Python applications efficiently and at scale.
 
