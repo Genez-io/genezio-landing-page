@@ -30,7 +30,7 @@ Sometimes, you need a different flavor, something that caters to your specific n
 
 The good news is the serverless world is full of high-performance alternatives. In this guide, I'll explore some of the top contenders you need to know, breaking down their strengths, weaknesses, and ideal use cases so you can find the perfect match for your next project.
 
-1. Genezio
+## Genezio
 
 {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} offers a compelling alternative to AWS Lambda, focusing on a full-stack cloud experience with near-zero latency serverless functions.
 
@@ -73,7 +73,7 @@ Next.js, without sacrificing performance or having to rewrite your code signific
 
 **Pricing**
 
-Free plan available up to Enterprise custom plans
+{{< external-link link="https://genezio.com/pricing/" >}}Free plan available{{< /external-link >}} up to Enterprise custom plans.
 
 ## Cloudflare Workers
 
