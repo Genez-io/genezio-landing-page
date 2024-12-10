@@ -49,6 +49,8 @@
       </div>
     </div>
 
+    {{partial "trustedBy.html" .}}
+
     <div class="position-relative mt-5">
       {{/* Header Colors */}} {{/* Left Color */}}
       <div
@@ -374,6 +376,158 @@ With Genezio's Git-powered auto-deployments, your app updates instantly with eve
         </div>
       </div>
     </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-5 mb-3">
+      ONE-CLICK STARTERS
+    </p>
+    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5">Featured Templates</h2>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-light m-0">Genez-io/</p>
+            <p class="fw-bold fs-5">flask-getting-started</p>
+
+            <p>A simple Hello World starter code for your Flask application.</p>
+
+            <img
+              class="w-100 mb-4"
+              alt="next-template1"
+              src="/images/expresstemplate.png"
+              style="max-height: 195px; object-fit: contain"
+              loading="lazy"
+            />
+
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">python</div>
+              <div class="languageBadge mb-2">flask</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/flask-getting-started"
+                target="_blank"
+                style="margin-right: 5px"
+                id="nextjs-getting-started-deploy-now"
+              >
+                Deploy now
+              </a>
+              {{/*
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+              */}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-light m-0">Genez-io/</p>
+            <p class="fw-bold fs-5">flask-chatgpt-getting-started</p>
+
+            <p>Hello World starter code for your express.js application.</p>
+
+            <img
+              class="w-100 mb-4"
+              alt="next-template2"
+              style="max-height: 195px; object-fit: contain"
+              src="/images/expresstemplate.png"
+              loading="lazy"
+            />
+
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">python</div>
+              <div class="languageBadge mb-2">flask</div>
+              <div class="languageBadge mb-2">chatgpt</div>
+
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/flask-chatgpt-getting-started"
+                target="_blank"
+                style="margin-right: 5px"
+                id="next-js-blog-boilerplate-deploy-now"
+              >
+                Deploy now
+              </a>
+              {{/*
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+              */}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-light m-0">Genez-io/</p>
+            <p class="fw-bold fs-5">faas-python-getting-started</p>
+
+            <p>A React Full Stack application with express as backend.</p>
+
+            <img
+              class="w-100 mb-4"
+              style="max-height: 195px; object-fit: contain"
+              alt="next-template3"
+              src="/images/expresstemplate.png"
+              loading="lazy"
+            />
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">python</div>
+              <div class="languageBadge mb-2">serverless-function</div>
+
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/faas-python-getting-started"
+                target="_blank"
+                style="margin-right: 5px"
+                id="next-shadcn-dashboard-starter-deploy-now"
+              >
+                Deploy now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-white text-center fw-bold m-0 mt-5 pb-3 mb-5">
+      Pricing
+    </h2>
+
+    {{partial "generalPricing.html" .}}
+
 
          <p
       style="font-size: 12px"
