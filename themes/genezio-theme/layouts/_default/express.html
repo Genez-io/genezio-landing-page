@@ -15,14 +15,16 @@
       <div class="row justify-content-between">
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
           <h1 style="z-index: 99; text-align: center" class="fw-bold pt-4 text-white display-6">
-            Stop worrying about servers
+            Deploy your <span class="text-success">Express.js</span> on Serverless
+
             <div>
-            Deploy your <span class="text-success">Express.js</span> on serverless.
-            <div>
+              Zero Configuration Setup
+            </div>
           </h1 >
           <h2 style="z-index: 99; text-align: center"  class="fw-medium mb-4 mt-3 text-white opacity-75 fs-6" id="expressDescription">
-            Enjoy seamless scalability, with lower and predictable costs.<br />
-            Enhance your Node.js Express app performance with Genezio's serverless infrastructure.
+            Focus on building your app, not managing servers. <br/>
+Start deploying your Node.js Express app in minutes with Genezio's serverless infrastructure
+
           </h2>
 
             <div id="headerExpressStartForFree" class="d-flex mt-0 mb-3">
@@ -32,7 +34,7 @@
               target="_blank"
               id="start-for-free-hero-express"
             >
-              Start for free
+              Deploy for Free
             </a>
             <a
               class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
@@ -48,6 +50,9 @@
 
       </div>
     </div>
+
+    {{partial "trustedBy.html" .}}
+
 
     <div class="position-relative mt-5">
       {{/* Header Colors */}} {{/* Left Color */}}
@@ -403,7 +408,7 @@ With Genezio's Git-powered auto-deployments, your app updates instantly with eve
 
             <div style="flex-wrap: wrap" class="d-flex">
               <div class="languageBadge mb-2">typescript</div>
-              <div class="languageBadge mb-2">next.js</div>
+              <div class="languageBadge mb-2">react</div>
               <div class="languageBadge mb-2">tailwind</div>
               <div class="languageBadge mb-2">CSS</div>
             </div>
@@ -453,9 +458,8 @@ With Genezio's Git-powered auto-deployments, your app updates instantly with eve
 
             <div style="flex-wrap: wrap" class="d-flex">
               <div class="languageBadge mb-2">typescript</div>
-              <div class="languageBadge mb-2">next.js</div>
-              <div class="languageBadge mb-2">tailwind</div>
-              <div class="languageBadge mb-2">CSS</div>
+              <div class="languageBadge mb-2">node.js</div>
+              <div class="languageBadge mb-2">express.js</div>
             </div>
 
             <div class="mt-4">
@@ -502,7 +506,7 @@ With Genezio's Git-powered auto-deployments, your app updates instantly with eve
             />
             <div style="flex-wrap: wrap" class="d-flex">
               <div class="languageBadge mb-2">typescript</div>
-              <div class="languageBadge mb-2">next.js</div>
+              <div class="languageBadge mb-2">express.js</div>
               <div class="languageBadge mb-2">shadcn</div>
             </div>
 
@@ -521,6 +525,13 @@ With Genezio's Git-powered auto-deployments, your app updates instantly with eve
         </div>
       </div>
     </div>
+
+    <h2 class="text-white text-center fw-bold m-0 mt-5 pb-3 mb-5">
+      Pricing
+    </h2>
+
+    {{partial "generalPricing.html" .}}
+
 
          <p
       style="font-size: 12px"
