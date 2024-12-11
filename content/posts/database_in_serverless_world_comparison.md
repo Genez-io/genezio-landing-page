@@ -53,7 +53,7 @@ I’ve picked the following databases since these are the NoSQL options that I'v
 - **DynamoDB:** an AWS based NoSQL database. You can obtain one from your AWS account. Amazon DynamoDB pricing is based on provisioned throughput, storage, data transfer, and additional features like backups, restore, and streams.
 - **MongoDB:** a popular NoSQL database used to store unstructured data. MongoDB can easily be hosted on the MongoDB Atlas Cloud Platform. They offer different pricing plans: a pay as you go serverless pricing tier, a dedicated server solution for production applications and also a free tier. For this test, I’ve used an M30 database. If you think about going with the serverless pricing tier, pay attention to the fact that you can’t have more than 500 concurrent connections which is quite low if you plan to use it in a FaaS.
 - **Atlas MongoDB Data API:** this is using the same MongoDB, the distinction lies in the connection protocol. Rather than using the MongoDB Wire Protocol, it employs a HTTP-based API. This is useful if managing a connection pool is not feasible or if a MongoDB driver isn't compatible with your client application. This feature could be especially beneficial in a FaaS system as it eliminates the need to establish a database connection during the 'cold start' phase.
-- **Firestore:** serverless NoSQL database provided by Google that is part of the Firebase app development platform.
+- **Firestore:** serverless NoSQL database provided by Google that is part of the {{< external-link link="https://genezio.com/blog/firebase-alternatives/">}}Firebase app development{{< /external-link >}} platform.
 
 I wanted to see how these databases worked in a FaaS setup. My goal? To answer these key question:
 
