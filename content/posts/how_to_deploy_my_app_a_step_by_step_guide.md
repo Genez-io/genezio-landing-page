@@ -28,7 +28,8 @@ Discover advanced features like real-time logs, in-browser code editing, databas
 
 ## Create a New Project on Genezio
 
-1.1. Visit the dashboard:https://app.genez.io/new-project/.
+1.1. Visit the {{< external-link link="https://app.genez.io/new-project/">}}dashboard{{< /external-link >}}.
+
 1.2. Click the **"Import from GitHub"** option to get started.
 
 ![alt_text](/posts/geneziotutorial1.webp)
