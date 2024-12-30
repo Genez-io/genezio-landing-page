@@ -1,6 +1,6 @@
 ---
 title: "End-User License Agreement"
-lastUpdated: "January 1st, 2024"
+lastUpdated: "December 30th, 2024"
 # meta data start
 description: "Read Genezio’s End-User License Agreement (EULA) to understand the terms and conditions for using our application and services."
 meta_og_url: "https://genezio.com/eula/"
@@ -61,6 +61,13 @@ The license that is granted to You by the Company is free, solely for your perso
 - request limit size 50 MB.
 
 notwithstanding the above, users subscribed to the Free Plan are subject to certain usage limitations, which include a maximum of 3 databases per user account, a limit of 10 instances per function, and a cap of 10 parallel calls within the same function. Additionally, each function may not exceed 10,000 calls per minute. Genezio reserves the right to restrict or suspend service for any Free Plan account that exceeds these limitations or otherwise engages in activities that negatively impact the service performance or availability.
+
+## Payment of Fees
+
+Genezio offers flexible subscription plans, including a free Hobby plan for non-commercial use, a Pro plan at $15 per month, and custom pricing for Enterprise solutions.
+By selecting a paid plan, you agree to pay the applicable subscription fees in advance for the selected billing period. All payments are non-refundable. Genezio reserves the right to adjust its pricing with 30 days’ notice. Your continued use of the Services after any fee changes will constitute acceptance of the new rates.
+If your payment cannot be processed, your account will automatically revert to the free Hobby plan, ensuring continued access to your projects without interruption. You can upgrade at any time to restore full Pro or Enterprise features.
+To learn more about our plans and pricing, visit our Pricing Page.
 
 ## License Restrictions
 
