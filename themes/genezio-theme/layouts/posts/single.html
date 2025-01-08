@@ -42,16 +42,20 @@
       {{/* writer + share on */}}
         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mt-3 pt-3">
         <div class="d-flex">
-          <img
+          <a href="{{.Params.linkedin}}" target="_blank">
+            <img
             src="/images/writers/{{ .Params.author | urlize  }}.webp"
             style="height: 48px; width: 48px; object-fit: cover;"
             class="rounded-circle"
             alt="writer-avatar"
-          />
+            />
+          </a>
           <div class="d-flex flex-column mx-4">
-            <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold" id="author">
-              {{ .Params.author }}
-            </p>
+            <a href="{{.Params.linkedin}}" target="_blank" class="text-decoration-none">
+              <p style="font-size: 14px; color: #171717" class="mb-0 fw-semibold" id="author">
+                {{ .Params.author }}
+              </p>
+            </a>
             <p id="linkedin-url" style="display: none;">
               {{ .Params.linkedin }}
             </p>
@@ -635,7 +639,23 @@ if(email){
   document.addEventListener('DOMContentLoaded', generateJSON);
 </script>
 
-
+<script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ .Title | htmlEscape }}",
+  "image": [
+  "{{ .Params.thumbnail  }}"
+  ],
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
+  "dateModified": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
+  "author": [{
+  "@type": "Person",
+  "name": "{{ .Params.author }}",
+  "url": "{{ .Params.linkedin }}"
+  }]
+ }
+ </script>
 
 
 
