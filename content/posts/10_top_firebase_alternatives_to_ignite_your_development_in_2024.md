@@ -4,7 +4,7 @@ date: 2024-11-01
 tags:
   - Learning
 author: Luis Minvielle
-linkedIn: https://www.linkedin.com/in/costin-sin/
+linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/firebase-alternatives.webp
 preview: Firebase is awesome, no doubt. There's a reason it's used by over 2.5 million apps and games worldwide, but the truth is,  it's not always the perfect fit for every project.
 # meta data start
