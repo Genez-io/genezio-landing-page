@@ -639,7 +639,23 @@ if(email){
   document.addEventListener('DOMContentLoaded', generateJSON);
 </script>
 
-
+<script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ .Title | htmlEscape }}",
+  "image": [
+  "{{ .Params.thumbnail  }}"
+  ],
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
+  "dateModified": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
+  "author": [{
+  "@type": "Person",
+  "name": "{{ .Params.author }}",
+  "url": "{{ .Params.linkedin }}"
+  }]
+ }
+ </script>
 
 
 
