@@ -231,6 +231,12 @@ $cyan: #0dcaf0 !default;
   transform: scale(1.2);
 }
 
+.authorPagePhoto {
+  max-width: 192px;
+  width: 100%;
+  height: 192px !important;
+}
+
 // import bootstrap from node modules
 // TODO: for a better performance let's import only the parts that we are using from bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -297,6 +303,11 @@ $cyan: #0dcaf0 !default;
 }
 
 @media (max-width: 768px) {
+  .authorPagePhoto {
+    max-width: 96px !important;
+    height: 96px !important;
+  }
+
   .dbPricing {
     margin-top: 80px !important;
   }
