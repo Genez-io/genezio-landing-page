@@ -50,11 +50,11 @@
             </div>
             {{/*  Writer Details  */}}
           <div class="d-flex">
-            <a href="{{.Params.linkedin}}" target="_blank" class="text-decoration-none">
+            <a href="/author/{{ .Params.author | urlize }}" class="text-decoration-none">
                 <img src="/images/writers/{{ .Params.author | urlize  }}.webp" style="height:  48px; width: 48px; object-fit: cover;" class="rounded-circle" alt="writer-avatar"/>
             </a>
             <div class="d-flex flex-column mx-4">
-              <a href="{{.Params.linkedin}}" target="_blank" class="text-decoration-none">
+              <a href="/author/{{ .Params.author | urlize }}" class="text-decoration-none">
                 <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
               </a>
               <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
@@ -146,11 +146,11 @@
           {{/*  Writer Details  */}}
           <div class="d-flex">
             {{/*  TODO: avatar placeholder  */}}
-                          <a href="{{.Params.linkedin}}" target="_blank" class="text-decoration-none">
+                          <a href="/author/{{ .Params.author | urlize }}" class="text-decoration-none">
                             <img src="/images/writers/{{ .Params.author | urlize  }}.webp" style="height:  48px; width: 48px; object-fit: cover;" class="rounded-circle " alt="writer-avatar"/>
                           </a>
             <div class="d-flex flex-column mx-4">
-              <a href="{{.Params.linkedin}}" target="_blank" class="text-decoration-none">
+              <a href="/author/{{ .Params.author | urlize }}" class="text-decoration-none">
                 <p style="font-size: 14px; color: #171717;" class="mb-0 fw-semibold">{{ .Params.author }}</p>
               </a>
               <p style="color: #525252;" class="mb-0 fw-medium date">{{ dateFormat "Jan 02, 2006" .Params.date }}</p>
