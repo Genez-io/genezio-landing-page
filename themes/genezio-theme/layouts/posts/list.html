@@ -1,3 +1,9 @@
+{{ define "header" }}
+  {{ $ogImage := "https://genez.io/images/og.jpg" }}
+  <meta property="og:image" content="{{ $ogImage }}">
+  <meta property="twitter:image" content="{{ $ogImage }}">
+{{ end }}
+
 {{ define "header_css" }}{{ end }}
 {{ define "body_classes" }}page-taxonomy-list{{ end }}
 {{ define "header_classes" }}{{ end }}
