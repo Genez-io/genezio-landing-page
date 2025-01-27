@@ -1,5 +1,5 @@
 ---
-title: "10 Full Stack Project Ideas for 2024"
+title: "10 Full Stack Project Ideas for 2025"
 date: 2024-09-04
 tags:
   - Learning
