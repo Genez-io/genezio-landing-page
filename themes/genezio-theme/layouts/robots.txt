@@ -2,6 +2,7 @@ User-agent: *
 
 Disallow: /*?utm_
 Disallow: /*?deviceId=
+Disallow: /*?ref=
 Allow: /
 
 Sitemap: https://genezio.com/sitemap.xml
