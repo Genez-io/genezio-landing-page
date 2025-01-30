@@ -22,7 +22,7 @@ Whether you’re an **ML engineer**, a **DevOps professional**, or a **Project M
 
 ## What is Genezio?
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is a cutting-edge **Function-as-a-Service (FaaS)** platform that streamlines the deployment of applications and proofs-of-concept, offering a simpler alternative to traditional infrastructure management. It’s built to help developers focus on creating innovative solutions without getting slowed down by complicated setups or infrastructure managemen
+{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is a serverless cloud platform that streamlines the deployment of applications and proofs-of-concept, offering a simpler alternative to traditional infrastructure management. It's built to help developers focus on creating innovative solutions without getting slowed down by complicated setups or infrastructure management.
 
 With {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}}, you don’t need to be a DevOps expert. You can deploy your code quickly and easily, cutting down on setup time, speeding up your launch, and making scalability simple. Its user-friendly interface is perfect for smaller teams or machine learning groups that don’t have a cloud engineer on hand. Just deploy your functions and applications straight to the cloud—no headaches, no fuss.
 
@@ -168,7 +168,7 @@ From the **Genezio** dashboard, you can seamlessly manage, test, update, and mon
 
 One of the best ways to use {{< external-link link="https://genezio.com/" >}}Genezio's{{< /external-link >}} RAG deployment is by building a **Knowledge Intelligence Search Tool** — a smart system that turns internal or public data into a powerful, easy-to-use knowledge base.
 
-Companies generate tons of information daily — internal documents, training manuals, reports, support tickets, and emails. But this data is often scattered across systems, making it hard for employees to find what they need. And let’s face it, traditional keyword searche s often fail because they don’t understand context.
+Companies generate tons of information daily — internal documents, training manuals, reports, support tickets, and emails. But this data is often scattered across systems, making it hard for employees to find what they need. And let’s face it, traditional keyword searches often fail because they don’t understand context.
 
 That’s where Genezio shines. It helps companies create a smart search tool using **semantic search**. Employees can ask questions in plain language and get accurate, context-aware answers. No more wasting time digging through endless files.
 
