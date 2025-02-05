@@ -83,7 +83,6 @@
           </div>
 
           <div class="mt-4">
-            {{/* TODO: img WIP */}}
             <h3 class="text-white">
               <span>MYBENEFITS</span
               ><span class="opacity-75 fw-light"> saved 1 year of developer time.</span>
@@ -164,17 +163,132 @@
         "
       >
         <div class="position-relative overflow-hidden" style="padding: 40px 0; height: 302px">
-          <p style="font-size: 12px" class="text-success fw-bold text-center position-relative z-2">
+          <p
+            style="font-size: 12px"
+            class="text-success fw-bold text-center position-relative mb-4 pb-3 z-2"
+          >
             USE THE FRAMEWORK YOU LOVE
           </p>
-          <div class="row text-center">
-            <div class="col-1"><i class="fas fa-home fa-2x"></i></div>
-            <div class="col-1"><i class="fas fa-user fa-2x"></i></div>
-            <div class="col-1"><i class="fas fa-envelope fa-2x"></i></div>
-            <div class="col-1"><i class="fas fa-phone fa-2x"></i></div>
-            <div class="col-1"><i class="fas fa-camera fa-2x"></i></div>
-            <div class="col-1"><i class="fas fa-music fa-2x"></i></div>
-            <div class="col-1"><i class="fas fa-car fa-2x"></i></div>
+          <div class="row justify-content-center text-center">
+            <div class="d-flex flex-wrap justify-content-center z-2" style="gap: 100px">
+              <img
+                class="navbar-brand"
+                alt="reactjs-logo"
+                src="/images/reactjslogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="angular-logo"
+                src="/images/angularjslogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="vue-logo"
+                src="/images/vuelogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="svelte-logo"
+                src="/images/sveltelogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="html-logo"
+                src="/images/htmllogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="nextjs-logo"
+                src="/images/nextjslogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="nuxt-logo"
+                src="/images/nuxtlogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="row justify-content center text-center">
+            <div class="d-flex flex-wrap justify-content-center mt-4 pt-3 z-2" style="gap: 100px">
+              <img
+                class="navbar-brand"
+                alt="express-logo"
+                src="/images/expresslogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="python-logo"
+                src="/images/pythonlogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="fastify-logo"
+                src="/images/fastifylogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="nestjs-logo"
+                src="/images/nestjslogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="fastapi-logo"
+                src="/images/fastapilogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="flask-logo"
+                src="/images/flasklogo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+              <img
+                class="navbar-brand"
+                alt="django-logo"
+                src="/images/djangologo.svg"
+                width="57px"
+                height="57px"
+                loading="lazy"
+              />
+            </div>
           </div>
           {{/* Decoration gradient start */}}
           <div
@@ -192,6 +306,7 @@
               filter: blur(100px);
             "
           ></div>
+
           {{/* Decoration gradient end */}}
 
           <div class="row text-center mt-3">
@@ -212,9 +327,9 @@
     <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-4 mb-3 pb-1">
       CAPABILITIES
     </p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-2">Key benefits</h2>
+    <h2 class="text-white text-center fw-bold mb-4 pb-2">Key features of Genezio</h2>
 
-    <div class="row mb-md-3 pb-md-2 justify-content-center">
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
@@ -235,11 +350,11 @@
               />
             </div>
             <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
-              One command-line deployment.
+              Reduced Cold Start Time
             </h3>
             <p class="card-text opacity-75 card-listing mb-2 pb-5">
-              Spend less time on setup and more time on development. Run one command and get your
-              app up and running in minutes.
+              Experience faster initialization times, ensuring that your functions are ready to
+              handle requests immediately.
             </p>
 
             <a
@@ -271,12 +386,10 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 60px">
-              Up to 4x Faster Response Times.
-            </h3>
-            <p class="card-text opacity-75 mb-2 pb-5 card-listing">
-              Take advantage of a Function-as-a-Service platform designed and built with performance
-              and security in mind.
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 60px">Easy Deployment</h3>
+            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+              Deploy effortlessly with Genezio's intuitive CLI. Quick to install and simple to use,
+              it streamlines your deployment process, letting you focus on coding.
             </p>
             <a
               href="https://genezio.com/docs/getting-started"
@@ -308,11 +421,11 @@
               />
             </div>
             <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
-              Auto-scaling for 100% Uptime.
+              Cost-Effective Pricing
             </h3>
-            <p class="card-text opacity-75 mb-4 pb-2 card-listing">
-              Whether you're serving a handful of users or millions, our platform scales
-              effortlessly to meet your needs without any hassle.
+            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+              Genezio’s predictable pricing model makes deploying serverless applications up to 6x
+              more affordable than traditional solutions.
             </p>
 
             <a
@@ -332,40 +445,49 @@
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
-          <div class="card-body d-flex">
-            <div
-              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
-            >
-              <img
-                class="navbar-brand"
-                alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
-                width="45px"
-                height="49px"
-                loading="lazy"
-              />
-            </div>
+          <div class="card-body">
+            {{/* class="card p-2 p-md-4 text-white" */}}
+            <h3 class="card-title m-0 mb-3">Automatic Scaling</h3>
+            <p class="card-text opacity-75 card-listing">
+              Genezio Functions automatically scale to meet demand, maintaining optimal performance
+              regardless of traffic volume.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h3 class="card-title m-0 mb-3">Frameworks</h3>
 
-            <div class="ms-4 ps-3">
-              <h3 class="card-title m-0 mb-2 pb-1">Up to 6x Lower Costs</h3>
-              <p class="card-text opacity-75 card-listing mb-4">
-                No more unpredictable bills at the end of the month.
-              </p>
+            <p class="card-text opacity-75 card-listing">
+              Deploy complex apps like Express.js and Next.js serverless with a single click,
+              simplifying the deployment process.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h3 class="card-title m-0 mb-3">Integrated Services</h3>
 
-              <a
-                target="_blank"
-                href="/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/"
-                class="card-link text-white text-decoration-none fw-semibold"
-                id="reduced-cold-start-time-learn-more"
-                >Learn more -></a
-              >
-            </div>
+            <p class="card-text opacity-75 card-listing">
+              Utilize additional Genezio Services, including typesafe feature, databases, auth, cron
+              jobs to build complete and dynamic applications.
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <h2 class="text-white text-left fw-bold m-0 pb-3 mb-3">Community templates</h2>
+    <h2 class="text-white text-left fw-bold m-0 pb-3 mb-3 ms-0 ms-md-2">Community templates</h2>
 
     <div class="row mb-md-3 pb-md-3 justify-content-center">
       {{/* Card */}}
@@ -447,12 +569,111 @@
       >
     </div>
 
-    <h2 class="text-white text-left fw-bold m-0 mt-5 pt-2 pb-3 mb-2">
+    <h2 class="text-white text-left fw-bold m-0 mt-5 pt-2 pb-3 mb-2 ms-0 ms-md-2">
       Genezio Native <br />
       Features & Services
     </h2>
 
     <div class="position-relative">
+      <div class="position-absolute" style="right: 70px; top: -200px; width: 50%; height: 100%">
+        {{/*
+        <svg
+          width="891"
+          height="1384"
+          viewBox="0 0 891 1384"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_0_1130)">
+            <g filter="url(#filter1_d_0_1130)">
+              <circle
+                cx="159.5"
+                cy="159.5"
+                r="159.5"
+                transform="matrix(-1 0 0 1 851 133.041)"
+                fill="url(#paint0_radial_0_1130)"
+              />
+            </g>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_0_1130"
+              x="-0.00524902"
+              y="0.0396423"
+              width="1383.01"
+              height="1383.01"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="399.004" />
+              <feGaussianBlur stdDeviation="266.003" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.129412 0 0 0 0 0.0784314 0 0 0 0 0.227451 0 0 0 0.6 0"
+              />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1130" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_0_1130"
+                result="shape"
+              />
+            </filter>
+            <filter
+              id="filter1_d_0_1130"
+              x="444.718"
+              y="45.7589"
+              width="493.564"
+              height="493.564"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset />
+              <feGaussianBlur stdDeviation="43.6411" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0.980392 0 0 0 0 0.643137 0 0 0 0.8 0"
+              />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1130" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_0_1130"
+                result="shape"
+              />
+            </filter>
+            <radialGradient
+              id="paint0_radial_0_1130"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(159.5 79.7499) scale(199.375)"
+            >
+              <stop stop-color="#00FAA4" />
+              <stop offset="0.7" stop-color="#00AF73" />
+              <stop offset="1" stop-color="#007D52" />
+            </radialGradient>
+          </defs>
+        </svg>
+        */}}
+      </div>
       {{/* Header Colors */}} {{/* Left Color */}}
       <div
         class="pe-none d-none d-lg-block d-xl-block"
@@ -492,13 +713,13 @@
         "
       ></div>
     </div>
-    <p class="fw-medium text-white text-left opacity-75 mb-4 pb-3 z-2">
+    <p class="fw-medium text-white text-left opacity-75 mb-4 pb-3 z-2 ms-0 ms-md-2">
       Deploy on the fastest full-stack cloud and enjoy the autoscaling of near-zero<br />latency
       serverless without rewriting your code.
     </p>
 
-    <div class="row">
-      <div class="col-12 col-md mt-4 mt-md-0 z-2">
+    <div class="row mx-md-2">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-0">
         <div
           class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
         >
@@ -528,7 +749,7 @@
           Get started
         </a>
       </div>
-      <div class="col-12 col-md mt-4 mt-md-0 z-2">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-2">
         <div
           class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
         >
@@ -560,8 +781,8 @@
       </div>
     </div>
 
-    <div class="row mt-0 mt-md-4 pt-0 pt-md-3">
-      <div class="col-12 col-md mt-4 mt-md-0 z-2">
+    <div class="row mt-0 mt-md-4 pt-0 pt-md-3 mx-md-2">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-0">
         <div
           class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
         >
@@ -591,7 +812,7 @@
           Get started
         </a>
       </div>
-      <div class="col-12 col-md mt-4 mt-md-0 z-2">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-2">
         <div
           class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
         >
@@ -631,7 +852,7 @@
     <h2 class="text-white text-center fw-bold m-0 pb-3 mb-4">Our latest article</h2>
     {{/* Our latest article */}} {{ with (index (where site.RegularPages "Type"
     "posts").ByDate.Reverse 0) }}
-    <div class="ourLatestArticle row mx-2 px-0 px-md-3 text-white justify-content-center pb-4 mb-3">
+    <div class="ourLatestArticle row px-0 px-md-3 text-white justify-content-center pb-4 mb-3">
       <div class="px-1">
         <div class="col-lg col-md-12 lastArticleBackground">
           <a
@@ -660,7 +881,7 @@
       Don't take our <span class="d-block d-sm-none"></span>word for it
     </h2>
 
-    <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
+    <div style="z-index: 99" class="row pb-2 justify-content-center position-relative">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
