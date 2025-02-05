@@ -10,19 +10,39 @@
   >
     <div class="expressWrapper">
       <div class="row d-flex justify-content-center align-items-center px-md-5">
+        <div class="position-relative">
+          <div
+            class="pe-none d-none d-lg-block d-xl-block"
+            style="
+              position: absolute;
+              height: 700px;
+              filter: blur(200px);
+              left: 50%;
+              transform: translateX(-50%);
+              background-image: radial-gradient(
+                ellipse at center,
+                rgba(140, 104, 205, 0.8),
+                transparent
+              );
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 80em;
+            "
+          ></div>
+        </div>
+
         <h1
-          style="z-index: 99"
-          class="fw-bold text-white py-4 mt-4 mt-md-0 py-md-0 hero-font-size-title text-center"
+          class="fw-bold text-white py-4 mt-4 mt-md-0 py-md-0 hero-font-size-title text-center z-2"
         >
           Deploy web and AI apps <br />
           on the <span class="text-success">fastest</span> cloud platform
         </h1>
-        <p class="text-white opacity-75 text-center pt-3">
+        <p class="text-white opacity-75 text-center pt-3 z-2">
           Deploy AI-powered apps on the most responsive and power-efficient cloud and enjoy the
           autoscaling of near-<br />zero latency serverless without rewriting your code.
         </p>
 
-        <div id="headerExpressStartForFree" class="d-flex justify-content-center mt-4 mb-3">
+        <div id="headerExpressStartForFree" class="d-flex justify-content-center mt-4 mb-3 z-2">
           <a
             class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
             href="https://app.genez.io/new-project/"
@@ -41,7 +61,7 @@
           </a>
         </div>
 
-        <div class="col-12 col-lg-7 col-md-12 col-sm-12 text-center text-md-start">
+        <div class="col-12 col-lg-7 col-md-12 col-sm-12 text-center text-md-start z-2">
           <div class="d-flex align-items-center">
             <img
               class="navbar-brand me-2"
@@ -87,7 +107,7 @@
         </div>
 
         <div
-          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center flex-column pt-5 mt-5 mt-md-0 pt-md-0"
+          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center flex-column pt-5 mt-5 mt-md-0 pt-md-0 z-2"
         >
           <img
             style="max-width: 650px; height: 430px; object-fit: contain"
@@ -194,7 +214,7 @@
     </p>
     <h2 class="text-white text-center fw-bold mb-4 pb-2">Key benefits</h2>
 
-    <div class="row mb-md-3 pb-md-3 justify-content-center">
+    <div class="row mb-md-3 pb-md-2 justify-content-center">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
@@ -254,7 +274,7 @@
             <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 60px">
               Up to 4x Faster Response Times.
             </h3>
-            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+            <p class="card-text opacity-75 mb-2 pb-5 card-listing">
               Take advantage of a Function-as-a-Service platform designed and built with performance
               and security in mind.
             </p>
@@ -290,7 +310,7 @@
             <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
               Auto-scaling for 100% Uptime.
             </h3>
-            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+            <p class="card-text opacity-75 mb-4 pb-2 card-listing">
               Whether you're serving a handful of users or millions, our platform scales
               effortlessly to meet your needs without any hassle.
             </p>
@@ -312,13 +332,34 @@
           class="card p-2 p-md-4 text-white border-gradient-green h-100"
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
-          <div class="card-body">
-            <h3 class="card-title m-0 mb-3">Integrated Services</h3>
+          <div class="card-body d-flex">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
 
-            <p class="card-text opacity-75 card-listing">
-              Utilize additional Genezio Services, including typesafe feature, databases, auth, cron
-              jobs to build complete and dynamic applications.
-            </p>
+            <div class="ms-4 ps-3">
+              <h3 class="card-title m-0 mb-2 pb-1">Up to 6x Lower Costs</h3>
+              <p class="card-text opacity-75 card-listing mb-4">
+                No more unpredictable bills at the end of the month.
+              </p>
+
+              <a
+                target="_blank"
+                href="/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/"
+                class="card-link text-white text-decoration-none fw-semibold"
+                id="reduced-cold-start-time-learn-more"
+                >Learn more -></a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -334,27 +375,17 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body p-0">
-            <p class="fw-bold fs-5">Serverless Function</p>
-            <p>Enjoy 4x faster response times without cloud configurations.</p>
+            <p class="fw-bold fs-5 mb-2 pb-1">Serverless Function</p>
+            <p class="opacity-75">Enjoy 4x faster response times without cloud configurations.</p>
 
-            <div class="mt-4">
+            <div class="mt-4 pt-2">
               <a
-                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                target="_blank"
                 href="https://app.genez.io/faas-getting-started"
-                target="_blank"
+                class="card-link text-white text-decoration-none fw-semibold"
                 id="serverless-function-get-started"
+                >Get Started -></a
               >
-                Get Started
-              </a>
-              {{/*
-              <a
-                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-                href="https://genezio.com/docs/getting-started"
-                target="_blank"
-              >
-                View demo
-              </a>
-              */}}
             </div>
           </div>
         </div>
@@ -366,28 +397,21 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body p-0">
-            <p class="fw-bold fs-5">Express.js App</p>
+            <p class="fw-bold fs-5 mb-2 pb-1">Express.js App</p>
 
-            <p class="pb-4">Cut deployment and server costs by up to 6x.</p>
+            <p class="opacity-75">
+              Cut deployment and server costs <br />
+              by up to 6x.
+            </p>
 
-            <div class="mt-4">
+            <div class="mt-4 pt-2">
               <a
-                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                target="_blank"
                 href="https://app.genez.io/express-getting-started"
-                target="_blank"
+                class="card-link text-white text-decoration-none fw-semibold"
                 id="express.js-app-get-started"
+                >Get Started -></a
               >
-                Get Started
-              </a>
-              {{/*
-              <a
-                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-                href="https://genezio.com/docs/getting-started"
-                target="_blank"
-              >
-                View demo
-              </a>
-              */}}
             </div>
           </div>
         </div>
@@ -399,34 +423,31 @@
           style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body p-0">
-            <p class="fw-bold fs-5">Next.js App</p>
-            <p>Eliminate unpredictable costs and cold start times.</p>
+            <p class="fw-bold fs-5 mb-2 pb-1">Next.js App</p>
+            <p class="opacity-75">Eliminate unpredictable costs and cold start times.</p>
 
-            <div class="mt-4">
+            <div class="mt-4 pt-2">
               <a
-                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                target="_blank"
                 href="https://app.genez.io/nextjs-getting-started"
-                target="_blank"
+                class="card-link text-white text-decoration-none fw-semibold"
                 id="next.js-app"
+                >Get Started -></a
               >
-                Get Started
-              </a>
-              {{/*
-              <a
-                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-                href="https://genezio.com/docs/getting-started"
-                target="_blank"
-              >
-                View demo
-              </a>
-              */}}
             </div>
           </div>
         </div>
       </div>
+      <a
+        target="_blank"
+        href="https://app.genez.io/templates"
+        class="card-link text-white text-decoration-none fw-semibold mt-4 ms-3"
+        id="more-templates"
+        >More templates -></a
+      >
     </div>
 
-    <h2 class="text-white text-left fw-bold m-0 pb-3 mb-2">
+    <h2 class="text-white text-left fw-bold m-0 mt-5 pt-2 pb-3 mb-2">
       Genezio Native <br />
       Features & Services
     </h2>
@@ -437,10 +458,10 @@
         class="pe-none d-none d-lg-block d-xl-block"
         style="
           position: absolute;
-          height: 800px;
+          height: 1000px;
           filter: blur(325.484375px);
-          top: -180px;
-          left: -35%;
+          top: 0px;
+          left: -40%;
           transform: translateX(-30%);
           background-image: radial-gradient(
             ellipse at center,
@@ -449,57 +470,35 @@
           );
           background-repeat: no-repeat, no-repeat;
           background-position: left, right;
-          width: 80em;
+          width: 90em;
           filter: blur(200px);
         "
       ></div>
 
-      {{/*
-      <div
-        class="pe-none d-none d-lg-block d-xl-block"
-        style="
-          position: absolute;
-          width: 100%;
-          height: 600px;
-          top: -140px;
-          left: 100%;
-          width: 150vw;
-          transform: translateX(-33%);
-          filter: blur(325px);
-          background-image: linear-gradient(
-            to right,
-            rgba(242, 123, 255, 0.2),
-            rgba(255, 255, 255, 0) 25%
-          );
-          background-repeat: no-repeat, no-repeat;
-          background-position: center;
-        "
-      ></div>
-      */}} {{/* Right Color */}}
       <div
         class="pe-none d-none d-lg-block d-xl-block"
         style="
           position: absolute;
           height: 1800px;
           filter: blur(325.484375px);
-          top: -180px;
+          top: -400px;
           left: 125%;
           transform: translateX(-40%);
           background-image: radial-gradient(ellipse at center, rgba(0, 175, 115, 0.9), transparent),
             radial-gradient(ellipse at right, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
           background-repeat: no-repeat, no-repeat;
           background-position: left, right;
-          width: 80em;
+          width: 90em;
         "
       ></div>
     </div>
-    <p style="z-index: 99" class="fw-medium text-white text-left opacity-75 mb-4 pb-3">
+    <p class="fw-medium text-white text-left opacity-75 mb-4 pb-3 z-2">
       Deploy on the fastest full-stack cloud and enjoy the autoscaling of near-zero<br />latency
       serverless without rewriting your code.
     </p>
 
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2">
         <div
           class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
         >
@@ -529,70 +528,7 @@
           Get started
         </a>
       </div>
-      <div class="col">
-        <div
-          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
-        >
-          <img
-            class="navbar-brand"
-            alt="genezio-logo-icon-black"
-            src="/images/genezio-logo-icon-black.svg"
-            width="45px"
-            height="49px"
-            loading="lazy"
-          />
-        </div>
-        <h4 class="text-white mb-4">Database Integration</h4>
-        <h5 class="text-white mb-2 pb-1 opacity-75">Database Integration</h5>
-        <p class="text-white opacity-50 mb-3 pb-3">
-          One of Genezio's most exciting features is guaranteed type safety between backend services
-          and clients. This is enabled by the autogenerated SDK, which constructs types that match
-          the server-side types used for RPC calls exposed to clients. Start adding type-safe
-          features to your project or create one from scratch.
-        </p>
-        <a
-          class="btn btn-secondary fw-semibold px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
-          href="https://genezio.com/docs/"
-          target="_blank"
-          id="check-our-docs-hero"
-        >
-          Get started
-        </a>
-      </div>
-    </div>
-
-    <div class="row mt-4 pt-3">
-      <div class="col">
-        <div
-          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
-        >
-          <img
-            class="navbar-brand"
-            alt="genezio-logo-icon-black"
-            src="/images/genezio-logo-icon-black.svg"
-            width="45px"
-            height="49px"
-            loading="lazy"
-          />
-        </div>
-        <h4 class="text-white mb-4">Database Integration</h4>
-        <h5 class="text-white mb-2 pb-1 opacity-75">Database Integration</h5>
-        <p class="text-white opacity-50 mb-3 pb-3">
-          One of Genezio's most exciting features is guaranteed type safety between backend services
-          and clients. This is enabled by the autogenerated SDK, which constructs types that match
-          the server-side types used for RPC calls exposed to clients. Start adding type-safe
-          features to your project or create one from scratch.
-        </p>
-        <a
-          class="btn btn-secondary fw-semibold px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
-          href="https://genezio.com/docs/"
-          target="_blank"
-          id="check-our-docs-hero"
-        >
-          Get started
-        </a>
-      </div>
-      <div class="col">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2">
         <div
           class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
         >
@@ -624,7 +560,70 @@
       </div>
     </div>
 
-    <hr class="mt-5" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <div class="row mt-0 mt-md-4 pt-0 pt-md-3">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2">
+        <div
+          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+        >
+          <img
+            class="navbar-brand"
+            alt="genezio-logo-icon-black"
+            src="/images/genezio-logo-icon-black.svg"
+            width="45px"
+            height="49px"
+            loading="lazy"
+          />
+        </div>
+        <h4 class="text-white mb-4">Database Integration</h4>
+        <h5 class="text-white mb-2 pb-1 opacity-75">Database Integration</h5>
+        <p class="text-white opacity-50 mb-3 pb-3">
+          One of Genezio's most exciting features is guaranteed type safety between backend services
+          and clients. This is enabled by the autogenerated SDK, which constructs types that match
+          the server-side types used for RPC calls exposed to clients. Start adding type-safe
+          features to your project or create one from scratch.
+        </p>
+        <a
+          class="btn btn-secondary fw-semibold px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
+          href="https://genezio.com/docs/"
+          target="_blank"
+          id="check-our-docs-hero"
+        >
+          Get started
+        </a>
+      </div>
+      <div class="col-12 col-md mt-4 mt-md-0 z-2">
+        <div
+          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+        >
+          <img
+            class="navbar-brand"
+            alt="genezio-logo-icon-black"
+            src="/images/genezio-logo-icon-black.svg"
+            width="45px"
+            height="49px"
+            loading="lazy"
+          />
+        </div>
+        <h4 class="text-white mb-4">Database Integration</h4>
+        <h5 class="text-white mb-2 pb-1 opacity-75">Database Integration</h5>
+        <p class="text-white opacity-50 mb-3 pb-3">
+          One of Genezio's most exciting features is guaranteed type safety between backend services
+          and clients. This is enabled by the autogenerated SDK, which constructs types that match
+          the server-side types used for RPC calls exposed to clients. Start adding type-safe
+          features to your project or create one from scratch.
+        </p>
+        <a
+          class="btn btn-secondary fw-semibold px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
+          href="https://genezio.com/docs/"
+          target="_blank"
+          id="check-our-docs-hero"
+        >
+          Get started
+        </a>
+      </div>
+    </div>
+
+    <hr class="mt-5" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
 
     <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1">
       EDUCATION
@@ -653,7 +652,7 @@
       </div>
     </div>
     {{ end }} {{/* End of main container */}} {{/* TESTIMONIALS */}}
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
     <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
       TESTIMONIALS
     </p>
@@ -810,7 +809,7 @@
       </div>
     </div>
 
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
     {{/* FAQ */}}
     <p
       style="font-size: 12px"
