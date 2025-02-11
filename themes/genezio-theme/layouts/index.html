@@ -240,21 +240,15 @@
       <div class="row d-flex justify-content-center align-items-center px-md-5">
         <div class="col-12 col-lg-7 col-md-12 col-sm-12 text-center text-md-start z-2">
           <div class="d-flex align-items-center">
-            <img
-              class="navbar-brand me-2"
-              alt="bware-logo-icon-white"
-              src="/images/bware-white.svg"
-              loading="lazy"
-            />
-            <h3 class="text-white mb-0 opacity-75 fw-light">reduces deployment time by 40%.</h3>
-          </div>
-
-          <div class="d-flex align-items-center mt-4">
-            <h3 class="text-white">
-              <span>SESSIONS</span>
-              <span class="opacity-75 fw-light">
-                reported less than 3 min from <br />
-                typescript code to cloud.</span
+            <h3 class="text-white mb-0 fw-light">
+              <img
+                class="navbar-brand me-2"
+                alt="bware-logo-icon-white"
+                src="/images/bware-white.svg"
+                loading="lazy"
+              /><span class="opacity-75"
+                >deployed new features “in hours, if not minutes” and cut integration time by 40%
+                with tools like Upstash.</span
               >
             </h3>
           </div>
@@ -262,7 +256,10 @@
           <div class="mt-4">
             <h3 class="text-white">
               <span>MYBENEFITS</span
-              ><span class="opacity-75 fw-light"> saved 1 year of developer time.</span>
+              ><span class="opacity-75 fw-light">
+                automated internal apps, reducing manual effort by 70% while ensuring reliability
+                with retry queues and escalations.</span
+              >
             </h3>
           </div>
 
@@ -496,9 +493,39 @@
       </div>
     </div>
 
-    <h2 class="text-white text-left fw-bold m-0 pb-3 mb-3 ms-0 ms-md-2 mt-5 pt-3">
-      Community templates
-    </h2>
+    <div class="row px-2 mt-5 pt-5 mb-5">
+      <div class="col-md-9">
+        <h2 class="text-white text-left fw-bold mb-3">Community templates</h2>
+        <p class="text-white opacity-75">
+          Import your project from your GitHub repo and deploy it instantly. <br />
+          Want to explore the platform first? Start with one of our ready-to-use getting started
+          templates.
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <a
+          class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-3 w-100"
+          href="https://app.genez.io/new-project/"
+          target="_blank"
+          id="import-your-existing-project"
+        >
+          Import your existing project
+        </a>
+        <a
+          class="btn btn-secondary fw-semibold px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1 w-100"
+          href="https://genezio.com/docs/"
+          target="_blank"
+          id="get-started-with-a-template"
+        >
+          Get started with a template
+        </a>
+      </div>
+    </div>
+
+    <h3 class="text-white text-left fw-bold m-0 pb-3 mb-3 ms-0 ms-md-2 mt-5 pt-3">
+      From idea to production, in minutes.
+    </h3>
 
     <div class="row mb-md-3 pb-md-3 justify-content-center">
       {{/* Card */}}
@@ -856,6 +883,30 @@
       </div>
     </div>
 
+    <div class="z-4 mt-5 pt-5">
+      <h3 class="text-white text-center fs-1 fw-bold mb-3 pb-2">
+        <span class="opacity-50">Everything</span> your team needs<span class="opacity-50"
+          >, in your control</span
+        >
+      </h3>
+
+      <p class="text-white text-center m-0 opacity-75">
+        Need advanced capabilities like
+        <b> organizations, audit logs, monitoring, secure networking, or log drains</b>?
+        <br />Contact us for a custom enterprise offer designed to meet your specific needs.
+      </p>
+
+      <div id="headerExpressStartForFree" class="d-flex justify-content-center mt-4 pb-4">
+        <a class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1" target="_blank"> Contact us </a>
+        <a
+          class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
+          target="_blank"
+        >
+          Get an Enterprise Trial
+        </a>
+      </div>
+    </div>
+
     <hr class="mt-5" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
 
     <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1">
@@ -1042,6 +1093,7 @@
       </div>
     </div>
 
+    <div class="mt-4"></div>
     <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
     {{/* FAQ */}}
     <p
