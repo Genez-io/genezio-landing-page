@@ -536,3 +536,44 @@ $cyan: #0dcaf0 !default;
   mask-composite: exclude;
   pointer-events: none;
 }
+
+.landingPageGradingBg {
+  background: linear-gradient(
+    60deg,
+    rgba(2, 0, 36, 0) 20%,
+    rgba(9, 9, 121, 0) 40%,
+    rgba(0, 250, 164, 0.2) 100%
+  );
+}
+
+.landingPageGradientSection {
+  background-color: #21143a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-left: none !important ;
+  border-right: none !important ;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .titleWrapper {
+    margin-top: 40px;
+    border: 1px solid #00faa4;
+    padding: 16px 24px;
+    border-radius: 99px;
+    box-shadow: inset 0px 0px 24px 0px #00faa4;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    h2 {
+      font-weight: 400;
+      letter-spacing: -2.3%;
+      font-size: 48px;
+
+      background: linear-gradient(to right, #ebf4ff, #99fddb, #c5b3e6);
+      -webkit-background-clip: text; /* This clips the background to the text */
+      color: transparent;
+    }
+  }
+}
