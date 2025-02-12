@@ -565,15 +565,33 @@ $cyan: #0dcaf0 !default;
     border-radius: 99px;
     box-shadow: inset 0px 0px 24px 0px #00faa4;
     background-color: rgba(0, 0, 0, 0.2);
+  }
 
+  h2 {
+    font-weight: 400;
+    letter-spacing: -2.3%;
+    font-size: 48px;
+    background: linear-gradient(to right, #ebf4ff, #99fddb, #c5b3e6);
+    -webkit-background-clip: text; /* This clips the background to the text */
+    color: transparent;
+  }
+
+  // mobile
+  @media (max-width: 768px) {
+    padding: 20px;
+    .titleWrapper {
+      padding: 8px 12px;
+      margin-top: 20px;
+    }
     h2 {
-      font-weight: 400;
-      letter-spacing: -2.3%;
-      font-size: 48px;
-
-      background: linear-gradient(to right, #ebf4ff, #99fddb, #c5b3e6);
-      -webkit-background-clip: text; /* This clips the background to the text */
-      color: transparent;
+      font-size: 24px;
+    }
+    div {
+      width: 100%;
+      flex-direction: column;
+      > a {
+        margin-bottom: 14px;
+      }
     }
   }
 }
