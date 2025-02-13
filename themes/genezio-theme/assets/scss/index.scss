@@ -546,6 +546,15 @@ $cyan: #0dcaf0 !default;
   );
 }
 
+.frameworksYouLove {
+  padding: 40px 0;
+  height: 302px;
+
+  @media (max-width: 994px) {
+    height: auto;
+  }
+}
+
 .landingPageGradientSection {
   background-color: #21143a;
   border: 1px solid rgba(255, 255, 255, 0.1);
