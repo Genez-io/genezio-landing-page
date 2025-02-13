@@ -91,6 +91,32 @@
   {{- partial "head.html" . -}}
   <body>
 
+     <!-- enterprise us Modal -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+      var modal = document.getElementById("enterpriseModal");
+      var btns = document.getElementsByClassName("open-enterprise-modal-btn");
+      var span = document.getElementById("closeEnterpriseModalBtn");
+    
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          modal.style.display = "block";
+        };
+      }
+    
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    });
+  </script>
+  <!-- End of enterprise Modal -->
+
     <!-- Contact us Modal -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {

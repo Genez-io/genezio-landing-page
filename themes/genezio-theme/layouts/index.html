@@ -37,7 +37,7 @@
           The <span class="text-success">autonomous</span> cloud platform <br />
           developers trust.
         </h1>
-        <p class="text-white opacity-75 text-center pt-3 z-2">
+        <p class="text-white opacity-75 text-center pt-0 pt-md-3 z-2">
           Our customers rely on Genezio for secure AI-powered web app <b>deployments</b>—running on
           ultra-fast,<br />
           energy-efficient infrastructure with CDN-optimized frontends, autoscaled backends,<br />
@@ -259,20 +259,21 @@
                 />
                 <img
                   class="navbar-brand z-2"
-                  alt="svelte-logo"
-                  src="/images/sveltelogo.svg"
+                  alt="flask-logo"
+                  src="/images/flasklogo.svg"
                   width="57px"
                   height="57px"
                   loading="lazy"
                 />
                 <img
                   class="navbar-brand z-2"
-                  alt="html-logo"
-                  src="/images/htmllogo.svg"
+                  alt="django-logo"
+                  src="/images/djangologo.svg"
                   width="57px"
                   height="57px"
                   loading="lazy"
                 />
+
                 <img
                   class="navbar-brand z-2"
                   alt="nextjs-logo"
@@ -336,16 +337,16 @@
                 />
                 <img
                   class="navbar-brand z-2"
-                  alt="flask-logo"
-                  src="/images/flasklogo.svg"
+                  alt="svelte-logo"
+                  src="/images/sveltelogo.svg"
                   width="57px"
                   height="57px"
                   loading="lazy"
                 />
                 <img
                   class="navbar-brand z-2"
-                  alt="django-logo"
-                  src="/images/djangologo.svg"
+                  alt="html-logo"
+                  src="/images/htmllogo.svg"
                   width="57px"
                   height="57px"
                   loading="lazy"
@@ -1128,20 +1129,19 @@
       </p>
 
       <div class="d-flex justify-content-center mt-4">
-        <a
-          class="btn btn-primary fw-semibold px-4 mx-2 py-2"
-          href="https://app.genez.io/new-project/"
-          target="_blank"
-        >
+        <a class="btn btn-primary fw-semibold px-4 mx-2 py-2 open-modal-btn" type="submit">
           Contact us
         </a>
         <a
-          class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75"
+          class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 open-enterprise-modal-btn"
           target="_blank"
           id="get-started-with-a-template"
+          type="submit"
         >
           Get an Enterprise Trial
         </a>
+
+        {{ partial "contactUsModal.html" . }} {{ partial "enterpriseRequest.html" . }}
       </div>
     </div>
     {{/* Everything your team needs end */}}
