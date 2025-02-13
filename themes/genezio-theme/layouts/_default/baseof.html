@@ -91,6 +91,31 @@
   {{- partial "head.html" . -}}
   <body>
 
+     <!-- submit template Modal -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+      var modal = document.getElementById("submitTemplateModal");
+      var btns = document.getElementsByClassName("open-submitTemplate-modal-btn");
+      var span = document.getElementById("closeSubmitTemplateModalBtn");
+    
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          modal.style.display = "block";
+        };
+      }
+    
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    });
+  </script>
+  <!-- End of submit template modal -->
      <!-- enterprise us Modal -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
