@@ -555,6 +555,21 @@ $cyan: #0dcaf0 !default;
   }
 }
 
+.learnMore::after {
+  content: "";
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  opacity: 0;
+  transform: translateX(-5px);
+}
+
+.learnMore:hover::after {
+  content: " ->";
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .landingPageGradientSection {
   background-color: #21143a;
   border: 1px solid rgba(255, 255, 255, 0.1);
