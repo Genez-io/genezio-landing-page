@@ -2,7 +2,7 @@
 title: "Deploy serverless apps" 
 date: 2019-02-22
 layout: faas
-leadTitle: "Effortlessly deploy faas apps on Genezio, eliminating server management. Enjoy seamless scaling, reduced costs, and increased flexibility with serverless."
+leadTitle: "Rely on Genezio for secure AI-powered web app deployments with ultra-fast, energy-efficient infrastructure. Benefit from CDN-optimized frontends, autoscaled backends, near-zero latency, and seamless AI integration for high-performance applications."
 leadSubTitle: "MOVED INLINE"
 callToAction: 'Learn more'
 leadButtonOneText: 'Start for Free'
@@ -17,7 +17,7 @@ code in your favorite language - be it Swift, Kotlin, etc."
 productTextP3: "Because you care about the environment, just as we do.  We are passionate about 
 power consumption, and we are optimizing the way the code is run towards our goal of zero overhead, fastest cold start delay, best CPU and memory resource allocation."
 # meta data start
-description: "Effortlessly deploy faas apps on Genezio, eliminating server management. Enjoy seamless scaling, reduced costs, and increased flexibility with serverless."
+description: "Rely on Genezio for secure AI-powered web app deployments with ultra-fast, energy-efficient infrastructure. Benefit from CDN-optimized frontends, autoscaled backends, near-zero latency, and seamless AI integration for high-performance applications."
 meta_og_url: "https://genez.io"
 meta_og_image: "https://genez.io/images/og.jpg"
 # meta data end
