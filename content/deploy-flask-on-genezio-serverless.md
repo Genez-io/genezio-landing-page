@@ -1,5 +1,5 @@
 ---
-title: "Deploy Flask on Serverless, Zero Configuration Hosting | Genezio"
+title: "Deploy Flask on Serverless, Zero Config Hosting"
 layout: "flask"
 summary: "flask"
 description: "Deploy your Flask app with Genezio’s zero-configuration, serverless hosting platform. Get Started for Free and share your app in minutes!"
