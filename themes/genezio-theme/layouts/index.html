@@ -10,65 +10,455 @@
   >
     <div class="expressWrapper">
       <div class="row d-flex justify-content-center align-items-center px-md-5">
-        <div
-          class="col-12 col-lg-7 col-md-12 col-sm-12 text-center text-md-start"
+        <div class="position-relative">
+          <div
+            class="pe-none d-none d-lg-block d-xl-block"
+            style="
+              position: absolute;
+              height: 700px;
+              filter: blur(200px);
+              left: 50%;
+              transform: translateX(-50%);
+              background-image: radial-gradient(
+                ellipse at center,
+                rgba(140, 104, 205, 0.8),
+                transparent
+              );
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 80em;
+            "
+          ></div>
+        </div>
+
+        <h1
+          class="fw-bold text-white py-4 mt-4 mt-md-0 py-md-0 hero-font-size-title text-center z-2"
         >
-          <h1
-            style="z-index: 99"
-            class="fw-bold text-white py-4 mt-4 mt-md-0 py-md-0 hero-font-size-title"
+          Deploy on the <span class="text-success">fastest</span><br />
+          full-stack cloud
+        </h1>
+        <p class="text-white opacity-75 text-center pt-0 pt-md-3 z-2">
+          Experience the autoscaling of near-zero latency serverless without rewriting your code.
+        </p>
+
+        <div id="headerExpressStartForFree" class="d-flex justify-content-center mt-4 mb-3 z-2">
+          <a
+            class="btn btn-primary fw-semibold mx-1 px-4 py-2 mt-1 mb-1"
+            href="https://app.genez.io/new-project/"
+            target="_blank"
+            id="start-for-free-hero"
           >
-            Deploy on the fastest <br />
-            full-stack cloud
-          </h1>
-          <h2
-            style="z-index: 99"
-            class="fw-medium text-white w-75 mx-auto mx-md-0 mb-1 mt-3 mt-md-4 mb-md-5 pb-5 pb-md-0"
-            id="expressDescription"
+            Start for free
+          </a>
+          <a
+            class="btn btn-secondary fw-semibold mx-1 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
+            href="https://genezio.com/docs/"
+            target="_blank"
+            id="check-our-docs-hero"
           >
-            <span class="opacity-90 hero-font-size-description"
-              >Experience the autoscaling of near-zero latency serverless
-              without rewriting your code.</span
+            Check our Docs
+          </a>
+        </div>
+
+        <div class="my-2 py-3"></div>
+      </div>
+      {{/* USE THE FRAMEWORK YOU LOVE */}}
+      <div class="position-relative" style="margin: 0 -12px">
+        <div
+          style="
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          "
+        >
+          <div class="position-relative overflow-hidden frameworksYouLove">
+            <p
+              style="font-size: 12px"
+              class="text-success fw-bold text-center position-relative mb-4 pb-3 z-2"
             >
-          </h2>
-          <div class="d-flex mt-0 mb-3 d-flex d-md-none">
-            <a
-              class="btn btn-primary fw-semibold px-4 py-3 py-m-2 mt-2 mb-2"
-              href="https://app.genez.io/new-project/"
-              target="_blank"
-              id="start-for-free-hero"
+              FRAMEWORK AGNOSTIC
+            </p>
+
+            <div
+              id="techCarousel"
+              class="carousel slide d-block d-lg-none mt-3"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
             >
-              Start for free
-            </a>
-            <a
-              class="btn btn-secondary fw-semibold mx-2 px-4 py-3 py-m-2 border-0 text-white opacity-75 mt-2 mb-2"
-              href="https://genezio.com/docs/"
-              target="_blank"
-              id="check-our-docs-hero"
-            >
-              Check our Docs
-            </a>
+              <div class="carousel-inner text-center z-2">
+                <div class="carousel-item active">
+                  <img
+                    src="/images/reactjslogo.svg"
+                    class="d-block mx-auto z-2"
+                    alt="ReactJS Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/angularjslogo.svg"
+                    class="d-block mx-auto z-2"
+                    alt="Angular Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/vuelogo.svg"
+                    class="d-block mx-auto z-2"
+                    alt="Vue Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/sveltelogo.svg"
+                    class="d-block mx-auto z-2"
+                    alt="Svelte Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/htmllogo.svg"
+                    class="d-block mx-auto"
+                    alt="HTML Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/nextjslogo.svg"
+                    class="d-block mx-auto z-2"
+                    alt="Next.js Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/nuxtlogo.svg"
+                    class="d-block mx-auto z-2"
+                    alt="Nuxt.js Logo"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="express-logo"
+                    src="/images/expresslogo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="python-logo"
+                    src="/images/pythonlogo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="fastify-logo"
+                    src="/images/fastifylogo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="nestjs-logo"
+                    src="/images/nestjslogo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="fastapi-logo"
+                    src="/images/fastapilogo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="flask-logo"
+                    src="/images/flasklogo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="django-logo"
+                    src="/images/djangologo.svg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center text-center d-none d-lg-block">
+              <div class="d-flex flex-wrap justify-content-center z-2" style="gap: 100px">
+                <a
+                  href="https://app.genez.io/auth/signup?redirect=react-getting-started"
+                  target="blank"
+                  class="z-2"
+                >
+                  <img
+                    class="navbar-brand z-2"
+                    alt="reactjs-logo"
+                    src="/images/reactjslogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://app.genez.io/auth/signup?redirect=angular-getting-started"
+                  target="blank"
+                  class="z-2"
+                >
+                  <img
+                    class="navbar-brand z-2"
+                    alt="angular-logo"
+                    src="/images/angularjslogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="https://app.genez.io/auth/signup?redirect=vue-getting-started"
+                  target="blank"
+                  class="z-2"
+                >
+                  <img
+                    class="navbar-brand z-2"
+                    alt="vue-logo"
+                    src="/images/vuelogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a href="/deploy-flask-on-genezio-serverless/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="flask-logo"
+                    src="/images/flasklogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a href="/deploy-django-on-genezio-serverless/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="django-logo"
+                    src="/images/djangologo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a href="/deploy-nextjs-apps/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="nextjs-logo"
+                    src="/images/nextjslogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="https://app.genez.io/auth/signup?redirect=nuxt-getting-started"
+                  target="_blank"
+                  class="z-2"
+                >
+                  <img
+                    class="navbar-brand z-2"
+                    alt="nuxt-logo"
+                    src="/images/nuxtlogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="row justify-content center text-center d-none d-lg-block">
+              <div class="d-flex flex-wrap justify-content-center mt-4 pt-3 z-2" style="gap: 100px">
+                <a href="/deploy-nodejs-express-on-genezio-serverless/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="express-logo"
+                    src="/images/expresslogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a href="/deploy-python-apps/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="python-logo"
+                    src="/images/pythonlogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="/deploy-fastify-on-genezio-serverless/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="fastify-logo"
+                    src="/images/fastifylogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="/deploy-nest-apps/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="nestjs-logo"
+                    src="/images/nestjslogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="/deploy-fastapi-on-genezio-serverless/" target="_blank" class="z-2">
+                  <img
+                    class="navbar-brand z-2"
+                    alt="fastapi-logo"
+                    src="/images/fastapilogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://app.genez.io/auth/signup?redirect=svelte-getting-started"
+                  target="_blank"
+                  class="z-2"
+                >
+                  <img
+                    class="navbar-brand z-2"
+                    alt="svelte-logo"
+                    src="/images/sveltelogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://app.genez.io/auth/signup?redirect=html-getting-started"
+                  target="_blank"
+                  class="z-2"
+                >
+                  <img
+                    class="navbar-brand z-2"
+                    alt="html-logo"
+                    src="/images/htmllogo.svg"
+                    width="57px"
+                    height="57px"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            {{/* Decoration gradient start */}}
+            <div
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120%;
+                height: 350px;
+                background: radial-gradient(
+                    circle,
+                    rgba(0, 250, 164, 1) 0%,
+                    rgba(0, 250, 164, 0) 50%
+                  ),
+                  radial-gradient(circle, rgba(153, 253, 219, 1) 0%, rgba(153, 253, 219, 0) 70%);
+                border-radius: 50%;
+                opacity: 0.5;
+                filter: blur(100px);
+              "
+            ></div>
+
+            {{/* Decoration gradient end */}}
+          </div>
+        </div>
+      </div>
+
+      <div class="my-4 py-3"></div>
+
+      <div class="row d-flex justify-content-center align-items-center px-md-5">
+        <div class="col-12 col-lg-7 col-md-12 col-sm-12 text-center text-md-start z-2">
+          <div class="d-flex align-items-center">
+            <h3 class="text-white mb-0 fw-light">
+              <img
+                class="navbar-brand me-2"
+                alt="bware-logo-icon-white"
+                src="/images/bware-white.svg"
+                loading="lazy"
+              /><span class="opacity-75 testimonials-text"
+                >deployed new features “in hours, if not minutes” and cut integration time by 40%
+                with tools like Upstash.</span
+              >
+            </h3>
           </div>
 
-          <div
-            id="headerExpressStartForFree"
-            class="d-flex mt-0 mb-3 d-none d-md-block"
-          >
-            <a
-              class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
-              href="https://app.genez.io/new-project/"
-              target="_blank"
-              id="start-for-free-hero"
-            >
-              Start for free
-            </a>
-            <a
-              class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
-              href="https://genezio.com/docs/"
-              target="_blank"
-              id="check-our-docs-hero"
-            >
-              Check our Docs
-            </a>
+          <div class="mt-4">
+            <h3 class="text-white">
+              <span>MYBENEFITS</span
+              ><span class="opacity-75 fw-light testimonials-text">
+                automated internal apps, reducing manual effort by 70% while ensuring reliability
+                with retry queues and escalations.</span
+              >
+            </h3>
           </div>
 
           <div
@@ -88,12 +478,12 @@
         </div>
 
         <div
-          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center flex-column pt-5 mt-5 mt-md-0 pt-md-0"
+          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center flex-column pt-0 mt-0 mt-md-0 pt-md-0 z-2"
         >
           <img
             style="max-width: 650px; height: 430px; object-fit: contain"
             class="w-100"
-            src="/images/genezio-aws-chart4.webp"
+            src="/images/genezio-aws-chart5.webp"
             alt="genezio-aws-chart"
           />
 
@@ -101,7 +491,7 @@
             <a
               target="_blank"
               href="/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/"
-              class="text-white mx-3 mb-0 fw-bold fs-4 text-decoration-none"
+              class="text-white mx-3 mb-0 fs-4 text-decoration-none"
               >Cold Start Comparison</a
             >
 
@@ -121,10 +511,7 @@
                   width="1"
                   height="1"
                 >
-                  <use
-                    xlink:href="#image0_1963_4999"
-                    transform="scale(0.00390625)"
-                  />
+                  <use xlink:href="#image0_1963_4999" transform="scale(0.00390625)" />
                 </pattern>
                 <image
                   id="image0_1963_4999"
@@ -139,29 +526,18 @@
       </div>
     </div>
 
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
-
-    {{partial "trustedBy.html" .}}
-
-    <p
-      style="font-size: 12px"
-      class="text-success fw-bold text-center mt-5 pt-4 mb-3 pb-1"
-    >
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-4 mb-3 pb-1">
       CAPABILITIES
     </p>
-    <h2 class="text-white text-center fw-bold mb-4 pb-2">
-      Key features of Genezio Functions
-    </h2>
+    <h2 class="text-white text-center fw-bold mb-4 pb-2">Key features of Genezio</h2>
 
     <div class="row mb-md-3 pb-md-3 justify-content-center">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
             <div
@@ -169,8 +545,8 @@
             >
               <img
                 class="navbar-brand"
-                alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
+                alt="reduced-icon"
+                src="/images/reduced-icon.svg"
                 width="45px"
                 height="49px"
                 loading="lazy"
@@ -180,16 +556,16 @@
               Reduced Cold Start Time
             </h3>
             <p class="card-text opacity-75 card-listing mb-2 pb-5">
-              Experience faster initialization times, ensuring that your
-              functions are ready to handle requests immediately.
+              Deploy any backend app with lightning-fast initialization, ensuring your serverless
+              infrastructure scales instantly to handle requests with zero delays.
             </p>
 
             <a
               target="_blank"
-              href="/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/"
-              class="card-link text-white text-decoration-none fw-semibold"
+              href="https://genezio.com/blog/aws-lambda-alternatives/"
+              class="learnMore text-white text-decoration-none fw-semibold"
               id="reduced-cold-start-time-learn-more"
-              >Learn more -></a
+              >Learn more</a
             >
           </div>
         </div>
@@ -198,10 +574,7 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
             <div
@@ -209,27 +582,25 @@
             >
               <img
                 class="navbar-brand"
-                alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
+                alt="rocket-icon"
+                src="/images/rocket-icon.svg"
                 width="45px"
                 height="49px"
                 loading="lazy"
               />
             </div>
-            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 60px">
-              Easy Deployment
-            </h3>
-            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
-              Deploy effortlessly with Genezio's intuitive CLI. Quick to install
-              and simple to use, it streamlines your deployment process, letting
-              you focus on coding.
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">Easy Deployment</h3>
+            <p class="card-text opacity-75 mb-4 pb-2 card-listing">
+              With built-in CI/CD, Genezio automates deployment, ensuring seamless updates and fast
+              releases. Quick to install and easy to use, it streamlines your workflow so you can
+              focus on coding.
             </p>
             <a
-              href="https://genezio.com/docs/getting-started"
+              href="https://genezio.com/blog/easy-web-app-deployment-with-genezio/"
               target="_blank"
-              class="card-link text-white text-decoration-none fw-semibold"
+              class="learnMore text-white text-decoration-none fw-semibold"
               id="easy-deployment-learn-more"
-              >Learn more -></a
+              >Learn more</a
             >
           </div>
         </div>
@@ -238,10 +609,7 @@
       <div class="col-lg col-md-12 m-2">
         <div
           class="card p-2 p-md-4 text-white border-gradient-green"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
         >
           <div class="card-body">
             <div
@@ -250,131 +618,222 @@
               <img
                 class="navbar-brand"
                 alt="genezio-logo-icon-black"
-                src="/images/genezio-logo-icon-black.svg"
+                src="/images/scaling-icon.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">Automatic Scaling</h3>
+            <p class="card-text opacity-75 mb-2 pb-5 card-listing">
+              Genezio auto-scales your backend to handle any traffic surge, ensuring seamless
+              performance without compromise.
+            </p>
+
+            <a
+              href="https://genezio.com/"
+              class="learnMore text-white text-decoration-none fw-semibold"
+              id="automatic-scaling-learn-more"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="terminal-icon"
+                src="/images/terminal-icon.svg"
                 width="45px"
                 height="49px"
                 loading="lazy"
               />
             </div>
             <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
-              Cost-Effective Pricing
+              Skip the CLI - Edit in your Browser
             </h3>
-            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
-              Genezio’s predictable pricing model makes deploying serverless
-              applications up to 6x more affordable than traditional solutions.
+            <p class="card-text opacity-75 card-listing mb-3 pb-5">
+              Edit code, manage dependencies, and set environment variables—all in the browser. A
+              faster, seamless alternative to the CLI.
             </p>
 
             <a
-              href="/pricing/"
-              class="card-link text-white text-decoration-none fw-semibold"
-              id="cost-effective-pricing-learn-more"
-              >Learn more -></a
+              target="_blank"
+              href="https://genezio.com/docs/getting-started/use-a-template/#4-edit-your-project"
+              class="learnMore text-white text-decoration-none fw-semibold"
+              id="skip-the-cli-edit-in-your-browser-learn-more"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="collaborate-icon"
+                src="/images/collaborate-icon.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 60px">
+              Collaborate without Limits
+            </h3>
+            <p class="card-text opacity-75 mb-3 pb-5 card-listing">
+              The Hobby plan includes collaboration with one teammate, while the Pro plan supports
+              up to 10, with no extra charges.
+            </p>
+            <a
+              href="https://genezio.com/docs/features/project-collaboration/"
+              target="_blank"
+              class="learnMore text-white text-decoration-none fw-semibold"
+              id="collaborate-without-limits-learn-more"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="deployment-history-icon"
+                src="/images/deployment-history-icon.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              Logs and Deployment History
+            </h3>
+            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+              Access detailed logs and track deployment history to monitor changes, debug issues,
+              and maintain full visibility over your application’s lifecycle.
+            </p>
+            <a
+              href="https://genezio.com/"
+              class="learnMore text-white text-decoration-none fw-semibold"
+              id="logs-and-deployment-history-learn-more"
+              >Learn more</a
             >
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row mb-md-3 pb-md-3 justify-content-center">
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
-        >
-          <div class="card-body">
-            {{/* class="card p-2 p-md-4 text-white" */}}
-            <h3 class="card-title m-0 mb-3">Automatic Scaling</h3>
-            <p class="card-text opacity-75 card-listing">
-              Genezio Functions automatically scale to meet demand, maintaining
-              optimal performance regardless of traffic volume.
-            </p>
-          </div>
+    <div class="row mt-5 pt-5 mb-5">
+      {{/* Deploy your app in seconds start */}}
+      <div class="landingPageGradientSection landingPageGradingBg z-2">
+        <img alt="abstract-decorator" src="/images/abstract-decorator.svg" loading="lazy" />
+        <div class="titleWrapper">
+          <a
+            class="text-decoration-none"
+            href="https://app.genez.io/auth/signup?redirect=import"
+            target="_blank"
+          >
+            <h2 class="mb-0 text-center">Deploy your app in seconds</h2>
+          </a>
         </div>
-      </div>
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
-        >
-          <div class="card-body">
-            <h3 class="card-title m-0 mb-3">Frameworks</h3>
 
-            <p class="card-text opacity-75 card-listing">
-              Deploy complex apps like Express.js and Next.js serverless with a
-              single click, simplifying the deployment process.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-2 p-md-4 text-white border-gradient-green h-100"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
-        >
-          <div class="card-body">
-            <h3 class="card-title m-0 mb-3">Integrated Services</h3>
+        <p class="text-white opacity-75 mt-3 pt-2 text-center">
+          Import your project from your GitHub repo and deploy it instantly. <br />
+          Want to explore the platform first? Start with one of our ready-to-use getting started
+          templates.
+        </p>
 
-            <p class="card-text opacity-75 card-listing">
-              Utilize additional Genezio Services, including typesafe feature,
-              databases, auth, cron jobs to build complete and dynamic
-              applications.
-            </p>
-          </div>
+        <div class="d-flex justify-content-center mt-4">
+          <a
+            class="btn btn-primary fw-semibold px-4 mx-2 py-2"
+            href="https://app.genez.io/auth/signup?redirect=import"
+            target="_blank"
+          >
+            Import from Github
+          </a>
+          <a
+            class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75"
+            href="https://app.genez.io/auth/signup?redirect=templates"
+            target="_blank"
+            id="get-started-with-a-template"
+          >
+            Get started with a template
+          </a>
         </div>
       </div>
+      {{/* Deploy your app in seconds end */}}
     </div>
 
-    <p
-      style="font-size: 12px"
-      class="text-success fw-bold text-center mt-4 pt-5 mb-3 pb-1"
+    <h3
+      class="text-white text-left fw-bold m-0 pb-3 mb-2 ms-0 ms-md-2 mt-5 pt-3 position-relative z-2"
     >
-      USE THE FRAMEWORK YOU LOVE
+      Jumpstart with community-powered templates
+    </h3>
+
+    <p class="text-white opacity-75 ms-0 ms-md-2 mb-4 pb-2 position-relative z-2">
+      The Genezio community has built a growing collection of templates to help you launch
+      faster.<br />
+      Explore ready-to-use solutions or contribute your own by submitting your template
+      <a class="text-white opacity-75 open-submitTemplate-modal-btn" type="submit">here</a>.
     </p>
-    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-3">
-      Featured Community templates you can deploy
-    </h2>
 
-    <div class="row mb-md-3 pb-md-3 justify-content-center">
+    {{ partial "submitTemplateModal.html" . }}
+
+    <div class="row align-items-center mb-md-3 pb-md-3 justify-content-center">
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-3 p-md-4 text-white border-gradient-green"
+          class="card text-white border-gradient-green z-2"
           style="
             border-radius: 0 20px 0 20px;
             background-color: rgba(255, 255, 255, 0.07);
+            padding: 40px;
           "
         >
           <div class="card-body p-0">
-            <p class="fw-bold fs-5">Serverless Function</p>
-            <p>Enjoy 4x faster response times without cloud configurations.</p>
+            <p class="fw-bold fs-5 mb-3 pb-1">AI-Powered Chatbot</p>
+            <p class="opacity-75">
+              Build a smart chatbot using the<br />
+              OpenAI API to automate and<br />
+              streamline customer interactions.
+            </p>
 
-            <div class="mt-4">
+            <div class="mt-4 pt-2">
               <a
-                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
-                href="https://app.genez.io/faas-getting-started"
                 target="_blank"
-                id="serverless-function-get-started"
+                href="https://app.genez.io/auth/signup?redirect=flask-chatgpt-getting-started"
+                class="learnMore text-white text-decoration-none fw-semibold"
+                id="flask-chatgpt-getting-started"
+                >Get Started</a
               >
-                Get Started
-              </a>
-              {{/*
-              <a
-                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-                href="https://genezio.com/docs/getting-started"
-                target="_blank"
-              >
-                View demo
-              </a>
-              */}}
             </div>
           </div>
         </div>
@@ -382,35 +841,30 @@
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-3 p-md-4 text-white border-gradient-green"
+          class="card text-white border-gradient-green z-2"
           style="
             border-radius: 0 20px 0 20px;
             background-color: rgba(255, 255, 255, 0.07);
+            padding: 40px;
           "
         >
           <div class="card-body p-0">
-            <p class="fw-bold fs-5">Express.js App</p>
+            <p class="fw-bold fs-5 mb-3 pb-1">AI-Powered Audio Translator</p>
 
-            <p class="pb-4">Cut deployment and server costs by up to 6x.</p>
+            <p class="opacity-75">
+              Translate audio files into another <br />
+              language using OpenAI’s GPT-4o<br />
+              audio modality API.
+            </p>
 
-            <div class="mt-4">
+            <div class="mt-4 pt-2">
               <a
-                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
-                href="https://app.genez.io/express-getting-started"
                 target="_blank"
-                id="express.js-app-get-started"
+                href="https://app.genez.io/auth/signup?redirect=audio-translator"
+                class="learnMore text-white text-decoration-none fw-semibold"
+                id="audio-translator"
+                >Get Started</a
               >
-                Get Started
-              </a>
-              {{/*
-              <a
-                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-                href="https://genezio.com/docs/getting-started"
-                target="_blank"
-              >
-                View demo
-              </a>
-              */}}
             </div>
           </div>
         </div>
@@ -418,226 +872,266 @@
       {{/* Card */}}
       <div class="col-lg col-md-12 m-2">
         <div
-          class="card p-3 p-md-4 text-white border-gradient-green"
+          class="card text-white border-gradient-green"
           style="
             border-radius: 0 20px 0 20px;
             background-color: rgba(255, 255, 255, 0.07);
+            padding: 40px;
           "
         >
           <div class="card-body p-0">
-            <p class="fw-bold fs-5">Next.js App</p>
-            <p>Eliminate unpredictable costs and cold start times.</p>
+            <p class="fw-bold fs-5 mb-3 pb-1">Real-Time Web Scraper</p>
+            <p class="opacity-75">
+              Build a web scraper to fetch live<br />
+              data from websites effortlessly<br />
+              and automate updates in real time.
+            </p>
 
-            <div class="mt-4">
+            <div class="mt-4 pt-2">
               <a
-                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
-                href="https://app.genez.io/nextjs-getting-started"
                 target="_blank"
-                id="next.js-app"
+                href="https://app.genez.io/auth/signup?redirect=web-scraper"
+                class="learnMore text-white text-decoration-none fw-semibold"
+                id="web-scraper"
+                >Get Started</a
               >
-                Get Started
-              </a>
-              {{/*
-              <a
-                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
-                href="https://genezio.com/docs/getting-started"
-                target="_blank"
-              >
-                View demo
-              </a>
-              */}}
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
-
-    <p
-      style="font-size: 12px"
-      class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1"
+    <a
+      class="btn btn-primary fw-semibold px-4 mx-2 py-2 z-2 position-relative"
+      href="https://app.genez.io/auth/signup?redirect=templates"
+      id="browse-all-templates"
+      target="_blank"
     >
-      GENEZIO SERVICES
-    </p>
+      Browse all templates
+    </a>
 
-    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-3">
-      Genezio Native Features & Services
+    <h2
+      class="text-white text-left fw-bold m-0 mt-5 pt-5 pb-3 mb-2 ms-0 ms-md-2 z-2 position-relative"
+    >
+      Genezio Native <br />
+      Features & Services
     </h2>
 
+    <div class="position-relative">
+      {{/* Left Color */}}
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 1000px;
+          filter: blur(325.484375px);
+          top: -900px;
+          left: -40%;
+          transform: translateX(-30%);
+          background-image: radial-gradient(
+            ellipse at center,
+            rgba(140, 104, 205, 0.8),
+            transparent
+          );
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 90em;
+          filter: blur(200px);
+        "
+      ></div>
+
+      <div
+        class="pe-none d-none d-lg-block d-xl-block"
+        style="
+          position: absolute;
+          height: 1800px;
+          filter: blur(325.484375px);
+          top: -500px;
+          left: 125%;
+          transform: translateX(-40%);
+          background-image: radial-gradient(ellipse at center, rgba(0, 175, 115, 0.9), transparent),
+            radial-gradient(ellipse at right, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          width: 90em;
+        "
+      ></div>
+    </div>
     <p
-      style="z-index: 99"
-      class="fw-medium mb-4 mt-3 text-white text-center opacity-75 w-75 mx-auto"
+      class="fw-medium text-white text-left opacity-75 mb-4 pb-3 z-2 ms-0 ms-md-2 z-2 position-relative"
     >
-      Enjoy the benefits of a function-as-a-service infrastructure and enhance
-      your development with Genezio's Services to optimize your workflow and
-      maximize performance.
+      Deploy on the fastest full-stack cloud and enjoy the autoscaling of near-zero<br />latency
+      serverless without rewriting your code.
     </p>
 
-    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5 mt-5">
-      #1 Database Integration
-    </h2>
-
-    <div
-      style="
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 0 20px 0 20px;
-      "
-      class="border-gradient-green row mx-4 mb-3 p-4"
-    >
-      <div class="col col-12 col-md-9 p-3">
-        <h3 style="z-index: 99" class="fw-medium text-white fs-4 m-0 mb-3">
-          Serverless, fully-managed databases
-        </h3>
-
-        <p class="text-white opacity-75 m-0">
-          Genezio offers on demand databases that are provisioned through our
-          partners. This means that you can create a database in a few seconds
-          without having to worry about the infrastructure, scalability or
-          maintenance of it.
+    <div class="row mx-md-2">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-0">
+        <div
+          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+        >
+          <img
+            class="navbar-brand"
+            alt="websockets-icon"
+            src="/images/websockets-icon.svg"
+            width="45px"
+            height="49px"
+            loading="lazy"
+          />
+        </div>
+        <h4 class="text-white mb-4">WebSockets Support</h4>
+        <h5 class="text-white mb-2 pb-1 opacity-75">
+          Fast, bidirectional communication for AI-powered apps
+        </h5>
+        <p class="text-white opacity-50 mb-3 pb-3">
+          Genezio’s WebSockets enable real-time messaging for AI applications like chatbots, live
+          analytics, and collaborative tools. Whether streaming AI responses or syncing data,
+          WebSockets ensure instant updates without polling. With Genezio’s scalable infrastructure,
+          handling thousands of connections is effortless.
         </p>
 
         <a
-          class="btn btn-primary fw-semibold px-4 py-2 mt-4"
-          href="https://app.genez.io/auth/login"
           target="_blank"
+          href="https://github.com/Genez-io/websocket-getting-started"
+          class="learnMore text-white text-decoration-none fw-semibold"
+          id="websockets-integration-get-started"
+          >Get Started</a
+        >
+      </div>
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-2">
+        <div
+          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+        >
+          <img
+            class="navbar-brand"
+            alt="genezio-database-integration-icon"
+            src="/images/database-integration-icon.svg"
+            width="45px"
+            height="49px"
+            loading="lazy"
+          />
+        </div>
+        <h4 class="text-white mb-4">Database Integration</h4>
+        <h5 class="text-white mb-2 pb-1 opacity-75">Serverless, fully-managed databases</h5>
+        <p class="text-white opacity-50 mb-3 pb-3">
+          Genezio offers on-demand databases provisioned through our trusted partners, allowing you
+          to create a database in just a few seconds—no need to sign up for a third-party service.
+          <b>Already have a database?</b> Easily connect it to your Genezio project.
+        </p>
+        <a
+          target="_blank"
+          href="https://genezio.com/docs/integrations/"
+          class="learnMore text-white text-decoration-none fw-semibold"
           id="database-integration-get-started"
+          >Get Started</a
         >
-          Get started
-        </a>
-      </div>
-      <div
-        style="border-left: 0.5px solid rgba(0, 250, 164, 1)"
-        class="col col-3 p-3 d-none align-items-center justify-content-center d-md-flex"
-      >
-        <img
-          class="mx-2 w-100"
-          style="max-width: 150px"
-          alt="postgres-logo"
-          src="/images/postgres.png"
-          loading="lazy"
-        />
       </div>
     </div>
 
-    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5 mt-5">
-      #2 Seamless Authentication Integration
-    </h2>
-
-    <div
-      style="
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 0 20px 0 20px;
-      "
-      class="border-gradient-green row mx-4 mb-3 p-4"
-    >
-      <div class="col col-12 col-md-9 p-3">
-        <h3 style="z-index: 99" class="fw-medium text-white fs-4 m-0 mb-3">
-          Authentication
-        </h3>
-
-        <p class="text-white opacity-75 m-0">
-          You can use Genezio Auth to allow the users to sign in into your app
-          using multiple providers such as email and password or Google. This is
-          an out-of-the-box authentication backend, with support for Postgres
-          and Mongo databases and a client SDK to easily integrate the
-          authentication feature into your frontend.
+    <div class="row mt-0 mt-md-4 pt-0 pt-md-3 mx-md-2">
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-0">
+        <div
+          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+        >
+          <img
+            class="navbar-brand"
+            alt="authentication-icon"
+            src="/images/authentication-icon.svg"
+            width="45px"
+            height="49px"
+            loading="lazy"
+          />
+        </div>
+        <h4 class="text-white mb-4">Authentication</h4>
+        <h5 class="text-white mb-2 pb-1 opacity-75">Seamless Authentication Integration</h5>
+        <p class="text-white opacity-50 mb-3 pb-3">
+          You can use Genezio Auth to allow the users to sign in into your app using multiple
+          providers such as email and password or Google. This is an out-of-the-box authentication
+          backend, with support for Postgres and Mongo databases and a client SDK to easily
+          integrate the authentication feature into your frontend.
         </p>
 
         <a
-          class="btn btn-primary fw-semibold px-4 py-2 mt-4"
-          href="https://app.genez.io/auth/login"
           target="_blank"
+          href="https://genezio.com/docs/features/authentication/"
+          class="learnMore text-white text-decoration-none fw-semibold"
           id="authentication-get-started"
+          >Get Started</a
         >
-          Get started
-        </a>
       </div>
-      <div
-        style="border-left: 0.5px solid rgba(0, 250, 164, 1)"
-        class="col col-3 p-3 d-none align-items-center justify-content-center d-md-flex"
-      >
-        <img
-          class="mx-2 w-100"
-          style="max-width: 150px; filter: brightness(0) invert(1)"
-          alt="auth-logo"
-          src="/images/authlogo.webp"
-          loading="lazy"
-        />
-      </div>
-    </div>
-
-    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5 mt-5">
-      #3 Easy Task Scheduling
-    </h2>
-
-    <div
-      style="
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 0 20px 0 20px;
-      "
-      class="border-gradient-green row mx-4 mb-3 p-4"
-    >
-      <div class="col col-12 col-md-9 p-3">
-        <h3 style="z-index: 99" class="fw-medium text-white fs-4 m-0 mb-3">
-          Repeating Schedule
-        </h3>
-
-        <p class="text-white opacity-75 m-0">
-          Genezio enables effortless cron job scheduling, allowing you to
-          automate tasks and maintain consistent performance. Set up and manage
-          scheduled tasks in seconds, without worrying about infrastructure,
-          scalability, or maintenance. Let Genezio handle the rest.
+      <div class="col-12 col-md mt-4 mt-md-0 z-2 px-3 px-md-2">
+        <div
+          class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+        >
+          <img
+            class="navbar-brand"
+            alt="task-schedule-icon"
+            src="/images/task-schedule-icon.svg"
+            width="45px"
+            height="49px"
+            loading="lazy"
+          />
+        </div>
+        <h4 class="text-white mb-4">Task Scheduling</h4>
+        <h5 class="text-white mb-2 pb-1 opacity-75">Repeating Schedule</h5>
+        <p class="text-white opacity-50 mb-3 pb-3">
+          Genezio enables effortless cron job scheduling, allowing you to automate tasks and
+          maintain consistent performance. Set up and manage scheduled tasks in seconds, without
+          worrying about infrastructure, scalability, or maintenance. Let Genezio handle the rest.
         </p>
-
         <a
-          class="btn btn-primary fw-semibold px-4 py-2 mt-4"
-          href="https://app.genez.io/cron-getting-started"
           target="_blank"
+          href="https://genezio.com/docs/features/cron-jobs/"
+          class="learnMore text-white text-decoration-none fw-semibold"
           id="easy-task-scheduling-get-started"
+          >Get Started</a
         >
-          Get started
-        </a>
-      </div>
-      <div
-        style="border-left: 0.5px solid rgba(0, 250, 164, 1)"
-        class="col col-3 p-3 d-none align-items-center justify-content-center d-md-flex"
-      >
-        <img
-          class="mx-2 w-100"
-          alt="cron-logo"
-          style="max-width: 150px; filter: brightness(0) invert(1)"
-          src="/images/cronlogo.webp"
-          loading="lazy"
-        />
       </div>
     </div>
 
-    <hr
-      class="mt-5"
-      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px"
-    />
+    {{/* Everything your team needs start */}}
+    <div class="landingPageGradientSection landingPageGradingBg mt-5 z-2" style="margin: 0px -12px">
+      <img alt="abstract-decorator" src="/images/abstract-decorator2.svg" loading="lazy" />
+      <div class="titleWrapper">
+        <h2 class="mb-0 text-center">Everything your team needs</h2>
+      </div>
+      <h2 class="mb-0 text-white text-center mt-2 pt-1">in your control</h2>
 
-    <p
-      style="font-size: 12px"
-      class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1"
-    >
+      <p class="text-white opacity-75 mt-3 pt-2 text-center">
+        Need advanced capabilities like organizations, audit logs, monitoring, secure networking, or
+        log <br />
+        drains? Contact us for a custom enterprise offer designed to meet your specific needs.
+      </p>
+
+      <div class="d-flex justify-content-center mt-4">
+        <a class="btn btn-primary fw-semibold px-4 mx-2 py-2 open-modal-btn" type="submit">
+          Contact us
+        </a>
+        <a
+          class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 open-enterprise-modal-btn"
+          target="_blank"
+          id="get-started-with-a-template"
+          type="submit"
+        >
+          Get an Enterprise Trial
+        </a>
+
+        {{ partial "contactUsModal.html" . }} {{ partial "enterpriseRequest.html" . }}
+      </div>
+    </div>
+    {{/* Everything your team needs end */}}
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1">
       EDUCATION
     </p>
-    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-4">
-      Our latest article
-    </h2>
+    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-4">Our latest article</h2>
     {{/* Our latest article */}} {{ with (index (where site.RegularPages "Type"
     "posts").ByDate.Reverse 0) }}
-    <div
-      class="ourLatestArticle row mx-2 px-0 px-md-3 text-white justify-content-center pb-4 mb-3"
-    >
+    <div class="ourLatestArticle row px-0 px-md-3 text-white justify-content-center pb-4 mb-3 z-2">
       <div class="px-1">
-        <div class="col-lg col-md-12 lastArticleBackground">
+        <div class="col-lg col-md-12 lastArticleBackground z-2">
           <a
             href="{{ .RelPermalink }}"
             target="_blank"
-            class="card-link text-white text-decoration-none fw-semibold"
+            class="learnMore text-white text-decoration-none fw-semibold"
           >
             <h3>{{.Title}}</h3>
           </a>
@@ -645,190 +1139,16 @@
           <a
             href="{{ .RelPermalink }}"
             target="_blank"
-            class="card-link text-white text-decoration-none fw-semibold"
-            >Read more -></a
+            class="learnMore text-white text-decoration-none fw-semibold"
+            >Read more</a
           >
         </div>
       </div>
     </div>
-    {{ end }} {{/* End of main container */}} {{/* TESTIMONIALS */}}
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
-    <p
-      style="font-size: 12px"
-      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
-    >
-      TESTIMONIALS
-    </p>
-    <h2
-      style="z-index: 99"
-      class="text-white text-center fw-bold mb-4 pb-3 position-relative"
-    >
-      Don't take our <span class="d-block d-sm-none"></span>word for it
-    </h2>
+    {{ end }} {{/* End of main container */}}
 
-    <div
-      style="z-index: 99"
-      class="row mx-2 pb-2 justify-content-center position-relative"
-    >
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <img
-                  style="height: 48px; width: 48px"
-                  class="rounded-circle"
-                  src="/images/testimonial2.webp"
-                  alt="testimonial-user-2"
-                  loading="lazy"
-                />
-
-                <div class="mx-3 me-0">
-                  <p class="mb-0 fw-semibold">Daniel M</p>
-                  <p style="font-size: 14px" class="mb-0">CEO @DeFiBuilder</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.g2.com/products/genezio/reviews/genezio-review-8869260"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="g2-logo"
-                  src="/images/g2-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-75">
-              Using their SDK, I was able to deploy complex functionalities with
-              an ease that I hadn't experienced before. The integration process
-              is so streamlined and user-friendly that even those with a basic
-              understanding of JavaScript can navigate it with confidence.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <img
-                  style="height: 48px; width: 48px"
-                  class="rounded-circle"
-                  src="/images/testimonial4.webp"
-                  loading="lazy"
-                  alt="testimonial-user-1"
-                />
-
-                <div class="mx-3 me-0">
-                  <p class="mb-0 fw-semibold">Cosmin Gamanusi</p>
-                  <p style="font-size: 14px" class="mb-0">SWE @Bware Labs</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.linkedin.com/in/cosmin-gamanusi/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="linkedin-logo"
-                  src="/images/linkedin-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-75">
-              Genezio has significantly improved my development workflow, both
-              for my startup projects and at work. The platform enables me to
-              quickly develop, test, and deploy new features. Its ease of
-              integration allowed my team to offload work seamlessly, enhancing
-              our productivity. Genezio’s efficient and user-friendly interface
-              has made it a valuable tool in our development process.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {{/* Card */}}
-      <div class="col-lg col-md-12 m-2">
-        <div
-          class="card p-4 text-white border-gradient-green"
-          style="
-            border-radius: 0 20px 0 20px;
-            background-color: rgba(255, 255, 255, 0.07);
-          "
-        >
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center pb-3">
-              <div class="d-flex">
-                <img
-                  style="height: 48px; width: 48px"
-                  class="rounded-circle"
-                  src="/images/testimonial3.webp"
-                  alt="testimonial-user-3"
-                  loading="lazy"
-                />
-
-                <div class="mx-3">
-                  <p class="mb-0 fw-semibold">Laurentiu Ciobanu</p>
-                  <p style="font-size: 14px" class="mb-0">CTO @Sessions</p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/?utm_source=share&utm_medium=member_desktop"
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  class="mx-2 footer-social-logo"
-                  alt="linkedin-logo"
-                  src="/images/linkedin-logo.svg"
-                  width="24px"
-                  height="24px"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
-            <p class="mt-4 opacity-75">
-              It was a pleasant and frictionless experience: from my TypeScript
-              code to the cloud in less than 3 minutes (including creating an
-              account, installing the CLI, and logging in with the CLI).
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <div class="mt-4"></div>
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -12px" />
     {{/* FAQ */}}
     <p
       style="font-size: 12px"
@@ -837,10 +1157,7 @@
     >
       FAQ
     </p>
-    <h2
-      class="text-white text-center fw-bold mb-4 pb-3 position-relative"
-      style="z-index: 99"
-    >
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 position-relative" style="z-index: 99">
       Your questions answered
     </h2>
 
@@ -861,7 +1178,7 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              What are some type of apps that can be built on Genezio?
+              How does Genezio compare to traditional cloud services?
             </button>
           </h2>
           <div
@@ -871,19 +1188,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
-              Genezio is used by our clients to build and host full-stack apps.
-              These include a variety of full-stack Web Apps, Mobile Apps,
-              Enterprise automation apps, and Blockchain enabled apps. Also,
-              some developers use Genezio just to set up scheduled tasks or to
-              keep an API key private in a part of their app that runs in the
-              background. To learn more and see examples, check out our
-              <a
-                style="text-decoration: none"
-                class="text-success"
-                href="https://genezio.com/docs/examples/"
-                target="_blank"
-                >docs</a
-              >.
+              Unlike traditional cloud platforms, Genezio eliminates cold start delays, automates
+              scaling, and offers built-in CI/CD for effortless deployments. It provides a
+              streamlined experience without managing infrastructure complexities.
             </div>
           </div>
         </div>
@@ -901,7 +1208,7 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              I already have a DevOps team, do I still need Genezio?
+              What types of applications can I build with Genezio?
             </button>
           </h2>
           <div
@@ -911,8 +1218,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Your DevOps team is probably pretty busy, so in order to try out a
-              pilot project, it's much easier to use our serverless approach.
+              You can deploy a wide range of applications, including AI-powered web apps, chatbots,
+              real-time analytics tools, automation workflows, and full-stack SaaS platforms.
             </div>
           </div>
         </div>
@@ -931,7 +1238,7 @@
               aria-expanded="false"
               aria-controls="collapse3"
             >
-              What is Function-as-a-service?
+              Can I deploy applications without using the command line?
             </button>
           </h2>
           <div
@@ -941,8 +1248,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              FaaS is a service that allows developers to execute code without
-              provisioning or managing servers.
+              Yes! Genezio allows you to edit code, manage dependencies, and set environment
+              variables directly in the browser, providing an alternative to CLI-based workflows.
             </div>
           </div>
         </div>
@@ -960,7 +1267,7 @@
               aria-expanded="false"
               aria-controls="collapse4"
             >
-              What are some common use cases for FaaS?
+              What databases can I use with Genezio?
             </button>
           </h2>
           <div
@@ -970,9 +1277,9 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              FaaS is commonly used for event-driven applications, such as
-              processing data streams, responding to HTTP requests, running
-              scheduled tasks, and automating workflows.
+              Genezio integrates with fully managed, serverless databases through trusted partners.
+              You can also connect your existing PostgreSQL, VectorDB or MongoDB databases
+              effortlessly.
             </div>
           </div>
         </div>
@@ -990,7 +1297,7 @@
               aria-expanded="false"
               aria-controls="collapse5"
             >
-              How does Genezio Functions differ from traditional server hosting?
+              Is there a free plan available?
             </button>
           </h2>
           <div
@@ -1000,216 +1307,8 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              In traditional server hosting, you need to manage the server
-              infrastructure, including maintenance, scaling, and updates.
-              Genezio abstracts this away, allowing you to focus solely on
-              writing and deploying code.
-            </div>
-          </div>
-        </div>
-        {{/* Question 6 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse6"
-              aria-expanded="false"
-              aria-controls="collapse6"
-            >
-              How do you handle scaling for Genezio Functions?
-            </button>
-          </h2>
-          <div
-            id="collapse6"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Genezio Functions automatically scale based on the number of
-              incoming requests or events, eliminating the need for manual
-              intervention to adjust server capacity.
-            </div>
-          </div>
-        </div>
-        {{/* Question 7 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse7"
-              aria-expanded="false"
-              aria-controls="collapse7"
-            >
-              What is a cold start?
-            </button>
-          </h2>
-          <div
-            id="collapse7"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              A cold start occurs when a function is invoked for the first time
-              or after being idle, leading to latency as the environment is
-              initialized. Genezio Functions are leveraging various optimization
-              techniques, such as snapshots and instance pre-warming, to keep
-              the cold start overhead as small as possible.
-            </div>
-          </div>
-        </div>
-        {{/* Question 8 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse8"
-              aria-expanded="false"
-              aria-controls="collapse8"
-            >
-              What languages are supported by Genezio Functions?
-            </button>
-          </h2>
-          <div
-            id="collapse8"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Javascript
-            </div>
-          </div>
-        </div>
-        {{/* Question 9 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse9"
-              aria-expanded="false"
-              aria-controls="collapse9"
-            >
-              How does Genezio pricing works?
-            </button>
-          </h2>
-          <div
-            id="collapse9"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Flat fees to prevent denial-of-wallet
-            </div>
-          </div>
-        </div>
-        {{/* Question 11 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse11"
-              aria-expanded="false"
-              aria-controls="collapse11"
-            >
-              How do I deploy a function to Genezio?
-            </button>
-          </h2>
-          <div
-            id="collapse11"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              It's a piece of cake, just run genezio deploy
-            </div>
-          </div>
-        </div>
-        {{/* Question 12 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse12"
-              aria-expanded="false"
-              aria-controls="collapse12"
-            >
-              Can I connect to my own database?
-            </button>
-          </h2>
-          <div
-            id="collapse12"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Yes and if you don't already have a database - Genezio natively
-              provides a Postgres instance.
-            </div>
-          </div>
-        </div>
-        {{/* Question 13 */}}
-        <div
-          class="accordion-item py-2 my-2 text-white"
-          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-        >
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button shadow-none collapsed fw-medium"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapse13"
-              aria-expanded="false"
-              aria-controls="collapse13"
-            >
-              Which web frameworks are compatible with Genezio?
-            </button>
-          </h2>
-          <div
-            id="collapse13"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              Genezio is compatible with various web framworks like Next.js,
-              ExpressJS, Fastify, and frontend frameworks like React, Vue,
-              Angular, Svelte, Flutter, and more, thanks to its
-              framework-agnostic nature.
+              Yes, Genezio offers a free plan for developers to get started. Paid plans provide
+              additional features, scaling options, and collaboration capabilities.
             </div>
           </div>
         </div>
@@ -1237,10 +1336,10 @@
             data-bs-parent="#accordionExample"
           >
             <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
-              You are fully responsible for the content you host with us. Any
-              type of illegal or offensive content is forbidden. Please refer to
-              our terms of use for further details. We reserve the right to take
-              down your app if it violates our terms of use without any notice.
+              You are fully responsible for the content you host with us. Any type of illegal or
+              offensive content is forbidden. Please refer to our terms of use for further details.
+              We reserve the right to take down your app if it violates our terms of use without any
+              notice.
             </div>
           </div>
         </div>
@@ -1262,7 +1361,7 @@
         rgba(0, 250, 164, 0) 77.17%,
         rgba(0, 250, 164, 0.47) 100%
       );
-      height: 5200px;
+      height: 4200px;
     "
   ></div>
 </div>
