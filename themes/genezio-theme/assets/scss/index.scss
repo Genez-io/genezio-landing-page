@@ -619,3 +619,9 @@ $cyan: #0dcaf0 !default;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .testimonials-text {
+    font-size: 18px !important;
+  }
+}
