@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { MenuIcon, XIcon, SunIcon, MoonIcon } from "lucide-react";
@@ -41,9 +41,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
   };
 
   return (
-    <header
-      className="sticky top-0 z-50 transition-all duration-300 bg-white dark:bg-slate-900 w-full shadow-sm"
-    >
+    <header className="sticky top-0 z-50 transition-all duration-300 bg-white dark:bg-slate-900 w-full shadow-sm">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -51,9 +49,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               onClick={() => navigateTo("home")}
               className="flex items-center space-x-2"
             >
-              <div
-                className="w-32 h-32 flex items-center justify-center"
-              >
+              <div className="w-32 h-32 flex items-center justify-center">
                 {theme === "dark" ? (
                   <img
                     src="https://genezio.com/images/logo-white.svg"
@@ -68,9 +64,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                   />
                 )}
               </div>
-              <span
-                className="text-xl font-bold text-slate-900 dark:text-white"
-              ></span>
+              <span className="text-xl font-bold text-slate-900 dark:text-white"></span>
             </button>
           </div>
 
@@ -97,9 +91,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 </svg>
               </button>
               {isProductsOpen && (
-                <div
-                  className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5"
-                >
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
                     <button
                       onClick={() => navigateTo("product1")}
@@ -165,9 +157,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div
-          className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800"
-        >
+        <div className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <div>
               <button
@@ -192,13 +182,17 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {isProductsOpen && (
                 <div className="pl-4">
                   <button
-                    onClick={() => navigateTo("product1")}
+                    onClick={() =>
+                      (window.location.href = "/deployment-platform")
+                    }
                     className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                   >
                     Gen AI Testing Platform
                   </button>
                   <button
-                    onClick={() => navigateTo("product2")}
+                    onClick={() =>
+                      (window.location.href = "/deployment-platform")
+                    }
                     className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                   >
                     Deployment Platform
@@ -208,7 +202,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </div>
 
             <button
-              onClick={() => navigateTo("contact")}
+              // onClick={() => navigateTo("contact")}
               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               Contact Us

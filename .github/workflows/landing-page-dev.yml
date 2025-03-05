@@ -81,6 +81,10 @@ jobs:
         run: |
           mkdir -p public/docs/
           cp -r genezio-documentation/build/* public/docs/
+      - name: Copy Deployment Platform Landing Page to public
+        run: |
+          mkdir -p public/deployment-platform/
+          cp -r deployment-platform/public/* public/deployment-platform/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend --stage dev
