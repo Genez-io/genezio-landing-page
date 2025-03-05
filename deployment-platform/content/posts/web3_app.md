@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/web3app.webp
+thumbnail: /deployment-platform/images/web3app.webp
 preview: In this tutorial, I am going to show you how to create your first Web3 application
 # meta data start
 description: "Create your first Web3 app with Genezio. Learn to use Ethereum, Metamask, and Blast API in this detailed tutorial."
 meta_og_url: "https://genezio.com/blog/create-your-first-web3-app/"
-meta_og_image: "https://genezio.com/images/web3app.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/web3app.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

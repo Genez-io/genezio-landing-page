@@ -5,12 +5,12 @@ tags:
   - News
 author: Andra Pitis
 linkedIn: https://www.linkedin.com/in/andra-pitis/
-thumbnail: /images/release0.6.webp
+thumbnail: /deployment-platform/images/release0.6.webp
 preview: "Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates"
 # meta data start
 description: "Genezio v0.6 introduces Redis and Postgres support, new SDK features, and easier project setup. Discover the latest updates!"
 meta_og_url: "https://genezio.com/blog/integrate-redis-and-postgres-plus-much-more-genezio-v0.6/"
-meta_og_image: "https://genezio.com/images/release0.6.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/release0.6.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -47,11 +47,13 @@ Presenting the **Neon integration**! Now, you have the option to install Neon an
 export class PostgresService {
   pool = new Pool({
     connectionString: process.env.NEON_POSTGRES_URL,
-    ssl: true,
+    ssl: true
   });
 
   async getUser(name: string): Promise<string> {
-    const result = await this.pool.query(`select * from users where name = ${name}`);
+    const result = await this.pool.query(
+      `select * from users where name = ${name}`
+    );
 
     return result.rows;
   }

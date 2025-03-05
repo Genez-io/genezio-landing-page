@@ -6,14 +6,14 @@ tags:
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 
-thumbnail: /images/send_email_with_typescript_genezio_email_service.webp
+thumbnail: /deployment-platform/images/send_email_with_typescript_genezio_email_service.webp
 
 preview: In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript.
 description: "In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript."
 meta_og_url: "https://genezio.com/blog/send-emails-with-genezio/"
 url: "/blog/send-emails-with-genezio/"
 
-meta_og_image: "https://genezio.com/images/send_email_with_typescript_genezio_email_service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/send_email_with_typescript_genezio_email_service.webp"
 
 # meta data end
 customHeader: "White header"

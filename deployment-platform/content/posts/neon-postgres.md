@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Virgil Turcu
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
-thumbnail: /images/genezio_neon.webp
+thumbnail: /deployment-platform/images/genezio_neon.webp
 preview: Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching.
 # meta data start
 description: "Learn to create a simple Genezio app and integrate it with a Postgres database using Neon. Follow our step-by-step guide."
 meta_og_url: "https://genezio.com/blog/now-available-neon-postgres/"
-meta_og_image: "https://genezio.com/images/genezio_neon.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezio_neon.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

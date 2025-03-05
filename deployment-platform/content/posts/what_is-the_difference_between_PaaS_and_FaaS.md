@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/business-logic-in-the-backend-the-why-and-how.webp
+thumbnail: /deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp
 preview: Serverless architectures are adaptable models of cloud deployment where software developers hand over their scaling and maintenance to a provider, so that every application can run with the optimal resources when the occasion demands it.
 # meta data start
 description: "Both FaaS and PaaS move towards a “serverless” approach by abstracting server management tasks from developers"
 meta_og_url: "https://genezio.com/blog/genezio-functions-reduce-cold-start-times/"
-meta_og_image: "https://genezio.com/images/business-logic-in-the-backend-the-why-and-how.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp"
 meta_og_title: "What Is the Difference Between PaaS And FaaS?"
 # meta data end
 customHeader: "White header"
@@ -77,7 +77,7 @@ This includes tasks that you could do every day, like sending a notification via
 A user uploads an image and presses “submit” on a mobile app. This action triggers an event within the FaaS architecture. This event is then routed to the appropriate microservice. In this case, an image processing microservice would be specifically triggered.
 
 ![alt_text](/posts/faasvspass4.webp)
-{{< external-link link="https://blog.alexellis.io/content/images/2017/08/evolution.png" >}}Source: blog.alexellis{{< /external-link >}}
+{{< external-link link="https://blog.alexellis.io/content/deployment-platform/images/2017/08/evolution.png" >}}Source: blog.alexellis{{< /external-link >}}
 
 In FaaS, these microservices become event-driven functions. These functions are independent pieces of code that execute only when triggered by specific events. This can include user actions like clicking a button, changes within a database, or incoming API calls.
 

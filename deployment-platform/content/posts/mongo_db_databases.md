@@ -5,12 +5,12 @@ tags:
   - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /images/mongodb-genezio.webp
+thumbnail: /deployment-platform/images/mongodb-genezio.webp
 preview: Genezio users can now set up MongoDB databases! You can now easily manage your MongoDB databases alongside your serverless functions. Learn how to deploy scalable, secure NoSQL databases effortlessly!
 # meta data start
 description: Learn about the new MongoDB database feature in Genezio. Easily set up and manage MongoDB databases alongside your serverless functions.
 meta_og_url: "https://genezio.com/blog/mongo_db_databases/"
-meta_og_image: "https://genezio.com/images/ferretdb-genezio.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/ferretdb-genezio.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

@@ -6,7 +6,7 @@ tags:
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
 
-thumbnail: /images/mybenefitsxgenezio.webp
+thumbnail: /deployment-platform/images/mybenefitsxgenezio.webp
 
 preview: For platforms like MyBenefits—a flexible benefits marketplace where employees allocate monthly budgets to order perks—scaling operations demands robust automation. Manual processes for order fulfillment, supplier communication, and status tracking were bottlenecking growth. By leveraging Genezio, MyBenefits engineered a fully automated system, eliminating manual work and ensuring reliability. This case study breaks down their architecture, integrations, and outcomes—no hype, just facts.
 
@@ -15,7 +15,7 @@ description: Learn how MyBenefits automated >90% of supplier order processing us
 
 meta_og_url: "https://genezio.com/blog/mybenefits-genezio-supplier-automation-case-study/"
 
-meta_og_image: "https://genezio.com/images/mybenefitsxgenezio.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/mybenefitsxgenezio.webp"
 
 # meta data end
 customHeader: "White header"

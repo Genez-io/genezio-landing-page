@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/mistakesintypescript.webp
+thumbnail: /deployment-platform/images/mistakesintypescript.webp
 preview: We will walk through the most common 10 mistakes in typescript and how to avoid them.
 # meta data start
 description: "We will walk through the most common 10 mistakes in typescript and how to avoid them."
 meta_og_url: "https://genezio.com/blog/10-common-mistakes-in-typescript-development"
-meta_og_image: "https://genezio.com/images/mistakesintypescript.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/mistakesintypescript.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -193,7 +193,7 @@ type MakeReadOnly<T> = {
 const readOnlyData: MakeReadOnly<OriginalData> = {
   name: "Alice",
   age: 30,
-  city: "New York",
+  city: "New York"
 };
 ```
 
@@ -252,7 +252,9 @@ type Point = {
 
 function calculateDistance(point1: Point, point2: Point): number {
   // Calculate distance
-  return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+  return Math.sqrt(
+    Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2)
+  );
 }
 ```
 

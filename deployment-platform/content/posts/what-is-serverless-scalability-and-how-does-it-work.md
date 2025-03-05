@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/what_is_serverless_scalability_and_how_does_it_work.webp
+thumbnail: /deployment-platform/images/what_is_serverless_scalability_and_how_does_it_work.webp
 preview: "Serverless computing is a system of a cloud model that is used by more than 20,000 companies across every industry imaginable, including Netflix, Coca-Cola, and Nordstrom."
 description: "Serverless scalability is the ability of a serverless system to automatically adjust its size to match the workload."
 meta_og_url: "https://genezio.com/blog/serverless-scalability/"
-meta_og_image: "https://genez.io/images/what_is_serverless_scalability_and_how_does_it_work.webp"
+meta_og_image: "https://genez.io/deployment-platform/images/what_is_serverless_scalability_and_how_does_it_work.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10

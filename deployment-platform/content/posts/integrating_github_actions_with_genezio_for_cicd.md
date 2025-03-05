@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/genezio_cicd.webp
+thumbnail: /deployment-platform/images/genezio_cicd.webp
 preview: GitHub Actions provides a powerful and flexible way to set up CI/CD workflows.
 # meta data start
 description: "Learn to integrate GitHub Actions with Genezio for CI/CD. Follow our guide for setting up automated workflows for seamless deployment."
 meta_og_url: "https://genezio.com/blog/how-to-add-a-mongodb-to-your-genezio-project/"
-meta_og_image: "https://genezio.com/images/genezio_mongodb.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezio_mongodb.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

@@ -5,12 +5,12 @@ tags:
   - News
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /images/geneziov1.webp
+thumbnail: /deployment-platform/images/geneziov1.webp
 preview: "Just launched: Genezio V1.0! This update is all about simplifying your development process with improved CLI output, a new configuration file, straightforward project testing, and improved user authentication."
 # meta data start
 description: "Explore the new features in Genezio v1.0, including improved authentication, easier project testing, and enhanced CLI error handling."
 meta_og_url: "https://genezio.com/blog/genezio-v1.0/"
-meta_og_image: "https://genezio.com/images/geneziov1.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/geneziov1.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

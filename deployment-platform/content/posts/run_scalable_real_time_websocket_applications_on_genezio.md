@@ -6,14 +6,14 @@ tags:
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 
-thumbnail: /images/websockets-on-genezio.webp
+thumbnail: /deployment-platform/images/websockets-on-genezio.webp
 
 preview: "At Genezio, we’ve solved one of the biggest challenges in serverless technology: deploying auto-scalable WebSocket applications on Function-as-a-Service (FaaS) platforms."
 # meta data start
 description: Run WebSocket apps on Genezio’s serverless platform. Enjoy real-time capabilities, auto-scaling, and a streamlined approach to modern app deployment
 meta_og_url: "https://genezio.com/blog/websockets-on-genezio/"
 
-meta_og_image: "https://genezio.com/images/websockets-on-genezio.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/websockets-on-genezio.webp"
 
 # meta data end
 customHeader: "White header"

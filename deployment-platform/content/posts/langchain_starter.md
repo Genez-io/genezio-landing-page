@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/custom_data_llm.webp
+thumbnail: /deployment-platform/images/custom_data_llm.webp
 preview: "Build an LLM application that will answer questions based on your external data using Langchain, LanceDB and Genezio."
 description: "Learn how to use LangChain, LanceDB, and Genezio to create a bot that chats with your own data. Follow our detailed guide."
 meta_og_url: "https://genezio.com/blog/langchain-genezio-project/"
-meta_og_image: "https://genezio.com/images/custom_data_llm.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/custom_data_llm.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
@@ -65,7 +65,9 @@ const loader = new TextLoader("./genezio_docs.txt");
 // Load the data into documents
 const documents = await loader.load();
 // Save the data as OpenAI embeddings in a table
-const vectorStore = await vector_database.fromDocuments(documents, embeddings, { table });
+const vectorStore = await vector_database.fromDocuments(documents, embeddings, {
+  table
+});
 
 // Query the database for the most similar context to the word "genezio"
 const genezio_info = await vectorStore.similaritySearch("genezio", 1);
@@ -98,9 +100,10 @@ const outputParser = new StringOutputParser();
 // Create a pipeline that will feed the input question and the database retrieved context to the model
 const setupAndRetrieval = RunnableMap.from({
   context: new RunnableLambda({
-    func: (input: string) => retriever.invoke(input).then((response) => response[0].pageContent),
+    func: (input: string) =>
+      retriever.invoke(input).then((response) => response[0].pageContent)
   }).withConfig({ runName: "contextRetriever" }),
-  question: new RunnablePassthrough(),
+  question: new RunnablePassthrough()
 });
 
 // Feed the input question and the database retrieved context to the model
@@ -236,7 +239,9 @@ const loader = new TextLoader("./data/data.txt");
 // Load the data into documents
 const documents = await loader.load();
 // Save the data as OpenAI embeddings in a table
-const vectorStore = await LanceDB.fromDocuments(documents, embeddings, { table });
+const vectorStore = await LanceDB.fromDocuments(documents, embeddings, {
+  table
+});
 ```
 
 To test that the database has been populated correctly, you can add the following code that queries the database for the most similar context to the word "genezio":
@@ -250,6 +255,7 @@ console.log(genezio_info);
 ```
 
 This code snippet appended at the end of the file will actually create the vector database when the Node.js script is run:
+
 ```typescript
 (async () => {
   console.log("Creating the LanceDB vector table.");
@@ -293,7 +299,7 @@ export class BackendService {
       modelName: "gpt-4",
       openAIApiKey: OPENAI_API_KEY,
       temperature: 0.5,
-      verbose: true,
+      verbose: true
     });
 
     // Define the prompt that will be fed to the model
@@ -303,9 +309,9 @@ export class BackendService {
         `Answer the question based on only the following context.
 If the information is not in the context, use your previous knowledge to answer the question.
 
-{context}`,
+{context}`
       ],
-      ["human", "{question}"],
+      ["human", "{question}"]
     ]);
 
     // Set the database path
@@ -333,9 +339,10 @@ const outputParser = new StringOutputParser();
 // Create a pipeline that will feed the input question and the database retrieved context to the model
 const setupAndRetrieval = RunnableMap.from({
   context: new RunnableLambda({
-    func: (input: string) => retriever.invoke(input).then((response) => response[0].pageContent),
+    func: (input: string) =>
+      retriever.invoke(input).then((response) => response[0].pageContent)
   }).withConfig({ runName: "contextRetriever" }),
-  question: new RunnablePassthrough(),
+  question: new RunnablePassthrough()
 });
 ```
 
@@ -398,7 +405,6 @@ export default function App() {
     </>
   );
 }
-
 ```
 
 ## Deploy your application

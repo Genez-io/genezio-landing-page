@@ -6,12 +6,12 @@ tags:
   - Learning
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /images/database-performance.webp
+thumbnail: /deployment-platform/images/database-performance.webp
 preview: Deciding on the right database is often a challenging task when starting a new project.
 # meta data start
 description: "Decide on the right database for your project based on this analysis of their performance in a Function as a Service serverless environment."
 meta_og_url: "https://genezio.com/blog/database_in_serverless_world_comparison"
-meta_og_image: "https://genezio.com/images/database-performance.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/database-performance.webp"
 # meta data end
 # svg = “xyz”
 customHeader: "White header"

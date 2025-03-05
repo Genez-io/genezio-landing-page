@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-thumbnail: /images/metamask.webp
+thumbnail: /deployment-platform/images/metamask.webp
 preview: This article dives deep into the inner workings of logging in with MetaMask on your web app.
 # meta data start
 description: "Discover how to add MetaMask login to your Genezio app. Follow our detailed guide for effortless Web3 authentication."
 meta_og_url: "https://genezio.com/blog/seamless-web3-authentication-add-metamask-login-to-your-app-in-a-few-clicks-with-genezio/"
-meta_og_image: "https://genezio.com/images/metamask.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/metamask.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

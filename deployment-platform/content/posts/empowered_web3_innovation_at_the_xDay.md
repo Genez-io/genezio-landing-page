@@ -5,14 +5,14 @@ tags:
   - News
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /images/genezio_xday.webp
+thumbnail: /deployment-platform/images/genezio_xday.webp
 
 preview: This article will present DeFiBuilder and GiveCup, two emerging Web3 startups that started their journey at the xDay.2023 Hackathon, one of Europe’s largest Web3 developers competitions.
 # meta data start
 description: "Explore Genezio’s impact on Web3 projects at xDay.2023. Learn more about the benefits of Genezio for Web3 developers and how to get started today"
 
 meta_og_url: "https://genezio.com/blog/genezio-empowered-web3-innovation-at-the-xday.2023-hackathon/"
-meta_og_image: "https://genezio.com/images/genezio_xday.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezio_xday.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

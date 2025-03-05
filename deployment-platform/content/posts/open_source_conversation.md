@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/opensourceconversation.webp
+thumbnail: /deployment-platform/images/opensourceconversation.webp
 preview: The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a critical driver of massive growth.
 # meta data start
 description: "The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a driver of growth."
 meta_og_url: "https://genezio.com/blog/an-open-conversation-about-open-source/"
-meta_og_image: "https://genezio.com/images/opensourceconversation.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/opensourceconversation.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

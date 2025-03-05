@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/communicationbreakdown.webp
+thumbnail: /deployment-platform/images/communicationbreakdown.webp
 preview: One of the most difficult parts of developing a service is managing the sheer number of connected parts.
 # meta data start
 description: "Explore the importance of backend-to-frontend communication and learn how to manage it effectively in full-stack development."
 meta_og_url: "https://genezio.com/blog/communication-breakdown-why-backend-to-frontend-communication-matters/"
-meta_og_image: "https://genezio.com/images/communicationbreakdown.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/communicationbreakdown.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

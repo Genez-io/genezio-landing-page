@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /images/bware-labs.webp
+thumbnail: /deployment-platform/images/bware-labs.webp
 
 preview: Genezio is a full-stack cloud platform that allows developers to launch and deploy their projects in minutes. It’s helping entrepreneurs and companies alike with its speed and ease of use. One of the latest success stories comes from the web3 firm BwareLabs, which had to deal with plenty of DevOps resources to monitor their various blockchain instances.
 # meta data start
 description: BwareLabs benefits from Genezio’s quick setup process to automate their workflows and run a scalable cloud app.
 meta_og_url: "https://genezio.com/blog/bwarelabs-case-study/"
-meta_og_image: "https://genezio.com/images/bware-labs.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/bware-labs.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

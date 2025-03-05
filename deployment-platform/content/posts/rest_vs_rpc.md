@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Bogdan Ciobanu
 linkedIn: https://www.linkedin.com/in/bogdan-calin-ciobanu-a966b2268/
-thumbnail: /images/rest-rpc.webp
+thumbnail: /deployment-platform/images/rest-rpc.webp
 preview: REST and RPC are two distinct approaches to web services and distributed computing
 # meta data start
 description: "Explore the history and evolution of APIs, from RPC to REST, and learn how Genezio implements both paradigms for modern web services."
 meta_og_url: "https://genezio.com/blog/the-evolution-of-apis-a-history-of-rest-and-rpc/"
-meta_og_image: "https://genezio.com/images/rest-rpc.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/rest-rpc.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -202,7 +202,7 @@ export class RestPlaylist {
       default: {
         return {
           statusCode: "405",
-          statusDescription: "405 Method Not Allowed " + request.method,
+          statusDescription: "405 Method Not Allowed " + request.method
         };
       }
     }
@@ -220,11 +220,11 @@ export class RestPlaylist {
 
     return {
       body: {
-        response: "Song " + song + " added in playlist " + playlist,
+        response: "Song " + song + " added in playlist " + playlist
       },
       headers: { testHeader: "testHeaderValue" },
       statusCode: "201",
-      statusDescription: "Ok",
+      statusDescription: "Ok"
     };
   }
 }

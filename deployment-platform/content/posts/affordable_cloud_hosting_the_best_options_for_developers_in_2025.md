@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /images/genezioandautomation.webp
+thumbnail: /deployment-platform/images/genezioandautomation.webp
 
 preview: "Cloud hosting can be affordable—until it’s suddenly not. Sure thing: Its affordability (a nicer way of saying that it’s cheap, as in, it doesn’t cost much money) is built into how the providers pack and sell it."
 # meta data start
 description: The most affordable cloud hosting is Genezio, a serverless platform for full-stack deployments.
 meta_og_url: "https://genezio.com/blog/affordable-cloud-hosting"
-meta_og_image: "https://genezio.com/images/genezioandautomation.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezioandautomation.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

@@ -6,14 +6,14 @@ tags:
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
 
-thumbnail: /images/openai-flask.webp
+thumbnail: /deployment-platform/images/openai-flask.webp
 
 preview: Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a ChatGPT-powered chat app using Flask, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with Genezio, a powerful cloud deployment platform..
 # meta data start
 description: Learn how to create a ChatGPT-powered chat app with Flask. This guide covers setup, deployment with Genezio, and tips for seamless integration.
 meta_og_url: "https://genezio.com/blog/build-chatgpt-chatbot-flask/"
 
-meta_og_image: "https://genezio.com/images/openai-flask.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/openai-flask.webp"
 
 # meta data end
 customHeader: "White header"
@@ -155,7 +155,7 @@ This folder will store the HTML template used to display the chat interface.
 Here’s the content of the `index.html` file:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Chat with GPT</title>
@@ -182,8 +182,12 @@ Here’s the content of the `index.html` file:
               <div class="card shadow-sm border-0" style="max-width: 75%;">
                 <div class="card-body">
                   <div class="mb-2">
-                    <h3 class="h6 text-primary">{{ 'You' if message.is_user else 'GPT' }}:</h3>
-                    <p class="mb-0 ps-3">{{ message.q if message.is_user else message.a }}</p>
+                    <h3 class="h6 text-primary">
+                      {{ 'You' if message.is_user else 'GPT' }}:
+                    </h3>
+                    <p class="mb-0 ps-3">
+                      {{ message.q if message.is_user else message.a }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -201,12 +205,16 @@ Here’s the content of the `index.html` file:
                   placeholder="Write your message here..."
                   required
                 />
-                <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Send
+                </button>
               </div>
             </form>
 
             <form method="POST" action="/reset">
-              <button type="submit" class="btn btn-outline-secondary btn-lg">New</button>
+              <button type="submit" class="btn btn-outline-secondary btn-lg">
+                New
+              </button>
             </form>
           </div>
         </div>

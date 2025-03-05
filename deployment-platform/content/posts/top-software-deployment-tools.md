@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/top_software_deployment_tools.webp
+thumbnail: /deployment-platform/images/top_software_deployment_tools.webp
 preview: "A good software deployment tool should allow developers to continuously update their code without breaking the central software. It should also make it easy to use from the first time on: a SaaS business should be able to deploy their software to a cloud or on-premises environment very quickly. And most importantly, it should be affordable or free, and ideally integrated with the cloud environment."
 description: "The 14 top software deployment tools include Genezio, PDQ Deploy, Microsoft Intune, and Jenkins."
 meta_og_url: "https://genezio.com/blog/top-software-deployment-tools/"
-meta_og_image: "https://genez.io/images/top_software_deployment_tools.webp"
+meta_og_image: "https://genez.io/deployment-platform/images/top_software_deployment_tools.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10

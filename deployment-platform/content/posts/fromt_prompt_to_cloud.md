@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/fromPromptToCloud.webp
+thumbnail: /deployment-platform/images/fromPromptToCloud.webp
 preview: We are developing an application that generates a list of movies with summarized reviews
 # meta data start
 description: "Explore prompt engineering with Genezio. Learn to create effective prompts and integrate OpenAI in your applications"
 meta_og_url: "https://genezio.com/blog/unlocking-the-potential-of-prompt-engineering-with-genezio/"
-meta_og_image: "https://genezio.com/images/fromPromptToCloud.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/fromPromptToCloud.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -53,7 +53,7 @@ A complete demo app can be accessed at {{< external-link link="https://movie-gur
 
 <!-- TODO: -->
 
-![alt_text](/images/promptimg.webp)
+![alt_text](/deployment-platform/images/promptimg.webp)
 
 ## Introduction
 

@@ -22,7 +22,8 @@
 
         // Set default tab text
         if (document.querySelector(dropdownToggle)) {
-          document.querySelector(dropdownToggle).textContent = defaultItem.textContent;
+          document.querySelector(dropdownToggle).textContent =
+            defaultItem.textContent;
         }
 
         // Show default tab content
@@ -33,20 +34,23 @@
       setDefaultTab();
 
       if (document.querySelector(dropdownToggle)) {
-        document.querySelector(dropdownToggle).addEventListener("click", function (event) {
-          if (event.target.classList.contains("dropdown-item")) {
-            var selectedTabText = event.target.textContent;
-            var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
+        document
+          .querySelector(dropdownToggle)
+          .addEventListener("click", function (event) {
+            if (event.target.classList.contains("dropdown-item")) {
+              var selectedTabText = event.target.textContent;
+              var selectedTabValue = event.target.getAttribute("href"); // Assuming the value is stored in the "href" attribute
 
-            // Update dropdown text
-            document.querySelector(dropdownToggle).textContent = selectedTabText;
+              // Update dropdown text
+              document.querySelector(dropdownToggle).textContent =
+                selectedTabText;
 
-            var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
+              var selectedTabId = selectedTabValue.substring(1); // Remove the "#" from the href
 
-            // Show and activate the selected tab content
-            showTab(selectedTabId);
-          }
-        });
+              // Show and activate the selected tab content
+              showTab(selectedTabId);
+            }
+          });
       }
     }
 
@@ -63,15 +67,22 @@
     handleDropdown("#selectedCloudTab", "tabGroup4");
   });
 </script>
-<div class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area">
+<div
+  class="row px-2 pb-2 text-white mt-4 justify-content-center wrapper-code-area"
+>
   {{/* Mobile version */}}
   <div class="d-md-none d-block">
     {{/*
-    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3"
+    >
       THE CODE
     </p>
     */}}
-    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">
+      Show me the code
+    </h2>
 
     <div class="px-md-4 pb-3 mx-1">
       <!-- genezio Rpc -->
@@ -115,10 +126,18 @@
                       Select an Rpc Tab
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" id="rpcTab1-tab" data-toggle="tab" href="#rpcTab1"
+                      <a
+                        class="dropdown-item"
+                        id="rpcTab1-tab"
+                        data-toggle="tab"
+                        href="#rpcTab1"
                         >Build apps faster with type safe APIs</a
                       >
-                      <a class="dropdown-item" id="rpcTab2-tab" data-toggle="tab" href="#rpcTab2"
+                      <a
+                        class="dropdown-item"
+                        id="rpcTab2-tab"
+                        data-toggle="tab"
+                        href="#rpcTab2"
                         >Type safe APIs in any language</a
                       >
                       <!-- Add more tabs as needed -->
@@ -181,22 +200,46 @@
                       Select a Tab
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" id="tab1-tab" data-toggle="tab" href="#tab1"
+                      <a
+                        class="dropdown-item"
+                        id="tab1-tab"
+                        data-toggle="tab"
+                        href="#tab1"
                         >User authentication</a
                       >
-                      <a class="dropdown-item" id="tab2-tab" data-toggle="tab" href="#tab2"
+                      <a
+                        class="dropdown-item"
+                        id="tab2-tab"
+                        data-toggle="tab"
+                        href="#tab2"
                         >Database support</a
                       >
-                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab3"
+                      <a
+                        class="dropdown-item"
+                        id="tab4-tab"
+                        data-toggle="tab"
+                        href="#tab3"
                         >Queues</a
                       >
-                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab4"
+                      <a
+                        class="dropdown-item"
+                        id="tab4-tab"
+                        data-toggle="tab"
+                        href="#tab4"
                         >Cron jobs</a
                       >
-                      <a class="dropdown-item" id="tab3-tab" data-toggle="tab" href="#tab5"
+                      <a
+                        class="dropdown-item"
+                        id="tab3-tab"
+                        data-toggle="tab"
+                        href="#tab5"
                         >Storage (soon)</a
                       >
-                      <a class="dropdown-item" id="tab4-tab" data-toggle="tab" href="#tab6"
+                      <a
+                        class="dropdown-item"
+                        id="tab4-tab"
+                        data-toggle="tab"
+                        href="#tab6"
                         >Real time (soon)</a
                       >
                       <!-- Add more tabs as needed -->
@@ -343,12 +386,18 @@
           Select a Tab
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownTabs">
-          <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')">genezio.Rpc</a>
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content1')"
+            >genezio.Rpc</a
+          >
           <a class="dropdown-item" href="#" onclick="showTab(event, 'content2')"
             >genezio.Services</a
           >
-          <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')">genezio.Cloud</a>
-          <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')">genezio.Cloud</a>
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content3')"
+            >genezio.Cloud</a
+          >
+          <a class="dropdown-item" href="#" onclick="showTab(event, 'content4')"
+            >genezio.Cloud</a
+          >
         </div>
       </div>
 
@@ -376,7 +425,9 @@
 
   {{/* Desktop version */}}
   <div class="d-md-block d-none">
-    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">Show me the code</h2>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 pt-5">
+      Show me the code
+    </h2>
 
     <div class="col-lg-11 col-md-11 m-2 mx-auto">
       <nav>
@@ -450,7 +501,11 @@
           <div class="row mt-4">
             <div class="col-md-3 col-xs-12 d-flex text-left px-4">
               <nav class="w-100">
-                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                <div
+                  class="nav flex-column nav-custom-left"
+                  id="nav-tab"
+                  role="tablist"
+                >
                   <button
                     class="nav-link nav-link-custom text-start active"
                     id="build-apps-faster-tab"
@@ -515,7 +570,11 @@
           <div class="row mt-4">
             <div class="col-md-3 col-xs-12 d-flex text-left px-4">
               <nav class="w-100">
-                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                <div
+                  class="nav flex-column nav-custom-left"
+                  id="nav-tab"
+                  role="tablist"
+                >
                   <button
                     class="nav-link nav-link-custom text-start active"
                     id="user-auth-tab"
@@ -664,7 +723,11 @@
           <div class="row mt-4">
             <div class="col-md-3 col-xs-12 d-flex text-left px-4">
               <nav class="w-100">
-                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                <div
+                  class="nav flex-column nav-custom-left"
+                  id="nav-tab"
+                  role="tablist"
+                >
                   <button
                     class="nav-link nav-link-custom text-start active"
                     id="user-auth-tab2"
@@ -771,7 +834,11 @@
           <div class="row mt-4">
             <div class="col-md-3 col-xs-12 d-flex text-left px-4">
               <nav class="w-100">
-                <div class="nav flex-column nav-custom-left" id="nav-tab" role="tablist">
+                <div
+                  class="nav flex-column nav-custom-left"
+                  id="nav-tab"
+                  role="tablist"
+                >
                   <button
                     class="nav-link nav-link-custom text-start active"
                     id="user-auth-tab2"
@@ -800,14 +867,14 @@
                     Test parameters: <br />
                     Hello World function <br />
                     30 HTTPS requests for each scenario<br />
-                    Cached DNS records for functions domains to prevent additional time caused by
-                    DNS
+                    Cached DNS records for functions domains to prevent
+                    additional time caused by DNS
                   </p>
 
                   <img
                     class="mt-4 w-100"
                     style="max-width: 512px"
-                    src="/images/cold-start-chart.webp"
+                    src="/deployment-platform/images/cold-start-chart.webp"
                     alt="cold-start-chart"
                   />
                 </div>
@@ -833,7 +900,9 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var accordionButtons = document.querySelectorAll(".accordion-button.theCode");
+    var accordionButtons = document.querySelectorAll(
+      ".accordion-button.theCode"
+    );
 
     accordionButtons.forEach(function (button) {
       button.addEventListener("click", function () {
@@ -859,7 +928,9 @@
       var isOpen = this.classList.contains("collapsed");
 
       if (!isOpen) {
-        var openAccordions = document.querySelectorAll(".accordion-button.theCode:not(.collapsed)");
+        var openAccordions = document.querySelectorAll(
+          ".accordion-button.theCode:not(.collapsed)"
+        );
         openAccordions.forEach(function (openAccordion) {
           openAccordion.click();
         });
@@ -867,10 +938,13 @@
     });
   });
 
-  var tabDropdownItems = document.querySelectorAll('.dropdown-item[data-toggle="tab"]');
+  var tabDropdownItems = document.querySelectorAll(
+    '.dropdown-item[data-toggle="tab"]'
+  );
   tabDropdownItems.forEach(function (item) {
     item.addEventListener("click", function () {
-      var dropdownToggle = this.closest(".dropdown").querySelector(".sectionDropdown");
+      var dropdownToggle =
+        this.closest(".dropdown").querySelector(".sectionDropdown");
       if (dropdownToggle) {
         dropdownToggle.innerHTML = this.innerHTML;
       }

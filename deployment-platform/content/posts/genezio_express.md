@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Stefan Iordache
 linkedIn: https://www.linkedin.com/in/stefan-d-iordache/
-thumbnail: /images/genezio_express.webp
+thumbnail: /deployment-platform/images/genezio_express.webp
 preview: Today we will compare genezio with one of the major players in the market, Express
 # meta data start
 description: "Compare genezio with Express.js. Find out about writing code, testing the code, calling the API from your client, and what it takes to deploy your code."
 meta_og_url: "https://genezio.com/exploring-the-differences-between-genezio-and-express-js/"
-meta_og_image: "https://genezio.com/images/genezio_express.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezio_express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -127,16 +127,16 @@ Using an Express API is the same as using any RESTful API. The client has to mak
 ```javascript
 const axios = require("axios");
 let data = JSON.stringify({
-  name: "John",
+  name: "John"
 });
 
 let config = {
   method: "post",
   url: "http://localhost:3000/",
   headers: {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json"
   },
-  data: data,
+  data: data
 };
 
 axios

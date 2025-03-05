@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/whatsappchatgptphoto.webp
+thumbnail: /deployment-platform/images/whatsappchatgptphoto.webp
 preview: "Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o."
 description: "Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o."
 meta_og_url: "https://genez.io/blog/mastering_automation_a_step-by_step_guide_to_creating_a_whatsapp_chatbot with_chatgpt_4o"
-meta_og_image: "https://genez.io/images/whatsappchatgptphoto.webp"
+meta_og_image: "https://genez.io/deployment-platform/images/whatsappchatgptphoto.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30

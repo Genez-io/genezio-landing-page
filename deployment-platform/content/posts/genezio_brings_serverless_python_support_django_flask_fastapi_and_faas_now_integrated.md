@@ -5,12 +5,12 @@ tags:
   - News
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/python-support.webp
+thumbnail: /deployment-platform/images/python-support.webp
 preview: We’re thrilled to announce that Genezio now fully supports deploying Python popular frameworks like Django, Flask, FastAPI. With built-in WSGI and ASGI compatibility, Genezio makes it effortless to develop Python applications across a variety of use cases, from web apps to real-time APIs and serverless solutions.
 # meta data start
 description: Genezio now offers full Python support for Django, Flask, FastAPI, and Function-as-a-Service, streamlining deployments with WSGI and ASGI compatibility.
 meta_og_url: "https://genezio.com/blog/genezio-python-support/"
-meta_og_image: "https://genezio.com/images/python-support.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/python-support.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

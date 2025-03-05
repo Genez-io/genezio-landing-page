@@ -1,1 +1,463 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[185],{974:function(e,t,s){Promise.resolve().then(s.bind(s,5743))},9205:function(e,t,s){"use strict";s.d(t,{Z:function(){return o}});var l=s(2265);let a=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),r=function(){for(var e=arguments.length,t=Array(e),s=0;s<e;s++)t[s]=arguments[s];return t.filter((e,t,s)=>!!e&&""!==e.trim()&&s.indexOf(e)===t).join(" ").trim()};var n={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};let d=(0,l.forwardRef)((e,t)=>{let{color:s="currentColor",size:a=24,strokeWidth:d=2,absoluteStrokeWidth:o,className:i="",children:c,iconNode:x,...h}=e;return(0,l.createElement)("svg",{ref:t,...n,width:a,height:a,stroke:s,strokeWidth:o?24*Number(d)/Number(a):d,className:r("lucide",i),...h},[...x.map(e=>{let[t,s]=e;return(0,l.createElement)(t,s)}),...Array.isArray(c)?c:[c]])}),o=(e,t)=>{let s=(0,l.forwardRef)((s,n)=>{let{className:o,...i}=s;return(0,l.createElement)(d,{ref:n,iconNode:t,className:r("lucide-".concat(a(e)),o),...i})});return s.displayName="".concat(e),s}},5743:function(e,t,s){"use strict";s.r(t),s.d(t,{default:function(){return u}});var l=s(7437),a=s(2265),r=s(9205);let n=(0,r.Z)("Sun",[["circle",{cx:"12",cy:"12",r:"4",key:"4exip2"}],["path",{d:"M12 2v2",key:"tus03m"}],["path",{d:"M12 20v2",key:"1lh1kg"}],["path",{d:"m4.93 4.93 1.41 1.41",key:"149t6j"}],["path",{d:"m17.66 17.66 1.41 1.41",key:"ptbguv"}],["path",{d:"M2 12h2",key:"1t8f8n"}],["path",{d:"M20 12h2",key:"1q8mjw"}],["path",{d:"m6.34 17.66-1.41 1.41",key:"1m8zz5"}],["path",{d:"m19.07 4.93-1.41 1.41",key:"1shlcs"}]]),d=(0,r.Z)("Moon",[["path",{d:"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",key:"a7tn18"}]]),o=(0,r.Z)("X",[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]]),i=(0,r.Z)("Menu",[["line",{x1:"4",x2:"20",y1:"12",y2:"12",key:"1e0a9i"}],["line",{x1:"4",x2:"20",y1:"6",y2:"6",key:"1owob3"}],["line",{x1:"4",x2:"20",y1:"18",y2:"18",key:"yk5zj1"}]]),c=(0,a.createContext)({theme:"system",setTheme:()=>null});function x(e){let{children:t,defaultTheme:s="system",storageKey:r="ui-theme",...n}=e,[d,o]=(0,a.useState)(s);return(0,a.useEffect)(()=>{{let e=localStorage.getItem(r);e&&o(e)}},[r]),(0,a.useEffect)(()=>{let e=window.document.documentElement;if(e.classList.remove("light","dark"),"system"===d){let t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";e.classList.add(t);return}e.classList.add(d)},[d]),(0,l.jsx)(c.Provider,{...n,value:{theme:d,setTheme:e=>{localStorage.setItem(r,e),o(e)}},children:t})}let h=()=>{let e=(0,a.useContext)(c);if(void 0===e)throw Error("useTheme must be used within a ThemeProvider");return e};function m(e){let{currentPage:t,setCurrentPage:s}=e,[r,c]=(0,a.useState)(!1),[x,m]=(0,a.useState)(!1),[u,k]=(0,a.useState)(!1),[p,f]=(0,a.useState)(!1),{theme:b,setTheme:g}=h();(0,a.useEffect)(()=>{let e=()=>{window.scrollY>10?f(!0):f(!1)};return window.addEventListener("scroll",e),()=>{window.removeEventListener("scroll",e)}},[]);let j=()=>m(!x),v=e=>{s(e),c(!1)};return(0,l.jsxs)("header",{className:"sticky top-0 z-50 transition-all duration-300 bg-white dark:bg-slate-900 w-full shadow-sm",children:[(0,l.jsx)("div",{className:"container mx-auto px-4 md:px-6",children:(0,l.jsxs)("div",{className:"flex items-center justify-between h-16",children:[(0,l.jsx)("div",{className:"flex items-center",children:(0,l.jsxs)("button",{onClick:()=>v("home"),className:"flex items-center space-x-2",children:[(0,l.jsx)("div",{className:"w-32 h-32 flex items-center justify-center",children:"dark"===b?(0,l.jsx)("img",{src:"https://genezio.com/images/logo-white.svg",alt:"genezio logo",className:"w-full h-full object-contain"}):(0,l.jsx)("img",{src:"https://assets.polymet.ai/loyal-gray-559574",alt:"genezio logo",className:"w-full h-full object-contain"})}),(0,l.jsx)("span",{className:"text-xl font-bold text-slate-900 dark:text-white"})]})}),(0,l.jsxs)("nav",{className:"hidden md:flex items-center space-x-8",children:[(0,l.jsxs)("div",{className:"relative group",children:[(0,l.jsxs)("button",{className:"flex items-center text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400",onClick:j,children:["Products",(0,l.jsx)("svg",{className:"ml-1 h-4 w-4",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor",children:(0,l.jsx)("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,d:"M19 9l-7 7-7-7"})})]}),x&&(0,l.jsx)("div",{className:"absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5",children:(0,l.jsxs)("div",{className:"py-1",children:[(0,l.jsx)("button",{onClick:()=>v("product1"),className:"block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left",children:"Gen AI Testing Platform"}),(0,l.jsx)("button",{onClick:()=>v("product2"),className:"block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left",children:"Deployment Platform"})]})})]}),(0,l.jsx)("button",{onClick:()=>v("contact"),className:"text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400",children:"Contact Us"}),(0,l.jsx)("button",{onClick:()=>g("dark"===b?"light":"dark"),className:"p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",children:"dark"===b?(0,l.jsx)(n,{className:"h-5 w-5"}):(0,l.jsx)(d,{className:"h-5 w-5"})})]}),(0,l.jsxs)("div",{className:"flex md:hidden items-center space-x-2",children:[(0,l.jsx)("button",{onClick:()=>g("dark"===b?"light":"dark"),className:"p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",children:"dark"===b?(0,l.jsx)(n,{className:"h-5 w-5"}):(0,l.jsx)(d,{className:"h-5 w-5"})}),(0,l.jsx)("button",{onClick:()=>c(!r),className:"p-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none",children:r?(0,l.jsx)(o,{className:"h-6 w-6"}):(0,l.jsx)(i,{className:"h-6 w-6"})})]})]})}),r&&(0,l.jsx)("div",{className:"md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800",children:(0,l.jsxs)("div",{className:"px-2 pt-2 pb-3 space-y-1",children:[(0,l.jsxs)("div",{children:[(0,l.jsxs)("button",{onClick:j,className:"w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800",children:["Products",(0,l.jsx)("svg",{className:"ml-1 h-4 w-4",fill:"none",viewBox:"0 0 24 24",stroke:"currentColor",children:(0,l.jsx)("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,d:"M19 9l-7 7-7-7"})})]}),x&&(0,l.jsxs)("div",{className:"pl-4",children:[(0,l.jsx)("button",{onClick:()=>v("product1"),className:"block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800",children:"Gen AI Testing Platform"}),(0,l.jsx)("button",{onClick:()=>v("product2"),className:"block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800",children:"Deployment Platform"})]})]}),(0,l.jsx)("button",{onClick:()=>v("contact"),className:"block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800",children:"Contact Us"})]})})]})}function u(e){let{children:t,currentPage:s,setCurrentPage:a}=e;return(0,l.jsx)("html",{children:(0,l.jsx)("body",{children:(0,l.jsx)(x,{defaultTheme:"light",storageKey:"ai-agents-audit-theme",children:(0,l.jsxs)("div",{className:"min-h-screen bg-white dark:bg-slate-900",children:[(0,l.jsx)(m,{currentPage:s,setCurrentPage:a}),(0,l.jsx)("main",{children:t}),(0,l.jsx)("footer",{className:"bg-slate-50 dark:bg-slate-800 py-12 border-t border-slate-200 dark:border-slate-700",children:(0,l.jsxs)("div",{className:"container mx-auto px-4 md:px-6",children:[(0,l.jsxs)("div",{className:"flex flex-col md:flex-row justify-between items-center",children:[(0,l.jsxs)("div",{className:"mb-6 md:mb-0",children:[(0,l.jsx)("h3",{className:"text-xl font-bold text-slate-900 dark:text-white",children:"Genezio | Gen AI Testing Platform"}),(0,l.jsx)("p",{className:"mt-2 text-slate-600 dark:text-slate-400",children:"Ensuring Trust in Gen AI Adoption for Enterprises"})]}),(0,l.jsxs)("div",{className:"flex space-x-6",children:[(0,l.jsx)("a",{href:"#",className:"text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",children:"Terms"}),(0,l.jsx)("a",{href:"#",className:"text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",children:"Privacy"}),(0,l.jsx)("a",{href:"#",className:"text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",children:"Contact"})]})]}),(0,l.jsx)("div",{className:"mt-8 pt-8 border-t border-slate-200 dark:border-slate-700",children:(0,l.jsx)("p",{className:"text-center text-slate-600 dark:text-slate-400",children:"\xa9 2025 Gen AI Testing Agents. All rights reserved."})})]})})]})})})})}s(2778)},2778:function(){}},function(e){e.O(0,[461,971,117,744],function(){return e(e.s=974)}),_N_E=e.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [185],
+  {
+    974: function(e, t, s) {
+      Promise.resolve().then(s.bind(s, 5743));
+    },
+    9205: function(e, t, s) {
+      "use strict";
+      s.d(t, {
+        Z: function() {
+          return o;
+        }
+      });
+      var l = s(2265);
+      let a = e => e.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(),
+        r = function() {
+          for (var e = arguments.length, t = Array(e), s = 0; s < e; s++)
+            t[s] = arguments[s];
+          return t
+            .filter((e, t, s) => !!e && "" !== e.trim() && s.indexOf(e) === t)
+            .join(" ")
+            .trim();
+        };
+      var n = {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: 24,
+        height: 24,
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: 2,
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      };
+      let d = (0, l.forwardRef)((e, t) => {
+          let {
+            color: s = "currentColor",
+            size: a = 24,
+            strokeWidth: d = 2,
+            absoluteStrokeWidth: o,
+            className: i = "",
+            children: c,
+            iconNode: x,
+            ...h
+          } = e;
+          return (0, l.createElement)(
+            "svg",
+            {
+              ref: t,
+              ...n,
+              width: a,
+              height: a,
+              stroke: s,
+              strokeWidth: o ? 24 * Number(d) / Number(a) : d,
+              className: r("lucide", i),
+              ...h
+            },
+            [
+              ...x.map(e => {
+                let [t, s] = e;
+                return (0, l.createElement)(t, s);
+              }),
+              ...(Array.isArray(c) ? c : [c])
+            ]
+          );
+        }),
+        o = (e, t) => {
+          let s = (0, l.forwardRef)((s, n) => {
+            let { className: o, ...i } = s;
+            return (0, l.createElement)(d, {
+              ref: n,
+              iconNode: t,
+              className: r("lucide-".concat(a(e)), o),
+              ...i
+            });
+          });
+          return (s.displayName = "".concat(e)), s;
+        };
+    },
+    5743: function(e, t, s) {
+      "use strict";
+      s.r(t), s.d(t, {
+        default: function() {
+          return u;
+        }
+      });
+      var l = s(7437),
+        a = s(2265),
+        r = s(9205);
+      let n = (0, r.Z)("Sun", [
+          ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
+          ["path", { d: "M12 2v2", key: "tus03m" }],
+          ["path", { d: "M12 20v2", key: "1lh1kg" }],
+          ["path", { d: "m4.93 4.93 1.41 1.41", key: "149t6j" }],
+          ["path", { d: "m17.66 17.66 1.41 1.41", key: "ptbguv" }],
+          ["path", { d: "M2 12h2", key: "1t8f8n" }],
+          ["path", { d: "M20 12h2", key: "1q8mjw" }],
+          ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
+          ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
+        ]),
+        d = (0, r.Z)("Moon", [
+          ["path", { d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z", key: "a7tn18" }]
+        ]),
+        o = (0, r.Z)("X", [
+          ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
+          ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
+        ]),
+        i = (0, r.Z)("Menu", [
+          ["line", { x1: "4", x2: "20", y1: "12", y2: "12", key: "1e0a9i" }],
+          ["line", { x1: "4", x2: "20", y1: "6", y2: "6", key: "1owob3" }],
+          ["line", { x1: "4", x2: "20", y1: "18", y2: "18", key: "yk5zj1" }]
+        ]),
+        c = (0, a.createContext)({ theme: "system", setTheme: () => null });
+      function x(e) {
+        let {
+            children: t,
+            defaultTheme: s = "system",
+            storageKey: r = "ui-theme",
+            ...n
+          } = e,
+          [d, o] = (0, a.useState)(s);
+        return (0, a.useEffect)(
+          () => {
+            {
+              let e = localStorage.getItem(r);
+              e && o(e);
+            }
+          },
+          [r]
+        ), (0, a.useEffect)(
+          () => {
+            let e = window.document.documentElement;
+            if ((e.classList.remove("light", "dark"), "system" === d)) {
+              let t = window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+              e.classList.add(t);
+              return;
+            }
+            e.classList.add(d);
+          },
+          [d]
+        ), (0, l.jsx)(c.Provider, {
+          ...n,
+          value: {
+            theme: d,
+            setTheme: e => {
+              localStorage.setItem(r, e), o(e);
+            }
+          },
+          children: t
+        });
+      }
+      let h = () => {
+        let e = (0, a.useContext)(c);
+        if (void 0 === e)
+          throw Error("useTheme must be used within a ThemeProvider");
+        return e;
+      };
+      function m(e) {
+        let { currentPage: t, setCurrentPage: s } = e,
+          [r, c] = (0, a.useState)(!1),
+          [x, m] = (0, a.useState)(!1),
+          [u, k] = (0, a.useState)(!1),
+          [p, f] = (0, a.useState)(!1),
+          { theme: b, setTheme: g } = h();
+        (0, a.useEffect)(() => {
+          let e = () => {
+            window.scrollY > 10 ? f(!0) : f(!1);
+          };
+          return window.addEventListener("scroll", e), () => {
+            window.removeEventListener("scroll", e);
+          };
+        }, []);
+        let j = () => m(!x),
+          v = e => {
+            s(e), c(!1);
+          };
+        return (0, l.jsxs)("header", {
+          className:
+            "sticky top-0 z-50 transition-all duration-300 bg-white dark:bg-slate-900 w-full shadow-sm",
+          children: [
+            (0, l.jsx)("div", {
+              className: "container mx-auto px-4 md:px-6",
+              children: (0, l.jsxs)("div", {
+                className: "flex items-center justify-between h-16",
+                children: [
+                  (0, l.jsx)("div", {
+                    className: "flex items-center",
+                    children: (0, l.jsxs)("button", {
+                      onClick: () => v("home"),
+                      className: "flex items-center space-x-2",
+                      children: [
+                        (0, l.jsx)("div", {
+                          className:
+                            "w-32 h-32 flex items-center justify-center",
+                          children:
+                            "dark" === b
+                              ? (0, l.jsx)("img", {
+                                  src:
+                                    "https://genezio.com/deployment-platform/images/logo-white.svg",
+                                  alt: "genezio logo",
+                                  className: "w-full h-full object-contain"
+                                })
+                              : (0, l.jsx)("img", {
+                                  src:
+                                    "https://assets.polymet.ai/loyal-gray-559574",
+                                  alt: "genezio logo",
+                                  className: "w-full h-full object-contain"
+                                })
+                        }),
+                        (0, l.jsx)("span", {
+                          className:
+                            "text-xl font-bold text-slate-900 dark:text-white"
+                        })
+                      ]
+                    })
+                  }),
+                  (0, l.jsxs)("nav", {
+                    className: "hidden md:flex items-center space-x-8",
+                    children: [
+                      (0, l.jsxs)("div", {
+                        className: "relative group",
+                        children: [
+                          (0, l.jsxs)("button", {
+                            className:
+                              "flex items-center text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400",
+                            onClick: j,
+                            children: [
+                              "Products",
+                              (0, l.jsx)("svg", {
+                                className: "ml-1 h-4 w-4",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor",
+                                children: (0, l.jsx)("path", {
+                                  strokeLinecap: "round",
+                                  strokeLinejoin: "round",
+                                  strokeWidth: 2,
+                                  d: "M19 9l-7 7-7-7"
+                                })
+                              })
+                            ]
+                          }),
+                          x &&
+                            (0, l.jsx)("div", {
+                              className:
+                                "absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5",
+                              children: (0, l.jsxs)("div", {
+                                className: "py-1",
+                                children: [
+                                  (0, l.jsx)("button", {
+                                    onClick: () => v("product1"),
+                                    className:
+                                      "block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left",
+                                    children: "Gen AI Testing Platform"
+                                  }),
+                                  (0, l.jsx)("button", {
+                                    onClick: () => v("product2"),
+                                    className:
+                                      "block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left",
+                                    children: "Deployment Platform"
+                                  })
+                                ]
+                              })
+                            })
+                        ]
+                      }),
+                      (0, l.jsx)("button", {
+                        onClick: () => v("contact"),
+                        className:
+                          "text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400",
+                        children: "Contact Us"
+                      }),
+                      (0, l.jsx)("button", {
+                        onClick: () => g("dark" === b ? "light" : "dark"),
+                        className:
+                          "p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",
+                        children:
+                          "dark" === b
+                            ? (0, l.jsx)(n, { className: "h-5 w-5" })
+                            : (0, l.jsx)(d, { className: "h-5 w-5" })
+                      })
+                    ]
+                  }),
+                  (0, l.jsxs)("div", {
+                    className: "flex md:hidden items-center space-x-2",
+                    children: [
+                      (0, l.jsx)("button", {
+                        onClick: () => g("dark" === b ? "light" : "dark"),
+                        className:
+                          "p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200",
+                        children:
+                          "dark" === b
+                            ? (0, l.jsx)(n, { className: "h-5 w-5" })
+                            : (0, l.jsx)(d, { className: "h-5 w-5" })
+                      }),
+                      (0, l.jsx)("button", {
+                        onClick: () => c(!r),
+                        className:
+                          "p-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none",
+                        children: r
+                          ? (0, l.jsx)(o, { className: "h-6 w-6" })
+                          : (0, l.jsx)(i, { className: "h-6 w-6" })
+                      })
+                    ]
+                  })
+                ]
+              })
+            }),
+            r &&
+              (0, l.jsx)("div", {
+                className:
+                  "md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800",
+                children: (0, l.jsxs)("div", {
+                  className: "px-2 pt-2 pb-3 space-y-1",
+                  children: [
+                    (0, l.jsxs)("div", {
+                      children: [
+                        (0, l.jsxs)("button", {
+                          onClick: j,
+                          className:
+                            "w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800",
+                          children: [
+                            "Products",
+                            (0, l.jsx)("svg", {
+                              className: "ml-1 h-4 w-4",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              children: (0, l.jsx)("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                strokeWidth: 2,
+                                d: "M19 9l-7 7-7-7"
+                              })
+                            })
+                          ]
+                        }),
+                        x &&
+                          (0, l.jsxs)("div", {
+                            className: "pl-4",
+                            children: [
+                              (0, l.jsx)("button", {
+                                onClick: () => v("product1"),
+                                className:
+                                  "block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800",
+                                children: "Gen AI Testing Platform"
+                              }),
+                              (0, l.jsx)("button", {
+                                onClick: () => v("product2"),
+                                className:
+                                  "block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800",
+                                children: "Deployment Platform"
+                              })
+                            ]
+                          })
+                      ]
+                    }),
+                    (0, l.jsx)("button", {
+                      onClick: () => v("contact"),
+                      className:
+                        "block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800",
+                      children: "Contact Us"
+                    })
+                  ]
+                })
+              })
+          ]
+        });
+      }
+      function u(e) {
+        let { children: t, currentPage: s, setCurrentPage: a } = e;
+        return (0, l.jsx)("html", {
+          children: (0, l.jsx)("body", {
+            children: (0, l.jsx)(x, {
+              defaultTheme: "light",
+              storageKey: "ai-agents-audit-theme",
+              children: (0, l.jsxs)("div", {
+                className: "min-h-screen bg-white dark:bg-slate-900",
+                children: [
+                  (0, l.jsx)(m, { currentPage: s, setCurrentPage: a }),
+                  (0, l.jsx)("main", { children: t }),
+                  (0, l.jsx)("footer", {
+                    className:
+                      "bg-slate-50 dark:bg-slate-800 py-12 border-t border-slate-200 dark:border-slate-700",
+                    children: (0, l.jsxs)("div", {
+                      className: "container mx-auto px-4 md:px-6",
+                      children: [
+                        (0, l.jsxs)("div", {
+                          className:
+                            "flex flex-col md:flex-row justify-between items-center",
+                          children: [
+                            (0, l.jsxs)("div", {
+                              className: "mb-6 md:mb-0",
+                              children: [
+                                (0, l.jsx)("h3", {
+                                  className:
+                                    "text-xl font-bold text-slate-900 dark:text-white",
+                                  children: "Genezio | Gen AI Testing Platform"
+                                }),
+                                (0, l.jsx)("p", {
+                                  className:
+                                    "mt-2 text-slate-600 dark:text-slate-400",
+                                  children:
+                                    "Ensuring Trust in Gen AI Adoption for Enterprises"
+                                })
+                              ]
+                            }),
+                            (0, l.jsxs)("div", {
+                              className: "flex space-x-6",
+                              children: [
+                                (0, l.jsx)("a", {
+                                  href: "#",
+                                  className:
+                                    "text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",
+                                  children: "Terms"
+                                }),
+                                (0, l.jsx)("a", {
+                                  href: "#",
+                                  className:
+                                    "text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",
+                                  children: "Privacy"
+                                }),
+                                (0, l.jsx)("a", {
+                                  href: "#",
+                                  className:
+                                    "text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400",
+                                  children: "Contact"
+                                })
+                              ]
+                            })
+                          ]
+                        }),
+                        (0, l.jsx)("div", {
+                          className:
+                            "mt-8 pt-8 border-t border-slate-200 dark:border-slate-700",
+                          children: (0, l.jsx)("p", {
+                            className:
+                              "text-center text-slate-600 dark:text-slate-400",
+                            children:
+                              "\xa9 2025 Gen AI Testing Agents. All rights reserved."
+                          })
+                        })
+                      ]
+                    })
+                  })
+                ]
+              })
+            })
+          })
+        });
+      }
+      s(2778);
+    },
+    2778: function() {}
+  },
+  function(e) {
+    e.O(0, [461, 971, 117, 744], function() {
+      return e((e.s = 974));
+    }), (_N_E = e.O());
+  }
+]);

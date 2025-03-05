@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/business-logic-in-the-backend-the-why-and-how.webp
+thumbnail: /deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp
 preview: Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation.
 # meta data start
 description: "Learn the importance of implementing business logic in the backend. Discover best practices and strategies for effective deployment."
 meta_og_url: "https://genezio.com/blog/business-logic-in-the-backend-the-why-and-how/"
-meta_og_image: "https://genezio.com/images/business-logic-in-the-backend-the-why-and-how.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

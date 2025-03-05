@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/express.webp
+thumbnail: /deployment-platform/images/express.webp
 preview: "In this short guide, you’ll learn how to migrate your Express.js app to Genezio Cloud in a few simple steps. Before we get started with the tutorial, let’s briefly talk about why you should consider migrating your project to a FaaS platform like Genezio in the first place. "
 description: "Learn how to migrate your Express.js app to Genezio Cloud, optimize costs, scale easily, and reduce maintenance with this simple step-by-step guide"
 meta_og_url: "https://genezio.com/blog/migrate-express-app/"
-meta_og_image: "https://genez.io/images/express.webp"
+meta_og_image: "https://genez.io/deployment-platform/images/express.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 20

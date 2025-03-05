@@ -5,12 +5,12 @@ tags:
   - News
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/genezio-functions-reduce-cold-start-times-compared-to-Lambda.webp
+thumbnail: /deployment-platform/images/genezio-functions-reduce-cold-start-times-compared-to-Lambda.webp
 preview: We are excited to announce that after two years of dedicated development, our team has launched Genezio Functions
 # meta data start
 description: "We are excited to announce that after two years of dedicated development, our team has launched Genezio Functions"
 meta_og_url: "https://genezio.com/blog/genezio-functions-reduce-cold-start-times/"
-meta_og_image: "https://genezio.com/images/genezio-functions-reduce-cold-start-times-compared-to-Lambda.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezio-functions-reduce-cold-start-times-compared-to-Lambda.webp"
 meta_og_title: "Genezio Functions reduce cold start times by up to 4x compared to AWS Lambda"
 # meta data end
 customHeader: "White header"

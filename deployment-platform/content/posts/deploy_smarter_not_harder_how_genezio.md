@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Rares Istoc
 linkedIn: https://ro.linkedin.com/in/rares-istoc-9aa401123
-thumbnail: /images/rag.webp
+thumbnail: /deployment-platform/images/rag.webp
 preview: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how Genezio can transform your deployment workflow.
 # meta data start
 description: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how Genezio can transform your deployment workflow.
 meta_og_url: "https://genezio.com/blog//deploy-smarter-not-harder-how-genezio/"
-meta_og_image: "https://genezio.com/images/rag.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/rag.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

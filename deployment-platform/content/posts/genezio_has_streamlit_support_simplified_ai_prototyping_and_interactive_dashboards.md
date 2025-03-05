@@ -5,13 +5,13 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/streamlit.webp
+thumbnail: /deployment-platform/images/streamlit.webp
 preview: Python developers and machine learning engineers asked for Streamlit support, and it is now live in production. Early access users have already tested the integration, validating its simplicity and efficiency. With Genezio’s optimized deployment process, building and deploying AI prototypes and interactive dashboards is seamless.
 # meta data start
 description: Genezio now supports Streamlit, enabling seamless AI prototyping and interactive dashboards with serverless Python deployment.
 
 meta_og_url: "https://genezio.com/blog/streamlit/"
-meta_og_image: "https://genezio.com/images/streamlit.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/streamlit.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

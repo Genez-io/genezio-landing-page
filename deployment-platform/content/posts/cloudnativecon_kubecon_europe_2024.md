@@ -5,12 +5,12 @@ tags:
   - News
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/kubecon.webp
+thumbnail: /deployment-platform/images/kubecon.webp
 preview: "The Genezio team is still buzzing after an incredible week at KubeCon + CloudNativeCon Europe 2024!"
 # meta data start
 description: "Learn about Genezio’s participation in KubeCon + CloudNativeCon 2024, including key takeaways on cloud-native development trends"
 meta_og_url: "https://genezio.com/blog/kubecon-cloudnativecon-paris/"
-meta_og_image: "https://genezio.com/images/kubecon.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/kubecon.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

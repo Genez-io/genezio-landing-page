@@ -19,6 +19,6 @@ power consumption, and we are optimizing the way the code is run towards our goa
 # meta data start
 description: "The type safe serverless platform for modern full-stack developers Everything you need to build apps that scale up to millions of users."
 meta_og_url: "https://genez.io"
-meta_og_image: "https://genez.io/images/og.jpg"
+meta_og_image: "https://genez.io/deployment-platform/images/og.jpg"
 # meta data end
 ---

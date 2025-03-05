@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 # TODO:
-thumbnail: /images/database-performance.webp
+thumbnail: /deployment-platform/images/database-performance.webp
 preview: Deploying a web app can be more of a tedious job than a step forward. According to a December 2024 AWS blog post,developers report spending an average of just one hour per day on coding, with the rest of their time tied up in tasks like managing deployments, writing documentation, and troubleshooting issues.
 # meta data start
 description: Learn how Genezio simplifies web app deployment with direct GitHub project integration. Save time and focus on building your app.
 meta_og_url: "https://genezio.com/blog/easy-web-app-deployment-with-genezio/"
 # TODO:
-meta_og_image: "https://genezio.com/images/database-performance.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/database-performance.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

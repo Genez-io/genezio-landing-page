@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/what-serverless-is-and-why-you-should-care.webp
+thumbnail: /deployment-platform/images/what-serverless-is-and-why-you-should-care.webp
 preview: Serverless is an incredibly powerful option for many development situations. But what exactly is it? And how can you leverage it to great success today – with as little friction as possible?
 # meta data start
 description: "Learn about serverless computing and its benefits. Discover how Genezio simplifies serverless deployment for efficient and scalable applications."
 meta_og_url: "https://genezio.com/blog/what-serverless-is/"
-meta_og_image: "https://genezio.com/images/what-serverless-is-and-why-you-should-care.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/what-serverless-is-and-why-you-should-care.webp"
 url: "/blog/what-serverless-is/"
 # meta data end
 customHeader: "White header"

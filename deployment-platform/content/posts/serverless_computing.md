@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/whentogoserverless.webp
+thumbnail: /deployment-platform/images/whentogoserverless.webp
 preview: Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption
 # meta data start
 description: "Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption"
 meta_og_url: "https://genezio.com/blog/serverless-computing-when-to-go-serverless/"
-meta_og_image: "https://genezio.com/images/whentogoserverless.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/whentogoserverless.webp"
 meta_og_title: "Serverless Computing: When to Go Serverless?"
 # meta data end
 customHeader: "White header"

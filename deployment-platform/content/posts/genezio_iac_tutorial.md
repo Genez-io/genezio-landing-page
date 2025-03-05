@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/boost_your_productivity.webp
+thumbnail: /deployment-platform/images/boost_your_productivity.webp
 preview: "Discover how Genezio's enhanced YAML configuration simplifies deployments with dynamic expressions and one-click resource creation."
 description: "Genezio introduces powerful new features in YAML configuration, allowing developers to streamline their workflow with single-click deployments and dynamic resource management."
 meta_og_url: "https://genezio.com/blog/genezio-single-click-deployments/"
-meta_og_image: "https://genezio.com/images/boost_your_productivity.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/boost_your_productivity.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -50,13 +50,13 @@ For example, in the frontend section, you can dynamically reference backend func
 
 ```yaml
 frontend:
-    environment:
-      VITE_API_URL: ${{ backend.functions.express.url }}
-      VITE_AUTH_TOKEN: ${{ services.authentication.token }}
-      VITE_AUTH_REGION: ${{ services.authentication.region }}
-    scripts:
-      deploy: npm install
-      build: npm run build
+  environment:
+    VITE_API_URL: ${{ backend.functions.express.url }}
+    VITE_AUTH_TOKEN: ${{ services.authentication.token }}
+    VITE_AUTH_REGION: ${{ services.authentication.region }}
+  scripts:
+    deploy: npm install
+    build: npm run build
 ```
 
 ### Support for Environment Variables

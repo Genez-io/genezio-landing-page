@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Virgil Turcu
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
-thumbnail: /images/genezio_middleware.webp
+thumbnail: /deployment-platform/images/genezio_middleware.webp
 preview: Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database.
 # meta data start
 description: "Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database."
 meta_og_url: "https://genezio.com/blog/how_to_implement_the_first_middleware_in_a_genezio_project"
-meta_og_image: "https://genezio.com/images/genezio_middleware.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/genezio_middleware.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -185,8 +185,8 @@ export class BackendService {
 
   @ParameterCheckerMiddleware([
     z.object({
-      name: z.string(),
-    }),
+      name: z.string()
+    })
   ])
   async hello(props: { name: string }): Promise<string> {
     console.log(`Hello from backend service ${props.name}`);
@@ -200,9 +200,9 @@ export class BackendService {
       details: z.object({
         age: z.number(),
         address: z.string(),
-        email: z.string(),
-      }),
-    }),
+        email: z.string()
+      })
+    })
   ])
   async helloPerson(props: Person): Promise<string> {
     console.log(

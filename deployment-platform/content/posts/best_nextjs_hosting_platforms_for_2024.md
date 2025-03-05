@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/nextj-hosting-provider.webp
+thumbnail: /deployment-platform/images/nextj-hosting-provider.webp
 preview: Next.js has quickly become a go-to choice for developers, powering a powerhouse of web applications across the internet.
 # meta data start
 description: "Discover the best Next.js hosting platforms for 2024. Unleash powerful, SEO-friendly web apps with top-tier hosts optimizing for speed, scalability, and cost."
 meta_og_url: "https://genezio.com/blog/nextj-hosting-provider/"
-meta_og_image: "https://genezio.com/images/nextj-hosting-provider.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/nextj-hosting-provider.webp"
 meta_og_title: "Best Nextjs Hosting Platforms for 2024"
 # meta data end
 customHeader: "White header"

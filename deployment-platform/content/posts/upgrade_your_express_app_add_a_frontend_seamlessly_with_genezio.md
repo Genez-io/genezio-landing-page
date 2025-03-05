@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/express-frontend-genezio.webp
+thumbnail: /deployment-platform/images/express-frontend-genezio.webp
 preview: In this short guide, you’ll learn how to add a frontend to your Express.js app with Genezio Cloud in a few easy steps.
 # meta data start
 description: Learn how to seamlessly add a frontend to your Express.js app with Genezio Cloud in a few easy steps, simplifying full-stack development and deployment
 meta_og_url: "https://genezio.com/blog/add-frontend-express/"
-meta_og_image: "https://genezio.com/images/express-frontend-genezio.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/express-frontend-genezio.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/effortless.webp
+thumbnail: /deployment-platform/images/effortless.webp
 preview: "The modern web thrives on efficiency and effectiveness – the difference between being somewhat efficient and very efficient can be fundamentally impactful to business success, with even small gaps adding to major business opportunities."
 description: "Unlock business success with Genezio’s auto scaling solutions. The difference between somewhat efficient and very efficient can impact your business succes"
 meta_og_url: "https://genezio.com/blog/effortless-scaling-genezio-handles-growth/"
-meta_og_image: "https://genezio.com/images/effortless.webp"
+meta_og_image: "https://genezio.com/deployment-platform/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
