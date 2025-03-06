@@ -3,32 +3,26 @@
 import React from "react";
 import { Header } from "./(components)/header";
 import { ThemeProvider } from "./(components)/theme-provider";
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 
 interface LayoutProps {
   children: React.ReactNode;
-  currentPage: string;
-  setCurrentPage: (page: string) => void;
 }
 
-export default function Layout({
-  children,
-  currentPage,
-  setCurrentPage
-}: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <html>
       <head>
         <title>AI Test Agents</title>
       </head>
       <body>
-        <GoogleTagManager gtmId="GTM-PP95P9BW" />
+        {/* <GoogleTagManager gtmId="GTM-PP95P9BW" /> */}
 
         <ThemeProvider defaultTheme="light" storageKey="ai-agents-audit-theme">
           <div className="min-h-screen bg-white dark:bg-slate-900">
-            <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            <Header />
 
             <main>{children}</main>
             <footer className="bg-slate-50 dark:bg-slate-800 py-12 border-t border-slate-200 dark:border-slate-700">
