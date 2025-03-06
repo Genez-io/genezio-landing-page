@@ -1,5 +1,5 @@
 ---
-title: "Secure AI agent deployment: run Python code for data analysis with LangGraph"
+title: "Run Python code for AI data analysis with LangGraph"
 date: 2025-02-27
 tags:
   - Tutorials
