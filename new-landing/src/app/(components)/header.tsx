@@ -3,16 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { MenuIcon, XIcon, SunIcon, MoonIcon } from "lucide-react";
 import { useTheme } from "./theme-provider";
+import Image from "next/image";
 
-interface HeaderProps {
-  currentPage: string;
-  setCurrentPage: (page: string) => void;
-}
-
-export function Header({ currentPage, setCurrentPage }: HeaderProps) {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -33,12 +28,6 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleProducts = () => setIsProductsOpen(!isProductsOpen);
-  const toggleResources = () => setIsResourcesOpen(!isResourcesOpen);
-
-  const navigateTo = (page: string) => {
-    setCurrentPage(page);
-    setIsMenuOpen(false);
-  };
 
   const scrollToCtaSection = () => {
     const ctaSection = document.getElementById("cta-buttons");
@@ -58,16 +47,18 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             >
               <div className="w-32 h-32 flex items-center justify-center">
                 {theme === "dark" ? (
-                  <img
-                    src="genezio-logo-white.svg"
+                  <Image
+                    src="/genezio-logo-white.svg"
                     alt="genezio logo"
-                    className="w-full h-full object-contain"
+                    width={128}
+                    height={128}
                   />
                 ) : (
-                  <img
-                    src="genezio-logo-dark.svg"
+                  <Image
+                    src="/genezio-logo-dark.svg"
                     alt="genezio logo"
-                    className="w-full h-full object-contain"
+                    width={128}
+                    height={128}
                   />
                 )}
               </div>
