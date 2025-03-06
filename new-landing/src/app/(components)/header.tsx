@@ -59,13 +59,13 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               <div className="w-32 h-32 flex items-center justify-center">
                 {theme === "dark" ? (
                   <img
-                    src="https://genezio.com/images/logo-white.svg"
+                    src="genezio-logo-white.svg"
                     alt="genezio logo"
                     className="w-full h-full object-contain"
                   />
                 ) : (
                   <img
-                    src="https://assets.polymet.ai/loyal-gray-559574"
+                    src="genezio-logo-dark.svg"
                     alt="genezio logo"
                     className="w-full h-full object-contain"
                   />
