@@ -3,7 +3,7 @@
 import React from "react";
 import { Header } from "./(components)/header";
 import { ThemeProvider } from "./(components)/theme-provider";
-// import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
         <title>AI Test Agents</title>
       </head>
       <body>
-        {/* <GoogleTagManager gtmId="GTM-PP95P9BW" /> */}
+        <GoogleTagManager gtmId="GTM-PP95P9BW" />
 
         <ThemeProvider defaultTheme="light" storageKey="ai-agents-audit-theme">
           <div className="min-h-screen bg-white dark:bg-slate-900">
