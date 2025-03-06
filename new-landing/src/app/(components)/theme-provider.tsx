@@ -28,9 +28,11 @@ export function ThemeProvider({
   storageKey = "ui-theme",
   ...props
 }: ThemeProviderProps) {
+  // Initialize theme state with defaultTheme, update in useEffect
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
+    // Only access localStorage if window is defined
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem(storageKey) as Theme;
       if (storedTheme) {
@@ -41,6 +43,7 @@ export function ThemeProvider({
 
   useEffect(() => {
     const root = window.document.documentElement;
+
     root.classList.remove("light", "dark");
 
     if (theme === "system") {
@@ -57,11 +60,12 @@ export function ThemeProvider({
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
+    setTheme: (newTheme: Theme) => {
+      // Check if window is defined before using localStorage
       if (typeof window !== "undefined") {
-        localStorage.setItem(storageKey, theme);
+        localStorage.setItem(storageKey, newTheme);
       }
-      setTheme(theme);
+      setTheme(newTheme);
     }
   };
 
@@ -74,8 +78,10 @@ export function ThemeProvider({
 
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
+
   if (context === undefined) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
+
   return context;
 };

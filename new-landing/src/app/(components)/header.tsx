@@ -40,19 +40,26 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
     setIsMenuOpen(false);
   };
 
+  const scrollToCtaSection = () => {
+    const ctaSection = document.getElementById("cta-buttons");
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 transition-all duration-300 bg-white dark:bg-slate-900 w-full shadow-sm">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <button
-              onClick={() => navigateTo("home")}
+              onClick={() => (window.location.href = "/")}
               className="flex items-center space-x-2"
             >
               <div className="w-32 h-32 flex items-center justify-center">
                 {theme === "dark" ? (
                   <img
-                    src="https://genezio.com/deployment-platform/images/logo-white.svg"
+                    src="https://genezio.com/images/logo-white.svg"
                     alt="genezio logo"
                     className="w-full h-full object-contain"
                   />
@@ -94,13 +101,15 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
                     <button
-                      onClick={() => navigateTo("product1")}
+                      onClick={() => (window.location.href = "/")}
                       className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left"
                     >
-                      Gen AI Testing Platform
+                      AI Testing Platform
                     </button>
                     <button
-                      onClick={() => navigateTo("product2")}
+                      onClick={() =>
+                        (window.location.href = "/deployment-platform")
+                      }
                       className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left"
                     >
                       Deployment Platform
@@ -111,7 +120,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </div>
 
             <button
-              onClick={() => navigateTo("contact")}
+              onClick={scrollToCtaSection}
               className="text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
             >
               Contact Us
@@ -182,9 +191,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {isProductsOpen && (
                 <div className="pl-4">
                   <button
-                    onClick={() =>
-                      (window.location.href = "/deployment-platform")
-                    }
+                    onClick={() => (window.location.href = "/")}
                     className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                   >
                     Gen AI Testing Platform
@@ -202,7 +209,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </div>
 
             <button
-              // onClick={() => navigateTo("contact")}
+              onClick={scrollToCtaSection}
               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               Contact Us

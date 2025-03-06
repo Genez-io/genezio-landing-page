@@ -41,7 +41,7 @@ export default function Layout({
                 <h3
                   className="text-xl font-bold text-slate-900 dark:text-white"
                 >
-                  Genezio | Gen AI Testing Platform
+                  Genezio
                 </h3>
                 <p
                   className="mt-2 text-slate-600 dark:text-slate-400"
@@ -53,21 +53,15 @@ export default function Layout({
                 <a
                   href="#"
                   className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
-                >
-                  Terms
-                </a>
+                ></a>
                 <a
                   href="#"
                   className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
-                >
-                  Privacy
-                </a>
+                ></a>
                 <a
                   href="#"
                   className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
-                >
-                  Contact
-                </a>
+                ></a>
               </div>
             </div>
             <div
@@ -76,7 +70,7 @@ export default function Layout({
               <p
                 className="text-center text-slate-600 dark:text-slate-400"
               >
-                © 2025 Gen AI Testing Agents. All rights reserved.
+                © 2025 AI Test Agents. All rights reserved.
               </p>
             </div>
           </div>

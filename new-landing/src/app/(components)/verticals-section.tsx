@@ -8,7 +8,7 @@ export function VerticalsSection() {
     {
       title: "E-commerce",
       description:
-        "Ensure AI-powered shopping assistants provide accurate product information and recommendations while maintaining compliance with consumer protection regulations.",
+        "Evaluate AI-powered shopping assistants to deliver accurate product information, personalized recommendations, and fraud detection while ensuring compliance with consumer protection laws.",
       icon: (
         <ShoppingCartIcon
           className="w-12 h-12 text-purple-600 dark:text-purple-400"
@@ -22,7 +22,7 @@ export function VerticalsSection() {
     {
       title: "Banking & Finance",
       description:
-        "Validate that financial AI agents deliver accurate information about products, rates, and regulations while protecting sensitive customer data.",
+        "Ensure Customer Service AI agents maintain data accuracy, regulatory compliance (GDPR, PCI DSS), and fraud prevention while protecting sensitive customer data.",
       icon: (
         <LandmarkIcon
           className="w-12 h-12 text-blue-600 dark:text-blue-400"
@@ -36,16 +36,16 @@ export function VerticalsSection() {
     {
       title: "Healthcare",
       description:
-        "Test AI systems to ensure they provide medically accurate information, maintain patient privacy, and comply with healthcare regulations.",
+        "Validate AI-powered healthcare agents to ensure medically accurate information, safeguard patient privacy (HIPAA, GDPR), and meet industry compliance standards for diagnostics and patient interactions.",
       icon: (
         <HeartIcon
-          className="w-12 h-12 text-red-600 dark:text-red-400"
+          className="w-12 h-12 text-green-600 dark:text-green-400"
         />
       ),
 
-      color: "bg-red-50 dark:bg-red-900/20",
-      borderColor: "border-red-200 dark:border-red-700",
-      iconBg: "bg-red-100 dark:bg-red-800",
+      color: "bg-green-50 dark:bg-green-900/20",
+      borderColor: "border-green-200 dark:border-green-700",
+      iconBg: "bg-gren-100 dark:bg-green-800",
     },
   ];
 
@@ -58,10 +58,11 @@ export function VerticalsSection() {
           <h2
             className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4"
           >
-            Genezio Agents Across Industries
+            Industry Specific Validation
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300">
-            Our AI Validation platform
+            Ensuring AI accuracy, compliance, and security across critical
+            sectors.
           </p>
         </div>
 

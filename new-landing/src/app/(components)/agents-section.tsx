@@ -3,6 +3,7 @@
 import React from "react";
 import {
   CheckCircleIcon,
+  ShieldIcon,
   TestTubeIcon,
   FilterIcon,
   ClockIcon,
@@ -21,37 +22,37 @@ export function AgentsSection() {
       icon: <CheckCircleIcon className="w-8 h-8 text-green-500" />,
       color: "bg-white dark:bg-slate-800",
       borderColor: "border-slate-200 dark:border-slate-700",
-      tag: "Coming Soon",
+      tag: "",
       tagColor: "bg-amber-500 text-white"
     },
     {
       title: "Offensive Language",
       description:
-        "Detect and flag inappropriate, offensive, or harmful content in AI-generated responses.",
+        "Detect inappropriate, or harmful content in AI-generated responses to protect your brand's reputation.",
       icon: <AlertTriangleIcon className="w-8 h-8 text-red-500" />,
       color: "bg-white dark:bg-slate-800",
       borderColor: "border-slate-200 dark:border-slate-700",
-      tag: "Coming Soon",
+      tag: "",
       tagColor: "bg-amber-500 text-white"
     },
     {
       title: "Off Topic",
       description:
-        "Identify hallucinations or irrelevant responses that could mislead users or damage brand reputation.",
+        "Prevent competitor mentions and other irrelevant responses, enhancing customer satisfaction and accuracy.",
       icon: <FilterIcon className="w-8 h-8 text-amber-500" />,
       color: "bg-white dark:bg-slate-800",
       borderColor: "border-slate-200 dark:border-slate-700",
-      tag: "Coming Soon",
+      tag: "",
       tagColor: "bg-amber-500 text-white"
     },
     {
       title: "Cost Control",
       description:
-        "Monitor and optimize token usage to prevent excessive costs from verbose responses or inefficient prompts.",
+        "Detect excessive token usage to prevent excessive costs from verbose responses or inefficient prompts.",
       icon: <DollarSignIcon className="w-8 h-8 text-green-600" />,
       color: "bg-white dark:bg-slate-800",
       borderColor: "border-slate-200 dark:border-slate-700",
-      tag: "Coming Soon",
+      tag: "",
       tagColor: "bg-amber-500 text-white"
     },
     {
@@ -65,14 +66,15 @@ export function AgentsSection() {
       tagColor: "bg-amber-500 text-white"
     },
     {
-      title: "Competitor Mentions",
+      title: "Custom Agent",
       description:
-        "Identify and analyze when AI agents reference competitors or competitive products inappropriately.",
+        "Build specialized test agents for your use cases using historical conversations and first-party data.",
       icon: <BriefcaseIcon className="w-8 h-8 text-blue-500" />,
       color: "bg-white dark:bg-slate-800",
-      borderColor: "border-slate-200 dark:border-slate-700",
+      borderColor: "border-purple-200 dark:border-slate-700",
       tag: "Coming Soon",
-      tagColor: "bg-amber-500 text-white"
+      tagColor: "bg-amber-500 text-white",
+      highlight: true
     },
     {
       title: "Functional Testing",
@@ -105,7 +107,9 @@ export function AgentsSection() {
             Continuous Testing Validation
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Test in a Controlled, Real-World Simulation
+            Don't just blindly trust your AI Agents.
+            <br />
+            Test them. Continuously.
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300">
             Run comprehensive simulations of real-world interactions with our
@@ -119,17 +123,25 @@ export function AgentsSection() {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className={`rounded-xl ${agent.color} border ${agent.borderColor} p-6 transition-all hover:shadow-lg relative overflow-hidden group`}
+              className={`rounded-xl ${agent.color} border ${
+                agent.borderColor
+              } p-6 transition-all hover:shadow-lg relative overflow-hidden group ${
+                agent.highlight
+                  ? "ring-2 ring-purple-400 dark:ring-purple-500"
+                  : ""
+              }`}
               id={`pi51ci_${index}`}
             >
-              <div className="absolute top-0 right-0" id={`fj8syn_${index}`}>
-                <div
-                  className={`px-3 py-1 text-xs font-medium ${agent.tagColor} rounded-bl-lg`}
-                  id={`ugzsid_${index}`}
-                >
-                  {agent.tag}
+              {agent.tag && (
+                <div className="absolute top-0 right-0" id={`fj8syn_${index}`}>
+                  <div
+                    className={`px-3 py-1 text-xs font-medium ${agent.tagColor} rounded-bl-lg`}
+                    id={`ugzsid_${index}`}
+                  >
+                    {agent.tag}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div
                 className="p-3 rounded-lg bg-slate-100 dark:bg-slate-700 shadow-sm inline-block mb-4"
@@ -155,7 +167,7 @@ export function AgentsSection() {
                 className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 id={`qzsjir_${index}`}
               >
-                <button
+                {/* <button
                   className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 flex items-center"
                   id={`j9hx9j_${index}`}
                 >
@@ -175,7 +187,7 @@ export function AgentsSection() {
                       id={`s91mt8_${index}`}
                     />
                   </svg>
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

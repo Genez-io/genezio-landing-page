@@ -3,12 +3,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  distDir: "../public",
+  distDir: "build",
   output: "export",
-  trailingSlash: true, // Optional: Adds trailing slashes to URLs
-  images: {
-    unoptimized: true // Prevents issues with Next.js Image component on static export
-  }
+  trailingSlash: true
 };
 
 export default nextConfig;

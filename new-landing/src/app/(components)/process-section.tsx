@@ -10,7 +10,8 @@ export function ProcessSection() {
     {
       id: 0,
       title: "Define",
-      description: "Enterprises define real-world test scenarios",
+      description:
+        "Choose the required agents to participate as actors in the simulated environments.",
       icon: <ClipboardListIcon className="w-6 h-6" />,
       content: (
         <div
@@ -61,18 +62,6 @@ export function ProcessSection() {
                 </p>
               </div>
             </div>
-            <div className="flex items-start">
-              <div
-                className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-600 dark:text-purple-400 mr-3 mt-0.5"
-              >
-                4
-              </div>
-              <div>
-                <p className="text-slate-700 dark:text-slate-300">
-                  Configure test parameters and success criteria
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       ),
@@ -80,7 +69,8 @@ export function ProcessSection() {
     {
       id: 1,
       title: "Simulate",
-      description: "Run AI Agents in parallel from multiple regions & IPs",
+      description:
+        "Launch simulations with multiple agents operating across different countries simultaneously.",
       icon: <PlayIcon className="w-6 h-6" />,
       content: (
         <div
@@ -100,7 +90,8 @@ export function ProcessSection() {
               </div>
               <div>
                 <p className="text-slate-700 dark:text-slate-300">
-                  Deploy audit agents across multiple geographic regions
+                  Choose the validation agents you want to include in your
+                  simulation.
                 </p>
               </div>
             </div>
@@ -112,7 +103,8 @@ export function ProcessSection() {
               </div>
               <div>
                 <p className="text-slate-700 dark:text-slate-300">
-                  Simulate thousands of user interactions simultaneously
+                  Design the simulated world by configuring the language, number
+                  of parallel conversations, etc.
                 </p>
               </div>
             </div>
@@ -124,19 +116,7 @@ export function ProcessSection() {
               </div>
               <div>
                 <p className="text-slate-700 dark:text-slate-300">
-                  Test with various user personas and interaction patterns
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div
-                className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400 mr-3 mt-0.5"
-              >
-                4
-              </div>
-              <div>
-                <p className="text-slate-700 dark:text-slate-300">
-                  Monitor real-time performance and response quality
+                  Run the simulation.
                 </p>
               </div>
             </div>
@@ -146,8 +126,9 @@ export function ProcessSection() {
     },
     {
       id: 2,
-      title: "Audit",
-      description: "Receive detailed audit reports & take action",
+      title: "Monitor",
+      description:
+        "Receive one-time or periodic reports to identify and address emerging issues with each new release.",
       icon: <FileTextIcon className="w-6 h-6" />,
       content: (
         <div
@@ -167,7 +148,7 @@ export function ProcessSection() {
               </div>
               <div>
                 <p className="text-slate-700 dark:text-slate-300">
-                  Analyze detailed performance metrics and compliance scores
+                  Analyze detailed performance metrics and compliance scores.
                 </p>
               </div>
             </div>
@@ -179,7 +160,7 @@ export function ProcessSection() {
               </div>
               <div>
                 <p className="text-slate-700 dark:text-slate-300">
-                  Review identified vulnerabilities and failure points
+                  Review identified vulnerabilities and failure points.
                 </p>
               </div>
             </div>
@@ -191,19 +172,7 @@ export function ProcessSection() {
               </div>
               <div>
                 <p className="text-slate-700 dark:text-slate-300">
-                  Get actionable recommendations for improvement
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div
-                className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-600 dark:text-purple-400 mr-3 mt-0.5"
-              >
-                4
-              </div>
-              <div>
-                <p className="text-slate-700 dark:text-slate-300">
-                  Generate compliance certification documentation
+                  Get actionable recommendations for improvement.
                 </p>
               </div>
             </div>
