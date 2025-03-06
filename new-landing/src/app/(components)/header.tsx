@@ -185,7 +185,7 @@ export function Header() {
                     onClick={() => (window.location.href = "/")}
                     className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                   >
-                    Gen AI Testing Platform
+                    AI Testing Platform
                   </button>
                   <button
                     onClick={() =>
