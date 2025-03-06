@@ -1,0 +1,1439 @@
+{{ define "header_css" }}{{ end }} {{ define "body_classes"
+}}page-default-single{{ end }} {{ define "header_classes" }}{{ end }} {{ define
+"main" }}
+
+<div class="px-3 bg-dark" style="overflow: hidden">
+  <div class="container plansWrap text-white">
+    <h1 class="fw-bold text-center py-5 mb-4 fs-1">
+      Start for free. Collaborate.<br />
+      Deploy any git repo. No hidden fees.
+    </h1>
+
+    {{partial "generalPricing.html" .}}
+
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative tableMobileTitle"
+      style="z-index: 99"
+      id="comparison-table"
+    >
+      COMPARISON TABLE
+    </p>
+
+    <div class="fixed-width-container">
+      <div class="fixed-width-row stickyHeader">
+        <div style="border: none" class="fixed-width-col biggerCol">
+          <h2 class="fw-bold">
+            Compare<br />
+            our monthly<br />
+            plans in detail
+          </h2>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <div class="colBg">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="fw-bold m-0">Hobby</h2>
+              <div class="d-flex flex-column align-items-end">
+                <h2 class="m-0">Free</h2>
+                {{/*
+                <p class="m-0 opacity-50">forever</p>
+                */}}
+              </div>
+            </div>
+
+            <p class="mb-0 mt-3 opacity-50 text-center" style="font-size: 14px">
+              perfect for prototyping and showcasing side projects
+            </p>
+          </div>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <div class="colBg">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="fw-bold m-0">Pro</h2>
+              <div class="d-flex align-items-end">
+                <h2 class="m-0">15$</h2>
+                <p class="m-0 opacity-50">/month</p>
+              </div>
+            </div>
+
+            <p class="mb-0 mt-3 opacity-50 text-center" style="font-size: 14px">
+              perfect for teams up to 10 people who deploy to production
+            </p>
+          </div>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <div class="colBg">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="fw-bold m-0">Enterprise</h2>
+            </div>
+            <p class="mb-0 mt-3 opacity-50 text-center" style="font-size: 14px">
+              large organizations and businesses
+            </p>
+          </div>
+        </div>
+        <!-- Add more columns as needed -->
+      </div>
+
+      <p class="mt-1 mb-3 text-success fw-bold pricingTitle">BUILD FASTER</p>
+
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="biggerCol fixed-width-col">
+          <p class="mb-0 py-4" style="font-weight: 500">Projects</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">Unlimited</p>
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              non-commercial or academic
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">Unlimited</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">Unlimited</p>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4" style="font-weight: 500">Collaboration</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">
+              2 seats across all projects
+            </p>
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              non-commercial or academic
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">
+              10 seats across all projects
+            </p>
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              then $15 per additional seat
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-1" style="font-weight: 500">
+            Account management
+          </p>
+        </div>
+      </div>
+
+      {{/* ROW */}} {{/*
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4" style="font-weight: 500">
+              Multiple stage environments
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-check"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-check"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/deployment-platform/images/pricing-check-icon.svg"
+              alt="table-check"
+            />
+          </div>
+        </div>
+      </div>
+      */}} {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4" style="font-weight: 500">Concurrent builds</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">1</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">10</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4" style="font-weight: 500">Build Minutes</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">600</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">24,000</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4" style="font-weight: 500">
+              Bandwidth (FE + BE)
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">100 GB</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">1 TB</p>
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              then starting at $10 per 100 GB
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 py-4" style="font-weight: 500">
+              Serverless Function Invocations
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">1,000,000</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">2,000,000</p>
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              then starting at $0.40 per 1M
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Function Timeout</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">15 minutes</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <div>
+            <p class="text-center mb-0" style="font-weight: 500">1 hour</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-1" style="font-weight: 500">Function Duration</p>
+            <p style="font-weight: 400" class="opacity-50 mb-0">
+              total execution time of your function
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">100 GB-hour</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <div>
+            <p class="text-center mb-1" style="font-weight: 500">
+              1,000 GB-hour
+            </p>
+
+            <p class="text-center m-0 opacity-50" style="font-weight: 400">
+              then $0.06 per GB-hour
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-1" style="font-weight: 500">
+              Long-running async functions
+            </p>
+            <p style="font-weight: 400" class="opacity-50 mb-0">up to 1 hour</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/deployment-platform/images/pricing-check-icon.svg"
+              alt="table-x"
+            />
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-1" style="font-weight: 500">
+              Custom deployment options
+            </p>
+            <p style="font-weight: 400" class="opacity-50 mb-0">
+              boosts limits&memory, or set custom region
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/deployment-platform/images/pricing-check-icon.svg"
+              alt="table-x"
+            />
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-1" style="font-weight: 500">Automatic CI/CD</p>
+            <p style="font-weight: 400" class="opacity-50 mb-0">
+              zero configs with first-class Git integration
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/deployment-platform/images/pricing-check-icon.svg"
+              alt="table-x"
+            />
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Staging environments</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/deployment-platform/images/pricing-check-icon.svg"
+              alt="table-x"
+            />
+          </div>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Custom domain</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">
+            w/ genezio branding
+          </p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/deployment-platform/images/pricing-check-icon.svg"
+              alt="table-x"
+            />
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4 mb-3 text-success fw-bold pricingTitle">
+        GENEZIO SERVICES
+      </p>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Typesafe SDK</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              User Authentication Module
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">
+            10,000 signins/year
+          </p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">Unlimited</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">Unlimited</p>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Cron Jobs</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">10</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">Unlimited</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">Unlimited</p>
+        </div>
+      </div>
+      {{/* ROW */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Email Service</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">
+            w/ genezio branding
+          </p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+
+      <p class="mt-4 mb-3 text-success fw-bold pricingTitle">STORAGE</p>
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              PostgreSQL/MongoDB Databases
+            </p>
+            <div class="custom-tooltip-container mx-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.25 9.25L9.29149 9.22926C9.86461 8.9427 10.5099 9.46034 10.3545 10.082L9.64549 12.918C9.49009 13.5397 10.1354 14.0573 10.7085 13.7707L10.75 13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10ZM10 6.25H10.0075V6.2575H10V6.25Z"
+                  stroke="white"
+                  stroke-opacity="0.7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="custom-tooltip-text"
+                >You can create a maximum of 3 databases in total. For example,
+                1 MongoDB and 2 PostgreSQL.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">3</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">10</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">Custom</p>
+        </div>
+      </div>
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              PostgreSQL/MongoDB Storage
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">0.5 GiB</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">10 GiB</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">50 GiB</p>
+        </div>
+      </div>
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Postgres Compute</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">
+            60 compute hours
+          </p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">
+            100 compute hours
+          </p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">custom</p>
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              Queue Connectors - via Upstash
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              PostgreSQL Connector - via Neon
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              Redis Connector - via Upstash
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              Bring your own database/connector
+            </p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+
+      <p class="mt-4 mb-3 text-success fw-bold pricingTitle">OBSERVABILITY</p>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">
+              Website Vulnerability Scanner
+            </p>
+            <p class="mb-0 opacity-50" style="font-weight: 400">coming soon</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">1 scan</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">daily scans</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">custom</p>
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Functions Log Retention</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <p class="text-center mb-0" style="font-weight: 500">3 days</p>
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <p class="text-center mb-0" style="font-weight: 500">1 month</p>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <p class="text-center mb-0" style="font-weight: 500">custom</p>
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Audit Logs</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+
+      <p class="mt-4 mb-3 text-success fw-bold pricingTitle">SUPPORT</p>
+
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Community Suport</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Email Support</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">99.99% uptime SLA</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+      {{/* Row */}}
+      <div class="fixed-width-row">
+        <div class="fixed-width-col biggerCol">
+          <div class="d-flex flex-column align-items-start py-4">
+            <p class="mb-0" style="font-weight: 500">Onboarding Support</p>
+          </div>
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Hobby</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col middleCol">
+          <p class="mobilePlanTitle">Pro</p>
+          <img
+            src="/deployment-platform/images/pricing-deny-icon.svg"
+            alt="table-x"
+          />
+        </div>
+        <div class="fixed-width-col">
+          <p class="mobilePlanTitle">Enterprise</p>
+          <img
+            src="/deployment-platform/images/pricing-check-icon.svg"
+            alt="table-x"
+          />
+        </div>
+      </div>
+
+      {{/* */}}
+      <div class="fixed-width-row stickyHeader d-md-flex d-none">
+        <div style="border: none" class="fixed-width-col biggerCol"></div>
+        <div style="border: none" class="fixed-width-col">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center px-4 fw-semibold bg-transparent border-3"
+            style="height: 48px"
+            type="submit"
+            href="https://app.genez.io/signup"
+            target="_blank"
+          >
+            Get started
+          </a>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <a
+            class="btn btn-primary d-flex justify-content-center align-items-center border-0 px-4 fw-semibold"
+            style="height: 48px"
+            type="submit"
+            href="https://app.genez.io/auth/login?redirect=upgrade-now-pro"
+            target="_blank"
+          >
+            Upgrade now
+          </a>
+        </div>
+        <div style="border: none" class="fixed-width-col">
+          <button
+            class="btn btn-primary open-modal-btn d-flex justify-content-center align-items-center px-4 fw-semibold bg-transparent border-3"
+            style="height: 48px"
+            type="submit"
+          >
+            Contact Us
+          </button>
+        </div>
+        <!-- Add more columns as needed -->
+      </div>
+    </div>
+
+    <div style="margin-top: 40px" class="px-md-0 pb-3 mx-1">
+      <p
+        style="font-size: 12px"
+        class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative"
+        style="z-index: 99"
+      >
+        FAQ
+      </p>
+
+      <h2
+        class="text-white text-center fw-bold mb-4 pb-3 position-relative"
+        style="z-index: 99"
+      >
+        Your questions answered
+      </h2>
+      <div
+        class="accordion text-white pb-4 position-relative"
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1); z-index: 99"
+        id="accordionExample"
+      >
+        {{/* Question 1 */}}
+        <div class="accordion-item py-2 my-2 text-white">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Do I need a credit card to start using the platform?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
+              You don't need a credit card to create personal and hobby
+              projects. Just pick the Hobby plan and get started with Genezio. A
+              credit card is only required when you'll upgrade your account to
+              Pro.
+            </div>
+          </div>
+        </div>
+        {{/* Question 2 */}} {{/* Question 3 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              Is there a time limit for the Hobby account?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              No, you can use Genezio for free forever.
+            </div>
+          </div>
+        </div>
+        {{/* Question 4 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse8"
+              aria-expanded="false"
+              aria-controls="collapse8"
+            >
+              Do I get a notification if I am approaching my usage limits?
+            </button>
+          </h2>
+          <div
+            id="collapse8"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Yes, we will email you when you are within 20% of your limits. If
+              you need customized project limits to better suit your needs, feel
+              free to contact us.
+            </div>
+          </div>
+        </div>
+        {{/* Question 9 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse9"
+              aria-expanded="false"
+              aria-controls="collapse9"
+            >
+              What happens when I exceed the invocation limit on a free project?
+            </button>
+          </h2>
+          <div
+            id="collapse9"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              We will notify you via email when you are approaching your free
+              project limits. You will have a grace period in which you can go
+              over those limits. During the grace period you will need to enter
+              a CC and upgrade to Pro. Failure to do that will result in
+              throttling your project to the free limits.
+            </div>
+          </div>
+        </div>
+        {{/* Question 10 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse10"
+              aria-expanded="false"
+              aria-controls="collapse10"
+            >
+              What happens when I exceed the invocation limit on a Pro plan?
+            </button>
+          </h2>
+          <div
+            id="collapse10"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              You will have a grace period in which you can go over those
+              limits. During this time, we will reach out to personalize your
+              plan to better suit your needs.
+            </div>
+          </div>
+        </div>
+        {{/* Question 11 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse11"
+              aria-expanded="false"
+              aria-controls="collapse11"
+            >
+              I'm worried I could end up with a huge bill at the end of the
+              month.
+            </button>
+          </h2>
+          <div
+            id="collapse11"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              No need to worry about surprise bills. Genezio has a simple
+              pricing model – a flat one with no surprises. You'll always know
+              what to expect, making it budget-friendly.
+            </div>
+          </div>
+        </div>
+        {{/* Question 12 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse12"
+              aria-expanded="false"
+              aria-controls="collapse12"
+            >
+              Can I pause a project?
+            </button>
+          </h2>
+          <div
+            id="collapse12"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Yes, you can pause a project anytime from your Dashboard.
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse17"
+              aria-expanded="false"
+              aria-controls="collapse17"
+            >
+              How do I get started with Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapse17"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Visit the Getting started guide
+              <a
+                style="text-decoration: none"
+                class="text-success"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+                >here</a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/* start of used and trusted at */}}
+    <p
+      style="font-size: 12px"
+      class="text-success fw-bold text-center mb-4 pb-3"
+    >
+      USED AND TRUSTED AT
+    </p>
+    <div
+      style="margin-bottom: 260px"
+      class="w-100 mx-auto d-flex justify-content-around pb-3"
+    >
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="multiversx-logo"
+        src="/deployment-platform/images/multiversx-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="294px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="google-logo"
+        src="/deployment-platform/images/google-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="50px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="splunk-logo"
+        src="/deployment-platform/images/splunk-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="168px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="uipath-logo"
+        src="/deployment-platform/images/uipath-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="51px"
+      />
+
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide d-block d-sm-block d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              alt="multiversx-logo"
+              src="/deployment-platform/images/multiversx-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="google-logo"
+              src="/deployment-platform/images/google-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="splunk-logo"
+              src="/deployment-platform/images/splunk-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="uipath-logo"
+              src="/deployment-platform/images/uipath-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr
+      class="mt-4"
+      style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -40px"
+    />
+    {{/* end of used and trusted at */}}
+  </div>
+</div>
+
+<div class="position-relative">
+  <img
+    class="pe-none d-lg-block d-xl-block"
+    src="/deployment-platform/images/wave.svg"
+    style="
+      mix-blend-mode: screen;
+      filter: grayscale(50%);
+      opacity: 0.4;
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+    "
+    alt="howGenezioWork"
+  />
+  <div
+    class="position-absolute w-100 bottom-0 pe-none"
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      height: 3300px;
+    "
+  ></div>
+</div>
+
+{{ end }}

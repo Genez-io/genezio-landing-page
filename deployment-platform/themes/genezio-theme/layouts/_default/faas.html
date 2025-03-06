@@ -1,0 +1,1284 @@
+{{ define "meta_tags" }} {{ end }} {{ define "main" }}
+
+<div class="px-3 bg-dark">
+  <div
+    style="
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    "
+    class="container"
+  >
+    <div class="expressWrapper">
+      <div class="row justify-content-between">
+        <div class="col-12 col-lg-7 col-md-12 col-sm-12">
+          <p style="font-weight: 500;" class="text-success m-0 fs-5 mb-4 pb-2">GENEZIO CLOUD</p>
+          <h1 style="z-index: 99" class="fw-bold text-white display-5">
+            Deploy serverless  <br />
+            at a fraction of the cost
+          </h1>
+          <h2
+            style="z-index: 99"
+            class="fw-medium mb-4 mt-4 pt-2 text-white fs-4"
+            id="expressDescription"
+          >
+            
+            <span class="opacity-75"
+              >Deploy and run code without provisioning or managing servers, similar to AWS Lambda,
+            Azure Functions, Google Cloud Functions, and Vercel or Netlify Functions but <span class="text-success">more
+            cost-effective and faster.</span>
+          </h2>
+
+          <ul style="list-style-type: none" class="text-white p-0">
+            <li class="d-flex">
+              <img alt="checkMarkIcon" src="/deployment-platform/images/table-check-icon.svg" />
+              <a
+                style="text-decoration: none; font-weight: 500"
+                class="opacity-75 mb-0 mx-2 text-white fs-4"
+                >Predictible and Competitive Pricing</a
+
+              >
+            </li>
+            <li class="d-flex my-1">
+              <img alt="checkMarkIcon" src="/deployment-platform/images/table-check-icon.svg" />
+              <a
+                style="text-decoration: none; font-weight: 500"
+                class="opacity-75 mb-0 mx-2 text-white fs-4"
+                href="#lower-cost"
+                >Up to 4x Faster than AWS Lambda Cold Start</a
+              >
+            </li>
+            <li class="d-flex">
+              <img alt="checkMarkIcon" src="/deployment-platform/images/table-check-icon.svg" />
+              <a
+                style="text-decoration: none; font-weight: 500"
+                class="opacity-75 mb-0 mx-2 text-white fs-4"
+                href="#auto-scaling"
+                >Auto-scaling for 100% Responsiveness</a
+              >
+            </li>
+          </ul>
+
+       <div
+  class="pe-none d-none d-lg-block d-xl-block"
+  style="
+    position: absolute;
+    background: rgba(140, 104, 205, 0.1);
+    filter: blur(500px);
+    width: 1318px;
+    height: 818px;
+    top: 625px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  "
+></div>
+
+        </div>
+
+        <div
+          class="col-12 col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center flex-column"
+        >
+          <img
+            style="max-width: 450px; height: 430px; object-fit: contain"
+            class="w-100"
+            src="/deployment-platform/images/genezioChart.webp"
+            alt="genezio-aws-chart"
+          />
+
+          <div class="d-flex align-items-center mt-3">
+            <h5 class="text-white mx-3 mb-0 fw-bold fs-4">Cold Start Comparison</h5>
+
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="26" height="26" fill="url(#pattern0_1963_4999)" />
+              <defs>
+                <pattern
+                  id="pattern0_1963_4999"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use xlink:href="#image0_1963_4999" transform="scale(0.00390625)" />
+                </pattern>
+                <image
+                  id="image0_1963_4999"
+                  width="256"
+                  height="256"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <div id="headerExpressStartForFree" class="d-flex justify-content-center mt-0  mt-3 pt-2">
+
+          <a
+            class="btn btn-primary fw-semibold px-4 py-2 mt-1 mb-1"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
+            target="_blank"
+          >
+            Start for free
+          </a>
+          <a
+            class="btn btn-secondary fw-semibold mx-2 px-4 py-2 border-0 text-white opacity-75 mt-1 mb-1"
+            href="https://genezio.com/docs/frameworks/expressjs/"
+            target="_blank"
+          >
+            Check our Docs
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+
+    <div class="position-relative">
+      <p style="font-size: 12px" class="text-success fw-bold text-center my-4 py-3">
+        USED AND TRUSTED AT
+      </p>
+      <div class="w-100 mx-auto d-flex justify-content-around mb-4 pb-3">
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="multiversx-logo"
+        src="/deployment-platform/images/multiversx-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="294px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="google-logo"
+        src="/deployment-platform/images/google-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="50px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="splunk-logo"
+        src="/deployment-platform/images/splunk-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="168px"
+      />
+      <img
+        class="navbar-brand d-none d-md-block"
+        alt="uipath-logo"
+        src="/deployment-platform/images/uipath-logo.svg"
+        loading="lazy"
+        height="50px"
+        width="51px"
+      />
+
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide d-block d-sm-block d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              alt="multiversx-logo"
+              src="/deployment-platform/images/multiversx-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="google-logo"
+              src="/deployment-platform/images/google-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="splunk-logo"
+              src="/deployment-platform/images/splunk-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              alt="uipath-logo"
+              src="/deployment-platform/images/uipath-logo.svg"
+              class="d-block w-100 custom-brand-img-item"
+              loading="lazy"
+              height="50px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-5 pt-4 mb-3 pb-1">
+      CAPABILITIES
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-2">Key features of Genezio Functions</h2>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/deployment-platform/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              Reduced Cold Start Time
+            </h3>
+            <p class="card-text opacity-75 card-listing mb-4 pb-4">
+              Experience faster initialization times, ensuring that your functions are ready to
+              handle requests immediately.
+            </p>
+
+            <a
+              href="https://genezio.com/docs/getting-started"
+              target="_blank"
+              class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/deployment-platform/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 60px">Easy Deployment</h3>
+            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+              Deploy effortlessly with Genezio's intuitive CLI. Quick to install and simple to use,
+              it streamlines your deployment process, letting you focus on coding.
+            </p>
+            <a
+              href="https://genezio.com/docs/getting-started"
+              target="_blank"
+              class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div
+              class="mb-4 d-flex align-items-center justify-content-center rounded-circle wrapper-logo-features"
+            >
+              <img
+                class="navbar-brand"
+                alt="genezio-logo-icon-black"
+                src="/deployment-platform/images/genezio-logo-icon-black.svg"
+                width="45px"
+                height="49px"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="card-title pt-2 mb-2 pb-1" style="min-height: 64px">
+              Cost-Effective Pricing
+            </h3>
+            <p class="card-text opacity-75 mb-4 pb-3 card-listing">
+              Genezio’s predictable pricing model makes deploying serverless applications up to 6x
+              more affordable than traditional solutions.
+            </p>
+
+            <a
+              href="https://genezio.com/docs/getting-started"
+              target="_blank"
+              class="card-link text-white text-decoration-none fw-semibold"
+              >Learn more -></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            {{/* class="card p-2 p-md-4 text-white" */}}
+            <h3 class="card-title m-0 mb-3">Automatic Scaling</h3>
+            <p class="card-text opacity-75 card-listing">
+              Genezio Functions automatically scale to meet demand, maintaining optimal performance
+              regardless of traffic volume.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h3 class="card-title m-0 mb-3">Frameworks</h3>
+
+            <p class="card-text opacity-75 card-listing">
+              Deploy complex apps like Express.js and Next.js serverless with a single click,
+              simplifying the deployment process.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-2 p-md-4 text-white border-gradient-green h-100"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <h3 class="card-title m-0 mb-3">Integrated Services</h3>
+
+            <p class="card-text opacity-75 card-listing">
+              Utilize additional Genezio Services, including typesafe feature, databases, auth, cron
+              jobs to build complete and dynamic applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-5 mb-3 pb-1">
+      USE THE FRAMEWORK YOU LOVE
+    </p>
+    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-3">
+      Featured Community templates  you can deploy
+    </h2>
+
+    <div class="row mb-md-3 pb-md-3 justify-content-center">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-bold fs-5">nextjs-starter-medusa</p>
+
+            <p>A performant frontend ecommerce starter template with Next.js 14 and Medusa.</p>
+
+            <img
+              class="w-100 mb-4"
+              style="max-height: 195px; object-fit: contain"
+              alt="next-template1"
+              src="/deployment-platform/images/nexttemplate1.webp"
+              loading="lazy"
+            />
+
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">typescript</div>
+              <div class="languageBadge mb-2">next.js</div>
+              <div class="languageBadge mb-2">medusa</div>
+              <div class="languageBadge mb-2">tailwind</div>
+              <div class="languageBadge mb-2">CSS</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/auth/signup"
+                target="_blank"
+              >
+                Deploy to Genezio
+              </a>
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-bold fs-5">tailwind-nextjs-starter-blog</p>
+
+            <p>
+              A sleek & customizable blog template built with Next.js 14, perfect for content
+              creators.
+            </p>
+
+            <img
+              class="w-100 mb-4"
+              style="max-height: 195px; object-fit: contain"
+              alt="next-template2"
+              src="/deployment-platform/images/nexttemplate2.webp"
+              loading="lazy"
+            />
+
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">typescript</div>
+              <div class="languageBadge mb-2">next.js</div>
+              <div class="languageBadge mb-2">tailwind</div>
+              <div class="languageBadge mb-2">CSS</div>
+              <div class="languageBadge mb-2">react server component</div>
+              <div class="languageBadge mb-2">Contentlayer</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/auth/signup"
+                target="_blank"
+              >
+                Deploy to Genezio
+              </a>
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-3 p-md-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body p-0">
+            <p class="fw-bold fs-5">materio-mui-react-nextjs-admin</p>
+
+            <p>The Most Powerful & Comprehensive free Next.js React admin template based on MUI</p>
+
+            <img
+              class="w-100 mb-4"
+              style="max-height: 195px; object-fit: contain"
+              alt="next-template3"
+              src="/deployment-platform/images/nexttemplate3.webp"
+              loading="lazy"
+            />
+            <div style="flex-wrap: wrap" class="d-flex">
+              <div class="languageBadge mb-2">typescript</div>
+              <div class="languageBadge mb-2">next.js</div>
+              <div class="languageBadge mb-2">react</div>
+              <div class="languageBadge mb-2">MUI</div>
+              <div class="languageBadge mb-2">CSS</div>
+            </div>
+
+            <div class="mt-4">
+              <a
+                class="btn btn-primary fw-semibold px-4 py-2 border-0 mt-2"
+                href="https://app.genez.io/auth/signup"
+                target="_blank"
+              >
+                Deploy to Genezio
+              </a>
+              <a
+                class="btn btn-secondary fw-semibold mx-0 mx-md-1 px-4 py-2 border-0 text-white opacity-75 mt-2"
+                href="https://genezio.com/docs/getting-started"
+                target="_blank"
+              >
+                View demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1">
+    Genezio Services
+    </p>
+
+     <h2 class="text-white text-center fw-bold m-0 pb-3 mb-3 ">
+    Genezio Native Features & Services
+    </h2>
+
+    <p style="z-index: 99" class="fw-medium mb-4 mt-3 text-white text-center opacity-75">
+      Enjoy the benefits of a function-as-a-service infrastructure and enhance your development with Genezio's Services to optimize your workflow and maximize performance.
+    </p>
+
+    
+    
+
+      <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5 mt-5 ">
+        #1 Database integration
+      </h2>
+    
+    <div style="background: rgba(255, 255, 255, 0.04); border-radius: 0 20px 0 20px;" class="border-gradient-green row mx-4  mb-3 p-4">
+      <div class="col col-12 col-md-9 p-3">
+        <h2 style="z-index: 99"
+            class="fw-medium  text-white fs-4 m-0 mb-3"
+          >
+           Serverless, fully-managed databases
+          </h2>
+
+          <p class="text-white opacity-75 m-0">Genezio offers on demand databases that are provisioned through our partners. This means that you can create a database in a few seconds without having to worry about the infrastructure, scalability or maintenance of it.</p>
+
+          <a
+            class="btn btn-primary fw-semibold px-4 py-2 mt-4"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>
+      </div>
+      <div style="border-left:0.5px solid rgba(0, 250, 164, 1)" class="col col-3 p-3 d-none align-items-center justify-content-center d-md-flex">
+        <img
+          class="mx-2 w-100"
+          style="max-width: 150px;"
+          alt="postgres-logo"
+          src="/deployment-platform/images/postgres.png"
+          loading="lazy"
+          />
+      </div>
+    </div>
+
+      <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5 mt-5 ">
+       #2 Authentication Module
+      </h2>
+
+      <div style="background: rgba(255, 255, 255, 0.04); border-radius: 0 20px 0 20px;" class="border-gradient-green row mx-4  mb-3 p-4">
+      <div class="col col-12 col-md-9 p-3">
+        <h2 style="z-index: 99"
+            class="fw-medium  text-white fs-4 m-0 mb-3"
+          >
+            Authentication
+          </h2>
+
+          <p class="text-white opacity-75 m-0">
+            You can use Genezio Auth to allow the users to sign in into your app using multiple providers such as email and password or Google. This is an out-of-the-box authentication backend, with support for Postgres and Mongo databases and a client SDK to easily integrate the authentication feature into your frontend.
+          </p>
+
+          <a
+            class="btn btn-primary fw-semibold px-4 py-2 mt-4"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>
+      </div>
+      <div style="border-left:0.5px solid rgba(0, 250, 164, 1)" class="col col-3 p-3 d-none align-items-center justify-content-center d-md-flex">
+        <img
+          class="mx-2 w-100"
+          style="max-width: 150px;"
+          alt="auth-logo"
+          src="/deployment-platform/images/authlogo.png"
+          loading="lazy"
+          />
+      </div>
+    </div>
+
+      <h2 class="text-white text-center fw-bold m-0 pb-3 mb-5 mt-5 ">
+      Cron Jobs
+      </h2>
+
+       <div style="background: rgba(255, 255, 255, 0.04); border-radius: 0 20px 0 20px;" class="border-gradient-green row mx-4  mb-3 p-4">
+      <div class="col col-12 col-md-9 p-3">
+        <h2 style="z-index: 99"
+            class="fw-medium  text-white fs-4 m-0 mb-3"
+          >
+            Repeating Schedule
+          </h2>
+
+          <p class="text-white opacity-75 m-0">
+            Genezio enables effortless cron job scheduling, allowing you to automate tasks and maintain consistent performance. Set up and manage scheduled tasks in seconds, without worrying about infrastructure, scalability, or maintenance. Let Genezio handle the rest.
+          </p>
+
+          <a
+            class="btn btn-primary fw-semibold px-4 py-2 mt-4"
+            href="https://app.genez.io/auth/signup?redirect=express-getting-started"
+            target="_blank"
+          >
+            Get started
+          </a>
+      </div>
+      <div style="border-left:0.5px solid rgba(0, 250, 164, 1)" class="col col-3 p-3 d-none align-items-center justify-content-center d-md-flex">
+        <img
+          class="mx-2  w-100"
+          alt="cron-logo"
+          style="max-width: 150px;"
+          src="/deployment-platform/images/cron.png"
+          loading="lazy"
+          />
+      </div>
+    </div>
+
+<hr class="mt-5" style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+
+    <p style="font-size: 12px" class="text-success fw-bold text-center mt-4 pt-3 mb-3 pb-1">
+      EDUCATION
+    </p>
+    <h2 class="text-white text-center fw-bold m-0 pb-3 mb-4">Our latest article</h2>
+    {{/* Our latest article */}} {{ with (index (where site.RegularPages "Type"
+    "posts").ByDate.Reverse 0) }}
+    <div class="ourLatestArticle row mx-2 px-0 px-md-3 text-white justify-content-center pb-4 mb-3">
+      <div class="px-1">
+        <div class="col-lg col-md-12 lastArticleBackground">
+          <a
+            href="{{ .RelPermalink }}"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+          >
+            <h3>{{.Title}}</h3>
+          </a>
+
+          <a
+            href="{{ .RelPermalink }}"
+            target="_blank"
+            class="card-link text-white text-decoration-none fw-semibold"
+            >Read more -></a
+          >
+        </div>
+      </div>
+    </div>
+    {{ end }} {{/* End of main container */}} {{/* TESTIMONIALS */}}
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    <p style="font-size: 12px" class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3">
+      TESTIMONIALS
+    </p>
+    <h2 style="z-index: 99" class="text-white text-center fw-bold mb-4 pb-3 position-relative">
+      Don't take our <span class="d-block d-sm-none"></span>word for it
+    </h2>
+
+    <div style="z-index: 99" class="row mx-2 pb-2 justify-content-center position-relative">
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/deployment-platform/images/testimonial2.webp"
+                  alt="testimonial-user-2"
+                  loading="lazy"
+                />
+
+                <div class="mx-3 me-0">
+                  <p class="mb-0 fw-semibold">Daniel M</p>
+                  <p style="font-size: 14px" class="mb-0">CEO @DeFiBuilder</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.g2.com/products/genezio/reviews/genezio-review-8869260"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="g2-logo"
+                  src="/deployment-platform/images/g2-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-75">
+              Using their SDK, I was able to deploy complex functionalities with an ease that I
+              hadn't experienced before. The integration process is so streamlined and user-friendly
+              that even those with a basic understanding of JavaScript can navigate it with
+              confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/deployment-platform/images/testimonial4.webp"
+                  loading="lazy"
+                  alt="testimonial-user-1"
+                />
+
+                <div class="mx-3 me-0">
+                  <p class="mb-0 fw-semibold">Cosmin Gamanusi</p>
+                  <p style="font-size: 14px" class="mb-0">SWE @Bware Labs</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.linkedin.com/in/cosmin-gamanusi/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="linkedin-logo"
+                  src="/deployment-platform/images/linkedin-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-75">
+             Genezio has significantly improved my development workflow, both for my startup projects and at work. The platform enables me to quickly develop, test, and deploy new features. Its ease of integration allowed my team to offload work seamlessly, enhancing our productivity. Genezio’s efficient and user-friendly interface has made it a valuable tool in our development process.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {{/* Card */}}
+      <div class="col-lg col-md-12 m-2">
+        <div
+          class="card p-4 text-white border-gradient-green"
+          style="border-radius: 0 20px 0 20px; background-color: rgba(255, 255, 255, 0.07)"
+        >
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div class="d-flex">
+                <img
+                  style="height: 48px; width: 48px"
+                  class="rounded-circle"
+                  src="/deployment-platform/images/testimonial3.webp"
+                  alt="testimonial-user-3"
+                  loading="lazy"
+                />
+
+                <div class="mx-3">
+                  <p class="mb-0 fw-semibold">Laurentiu Ciobanu</p>
+                  <p style="font-size: 14px" class="mb-0">CTO @Sessions</p>
+                </div>
+              </div>
+
+              <a
+                href="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/?utm_source=share&utm_medium=member_desktop"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  class="mx-2 footer-social-logo"
+                  alt="linkedin-logo"
+                  src="/deployment-platform/images/linkedin-logo.svg"
+                  width="24px"
+                  height="24px"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <p class="mt-4 opacity-75">
+              It was a pleasant and frictionless experience: from my TypeScript code to the cloud in
+              less than 3 minutes (including creating an account, installing the CLI, and logging in
+              with the CLI).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 -13px" />
+    {{/* FAQ */}}
+    <p
+      style="font-size: 12px"
+      class="mb-3 pb-1 text-success fw-bold text-center mt-4 pt-3 position-relative"
+      style="z-index: 99"
+    >
+      FAQ
+    </p>
+    <h2 class="text-white text-center fw-bold mb-4 pb-3 position-relative" style="z-index: 99">
+      Your questions answered
+    </h2>
+
+    <div class="px-md-4 pb-3 mx-1">
+      <div
+        class="accordion text-white pb-4 position-relative"
+        style="border-top: 1px solid rgba(255, 255, 255, 0.1); z-index: 99"
+        id="accordionExample"
+      >
+        {{/* Question 1 */}}
+        <div class="accordion-item py-2 my-2 text-white">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              What are some type of apps that can be built on Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body px-5 py-2 mx-4">
+              Genezio is used by our clients to build and host full-stack apps. These include a
+              variety of full-stack Web Apps, Mobile Apps, Enterprise automation apps, and
+              Blockchain enabled apps. Also, some developers use Genezio just to set up scheduled
+              tasks or to keep an API key private in a part of their app that runs in the
+              background. To learn more and see examples, check out our
+              <a
+                style="text-decoration: none"
+                class="text-success"
+                href="https://genezio.com/docs/examples/"
+                target="_blank"
+                >docs</a
+              >.
+            </div>
+          </div>
+        </div>
+        {{/* Question 2 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              I already have a DevOps team, do I still need Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Your DevOps team is probably pretty busy, so in order to try out a pilot project, it's
+              much easier to use our serverless approach.
+            </div>
+          </div>
+        </div>
+
+        {{/* Question 3 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              What is Function-as-a-service? 
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              FaaS is a service that allows developers to execute code without provisioning or managing servers.
+            </div>
+          </div>
+        </div>
+        {{/* Question 4 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              What are some common use cases for FaaS? 
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              FaaS is commonly used for event-driven applications, such as processing data streams, responding to HTTP requests, running scheduled tasks, and automating workflows.
+            </div>
+          </div>
+        </div>
+        {{/* Question 5 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              How does Genezio Functions differ from traditional server hosting? 
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              In traditional server hosting, you need to manage the server infrastructure, including maintenance, scaling, and updates. Genezio abstracts this away, allowing you to focus solely on writing and deploying code.
+            </div>
+          </div>
+        </div>
+        {{/* Question 6 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse6"
+              aria-expanded="false"
+              aria-controls="collapse6"
+            >
+              How do you handle scaling for Genezio Functions? 
+            </button>
+          </h2>
+          <div
+            id="collapse6"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Genezio Functions automatically scale based on the number of incoming requests or events, eliminating the need for manual intervention to adjust server capacity.
+            </div>
+          </div>
+        </div>
+        {{/* Question 7 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse7"
+              aria-expanded="false"
+              aria-controls="collapse7"
+            >
+              What is a cold start?
+            </button>
+          </h2>
+          <div
+            id="collapse7"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+               A cold start occurs when a function is invoked for the first time or after being idle, leading to latency as the environment is initialized. Genezio Functions are leveraging various optimization techniques, such as snapshots and instance pre-warming, to keep the cold start overhead as small as possible.
+            </div>
+          </div>
+        </div>
+        {{/* Question 8 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse8"
+              aria-expanded="false"
+              aria-controls="collapse8"
+            >
+              What languages are supported by Genezio Functions?
+            </button>
+          </h2>
+          <div
+            id="collapse8"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+               Javascript
+            </div>
+          </div>
+        </div>
+        {{/* Question 9 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse9"
+              aria-expanded="false"
+              aria-controls="collapse9"
+            >
+              How does Genezio pricing works?
+            </button>
+          </h2>
+          <div
+            id="collapse9"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+               Flat fees to prevent denial-of-wallet
+            </div>
+          </div>
+        </div>
+        {{/* Question 11 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse11"
+              aria-expanded="false"
+              aria-controls="collapse11"
+            >
+              How do I deploy a function to Genezio? 
+            </button>
+          </h2>
+          <div
+            id="collapse11"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+             It's a piece of cake, just run genezio deploy
+            </div>
+          </div>
+        </div>
+        {{/* Question 12 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse12"
+              aria-expanded="false"
+              aria-controls="collapse12"
+            >
+              Can I connect to my own database? 
+            </button>
+          </h2>
+          <div
+            id="collapse12"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+            Yes and if you don't already have a database - Genezio natively provides a Postgres instance.
+            </div>
+          </div>
+        </div>
+        {{/* Question 13 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse13"
+              aria-expanded="false"
+              aria-controls="collapse13"
+            >
+              Which web frameworks are compatible with Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapse13"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Genezio is compatible with various web framworks like Next.js, ExpressJS, Fastify, and frontend frameworks like React, Vue, Angular, Svelte, Flutter,  and more, thanks to its framework-agnostic nature.
+            </div>
+          </div>
+        </div>
+        {{/* Question 14 */}}
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse14"
+              aria-expanded="false"
+              aria-controls="collapse14"
+            >
+              Can I use my own AWS account with Genezio?
+            </button>
+          </h2>
+          <div
+            id="collapse14"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              Yes. Genezio provides the option to integrate your AWS account in place of using our managed AWS for Genezio Cloud. This feature is present in our open source command line tools.
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="accordion-item py-2 my-2 text-white"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button shadow-none collapsed fw-medium"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse15"
+              aria-expanded="false"
+              aria-controls="collapse15"
+            >
+              What type of content can I host?
+            </button>
+          </h2>
+          <div
+            id="collapse15"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div style="color: #d4d4d4" class="accordion-body py-2 px-5 mx-4">
+              You are fully responsible for the content you host with us. Any type of illegal or offensive content is forbidden. Please refer to our terms of use for further details. We reserve the right to take down your app if it violates our terms of use without any notice.
+            </div>
+          </div>
+        </div>
+
+        {{/* */}}
+      </div>
+    </div>
+
+    {{/* End of main container */}}
+  </div>
+</div>
+
+<div class="position-relative">
+  <div
+    class="position-absolute w-100 bottom-0 pe-none"
+    style="
+      background: linear-gradient(
+        180deg,
+        rgba(0, 250, 164, 0) 77.17%,
+        rgba(0, 250, 164, 0.47) 100%
+      );
+      height: 5200px;
+    "
+  ></div>
+</div>
+{{ end }}

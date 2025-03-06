@@ -51,8 +51,10 @@ jobs:
         with:
           submodules: recursive
       - name: Install Node.js dependencies
+        working-directory: ./deployment-platform
         run: npm ci
       - name: Build with Hugo
+        working-directory: ./deployment-platform
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
@@ -60,18 +62,29 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://genezio.com/"
+            --baseURL "https://genezio.com/deployment-platform/"
+      - name: Install deps landing page
+        working-directory: ./new-landing
+        run: npm install
+      - name: Build landing page
+        working-directory: ./new-landing
+        run: npm run build
       - name: Clone https://github.com/Genez-io/genezio-documentation
         run: git clone https://github.com/Genez-io/genezio-documentation
       - name: Install and build Documentation
         run: |
           cd genezio-documentation
+          git checkout dev
           npm ci
           npm run build
       - name: Copy Documentation to public
         run: |
           mkdir -p public/docs/
           cp -r genezio-documentation/build/* public/docs/
+      - name: Copy Deployment Platform Landing Page to public
+        run: |
+          mkdir -p public/deployment-platform/
+          cp -r deployment-platform/public/* public/deployment-platform/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend
