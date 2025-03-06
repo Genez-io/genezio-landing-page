@@ -48,14 +48,14 @@ export function Header() {
               <div className="w-32 h-32 flex items-center justify-center">
                 {theme === "dark" ? (
                   <Image
-                    src="/genezio-logo-white.svg"
+                    src="/assets/genezio-logo-white.svg"
                     alt="genezio logo"
                     width={128}
                     height={128}
                   />
                 ) : (
                   <Image
-                    src="/genezio-logo-dark.svg"
+                    src="/assets/genezio-logo-dark.svg"
                     alt="genezio logo"
                     width={128}
                     height={128}
