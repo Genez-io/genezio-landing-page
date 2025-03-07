@@ -41,7 +41,7 @@ Genezio automatically scales. It’s so quick to set up and it’s an ideal plat
 
 Since we’ve introduced the concept, we’ll make clear what separates continuous integration with continuous deployment. CI is about making code ready for release — for example, testing — and CD is about actually releasing and deploying code. Both are automatic: CI automatically updates the code for testing, and CD automatically deploys a release for production. Software deployment tools usually follow this model because they mean to help developers introduce slight changes to a codebase without breaking the central program.
 
-![alt_text](/posts/the-best-software-deployment-tools1.webp)
+![alt_text](/deployment-platform/posts/the-best-software-deployment-tools1.webp)
 
 ## Juju by Canonical
 
@@ -77,7 +77,7 @@ As expected, Azure and Google Cloud Platform have their “own CodeDeploy” eac
 
 Key features: It offers {{< external-link link="https://docs.travis-ci.com/user/build-matrix/" >}}Matrix Builds{{< /external-link >}} to test against multiple versions of languages, environments, and operating systems simultaneously. You can run {{< external-link link="https://www.redhat.com/en/topics/containers#:~:text=Containers%20are%20technologies%20that%20allow,the%20files%20necessary%20to%20run." >}}containers{{< /external-link >}} with it. After successful builds, they can be automatically sent to cloud services like AWS and Google Cloud.
 
-![alt_text](/posts/the-best-software-deployment-tools4.webp)
+![alt_text](/deployment-platform/posts/the-best-software-deployment-tools4.webp)
 
 ## Jenkins
 
@@ -91,7 +91,7 @@ Key features: It offers {{< external-link link="https://docs.travis-ci.com/user/
 
 **Its main features are:** It has automated build and deployment pipelines. It integrates with Docker and AWS CodeDeploy. And it comes with direct control over {{< external-link link="https://confluence.atlassian.com/bamboo/git-289277007.html" >}}Git{{< /external-link >}}.
 
-![alt_text](/posts/the-best-software-deployment-tools2.webp)
+![alt_text](/deployment-platform/posts/the-best-software-deployment-tools2.webp)
 
 ## PDQ Deploy
 
@@ -105,7 +105,7 @@ No, {{< external-link link="https://learn.microsoft.com/en-us/mem/intune/fundame
 
 **Key features:** It manages mobile and desktop devices, including deployment and updates. It also integrates with Microsoft {{< external-link link="https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection" >}}Defender for Endpoint{{< /external-link >}}, Microsoft’s AV. And it supports bring-your-own-device {{< external-link link="https://www.microsoft.com/insidetrack/blog/microsoft-intune-makes-it-easy-to-bring-your-own-device-to-work/" >}}(BYOD){{< /external-link >}} models.
 
-![alt_text](/posts/the-best-software-deployment-tools3.webp)
+![alt_text](/deployment-platform/posts/the-best-software-deployment-tools3.webp)
 
 ## DeployBot
 

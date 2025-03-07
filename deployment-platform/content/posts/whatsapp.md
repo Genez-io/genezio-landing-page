@@ -219,41 +219,41 @@ This method abstracts the messaging logic through the Facebook Graph API for the
 
 1. Go to the {{< external-link link="https://developers.facebook.com/" >}} Meta Website{{< /external-link >}} and create an account.
 
-![whatsapp](/posts/whatsapp1.webp)
+![whatsapp](/deployment-platform/posts/whatsapp1.webp)
 
 2. Select “My Apps”
 
-![whatsapp](/posts/whatsapp2.webp)
+![whatsapp](/deployment-platform/posts/whatsapp2.webp)
 
 3. Select “Create App”
 
-![whatsapp](/posts/whatsapp3.webp)
+![whatsapp](/deployment-platform/posts/whatsapp3.webp)
 
 4. Select “Other” and click on ‘Next’
 
-![whatsapp](/posts/whatsapp4.webp)
+![whatsapp](/deployment-platform/posts/whatsapp4.webp)
 
 5. Select “Business” and click on ‘Next’
 
-![whatsapp](/posts/whatsapp5.webp)
+![whatsapp](/deployment-platform/posts/whatsapp5.webp)
 
 6. Add an app name and the contact email address and click on ‘Create app’.
 
-![whatsapp](/posts/whatsapp6.webp)
+![whatsapp](/deployment-platform/posts/whatsapp6.webp)
 
 ## Configure the project
 
 1. Search for the Whatsapp Integration and click on ‘Set up’.
 
-![whatsapp](/posts/whatsapp7.webp)
+![whatsapp](/deployment-platform/posts/whatsapp7.webp)
 
 2. Select a business portfolio
 
-![whatsapp](/posts/whatsapp8.webp)
+![whatsapp](/deployment-platform/posts/whatsapp8.webp)
 
 3. Start using the API
 
-![whatsapp](/posts/whatsapp9.webp)
+![whatsapp](/deployment-platform/posts/whatsapp9.webp)
 
 4. From here we will take the access token and Phone number ID.
 
@@ -264,17 +264,17 @@ BUSINESS_PHONE_NUMBER_ID=<Phone number ID>
 
 Note: Here you can also see which phone number you can test the bot on.
 
-![whatsapp](/posts/whatsapp10.webp)
+![whatsapp](/deployment-platform/posts/whatsapp10.webp)
 
 5. In order for the bot to work, we still need to configure an api for callback. Select Configuration
 
-![whatsapp](/posts/whatsapp11.webp)
+![whatsapp](/deployment-platform/posts/whatsapp11.webp)
 
 6. Click on ‘Edit’
 
-![whatsapp](/posts/whatsapp12.webp)
+![whatsapp](/deployment-platform/posts/whatsapp12.webp)
 
-![whatsapp](/posts/whatsapp13.webp)
+![whatsapp](/deployment-platform/posts/whatsapp13.webp)
 
 Here we need a callback url and a verify token. The Callback url will be generated in the next step and verify token is a random string put by you which is the same as the one in the .env file to the key `WEBHOOK_VERIFY_TOKEN`
 
@@ -288,21 +288,21 @@ genezio deploy -env .env
 
 Take the url from : BackendService.webhook
 
-![whatsapp](/posts/whatsapp14.webp)
+![whatsapp](/deployment-platform/posts/whatsapp14.webp)
 
 8. Put the link to the callback from the platform
 
-![whatsapp](/posts/whatsapp15.webp)
+![whatsapp](/deployment-platform/posts/whatsapp15.webp)
 
 9. Subscribe for messages
 
-![whatsapp](/posts/whatsapp16.webp)
+![whatsapp](/deployment-platform/posts/whatsapp16.webp)
 
-![whatsapp](/posts/whatsapp17.webp)
+![whatsapp](/deployment-platform/posts/whatsapp17.webp)
 
 10. Now you have a bot. For testing, you can send "ping" from the test number
 
-![whatsapp](/posts/whatsapp18.webp)
+![whatsapp](/deployment-platform/posts/whatsapp18.webp)
 
 ## This is it!
 

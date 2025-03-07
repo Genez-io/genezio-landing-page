@@ -50,7 +50,7 @@ Genezio features AWS Lambda compatibility. This means that developers can migrat
 
 Below, you can see two ways to get started: {{< external-link link="https://app.genez.io/import">}}importing a project{{< /external-link >}} directly from GitHub or starting with a {{< external-link link="https://app.genez.io/fork?repository=https://github.com/Genez-io/faas-getting-started">}}“Hello World” function template:{{< /external-link >}}
 
-![alt_text](/posts/serverlessfunctionsproviders4.webp)
+![alt_text](/deployment-platform/posts/serverlessfunctionsproviders4.webp)
 
 ## AWS
 
@@ -60,7 +60,7 @@ As a FaaS offering, pricing is based on usage, with charges for the number of re
 
 Lambda can automatically adjust to different tasks. It takes care of server and OS maintenance, and facilitates function management and troubleshooting.
 
-![alt_text](/posts/serverlessfunctionsproviders2.webp)
+![alt_text](/deployment-platform/posts/serverlessfunctionsproviders2.webp)
 
 ## Google Cloud Platform
 
@@ -68,7 +68,7 @@ Google Cloud Platform offers functions with the aptly-named {{< external-link li
 
 This is an affordable FaaS solution and pricing, like most FaaS offerings, is pay-per-use: the first two million requests are free, and additional requests are priced at $0.40 per million. This is identical to what other big providers charge, but users report other costs — e.g. in computing power — stack up so quickly that it’s sometimes more convenient to recur to a niche player or to use an architecture other than functions-based. The platform’s 2nd gen release integrates easily with 18 Google Cloud services like {{< external-link link="https://cloud.google.com/pubsub/docs/overview">}}Cloud Pub/Sub{{< /external-link >}} and {{< external-link link="https://firebase.google.com/docs/functions">}}Firebase{{< /external-link >}}, as well as third-party services.
 
-![alt_text](/posts/serverlessfunctionsproviders1.webp)
+![alt_text](/deployment-platform/posts/serverlessfunctionsproviders1.webp)
 
 ## Azure
 
@@ -86,7 +86,7 @@ Twilio, the company best known for their messaging APIs, has {{< external-link l
 
 Twilio Functions operates on a pay-per-use model, where you are charged based on the number of requests and execution time, with automatic scaling to meet application demands. Built-in security makes sure that only Twilio requests can execute the code, and users have easy access to pre-defined templates for common use cases.
 
-![alt_text](/posts/serverlessfunctionsproviders3.webp)
+![alt_text](/deployment-platform/posts/serverlessfunctionsproviders3.webp)
 
 ## Iron.io
 

@@ -74,7 +74,7 @@ Azure Functions works with a lot of programming languages, including C#, JavaScr
 
 Pricing is offered with Vercel's standard plans: Hobby (free for non-commercial use), Pro ($20 a month), and Enterprise (custom pricing). The platform supports unlimited function calls with specific limits on execution time and memory based on each plan. Developers can use Next.js easily… because a {{< external-link link="http://Next.js">}}Next.js{{< /external-link >}} team came up with Vercel in the first place.
 
-![alt_text](/posts/topserverless1.webp)
+![alt_text](/deployment-platform/posts/topserverless1.webp)
 
 ### 6. Netlify Functions
 

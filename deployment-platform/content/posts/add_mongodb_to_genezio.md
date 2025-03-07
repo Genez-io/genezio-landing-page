@@ -73,7 +73,7 @@ and create an account. Personally, I recommend creating an account using Google 
 
 After you create your account, you will get to this wizard where you can create your cluster:
 
-![alt_text](/posts/add-mongo-to-genezio1.webp)
+![alt_text](/deployment-platform/posts/add-mongo-to-genezio1.webp)
 
 Here you have the following configurations:
 
@@ -86,7 +86,7 @@ Click the ‘Create’ button.
 
 After, you have to create a user with a strong password. Make sure to store it somewhere safe as we will need it later on.
 
-![alt_text](/posts/add-mongo-to-genezio2.webp)
+![alt_text](/deployment-platform/posts/add-mongo-to-genezio2.webp)
 
 Fill in the required information and click ‘Create User’.
 
@@ -94,11 +94,11 @@ Next, add an IP address to the whitelist. For testing purposes, you can add `0.0
 
 Now click on ‘Add Entry’.
 
-![alt_text](/posts/add-mongo-to-genezio3.webp)
+![alt_text](/deployment-platform/posts/add-mongo-to-genezio3.webp)
 
 You should now see your dashboard. Click on ‘Connect’ in the cluster.
 
-![alt_text](/posts/add-mongo-to-genezio4.webp)
+![alt_text](/deployment-platform/posts/add-mongo-to-genezio4.webp)
 
 A pop-up with the MongoDB connection string will appear. Replace `<password>` with your password from the previous step and copy it.
 

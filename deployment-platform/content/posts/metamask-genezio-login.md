@@ -69,7 +69,7 @@ Run `genezio deploy` to deploy the project in your genezio account. Now, let's c
 Go to the Genezio Dashboard, select your project, and navigate to the Authentication section in the sidebar to enable the feature. Follow the instructions on screen and create a Postgres database to store user and session information.
 To enable `Web3` login, go to `Providers` and toggle the enable button. Now, you have an authentication service that can perform the "Login with MetaMask" flow described in the previous section. We just have to implement the frontend.
 
-![Enable auth genezio](/posts/metamask-auth.webp)
+![Enable auth genezio](/deployment-platform/posts/metamask-auth.webp)
 
 Remember the "token" and "region" values as we are going to use them later.
 

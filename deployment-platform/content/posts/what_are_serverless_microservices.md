@@ -54,11 +54,11 @@ Tightly coupled components — as opposed to the “decoupled” components we m
 
 Scalability is another issue. During peak seasons, like the holiday rush, demand for rental equipment can increase rapidly. A monolithic platform might struggle to handle this increased load, especially in key areas like payment processing. Deploying additional instances of the entire application is often the only solution, a time-consuming process that might be too slow to address the peak in time. By the time the new version is deployed, the peak demand might have very probably slowed down.
 
-![alt_text](/posts/serverlessMicroservices3.webp)
+![alt_text](/deployment-platform/posts/serverlessMicroservices3.webp)
 
 A serverless microservice architecture breaks the platform down into smaller, independently deployable services. Our photography equipment rental platform would consist of separate services for each of its components, that is, user management, inventory, recommendations, orders, payments, and reporting. Each of these services runs in its own container and communicates with others through APIs. Additionally, the “serverless” model eliminates the need to manage infrastructure entirely.
 
-![alt_text](/posts/serverlessMicroservices2.webp)
+![alt_text](/deployment-platform/posts/serverlessMicroservices2.webp)
 
 The serverless microservice model offers greater flexibility than a monolithic system. Teams can independently develop, deploy, and scale each service. They can accelerate development and improve their response to workload fluctuations because they’re better prepared for it. If payment processing in our rental app slows down during peak season, only the payment service — which in this case is an independent and cohesive component — needs to be scaled up. This means the bottleneck can be dealt with without affecting other parts of the application.
 
@@ -72,7 +72,7 @@ In serverless, these microservices are just small, independent pieces of code ca
 
 If a competitor wanted to start their site and {{< external-link link="https://genezio.com/blog/how-to-host-a-web-app-host-application-hosting-an-app-application-server-hosting-web-application-hosting-server-free-application-hosting/#conclusion-your-free-hosting-journey-begins-now" >}}launch a web application{{< /external-link >}} for selling items to drunk buyers, they could use pre-built microservices for features like user authentication or payment processing to get a head start. Some of these services can be found on platforms like {{< external-link link="https://genezio.com/genezio-typesafe/" >}}Genezio{{< /external-link >}}. Genezio is a serverless platform for building applications, and it also offers pre-built, typesafe microservices.
 
-![alt_text](/posts/serverlessMicroservices1.webp)
+![alt_text](/deployment-platform/posts/serverlessMicroservices1.webp)
 
 In the past, setting up these services would involve a lot of technical work and managing servers. With serverless microservices, the platform provider handles all the behind-the-scenes details, like scaling and infrastructure.
 

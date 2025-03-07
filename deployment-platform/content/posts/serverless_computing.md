@@ -29,7 +29,7 @@ This article will explain serverless computing and explore when and why it shoul
 
 Serverless computing is a cloud-based approach to building and deploying applications. As an alternative to managing your own servers and infrastructure, you sign up for backend services on a pay-per-use model. This means you're not charged for idle resources, just like you wouldn't pay for electricity when your light bulbs are off. While the term “serverless” might suggest no servers are involved, cloud providers still handle the underlying infrastructure. Serverless means that the developer can {{< external-link link="https://genezio.com/blog/what-serverless-is/#what-is-serverless-deployment" >}}focus on writing code{{< /external-link >}} and concentrate on growing their business without worrying about server management tasks.
 
-![alt_text](/posts/whentoserverless1.webp)
+![alt_text](/deployment-platform/posts/whentoserverless1.webp)
 
 ## When to use serverless computing
 
@@ -39,7 +39,7 @@ Serverless computing is also well-suited when managing multiple databases or lau
 
 Depending on the use case, serverless has some shortcomings, especially if the platform is not tightly optimized. While it offers faster development and potentially lower costs, there might be a trade-off in terms of control over the underlying infrastructure, or even on debugging. Serverless is best suited for new applications or complete redesigns, especially those that don't rely on legacy databases. Legacy databases can cause bottlenecks because they don't scale as easily with serverless functions.
 
-![alt_text](/posts/whentoserverless2.webp)
+![alt_text](/deployment-platform/posts/whentoserverless2.webp)
 
 ## Serverless computing vs cloud computing
 
@@ -63,7 +63,7 @@ Here’s a balanced look at serverless computing’s advantages and disadvantage
 
 Consider serverless infrastructure if you're building a lightweight, fast-scaling application that needs to be updated frequently and manage fluctuating usage. A serverless setup will respond instantly when needed and will not be subject to costs when at a standstill. Since billing is based on actual usage, serverless reduces costs for applications that do not require constant computing power. Also, serverless architecture is beneficial for applications that need to position functions closer to end users for faster response times.
 
-![alt_text](/posts/whentoserverless3.webp)
+![alt_text](/deployment-platform/posts/whentoserverless3.webp)
 
 ### Why type-safe serverless platforms are best for business
 

@@ -315,7 +315,7 @@ Select the event to listen to **checkout.session.completed.**
 
 The screen should look like this:
 
-![Alt text](/posts/stripe-post-img1.webp)
+![Alt text](/deployment-platform/posts/stripe-post-img1.webp)
 
 Now Press **Add Endpoint.**
 
@@ -323,7 +323,7 @@ After the Endpoint is created, press **Reveal Signing Secret** and copy it for t
 
 This is a look at our environment variables page after all the setup is complete.
 
-![Alt text](/posts/env-variables-stripe.webp)
+![Alt text](/deployment-platform/posts/env-variables-stripe.webp)
 
 Simply hit 'save' and you're all set to test your application in a cloud environment.
 Go to the frontend URL and test your app.

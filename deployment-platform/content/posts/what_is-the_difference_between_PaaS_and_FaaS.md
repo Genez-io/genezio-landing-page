@@ -30,7 +30,7 @@ To understand the difference between FaaS and PaaS, we’ll explain each technol
 
 Before cloud computing, businesses had to manage their own IT systems in thick mainframe systems—on-premises. On top of physical servers, organisations run virtual machines to segment them. On top of that, they had to take care of the computer’s operating system. Then came the invisible layer—the runtime environment. Finally, at the very top was the application, the company could deploy the actual service someone could use, e.g. like an enterprise application to manage their expenses. It took a lot of money to maintain this whole system, and fixing problems could take weeks. This is probably why IT reps at companies are so well-versed with infrastructure practices, even if other staff members expected them to just code in Java.
 
-![alt_text](/posts/faasvspass1.webp)
+![alt_text](/deployment-platform/posts/faasvspass1.webp)
 {{< external-link link="https://www.youtube.com/watch?v=EOIja7yFScs" >}}Source: IBM Technology{{< /external-link >}}
 
 Legend has it that when Amazon bought so many servers for their business, they mulled over what to do with the excess processing power. And with that idle CPU capacity, they {{< external-link link="https://fortune.com/longform/amazon-web-services-ceo-adam-selipsky-cloud-computing/" >}}launched AWS{{< /external-link >}} and the cloud so that third parties could also use it. Along with other vendors trying to do the same thing, the early 2000s saw the rise of cloud computing with Infrastructure-as-a-Service (IaaS). IaaS outsources the foundation (hardware) and pre-fabricated enclosures (virtualisation) of the IT system to a third party. Companies access those servers through the internet—meaning they’re in “the cloud.” Since then, businesses can rent computing power, storage, and networking from cloud providers like AWS or Azure instead of managing their own servers. This is much more economical in the short term and allows for faster setup, taking hours or even minutes compared to weeks.
@@ -58,7 +58,7 @@ FaaS stands for **Function-as-a-Service**. FaaS is a subset of serverless as it 
 
 FaaS lets you write and deploy independent functions—microservices —triggered by specific events within your application. These events can include user actions like login or sending a notification. These functions are mini-programmes you can easily add, remove or update without affecting the entire application. We’ll talk about the integration of FaaS with microservice architectures later, but for now, it’s important to understand that FaaS simplifies development by letting developers focus on building specific functionalities without the burden of server management.
 
-![alt_text](/posts/faasvspass2.webp)
+![alt_text](/deployment-platform/posts/faasvspass2.webp)
 {{< external-link link="https://www.oreilly.com/library/view/docker-for-serverless/9781788835268/c2d98f2d-30ed-4d10-8ab0-f7fef2e5f5a1.xhtml" >}}Source: Oreilly{{< /external-link >}}
 
 ## How does FaaS work?
@@ -69,14 +69,14 @@ handle server infrastructure all at the same time. FaaS breaks this down by usin
 
 This includes tasks that you could do every day, like sending a notification via email. The difference with an API is, among other things, that a microservice is exceptionally specific and can be isolated or updated on its own without affecting a “monolithic” app.’’
 
-![alt_text](/posts/faasvspass3.webp)
+![alt_text](/deployment-platform/posts/faasvspass3.webp)
 {{< external-link link="https://www.youtube.com/watch?v=CdBtNQZH8a4" >}}Source: IBM Technology{{< /external-link >}}
 
 ### Very simple example of FaaS
 
 A user uploads an image and presses “submit” on a mobile app. This action triggers an event within the FaaS architecture. This event is then routed to the appropriate microservice. In this case, an image processing microservice would be specifically triggered.
 
-![alt_text](/posts/faasvspass4.webp)
+![alt_text](/deployment-platform/posts/faasvspass4.webp)
 {{< external-link link="https://blog.alexellis.io/content/deployment-platform/images/2017/08/evolution.png" >}}Source: blog.alexellis{{< /external-link >}}
 
 In FaaS, these microservices become event-driven functions. These functions are independent pieces of code that execute only when triggered by specific events. This can include user actions like clicking a button, changes within a database, or incoming API calls.
@@ -87,7 +87,7 @@ For instance, consider a new bank building their entire user experience out of a
 
 Typically, deploying these services would require extensive configuration on their own servers. It could even mean developing the whole thing from scratch (especially if the bank has some legacy infrastructure). However, FaaS offers a faster approach. Using pre-built microservices in a FaaS environment automatically takes care of infrastructure provisioning and scaling, so the bank can focus on building their user experience and get to market faster.
 
-![alt_text](/posts/faasvspass5.webp)
+![alt_text](/deployment-platform/posts/faasvspass5.webp)
 {{< external-link link="https://www.youtube.com/watch?v=EOIja7yFScs" >}}Source: IBM Technology{{< /external-link >}}
 
 ## What are FaaS model’s pros and cons?
@@ -121,14 +121,14 @@ Namely, reduced costs by only paying for used resources and automatic scaling to
 
 With a FaaS framework, a developer can build up an enterprise application to request time off at a company. Then, by picking out each microservice, they can choose if the notification method for their coworkers will be push notifications or an SMS message. If the SMS provider suddenly changes their API, only that microservice will break down. The other services will keep on running.
 
-![alt_text](/posts/faasvspass6.webp)
+![alt_text](/deployment-platform/posts/faasvspass6.webp)
 {{< external-link link="https://fosdem.org/2024/events/attachments/fosdem-2024-3269-run-node-js-in-a-unikernel-reliably/slides/22337/Run_Node_js_in_a_unikernel_reliably_DlMGm32.pdf" >}}Source: Genezio{{< /external-link >}}
 
 ## Should you consider FaaS?
 
 FaaS is best for building applications with microservice architectures, where each function performs a single, isolated task. But if your project demands a monolithic architecture or frequent function interaction, FaaS might not be the very best choice. Even without FaaS, the cloud offers solutions. PaaS (Platform as a Service), for example, offers another option to move some application functions to the cloud.
 
-![alt_text](/posts/faasvspass7.webp)
+![alt_text](/deployment-platform/posts/faasvspass7.webp)
 {{< external-link link="http://wearecommunity.io" >}}Source: wearecommunity.io{{< /external-link >}}
 
 ## What is PaaS? Platform as a Service Explained
@@ -146,7 +146,7 @@ Its underlying strength lies in the three core components of a PaaS solution: in
 
 With PaaS, the cloud provider takes care of the heavy lifting of cloud infrastructure while developers keep control over the applications and data. PaaS vendors typically offer plugins that make integrations more or less easy than what plain coding would require.
 
-![alt_text](/posts/faasvspass8.webp)
+![alt_text](/deployment-platform/posts/faasvspass8.webp)
 {{< external-link link="https://images.spiceworks.com/wp-content/uploads/2021/07/19072414/Paas.png" >}}Source: spiceworks{{< /external-link >}}
 
 ## PaaS pros and cons
@@ -165,7 +165,7 @@ PaaS platforms offer access to a set of resources that some organisations, espec
 
 PaaS can create lock-in, making it difficult to switch providers later due to reliance on specific tools and platform architecture. Migrating applications may require significant code rewrites. PaaS may require more work than FaaS, which is not good for applications that need to grow quickly.
 
-![alt_text](/posts/faasvspass9.webp)
+![alt_text](/deployment-platform/posts/faasvspass9.webp)
 {{< external-link link="https://chsakell.com/wp-content/uploads/2018/11/building-serveless-apps-with-azure-functions-39.png" >}}Source: chsakell{{< /external-link >}}
 
 ## Example of a PaaS service: How PaaS can adapt to a new market

@@ -34,7 +34,7 @@ They devised a solution to allow any type of user to create their own internal t
 
 ## Architecture walk through
 
-![alt_text](/posts/analyzer.gif)
+![alt_text](/deployment-platform/posts/analyzer.gif)
 
 The techniques presented combine knowledge of machine learning and data analysis. The entire solution can be found on {{< external-link link="https://github.com/mlvanguards/scaling-data-harvesting" >}}GitHub{{< /external-link >}} for those looking for a hands-on approach.
 
@@ -67,7 +67,7 @@ The easy way is to head over to the {{< external-link link="https://app.genez.io
 
 ## Preview
 
-![alt_text](/posts/analyzer.webp)
+![alt_text](/deployment-platform/posts/analyzer.webp)
 
 The solution is available online at {{< external-link link="https://pink-equivalent-cat.app.genez.io/" >}}this URL{{< /external-link >}}.
 

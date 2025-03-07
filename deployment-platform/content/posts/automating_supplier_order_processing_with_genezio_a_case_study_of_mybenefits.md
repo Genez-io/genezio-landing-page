@@ -55,7 +55,7 @@ MyBenefits built a modular system using Genezio’s features. Below is the techn
 
 ### Automation Workflow
 
-![alt_text](/posts/mybenefits1.webp)
+![alt_text](/deployment-platform/posts/mybenefits1.webp)
 
 **A simplified view of MyBenefits’ order processing.**
 React frontend triggers workflows managed by Genezio’s Cron and Queues. Orders are pulled via MyBenefits API, stored in MongoDB, transformed into Excel (saved to Google Drive), and emailed via Gmail SMTP. Supplier APIs enable direct integrations, while queues handle retries.

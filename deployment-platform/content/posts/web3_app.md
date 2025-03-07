@@ -132,24 +132,24 @@ Head to {{< external-link link="https://opensea.io/" >}}OpenSea{{< /external-lin
 
 Open the collection and select “View on EtherScan”.
 
-![Street Art Image](/posts/ss_8.webp)
+![Street Art Image](/deployment-platform/posts/ss_8.webp)
 
 {{< external-link link="https://etherscan.io/" >}}EtherScan{{< /external-link >}} is an analytics platform for smart contracts deployed on the Ethereum blockchain. Here you can see all of the events managed by this smart contract under the “Events” tab.
 
-![Street Art Image](/posts/ss_9.webp)
+![Street Art Image](/deployment-platform/posts/ss_9.webp)
 
 What is important on this page is:
 
 1. The contract address - think of it as a unique name for the smart contract
    Copy the contract address from the main page and paste it in the `.env` file in the `blockchain-project/server` directory.
 
-![Street Art Image](/posts/ss_10.webp)
+![Street Art Image](/deployment-platform/posts/ss_10.webp)
 
 2. The ABI - the binary that the Ethereum Virtual Machine knows how to execute.
 
 Click on the _“Contract”_ tab and scroll down to the _“Contract ABI”_ section. Copy it from here and paste it in the `abi.js` file in the `blockchain-project/server` directory.
 
-![Street Art Image](/posts/ss_11.webp)
+![Street Art Image](/deployment-platform/posts/ss_11.webp)
 
 {{< /details >}}
 
@@ -163,7 +163,7 @@ Note to yourself - Remember the password you set because it will be useful in th
 
 When you successfully finish this step, your screen should look like this:
 
-![Street Art Image](/posts/screenshot_1.webp)
+![Street Art Image](/deployment-platform/posts/screenshot_1.webp)
 
 The wallet created with Metamask will be used to connect to an Ethereum endpoint using Blast API in the next step.
 
@@ -176,29 +176,29 @@ To interact with a given blockchain, you can either host and add your node to th
 Head over to the {{< external-link link="https://blastapi.io/" >}}Blast API webpage{{< /external-link >}}
 and click on _“Get Endpoint”_ - this will allow you to interact with the blockchain using an existing node.
 
-![Street Art Image](/posts/screenshot_2.webp)
+![Street Art Image](/deployment-platform/posts/screenshot_2.webp)
 
 From there, select _“Create a Consumer App”_ and connect using your Metamask wallet. Follow through the pop-ups that are appearing on your screen.
 
-![Street Art Image](/posts/ss_3.webp)
+![Street Art Image](/deployment-platform/posts/ss_3.webp)
 
 Now you can set up a project to get access to an Ethereum endpoint. Select _“Add a new project”_.
 
-![Street Art Image](/posts/ss_4.webp)
+![Street Art Image](/deployment-platform/posts/ss_4.webp)
 
 Enter a project name and select the _“development”_ environment. After you are happy with the name, hit the _“Create project”_ button.
 
-![Street Art Image](/posts/ss_5.webp)
+![Street Art Image](/deployment-platform/posts/ss_5.webp)
 
 A dashboard with your active endpoints will appear. For now, there is no endpoint you are connected to, so let’s change that. Head to the _“Available Endpoints”_ tab and select _“Ethereum”_ and, then, _“Ethereum Mainnet”_.
 
-![Street Art Image](/posts/ss_6.webp)
+![Street Art Image](/deployment-platform/posts/ss_6.webp)
 
 Congrats 🥳 Now you are connected to an Ethereum node.
 
 To be able to interact with the node in your application, click on the* “Active Endpoints”*, on the _“Ethereum”_ widget and copy the RPC endpoint and paste it in the `.env` file in the `blockchain-project/server` directory.
 
-![Street Art Image](/posts/ss_7.webp)
+![Street Art Image](/deployment-platform/posts/ss_7.webp)
 {{< /details >}}
 
 {{< details "Create a Mongo Database" >}}

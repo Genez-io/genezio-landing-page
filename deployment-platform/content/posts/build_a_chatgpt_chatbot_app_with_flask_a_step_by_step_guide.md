@@ -33,7 +33,7 @@ Here’s what we’ll achieve by the end of this tutorial:
 - A functional Flask-based ChatGPT app with a responsive user interface.
 - Seamless deployment using Genezio for scalability and production readiness.
 
-![alt_text](/posts/chatgpt-python.webp)
+![alt_text](/deployment-platform/posts/chatgpt-python.webp)
 
 ## Step-by-Step Guide
 

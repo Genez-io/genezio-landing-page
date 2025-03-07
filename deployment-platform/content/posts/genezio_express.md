@@ -118,7 +118,7 @@ The most common way of testing an Express application is by using an HTTP client
 
 genezio comes with a custom tool for testing your projects locally, as well as after they are deployed. The interface is aware of your project’s structure and autocompletes your testing environment with the corresponding function and parameter names. You don’t have to manually add your endpoints, just select the function you want to test, input the parameters and click SEND.
 
-![test interface](/posts/test_interface.webp "image_tooltip")
+![test interface](/deployment-platform/posts/test_interface.webp "image_tooltip")
 
 **Accessing Your API**
 

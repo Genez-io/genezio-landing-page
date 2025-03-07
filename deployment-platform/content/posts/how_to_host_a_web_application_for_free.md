@@ -171,7 +171,7 @@ Research and experiment with different tools to find the best combination for yo
 
 ## Domain name (optional): Your app's digital address
 
-![alt_text](/posts/choosing-a-domain-name.webp)
+![alt_text](/deployment-platform/posts/choosing-a-domain-name.webp)
 
 While technically optional, especially for those starting with free hosting, a custom domain name is a powerful tool in your app's arsenal. Think of it as more than just a web address – it's your app's:
 

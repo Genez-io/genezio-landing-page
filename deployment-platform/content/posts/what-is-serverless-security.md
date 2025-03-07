@@ -60,7 +60,7 @@ Serverless computing's architecture — which breaks down applications into smal
 
 Serverless frameworks usually feature {{< external-link link="https://www.sciencedirect.com/topics/computer-science/runtime-protection#:~:text=Runtime%20protection%20is%20an%20effective,code%20changes%20are%20not%20possible.&text=Web%20application%20firewalls%20can%20provide,SQL%20injection%20when%20properly%20tuned." >}}runtime protection mechanisms{{< /external-link >}}. This makes it significantly harder for attackers to exploit vulnerabilities like {{< external-link link="https://www.sciencedirect.com/topics/computer-science/runtime-protection#:~:text=Runtime%20protection%20is%20an%20effective,code%20changes%20are%20not%20possible.&text=Web%20application%20firewalls%20can%20provide,SQL%20injection%20when%20properly%20tuned." >}}SQL injection{{< /external-link >}} or {{< external-link link="https://portswigger.net/web-security/cross-site-scripting#:~:text=Cross%2Dsite%20scripting%20(also%20known,different%20websites%20from%20each%20other." >}}cross-site scripting{{< /external-link >}}. Just keep in mind — not all serverless frameworks feature this protection.
 
-![alt_text](/posts/serverless_security1.webp)
+![alt_text](/deployment-platform/posts/serverless_security1.webp)
 
 Serverless environments also allow for always-on {{< external-link link="https://aws.plainenglish.io/serverless-monitoring-best-practices-fbcf14e3b624" >}}function behaviour monitoring{{< /external-link >}}. Keeping track of things like how long it takes to do something and how many resources are being used can help find and address problems that might indicate a cyberattack. Some providers have built-in monitoring tools that show how functions are working, but that’s more on the business side, since they’ll be the ones acting on a threat if that were the case for strange behaviour.
 
@@ -86,7 +86,7 @@ Even though serverless functions are short-lived, hackers can still attack them 
 
 Broken authentication is a typical problem in any full-stack web app (ask around for {{< external-link link="https://auth0.com/blog/what-is-broken-authentication/" >}}multimillion-dollar companies{{< /external-link >}} promising to solve it), including those on serverless designs. Weak or compromised login information can give unauthorised access to sensitive data. DoS attacks can still affect serverless applications by overwhelming function requests or using too many resources. So, the best way out of it is to side with a provider that offers out-of-the-box strong authentication systems.
 
-![alt_text](/posts/serverless_security2.webp)
+![alt_text](/deployment-platform/posts/serverless_security2.webp)
 
 ## Relying on leading serverless security with Genezio
 

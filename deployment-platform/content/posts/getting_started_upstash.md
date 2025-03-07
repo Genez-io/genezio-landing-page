@@ -132,19 +132,19 @@ Once the deployment is complete, open your {{< external-link link="https://app.g
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 
-![Alt text](/posts/integrations.webp)
+![Alt text](/deployment-platform/posts/integrations.webp)
 
 Connect with an Upstash account using the preferred login method:
 
-![Alt text](/posts/image.png)
+![Alt text](/deployment-platform/posts/image.png)
 
 Create a Redis database or select an already existing database:
 
-![Alt text](/posts/image-1.png)
+![Alt text](/deployment-platform/posts/image-1.png)
 
 Hit the `Save` button to set the database credentials as environment variables in your genezio project:
 
-![Alt text](/posts/image-2.png)
+![Alt text](/deployment-platform/posts/image-2.png)
 
 ## Step 3: Connect your backend to the Redis database
 

@@ -40,7 +40,7 @@ In serverless apps, monitoring and observability are tied to the business health
 
 A serverless user won’t be monitoring the servers to know how to handle the workload or how to scale up. That falls entirely on the serverless provider. But that same provider should include tools that can help improve or fine-tune the user experience. Monitoring and observability in serverless should do exactly that and no more than that. A good monitoring and observability suite should allow a developer to easily debug an app in the worst-case scenario, and simply fine-tune it in the best case.
 
-![alt_text](/posts/serverlessmonitoring.webp)
+![alt_text](/deployment-platform/posts/serverlessmonitoring.webp)
 
 So, for example, with good monitoring tools built into a serverless platform, a developer should be able to draw up facts about how, on a SaaS, the login experience, response times, or latency are working out for users. The same developer should be able to spot out an issue quickly thanks to these tools.
 

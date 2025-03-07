@@ -53,7 +53,7 @@ There are different types of web service architectures, including SOAP (Simple O
 
 In the early days of web services, Remote Procedure Call (RPC) was the dominant paradigm. At its roots, RPC is a request-response protocol, a model that has been around since the late 60's. However, RPC as we understand it today was first implemented in the early 80's. RPC was proposed as a way to enable applications written in different languages and running on different devices to communicate with each other over a network. The idea was simple, yet powerful. A client application would call a procedure on a server application, passing arguments and receiving results. RPC would then handle all the details of packing the arguments and results, and transmitting them over the network. Due to its ease of use, and the familiar way of calling functions, just like you would call functions from a library or your own program, it gained significant traction as soon as it arrived.
 
-![alt_text](/posts/genezio-rpc.webp)
+![alt_text](/deployment-platform/posts/genezio-rpc.webp)
 
 In essence, the RPC of those times was a protocol for communicating between applications that are running on different machines. The basic idea behind RPC is to make a remote function call on another computer or server, as if it were a local function call. RPC can be used in client-server architectures, where the client sends requests to the server, and the server executes the requested procedure and returns the result.
 
@@ -77,7 +77,7 @@ One of the main advantages of REST over classical RPC was its simplicity. RESTfu
 
 RESTful web services naturally operate over the HTTP protocol, using HTTP methods such as GET, POST, PUT, and DELETE to perform CRUD (Create, Read, Update, Delete) operations on resources. CRUD represents the basic operations that can be performed on data in a database or other data storage system. These operations are essential for any system that deals with data and are commonly used in web development to describe the actions that can be performed on a resource.
 
-![alt_text](/posts/genezio-rest.webp)
+![alt_text](/deployment-platform/posts/genezio-rest.webp)
 
 The four CRUD operations are:
 

@@ -48,7 +48,7 @@ Explore the complete code and examples for deploying a RAG system on Genezio in 
 
 ### An advanced RAG architecture: Indexing, Retrieval, Synthesizer
 
-![alt_text](/posts/rag1.webp)
+![alt_text](/deployment-platform/posts/rag1.webp)
 
 A well-designed Retrieval-Augmented Generation (RAG) architecture is the backbone of production-ready AI systems, ensuring efficient processing, accurate retrieval, and seamless information synthesis.
 
@@ -56,7 +56,7 @@ Let’s break down the key components of an advanced RAG pipeline:
 
 **Indexing**
 
-![alt_text](/posts/rag2.webp)
+![alt_text](/deployment-platform/posts/rag2.webp)
 
 The QdrantIndexer class is designed to index documents using various embedding models and store them in a Qdrant database.
 
@@ -72,17 +72,17 @@ We use multiple embeddings are in the indexing process:
 
 This hybrid approach maximizes both precision and recall, making retrieval robust and effective for diverse query intents.
 
-![alt_text](/posts/rag3.webp)
+![alt_text](/deployment-platform/posts/rag3.webp)
 
 The first step in the process is preparing your data for efficient retrieval. Documents are:
 
 **Transformed** into nodes: Breaking documents into smaller, manageable pieces ensures better granularity and relevance during retrieval.
 
-![alt_text](/posts/rag4.webp)
+![alt_text](/deployment-platform/posts/rag4.webp)
 
 **Retrieval**
 
-![alt_text](/posts/rag5.webp)
+![alt_text](/deployment-platform/posts/rag5.webp)
 
 When a query is submitted, the system employs a hybrid search mechanism using **both dense and sparse embeddings** to ensure comprehensive retrieval.
 
@@ -96,7 +96,7 @@ The results from these models are then fused using a **Reciprocal Rank Fusion (R
 
 The final stage of the pipeline is the synthesis of retrieved results into meaningful outputs.
 
-![alt_text](/posts/rag6.webp)
+![alt_text](/deployment-platform/posts/rag6.webp)
 
 The **synthesizer** transforms retrieved results into meaningful, query-specific outputs:
 
@@ -116,7 +116,7 @@ And here comes Genezio onto the battlefield.
 
 For this setup, we needed a vector database. Our natural choice, considered the de-facto standard in the industry, was **QDrant**. While {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} currently integrates with PostgreSQL and MongoDB — excellent options that meet the needs of most solutions — we opted to stick with QDrant to maintain consistency with the RAG systems we’ve developed in the past. However, it’s worth noting that you can seamlessly integrate an external managed database with **Genezio**, making it adaptable to a wide range of use cases without altering the core setup.
 
-![alt_text](/posts/rag7.webp)
+![alt_text](/deployment-platform/posts/rag7.webp)
 
 The system architecture consists of three main components:
 
@@ -146,7 +146,7 @@ This will start an local development environment, similar to sam local, for thos
 genezio local
 ```
 
-![alt_text](/posts/rag8.webp)
+![alt_text](/deployment-platform/posts/rag8.webp)
 
 3. **Deploy on Cloud**
 
@@ -156,7 +156,7 @@ genezio deploy
 
 And here you have it:
 
-![alt_text](/posts/rag9.webp)
+![alt_text](/deployment-platform/posts/rag9.webp)
 
 Your application will be hosted on a custom subdomain, such as https://your-app-name.app.genez.io.
 

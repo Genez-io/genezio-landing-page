@@ -35,7 +35,7 @@ Our Data Analyst Agent consists of four key components:
 3. **Genezio Interpreter tool:** A LangGraph tool that informs the LLM that it can run Python code to achieve the task. If you want to learn more about Function Invocation and Tooling in the LLM World check {{< external-link link="https://huggingface.co/docs/hugs/en/guides/function-calling" >}}this{{< /external-link >}} out.
 4. **Python Executor Environment:** Deployed as part of your application, it communicates with the Genezio Interpreter tool to execute the generated code in a temporary, isolated environment to ensure security and privacy.
 
-![aiagent](/posts/aiagent1.webp)
+![aiagent](/deployment-platform/posts/aiagent1.webp)
 
 ## Python Code Execution: How does it work?
 
@@ -43,7 +43,7 @@ When the AI agent generates Python code, it needs to be executed in a way that e
 
 Here’s what happens under the hood:
 
-![aiagent](/posts/aiagent2.webp)
+![aiagent](/deployment-platform/posts/aiagent2.webp)
 
 1. **Code Generation:** When a request is received, the LLM might decide that to achieve the task it needs to run Python code. It generates the code and passes it to LangGraph, specifying that it wants to use the `GenezioInterpreter` tool.
 2. **Execution Request:** The `GenezioInterpreter` tool makes a request to the Python Executor environment deployed on Genezio. All files that the user has uploaded are also passed in this request.
