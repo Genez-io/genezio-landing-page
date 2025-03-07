@@ -86,7 +86,7 @@ Navigate to the {{< external-link link="https://app.genez.io/" >}}genezio dashbo
 After you are redirected to the email service page, press the `Install` button.
 Now your page should look like this one:
 
-![Alt text](/posts/add_email_integration.webp)
+![Alt text](/deployment-platform/posts/add_email_integration.webp)
 
 ## Set up the env
 
@@ -155,7 +155,7 @@ genezio local
 
 Now you can test your method using the {{< external-link link="http://localhost:8083/explore" >}}genezio test interface{{< /external-link >}}.
 
-![Alt text](/posts/mail-in-ts-with-nodemailer3.webp)
+![Alt text](/deployment-platform/posts/mail-in-ts-with-nodemailer3.webp)
 
 After everything goes well, you can deploy your app to the genezio cloud.
 

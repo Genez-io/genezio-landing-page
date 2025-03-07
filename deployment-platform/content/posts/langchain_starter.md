@@ -24,7 +24,7 @@ In this article, I delve into how you can feed external data to an already train
 
 More specifically, I want to build a bot that can answer questions based on the documentation pages of genezio like in the preview below:
 
-![Langchain Starter Preview](/posts/langchain_starter/langchain_starter_demo.gif)
+![Langchain Starter Preview](/deployment-platform/posts/langchain_starter/langchain_starter_demo.gif)
 
 You can use this project as a starting point to build more complex applications such as:
 
@@ -167,11 +167,11 @@ genezio local
 This command will start your fullstack application locally.
 You can send requests to the backend API directly by navigating to `http://localhost:8083/explore`:
 
-![Test Interface Screenshot](/posts/langchain_starter/langchain_starter_test_interface.webp)
+![Test Interface Screenshot](/deployment-platform/posts/langchain_starter/langchain_starter_test_interface.webp)
 
 You can also test the application directly from the frontend at `http://localhost:5173/`.
 
-![Test Interface Screenshot](/posts/langchain_starter/langchain_starter_local_frontend.webp)
+![Test Interface Screenshot](/deployment-platform/posts/langchain_starter/langchain_starter_local_frontend.webp)
 
 Initially, the bot will provide information about `genezio`. You can customize the bot with your own data in the next step.
 

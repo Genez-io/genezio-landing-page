@@ -25,7 +25,7 @@ What is a MERN stack?
 
 The MERN stack is a very popular technology for full stack web applications because it uses very mature and battle tested technologies. These technologies are also quite popular themselves and easy to learn and use. A main advantage of this stack is that you can use Javascript or Typescript on both frontend and backend.
 
-![alt_text](/posts/merndeploy.webp)
+![alt_text](/deployment-platform/posts/merndeploy.webp)
 
 ## Deploying a MERN application
 
@@ -44,7 +44,7 @@ Now, imagine deploying a fully functional MERN application from scratch—within
 Click the button below to start the process of deploying a template application.
 
 {{< external-link link="https://app.genez.io/auth/signup?redirect=mern-getting-started" >}}
-![alt_text](/posts/deploy-button.svg)
+![alt_text](/deployment-platform/posts/deploy-button.svg)
 {{< /external-link >}}
 
 ### Step 1

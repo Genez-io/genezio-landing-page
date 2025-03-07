@@ -57,7 +57,7 @@ Let’s break it down with an example: a basic Node.js HTTP server application:
 
 This model also works seamlessly with WebSocket connections. When the first WebSocket connection is received, the application starts and remains active as long as data flows through the connection or until a configurable timeout is reached.
 
-![alt_text](/posts/how-to-use-websockets-on-genezio.webp)
+![alt_text](/deployment-platform/posts/how-to-use-websockets-on-genezio.webp)
 
 ## Backwards Compatibility
 
@@ -81,10 +81,10 @@ You can start from one of our templates:
 
 - A very simple echo websocket application:
   {{< external-link link="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/websocket-getting-started" >}}
-  ![alt_text](/posts/deploy-button.svg)
+  ![alt_text](/deployment-platform/posts/deploy-button.svg)
   {{< /external-link >}}
 
 - A full stack chat socket-io application that uses MongoDB adapter for scaling capabilities:
   {{< external-link link="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/socket-io-getting-started" >}}
-  ![alt_text](/posts/deploy-button.svg)
+  ![alt_text](/deployment-platform/posts/deploy-button.svg)
   {{< /external-link >}}

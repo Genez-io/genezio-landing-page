@@ -108,11 +108,11 @@ The results are presented below. The Y value of the X-th percentile means that Y
 
 For the warm start, we observe similar results, except there is a noticeably higher response at the 99.99th percentile. This means that it is unusual for queries to take more than 30 milliseconds. Such cases are the exception.
 
-![alt_text](/posts/dbtable1.webp)
+![alt_text](/deployment-platform/posts/dbtable1.webp)
 
 ###### Figure 3: Percentile statistics for 300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/posts/dbtable2.webp)
+![alt_text](/deployment-platform/posts/dbtable2.webp)
 
 ###### Figure 4: Percentile statistics for 900 concurrent requests with no timeout between them.
 
@@ -122,11 +122,11 @@ For MongoDB with an established connection it was way easier to find the point w
 
 We can see that the cold start increases from a steady 280-300 ms (Figure 5) to more than 800 ms (Figure 6). The warm query time remains constant. The problem is establishing the connection, but once the connection is successfully established, the time will remain constant.
 
-![alt_text](/posts/dbtable3.webp)
+![alt_text](/deployment-platform/posts/dbtable3.webp)
 
 ###### Figure 5: Percentile statistics for MongoDB with wire protocol connections and 300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/posts/dbtable4.webp)
+![alt_text](/deployment-platform/posts/dbtable4.webp)
 
 ###### Figure 6: Percentile statistics for MongoDB with wire protocol connections and 100 concurrent requests with 10ms timeout between them.
 
@@ -136,11 +136,11 @@ The MongoDB Data API is behaving better during a spike of traffic. I’ve done 9
 
 We see a slight decrease in the performance during the cold start, but nothing substantial. For the warm time responses, the response time is the same. Same as for the Firestore Database, we barely touched the breaking point and we can say with confidence that the MongoDB Data API could handle even more traffic.
 
-![alt_text](/posts/dbtable5.webp)
+![alt_text](/deployment-platform/posts/dbtable5.webp)
 
 ###### Figure 7: Percentile statistics for MongoDB Data API with 300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/posts/dbtable6.webp)
+![alt_text](/deployment-platform/posts/dbtable6.webp)
 
 ###### Figure 8: Percentile statistics for MongoDB Data API with 900 concurrent requests with no timeout between them.
 
@@ -148,11 +148,11 @@ We see a slight decrease in the performance during the cold start, but nothing s
 
 Lastly, DynamoDB was tested with 900 concurrent requests without any sleep time between the requests.
 
-![alt_text](/posts/dbtable7.webp)
+![alt_text](/deployment-platform/posts/dbtable7.webp)
 
 ###### Figure 9: Percentile statistics for DynamoDB with  300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/posts/dbtable8.webp)
+![alt_text](/deployment-platform/posts/dbtable8.webp)
 
 ###### Figure 10: Percentile statistics for DynamoDB with 900 concurrent requests with no timeout between them.
 
@@ -170,7 +170,7 @@ To gauge the severity and reproducibility of this error I ran the following expe
 
 The steps 2 and 3 were repeated five times. Afterwards, I inspected the Atlas MongoDB's monitoring dashboard to observe the impact on the number of active connections. The results can be seen in Figure 11.
 
-![alt_text](/posts/dbchart.webp)
+![alt_text](/deployment-platform/posts/dbchart.webp)
 
 ###### Figure 11: Atlas MongoDB's monitoring dashboard
 

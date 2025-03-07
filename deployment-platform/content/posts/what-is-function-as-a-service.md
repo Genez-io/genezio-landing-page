@@ -46,7 +46,7 @@ Microservices are very good for entrepreneurs or busy developers because they al
 
 Microservices are also good for working with big development teams. By breaking the application up into smaller, manageable services, different teams can work independently without affecting each other's progress. Microservices often involve separate databases and deployments for each service, but the main purpose is to make units that can be developed and released independently.
 
-![alt_text](/posts/what-is-function-as-a-service1.webp)
+![alt_text](/deployment-platform/posts/what-is-function-as-a-service1.webp)
 
 Source: {{< external-link link="https://medium.com/javanlabs/micro-services-versus-monolithic-architecture-what-are-they-e17ddc8d3910" >}}Javan Cipta Solusi{{< /external-link >}}
 
@@ -74,7 +74,7 @@ The cost-savings are another important advantage. FaaS differs from traditional 
 
 FaaS’ automatic scaling capabilities makes it particularly good at handling fluctuating workloads. This means applications can handle spikes by automatically adjusting resources based on usage, without the need for manual intervention. This feature can be referred to as elasticity. But for workloads that need constant compute resources or tight coupling between components, traditional approaches might be a better choice.
 
-![alt_text](/posts/what-is-function-as-a-service2.webp)
+![alt_text](/deployment-platform/posts/what-is-function-as-a-service2.webp)
 
 Source: {{< external-link link="https://cdn2.hubspot.net/hubfs/2295024/blog-images/Cloud%20Vs%20On%20Premises.jpg" >}}Hubspot{{< /external-link >}}
 

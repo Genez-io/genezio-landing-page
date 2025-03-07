@@ -72,7 +72,7 @@ The better you can predict how much load your system will handle, the better it 
 
 There are two primary ways to handle an increased load: **Scale-up** (vertical scaling), which involves upgrading a single computer (with a faster processor or more memory, for instance), and **scale-out** (horizontal scaling), which means adding more computers or servers to share the workload. Often, a combination of both approaches is the best option. (If you're running serverless, you don't even have to think about going horizontal or vertical — the provider handles that decision for you).
 
-![alt_text](/posts/serverless-scalability2.webp)
+![alt_text](/deployment-platform/posts/serverless-scalability2.webp)
 
 Using serverless technology helps a lot with handling load. The system automatically adds or removes computers as required, so you don't have to worry about it as much. This also means you can focus on building your application instead of managing servers, crashes, and timeout errors.
 
@@ -105,7 +105,7 @@ It's important to look at the right numbers when measuring performance. While te
 
 Percentiles offer a more precise representation of system performance. A **percentile** indicates the percentage of data points falling below a specific value. Commonly used percentiles include the 95th, 99th, and 99.9th percentiles (p95, p99, and p999). A typical p99 value for server response time might range from 15 to 70 milliseconds. But you might not need the same p99 value for an instant messaging app than for an enterprise solution you built so that your company can start offering benefits through a dashboard. Your colleagues are likely to be more patient, considering they're about to cop some corporate swag.
 
-![alt_text](/posts/serverless-scalability1.webp)
+![alt_text](/deployment-platform/posts/serverless-scalability1.webp)
 
 ## Serverless scalability in practice with Genezio
 

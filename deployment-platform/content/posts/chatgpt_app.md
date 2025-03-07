@@ -72,7 +72,7 @@ Since you are reading this, I assume you already know what ChatGPT is and how it
 
 When deciding where to make the calls from, you have to keep in mind how secure you want this to be. So, as it is smart not to do them from the frontend, you are going to use genezio to host the backend and to call the OpenAPI from the genezio functions. For you to create a clearer idea about how this works, take a look at this illustration:
 
-![Street Art Image](/posts/react-gen-chat.webp)
+![Street Art Image](/deployment-platform/posts/react-gen-chat.webp)
 
 Now, let’s dive in! You can find the complete project {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" >}}here{{< /external-link >}}.
 
@@ -82,13 +82,13 @@ Now, let’s dive in! You can find the complete project {{< external-link link="
 
 1. Go to the {{< external-link link="https://platform.openai.com/signup/" >}}OpenAI website{{< /external-link >}} and create an account.
 
-![Street Art Image](/posts/create-account.webp)
+![Street Art Image](/deployment-platform/posts/create-account.webp)
 
 2. Go to{{< external-link link="https://platform.openai.com/account/api-keys" >}} platform.openai.com/account/api-keys{{< /external-link >}}
 
 3. Click on the "Create new secret key" button.
 
-![Street Art Image](/posts/api-keys.webp)
+![Street Art Image](/deployment-platform/posts/api-keys.webp)
 
 **Note**: Remember to keep your API key secure and do not share it with anyone.
 

@@ -36,7 +36,7 @@ BwareLabs’ case is one example of how Genezio could help a company that needs 
 
 Thanks to the adoption of Genezio and its responsive cloud platform, BwareLabs was able to automate many of these tasks. One of the {{< external-link link="https://bwarelabs.com/blog/how-genezio-enhances-web3-development-at-bware-labs" >}}key achievements{{< /external-link >}} made possible through Genezio was the development of M.A.T.E.I., an internal monitoring app now a keystone in BwareLabs’ infrastructure and operations. M.A.T.E.I. automates the monitoring of blockchain nodes, tracks the latest updates, and pushes important notifications to the team’s Slack channels to make sure developers stay informed and take action without unwelcome interruptions.
 
-![alt_text](/posts/bwarecase.webp)
+![alt_text](/deployment-platform/posts/bwarecase.webp)
 
 Genezio’s serverless functions helped develop M.A.T.E.I. and get it running quickly enough. Given that the app is hosted in a serverless environment, BwareLabs doesn't have to take care of server infrastructure, which helps ease the burden on their DevOps team. And when BwareLabs actually needs to push a code update, it’s as easy as it gets. Genezio makes possible rapid update deployments and allows developers to trigger updates with a click.
 

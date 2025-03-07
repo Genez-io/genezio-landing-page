@@ -32,19 +32,19 @@ Better cold start performance translates to a better user experience, as applica
 
 - Compared to GCP, Vercel, and Netlify, Genezio has a narrower distribution (the height of the box), indicating reliability and predictability.
 
-![alt_text](/posts/genezioFunctions2.webp)
+![alt_text](/deployment-platform/posts/genezioFunctions2.webp)
 
 The following bar chart shows the median (p50) values for cold start response times in milliseconds. In contexts of performance metrics, such as response times, the p50 value clearly indicates the typical performance that can be expected from the FaaS platform.
 
 **Key Takeaway:** Genezio Functions has the lowest median (p50) cold start response time, significantly lower than the other platforms.
 
-![alt_text](/posts/genezioFunctions3.webp)
+![alt_text](/deployment-platform/posts/genezioFunctions3.webp)
 
 The bar chart below shows the p95 values for cold start response times in milliseconds. In response time analysis, the p95 value indicates that 95% of the response times are faster than this value, highlighting the performance experienced by most users.
 
 **Key Takeaway:** Genezio Functions has the lowest p95 cold start response time.
 
-![alt_text](/posts/genezioFunctions1.webp)
+![alt_text](/deployment-platform/posts/genezioFunctions1.webp)
 
 ### Benchmark setup
 

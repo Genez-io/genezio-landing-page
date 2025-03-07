@@ -54,7 +54,7 @@ At the heart of every **intelligent agent in AI** is what's known as the agent l
 
 This cycle, sometimes referred to as OODA (Observe, Orient, Decide, Act), forms the fundamental operational pattern for **artificial intelligence and intelligent agents**. The sophistication of each step determines the agent's overall capabilities.
 
-![aiagent](/posts/aiagent1011.webp)
+![aiagent](/deployment-platform/posts/aiagent1011.webp)
 
 ## Types of AI Agents
 
@@ -94,7 +94,7 @@ The most advanced category, these agents can improve their performance over time
 
 To understand how an **intelligent agent in artificial intelligence** operates, we use the PEAS framework:
 
-![aiagent](/posts/aiagent1012.webp)
+![aiagent](/deployment-platform/posts/aiagent1012.webp)
 
 To see how this works in practice, let’s apply the PEAS framework to an e-commerce recommendation agent:
 

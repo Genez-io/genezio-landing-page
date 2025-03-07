@@ -23,7 +23,7 @@ Hello, everyone. Today, we are talking about middleware integration in Genezio p
 
 Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database. The term ‘middleware’ is very broad and can be applied to a lot of different specific software components such as logging, security, data validation and many more. The classic web architecture is usually composed of three major components, the frontend, the backend and the database. Between these components is where the middleware integration works its magic. For our {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} projects, we want to implement the middleware between the frontend and the backend.
 
-![alt_text](/posts/middlewareexplication.webp)
+![alt_text](/deployment-platform/posts/middlewareexplication.webp)
 
 Some common examples of middleware are {{< external-link link="https://genezio.com/docs/features/authentication/" >}}authentication{{< /external-link >}}, type validation, connection management, {{< external-link link="https://genezio.com/docs/genezio-typesafe/rate-limiter/" >}}rate limiting{{< /external-link >}} etc. The importance of middleware integration is paramount in any software development process to ensure that any cross-integration problems are solved seamlessly.
 

@@ -260,7 +260,7 @@ const handleCreateBook = async (e: any) => {
 
 What is great now is that we can leverage the IDE capabilities. Hover over the `BookService.getAllBooks()` method and you can see: the documentation, the parameter types and the return type of the method. Pass a wrong parameter to `BookService.createBook()` and your IDE will shout that there is something wrong.
 
-![Alt text](/posts/demo-express-genezio.webp)
+![Alt text](/deployment-platform/posts/demo-express-genezio.webp)
 
 Let's see how we handle errors. Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
 

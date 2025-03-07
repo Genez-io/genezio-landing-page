@@ -199,11 +199,11 @@ In this context, `hub.mode`, `hub.verify_token`, and `hub.challenge` are paramet
 - `hub.verify_token` is a user-defined string that serves as a security measure to verify the authenticity of the request.
 - `hub.challenge` is a string sent by the WhatsApp API that needs to be returned by the endpoint to confirm successful verification.
 
-![whatsapp](/posts/whatsappchatgpt1.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt1.webp)
 
 After verification, the endpoint processes incoming messages. It extracts the message content and utilizes the GPT worker to generate a response. The generated response is then sent back to the user via the `#sendMessage` method using the WhatsApp API Cloud.
 
-![whatsapp](/posts/whatsappchatgpt2.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt2.webp)
 
 ## Create a ChatGPT Worker that responds in time to the user.
 
@@ -289,27 +289,27 @@ The generateResponse method uses the OpenAI API to send a user message and recei
 
 1. Go to the {{< external-link link="https://platform.openai.com/signup" >}}Open AI{{< /external-link >}} platform and create an account.
 
-![whatsapp](/posts/whatsappchatgpt3.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt3.webp)
 
 2. Select “API keys” in sidebar
 
-![whatsapp](/posts/whatsappchatgpt4.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt4.webp)
 
 3. Select “Create new secret key”
 
-![whatsapp](/posts/whatsappchatgpt5.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt5.webp)
 
 4. Select “Create secret key”
 
-![whatsapp](/posts/whatsappchatgpt8.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt8.webp)
 
 5. Select "Copy" button and save this somewhere because you can only see it once.
 
-![whatsapp](/posts/whatsappchatgpt7.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt7.webp)
 
 6. After you save the key, select “Done” button.
 
-![whatsapp](/posts/whatsappchatgpt6.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt6.webp)
 
 7. Put in `.env` file the OPEN_API_KEY
 
@@ -319,41 +319,41 @@ OPENAI_API_KEY=<token generated above>
 
 1. Go to the {{< external-link link="https://developers.facebook.com/" >}} Meta Website{{< /external-link >}} and create an account.
 
-![whatsapp](/posts/whatsapp1.webp)
+![whatsapp](/deployment-platform/posts/whatsapp1.webp)
 
 2. Select “My Apps”
 
-![whatsapp](/posts/whatsapp2.webp)
+![whatsapp](/deployment-platform/posts/whatsapp2.webp)
 
 3. Select “Create App”
 
-![whatsapp](/posts/whatsapp3.webp)
+![whatsapp](/deployment-platform/posts/whatsapp3.webp)
 
 4. Select “Other” and click on ‘Next’
 
-![whatsapp](/posts/whatsapp4.webp)
+![whatsapp](/deployment-platform/posts/whatsapp4.webp)
 
 5. Select “Business” and click on ‘Next’
 
-![whatsapp](/posts/whatsapp5.webp)
+![whatsapp](/deployment-platform/posts/whatsapp5.webp)
 
 6. Add an app name and the contact email address and click on ‘Create app’.
 
-![whatsapp](/posts/whatsapp6.webp)
+![whatsapp](/deployment-platform/posts/whatsapp6.webp)
 
 ## Configure the project
 
 1. Search for the Whatsapp Integration and click on ‘Set up’.
 
-![whatsapp](/posts/whatsapp7.webp)
+![whatsapp](/deployment-platform/posts/whatsapp7.webp)
 
 2. Select a business portfolio
 
-![whatsapp](/posts/whatsapp8.webp)
+![whatsapp](/deployment-platform/posts/whatsapp8.webp)
 
 3. Start using the API
 
-![whatsapp](/posts/whatsapp9.webp)
+![whatsapp](/deployment-platform/posts/whatsapp9.webp)
 
 4. From here we will take the access token and Phone number ID for the .env file.
 
@@ -365,16 +365,16 @@ WEBHOOK_VERIFY_TOKEN=<random string>
 
 Note: Here you can also see which phone number you can test the Whatsapp bot on.
 
-![whatsapp](/posts/whatsapp10.webp)
+![whatsapp](/deployment-platform/posts/whatsapp10.webp)
 
 5. In order for the bot to work, we still need to configure an api for callback. Select Configuration
 
-![whatsapp](/posts/whatsapp11.webp)
+![whatsapp](/deployment-platform/posts/whatsapp11.webp)
 
 6. Click on ‘Edit’
 
-![whatsapp](/posts/whatsapp12.webp)
-![whatsapp](/posts/whatsapp13.webp)
+![whatsapp](/deployment-platform/posts/whatsapp12.webp)
+![whatsapp](/deployment-platform/posts/whatsapp13.webp)
 
 Here we need a callback URL and a verify token. The Callback URL will be generated in the next step and verify token is a random string put by you which is the same as the one in the .env file to the key `WEBHOOK_VERIFY_TOKEN`
 
@@ -387,21 +387,21 @@ genezio deploy –env .env
 ```
 
 Take the url from : BackendService.webhook
-![whatsapp](/posts/whatsapp14.webp)
+![whatsapp](/deployment-platform/posts/whatsapp14.webp)
 
 The `Callback URL` is an endpoint that you provide to the WhatsApp API Cloud, which is used by WhatsApp to send you notifications about events such as new messages, message status updates, and other webhook events. This URL must be accessible over the internet so that WhatsApp can communicate with your server.
 
 8. Put the link to the callback from the platform
 
-![whatsapp](/posts/whatsapp15.webp)
+![whatsapp](/deployment-platform/posts/whatsapp15.webp)
 
 9. Subscribe for messages
 
-![whatsapp](/posts/whatsapp17.webp)
+![whatsapp](/deployment-platform/posts/whatsapp17.webp)
 
 10. Now you have a WhatsApp bot. For testing, you can send a question from the test number.
 
-![whatsapp](/posts/whatsappchatgpt20.webp)
+![whatsapp](/deployment-platform/posts/whatsappchatgpt20.webp)
 
 ## Start using your WhatsApp ChatBot
 

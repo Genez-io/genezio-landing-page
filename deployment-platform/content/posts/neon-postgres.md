@@ -67,23 +67,23 @@ genezio deploy
 
 Once the deployment is complete, open your {{< external-link link="https://app.genez.io/dashboard" >}}genezio dashboard{{< /external-link >}} and pick the project you created earlier. In the _Integrations_ tab you can select to install the Neon Postgres integration:
 
-![alt_text](/posts/integrations.webp)
+![alt_text](/deployment-platform/posts/integrations.webp)
 
 Connect with a Neon account, or if you don’t have one, create a new one by going to the Neon website:
 
-![alt_text](/posts/neon2.png)
+![alt_text](/deployment-platform/posts/neon2.png)
 
 Create a new Neon Project called getting-started-neon or select an existing one:
 
-![alt_text](/posts/neon3.png)
+![alt_text](/deployment-platform/posts/neon3.png)
 
 Next, choose the project details:
 
-![alt_text](/posts/neon4.png)
+![alt_text](/deployment-platform/posts/neon4.png)
 
 Finally, save the environment variable to your project so that you may use it when you want to connect to your database:
 
-![alt_text](/posts/neon5.png)
+![alt_text](/deployment-platform/posts/neon5.png)
 
 With all that done, your project is fully integrated with a free tier Neon Postgres database.
 
@@ -135,7 +135,7 @@ With all that done, you now have a single method for inserting a user into a tab
 
 To locally test your Postgres service, you have to copy the environment variable `NEON_POSTGRES_URL` in a `.env` file in the root directory of your project. You can find this variable in the `Integrations` tab of your project page in the {{< external-link link="https://app.genez.io" >}}genezio dashboard{{< /external-link >}}:
 
-![alt_text](/posts/neon6.png)
+![alt_text](/deployment-platform/posts/neon6.png)
 
 The `.env` file should look similar to the following snippet:
 
