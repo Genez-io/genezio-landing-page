@@ -55,7 +55,7 @@ This approach ensures that **no data persists beyond execution**, making it a gr
 
 Let’s see how it works.
 
-{{< video src="/posts/demoagent.webm" width="100%" height="360" >}}
+{{< video src="/deployment-platform/posts/demoagent.webm" width="100%" height="360" >}}
 
 The LLM was able to answer questions related to the CSV file that I’ve uploaded. You can also play with it {{< external-link link="https://data-scientist-agent.app.genez.io/" >}}here{{< /external-link >}}.
 
