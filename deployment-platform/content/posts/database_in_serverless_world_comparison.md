@@ -76,7 +76,7 @@ As mentioned earlier, my focus was to examine how the database would handle a su
 
 I measured the response time for a query during the 'cold start' phase, as well as the query time for an already warmed-up function. Let’s analyze the results!
 
-{{< svg file="/posts/dbchart1.svg" >}}
+{{< svg file="/deployment-platform/posts/dbchart1.svg" >}}
 
 ###### Figure 1: Results of the experiment with 300 requests every 100 ms for all databases.
 
@@ -90,7 +90,7 @@ When using the **Atlas MongoDB Data API**, we observe a notably favorable respon
 
 Furthermore, I conducted the same set of experiments with the genezio application, which was now hosted in a different region (us-east-1) than the database (eu-central-1). This aspect becomes useful when considering scenarios such as deploying a multi-region application while using a single database.
 
-{{< svg file="/posts/dbchart2.svg" >}}
+{{< svg file="/deployment-platform/posts/dbchart2.svg" >}}
 
 ###### Figure 2: Results of the experiment with 300 requests every 100 ms for all databases when the app is hosted in a different region than the database.
 
