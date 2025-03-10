@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export function CtaSection() {
-  const [formType, setFormType] = useState<"scan" | "demo">("demo");
+  const [formType, setFormType] = useState<"scan" | "demo">("scan");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleScanClick = () => {
@@ -82,17 +82,6 @@ export function CtaSection() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     className={`px-6 py-3 rounded-lg ${
-                      formType === "demo"
-                        ? "bg-purple-600 hover:bg-purple-700"
-                        : "bg-slate-700/50 hover:bg-slate-700/70 border border-slate-600"
-                    } text-white font-medium transition-colors flex items-center justify-center`}
-                    onClick={handleDemoClick}
-                  >
-                    <CalendarIcon className="mr-2 w-5 h-5" />
-                    Schedule a Demo
-                  </button>
-                  <button
-                    className={`px-6 py-3 rounded-lg ${
                       formType === "scan"
                         ? "bg-purple-600 hover:bg-purple-700"
                         : "bg-slate-700/50 hover:bg-slate-700/70 border border-slate-600"
@@ -101,6 +90,17 @@ export function CtaSection() {
                   >
                     <RocketIcon className="mr-2 w-5 h-5" />
                     Try for Free
+                  </button>
+                  <button
+                    className={`px-6 py-3 rounded-lg ${
+                      formType === "demo"
+                        ? "bg-purple-600 hover:bg-purple-700"
+                        : "bg-slate-700/50 hover:bg-slate-700/70 border border-slate-600"
+                    } text-white font-medium transition-colors flex items-center justify-center`}
+                    onClick={handleDemoClick}
+                  >
+                    <CalendarIcon className="mr-2 w-5 h-5" />
+                    Schedule a Demo
                   </button>
                 </div>
               </div>
