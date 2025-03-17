@@ -2,7 +2,7 @@
 title: "Run Python code for AI data analysis with LangGraph"
 date: 2025-02-27
 tags:
-  - Tutorials
+  - AI
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 thumbnail: /deployment-platform/images/langgraph.webp

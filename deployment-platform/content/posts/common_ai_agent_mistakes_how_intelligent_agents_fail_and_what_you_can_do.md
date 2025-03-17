@@ -2,7 +2,7 @@
 title: "Common AI Agent Mistakes: How Intelligent Agents Fail and What You Can Do"
 date: 2025-03-10
 tags:
-  - Learning
+  - AI
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /deployment-platform/images/ai-mistakes.webp
