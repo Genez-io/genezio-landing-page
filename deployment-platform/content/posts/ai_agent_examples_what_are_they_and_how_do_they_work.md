@@ -2,7 +2,7 @@
 title: "AI Agent Examples: What Are They, and How Do They Work?"
 date: 2025-03-12
 tags:
-  - Learning
+  - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /deployment-platform/images/effortless.webp

@@ -2,7 +2,7 @@
 title: "AI Agents 101: Understanding Their Role and Functionality"
 date: 2025-03-04
 tags:
-  - Learning
+  - AI
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 thumbnail: /deployment-platform/images/genezioai101.webp
