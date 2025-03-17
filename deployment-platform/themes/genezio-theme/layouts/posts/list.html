@@ -26,7 +26,8 @@
               {{ if .Params.tags }}
             <div class="mb-2 pb-1">
             {{ range .Params.tags }}
-            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ site.BaseURL }}deployment-platform/tags/{{ . | urlize }}"
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ "/deployment-platform/tags/" | absURL | replace "/genezio-landing-page" "" }}{{ . | urlize }}"
+
 >{{ . }}</a>
             {{ end }}
           </div>
@@ -119,7 +120,8 @@
           {{ if .Params.tags }}
           <div class="mb-2 pb-1">
             {{ range .Params.tags }}
-            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ site.BaseURL }}deployment-platform/tags/{{ . | urlize }}"
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="{{ "/deployment-platform/tags/" | absURL | replace "/genezio-landing-page" "" }}{{ . | urlize }}"
+
 >{{ . }}</a>         
             {{ end }}
           </div>
