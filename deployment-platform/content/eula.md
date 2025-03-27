@@ -77,6 +77,7 @@ You agree not to, and You will not permit others to:
 - Copy or use the Application for any purpose other than as permitted under the above section 'License'.
 - Modify, make derivative works of, disassemble, decrypt, reverse compile or reverse engineer any part of the Application.
 - Remove, alter or obscure any proprietary notice (including any notice of copyright or trademark) of the Company or its affiliates, partners, suppliers or the licensors of the Application.
+- Use any third-party database services made available through the Application, including but not limited to PostgreSQL and MongoDB, unless such database is explicitly connected to and used within the context of an active Genezio project.
 
 ---
 
