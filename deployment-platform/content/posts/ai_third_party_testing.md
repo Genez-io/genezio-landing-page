@@ -1,22 +1,22 @@
 ---
 title: "AI Third-Party Testing: Why Independent Testing Matters for AI Agents"
-date: 2025-03-28
+date: 2025-03-31
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/rag-is-fixing-llms-but-is-it-enough.webp
+thumbnail: https://genezio.com/deployment-platform/posts/ai-third-party-testing.webp
 preview: According to Anthropic, one of the biggest challenges in AI today is the need for independent testing. As the Anthropic team explained in a 2024 write-up, AI agents are being deployed in high-stakes environments.
 # meta data start
 description: AI third-party testing helps businesses flag AI mistakes, mitigate risks, and keep AI agents reliable. Learn how Genezio makes AI testing easier.
 meta_og_url: "https://genezio.com/deployment-platform/blog/ai-third-party-testing/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/rag-is-fixing-llms-but-is-it-enough.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/ai-third-party-testing.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 9
+readTime: 7
 url: /blog/ai-third-party-testing/
 ---
 
