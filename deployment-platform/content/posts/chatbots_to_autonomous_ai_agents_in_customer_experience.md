@@ -41,9 +41,10 @@ Key characteristics of rule-based chatbots:
 
 While revolutionary at the time, these systems were notoriously frustrating for users who needed help with anything outside their narrowly defined parameters. A slight variation in phrasing could break the entire interaction, leading to the dreaded "I don't understand" response or being trapped in an endless loop of irrelevant suggestions.
 
-Despite these limitations, rule-based chatbots provided a foundation for automating simple, repetitive queries, allowing human agents to focus on more complex issues. They demonstrated the potential for automation in customer experience while highlighting the need for more sophisticated solutions.
+Despite these limitations, rule-based chatbots provided a foundation for automating simple, repetitive queries, allowing human agents to focus on more complex issues. They demonstrated the potential for automation in customer experience while highlighting the need for more sophisticated solutions.<br/>
 
 ![rule-based-chatbots-flow](/deployment-platform/posts/rule-based-chatbots.webp)
+<br/>
 
 ### Second Generation: NLP-Enhanced Virtual Assistants
 
@@ -58,9 +59,9 @@ Key advancements in NLP-enhanced virtual assistants:
 
 These systems represented a significant improvement over their rule-based predecessors. Customers could phrase their questions more naturally, and the systems could handle a wider range of inquiries without breaking down. Companies like Apple, Google, Amazon, and Microsoft invested heavily in this technology, leading to the creation of Siri, Google Assistant, Alexa, and Cortana.
 
-However, these second-generation systems still relied heavily on predefined responses and lacked true understanding of complex queries. They struggled with ambiguity, multi-part questions, and maintaining context over extended interactions.
+However, these second-generation systems still relied heavily on predefined responses and lacked true understanding of complex queries. They struggled with ambiguity, multi-part questions, and maintaining context over extended interactions.<br/>
 
-![nlp-enhanced-virtual-assistants-flow](/deployment-platform/posts/nlp-enhanced-virtual-assistants.webp)
+![nlp-enhanced-virtual-assistants-flow](/deployment-platform/posts/nlp-enhanced-virtual-assistants.webp)<br/>
 
 ### Third Generation: AI-Powered Conversational Agents
 
