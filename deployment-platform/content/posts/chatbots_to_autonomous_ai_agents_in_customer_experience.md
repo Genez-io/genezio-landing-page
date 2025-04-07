@@ -81,7 +81,7 @@ Companies implemented these solutions to handle a wider range of customer servic
 
 ### Fourth Generation: LLM-Powered Autonomous AI Agents
 
-With the introduction of Large Language Models (LLMs) like GPT-4, Claude, and Gemini, we entered the current generation of customer experience automation: autonomous AI agents. These systems leverage the immense knowledge and reasoning capabilities of foundation models combined with specialized components for task execution.
+With the introduction of Large Language Models (LLMs) like GPT-4, Claude, and Gemini, we entered the current generation of customer experience automation: {{< external-link link="https://genezio.com/deployment-platform/blog/understanding-ai-agents-101/" >}}autonomous AI agents{{< /external-link >}}. These systems leverage the immense knowledge and reasoning capabilities of foundation models combined with specialized components for task execution.
 
 Defining characteristics of autonomous AI agents:
 - **Foundation model intelligence**: Built on LLMs with billions of parameters
