@@ -6,13 +6,13 @@ tags:
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 
-thumbnail: https://genezio.com/deployment-platform/posts/rag-is-fixing-llms-but-is-it-enough.webp
+thumbnail: https://genezio.com/deployment-platform/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp
 preview: This article explores the evolution of AI agents in customer experience, from their humble beginnings to the current state of the art, and provides insights into how businesses can effectively test, implement, and optimize these systems to gain a competitive edge.
 # meta data start
 description: Learn how autonomous AI agents revolutionize customer experience, delivering personalized support at scale while reducing service costs by 60-80%.
 meta_og_url: "https://genezio.com/deployment-platform/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/rag-is-fixing-llms-but-is-it-enough.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
