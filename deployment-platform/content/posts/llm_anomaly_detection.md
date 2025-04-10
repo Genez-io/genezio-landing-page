@@ -1,6 +1,6 @@
 
 ---
-title: "LLM Hallucination Detection for AI Agents in Customer Service"
+title: "LLM Anomaly Detection: How to Keep AI Responses on Track"
 date: 2025-04-10
 tags:
   - AI
