@@ -1,4 +1,5 @@
 ---
+
  title: "LLM Anomaly Detection: How to Keep AI Responses on Track"
  date: 2025-04-10
  tags:
@@ -18,6 +19,7 @@
  customFooter: "White footer"
  readTime: 5
  url: /blog/llm-anomaly-detection/
+ 
  ---
 
 Large language models (LLMs) don't always behave the way you expect. They can go off-topic, return inaccurate data, or overlook important instructions. Genezio's focus on LLM anomaly detection helps businesses test and monitor AI agents and catch (and address!) those harmful behaviors before they happen with clients.
