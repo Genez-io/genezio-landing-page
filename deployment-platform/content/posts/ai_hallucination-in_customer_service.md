@@ -5,6 +5,7 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
+draft: true
 
 thumbnail: https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
 preview: As a Customer Care Expert, you know how important it is to keep a high standard of customer service. AI hallucination in customer service can seriously hurt the experience you’ve worked hard to build. That’s why it helps to have the right tools in place before things go off track.
