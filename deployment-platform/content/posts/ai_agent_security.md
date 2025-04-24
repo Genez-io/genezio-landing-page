@@ -28,7 +28,7 @@ That's why more and more Customer Care Executives are focusing on how these agen
 
 Also, anecdotal evidence suggests that VCs are especially concerned with AI agent security because they don't want new companies to damage their reputation because of a prompt injection attack.
 
-{{< tweet user="venturetwins" id="1710321733184667985" >}}
+{{< tweet "https://twitter.com/venturetwins/status/1710321733184667985" >}}
 
 So, before thinking about features, it's worth asking: can this agent be trusted to represent your business?
 
