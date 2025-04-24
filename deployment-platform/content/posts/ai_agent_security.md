@@ -28,7 +28,7 @@ That's why more and more Customer Care Executives are focusing on how these agen
 
 Also, anecdotal evidence suggests that VCs are especially concerned with AI agent security because they don't want new companies to damage their reputation because of a prompt injection attack.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">God-tier prompt injection: using the knowledge cutoff date against ChatGPT <a href="https://t.co/m7lDYjD7GP">pic.twitter.com/m7lDYjD7GP</a></p>&mdash; Justine Moore (@venturetwins) <a href="https://twitter.com/venturetwins/status/1710321733184667985?ref_src=twsrc%5Etfw">October 6, 2023</a></blockquote>
+{{< tweet user="venturetwins" id="1710321733184667985" >}}
 
 So, before thinking about features, it's worth asking: can this agent be trusted to represent your business?
 
