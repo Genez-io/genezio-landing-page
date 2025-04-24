@@ -5,6 +5,7 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
+draft: true
 
 thumbnail: https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
