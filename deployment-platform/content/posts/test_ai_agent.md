@@ -1,19 +1,18 @@
 ---
 title: "Test AI Agent Behavior and Accuracy"
-date: 2025-04-24
+date: 2025-05-12
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-draft: true
 
-thumbnail: https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
+thumbnail: https://genezio.com/deployment-platform/posts/ai-agent-performance-v1.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
 # meta data start
 description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
 meta_og_url: "https://genezio.com/deployment-platform/blog/test-ai-agent/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/ai-agent-performance-v1.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -101,6 +100,4 @@ The chatbot (formerly Bing Chat) showed anger and refused to continue a conversa
 
 ## Use Genezio to Test AI Agent Behavior Now 
 
-Customer Care Executives can use Genezio to test AI agent behavior, {{< external-link link="https://genezio.com/deployment-platform/blog/llm-anomaly-detection/" >}}check for anomalies{{< /external-link >}}, and fix issues before they go live. Start testing today and receive your first report in just 24 hours.
-
-{{< external-link link="https://genezio.com/#cta-buttons" >}}Try for free{{< /external-link >}}
+Customer Care Executives can use Genezio to test AI agent behavior, {{< external-link link="https://genezio.com/deployment-platform/blog/llm-anomaly-detection/" >}}check for anomalies{{< /external-link >}}, and fix issues before they go live. {{< external-link link="https://genezio.com/#cta-buttons" >}}Start testing your AI agent today{{< /external-link >}} and receive your first report in just 24 hours. 
