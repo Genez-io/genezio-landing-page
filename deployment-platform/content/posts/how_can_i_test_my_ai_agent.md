@@ -5,15 +5,14 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-draft: true
 
-thumbnail: https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
+thumbnail: https://genezio.com/deployment-platform/posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp
 preview: Testing the effectiveness of your AI agent means placing it in realistic scenarios before it reaches real users. Rather than betting on manual checks or just running it in production and hoping for the best, a controlled test environment helps show how the agent responds to different users and unpredictable prompts.
 # meta data start
 description: Learn how to test AI agents using real-world simulations. Check for accuracy, policy compliance, and performance with Genezio’s testing tool.
 meta_og_url: "https://genezio.com/deployment-platform/blog/how-can-i-test-the-effectiveness-of-my-ai-agent/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
