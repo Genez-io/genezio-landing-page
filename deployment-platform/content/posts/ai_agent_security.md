@@ -1,19 +1,18 @@
 ---
 title: "AI Agent Security: Best Ways to Secure your AI Agent"
-date: 2025-04-24
+date: 2025-05-15
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-draft: true
 
-thumbnail: https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
+thumbnail: https://genezio.com/deployment-platform/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
 # meta data start
 description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
 meta_og_url: "https://genezio.com/deployment-platform/blog/ai-agent-security/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
