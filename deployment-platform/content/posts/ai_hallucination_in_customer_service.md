@@ -1,19 +1,18 @@
 ---
 title: "How Genezio Solves AI Hallucination in Customer Service"
-date: 2025-04-24
+date: 2025-05-15
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-draft: true
 
-thumbnail: https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
+thumbnail: https://genezio.com/deployment-platform/posts/ai-hallucination-in-customer-service-a-solution.webp
 preview: As a Customer Care Expert, you know how important it is to keep a high standard of customer service. AI hallucination in customer service can seriously hurt the experience you’ve worked hard to build. That’s why it helps to have the right tools in place before things go off track.
 # meta data start
 description: AI agents can make mistakes. Learn how Genezio helps you catch those errors for a better customer experience.
 meta_og_url: "https://genezio.com/deployment-platform/blog/ai-hallucination-in-customer-service/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/ai-hallucination-in-customer-service-a-solution.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
