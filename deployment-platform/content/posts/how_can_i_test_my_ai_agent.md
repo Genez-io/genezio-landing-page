@@ -1,6 +1,6 @@
 ---
 title: "How Can I Test the Effectiveness of My AI Agent?"
-date: 2025-04-24
+date: 2025-05-15
 tags:
   - AI
 author: Luis Minvielle
