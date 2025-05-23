@@ -1,18 +1,18 @@
 ---
 title: "Deploy AI Agents: How to Deploy your Agent in Few Steps"
-date: 2025-05-21
+date: 2025-05-23
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp
+thumbnail: https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp
 preview: In this article, we’ll walk you through the process of deploying AI agents with Genezio and explain why regular testing is just as important as deployment to make sure your AI agents deliver in real-world interactions.
 # meta data start
 description: Deploy AI agents with Genezio. Build, test, and monitor behavior in one place. No extra setup needed.
 meta_og_url: "https://genezio.com/deployment-platform/blog/deploy-ai-agents/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
