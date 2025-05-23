@@ -1,16 +1,16 @@
 ---
 title: "Top 3 AI Monitoring Tools in 2025 for Customer Care & Compliance"
-date: 2025-05-21
+date: 2025-05-23
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: https://genezio.com/deployment-platform/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp
+thumbnail: https://genezio.com/deployment-platform/posts/top-3-ai-monitoring-tools-in-2025.webp
 preview: In this article, we’ll look at three of the best AI monitoring tools in 2025 - what they do, who they’re built for, and how they help teams keep their AI agents on track.
 # meta data start
 description: Top AI Monitoring Tools in 2025. Comparing Genezio, Arize, and Fiddler to choose the right solution for customer-facing AI agents.
 meta_og_url: "https://genezio.com/deployment-platform/blog/top-3-ai-monitoring-tools-in-2025/"
-meta_og_image: "https://genezio.com/deployment-platform/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/top-3-ai-monitoring-tools-in-2025.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
