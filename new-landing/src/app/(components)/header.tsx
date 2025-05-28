@@ -54,12 +54,7 @@ export function Header() {
                     height={128}
                   />
                 ) : (
-                  <Image
-                    src="/genezio-logo-dark.svg"
-                    alt="genezio logo"
-                    width={128}
-                    height={128}
-                  />
+                  <Image src="/genezio-logo-dark.svg" alt="genezio logo" width={128} height={128} />
                 )}
               </div>
               <span className="text-xl font-bold text-slate-900 dark:text-white"></span>
@@ -74,12 +69,7 @@ export function Header() {
                 onClick={toggleProducts}
               >
                 Products
-                <svg
-                  className="ml-1 h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -98,9 +88,7 @@ export function Header() {
                       AI Testing Platform
                     </button>
                     <button
-                      onClick={() =>
-                        (window.location.href = "/deployment-platform/")
-                      }
+                      onClick={() => (window.location.href = "/deployment-platform/")}
                       className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 w-full text-left"
                     >
                       Deployment Platform
@@ -109,6 +97,13 @@ export function Header() {
                 </div>
               )}
             </div>
+
+            <button
+              onClick={() => (window.location.href = "/deployment-platform/blog/")}
+              className="text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
+            >
+              Blog
+            </button>
 
             <button
               onClick={scrollToCtaSection}
@@ -145,11 +140,7 @@ export function Header() {
               onClick={toggleMenu}
               className="p-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none"
             >
-              {isMenuOpen ? (
-                <XIcon className="h-6 w-6" />
-              ) : (
-                <MenuIcon className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -165,12 +156,7 @@ export function Header() {
                 className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
               >
                 Products
-                <svg
-                  className="ml-1 h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -188,9 +174,7 @@ export function Header() {
                     AI Testing Platform
                   </button>
                   <button
-                    onClick={() =>
-                      (window.location.href = "/deployment-platform/")
-                    }
+                    onClick={() => (window.location.href = "/deployment-platform/")}
                     className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                   >
                     Deployment Platform
