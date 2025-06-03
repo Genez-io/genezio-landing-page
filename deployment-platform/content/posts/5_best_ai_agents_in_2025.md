@@ -1,18 +1,18 @@
 ---
 title: "5 Best AI Agents in 2025 (and How to Keep Them Reliable)"
-date: 2025-06-02
+date: 2025-06-03
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp
-preview: In this article, we’ll walk you through the process of deploying AI agents with Genezio and explain why regular testing is just as important as deployment to make sure your AI agents deliver in real-world interactions.
+thumbnail: https://genezio.com/deployment-platform/posts/The-5-Best-AI-Agents-in-2025.webp
+preview: In this article, we'll take a look at the 5 best AI agents for 2025 and discuss why testing them is necessary to protect customer trust and satisfaction.
 # meta data start
 description: Discover the 5 best AI agents for customer service in 2025 — including Intercom Fin, Sendbird and Genezio. Learn how to test and monitor AI to avoid costly support mistakes.
 meta_og_url: "https://genezio.com/deployment-platform/blog/5-best-ai-agents-in-2025/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/The-5-Best-AI-Agents-in-2025.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -26,7 +26,7 @@ But while the growth is clear, not everyone is convinced. A 2023 survey found th
 
 This brings us to a point often overlooked: testing. As AI agents become more widespread, it\'s important Customer Care Experts make sure AI systems are working as they should and delivering the service their customers expect.
 
-In this article, we\'ll take a look at the 6 best AI agents for 2025 and discuss why testing them is necessary to protect customer trust and satisfaction.
+In this article, we\'ll take a look at the 5 best AI agents for 2025 and discuss why testing them is necessary to protect customer trust and satisfaction.
 
 ## What are AI Agents?
 
