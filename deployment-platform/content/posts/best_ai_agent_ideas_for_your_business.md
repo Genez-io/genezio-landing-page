@@ -1,18 +1,18 @@
 ---
 title: "The Best AI Agent Ideas for your Business"
-date: 2025-06-02
+date: 2025-06-03
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp
+thumbnail: https://genezio.com/deployment-platform/posts/The-Best-AI-Agent-Ideas-for-Your-Business.webp
 preview: In this article, we'll look at some of the best AI agent ideas for your business and explain how the right AI testing solution can prevent failures and keep your AI agents reliable.
 # meta data start
 description: Discover the best AI agent ideas for your business. Learn how Genezio helps test and monitor AI agents for reliable performance.
 meta_og_url: "https://genezio.com/deployment-platform/blog/best-ai-agent-ideas-for-your-business/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/The-Best-AI-Agent-Ideas-for-Your-Business.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
