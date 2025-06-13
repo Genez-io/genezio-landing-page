@@ -1,18 +1,18 @@
 ---
 title: "Chatbot Testing Without Developers"
-date: 2025-06-12
+date: 2025-06-13
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/The-5-Best-AI-Agents-in-2025.webp
+thumbnail: https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp
 preview: This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users.
 # meta data start
 description: Chatbot testing without developers is easy and free with Genezio’s simulation based evals.
 meta_og_url: "https://genezio.com/deployment-platform/blog/chatbot-testing-without-developers/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/The-5-Best-AI-Agents-in-2025.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -32,7 +32,7 @@ This article will walk you through chatbot testing without developers with Genez
 
 Many companies today deploy chatbots without truly understanding how they will behave once customers start interacting with them. This is especially common when generative AI models are used. While these models can sound intelligent, they're notoriously unpredictable. A bot might give the false discount code, contradict your pricing structure, or respond rudely to a customer---it's happened before, even at major corporations. For example, in 2025, the Virgin Money chatbot thought its own brand name was inappropriate and scolded a client for using the word.
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7286716638916214784" height="692" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+{{< linkedin "https://www.linkedin.com/embed/feed/update/urn:li:share:7286716638916214784" >}}
 
 A single negative chatbot interaction can spark a flood of complaints, go viral on social media, and damage your brand's reputation. Not to mention the potential legal or compliance risks of giving customers incorrect information. That's why frequent chatbot testing without developers is needed now more than ever.
 
