@@ -1,18 +1,18 @@
 ---
 title: "Agent Evaluation: A Framework for Businesses"
-date: 2025-06-12
+date: 2025-06-13
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp
+thumbnail: https://genezio.com/deployment-platform/posts/agent-evaluation-a-framework-for-businesses.webp
 preview: In this article, we break down the main takeaways from the whitepaper and discuss how Genezio puts together the tools and support needed to carry out agent evaluations in real-world business scenarios. 
 # meta data start
 description: Agent evaluations are regulated tests that check the quality of your chatbot and guarantee that AI customer service agents are reliable.
 meta_og_url: "https://genezio.com/deployment-platform/blog/agent-evaluation/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/agent-evaluation-a-framework-for-businesses.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -23,7 +23,7 @@ Business owners need to evaluate agents more than ever before, considering AI-po
 
 Before getting to that answer, business owners and customer care executives need to understand the concept of agent evaluations.
 
-When it comes to AI agents for customer support, it has become clear that it's easy to build a proof of concept, **but incredibly difficult to guarantee high-quality, production-ready results in gen AI.** And that is the central topic of a recent {{< external-link link="https://www.kaggle.com/whitepaper-agent-companion" >}}Kaggle whitepaper{{< /external-link >}} titled "Agent Companion: A Framework for Evaluating LLM Agents." It provides a compelling and structured approach to solving this very problem. It proposes a repeatable, modular framework to assess the behavior and effectiveness of AI agents in {{< external-link link="https://genezio.com/deployment-platform/blog/ai-agent-security/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}customer service{{< /external-link >}} settings.
+When it comes to AI agents for customer support, it has become clear that it's easy to build a proof of concept, **but incredibly difficult to guarantee high-quality, production-ready results in gen AI.** And that is the central topic of a recent {{< external-link link="https://www.kaggle.com/whitepaper-agent-companion" >}}Kaggle whitepaper{{< /external-link >}} titled "Agent Companion: A Framework for Evaluating LLM Agents." It provides a compelling and structured approach to solving this very problem. It proposes a repeatable, modular framework to assess the behavior and effectiveness of AI agents in {{< external-link link="https://genezio.com/deployment-platform/blog/ai-agent-security/" >}}customer service{{< /external-link >}} settings.
 
 In this article, we break down the main takeaways from the whitepaper and discuss how Genezio puts together the tools and support needed to carry out **agent evaluations** in real-world business scenarios.
 
@@ -73,7 +73,7 @@ The Agent Companion framework is a valuable roadmap, but turning it into a worki
 
 And it does so in a way that's accessible for non-technical teams, **so that everyone, from support managers to legal reviewers, can play a role in evaluating AI agents.**
 
-Genezio is a platform designed to run real-world simulations for generative AI agents. It enables teams to test their AI agents before launch and continue monitoring them in production through automated testing in complex scenarios. These evaluations cover functionality, performance, {{< external-link link="https://genezio.com/deployment-platform/blog/ai-agent-security/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}security{{< /external-link >}}, and compliance to guarantee that agents stay aligned with business goals and evolving industry standards.
+Genezio is a platform designed to run real-world simulations for generative AI agents. It enables teams to test their AI agents before launch and continue monitoring them in production through automated testing in complex scenarios. These evaluations cover functionality, performance, {{< external-link link="https://genezio.com/deployment-platform/blog/ai-agent-security/" >}}security{{< /external-link >}}, and compliance to guarantee that agents stay aligned with business goals and evolving industry standards.
 
 Businesses can simulate multiple agents in different regions with Genezio. They can also get detailed reports, either once or on a regular basis, and learn about potential weaknesses and performance gaps.
 
