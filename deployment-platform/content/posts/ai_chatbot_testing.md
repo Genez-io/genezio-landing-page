@@ -1,5 +1,5 @@
 ---
-title: "AI Chatbot Testing: Testing WhatsApp, Voice, and Chatbots in One Place"
+title: "AI Chatbot Testing: Testing WhatsApp, Voice, & Chatbots in One Place"
 date: 2025-06-13
 tags:
   - AI
