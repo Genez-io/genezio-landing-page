@@ -1,18 +1,18 @@
 ---
 title: "AI Chatbot Testing: Testing WhatsApp, Voice, and Chatbots in One Place"
-date: 2025-06-12
+date: 2025-06-13
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp
+thumbnail: https://genezio.com/deployment-platform/posts/ai-chatbot-testing-whatsapp-voice-web.webp
 preview: In this article, we’ll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI. 
 # meta data start
 description: See to it that AI agents act consistently across WhatsApp, voice, and web platforms with Genezio’s AI chatbot testing solution.
 meta_og_url: "https://genezio.com/deployment-platform/blog/ai-chatbot-testing/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/ai-chatbot-testing-whatsapp-voice-web.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -54,9 +54,9 @@ This is why companies need a centralized approach, a unified way to {{< external
 
 Genezio offers a solution especially designed for this AI-first support era. If you're a company using AI chatbots across WhatsApp, voice, and web, Genezio enables you to test them all from a single interface.
 
-The most effective AI chatbot testing is running realistic scenarios that mimic user's actual behaviors rather than ideal customer conditions. Genezio generates a simulation where your bot faces incorrect spellings, sensitive questions, unpredictable input and even malicious user prompts. Genezio also reports common {{< external-link link="https://genezio.com/deployment-platform/blog/llm-anomaly-detection/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}AI anomalies{{< /external-link >}} like hallucinations and prompt injection attacks and tracks how frequently they appear across cases. This way you can be sure you can fully trust your AI agent even under pressure.
+The most effective AI chatbot testing is running realistic scenarios that mimic user's actual behaviors rather than ideal customer conditions. Genezio generates a simulation where your bot faces incorrect spellings, sensitive questions, unpredictable input and even malicious user prompts. Genezio also reports common {{< external-link link="https://genezio.com/deployment-platform/blog/llm-anomaly-detection/" >}}AI anomalies{{< /external-link >}} like hallucinations and prompt injection attacks and tracks how frequently they appear across cases. This way you can be sure you can fully trust your AI agent even under pressure.
 
-Genezio's AI chatbot testing doesn't stop after launching. If you choose to, you can keep monitoring your agent and {{< external-link link="https://genezio.com/deployment-platform/blog/test-ai-agent/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}track behavioral shifts{{< /external-link >}} over time so you can tackle possible problems early on.
+Genezio's AI chatbot testing doesn't stop after launching. If you choose to, you can keep monitoring your agent and {{< external-link link="https://genezio.com/deployment-platform/blog/test-ai-agent/" >}}track behavioral shifts{{< /external-link >}} over time so you can tackle possible problems early on.
 
 ### How Genezio's tool works
 
