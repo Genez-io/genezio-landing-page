@@ -32,8 +32,6 @@ This article will walk you through chatbot testing without developers with Genez
 
 Many companies today deploy chatbots without truly understanding how they will behave once customers start interacting with them. This is especially common when generative AI models are used. While these models can sound intelligent, they're notoriously unpredictable. A bot might give the false discount code, contradict your pricing structure, or respond rudely to a customer---it's happened before, even at major corporations. For example, in 2025, the Virgin Money chatbot thought its own brand name was inappropriate and scolded a client for using the word.
 
-{{< linkedin "https://www.linkedin.com/embed/feed/update/urn:li:share:7286716638916214784" >}}
-
 A single negative chatbot interaction can spark a flood of complaints, go viral on social media, and damage your brand's reputation. Not to mention the potential legal or compliance risks of giving customers incorrect information. That's why frequent chatbot testing without developers is needed now more than ever.
 
 The old way of testing chatbots required heavy involvement from developers. This not only delayed releases but also left non-technical customer experience leaders in the dark. But in reality, they're the ones best equipped to judge if a bot's tone, accuracy, and helpfulness align with the brand.
