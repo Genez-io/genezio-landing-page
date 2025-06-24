@@ -7,7 +7,7 @@ author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
 thumbnail: https://genezio.com/deployment-platform/posts/ai-chatbot-testing-whatsapp-voice-web.webp
-preview: In this article, we’ll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI. 
+preview: In this article, we’ll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI.
 # meta data start
 description: See to it that AI agents act consistently across WhatsApp, voice, and web platforms with Genezio’s AI chatbot testing solution.
 meta_og_url: "https://genezio.com/deployment-platform/blog/ai-chatbot-testing/"
@@ -19,6 +19,8 @@ customFooter: "White footer"
 readTime: 5
 url: /blog/ai-chatbot-testing/
 ---
+
+test
 
 AI chatbots are quickly becoming the first level of assistance for customer service. As businesses race to automate support across platforms like WhatsApp, websites, and voice assistants, the margin for error grows wider---and the cost of those errors more public. As these tools become smarter and more independent, the risks of miscommunication, {{< external-link link="https://genezio.com/deployment-platform/blog/llm-hallucination-detection/" >}}hallucinations{{< /external-link >}}, and brand-damaging errors increase. A {{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2024-07-09-gartner-survey-finds-64-percent-of-customers-would-prefer-that-companies-didnt-use-ai-for-customer-service" >}}Gartner{{< /external-link >}} survey finds 64% of customers would prefer that companies didn't use AI for customer service. This speaks to companies' disregard of AI chatbot testing to ensure consistent and helpful customer support.
 
