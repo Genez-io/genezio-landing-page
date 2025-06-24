@@ -52,9 +52,7 @@ With continuous testing, you simulate a wide range of customer interactions on a
 
 {{< external-link link="https://www.bloomberg.com/news/articles/2025-05-08/klarna-turns-from-ai-to-real-person-customer-service" >}}Klarna{{< /external-link >}} replaced 700 customer service agents with AI, froze hiring and assumed its chatbot could handle two-thirds of support requests. In 2024, CEO Sebastian Siemiatkowski proudly announced a nearly 50% reduction in workforce, largely thanks to AI systems taking over key customer support functions. But customers felt the drop in quality. Klarna reversed course in 2025 and started hiring humans again and promised customers they'd always be able to speak to a real person.
 
-<div style="text-align: center;">
 {{< tweet "https://twitter.com/ashbeauchamp/status/1922096736308490416" >}}
-</div>
 
 The lesson? Scaling AI too fast without proper and continuous testing can hurt your brand. Genezio helps companies avoid this by offering continuous evals for AI agents, no tech skills required, so your chatbot supports customers without risking revenue or reputation.
 
