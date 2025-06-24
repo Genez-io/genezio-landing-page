@@ -20,6 +20,8 @@ readTime: 8
 url: /blog/best-ai-agent-ideas-for-your-business/
 ---
 
+test test test
+
 AI adoption in business {{< external-link link="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250123-3" >}}is growing{{< /external-link >}} because companies want to rely on them. AI agents, like chatbots and virtual assistants, are helping businesses speed up their operations in areas like customer relations. Businesses can now hand over some repetitive tasks---like sorting out support tickets or like answering some frequently-asked queries---to AI agents. Yet, despite the rise of AI in businesses, many customers still aren't fully confident about it.
 
 A recent survey by Omnisend found that {{< external-link link="https://www.omnisend.com/blog/ai-trust-and-data-privacy-ecommerce/" >}}39% of shoppers{{< /external-link >}} abandoned purchases due to poor AI interactions --- which came either from unhelpful chatbots, bad recommendations, or simply because they felt like the technology wasn't working for them. What's more, 48% of shoppers said they'd most like to see improvements in customer service through AI. This shows that while customers are open to AI, it doesn't always meet their expectations, especially in customer service.
@@ -58,7 +60,7 @@ This AI agent tracks how users interact with a website --- such as clicks, scrol
 
 ![Hotjar User Insights](https://genezio.com/deployment-platform/posts/hotjar-user-insights.webp)
 
-The AI agent can then suggest changes, like adjusting CTA placements or fixing confusing navigation. (An ideal AI agent should also make the changes.) It can also run A/B tests on layouts or headlines to see what works better. The risk is that AI might misinterpret user behavior, and recommend changes that don't actually improve engagement. Regular AI testing helps keep it on track, as it makes sure the AI understands user behavior correctly and submits changes *that really work*.
+The AI agent can then suggest changes, like adjusting CTA placements or fixing confusing navigation. (An ideal AI agent should also make the changes.) It can also run A/B tests on layouts or headlines to see what works better. The risk is that AI might misinterpret user behavior, and recommend changes that don't actually improve engagement. Regular AI testing helps keep it on track, as it makes sure the AI understands user behavior correctly and submits changes _that really work_.
 
 ### AI customer support chatbot
 
