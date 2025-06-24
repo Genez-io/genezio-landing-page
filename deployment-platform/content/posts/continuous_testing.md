@@ -1,6 +1,6 @@
 ---
 title: "Continuous Testing for AI Chatbots"
-date: 2025-06-24
+date: 2025-06-23
 tags:
   - AI
 author: Luis Minvielle
