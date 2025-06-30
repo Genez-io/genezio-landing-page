@@ -1,18 +1,18 @@
 ---
 title: "Continuous Testing for AI Chatbots"
-date: 2025-06-23
+date: 2025-06-30
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/The-5-Best-AI-Agents-in-2025.webp
+thumbnail: https://genezio.com/deployment-platform/posts/continuous-testing-for-ai-chatbots.webp
 preview: Instead of testing once during development and hoping for the best, you set up a system that keeps checking how the chatbot performs as users interact with it and as updates roll in.
 # meta data start
 description: Learn how continuous testing with Genezio helps teams monitor chatbot behavior and fix issues fast.
 meta_og_url: "https://genezio.com/deployment-platform/blog/continuous-testing/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/The-5-Best-AI-Agents-in-2025.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/continuous-testing-for-ai-chatbots.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
