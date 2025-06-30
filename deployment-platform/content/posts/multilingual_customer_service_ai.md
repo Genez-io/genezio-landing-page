@@ -1,18 +1,18 @@
 ---
 title: "Multilingual Customer Service: Cost of Multilingual Misfires in AI Customer Service"
-date: 2025-06-23
+date: 2025-06-30
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/agent-evaluation-a-framework-for-businesses.webp
+thumbnail: https://genezio.com/deployment-platform/posts/multilingual-customer-service.webp
 preview: This article will explain why customer support across languages is a necessity and how you can solve this problem through an AI testing tool made by multilingual engineers like Genezio.
 # meta data start
 description: Multilingual Customer Service misfires damage trust. Genezio’s AI evals catch issues across languages—no tech skills required.
 meta_og_url: "https://genezio.com/deployment-platform/blog/multilingual-customer-service-ai/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/agent-evaluation-a-framework-for-businesses.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/multilingual-customer-service.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
