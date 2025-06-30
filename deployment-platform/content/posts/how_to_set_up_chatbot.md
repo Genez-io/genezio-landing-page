@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp
+thumbnail: https://genezio.com/deployment-platform/posts/how-to-set-up-a-chatbot.webp
 preview: Evaluating your chatbot before launch is a business-critical task. And with tools like Genezio, even non-technical staff can run AI evals to make sure your chatbot doesn’t become a liability.
 # meta data start
 description: Learn how to set up a chatbot, test, and evaluate them using Genezio’s simulation evals for high-performance customer service.
 meta_og_url: "https://genezio.com/deployment-platform/blog/how-to-set-up-chatbot/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-set-up-a-chatbot.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
