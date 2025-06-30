@@ -1,6 +1,6 @@
 ---
 title: "Evals for AI Agents: Differences with QA Testing"
-date: 2025-06-23
+date: 2025-06-30
 tags:
   - AI
 author: Luis Minvielle
