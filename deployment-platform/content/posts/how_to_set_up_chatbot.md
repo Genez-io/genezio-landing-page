@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up a Chatbot: What Every CXO Should Know Before Launching a Chatbot"
-date: 2025-06-23
+date: 2025-06-30
 tags:
   - AI
 author: Luis Minvielle
