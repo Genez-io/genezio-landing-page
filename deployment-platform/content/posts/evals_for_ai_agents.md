@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp
+thumbnail: https://genezio.com/deployment-platform/posts/evals-for-ai-agents.webp
 preview: This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users.
 # meta data start
 description: QA testing ensures your chatbot works, but only evals for AI agents can test how it behaves. Learn how to test AI agents with Genezio. 
 meta_og_url: "https://genezio.com/deployment-platform/blog/evals-for-ai-agents/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp"
+meta_og_image: "https://genezio.com/deployment-platform/posts/evals-for-ai-agents.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
