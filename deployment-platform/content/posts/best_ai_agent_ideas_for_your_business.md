@@ -58,7 +58,7 @@ This AI agent tracks how users interact with a website --- such as clicks, scrol
 
 ![Hotjar User Insights](https://genezio.com/deployment-platform/posts/hotjar-user-insights.webp)
 
-The AI agent can then suggest changes, like adjusting CTA placements or fixing confusing navigation. (An ideal AI agent should also make the changes.) It can also run A/B tests on layouts or headlines to see what works better. The risk is that AI might misinterpret user behavior, and recommend changes that don't actually improve engagement. Regular AI testing helps keep it on track, as it makes sure the AI understands user behavior correctly and submits changes *that really work*.
+The AI agent can then suggest changes, like adjusting CTA placements or fixing confusing navigation. (An ideal AI agent should also make the changes.) It can also run A/B tests on layouts or headlines to see what works better. The risk is that AI might misinterpret user behavior, and recommend changes that don't actually improve engagement. Regular AI testing helps keep it on track, as it makes sure the AI understands user behavior correctly and submits changes _that really work_.
 
 ### AI customer support chatbot
 
