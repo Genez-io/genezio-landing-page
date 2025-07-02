@@ -34,7 +34,7 @@
           {{ if .Params.tags }}
           <div class="mb-2 pb-1">
             {{ range .Params.tags }}
-            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="/tags/{{ . | urlize }}/">{{ . }}</a>
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>
             {{ end }}
           </div>
           {{ end }}

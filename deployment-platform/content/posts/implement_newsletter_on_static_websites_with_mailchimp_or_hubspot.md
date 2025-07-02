@@ -252,6 +252,6 @@ Congratulations! 🥳
 
 You've just seamlessly integrated newsletter functionality without the need to grapple with the complexities of setting up and hosting your backend.
 
-I hope you enjoyed this tutorial and I encourage you to check out our other [tutorials](https://genezio.com/tags/tutorials/) for more tips and tricks on improving your software engineering skills. 🥷 💻
+I hope you enjoyed this tutorial and I encourage you to check out our other [tutorials](https://genezio.com/blog/tags/tutorials/) for more tips and tricks on improving your software engineering skills. 🥷 💻
 
 Also, I invite you to check our examples on {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/">}}GitHub{{< /external-link >}}.

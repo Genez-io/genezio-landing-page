@@ -13,7 +13,7 @@
             {{ if .Params.tags }}
             <div class="mb-2 pb-1">
             {{ range .Params.tags }}
-            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="/tags/{{ . | urlize }}/">{{ . }}</a>
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>
             {{ end }}
           </div>
           {{ end }}
@@ -274,7 +274,7 @@
           {{ if .Params.tags }}
           <div class="mb-2 pb-1">
             {{ range .Params.tags }}
-            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="/tags/{{ . | urlize }}/">{{ . }}</a>
+            <a class="text-decoration-none blogGradientText fw-bold" style="font-size: 12px;" href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>
             {{ end }}
           </div>
           {{ end }}
@@ -343,7 +343,7 @@
               <div class="card-body p-4">
                 {{ with .Params.tags }}
                   {{ range . }}
-                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                   {{ end }}
                 {{ end }}
                 <h4 class="text-black mb-0 mt-2 pt-1" style="min-height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>
@@ -366,7 +366,7 @@
               <div class="card-body p-4">
                 {{ with .Params.tags }}
                   {{ range . }}
-                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a class="text-decoration-none fw-bold blogGradientText" style="font-size: 12px" href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                   {{ end }}
                 {{ end }}
                 <h4 class="text-black mb-0 mt-2 pt-1" style="height: 64px; font-size:18px;"><a class="text-decoration-none text-black" href="{{ .Permalink }}">{{ .Title }}</a></h4>

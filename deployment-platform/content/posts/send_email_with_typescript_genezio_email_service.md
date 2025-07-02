@@ -235,7 +235,7 @@ A use case for this can be sending a newsletter to your customer at a specific t
 
 In conclusion, after following the steps outlined in this guide to integrate the genezio Email Service into your web application, you will enhance your project's reliability and functionality, ensuring a smooth and efficient communication flow.
 
-I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genez.io/tags/tutorials/" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
+I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genezio.com/blog/tags/tutorials/" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
 
 Also, I invite you to check your examples from {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main" >}}GitHub{{< /external-link >}}.
 
