@@ -84,7 +84,7 @@ jobs:
       - name: Copy Deployment Platform Landing Page to public
         run: |
           mkdir -p public/blog/
-          cp -r deployment-platform/public/blog/* public/blog/
+          cp -r deployment-platform/public/* public/blog/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend
