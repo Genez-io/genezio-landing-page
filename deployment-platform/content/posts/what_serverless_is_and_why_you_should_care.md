@@ -16,7 +16,7 @@ url: "/blog/what-serverless-is/"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 4
-url: /blog/what-serverless-is
+url: /what-serverless-is
 ---
 
 Serverless is an incredibly powerful option for many development situations. But what exactly is it? And how can you leverage it to great success today – with as little friction as possible?

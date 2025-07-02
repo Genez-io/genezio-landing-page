@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/images/bware-labs.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/bwarelabs-case-study/
+url: /bwarelabs-case-study/
 ---
 
 DeployApps is a full-stack cloud platform that allows developers to launch and deploy their projects in minutes. It’s {{< external-link link="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/" >}}helping entrepreneurs{{< /external-link >}} and companies alike with its speed and ease of use. One of the latest success stories comes from the web3 firm {{< external-link link="https://bwarelabs.com/" >}}BwareLabs{{< /external-link >}}, which had to deal with plenty of DevOps resources to monitor their various blockchain instances.

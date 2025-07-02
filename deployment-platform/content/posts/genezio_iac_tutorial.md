@@ -13,7 +13,7 @@ meta_og_image: "https://genezio.com/images/boost_your_productivity.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/genezio-single-click-deployments/
+url: /genezio-single-click-deployments/
 ---
 
 # Streamline Your Development with DeployApps’s Enhanced YAML Configuration

@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/posts/top-3-ai-monitoring-tools-in-2025.webp
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/top-3-ai-monitoring-tools-in-2025/
+url: /top-3-ai-monitoring-tools-in-2025/
 ---
 
 Businesses will need AI monitoring tools because AI agents will probably be used in almost every line of business. For example, banks could use them to handle account questions. Retailers could rely on them to help customers track orders or find products. Healthcare companies might use them to answer basic patient queries. Even HR teams could use them to guide employees through internal tools. Some companies have already adopted these workflows.

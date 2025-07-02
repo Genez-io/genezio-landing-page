@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/chatbots-to-autonomous-ai-agents-in-cu
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 9
-url: /blog/chatbots-to-autonomous-ai-agents-in-customer-experience/
+url: /chatbots-to-autonomous-ai-agents-in-customer-experience/
 ---
 
 The landscape of customer experience has undergone a dramatic transformation over the past decade. What began as simple rule-based chatbots offering basic responses to predefined queries has evolved into sophisticated autonomous AI agents capable of understanding context, learning from interactions, and providing personalized solutions in real-time. This evolution represents not just a technological advancement but a fundamental shift in how businesses engage with their customers.

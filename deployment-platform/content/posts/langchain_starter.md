@@ -13,7 +13,7 @@ meta_og_image: "https://genezio.com/images/custom_data_llm.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
-url: /blog/langchain-genezio-project
+url: /langchain-genezio-project
 ---
 
 The last couple of months brought a new wave of keywords and concepts that are concerning every software developer out there.

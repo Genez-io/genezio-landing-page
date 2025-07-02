@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/kubecon.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 2
-url: /blog/kubecon-cloudnativecon-paris/
+url: /kubecon-cloudnativecon-paris/
 ---
 
 The Genezio team is still buzzing after an incredible week at {{< external-link link="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/" >}}KubeCon + CloudNativeCon Europe 2024{{< /external-link >}}! This huge gathering of open-source enthusiasts, amazing products, and software engineers was an opportunity to connect, learn, and share our passion for cloud development.

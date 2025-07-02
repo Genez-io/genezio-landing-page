@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/express-frontend-genezio.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 20
-url: /blog/add-frontend-express/
+url: /add-frontend-express/
 ---
 
 In this short guide, you’ll learn how to add a frontend to your Express.js app with DeployApps Cloud in a few easy steps.

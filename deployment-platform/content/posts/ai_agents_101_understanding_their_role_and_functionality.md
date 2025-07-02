@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/genezioai101.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/understanding-ai-agents-101/
+url: /understanding-ai-agents-101/
 ---
 
 In today's rapidly evolving technological landscape, **artificial intelligence and intelligent agents** have moved from science fiction to practical business tools. Whether you're a developer looking to integrate AI capabilities into your applications or a business owner seeking to leverage automation for competitive advantage, understanding **AI agents** is becoming increasingly critical.

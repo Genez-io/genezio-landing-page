@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/ai-agent-security-best-ways-to-secure-
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/ai-agent-security/
+url: /ai-agent-security/
 ---
 
 For businesses, AI agent security is focused on making sure an AI agent behaves the way they expect, and that it can't be jailbroken easily with a few prompts. It involves outsourcing or setting up a secure infrastructure, testing how they behave, spotting when they make mistakes, and stopping them from saying or doing something that could lead to real problems—like leaking private data, giving questionable advice, or falling for prompt tricks.

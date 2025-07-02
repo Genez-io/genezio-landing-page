@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/ferretdb-genezio.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/mongo_db_databases/
+url: /mongo_db_databases/
 ---
 
 Hey developers! We’ve got some exciting news—DeployApps now supports MongoDB Atlas databases! As a developer, I know how important it is to have a reliable, scalable database, and now you can easily set up and manage NoSQL databases right from the DeployApps platform.

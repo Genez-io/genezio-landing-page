@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/django-genezio.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/getting-started-django-web-app/
+url: /getting-started-django-web-app/
 ---
 
 ## Introduction

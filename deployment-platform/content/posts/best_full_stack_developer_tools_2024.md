@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/full-stack-developer-tools.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/best-full-stack-developer-tools/
+url: /best-full-stack-developer-tools/
 ---
 
 Full-stack development is no walk in the park.

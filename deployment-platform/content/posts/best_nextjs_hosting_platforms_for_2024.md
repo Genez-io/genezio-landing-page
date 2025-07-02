@@ -16,7 +16,7 @@ meta_og_title: "Best Nextjs Hosting Platforms for 2024"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/nextj-hosting-provider/
+url: /nextj-hosting-provider/
 ---
 
 Next.js has quickly become a go-to choice for developers, powering a powerhouse of web applications across the internet.

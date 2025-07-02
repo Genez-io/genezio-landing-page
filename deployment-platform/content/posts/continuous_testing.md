@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/continuous-testing-for-ai-chatbots.web
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/continuous-testing/
+url: /continuous-testing/
 ---
 
 Customer service chatbots that promise 24/7 availability, instant responses, and reduced operational costs seem like an ideal situation for both the customer and your business. Even so, a 2024 {{< external-link link="https://go.callvu.com/hubfs/eGuides/AI%20in%20Customer%20Research%20FINAL%2004302024.pdf" >}}Callvu{{< /external-link >}} survey found that 81% of respondents would wait to speak with a live agent for at least a few minutes, versus engaging with an AI assistant immediately. This means that, if you want to incorporate a chatbot as part of your customer experience team, you need to make sure it works exceptionally well.

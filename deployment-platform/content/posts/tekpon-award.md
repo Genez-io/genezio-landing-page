@@ -16,7 +16,7 @@ meta_og_title: "DeployApps at Tekpon Awards 2024"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 3
-url: /blog/genezio-at-tekpon-awards-2024/
+url: /genezio-at-tekpon-awards-2024/
 ---
 
 We are thrilled to announce that DeployApps has been recognized at the prestigious Tekpon Awards 2024, securing two significant accolades: **Top Innovator 2024** and **Founder of the Year**, received by our Founder and CEO, Andrei Pitiș. This recognition highlights our commitment to revolutionizing software development and our dedication to innovation as a core value of DeployApps.

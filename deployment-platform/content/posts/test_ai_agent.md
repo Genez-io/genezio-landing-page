@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/ai-agent-performance-v1.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/test-ai-agent/
+url: /test-ai-agent/
 ---
 
 AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios. It is easy to set up, and it runs as often as you need to so you can fine-tune your agents.

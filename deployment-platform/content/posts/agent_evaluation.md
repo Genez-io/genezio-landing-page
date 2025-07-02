@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/agent-evaluation-a-framework-for-busin
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/agent-evaluation/
+url: /agent-evaluation/
 ---
 Business owners need to evaluate agents more than ever before, considering AI-powered customer service keeps getting more complicated and accepted. Companies across industries are integrating AI agents to handle everything from simple FAQs to nuanced customer complaints. But how can a company be certain that these agents aren't hurting the customer experience or, worse, the company's reputation, but rather improving it?
 

@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/does-full-stack-include-devops/
+url: /does-full-stack-include-devops/
 ---
 
 When it comes to building apps, you’ll often hear about “full-stack” and, rightfully so, wonder if it includes “DevOps.” But not really. DevOps, the bit that would help a developer deploy their newly-coded app, is not part of the full-stack skill set. Full-stack is about building the app itself from start to finish, while DevOps focuses on making sure it works properly once it's built and running. And, if they know with which platforms to work with, developers are not expected to master the two.

@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/trend-analyzer.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/ai-trend-tracker-genezio/
+url: /ai-trend-tracker-genezio/
 ---
 
 This year has started on a rollercoaster, tech included. Incredible news appear every second day, the AI industry is on fire and the benchmarks are constantly moving. Funny enough, the buzz is contained in the online world while the day to day has more predictable shifts.

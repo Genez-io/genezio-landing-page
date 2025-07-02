@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/template-tutorials.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/how-to-deploy-my-app/
+url: /how-to-deploy-my-app/
 ---
 
 Hello, I’m Cristi Miloiu and I will show you the process of deploying your app using DeployApps, a powerful platform designed to simplify app deployment.

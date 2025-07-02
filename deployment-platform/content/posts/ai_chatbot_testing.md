@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/ai-chatbot-testing-whatsapp-voice-web.
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/ai-chatbot-testing/
+url: /ai-chatbot-testing/
 ---
 
 AI chatbots are quickly becoming the first level of assistance for customer service. As businesses race to automate support across platforms like WhatsApp, websites, and voice assistants, the margin for error grows wider---and the cost of those errors more public. As these tools become smarter and more independent, the risks of miscommunication, {{< external-link link="<https://genezio.com/blog/llm-hallucination-detection/>" >}}hallucinations{{< /external-link >}}, and brand-damaging errors increase. A {{< external-link link="<https://www.gartner.com/en/newsroom/press-releases/2024-07-09-gartner-survey-finds-64-percent-of-customers-would-prefer-that-companies-didnt-use-ai-for-customer-service>" >}}Gartner{{< /external-link >}} survey finds 64% of customers would prefer that companies didn't use AI for customer service. This speaks to companies' disregard of AI chatbot testing to ensure consistent and helpful customer support.

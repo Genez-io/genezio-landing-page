@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/full-stack-project-ideas.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/full-stack-project-ideas/
+url: /full-stack-project-ideas/
 ---
 
 Let's cut to the chase.

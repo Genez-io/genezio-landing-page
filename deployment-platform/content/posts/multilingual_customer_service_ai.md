@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/multilingual-customer-service.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /blog/multilingual-customer-service-ai/
+url: /multilingual-customer-service-ai/
 ---
 
 As AI agents become a standard part of {{< external-link link="https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}customer service{{< /external-link >}} operations, one glaring problem is increasingly coming to the surface: they often fail when communicating in languages not commonly fed into its training data. This flaw is just as much a customer experience challenge ---you want to be able to help customers that can't speak your language--- as a security issue. A {{< external-link link="https://csa-research.com/Blogs-Events/CSA-in-the-Media/Press-Releases/Consumers-Prefer-their-Own-Language#:~:text=(July%207%2C%202020)%20%E2%80%93,from%20websites%20in%20other%20languages." >}}CSA{{< /external-link >}} study found that 76% of online shoppers prefer to buy products with information in their native language, and 40% will never buy from websites in other languages. Despite this, many AI agents are developed, trained, and tested almost exclusively in English.

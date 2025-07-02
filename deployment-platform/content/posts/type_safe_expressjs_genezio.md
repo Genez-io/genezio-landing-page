@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/express.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 13
-url: /blog/express-genezio-easy-error-free-api-management/
+url: /express-genezio-easy-error-free-api-management/
 ---
 
 Maintaining an API across multiple clients can be a tedious task. Some common hurdles are encountered by both backend and frontend software engineers:

@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/What-Are-the-Benefits-of-Using-AI-in-C
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/what-are-the-benefits-of-using-ai-in-customer-service/
+url: /what-are-the-benefits-of-using-ai-in-customer-service/
 ---
 
 

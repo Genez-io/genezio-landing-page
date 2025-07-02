@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/ferretdb-genezio.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 14
-url: /blog/use-ferretdb-with-genezio/
+url: /use-ferretdb-with-genezio/
 ---
 
 **FerretDB** is an **open-source alternative** to **MongoDB** that allows you to **use MongoDB drivers seamlessly** with a **PostgreSQL** as the database backend. It acts like a proxy that understands **the MongoDB wire protocol** and translates the requests to **SQL queries** that are executed on the **PostgreSQL** database.

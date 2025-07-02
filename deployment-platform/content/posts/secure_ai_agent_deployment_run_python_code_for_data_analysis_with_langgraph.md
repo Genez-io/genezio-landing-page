@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/langgraph.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/data-analyst-agent-langgraph-genezio/
+url: /data-analyst-agent-langgraph-genezio/
 ---
 
 ## Introduction

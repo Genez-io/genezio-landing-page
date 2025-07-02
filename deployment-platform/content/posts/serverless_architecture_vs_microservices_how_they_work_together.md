@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/serverlessvsmicroservices.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/serverless-architecture-vs-microservices/
+url: /serverless-architecture-vs-microservices/
 ---
 
 The main difference between serverless architecture vs microservices is that they conform to different moments of a webapp’s existence. Actually, both can mix well, if the platform allows for it. Many developers know this, and are turning to serverless architecture and microservices so they can deploy apps and run them without depending on monolithic codebases. On a 2023 Gartner report, {{< external-link link="https://www.gartner.com/peer-community/oneminuteinsights/omi-microservices-architecture-have-engineering-organizations-found-success-u6b" >}}74% of surveyed organizations{{< /external-link >}} were already using microservices, and the global serverless market is projected to hit {{< external-link link="https://www.marketsandmarkets.com/Market-Reports/serverless-architecture-market-64917099.html" >}}$21.1 billion{{< /external-link >}} by 2026. It’s clear that these practices are increasingly popular choices in contemporary app development.

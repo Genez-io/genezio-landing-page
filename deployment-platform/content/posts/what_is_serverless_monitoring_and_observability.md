@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/what_is_serverless_security.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/serverless-monitoring-observability/
+url: /serverless-monitoring-observability/
 ---
 
 Research shows that fixing bugs is a developer’s {{< external-link link="https://www.businesswire.com/news/home/20210216005484/en/Rollbar-Research-Shows-That-Traditional-Error-Monitoring-Is-Missing-the-Mark#:~:text=Nearly%20half%20(48.3%25)%20of,painful%20aspect%20of%20their%20work." >}}top challenge{{< /external-link >}}, with 88% of developers complaining that traditional error monitoring falls short. Serverless and functions architecture help deal with some of these modern monitoring challenges. Serverless technology simplifies building software, and debugging its small instances is more convenient than debugging a cluttered monolithic app with a cumbersome codebase. It’s easier to find and debug a bottleneck in a simple function than in a gigantic block of code.

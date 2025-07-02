@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/how-to-set-up-a-chatbot.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/how-to-set-up-chatbot/
+url: /how-to-set-up-chatbot/
 ---
 
 Anyone who's worked with generative AI knows that turning an idea into a quick prototype is relatively simple, but delivering consistent, high-quality results at production scale is a much bigger challenge. Why? Because not every chatbot is created---or tested---equally.

@@ -20,7 +20,7 @@ meta_og_image: "https://genezio.com/images/remix.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/deploy-remix-app-serverless/
+url: /deploy-remix-app-serverless/
 ---
 
 **Deploy Remix apps seamlessly with DeployApps. Serverless, autoscaling, and optimized performance. Get started for free today!**

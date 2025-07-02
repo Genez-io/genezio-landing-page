@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/ai-hallucination-in-customer-service-a
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /blog/ai-hallucination-in-customer-service/
+url: /ai-hallucination-in-customer-service/
 ---
 
 AI hallucination is quickly becoming a {{< external-link link="<https://www.aporia.com/survey-2024/#survey>" >}}serious concern{{< /external-link >}} for Customer Care teams. As more companies rely on AI to handle support conversations, the risk of these systems giving wrong or irrelevant answers is growing. And customers are noticing.

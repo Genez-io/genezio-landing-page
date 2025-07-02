@@ -19,7 +19,7 @@ meta_og_image: "https://genezio.com/images/openai-flask.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/build-chatgpt-chatbot-flask/
+url: /build-chatgpt-chatbot-flask/
 ---
 
 Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a **ChatGPT-powered chat app using Flask**, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with **DeployApps**, a powerful cloud deployment platform.

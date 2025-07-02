@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/rag.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog//deploy-smarter-not-harder-how-genezio/
+url: //deploy-smarter-not-harder-how-genezio/
 ---
 
 Whether you’re an **ML engineer**, a **DevOps professional**, or a **Project Manager** looking to improve collaboration with clients, this article will provide insights and a clear understanding of how {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} can transform your deployment workflow.

@@ -16,7 +16,7 @@ meta_og_image: "https://genezio.com/images/streamlit.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/streamlit/
+url: /streamlit/
 ---
 
 # DeployApps has Streamlit Support: Simplified AI Prototyping and Interactive Dashboards

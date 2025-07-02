@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/firebase-alternatives.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/firebase-alternatives
+url: /firebase-alternatives
 ---
 
 Firebase is awesome, no doubt.

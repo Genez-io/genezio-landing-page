@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/evals-for-ai-agents.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/evals-for-ai-agents/
+url: /evals-for-ai-agents/
 ---
 
 According to a study by {{< external-link link="https://www.pwc.com/us/en/services/consulting/library/consumer-intelligence-series/future-of-customer-experience.html" >}}PWC{{< /external-link >}}, 73% of customers say that a positive experience is key to influencing brand loyalty, while 32% say they would walk away from a brand they love after just one bad experience. As more companies rely on generative AI chatbots to power customer care, it's important to ensure a consistent, safe, and high-quality experience without human intervention. Yet, there's a dangerous misconception floating around: that traditional QA testing is enough to guarantee chatbot performance.

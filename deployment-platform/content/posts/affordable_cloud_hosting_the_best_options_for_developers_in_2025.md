@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/images/genezioandautomation.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/affordable-cloud-hosting
+url: /affordable-cloud-hosting
 ---
 
 Cloud hosting can be affordable—until it’s {{< external-link link="https://www.techradar.com/pro/cloud-bills-are-rising-for-businesses-of-all-sizes" >}}suddenly not{{< /external-link >}}. Sure thing: Its affordability (a nicer way of saying that it’s cheap, as in, it doesn’t cost much money) is built into how the providers pack and sell it. Developers run applications and websites on virtual servers, which they simply rent from a cloud provider. So, the provider made the bigger purchase and now offers you resources for a dollar's worth. Given how, in some cases, they’re renting out just a tiny fraction of their computing capacity, the cloud model certainly comes off like a model with cheap fees.

@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/ai-mistakes.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/common-mistakes-ai-agents-make/
+url: /common-mistakes-ai-agents-make/
 ---
 
 The adoption of large language models (LLMs) for customer support has revolutionized the way users interact with companies. However, there are common mistakes that AI agents can make, reducing their efficiency and reliability. Here are some frequently encountered errors:

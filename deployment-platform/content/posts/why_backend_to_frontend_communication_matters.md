@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/communicationbreakdown.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-# url: /blog/express-genezio-easy-error-free-api-management/
+# url: /express-genezio-easy-error-free-api-management/
 ---
 
 One of the most difficult parts of developing a service is managing the sheer number of connected parts. With so many people, different solutions, different needs, and even different modalities in competition, the management and process of connecting these services can often be a major headache for developers.

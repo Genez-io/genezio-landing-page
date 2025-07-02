@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/top_9_serverless_function_faas_providers
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/best-serverless-faas-providers/
+url: /best-serverless-faas-providers/
 ---
 
 Startups choose serverless or FaaS because it’s affordable, it’s easy to set up, and it scales. Yet, unfortunately, choosing the wrong serverless provider can be expensive and nerve-wracking. For example, a company {{< external-link link="https://insights.project-a.com/we-cut-our-aws-bill-by-65-after-moving-to-lambda-part-2-heres-how-we-did-it/" >}}slashed its AWS bill{{< /external-link >}} from around $2,200 to $773 per month by switching from AWS Fargate — AWS’s serverless solution — to a FaaS module.

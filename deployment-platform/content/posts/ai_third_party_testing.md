@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/ai-third-party-testing.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/ai-third-party-testing/
+url: /ai-third-party-testing/
 ---
 
 # AI Third-Party Testing: Why Independent Testing Matters for AI Agents

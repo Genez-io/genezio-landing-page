@@ -1,10 +1,10 @@
 ---
 title: "Blog"
 date: 2019-02-24
-url: "/blog"
+url: "/"
 description: "Explore the DeployApps blog for the latest insights, tutorials, and news on full-stack development, serverless technologies, and more"
 customHeader: "White header"
 customFooter: "White header"
 ---
 
-# Read our blog to find out more about..
+# Read our blog to find out more about

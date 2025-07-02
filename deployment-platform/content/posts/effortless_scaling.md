@@ -13,7 +13,7 @@ meta_og_image: "https://genezio.com/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/effortless-scaling-genezio-handles-growth/
+url: /effortless-scaling-genezio-handles-growth/
 ---
 
 The modern web thrives on efficiency and effectiveness – the difference between being somewhat efficient and very efficient can be fundamentally impactful to business success, with even small gaps adding to major business opportunities.

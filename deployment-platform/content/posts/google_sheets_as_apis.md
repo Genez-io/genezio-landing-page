@@ -13,7 +13,7 @@ meta_og_image: "https://genezio.com/images/google-sheets.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
-url: /blog/google-sheets-as-apis
+url: /google-sheets-as-apis
 ---
 
 Accessing Google Sheets data programmatically can be essential for server-side applications that need to read or manipulate spreadsheet data without human interaction. Whether you're automating reports, synchronizing data, or managing inventory systems, accessing Google Sheets through a Service Account provides a secure and efficient solution for backend environments.

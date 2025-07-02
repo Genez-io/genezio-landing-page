@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/nextj-hosting-provider.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/ai-agent-tools/
+url: /ai-agent-tools/
 ---
 
 AI agent tools make possible the creation of autonomous AI agents—software entities that can and act on their own and undertake some step-by-step tasks, like researching for a paper. The AI agent market, which is estimated at {{< external-link link="https://www.grandviewresearch.com/industry-analysis/ai-agents-market-report" >}}$5.4 billion{{< /external-link >}} in 2024, is being pushed by use cases such as self-service customer experiences, or even crypto trading agents.

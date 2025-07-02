@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/python-support.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/genezio-python-support/
+url: /genezio-python-support/
 ---
 
 We’re thrilled to announce that {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} now fully supports deploying Python popular frameworks like **Django**, **Flask**, **FastAPI**. With built-in **WSGI** and **ASGI** compatibility, DeployApps makes it effortless to develop Python applications across a variety of use cases, from web apps to real-time APIs and serverless solutions.

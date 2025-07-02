@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/how-can-i-test-the-effectiveness-of-my
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /blog/how-can-i-test-the-effectiveness-of-my-ai-agent/
+url: /how-can-i-test-the-effectiveness-of-my-ai-agent/
 ---
 
 Some AI agents still miss the mark. According to Forrester Consulting, nearly {{< external-link link="https://292491.fs1.hubspotusercontent-na1.net/hubfs/292491/Reports/Forrester%20Chatbot%20Report-Cyara%20Opportunity%20Snapshot_final-Jan%202023.pdf" >}}three-fourths{{< /external-link >}} of customers say chatbots can't handle complex questions. Over 60% say they often fail to understand what they're asking for. And when that happens, people leave. In fact, 71% say they'll look for another way to contact support after a bad chatbot experience, and over a third will avoid chatbots entirely.

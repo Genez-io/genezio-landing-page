@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/rag-is-fixing-llms-but-is-it-enough.we
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 9
-url: /blog/retrieval-augmented-generation-is-fixing-llm/
+url: /retrieval-augmented-generation-is-fixing-llm/
 ---
 
 # Retrieval-Augmented Generation (RAG): Transforming Large Language Models

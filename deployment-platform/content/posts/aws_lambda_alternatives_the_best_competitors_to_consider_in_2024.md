@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/aws-lambda-alternatives.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 15
-url: /blog/aws-lambda-alternatives/
+url: /aws-lambda-alternatives/
 ---
 
 Alright, let's have a heart-to-heart.

@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/llm-anomaly-detection-how-to-keep-ai-r
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/llm-anomaly-detection/
+url: /llm-anomaly-detection/
 ---
 
 Large language models (LLMs) don't always behave the way you expect. They can go off-topic, return inaccurate data, or overlook important instructions. Genezio's focus on LLM anomaly detection helps businesses test and monitor AI agents and catch (and address!) those harmful behaviors before they happen with clients.

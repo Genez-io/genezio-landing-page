@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/chatbot-testing-without-developers.web
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/chatbot-testing-without-developers/
+url: /chatbot-testing-without-developers/
 ---
 
 While {{< external-link link="<https://genezio.com/blog/understanding-ai-agents-101/>" >}}gen AI chatbots{{< /external-link >}} are becoming more frequent in {{< external-link link="<https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/>" >}}customer service{{< /external-link >}} areas, the risks and controversies many of these branded chatbots face rise exponentially. According to Salesforce, customer trust fell by 72% in 2024 compared to the year before, while 43% of customers say they would stop buying from a brand after a poor customer service experience. This should serve as a warning sign to all CXOs who are entrusting the face of their customer service experience to unpredictable technology such as AI chatbots. It emphasizes the need for more robust and more frequent {{< external-link link="<https://genezio.com/blog/ai-third-party-testing/>" >}}independent evals{{< /external-link >}} to monitor the agents

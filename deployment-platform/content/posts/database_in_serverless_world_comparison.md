@@ -1,6 +1,6 @@
 ---
 title: "Comparison Between Databases in the Serverless World"
-url: /blog/database-in-serverless-world-comparison/
+url: /database-in-serverless-world-comparison/
 date: 2023-07-20
 tags:
   - Learning

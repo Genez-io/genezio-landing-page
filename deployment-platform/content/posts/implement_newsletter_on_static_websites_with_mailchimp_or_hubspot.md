@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/implementing_newsletter_section.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/implement-newsletter-section/
+url: /implement-newsletter-section/
 ---
 
 Hey everyone! I'm Tudor, and I'm part of the DeployApps development team. Lately, I've been on a mission to find the easiest way to add a newsletter section to The Bucharest Hackathon website – it's gonna be a cool {{< external-link link="https://thebucharesthackathon.com/" >}}hackathon{{< /external-link >}} taking place in Bucharest.

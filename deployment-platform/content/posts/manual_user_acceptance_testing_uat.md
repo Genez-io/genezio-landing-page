@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/posts/uat-slows-down-chatbot-launches.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/manual-user-acceptance-testing-uat/
+url: /manual-user-acceptance-testing-uat/
 ---
 
 Launching an AI chatbot for your business often feels like a marathon. Company executives are already calling it a complicated matter from a technical standpoint. In a recent survey conducted by an automation vendor, almost nine out of ten respondents said that their companies {{< external-link link="https://tray.ai/press/survey-86-percent-of-enterprises-require-tech-stack-upgrades-to-deploy-ai-agents" >}}would need to upgrade their stack{{< /external-link >}} to deploy AI agents.

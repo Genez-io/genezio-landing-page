@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/ai-agent-examples/
+url: /ai-agent-examples/
 ---
 
 What was once a futuristic concept—AIs making real decisions and automating complex tasks independently—is now our reality. “AI agents” is the latest buzzword you may have seen floating around 𝕏 and such, and while many people swear they have the most advanced AI agents, a lot of them either are a downright sham. But the AI agents market is, in fact, developing rapidly, with a {{< external-link link="https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html" >}}projection{{< /external-link >}} to grow from USD 5.1 billion in 2024 to USD 47.1 billion by 2030.

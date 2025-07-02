@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/metamask.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 13
-# url: /blog/metamask-genezio-login/
+# url: /metamask-genezio-login/
 ---
 
 Have you ever wondered what happens when you click that "Login with MetaMask" button on a web app?

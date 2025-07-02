@@ -16,7 +16,7 @@ meta_og_title: "Serverless Computing: When to Go Serverless?"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-# url: /blog/serverless-genezio-project
+# url: /serverless-genezio-project
 ---
 
 Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption: {{< external-link link="https://www.datadoghq.com/state-of-serverless/" >}}More than half{{< /external-link >}} of all organizations running through the three major cloud vendors had already adopted serverless models.

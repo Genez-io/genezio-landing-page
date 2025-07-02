@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/mern.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/deploy-mern-application
+url: /deploy-mern-application
 ---
 
 Deploying a MERN (MongoDB, Express.js, React.js, Node.js) application can often feel complex and time-consuming, especially for developers looking for a streamlined solution. In this article, I present a solution for anyone who wants to quickly deploy a fully functional MERN app without diving into the intricacies of manual setup. With just one click, you can have your app live and ready to use—let’s get started!

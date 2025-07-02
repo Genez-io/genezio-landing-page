@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/quality-monitoring-software.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /blog/quality-monitoring-software/
+url: /quality-monitoring-software/
 ---
 
 AI agents are becoming part of daily life in customer support. They can answer questions, handle simple requests, and take care of routine tasks. According to a 2024 study by Metrigy, {{< external-link link="https://metrigy.com/putting-the-core-in-place-for-ai-excellence/" >}}nearly half of companies{{< /external-link >}} already use AI in customer service, and another 38% plan to start within the year.

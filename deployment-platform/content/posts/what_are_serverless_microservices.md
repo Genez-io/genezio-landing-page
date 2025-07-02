@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/what_are_microservices.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/serverless-microservices/
+url: /serverless-microservices/
 ---
 
 As companies and the world become {{< external-link link="https://www.microsoft.com/en-us/microsoft-365/business-insights-ideas/resources/what-is-digital-transformation" >}}increasingly digital{{< /external-link >}}, many organisations — corporations or small businesses — are relying on cloud services to run their operations because the cloud is quick, effortless, affordable, and doesn’t require a huge upfront fee. There are many models for cloud adoption, and one of them is serverless, a model in which developers or organisations don’t handle any server and just focus on application logic. Serverless is ideal for running microservices, a framework in which applications are split into plenty of units that do very specific tasks that run separately; so if you’re authenticating to a new SaaS, that SaaS is probably using a microservice for that.

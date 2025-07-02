@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/what_is_serverless_scalability_and_how_d
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/what-is-framework-agnostic/
+url: /what-is-framework-agnostic/
 ---
 
 Worried this is another framework buzzword?

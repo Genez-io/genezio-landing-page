@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/whatsapp.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
-url: /blog/whatsapp-genezio-project/
+url: /whatsapp-genezio-project/
 ---
 
 Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating a WhatsApp bot and implementing a simple 'ping pong' interaction. This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more.

@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/geneziov1.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 1
-url: /blog/genezio-v1.0/
+url: /genezio-v1.0/
 ---
 
 Big news: DeployApps has just hit V1.0! It's a major milestone that shows how far we’ve come.

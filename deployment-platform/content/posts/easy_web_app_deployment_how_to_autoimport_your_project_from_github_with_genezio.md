@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/images/database-performance.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/easy-web-app-deployment-with-genezio/
+url: /easy-web-app-deployment-with-genezio/
 ---
 
 Deploying a web app can be more of a tedious job than a step forward. According to a December 2024 AWS blog post,developers report spending an average of {{< external-link link="https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-q-developer-generate-documentation-source-code/?nc1=h_ls" >}}just one hour per day on coding{{< /external-link >}}, with the rest of their time tied up in tasks like managing deployments, writing documentation, and troubleshooting issues.

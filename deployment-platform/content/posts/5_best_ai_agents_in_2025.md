@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/The-5-Best-AI-Agents-in-2025.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/5-best-ai-agents-in-2025/
+url: /5-best-ai-agents-in-2025/
 ---
 
 Back in 2023, {{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2023-08-30-gartner-reveals-three-technologies-that-will-transform-customer-service-and-support-by-2028" >}}Gartner predicted{{< /external-link >}} that by 2025, 80% of customer service and support teams would be using generative AI to improve their operations and customer experience. This shift is already happening, and it\'s not stopping anytime soon. In fact, the AI for customer service market is expected to reach {{< external-link link="https://www.marketsandmarkets.com/Market-Reports/ai-for-customer-service-market-244430169.html#:~:text=How%20big%20is%20the%20global,25.8%25%20during%20the%20forecast%20period." >}}$47.82 billion{{< /external-link >}} by 2030.

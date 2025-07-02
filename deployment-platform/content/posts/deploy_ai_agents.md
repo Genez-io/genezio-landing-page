@@ -17,7 +17,7 @@ meta_og_image: "https://genezio.com/posts/how-to-deploy-your-ai-agent-in-few-ste
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/deploy-ai-agents/
+url: /deploy-ai-agents/
 ---
 
 By 2026, Gartner predicts that investments in generative AI will lead to a {{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2023-08-03-customer-service-and-support-leaders-should-assess-generative-ai-technology-options-to-enhance-their-organizations-function" >}}20% to 30% reduction{{< /external-link >}} in the number of human customer service agents. At the same time, it will create new roles focused on building and managing these AI systems.

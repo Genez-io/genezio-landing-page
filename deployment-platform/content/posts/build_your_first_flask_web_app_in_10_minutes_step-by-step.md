@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/flask.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/getting-started-flask-web-app/
+url: /getting-started-flask-web-app/
 ---
 
 ## Introduction

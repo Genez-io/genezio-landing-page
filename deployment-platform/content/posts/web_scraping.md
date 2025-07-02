@@ -15,7 +15,7 @@ meta_og_image: "https://genezio.com/images/web_scrape.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/web-scraping-app/
+url: /web-scraping-app/
 ---
 
 Hey everyone! I’m Tudor, and recently, I found myself faced with a challenge: I needed to create a small React app to fetch data from GitHub, specifically the number of stars for our repository. With numerous solutions available, I started on finding the quickest and most efficient method.

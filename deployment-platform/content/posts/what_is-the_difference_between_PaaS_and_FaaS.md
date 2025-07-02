@@ -16,7 +16,7 @@ meta_og_title: "What Is the Difference Between PaaS And FaaS?"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/faas-vs-paas
+url: /faas-vs-paas
 ---
 
 Serverless architectures are adaptable models of cloud deployment where software developers hand over their scaling and maintenance to a provider, so that every application can run with the optimal resources when the occasion demands it. FaaS—Function as a Service—and PaaS—Platform as a Service—are two types of cloud computing models that can be eye-opening to developers interested in serverless architecture, because each can handle complicated aspects—including speed to deploy and the effort required to supervise—of running software on the cloud.

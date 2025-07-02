@@ -13,7 +13,7 @@ meta_og_image: "https://genez.io/images/genezio_xday.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
-url: /blog/what-is-function-as-a-service
+url: /what-is-function-as-a-service
 ---
 
 The Function-as-a-Service (FaaS) cloud service model, a subset of serverless in which developers only pay for the **functions** they use, is being increasingly adopted by big names which include {{< external-link link="https://theirstack.com/en/technology/microsoft-azure-functions" >}}Shell{{< /external-link >}}, KPMG, or the job board Dice. The market cap of FaaS is expected to grow by {{< external-link link="https://www.skyquestt.com/report/function-as-a-service-market#:~:text=What%20is%20the%20market%20size,period%20(2024%2D2031)." >}}almost $70 billion{{< /external-link >}} in the next seven years, which compares, for example, to the projected revenue of some of {{< external-link link="https://www.astrazeneca.com/media-centre/press-releases/2024/astrazeneca-to-deliver-80bn-revenue-by-2030.html" >}}pharma’s biggest{{< /external-link >}}players.
