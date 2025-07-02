@@ -5,7 +5,7 @@ frontend:
   path: ./
   subdomain: genezio-landing-page
   publish: ./public
-redirects:
-    - from: /deployment-platform/
-      to: https://deployapps.dev/
-      status: 302
+  redirects:
+      - from: /deployment-platform/
+        to: https://deployapps.dev/
+        status: 301
