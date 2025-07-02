@@ -5,7 +5,7 @@ tags:
   - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /images/mongodb-genezio.webp
+thumbnail: /blog/images/mongodb-genezio.webp
 preview: DeployApps users can now set up MongoDB databases! You can now easily manage your MongoDB databases alongside your serverless functions. Learn how to deploy scalable, secure NoSQL databases effortlessly!
 # meta data start
 description: Learn about the new MongoDB database feature in DeployApps. Easily set up and manage MongoDB databases alongside your serverless functions.

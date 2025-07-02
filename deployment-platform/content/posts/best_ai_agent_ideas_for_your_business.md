@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/The-Best-AI-Agent-Ideas-for-Your-Business.webp
+thumbnail: /blog/posts/The-Best-AI-Agent-Ideas-for-Your-Business.webp
 preview: In this article, we'll look at some of the best AI agent ideas for your business and explain how the right AI testing solution can prevent failures and keep your AI agents reliable.
 # meta data start
 description: Discover the best AI agent ideas for your business. Learn how Genezio helps test and monitor AI agents for reliable performance.

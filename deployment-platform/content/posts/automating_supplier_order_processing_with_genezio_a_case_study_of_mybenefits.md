@@ -6,7 +6,7 @@ tags:
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
 
-thumbnail: /images/mybenefitsxgenezio.webp
+thumbnail: /blog/images/mybenefitsxgenezio.webp
 
 preview: For platforms like MyBenefits—a flexible benefits marketplace where employees allocate monthly budgets to order perks—scaling operations demands robust automation. Manual processes for order fulfillment, supplier communication, and status tracking were bottlenecking growth. By leveraging DeployApps, MyBenefits engineered a fully automated system, eliminating manual work and ensuring reliability. This case study breaks down their architecture, integrations, and outcomes—no hype, just facts.
 

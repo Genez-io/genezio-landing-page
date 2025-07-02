@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Virgil Turcu
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
-thumbnail: /images/genezio_middleware.webp
+thumbnail: /blog/images/genezio_middleware.webp
 preview: Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database.
 # meta data start
 description: "Middleware is software that acts as an intermediary layer between different applications or between an application and the underlying operating system, network, or database."

@@ -5,7 +5,7 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/nextj-hosting-provider.webp
+thumbnail: /blog/images/nextj-hosting-provider.webp
 preview: AI agent tools make possible the creation of autonomous AI agents—software entities that can and act on their own and undertake some step-by-step tasks, like researching for a paper. The AI agent market, which is estimated at $5.4 billion in 2024, is being pushed by use cases such as self-service customer experiences, or even crypto trading agents
 # meta data start
 description: The best AI agent tools are LangChain, Mirascope, AutoGen, CrewAI, and DeployApps. With them, you’re all set for your next AI agent project.

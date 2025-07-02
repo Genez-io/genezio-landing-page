@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/what_are_microservices.webp
+thumbnail: /blog/images/what_are_microservices.webp
 preview: "As companies and the world become increasingly digital, many organisations — corporations or small businesses — are relying on cloud services to run their operations because the cloud is quick, effortless, affordable, and doesn’t require a huge upfront fee."
 description: "Serverless microservices are small, independent units of code that perform specific tasks within an application"
 meta_og_url: "https://genezio.com/blog/serverless-microservices/"

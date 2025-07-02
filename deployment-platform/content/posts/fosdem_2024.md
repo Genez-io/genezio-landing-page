@@ -5,7 +5,7 @@ tags:
   - News
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/fosdem-2024.webp
+thumbnail: /blog/images/fosdem-2024.webp
 preview: "Check out our technical presentation at FOSDEM 2024 on running Node.js applications over unikernels"
 # meta data start
 description: "Read about DeployApps’s presentation at FOSDEM 2024 on Node.js in unikernels. Learn about technical challenges and the benefits of unikernel architecture."

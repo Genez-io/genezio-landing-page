@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/streamlit.webp
+thumbnail: /blog/images/streamlit.webp
 preview: Python developers and machine learning engineers asked for Streamlit support, and it is now live in production. Early access users have already tested the integration, validating its simplicity and efficiency. With DeployApps’s optimized deployment process, building and deploying AI prototypes and interactive dashboards is seamless.
 # meta data start
 description: DeployApps now supports Streamlit, enabling seamless AI prototyping and interactive dashboards with serverless Python deployment.

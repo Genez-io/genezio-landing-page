@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/The-5-Best-AI-Agents-in-2025.webp
+thumbnail: /blog/posts/The-5-Best-AI-Agents-in-2025.webp
 preview: In this article, we'll take a look at the 5 best AI agents for 2025 and discuss why testing them is necessary to protect customer trust and satisfaction.
 # meta data start
 description: Discover the 5 best AI agents for customer service in 2025 — including Intercom Fin, Sendbird and Genezio. Learn how to test and monitor AI to avoid costly support mistakes.

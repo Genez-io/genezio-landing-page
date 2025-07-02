@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/firebase-alternatives.webp
+thumbnail: /blog/images/firebase-alternatives.webp
 preview: Firebase is awesome, no doubt. There's a reason it's used by over 2.5 million apps and games worldwide, but the truth is,  it's not always the perfect fit for every project.
 # meta data start
 description: Explore top Firebase alternatives in 2024. Find the perfect backend solution for your web and mobile apps.

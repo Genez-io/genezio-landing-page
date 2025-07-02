@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/what_is_serverless_scalability_and_how_does_it_work.webp
+thumbnail: /blog/images/what_is_serverless_scalability_and_how_does_it_work.webp
 preview: "Yeah, the development world moves at a breakneck pace, with terms and phrases coming and going, but every now and then, something pops up that sticks around and actually has a long-lasting impact."
 description: 'Learn what "framework agnostic" means, its benefits, and how to choose the right platform. A key component you need to succeed in your development ventures.'
 meta_og_url: "https://genezio.com/blog/what-is-framework-agnostic/"

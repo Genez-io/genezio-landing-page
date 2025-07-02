@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/aws-lambda-alternatives.webp
+thumbnail: /blog/images/aws-lambda-alternatives.webp
 preview: AWS Lambda is the undisputed heavyweight champ of serverless computing. It's powerful, scalable, and deeply integrated with the AWS ecosystem.
 # meta data start
 description: Explore top AWS Lambda alternatives in 2024, including DeployApps, Cloudflare Workers, and more, to help you find the best solution for your needs.

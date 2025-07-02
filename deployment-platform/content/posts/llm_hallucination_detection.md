@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
+thumbnail: /blog/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp
 preview: AI agents are great at automating tasks, but they’re not always accurate. LLM hallucination detection helps Customer Care Executives test and monitor AI-generated responses to catch errors before they cause real problems.
 # meta data start
 description: Prevent AI from making costly mistakes. Genezio’s LLM hallucination detection helps businesses test AI agents to stay on track and compliant.

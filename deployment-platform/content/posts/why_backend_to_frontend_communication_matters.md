@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/communicationbreakdown.webp
+thumbnail: /blog/images/communicationbreakdown.webp
 preview: One of the most difficult parts of developing a service is managing the sheer number of connected parts.
 # meta data start
 description: "Explore the importance of backend-to-frontend communication and learn how to manage it effectively in full-stack development."

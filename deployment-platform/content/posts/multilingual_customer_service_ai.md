@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/multilingual-customer-service.webp
+thumbnail: /blog/posts/multilingual-customer-service.webp
 preview: This article will explain why customer support across languages is a necessity and how you can solve this problem through an AI testing tool made by multilingual engineers like Genezio.
 # meta data start
 description: Multilingual Customer Service misfires damage trust. Genezio’s AI evals catch issues across languages—no tech skills required.

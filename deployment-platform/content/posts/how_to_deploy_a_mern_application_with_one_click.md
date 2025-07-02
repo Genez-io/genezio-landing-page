@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /images/mern.webp
+thumbnail: /blog/images/mern.webp
 preview: Deploying a MERN (MongoDB, Express.js, React.js, Node.js) application can often feel complex and time-consuming, especially for developers looking for a streamlined solution. In this article, I present a solution for anyone who wants to quickly deploy a fully functional MERN app without diving into the intricacies of manual setup. With just one click, you can have your app live and ready to use—let’s get started!
 # meta data start
 description: The MERN stack is a very popular technology for full stack web applications because it uses very mature and battle tested technologies.

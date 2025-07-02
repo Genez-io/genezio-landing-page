@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/effortless.webp
+thumbnail: /blog/images/effortless.webp
 preview: When it comes to building apps, you’ll often hear about “full-stack” and, rightfully so, wonder if it includes “DevOps.” But not really. DevOps, the bit that would help a developer deploy their newly-coded app, is not part of the full-stack skill set.
 # meta data start
 description: “Full-stack” doesn’t include DevOps. And, to deploy their apps, developers can use platforms like DeployApps.

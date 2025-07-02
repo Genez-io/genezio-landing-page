@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /images/the-best-app-for-python-programming-find-the-right-tool-for-you.webp
+thumbnail: /blog/images/the-best-app-for-python-programming-find-the-right-tool-for-you.webp
 
 preview: Python remains one of the most popular programming languages, thanks to its versatility, ease of learning, and wide range of applications, like building APIs, dissecting data, or even programming webapps. Tools like IDEs help streamline coding because they’re bundled with features like syntax highlighting or tools for debugging.
 # meta data start

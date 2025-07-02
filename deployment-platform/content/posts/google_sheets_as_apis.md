@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
-thumbnail: /images/google-sheets.webp
+thumbnail: /blog/images/google-sheets.webp
 preview: "Expose data stored in google sheets as APIs to be used in your DeployApps projects."
 description: "Learn how to use Google Sheets APIs to create API endpoints. Follow our detailed guide."
 meta_og_url: "https://genezio.com/blog/google-sheets-as-apis/"

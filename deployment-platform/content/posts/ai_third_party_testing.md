@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/ai-third-party-testing.webp
+thumbnail: /blog/posts/ai-third-party-testing.webp
 preview: According to Anthropic, one of the biggest challenges in AI today is the need for independent testing. As the Anthropic team explained in a 2024 write-up, AI agents are being deployed in high-stakes environments.
 # meta data start
 description: AI third-party testing helps businesses flag AI mistakes, mitigate risks, and keep AI agents reliable. Learn how Genezio makes AI testing easier.

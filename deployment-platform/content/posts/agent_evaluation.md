@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/agent-evaluation-a-framework-for-businesses.webp
+thumbnail: /blog/posts/agent-evaluation-a-framework-for-businesses.webp
 preview: In this article, we break down the main takeaways from the whitepaper and discuss how Genezio puts together the tools and support needed to carry out agent evaluations in real-world business scenarios. 
 # meta data start
 description: Agent evaluations are regulated tests that check the quality of your chatbot and guarantee that AI customer service agents are reliable.

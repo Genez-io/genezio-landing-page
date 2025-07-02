@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/genezioandautomation.webp
+thumbnail: /blog/images/genezioandautomation.webp
 preview: In the modern digital landscape, APIs (Application Programming Interfaces) and web services have become the backbone of many business operations, facilitating seamless communication between different software systems and enabling the delivery of business logic at scale.
 # meta data start
 description: "APIs and web services drive automation and seamless communication in modern business operations, enabling scalable delivery of business logic."

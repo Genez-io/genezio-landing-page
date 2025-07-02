@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/quality-monitoring-software.webp
+thumbnail: /blog/posts/quality-monitoring-software.webp
 preview: In this article, we’ll look at how quality monitoring software, like Genezio, helps businesses keep their AI agents on the right track, and make sure they benefit both customers and support teams.
 # meta data start
 description: Quality monitoring software improves AI agents performance in customer support. Learn how Genezio makes AI testing and monitoring easier.

@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/genezioandautomation.webp
+thumbnail: /blog/images/genezioandautomation.webp
 preview: "The switch to serverless computing can help startups save thousands of dollars on cloud costs. A recent case study reported how a startup was spending $5,000 per month on a Kubernetes cluster to manage their microservices. By moving to a serverless architecture, the startup cut their cloud bill to $400-$600 per month."
 description: "The 10 best serverless platforms include DeployApps, AWS Fargate, Google Cloud Functions and Cloudflare Workers."
 meta_og_url: "https://genezio.com/best-serverless-platforms-providers/"

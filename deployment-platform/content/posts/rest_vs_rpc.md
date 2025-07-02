@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Bogdan Ciobanu
 linkedIn: https://www.linkedin.com/in/bogdan-calin-ciobanu-a966b2268/
-thumbnail: /images/rest-rpc.webp
+thumbnail: /blog/images/rest-rpc.webp
 preview: REST and RPC are two distinct approaches to web services and distributed computing
 # meta data start
 description: "Explore the history and evolution of APIs, from RPC to REST, and learn how DeployApps implements both paradigms for modern web services."

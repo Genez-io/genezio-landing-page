@@ -5,7 +5,7 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /posts/top-3-ai-monitoring-tools-in-2025.webp
+thumbnail: /blog/posts/top-3-ai-monitoring-tools-in-2025.webp
 preview: In this article, we’ll look at three of the best AI monitoring tools in 2025 - what they do, who they’re built for, and how they help teams keep their AI agents on track.
 # meta data start
 description: Top AI Monitoring Tools in 2025. Comparing Genezio, Arize, and Fiddler to choose the right solution for customer-facing AI agents.

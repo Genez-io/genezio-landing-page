@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Stefan Iordache
 linkedIn: https://www.linkedin.com/in/stefan-d-iordache/
-thumbnail: /images/genezio_express.webp
+thumbnail: /blog/images/genezio_express.webp
 preview: Today we will compare genezio with one of the major players in the market, Express
 # meta data start
 description: "Compare genezio with Express.js. Find out about writing code, testing the code, calling the API from your client, and what it takes to deploy your code."

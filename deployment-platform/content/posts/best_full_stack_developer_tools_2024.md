@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/full-stack-developer-tools.webp
+thumbnail: /blog/images/full-stack-developer-tools.webp
 preview: Full-stack development is no walk in the park. It demands a broad skill set and the ability to navigate both frontend and backend technologies and the right tools for the job.
 # meta data start
 description: Master full-stack development with the essential tools for frontend, backend, databases, and more. Discover the toolkit you need to build amazing applications.

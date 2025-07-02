@@ -6,7 +6,7 @@ tags:
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 
-thumbnail: /images/websockets-on-genezio.webp
+thumbnail: /blog/images/websockets-on-genezio.webp
 
 preview: "At DeployApps, we’ve solved one of the biggest challenges in serverless technology: deploying auto-scalable WebSocket applications on Function-as-a-Service (FaaS) platforms."
 # meta data start

@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp
+thumbnail: /blog/posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp
 preview: Testing the effectiveness of your AI agent means placing it in realistic scenarios before it reaches real users. Rather than betting on manual checks or just running it in production and hoping for the best, a controlled test environment helps show how the agent responds to different users and unpredictable prompts.
 # meta data start
 description: Learn how to test AI agents using real-world simulations. Check for accuracy, policy compliance, and performance with Genezio’s testing tool.

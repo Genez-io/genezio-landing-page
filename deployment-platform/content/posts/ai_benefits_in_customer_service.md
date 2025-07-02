@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp
+thumbnail: /blog/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp
 preview: In this article, we’ll look at what those benefits are, what can go wrong, and how testing and monitoring with tools like Genezio can help Customer Care Experts trust their AI.
 # meta data start
 description: AI can speed up support and reduce costs, but it can also make mistakes. Genezio’s tester helps catch AI failures before they reach customers

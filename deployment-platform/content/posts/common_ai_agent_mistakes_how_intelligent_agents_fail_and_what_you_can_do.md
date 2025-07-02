@@ -5,7 +5,7 @@ tags:
   - AI
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /images/ai-mistakes.webp
+thumbnail: /blog/images/ai-mistakes.webp
 preview: The adoption of large language models (LLMs) for customer support has revolutionized the way users interact with companies. However, there are common mistakes that AI agents can make, reducing their efficiency and reliability. Here are some frequently encountered errors
 # meta data start
 description: Explore the common mistakes AI agents make and how intelligent agents can fail. Learn now and uncover the challenges of AI-powered virtual agents.

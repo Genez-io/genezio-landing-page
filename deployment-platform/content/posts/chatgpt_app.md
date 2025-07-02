@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/chatgptapp.webp
+thumbnail: /blog/images/chatgptapp.webp
 preview: In this tutorial, I will show you how to create an app called the Rephrasing App.
 # meta data start
 description: "Learn how to build your first ChatGPT app in this step-by-step tutorial. Rephrase text and improve your writing with React and genezio. Get started now!"

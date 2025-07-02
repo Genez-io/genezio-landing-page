@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/remix.webp
+thumbnail: /blog/images/remix.webp
 preview: 'Deploy Remix apps seamlessly with DeployApps. Serverless, autoscaling, and optimized performance. Get started for free today!
 Looking for the fastest and easiest way to deploy your Remix application?  DeployApps now offers comprehensive support for Remix, allowing you to build and deploy high-performance, server-rendered applications with ease.'
 

@@ -5,7 +5,7 @@ tags:
   - News
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /images/geneziov1.webp
+thumbnail: /blog/images/geneziov1.webp
 preview: "Just launched: DeployApps V1.0! This update is all about simplifying your development process with improved CLI output, a new configuration file, straightforward project testing, and improved user authentication."
 # meta data start
 description: "Explore the new features in DeployApps v1.0, including improved authentication, easier project testing, and enhanced CLI error handling."

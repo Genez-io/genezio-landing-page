@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/scheduletasks.webp
+thumbnail: /blog/images/scheduletasks.webp
 preview: This guide will walk you through the steps of building a scheduler with genezio.
 # meta data start
 description: "Learn how to set up cron jobs with DeployApps. Follow our guide to schedule tasks and automate processes in your projects."

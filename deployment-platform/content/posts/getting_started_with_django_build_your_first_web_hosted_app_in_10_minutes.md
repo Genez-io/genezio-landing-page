@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/django-genezio.webp
+thumbnail: /blog/images/django-genezio.webp
 preview: Hi, I’m Cristi Miloiu, and in this tutorial, I’ll guide you through building your first web application using Django, one of the most popular Python web frameworks. By the end of this article, you’ll have a simple, fully functional web app running on your local machine.
 # meta data start
 description: Learn how to build your first web app with Django in just 10 minutes. Follow this beginner-friendly guide to kickstart your journey into web development.

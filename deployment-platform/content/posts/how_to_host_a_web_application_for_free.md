@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/communicationbreakdown.webp
+thumbnail: /blog/images/communicationbreakdown.webp
 preview: Ever poured your heart and soul into building an awesome web app, only to hit a wall when it comes to sharing it with the world? You're not alone.
 # meta data start
 description: "Discover how to host your web app for free with our step-by-step guide. Learn about free hosting platforms, including DeployApps, and how to prepare your app for launch."

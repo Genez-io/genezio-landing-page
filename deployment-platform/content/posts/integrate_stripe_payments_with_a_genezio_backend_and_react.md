@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp
+thumbnail: /blog/images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp
 preview: This guide will walk you through integrating Stripe payments using a genezio backend and a React frontend. Integrating a web app with a payment gateway can be challenging, even if Stripe provides most of the functionality out of the box.
 # meta data start
 description: "Learn how to integrate Stripe payments into your DeployApps backend with React. Follow our step-by-step guide for seamless payment integration."

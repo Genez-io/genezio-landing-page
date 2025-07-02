@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/full-stack-project-ideas.webp
+thumbnail: /blog/images/full-stack-project-ideas.webp
 preview: "You want to be a full-stack developer, and that means building a portfolio that showcases your skills. It's not just about ticking boxes; it's about proving you can handle the entire development stack – from crafting sleek user interfaces to building robust backends."
 description: "Looking for full-stack project ideas to take or use as inspiration? Here are some of the best ideas to pack your portfolio, impress employers or make money."
 meta_og_url: "https://genezio.com/blog/full-stack-project-ideas/"

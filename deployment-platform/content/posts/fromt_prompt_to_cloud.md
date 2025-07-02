@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/fromPromptToCloud.webp
+thumbnail: /blog/images/fromPromptToCloud.webp
 preview: We are developing an application that generates a list of movies with summarized reviews
 # meta data start
 description: "Explore prompt engineering with DeployApps. Learn to create effective prompts and integrate OpenAI in your applications"

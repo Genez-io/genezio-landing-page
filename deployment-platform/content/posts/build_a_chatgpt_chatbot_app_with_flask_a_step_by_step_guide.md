@@ -6,7 +6,7 @@ tags:
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
 
-thumbnail: /images/openai-flask.webp
+thumbnail: /blog/images/openai-flask.webp
 
 preview: Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a ChatGPT-powered chat app using Flask, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with DeployApps, a powerful cloud deployment platform..
 # meta data start

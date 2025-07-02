@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/nextj-hosting-provider.webp
+thumbnail: /blog/images/nextj-hosting-provider.webp
 preview: Next.js has quickly become a go-to choice for developers, powering a powerhouse of web applications across the internet.
 # meta data start
 description: "Discover the best Next.js hosting platforms for 2024. Unleash powerful, SEO-friendly web apps with top-tier hosts optimizing for speed, scalability, and cost."

@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/express-frontend-genezio.webp
+thumbnail: /blog/images/express-frontend-genezio.webp
 preview: In this short guide, you’ll learn how to add a frontend to your Express.js app with DeployApps Cloud in a few easy steps.
 # meta data start
 description: Learn how to seamlessly add a frontend to your Express.js app with DeployApps Cloud in a few easy steps, simplifying full-stack development and deployment

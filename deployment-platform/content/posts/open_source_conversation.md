@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/opensourceconversation.webp
+thumbnail: /blog/images/opensourceconversation.webp
 preview: The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a critical driver of massive growth.
 # meta data start
 description: "The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a driver of growth."

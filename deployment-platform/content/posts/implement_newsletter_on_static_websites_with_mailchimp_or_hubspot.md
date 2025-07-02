@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Tudor Anghelescu
 linkedIn: https://www.linkedin.com/in/anghelescu-tudor-b73739193/
-thumbnail: /images/implementing_newsletter_section.webp
+thumbnail: /blog/images/implementing_newsletter_section.webp
 preview: "In this blog, I'll take you through a practical solution for effortlessly integrating newsletter sections into your website."
 # meta data start
 description: "In this blog, I'll take you through a practical solution for effortlessly integrating newsletter sections into your website."

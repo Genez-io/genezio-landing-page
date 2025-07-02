@@ -5,7 +5,7 @@ tags:
   - News
 author: Andra Pitis
 linkedIn: https://www.linkedin.com/in/andra-pitis/
-thumbnail: /images/release0.6.webp
+thumbnail: /blog/images/release0.6.webp
 preview: "Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates"
 # meta data start
 description: "DeployApps v0.6 introduces Redis and Postgres support, new SDK features, and easier project setup. Discover the latest updates!"

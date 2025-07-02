@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /images/ferretdb-genezio.webp
+thumbnail: /blog/images/ferretdb-genezio.webp
 preview: Discover how you can use FerretDB inside DeployApps Functions as a proxy that understands the MongoDB wire protocol and translates the requests to SQL queries executed on a PostgreSQL database provided by DeployApps.
 # meta data start
 description: Learn how to set up FerretDB with DeployApps Functions and connect to a PostgreSQL database provided by DeployApps.

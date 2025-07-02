@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/ai-chatbot-testing-whatsapp-voice-web.webp
+thumbnail: /blog/posts/ai-chatbot-testing-whatsapp-voice-web.webp
 preview: In this article, we’ll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI.
 # meta data start
 description: See to it that AI agents act consistently across WhatsApp, voice, and web platforms with Genezio’s AI chatbot testing solution.

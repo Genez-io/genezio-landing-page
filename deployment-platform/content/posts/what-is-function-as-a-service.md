@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/genezio_what_is_function_as_a_service.webp
+thumbnail: /blog/images/genezio_what_is_function_as_a_service.webp
 preview: "FaaS allows developers to focus solely on writing code — they don’t have to manage servers or scaling."
 description: "FaaS allows developers to focus solely on writing code - they don’t have to manage servers or scaling."
 meta_og_url: "https://genezio.com/blog/what-is-function-as-a-service/"

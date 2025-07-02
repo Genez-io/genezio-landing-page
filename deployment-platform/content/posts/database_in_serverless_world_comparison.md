@@ -6,7 +6,7 @@ tags:
   - Learning
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /images/database-performance.webp
+thumbnail: /blog/images/database-performance.webp
 preview: Deciding on the right database is often a challenging task when starting a new project.
 # meta data start
 description: "Decide on the right database for your project based on this analysis of their performance in a Function as a Service serverless environment."

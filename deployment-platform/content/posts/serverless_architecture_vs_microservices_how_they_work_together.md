@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/serverlessvsmicroservices.webp
+thumbnail: /blog/images/serverlessvsmicroservices.webp
 preview: The main difference between serverless architecture vs microservices is that they conform to different moments of a webapp’s existence. Actually, both can mix well, if the platform allows for it.
 # meta data start
 description: There’s no debate around serverless architecture vs microservices, because some platforms allow developers to handle both at the same time.

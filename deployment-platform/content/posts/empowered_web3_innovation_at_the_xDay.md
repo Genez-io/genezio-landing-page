@@ -5,7 +5,7 @@ tags:
   - News
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /images/genezio_xday.webp
+thumbnail: /blog/images/genezio_xday.webp
 
 preview: This article will present DeFiBuilder and GiveCup, two emerging Web3 startups that started their journey at the xDay.2023 Hackathon, one of Europe’s largest Web3 developers competitions.
 # meta data start

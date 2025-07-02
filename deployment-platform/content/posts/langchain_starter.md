@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/custom_data_llm.webp
+thumbnail: /blog/images/custom_data_llm.webp
 preview: "Build an LLM application that will answer questions based on your external data using Langchain, LanceDB and DeployApps."
 description: "Learn how to use LangChain, LanceDB, and DeployApps to create a bot that chats with your own data. Follow our detailed guide."
 meta_og_url: "https://genezio.com/blog/langchain-genezio-project/"

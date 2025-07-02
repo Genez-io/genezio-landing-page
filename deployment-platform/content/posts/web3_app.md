@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/web3app.webp
+thumbnail: /blog/images/web3app.webp
 preview: In this tutorial, I am going to show you how to create your first Web3 application
 # meta data start
 description: "Create your first Web3 app with DeployApps. Learn to use Ethereum, Metamask, and Blast API in this detailed tutorial."

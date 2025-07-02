@@ -5,7 +5,7 @@ tags:
   - News
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/kubecon.webp
+thumbnail: /blog/images/kubecon.webp
 preview: "The Genezio team is still buzzing after an incredible week at KubeCon + CloudNativeCon Europe 2024!"
 # meta data start
 description: "Learn about DeployApps’s participation in KubeCon + CloudNativeCon 2024, including key takeaways on cloud-native development trends"

@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Virgil Turcu
 linkedIn: https://www.linkedin.com/in/virgil-turcu-797172255/
-thumbnail: /images/genezio_neon.webp
+thumbnail: /blog/images/genezio_neon.webp
 preview: Neon provides serverless Postgres databases that offer a generous free tier as well as other features such as autoscaling, bottomless storage, and branching.
 # meta data start
 description: "Learn to create a simple DeployApps app and integrate it with a Postgres database using Neon. Follow our step-by-step guide."

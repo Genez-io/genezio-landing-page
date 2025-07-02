@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /images/type-safety.webp
+thumbnail: /blog/images/type-safety.webp
 preview: "Whenever we talk about technology, it’s easy to get lost in the myriad of terms, phrases, and buzzwords. These terms are often taken for granted by those in the industry, but truly understanding what these phrases mean is a huge step to ensuring that you are leveraging the appropriate solutions with the right product fit."
 # meta data start
 description: "Explore the importance of type safety in development. Learn how DeployApps ensures stable, secure, and efficient code with type-safe solutions."

@@ -5,7 +5,7 @@ tags:
   - News
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /images/release0.8.webp
+thumbnail: /blog/images/release0.8.webp
 preview: "We've rolled out new features including a user-friendly authentication module, direct PostgreSQL database provision, and beta support for Golang, making your development process smoother."
 # meta data start
 description: "Explore the new features in DeployApps v0.8, including easy authentication, Postgres support, and beta Golang integration."

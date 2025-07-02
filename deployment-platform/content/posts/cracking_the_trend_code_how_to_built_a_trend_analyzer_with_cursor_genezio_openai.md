@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Rares Istoc
 linkedIn: https://ro.linkedin.com/in/rares-istoc-9aa401123
-thumbnail: /images/trend-analyzer.webp
+thumbnail: /blog/images/trend-analyzer.webp
 preview: This year has started on a rollercoaster, tech included. Incredible news appear every second day, the AI industry is on fire and the benchmarks are constantly moving. Funny enough, the buzz is contained in the online world while the day to day has more predictable shifts.
 # meta data start
 description: Learn how MLVanguards built an AI-powered LinkedIn trend tracker using DeployApps. Step-by-step guide on trend monitoring, AI integration, and cloud deployment.

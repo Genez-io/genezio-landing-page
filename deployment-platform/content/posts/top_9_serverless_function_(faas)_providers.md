@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/top_9_serverless_function_faas_providers.webp
+thumbnail: /blog/images/top_9_serverless_function_faas_providers.webp
 preview: "Startups choose serverless or FaaS because it’s affordable, it’s easy to set up, and it scales. Yet, unfortunately, choosing the wrong serverless provider can be expensive and nerve-wracking. "
 description: "The 9 best serverless functions (FaaS) providers include DeployApps, AWS, Google, Azure, and Cloudflare."
 meta_og_url: "https://genezio.com/blog/best-serverless-faas-providers/"

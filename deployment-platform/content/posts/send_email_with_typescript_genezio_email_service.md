@@ -6,7 +6,7 @@ tags:
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 
-thumbnail: /images/send_email_with_typescript_genezio_email_service.webp
+thumbnail: /blog/images/send_email_with_typescript_genezio_email_service.webp
 
 preview: In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript.
 description: "In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript."

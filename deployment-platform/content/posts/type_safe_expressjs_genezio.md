@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-thumbnail: /images/express.webp
+thumbnail: /blog/images/express.webp
 preview: Check ou how to integrate genezio in express for an easier and safer integration between backends and clients.
 # meta data start
 description: "Check ou how to integrate genezio in express for an easier and safer integration between backends and clients."

@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/genezio_mongodb.webp
+thumbnail: /blog/images/genezio_mongodb.webp
 
 preview: In this tutorial, I will show you the steps of integrating a Mongo database into your genezio project.
 # meta data start

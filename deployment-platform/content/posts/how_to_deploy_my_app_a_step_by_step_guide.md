@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/template-tutorials.webp
+thumbnail: /blog/images/template-tutorials.webp
 preview: Hello, I’m Cristi Miloiu and I will show you the process of deploying your app using DeployApps, a powerful platform designed to simplify app deployment.
 # meta data start
 description: Learn how to deploy your apps with DeployApps in this step-by-step guide. Perfect for frameworks like Flask, Django, FastAPI, Next.js, React, Angular, Vue, and more!

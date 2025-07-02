@@ -5,7 +5,7 @@ tags:
   - News
 author: Andra Pitis
 linkedIn: https://www.linkedin.com/in/andra-pitis/
-thumbnail: /images/release.webp
+thumbnail: /blog/images/release.webp
 preview: Since our last release, we’ve added some new features, improved a couple of things and resolved a few bugs
 # meta data start
 description: "Explore the latest DeployApps release: open-source availability, backend Dart support, custom domains, and more. Learn about new features and improvements."

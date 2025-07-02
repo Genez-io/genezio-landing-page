@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-thumbnail: /images/metamask.webp
+thumbnail: /blog/images/metamask.webp
 preview: This article dives deep into the inner workings of logging in with MetaMask on your web app.
 # meta data start
 description: "Discover how to add MetaMask login to your DeployApps app. Follow our detailed guide for effortless Web3 authentication."

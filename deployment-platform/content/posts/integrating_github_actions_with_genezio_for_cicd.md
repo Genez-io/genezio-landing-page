@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/genezio_cicd.webp
+thumbnail: /blog/images/genezio_cicd.webp
 preview: GitHub Actions provides a powerful and flexible way to set up CI/CD workflows.
 # meta data start
 description: "Learn to integrate GitHub Actions with DeployApps for CI/CD. Follow our guide for setting up automated workflows for seamless deployment."

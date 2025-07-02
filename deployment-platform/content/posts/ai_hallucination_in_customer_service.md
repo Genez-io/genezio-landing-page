@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /posts/ai-hallucination-in-customer-service-a-solution.webp
+thumbnail: /blog/posts/ai-hallucination-in-customer-service-a-solution.webp
 preview: As a Customer Care Expert, you know how important it is to keep a high standard of customer service. AI hallucination in customer service can seriously hurt the experience you’ve worked hard to build. That’s why it helps to have the right tools in place before things go off track.
 # meta data start
 description: AI agents can make mistakes. Learn how Genezio helps you catch those errors for a better customer experience.

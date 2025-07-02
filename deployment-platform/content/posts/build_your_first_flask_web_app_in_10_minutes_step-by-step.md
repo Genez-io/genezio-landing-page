@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /images/flask.webp
+thumbnail: /blog/images/flask.webp
 preview: Flask is one of the most popular Python web frameworks, known for its simplicity and flexibility. Whether you're a beginner or an experienced developer, Flask makes web development straightforward.
 # meta data start
 description: Learn how to build and deploy your first Flask web app in just 10 minutes. Follow this step-by-step tutorial for beginners and get your project online fast.

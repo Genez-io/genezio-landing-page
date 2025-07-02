@@ -5,7 +5,7 @@ tags:
   - AI
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
-thumbnail: /images/genezioai101.webp
+thumbnail: /blog/images/genezioai101.webp
 preview: In today's rapidly evolving technological landscape, artificial intelligence and intelligent agents have moved from science fiction to practical business tools. Whether you're a developer looking to integrate AI capabilities into your applications or a business owner seeking to leverage automation for competitive advantage, understanding AI agents is becoming increasingly critical.
 # meta data start
 description: Learn about AI intelligent agents, their types, real-world applications, and how to deploy your own using Genezio's infrastructure. Transform your business now.

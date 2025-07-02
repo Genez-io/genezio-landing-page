@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/business-logic-in-the-backend-the-why-and-how.webp
+thumbnail: /blog/images/business-logic-in-the-backend-the-why-and-how.webp
 preview: Serverless architectures are adaptable models of cloud deployment where software developers hand over their scaling and maintenance to a provider, so that every application can run with the optimal resources when the occasion demands it.
 # meta data start
 description: "Both FaaS and PaaS move towards a “serverless” approach by abstracting server management tasks from developers"

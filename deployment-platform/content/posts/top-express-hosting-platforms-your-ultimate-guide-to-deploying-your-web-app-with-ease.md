@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/express-hosting-platforms.webp
+thumbnail: /blog/images/express-hosting-platforms.webp
 preview: You’ve poured your heart and soul into crafting the perfect Express.js application – a sleek, efficient, and downright brilliant piece of software engineering.
 # meta data start
 description: "You’ve poured your heart and soul into crafting the perfect Express.js application – a sleek, efficient, and downright brilliant piece of software engineering."

@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /images/bware-labs.webp
+thumbnail: /blog/images/bware-labs.webp
 
 preview: DeployApps is a full-stack cloud platform that allows developers to launch and deploy their projects in minutes. It’s helping entrepreneurs and companies alike with its speed and ease of use. One of the latest success stories comes from the web3 firm BwareLabs, which had to deal with plenty of DevOps resources to monitor their various blockchain instances.
 # meta data start

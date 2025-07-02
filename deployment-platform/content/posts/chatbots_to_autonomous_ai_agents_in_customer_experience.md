@@ -6,7 +6,7 @@ tags:
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 
-thumbnail: /posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp
+thumbnail: /blog/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp
 preview: This article explores the evolution of AI agents in customer experience, from their humble beginnings to the current state of the art, and provides insights into how businesses can effectively test, implement, and optimize these systems to gain a competitive edge.
 # meta data start
 description: Learn how autonomous AI agents revolutionize customer experience, delivering personalized support at scale while reducing service costs by 60-80%.

@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Tudor Anghelescu
 linkedIn: https://www.linkedin.com/in/anghelescu-tudor-b73739193/
-thumbnail: /images/web_scrape.webp
+thumbnail: /blog/images/web_scrape.webp
 preview: In this article, I’ll show you how to track stars from a GitHub repository in under 10 minutes. However, this code can be easily adapted to track various other metrics like social media likes, followers numbers, or stock market prices.
 # meta data start
 description: "Build and deploy a web scraping app with DeployApps. Learn to extract real-time data from websites in our detailed guide."

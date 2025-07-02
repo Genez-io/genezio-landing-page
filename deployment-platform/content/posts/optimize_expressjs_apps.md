@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
-thumbnail: /images/optimize_expressjs_apps.webp
+thumbnail: /blog/images/optimize_expressjs_apps.webp
 preview: "Discover best practices for optimizing Express.js development with serverless architecture and CDN deployment on DeployApps"
 # meta data start
 description: "Learn how to optimize your Express.js development by implementing serverless architecture and CDN deployment. Explore how DeployApps’s platform enhances performance, scalability, and cost-efficiency, making it easier to build and deploy modern web applications"

@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /images/implement_shopping_cart_redis.webp
+thumbnail: /blog/images/implement_shopping_cart_redis.webp
 preview: Learn how to build a shopping cart app with Typescript, Redis, and React.
 description: Implement a scalable, fast, and robust shopping cart using Redis, NodeJs, and React. This tutorial guides you step-by-step through building a cart feature.
 meta_og_url: "https://genezio.com/blog/implement-a-shopping-cart-using-typescript-redis-and-react/"
@@ -364,7 +364,7 @@ export interface Product {
   description: string;
   price: number;
   rating: number;
-  thumbnail: string;
+  thumbnail: /blogstring;
 }
 
 // Information needed for a cart item

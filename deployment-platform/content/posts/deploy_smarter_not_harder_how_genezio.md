@@ -5,7 +5,7 @@ tags:
   - Tutorials
 author: Rares Istoc
 linkedIn: https://ro.linkedin.com/in/rares-istoc-9aa401123
-thumbnail: /images/rag.webp
+thumbnail: /blog/images/rag.webp
 preview: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how DeployApps can transform your deployment workflow.
 # meta data start
 description: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how DeployApps can transform your deployment workflow.

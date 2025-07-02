@@ -5,7 +5,7 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /images/effortless.webp
+thumbnail: /blog/images/effortless.webp
 preview: What was once a futuristic concept—AIs making real decisions and automating complex tasks independently—is now our reality. “AI agents” is the latest buzzword you may have seen floating around 𝕏 and such, and while many people swear they have the most advanced AI agents, a lot of them either are a downright sham. But the AI agents market is, in fact, developing rapidly, with a projection to grow from USD 5.1 billion in 2024 to USD 47.1 billion by 2030.
 # meta data start
 description: Look into AI agent examples like OpenAI’s Deep Research, Waymo’s self-driving cars, and Nightingale’s security drones.

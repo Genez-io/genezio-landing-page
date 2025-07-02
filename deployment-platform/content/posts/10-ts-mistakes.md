@@ -5,7 +5,7 @@ tags:
   - Learning
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /images/mistakesintypescript.webp
+thumbnail: /blog/images/mistakesintypescript.webp
 preview: We will walk through the most common 10 mistakes in typescript and how to avoid them.
 # meta data start
 description: "We will walk through the most common 10 mistakes in typescript and how to avoid them."
