@@ -62,7 +62,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://genezio-landing-page.genezio.ai/"
+            --baseURL "https://genezio-landing-page.genezio.ai/blog"
       - name: Install deps landing page
         working-directory: ./new-landing
         run: npm install
