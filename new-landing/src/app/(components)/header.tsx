@@ -99,7 +99,7 @@ export function Header() {
             </div>
 
             <button
-              onClick={() => (window.location.href = "/deployment-platform/blog/")}
+              onClick={() => (window.location.href = "/blog/")}
               className="text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
             >
               Blog
