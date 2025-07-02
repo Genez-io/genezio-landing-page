@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/what_is_serverless_security.webp
+thumbnail: /images/what_is_serverless_security.webp
 preview: "Security in the cloud is still a headache for CTOs and solopreneurs alike. Almost 60% of organisations that detect a cyberattack respond to it only after the damage has already been done."
 description: "Serverless security is a term to describe the implemention of a layer of security within the serverless application to protect the code from cyberattacks and bad actors."
 meta_og_url: "https://genezio.com/blog/serverless-security/"
-meta_og_image: "https://genez.io/deployment-platform/images/what_is_serverless_security.webp"
+meta_og_image: "https://genez.io/images/what_is_serverless_security.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -36,7 +36,7 @@ It’s widespread that the weakest security link is the human link, and developi
 
 ### Serverless framework security
 
-Serverless frameworks are platforms that are used to build and deploy serverless applications. They make it easier for full-stack developers to deploy code with cloud providers. Genezio, {{< external-link link="https://github.com/sst/sst" >}}SST{{< /external-link >}}, or {{< external-link link="https://github.com/hashicorp/terraform" >}}Terraform{{< /external-link >}} are all well-established examples of serverless frameworks. Serverless framework security refers to the measures these frameworks take to protect code or apps.
+Serverless frameworks are platforms that are used to build and deploy serverless applications. They make it easier for full-stack developers to deploy code with cloud providers. DeployApps, {{< external-link link="https://github.com/sst/sst" >}}SST{{< /external-link >}}, or {{< external-link link="https://github.com/hashicorp/terraform" >}}Terraform{{< /external-link >}} are all well-established examples of serverless frameworks. Serverless framework security refers to the measures these frameworks take to protect code or apps.
 
 ### Side with serverless frameworks that have addressed privacy
 
@@ -60,7 +60,7 @@ Serverless computing's architecture — which breaks down applications into smal
 
 Serverless frameworks usually feature {{< external-link link="https://www.sciencedirect.com/topics/computer-science/runtime-protection#:~:text=Runtime%20protection%20is%20an%20effective,code%20changes%20are%20not%20possible.&text=Web%20application%20firewalls%20can%20provide,SQL%20injection%20when%20properly%20tuned." >}}runtime protection mechanisms{{< /external-link >}}. This makes it significantly harder for attackers to exploit vulnerabilities like {{< external-link link="https://www.sciencedirect.com/topics/computer-science/runtime-protection#:~:text=Runtime%20protection%20is%20an%20effective,code%20changes%20are%20not%20possible.&text=Web%20application%20firewalls%20can%20provide,SQL%20injection%20when%20properly%20tuned." >}}SQL injection{{< /external-link >}} or {{< external-link link="https://portswigger.net/web-security/cross-site-scripting#:~:text=Cross%2Dsite%20scripting%20(also%20known,different%20websites%20from%20each%20other." >}}cross-site scripting{{< /external-link >}}. Just keep in mind — not all serverless frameworks feature this protection.
 
-![alt_text](/deployment-platform/posts/serverless_security1.webp)
+![alt_text](/posts/serverless_security1.webp)
 
 Serverless environments also allow for always-on {{< external-link link="https://aws.plainenglish.io/serverless-monitoring-best-practices-fbcf14e3b624" >}}function behaviour monitoring{{< /external-link >}}. Keeping track of things like how long it takes to do something and how many resources are being used can help find and address problems that might indicate a cyberattack. Some providers have built-in monitoring tools that show how functions are working, but that’s more on the business side, since they’ll be the ones acting on a threat if that were the case for strange behaviour.
 
@@ -86,9 +86,9 @@ Even though serverless functions are short-lived, hackers can still attack them 
 
 Broken authentication is a typical problem in any full-stack web app (ask around for {{< external-link link="https://auth0.com/blog/what-is-broken-authentication/" >}}multimillion-dollar companies{{< /external-link >}} promising to solve it), including those on serverless designs. Weak or compromised login information can give unauthorised access to sensitive data. DoS attacks can still affect serverless applications by overwhelming function requests or using too many resources. So, the best way out of it is to side with a provider that offers out-of-the-box strong authentication systems.
 
-![alt_text](/deployment-platform/posts/serverless_security2.webp)
+![alt_text](/posts/serverless_security2.webp)
 
-## Relying on leading serverless security with Genezio
+## Relying on leading serverless security with DeployApps
 
 Security in internet applications can be taken for granted — or sent to the “to-do” list — on plenty of occasions. For example, in any cloud platform, developers might make the mistake of sitting back and relaxing when designing their security measures because they're relying on the vendor — and we'll talk again about how that approach has fared so far.
 
@@ -98,8 +98,8 @@ A third scenario: When expanding a certain SaaS business to Europe (which is jus
 
 These are all plausible possibilities because they're far removed from the business logic. They're occasions in which security needs to be added because there are people who know how to exploit these easy-to-score vulnerabilities. And if you were wondering, depending on a cloud vendor for security won't cut it — even {{< external-link link="https://www.sumologic.com/blog/aws-security-breaches-2017/" >}}Accenture got hacked{{< /external-link >}} and gave away gigabytes of information from their AWS S3 bucket.
 
-Genezio is a type-safe serverless platform so that developers can build full-stack apps, and that means, of course, taking care of security also. Since the platform intends users to get their apps up and running quickly so they can focus on their business, it makes efforts to solve security starting from the code itself. Typesafe coding is associated with preventing bugs, but such a design might also turn out to sift out some vulnerabilities.
+DeployApps is a type-safe serverless platform so that developers can build full-stack apps, and that means, of course, taking care of security also. Since the platform intends users to get their apps up and running quickly so they can focus on their business, it makes efforts to solve security starting from the code itself. Typesafe coding is associated with preventing bugs, but such a design might also turn out to sift out some vulnerabilities.
 
-Genezio also throws the business logic to the backend so that accessing it becomes harder for attackers. And even the {{< external-link link="https://genezio.com/docs/cli-tool/#cli-environment-variables" >}}Analytics tool{{< /external-link >}} is anonymised. That's how Genezio solves security — it has brought it to the table by design, and, like a good serverless platform should do, it takes care of it so that developers can focus on building their business.
+DeployApps also throws the business logic to the backend so that accessing it becomes harder for attackers. And even the {{< external-link link="https://genezio.com/docs/cli-tool/#cli-environment-variables" >}}Analytics tool{{< /external-link >}} is anonymised. That's how DeployApps solves security — it has brought it to the table by design, and, like a good serverless platform should do, it takes care of it so that developers can focus on building their business.
 
-**Find out more about the benefits of serverless security and type-safe serverless development with multiple builds at {{< external-link link="https://Genezio.com" >}}Genezio.com{{< /external-link >}}.**
+**Find out more about the benefits of serverless security and type-safe serverless development with multiple builds at {{< external-link link="https://deployapps.dev" >}}DeployApps.dev{{< /external-link >}}.**

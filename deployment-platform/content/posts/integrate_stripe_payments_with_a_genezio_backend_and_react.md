@@ -1,16 +1,16 @@
 ---
-title: "Integrate Stripe Payments with a Genezio Backend and React"
+title: "Integrate Stripe Payments with a DeployApps Backend and React"
 date: 2024-03-05
 tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /deployment-platform/images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp
+thumbnail: /images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp
 preview: This guide will walk you through integrating Stripe payments using a genezio backend and a React frontend. Integrating a web app with a payment gateway can be challenging, even if Stripe provides most of the functionality out of the box.
 # meta data start
-description: "Learn how to integrate Stripe payments into your Genezio backend with React. Follow our step-by-step guide for seamless payment integration."
+description: "Learn how to integrate Stripe payments into your DeployApps backend with React. Follow our step-by-step guide for seamless payment integration."
 meta_og_url: "https://genezio.com/blog/integrate-stripe-payments/"
-meta_og_image: "https://genezio.com/deployment-platform/images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp"
+meta_og_image: "https://genezio.com/images/integrate_stripe_payments_with_a_genezio_backend_and_react.webp"
 url: "/blog/integrate-stripe-payments/"
 # meta data end
 customHeader: "White header"
@@ -20,7 +20,7 @@ readTime: 20
 
 This guide will walk you through integrating Stripe payments using a genezio backend and a React frontend. Integrating a web app with a payment gateway can be challenging, even if Stripe provides most of the functionality out of the box.
 There are numerous approaches to managing Stripe API integration on the backend. In this tutorial, I'll share with you the method I believe to be most efficient and in line with Stripe API official recommendations.
-Genezio significantly simplifies the process, freeing you from concerns about deployment and ensuring smooth communication between the backend and frontend.
+DeployApps significantly simplifies the process, freeing you from concerns about deployment and ensuring smooth communication between the backend and frontend.
 
 ## Content
 
@@ -315,7 +315,7 @@ Select the event to listen to **checkout.session.completed.**
 
 The screen should look like this:
 
-![Alt text](/deployment-platform/posts/stripe-post-img1.webp)
+![Alt text](/posts/stripe-post-img1.webp)
 
 Now Press **Add Endpoint.**
 
@@ -323,7 +323,7 @@ After the Endpoint is created, press **Reveal Signing Secret** and copy it for t
 
 This is a look at our environment variables page after all the setup is complete.
 
-![Alt text](/deployment-platform/posts/env-variables-stripe.webp)
+![Alt text](/posts/env-variables-stripe.webp)
 
 Simply hit 'save' and you're all set to test your application in a cloud environment.
 Go to the frontend URL and test your app.

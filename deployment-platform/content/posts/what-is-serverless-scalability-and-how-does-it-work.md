@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/what_is_serverless_scalability_and_how_does_it_work.webp
+thumbnail: /images/what_is_serverless_scalability_and_how_does_it_work.webp
 preview: "Serverless computing is a system of a cloud model that is used by more than 20,000 companies across every industry imaginable, including Netflix, Coca-Cola, and Nordstrom."
 description: "Serverless scalability is the ability of a serverless system to automatically adjust its size to match the workload."
 meta_og_url: "https://genezio.com/blog/serverless-scalability/"
-meta_og_image: "https://genez.io/deployment-platform/images/what_is_serverless_scalability_and_how_does_it_work.webp"
+meta_og_image: "https://genez.io/images/what_is_serverless_scalability_and_how_does_it_work.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -32,7 +32,7 @@ The serverless model generally operates on a pay-per-use basis, meaning you only
 
 Serverless scalability is like having a restaurant ({{< external-link link="https://www.goodreads.com/quotes/622508-numbers-written-on-restaurant-bills-within-the-confines-of-restaurants" >}}Bistromathics{{< /external-link >}} come to mind) that can magically create and remove tables based on the number of people wanting to eat. (We use the word “magically” because, as we are talking about “serverless,” all this happens without the owner of the restaurant being aware of it — in other words, automagically). So, unlike traditional systems where you need to manually add or remove servers (or processing power if you're running on the cloud) depending on the rise or fall of the demand, serverless platforms do this automatically, which is equivalent to saying that serverless systems are inherently scalable—provided you choose the right partner who can help you set up the environment so that it doesn’t crash or leave you with an unexpected bill.
 
-{{< external-link link="https://genezio.com/blog/effortless-scaling-genezio-handles-growth/#understanding-scalability" >}}Auto Scaling — Genezio Handles Growth →{{< /external-link >}}
+{{< external-link link="https://genezio.com/blog/effortless-scaling-genezio-handles-growth/#understanding-scalability" >}}Auto Scaling — DeployApps Handles Growth →{{< /external-link >}}
 
 Let's take another example. You've programmed by yourself a ticket-selling web app that has gone viral overnight, particularly because you cut a deal with an up-and-coming act that's doing {{< external-link link="https://www.nytimes.com/2024/06/21/business/taylor-swift-eras-tour-inflation-europe.html" >}}their first show{{< /external-link >}} in your town. With a normal server setup, your web app might probably crash because too many people are trying to use it at once. Even if you've set up your server to automatically add more power when it's necessary (called autoscaling in traditional setups), this doesn't happen instantly. It takes time for these extra servers to start up. Not to mention the bill — that also goes up.
 
@@ -72,7 +72,7 @@ The better you can predict how much load your system will handle, the better it 
 
 There are two primary ways to handle an increased load: **Scale-up** (vertical scaling), which involves upgrading a single computer (with a faster processor or more memory, for instance), and **scale-out** (horizontal scaling), which means adding more computers or servers to share the workload. Often, a combination of both approaches is the best option. (If you're running serverless, you don't even have to think about going horizontal or vertical — the provider handles that decision for you).
 
-![alt_text](/deployment-platform/posts/serverless-scalability2.webp)
+![alt_text](/posts/serverless-scalability2.webp)
 
 Using serverless technology helps a lot with handling load. The system automatically adds or removes computers as required, so you don't have to worry about it as much. This also means you can focus on building your application instead of managing servers, crashes, and timeout errors.
 
@@ -105,14 +105,14 @@ It's important to look at the right numbers when measuring performance. While te
 
 Percentiles offer a more precise representation of system performance. A **percentile** indicates the percentage of data points falling below a specific value. Commonly used percentiles include the 95th, 99th, and 99.9th percentiles (p95, p99, and p999). A typical p99 value for server response time might range from 15 to 70 milliseconds. But you might not need the same p99 value for an instant messaging app than for an enterprise solution you built so that your company can start offering benefits through a dashboard. Your colleagues are likely to be more patient, considering they're about to cop some corporate swag.
 
-![alt_text](/deployment-platform/posts/serverless-scalability1.webp)
+![alt_text](/posts/serverless-scalability1.webp)
 
-## Serverless scalability in practice with Genezio
+## Serverless scalability in practice with DeployApps
 
 Serverless technology allows software to become a lot simpler to scale up. For instance, if your website — a page that reports highway traffic near the central business district — receives high volumes of visitors during standard business hours (Monday to Friday, 8am to 5pm) but sees a considerable drop-off on the weekend, serverless will adapt for you (and will adapt to your operating costs too).
 
 Also, if you don't have to do things like restarting servers, fixing problems with storage, or installing updates, your team can spend more time building and improving your application. This is true for solopreneurs, big business owners, hobbyist developers, or IT technicians who need to build an app outside a legacy system alike.
 
-{{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}}, a serverless platform that can run as a FaaS provider as well, is a practical example of serverless scalability. It automatically scales applications based on the volume of traffic. Applications running on Genezio can handle sudden increases in users without issues. Developers have deployed their full-stack web apps **on Genezio in minutes**. And the serverless scalability of these typesafe web apps occurs in an instant.
+{{< external-link link="https://genezio.com" >}}DeployApps{{< /external-link >}}, a serverless platform that can run as a FaaS provider as well, is a practical example of serverless scalability. It automatically scales applications based on the volume of traffic. Applications running on DeployApps can handle sudden increases in users without issues. Developers have deployed their full-stack web apps **on DeployApps in minutes**. And the serverless scalability of these typesafe web apps occurs in an instant.
 
-**To learn more about serverless scalability and its benefits, visit** {{< external-link link="https://genezio.com" >}} Genezio.com{{< /external-link >}}.
+**To learn more about serverless scalability and its benefits, visit** {{< external-link link="https://genezio.com" >}} DeployApps.com{{< /external-link >}}.

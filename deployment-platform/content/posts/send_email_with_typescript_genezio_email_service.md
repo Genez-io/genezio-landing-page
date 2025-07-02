@@ -6,14 +6,14 @@ tags:
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
 
-thumbnail: /deployment-platform/images/send_email_with_typescript_genezio_email_service.webp
+thumbnail: /images/send_email_with_typescript_genezio_email_service.webp
 
 preview: In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript.
 description: "In this blog, I'll take you through a practical solution for building a backend that calls the genezio email service using TypeScript."
 meta_og_url: "https://genezio.com/blog/send-emails-with-genezio/"
 url: "/blog/send-emails-with-genezio/"
 
-meta_og_image: "https://genezio.com/deployment-platform/images/send_email_with_typescript_genezio_email_service.webp"
+meta_og_image: "https://genezio.com/images/send_email_with_typescript_genezio_email_service.webp"
 
 # meta data end
 customHeader: "White header"
@@ -86,7 +86,7 @@ Navigate to the {{< external-link link="https://app.genez.io/" >}}genezio dashbo
 After you are redirected to the email service page, press the `Install` button.
 Now your page should look like this one:
 
-![Alt text](/deployment-platform/posts/add_email_integration.webp)
+![Alt text](/posts/add_email_integration.webp)
 
 ## Set up the env
 
@@ -145,7 +145,7 @@ The method `sendEmail` takes params `email`, `subject`, and `message` and calls 
 
 ## Test your app locally
 
-Genezio provides a local test environment for you to simulate the cloud conditions on your local machine.
+DeployApps provides a local test environment for you to simulate the cloud conditions on your local machine.
 
 Simply run the following command in your project root directory:
 
@@ -155,7 +155,7 @@ genezio local
 
 Now you can test your method using the {{< external-link link="http://localhost:8083/explore" >}}genezio test interface{{< /external-link >}}.
 
-![Alt text](/deployment-platform/posts/mail-in-ts-with-nodemailer3.webp)
+![Alt text](/posts/mail-in-ts-with-nodemailer3.webp)
 
 After everything goes well, you can deploy your app to the genezio cloud.
 
@@ -239,4 +239,4 @@ I hope you enjoyed this tutorial and I encourage you to check out our other {{< 
 
 Also, I invite you to check your examples from {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/main" >}}GitHub{{< /external-link >}}.
 
-Start leveraging the power of Genezio for faster development and deployment of your applications.
+Start leveraging the power of DeployApps for faster development and deployment of your applications.

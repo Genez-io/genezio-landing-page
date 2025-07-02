@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /deployment-platform/images/mern.webp
+thumbnail: /images/mern.webp
 preview: Deploying a MERN (MongoDB, Express.js, React.js, Node.js) application can often feel complex and time-consuming, especially for developers looking for a streamlined solution. In this article, I present a solution for anyone who wants to quickly deploy a fully functional MERN app without diving into the intricacies of manual setup. With just one click, you can have your app live and ready to use—let’s get started!
 # meta data start
 description: The MERN stack is a very popular technology for full stack web applications because it uses very mature and battle tested technologies.
 meta_og_url: "https://genezio.com/blog/mern/"
-meta_og_image: "https://genezio.com/deployment-platform/images/mern.webp"
+meta_og_image: "https://genezio.com/images/mern.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -25,7 +25,7 @@ What is a MERN stack?
 
 The MERN stack is a very popular technology for full stack web applications because it uses very mature and battle tested technologies. These technologies are also quite popular themselves and easy to learn and use. A main advantage of this stack is that you can use Javascript or Typescript on both frontend and backend.
 
-![alt_text](/deployment-platform/posts/merndeploy.webp)
+![alt_text](/posts/merndeploy.webp)
 
 ## Deploying a MERN application
 
@@ -44,7 +44,7 @@ Now, imagine deploying a fully functional MERN application from scratch—within
 Click the button below to start the process of deploying a template application.
 
 {{< external-link link="https://app.genez.io/auth/signup?redirect=mern-getting-started" >}}
-![alt_text](/deployment-platform/posts/deploy-button.svg)
+![alt_text](/posts/deploy-button.svg)
 {{< /external-link >}}
 
 ### Step 1
@@ -56,7 +56,7 @@ Login with either Google or Github.
 In the next screen, you will be asked to choose between:
 
 1. Deploy using Github meaning that your project will be integrated with Github and whenever you push a new commit a new deployment starts.
-2. Deploy without Github if you want to manually deploy using Genezio CLI.
+2. Deploy without Github if you want to manually deploy using DeployApps CLI.
 
 Choose “Deploy on Github”.
 
@@ -66,11 +66,11 @@ If you have pressed “Deploy on Github”, a new repository will be created for
 
 Congratulations! In under five minutes, you’ve successfully deployed a MERN application. Now, let’s dive into the project to uncover the “magic” behind it.
 
-The platform powering this seamless experience is Genezio, a full-stack deployment platform designed to handle all essential components: static web pages, scalable HTTP servers, and databases (including MongoDB and PostgreSQL). Genezio simplifies deployment, offering an intuitive and efficient solution for modern development needs.
+The platform powering this seamless experience is DeployApps, a full-stack deployment platform designed to handle all essential components: static web pages, scalable HTTP servers, and databases (including MongoDB and PostgreSQL). DeployApps simplifies deployment, offering an intuitive and efficient solution for modern development needs.
 
 ## Exploring the Project
 
-One of the key files in your project is the `genezio.yaml`. This file outlines all the resources your project requires, and Genezio automatically provisions them during deployment. No need to worry—you’ll rarely, if ever, need to modify this file.
+One of the key files in your project is the `genezio.yaml`. This file outlines all the resources your project requires, and DeployApps automatically provisions them during deployment. No need to worry—you’ll rarely, if ever, need to modify this file.
 
 Besides that, the project structure is very simple. There are two folders: one for the express.js server and one for the React application.
 

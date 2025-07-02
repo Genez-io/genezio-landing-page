@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/how-to-set-up-a-chatbot.webp
+thumbnail: /posts/how-to-set-up-a-chatbot.webp
 preview: Evaluating your chatbot before launch is a business-critical task. And with tools like Genezio, even non-technical staff can run AI evals to make sure your chatbot doesn’t become a liability.
 # meta data start
 description: Learn how to set up a chatbot, test, and evaluate them using Genezio’s simulation evals for high-performance customer service.
-meta_og_url: "https://genezio.com/deployment-platform/blog/how-to-set-up-chatbot/"
+meta_og_url: "https://genezio.com/blog/how-to-set-up-chatbot/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-set-up-a-chatbot.webp"
+meta_og_image: "https://genezio.com/posts/how-to-set-up-a-chatbot.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -22,11 +22,11 @@ url: /blog/how-to-set-up-chatbot/
 
 Anyone who's worked with generative AI knows that turning an idea into a quick prototype is relatively simple, but delivering consistent, high-quality results at production scale is a much bigger challenge. Why? Because not every chatbot is created---or tested---equally.
 
-{{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290" >}}Gartner{{< /external-link >}} projects over 80% of customer interactions to be handled autonomously by agentic AI by 2029, which would lead to a 30% reduction in operational costs. If you're a CXO planning to roll out a customer-facing chatbot, the biggest mistake you can make is underestimating the power, and danger, of AI agents. Most modern bots are powered by large language models, which are extremely good at generating text but also prone to {{< external-link link="https://genezio.com/deployment-platform/blog/ai-hallucination-in-customer-service/" >}}hallucinations{{< /external-link >}}. A wrong recommendation, a made-up refund policy, or offensive response can result in an angry customer, bad PR, and real financial loss.
+{{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290" >}}Gartner{{< /external-link >}} projects over 80% of customer interactions to be handled autonomously by agentic AI by 2029, which would lead to a 30% reduction in operational costs. If you're a CXO planning to roll out a customer-facing chatbot, the biggest mistake you can make is underestimating the power, and danger, of AI agents. Most modern bots are powered by large language models, which are extremely good at generating text but also prone to {{< external-link link="https://genezio.com/blog/ai-hallucination-in-customer-service/" >}}hallucinations{{< /external-link >}}. A wrong recommendation, a made-up refund policy, or offensive response can result in an angry customer, bad PR, and real financial loss.
 
 That's why evaluating your chatbot before launch is a business-critical task. And with tools like Genezio, even non-technical staff can run AI evals to make sure your chatbot doesn't become a liability.
 
-![How should customer service teams adapt to the rise of agentic Al?](https://genezio.com/deployment-platform/posts/adapt-to-the-rise-of-agentic-ai.webp)
+![How should customer service teams adapt to the rise of agentic Al?](https://genezio.com/posts/adapt-to-the-rise-of-agentic-ai.webp)
 
 ## How to Set Up a Chatbot in 6 Steps for Non-Technical Business Stakeholders
 
@@ -34,7 +34,7 @@ Let's walk through what every CXO should know about how to set up a chatbot in 2
 
 ## Step 1: Understand what you're really building
 
-Today's chatbot isn't a simple FAQ script. It's often powered by a combination of AI agents, LLMs, and retrieval-augmented generation ({{< external-link link="https://genezio.com/deployment-platform/blog/retrieval-augmented-generation-is-fixing-llm/" >}}RAG{{< /external-link >}}) systems that make it capable of nuanced, human-like conversation. That means your chatbot is representing your brand, it makes decisions, and shapes customer experiences.
+Today's chatbot isn't a simple FAQ script. It's often powered by a combination of AI agents, LLMs, and retrieval-augmented generation ({{< external-link link="https://genezio.com/blog/retrieval-augmented-generation-is-fixing-llm/" >}}RAG{{< /external-link >}}) systems that make it capable of nuanced, human-like conversation. That means your chatbot is representing your brand, it makes decisions, and shapes customer experiences.
 
 That also means LLMs can, and often do, hallucinate and produce responses that sound confident but are factually wrong. If your AI chatbot gives a customer the wrong refund policy, or tells them their account is closed when it's not, the damage is real. In a 2024 {{< external-link link="https://www.salesforce.com/resources/articles/customer-expectations/" >}}Salesforce{{< /external-link >}} survey, 80% of customers say it's important for a human to validate the output of AI and 68% say advances in AI make it more important for companies to be trustworthy.
 
@@ -42,11 +42,11 @@ So, if you're asking yourself how to set up a chatbot, step one is recognizing t
 
 ## Step 2: Choose your platform
 
-This might be the first obstacle that rises as you ask yourself how to set up a chatbot. There are a lot of developer platforms to build {{< external-link link="https://genezio.com/deployment-platform/blog/ai-agent-tools/" >}}autonomous AI systems{{< /external-link >}}, but there are also many free, no-code needed resources to build chatbots today. First things first, what do you want your chatbot to do? Do you want a sales chatbot? A customer service bot? A travel agency bot that can handle bookings and plan itineraries based on specific budgets?
+This might be the first obstacle that rises as you ask yourself how to set up a chatbot. There are a lot of developer platforms to build {{< external-link link="https://genezio.com/blog/ai-agent-tools/" >}}autonomous AI systems{{< /external-link >}}, but there are also many free, no-code needed resources to build chatbots today. First things first, what do you want your chatbot to do? Do you want a sales chatbot? A customer service bot? A travel agency bot that can handle bookings and plan itineraries based on specific budgets?
 
 Based on your answer, you can go on ahead and select a platform. There are many platforms that cater to specific chatbot purposes, so try to select the one that lines up with your objective the most. The right chatbot platform for your business will largely depend on your programming background, the specific integrations your setup requires, the communication channels you plan to use (such as a website, WhatsApp, or both), and the overall complexity of your chatbot's role.
 
-Depending on these factors, you might opt for an open-source solution, a customizable white-label platform, or a user-friendly low-code tool that simplifies development. You might also just integrate a third-party API (let's say, from {{< external-link link="https://genezio.com/deployment-platform/blog/ai-third-party-testing/#what-are-ai-agents" >}}Anthropic{{< /external-link >}}). These platforms or web services will, one way or another, let you configure the chatbot's tone, knowledge base, fallback behavior, and integration with your backend systems. However, the right platform doesn't guarantee high performance. Most platforms don't come with reliable evaluation systems included by default.
+Depending on these factors, you might opt for an open-source solution, a customizable white-label platform, or a user-friendly low-code tool that simplifies development. You might also just integrate a third-party API (let's say, from {{< external-link link="https://genezio.com/blog/ai-third-party-testing/#what-are-ai-agents" >}}Anthropic{{< /external-link >}}). These platforms or web services will, one way or another, let you configure the chatbot's tone, knowledge base, fallback behavior, and integration with your backend systems. However, the right platform doesn't guarantee high performance. Most platforms don't come with reliable evaluation systems included by default.
 
 ## Step 3: Build it!
 
@@ -66,7 +66,7 @@ When the bot is under a lot of "added pressure," CXOs need to make sure that its
 
 ## Step 5: Evaluate before you launch
 
-This is the most overlooked step in the chatbot setup process, especially in non-technical teams. Many companies test their bots with ideal user interactions, such as {{< external-link link="https://genezio.com/deployment-platform/blog/manual-user-acceptance-testing-uat/" >}}UAT{{< /external-link >}}. But that's not enough.
+This is the most overlooked step in the chatbot setup process, especially in non-technical teams. Many companies test their bots with ideal user interactions, such as {{< external-link link="https://genezio.com/blog/manual-user-acceptance-testing-uat/" >}}UAT{{< /external-link >}}. But that's not enough.
 
 An effective evaluation system needs to answer these questions:
 

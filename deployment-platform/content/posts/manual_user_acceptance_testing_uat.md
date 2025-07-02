@@ -5,12 +5,12 @@ tags:
   - AI
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: https://genezio.com/deployment-platform/posts/uat-slows-down-chatbot-launches.webp
+thumbnail: /posts/uat-slows-down-chatbot-launches.webp
 preview: Manual user acceptance testing (UAT) is a step in software development in which actual users test software in real-life situations to make sure it works for what they need to do. 
 # meta data start
 description: Manual User Acceptance Testing, or manual UAT, can make an AI chatbot deployment get stuck in development hell. This is what to do instead.
-meta_og_url: "https://genezio.com/deployment-platform/blog/manual-user-acceptance-testing-uat/"
-meta_og_image: "https://genezio.com/deployment-platform/posts/uat-slows-down-chatbot-launches.webp"
+meta_og_url: "https://genezio.com/blog/manual-user-acceptance-testing-uat/"
+meta_og_image: "https://genezio.com/posts/uat-slows-down-chatbot-launches.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -30,7 +30,7 @@ Because, usually, manual user acceptance testing takes simply too long, sometime
 
 For mid-market companies, from e-commerce to regional airlines, the complexity is made worse by scarce in-house expertise (this is totally acceptable) and the need to test in multiple languages and channels (Not as easy as it initially seems — LLMs can go rogue in multiple languages).
 
-So, what should companies do to make sure that UAT does not slow down their new {{< external-link link="https://genezio.com/deployment-platform/blog/understanding-ai-agents-101/" >}}AI agents{{< /external-link >}} deployment?
+So, what should companies do to make sure that UAT does not slow down their new {{< external-link link="https://genezio.com/blog/understanding-ai-agents-101/" >}}AI agents{{< /external-link >}} deployment?
 
 ## What is Manual User Acceptance Testing?
 
@@ -38,7 +38,7 @@ Manual user acceptance testing (UAT) is a step in software development in which 
 
 Manual UAT is done by actual, non-technical users. A company's staff can do UAT because they're replicating the behavior their potential users will have. This is why user acceptance testing is different to QA, or quality assurance, testing.
 
-![ai agent for cx launch](/deployment-platform/posts/ai-agent-for-cx-launch.webp)
+![ai agent for cx launch](/posts/ai-agent-for-cx-launch.webp)
 
 ## The Problem: Manual User Acceptance Testing is a Bottleneck
 
@@ -105,7 +105,7 @@ AI agents interact with evolving databases, changing APIs, and all kinds of user
 - A finance bot could offer unsanctioned advice or breach compliance terms.
 - Even worse—a healthcare assistant might offer financial advice because the user jail-broke it into saying it. And now the company is liable!
 
-With Genezio, your AI agent is {{< external-link link="https://genezio.com/deployment-platform/blog/common-mistakes-ai-agents-make/" >}}continuously tested for mistakes{{< /external-link >}} across scenarios that matter most to your business. Our regression testing framework alerts teams to new bugs or undesired behavior as soon as it happens. Companies can use our alerts to fix issues before customers notice.
+With Genezio, your AI agent is {{< external-link link="https://genezio.com/blog/common-mistakes-ai-agents-make/" >}}continuously tested for mistakes{{< /external-link >}} across scenarios that matter most to your business. Our regression testing framework alerts teams to new bugs or undesired behavior as soon as it happens. Companies can use our alerts to fix issues before customers notice.
 
 ## Solving Enterprise-Grade Pain Points
 

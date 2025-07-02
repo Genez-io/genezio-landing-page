@@ -6,12 +6,12 @@ tags:
   - Learning
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /deployment-platform/images/database-performance.webp
+thumbnail: /images/database-performance.webp
 preview: Deciding on the right database is often a challenging task when starting a new project.
 # meta data start
 description: "Decide on the right database for your project based on this analysis of their performance in a Function as a Service serverless environment."
 meta_og_url: "https://genezio.com/blog/database_in_serverless_world_comparison"
-meta_og_image: "https://genezio.com/deployment-platform/images/database-performance.webp"
+meta_og_image: "https://genezio.com/images/database-performance.webp"
 # meta data end
 # svg = “xyz”
 customHeader: "White header"
@@ -76,7 +76,7 @@ As mentioned earlier, my focus was to examine how the database would handle a su
 
 I measured the response time for a query during the 'cold start' phase, as well as the query time for an already warmed-up function. Let’s analyze the results!
 
-{{< svg file="/deployment-platform/posts/dbchart1.svg" >}}
+{{< svg file="/posts/dbchart1.svg" >}}
 
 ###### Figure 1: Results of the experiment with 300 requests every 100 ms for all databases.
 
@@ -90,7 +90,7 @@ When using the **Atlas MongoDB Data API**, we observe a notably favorable respon
 
 Furthermore, I conducted the same set of experiments with the genezio application, which was now hosted in a different region (us-east-1) than the database (eu-central-1). This aspect becomes useful when considering scenarios such as deploying a multi-region application while using a single database.
 
-{{< svg file="/deployment-platform/posts/dbchart2.svg" >}}
+{{< svg file="/posts/dbchart2.svg" >}}
 
 ###### Figure 2: Results of the experiment with 300 requests every 100 ms for all databases when the app is hosted in a different region than the database.
 
@@ -108,11 +108,11 @@ The results are presented below. The Y value of the X-th percentile means that Y
 
 For the warm start, we observe similar results, except there is a noticeably higher response at the 99.99th percentile. This means that it is unusual for queries to take more than 30 milliseconds. Such cases are the exception.
 
-![alt_text](/deployment-platform/posts/dbtable1.webp)
+![alt_text](/posts/dbtable1.webp)
 
 ###### Figure 3: Percentile statistics for 300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/deployment-platform/posts/dbtable2.webp)
+![alt_text](/posts/dbtable2.webp)
 
 ###### Figure 4: Percentile statistics for 900 concurrent requests with no timeout between them.
 
@@ -122,11 +122,11 @@ For MongoDB with an established connection it was way easier to find the point w
 
 We can see that the cold start increases from a steady 280-300 ms (Figure 5) to more than 800 ms (Figure 6). The warm query time remains constant. The problem is establishing the connection, but once the connection is successfully established, the time will remain constant.
 
-![alt_text](/deployment-platform/posts/dbtable3.webp)
+![alt_text](/posts/dbtable3.webp)
 
 ###### Figure 5: Percentile statistics for MongoDB with wire protocol connections and 300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/deployment-platform/posts/dbtable4.webp)
+![alt_text](/posts/dbtable4.webp)
 
 ###### Figure 6: Percentile statistics for MongoDB with wire protocol connections and 100 concurrent requests with 10ms timeout between them.
 
@@ -136,11 +136,11 @@ The MongoDB Data API is behaving better during a spike of traffic. I’ve done 9
 
 We see a slight decrease in the performance during the cold start, but nothing substantial. For the warm time responses, the response time is the same. Same as for the Firestore Database, we barely touched the breaking point and we can say with confidence that the MongoDB Data API could handle even more traffic.
 
-![alt_text](/deployment-platform/posts/dbtable5.webp)
+![alt_text](/posts/dbtable5.webp)
 
 ###### Figure 7: Percentile statistics for MongoDB Data API with 300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/deployment-platform/posts/dbtable6.webp)
+![alt_text](/posts/dbtable6.webp)
 
 ###### Figure 8: Percentile statistics for MongoDB Data API with 900 concurrent requests with no timeout between them.
 
@@ -148,11 +148,11 @@ We see a slight decrease in the performance during the cold start, but nothing s
 
 Lastly, DynamoDB was tested with 900 concurrent requests without any sleep time between the requests.
 
-![alt_text](/deployment-platform/posts/dbtable7.webp)
+![alt_text](/posts/dbtable7.webp)
 
 ###### Figure 9: Percentile statistics for DynamoDB with  300 concurrent requests with 100ms timeout between them.
 
-![alt_text](/deployment-platform/posts/dbtable8.webp)
+![alt_text](/posts/dbtable8.webp)
 
 ###### Figure 10: Percentile statistics for DynamoDB with 900 concurrent requests with no timeout between them.
 
@@ -170,7 +170,7 @@ To gauge the severity and reproducibility of this error I ran the following expe
 
 The steps 2 and 3 were repeated five times. Afterwards, I inspected the Atlas MongoDB's monitoring dashboard to observe the impact on the number of active connections. The results can be seen in Figure 11.
 
-![alt_text](/deployment-platform/posts/dbchart.webp)
+![alt_text](/posts/dbchart.webp)
 
 ###### Figure 11: Atlas MongoDB's monitoring dashboard
 

@@ -5,19 +5,19 @@ tags:
   - Learning
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
-thumbnail: /deployment-platform/images/optimize_expressjs_apps.webp
-preview: "Discover best practices for optimizing Express.js development with serverless architecture and CDN deployment on Genezio"
+thumbnail: /images/optimize_expressjs_apps.webp
+preview: "Discover best practices for optimizing Express.js development with serverless architecture and CDN deployment on DeployApps"
 # meta data start
-description: "Learn how to optimize your Express.js development by implementing serverless architecture and CDN deployment. Explore how Genezio’s platform enhances performance, scalability, and cost-efficiency, making it easier to build and deploy modern web applications"
+description: "Learn how to optimize your Express.js development by implementing serverless architecture and CDN deployment. Explore how DeployApps’s platform enhances performance, scalability, and cost-efficiency, making it easier to build and deploy modern web applications"
 meta_og_url: "https://genezio.com/blog/optimize-expressjs-apps"
-meta_og_image: "https://genezio.com/deployment-platform/images/optimize_expressjs_apps.webp"
+meta_og_image: "https://genezio.com/images/optimize_expressjs_apps.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 4
 ---
 
-When developing web applications using Express.js, developers must make critical decisions on how to efficiently serve static files and manage backend infrastructure. In this comprehensive guide, we’ll explore best practices for optimizing your Express.js projects, including leveraging modern platforms like Genezio to streamline these processes.
+When developing web applications using Express.js, developers must make critical decisions on how to efficiently serve static files and manage backend infrastructure. In this comprehensive guide, we’ll explore best practices for optimizing your Express.js projects, including leveraging modern platforms like DeployApps to streamline these processes.
 
 ## Optimized Static File Serving with Express.js
 
@@ -41,23 +41,23 @@ Docker containers offer isolated environments for running applications, improvin
 
 ### 3. Serverless Architecture
 
-Serverless computing is the most efficient and cost-effective solution among these options. Functions are executed on-demand, meaning resources are only consumed when needed. This results in significant cost savings. Serverless architectures also scale automatically, spawning new function instances as required. The primary challenge has been "cold starts," where invoking a function after a period of inactivity introduces delays. However, advancements in serverless technology, such as those by Genezio, have minimized cold start times to as low as 50 milliseconds, making serverless an increasingly viable option.
+Serverless computing is the most efficient and cost-effective solution among these options. Functions are executed on-demand, meaning resources are only consumed when needed. This results in significant cost savings. Serverless architectures also scale automatically, spawning new function instances as required. The primary challenge has been "cold starts," where invoking a function after a period of inactivity introduces delays. However, advancements in serverless technology, such as those by DeployApps, have minimized cold start times to as low as 50 milliseconds, making serverless an increasingly viable option.
 
-For more insights on how Genezio has optimized cold start times, explore the {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/">}}blog post on reducing cold start delays{{< /external-link >}}.
+For more insights on how DeployApps has optimized cold start times, explore the {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/">}}blog post on reducing cold start delays{{< /external-link >}}.
 
 ## Cost-Efficiency: Weighing the Options
 
 Cost is a pivotal consideration when selecting a backend architecture. EC2 instances and Docker containers can be expensive due to the need for continuous uptime, monitoring, and scaling. Serverless platforms, however, typically offer a more cost-effective pay-as-you-go model. You only pay for the actual execution time, which is particularly beneficial for applications with variable or unpredictable traffic patterns.
 
-## Genezio: Implementing Best Practices for Express.js Development
+## DeployApps: Implementing Best Practices for Express.js Development
 
-Genezio exemplifies best practices by integrating serverless architecture with CDN deployment for static assets. The platform offers automatic scaling, minimal cold start times, and efficient resource usage, making it an ideal solution for modern web applications. By handling backend processes as serverless functions and deploying front-end assets via a CDN. Genezio addresses both performance and cost concerns, offering a streamlined deployment experience for developers.
+DeployApps exemplifies best practices by integrating serverless architecture with CDN deployment for static assets. The platform offers automatic scaling, minimal cold start times, and efficient resource usage, making it an ideal solution for modern web applications. By handling backend processes as serverless functions and deploying front-end assets via a CDN. DeployApps addresses both performance and cost concerns, offering a streamlined deployment experience for developers.
 
-## How to Get Started with Genezio for Express.js Development
+## How to Get Started with DeployApps for Express.js Development
 
-If you’re ready to implement these best practices, deploying an Express.js app on Genezio is a great way to get started. By doing so, you’ll leverage the advantages of serverless architecture, including automatic scaling, efficient resource usage, and reduced cold start times. Genezio also takes care of CDN deployment for your static assets, ensuring fast load times and reduced server load.
+If you’re ready to implement these best practices, deploying an Express.js app on DeployApps is a great way to get started. By doing so, you’ll leverage the advantages of serverless architecture, including automatic scaling, efficient resource usage, and reduced cold start times. DeployApps also takes care of CDN deployment for your static assets, ensuring fast load times and reduced server load.
 
-You can get started quickly by deploying an Express.js app using this {{< external-link link="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/express-react-getting-started" >}}Genezio template{{< /external-link >}}. This template implements all the best practices discussed, providing a robust starting point for your next web application.
+You can get started quickly by deploying an Express.js app using this {{< external-link link="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/express-react-getting-started" >}}DeployApps template{{< /external-link >}}. This template implements all the best practices discussed, providing a robust starting point for your next web application.
 
 ## We'd love your thoughts
 

@@ -5,12 +5,12 @@ tags:
   - News
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
-thumbnail: /deployment-platform/images/release0.7.webp
+thumbnail: /images/release0.7.webp
 preview: "We've been hard at work, and we're thrilled to introduce genezio v0.7, loaded with features designed to make your development experience smoother and more collaborative!"
 # meta data start
-description: "Discover Genezio v0.7 updates, featuring collaboration tools, new project wizard, and Qstash queue integration for seamless development!"
+description: "Discover DeployApps v0.7 updates, featuring collaboration tools, new project wizard, and Qstash queue integration for seamless development!"
 meta_og_url: "https://genezio.com/blog/collaboration-queues-and-new-project-wizard-genezio-v0.7/"
-meta_og_image: "https://genezio.com/deployment-platform/images/release0.7.webp"
+meta_og_image: "https://genezio.com/images/release0.7.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

@@ -6,14 +6,14 @@ tags:
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
 
-thumbnail: /deployment-platform/images/openai-flask.webp
+thumbnail: /images/openai-flask.webp
 
-preview: Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a ChatGPT-powered chat app using Flask, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with Genezio, a powerful cloud deployment platform..
+preview: Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a ChatGPT-powered chat app using Flask, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with DeployApps, a powerful cloud deployment platform..
 # meta data start
-description: Learn how to create a ChatGPT-powered chat app with Flask. This guide covers setup, deployment with Genezio, and tips for seamless integration.
+description: Learn how to create a ChatGPT-powered chat app with Flask. This guide covers setup, deployment with DeployApps, and tips for seamless integration.
 meta_og_url: "https://genezio.com/blog/build-chatgpt-chatbot-flask/"
 
-meta_og_image: "https://genezio.com/deployment-platform/images/openai-flask.webp"
+meta_og_image: "https://genezio.com/images/openai-flask.webp"
 
 # meta data end
 customHeader: "White header"
@@ -22,7 +22,7 @@ readTime: 12
 url: /blog/build-chatgpt-chatbot-flask/
 ---
 
-Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a **ChatGPT-powered chat app using Flask**, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with **Genezio**, a powerful cloud deployment platform.
+Hi! I’m Cristi Miloiu, and in this article, I’ll walk you through building a **ChatGPT-powered chat app using Flask**, Python, and the OpenAI API. We’ll also cover deploying your app seamlessly with **DeployApps**, a powerful cloud deployment platform.
 
 If you’re short on time and prefer a ready-to-go solution, {{< external-link link="https://app.genez.io/auth/signup?redirect=flask-chatgpt-getting-started" >}}click here{{< /external-link >}} to deploy the app instantly to your account!
 
@@ -31,9 +31,9 @@ Have questions or suggestions? Feel free to contact me at cristi@genezio.com.
 Here’s what we’ll achieve by the end of this tutorial:
 
 - A functional Flask-based ChatGPT app with a responsive user interface.
-- Seamless deployment using Genezio for scalability and production readiness.
+- Seamless deployment using DeployApps for scalability and production readiness.
 
-![alt_text](/deployment-platform/posts/chatgpt-python.webp)
+![alt_text](/posts/chatgpt-python.webp)
 
 ## Step-by-Step Guide
 
@@ -250,7 +250,7 @@ npm install -g genezio
 
 ## Step 7: Test Locally
 
-Run your app locally using Genezio:
+Run your app locally using DeployApps:
 
 ```bash
 genezio local
@@ -268,10 +268,10 @@ genezio analyze
 
 Explanation:
 
-- Genezio scans your project to create a configuration file, `genezio.yaml`.
+- DeployApps scans your project to create a configuration file, `genezio.yaml`.
 - During this process, you’ll be prompted to enter the project name and region in the terminal.
 
-## Step 9: Deploy your app with Genezio
+## Step 9: Deploy your app with DeployApps
 
 Finally, deploy your app to the cloud with a single command:
 
@@ -283,17 +283,17 @@ Your app will be live at a custom subdomain, such as
 `https://your-app-name.app.genez.io`.
 You can continue to manage, test, update and monitor your project from the genezio dashboard.
 
-## Why use Genezio for deployment?
+## Why use DeployApps for deployment?
 
 - **Simplified Deployment:** One-command deployment makes getting your app live easy.
 - **Scalability:** Automatically scale your app as user demand grows.
-- **Built-in Monitoring:** Manage and monitor your app from the Genezio dashboard.
+- **Built-in Monitoring:** Manage and monitor your app from the DeployApps dashboard.
 
 With this guide, you’ve learned to:
 
 - Build a **Flask-based ChatGPT app** using the OpenAI API.
 
-Deploy and manage your app seamlessly with **Genezio**.
+Deploy and manage your app seamlessly with **DeployApps**.
 
 If you have questions or feedback, feel free to reach out to me at cristi@genezio.com.
 

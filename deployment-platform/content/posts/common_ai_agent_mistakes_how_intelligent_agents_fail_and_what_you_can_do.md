@@ -5,12 +5,12 @@ tags:
   - AI
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /deployment-platform/images/ai-mistakes.webp
+thumbnail: /images/ai-mistakes.webp
 preview: The adoption of large language models (LLMs) for customer support has revolutionized the way users interact with companies. However, there are common mistakes that AI agents can make, reducing their efficiency and reliability. Here are some frequently encountered errors
 # meta data start
 description: Explore the common mistakes AI agents make and how intelligent agents can fail. Learn now and uncover the challenges of AI-powered virtual agents.
 meta_og_url: "https://genezio.com/blog/common-mistakes-ai-agents-make/"
-meta_og_image: "https://genezio.com/deployment-platform/images/ai-mistakes.webp"
+meta_og_image: "https://genezio.com/images/ai-mistakes.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

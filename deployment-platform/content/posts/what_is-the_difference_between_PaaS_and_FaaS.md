@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp
+thumbnail: /images/business-logic-in-the-backend-the-why-and-how.webp
 preview: Serverless architectures are adaptable models of cloud deployment where software developers hand over their scaling and maintenance to a provider, so that every application can run with the optimal resources when the occasion demands it.
 # meta data start
 description: "Both FaaS and PaaS move towards a “serverless” approach by abstracting server management tasks from developers"
 meta_og_url: "https://genezio.com/blog/genezio-functions-reduce-cold-start-times/"
-meta_og_image: "https://genezio.com/deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp"
+meta_og_image: "https://genezio.com/images/business-logic-in-the-backend-the-why-and-how.webp"
 meta_og_title: "What Is the Difference Between PaaS And FaaS?"
 # meta data end
 customHeader: "White header"
@@ -30,7 +30,7 @@ To understand the difference between FaaS and PaaS, we’ll explain each technol
 
 Before cloud computing, businesses had to manage their own IT systems in thick mainframe systems—on-premises. On top of physical servers, organisations run virtual machines to segment them. On top of that, they had to take care of the computer’s operating system. Then came the invisible layer—the runtime environment. Finally, at the very top was the application, the company could deploy the actual service someone could use, e.g. like an enterprise application to manage their expenses. It took a lot of money to maintain this whole system, and fixing problems could take weeks. This is probably why IT reps at companies are so well-versed with infrastructure practices, even if other staff members expected them to just code in Java.
 
-![alt_text](/deployment-platform/posts/faasvspass1.webp)
+![alt_text](/posts/faasvspass1.webp)
 {{< external-link link="https://www.youtube.com/watch?v=EOIja7yFScs" >}}Source: IBM Technology{{< /external-link >}}
 
 Legend has it that when Amazon bought so many servers for their business, they mulled over what to do with the excess processing power. And with that idle CPU capacity, they {{< external-link link="https://fortune.com/longform/amazon-web-services-ceo-adam-selipsky-cloud-computing/" >}}launched AWS{{< /external-link >}} and the cloud so that third parties could also use it. Along with other vendors trying to do the same thing, the early 2000s saw the rise of cloud computing with Infrastructure-as-a-Service (IaaS). IaaS outsources the foundation (hardware) and pre-fabricated enclosures (virtualisation) of the IT system to a third party. Companies access those servers through the internet—meaning they’re in “the cloud.” Since then, businesses can rent computing power, storage, and networking from cloud providers like AWS or Azure instead of managing their own servers. This is much more economical in the short term and allows for faster setup, taking hours or even minutes compared to weeks.
@@ -58,7 +58,7 @@ FaaS stands for **Function-as-a-Service**. FaaS is a subset of serverless as it 
 
 FaaS lets you write and deploy independent functions—microservices —triggered by specific events within your application. These events can include user actions like login or sending a notification. These functions are mini-programmes you can easily add, remove or update without affecting the entire application. We’ll talk about the integration of FaaS with microservice architectures later, but for now, it’s important to understand that FaaS simplifies development by letting developers focus on building specific functionalities without the burden of server management.
 
-![alt_text](/deployment-platform/posts/faasvspass2.webp)
+![alt_text](/posts/faasvspass2.webp)
 {{< external-link link="https://www.oreilly.com/library/view/docker-for-serverless/9781788835268/c2d98f2d-30ed-4d10-8ab0-f7fef2e5f5a1.xhtml" >}}Source: Oreilly{{< /external-link >}}
 
 ## How does FaaS work?
@@ -69,15 +69,15 @@ handle server infrastructure all at the same time. FaaS breaks this down by usin
 
 This includes tasks that you could do every day, like sending a notification via email. The difference with an API is, among other things, that a microservice is exceptionally specific and can be isolated or updated on its own without affecting a “monolithic” app.’’
 
-![alt_text](/deployment-platform/posts/faasvspass3.webp)
+![alt_text](/posts/faasvspass3.webp)
 {{< external-link link="https://www.youtube.com/watch?v=CdBtNQZH8a4" >}}Source: IBM Technology{{< /external-link >}}
 
 ### Very simple example of FaaS
 
 A user uploads an image and presses “submit” on a mobile app. This action triggers an event within the FaaS architecture. This event is then routed to the appropriate microservice. In this case, an image processing microservice would be specifically triggered.
 
-![alt_text](/deployment-platform/posts/faasvspass4.webp)
-{{< external-link link="https://blog.alexellis.io/content/deployment-platform/images/2017/08/evolution.png" >}}Source: blog.alexellis{{< /external-link >}}
+![alt_text](/posts/faasvspass4.webp)
+{{< external-link link="https://blog.alexellis.io/content/images/2017/08/evolution.png" >}}Source: blog.alexellis{{< /external-link >}}
 
 In FaaS, these microservices become event-driven functions. These functions are independent pieces of code that execute only when triggered by specific events. This can include user actions like clicking a button, changes within a database, or incoming API calls.
 
@@ -87,7 +87,7 @@ For instance, consider a new bank building their entire user experience out of a
 
 Typically, deploying these services would require extensive configuration on their own servers. It could even mean developing the whole thing from scratch (especially if the bank has some legacy infrastructure). However, FaaS offers a faster approach. Using pre-built microservices in a FaaS environment automatically takes care of infrastructure provisioning and scaling, so the bank can focus on building their user experience and get to market faster.
 
-![alt_text](/deployment-platform/posts/faasvspass5.webp)
+![alt_text](/posts/faasvspass5.webp)
 {{< external-link link="https://www.youtube.com/watch?v=EOIja7yFScs" >}}Source: IBM Technology{{< /external-link >}}
 
 ## What are FaaS model’s pros and cons?
@@ -121,14 +121,14 @@ Namely, reduced costs by only paying for used resources and automatic scaling to
 
 With a FaaS framework, a developer can build up an enterprise application to request time off at a company. Then, by picking out each microservice, they can choose if the notification method for their coworkers will be push notifications or an SMS message. If the SMS provider suddenly changes their API, only that microservice will break down. The other services will keep on running.
 
-![alt_text](/deployment-platform/posts/faasvspass6.webp)
-{{< external-link link="https://fosdem.org/2024/events/attachments/fosdem-2024-3269-run-node-js-in-a-unikernel-reliably/slides/22337/Run_Node_js_in_a_unikernel_reliably_DlMGm32.pdf" >}}Source: Genezio{{< /external-link >}}
+![alt_text](/posts/faasvspass6.webp)
+{{< external-link link="https://fosdem.org/2024/events/attachments/fosdem-2024-3269-run-node-js-in-a-unikernel-reliably/slides/22337/Run_Node_js_in_a_unikernel_reliably_DlMGm32.pdf" >}}Source: DeployApps{{< /external-link >}}
 
 ## Should you consider FaaS?
 
 FaaS is best for building applications with microservice architectures, where each function performs a single, isolated task. But if your project demands a monolithic architecture or frequent function interaction, FaaS might not be the very best choice. Even without FaaS, the cloud offers solutions. PaaS (Platform as a Service), for example, offers another option to move some application functions to the cloud.
 
-![alt_text](/deployment-platform/posts/faasvspass7.webp)
+![alt_text](/posts/faasvspass7.webp)
 {{< external-link link="http://wearecommunity.io" >}}Source: wearecommunity.io{{< /external-link >}}
 
 ## What is PaaS? Platform as a Service Explained
@@ -146,7 +146,7 @@ Its underlying strength lies in the three core components of a PaaS solution: in
 
 With PaaS, the cloud provider takes care of the heavy lifting of cloud infrastructure while developers keep control over the applications and data. PaaS vendors typically offer plugins that make integrations more or less easy than what plain coding would require.
 
-![alt_text](/deployment-platform/posts/faasvspass8.webp)
+![alt_text](/posts/faasvspass8.webp)
 {{< external-link link="https://images.spiceworks.com/wp-content/uploads/2021/07/19072414/Paas.png" >}}Source: spiceworks{{< /external-link >}}
 
 ## PaaS pros and cons
@@ -165,16 +165,16 @@ PaaS platforms offer access to a set of resources that some organisations, espec
 
 PaaS can create lock-in, making it difficult to switch providers later due to reliance on specific tools and platform architecture. Migrating applications may require significant code rewrites. PaaS may require more work than FaaS, which is not good for applications that need to grow quickly.
 
-![alt_text](/deployment-platform/posts/faasvspass9.webp)
+![alt_text](/posts/faasvspass9.webp)
 {{< external-link link="https://chsakell.com/wp-content/uploads/2018/11/building-serveless-apps-with-azure-functions-39.png" >}}Source: chsakell{{< /external-link >}}
 
 ## Example of a PaaS service: How PaaS can adapt to a new market
 
 Heroku, a solution that probably runs on an AWS server, used to be a prototypical case of a PaaS service. It became very popular even among the non-technical crowd because it allowed non-developers who had a Node.js solution to get it running with a URL in their environment.
 
-But Heroku fell from grace when it removed its free plans, with some commentators proclaiming it dead. What could help it revive its allure would be getting an elastic, easy-to-scale plan that could allow founders, entrepreneurs, and developers to lay back and not lose their time on DevOps… this is essentially what Genezio offers. Genezio goes beyond traditional PaaS platforms by letting you place your critical business logic in a secure backend environment. Unlike other PaaS offerings, Genezio doesn’t require you to rewrite your existing code or migrate to a specific framework. It collects everything that made PaaS popular in the first place and offers it along with developer-friendly serverless models. The market for a PaaS could bounce back if providers add scalability, reliability, and affordability to the classical offering, and Genezio is addressing those features with its product.
+But Heroku fell from grace when it removed its free plans, with some commentators proclaiming it dead. What could help it revive its allure would be getting an elastic, easy-to-scale plan that could allow founders, entrepreneurs, and developers to lay back and not lose their time on DevOps… this is essentially what DeployApps offers. DeployApps goes beyond traditional PaaS platforms by letting you place your critical business logic in a secure backend environment. Unlike other PaaS offerings, DeployApps doesn’t require you to rewrite your existing code or migrate to a specific framework. It collects everything that made PaaS popular in the first place and offers it along with developer-friendly serverless models. The market for a PaaS could bounce back if providers add scalability, reliability, and affordability to the classical offering, and DeployApps is addressing those features with its product.
 
-{{< external-link link="https://genezio.com/how-to-schedule-tasks-with-genezio/#conclusion" >}}**Example: How to Run a PaaS on Genezio →**{{< /external-link >}}
+{{< external-link link="https://genezio.com/how-to-schedule-tasks-with-genezio/#conclusion" >}}**Example: How to Run a PaaS on DeployApps →**{{< /external-link >}}
 
 ## FaaS vs PaaS: The Difference for Developers
 
@@ -188,8 +188,8 @@ So, choosing between FaaS and PaaS depends on what your project requires and wha
 
 Offering end-users a SaaS—like an enterprise application or a PDF converter—is easier with a PaaS or FaaS provider that can scale with typesafe code from the get-go.
 
-Both models serve different business and project needs. In any case, a niche, serverless provider like {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is the quickest way to get onto each tech path. Genezio can help you set up the right PaaS or FaaS solution for your current and future business needs and make sure it’s safe to use and as easy as possible to run.
+Both models serve different business and project needs. In any case, a niche, serverless provider like {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} is the quickest way to get onto each tech path. DeployApps can help you set up the right PaaS or FaaS solution for your current and future business needs and make sure it’s safe to use and as easy as possible to run.
 
-Genezio offers a true pay-as-you-go serverless model with typesafe methods, so that users can focus on running their business or making sure their solution is better than the competition. And that’s precisely what investors and users will demand, but crashes and bugs won’t allow doing. {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up{{< /external-link >}} now to try the platform and start deploying for free. It only takes a few clicks to get started building your serverless application, and you can build an unlimited number of projects with the Hobby account.
+DeployApps offers a true pay-as-you-go serverless model with typesafe methods, so that users can focus on running their business or making sure their solution is better than the competition. And that’s precisely what investors and users will demand, but crashes and bugs won’t allow doing. {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up{{< /external-link >}} now to try the platform and start deploying for free. It only takes a few clicks to get started building your serverless application, and you can build an unlimited number of projects with the Hobby account.
 
-To learn more about the advantages of FaaS, typesafe serverless platforms with unlimited builds, visit {{< external-link link="https://genezio.com" >}}Genezio.com{{< /external-link >}}.
+To learn more about the advantages of FaaS, typesafe serverless platforms with unlimited builds, visit {{< external-link link="https://genezio.com" >}}DeployApps.com{{< /external-link >}}.

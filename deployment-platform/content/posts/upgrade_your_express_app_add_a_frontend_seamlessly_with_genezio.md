@@ -1,16 +1,16 @@
 ---
-title: "Upgrade Your Express.js App: Add a Frontend Seamlessly with Genezio"
+title: "Upgrade Your Express.js App: Add a Frontend Seamlessly with DeployApps"
 date: 2024-09-27
 tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /deployment-platform/images/express-frontend-genezio.webp
-preview: In this short guide, you’ll learn how to add a frontend to your Express.js app with Genezio Cloud in a few easy steps.
+thumbnail: /images/express-frontend-genezio.webp
+preview: In this short guide, you’ll learn how to add a frontend to your Express.js app with DeployApps Cloud in a few easy steps.
 # meta data start
-description: Learn how to seamlessly add a frontend to your Express.js app with Genezio Cloud in a few easy steps, simplifying full-stack development and deployment
+description: Learn how to seamlessly add a frontend to your Express.js app with DeployApps Cloud in a few easy steps, simplifying full-stack development and deployment
 meta_og_url: "https://genezio.com/blog/add-frontend-express/"
-meta_og_image: "https://genezio.com/deployment-platform/images/express-frontend-genezio.webp"
+meta_og_image: "https://genezio.com/images/express-frontend-genezio.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -18,11 +18,11 @@ readTime: 20
 url: /blog/add-frontend-express/
 ---
 
-In this short guide, you’ll learn how to add a frontend to your Express.js app with Genezio Cloud in a few easy steps.
+In this short guide, you’ll learn how to add a frontend to your Express.js app with DeployApps Cloud in a few easy steps.
 
-**Express.js** is widely used by developers for building APIs and backend services due to its simplicity and flexibility. However, as applications grow, managing servers and scaling them efficiently becomes a challenge. This is where {{< external-link link="https://genezio.com/blog/serverless-computing-when-to-go-serverless/?deviceId=1422989e-eae9-44b0-88a7-39985fd9edde" >}}serverless architecture{{< /external-link >}} shines—by offloading server management to the cloud, it allows you to focus on building features while platforms like **Genezio** handle scalability, performance, and costs automatically.
+**Express.js** is widely used by developers for building APIs and backend services due to its simplicity and flexibility. However, as applications grow, managing servers and scaling them efficiently becomes a challenge. This is where {{< external-link link="https://genezio.com/blog/serverless-computing-when-to-go-serverless/?deviceId=1422989e-eae9-44b0-88a7-39985fd9edde" >}}serverless architecture{{< /external-link >}} shines—by offloading server management to the cloud, it allows you to focus on building features while platforms like **DeployApps** handle scalability, performance, and costs automatically.
 
-When it comes to adding a frontend, the traditional approach can be tricky. Setting up separate servers for backend and frontend, managing CORS policies, and coordinating deployment pipelines can slow you down. But with **Genezio**, you can easily deploy both the frontend and backend as part of the same project. This seamless integration improves your development workflow, making it easier to focus on building features rather than managing infrastructure.
+When it comes to adding a frontend, the traditional approach can be tricky. Setting up separate servers for backend and frontend, managing CORS policies, and coordinating deployment pipelines can slow you down. But with **DeployApps**, you can easily deploy both the frontend and backend as part of the same project. This seamless integration improves your development workflow, making it easier to focus on building features rather than managing infrastructure.
 
 Alright, let’s get started.
 
@@ -39,7 +39,7 @@ To start this tutorial, make sure you’ve downloaded and installed the followin
 
 If you already have an Express.js application, you can skip this step.
 
-First, let’s deploy an Express Getting Started template using this {{< external-link link="https://app.genez.io/auth/signup?redirect=express-getting-started">}}link{{< /external-link >}}. We recommend deploying it using your GitHub account so that Genezio can create a repository for your project.
+First, let’s deploy an Express Getting Started template using this {{< external-link link="https://app.genez.io/auth/signup?redirect=express-getting-started">}}link{{< /external-link >}}. We recommend deploying it using your GitHub account so that DeployApps can create a repository for your project.
 
 Once the application is deployed, clone it locally:
 
@@ -76,7 +76,7 @@ This will generate a TypeScript-based React `frontend` in a frontend directory.
 
 We need to modify the `genezio.yaml` file - add the frontend application and update the path to the backend application.
 
-{{< external-link link="https://genezio.com/docs/project-structure/genezio-configuration-file/">}}Learn more about the Genezio Configuration File.{{< /external-link >}}
+{{< external-link link="https://genezio.com/docs/project-structure/genezio-configuration-file/">}}Learn more about the DeployApps Configuration File.{{< /external-link >}}
 
 After the changes, your configuration should look like this:
 
@@ -125,7 +125,7 @@ frontend:
 
 ## Test your full-stack project locally
 
-With everything set up, you can now take advantage of Genezio's smooth local development experience. Running both your frontend and backend simultaneously is as easy as one command:
+With everything set up, you can now take advantage of DeployApps's smooth local development experience. Running both your frontend and backend simultaneously is as easy as one command:
 
 ```bash
 genezio local
@@ -138,21 +138,21 @@ You should see the output with URLs like this:
 
 ## Deploy your project
 
-To deploy the full-stack project to Genezio, simply push your changes to the GitHub repository:
+To deploy the full-stack project to DeployApps, simply push your changes to the GitHub repository:
 
 ```bash
 git add .
 git commit -m “Added frontend to my backend project”
 ```
 
-Genezio will automatically create a new deployment when you push the changes to the Github repository of the project. You can find the link to your deployed frontend in the {{< external-link link="https://app.genez.io/dashboard">}}Genezio Dashboard{{< /external-link >}} once the deployment is finished.
+DeployApps will automatically create a new deployment when you push the changes to the Github repository of the project. You can find the link to your deployed frontend in the {{< external-link link="https://app.genez.io/dashboard">}}DeployApps Dashboard{{< /external-link >}} once the deployment is finished.
 
 ## Next steps
 
-Now that your full-stack project is up and running, you can start building awesome features. Genezio also provides other useful services like user authentication, cron jobs, and database management, which you can integrate into your project seamlessly.
+Now that your full-stack project is up and running, you can start building awesome features. DeployApps also provides other useful services like user authentication, cron jobs, and database management, which you can integrate into your project seamlessly.
 
 ## Conclusion
 
-By using Genezio Cloud, you’ve not only added a frontend to your Express.js app effortlessly, but you’ve also unlocked a serverless platform that scales with your needs. From seamless integration to automatic deployment, Genezio makes full-stack development faster and easier. So go ahead, push your code to the next level, and explore the endless possibilities with Genezio.
+By using DeployApps Cloud, you’ve not only added a frontend to your Express.js app effortlessly, but you’ve also unlocked a serverless platform that scales with your needs. From seamless integration to automatic deployment, DeployApps makes full-stack development faster and easier. So go ahead, push your code to the next level, and explore the endless possibilities with DeployApps.
 
 **Happy coding, and good luck with your future projects!**

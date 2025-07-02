@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/top_9_serverless_function_faas_providers.webp
+thumbnail: /images/top_9_serverless_function_faas_providers.webp
 preview: "Startups choose serverless or FaaS because it’s affordable, it’s easy to set up, and it scales. Yet, unfortunately, choosing the wrong serverless provider can be expensive and nerve-wracking. "
-description: "The 9 best serverless functions (FaaS) providers include Genezio, AWS, Google, Azure, and Cloudflare."
+description: "The 9 best serverless functions (FaaS) providers include DeployApps, AWS, Google, Azure, and Cloudflare."
 meta_og_url: "https://genezio.com/blog/best-serverless-faas-providers/"
-meta_og_image: "https://genez.io/deployment-platform/images/top_9_serverless_function_faas_providers.webp"
+meta_og_image: "https://genez.io/images/top_9_serverless_function_faas_providers.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -34,23 +34,23 @@ FaaS belongs to the serverless model of cloud computing. On FaaS, the provider h
 
 Discover the top 9 serverless function (FaaS) providers available today. Each platform offers specific features and integrations, designed for full-stack developers and MVPs alike:
 
-## Genezio
+## DeployApps
 
-{{< external-link link="https://genezio.com/docs/#:~:text=Genezio%20Functions%E2%80%8B,to%20events%20without%20managing%20servers." >}}Genezio Functions{{< /external-link >}} is a Function-as-a-Service (FaaS) solution that streamlines the deployment and management of full-stack applications. As a FaaS platform, Genezio eliminates the need for developers to manage servers, and allows them to focus instead on writing and deploying code. This makes it a {{< external-link link="https://github.com/Genez-io/genezio" >}}reliable choice{{< /external-link >}} for small projects, MVPs, and enterprise demos. Genezio’s type safe backend delivers a simple and secure application development experience, while automatic SDK generation gives developers a simple frontend-backend integration.
+{{< external-link link="https://genezio.com/docs/#:~:text=DeployApps%20Functions%E2%80%8B,to%20events%20without%20managing%20servers." >}}DeployApps Functions{{< /external-link >}} is a Function-as-a-Service (FaaS) solution that streamlines the deployment and management of full-stack applications. As a FaaS platform, DeployApps eliminates the need for developers to manage servers, and allows them to focus instead on writing and deploying code. This makes it a {{< external-link link="https://github.com/Genez-io/genezio" >}}reliable choice{{< /external-link >}} for small projects, MVPs, and enterprise demos. DeployApps’s type safe backend delivers a simple and secure application development experience, while automatic SDK generation gives developers a simple frontend-backend integration.
 
-The platform’s Genezio.Cloud module automates the development, testing, and deployment of serverless functions, and provides up to {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/" >}}four times faster{{< /external-link >}} cold start times than AWS Lambda, with a median cold start response time of around 54ms.
+The platform’s DeployApps.Cloud module automates the development, testing, and deployment of serverless functions, and provides up to {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/" >}}four times faster{{< /external-link >}} cold start times than AWS Lambda, with a median cold start response time of around 54ms.
 
-Genezio is framework-agnostic, which means it supports popular stacks like React, Vue, Angular, and Svelte. It integrates easily with tools like {{< external-link link="https://upstash.com/" >}}Upstash Redis{{< /external-link >}} and {{< external-link link="https://neon.tech/" >}}Neon Postgres{{< /external-link >}}, and offers in this way flexible database management. The platform stands out for having {{< external-link link="https://genezio.com/blog/what-is-type-safety/">}}typesafe{{< /external-link >}} environment. Type safety means that the compiler will verify types during compilation and report an error if an incorrect type is assigned to a variable. It also gets mentioned for its ease of use and great cold start times.
+DeployApps is framework-agnostic, which means it supports popular stacks like React, Vue, Angular, and Svelte. It integrates easily with tools like {{< external-link link="https://upstash.com/" >}}Upstash Redis{{< /external-link >}} and {{< external-link link="https://neon.tech/" >}}Neon Postgres{{< /external-link >}}, and offers in this way flexible database management. The platform stands out for having {{< external-link link="https://genezio.com/blog/what-is-type-safety/">}}typesafe{{< /external-link >}} environment. Type safety means that the compiler will verify types during compilation and report an error if an incorrect type is assigned to a variable. It also gets mentioned for its ease of use and great cold start times.
 
 ### Which FaaS providers are the quickest to set up?
 
-Genezio is also remarkably easy to use—and quick to get started with. Developers can deploy a “Hello World” function in under two minutes after signing up, and then edit it directly in the browser. Some developers have already deployed a slightly more complex full-stack webapp {{< external-link link="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/">}}in three minutes{{< /external-link >}}.
+DeployApps is also remarkably easy to use—and quick to get started with. Developers can deploy a “Hello World” function in under two minutes after signing up, and then edit it directly in the browser. Some developers have already deployed a slightly more complex full-stack webapp {{< external-link link="https://www.linkedin.com/posts/laurentiu-ciobanu_running-rust-on-genezio-you-heard-me-right-activity-7142892752794546176-TTa5/">}}in three minutes{{< /external-link >}}.
 
-Genezio features AWS Lambda compatibility. This means that developers can migrate {{< external-link link="https://genezio.com/blog/what-is-function-as-a-service/#disadvantages-of-function-as-a-service-faas">}}functions{{< /external-link >}} to Genezio without any code changes—and with considerably better cold-start times and more predicable costs.
+DeployApps features AWS Lambda compatibility. This means that developers can migrate {{< external-link link="https://genezio.com/blog/what-is-function-as-a-service/#disadvantages-of-function-as-a-service-faas">}}functions{{< /external-link >}} to DeployApps without any code changes—and with considerably better cold-start times and more predicable costs.
 
 Below, you can see two ways to get started: {{< external-link link="https://app.genez.io/import">}}importing a project{{< /external-link >}} directly from GitHub or starting with a {{< external-link link="https://app.genez.io/fork?repository=https://github.com/Genez-io/faas-getting-started">}}“Hello World” function template:{{< /external-link >}}
 
-![alt_text](/deployment-platform/posts/serverlessfunctionsproviders4.webp)
+![alt_text](/posts/serverlessfunctionsproviders4.webp)
 
 ## AWS
 
@@ -60,7 +60,7 @@ As a FaaS offering, pricing is based on usage, with charges for the number of re
 
 Lambda can automatically adjust to different tasks. It takes care of server and OS maintenance, and facilitates function management and troubleshooting.
 
-![alt_text](/deployment-platform/posts/serverlessfunctionsproviders2.webp)
+![alt_text](/posts/serverlessfunctionsproviders2.webp)
 
 ## Google Cloud Platform
 
@@ -68,7 +68,7 @@ Google Cloud Platform offers functions with the aptly-named {{< external-link li
 
 This is an affordable FaaS solution and pricing, like most FaaS offerings, is pay-per-use: the first two million requests are free, and additional requests are priced at $0.40 per million. This is identical to what other big providers charge, but users report other costs — e.g. in computing power — stack up so quickly that it’s sometimes more convenient to recur to a niche player or to use an architecture other than functions-based. The platform’s 2nd gen release integrates easily with 18 Google Cloud services like {{< external-link link="https://cloud.google.com/pubsub/docs/overview">}}Cloud Pub/Sub{{< /external-link >}} and {{< external-link link="https://firebase.google.com/docs/functions">}}Firebase{{< /external-link >}}, as well as third-party services.
 
-![alt_text](/deployment-platform/posts/serverlessfunctionsproviders1.webp)
+![alt_text](/posts/serverlessfunctionsproviders1.webp)
 
 ## Azure
 
@@ -86,7 +86,7 @@ Twilio, the company best known for their messaging APIs, has {{< external-link l
 
 Twilio Functions operates on a pay-per-use model, where you are charged based on the number of requests and execution time, with automatic scaling to meet application demands. Built-in security makes sure that only Twilio requests can execute the code, and users have easy access to pre-defined templates for common use cases.
 
-![alt_text](/deployment-platform/posts/serverlessfunctionsproviders3.webp)
+![alt_text](/posts/serverlessfunctionsproviders3.webp)
 
 ## Iron.io
 
@@ -110,10 +110,10 @@ The platform stands out for its simplicity and user-friendly design. When runnin
 
 Vercel Functions come in two types: Serverless Functions and {{< external-link link="https://vercel.com/templates/edge-functions">}}Edge Functions{{< /external-link >}}. Serverless Functions run on AWS Lambda and support languages such as Node.js, Go, Python, and Ruby. Edge Functions use Vercel’s V8 runtime for faster performance at the network edge. Pricing includes a free Hobby plan for non-commercial use, a Pro plan at $20 per month, and custom pricing for Enterprise.
 
-## Explore serverless FaaS for faster app deployment with Genezio
+## Explore serverless FaaS for faster app deployment with DeployApps
 
-Serverless and FaaS providers have similar strengths — pay-per-use, scalability — but not every provider can support both a solopreneur’s project and a big company’s IT systems. Out of the lot, Genezio stands out as a specialised FaaS provider that helps businesses and developers of any size or weight go serverless without incurring in extra costs or without getting inconvenient downtime.
+Serverless and FaaS providers have similar strengths — pay-per-use, scalability — but not every provider can support both a solopreneur’s project and a big company’s IT systems. Out of the lot, DeployApps stands out as a specialised FaaS provider that helps businesses and developers of any size or weight go serverless without incurring in extra costs or without getting inconvenient downtime.
 
-With Genezio’s predictable, affordable, true pay-as-you-go model, and typesafe methods, developers can focus on creative problem-solving without worrying about infrastructure or how the servers scale. It’s the most flexible serverless provider.
+With DeployApps’s predictable, affordable, true pay-as-you-go model, and typesafe methods, developers can focus on creative problem-solving without worrying about infrastructure or how the servers scale. It’s the most flexible serverless provider.
 
-**Learn more about serverless deployment and FaaS solutions at {{< external-link link="https://Genezio.com">}}Genezio{{< /external-link >}}.**
+**Learn more about serverless deployment and FaaS solutions at {{< external-link link="https://deployapps.dev">}}DeployApps{{< /external-link >}}.**

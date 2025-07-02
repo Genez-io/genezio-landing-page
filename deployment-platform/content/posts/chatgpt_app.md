@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /deployment-platform/images/chatgptapp.webp
+thumbnail: /images/chatgptapp.webp
 preview: In this tutorial, I will show you how to create an app called the Rephrasing App.
 # meta data start
 description: "Learn how to build your first ChatGPT app in this step-by-step tutorial. Rephrase text and improve your writing with React and genezio. Get started now!"
 meta_og_url: "https://genezio.com/blog/create-your-first-app-using-chatgpt/"
-meta_og_image: "https://genezio.com/deployment-platform/images/chatgptapp.webp"
+meta_og_image: "https://genezio.com/images/chatgptapp.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -72,7 +72,7 @@ Since you are reading this, I assume you already know what ChatGPT is and how it
 
 When deciding where to make the calls from, you have to keep in mind how secure you want this to be. So, as it is smart not to do them from the frontend, you are going to use genezio to host the backend and to call the OpenAPI from the genezio functions. For you to create a clearer idea about how this works, take a look at this illustration:
 
-![Street Art Image](/deployment-platform/posts/react-gen-chat.webp)
+![Street Art Image](/posts/react-gen-chat.webp)
 
 Now, let’s dive in! You can find the complete project {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/chatgpt-project" >}}here{{< /external-link >}}.
 
@@ -82,13 +82,13 @@ Now, let’s dive in! You can find the complete project {{< external-link link="
 
 1. Go to the {{< external-link link="https://platform.openai.com/signup/" >}}OpenAI website{{< /external-link >}} and create an account.
 
-![Street Art Image](/deployment-platform/posts/create-account.webp)
+![Street Art Image](/posts/create-account.webp)
 
 2. Go to{{< external-link link="https://platform.openai.com/account/api-keys" >}} platform.openai.com/account/api-keys{{< /external-link >}}
 
 3. Click on the "Create new secret key" button.
 
-![Street Art Image](/deployment-platform/posts/api-keys.webp)
+![Street Art Image](/posts/api-keys.webp)
 
 **Note**: Remember to keep your API key secure and do not share it with anyone.
 

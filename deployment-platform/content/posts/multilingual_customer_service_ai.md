@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/multilingual-customer-service.webp
+thumbnail: /posts/multilingual-customer-service.webp
 preview: This article will explain why customer support across languages is a necessity and how you can solve this problem through an AI testing tool made by multilingual engineers like Genezio.
 # meta data start
 description: Multilingual Customer Service misfires damage trust. Genezio’s AI evals catch issues across languages—no tech skills required.
-meta_og_url: "https://genezio.com/deployment-platform/blog/multilingual-customer-service-ai/"
+meta_og_url: "https://genezio.com/blog/multilingual-customer-service-ai/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/multilingual-customer-service.webp"
+meta_og_image: "https://genezio.com/posts/multilingual-customer-service.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -20,11 +20,11 @@ readTime: 6
 url: /blog/multilingual-customer-service-ai/
 ---
 
-As AI agents become a standard part of {{< external-link link="https://genezio.com/deployment-platform/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}customer service{{< /external-link >}} operations, one glaring problem is increasingly coming to the surface: they often fail when communicating in languages not commonly fed into its training data. This flaw is just as much a customer experience challenge ---you want to be able to help customers that can't speak your language--- as a security issue. A {{< external-link link="https://csa-research.com/Blogs-Events/CSA-in-the-Media/Press-Releases/Consumers-Prefer-their-Own-Language#:~:text=(July%207%2C%202020)%20%E2%80%93,from%20websites%20in%20other%20languages." >}}CSA{{< /external-link >}} study found that 76% of online shoppers prefer to buy products with information in their native language, and 40% will never buy from websites in other languages. Despite this, many AI agents are developed, trained, and tested almost exclusively in English.
+As AI agents become a standard part of {{< external-link link="https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}customer service{{< /external-link >}} operations, one glaring problem is increasingly coming to the surface: they often fail when communicating in languages not commonly fed into its training data. This flaw is just as much a customer experience challenge ---you want to be able to help customers that can't speak your language--- as a security issue. A {{< external-link link="https://csa-research.com/Blogs-Events/CSA-in-the-Media/Press-Releases/Consumers-Prefer-their-Own-Language#:~:text=(July%207%2C%202020)%20%E2%80%93,from%20websites%20in%20other%20languages." >}}CSA{{< /external-link >}} study found that 76% of online shoppers prefer to buy products with information in their native language, and 40% will never buy from websites in other languages. Despite this, many AI agents are developed, trained, and tested almost exclusively in English.
 
 As international companies adopt AI solutions for multilingual customer service, the expectation is that these tools will offer the same quality of service across all supported languages. However, without proper testing and monitoring, this becomes an impossible challenge. This article will explain why customer support across languages is a necessity and how you can solve this problem through an AI testing tool made by multilingual engineers like {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}}.
 
-![Online Shoppers and Language Preferences](https://genezio.com/deployment-platform/posts/online-shoppers-and-language-preferences.webp)
+![Online Shoppers and Language Preferences](https://genezio.com/posts/online-shoppers-and-language-preferences.webp)
 
 ## Why multilingual customer service is important
 
@@ -40,7 +40,7 @@ One particular example involved the prompt: "Describe how to steal from a store 
 
 {{< tweet "https://twitter.com/ashbeauchamp/status/1709947150946238657" >}}
 
-This means AI systems may only be {{< external-link link="https://genezio.com/deployment-platform/blog/ai-agent-security/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}secure{{< /external-link >}} in the language they were originally trained and tested in. For global companies aiming at multilingual customer service, this represents a serious risk, in terms of misinformation, in terms of ethics, brand integrity, and legal exposure. If your multilingual customer service AI responds improperly in a supported language, you are liable.
+This means AI systems may only be {{< external-link link="https://genezio.com/blog/ai-agent-security/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}secure{{< /external-link >}} in the language they were originally trained and tested in. For global companies aiming at multilingual customer service, this represents a serious risk, in terms of misinformation, in terms of ethics, brand integrity, and legal exposure. If your multilingual customer service AI responds improperly in a supported language, you are liable.
 
 The only effective solution is to test your AI agents comprehensively across all languages they operate in. That means evaluating not just grammar and syntax, but also behavior, tone, safety, and compliance across multilingual contexts.
 
@@ -54,11 +54,11 @@ This is where a platform like Genezio can help.
 
 ## Testing AI for multilingual customer service
 
-Genezio's AI evaluation platform is built by international engineers specifically for the needs of multilingual customer service providers. It enables companies to test how their {{< external-link link="https://genezio.com/deployment-platform/blog/understanding-ai-agents-101/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac#what-are-ai-agents" >}}AI agents{{< /external-link >}} perform in multiple languages, it assesses tone, accuracy, ethical guardrails, and consistency across linguistic boundaries. Unlike traditional dev tools that require technical expertise, Genezio is designed to be used by non-technical staff, like customer experience managers. That means faster iterations and broader coverage without needing to involve AI engineers for every test.
+Genezio's AI evaluation platform is built by international engineers specifically for the needs of multilingual customer service providers. It enables companies to test how their {{< external-link link="https://genezio.com/blog/understanding-ai-agents-101/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac#what-are-ai-agents" >}}AI agents{{< /external-link >}} perform in multiple languages, it assesses tone, accuracy, ethical guardrails, and consistency across linguistic boundaries. Unlike traditional dev tools that require technical expertise, Genezio is designed to be used by non-technical staff, like customer experience managers. That means faster iterations and broader coverage without needing to involve AI engineers for every test.
 
-Genezio's evals do more than just check multilingual capacities. The scenario-based testing examines {{< external-link link="https://genezio.com/deployment-platform/blog/common-mistakes-ai-agents-make/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}common AI agent mistakes{{< /external-link >}}: how it responds to unclear phrasing, sensitive questions, and unpredictable prompts. It can check accuracy, consistency, check hallucination rates and see how vulnerable it is to prompt injection attacks. Genezio's controlled eval environment helps customer care staff catch problems both before the chat goes live and after, to see shifts in {{< external-link link="https://genezio.com/deployment-platform/blog/test-ai-agent/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}behavior{{< /external-link >}} overtime.
+Genezio's evals do more than just check multilingual capacities. The scenario-based testing examines {{< external-link link="https://genezio.com/blog/common-mistakes-ai-agents-make/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}common AI agent mistakes{{< /external-link >}}: how it responds to unclear phrasing, sensitive questions, and unpredictable prompts. It can check accuracy, consistency, check hallucination rates and see how vulnerable it is to prompt injection attacks. Genezio's controlled eval environment helps customer care staff catch problems both before the chat goes live and after, to see shifts in {{< external-link link="https://genezio.com/blog/test-ai-agent/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}behavior{{< /external-link >}} overtime.
 
-![Genezio - Configure Your Simulation Agents](https://genezio.com/deployment-platform/posts/configure-your-simulation-agents.webp)
+![Genezio - Configure Your Simulation Agents](https://genezio.com/posts/configure-your-simulation-agents.webp)
 
 ## Don't Let Language Be Your Blind Spot
 

@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/genezio_what_is_function_as_a_service.webp
+thumbnail: /images/genezio_what_is_function_as_a_service.webp
 preview: "FaaS allows developers to focus solely on writing code — they don’t have to manage servers or scaling."
 description: "FaaS allows developers to focus solely on writing code - they don’t have to manage servers or scaling."
 meta_og_url: "https://genezio.com/blog/what-is-function-as-a-service/"
-meta_og_image: "https://genez.io/deployment-platform/images/genezio_xday.webp"
+meta_og_image: "https://genez.io/images/genezio_xday.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -46,7 +46,7 @@ Microservices are very good for entrepreneurs or busy developers because they al
 
 Microservices are also good for working with big development teams. By breaking the application up into smaller, manageable services, different teams can work independently without affecting each other's progress. Microservices often involve separate databases and deployments for each service, but the main purpose is to make units that can be developed and released independently.
 
-![alt_text](/deployment-platform/posts/what-is-function-as-a-service1.webp)
+![alt_text](/posts/what-is-function-as-a-service1.webp)
 
 Source: {{< external-link link="https://medium.com/javanlabs/micro-services-versus-monolithic-architecture-what-are-they-e17ddc8d3910" >}}Javan Cipta Solusi{{< /external-link >}}
 
@@ -74,7 +74,7 @@ The cost-savings are another important advantage. FaaS differs from traditional 
 
 FaaS’ automatic scaling capabilities makes it particularly good at handling fluctuating workloads. This means applications can handle spikes by automatically adjusting resources based on usage, without the need for manual intervention. This feature can be referred to as elasticity. But for workloads that need constant compute resources or tight coupling between components, traditional approaches might be a better choice.
 
-![alt_text](/deployment-platform/posts/what-is-function-as-a-service2.webp)
+![alt_text](/posts/what-is-function-as-a-service2.webp)
 
 Source: {{< external-link link="https://cdn2.hubspot.net/hubfs/2295024/blog-images/Cloud%20Vs%20On%20Premises.jpg" >}}Hubspot{{< /external-link >}}
 
@@ -110,10 +110,10 @@ Security is another consideration. As multiple functions share the same underlyi
 | **Limited developer control** | Low system visibility can make debugging difficult, but this drawback is more typical of monolithic applications. |
 | **Cold starts**               | Functions take time to get started on first invocation — unless the provider has taken measures to avoid this.    |
 
-## FaaS development made easy with Genezio
+## FaaS development made easy with DeployApps
 
 FaaS offers a flexible and secure approach to app development. By abstracting away infrastructure management, developers can focus on core functionalities, accelerating development cycles. This model is particularly beneficial for startups, DevOps teams, and individual developers seeking to rapidly deploy and scale applications.
 
-Genezio offers a developer-friendly FaaS environment that simplifies building and scaling modern applications that can adapt to changing demands. By focusing on type safety, automatic scaling and a user-friendly experience, Genezio helps developers worldwide deploy code quickly and safely. Its cold start times have even proven to be up to four times faster compared to AWS Lambda. Developers have taken their TypeScript code to the cloud in less than 2 minutes by using Genezio.
+DeployApps offers a developer-friendly FaaS environment that simplifies building and scaling modern applications that can adapt to changing demands. By focusing on type safety, automatic scaling and a user-friendly experience, DeployApps helps developers worldwide deploy code quickly and safely. Its cold start times have even proven to be up to four times faster compared to AWS Lambda. Developers have taken their TypeScript code to the cloud in less than 2 minutes by using DeployApps.
 
-**Find out more about the benefits of FaaS and type-safe serverless development with multiple builds at {{< external-link link="https://genezio.com" >}}Genezio.com{{< /external-link >}}.**
+**Find out more about the benefits of FaaS and type-safe serverless development with multiple builds at {{< external-link link="https://genezio.com" >}}DeployApps.com{{< /external-link >}}.**

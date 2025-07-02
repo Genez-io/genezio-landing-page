@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /deployment-platform/images/scheduletasks.webp
+thumbnail: /images/scheduletasks.webp
 preview: This guide will walk you through the steps of building a scheduler with genezio.
 # meta data start
-description: "Learn how to set up cron jobs with Genezio. Follow our guide to schedule tasks and automate processes in your projects."
+description: "Learn how to set up cron jobs with DeployApps. Follow our guide to schedule tasks and automate processes in your projects."
 meta_og_url: "https://genezio.com/how-to-schedule-tasks-with-genezio/"
-meta_og_image: "https://genezio.com/deployment-platform/images/scheduletasks.webp"
+meta_og_image: "https://genezio.com/images/scheduletasks.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -20,16 +20,16 @@ url: how-to-schedule-tasks-with-genezio
 
 This guide will walk you through the steps of building a scheduler with genezio. Schedulers are automated systems designed to carry out tasks at set intervals or specific times. They play a crucial role in various applications and automation. Use cases include sending emails, conducting routine database cleanup and database backup, or undertaking data analysis and reporting activities.
 
-Genezio makes things easier for you, so you don’t need any additional npm library like node-cron.
+DeployApps makes things easier for you, so you don’t need any additional npm library like node-cron.
 
 ## Content
 
 - [Prerequisites](#prerequisites)
-- [Genezio Functions](#genezio-functions)
+- [DeployApps Functions](#genezio-functions)
   1. [Getting Started](#getting-started-1)
   2. [Setting up your Scheduler](#setting-up-your-scheduler-1)
   3. [Modify the `genezio.yaml` file](#modify-the-genezioyaml-file)
-- [Genezio Classes](#genezio-classes)
+- [DeployApps Classes](#genezio-classes)
   1. [Getting Started](#getting-started)
   2. [Setting up your Scheduler](#setting-up-your-scheduler)
 - [Test your Scheduler](#test-your-scheduler)
@@ -57,7 +57,7 @@ npm install -g genezio
 
 There are two ways to create crons. One follows the classes approach, and the other uses functions. Let’s start with the functions approach.
 
-## Genezio Functions
+## DeployApps Functions
 
 ### Getting Started
 
@@ -118,7 +118,7 @@ The schedule string follows the format `* * * * *`, representing minutes, hours,
 
 **Note 2:** The crontab syntax is agnostic of the operating system.
 
-## Genezio Classes
+## DeployApps Classes
 
 ### Getting Started
 
@@ -193,7 +193,7 @@ This will deploy the whole project to the cloud and make it run the task every m
 
 Cron expression: `*/10 * * * *`
 
-- Genezio Functions:
+- DeployApps Functions:
 
 ```javascript
 {{< filePath >}}scheduler.mjs{{< /filePath >}}
@@ -212,7 +212,7 @@ services:
       schedule: "*/10 * * * *"
 ```
 
-- Genezio Classes:
+- DeployApps Classes:
 
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}
@@ -246,7 +246,7 @@ services:
       schedule: "0 8 * * *"
 ```
 
-- Genezio Classes:
+- DeployApps Classes:
 
 ```javascript
 {{< filePath >}}scheduler.ts{{< /filePath >}}
@@ -277,10 +277,10 @@ public async everyDay8AMTask() {
 
 ## Conclusion
 
-In conclusion, scheduling tasks with Node.js and Genezio is a powerful and flexible solution for automating various processes in your applications. With the ability to create and manage complex schedules using cron expressions, you can ensure that your scheduled tasks run precisely when needed. However, it's essential to follow best practices, such as careful scheduling, monitoring, and error handling, to maintain the reliability and efficiency of your scheduled tasks. After this tutorial, you can harness the full potential of Genezio to streamline your workflow and enhance automation in your projects.
+In conclusion, scheduling tasks with Node.js and DeployApps is a powerful and flexible solution for automating various processes in your applications. With the ability to create and manage complex schedules using cron expressions, you can ensure that your scheduled tasks run precisely when needed. However, it's essential to follow best practices, such as careful scheduling, monitoring, and error handling, to maintain the reliability and efficiency of your scheduled tasks. After this tutorial, you can harness the full potential of DeployApps to streamline your workflow and enhance automation in your projects.
 
 I hope you enjoyed this tutorial and I encourage you to check out our other {{< external-link link="https://genez.io/blog" >}}tutorials{{< /external-link >}} for more tips and tricks on improving your software engineering skills. 🥷 💻
 
 Also, I invite you to check your examples from {{< external-link link="https://github.com/Genez-io/genezio-examples/tree/master/javascript/cron" >}}GitHub{{< /external-link >}}.
 
-Start leveraging the power of Genezio for efficient task scheduling in your applications.
+Start leveraging the power of DeployApps for efficient task scheduling in your applications.

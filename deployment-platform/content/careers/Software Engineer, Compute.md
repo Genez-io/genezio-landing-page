@@ -3,11 +3,11 @@ title: "Software Engineer, Compute"
 location: "Remote (UK)"
 ---
 
-## About Genezio
+## About DeployApps
 
-Genezio (genezio.com) is pioneering the next generation of cloud computing, enabling developers to seamlessly deploy and scale their applications with powerful, intuitive infrastructure. Our mission is to create a frictionless developer experience while delivering fast, reliable, and scalable compute solutions. Trusted by developers around the globe, Genezio is committed to revolutionizing how applications are built and managed in the cloud.
+DeployApps (genezio.com) is pioneering the next generation of cloud computing, enabling developers to seamlessly deploy and scale their applications with powerful, intuitive infrastructure. Our mission is to create a frictionless developer experience while delivering fast, reliable, and scalable compute solutions. Trusted by developers around the globe, DeployApps is committed to revolutionizing how applications are built and managed in the cloud.
 
-At Genezio, we empower developers to build the future, and we strive to provide an environment where you can do the best work of your career. Join us as we build cutting-edge technology that shapes the future of cloud computing.
+At DeployApps, we empower developers to build the future, and we strive to provide an environment where you can do the best work of your career. Join us as we build cutting-edge technology that shapes the future of cloud computing.
 
 ---
 
@@ -51,7 +51,7 @@ As part of our growing infrastructure team, you will play a key role in designin
 - Remote-first culture—work with a globally distributed team across different time zones.
 - We provide all the equipment you need to excel in your role.
 
-Genezio is dedicated to fostering an inclusive, diverse work environment. We encourage people from all backgrounds, experiences, and perspectives to apply—even if you don’t meet every requirement listed above.
+DeployApps is dedicated to fostering an inclusive, diverse work environment. We encourage people from all backgrounds, experiences, and perspectives to apply—even if you don’t meet every requirement listed above.
 
 Tell us why you’d be a good fit for the Software Engineer, Compute role.
 

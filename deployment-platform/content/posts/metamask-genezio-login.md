@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-thumbnail: /deployment-platform/images/metamask.webp
+thumbnail: /images/metamask.webp
 preview: This article dives deep into the inner workings of logging in with MetaMask on your web app.
 # meta data start
-description: "Discover how to add MetaMask login to your Genezio app. Follow our detailed guide for effortless Web3 authentication."
+description: "Discover how to add MetaMask login to your DeployApps app. Follow our detailed guide for effortless Web3 authentication."
 meta_og_url: "https://genezio.com/blog/seamless-web3-authentication-add-metamask-login-to-your-app-in-a-few-clicks-with-genezio/"
-meta_og_image: "https://genezio.com/deployment-platform/images/metamask.webp"
+meta_og_image: "https://genezio.com/images/metamask.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -23,7 +23,7 @@ In today's world, where security and user control over data are critical, levera
 But what goes on behind the scenes to make this seamless experience possible?
 
 This article dives deep into the inner workings of logging in with MetaMask on your web app.
-We'll break down the four-step process involved and explore how Genezio's user-friendly authentication service handles the heavy lifting, allowing you to focus on building amazing features for your application.
+We'll break down the four-step process involved and explore how DeployApps's user-friendly authentication service handles the heavy lifting, allowing you to focus on building amazing features for your application.
 
 ## MetaMask Login Explained
 
@@ -36,7 +36,7 @@ When the user clicks on 'Login with MetaMask', the flow goes like this:
 4. The signature and the public address are sent back to the server, which checks if the signature is correct. If so, an auth token is generated and returned to the web app.
    A new nonce will be generated for that user for the next time the user will want to login.
 
-Don't worry, you don't have to handle all these things since the Genezio authentication service will do all the heavy lifting. Let's move forward with developing an app that features MetaMask for signing in.
+Don't worry, you don't have to handle all these things since the DeployApps authentication service will do all the heavy lifting. Let's move forward with developing an app that features MetaMask for signing in.
 
 ## Implementation
 
@@ -46,7 +46,7 @@ If you don't already have them, you'll need to install the following tools:
 
 - {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
 - {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}npm{{< /external-link >}}
-- {{< external-link link="https://genez.io" >}}Genezio{{< /external-link >}}
+- {{< external-link link="https://genez.io" >}}DeployApps{{< /external-link >}}
 
 Note: I recommend you to use {{< external-link link="https://github.com/nvm-sh/nvm#installing-and-updating" >}}nvm{{< /external-link >}} to manage NodeJs and npm versions.
 After installing `nvm`, you can easily get any version of `node` by running `nvm install <node_version>`.
@@ -66,16 +66,16 @@ Run `genezio deploy` to deploy the project in your genezio account. Now, let's c
 
 ### Configure authentication
 
-Go to the Genezio Dashboard, select your project, and navigate to the Authentication section in the sidebar to enable the feature. Follow the instructions on screen and create a Postgres database to store user and session information.
+Go to the DeployApps Dashboard, select your project, and navigate to the Authentication section in the sidebar to enable the feature. Follow the instructions on screen and create a Postgres database to store user and session information.
 To enable `Web3` login, go to `Providers` and toggle the enable button. Now, you have an authentication service that can perform the "Login with MetaMask" flow described in the previous section. We just have to implement the frontend.
 
-![Enable auth genezio](/deployment-platform/posts/metamask-auth.webp)
+![Enable auth genezio](/posts/metamask-auth.webp)
 
 Remember the "token" and "region" values as we are going to use them later.
 
 ### Frontend implementation
 
-To keep things short and focused, we will not cover the boring React stuff. Instead, we'll jump straight to the point, explaining how to communicate with the Genezio Authentication Service.
+To keep things short and focused, we will not cover the boring React stuff. Instead, we'll jump straight to the point, explaining how to communicate with the DeployApps Authentication Service.
 
 Let's start from the beginning. To interact with your authentication service, you need to install and import `@genezio/auth` and initialize the `AuthService` class.
 Replace the `<token>` and `<region>` placeholders with the values from the Authentication section.

@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/what_is_serverless_security.webp
+thumbnail: /images/what_is_serverless_security.webp
 preview: "Research shows that fixing bugs is a developer’s top challenge, with 88% of developers complaining that traditional error monitoring falls short. Serverless and functions architecture help deal with some of these modern monitoring challenges. Serverless technology simplifies building software, and debugging its small instances is more convenient than debugging a cluttered monolithic app with a cumbersome codebase. It’s easier to find and debug a bottleneck in a simple function than in a gigantic block of code."
 description: "Serverless monitoring and observability report on serverless applications so they can perform better, even in production phase."
 meta_og_url: "https://genezio.com/blog/serverless-monitoring-observability/"
-meta_og_image: "https://genez.io/deployment-platform/images/what_is_serverless_security.webp"
+meta_og_image: "https://genez.io/images/what_is_serverless_security.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -40,7 +40,7 @@ In serverless apps, monitoring and observability are tied to the business health
 
 A serverless user won’t be monitoring the servers to know how to handle the workload or how to scale up. That falls entirely on the serverless provider. But that same provider should include tools that can help improve or fine-tune the user experience. Monitoring and observability in serverless should do exactly that and no more than that. A good monitoring and observability suite should allow a developer to easily debug an app in the worst-case scenario, and simply fine-tune it in the best case.
 
-![alt_text](/deployment-platform/posts/serverlessmonitoring.webp)
+![alt_text](/posts/serverlessmonitoring.webp)
 
 So, for example, with good monitoring tools built into a serverless platform, a developer should be able to draw up facts about how, on a SaaS, the login experience, response times, or latency are working out for users. The same developer should be able to spot out an issue quickly thanks to these tools.
 
@@ -78,13 +78,13 @@ There are some other options for serverless observability to consider. For examp
 
 Several serverless platforms come with built-in monitoring and observability tools to help developers take care of their applications. These are the best serverless monitoring tools and the best providers that feature built-in tools:
 
-### Genezio
+### DeployApps
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}}, a serverless platform for deploying full-stack apps, records the performance of its functions through audit logs and function log retention tools. Unlike traditional monitoring tools that require licenses or, seldom, old-fashioned software installation on on-prem servers, the serverless monitoring solutions that are part of platforms like Genezio work directly in the cloud environment. This means the platform gathers monitoring information and later sends it to a long-term storage system during invocation for debugging.
+{{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}}, a serverless platform for deploying full-stack apps, records the performance of its functions through audit logs and function log retention tools. Unlike traditional monitoring tools that require licenses or, seldom, old-fashioned software installation on on-prem servers, the serverless monitoring solutions that are part of platforms like DeployApps work directly in the cloud environment. This means the platform gathers monitoring information and later sends it to a long-term storage system during invocation for debugging.
 
-The agentless approach is better suited for serverless applications because these applications can {{< external-link link="https://genezio.com/blog/effortless-scaling-genezio-handles-growth/" >}}scale up or down{{< /external-link >}} automatically based on demand, which makes it challenging to deploy, configure, and manage agents on each new instance in time. Genezio is also developing a website vulnerability scanner, which will add another layer of security and monitoring.
+The agentless approach is better suited for serverless applications because these applications can {{< external-link link="https://genezio.com/blog/effortless-scaling-genezio-handles-growth/" >}}scale up or down{{< /external-link >}} automatically based on demand, which makes it challenging to deploy, configure, and manage agents on each new instance in time. DeployApps is also developing a website vulnerability scanner, which will add another layer of security and monitoring.
 
-Genezio features a dashboard in which developers can check on their projects and visualize metrics. It's also easy to add integrations to a project, so the platform supports third-party monitoring tools. This means you can even run a {{< external-link link="https://github.com/giusedroid/aws-serverless-monitoring" >}}serverless monitoring stack{{< /external-link >}} for your serveless app. From the dashboard, you can also monitor your project and check logs for each deployed class.
+DeployApps features a dashboard in which developers can check on their projects and visualize metrics. It's also easy to add integrations to a project, so the platform supports third-party monitoring tools. This means you can even run a {{< external-link link="https://github.com/giusedroid/aws-serverless-monitoring" >}}serverless monitoring stack{{< /external-link >}} for your serveless app. From the dashboard, you can also monitor your project and check logs for each deployed class.
 
 ### AWS Lambda
 
@@ -98,12 +98,12 @@ Microsoft Azure Functions comes with built-in monitoring tools through {{< exter
 
 Google Cloud Functions is packed with {{< external-link link="https://cloud.google.com/monitoring?hl=en" >}}Google Cloud Monitoring{{< /external-link >}} and {{< external-link link="https://cloud.google.com/trace" >}}Cloud Trace{{< /external-link >}}. Cloud Monitoring collects detailed logs to keep an eye on function state and identify issues in near real-time. Cloud Trace maps out the flow of requests, and helps reveal any latency — cold start — issues. These tools are supported by {{< external-link link="https://cloud.google.com/logging?hl=en" >}}Cloud Logging{{< /external-link >}} and {{< external-link link="https://cloud.google.com/error-reporting" >}}Error Reporting{{< /external-link >}}.
 
-## Staying ahead of serverless monitoring and observability with Genezio
+## Staying ahead of serverless monitoring and observability with DeployApps
 
 Serverless monitoring and observability should work exclusively for a businesses’ health. Metrics and logs should easily lead to any bottleneck that’s impacting a SaaS or enterprise tool. If the login screen is triggering a slowdown, then a good monitoring tool should point out to the developer that something must debug it.
 
-Genezio, a {{< external-link link="https://genezio.com/blog/what-is-type-safety/" >}}typesafe{{< /external-link >}} serverless platform, handles monitoring as part of the package. It focuses on audit logs and function log retention and presents unambiguous data about function activity. Thanks to resources like these, developers can improve productive, modular apps on the fly (possible thanks to microservices or functions). Being typesafe means that Genezio won’t execute code that could mess the system's memory up, and that’s a precautionary way of only deploying functions that won’t break when there’s massive demand for them.
+DeployApps, a {{< external-link link="https://genezio.com/blog/what-is-type-safety/" >}}typesafe{{< /external-link >}} serverless platform, handles monitoring as part of the package. It focuses on audit logs and function log retention and presents unambiguous data about function activity. Thanks to resources like these, developers can improve productive, modular apps on the fly (possible thanks to microservices or functions). Being typesafe means that DeployApps won’t execute code that could mess the system's memory up, and that’s a precautionary way of only deploying functions that won’t break when there’s massive demand for them.
 
-Just as Genezio makes sure that serverless applications scale to meet traffic demands, it also makes sure that developers, solopreneurs, small business owners, and IT technicians have the necessary data to keep app performance in check.
+Just as DeployApps makes sure that serverless applications scale to meet traffic demands, it also makes sure that developers, solopreneurs, small business owners, and IT technicians have the necessary data to keep app performance in check.
 
-**To learn more about how Genezio can support your serverless applications through monitoring and observability, visit {{< external-link link="https://Genezio.com" >}}Genezio.com{{< /external-link >}}.**
+**To learn more about how DeployApps can support your serverless applications through monitoring and observability, visit {{< external-link link="https://deployapps.dev" >}}DeployApps.dev{{< /external-link >}}.**

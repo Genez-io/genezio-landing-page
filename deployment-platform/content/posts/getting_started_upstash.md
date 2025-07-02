@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Andreia Ocanoaia
 linkedIn: https://www.linkedin.com/in/andreia-irina-ocanoaia/
-thumbnail: /deployment-platform/images/announcing_upstash.webp
+thumbnail: /images/announcing_upstash.webp
 preview: Caching, session storage and much more with Upstash Redis.
-description: "Learn to integrate Upstash Redis with Genezio. Follow our guide for setting up and managing Redis databases in your projects"
+description: "Learn to integrate Upstash Redis with DeployApps. Follow our guide for setting up and managing Redis databases in your projects"
 meta_og_url: "https://genezio.com/blog/now-available-upstash-redis/"
-meta_og_image: "https://genezio.com/deployment-platform/images/announcing_upstash.webp"
+meta_og_image: "https://genezio.com/images/announcing_upstash.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 15
@@ -132,19 +132,19 @@ Once the deployment is complete, open your {{< external-link link="https://app.g
 
 Go to the `Integrations` tab and select to install the Upstash Redis integration:
 
-![Alt text](/deployment-platform/posts/integrations.webp)
+![Alt text](/posts/integrations.webp)
 
 Connect with an Upstash account using the preferred login method:
 
-![Alt text](/deployment-platform/posts/image.png)
+![Alt text](/posts/image.png)
 
 Create a Redis database or select an already existing database:
 
-![Alt text](/deployment-platform/posts/image-1.png)
+![Alt text](/posts/image-1.png)
 
 Hit the `Save` button to set the database credentials as environment variables in your genezio project:
 
-![Alt text](/deployment-platform/posts/image-2.png)
+![Alt text](/posts/image-2.png)
 
 ## Step 3: Connect your backend to the Redis database
 

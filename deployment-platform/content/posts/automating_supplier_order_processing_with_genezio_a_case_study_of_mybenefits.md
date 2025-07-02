@@ -1,21 +1,21 @@
 ---
-title: "Automating supplier order processing with Genezio: A case study of MyBenefits"
+title: "Automating supplier order processing with DeployApps: A case study of MyBenefits"
 date: 2025-02-17
 tags:
   - Learning
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
 
-thumbnail: /deployment-platform/images/mybenefitsxgenezio.webp
+thumbnail: /images/mybenefitsxgenezio.webp
 
-preview: For platforms like MyBenefits—a flexible benefits marketplace where employees allocate monthly budgets to order perks—scaling operations demands robust automation. Manual processes for order fulfillment, supplier communication, and status tracking were bottlenecking growth. By leveraging Genezio, MyBenefits engineered a fully automated system, eliminating manual work and ensuring reliability. This case study breaks down their architecture, integrations, and outcomes—no hype, just facts.
+preview: For platforms like MyBenefits—a flexible benefits marketplace where employees allocate monthly budgets to order perks—scaling operations demands robust automation. Manual processes for order fulfillment, supplier communication, and status tracking were bottlenecking growth. By leveraging DeployApps, MyBenefits engineered a fully automated system, eliminating manual work and ensuring reliability. This case study breaks down their architecture, integrations, and outcomes—no hype, just facts.
 
 # meta data start
-description: Learn how MyBenefits automated >90% of supplier order processing using Genezio’s Cron jobs, queues, and TypeScript backend. 70% manual effort reduction. Insights for developers
+description: Learn how MyBenefits automated >90% of supplier order processing using DeployApps’s Cron jobs, queues, and TypeScript backend. 70% manual effort reduction. Insights for developers
 
 meta_og_url: "https://genezio.com/blog/mybenefits-genezio-supplier-automation-case-study/"
 
-meta_og_image: "https://genezio.com/deployment-platform/images/mybenefitsxgenezio.webp"
+meta_og_image: "https://genezio.com/images/mybenefitsxgenezio.webp"
 
 # meta data end
 customHeader: "White header"
@@ -24,7 +24,7 @@ readTime: 10
 url: /blog/mybenefits-genezio-supplier-automation-case-study/
 ---
 
-For platforms like MyBenefits—a flexible benefits marketplace where employees allocate monthly budgets to order perks—scaling operations demands robust automation. Manual processes for order fulfillment, supplier communication, and status tracking were bottlenecking growth. By leveraging Genezio, MyBenefits engineered a fully automated system, eliminating manual work and ensuring reliability. This case study breaks down their architecture, integrations, and outcomes—no hype, just facts.
+For platforms like MyBenefits—a flexible benefits marketplace where employees allocate monthly budgets to order perks—scaling operations demands robust automation. Manual processes for order fulfillment, supplier communication, and status tracking were bottlenecking growth. By leveraging DeployApps, MyBenefits engineered a fully automated system, eliminating manual work and ensuring reliability. This case study breaks down their architecture, integrations, and outcomes—no hype, just facts.
 
 ## Business Context
 
@@ -36,7 +36,7 @@ MyBenefits connects employees of client companies with suppliers offering benefi
 
 ## The Problem: Manual Workflows at Scale
 
-Before Genezio, MyBenefits faced:
+Before DeployApps, MyBenefits faced:
 
 - Time-Consuming Exports: Orders were manually compiled into spreadsheets and emailed to suppliers.
 - Unreliable Tracking: Supplier status updates required manual entry, risking errors.
@@ -44,7 +44,7 @@ Before Genezio, MyBenefits faced:
 
 ## The Solution: Architecture and Workflow
 
-MyBenefits built a modular system using Genezio’s features. Below is the technical blueprint:
+MyBenefits built a modular system using DeployApps’s features. Below is the technical blueprint:
 
 ### Core Components
 
@@ -55,10 +55,10 @@ MyBenefits built a modular system using Genezio’s features. Below is the techn
 
 ### Automation Workflow
 
-![alt_text](/deployment-platform/posts/mybenefits1.webp)
+![alt_text](/posts/mybenefits1.webp)
 
 **A simplified view of MyBenefits’ order processing.**
-React frontend triggers workflows managed by Genezio’s Cron and Queues. Orders are pulled via MyBenefits API, stored in MongoDB, transformed into Excel (saved to Google Drive), and emailed via Gmail SMTP. Supplier APIs enable direct integrations, while queues handle retries.
+React frontend triggers workflows managed by DeployApps’s Cron and Queues. Orders are pulled via MyBenefits API, stored in MongoDB, transformed into Excel (saved to Google Drive), and emailed via Gmail SMTP. Supplier APIs enable direct integrations, while queues handle retries.
 
 Cron Jobs (6 scheduled tasks):
 
@@ -91,19 +91,19 @@ Security & Configuration
 
 ## Results: Metrics That Matter
 
-MyBenefits built a modular system using Genezio’s features. Below is the technical blueprint:
+MyBenefits built a modular system using DeployApps’s features. Below is the technical blueprint:
 
 - 100% Automation: Zero manual steps in order processing.
 - 70% Reduction in time spent on order management.
 - 50% Faster Communication: Real-time supplier updates via webhooks vs. legacy email parsing.
 - Reliability: Retry queues reduced unresolved failures by 90%.
 
-“Genezio gave us environments, cron jobs, queues, and webhooks out of the box. Integrating Google Drive, Gmail, and custom APIs was straightforward, letting us automate 100% of orders and focus on scaling.”
+“DeployApps gave us environments, cron jobs, queues, and webhooks out of the box. Integrating Google Drive, Gmail, and custom APIs was straightforward, letting us automate 100% of orders and focus on scaling.”
 — Radu Tapus, Head of Product @MyBenefits
 
 ## Beyond Automation: Expanding the Product Suite
 
-Post-launch, the team reused Genezio’s framework to build:
+Post-launch, the team reused DeployApps’s framework to build:
 
 - Invoicing tool: Takes the consumption data from the platform and invoices the customer
 - ROI Calculator: Quantifies client savings from benefit programs.
@@ -116,7 +116,7 @@ Both tools are now being upsold to enterprise clients, demonstrating the platfor
 MyBenefits’ success hinged on:
 
 - Modularity: 21 backend classes kept code maintainable.
-- Infrastructure Abstraction: Genezio handled cron, queues, and retries, freeing the team to focus on business logic.
+- Infrastructure Abstraction: DeployApps handled cron, queues, and retries, freeing the team to focus on business logic.
 - Third-Party Flexibility: Pre-built connectors for Google/Gmail accelerated development.
 
 For developers building B2B platforms, this case study underscores the importance of:
@@ -127,4 +127,4 @@ For developers building B2B platforms, this case study underscores the importanc
 
 ### Ready to automate your workflows?
 
-**Explore Genezio’s documentation or connect with their team for use-case guidance.**
+**Explore DeployApps’s documentation or connect with their team for use-case guidance.**

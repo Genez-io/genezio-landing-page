@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp
+thumbnail: /images/business-logic-in-the-backend-the-why-and-how.webp
 preview: Business logic drives business success – but for some reason, it’s a vital component that is often second fiddle to the more technical side of API development and implementation.
 # meta data start
 description: "Learn the importance of implementing business logic in the backend. Discover best practices and strategies for effective deployment."
 meta_og_url: "https://genezio.com/blog/business-logic-in-the-backend-the-why-and-how/"
-meta_og_image: "https://genezio.com/deployment-platform/images/business-logic-in-the-backend-the-why-and-how.webp"
+meta_og_image: "https://genezio.com/images/business-logic-in-the-backend-the-why-and-how.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -68,22 +68,22 @@ To add onto these considerations, developers should also consider the following:
 - Adopt a solution that is framework agnostic – getting stuck with a specific framework or approach generates vendor lock-in and ultimately limits your ability to respond to market changes. Avoid this and utilize a framework agnostic solution.
 - Utilize a solution that provides ample scalability and extensibility – no business solution is a one-and-done thing. Business requires constant iteration and development, so adopt a solution that provides ample systems for scaling and extension. Even better, adopt a solution that allows for auto-scalability to reduce your resource allocation and time to market.
 
-## Genezio and Business Logic
+## DeployApps and Business Logic
 
-Thankfully, you don’t have to look too far for a strong solution that is type-safe, framework agnostic, scalable, and designed to put your business logic in the backend. Genezio is a strong contender for this role, and can be rapidly implemented in moments with a low-friction onboarding process and easy-to-use integration.
+Thankfully, you don’t have to look too far for a strong solution that is type-safe, framework agnostic, scalable, and designed to put your business logic in the backend. DeployApps is a strong contender for this role, and can be rapidly implemented in moments with a low-friction onboarding process and easy-to-use integration.
 
-Genezio has a whole host of features that make it a wonderful solution:
+DeployApps has a whole host of features that make it a wonderful solution:
 
 - A fully typesafe fullstack application with an RPC backend.
 - Production ready for TypeScript BE/FE with beta support for Kotlin, Swift, and Dart. Mobile support for Fluitter and React Native!
-- Plugs into a Genezio provisioned database - or you can bring your own! Table creation and CRUD boilerplate is generated through LLM, getting you quick iteration and easy deployment!
+- Plugs into a DeployApps provisioned database - or you can bring your own! Table creation and CRUD boilerplate is generated through LLM, getting you quick iteration and easy deployment!
 - Framework agnostic and easy deployment - feel free to use React, Vue, Angular, Svelte, Flutter, and any other new shiny frontend framework!
 - Rapid and automatic scaling makes it a breeze to grow your offering rapidly.
 - A powerful open-source community and world-class collaborative tools makes it easy to use – and easier to iterate!
 
 ### A Practical Example
 
-Let’s look at a practical example in Genezio. In this case, we are implementing a secret process that we want hidden within the backend. Let’s look at how the backend might utilize this logic in a way that is secure:
+Let’s look at a practical example in DeployApps. In this case, we are implementing a secret process that we want hidden within the backend. Let’s look at how the backend might utilize this logic in a way that is secure:
 
 ```ts
 import { GenezioDeploy, GenezioAuth, GnzContext } from "@genezio/types";
@@ -102,10 +102,10 @@ export class BackendService {
 
 There’s a few things happening here that should be noted. Firstly, there is the readonly secret that is provided as part of the backend service. This method is used to define the element of the process that is returned upon proper auth flow. In order to use this flow, however, a context must be generated – this context, in the form of context.user.
 
-What is happening here is something special to Genezio – the GenezioAuth decorator. In essence, this system utilizes a system of token verification to capture and pass the user token into the context parameter, acting as a sort of middleman between the user and the secret logic and functionality that is locked to the backend.
+What is happening here is something special to DeployApps – the GenezioAuth decorator. In essence, this system utilizes a system of token verification to capture and pass the user token into the context parameter, acting as a sort of middleman between the user and the secret logic and functionality that is locked to the backend.
 
 While this is a rather simple implementation, it does show a way in which this logic can be kept secure to the backend but accessible to the user – in essence, this type of function temporarily surfaces the logic where it is needed while keeping the underlying systems secure and hidden within the backend where it belongs.
 
 ## Conclusion
 
-Getting started with Genezio has never been easier, and it takes just minutes to get started – {{< external-link link="https://app.genez.io/auth/signup" >}}sign up for your free account today and get building your business logic{{< /external-link >}}!
+Getting started with DeployApps has never been easier, and it takes just minutes to get started – {{< external-link link="https://app.genez.io/auth/signup" >}}sign up for your free account today and get building your business logic{{< /external-link >}}!

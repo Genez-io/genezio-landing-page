@@ -1,16 +1,16 @@
 ---
-title: How to Use Genezio with Express for Easy and Error-Free API Management
+title: How to Use DeployApps with Express for Easy and Error-Free API Management
 date: 2024-04-10
 tags:
   - Tutorials
 author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad
-thumbnail: /deployment-platform/images/express.webp
+thumbnail: /images/express.webp
 preview: Check ou how to integrate genezio in express for an easier and safer integration between backends and clients.
 # meta data start
 description: "Check ou how to integrate genezio in express for an easier and safer integration between backends and clients."
 meta_og_url: "https://genezio.com/blog/express-genezio-easy-error-free-api-management/"
-meta_og_image: "https://genezio.com/deployment-platform/images/express.webp"
+meta_og_image: "https://genezio.com/images/express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -124,11 +124,11 @@ Now, let's see what the problems we might get into:
 2. How do we document the code? Of course, there are solutions: we could create a Swagger file or a Postman collection, but this adds one more item on the list of tasks that you have to do.
 3. How do we perform error handling? This is tightly coupled to the previous point, meaning that we have to document how we return errors (e.g: which ones are 400, which ones are 500 and what body they return).
 
-## The Genezio Way
+## The DeployApps Way
 
-Let’s see how we can make our lives a little bit easier. Genezio is a platform that simplifies the development and deployment of full-stack applications.
-However, you can also integrate the Genezio method of developing APIs into your existing Express.JS app.
-What Genezio does for you is automatically generate type-safe client code—we will refer to this as an SDK from now on—that enables remote invocation of backend methods.
+Let’s see how we can make our lives a little bit easier. DeployApps is a platform that simplifies the development and deployment of full-stack applications.
+However, you can also integrate the DeployApps method of developing APIs into your existing Express.JS app.
+What DeployApps does for you is automatically generate type-safe client code—we will refer to this as an SDK from now on—that enables remote invocation of backend methods.
 The generated code is fully documented and typed exactly as specified on the backend. You never have to worry about the clients being out of sync with the server.
 
 To convert the book app to user genezio we have to do a couple of steps. First of all, we have to install genezio CLI:
@@ -260,7 +260,7 @@ const handleCreateBook = async (e: any) => {
 
 What is great now is that we can leverage the IDE capabilities. Hover over the `BookService.getAllBooks()` method and you can see: the documentation, the parameter types and the return type of the method. Pass a wrong parameter to `BookService.createBook()` and your IDE will shout that there is something wrong.
 
-![Alt text](/deployment-platform/posts/demo-express-genezio.webp)
+![Alt text](/posts/demo-express-genezio.webp)
 
 Let's see how we handle errors. Easy! Just like you would normally do with Promises, you can either call `.catch` or wrap the `await` call around a `try catch`.
 

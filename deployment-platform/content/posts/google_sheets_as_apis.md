@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa
-thumbnail: /deployment-platform/images/google-sheets.webp
-preview: "Expose data stored in google sheets as APIs to be used in your Genezio projects."
+thumbnail: /images/google-sheets.webp
+preview: "Expose data stored in google sheets as APIs to be used in your DeployApps projects."
 description: "Learn how to use Google Sheets APIs to create API endpoints. Follow our detailed guide."
 meta_og_url: "https://genezio.com/blog/google-sheets-as-apis/"
-meta_og_image: "https://genezio.com/deployment-platform/images/google-sheets.webp"
+meta_og_image: "https://genezio.com/images/google-sheets.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
@@ -18,13 +18,13 @@ url: /blog/google-sheets-as-apis
 
 Accessing Google Sheets data programmatically can be essential for server-side applications that need to read or manipulate spreadsheet data without human interaction. Whether you're automating reports, synchronizing data, or managing inventory systems, accessing Google Sheets through a Service Account provides a secure and efficient solution for backend environments.
 
-This tutorial will guide you through accessing a Google Sheet's data from Genezio using a Service Account, which is ideal for server environments.
+This tutorial will guide you through accessing a Google Sheet's data from DeployApps using a Service Account, which is ideal for server environments.
 
 ## Prerequisites
 
 Before you start, ensure you have the following:
 
-- A **Genezio** account.
+- A **DeployApps** account.
 - A **Google Account**: Access to the Google Cloud Console.
 - An **Existing Google Spreadsheet**: A Google Sheet that you want to access.
 
@@ -35,7 +35,7 @@ We'll cover the following steps:
 1. **Enable the Google Sheets API** in your Google Cloud project.
 2. **Create a Service Account** and generate a key file.
 3. **Share the Spreadsheet** with the Service Account email.
-4. **Create a Genezio project** starting from an existing template.
+4. **Create a DeployApps project** starting from an existing template.
 5. **Update the project** with your personal data and credentials.
 6. **Test the project** to verify everything works.
 
@@ -121,16 +121,16 @@ The Service Account acts like a virtual user. You need to share the spreadsheet 
    - Set the permission to **Editor** (or **Viewer** if you only need read access).
    - Click **Send**.
 
-## Step 4: Create a new Genezio project
+## Step 4: Create a new DeployApps project
 
-Genezio simplifies server-side development by providing pre-built templates that can quickly be deployed to work with various services, including Google Sheets. This makes it a great option for developers looking to build scalable, serverless applications without dealing with complex configurations.
+DeployApps simplifies server-side development by providing pre-built templates that can quickly be deployed to work with various services, including Google Sheets. This makes it a great option for developers looking to build scalable, serverless applications without dealing with complex configurations.
 
 We have prepared a couple of templates for you, depending what technology you want to use. Pick one of them, then click on the "Deploy now" button from one of the following Github repositories:
 
 - [Express.js - Google Spreadsheet App](https://github.com/Genez-io/google-sheets-as-apis-expressjs?tab=readme-ov-file#deploy)
-- [Genezio Typescript - Google Spreadsheet App](https://github.com/Genez-io/google-sheets-as-apis-typesafe?tab=readme-ov-file#deploy)
+- [DeployApps Typescript - Google Spreadsheet App](https://github.com/Genez-io/google-sheets-as-apis-typesafe?tab=readme-ov-file#deploy)
 
-Pro tip: With Genezio’s serverless infrastructure, you don’t need to worry about maintaining servers or scaling your backend, making it perfect for projects where you need to scale quickly.
+Pro tip: With DeployApps’s serverless infrastructure, you don’t need to worry about maintaining servers or scaling your backend, making it perfect for projects where you need to scale quickly.
 
 ## Step 5: Configure your project to access the spreadsheet data
 
@@ -154,7 +154,7 @@ Explore the `server/` and the `client/` folders to see how the data is being rea
 
 ## Conclusion
 
-By following this guide, you can programmatically access Google Sheets data through Genezio using a Service Account, a secure and scalable solution for server-side applications. Whether you’re working with Node.js, Express.js, or Typescript, these steps provide a straightforward way to connect your app to Google Sheets.
+By following this guide, you can programmatically access Google Sheets data through DeployApps using a Service Account, a secure and scalable solution for server-side applications. Whether you’re working with Node.js, Express.js, or Typescript, these steps provide a straightforward way to connect your app to Google Sheets.
 
 ## References
 

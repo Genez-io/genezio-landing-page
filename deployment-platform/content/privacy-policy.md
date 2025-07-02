@@ -4,7 +4,7 @@ lastUpdated: "January 1st, 2024"
 # meta data start
 description: "Learn how Genezio protects your privacy and personal data. Our Privacy Policy outlines information collection, use, and your rights under GDPR and CCPA."
 meta_og_url: "https://genezio.com/"
-meta_og_image: "https://genezio.com/deployment-platform/images/og.jpg"
+meta_og_image: "https://genezio.com/images/og.jpg"
 # meta data end
 ---
 

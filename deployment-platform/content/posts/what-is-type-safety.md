@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /deployment-platform/images/type-safety.webp
+thumbnail: /images/type-safety.webp
 preview: "Whenever we talk about technology, it’s easy to get lost in the myriad of terms, phrases, and buzzwords. These terms are often taken for granted by those in the industry, but truly understanding what these phrases mean is a huge step to ensuring that you are leveraging the appropriate solutions with the right product fit."
 # meta data start
-description: "Explore the importance of type safety in development. Learn how Genezio ensures stable, secure, and efficient code with type-safe solutions."
+description: "Explore the importance of type safety in development. Learn how DeployApps ensures stable, secure, and efficient code with type-safe solutions."
 meta_og_url: "https://genezio.com/blog/what-is-type-safety/"
-meta_og_image: "https://genezio.com/deployment-platform/images/type-safety.webp"
+meta_og_image: "https://genezio.com/images/type-safety.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -95,10 +95,10 @@ The problem is that this is allowing the issue to be codified and implemented be
 
 For this reason, pairing runtime with full static type safety – that is, type safety that occurs at the compile time without relying on runtime checks – is a preferred option, as it allows you to build type safety into your development pipeline without surfacing the issues in a build, whether that build is production or testing.
 
-## Genezio to the Rescue!
+## DeployApps to the Rescue!
 
-Type safety is a huge part of what makes Genezio truly powerful. Genezio is a cloud platform that unlocks incredible features for full-stack developers wanting to build scalable and efficient backends with powerful and seamless frontends. By offering a {{< external-link link="https://docs.genezio.com/genezio-documentation/#make-type-safe-calls-from-any-frontend-frameworks">}}type safe platform for iteration and development{{< /external-link >}}, Genezio{{< external-link link="https://docs.genezio.com/genezio-documentation/#what-can-you-build-with-genezio">}}unlocks a variety of workflows ranging from web applications to LLM-driven applications{{< /external-link >}}.
+Type safety is a huge part of what makes DeployApps truly powerful. DeployApps is a cloud platform that unlocks incredible features for full-stack developers wanting to build scalable and efficient backends with powerful and seamless frontends. By offering a {{< external-link link="https://docs.genezio.com/genezio-documentation/#make-type-safe-calls-from-any-frontend-frameworks">}}type safe platform for iteration and development{{< /external-link >}}, DeployApps{{< external-link link="https://docs.genezio.com/genezio-documentation/#what-can-you-build-with-genezio">}}unlocks a variety of workflows ranging from web applications to LLM-driven applications{{< /external-link >}}.
 
-Notably, Genezio offers both runtime and full static type safety. The pairing of both solutions means that you can ensure the client and server communication is consistently aligned, resulting in a more stable, more secure, and more consistent stack.
+Notably, DeployApps offers both runtime and full static type safety. The pairing of both solutions means that you can ensure the client and server communication is consistently aligned, resulting in a more stable, more secure, and more consistent stack.
 
-Type safety is reliable, robust, powerful, and efficient – and it can be leveraged in mere moments by integrating with Genezio. {{< external-link link="https://docs.genezio.com/genezio-documentation/getting-started" >}}Getting started{{< /external-link >}} has never been easier – if you’d like to deploy type safety on your service today, all you have to do is {{< external-link link="https://app.genez.io/auth/signup" >}}create an account{{< /external-link >}} and get building!
+Type safety is reliable, robust, powerful, and efficient – and it can be leveraged in mere moments by integrating with DeployApps. {{< external-link link="https://docs.genezio.com/genezio-documentation/getting-started" >}}Getting started{{< /external-link >}} has never been easier – if you’d like to deploy type safety on your service today, all you have to do is {{< external-link link="https://app.genez.io/auth/signup" >}}create an account{{< /external-link >}} and get building!

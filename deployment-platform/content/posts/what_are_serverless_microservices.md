@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/what_are_microservices.webp
+thumbnail: /images/what_are_microservices.webp
 preview: "As companies and the world become increasingly digital, many organisations — corporations or small businesses — are relying on cloud services to run their operations because the cloud is quick, effortless, affordable, and doesn’t require a huge upfront fee."
 description: "Serverless microservices are small, independent units of code that perform specific tasks within an application"
 meta_og_url: "https://genezio.com/blog/serverless-microservices/"
-meta_og_image: "https://genez.io/deployment-platform/images/what_are_microservices.webp"
+meta_og_image: "https://genez.io/images/what_are_microservices.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -54,11 +54,11 @@ Tightly coupled components — as opposed to the “decoupled” components we m
 
 Scalability is another issue. During peak seasons, like the holiday rush, demand for rental equipment can increase rapidly. A monolithic platform might struggle to handle this increased load, especially in key areas like payment processing. Deploying additional instances of the entire application is often the only solution, a time-consuming process that might be too slow to address the peak in time. By the time the new version is deployed, the peak demand might have very probably slowed down.
 
-![alt_text](/deployment-platform/posts/serverlessMicroservices3.webp)
+![alt_text](/posts/serverlessMicroservices3.webp)
 
 A serverless microservice architecture breaks the platform down into smaller, independently deployable services. Our photography equipment rental platform would consist of separate services for each of its components, that is, user management, inventory, recommendations, orders, payments, and reporting. Each of these services runs in its own container and communicates with others through APIs. Additionally, the “serverless” model eliminates the need to manage infrastructure entirely.
 
-![alt_text](/deployment-platform/posts/serverlessMicroservices2.webp)
+![alt_text](/posts/serverlessMicroservices2.webp)
 
 The serverless microservice model offers greater flexibility than a monolithic system. Teams can independently develop, deploy, and scale each service. They can accelerate development and improve their response to workload fluctuations because they’re better prepared for it. If payment processing in our rental app slows down during peak season, only the payment service — which in this case is an independent and cohesive component — needs to be scaled up. This means the bottleneck can be dealt with without affecting other parts of the application.
 
@@ -70,15 +70,15 @@ An e-commerce platform can be a good example of how microservices help a shopper
 
 In serverless, these microservices are just small, independent pieces of code called functions. They only snap into action when something specific happens, like a customer adding an item to their cart, a payment being processed, or a product running out of stock. Instead of running all the time, these apps only run when needed, which saves money on processing power. If the e-commerce platform only operates in one country with a single time zone, they’ll surely be cutting down on processing power during the wee hours (drunk shoppers who spend almost {{< external-link link="https://www.digitaltrends.com/news/drunk-shoppers-spend-48-billion-per-year-mostly-on-amazon/" >}}$50 billion a year{{< /external-link >}} are a good excuse to keep the site running all night long).
 
-If a competitor wanted to start their site and {{< external-link link="https://genezio.com/blog/how-to-host-a-web-app-host-application-hosting-an-app-application-server-hosting-web-application-hosting-server-free-application-hosting/#conclusion-your-free-hosting-journey-begins-now" >}}launch a web application{{< /external-link >}} for selling items to drunk buyers, they could use pre-built microservices for features like user authentication or payment processing to get a head start. Some of these services can be found on platforms like {{< external-link link="https://genezio.com/genezio-typesafe/" >}}Genezio{{< /external-link >}}. Genezio is a serverless platform for building applications, and it also offers pre-built, typesafe microservices.
+If a competitor wanted to start their site and {{< external-link link="https://genezio.com/blog/how-to-host-a-web-app-host-application-hosting-an-app-application-server-hosting-web-application-hosting-server-free-application-hosting/#conclusion-your-free-hosting-journey-begins-now" >}}launch a web application{{< /external-link >}} for selling items to drunk buyers, they could use pre-built microservices for features like user authentication or payment processing to get a head start. Some of these services can be found on platforms like {{< external-link link="https://genezio.com/genezio-typesafe/" >}}DeployApps{{< /external-link >}}. DeployApps is a serverless platform for building applications, and it also offers pre-built, typesafe microservices.
 
-![alt_text](/deployment-platform/posts/serverlessMicroservices1.webp)
+![alt_text](/posts/serverlessMicroservices1.webp)
 
 In the past, setting up these services would involve a lot of technical work and managing servers. With serverless microservices, the platform provider handles all the behind-the-scenes details, like scaling and infrastructure.
 
 ## How do solopreneurs, SaaS companies and IT talent benefit from serverless microservices?
 
-Solopreneurs and IT workers who need to start their own projects fast can use microservices with very similar benefits. They’ll be able to launch fast, and their stack will exist independently of other platforms (i.e., by using Genezio, they won’t have to deploy on an already-existing legacy machine that the company forces them to use). The microservices' architecture will mean they’ll be able to drop an MVP with the minimal features and then build upon that slowly.
+Solopreneurs and IT workers who need to start their own projects fast can use microservices with very similar benefits. They’ll be able to launch fast, and their stack will exist independently of other platforms (i.e., by using DeployApps, they won’t have to deploy on an already-existing legacy machine that the company forces them to use). The microservices' architecture will mean they’ll be able to drop an MVP with the minimal features and then build upon that slowly.
 
 Just like the e-commerce platform we were referring to, a solopreneur won’t have to care about scaling up when their app becomes a hit because the serverless design will do it for them. And, just like a SaaS business would benefit from, they won’t have to pay for server time when their app is idle.
 
@@ -106,7 +106,7 @@ Unlike monolithic architectures, where developers are constrained to the technol
 
 ### 5. Pre-built components
 
-Serverless microservices let you easily combine different cloud services like databases, message queues, and object storage to build your app. This means you can reuse code and save time by leveraging pre-built solutions. Genezio offers plenty of pre-built components, including typesafe features, databases, auth, and cron jobs to build full-stack applications without building them from scratch.
+Serverless microservices let you easily combine different cloud services like databases, message queues, and object storage to build your app. This means you can reuse code and save time by leveraging pre-built solutions. DeployApps offers plenty of pre-built components, including typesafe features, databases, auth, and cron jobs to build full-stack applications without building them from scratch.
 
 ### 6. Cost savings
 
@@ -126,7 +126,7 @@ Figuring out which tests to run and when to run them is tough. Some developers c
 
 ### 3. Cold starts (unless you plan ahead)
 
-Serverless environments usually have to deal with latency and cold starts when code hasn’t been running for a while. The best way to counter this disadvantage is to partner up with a tech company that has developed a workaround to them. {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/#genezio-functions-vs-aws-lambda-vs-gcp-vs-vercel-vs-netlify" >}}Genezio Functions{{< /external-link >}}, for example, are designed to prevent cold starts for any serverless app and starts up to 4x faster than AWS Lambda.
+Serverless environments usually have to deal with latency and cold starts when code hasn’t been running for a while. The best way to counter this disadvantage is to partner up with a tech company that has developed a workaround to them. {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/#genezio-functions-vs-aws-lambda-vs-gcp-vs-vercel-vs-netlify" >}}DeployApps Functions{{< /external-link >}}, for example, are designed to prevent cold starts for any serverless app and starts up to 4x faster than AWS Lambda.
 
 ### 4. Low visibility
 
@@ -136,8 +136,8 @@ If you’re a first-timer, it can be hard to keep track of request flows, find d
 
 ## Start using serverless microservices now
 
-Serverless microservices have become a fundamental tool in today’s developing environment, as they help build applications that are easier to manage and scale. This is why we encourage you to make a step forward and begin your journey into serverless microservices. {{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}} is a strong starting point.
+Serverless microservices have become a fundamental tool in today’s developing environment, as they help build applications that are easier to manage and scale. This is why we encourage you to make a step forward and begin your journey into serverless microservices. {{< external-link link="https://genezio.com" >}}DeployApps{{< /external-link >}} is a strong starting point.
 
-As a specialised serverless provider, Genezio easily guides businesses and developers in selecting the right serverless architecture for their current and future needs. With a true pay-as-you-go model and type-safe methods, our platform motivates developers to focus on innovation rather than infrastructure management. {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up{{< /external-link >}} now to try the platform and start building your serverless application for free. You can get started in seconds!
+As a specialised serverless provider, DeployApps easily guides businesses and developers in selecting the right serverless architecture for their current and future needs. With a true pay-as-you-go model and type-safe methods, our platform motivates developers to focus on innovation rather than infrastructure management. {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up{{< /external-link >}} now to try the platform and start building your serverless application for free. You can get started in seconds!
 
-**To learn more about the advantages of typesafe serverless platforms with unlimited builds, visit {{< external-link link="https://Genezio.com" >}}Genezio{{< /external-link >}}.**
+**To learn more about the advantages of typesafe serverless platforms with unlimited builds, visit {{< external-link link="https://deployapps.dev" >}}DeployApps{{< /external-link >}}.**

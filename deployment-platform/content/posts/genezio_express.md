@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Stefan Iordache
 linkedIn: https://www.linkedin.com/in/stefan-d-iordache/
-thumbnail: /deployment-platform/images/genezio_express.webp
+thumbnail: /images/genezio_express.webp
 preview: Today we will compare genezio with one of the major players in the market, Express
 # meta data start
 description: "Compare genezio with Express.js. Find out about writing code, testing the code, calling the API from your client, and what it takes to deploy your code."
 meta_og_url: "https://genezio.com/exploring-the-differences-between-genezio-and-express-js/"
-meta_og_image: "https://genezio.com/deployment-platform/images/genezio_express.webp"
+meta_og_image: "https://genezio.com/images/genezio_express.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -118,7 +118,7 @@ The most common way of testing an Express application is by using an HTTP client
 
 genezio comes with a custom tool for testing your projects locally, as well as after they are deployed. The interface is aware of your project’s structure and autocompletes your testing environment with the corresponding function and parameter names. You don’t have to manually add your endpoints, just select the function you want to test, input the parameters and click SEND.
 
-![test interface](/deployment-platform/posts/test_interface.webp "image_tooltip")
+![test interface](/posts/test_interface.webp "image_tooltip")
 
 **Accessing Your API**
 

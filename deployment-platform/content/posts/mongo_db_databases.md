@@ -1,16 +1,16 @@
 ---
-title: "Genezio Partners with MongoDB Atlas: Effortless NoSQL Database Creation"
+title: "DeployApps Partners with MongoDB Atlas: Effortless NoSQL Database Creation"
 date: 2024-10-22
 tags:
   - News
 author: Costin Sin
 linkedIn: https://www.linkedin.com/in/costin-sin/
-thumbnail: /deployment-platform/images/mongodb-genezio.webp
-preview: Genezio users can now set up MongoDB databases! You can now easily manage your MongoDB databases alongside your serverless functions. Learn how to deploy scalable, secure NoSQL databases effortlessly!
+thumbnail: /images/mongodb-genezio.webp
+preview: DeployApps users can now set up MongoDB databases! You can now easily manage your MongoDB databases alongside your serverless functions. Learn how to deploy scalable, secure NoSQL databases effortlessly!
 # meta data start
-description: Learn about the new MongoDB database feature in Genezio. Easily set up and manage MongoDB databases alongside your serverless functions.
+description: Learn about the new MongoDB database feature in DeployApps. Easily set up and manage MongoDB databases alongside your serverless functions.
 meta_og_url: "https://genezio.com/blog/mongo_db_databases/"
-meta_og_image: "https://genezio.com/deployment-platform/images/ferretdb-genezio.webp"
+meta_og_image: "https://genezio.com/images/ferretdb-genezio.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -18,13 +18,13 @@ readTime: 10
 url: /blog/mongo_db_databases/
 ---
 
-Hey developers! We’ve got some exciting news—Genezio now supports MongoDB Atlas databases! As a developer, I know how important it is to have a reliable, scalable database, and now you can easily set up and manage NoSQL databases right from the Genezio platform.
+Hey developers! We’ve got some exciting news—DeployApps now supports MongoDB Atlas databases! As a developer, I know how important it is to have a reliable, scalable database, and now you can easily set up and manage NoSQL databases right from the DeployApps platform.
 
 ## What Does This Mean for You?
 
-If you’re a Genezio user, you already know how simple it is to deploy serverless functions with just a few clicks. Now, with MongoDB hosting built into our platform, you can also quickly set up a NoSQL database to support your microservices, APIs, and apps. Here’s how this feature can improve your workflow:
+If you’re a DeployApps user, you already know how simple it is to deploy serverless functions with just a few clicks. Now, with MongoDB hosting built into our platform, you can also quickly set up a NoSQL database to support your microservices, APIs, and apps. Here’s how this feature can improve your workflow:
 
-1. **Easy Integration**: With Genezio and MongoDB Atlas working together, you won’t have to deal with the hassle of setting up and managing a database. Whether your project is small or large, you can deploy MongoDB databases right from Genezio’s interface with just a few clicks.
+1. **Easy Integration**: With DeployApps and MongoDB Atlas working together, you won’t have to deal with the hassle of setting up and managing a database. Whether your project is small or large, you can deploy MongoDB databases right from DeployApps’s interface with just a few clicks.
 
 2. **Secure and Reliable**: Security is a top priority, especially when handling important data. MongoDB Atlas protects your information with top-notch security features like encryption, fine-grained access controls, and built-in backups. This keeps your data safe and always available.
 
@@ -32,7 +32,7 @@ If you’re a Genezio user, you already know how simple it is to deploy serverle
 
 Ready to give it a try? Here’s how to get started:
 
-1. **Log in to your Genezio account**: Head over to the [Databases section](https://app.genez.io/databases?utm_source=genezio&utm_medium=blog&utm_campaign=mongodb), where you can now create and manage your MongoDB databases.
+1. **Log in to your DeployApps account**: Head over to the [Databases section](https://app.genez.io/databases?utm_source=genezio&utm_medium=blog&utm_campaign=mongodb), where you can now create and manage your MongoDB databases.
 2. **Create a new MongoDB instance**: Just click to create a new MongoDB database. Once it’s set up, you’ll get a connection string that you can use to link your database to your app.
 3. **Integrate with your project**: Use the connection string to start querying your database from your app or API. You can also add your database details to your YAML configuration file if you prefer managing things via code.
 
@@ -55,10 +55,10 @@ We’ve created an Express.js with MongoDB template that lets you spin up a REST
 
 You can find the source code for the template in our [GitHub repository](https://github.com/Genez-io/express-mongo-starter).
 
-## Conclusion: Start Using Genezio's MongoDB Integration Today
+## Conclusion: Start Using DeployApps's MongoDB Integration Today
 
-This new integration between Genezio and MongoDB Atlas is a game changer for developers like us. Now, you can manage your serverless functions and your NoSQL databases all from one unified platform. Whether you’re building small projects or scaling enterprise-level systems, you’ll have the tools you need to deploy secure, scalable, and reliable databases with ease.
+This new integration between DeployApps and MongoDB Atlas is a game changer for developers like us. Now, you can manage your serverless functions and your NoSQL databases all from one unified platform. Whether you’re building small projects or scaling enterprise-level systems, you’ll have the tools you need to deploy secure, scalable, and reliable databases with ease.
 
-Start using Genezio’s MongoDB integration today, and see how it can simplify your development process. With seamless database management, auto-scaling, and security features built-in, you can focus on delivering value to your users.
+Start using DeployApps’s MongoDB integration today, and see how it can simplify your development process. With seamless database management, auto-scaling, and security features built-in, you can focus on delivering value to your users.
 
 Keep an eye out for more updates, and happy coding!

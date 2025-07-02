@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /deployment-platform/images/mistakesintypescript.webp
+thumbnail: /images/mistakesintypescript.webp
 preview: We will walk through the most common 10 mistakes in typescript and how to avoid them.
 # meta data start
 description: "We will walk through the most common 10 mistakes in typescript and how to avoid them."
 meta_og_url: "https://genezio.com/blog/10-common-mistakes-in-typescript-development"
-meta_og_image: "https://genezio.com/deployment-platform/images/mistakesintypescript.webp"
+meta_og_image: "https://genezio.com/images/mistakesintypescript.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"

@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/continuous-testing-for-ai-chatbots.webp
+thumbnail: /posts/continuous-testing-for-ai-chatbots.webp
 preview: Instead of testing once during development and hoping for the best, you set up a system that keeps checking how the chatbot performs as users interact with it and as updates roll in.
 # meta data start
 description: Learn how continuous testing with Genezio helps teams monitor chatbot behavior and fix issues fast.
-meta_og_url: "https://genezio.com/deployment-platform/blog/continuous-testing/"
+meta_og_url: "https://genezio.com/blog/continuous-testing/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/continuous-testing-for-ai-chatbots.webp"
+meta_og_image: "https://genezio.com/posts/continuous-testing-for-ai-chatbots.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -30,7 +30,7 @@ So, it's not enough to build a chatbot and run a few pre-launch tests. You need 
 
 If you're integrating an AI model or using a third-party chatbot provider, you may have no idea when updates roll out or how those changes affect your customers. That unpredictability is why continuous testing is a must. And the good news? {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} makes this process simple, even for without developers, so your team can detect and prevent problems before they cost you a customer---or your reputation.
 
-![AI Assistants understand complex problems better](https://genezio.com/deployment-platform/posts/understand-complex-problems-better.webp)
+![AI Assistants understand complex problems better](https://genezio.com/posts/understand-complex-problems-better.webp)
 
 ## What is continuous testing?
 
@@ -46,7 +46,7 @@ Traditional customer service systems are relatively predictable. If you update a
 
 Let's say your chatbot accidentally tells a customer their refund is guaranteed when it's not. Or imagine it says something that gets flagged as discriminatory or biased. That's a PR nightmare waiting to happen.
 
-With continuous testing, you simulate a wide range of customer interactions on a regular basis. You can monitor for tone, compliance with policy, brand consistency, and overall {{< external-link link="https://genezio.com/deployment-platform/blog/how-can-i-test-the-effectiveness-of-my-ai-agent/" >}}effectiveness{{< /external-link >}}. And when something goes off the rails, you can catch it fast and fix it before it hurts your business.
+With continuous testing, you simulate a wide range of customer interactions on a regular basis. You can monitor for tone, compliance with policy, brand consistency, and overall {{< external-link link="https://genezio.com/blog/how-can-i-test-the-effectiveness-of-my-ai-agent/" >}}effectiveness{{< /external-link >}}. And when something goes off the rails, you can catch it fast and fix it before it hurts your business.
 
 ## The Klarna case
 
@@ -60,8 +60,8 @@ The lesson? Scaling AI too fast without proper and continuous testing can hurt y
 
 Think about the cost of losing just a handful of loyal customers because your chatbot gave them bad advice. Or the hours your human agents have to spend cleaning up after a chatbot's mistake. With Genezio, you can track how your chatbot performs across time, catch regressions early, and update your logic or prompts before they become liabilities.
 
-And because Genezio supports easy integration with your existing chatbot stack, you can get started fast, even if your bot is based on a third-party API. You don't want your bot to give wrong advice, guess about health issues, or leak personal information. Continuous testing helps teams check if the AI follows company rules, stays clear under pressure, and avoids confusing or risky {{< external-link link="https://genezio.com/deployment-platform/blog/test-ai-agent/" >}}behavior{{< /external-link >}}. Genezio also catches common problems like made-up answers or prompt injection attacks, and shows how often they happen across different chats.
+And because Genezio supports easy integration with your existing chatbot stack, you can get started fast, even if your bot is based on a third-party API. You don't want your bot to give wrong advice, guess about health issues, or leak personal information. Continuous testing helps teams check if the AI follows company rules, stays clear under pressure, and avoids confusing or risky {{< external-link link="https://genezio.com/blog/test-ai-agent/" >}}behavior{{< /external-link >}}. Genezio also catches common problems like made-up answers or prompt injection attacks, and shows how often they happen across different chats.
 
-Continuous testing with Genezio is simple. First, test it before it launches. You can do this by simply pasting your URL or connecting your agent directly. Genezio then runs scenario based simulations targeting different cases to see how your bet responds under pressure. This includes: confusing prompts, edge cases, {{< external-link link="https://genezio.com/deployment-platform/blog/ai-hallucination-in-customer-service/" >}}hallucinations{{< /external-link >}}, multilingual instances and more. After it launches, Genezio keeps monitoring and reporting back to your team, so you'll know when something weird is happening. If your agent goes off track, Genezio shows you why.
+Continuous testing with Genezio is simple. First, test it before it launches. You can do this by simply pasting your URL or connecting your agent directly. Genezio then runs scenario based simulations targeting different cases to see how your bet responds under pressure. This includes: confusing prompts, edge cases, {{< external-link link="https://genezio.com/blog/ai-hallucination-in-customer-service/" >}}hallucinations{{< /external-link >}}, multilingual instances and more. After it launches, Genezio keeps monitoring and reporting back to your team, so you'll know when something weird is happening. If your agent goes off track, Genezio shows you why.
 
 Ready to monitor your chatbot continuously? **{{< external-link link="https://genezio.com/" >}}Try Genezio{{< /external-link >}} for free or book a demo now.**

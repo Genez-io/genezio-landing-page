@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /deployment-platform/images/flask.webp
+thumbnail: /images/flask.webp
 preview: Flask is one of the most popular Python web frameworks, known for its simplicity and flexibility. Whether you're a beginner or an experienced developer, Flask makes web development straightforward.
 # meta data start
 description: Learn how to build and deploy your first Flask web app in just 10 minutes. Follow this step-by-step tutorial for beginners and get your project online fast.
 meta_og_url: "https://genezio.com/blog/getting-started-flask-web-app/"
-meta_og_image: "https://genezio.com/deployment-platform/images/flask.webp"
+meta_og_image: "https://genezio.com/images/flask.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -114,12 +114,12 @@ genezio analyze
 
 Explanation:
 
-- Genezio scans your project to create a configuration file, genezio.yaml.
+- DeployApps scans your project to create a configuration file, genezio.yaml.
 - During this process, you’ll be prompted to enter the project name and region in the terminal.
 
 ### Step 3: Test Locally
 
-Run your app locally using Genezio:
+Run your app locally using DeployApps:
 
 ```bash
 genezio local
@@ -127,7 +127,7 @@ genezio local
 
 This command runs your app in a local development environment.
 
-### Step 4: Deploy your app with Genezio
+### Step 4: Deploy your app with DeployApps
 
 Finally, deploy your app to the cloud with a single command:
 
@@ -146,7 +146,7 @@ You’ve successfully built and deployed your first Flask web app in just 10 min
 
 **Join Our Community!**
 
-Need help or want to connect with fellow developers? Join us on the {{< external-link link="https://discord.com/invite/uc9H5YKjXv" >}}Genezio Discord server{{< /external-link >}}.
+Need help or want to connect with fellow developers? Join us on the {{< external-link link="https://discord.com/invite/uc9H5YKjXv" >}}DeployApps Discord server{{< /external-link >}}.
 
 For questions, feel free to contact me at cristi@genezio.com.
 

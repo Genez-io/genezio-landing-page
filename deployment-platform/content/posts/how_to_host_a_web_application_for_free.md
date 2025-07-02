@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/communicationbreakdown.webp
+thumbnail: /images/communicationbreakdown.webp
 preview: Ever poured your heart and soul into building an awesome web app, only to hit a wall when it comes to sharing it with the world? You're not alone.
 # meta data start
-description: "Discover how to host your web app for free with our step-by-step guide. Learn about free hosting platforms, including Genezio, and how to prepare your app for launch."
+description: "Discover how to host your web app for free with our step-by-step guide. Learn about free hosting platforms, including DeployApps, and how to prepare your app for launch."
 meta_og_url: "https://genezio.com/blog/genezio-functions-reduce-cold-start-times/"
-meta_og_image: "https://genezio.com/deployment-platform/images/communicationbreakdown.webp"
+meta_og_image: "https://genezio.com/images/communicationbreakdown.webp"
 meta_og_title: "How to Host a Web Application for Free"
 # meta data end
 customHeader: "White header"
@@ -171,7 +171,7 @@ Research and experiment with different tools to find the best combination for yo
 
 ## Domain name (optional): Your app's digital address
 
-![alt_text](/deployment-platform/posts/choosing-a-domain-name.webp)
+![alt_text](/posts/choosing-a-domain-name.webp)
 
 While technically optional, especially for those starting with free hosting, a custom domain name is a powerful tool in your app's arsenal. Think of it as more than just a web address – it's your app's:
 
@@ -234,25 +234,25 @@ If you're looking for a no-frills, purely free hosting solution, there are platf
 
 - **000webhost:** Another option with unlimited bandwidth and disk space, but it also has ads and may experience occasional downtime.
 
-**Genezio: The developer's dream**
+**DeployApps: The developer's dream**
 
-Now, let's talk about {{< external-link link="https://www.genezio.com/" >}}Genezio {{< /external-link >}}, a platform that's quickly becoming a favourite among developers who want a free, scalable, and developer-friendly web app hosting solution.
+Now, let's talk about {{< external-link link="https://www.genezio.com/" >}}DeployApps {{< /external-link >}}, a platform that's quickly becoming a favourite among developers who want a free, scalable, and developer-friendly web app hosting solution.
 
-Genezio's serverless architecture means you don't have to worry about managing servers or infrastructure. It automatically scales to handle your app's traffic, so you can focus on what you do best – building awesome apps.
+DeployApps's serverless architecture means you don't have to worry about managing servers or infrastructure. It automatically scales to handle your app's traffic, so you can focus on what you do best – building awesome apps.
 
-Here's why Genezio stands out:
+Here's why DeployApps stands out:
 
-- **Generous free tier:** Genezio's free tier is truly generous, offering enough resources to run a small to medium-sized web app without any cost.
+- **Generous free tier:** DeployApps's free tier is truly generous, offering enough resources to run a small to medium-sized web app without any cost.
 
-- **Serverless simplicity:** Say goodbye to server management headaches. Genezio handles the infrastructure for you so you can focus on your code.
+- **Serverless simplicity:** Say goodbye to server management headaches. DeployApps handles the infrastructure for you so you can focus on your code.
 
-- **Scalability:** As your app grows, Genezio scales effortlessly to meet your needs. No more worrying about traffic spikes or outgrowing your hosting plan.
+- **Scalability:** As your app grows, DeployApps scales effortlessly to meet your needs. No more worrying about traffic spikes or outgrowing your hosting plan.
 
-- **Database integration:** Genezio provides a built-in serverless database that's easy to integrate with your app, saving you time and money.
+- **Database integration:** DeployApps provides a built-in serverless database that's easy to integrate with your app, saving you time and money.
 
-- **Developer-friendly:** Genezio's intuitive interface and comprehensive documentation make it a breeze to get started, even if you're not a DevOps expert.
+- **Developer-friendly:** DeployApps's intuitive interface and comprehensive documentation make it a breeze to get started, even if you're not a DevOps expert.
 
-Whether you're a hobbyist, a bootstrapped startup, or a seasoned developer, Genezio offers a compelling free hosting solution that empowers you to launch your app without financial constraints.
+Whether you're a hobbyist, a bootstrapped startup, or a seasoned developer, DeployApps offers a compelling free hosting solution that empowers you to launch your app without financial constraints.
 
 Simply choose the platform that best suits your needs and requirements as a dev and you'll be good to go.
 
@@ -260,10 +260,10 @@ Simply choose the platform that best suits your needs and requirements as a dev 
 
 There you have it – your ultimate guide on how to a web app for free. We've demystified the world of web hosting, explored various options (from traditional to serverless), and prepped your app for its grand debut. Remember, the best hosting solution for you depends on your app's unique needs and your budget.
 
-If you're looking for a free, scalable, and developer-friendly platform, I highly recommend checking out Genezio. Its serverless architecture and generous free tier make it a fantastic choice for both beginners and experienced developers.
+If you're looking for a free, scalable, and developer-friendly platform, I highly recommend checking out DeployApps. Its serverless architecture and generous free tier make it a fantastic choice for both beginners and experienced developers.
 
 So, go ahead, explore your options, experiment, and most importantly, have fun bringing your web app to life!
 
 **Ready to launch your app?**
 
-{{< external-link link="https://genezio.com/" >}}Get started with Genezio's free tier today{{< /external-link >}} and experience the power of serverless hosting!
+{{< external-link link="https://genezio.com/" >}}Get started with DeployApps's free tier today{{< /external-link >}} and experience the power of serverless hosting!

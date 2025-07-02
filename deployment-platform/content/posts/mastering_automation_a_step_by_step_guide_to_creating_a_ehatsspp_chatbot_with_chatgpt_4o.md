@@ -5,18 +5,18 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /deployment-platform/images/whatsappchatgptphoto.webp
+thumbnail: /images/whatsappchatgptphoto.webp
 preview: "Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o."
 description: "Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o."
 meta_og_url: "https://genez.io/blog/mastering_automation_a_step-by_step_guide_to_creating_a_whatsapp_chatbot with_chatgpt_4o"
-meta_og_image: "https://genez.io/deployment-platform/images/whatsappchatgptphoto.webp"
+meta_og_image: "https://genez.io/images/whatsappchatgptphoto.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
 ---
 
 Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating an automated WhatsApp ChatBot and implementing a simple interaction with ChatGPT-4o.
-We’re also going to use {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} as the tool to manage and quickly deploy a customized API that can communicate with the WhatsApp API Cloud and OpenAI API without the need for the user to manage servers on their own. Before we dive into the tutorial, let’s discuss the type of WhatsApp bots and the potential ways you can use a bot for personal or business related tasks.
+We’re also going to use {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} as the tool to manage and quickly deploy a customized API that can communicate with the WhatsApp API Cloud and OpenAI API without the need for the user to manage servers on their own. Before we dive into the tutorial, let’s discuss the type of WhatsApp bots and the potential ways you can use a bot for personal or business related tasks.
 
 ## What is a WhatsApp bot?
 
@@ -66,7 +66,7 @@ In this tutorial, we’ll discuss the following:
 
 The first time, open your favourite IDE and a terminal.
 
-1. In your terminal install Genezio using npm:
+1. In your terminal install DeployApps using npm:
 
 ```bash
 npm install genezio -g
@@ -183,11 +183,11 @@ This structure defines the following components:
 
 `webhook:` This method serves as the endpoint for receiving all application requests.
 
-## Why do we use Genezio?
+## Why do we use DeployApps?
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} plays a crucial role in this tutorial by managing and quickly deploying a customized API that communicates with the WhatsApp API Cloud and OpenAI API. Genezio's platform simplifies the process of creating and maintaining scalable backends, ensuring that developers can focus on building the core features of their applications without worrying about server management. Its type-safe interface makes it particularly effective at connecting APIs reliably.
+{{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} plays a crucial role in this tutorial by managing and quickly deploying a customized API that communicates with the WhatsApp API Cloud and OpenAI API. DeployApps's platform simplifies the process of creating and maintaining scalable backends, ensuring that developers can focus on building the core features of their applications without worrying about server management. Its type-safe interface makes it particularly effective at connecting APIs reliably.
 
-By using Genezio, you benefit from a streamlined, efficient setup, enabling robust and seamless interactions between your WhatsApp bot and various services. This tool is not only excellent for this specific use case but also versatile for event planning, daily reminders, and more, making it an essential addition to your development toolkit. To learn more about Genezio and how you can use it for your next project, check out our {{< external-link link="https://genezio.com/docs/getting-started/" >}}starter guide{{< /external-link >}}.
+By using DeployApps, you benefit from a streamlined, efficient setup, enabling robust and seamless interactions between your WhatsApp bot and various services. This tool is not only excellent for this specific use case but also versatile for event planning, daily reminders, and more, making it an essential addition to your development toolkit. To learn more about DeployApps and how you can use it for your next project, check out our {{< external-link link="https://genezio.com/docs/getting-started/" >}}starter guide{{< /external-link >}}.
 
 ## How the WhatsApp API Works
 
@@ -199,11 +199,11 @@ In this context, `hub.mode`, `hub.verify_token`, and `hub.challenge` are paramet
 - `hub.verify_token` is a user-defined string that serves as a security measure to verify the authenticity of the request.
 - `hub.challenge` is a string sent by the WhatsApp API that needs to be returned by the endpoint to confirm successful verification.
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt1.webp)
+![whatsapp](/posts/whatsappchatgpt1.webp)
 
 After verification, the endpoint processes incoming messages. It extracts the message content and utilizes the GPT worker to generate a response. The generated response is then sent back to the user via the `#sendMessage` method using the WhatsApp API Cloud.
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt2.webp)
+![whatsapp](/posts/whatsappchatgpt2.webp)
 
 ## Create a ChatGPT Worker that responds in time to the user.
 
@@ -231,7 +231,7 @@ export class GptWorker {
 
 This structure defines the following components:
 
-- @GenezioDeploy() decorator is used to know which class is deployed on the server provided by Genezio for the production environment. This way, your code can be accessed at any time without having a local server running.
+- @GenezioDeploy() decorator is used to know which class is deployed on the server provided by DeployApps for the production environment. This way, your code can be accessed at any time without having a local server running.
 - `export class GptWorker` is the definition of the class that we will use in this tutorial.
   OPENAI_API_KEY`is the credential you need.
 - `generateResponse` is the method by which we will be able to chat with ChatGPT-4o and return the response.
@@ -289,27 +289,27 @@ The generateResponse method uses the OpenAI API to send a user message and recei
 
 1. Go to the {{< external-link link="https://platform.openai.com/signup" >}}Open AI{{< /external-link >}} platform and create an account.
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt3.webp)
+![whatsapp](/posts/whatsappchatgpt3.webp)
 
 2. Select “API keys” in sidebar
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt4.webp)
+![whatsapp](/posts/whatsappchatgpt4.webp)
 
 3. Select “Create new secret key”
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt5.webp)
+![whatsapp](/posts/whatsappchatgpt5.webp)
 
 4. Select “Create secret key”
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt8.webp)
+![whatsapp](/posts/whatsappchatgpt8.webp)
 
 5. Select "Copy" button and save this somewhere because you can only see it once.
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt7.webp)
+![whatsapp](/posts/whatsappchatgpt7.webp)
 
 6. After you save the key, select “Done” button.
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt6.webp)
+![whatsapp](/posts/whatsappchatgpt6.webp)
 
 7. Put in `.env` file the OPEN_API_KEY
 
@@ -319,41 +319,41 @@ OPENAI_API_KEY=<token generated above>
 
 1. Go to the {{< external-link link="https://developers.facebook.com/" >}} Meta Website{{< /external-link >}} and create an account.
 
-![whatsapp](/deployment-platform/posts/whatsapp1.webp)
+![whatsapp](/posts/whatsapp1.webp)
 
 2. Select “My Apps”
 
-![whatsapp](/deployment-platform/posts/whatsapp2.webp)
+![whatsapp](/posts/whatsapp2.webp)
 
 3. Select “Create App”
 
-![whatsapp](/deployment-platform/posts/whatsapp3.webp)
+![whatsapp](/posts/whatsapp3.webp)
 
 4. Select “Other” and click on ‘Next’
 
-![whatsapp](/deployment-platform/posts/whatsapp4.webp)
+![whatsapp](/posts/whatsapp4.webp)
 
 5. Select “Business” and click on ‘Next’
 
-![whatsapp](/deployment-platform/posts/whatsapp5.webp)
+![whatsapp](/posts/whatsapp5.webp)
 
 6. Add an app name and the contact email address and click on ‘Create app’.
 
-![whatsapp](/deployment-platform/posts/whatsapp6.webp)
+![whatsapp](/posts/whatsapp6.webp)
 
 ## Configure the project
 
 1. Search for the Whatsapp Integration and click on ‘Set up’.
 
-![whatsapp](/deployment-platform/posts/whatsapp7.webp)
+![whatsapp](/posts/whatsapp7.webp)
 
 2. Select a business portfolio
 
-![whatsapp](/deployment-platform/posts/whatsapp8.webp)
+![whatsapp](/posts/whatsapp8.webp)
 
 3. Start using the API
 
-![whatsapp](/deployment-platform/posts/whatsapp9.webp)
+![whatsapp](/posts/whatsapp9.webp)
 
 4. From here we will take the access token and Phone number ID for the .env file.
 
@@ -365,16 +365,16 @@ WEBHOOK_VERIFY_TOKEN=<random string>
 
 Note: Here you can also see which phone number you can test the Whatsapp bot on.
 
-![whatsapp](/deployment-platform/posts/whatsapp10.webp)
+![whatsapp](/posts/whatsapp10.webp)
 
 5. In order for the bot to work, we still need to configure an api for callback. Select Configuration
 
-![whatsapp](/deployment-platform/posts/whatsapp11.webp)
+![whatsapp](/posts/whatsapp11.webp)
 
 6. Click on ‘Edit’
 
-![whatsapp](/deployment-platform/posts/whatsapp12.webp)
-![whatsapp](/deployment-platform/posts/whatsapp13.webp)
+![whatsapp](/posts/whatsapp12.webp)
+![whatsapp](/posts/whatsapp13.webp)
 
 Here we need a callback URL and a verify token. The Callback URL will be generated in the next step and verify token is a random string put by you which is the same as the one in the .env file to the key `WEBHOOK_VERIFY_TOKEN`
 
@@ -387,21 +387,21 @@ genezio deploy –env .env
 ```
 
 Take the url from : BackendService.webhook
-![whatsapp](/deployment-platform/posts/whatsapp14.webp)
+![whatsapp](/posts/whatsapp14.webp)
 
 The `Callback URL` is an endpoint that you provide to the WhatsApp API Cloud, which is used by WhatsApp to send you notifications about events such as new messages, message status updates, and other webhook events. This URL must be accessible over the internet so that WhatsApp can communicate with your server.
 
 8. Put the link to the callback from the platform
 
-![whatsapp](/deployment-platform/posts/whatsapp15.webp)
+![whatsapp](/posts/whatsapp15.webp)
 
 9. Subscribe for messages
 
-![whatsapp](/deployment-platform/posts/whatsapp17.webp)
+![whatsapp](/posts/whatsapp17.webp)
 
 10. Now you have a WhatsApp bot. For testing, you can send a question from the test number.
 
-![whatsapp](/deployment-platform/posts/whatsappchatgpt20.webp)
+![whatsapp](/posts/whatsappchatgpt20.webp)
 
 ## Start using your WhatsApp ChatBot
 
@@ -409,4 +409,4 @@ I hope that you found this WhatsApp ChatBot tutorial helpful, and I encourage yo
 
 If you would like to train your bot on your own data, we’ve put together {{< external-link link="https://genezio.com/blog/langchain-genezio-project" >}}this tutorial{{< /external-link >}}, which has a detailed explanation of how you can set that up.
 
-If you have any questions about this tutorial or the {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} platform, feel free to reach out to me on Discord or via my email (cristi@genezio.com). Good luck!
+If you have any questions about this tutorial or the {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} platform, feel free to reach out to me on Discord or via my email (cristi@genezio.com). Good luck!

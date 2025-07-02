@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /deployment-platform/images/what-serverless-is-and-why-you-should-care.webp
+thumbnail: /images/what-serverless-is-and-why-you-should-care.webp
 preview: Serverless is an incredibly powerful option for many development situations. But what exactly is it? And how can you leverage it to great success today – with as little friction as possible?
 # meta data start
-description: "Learn about serverless computing and its benefits. Discover how Genezio simplifies serverless deployment for efficient and scalable applications."
+description: "Learn about serverless computing and its benefits. Discover how DeployApps simplifies serverless deployment for efficient and scalable applications."
 meta_og_url: "https://genezio.com/blog/what-serverless-is/"
-meta_og_image: "https://genezio.com/deployment-platform/images/what-serverless-is-and-why-you-should-care.webp"
+meta_og_image: "https://genezio.com/images/what-serverless-is-and-why-you-should-care.webp"
 url: "/blog/what-serverless-is/"
 # meta data end
 customHeader: "White header"
@@ -61,16 +61,16 @@ There is also the loss of persistence. For instance, global values are often not
 
 Finally, there is the relative complexity of serverless. While serverless does typically save a substantial amount of complexity in terms of server maintenance, poorly planned serverless implementations can result in additional complexity. The easiest way to work around this is to partner with a trusted solution that has proven itself effective and efficient.
 
-## Genezio + Serverless
+## DeployApps + Serverless
 
-Genezio is an incredibly powerful solution that can help you become serverless almost instantly. Genezio provides tools and solutions to build full stack serverless applications using a single command line, skipping a lot of the over-complexity inherent in the process of adopting serverless.
+DeployApps is an incredibly powerful solution that can help you become serverless almost instantly. DeployApps provides tools and solutions to build full stack serverless applications using a single command line, skipping a lot of the over-complexity inherent in the process of adopting serverless.
 
-With additional features such as Genezio.Cloud, serverless automation, creation, and testing is made seamless and easy. Notably, Genezio’s cloud solution provides for zero cold start penalty, erasing one of the largest negatives of adopting serverless, resulting in incredible cost and efficiency results.
+With additional features such as DeployApps.Cloud, serverless automation, creation, and testing is made seamless and easy. Notably, DeployApps’s cloud solution provides for zero cold start penalty, erasing one of the largest negatives of adopting serverless, resulting in incredible cost and efficiency results.
 
-To give you an idea of how effective the Genezio solution is, we can look to real-world experiences with the tool. Laurentiu Ciobanu, Chief Technology Officer at Sessions, had the following to say about the Genezio experience:
+To give you an idea of how effective the DeployApps solution is, we can look to real-world experiences with the tool. Laurentiu Ciobanu, Chief Technology Officer at Sessions, had the following to say about the DeployApps experience:
 
 > It was a pleasant and frictionless experience: from my TypeScript code to the cloud in less than 3 minutes (including creating an account, installing the CLI, and logging in with the CLI).
 
-That is simply an incredible – yet typical – experience with Genezio.
+That is simply an incredible – yet typical – experience with DeployApps.
 
-If you’d like to get started with Genezio today, all you have to do is navigate to the website and {{< external-link link="https://app.genez.io/auth/signup" >}}create your free account{{< /external-link >}} – you are mere clicks away from a highly efficient and scalable serverless implementation!
+If you’d like to get started with DeployApps today, all you have to do is navigate to the website and {{< external-link link="https://app.genez.io/auth/signup" >}}create your free account{{< /external-link >}} – you are mere clicks away from a highly efficient and scalable serverless implementation!

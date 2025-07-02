@@ -1,16 +1,16 @@
 ---
-title: "Deploy smarter, not harder: How Genezio simplifies fast, scalable deployment for ML teams"
+title: "Deploy smarter, not harder: How DeployApps simplifies fast, scalable deployment for ML teams"
 date: 2025-01-21
 tags:
   - Tutorials
 author: Rares Istoc
 linkedIn: https://ro.linkedin.com/in/rares-istoc-9aa401123
-thumbnail: /deployment-platform/images/rag.webp
-preview: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how Genezio can transform your deployment workflow.
+thumbnail: /images/rag.webp
+preview: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how DeployApps can transform your deployment workflow.
 # meta data start
-description: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how Genezio can transform your deployment workflow.
+description: Whether you’re an ML engineer, a DevOps professional, or a Project Manager looking to improve collaboration with clients, this article will provide insights and a clear understanding of how DeployApps can transform your deployment workflow.
 meta_og_url: "https://genezio.com/blog//deploy-smarter-not-harder-how-genezio/"
-meta_og_image: "https://genezio.com/deployment-platform/images/rag.webp"
+meta_og_image: "https://genezio.com/images/rag.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -18,23 +18,23 @@ readTime: 10
 url: /blog//deploy-smarter-not-harder-how-genezio/
 ---
 
-Whether you’re an **ML engineer**, a **DevOps professional**, or a **Project Manager** looking to improve collaboration with clients, this article will provide insights and a clear understanding of how {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} can transform your deployment workflow.
+Whether you’re an **ML engineer**, a **DevOps professional**, or a **Project Manager** looking to improve collaboration with clients, this article will provide insights and a clear understanding of how {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} can transform your deployment workflow.
 
-## What is Genezio?
+## What is DeployApps?
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is a serverless cloud platform that streamlines the deployment of applications and proofs-of-concept, offering a simpler alternative to traditional infrastructure management. It's built to help developers focus on creating innovative solutions without getting slowed down by complicated setups or infrastructure management.
+{{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} is a serverless cloud platform that streamlines the deployment of applications and proofs-of-concept, offering a simpler alternative to traditional infrastructure management. It's built to help developers focus on creating innovative solutions without getting slowed down by complicated setups or infrastructure management.
 
-With {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}}, you don’t need to be a DevOps expert. You can deploy your code quickly and easily, cutting down on setup time, speeding up your launch, and making scalability simple. Its user-friendly interface is perfect for smaller teams or machine learning groups that don’t have a cloud engineer on hand. Just deploy your functions and applications straight to the cloud—no headaches, no fuss.
+With {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}}, you don’t need to be a DevOps expert. You can deploy your code quickly and easily, cutting down on setup time, speeding up your launch, and making scalability simple. Its user-friendly interface is perfect for smaller teams or machine learning groups that don’t have a cloud engineer on hand. Just deploy your functions and applications straight to the cloud—no headaches, no fuss.
 
-Check out 🔗 {{< external-link link="https://genezio.com/" >}}Genezio’s{{< /external-link >}} Function-as-a-Service (FaaS) platform simplifies infrastructure management and accelerates development.
+Check out 🔗 {{< external-link link="https://genezio.com/" >}}DeployApps’s{{< /external-link >}} Function-as-a-Service (FaaS) platform simplifies infrastructure management and accelerates development.
 
 ## How client collaboration drives successful AI projects
 
 **Small feedback loops** in AI outsourcing are a game-changer. They keep clients in the loop about their projects, so it doesn't feel like they’re investing in a “black box.” Instead, clients can see visible progress, stay aligned with their goals, and build trust along the way. These loops also help catch issues early and ensure expectations are met, making project delivery smoother and clients happier.
 
-That’s where {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} comes in. Think of it as a more user-friendly version of AWS Lambda. This Function-as-a-Service (FaaS) platform makes deploying AI applications a breeze. It takes care of the heavy lifting with infrastructure, so machine learning teams can focus on being creative and innovative. Plus, {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} supports real-time client interactions with proofs-of-concept and makes local testing easy, minimizing post-deployment headaches. The result? More efficient projects and happier teams.
+That’s where {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} comes in. Think of it as a more user-friendly version of AWS Lambda. This Function-as-a-Service (FaaS) platform makes deploying AI applications a breeze. It takes care of the heavy lifting with infrastructure, so machine learning teams can focus on being creative and innovative. Plus, {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} supports real-time client interactions with proofs-of-concept and makes local testing easy, minimizing post-deployment headaches. The result? More efficient projects and happier teams.
 
-## How to Deploy a RAG System with Genezio: A Step-by-Step Guide
+## How to Deploy a RAG System with DeployApps: A Step-by-Step Guide
 
 Deploying a Retrieval-Augmented Generation (RAG) system is no walk in the park. It often involves:
 
@@ -42,13 +42,13 @@ Deploying a Retrieval-Augmented Generation (RAG) system is no walk in the park. 
 - **Writing Infrastructure as Code (IaC)** to manage cloud resources.
 - **Handling cloud configurations**, from networking to storage, which can quickly become overwhelming.
 
-This is where **Genezio** steps in. By simplifying deployment, Genezio eliminates these pain points, taking you from **PoC to production-ready RAG infrastructure in record time** — all without needing deep DevOps expertise.
+This is where **DeployApps** steps in. By simplifying deployment, DeployApps eliminates these pain points, taking you from **PoC to production-ready RAG infrastructure in record time** — all without needing deep DevOps expertise.
 
-Explore the complete code and examples for deploying a RAG system on Genezio in 🔗 {{< external-link link="https://github.com/mlvanguards/deploy-hybrid-rag-genezio" >}}deploy-hybrid-rag-genezio{{< /external-link >}} Github.
+Explore the complete code and examples for deploying a RAG system on DeployApps in 🔗 {{< external-link link="https://github.com/mlvanguards/deploy-hybrid-rag-genezio" >}}deploy-hybrid-rag-genezio{{< /external-link >}} Github.
 
 ### An advanced RAG architecture: Indexing, Retrieval, Synthesizer
 
-![alt_text](/deployment-platform/posts/rag1.webp)
+![alt_text](/posts/rag1.webp)
 
 A well-designed Retrieval-Augmented Generation (RAG) architecture is the backbone of production-ready AI systems, ensuring efficient processing, accurate retrieval, and seamless information synthesis.
 
@@ -56,7 +56,7 @@ Let’s break down the key components of an advanced RAG pipeline:
 
 **Indexing**
 
-![alt_text](/deployment-platform/posts/rag2.webp)
+![alt_text](/posts/rag2.webp)
 
 The QdrantIndexer class is designed to index documents using various embedding models and store them in a Qdrant database.
 
@@ -72,17 +72,17 @@ We use multiple embeddings are in the indexing process:
 
 This hybrid approach maximizes both precision and recall, making retrieval robust and effective for diverse query intents.
 
-![alt_text](/deployment-platform/posts/rag3.webp)
+![alt_text](/posts/rag3.webp)
 
 The first step in the process is preparing your data for efficient retrieval. Documents are:
 
 **Transformed** into nodes: Breaking documents into smaller, manageable pieces ensures better granularity and relevance during retrieval.
 
-![alt_text](/deployment-platform/posts/rag4.webp)
+![alt_text](/posts/rag4.webp)
 
 **Retrieval**
 
-![alt_text](/deployment-platform/posts/rag5.webp)
+![alt_text](/posts/rag5.webp)
 
 When a query is submitted, the system employs a hybrid search mechanism using **both dense and sparse embeddings** to ensure comprehensive retrieval.
 
@@ -96,7 +96,7 @@ The results from these models are then fused using a **Reciprocal Rank Fusion (R
 
 The final stage of the pipeline is the synthesis of retrieved results into meaningful outputs.
 
-![alt_text](/deployment-platform/posts/rag6.webp)
+![alt_text](/posts/rag6.webp)
 
 The **synthesizer** transforms retrieved results into meaningful, query-specific outputs:
 
@@ -110,13 +110,13 @@ The **synthesizer** transforms retrieved results into meaningful, query-specific
 
 5. **Delivery:** Provides actionable, query-aligned insights based on the retrieved data.
 
-### Step-by-step guide to setting up RAG on Genezio
+### Step-by-step guide to setting up RAG on DeployApps
 
-And here comes Genezio onto the battlefield.
+And here comes DeployApps onto the battlefield.
 
-For this setup, we needed a vector database. Our natural choice, considered the de-facto standard in the industry, was **QDrant**. While {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} currently integrates with PostgreSQL and MongoDB — excellent options that meet the needs of most solutions — we opted to stick with QDrant to maintain consistency with the RAG systems we’ve developed in the past. However, it’s worth noting that you can seamlessly integrate an external managed database with **Genezio**, making it adaptable to a wide range of use cases without altering the core setup.
+For this setup, we needed a vector database. Our natural choice, considered the de-facto standard in the industry, was **QDrant**. While {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} currently integrates with PostgreSQL and MongoDB — excellent options that meet the needs of most solutions — we opted to stick with QDrant to maintain consistency with the RAG systems we’ve developed in the past. However, it’s worth noting that you can seamlessly integrate an external managed database with **DeployApps**, making it adaptable to a wide range of use cases without altering the core setup.
 
-![alt_text](/deployment-platform/posts/rag7.webp)
+![alt_text](/posts/rag7.webp)
 
 The system architecture consists of three main components:
 
@@ -126,13 +126,13 @@ The system architecture consists of three main components:
 
 3. **Vector Database:** The backbone of the system, storing the vectors produced during the indexing process. This component ensures efficient retrieval of relevant data to support accurate and context-aware generation
 
-By leveraging {{< external-link link="https://genezio.com/" >}}Genezio's{{< /external-link >}} modularity, each major component of your system is deployed as a single function on the platform. Combined with **Genezio’s out-of-the-box elastic scaling**, the system can seamlessly adapt to fluctuating user demands, whether you’re experiencing a surge in interactions or testing new features.
+By leveraging {{< external-link link="https://genezio.com/" >}}DeployApps's{{< /external-link >}} modularity, each major component of your system is deployed as a single function on the platform. Combined with **DeployApps’s out-of-the-box elastic scaling**, the system can seamlessly adapt to fluctuating user demands, whether you’re experiencing a surge in interactions or testing new features.
 
-This robust, scalable architecture empowers teams to focus on building and innovating rather than being bogged down by infrastructure complexities. With Genezio, you can accelerate development from concept to production while maintaining a clean and maintainable system architecture.
+This robust, scalable architecture empowers teams to focus on building and innovating rather than being bogged down by infrastructure complexities. With DeployApps, you can accelerate development from concept to production while maintaining a clean and maintainable system architecture.
 
 Here are all the steps required to spin up this infrastructure:
 
-1. **Install Genezion CLI**
+1. **Install DeployAppsn CLI**
 
 ```bash
 npm install genezio -g
@@ -146,7 +146,7 @@ This will start an local development environment, similar to sam local, for thos
 genezio local
 ```
 
-![alt_text](/deployment-platform/posts/rag8.webp)
+![alt_text](/posts/rag8.webp)
 
 3. **Deploy on Cloud**
 
@@ -156,21 +156,21 @@ genezio deploy
 
 And here you have it:
 
-![alt_text](/deployment-platform/posts/rag9.webp)
+![alt_text](/posts/rag9.webp)
 
 Your application will be hosted on a custom subdomain, such as https://your-app-name.app.genez.io.
 
-From the **Genezio** dashboard, you can seamlessly manage, test, update, and monitor your project, ensuring smooth operation and effortless maintenance.
+From the **DeployApps** dashboard, you can seamlessly manage, test, update, and monitor your project, ensuring smooth operation and effortless maintenance.
 
-**Genezio** takes the headache out of application deployment, removing the complicated infrastructure setups that slow you down. No need to deal with tricky network configs, security groups, CDNs, or endless Infrastructure-as-Code (IaC) files. Instead, your team can focus on what really matters—building and improving your apps. It saves time, reduces stress, and frees up room for innovation. If speed, simplicity, and scalability are your priorities, **Genezio**’s got you covered.
+**DeployApps** takes the headache out of application deployment, removing the complicated infrastructure setups that slow you down. No need to deal with tricky network configs, security groups, CDNs, or endless Infrastructure-as-Code (IaC) files. Instead, your team can focus on what really matters—building and improving your apps. It saves time, reduces stress, and frees up room for innovation. If speed, simplicity, and scalability are your priorities, **DeployApps**’s got you covered.
 
 ## Real-World Scenario
 
-One of the best ways to use {{< external-link link="https://genezio.com/" >}}Genezio's{{< /external-link >}} RAG deployment is by building a **Knowledge Intelligence Search Tool** — a smart system that turns internal or public data into a powerful, easy-to-use knowledge base.
+One of the best ways to use {{< external-link link="https://genezio.com/" >}}DeployApps's{{< /external-link >}} RAG deployment is by building a **Knowledge Intelligence Search Tool** — a smart system that turns internal or public data into a powerful, easy-to-use knowledge base.
 
 Companies generate tons of information daily — internal documents, training manuals, reports, support tickets, and emails. But this data is often scattered across systems, making it hard for employees to find what they need. And let’s face it, traditional keyword searches often fail because they don’t understand context.
 
-That’s where Genezio shines. It helps companies create a smart search tool using **semantic search**. Employees can ask questions in plain language and get accurate, context-aware answers. No more wasting time digging through endless files.
+That’s where DeployApps shines. It helps companies create a smart search tool using **semantic search**. Employees can ask questions in plain language and get accurate, context-aware answers. No more wasting time digging through endless files.
 
 **Benefits**
 
@@ -184,9 +184,9 @@ That’s where Genezio shines. It helps companies create a smart search tool usi
 
 If you’re looking to simplify deployments, accelerate your development process, and reduce the complexities of infrastructure management,
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is the ideal Function-as-a-Service (FaaS) platform for you. Designed with engineering teams, **Genezio** enables rapid deployment of proofs-of-concept, scalable applications, and advanced RAG (Retrieval-Augmented Generation) systems with ease.
+{{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} is the ideal Function-as-a-Service (FaaS) platform for you. Designed with engineering teams, **DeployApps** enables rapid deployment of proofs-of-concept, scalable applications, and advanced RAG (Retrieval-Augmented Generation) systems with ease.
 
 **Ready to get started?**
 Explore the 🔗 {{< external-link link="https://github.com/mlvanguards/deploy-hybrid-rag-genezio" >}}deploy-hybrid-rag-genezio{{< /external-link >}} repository to access code samples, configuration files, and step-by-step guides to help you hit the ground running.
 
-Discover how Genezio’s features can transform your development workflow and simplify your deployments.
+Discover how DeployApps’s features can transform your development workflow and simplify your deployments.

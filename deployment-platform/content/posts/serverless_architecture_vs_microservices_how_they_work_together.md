@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/serverlessvsmicroservices.webp
+thumbnail: /images/serverlessvsmicroservices.webp
 preview: The main difference between serverless architecture vs microservices is that they conform to different moments of a webapp’s existence. Actually, both can mix well, if the platform allows for it.
 # meta data start
 description: There’s no debate around serverless architecture vs microservices, because some platforms allow developers to handle both at the same time.
 meta_og_url: "https://genezio.com/blog/serverless-architecture-vs-microservices/"
-meta_og_image: "https://genezio.com/deployment-platform/images/serverlessvsmicroservices.webp"
+meta_og_image: "https://genezio.com/images/serverlessvsmicroservices.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -22,7 +22,7 @@ The main difference between serverless architecture vs microservices is that the
 
 But, for some developers, when considering where or how these apps should run, serverless and microservices might seem like entirely independent alternatives. But are they really opposite approaches? Not quite. Serverless takes the weight of managing infrastructure off developers’ shoulders, while microservices break apps into smaller, independent parts — which makes serverless the perfect environment for deploying microservices. Instead of being alternatives, these two models are actually mutually supportive. And yes, the whole “serverless vs. microservices” debate doesn’t really make sense when you look a bit closer.
 
-In this article, we’ll look at how both serverless and microservices can be used together to build scalable apps without the usual infrastructure headaches, and how platforms like {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} make it easier to manage both.
+In this article, we’ll look at how both serverless and microservices can be used together to build scalable apps without the usual infrastructure headaches, and how platforms like {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} make it easier to manage both.
 
 ## What is serverless architecture?
 
@@ -48,26 +48,26 @@ So, when people say “serverless vs. microservices,” it doesn’t quite captu
 
 Instead of asking, “Should I go serverless or microservices?”, the real question for developers should be, “How can I use both to make my app faster, easier to manage, and easier to deploy each time i need to roll out an update?”
 
-## How Genezio supports both serverless architecture and microservices
+## How DeployApps supports both serverless architecture and microservices
 
-Genezio helps full-stack developers quickly build {{< external-link link="https://genezio.com/blog/serverless-microservices/#what-are-serverless-microservices" >}}serverless apps{{< /external-link >}} and deploy microservices. It simplifies the deployment of both setups with automatic management of infrastructure and scaling. When you {{< external-link link="https://genezio.com/import-github-projects-genezio/#step-by-step-guide-to-importing-and-deploying-your-project" >}}integrate your GitHub repository{{< /external-link >}} to Genezio, the platform directly detects the framework you’re using and takes care of the rest. You don't need to worry about setting up servers or scaling resources manually; Genezio handles all of that for you.
+DeployApps helps full-stack developers quickly build {{< external-link link="https://genezio.com/blog/serverless-microservices/#what-are-serverless-microservices" >}}serverless apps{{< /external-link >}} and deploy microservices. It simplifies the deployment of both setups with automatic management of infrastructure and scaling. When you {{< external-link link="https://genezio.com/import-github-projects-genezio/#step-by-step-guide-to-importing-and-deploying-your-project" >}}integrate your GitHub repository{{< /external-link >}} to DeployApps, the platform directly detects the framework you’re using and takes care of the rest. You don't need to worry about setting up servers or scaling resources manually; DeployApps handles all of that for you.
 
-With Genezio’s {{< external-link link="https://genezio.com/blog/effortless-scaling-genezio-handles-growth/" >}}autoscaling feature{{< /external-link >}}, your app can handle traffic spikes without any extra effort. Whether you’re running microservices or serverless functions, Genezio automatically adjusts resources based on demand so you can focus on writing and improving your code, not managing infrastructure.
+With DeployApps’s {{< external-link link="https://genezio.com/blog/effortless-scaling-genezio-handles-growth/" >}}autoscaling feature{{< /external-link >}}, your app can handle traffic spikes without any extra effort. Whether you’re running microservices or serverless functions, DeployApps automatically adjusts resources based on demand so you can focus on writing and improving your code, not managing infrastructure.
 
-One standout feature of Genezio is its focus on minimizing cold start times, which can be a common issue in serverless environments. With {{< external-link link="https://genezio.com/docs/#:~:text=Genezio%20Functions%E2%80%8B,to%20events%20without%20managing%20servers." >}}Genezio Functions{{< /external-link >}}, cold start times are up to {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/" >}}4x faster{{< /external-link >}} compared to platforms like AWS Lambda, even under peak traffic or unpredictable workloads. For microservices, this is especially useful when different parts of your app need to communicate in real-time with minimal delay.
+One standout feature of DeployApps is its focus on minimizing cold start times, which can be a common issue in serverless environments. With {{< external-link link="https://genezio.com/docs/#:~:text=DeployApps%20Functions%E2%80%8B,to%20events%20without%20managing%20servers." >}}DeployApps Functions{{< /external-link >}}, cold start times are up to {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/" >}}4x faster{{< /external-link >}} compared to platforms like AWS Lambda, even under peak traffic or unpredictable workloads. For microservices, this is especially useful when different parts of your app need to communicate in real-time with minimal delay.
 
-Genezio also makes it simple to deploy, update, and scale microservices independently. You can manage all parts of your app without dealing with complicated setup or worrying about how each service interacts with the others. Genezio keeps everything running securely behind the scenes.
+DeployApps also makes it simple to deploy, update, and scale microservices independently. You can manage all parts of your app without dealing with complicated setup or worrying about how each service interacts with the others. DeployApps keeps everything running securely behind the scenes.
 
 ### Why type safety is so influential when running web apps
 
-Genezio is a typesafe platform. As such, developers who run code on it will be only able to carry on with programs with no typed mistakes. Considering the whole premise of Genezio and its support for serverless and microservices is making things as easy as possible for developers, type safety is a good add-on to look at when weighing in about which platform to choose.
+DeployApps is a typesafe platform. As such, developers who run code on it will be only able to carry on with programs with no typed mistakes. Considering the whole premise of DeployApps and its support for serverless and microservices is making things as easy as possible for developers, type safety is a good add-on to look at when weighing in about which platform to choose.
 
-## How Genezio can help with serverless and microservices
+## How DeployApps can help with serverless and microservices
 
-Genezio is the ideal choice for building apps with serverless and microservices. It handles the infrastructure side proactively, so you can spend time on what matters: developing your app. Regardless of whether you’re working with microservices or serverless functions, Genezio expedites the process and lets you sidestep the complications of server management.
+DeployApps is the ideal choice for building apps with serverless and microservices. It handles the infrastructure side proactively, so you can spend time on what matters: developing your app. Regardless of whether you’re working with microservices or serverless functions, DeployApps expedites the process and lets you sidestep the complications of server management.
 
-With its GitHub integration, you can connect your repository in minutes—and deploy just as quickly. Genezio detects your framework and manages the deployment, scaling, and backend operations for you. This makes it a great tool for both experienced developers and those just starting out who need a way to {{< external-link link="https://genezio.com/blog/easy-web-app-deployment-with-genezio/" >}}easily deploy a webapp{{< /external-link >}}.
+With its GitHub integration, you can connect your repository in minutes—and deploy just as quickly. DeployApps detects your framework and manages the deployment, scaling, and backend operations for you. This makes it a great tool for both experienced developers and those just starting out who need a way to {{< external-link link="https://genezio.com/blog/easy-web-app-deployment-with-genezio/" >}}easily deploy a webapp{{< /external-link >}}.
 
-Plus, Genezio’s free starter plan is very generous, so you don’t have to worry about costs when you’re getting started. Signing up only takes a few minutes, and you can begin deploying your serverless or microservices app right away.
+Plus, DeployApps’s free starter plan is very generous, so you don’t have to worry about costs when you’re getting started. Signing up only takes a few minutes, and you can begin deploying your serverless or microservices app right away.
 
-**{{< external-link link="https://app.genez.io/auth/login" >}}Sign up now for free{{< /external-link >}} and get started with your first project today! If you’re ready to simplify your app deployment with serverless and microservices, head over to {{< external-link link="http://Genezio.com" >}}Genezio.com{{< /external-link >}}.**
+**{{< external-link link="https://app.genez.io/auth/login" >}}Sign up now for free{{< /external-link >}} and get started with your first project today! If you’re ready to simplify your app deployment with serverless and microservices, head over to {{< external-link link="http://deployapps.dev" >}}deployapps.dev{{< /external-link >}}.**

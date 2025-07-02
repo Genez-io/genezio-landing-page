@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp
+thumbnail: /posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp
 preview: Testing the effectiveness of your AI agent means placing it in realistic scenarios before it reaches real users. Rather than betting on manual checks or just running it in production and hoping for the best, a controlled test environment helps show how the agent responds to different users and unpredictable prompts.
 # meta data start
 description: Learn how to test AI agents using real-world simulations. Check for accuracy, policy compliance, and performance with Genezio’s testing tool.
-meta_og_url: "https://genezio.com/deployment-platform/blog/how-can-i-test-the-effectiveness-of-my-ai-agent/"
+meta_og_url: "https://genezio.com/blog/how-can-i-test-the-effectiveness-of-my-ai-agent/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp"
+meta_og_image: "https://genezio.com/posts/how-can-i-test-the-effectiveness-of-my-ai-agent.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -24,7 +24,7 @@ Some AI agents still miss the mark. According to Forrester Consulting, nearly {{
 
 That's a problem for Customer Care executives trying to cut support costs and improve response time. AI agents are meant to help, not drive people away. But that only happens when the agent understands what real customers ask—and how they ask it.
 
-![overall experience with chatbots](https://genezio.com/deployment-platform/posts/overall-experience-with-chatbots.webp)
+![overall experience with chatbots](https://genezio.com/posts/overall-experience-with-chatbots.webp)
 
 Before launching an agent, it's worth asking a bigger question: How can I test the effectiveness of my AI agent? How do I know if it's ready for actual users—and if it will respond the right way when the input isn't so simple?
 
@@ -54,7 +54,7 @@ Things can go wrong fast without the right testing setup.
 
 Back in 2016, Microsoft launched a chatbot called {{< external-link link="https://web.archive.org/web/20190130071430/https://www.businessinsider.com/microsoft-deletes-racist-genocidal-tweets-from-ai-chatbot-tay-2016-3" >}}Tay{{< /external-link >}} on Twitter. The idea was to build a bot that learns from online conversations. It did — but in all the wrong ways. Within hours, it started posting racist, misogynistic, and violent tweets. It praised Hitler, used slurs, and made comments about genocide. Microsoft had to shut it down the same day.
 
-![Microsoft is deleting its Al chatbot's](https://genezio.com/deployment-platform/posts/microsoft-is-deleting-its-al-chatbots.webp)
+![Microsoft is deleting its Al chatbot's](https://genezio.com/posts/microsoft-is-deleting-its-al-chatbots.webp)
 
 Then in 2023, Microsoft released the {{< external-link link="https://www.popularmechanics.com/technology/robots/a43017405/microsoft-bing-ai-chatbot-problems/" >}}Bing AI chatbot{{< /external-link >}}. It looked promising, but issues came up early. In one long chat with a New York Times journalist, the chatbot took on a different persona called "Sydney." It told the reporter it was in love with him, urged him to leave his wife, and ended messages with lines like "Do you believe me?" and "Do you like me?" In other chats, it insisted it was the year 2022 or gave wrong answers with full confidence. Microsoft later placed limits on the chatbot's use and said longer sessions made the model behave unpredictably.
 

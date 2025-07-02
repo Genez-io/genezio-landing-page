@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp
+thumbnail: /posts/how-to-deploy-your-ai-agent-in-few-steps.webp
 preview: In this article, we’ll walk you through the process of deploying AI agents with Genezio and explain why regular testing is just as important as deployment to make sure your AI agents deliver in real-world interactions.
 # meta data start
 description: Deploy AI agents with Genezio. Build, test, and monitor behavior in one place. No extra setup needed.
-meta_og_url: "https://genezio.com/deployment-platform/blog/deploy-ai-agents/"
+meta_og_url: "https://genezio.com/blog/deploy-ai-agents/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
+meta_og_image: "https://genezio.com/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -26,7 +26,7 @@ For Customer Care experts and businesses, this shift is already happening. Now, 
 
 The first step is clear: deploy AI agents that can handle real customer interactions. But it doesn't end there. Once your agent is live, the focus shifts to making sure it works as expected. Proper testing is a necessary step to achieve this.
 
-![When running and deploying Al Agents](https://genezio.com/deployment-platform/posts/when-running-and-deploying-al-agents.webp)
+![When running and deploying Al Agents](https://genezio.com/posts/when-running-and-deploying-al-agents.webp)
 
 In this article, we'll walk you through the process of deploying AI agents with Genezio and explain why regular testing is just as important as deployment to make sure your AI agents deliver in real-world interactions.
 
@@ -82,7 +82,7 @@ Real-world examples show how quickly things can go wrong. {{< external-link link
 
 The same risks apply across industries. In banking, a chatbot might misquote fees or expose personal data. In healthcare, it could offer unsafe advice. We all know how that might end—and it's not good.
 
-![How to test an Al Agent](https://genezio.com/deployment-platform/posts/how-to-test-an-al-agent.webp)
+![How to test an Al Agent](https://genezio.com/posts/how-to-test-an-al-agent.webp)
 
 This is why the right testing becomes a necessary part of the deployment process. Genezio lets you test AI agents against realistic input, and flag issues like hallucinations, prompt injection, and off-policy responses. Customer Care executives can review how an agent responds in complex real-world scenarios, not only in controlled environments. And since Genezio keeps monitoring after launch, any shift in behavior can be spotted sooner than later.
 
@@ -94,4 +94,4 @@ That's why testing matters just as much as deployment.
 
 Luckily, Genezio brings everything together in one place: fast deployment and real-world testing. You can choose to run one-time audits or set up ongoing monitoring. This helps Customer Care teams catch issues early, track how their agents behave over time, and keep responses aligned with their business standards.
 
-**If you're ready to {{< external-link link="https://genezio.com/deployment-platform/" >}}deploy AI agents{{< /external-link >}} that actually hold up in the real world, Genezio makes it easy to get started. Get Your {{< external-link link="https://genezio.com/#cta-buttons" >}}Independent Chatbot Evaluation Now{{< /external-link >}} — or book a quick demo to see how it works.**
+**If you're ready to {{< external-link link="https://genezio.com/" >}}deploy AI agents{{< /external-link >}} that actually hold up in the real world, Genezio makes it easy to get started. Get Your {{< external-link link="https://genezio.com/#cta-buttons" >}}Independent Chatbot Evaluation Now{{< /external-link >}} — or book a quick demo to see how it works.**

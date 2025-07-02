@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /deployment-platform/images/opensourceconversation.webp
+thumbnail: /images/opensourceconversation.webp
 preview: The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a critical driver of massive growth.
 # meta data start
 description: "The web is built upon open standards – open source software has transformed the internet, unlocking amazing functionality and becoming a driver of growth."
 meta_og_url: "https://genezio.com/blog/an-open-conversation-about-open-source/"
-meta_og_image: "https://genezio.com/deployment-platform/images/opensourceconversation.webp"
+meta_og_image: "https://genezio.com/images/opensourceconversation.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -65,8 +65,8 @@ There is also the core problem of trust. Closed source solutions might work toda
 
 Adopting closed source solutions have their time and place, but open source delivers such incredible value that it should be considered a principle solution.
 
-## Genezio and Open Source Solutions
+## DeployApps and Open Source Solutions
 
-All of these reasons are why Genezio is open source – we believe that open source builds a level of trust, transparency, and efficiency that is second to none. Our platform boasts {{< external-link link="https://genezio.com/blog/what-is-type-safety/" >}}full static type-safety{{< /external-link >}} and auto complete, typesafe RPC, and seamless bundling and compiling in a framework agnostic environment. Most importantly, it does all this in an open source format, supporting a community of developers and users who are passionate about our project.
+All of these reasons are why DeployApps is open source – we believe that open source builds a level of trust, transparency, and efficiency that is second to none. Our platform boasts {{< external-link link="https://genezio.com/blog/what-is-type-safety/" >}}full static type-safety{{< /external-link >}} and auto complete, typesafe RPC, and seamless bundling and compiling in a framework agnostic environment. Most importantly, it does all this in an open source format, supporting a community of developers and users who are passionate about our project.
 
-Genezio is changing the {{< external-link link="https://genezio.com/blog/what-serverless-is/" >}}serverless game{{< /external-link >}} and making your life easier, and this effort starts with our commitment to open source and the end developer experience. We believe that Genezio is by far the easiest way to write and host a serverless application – if you’d like to experience the difference with Genezio, you can {{< external-link link="https://genezio.com/docs/getting-started/" >}}get started today in less than an hour{{< /external-link >}}!
+DeployApps is changing the {{< external-link link="https://genezio.com/blog/what-serverless-is/" >}}serverless game{{< /external-link >}} and making your life easier, and this effort starts with our commitment to open source and the end developer experience. We believe that DeployApps is by far the easiest way to write and host a serverless application – if you’d like to experience the difference with DeployApps, you can {{< external-link link="https://genezio.com/docs/getting-started/" >}}get started today in less than an hour{{< /external-link >}}!

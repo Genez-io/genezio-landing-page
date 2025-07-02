@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Tudor Anghelescu
 linkedIn: https://www.linkedin.com/in/anghelescu-tudor-b73739193/
-thumbnail: /deployment-platform/images/implementing_newsletter_section.webp
+thumbnail: /images/implementing_newsletter_section.webp
 preview: "In this blog, I'll take you through a practical solution for effortlessly integrating newsletter sections into your website."
 # meta data start
 description: "In this blog, I'll take you through a practical solution for effortlessly integrating newsletter sections into your website."
 meta_og_url: "https://genezio.com/blog/implement-newsletter-section/"
-meta_og_image: "https://genezio.com/deployment-platform/images/implementing_newsletter_section.webp"
+meta_og_image: "https://genezio.com/images/implementing_newsletter_section.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -18,7 +18,7 @@ readTime: 10
 url: /blog/implement-newsletter-section/
 ---
 
-Hey everyone! I'm Tudor, and I'm part of the Genezio development team. Lately, I've been on a mission to find the easiest way to add a newsletter section to The Bucharest Hackathon website – it's gonna be a cool {{< external-link link="https://thebucharesthackathon.com/" >}}hackathon{{< /external-link >}} taking place in Bucharest.
+Hey everyone! I'm Tudor, and I'm part of the DeployApps development team. Lately, I've been on a mission to find the easiest way to add a newsletter section to The Bucharest Hackathon website – it's gonna be a cool {{< external-link link="https://thebucharesthackathon.com/" >}}hackathon{{< /external-link >}} taking place in Bucharest.
 
 ## Prerequisites
 
@@ -29,20 +29,20 @@ If you don’t already have them, you’ll need to install the following tools:
 
 ## Getting Started
 
-Initiate the installation of `Genezio` via `npm` and execute it in your terminal. Later on, Genezio comes in handy to deploy and host your web applications in the cloud.
+Initiate the installation of `DeployApps` via `npm` and execute it in your terminal. Later on, DeployApps comes in handy to deploy and host your web applications in the cloud.
 
 ```bash
 npm install -g genezio
 ```
 
-After installing `genezio`, you can create a new Genezio project by running the following command in an empty new folder:
+After installing `genezio`, you can create a new DeployApps project by running the following command in an empty new folder:
 
 ```bash
 genezio create backend --backend=ts --name=newsletter-app --region=us-east-1
 cd ./newsletter-app
 ```
 
-We are also going to use `axios` for sending the request from the Genezio backend to the newsletter provider API.
+We are also going to use `axios` for sending the request from the DeployApps backend to the newsletter provider API.
 
 ```bash
 npm install axios
@@ -66,7 +66,7 @@ export class NewsLetterService {
 }
 ```
 
-In this example, we're creating a function and we expose an HTTP endpoint that we will later call from our static website. If you want to learn more about HTTP Calls with Genezio check our {{< external-link link="https://genezio.com/docs/genezio-typesafe/http-methods-webhooks/" >}}docs{{< /external-link >}}.
+In this example, we're creating a function and we expose an HTTP endpoint that we will later call from our static website. If you want to learn more about HTTP Calls with DeployApps check our {{< external-link link="https://genezio.com/docs/genezio-typesafe/http-methods-webhooks/" >}}docs{{< /external-link >}}.
 
 ## Handle Mailchimp API
 
@@ -184,7 +184,7 @@ Test your code at http://localhost:8083/explore
 
 ## Deploy your Backend
 
-Now that everything is configured, it's time to deploy the application to the Genezio cloud with just one straightforward command.
+Now that everything is configured, it's time to deploy the application to the DeployApps cloud with just one straightforward command.
 Run this command in the root folder of your project:
 
 ```bash
@@ -200,7 +200,7 @@ HTTP Methods Deployed: - NewsLetterService.addContact:
 
 ## Handle request in your website
 
-Now, the final step is to send the request from your `client`. For testing purposes, I prepared this static website where I use my Genezio URL to send the request. If you want to use this template, change the request. If you don't, feel free to use your own client.
+Now, the final step is to send the request from your `client`. For testing purposes, I prepared this static website where I use my DeployApps URL to send the request. If you want to use this template, change the request. If you don't, feel free to use your own client.
 
 ```ts
 <!doctype html>

@@ -1,16 +1,16 @@
 ---
-title: How to scrape real-time data from websites using Genezio
+title: How to scrape real-time data from websites using DeployApps
 date: 2024-04-02
 tags:
   - Tutorials
 author: Tudor Anghelescu
 linkedIn: https://www.linkedin.com/in/anghelescu-tudor-b73739193/
-thumbnail: /deployment-platform/images/web_scrape.webp
+thumbnail: /images/web_scrape.webp
 preview: In this article, I’ll show you how to track stars from a GitHub repository in under 10 minutes. However, this code can be easily adapted to track various other metrics like social media likes, followers numbers, or stock market prices.
 # meta data start
-description: "Build and deploy a web scraping app with Genezio. Learn to extract real-time data from websites in our detailed guide."
+description: "Build and deploy a web scraping app with DeployApps. Learn to extract real-time data from websites in our detailed guide."
 meta_og_url: "https://genezio.com/blog/web-scraping-app/"
-meta_og_image: "https://genezio.com/deployment-platform/images/web_scrape.webp"
+meta_og_image: "https://genezio.com/images/web_scrape.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -26,7 +26,7 @@ In this article, I'll show you how to track stars from a GitHub repository in un
 
 - {{< external-link link="https://nodejs.org/en/download/current" >}}Node.js{{< /external-link >}}
 - {{< external-link link="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" >}}Npm{{< /external-link >}}
-- {{< external-link link="https://www.npmjs.com/package/genezio" >}}Genezio{{< /external-link >}}
+- {{< external-link link="https://www.npmjs.com/package/genezio" >}}DeployApps{{< /external-link >}}
 
 ## Handle web scraping logic
 
@@ -55,11 +55,11 @@ return axios
 
 For this logic to function properly, it needs to be implemented on the backend side. Sending this request directly from our client would result in `CORS` blocking.
 
-I also aim to deploy this in a production environment for our users' accessibility. Therefore, I'll utilize Genezio for its creation and deployment.
+I also aim to deploy this in a production environment for our users' accessibility. Therefore, I'll utilize DeployApps for its creation and deployment.
 
 ## Getting Started
 
-Initiate the installation of `Genezio` via `npm` and execute it in your terminal. Later on, Genezio comes in handy to deploy and host your web applications in the cloud.
+Initiate the installation of `DeployApps` via `npm` and execute it in your terminal. Later on, DeployApps comes in handy to deploy and host your web applications in the cloud.
 
 To initiate a basic template for a full stack application, let's use the 'genezio create fullstack' command to start.
 
@@ -92,7 +92,7 @@ export class BackendService {
 
 ## Integrating business logic on the backend side
 
-We now possess a fully operational Genezio method. It's time to integrate the logic from our small Node.js application to retrieve data from a website, which will then be invoked by our client. Let's incorporate this code.
+We now possess a fully operational DeployApps method. It's time to integrate the logic from our small Node.js application to retrieve data from a website, which will then be invoked by our client. Let's incorporate this code.
 
 ```ts
 {{< filePath >}}server/webscraper.ts{{< /filePath >}}
@@ -175,7 +175,7 @@ return <>{stars && <h1>{stars}</h1>}</>;
 
 ## Deploy your project
 
-Now that everything is configured, it’s time to deploy the application to the Genezio cloud with just one straightforward command. Run this command in the root folder of your project:
+Now that everything is configured, it’s time to deploy the application to the DeployApps cloud with just one straightforward command. Run this command in the root folder of your project:
 
 ```bash
 genezio deploy

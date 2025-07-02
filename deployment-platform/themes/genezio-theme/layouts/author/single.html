@@ -7,7 +7,7 @@
       <div class="row mt-4">
         <div class="col-md-2 text-center text-md-start">
           <img
-            src="/deployment-platform/images/writers/{{ .Title | urlize }}.webp"
+            src="/images/writers/{{ .Title | urlize }}.webp"
             class="img-fluid authorPagePhoto rounded-circle"
             alt="author-photo"
             style="
@@ -89,7 +89,7 @@
                 "
               >
                 <div class="d-flex align-items-center">
-                  <img src="/deployment-platform/images/clock-icon.svg" alt="clock-icon" />
+                  <img src="/images/clock-icon.svg" alt="clock-icon" />
                   <p style="font-size: 12px; margin-left: 4px" class="text-white mb-0">
                     {{ .Params.readTime }} minutes read
                   </p>
@@ -136,7 +136,7 @@
               {{/* TODO: avatar placeholder */}}
               <a href="/author/{{ .Params.author | urlize }}" class="text-decoration-none">
                 <img
-                  src="/deployment-platform/images/writers/{{ .Params.author | urlize  }}.webp"
+                  src="/images/writers/{{ .Params.author | urlize  }}.webp"
                   style="height: 48px; width: 48px; object-fit: cover"
                   class="rounded-circle"
                   alt="writer-avatar"

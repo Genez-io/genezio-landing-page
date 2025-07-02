@@ -2,9 +2,9 @@
 title: "End-User License Agreement"
 lastUpdated: "December 30th, 2024"
 # meta data start
-description: "Read Genezio’s End-User License Agreement (EULA) to understand the terms and conditions for using our application and services."
+description: "Read DeployApps’s End-User License Agreement (EULA) to understand the terms and conditions for using our application and services."
 meta_og_url: "https://genezio.com/eula/"
-meta_og_image: "https://genezio.com/deployment-platform/images/og.jpg"
+meta_og_image: "https://genezio.com/images/og.jpg"
 # meta data end
 ---
 

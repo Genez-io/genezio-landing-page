@@ -5,11 +5,11 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267
-thumbnail: /deployment-platform/images/whatsapp.webp
+thumbnail: /images/whatsapp.webp
 preview: "This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more."
-description: "Genezio blog: Step-by-step tutorial on creating a WhatsApp bot. Integrate the bot with WhatsApp API and automate responses."
+description: "DeployApps blog: Step-by-step tutorial on creating a WhatsApp bot. Integrate the bot with WhatsApp API and automate responses."
 meta_og_url: "https://genezio.com/blog/whatsapp-genezio-project/"
-meta_og_image: "https://genez.io/deployment-platform/images/whatsapp.webp"
+meta_og_image: "https://genez.io/images/whatsapp.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 30
@@ -18,7 +18,7 @@ url: /blog/whatsapp-genezio-project/
 
 Welcome, automation enthusiasts! My name is Cristi, and in this tutorial, I'll guide you through the process of creating a WhatsApp bot and implementing a simple 'ping pong' interaction. This is a crucial step towards leveraging automation, covering the essentials to get you started on your journey to building more complex bots like natural language processing chatbots, e-commerce assistants, customer service bots, and more.
 
-Genezio comes in handy as a tool to create, manage and quickly deploy a customized API that can communicate with the WhatsApp API Cloud without the need for the user to manage servers on their own. Through Genezio, you can define how your bot interacts with users on WhatsApp. This will enable you to automate responses and execute various actions based on received messages or predefined events. It's an essential component in building and managing the functionality of your WhatsApp bot, facilitating seamless communication between your application and the WhatsApp messaging platform.
+DeployApps comes in handy as a tool to create, manage and quickly deploy a customized API that can communicate with the WhatsApp API Cloud without the need for the user to manage servers on their own. Through DeployApps, you can define how your bot interacts with users on WhatsApp. This will enable you to automate responses and execute various actions based on received messages or predefined events. It's an essential component in building and managing the functionality of your WhatsApp bot, facilitating seamless communication between your application and the WhatsApp messaging platform.
 
 ## Overview:
 
@@ -110,7 +110,7 @@ export class BackendService {
 
 This structure defines the following components:
 
-- `@GenezioDeploy()` decorator is used to know which class is deployed on the server provided by Genezio for the production environment. This way your code can be accessed at any time without having a local server running.
+- `@GenezioDeploy()` decorator is used to know which class is deployed on the server provided by DeployApps for the production environment. This way your code can be accessed at any time without having a local server running.
 
 - `@GenezioMethod({type:"http"})` decorator is used to turn a method of a class into an endpoint you will later use to receive http requests.
 
@@ -219,41 +219,41 @@ This method abstracts the messaging logic through the Facebook Graph API for the
 
 1. Go to the {{< external-link link="https://developers.facebook.com/" >}} Meta Website{{< /external-link >}} and create an account.
 
-![whatsapp](/deployment-platform/posts/whatsapp1.webp)
+![whatsapp](/posts/whatsapp1.webp)
 
 2. Select “My Apps”
 
-![whatsapp](/deployment-platform/posts/whatsapp2.webp)
+![whatsapp](/posts/whatsapp2.webp)
 
 3. Select “Create App”
 
-![whatsapp](/deployment-platform/posts/whatsapp3.webp)
+![whatsapp](/posts/whatsapp3.webp)
 
 4. Select “Other” and click on ‘Next’
 
-![whatsapp](/deployment-platform/posts/whatsapp4.webp)
+![whatsapp](/posts/whatsapp4.webp)
 
 5. Select “Business” and click on ‘Next’
 
-![whatsapp](/deployment-platform/posts/whatsapp5.webp)
+![whatsapp](/posts/whatsapp5.webp)
 
 6. Add an app name and the contact email address and click on ‘Create app’.
 
-![whatsapp](/deployment-platform/posts/whatsapp6.webp)
+![whatsapp](/posts/whatsapp6.webp)
 
 ## Configure the project
 
 1. Search for the Whatsapp Integration and click on ‘Set up’.
 
-![whatsapp](/deployment-platform/posts/whatsapp7.webp)
+![whatsapp](/posts/whatsapp7.webp)
 
 2. Select a business portfolio
 
-![whatsapp](/deployment-platform/posts/whatsapp8.webp)
+![whatsapp](/posts/whatsapp8.webp)
 
 3. Start using the API
 
-![whatsapp](/deployment-platform/posts/whatsapp9.webp)
+![whatsapp](/posts/whatsapp9.webp)
 
 4. From here we will take the access token and Phone number ID.
 
@@ -264,17 +264,17 @@ BUSINESS_PHONE_NUMBER_ID=<Phone number ID>
 
 Note: Here you can also see which phone number you can test the bot on.
 
-![whatsapp](/deployment-platform/posts/whatsapp10.webp)
+![whatsapp](/posts/whatsapp10.webp)
 
 5. In order for the bot to work, we still need to configure an api for callback. Select Configuration
 
-![whatsapp](/deployment-platform/posts/whatsapp11.webp)
+![whatsapp](/posts/whatsapp11.webp)
 
 6. Click on ‘Edit’
 
-![whatsapp](/deployment-platform/posts/whatsapp12.webp)
+![whatsapp](/posts/whatsapp12.webp)
 
-![whatsapp](/deployment-platform/posts/whatsapp13.webp)
+![whatsapp](/posts/whatsapp13.webp)
 
 Here we need a callback url and a verify token. The Callback url will be generated in the next step and verify token is a random string put by you which is the same as the one in the .env file to the key `WEBHOOK_VERIFY_TOKEN`
 
@@ -288,21 +288,21 @@ genezio deploy -env .env
 
 Take the url from : BackendService.webhook
 
-![whatsapp](/deployment-platform/posts/whatsapp14.webp)
+![whatsapp](/posts/whatsapp14.webp)
 
 8. Put the link to the callback from the platform
 
-![whatsapp](/deployment-platform/posts/whatsapp15.webp)
+![whatsapp](/posts/whatsapp15.webp)
 
 9. Subscribe for messages
 
-![whatsapp](/deployment-platform/posts/whatsapp16.webp)
+![whatsapp](/posts/whatsapp16.webp)
 
-![whatsapp](/deployment-platform/posts/whatsapp17.webp)
+![whatsapp](/posts/whatsapp17.webp)
 
 10. Now you have a bot. For testing, you can send "ping" from the test number
 
-![whatsapp](/deployment-platform/posts/whatsapp18.webp)
+![whatsapp](/posts/whatsapp18.webp)
 
 ## This is it!
 

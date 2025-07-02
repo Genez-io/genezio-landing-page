@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Cristi Miloiu
 linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267/
-thumbnail: /deployment-platform/images/django-genezio.webp
+thumbnail: /images/django-genezio.webp
 preview: Hi, I’m Cristi Miloiu, and in this tutorial, I’ll guide you through building your first web application using Django, one of the most popular Python web frameworks. By the end of this article, you’ll have a simple, fully functional web app running on your local machine.
 # meta data start
 description: Learn how to build your first web app with Django in just 10 minutes. Follow this beginner-friendly guide to kickstart your journey into web development.
 meta_og_url: "https://genezio.com/blog/getting-started-django-web-app/"
-meta_og_image: "https://genezio.com/deployment-platform/images/django-genezio.webp"
+meta_og_image: "https://genezio.com/images/django-genezio.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -136,7 +136,7 @@ Open a browser and navigate to `http://localhost:8000`. You should see "Hello, W
 
 ### Step 1: Configure Allowed Hosts
 
-Add the Genezio domain .genez.io to the ALLOWED_HOSTS list in your settings.py file:
+Add the DeployApps domain .genez.io to the ALLOWED_HOSTS list in your settings.py file:
 
 ```python
 ALLOWED_HOSTS = [
@@ -146,9 +146,9 @@ ALLOWED_HOSTS = [
 ]
 ```
 
-### Step 2: Install the Genezio CLI
+### Step 2: Install the DeployApps CLI
 
-Install Genezio for deployment:
+Install DeployApps for deployment:
 
 ```bash
 npm install -g genezio
@@ -166,7 +166,7 @@ You’ll be prompted to provide the project name and region.
 
 ### Step 4: Test Locally
 
-Test your app locally with Genezio:
+Test your app locally with DeployApps:
 
 ```bash
 genezio local
@@ -184,7 +184,7 @@ Your app will be live at a custom subdomain, such as `https://your-app-name.app.
 
 ## Known limitations​
 
-Genezio does not support SQLite databases, because SQLite is not suitable for serverless applications. You need to use a different database like PostgreSQL or MongoDB. You can create it at this {{< external-link link="https://app.genez.io/databases" >}}link{{< /external-link >}} in the Genezio dashboard.
+DeployApps does not support SQLite databases, because SQLite is not suitable for serverless applications. You need to use a different database like PostgreSQL or MongoDB. You can create it at this {{< external-link link="https://app.genez.io/databases" >}}link{{< /external-link >}} in the DeployApps dashboard.
 
 ## Conclusion
 

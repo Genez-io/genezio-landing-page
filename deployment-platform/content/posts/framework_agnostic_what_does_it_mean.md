@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/what_is_serverless_scalability_and_how_does_it_work.webp
+thumbnail: /images/what_is_serverless_scalability_and_how_does_it_work.webp
 preview: "Yeah, the development world moves at a breakneck pace, with terms and phrases coming and going, but every now and then, something pops up that sticks around and actually has a long-lasting impact."
 description: 'Learn what "framework agnostic" means, its benefits, and how to choose the right platform. A key component you need to succeed in your development ventures.'
 meta_og_url: "https://genezio.com/blog/what-is-framework-agnostic/"
-meta_og_image: "https://genez.io/deployment-platform/images/what_is_serverless_scalability_and_how_does_it_work.webp"
+meta_og_image: "https://genez.io/images/what_is_serverless_scalability_and_how_does_it_work.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -128,13 +128,13 @@ There are options, but again, it comes down to choosing the solution that's righ
 
 Remember, the right platform can make all the difference in your framework-agnostic journey. Take your time, do your research, and choose wisely.
 
-### Genezio: The Framework-Agnostic Powerhouse
+### DeployApps: The Framework-Agnostic Powerhouse
 
 Want to look into what this might look like in the real world?
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is a top-notch framework-agnostic serverless platform designed from the ground up to empower developers like us with the freedom and flexibility we crave.
+{{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} is a top-notch framework-agnostic serverless platform designed from the ground up to empower developers like us with the freedom and flexibility we crave.
 
-Genezio boasts a super smooth development experience, effortless scalability (so you can handle those traffic spikes like a champ), and rock-solid integrations that'll make your life easier. Plus, it lets you focus on what you do best – building awesome products – instead of getting bogged down in infrastructure management.
+DeployApps boasts a super smooth development experience, effortless scalability (so you can handle those traffic spikes like a champ), and rock-solid integrations that'll make your life easier. Plus, it lets you focus on what you do best – building awesome products – instead of getting bogged down in infrastructure management.
 
 In short, it's the perfect partner for your framework-agnostic adventures. It's got everything you need to take your projects to the next level.
 
@@ -144,6 +144,6 @@ The world of software development is constantly evolving, and framework agnostic
 
 While there might be a slight learning curve and some initial complexity, the benefits of framework agnosticism far outweigh the challenges, and it's well worth considering for your current and future projects.
 
-What's more, when you take the time to work with the right tools, like Genezio, you'll be well-equipped to navigate the ever-changing tech landscape and build remarkable applications that stand the test of time.
+What's more, when you take the time to work with the right tools, like DeployApps, you'll be well-equipped to navigate the ever-changing tech landscape and build remarkable applications that stand the test of time.
 
 {{< external-link link="https://genezio.com/" >}}Get started today!{{< /external-link >}}

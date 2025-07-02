@@ -1,15 +1,15 @@
 ---
-title: "Auto Scaling - Genezio Handles Growth"
+title: "Auto Scaling - DeployApps Handles Growth"
 date: 2024-05-14
 tags:
   - Learning
 author: Kristopher Sandoval
 linkedIn: https://www.linkedin.com/in/krsando/
-thumbnail: /deployment-platform/images/effortless.webp
+thumbnail: /images/effortless.webp
 preview: "The modern web thrives on efficiency and effectiveness – the difference between being somewhat efficient and very efficient can be fundamentally impactful to business success, with even small gaps adding to major business opportunities."
-description: "Unlock business success with Genezio’s auto scaling solutions. The difference between somewhat efficient and very efficient can impact your business succes"
+description: "Unlock business success with DeployApps’s auto scaling solutions. The difference between somewhat efficient and very efficient can impact your business succes"
 meta_og_url: "https://genezio.com/blog/effortless-scaling-genezio-handles-growth/"
-meta_og_image: "https://genezio.com/deployment-platform/images/effortless.webp"
+meta_og_image: "https://genezio.com/images/effortless.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
@@ -20,7 +20,7 @@ The modern web thrives on efficiency and effectiveness – the difference betwee
 
 Understanding how to grow while maintaining this efficacy and effective service is critical. Scalability, extensibility, auto-scaling – there are so many approaches to ensuring you maintain this edge.
 
-Today, we’re going to look into some of these concepts. We’ll look at the benefits of each approach, and show you just how Genezio can help you grow bigger – better!
+Today, we’re going to look into some of these concepts. We’ll look at the benefits of each approach, and show you just how DeployApps can help you grow bigger – better!
 
 ## Understanding Scalability
 
@@ -48,22 +48,22 @@ By designing systems that are scalable, organizations can ensure that their soft
 
 Scalability and extensibility are not just technical requirements; they are strategic imperatives that underpin the agility and robustness of modern software architectures. When combined with auto-scaling and framework agnosticism, these concepts empower organizations to thrive in an increasingly competitive and ever-changing technological landscape, ensuring sustainable growth and continued success.
 
-## Getting Bigger Better with Genezio
+## Getting Bigger Better with DeployApps
 
-Luckily, Genezio can help you get bigger better by delivering the power of auto-scaling and extensible framework-agnostic code with ease! Genezio is designed to help you scale your application to millions of users through a type safe serverless platform!
+Luckily, DeployApps can help you get bigger better by delivering the power of auto-scaling and extensible framework-agnostic code with ease! DeployApps is designed to help you scale your application to millions of users through a type safe serverless platform!
 
-Firstly, Genezio is truly framework agnostic – with support for React, Vue, Angular, Svelte, and more, Genezio works with your codebase, simplifying the process of developing and deploying at scale. This process is made even more seamless through the use of automated SDK generation, allowing you to create and scale without the headaches common in other solutions.
+Firstly, DeployApps is truly framework agnostic – with support for React, Vue, Angular, Svelte, and more, DeployApps works with your codebase, simplifying the process of developing and deploying at scale. This process is made even more seamless through the use of automated SDK generation, allowing you to create and scale without the headaches common in other solutions.
 
-Genezio also lets you deploy your backend how you need it deployed. Have your own databases? Great! Want to deploy on a managed AWS instance? Genezio has your back! Want something in the middle? Genezio.Cloud unlocks cloud functionality for you. With all this focus on the backend, you might be wondering how Genezio unlocks frontend success. Frontend deployment with CDN can be achieved just as easily, getting you in front of your users with a scalable and extensible system. Genezio supports teams of different structures and focuses with support for multiple staging environments, production deployment, and local development deployment.
+DeployApps also lets you deploy your backend how you need it deployed. Have your own databases? Great! Want to deploy on a managed AWS instance? DeployApps has your back! Want something in the middle? DeployApps.Cloud unlocks cloud functionality for you. With all this focus on the backend, you might be wondering how DeployApps unlocks frontend success. Frontend deployment with CDN can be achieved just as easily, getting you in front of your users with a scalable and extensible system. DeployApps supports teams of different structures and focuses with support for multiple staging environments, production deployment, and local development deployment.
 
 ### The Serverless Puzzle Piece
 
-One of the main aspects of Genezio that unlocks successful scaling is the fact that it is a fully {{< external-link link="https://genezio.com/blog/what-serverless-is/#genezio--serverless" >}}serverless solution{{< /external-link >}}. Serverless is a simple concept – you spin up servers only to fit the need instead of investing heavily in static resourcing. For the end developer, this means scaling resources to meet scaling demand, driving costs down through server automation, which brings major savings in resource and opportunity cost.
+One of the main aspects of DeployApps that unlocks successful scaling is the fact that it is a fully {{< external-link link="https://genezio.com/blog/what-serverless-is/#genezio--serverless" >}}serverless solution{{< /external-link >}}. Serverless is a simple concept – you spin up servers only to fit the need instead of investing heavily in static resourcing. For the end developer, this means scaling resources to meet scaling demand, driving costs down through server automation, which brings major savings in resource and opportunity cost.
 
-Genezio not only provides a serverless framework, it does so with zero cold start penalty – in effect, you get to reap the rewards of a serverless approach without incurring the typical penalties of the approach at scale.
+DeployApps not only provides a serverless framework, it does so with zero cold start penalty – in effect, you get to reap the rewards of a serverless approach without incurring the typical penalties of the approach at scale.
 
 ## Conclusion
 
-Ultimately, Genezio unlocks growth by allowing you to focus on the code, and not the tooling. So many solutions in the market demand that you implement your solution in adherence to their point of view or approach – Genezio allows you to develop your code for your purposes while still unlocking autoscaling and extensibility.
+Ultimately, DeployApps unlocks growth by allowing you to focus on the code, and not the tooling. So many solutions in the market demand that you implement your solution in adherence to their point of view or approach – DeployApps allows you to develop your code for your purposes while still unlocking autoscaling and extensibility.
 
-Interested in seeing the power of Genezio for yourself? {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up today{{< /external-link >}} and check it out!
+Interested in seeing the power of DeployApps for yourself? {{< external-link link="https://app.genez.io/auth/signup" >}}Sign up today{{< /external-link >}} and check it out!

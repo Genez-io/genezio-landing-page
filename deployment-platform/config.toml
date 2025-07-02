@@ -1,6 +1,6 @@
 baseURL = "/"  
 languageCode = "en-us"  
-title = "Genezio"  
+title = "DeployApps"  
 theme = "genezio-theme"  
 enableRobotsTXT = true
 paginate = 9
@@ -9,12 +9,7 @@ paginate = 9
     primary_color = "#6f42c1"
 
 [params.footer]
-        description = "genezio is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
-        facebook = "https://www.facebook.com/profile.php?id=100086667803855"
-        twitter = "https://twitter.com/Geneziodev"
-        instagram = "https://www.instagram.com/genezio.dev/"
-        discord = "https://discord.com/invite/uc9H5YKjXv"
-        linkedin = "https://www.linkedin.com/company/genez-io/"
+        description = "DeployApps is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
         
 [permalinks]
     posts = "/blog/:title/"

@@ -5,11 +5,11 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/top_software_deployment_tools.webp
+thumbnail: /images/top_software_deployment_tools.webp
 preview: "A good software deployment tool should allow developers to continuously update their code without breaking the central software. It should also make it easy to use from the first time on: a SaaS business should be able to deploy their software to a cloud or on-premises environment very quickly. And most importantly, it should be affordable or free, and ideally integrated with the cloud environment."
-description: "The 14 top software deployment tools include Genezio, PDQ Deploy, Microsoft Intune, and Jenkins."
+description: "The 14 top software deployment tools include DeployApps, PDQ Deploy, Microsoft Intune, and Jenkins."
 meta_og_url: "https://genezio.com/blog/top-software-deployment-tools/"
-meta_og_image: "https://genez.io/deployment-platform/images/top_software_deployment_tools.webp"
+meta_og_image: "https://genez.io/images/top_software_deployment_tools.webp"
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 10
@@ -25,15 +25,15 @@ A good software deployment tool should allow developers to continuously update t
 
 Using those standards, this article breaks down the 13 top deployment tools. You'll find tools that fit your needs and infrastructure, whether you're a solopreneur, a small team, or a large company.
 
-## Genezio
+## DeployApps
 
-{{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} is a serverless platform with an integrated software deployment tool. It stands out as a versatile typesafe — that you can’t program a typo — deployment tool that simplifies the process of deploying full-stack applications, whether for small projects, MVPs, or enterprise demos. It allows developers to focus on coding and launch faster with simple commands and a single codebase.
+{{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} is a serverless platform with an integrated software deployment tool. It stands out as a versatile typesafe — that you can’t program a typo — deployment tool that simplifies the process of deploying full-stack applications, whether for small projects, MVPs, or enterprise demos. It allows developers to focus on coding and launch faster with simple commands and a single codebase.
 
-The Genezio CLI companion can be used to deploy your projects. You can run it on your machine or in your CI/CD (continuous integration and deployment) pipeline with {{< external-link link="https://genezio.com/blog/integrating-github-actions-with-genezio-for-ci/cd/" >}}GitHub actions{{< /external-link >}}.
+The DeployApps CLI companion can be used to deploy your projects. You can run it on your machine or in your CI/CD (continuous integration and deployment) pipeline with {{< external-link link="https://genezio.com/blog/integrating-github-actions-with-genezio-for-ci/cd/" >}}GitHub actions{{< /external-link >}}.
 
-Genezio is not just a deployment tool. The Genezio.Cloud feature automates the creation, testing, and deployment of {{< external-link link="https://genezio.com/blog/serverless-computing-when-to-go-serverless/" >}}serverless{{< /external-link >}} functions. Notably, {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/#genezio-functions-vs-aws-lambda-vs-gcp-vs-vercel-vs-netlify" >}}Genezio Functions{{< /external-link >}} , a modern Function-as-a-Service (FaaS) platform, delivers up to four times faster cold start times than AWS Lambda, with a median cold start response time of around 54ms. It’s the kind of response time you might not consider important in a staging environment, but that could tilt the scale towards your own SaaS when a user realises it’s so quick. Former Amazon employees famously claimed almost 20 years ago that a {{< external-link link="https://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html" >}}100ms delay{{< /external-link >}} resulted in lost revenue.
+DeployApps is not just a deployment tool. The DeployApps.Cloud feature automates the creation, testing, and deployment of {{< external-link link="https://genezio.com/blog/serverless-computing-when-to-go-serverless/" >}}serverless{{< /external-link >}} functions. Notably, {{< external-link link="https://genezio.com/blog/genezio-functions-reduce-cold-start-times-by-up-to-4x-compared-to-aws-lambda/#genezio-functions-vs-aws-lambda-vs-gcp-vs-vercel-vs-netlify" >}}DeployApps Functions{{< /external-link >}} , a modern Function-as-a-Service (FaaS) platform, delivers up to four times faster cold start times than AWS Lambda, with a median cold start response time of around 54ms. It’s the kind of response time you might not consider important in a staging environment, but that could tilt the scale towards your own SaaS when a user realises it’s so quick. Former Amazon employees famously claimed almost 20 years ago that a {{< external-link link="https://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html" >}}100ms delay{{< /external-link >}} resulted in lost revenue.
 
-Genezio automatically scales. It’s so quick to set up and it’s an ideal platform to deploy either an already-built app or to deploy microservices and start shaping up the app from there on.
+DeployApps automatically scales. It’s so quick to set up and it’s an ideal platform to deploy either an already-built app or to deploy microservices and start shaping up the app from there on.
 
 **Key features:** It makes managing APIs easier by automatically creating an SDK. It has a framework-agnostic design that supports React, Vue, Angular, and Svelte. It’s compatible with tools like {{< external-link link="https://upstash.com/" >}}Upstash Redis{{< /external-link >}} and {{< external-link link="https://neon.tech/" >}}Neon Postgres{{< /external-link >}}.
 
@@ -41,7 +41,7 @@ Genezio automatically scales. It’s so quick to set up and it’s an ideal plat
 
 Since we’ve introduced the concept, we’ll make clear what separates continuous integration with continuous deployment. CI is about making code ready for release — for example, testing — and CD is about actually releasing and deploying code. Both are automatic: CI automatically updates the code for testing, and CD automatically deploys a release for production. Software deployment tools usually follow this model because they mean to help developers introduce slight changes to a codebase without breaking the central program.
 
-![alt_text](/deployment-platform/posts/the-best-software-deployment-tools1.webp)
+![alt_text](/posts/the-best-software-deployment-tools1.webp)
 
 ## Juju by Canonical
 
@@ -77,7 +77,7 @@ As expected, Azure and Google Cloud Platform have their “own CodeDeploy” eac
 
 Key features: It offers {{< external-link link="https://docs.travis-ci.com/user/build-matrix/" >}}Matrix Builds{{< /external-link >}} to test against multiple versions of languages, environments, and operating systems simultaneously. You can run {{< external-link link="https://www.redhat.com/en/topics/containers#:~:text=Containers%20are%20technologies%20that%20allow,the%20files%20necessary%20to%20run." >}}containers{{< /external-link >}} with it. After successful builds, they can be automatically sent to cloud services like AWS and Google Cloud.
 
-![alt_text](/deployment-platform/posts/the-best-software-deployment-tools4.webp)
+![alt_text](/posts/the-best-software-deployment-tools4.webp)
 
 ## Jenkins
 
@@ -91,7 +91,7 @@ Key features: It offers {{< external-link link="https://docs.travis-ci.com/user/
 
 **Its main features are:** It has automated build and deployment pipelines. It integrates with Docker and AWS CodeDeploy. And it comes with direct control over {{< external-link link="https://confluence.atlassian.com/bamboo/git-289277007.html" >}}Git{{< /external-link >}}.
 
-![alt_text](/deployment-platform/posts/the-best-software-deployment-tools2.webp)
+![alt_text](/posts/the-best-software-deployment-tools2.webp)
 
 ## PDQ Deploy
 
@@ -105,7 +105,7 @@ No, {{< external-link link="https://learn.microsoft.com/en-us/mem/intune/fundame
 
 **Key features:** It manages mobile and desktop devices, including deployment and updates. It also integrates with Microsoft {{< external-link link="https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection" >}}Defender for Endpoint{{< /external-link >}}, Microsoft’s AV. And it supports bring-your-own-device {{< external-link link="https://www.microsoft.com/insidetrack/blog/microsoft-intune-makes-it-easy-to-bring-your-own-device-to-work/" >}}(BYOD){{< /external-link >}} models.
 
-![alt_text](/deployment-platform/posts/the-best-software-deployment-tools3.webp)
+![alt_text](/posts/the-best-software-deployment-tools3.webp)
 
 ## DeployBot
 
@@ -132,8 +132,8 @@ It offers quick setup and extensive functionality with {{< external-link link="h
 
 **Key features:** Integration with .NET technologies, including code coverage and testing frameworks. It has native support for tools like Jira, Visual Studio, and Maven. And it offers over {{< external-link link="https://plugins.jetbrains.com/teamcity">}}400 plugins{{< /external-link >}} available for extended functionality and integrations.
 
-## Deploy your full-stack web app quickly with Genezio
+## Deploy your full-stack web app quickly with DeployApps
 
-A productive software deployment tool should be easy to use, quick, affordable, and reliable. As your workflows become more complex, adding new tools will only get harder and pricier. That's why choosing a typesafe deployment tool like Genezio today can save you and your team valuable time and resources in the long run.
+A productive software deployment tool should be easy to use, quick, affordable, and reliable. As your workflows become more complex, adding new tools will only get harder and pricier. That's why choosing a typesafe deployment tool like DeployApps today can save you and your team valuable time and resources in the long run.
 
-Genezio is a reliable deployment tool that simplifies and speeds up application launches. It features automatic SDK generation and easy integrations, while also cutting down on cold start times. If you are ready to improve your software deployments today, visit our website, {{< external-link link="https://app.genez.io/auth/signup">}}sign up{{< /external-link >}} for a free account, and start using Genezio.
+DeployApps is a reliable deployment tool that simplifies and speeds up application launches. It features automatic SDK generation and easy integrations, while also cutting down on cold start times. If you are ready to improve your software deployments today, visit our website, {{< external-link link="https://app.genez.io/auth/signup">}}sign up{{< /external-link >}} for a free account, and start using DeployApps.

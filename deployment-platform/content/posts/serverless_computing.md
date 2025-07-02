@@ -5,12 +5,12 @@ tags:
   - Learning
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /deployment-platform/images/whentogoserverless.webp
+thumbnail: /images/whentogoserverless.webp
 preview: Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption
 # meta data start
 description: "Serverless has become a mainstay in cloud computing for a few years now. A 2022 report already showed how all major cloud providers were already seeing significant serverless adoption"
 meta_og_url: "https://genezio.com/blog/serverless-computing-when-to-go-serverless/"
-meta_og_image: "https://genezio.com/deployment-platform/images/whentogoserverless.webp"
+meta_og_image: "https://genezio.com/images/whentogoserverless.webp"
 meta_og_title: "Serverless Computing: When to Go Serverless?"
 # meta data end
 customHeader: "White header"
@@ -29,7 +29,7 @@ This article will explain serverless computing and explore when and why it shoul
 
 Serverless computing is a cloud-based approach to building and deploying applications. As an alternative to managing your own servers and infrastructure, you sign up for backend services on a pay-per-use model. This means you're not charged for idle resources, just like you wouldn't pay for electricity when your light bulbs are off. While the term “serverless” might suggest no servers are involved, cloud providers still handle the underlying infrastructure. Serverless means that the developer can {{< external-link link="https://genezio.com/blog/what-serverless-is/#what-is-serverless-deployment" >}}focus on writing code{{< /external-link >}} and concentrate on growing their business without worrying about server management tasks.
 
-![alt_text](/deployment-platform/posts/whentoserverless1.webp)
+![alt_text](/posts/whentoserverless1.webp)
 
 ## When to use serverless computing
 
@@ -39,7 +39,7 @@ Serverless computing is also well-suited when managing multiple databases or lau
 
 Depending on the use case, serverless has some shortcomings, especially if the platform is not tightly optimized. While it offers faster development and potentially lower costs, there might be a trade-off in terms of control over the underlying infrastructure, or even on debugging. Serverless is best suited for new applications or complete redesigns, especially those that don't rely on legacy databases. Legacy databases can cause bottlenecks because they don't scale as easily with serverless functions.
 
-![alt_text](/deployment-platform/posts/whentoserverless2.webp)
+![alt_text](/posts/whentoserverless2.webp)
 
 ## Serverless computing vs cloud computing
 
@@ -63,7 +63,7 @@ Here’s a balanced look at serverless computing’s advantages and disadvantage
 
 Consider serverless infrastructure if you're building a lightweight, fast-scaling application that needs to be updated frequently and manage fluctuating usage. A serverless setup will respond instantly when needed and will not be subject to costs when at a standstill. Since billing is based on actual usage, serverless reduces costs for applications that do not require constant computing power. Also, serverless architecture is beneficial for applications that need to position functions closer to end users for faster response times.
 
-![alt_text](/deployment-platform/posts/whentoserverless3.webp)
+![alt_text](/posts/whentoserverless3.webp)
 
 ### Why type-safe serverless platforms are best for business
 
@@ -71,10 +71,10 @@ Using type safety on your serverless platform helps filter out programming mista
 
 Going for type safe models, then, means fewer or no crashes when your app is running and when your app scales. It could also mean a quicker turnaround time when you need to ship your solution. All of these things are important for making sure you can focus on your business and not on urgent client calls. Relying on a type-safe serverless platform sounds like a move only a techie would prioritise, but, in fact, it’s a business and strategic decision.
 
-## How does Genezio help full-stack developers build serverless apps?
+## How does DeployApps help full-stack developers build serverless apps?
 
-Building serverless apps can be complex, but {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} helps full-stack developers get started fast. The solution simplifies things with a single command line for building entire serverless applications. This cuts through the usual setup concerns, letting developers focus on writing code and running their apps quickly. {{< external-link link="https://github.com/Genez-io/genezio-documentation" >}}Genezio.Cloud{{< /external-link >}} takes it a step further by automating every stage, like creating serverless functions or testing and deploying. Plus, the cloud solution eliminates the performance lag—“cold starts”—often experienced with serverless functions.
+Building serverless apps can be complex, but {{< external-link link="https://genezio.com/" >}}DeployApps{{< /external-link >}} helps full-stack developers get started fast. The solution simplifies things with a single command line for building entire serverless applications. This cuts through the usual setup concerns, letting developers focus on writing code and running their apps quickly. {{< external-link link="https://github.com/Genez-io/genezio-documentation" >}}DeployApps.Cloud{{< /external-link >}} takes it a step further by automating every stage, like creating serverless functions or testing and deploying. Plus, the cloud solution eliminates the performance lag—“cold starts”—often experienced with serverless functions.
 
-Unlike some tools that force a specific approach, Genezio lets you write code your way while still giving you autoscaling and future-proofing. Head over to our website and {{< external-link link="https://app.genez.io/auth/signup" >}}sign up{{< /external-link >}} for a free account. It only takes a few clicks to get started building your serverless application. Good luck!
+Unlike some tools that force a specific approach, DeployApps lets you write code your way while still giving you autoscaling and future-proofing. Head over to our website and {{< external-link link="https://app.genez.io/auth/signup" >}}sign up{{< /external-link >}} for a free account. It only takes a few clicks to get started building your serverless application. Good luck!
 
-**To learn more about type-safe serverless platforms for entrepreneurs and techies, visit Genezio.com.**
+**To learn more about type-safe serverless platforms for entrepreneurs and techies, visit DeployApps.com.**

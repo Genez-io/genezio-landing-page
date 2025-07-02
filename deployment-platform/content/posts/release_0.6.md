@@ -5,19 +5,19 @@ tags:
   - News
 author: Andra Pitis
 linkedIn: https://www.linkedin.com/in/andra-pitis/
-thumbnail: /deployment-platform/images/release0.6.webp
+thumbnail: /images/release0.6.webp
 preview: "Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates"
 # meta data start
-description: "Genezio v0.6 introduces Redis and Postgres support, new SDK features, and easier project setup. Discover the latest updates!"
+description: "DeployApps v0.6 introduces Redis and Postgres support, new SDK features, and easier project setup. Discover the latest updates!"
 meta_og_url: "https://genezio.com/blog/integrate-redis-and-postgres-plus-much-more-genezio-v0.6/"
-meta_og_image: "https://genezio.com/deployment-platform/images/release0.6.webp"
+meta_og_image: "https://genezio.com/images/release0.6.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 1
 ---
 
-## Genezio New Release
+## DeployApps New Release
 
 Since our last release, we've introduced some new features that make it easier to integrate a database, simplify yaml configuration files, and many more. Let's explore the latest updates:
 
@@ -72,7 +72,7 @@ It provides the flexibility to use older versions of the SDK as necessary.
 
 ## Monorepo or multirepo?
 
-Both monorepo and multirepo approaches are valid. Genezio now supports both, allowing you to choose based on your project's requirements!\
+Both monorepo and multirepo approaches are valid. DeployApps now supports both, allowing you to choose based on your project's requirements!\
 A monorepo enables you to maintain your full stack application in a single repository. This simplifies developing new features or refactoring, as all changes can be submitted through a single pull request. It streamlines code comprehension, review processes, and the synchronization of backend and frontend components. Moreover, deployment is unified, allowing the entire system to be launched with a single `genezio deploy` command.
 
 On the other hand, a multirepo strategy offers significant benefits when a clear separation between backend and frontend is desired. This is particularly helpful if  your server serves multiple clients, each interacting with a different version of the API. With multirepo, you can deploy server and client applications independently and select the appropriate SDK version for each client.

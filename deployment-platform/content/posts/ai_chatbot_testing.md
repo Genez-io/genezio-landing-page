@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/ai-chatbot-testing-whatsapp-voice-web.webp
+thumbnail: /posts/ai-chatbot-testing-whatsapp-voice-web.webp
 preview: In this article, we’ll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI.
 # meta data start
 description: See to it that AI agents act consistently across WhatsApp, voice, and web platforms with Genezio’s AI chatbot testing solution.
-meta_og_url: "https://genezio.com/deployment-platform/blog/ai-chatbot-testing/"
+meta_og_url: "https://genezio.com/blog/ai-chatbot-testing/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/ai-chatbot-testing-whatsapp-voice-web.webp"
+meta_og_image: "https://genezio.com/posts/ai-chatbot-testing-whatsapp-voice-web.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -20,7 +20,7 @@ readTime: 5
 url: /blog/ai-chatbot-testing/
 ---
 
-AI chatbots are quickly becoming the first level of assistance for customer service. As businesses race to automate support across platforms like WhatsApp, websites, and voice assistants, the margin for error grows wider---and the cost of those errors more public. As these tools become smarter and more independent, the risks of miscommunication, {{< external-link link="https://genezio.com/deployment-platform/blog/llm-hallucination-detection/" >}}hallucinations{{< /external-link >}}, and brand-damaging errors increase. A {{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2024-07-09-gartner-survey-finds-64-percent-of-customers-would-prefer-that-companies-didnt-use-ai-for-customer-service" >}}Gartner{{< /external-link >}} survey finds 64% of customers would prefer that companies didn't use AI for customer service. This speaks to companies' disregard of AI chatbot testing to ensure consistent and helpful customer support.
+AI chatbots are quickly becoming the first level of assistance for customer service. As businesses race to automate support across platforms like WhatsApp, websites, and voice assistants, the margin for error grows wider---and the cost of those errors more public. As these tools become smarter and more independent, the risks of miscommunication, {{< external-link link="<https://genezio.com/blog/llm-hallucination-detection/>" >}}hallucinations{{< /external-link >}}, and brand-damaging errors increase. A {{< external-link link="<https://www.gartner.com/en/newsroom/press-releases/2024-07-09-gartner-survey-finds-64-percent-of-customers-would-prefer-that-companies-didnt-use-ai-for-customer-service>" >}}Gartner{{< /external-link >}} survey finds 64% of customers would prefer that companies didn't use AI for customer service. This speaks to companies' disregard of AI chatbot testing to ensure consistent and helpful customer support.
 
 In this article, we'll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI.
 
@@ -32,9 +32,9 @@ If your chatbot is answering customers on WhatsApp, your website, and over the p
 
 ### When chatbots go rogue
 
-In July 2022, {{< external-link link="https://www.theguardian.com/world/2024/feb/16/air-canada-chatbot-lawsuit" >}}Air Canada{{< /external-link >}} made headlines for all the wrong reasons when its AI-powered chatbot misinformed a customer about bereavement fares. The bot told a man he could retroactively apply a discount after purchasing his ticket for his grandmother's funeral. But when he contacted support for reimbursement, the airline refused, and claimed the bot was a "separate legal entity that is responsible for its own actions". The issue escalated to small claims court, where the judge ruled against the airline, and stated that Air Canada is responsible for all information provided by its chatbot. The company had to reimburse the ticket and pay damages.
+In July 2022, {{< external-link link="<https://www.theguardian.com/world/2024/feb/16/air-canada-chatbot-lawsuit>" >}}Air Canada{{< /external-link >}} made headlines for all the wrong reasons when its AI-powered chatbot misinformed a customer about bereavement fares. The bot told a man he could retroactively apply a discount after purchasing his ticket for his grandmother's funeral. But when he contacted support for reimbursement, the airline refused, and claimed the bot was a "separate legal entity that is responsible for its own actions". The issue escalated to small claims court, where the judge ruled against the airline, and stated that Air Canada is responsible for all information provided by its chatbot. The company had to reimburse the ticket and pay damages.
 
-![Air Canada Chatbot Case Study](https://genezio.com/deployment-platform/posts/air-canada-ordered-to-pay-customer-who-was-misled-by-airline's-chatbot.webp)
+![Air Canada Chatbot Case Study](https://genezio.com/posts/air-canada-ordered-to-pay-customer-who-was-misled-by-airline's-chatbot.webp)
 
 This wasn't a minor error. It demonstrated how a single misleading response from an AI agent---especially one acting as an official voice of a brand---can lead to legal, financial, and reputational damage.
 
@@ -48,15 +48,15 @@ Today's companies aren't just deploying one chatbot. They're deploying fleets of
 
 Traditional QA methods don't scale with this complexity. Testing each chatbot individually, across every platform and integration, is time-consuming and expensive. Worse yet, it doesn't reflect the real-world customer journey, which often flows across multiple platforms.
 
-This is why companies need a centralized approach, a unified way to {{< external-link link="https://genezio.com/deployment-platform/blog/ai-third-party-testing/" >}}third-party test all their AI-powered chatbots{{< /external-link >}} in one place. Thankfully, Genezio has you covered with its AI chatbot testing.
+This is why companies need a centralized approach, a unified way to {{< external-link link="<https://genezio.com/blog/ai-third-party-testing/>" >}}third-party test all their AI-powered chatbots{{< /external-link >}} in one place. Thankfully, Genezio has you covered with its AI chatbot testing.
 
 ## Genezio's AI chatbot testing across platforms: AI Chatbot Testing for Non-Technical Stakeholders
 
 Genezio offers a solution especially designed for this AI-first support era. If you're a company using AI chatbots across WhatsApp, voice, and web, Genezio enables you to test them all from a single interface.
 
-The most effective AI chatbot testing is running realistic scenarios that mimic user's actual behaviors rather than ideal customer conditions. Genezio generates a simulation where your bot faces incorrect spellings, sensitive questions, unpredictable input and even malicious user prompts. Genezio also reports common {{< external-link link="https://genezio.com/deployment-platform/blog/llm-anomaly-detection/" >}}AI anomalies{{< /external-link >}} like hallucinations and prompt injection attacks and tracks how frequently they appear across cases. This way you can be sure you can fully trust your AI agent even under pressure.
+The most effective AI chatbot testing is running realistic scenarios that mimic user's actual behaviors rather than ideal customer conditions. Genezio generates a simulation where your bot faces incorrect spellings, sensitive questions, unpredictable input and even malicious user prompts. Genezio also reports common {{< external-link link="<https://genezio.com/blog/llm-anomaly-detection/>" >}}AI anomalies{{< /external-link >}} like hallucinations and prompt injection attacks and tracks how frequently they appear across cases. This way you can be sure you can fully trust your AI agent even under pressure.
 
-Genezio's AI chatbot testing doesn't stop after launching. If you choose to, you can keep monitoring your agent and {{< external-link link="https://genezio.com/deployment-platform/blog/test-ai-agent/" >}}track behavioral shifts{{< /external-link >}} over time so you can tackle possible problems early on.
+Genezio's AI chatbot testing doesn't stop after launching. If you choose to, you can keep monitoring your agent and {{< external-link link="<https://genezio.com/blog/test-ai-agent/>" >}}track behavioral shifts{{< /external-link >}} over time so you can tackle possible problems early on.
 
 ### How Genezio's tool works
 
@@ -70,4 +70,4 @@ If your business is using AI to power customer support on multiple platforms, yo
 
 Genezio's scope currently focuses on text agents, so depending on your solution layout, you might be able to also test voice agents, especially if they're powered by an LLM.
 
-Don't wait for a viral PR nightmare to realize your chatbot isn't behaving as it should. **Book a demo and get your free {{< external-link link="https://genezio.com/#cta-buttons" >}}AI chatbot testing with Genezio{{< /external-link >}}.**
+Don't wait for a viral PR nightmare to realize your chatbot isn't behaving as it should. **Book a demo and get your free {{< external-link link="<https://genezio.com/#cta-buttons>" >}}AI chatbot testing with Genezio{{< /external-link >}}.**

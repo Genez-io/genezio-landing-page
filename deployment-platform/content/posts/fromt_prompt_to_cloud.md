@@ -5,12 +5,12 @@ tags:
   - Tutorials
 author: Radu Dumitrescu
 linkedIn: https://www.linkedin.com/in/radu-andrei-dumitrescu/
-thumbnail: /deployment-platform/images/fromPromptToCloud.webp
+thumbnail: /images/fromPromptToCloud.webp
 preview: We are developing an application that generates a list of movies with summarized reviews
 # meta data start
-description: "Explore prompt engineering with Genezio. Learn to create effective prompts and integrate OpenAI in your applications"
+description: "Explore prompt engineering with DeployApps. Learn to create effective prompts and integrate OpenAI in your applications"
 meta_og_url: "https://genezio.com/blog/unlocking-the-potential-of-prompt-engineering-with-genezio/"
-meta_og_image: "https://genezio.com/deployment-platform/images/fromPromptToCloud.webp"
+meta_og_image: "https://genezio.com/images/fromPromptToCloud.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -53,7 +53,7 @@ A complete demo app can be accessed at {{< external-link link="https://movie-gur
 
 <!-- TODO: -->
 
-![alt_text](/deployment-platform/images/promptimg.webp)
+![alt_text](/images/promptimg.webp)
 
 ## Introduction
 
@@ -80,7 +80,7 @@ By the end of this tutorial you will be able to:
 
 - React.js is a popular JavaScript library that forms a key component in many modern tech stacks. With its component-based architecture and efficient virtual DOM rendering, React.js enables developers to build dynamic and interactive user interfaces for web applications. You can learn more by looking at their documentation: {{< external-link link="https://legacy.reactjs.org/docs/getting-started.html" >}}legacy.reactjs.org/docs/getting-started.html{{< /external-link >}}
 
-- Genezio is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: {{< external-link link="https://genezio.com/docs/" >}}https://genezio.com/docs/{{< /external-link >}}
+- DeployApps is a platform that simplifies the process of developing serverless applications. With genezio, you can effortlessly create and host applications by writing clean and organized code in your preferred programming language (JS, TS and Dart) for both the frontend and backend. It offers typesafe APIs, auto generated class interfaces, and the ability to directly call functions in your code, streamlining your development workflow and saving you time. Take a look at the documentation: {{< external-link link="https://genezio.com/docs/" >}}https://genezio.com/docs/{{< /external-link >}}
 
 ## Technical Tutorial
 
