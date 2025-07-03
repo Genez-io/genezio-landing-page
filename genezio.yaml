@@ -5,5 +5,7 @@ frontend:
   path: ./
   subdomain: genezio-landing-page
   publish: ./public
-  rewrites: []
-  redirects: []
+  redirects:
+    - from: /no_content
+      to: /page-not-found
+      status: 302
