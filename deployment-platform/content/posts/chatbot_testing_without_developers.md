@@ -12,7 +12,7 @@ preview: This article will walk you through chatbot testing without developers w
 description: Chatbot testing without developers is easy and free with Genezio’s simulation based evals.
 meta_og_url: "https://genezio.com/blog/chatbot-testing-without-developers/"
 
-meta_og_image: "https://genezio.com/posts/chatbot-testing-without-developers.webp"
+meta_og_image: "https://genezio.com/blog/posts/chatbot-testing-without-developers.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -26,7 +26,7 @@ But what if you're not a software engineer or a data scientist? What if you're a
 
 This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users, Genezio allows teams to run real-world simulations, evaluate chatbot responses, and catch costly errors before they go live---with no coding required.
 
-![Top Reasons Customers Stopped Buying from a Brand in the Last Year](https://genezio.com/posts/salesforce-survey-top-reasons-customers-stopped-buying-from-a-brand-in-the-last-year.webp)
+![Top Reasons Customers Stopped Buying from a Brand in the Last Year](https://genezio.com/blog/posts/salesforce-survey-top-reasons-customers-stopped-buying-from-a-brand-in-the-last-year.webp)
 
 ## The problem with skipping evals
 
