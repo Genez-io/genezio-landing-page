@@ -1,8 +1,8 @@
 ---
-title: "Blog"
+title: "Mastering AI Safety via Agent Testing"
 date: 2019-02-24
 url: "/"
-description: "Explore the DeployApps blog for the latest insights, tutorials, and news on full-stack development, serverless technologies, and more"
+description: "Explore the Genezio blog for expert guides on AI agent testing, RAG system validation, and performance. Learn to build reliable & safe gen AI products."
 customHeader: "White header"
 customFooter: "White header"
 ---
