@@ -38,7 +38,7 @@ In this article, we'll break down what AI agent security means, why testing matt
 
 AI agents are software systems that use large language models (LLMs) and other tools to handle tasks for people. They can answer questions, make decisions, or carry out actions based on what users say. You'll find them in customer service, retail chatbots, healthcare tools, banking support, and more.
 
-![GM dealer chatbot talked into selling Chevy Tahoe for $1](https://genezio.com/posts/gm-dealer-chatbot-talked-into-selling-chevy-tahoe-for-$1.webp)
+![GM dealer chatbot talked into selling Chevy Tahoe for $1](https://genezio.com/blog/posts/gm-dealer-chatbot-talked-into-selling-chevy-tahoe-for-$1.webp)
 
 Unlike traditional software that relies on fixed scripts, AI agents respond based on patterns in language. They take in what the user says, figure out the intent, and generate a response each time. That makes them flexible, but also harder to predict. An AI agent trained to answer support questions might start giving legal or medical advice if the conversation drifts. And sometimes, people push them in that direction on purpose, just to see how far they can go.
 
