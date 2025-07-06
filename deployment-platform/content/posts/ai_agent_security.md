@@ -12,7 +12,7 @@ preview: AI agents can help support teams move faster, but small mistakes can ca
 description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
 meta_og_url: "https://genezio.com/blog/ai-agent-security/"
 
-meta_og_image: "https://genezio.com/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
+meta_og_image: "https://genezio.com/blog/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
