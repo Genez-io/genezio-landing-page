@@ -43,7 +43,7 @@ The cost of deploying a poor-performing AI agent is enormous. From mishandled qu
 
 The Agent Companion whitepaper emphasizes that AI agents are only as good as the process behind them. Businesses must evaluate agents not just for technical performance, but for human-centric quality: helpfulness, tone, empathy, and adaptability. And crucially, these evaluations shouldn't be left solely to engineers or data scientists --- customer care professionals, brand strategists, and legal teams must all have input.
 
-![Agent Evaluation Framework](https://genezio.com/posts/high-level-diagram-of-agentbench.webp)
+![Agent Evaluation Framework](https://genezio.com/blog/posts/high-level-diagram-of-agentbench.webp)
 
 To understand its importance, think about the amount of big name companies that had front page AI related scandals in the past year, like Air Canada. In July 2022, the airline's bot told a customer he could apply a discount retroactively after buying a ticket for his grandmother's funeral. However, when the man demanded the reimbursement, the airline refused and claimed the chatbot was a "separate legal entity" responsible for its own actions. A judge ruled against Air Canada, and stated the airline is ultimately responsible for all information provided by its chatbot. As a result, the company had to refund the ticket and pay damages.
 
