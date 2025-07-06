@@ -12,7 +12,7 @@ preview: This article explores the evolution of AI agents in customer experience
 description: Learn how autonomous AI agents revolutionize customer experience, delivering personalized support at scale while reducing service costs by 60-80%.
 meta_og_url: "https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/"
 
-meta_og_image: "https://genezio.com/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp"
+meta_og_image: "https://genezio.com/blog/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -44,7 +44,7 @@ While revolutionary at the time, these systems were notoriously frustrating for 
 Despite these limitations, rule-based chatbots provided a foundation for automating simple, repetitive queries, allowing human agents to focus on more complex issues. They demonstrated the potential for automation in customer experience while highlighting the need for more sophisticated solutions.  
 <br><br><br />
 
-![rule-based-chatbots-flow](/posts/rule-based-chatbots.webp)
+![rule-based-chatbots-flow](/blog/posts/rule-based-chatbots.webp)
 
 <br><br><br />
 ### Second Generation: NLP-Enhanced Virtual Assistants
@@ -63,7 +63,7 @@ These systems represented a significant improvement over their rule-based predec
 However, these second-generation systems still relied heavily on predefined responses and lacked true understanding of complex queries. They struggled with ambiguity, multi-part questions, and maintaining context over extended interactions.  
 <br><br><br />
 
-![nlp-enhanced-virtual-assistants-flow](/posts/nlp-enhanced-virtual-assistants.webp)
+![nlp-enhanced-virtual-assistants-flow](/blog/posts/nlp-enhanced-virtual-assistants.webp)
 <br><br><br />
 
 ### Third Generation: AI-Powered Conversational Agents
