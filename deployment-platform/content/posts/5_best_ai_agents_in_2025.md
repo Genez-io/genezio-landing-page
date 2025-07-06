@@ -12,7 +12,7 @@ preview: In this article, we'll take a look at the 5 best AI agents for 2025 and
 description: Discover the 5 best AI agents for customer service in 2025 — including Intercom Fin, Sendbird and Genezio. Learn how to test and monitor AI to avoid costly support mistakes.
 meta_og_url: "https://genezio.com/blog/5-best-ai-agents-in-2025/"
 
-meta_og_image: "https://genezio.com/posts/The-5-Best-AI-Agents-in-2025.webp"
+meta_og_image: "https://genezio.com/blog/posts/The-5-Best-AI-Agents-in-2025.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
