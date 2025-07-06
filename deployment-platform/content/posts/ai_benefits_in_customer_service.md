@@ -12,7 +12,7 @@ preview: In this article, we’ll look at what those benefits are, what can go w
 description: AI can speed up support and reduce costs, but it can also make mistakes. Genezio’s tester helps catch AI failures before they reach customers
 meta_og_url: "https://genezio.com/blog/what-are-the-benefits-of-using-ai-in-customer-service/"
 
-meta_og_image: "https://genezio.com/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp"
+meta_og_image: "https://genezio.com/blog/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -25,7 +25,7 @@ According to a 2023 Zendesk report, {{< external-link link="<https://www.zendesk
 
 But the opposite is also true. A confusing or inaccurate reply can end the conversation before it starts. In fact, in the same Forrester study, 73% of customers agree chatbots still can't handle complex questions, and 61% feel bots often don't understand what they're asking in the first place.
 
-![AI Customer Service Statistics](https://genezio.com/posts/consumer-opinions-on-ai-agents.webp)
+![AI Customer Service Statistics](https://genezio.com/blog/posts/consumer-opinions-on-ai-agents.webp)
 
 So, what are the benefits of using AI in customer service? Faster replies, lower costs, and support that's always available.
 
@@ -56,7 +56,7 @@ But the risk is real: if the AI gives incorrect, confusing, or made-up answers, 
 Back in 2023, the National Eating Disorders Association (NEDA) had to {{< external-link link="<https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea>" >}}take down its AI chatbot{{< /external-link >}} after it told users struggling with eating disorders to try fasting and counting calories. It gave the advice confidently, even though it was harmful and inappropriate. Of course, it wasn't the AI that got blamed. When things go wrong, the responsibility always lands on the business, not the tool.
 
 ![National Eating Disorders
-Association phases out human helpline, pivots to chatbot](https://genezio.com/posts/neda-phases-out-human-helpline-pivots-to-chatbot.webp)
+Association phases out human helpline, pivots to chatbot](https://genezio.com/blog/posts/neda-phases-out-human-helpline-pivots-to-chatbot.webp)
 
 So what are the benefits of using AI in customer service? It helps with faster replies, shorter wait times, and handles routine questions, so human teams can focus where they're needed most. The benefits of using AI in customer service are real, but only if the tools work the way they're supposed to. That's why testing is important before anything goes live.
 
