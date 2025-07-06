@@ -30,7 +30,7 @@ So, it's not enough to build a chatbot and run a few pre-launch tests. You need 
 
 If you're integrating an AI model or using a third-party chatbot provider, you may have no idea when updates roll out or how those changes affect your customers. That unpredictability is why continuous testing is a must. And the good news? {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} makes this process simple, even for without developers, so your team can detect and prevent problems before they cost you a customer---or your reputation.
 
-![AI Assistants understand complex problems better](https://genezio.com/posts/understand-complex-problems-better.webp)
+![AI Assistants understand complex problems better](https://genezio.com/blog/posts/understand-complex-problems-better.webp)
 
 ## What is continuous testing?
 
