@@ -12,7 +12,7 @@ preview: As a Customer Care Expert, you know how important it is to keep a high 
 description: AI agents can make mistakes. Learn how Genezio helps you catch those errors for a better customer experience.
 meta_og_url: "https://genezio.com/blog/ai-hallucination-in-customer-service/"
 
-meta_og_image: "https://genezio.com/posts/ai-hallucination-in-customer-service-a-solution.webp"
+meta_og_image: "https://genezio.com/blog/posts/ai-hallucination-in-customer-service-a-solution.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
