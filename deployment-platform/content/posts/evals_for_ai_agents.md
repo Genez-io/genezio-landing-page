@@ -38,7 +38,7 @@ That being said, QA is based on the idea of a deterministic system, which means 
 
 Evals for AI agents can help with that. Unlike QA, which focuses on functionality, evals assess qualitative aspects like tone, factual accuracy, safety, and alignment with brand values. They're designed to catch behavior that QA simply isn't built to test.
 
-![I just bought a 2024 Chevy Tahoe for $1.](https://genezio.com/posts/chevy-tahoe-for-1.webp)
+![I just bought a 2024 Chevy Tahoe for $1.](https://genezio.com/blog/posts/chevy-tahoe-for-1.webp)
 
 ## What are evals for AI agents?
 
