@@ -12,7 +12,7 @@ preview: According to Anthropic, one of the biggest challenges in AI today is th
 description: AI third-party testing helps businesses flag AI mistakes, mitigate risks, and keep AI agents reliable. Learn how Genezio makes AI testing easier.
 meta_og_url: "https://genezio.com/blog/ai-third-party-testing/"
 
-meta_og_image: "https://genezio.com/posts/ai-third-party-testing.webp"
+meta_og_image: "https://genezio.com/blog/posts/ai-third-party-testing.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -30,7 +30,7 @@ This gap in AI knowledge highlights the importance of independent testing. AI th
 
 In this article, we\'ll explore why AI third-party testing matters for AI safety and reliability, and explain how {{< external-link link="<https://genezio.com/>" >}}Genezio, a platform to test AI agents{{< /external-link >}}, can make this process simple and effective for businesses of all sizes.
 
-![genezio-my-test-agents-interface](/posts/genezio-my-test-agents-interface.webp)
+![genezio-my-test-agents-interface](/blog/posts/genezio-my-test-agents-interface.webp)
 
 ## What are AI agents?
 
@@ -44,7 +44,7 @@ For example, an AI-powered banking assistant must give correct financial advice 
 
 But there's also a risk that neither agent was predetermined to be a banking or healthcare expert, but it still *acts as one*. Since AI agents based on LLMs are trained on a trove of information, these agents are particularly prone to start "talking" far and beyond their area of programming. So, a bank with a support chatbot might instruct the AI agent to never, ever provide financial advice. But real-world cases have shown how these AI agents can be easily jailbroken into, well, handing out financial advice. And users might even force them to do so to hold the company liable. It can go even further than that. Some AI agents have even been called out for manipulating the emotions of teenagers.
 
-![lawsuit-against-ai-company](/posts/lawsuit-against-ai-company.webp)
+![lawsuit-against-ai-company](/blog/posts/lawsuit-against-ai-company.webp)
 
 With Genezio, businesses can avoid these risks. Genezio tests AI agents before deployment and keeps monitoring them while live. This way, companies can catch errors early and prevent sudden failures. Thanks to an environment where it simulates real-world case scenario, Genezio helps businesses make sure their AI agents respond correctly, follow business rules, and don't turn into liabilities.
 
@@ -54,7 +54,7 @@ Anthropic outlines {{< external-link link="<https://www.anthropic.com/news/third
 
 AI failures happen all the time, and here's one you might remember: Chevrolet's chatbot agreed to sell a 2024 Chevy Tahoe {{< external-link link="<https://x.com/ChrisJBakke/status/1736533308849443121>" >}}for one dollar{{< /external-link >}}. This mistake went viral, and seriously damaged the dealership's reputation. Proper AI independent testing could've saved them from this legally-binding headache.
 
-![ai-failures-chevrolet](/posts/ai-failures-chevrolet.webp)
+![ai-failures-chevrolet](/blog/posts/ai-failures-chevrolet.webp)
 
 Another case involved the National Eating Disorders Association (NEDA). The organization replaced human helpline staff with an AI agent called Tessa. The bot was supposed to give safe advice, but instead, it recommended {{< external-link link="<https://www.instagram.com/heysharonmaxwell/p/Cs1jp1pPkOs/?img_index=3>" >}}harmful weight-loss strategies{{< /external-link >}}. NEDA faced backlash and had to shut the system down, which shows how untested AI can cause real damage. Businesses that rely on AI agents cannot afford such mistakes.
 
