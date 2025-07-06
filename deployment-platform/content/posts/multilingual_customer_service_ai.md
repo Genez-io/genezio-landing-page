@@ -24,7 +24,7 @@ As AI agents become a standard part of {{< external-link link="https://genezio.c
 
 As international companies adopt AI solutions for multilingual customer service, the expectation is that these tools will offer the same quality of service across all supported languages. However, without proper testing and monitoring, this becomes an impossible challenge. This article will explain why customer support across languages is a necessity and how you can solve this problem through an AI testing tool made by multilingual engineers like {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}}.
 
-![Online Shoppers and Language Preferences](https://genezio.com/posts/online-shoppers-and-language-preferences.webp)
+![Online Shoppers and Language Preferences](https://genezio.com/blog/posts/online-shoppers-and-language-preferences.webp)
 
 ## Why multilingual customer service is important
 
@@ -58,7 +58,7 @@ Genezio's AI evaluation platform is built by international engineers specificall
 
 Genezio's evals do more than just check multilingual capacities. The scenario-based testing examines {{< external-link link="https://genezio.com/blog/common-mistakes-ai-agents-make/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}common AI agent mistakes{{< /external-link >}}: how it responds to unclear phrasing, sensitive questions, and unpredictable prompts. It can check accuracy, consistency, check hallucination rates and see how vulnerable it is to prompt injection attacks. Genezio's controlled eval environment helps customer care staff catch problems both before the chat goes live and after, to see shifts in {{< external-link link="https://genezio.com/blog/test-ai-agent/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}behavior{{< /external-link >}} overtime.
 
-![Genezio - Configure Your Simulation Agents](https://genezio.com/posts/configure-your-simulation-agents.webp)
+![Genezio - Configure Your Simulation Agents](https://genezio.com/blog/posts/configure-your-simulation-agents.webp)
 
 ## Don't Let Language Be Your Blind Spot
 
