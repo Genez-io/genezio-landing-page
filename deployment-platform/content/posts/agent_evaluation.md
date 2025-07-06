@@ -12,7 +12,7 @@ preview: In this article, we break down the main takeaways from the whitepaper a
 description: Agent evaluations are regulated tests that check the quality of your chatbot and guarantee that AI customer service agents are reliable.
 meta_og_url: "https://genezio.com/blog/agent-evaluation/"
 
-meta_og_image: "https://genezio.com/posts/agent-evaluation-a-framework-for-businesses.webp"
+meta_og_image: "https://genezio.com/blog/posts/agent-evaluation-a-framework-for-businesses.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
