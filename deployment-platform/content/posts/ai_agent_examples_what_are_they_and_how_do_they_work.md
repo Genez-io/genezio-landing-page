@@ -10,7 +10,7 @@ preview: What was once a futuristic concept—AIs making real decisions and auto
 # meta data start
 description: Look into AI agent examples like OpenAI’s Deep Research, Waymo’s self-driving cars, and Nightingale’s security drones.
 meta_og_url: "https://genezio.com/blog/ai-agent-examples/"
-meta_og_image: "https://genezio.com/images/effortless.webp"
+meta_og_image: "https://genezio.com/blog/images/effortless.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
