@@ -12,7 +12,7 @@ preview: Large language models (LLMs) don’t always behave the way you expect. 
 description: Explore how Genezio uses LLM anomaly detection to keep AI agents accurate and reliable.
 meta_og_url: "https://genezio.com/blog/llm-anomaly-detection/"
 
-meta_og_image: "https://genezio.com/posts/llm-anomaly-detection-how-to-keep-ai-responses-on-track.webp"
+meta_og_image: "https://genezio.com/blog/posts/llm-anomaly-detection-how-to-keep-ai-responses-on-track.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
