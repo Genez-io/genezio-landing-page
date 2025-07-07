@@ -12,7 +12,7 @@ preview: AI agents are great at automating tasks, but they’re not always accur
 description: Prevent AI from making costly mistakes. Genezio’s LLM hallucination detection helps businesses test AI agents to stay on track and compliant.
 meta_og_url: "https://genezio.com/blog/llm-hallucination-detection/"
 
-meta_og_image: "https://genezio.com/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp"
+meta_og_image: "https://genezio.com/blog/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
