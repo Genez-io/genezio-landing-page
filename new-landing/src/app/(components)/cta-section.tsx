@@ -19,40 +19,6 @@ export function CtaSection() {
     setIsSubmitted(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // call https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/demo for demo with body {name, email, company}
-    // call https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/scan for scan with body {name, email, website}
-
-    const body = {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      name: (e.target as any).elements[0].value,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      email: (e.target as any).elements[1].value,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      company: (e.target as any).elements[2].value,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      website: (e.target as any).elements[2].value,
-    };
-
-    const url =
-      formType === "scan"
-        ? "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/scan"
-        : "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/demo";
-
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    }).then((res) => {
-      console.log(res);
-      setIsSubmitted(true);
-    });
-  };
-
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -103,7 +69,12 @@ export function CtaSection() {
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 transition-all duration-300">
                 {!isSubmitted ? (
-                  <>{formType === "scan" ? <ZohoTestForFreeForm /> : <ZohoDemoForm />}</>
+                  <>
+                    <h3 className="text-xl font-semibold text-white mb-6">
+                      {formType === "scan" ? "Test Your AI for Free" : "Book a Comprehensive Demo"}
+                    </h3>
+                    {formType === "scan" ? <ZohoTestForFreeForm /> : <ZohoDemoForm />}
+                  </>
                 ) : (
                   <div className="flex flex-col items-center justify-center text-center py-8">
                     <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
