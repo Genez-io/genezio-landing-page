@@ -4,6 +4,8 @@ import React from "react";
 import { Header } from "./(components)/header";
 import { ThemeProvider } from "./(components)/theme-provider";
 import { GoogleTagManager } from "@next/third-parties/google";
+import AicpaBadge from "../../public/aicpabadge.png";
+import IsoBadge from "../../public/iso.png";
 
 import "./globals.css";
 
@@ -29,9 +31,7 @@ export default function Layout({ children }: LayoutProps) {
               <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                   <div className="mb-6 md:mb-0">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                      Genezio
-                    </h3>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">Genezio</h3>
                     <p className="mt-2 text-slate-600 dark:text-slate-400">
                       Ensuring Trust in Gen AI Adoption for Enterprises
                     </p>
@@ -49,6 +49,14 @@ export default function Layout({ children }: LayoutProps) {
                       href="#"
                       className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400"
                     ></a>
+                  </div>
+                  <div className="flex justify-center">
+                    <img
+                      style={{ maxWidth: "100px", margin: "0 10px" }}
+                      src={IsoBadge.src}
+                      alt="iso-badge"
+                    />
+                    <img style={{ maxWidth: "100px" }} src={AicpaBadge.src} alt="aicpa-badge" />
                   </div>
                 </div>
                 <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
