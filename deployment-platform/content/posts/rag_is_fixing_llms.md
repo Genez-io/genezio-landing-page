@@ -12,7 +12,7 @@ preview: This comprehensive guide explores how RAG is transforming the capabilit
 description: Learn how Retrieval-Augmented Generation (RAG) solves LLM hallucinations and outdated knowledge issues while enhancing AI accuracy and reliability
 meta_og_url: "https://genezio.com/blog/retrieval-augmented-generation-is-fixing-llm/"
 
-meta_og_image: "https://genezio.com/posts/rag-is-fixing-llms-but-is-it-enough.webp"
+meta_og_image: "https://genezio.com/blog/posts/rag-is-fixing-llms-but-is-it-enough.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -41,7 +41,7 @@ At its foundation, a RAG framework operates through a multi-stage process:
 
 This architecture allows RAG LLM systems to maintain the fluency and reasoning capabilities of large language models while grounding their outputs in verifiable facts.
 
-![rag-framework](/posts/rag-fix-llm-rag-framework.webp)
+![rag-framework](/blog/posts/rag-fix-llm-rag-framework.webp)
 
 ## Why Traditional LLMs Need Augmentation
 
@@ -119,7 +119,7 @@ The choice of vector database significantly affects retrieval performance. Popul
 - **Qdrant**: Vector database with extended filtering and payload capabilities
 - **Milvus**: Highly scalable vector database for enterprise applications
 
-![open-source-dedicated-databases](/posts/rag-fix-llm-open-source-dedicated-databases.webp)
+![open-source-dedicated-databases](/blog/posts/rag-fix-llm-open-source-dedicated-databases.webp)
 
 ### Retrieval Strategy Optimization
 
@@ -172,7 +172,7 @@ These systems dynamically adjust retrieval parameters based on query characteris
 
 Combining retrieval-augmented generation with multi-agent architectures allows for specialized agents handling different aspects of the knowledge retrieval and response generation process.
 
-![multi-agent-rag](/posts/rag-fix-llm-multi-agent-rag.webp)
+![multi-agent-rag](/blog/posts/rag-fix-llm-multi-agent-rag.webp)
 
 ### Self-RAG
 
