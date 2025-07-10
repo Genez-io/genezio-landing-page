@@ -90,7 +90,7 @@
         {{/* Mobile dropdown Links */}}
 
         <p style="font-size: 12px" class="text-success fw-bold pb-2">Resources</p>
-        <a class="opacity-50 text-white text-decoration-none" href="/docs/">
+        {{/*   <a class="opacity-50 text-white text-decoration-none" href="/docs/">
           <div class="d-flex">
             <svg
               width="24"
@@ -114,7 +114,7 @@
               <p style="font-weight: 500; font-size: 12px">Quick start, Features, Examples</p>
             </div>
           </div>
-        </a>
+        </a>  */}}
         <a class="opacity-50 text-white text-decoration-none" href="/blog/">
           <div class="d-flex">
             <svg
@@ -141,7 +141,7 @@
           </div>
         </a>
 
-        <a
+        {{/*   <a
           href="/pricing/"
           class="opacity-50 text-white text-decoration-none navbar-toggler shadow-none border-0"
           data-bs-toggle="collapse"
@@ -169,7 +169,7 @@
             </svg>
             <p style="font-size: 16px" class="mb-0 fw-semibold">Pricing</p>
           </div>
-        </a>
+        </a>  */}}
       </div>
 
       {{/* Mobile dropdown getting started */}}
@@ -213,7 +213,7 @@
               Star on GitHub</a
             >  */}}
 
-            <a
+            {{/*  <a
               class="btn btn-secondary fw-semibold px-4 py-2 border-0 ms-0 w-100 mt-4 mb-1 d-flex align-items-center justify-content-center"
               style="height: 48px; color: rgba(255, 255, 255, 0.7)"
               type="submit"
@@ -222,16 +222,16 @@
               id="login-navbar-mobile"
             >
               Login
-            </a>
+            </a>  */}}
             <a
               class="btn btn-primary fw-semibold px-4 py-2 border-0 ms-0 ms-md-2 newsletterBtn w-100 mt-2 mb-1 d-flex align-items-center justify-content-center"
               style="height: 48px"
               type="submit"
-              href="{{ if eq .RelPermalink "/deploy-nodejs-express-on-genezio-serverless/" }}https://app.genez.io/auth/signup?redirect=express-getting-started{{ else }}https://app.genez.io/auth/signup{{ end }}"
+              href="{{ if eq .RelPermalink "/#cta-buttons" }}https://genezio.com/#cta-buttons"
               target="_blank"
-              id="start-for-free-navbar-mobile"
+              id="schedule-a-demo-navbar-mobile"
             >
-              Start for free
+              Schedule a Demo
             </a>
           </div>
         </div>
@@ -306,7 +306,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
+                    {{/*  <a
                       class="dropdown-item d-flex"
                       target="_blank"
                       href="/docs/"
@@ -318,7 +318,7 @@
                           Quick start, Features, Examples
                         </p>
                       </div>
-                    </a>
+                    </a>  */}}
                   </li>
                 </ul>
               </li>
@@ -327,34 +327,34 @@
         </li>
 
          <li class="nav-item active">
-          <a
+          {{/*  <a
             class="nav-link text-white opacity-75 fw-semibold"
             style="margin-right: 10px"
             href="/pricing/"
             >Pricing</a
-          >
+          >  */}}
         </li>
       </ul>
 
       <div class="d-flex my-2 my-lg-0 d-flex align-items-center">
         <!-- Login Button -->
-        <a
+        {{/*   <a
           class="nav-link text-white opacity-75 fw-semibold mx-5"
           href="https://app.genez.io/auth/login"
           target="_blank"
           id="login-navbar"
           rel="noopener nofollow"
           >Login</a
-        >
+        >  */}}
 
         <!-- Start for Free Button -->
         <a
           class="btn btn-primary my-2 my-sm-0 fw-semibold"
-          href="{{ if eq .RelPermalink "/deploy-nodejs-express-on-genezio-serverless/" }}https://app.genez.io/auth/signup?redirect=express-getting-started{{ else }}https://app.genez.io/auth/signup{{ end }}"
+          href="{{ if eq .RelPermalink "/#cta-buttons" }}https://genezio.com/#cta-buttons"
           target="_blank"
           rel="noopener nofollow"
-          id="start-for-free-navbar"
-          >Start for free</a
+          id="schedule-a-demo-navbar"
+          >Schedule a Demo</a
         >
       </div>
     </div>
