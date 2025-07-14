@@ -20,7 +20,7 @@ export function CtaSection() {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="contact-us">
       <div className="container mx-auto px-4 md:px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900">
           {/* Background elements */}
@@ -29,7 +29,6 @@ export function CtaSection() {
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-500/10 rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-purple-500/5 to-transparent"></div>
           </div>
-
           <div className="relative z-10 p-8 md:p-12 lg:p-16" id="cta-buttons">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
