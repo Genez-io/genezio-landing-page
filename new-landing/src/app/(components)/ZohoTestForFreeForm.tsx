@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 
+declare const ZFAdvLead: any;
+declare const zfutm_zfAdvLead: any;
+declare const ZFLead: any;
+declare const zfutm_zfLead: any;
+
 const ZohoTestForFreeForm = () => {
   useEffect(() => {
     const container = document.getElementById("zoho-form-container");
