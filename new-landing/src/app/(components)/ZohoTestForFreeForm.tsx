@@ -52,7 +52,7 @@ const ZohoTestForFreeForm = () => {
 
     container.appendChild(f);
 
-    const handleMessage = (event) => {
+    const handleMessage = (event: any) => {
       const evntData = event.data;
       if (evntData && typeof evntData === "string") {
         const zf_ifrm_data = evntData.split("|");
