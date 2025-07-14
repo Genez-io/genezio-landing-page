@@ -7,3 +7,4 @@ Host: https://genezio.com
 
 # Sitemaps
 Sitemap: https://genezio.com/sitemap.xml
+Sitemap: https://genezio.com/blog/sitemap.xml
