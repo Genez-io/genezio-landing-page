@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ArrowRightIcon } from "lucide-react";
-import { LineChart, Line, BarChart, Bar, XAxis } from "recharts";
-import { ChartContainer } from "./chart";
+// import { LineChart, Line, BarChart, Bar, XAxis } from "recharts";
+// import { ChartContainer } from "./chart";
 
 export function RoiHeroSection() {
   const [activeTab, setActiveTab] = useState("revenue");
@@ -159,11 +159,10 @@ export function RoiHeroSection() {
                 </div>
 
                 <div className="h-32">
-                  <ChartContainer
+                  {/* <ChartContainer
                     className="aspect-[none] w-full h-full"
                     config={{}}
                   >
-                    {/* <ChartTooltip /> */}
 
                     {activeTab === "risk" ? (
                       <BarChart data={currentChart.data}>
@@ -193,7 +192,7 @@ export function RoiHeroSection() {
                         />
                       </LineChart>
                     )}
-                  </ChartContainer>
+                  </ChartContainer> */}
                 </div>
               </div>
 
