@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site to Pages - Dev
 
 on:
   # Runs on pushes targeting the default branch
@@ -62,29 +62,17 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://genezio-landing-page-dev.app.genez.io/deployment-platform/"
+            --baseURL "https://genezio-landing-page-dev.genezio.ai/blog"
       - name: Install deps landing page
         working-directory: ./new-landing
         run: npm install
       - name: Build landing page
         working-directory: ./new-landing
         run: npm run build
-      - name: Clone https://github.com/Genez-io/genezio-documentation
-        run: git clone https://github.com/Genez-io/genezio-documentation
-      - name: Install and build Documentation
-        run: |
-          cd genezio-documentation
-          git checkout dev
-          npm ci
-          npm run build
-      - name: Copy Documentation to public
-        run: |
-          mkdir -p public/docs/
-          cp -r genezio-documentation/build/* public/docs/
       - name: Copy Deployment Platform Landing Page to public
         run: |
-          mkdir -p public/deployment-platform/
-          cp -r deployment-platform/public/* public/deployment-platform/
+          mkdir -p public/blog/
+          cp -r deployment-platform/public/* public/blog/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend --stage dev
