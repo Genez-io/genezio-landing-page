@@ -36,8 +36,9 @@ export function CtaSection() {
                   Make your AI Agent trustworthy. Get a free report in 24 hours!
                 </h2>
                 <p className="text-xl text-slate-300 mb-8">
-                  Our AI simulations evaluate your agent directly from your website. For internal AI
-                  applications, book a demo to explore our comprehensive testing solutions.
+                  Our AI simulations evaluate your agent directly from your
+                  website. For internal AI applications, book a demo to explore
+                  our comprehensive testing solutions.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -70,9 +71,15 @@ export function CtaSection() {
                 {!isSubmitted ? (
                   <>
                     <h3 className="text-xl font-semibold text-white mb-6">
-                      {formType === "scan" ? "Test Your AI for Free" : "Book a Comprehensive Demo"}
+                      {formType === "scan"
+                        ? "Test Your AI for Free"
+                        : "Book a Comprehensive Demo"}
                     </h3>
-                    {formType === "scan" ? <ZohoTestForFreeForm /> : <ZohoDemoForm />}
+                    {formType === "scan" ? (
+                      <ZohoTestForFreeForm />
+                    ) : (
+                      <ZohoDemoForm />
+                    )}
                   </>
                 ) : (
                   <div className="flex flex-col items-center justify-center text-center py-8">
@@ -80,7 +87,9 @@ export function CtaSection() {
                       <CheckCircleIcon className="w-10 h-10 text-green-500" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      {formType === "scan" ? "Test Request Submitted!" : "Demo Request Received!"}
+                      {formType === "scan"
+                        ? "Test Request Submitted!"
+                        : "Demo Request Received!"}
                     </h3>
                     <p className="text-slate-300 mb-6">
                       {formType === "scan"
