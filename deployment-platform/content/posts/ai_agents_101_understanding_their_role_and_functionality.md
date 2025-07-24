@@ -5,17 +5,17 @@ tags:
   - AI
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
-thumbnail: /deployment-platform/images/genezioai101.webp
+thumbnail: /blog/images/genezioai101.webp
 preview: In today's rapidly evolving technological landscape, artificial intelligence and intelligent agents have moved from science fiction to practical business tools. Whether you're a developer looking to integrate AI capabilities into your applications or a business owner seeking to leverage automation for competitive advantage, understanding AI agents is becoming increasingly critical.
 # meta data start
 description: Learn about AI intelligent agents, their types, real-world applications, and how to deploy your own using Genezio's infrastructure. Transform your business now.
 meta_og_url: "https://genezio.com/blog/understanding-ai-agents-101/"
-meta_og_image: "https://genezio.com/deployment-platform/images/genezioai101.webp"
+meta_og_image: "https://genezio.com/blog/images/genezioai101.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /blog/understanding-ai-agents-101/
+url: /understanding-ai-agents-101/
 ---
 
 In today's rapidly evolving technological landscape, **artificial intelligence and intelligent agents** have moved from science fiction to practical business tools. Whether you're a developer looking to integrate AI capabilities into your applications or a business owner seeking to leverage automation for competitive advantage, understanding **AI agents** is becoming increasingly critical.
@@ -54,7 +54,7 @@ At the heart of every **intelligent agent in AI** is what's known as the agent l
 
 This cycle, sometimes referred to as OODA (Observe, Orient, Decide, Act), forms the fundamental operational pattern for **artificial intelligence and intelligent agents**. The sophistication of each step determines the agent's overall capabilities.
 
-![aiagent](/deployment-platform/posts/aiagent1011.webp)
+![aiagent](/blog/posts/aiagent1011.webp)
 
 ## Types of AI Agents
 
@@ -94,7 +94,7 @@ The most advanced category, these agents can improve their performance over time
 
 To understand how an **intelligent agent in artificial intelligence** operates, we use the PEAS framework:
 
-![aiagent](/deployment-platform/posts/aiagent1012.webp)
+![aiagent](/blog/posts/aiagent1012.webp)
 
 To see how this works in practice, let’s apply the PEAS framework to an e-commerce recommendation agent:
 
@@ -194,7 +194,7 @@ Common frameworks for developing intelligent agents include:
 
 - **TensorFlow Agents** and **Stable Baselines** for reinforcement learning, providing pre-built implementations of RL algorithms.
 - **Rasa** and **Dialogflow** for building conversational AI agents with natural language understanding and dialogue management.
-- **LangChain** and **LlamaIndex** for {{< external-link link="https://genezio.com/blog/data-analyst-agent-langgraph-genezio/" >}}developing LLM-based agents{{< /external-link >}}, enabling efficient orchestration of large language models and knowledge retrieval.
+- **LangChain** and **LlamaIndex** for {{< external-link link="https://deployapps.dev/blog/data-analyst-agent-langgraph-genezio/#introduction" >}}developing LLM-based agents{{< /external-link >}}, enabling efficient orchestration of large language models and knowledge retrieval.
 - **Ray RLlib** for scalable and distributed reinforcement learning, optimizing training for complex environments.
 
 ### 3. Design Your Agent Architecture
@@ -318,8 +318,8 @@ Whether you're looking to implement existing agent technologies or develop custo
 
 As you consider your next steps, remember that the most successful agent implementations start with clearly defined problems and thoughtfully designed architectures—technical sophistication alone doesn't guarantee value.
 
-## Ready to Take the Next Step?
+## Make your AI Agent trustworthy
 
-Sign up on Genezio and use our infrastructure to deploy your AI Agent. Our platform provides all the necessary components for successful agent deployment, including scalable compute resources, robust monitoring tools, and security protocols. Join thousands of developers who have accelerated their journey from concept to production with our specialized infrastructure.
+Ready to safeguard your enterprise AI-powered chatbot against sophisticated threats? At Genezio, our simulation platform rigorously tests your AI systems against jailbreaking attempts, prompt injection, social engineering, malicious code insertion, and other reputation-damaging attacks. Don't wait for a security breach to expose vulnerabilities in your customer-facing AI. Schedule a consultation today to see how our comprehensive testing framework can protect your enterprise chatbot, or sign up for a free demonstration to witness our security protocols in action. {{< external-link link="https://genezio.com/#cta-buttons" >}}Secure your AI{{< /external-link >}}, protect your reputation, and build customer trust with Genezio.
 
 This article is part of our ongoing series on artificial intelligence implementation strategies. Check back for future installments covering advanced agent design patterns, integration approaches, and industry-specific applications.

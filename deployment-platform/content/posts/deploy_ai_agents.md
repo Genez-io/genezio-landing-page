@@ -6,18 +6,18 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp
+thumbnail: /blog/posts/how-to-deploy-your-ai-agent-in-few-steps.webp
 preview: In this article, we’ll walk you through the process of deploying AI agents with Genezio and explain why regular testing is just as important as deployment to make sure your AI agents deliver in real-world interactions.
 # meta data start
 description: Deploy AI agents with Genezio. Build, test, and monitor behavior in one place. No extra setup needed.
-meta_og_url: "https://genezio.com/deployment-platform/blog/deploy-ai-agents/"
+meta_og_url: "https://genezio.com/blog/deploy-ai-agents/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
+meta_og_image: "https://genezio.com/blog/posts/how-to-deploy-your-ai-agent-in-few-steps.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/deploy-ai-agents/
+url: /deploy-ai-agents/
 ---
 
 By 2026, Gartner predicts that investments in generative AI will lead to a {{< external-link link="https://www.gartner.com/en/newsroom/press-releases/2023-08-03-customer-service-and-support-leaders-should-assess-generative-ai-technology-options-to-enhance-their-organizations-function" >}}20% to 30% reduction{{< /external-link >}} in the number of human customer service agents. At the same time, it will create new roles focused on building and managing these AI systems.
@@ -26,7 +26,7 @@ For Customer Care experts and businesses, this shift is already happening. Now, 
 
 The first step is clear: deploy AI agents that can handle real customer interactions. But it doesn't end there. Once your agent is live, the focus shifts to making sure it works as expected. Proper testing is a necessary step to achieve this.
 
-![When running and deploying Al Agents](https://genezio.com/deployment-platform/posts/when-running-and-deploying-al-agents.webp)
+![When running and deploying Al Agents](https://genezio.com/blog/posts/when-running-and-deploying-al-agents.webp)
 
 In this article, we'll walk you through the process of deploying AI agents with Genezio and explain why regular testing is just as important as deployment to make sure your AI agents deliver in real-world interactions.
 
@@ -64,13 +64,13 @@ If your agent code is already on GitHub, or if you generate it using Lovable, yo
 
 {{< external-link link="https://lovable.dev/" >}}Lovable{{< /external-link >}} gives you a quick way to code a working web app. After generating your project, you can connect it to GitHub with one click. Lovable handles the GitHub authorization and pushes your code automatically, so you get a clean, version-controlled codebase without the need to set anything up manually. It's a good first step if you are new to GitHub and want to start fast.
 
-### Step 2: Import your code into Genezio and deploy
+### Step 2: Import your code into DeployApps and deploy
 
-Once your code is on GitHub, {{< external-link link="https://genezio.com/docs/integrations/github-action/" >}}head over{{< /external-link >}} to Genezio. {{< external-link link="https://app.genez.io/auth/signup" >}}Log in{{< /external-link >}}, hit *Import from GitHub*, and drop in your repo URL. After authorizing Genezio, it sets up everything behind the scenes for you: backend, hosting, and scaling. Your AI agent is now a live service, ready to interact with users or plug into your internal tools.
+Once your code is on GitHub, {{< external-link link="https://deployapps.dev/docs/integrations/github-action/" >}}head over{{< /external-link >}} to DeployApps. {{< external-link link="https://app.genez.io/auth/signup" >}}Log in{{< /external-link >}}, hit *Import from GitHub*, and drop in your repo URL. After authorizing DeployApps, it sets up everything behind the scenes for you: backend, hosting, and scaling. Your AI agent is now a live service, ready to interact with users or plug into your internal tools.
 
 ### Step 3: Set up your custom domain (optional)
 
-Genezio gives you a default subdomain right away, so your agent is live as soon as it's deployed. If you want something more branded, go to your Project Settings, open the *Custom Domain* section, and add your preferred subdomain. You can also bring your own domain if you want, and Genezio walks you through the {{< external-link link="https://www.cloudflare.com/learning/dns/what-is-dns/" >}}DNS setup{{< /external-link >}}from the dashboard.
+DeployApps gives you a default subdomain right away, so your agent is live as soon as it's deployed. If you want something more branded, go to your Project Settings, open the *Custom Domain* section, and add your preferred subdomain. You can also bring your own domain if you want, and Genezio walks you through the {{< external-link link="https://www.cloudflare.com/learning/dns/what-is-dns/" >}}DNS setup{{< /external-link >}}from the dashboard.
 
 With these few steps, your agent is live and ready to answer simple customer questions or handle more complex tasks like ticket triaging or order tracking. But that's only half the job.
 
@@ -82,16 +82,14 @@ Real-world examples show how quickly things can go wrong. {{< external-link link
 
 The same risks apply across industries. In banking, a chatbot might misquote fees or expose personal data. In healthcare, it could offer unsafe advice. We all know how that might end—and it's not good.
 
-![How to test an Al Agent](https://genezio.com/deployment-platform/posts/how-to-test-an-al-agent.webp)
+![How to test an Al Agent](https://genezio.com/blog/posts/how-to-test-an-al-agent.webp)
 
 This is why the right testing becomes a necessary part of the deployment process. Genezio lets you test AI agents against realistic input, and flag issues like hallucinations, prompt injection, and off-policy responses. Customer Care executives can review how an agent responds in complex real-world scenarios, not only in controlled environments. And since Genezio keeps monitoring after launch, any shift in behavior can be spotted sooner than later.
 
-## Deploy and test AI agents with Genezio
+## Deploy and test AI agents with DeployApps
 
-Deploying AI agents is faster than ever—especially with Genezio, where you can link your GitHub project, skip the backend setup, and get your agent live without dealing with infrastructure. But once the agent is live, it's important to see how it performs in real conversations. For Customer Care Executives, this is what makes the difference.
+Deploying AI agents is faster than ever—especially with DeployApps, where you can link your GitHub project, skip the backend setup, and get your agent live without dealing with infrastructure. But once the agent is live, it's important to see how it performs in real conversations. For Customer Care Executives, this is what makes the difference.
 
 That's why testing matters just as much as deployment.
 
-Luckily, Genezio brings everything together in one place: fast deployment and real-world testing. You can choose to run one-time audits or set up ongoing monitoring. This helps Customer Care teams catch issues early, track how their agents behave over time, and keep responses aligned with their business standards.
-
-**If you're ready to {{< external-link link="https://genezio.com/deployment-platform/" >}}deploy AI agents{{< /external-link >}} that actually hold up in the real world, Genezio makes it easy to get started. Get Your {{< external-link link="https://genezio.com/#cta-buttons" >}}Independent Chatbot Evaluation Now{{< /external-link >}} — or book a quick demo to see how it works.**
+**If you're ready to {{< external-link link="https://DeployApps.dev/" >}}deploy AI agents{{< /external-link >}} that actually hold up in the real world, Genezio makes it easy to get started. Get Your {{< external-link link="https://genezio.com/#cta-buttons" >}}Independent Chatbot Evaluation Now{{< /external-link >}} — or book a quick demo to see how it works.**

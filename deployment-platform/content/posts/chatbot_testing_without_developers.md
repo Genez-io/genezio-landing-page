@@ -6,27 +6,27 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp
+thumbnail: /blog/posts/chatbot-testing-without-developers.webp
 preview: This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users.
 # meta data start
 description: Chatbot testing without developers is easy and free with Genezio’s simulation based evals.
-meta_og_url: "https://genezio.com/deployment-platform/blog/chatbot-testing-without-developers/"
+meta_og_url: "https://genezio.com/blog/chatbot-testing-without-developers/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/chatbot-testing-without-developers.webp"
+meta_og_image: "https://genezio.com/blog/posts/chatbot-testing-without-developers.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/chatbot-testing-without-developers/
+url: /chatbot-testing-without-developers/
 ---
 
-While {{< external-link link="https://genezio.com/deployment-platform/blog/understanding-ai-agents-101/" >}}gen AI chatbots{{< /external-link >}} are becoming more frequent in {{< external-link link="https://genezio.com/deployment-platform/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/" >}}customer service{{< /external-link >}} areas, the risks and controversies many of these branded chatbots face rise exponentially. According to Salesforce, customer trust fell by 72% in 2024 compared to the year before, while 43% of customers say they would stop buying from a brand after a poor customer service experience. This should serve as a warning sign to all CXOs who are entrusting the face of their customer service experience to unpredictable technology such as AI chatbots. It emphasizes the need for more robust and more frequent {{< external-link link="https://genezio.com/deployment-platform/blog/ai-third-party-testing/" >}}independent evals{{< /external-link >}} to monitor the agents
+While {{< external-link link="<https://genezio.com/blog/understanding-ai-agents-101/>" >}}gen AI chatbots{{< /external-link >}} are becoming more frequent in {{< external-link link="<https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/>" >}}customer service{{< /external-link >}} areas, the risks and controversies many of these branded chatbots face rise exponentially. According to Salesforce, customer trust fell by 72% in 2024 compared to the year before, while 43% of customers say they would stop buying from a brand after a poor customer service experience. This should serve as a warning sign to all CXOs who are entrusting the face of their customer service experience to unpredictable technology such as AI chatbots. It emphasizes the need for more robust and more frequent {{< external-link link="<https://genezio.com/blog/ai-third-party-testing/>" >}}independent evals{{< /external-link >}} to monitor the agents
 
 But what if you're not a software engineer or a data scientist? What if you're a customer care executive, a quality assurance lead, or a product manager with no coding experience? The challenge has long been that most tools for evaluating chatbots are built with developers in mind. This creates a critical gap: non-technical stakeholders, the very people closest to customer needs, are often left out of the chatbot evaluation loop.
 
 This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users, Genezio allows teams to run real-world simulations, evaluate chatbot responses, and catch costly errors before they go live---with no coding required.
 
-![Top Reasons Customers Stopped Buying from a Brand in the Last Year](https://genezio.com/deployment-platform/posts/salesforce-survey-top-reasons-customers-stopped-buying-from-a-brand-in-the-last-year.webp)
+![Top Reasons Customers Stopped Buying from a Brand in the Last Year](https://genezio.com/blog/posts/salesforce-survey-top-reasons-customers-stopped-buying-from-a-brand-in-the-last-year.webp)
 
 ## The problem with skipping evals
 
@@ -40,7 +40,7 @@ The old way of testing chatbots required heavy involvement from developers. This
 
 The best way to test a chatbot is not just to analyze its code or its accuracy metrics, it's to simulate real customer conversations. That means putting the chatbot through actual use cases to see how it behaves in live-like conditions. Does it respond correctly to frustrated users? Can it handle common edge cases like vague or ambiguous questions? Does it understand tone? These are the kinds of issues that only show up when the bot is put in realistic scenarios.
 
-Genezio makes it easy, quick, and accessible to test chatbots without having to train developers. Genezio creates evaluation scenarios that reflect your actual customer interactions. It tracks {{< external-link link="https://genezio.com/deployment-platform/blog/llm-hallucination-detection/" >}}hallucinations{{< /external-link >}}, vulnerability to data leakages and prompt injection attacks and more. You then get a detailed report highlighting areas to improve on to target specific problems before they become a legal liability or a lost customer.
+Genezio makes it easy, quick, and accessible to test chatbots without having to train developers. Genezio creates evaluation scenarios that reflect your actual customer interactions. It tracks {{< external-link link="<https://genezio.com/blog/llm-hallucination-detection/>" >}}hallucinations{{< /external-link >}}, vulnerability to data leakages and prompt injection attacks and more. You then get a detailed report highlighting areas to improve on to target specific problems before they become a legal liability or a lost customer.
 
 The best part is, **non-technical staff can run the evals without having to program a single line of code!**
 
@@ -72,4 +72,4 @@ Genezio gives Customer Care Experts clear and reliable chatbot testing without d
 
 Genezio helps you stay one step ahead by catching inappropriate or risky behavior before it reaches your customers, and continuing to monitor for issues after launch. Whether you prefer one-time evaluations or ongoing monitoring, Genezio delivers detailed, easy-to-understand reports that highlight what's working and what needs fixing. That means fewer surprises in production, more confident deployments, and AI agents your team, and your customers, can trust.
 
-**Try Genezio for free and {{< external-link link="https://genezio.com/#cta-buttons" >}}run chatbot testing{{< /external-link >}} without developers today.**
+**Try Genezio for free and {{< external-link link="<https://genezio.com/#cta-buttons>" >}}run chatbot testing{{< /external-link >}} without developers today.**

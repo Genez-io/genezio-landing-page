@@ -6,18 +6,18 @@ tags:
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 
-thumbnail: https://genezio.com/deployment-platform/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp
+thumbnail: /blog/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp
 preview: This article explores the evolution of AI agents in customer experience, from their humble beginnings to the current state of the art, and provides insights into how businesses can effectively test, implement, and optimize these systems to gain a competitive edge.
 # meta data start
 description: Learn how autonomous AI agents revolutionize customer experience, delivering personalized support at scale while reducing service costs by 60-80%.
-meta_og_url: "https://genezio.com/deployment-platform/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/"
+meta_og_url: "https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp"
+meta_og_image: "https://genezio.com/blog/posts/chatbots-to-autonomous-ai-agents-in-customer-experience.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 9
-url: /blog/chatbots-to-autonomous-ai-agents-in-customer-experience/
+url: /chatbots-to-autonomous-ai-agents-in-customer-experience/
 ---
 
 The landscape of customer experience has undergone a dramatic transformation over the past decade. What began as simple rule-based chatbots offering basic responses to predefined queries has evolved into sophisticated autonomous AI agents capable of understanding context, learning from interactions, and providing personalized solutions in real-time. This evolution represents not just a technological advancement but a fundamental shift in how businesses engage with their customers.
@@ -44,7 +44,7 @@ While revolutionary at the time, these systems were notoriously frustrating for 
 Despite these limitations, rule-based chatbots provided a foundation for automating simple, repetitive queries, allowing human agents to focus on more complex issues. They demonstrated the potential for automation in customer experience while highlighting the need for more sophisticated solutions.  
 <br><br><br />
 
-![rule-based-chatbots-flow](/deployment-platform/posts/rule-based-chatbots.webp)
+![rule-based-chatbots-flow](/blog/posts/rule-based-chatbots.webp)
 
 <br><br><br />
 ### Second Generation: NLP-Enhanced Virtual Assistants
@@ -63,7 +63,7 @@ These systems represented a significant improvement over their rule-based predec
 However, these second-generation systems still relied heavily on predefined responses and lacked true understanding of complex queries. They struggled with ambiguity, multi-part questions, and maintaining context over extended interactions.  
 <br><br><br />
 
-![nlp-enhanced-virtual-assistants-flow](/deployment-platform/posts/nlp-enhanced-virtual-assistants.webp)
+![nlp-enhanced-virtual-assistants-flow](/blog/posts/nlp-enhanced-virtual-assistants.webp)
 <br><br><br />
 
 ### Third Generation: AI-Powered Conversational Agents
@@ -83,7 +83,7 @@ Companies implemented these solutions to handle a wider range of customer servic
 
 ### Fourth Generation: LLM-Powered Autonomous AI Agents
 
-With the introduction of Large Language Models (LLMs) like GPT-4, Claude, and Gemini, we entered the current generation of customer experience automation: {{< external-link link="https://genezio.com/deployment-platform/blog/understanding-ai-agents-101/" >}}autonomous AI agents{{< /external-link >}}. These systems leverage the immense knowledge and reasoning capabilities of foundation models combined with specialized components for task execution.
+With the introduction of Large Language Models (LLMs) like GPT-4, Claude, and Gemini, we entered the current generation of customer experience automation: {{< external-link link="https://genezio.com/blog/understanding-ai-agents-101/" >}}autonomous AI agents{{< /external-link >}}. These systems leverage the immense knowledge and reasoning capabilities of foundation models combined with specialized components for task execution.
 
 Defining characteristics of autonomous AI agents:
 - **Foundation model intelligence**: Built on LLMs with billions of parameters
@@ -131,7 +131,7 @@ Modern AI agents connect to various knowledge sources to provide accurate, up-to
 - **Customer data**: Integration with CRM systems for personalized assistance
 - **Vector databases**: Semantic search capabilities for finding relevant information quickly
 
-This layer typically implements {{< external-link link="https://genezio.com/deployment-platform/blog/retrieval-augmented-generation-is-fixing-llm/" >}}Retrieval-Augmented Generation (RAG){{< /external-link >}} to enhance the foundation model's responses with specific, accurate information from trusted sources.
+This layer typically implements {{< external-link link="https://genezio.com/blog/retrieval-augmented-generation-is-fixing-llm/" >}}Retrieval-Augmented Generation (RAG){{< /external-link >}} to enhance the foundation model's responses with specific, accurate information from trusted sources.
 
 #### Tool Use and Integration Layer
 

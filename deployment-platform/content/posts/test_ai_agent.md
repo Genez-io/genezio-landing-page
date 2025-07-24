@@ -1,23 +1,23 @@
 ---
-title: "Test AI Agent Behavior and Accuracy"
+title: "How To Test AI Agent Performance (Behavior and Accuracy)"
 date: 2025-05-12
 tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/ai-agent-performance-v1.webp
+thumbnail: /blog/posts/ai-agent-performance-v1.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
 # meta data start
 description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
-meta_og_url: "https://genezio.com/deployment-platform/blog/test-ai-agent/"
+meta_og_url: "https://genezio.com/blog/test-ai-agent/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/ai-agent-performance-v1.webp"
+meta_og_image: "https://genezio.com/posts/ai-agent-performance-v1.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/test-ai-agent/
+url: /test-ai-agent/
 ---
 
 AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios. It is easy to set up, and it runs as often as you need to so you can fine-tune your agents.
@@ -83,7 +83,7 @@ In addition to testing AI agents, Genezio's platform integrates with tools for:
 
 - **Automated Quality Management**: Makes testing agent responses faster and easier.
 - **CX Automation**: Helps you build more reliable AI for customer support teams.
-- **{{< external-link link="https://genezio.com/deployment-platform/blog/llm-hallucination-detection/" >}}LLM Hallucination Detection{{< /external-link >}}**: Spots when AI "makes stuff up" and helps fix it.
+- **{{< external-link link="https://genezio.com/blog/llm-hallucination-detection/" >}}LLM Hallucination Detection{{< /external-link >}}**: Spots when AI "makes stuff up" and helps fix it.
 
 ## What Can Go Wrong Without AI Testing
 
@@ -100,4 +100,4 @@ The chatbot (formerly Bing Chat) showed anger and refused to continue a conversa
 
 ## Use Genezio to Test AI Agent Behavior Now 
 
-Customer Care Executives can use Genezio to test AI agent behavior, {{< external-link link="https://genezio.com/deployment-platform/blog/llm-anomaly-detection/" >}}check for anomalies{{< /external-link >}}, and fix issues before they go live. {{< external-link link="https://genezio.com/#cta-buttons" >}}Start testing your AI agent today{{< /external-link >}} and receive your first report in just 24 hours. 
+Customer Care Executives can use Genezio to test AI agent behavior, {{< external-link link="https://genezio.com/blog/llm-anomaly-detection/" >}}check for anomalies{{< /external-link >}}, and fix issues before they go live. {{< external-link link="https://genezio.com/#cta-buttons" >}}Start testing your AI agent today{{< /external-link >}} and receive your first report in just 24 hours. 

@@ -6,26 +6,26 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp
+thumbnail: /blog/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp
 preview: In this article, we’ll look at what those benefits are, what can go wrong, and how testing and monitoring with tools like Genezio can help Customer Care Experts trust their AI.
 # meta data start
 description: AI can speed up support and reduce costs, but it can also make mistakes. Genezio’s tester helps catch AI failures before they reach customers
-meta_og_url: "https://genezio.com/deployment-platform/blog/what-are-the-benefits-of-using-ai-in-customer-service/"
+meta_og_url: "https://genezio.com/blog/what-are-the-benefits-of-using-ai-in-customer-service/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp"
+meta_og_image: "https://genezio.com/blog/posts/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 5
-url: /blog/what-are-the-benefits-of-using-ai-in-customer-service/
+url: /what-are-the-benefits-of-using-ai-in-customer-service/
 ---
 
 
-According to a 2023 Zendesk report, {{< external-link link="https://www.zendesk.com/blog/ai-customer-service-statistics/" >}}70% of CX leaders{{< /external-link >}} believe generative AI makes every digital customer interaction more efficient. It helps teams stay available 24/7, cut down wait times, and take care of simple requests. That's also how most customers are using it. A {{< external-link link="https://292491.fs1.hubspotusercontent-na1.net/hubfs/292491/Reports/Forrester%20Chatbot%20Report-Cyara%20Opportunity%20Snapshot_final-Jan%202023.pdf" >}}Forrester custom study{{< /external-link >}} found that half of users turn to chatbots when they want a quick answer, and 44% use them when they need help after hours. And when it works, the impact is positive: a Cyara survey found that {{< external-link link="https://cyara.com/news/new-survey-gives-chatbots-a-failing-grade-in-customer-experience/?utm_source=genezio.com" >}}61% of users{{< /external-link >}} say they're more likely to return to a brand after a good chatbot interaction.
+According to a 2023 Zendesk report, {{< external-link link="<https://www.zendesk.com/blog/ai-customer-service-statistics/>" >}}70% of CX leaders{{< /external-link >}} believe generative AI makes every digital customer interaction more efficient. It helps teams stay available 24/7, cut down wait times, and take care of simple requests. That's also how most customers are using it. A {{< external-link link="<https://292491.fs1.hubspotusercontent-na1.net/hubfs/292491/Reports/Forrester%20Chatbot%20Report-Cyara%20Opportunity%20Snapshot_final-Jan%202023.pdf>" >}}Forrester custom study{{< /external-link >}} found that half of users turn to chatbots when they want a quick answer, and 44% use them when they need help after hours. And when it works, the impact is positive: a Cyara survey found that {{< external-link link="<https://cyara.com/news/new-survey-gives-chatbots-a-failing-grade-in-customer-experience/?utm_source=genezio.com>" >}}61% of users{{< /external-link >}} say they're more likely to return to a brand after a good chatbot interaction.
 
 But the opposite is also true. A confusing or inaccurate reply can end the conversation before it starts. In fact, in the same Forrester study, 73% of customers agree chatbots still can't handle complex questions, and 61% feel bots often don't understand what they're asking in the first place.
 
-![AI Customer Service Statistics](https://genezio.com/deployment-platform/posts/consumer-opinions-on-ai-agents.webp)
+![AI Customer Service Statistics](https://genezio.com/blog/posts/consumer-opinions-on-ai-agents.webp)
 
 So, what are the benefits of using AI in customer service? Faster replies, lower costs, and support that's always available.
 
@@ -53,10 +53,10 @@ In healthcare, AI chatbots can walk patients through insurance forms, explain cl
 
 But the risk is real: if the AI gives incorrect, confusing, or made-up answers, the customer service experience breaks down. It can lead to broken trust, lost time, or even compliance issues. Fixing those mistakes often takes more time and effort than handling the issue directly.
 
-Back in 2023, the National Eating Disorders Association (NEDA) had to {{< external-link link="https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea" >}}take down its AI chatbot{{< /external-link >}} after it told users struggling with eating disorders to try fasting and counting calories. It gave the advice confidently, even though it was harmful and inappropriate. Of course, it wasn't the AI that got blamed. When things go wrong, the responsibility always lands on the business, not the tool.
+Back in 2023, the National Eating Disorders Association (NEDA) had to {{< external-link link="<https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea>" >}}take down its AI chatbot{{< /external-link >}} after it told users struggling with eating disorders to try fasting and counting calories. It gave the advice confidently, even though it was harmful and inappropriate. Of course, it wasn't the AI that got blamed. When things go wrong, the responsibility always lands on the business, not the tool.
 
 ![National Eating Disorders
-Association phases out human helpline, pivots to chatbot](https://genezio.com/deployment-platform/posts/neda-phases-out-human-helpline-pivots-to-chatbot.webp)
+Association phases out human helpline, pivots to chatbot](https://genezio.com/blog/posts/neda-phases-out-human-helpline-pivots-to-chatbot.webp)
 
 So what are the benefits of using AI in customer service? It helps with faster replies, shorter wait times, and handles routine questions, so human teams can focus where they're needed most. The benefits of using AI in customer service are real, but only if the tools work the way they're supposed to. That's why testing is important before anything goes live.
 
@@ -68,7 +68,7 @@ Even well-trained agents can drift into topics they weren't meant to cover and c
 
 Still, the bigger risk isn't a wrong answer. It's that no one notices until it reaches a real customer. And by then, the damage is already done, especially in regulated fields.
 
-In 2023, {{< external-link link="https://www.verdict.co.uk/itutorgroup-settles-ai-hiring-lawsuit-alleging-age-discrimination/?cf-view" >}}iTutorGroup{{< /external-link >}} used an AI system to screen job applicants. It ended up rejecting hundreds of older candidates based on age-related keywords. The company later paid $365,000 in a legal settlement. Though the AI wasn't intentionally built to discriminate, it hadn't been tested properly to catch that behavior. And that's the point.
+In 2023, {{< external-link link="<https://www.verdict.co.uk/itutorgroup-settles-ai-hiring-lawsuit-alleging-age-discrimination/?cf-view>" >}}iTutorGroup{{< /external-link >}} used an AI system to screen job applicants. It ended up rejecting hundreds of older candidates based on age-related keywords. The company later paid $365,000 in a legal settlement. Though the AI wasn't intentionally built to discriminate, it hadn't been tested properly to catch that behavior. And that's the point.
 
 Customer Care Experts that use AI in their operations need a way to test how their AI agents perform---before launch and during day-to-day use. Ongoing testing helps catch hallucinations, wrong answers, and biased behavior early. That's how teams stay in control.
 
@@ -82,4 +82,4 @@ Once the agent is live, Genezio keeps checking for problems like hallucinations,
 
 For Customer Care Experts, that means fewer surprises. And an extra layer of assurance that the AI is doing what it's supposed to do.
 
-**The benefits of using AI in customer service only matter if the answers are correct. Genezio helps make sure they are. {{< external-link link="https://genezio.com/#cta-buttons" >}}Try Genezio for free{{< /external-link >}} or book a demo to start testing today!**
+**The benefits of using AI in customer service only matter if the answers are correct. Genezio helps make sure they are. {{< external-link link="<https://genezio.com/#cta-buttons>" >}}Try Genezio for free{{< /external-link >}} or book a demo to start testing today!**

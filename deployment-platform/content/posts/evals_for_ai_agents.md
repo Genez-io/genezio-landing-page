@@ -6,18 +6,18 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: https://genezio.com/deployment-platform/posts/evals-for-ai-agents.webp
+thumbnail: /blog/posts/evals-for-ai-agents.webp
 preview: This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users.
 # meta data start
 description: QA testing ensures your chatbot works, but only evals for AI agents can test how it behaves. Learn how to test AI agents with Genezio. 
-meta_og_url: "https://genezio.com/deployment-platform/blog/evals-for-ai-agents/"
+meta_og_url: "https://genezio.com/blog/evals-for-ai-agents/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/evals-for-ai-agents.webp"
+meta_og_image: "https://genezio.com/posts/evals-for-ai-agents.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
-url: /blog/evals-for-ai-agents/
+url: /evals-for-ai-agents/
 ---
 
 According to a study by {{< external-link link="https://www.pwc.com/us/en/services/consulting/library/consumer-intelligence-series/future-of-customer-experience.html" >}}PWC{{< /external-link >}}, 73% of customers say that a positive experience is key to influencing brand loyalty, while 32% say they would walk away from a brand they love after just one bad experience. As more companies rely on generative AI chatbots to power customer care, it's important to ensure a consistent, safe, and high-quality experience without human intervention. Yet, there's a dangerous misconception floating around: that traditional QA testing is enough to guarantee chatbot performance.
@@ -38,7 +38,7 @@ That being said, QA is based on the idea of a deterministic system, which means 
 
 Evals for AI agents can help with that. Unlike QA, which focuses on functionality, evals assess qualitative aspects like tone, factual accuracy, safety, and alignment with brand values. They're designed to catch behavior that QA simply isn't built to test.
 
-![I just bought a 2024 Chevy Tahoe for $1.](https://genezio.com/deployment-platform/posts/chevy-tahoe-for-1.webp)
+![I just bought a 2024 Chevy Tahoe for $1.](https://genezio.com/blog/posts/chevy-tahoe-for-1.webp)
 
 ## What are evals for AI agents?
 
@@ -58,7 +58,7 @@ A chatbot powered by a large language model (LLM) like GPT-4 or Claude can gener
 
 Your QA test might verify that the chatbot works on a test server. But once live, the same bot might give an incorrect refund policy to a customer, hallucinate a discount code that doesn't exist, provide unsafe or non-compliant medical advice or make up false information about your product.
 
-None of these risks would have shown up in standard QA testing. That's because QA isn't designed to probe {{< external-link link="https://genezio.com/deployment-platform/blog/test-ai-agent/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}behavior{{< /external-link >}}. It checks function, not judgment. It confirms performance, not alignment with brand values, ethics, or compliance.
+None of these risks would have shown up in standard QA testing. That's because QA isn't designed to probe {{< external-link link="https://genezio.com/blog/test-ai-agent/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}behavior{{< /external-link >}}. It checks function, not judgment. It confirms performance, not alignment with brand values, ethics, or compliance.
 
 ## Why customer care should care
 
@@ -74,7 +74,7 @@ So, how can customer care teams effectively evaluate their AI agents without tur
 
 Genezio provides evals for AI agents purpose-built for generative AI applications. Whether you're deploying your first AI chatbot or managing an entire AI-powered support pipeline, Genezio helps you move beyond basic QA to understand how your agents behave in the wild.
 
-With Genezio, you can: simulate real conversations with various personas, emotions, and edge cases; Run behavior tests across different model updates or prompt changes; Detect {{< external-link link="https://genezio.com/deployment-platform/blog/ai-hallucination-in-customer-service/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}hallucinations{{< /external-link >}}, tricky answers, or compliance risks before customers do; make detailed reports for Customer Care and Risk teams.
+With Genezio, you can: simulate real conversations with various personas, emotions, and edge cases; Run behavior tests across different model updates or prompt changes; Detect {{< external-link link="https://genezio.com/blog/ai-hallucination-in-customer-service/?deviceId=0f2bfc71-21a9-4abc-beee-0a153c03ffac" >}}hallucinations{{< /external-link >}}, tricky answers, or compliance risks before customers do; make detailed reports for Customer Care and Risk teams.
 
 Genezio allows you to do a one-off eval before deployment or continuous daily or weekly check-ups. This is important because LLMs change, prompts evolve, and new edge cases crop up as real users interact with the bot.
 

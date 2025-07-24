@@ -1,12 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  RocketIcon,
-  CalendarIcon,
-  ArrowRightIcon,
-  CheckCircleIcon
-} from "lucide-react";
+import { RocketIcon, CalendarIcon, CheckCircleIcon } from "lucide-react";
+import ZohoTestForFreeForm from "./ZohoTestForFreeForm";
+import ZohoDemoForm from "./ZohoDemoForm";
 
 export function CtaSection() {
   const [formType, setFormType] = useState<"scan" | "demo">("scan");
@@ -22,42 +19,8 @@ export function CtaSection() {
     setIsSubmitted(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // call https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/demo for demo with body {name, email, company}
-    // call https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/scan for scan with body {name, email, website}
-
-    const body = {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      name: (e.target as any).elements[0].value,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      email: (e.target as any).elements[1].value,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      company: (e.target as any).elements[2].value,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      website: (e.target as any).elements[2].value
-    };
-
-    const url =
-      formType === "scan"
-        ? "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/scan"
-        : "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/demo";
-
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(body)
-    }).then((res) => {
-      console.log(res);
-      setIsSubmitted(true);
-    });
-  };
-
   return (
-    <section className="py-20">
+    <section className="py-20" id="contact-us">
       <div className="container mx-auto px-4 md:px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900">
           {/* Background elements */}
@@ -66,7 +29,6 @@ export function CtaSection() {
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-500/10 rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-purple-500/5 to-transparent"></div>
           </div>
-
           <div className="relative z-10 p-8 md:p-12 lg:p-16" id="cta-buttons">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -74,9 +36,8 @@ export function CtaSection() {
                   Make your AI Agent trustworthy. Get a free report in 24 hours!
                 </h2>
                 <p className="text-xl text-slate-300 mb-8">
-                  Our AI simulations evaluate your agent directly from your
-                  website. For internal AI applications, book a demo to explore
-                  our comprehensive testing solutions.
+                  Our AI simulations evaluate your agent directly from your website. For internal AI
+                  applications, book a demo to explore our comprehensive testing solutions.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -109,73 +70,9 @@ export function CtaSection() {
                 {!isSubmitted ? (
                   <>
                     <h3 className="text-xl font-semibold text-white mb-6">
-                      {formType === "scan"
-                        ? "Test Your AI for Free"
-                        : "Book a Comprehensive Demo"}
+                      {formType === "scan" ? "Test Your AI for Free" : "Book a Comprehensive Demo"}
                     </h3>
-
-                    <form className="space-y-4" onSubmit={handleSubmit}>
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-sm font-medium text-slate-300 mb-1"
-                        >
-                          Full Name
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                          placeholder="Enter your name"
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-slate-300 mb-1"
-                        >
-                          Work Email
-                        </label>
-                        <input
-                          type="email"
-                          className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                          placeholder="you@company.com"
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="company"
-                          className="block text-sm font-medium text-slate-300 mb-1"
-                        >
-                          {formType === "scan"
-                            ? "AI Agent URL"
-                            : "Company Name"}
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                          placeholder={
-                            formType === "scan"
-                              ? "https://your-ai-url.com"
-                              : "Your company name"
-                          }
-                          required
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-medium transition-colors flex items-center justify-center"
-                      >
-                        {formType === "scan"
-                          ? "Get My Free AI Report"
-                          : "Book a Demo"}
-                        <ArrowRightIcon className="ml-2 w-4 h-4" />
-                      </button>
-                    </form>
+                    {formType === "scan" ? <ZohoTestForFreeForm /> : <ZohoDemoForm />}
                   </>
                 ) : (
                   <div className="flex flex-col items-center justify-center text-center py-8">
@@ -183,9 +80,7 @@ export function CtaSection() {
                       <CheckCircleIcon className="w-10 h-10 text-green-500" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      {formType === "scan"
-                        ? "Test Request Submitted!"
-                        : "Demo Request Received!"}
+                      {formType === "scan" ? "Test Request Submitted!" : "Demo Request Received!"}
                     </h3>
                     <p className="text-slate-300 mb-6">
                       {formType === "scan"

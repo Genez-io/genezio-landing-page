@@ -6,18 +6,18 @@ tags:
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 
-thumbnail: https://genezio.com/deployment-platform/posts/rag-is-fixing-llms-but-is-it-enough.webp
+thumbnail: /blog/posts/rag-is-fixing-llms-but-is-it-enough.webp
 preview: This comprehensive guide explores how RAG is transforming the capabilities of language models, its implementation, limitations, and whether it truly solves the fundamental problems faced by modern AI systems.
 # meta data start
 description: Learn how Retrieval-Augmented Generation (RAG) solves LLM hallucinations and outdated knowledge issues while enhancing AI accuracy and reliability
-meta_og_url: "https://genezio.com/blog/app-python-programming/"
+meta_og_url: "https://genezio.com/blog/retrieval-augmented-generation-is-fixing-llm/"
 
-meta_og_image: "https://genezio.com/deployment-platform/posts/rag-is-fixing-llms-but-is-it-enough.webp"
+meta_og_image: "https://genezio.com/blog/posts/rag-is-fixing-llms-but-is-it-enough.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 9
-url: /blog/retrieval-augmented-generation-is-fixing-llm/
+url: /retrieval-augmented-generation-is-fixing-llm/
 ---
 
 # Retrieval-Augmented Generation (RAG): Transforming Large Language Models
@@ -41,7 +41,7 @@ At its foundation, a RAG framework operates through a multi-stage process:
 
 This architecture allows RAG LLM systems to maintain the fluency and reasoning capabilities of large language models while grounding their outputs in verifiable facts.
 
-![rag-framework](/deployment-platform/posts/rag-fix-llm-rag-framework.webp)
+![rag-framework](/blog/posts/rag-fix-llm-rag-framework.webp)
 
 ## Why Traditional LLMs Need Augmentation
 
@@ -119,7 +119,7 @@ The choice of vector database significantly affects retrieval performance. Popul
 - **Qdrant**: Vector database with extended filtering and payload capabilities
 - **Milvus**: Highly scalable vector database for enterprise applications
 
-![open-source-dedicated-databases](/deployment-platform/posts/rag-fix-llm-open-source-dedicated-databases.webp)
+![open-source-dedicated-databases](/blog/posts/rag-fix-llm-open-source-dedicated-databases.webp)
 
 ### Retrieval Strategy Optimization
 
@@ -172,7 +172,7 @@ These systems dynamically adjust retrieval parameters based on query characteris
 
 Combining retrieval-augmented generation with multi-agent architectures allows for specialized agents handling different aspects of the knowledge retrieval and response generation process.
 
-![multi-agent-rag](/deployment-platform/posts/rag-fix-llm-multi-agent-rag.webp)
+![multi-agent-rag](/blog/posts/rag-fix-llm-multi-agent-rag.webp)
 
 ### Self-RAG
 
@@ -226,4 +226,4 @@ For organizations seeking to deploy AI solutions that combine the creative capab
 
 As the field continues to evolve, the organizations that will gain the most value are those that implement RAG frameworks today while maintaining the flexibility to incorporate emerging technologies as they mature.
 
-**Ready to enhance your LLMs with retrieval-augmented generation?** [Sign up on Genezio](https://genezio.com) today and deploy your RAG-powered application with infrastructure designed specifically for high-performance AI systems.
+**Ready to enhance your LLMs with retrieval-augmented generation?** [Sign up on DeployApps](https://genezio.com) today and deploy your RAG-powered application with infrastructure designed specifically for high-performance AI systems.
