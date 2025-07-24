@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 // import { ChartContainer } from "./chart";
 
 export function RoiHeroSection() {
-  const [activeTab, setActiveTab] = useState("revenue");
+  const [activeTab, setActiveTab] = useState<string>("revenue");
 
   const scrollToCtaSection = () => {
     const ctaSection = document.getElementById("cta-buttons");
@@ -83,7 +83,7 @@ export function RoiHeroSection() {
     }
   };
 
-  const currentChart = chartData[activeTab];
+  const currentChart = chartData[activeTab as keyof typeof chartData];
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
