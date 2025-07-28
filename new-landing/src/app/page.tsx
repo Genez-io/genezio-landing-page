@@ -10,6 +10,7 @@ import { ServiceDeliverySection } from "./(components)/service-delivery-section"
 import { RoiCardsSection } from "./(components)/roi-card-section";
 
 import { CtaSection } from "./(components)/cta-section";
+import { NoChatbotSection } from "./(components)/no-chatbot-section";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       <CostReductionSection />
       <RiskManagementSection />
       <ServiceDeliverySection />
-
+      <NoChatbotSection />
       <CtaSection />
     </div>
   );

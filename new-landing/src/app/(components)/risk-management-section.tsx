@@ -54,9 +54,9 @@ export function RiskManagementSection() {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm font-medium mb-4">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-md font-medium mb-4">
               {/* <ShieldIcon className="w-4 h-4 mr-2" /> */}
-              For IT Teams
+              Mitigate Risk
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Regulatory and Compliance Risk Management

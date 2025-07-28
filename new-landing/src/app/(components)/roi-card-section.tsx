@@ -5,13 +5,11 @@ export function RoiCardsSection() {
   const cards = [
     {
       id: "revenue",
-      title: "For Marketers<br>Increase Revenue",
+      title: "Increase Revenue",
       icon: TrendingUpIcon,
       iconColor: "text-green-600 dark:text-green-400",
       bgColor: "bg-slate-50 dark:bg-slate-800/50",
       borderColor: "border-slate-200 dark:border-slate-700",
-      description:
-        "Monitor brand presence across LLMs and dominate AI search results. Turn your AI assets into a powerful lead generation and conversion channel.",
       stats: [{ label: "Revenue Increase", value: "+35%" }],
 
       testimonial: {
@@ -24,14 +22,12 @@ export function RoiCardsSection() {
     },
     {
       id: "cost",
-      title: "For Customer Support<br>Reduce Cost",
+      title: "Reduce Cost",
       icon: TrendingDownIcon,
       iconColor: "text-blue-600 dark:text-blue-400",
       bgColor: "bg-slate-50 dark:bg-slate-800/50",
       borderColor: "border-slate-200 dark:border-slate-700",
-      description:
-        "Optimize operations through increased accuracy, reduced escalations, and controlled LLM costs. Generate comprehensive scenarios for meaningful insights.",
-      stats: [{ label: "Cost Reduction", value: "-18%" }],
+      stats: [{ label: "Cost Reduction", value: "18%" }],
 
       testimonial: {
         quote:
@@ -43,13 +39,11 @@ export function RoiCardsSection() {
     },
     {
       id: "risk",
-      title: "For IT<br>Manage Risk",
+      title: "Mitigate risk",
       icon: ShieldIcon,
       iconColor: "text-orange-600 dark:text-orange-400",
       bgColor: "bg-slate-50 dark:bg-slate-800/50",
       borderColor: "border-slate-200 dark:border-slate-700",
-      description:
-        "Ensure compliance and manage regulatory risks with comprehensive monitoring. Detect potential issues before they impact your business operations.",
       stats: [{ label: "Compliance Rate", value: "98%" }],
 
       testimonial: {
@@ -69,7 +63,7 @@ export function RoiCardsSection() {
           {/* Section Title */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              No Chatbot? No Problem.
+              What is your primary objective when using chatbots?
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Discover how different teams can leverage AI testing to drive
@@ -96,11 +90,6 @@ export function RoiCardsSection() {
                       />
                     </div>
                   </div>
-
-                  {/* Description */}
-                  <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                    {card.description}
-                  </p>
 
                   {/* Stats */}
                   <div className="grid grid-cols-1 gap-3 mb-6">
