@@ -25,7 +25,7 @@ export function CostReductionSection() {
           </div>
 
           {/* Two Strategies Side by Side */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid lg:grid-cols-1 gap-8 mb-12">
             {/* Strategy 1: Increase Accuracy */}
             <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
               <div className="flex items-start space-x-4 mb-6">
