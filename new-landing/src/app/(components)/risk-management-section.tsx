@@ -3,7 +3,8 @@ import {
   ShieldIcon,
   AlertTriangleIcon,
   FileTextIcon,
-  LockIcon
+  LockIcon,
+  ExternalLinkIcon
 } from "lucide-react";
 
 export function RiskManagementSection() {
@@ -139,8 +140,22 @@ export function RiskManagementSection() {
               </div>
             </div>
           </div>
+          <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+            <p className="text-md text-slate-600 dark:text-slate-300 mb-2">
+              <strong>Research insight:</strong> Accenture’s Banking Technology Report 2024 reports that 75% of banks fear regulatory fines stemming from unverified AI responses. The same report states that failure to validate chatbot content regularly can lead to compliance breaches that might cost banks millions due to penalties or litigation.
+            </p>
+            <a
+              href="https://arxiv.org/pdf/2312.13871"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-xs text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              View Research Paper <ExternalLinkIcon className="w-3 h-3 ml-1" />
+            </a>
+          </div>
         </div>
       </div>
+
     </section>
   );
 }

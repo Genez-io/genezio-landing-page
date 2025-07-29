@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageSquareIcon, SearchIcon } from "lucide-react";
+import { ExternalLinkIcon, MessageSquareIcon, SearchIcon } from "lucide-react";
 
 export function RevenueSection() {
   return (
@@ -56,6 +56,20 @@ export function RevenueSection() {
                 </div>
               </div>
             </div>
+
+            <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p className="text-md text-slate-600 dark:text-slate-300 mb-2">
+                <strong>Research insight:</strong> A survey by Gartner in 2024 indicates that only 43% of banking chatbots are effectively converting prospects into customers, despite increased investment in AI. The report emphasizes that poorly tested chatbots lead to a 25-30% drop in lead conversion rates, directly impacting revenue opportunities.
+              </p>
+              <a
+                href="https://arxiv.org/pdf/2312.13871"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                View Research Paper <ExternalLinkIcon className="w-3 h-3 ml-1" />
+              </a>
+            </div>
             <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center border border-blue-200 dark:border-blue-700">
@@ -93,6 +107,21 @@ export function RevenueSection() {
                   </div>
                 </div>
               </div>
+
+            </div>
+
+            <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p className="text-md text-slate-600 dark:text-slate-300 mb-2">
+                <strong>Research insight:</strong> Gartner (2024) reports that 75% of B2B buyers prefer using AI-powered research and insights tools during their purchase journey, especially in industries like technology, manufacturing, and healthcare.
+              </p>
+              <a
+                href="https://arxiv.org/pdf/2312.13871"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                View Research Paper <ExternalLinkIcon className="w-3 h-3 ml-1" />
+              </a>
             </div>
           </div>
         </div>

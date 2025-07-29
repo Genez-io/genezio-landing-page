@@ -63,7 +63,7 @@ export function RoiCardsSection() {
           {/* Section Title */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              What is your primary objective when using chatbots?
+              What is the key objective of your chatbots?
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Discover how different teams can leverage AI testing to drive

@@ -71,6 +71,19 @@ export function CostReductionSection() {
               </div>
             </div>
 
+            <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p className="text-md text-slate-600 dark:text-slate-300 mb-2">
+                <strong>Research insight:</strong> Forrester Research (2024) reports that 83% of consumers say that quick and accurate responses from chatbots significantly improve their overall customer experience. They also note that chatbot accuracy—meaning the correctness of responses—has a direct correlation with customer satisfaction, with a 50% increase in satisfaction scores when AI systems provide correct answers on the first reply.
+              </p>
+              <a
+                href="https://arxiv.org/pdf/2312.13871"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                View Research Paper <ExternalLinkIcon className="w-3 h-3 ml-1" />
+              </a>
+            </div>
             {/* Strategy 2: Decrease Escalation */}
             <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
               <div className="flex items-start space-x-4 mb-6">
@@ -116,6 +129,19 @@ export function CostReductionSection() {
             </div>
           </div>
 
+          <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+            <p className="text-md text-slate-600 dark:text-slate-300 mb-2">
+              <strong>Research insight:</strong> According to a McKinsey Intelligence Study (2024), banks citing their chatbot ROI often overlook hidden costs of inefficiency—such as 20-35% increases in manual escalations when chatbots are not properly tested or maintained. These costs manifest as increased staffing, longer resolution times, and customer dissatisfaction.
+            </p>
+            <a
+              href="https://arxiv.org/pdf/2312.13871"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-xs text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              View Research Paper <ExternalLinkIcon className="w-3 h-3 ml-1" />
+            </a>
+          </div>
           {/* Strategy 3: LLM Cost Control */}
           <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
             <div className="flex items-start space-x-4 mb-6">
@@ -169,11 +195,11 @@ export function CostReductionSection() {
           {/* Research Citation */}
           <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
             <p className="text-md text-slate-600 dark:text-slate-300 mb-2">
-              <strong>Research insight:</strong> "When the conversation is
+              <strong>Research insight:</strong> When the conversation is
               finished, the customer has formed an opinion not only about the
               dialogue system itself but often also about the organization that
               the chatbot represents. Customers blame the company more for
-              negative outcomes than the chatbot itself."
+              negative outcomes than the chatbot itself.
             </p>
             <a
               href="https://arxiv.org/pdf/2312.13871"

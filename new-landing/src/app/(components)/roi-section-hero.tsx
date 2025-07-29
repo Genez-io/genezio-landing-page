@@ -104,7 +104,7 @@ export function RoiHeroSection() {
                 </span>
               </h1>
               <p className="text-2xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-                Boost Your AI performance while minimizing risk and cost.
+                Boost your AI performance to generate more revenue while minimizing risk.
               </p>
             </div>
 
@@ -146,13 +146,12 @@ export function RoiHeroSection() {
                     {currentChart.description}
                   </span>
                   <span
-                    className={`text-lg font-bold ${
-                      activeTab === "revenue"
+                    className={`text-lg font-bold ${activeTab === "revenue"
                         ? "text-green-600"
                         : activeTab === "cost"
-                        ? "text-blue-600"
-                        : "text-purple-600"
-                    }`}
+                          ? "text-blue-600"
+                          : "text-purple-600"
+                      }`}
                   >
                     {currentChart.metric}
                   </span>
@@ -203,15 +202,15 @@ export function RoiHeroSection() {
                     {activeTab === "revenue"
                       ? "Conversion Rate"
                       : activeTab === "cost"
-                      ? "Cost Savings"
-                      : "Risk Incidents"}
+                        ? "Cost Savings"
+                        : "Risk Incidents"}
                   </div>
                   <div className="text-lg font-bold text-slate-900 dark:text-white">
                     {activeTab === "revenue"
                       ? "12.4%"
                       : activeTab === "cost"
-                      ? "$45K"
-                      : "3"}
+                        ? "$45K"
+                        : "3"}
                   </div>
                 </div>
                 <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-3">
@@ -219,15 +218,15 @@ export function RoiHeroSection() {
                     {activeTab === "revenue"
                       ? "Lead Quality"
                       : activeTab === "cost"
-                      ? "Efficiency Gain"
-                      : "Compliance Score"}
+                        ? "Efficiency Gain"
+                        : "Compliance Score"}
                   </div>
                   <div className="text-lg font-bold text-slate-900 dark:text-white">
                     {activeTab === "revenue"
                       ? "8.7/10"
                       : activeTab === "cost"
-                      ? "32%"
-                      : "98%"}
+                        ? "32%"
+                        : "98%"}
                   </div>
                 </div>
               </div>
