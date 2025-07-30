@@ -7,9 +7,9 @@ author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
 thumbnail: /blog/posts/prompt-injection-attacks.webp
-preview: Prompt injection attacks are the #1 security threat to AI chatbots. Learn how Genezio helps protect your AI agents through evaluations and testing.
+preview: In this article, we break down prompt injection attacks, the nr 1 security threat for AI agents. We'll show you how to leverage systematic evaluations (evals) and testing to protect your business and ensure your chatbot is secure.
 # meta data start
-description: Prompt injection attacks are the #1 security threat to AI chatbots. Learn how Genezio helps protect your AI agents through evals and testing.
+description: "Prompt injection attacks are the #1 security threat to AI chatbots. Learn how Genezio helps protect your AI agents through evals and testing."
 meta_og_url: "https://genezio.com/blog/prompt-injection-attack/"
 meta_og_image: "https://genezio.com/blog/posts/prompt-injection-attacks.webp"
 # meta data end
