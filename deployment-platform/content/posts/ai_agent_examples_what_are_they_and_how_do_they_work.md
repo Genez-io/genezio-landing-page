@@ -52,8 +52,8 @@ Our last AI agent example is {{< external-link link="https://www.nightingalesecu
 
 So, you don’t need your AI agent to work via your browser. That’s a big takeaway.
 
-## Deploy your AI Agent with Genezio
+## Deploy your AI Agent with DeployApps
 
-Got an AI agent idea? Whether you’re building a financial assistant, a healthcare chatbot, or the next-gen self-driving tech, {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} makes it easy to deploy, scale, and sell your AI solution. We simplify the process of building and hosting applications by offering a serverless architecture so you don’t have to worry about infrastructure—if your AI agent blows up overnight, Genezio will keep it running smoothly. Focus on building game-changing AI—we’ll handle the rest. We also support plenty of {{< external-link link="https://genezio.com/blog/genezio-python-support/#out-of-the-box-framework-detection-and-deployment" >}}Python frameworks{{< /external-link >}}.
+Got an AI agent idea? Whether you’re building a financial assistant, a healthcare chatbot, or the next-gen self-driving tech, {{< external-link link="https://deployapps.dev/" >}}DeployApps{{< /external-link >}} makes it easy to deploy, scale, and sell your AI solution. We simplify the process of building and hosting applications by offering a serverless architecture so you don’t have to worry about infrastructure—if your AI agent blows up overnight, DeployApps will keep it running smoothly. Focus on building game-changing AI—we’ll handle the rest. We also support plenty of {{< external-link link="https://deployapps.dev/blog/genezio-python-support/#out-of-the-box-framework-detection-and-deployment" >}}Python frameworks{{< /external-link >}}.
 
 **Ready to deploy? {{< external-link link="https://app.genez.io/auth/login?aff=blog" >}}Sign up{{< /external-link >}} for Genezio today. It’s free.**
