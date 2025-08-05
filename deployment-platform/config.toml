@@ -1,6 +1,6 @@
 baseURL = "/"  
 languageCode = "en-us"  
-title = "DeployApps"  
+title = "Genezio"  
 theme = "genezio-theme"  
 enableRobotsTXT = true
 paginate = 9
@@ -9,7 +9,7 @@ paginate = 9
     primary_color = "#6f42c1"
 
 [params.footer]
-        description = "DeployApps is a new paradigm in cloud native programming, making it accessible to everyone, allowing elegant and quick development of websites, mobile apps, IoT apps, and many others."
+        description = "Genezio’s blog: Your expert resource on AI agent evaluation, continuous testing, and prompt injection security. Master chatbot optimization and build a secure CX."
         
 [permalinks]
     posts = "/blog/:title/"
