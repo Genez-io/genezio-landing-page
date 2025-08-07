@@ -5,7 +5,3 @@ frontend:
   path: ./new-landing
   subdomain: genezio-landing-page
   publish: ./dist
-  redirects:
-    - from: /no_content
-      to: /page-not-found
-      status: 302
