@@ -82,7 +82,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
                   />
                 ) : (
                   <img
-                    src="https://genezio.com/images/logo-dark.svg"
+                    src="https://assets.polymet.ai/loyal-gray-559574"
                     alt="genezio logo"
                     className="w-full h-full object-contain"
                     id="gw71gi"
