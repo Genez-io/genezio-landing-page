@@ -17,8 +17,7 @@ export default defineConfig({
     }
   },
   server: {
-    // This ensures fallback to index.html during development
-    historyApiFallback: true
+    // Vite uses SPA fallback by default, so no need for historyApiFallback
   },
   build: {
     outDir: "dist"

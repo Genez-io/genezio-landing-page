@@ -18,6 +18,7 @@ import {
   PhoneIcon,
   MailIcon
 } from "lucide-react";
+import axios from "axios";
 
 interface DemoBookingModalProps {
   isOpen: boolean;
@@ -54,6 +55,35 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
 
     setIsSubmitting(false);
     setIsSubmitted(true);
+
+    console.log(" Request:", formData);
+    // Handle form submission
+    const data = JSON.stringify({
+      name: formData.fullName,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      message: formData.message
+    });
+
+    const config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/demo",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      data: data
+    };
+
+    await axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     // Reset form after 3 seconds and close modal
     setTimeout(() => {

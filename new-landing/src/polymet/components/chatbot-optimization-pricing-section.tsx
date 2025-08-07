@@ -14,6 +14,7 @@ import {
   TrendingUpIcon,
   ArrowRightIcon
 } from "lucide-react";
+import axios from "axios";
 
 export function ChatbotOptimizationPricingSection() {
   const [formData, setFormData] = useState({
@@ -22,6 +23,8 @@ export function ChatbotOptimizationPricingSection() {
     company: "",
     chatbotVolume: ""
   });
+
+  const [success, setSuccess] = useState(false);
 
   const handleInputChange = (
     e: React.TargetEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,10 +36,37 @@ export function ChatbotOptimizationPricingSection() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSuccess(false);
     console.log("Chatbot Optimization Request:", formData);
     // Handle form submission
+    const data = JSON.stringify({
+      company: formData.company,
+      email: formData.email,
+      interactions: formData.chatbotVolume,
+      message: formData.message
+    });
+
+    const config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/pricing",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      data: data
+    };
+
+    await axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    setSuccess(true);
     setFormData({ email: "", message: "", company: "", chatbotVolume: "" });
   };
 
@@ -158,6 +188,14 @@ export function ChatbotOptimizationPricingSection() {
                 for your business
               </p>
             </div>
+
+            {success && (
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-800 rounded-lg">
+                <CheckIcon className="inline h-5 w-5 mr-2" />
+                <span className="font-semibold">Thank you!</span> We'll get back
+                to you within 24 hours.
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
