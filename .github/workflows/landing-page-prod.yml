@@ -71,8 +71,8 @@ jobs:
         run: npm run build
       - name: Copy Deployment Platform Landing Page to dist
         run: |
-          mkdir -p dist/blog/
-          cp -r deployment-platform/public/* dist/blog/
+          mkdir -p new-landing/dist/blog/
+          cp -r deployment-platform/public/* new-landing/blog/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend
