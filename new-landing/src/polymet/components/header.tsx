@@ -154,6 +154,14 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </button>
 
             <button
+              onClick={() => (window.location.href = "/blog")}
+              className="text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
+              id="1q4j5k"
+            >
+              Blog
+            </button>
+
+            <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200"
               id="9dfv6f"
@@ -249,6 +257,15 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
               id="0qqvgp"
             >
               Contact Us
+            </button>
+
+            {/* blog  */}
+            <button
+              onClick={() => (window.location.href = "/blog")}
+              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+              id="1q4j5k"
+            >
+              Blog
             </button>
           </div>
         </div>
