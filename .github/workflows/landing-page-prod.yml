@@ -72,7 +72,7 @@ jobs:
       - name: Copy Deployment Platform Landing Page to dist
         run: |
           mkdir -p new-landing/dist/blog/
-          cp -r deployment-platform/public/* new-landing/blog/
+          cp -r deployment-platform/public/* new-landing/dist/blog/
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend
