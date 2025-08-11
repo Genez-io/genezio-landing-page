@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Header } from "@/polymet/components/header";
 import { ThemeProvider } from "@/polymet/components/theme-provider";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -14,6 +14,12 @@ export default function Layout({
   currentPage,
   setCurrentPage,
 }: LayoutProps) {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <ThemeProvider
       defaultTheme="light"
