@@ -130,9 +130,8 @@ export function BrandPresenceBenefitsSection() {
           </h2>
 
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            While your competitors focus on traditional marketing, secure your
-            position in the AI-driven future where customers discover and
-            evaluate brands.
+            While your competitors focus on traditional marketing, secure your position in the
+            AI-driven future where customers discover and evaluate brands.
           </p>
         </div>
 
@@ -155,9 +154,7 @@ export function BrandPresenceBenefitsSection() {
                     <IconComponent className={`w-6 h-6 ${colors.icon}`} />
                   </div>
                   <div className="text-right">
-                    <div className={`text-2xl font-bold ${colors.stat}`}>
-                      {benefit.stat}
-                    </div>
+                    <div className={`text-2xl font-bold ${colors.stat}`}>{benefit.stat}</div>
                     <div className="text-xs text-slate-500 dark:text-slate-400">
                       {benefit.statLabel}
                     </div>
@@ -185,16 +182,15 @@ export function BrandPresenceBenefitsSection() {
               Ready to Dominate AI Search Results?
             </h3>
             <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
-              Join leading brands who are already securing their position in the
-              AI-first search landscape. Get your comprehensive AI presence
-              audit today.
+              Join leading brands who are already securing their position in the AI-first search
+              landscape. Get your comprehensive AI presence audit today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
                 onClick={() => {
-                  const pricingSection = document.querySelector(
-                    '[data-pol-id="1dz73g"]'
+                  const pricingSection = document.getElementById(
+                    "chatbot-optimization-pricing-section"
                   );
                   if (pricingSection) {
                     pricingSection.scrollIntoView({
@@ -218,10 +214,7 @@ export function BrandPresenceBenefitsSection() {
       </div>
 
       {/* Demo Booking Modal */}
-      <DemoBookingModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-      />
+      <DemoBookingModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
     </section>
   );
 }
