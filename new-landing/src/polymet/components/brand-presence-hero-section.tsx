@@ -177,10 +177,9 @@ export function BrandPresenceHeroSection() {
                 className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 px-8 py-4 text-lg font-semibold bg-white dark:bg-slate-900"
                 onClick={() => {
                   // Try multiple selectors to find the process section
-                  const processSection =
-                    document.querySelector('[data-pol-id="2ez0go"]') ||
-                    document.querySelector('[data-pol-id="zjykqz"]') ||
-                    document.querySelector('section:has(h2:contains("How We Optimize"))');
+                  const processSection = document.getElementById(
+                    "chatbot-optimization-pricing-section"
+                  );
                   if (processSection) {
                     processSection.scrollIntoView({
                       behavior: "smooth",
