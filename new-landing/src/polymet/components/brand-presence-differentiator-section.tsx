@@ -14,11 +14,9 @@ export function BrandPresenceDifferentiatorSection() {
     {
       category: "Focus on Control & Strategy",
       genezioTitle: "Focus on Control & Strategy",
-      genezio:
-        "We connect every insight and action to controlling your brand narrative.",
+      genezio: "We connect every insight and action to controlling your brand narrative.",
       othersTitle: "A Fragmented Action Gap",
-      others:
-        "They show you mentions, leaving you to figure out how to influence them.",
+      others: "They show you mentions, leaving you to figure out how to influence them.",
       icon: CrownIcon,
       color: "blue",
     },
@@ -88,8 +86,8 @@ export function BrandPresenceDifferentiatorSection() {
           </h2>
 
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            While others provide passive monitoring, we deliver active control
-            over your brand narrative across AI platforms.
+            While others provide passive monitoring, we deliver active control over your brand
+            narrative across AI platforms.
           </p>
         </div>
 
@@ -177,15 +175,15 @@ export function BrandPresenceDifferentiatorSection() {
               Ready to Take Control of Your AI Narrative?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-lg">
-              Stop settling for passive monitoring. Start actively controlling
-              how AI platforms represent your brand.
+              Stop settling for passive monitoring. Start actively controlling how AI platforms
+              represent your brand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
                 onClick={() => {
-                  const pricingSection = document.querySelector(
-                    '[data-pol-id="1dz73g"]'
+                  const pricingSection = document.getElementById(
+                    "chatbot-optimization-pricing-section"
                   );
                   if (pricingSection) {
                     pricingSection.scrollIntoView({

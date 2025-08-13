@@ -78,32 +78,28 @@ export function BrandPresenceCompetitiveSection() {
     {
       icon: CrownIcon,
       title: "Market Leadership",
-      description:
-        "Become the go-to recommendation across all major AI platforms",
+      description: "Become the go-to recommendation across all major AI platforms",
       stat: "#1 Position",
       color: "yellow",
     },
     {
       icon: ShieldIcon,
       title: "Competitive Protection",
-      description:
-        "Prevent competitors from stealing your market share in AI search",
+      description: "Prevent competitors from stealing your market share in AI search",
       stat: "85% Protection",
       color: "blue",
     },
     {
       icon: ZapIcon,
       title: "First-Mover Advantage",
-      description:
-        "Get ahead while your competitors are still figuring out AI optimization",
+      description: "Get ahead while your competitors are still figuring out AI optimization",
       stat: "2-3 Years Ahead",
       color: "purple",
     },
     {
       icon: TargetIcon,
       title: "Precision Targeting",
-      description:
-        "Reach high-intent customers exactly when they're evaluating solutions",
+      description: "Reach high-intent customers exactly when they're evaluating solutions",
       stat: "4x Higher Intent",
       color: "green",
     },
@@ -154,9 +150,8 @@ export function BrandPresenceCompetitiveSection() {
           </h2>
 
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            While your competitors focus on traditional SEO, secure your
-            position as the #1 AI recommendation across ChatGPT, Claude, Gemini,
-            and Perplexity.
+            While your competitors focus on traditional SEO, secure your position as the #1 AI
+            recommendation across ChatGPT, Claude, Gemini, and Perplexity.
           </p>
         </div>
 
@@ -205,9 +200,7 @@ export function BrandPresenceCompetitiveSection() {
                 <div
                   key={index}
                   className={`flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 ${
-                    item.brand === "Your Brand"
-                      ? "ring-2 ring-blue-500 ring-opacity-50"
-                      : ""
+                    item.brand === "Your Brand" ? "ring-2 ring-blue-500 ring-opacity-50" : ""
                   }`}
                 >
                   <div className="flex items-center space-x-4">
@@ -234,9 +227,7 @@ export function BrandPresenceCompetitiveSection() {
                       <div className="text-lg font-bold text-slate-900 dark:text-white">
                         {item.mentions}%
                       </div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400">
-                        Mention Rate
-                      </div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400">Mention Rate</div>
                     </div>
 
                     {/* Trend Indicator */}
@@ -264,25 +255,17 @@ export function BrandPresenceCompetitiveSection() {
             {activeTab === "after" && (
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-700">
-                  <div className="text-3xl font-bold text-green-600 mb-1">
-                    +300%
-                  </div>
+                  <div className="text-3xl font-bold text-green-600 mb-1">+300%</div>
                   <div className="text-sm text-green-700 dark:text-green-400">
                     Visibility Increase
                   </div>
                 </div>
                 <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
-                  <div className="text-3xl font-bold text-blue-600 mb-1">
-                    #1
-                  </div>
-                  <div className="text-sm text-blue-700 dark:text-blue-400">
-                    Market Position
-                  </div>
+                  <div className="text-3xl font-bold text-blue-600 mb-1">#1</div>
+                  <div className="text-sm text-blue-700 dark:text-blue-400">Market Position</div>
                 </div>
                 <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-700">
-                  <div className="text-3xl font-bold text-purple-600 mb-1">
-                    4x
-                  </div>
+                  <div className="text-3xl font-bold text-purple-600 mb-1">4x</div>
                   <div className="text-sm text-purple-700 dark:text-purple-400">
                     More Recommendations
                   </div>
@@ -310,9 +293,7 @@ export function BrandPresenceCompetitiveSection() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className={`text-2xl font-bold ${colors.icon}`}>
-                    {advantage.stat}
-                  </div>
+                  <div className={`text-2xl font-bold ${colors.icon}`}>{advantage.stat}</div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
                     {advantage.title}
                   </h3>
@@ -333,17 +314,17 @@ export function BrandPresenceCompetitiveSection() {
                 Don't Let Competitors Dominate AI Search
               </h3>
               <p className="text-slate-300 mb-6 text-lg">
-                Every day you wait is another day your competitors gain ground
-                in AI recommendations. Start your optimization today and secure
-                your market position.
+                Every day you wait is another day your competitors gain ground in AI
+                recommendations. Start your optimization today and secure your market position.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
                   onClick={() => {
-                    const pricingSection = document.querySelector(
-                      '[data-pol-id="1dz73g"]'
+                    const pricingSection = document.getElementById(
+                      "chatbot-optimization-pricing-section"
                     );
+
                     if (pricingSection) {
                       pricingSection.scrollIntoView({
                         behavior: "smooth",
