@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /blog/posts/scenario-based-testing.webp
-preview: Scenario-based testing for AI agents helps companies simulate real-world interactions and prevent brand-damaging incidents before they happen.
+preview: How do you stop your agent from legal trouble like insider trading? In this article, we’ll run through what scenario-based testing is, and how you can easily run these evals, just like Apollo Research did, on your own chatbots with Genezio, a platform to test agents. 
 # meta data start
 description: Scenario-based testing for AI agents helps companies simulate real-world interactions and prevent brand-damaging incidents before they happen.
 meta_og_url: "https://genezio.com/blog/scenario-based-testing/"
