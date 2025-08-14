@@ -1,6 +1,6 @@
 ---
 title: "Scenario-Based Testing: AI Agent Evals for Companies"
-date: 2025-08-21
+date: 2025-08-14
 tags:
   - AI
 author: Luis Minvielle
