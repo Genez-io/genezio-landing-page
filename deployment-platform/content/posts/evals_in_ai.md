@@ -6,7 +6,7 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /blog/posts/evals-in-ai.webp
-preview: Evals in AI are assessments that determine reliability. Learn why they matter for customer service bots, and how Genezio helps you test agents.
+preview: When a chatbot fails to understand a query, spits out outdated or biased information, or simply loops endlessly, it frustrates users, it costs companies, either because that chatbot is costing money, or because it’s earning them reputational damage. That is why evals in AI make certain that your AI agents actually work as intended and comply with your customer’s expectations.
 # meta data start
 description: Evals in AI are assessments that determine reliability. Learn why they matter for customer service bots, and how Genezio helps you test agents.
 meta_og_url: "https://genezio.com/blog/evals-in-ai/"
