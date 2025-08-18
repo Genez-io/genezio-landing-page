@@ -77,11 +77,11 @@ export function BrandPresenceHeroSection() {
 
             {/* Headline */}
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
-                Control AI Search
+              <h1 className="text-4xl lg:text-4xl font-bold text-slate-900 dark:text-white leading-tight">
+                Generative Search Optimization
                 <br />
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Without a Chatbot
+                  Control the LLM narrative
                 </span>
               </h1>
 
