@@ -3,8 +3,8 @@ title: "76% of Gen Z and Younger Millennials Now Trust AI Over Google"
 date: 2025-08-15
 tags:
   - AI
-author: Horatiu Voicu
-linkedIn: https://genezio.com/blog/author/horatiu-voicu/
+author: Denisa Lera
+linkedIn: https://www.linkedin.com/in/denisa-lera-2661aa233/
 thumbnail: /blog/posts/gen-z-trusts-ai-over-google.webp
 preview: A fundamental change in how information is discovered is being driven by Gen Z and younger millennials. Our recent survey of over 100 respondents under 29 shows that 76.3% now trust answers from an AI more than from a traditional Google search.
 # meta data start
