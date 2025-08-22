@@ -193,7 +193,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
             {/* blog  */}
             <a
-              href="http://genezio.com/blog"
+              href="https://genezio.com/blog"
               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
               id="1q4j5k"
             >
