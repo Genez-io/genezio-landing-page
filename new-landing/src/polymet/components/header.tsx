@@ -154,7 +154,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </button>
 
             <a
-              href="http://genezio.com/blog"
+              href="https://genezio.com/blog"
               className="text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400"
               id="1q4j5k"
             >
