@@ -77,19 +77,18 @@ export function BrandPresenceHeroSection() {
 
             {/* Headline */}
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
-                Control AI Search
+              <h1 className="text-4xl lg:text-4xl font-bold text-slate-900 dark:text-white leading-tight">
+                Generative Search Optimization
                 <br />
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Without a Chatbot
+                  Control the LLM narrative
                 </span>
               </h1>
 
               <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                Your customers are asking AI assistants about your industry
-                every day. Ensure your brand is the first recommendation across
-                ChatGPT, Claude, Gemini, and Perplexity—even without having your
-                own chatbot.
+                Your customers are asking AI assistants about your industry every day. Ensure your
+                brand is the first recommendation across ChatGPT, Claude, Gemini, and
+                Perplexity—even without having your own chatbot.
               </p>
             </div>
 
@@ -158,13 +157,9 @@ export function BrandPresenceHeroSection() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 px-8 py-4 text-lg font-semibold group shadow-lg"
                 onClick={() => {
                   // Try multiple selectors to find the pricing section
-                  const pricingSection =
-                    document.querySelector('[data-pol-id="1dz73g"]') ||
-                    document.querySelector('[data-pol-id="cc9ldy"]') ||
-                    document.querySelector(
-                      'section:has(h2:contains("Brand Presence"))'
-                    ) ||
-                    document.querySelector("section:last-of-type");
+                  const pricingSection = document.getElementById(
+                    "chatbot-optimization-pricing-section"
+                  );
                   if (pricingSection) {
                     pricingSection.scrollIntoView({
                       behavior: "smooth",
@@ -182,12 +177,9 @@ export function BrandPresenceHeroSection() {
                 className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 px-8 py-4 text-lg font-semibold bg-white dark:bg-slate-900"
                 onClick={() => {
                   // Try multiple selectors to find the process section
-                  const processSection =
-                    document.querySelector('[data-pol-id="2ez0go"]') ||
-                    document.querySelector('[data-pol-id="zjykqz"]') ||
-                    document.querySelector(
-                      'section:has(h2:contains("How We Optimize"))'
-                    );
+                  const processSection = document.getElementById(
+                    "chatbot-optimization-pricing-section"
+                  );
                   if (processSection) {
                     processSection.scrollIntoView({
                       behavior: "smooth",
@@ -227,8 +219,7 @@ export function BrandPresenceHeroSection() {
                     </div>
                     <div className="flex-1 space-y-3">
                       <p className="text-sm text-slate-600 dark:text-slate-300">
-                        Based on current market analysis, here are the top
-                        solutions:
+                        Based on current market analysis, here are the top solutions:
                       </p>
 
                       {/* Your Brand Highlight */}
@@ -246,9 +237,8 @@ export function BrandPresenceHeroSection() {
                           </span>
                         </div>
                         <p className="text-sm text-slate-700 dark:text-slate-300">
-                          Leading provider of enterprise solutions with proven
-                          ROI improvements and industry-leading security
-                          standards.
+                          Leading provider of enterprise solutions with proven ROI improvements and
+                          industry-leading security standards.
                         </p>
                       </div>
 
@@ -267,9 +257,7 @@ export function BrandPresenceHeroSection() {
                 <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-700">
                   {brandMetrics.map((metric, index) => (
                     <div key={index} className="text-center">
-                      <div className={`text-2xl font-bold ${metric.color}`}>
-                        {metric.value}
-                      </div>
+                      <div className={`text-2xl font-bold ${metric.color}`}>{metric.value}</div>
                       <div className="text-xs text-slate-500 dark:text-slate-400">
                         {metric.label}
                       </div>
