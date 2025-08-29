@@ -36,8 +36,7 @@ const BrandPopup = () => {
         {/* Overlay */}
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999]" />
 
-        {/* Content */}
-        <Dialog.Content className="fixed inset-0 w-full h-full rounded-none p-2 shadow-xl focus:outline-none overflow-x-auto z-[9999]">
+        <Dialog.Content className="fixed inset-0 w-full h-full rounded-3xl bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900  p-2 shadow-xl focus:outline-none overflow-x-auto z-[9999]">
           <div className="flex items-center justify-end mb-4 sticky top-0 z-10">
             <Dialog.Close asChild>
               <button className="rounded-full p-1 hover:bg-gray-100">
