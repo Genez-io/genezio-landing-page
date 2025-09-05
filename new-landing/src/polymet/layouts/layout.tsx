@@ -21,7 +21,7 @@ export default function Layout({ children, currentPage, setCurrentPage }: Layout
     <ThemeProvider defaultTheme="light" storageKey="ai-agents-audit-theme">
       <div className="min-h-screen bg-white dark:bg-slate-900">
         <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        <BrandPopup />
+        {location.pathname === "/" && <BrandPopup />}
         <main>{children}</main>
         <footer className="bg-slate-50 dark:bg-slate-800 py-12 border-t border-slate-200 dark:border-slate-700">
           <div className="container mx-auto px-4 md:px-6" id="jrk11b">
