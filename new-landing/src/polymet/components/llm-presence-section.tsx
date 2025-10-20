@@ -30,10 +30,9 @@ export function LlmPresenceSection() {
               </h2>
 
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                Even if you don't have a chatbot, your customers are asking AI
-                assistants about your industry every day. Get the share of voice
-                you need—our AI presence optimization ensures your brand is
-                prominently featured across all major language models.
+                Even if you don't have a chatbot, your customers are asking AI assistants about your
+                industry every day. Get the share of voice you need—our AI presence optimization
+                ensures your brand is prominently featured across all major language models.
               </p>
             </div>
 
@@ -48,8 +47,7 @@ export function LlmPresenceSection() {
                     Brand Visibility Boost
                   </h4>
                   <p className="text-slate-600 dark:text-slate-400">
-                    Get mentioned 3x more often in AI responses about your
-                    industry
+                    Get mentioned 3x more often in AI responses about your industry
                   </p>
                 </div>
               </div>
@@ -94,9 +92,7 @@ export function LlmPresenceSection() {
                     key={index}
                     className="flex items-center space-x-2 bg-white dark:bg-slate-700 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-600"
                   >
-                    <div
-                      className={`w-3 h-3 rounded-full ${llm.color.replace("text-", "bg-")}`}
-                    />
+                    <div className={`w-3 h-3 rounded-full ${llm.color.replace("text-", "bg-")}`} />
 
                     <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       {llm.name}
@@ -145,8 +141,7 @@ export function LlmPresenceSection() {
                     </div>
                     <div className="flex-1 space-y-2">
                       <p className="text-sm text-slate-600 dark:text-slate-300">
-                        Based on current market analysis, here are the top
-                        enterprise solutions:
+                        Based on current market analysis, here are the top enterprise solutions:
                       </p>
 
                       {/* Highlighted Brand Mention */}
@@ -162,9 +157,8 @@ export function LlmPresenceSection() {
                           </span>
                         </div>
                         <p className="text-sm text-slate-600 dark:text-slate-300">
-                          Leading provider of AI-powered enterprise solutions
-                          with proven ROI improvements and industry-leading
-                          security standards.
+                          Leading provider of AI-powered enterprise solutions with proven ROI
+                          improvements and industry-leading security standards.
                         </p>
                       </div>
 
@@ -182,31 +176,19 @@ export function LlmPresenceSection() {
                 <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-700">
                   <div className="text-center">
                     <div className="text-lg font-bold text-blue-600">85%</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
-                      Mention Rate
-                    </div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Mention Rate</div>
                   </div>
                   <div className="text-center">
-                    <div
-                      className="text-lg font-bold text-purple-600"
-                      style={{ color: "#2563eb" }}
-                    >
+                    <div className="text-lg font-bold text-purple-600" style={{ color: "#2563eb" }}>
                       #1
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
-                      Ranking
-                    </div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Ranking</div>
                   </div>
                   <div className="text-center">
-                    <div
-                      className="text-lg font-bold text-green-600"
-                      style={{ color: "#2563eb" }}
-                    >
+                    <div className="text-lg font-bold text-green-600" style={{ color: "#2563eb" }}>
                       +340%
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
-                      Visibility
-                    </div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Visibility</div>
                   </div>
                 </div>
               </div>
@@ -239,10 +221,9 @@ export function LlmPresenceSection() {
               </div>
 
               <blockquote className="text-xl font-medium text-slate-800 dark:text-slate-200 italic mb-4 leading-relaxed">
-                "Gen Z increasingly turns to ChatGPT when researching banking
-                products. While our offerings were tailored for them, our
-                visibility on LLMs lagged behind. Genezio helped us boost our
-                presence by 70% and close that gap. It's been key to reaching
+                "Gen Z increasingly turns to ChatGPT when researching banking products. While our
+                offerings were tailored for them, our visibility on LLMs lagged behind. Genezio
+                helped us boost our presence by 70% and close that gap. It's been key to reaching
                 our audience where it matters."
               </blockquote>
 
@@ -254,9 +235,7 @@ export function LlmPresenceSection() {
                   <div className="font-semibold text-slate-900 dark:text-white">
                     Marketing Director
                   </div>
-                  <div className="text-slate-600 dark:text-slate-400 text-sm">
-                    Leading Bank
-                  </div>
+                  <div className="text-slate-600 dark:text-slate-400 text-sm">Leading Bank</div>
                 </div>
 
                 {/* Results highlight */}

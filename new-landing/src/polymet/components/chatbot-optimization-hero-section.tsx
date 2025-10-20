@@ -8,8 +8,16 @@ export function ChatbotOptimizationHeroSection() {
     "Increase lead generation by 52%",
     "Reduce support costs by 65%",
     "Achieve 99.8% compliance score",
-    "Performance analytics"
+    "Performance analytics",
   ];
+
+  document.title = "Chatbot Testing for Performance, ROI & Compliance | Genezio";
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute(
+      "content",
+      "Turn your chatbot into a revenue engine. Our AI testing platform provides actionable insights to boost lead gen, cut costs, and ensure compliance. Book a demo!"
+    );
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
@@ -44,14 +52,14 @@ export function ChatbotOptimizationHeroSection() {
               </h1>
               <div className="space-y-4">
                 <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed">
-                  The relationship between brands and customers is undergoing a
-                  fundamental shift. Every interaction, from initial discovery
-                  to final purchase, is becoming a conversation mediated by AI.
+                  The relationship between brands and customers is undergoing a fundamental shift.
+                  Every interaction, from initial discovery to final purchase, is becoming a
+                  conversation mediated by AI.
                 </p>
                 <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Winning in this new era means ensuring every single one of
-                  these dialogues—whether on public platforms or your own
-                  channels—is accurate, on-brand, and drives results.
+                  Winning in this new era means ensuring every single one of these dialogues—whether
+                  on public platforms or your own channels—is accurate, on-brand, and drives
+                  results.
                 </p>
               </div>
             </div>
@@ -63,9 +71,7 @@ export function ChatbotOptimizationHeroSection() {
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
                     <CheckIcon className="w-4 h-4 text-green-600 dark:text-green-400" />
                   </div>
-                  <span className="text-slate-700 dark:text-slate-300 font-medium">
-                    {benefit}
-                  </span>
+                  <span className="text-slate-700 dark:text-slate-300 font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -77,9 +83,7 @@ export function ChatbotOptimizationHeroSection() {
                 className="bg-blue-600 hover:bg-blue-700 text-white border-0 px-8 py-4 text-lg font-semibold group"
                 onClick={() => {
                   // scroll to id chatbot-optimization-pricing
-                  const element = document.getElementById(
-                    "chatbot-optimization-pricing-section"
-                  );
+                  const element = document.getElementById("chatbot-optimization-pricing-section");
                   if (element) {
                     element.scrollIntoView({ behavior: "smooth" });
                   }

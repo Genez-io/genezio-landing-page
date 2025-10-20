@@ -10,6 +10,14 @@ import { BrandPresencePricingSection } from "@/polymet/components/brand-presence
 import { RoiFinalCtaSection } from "@/polymet/components/roi-final-cta-section";
 
 export default function BrandPresence() {
+  document.title = "AI Search Optimization: Control Your Brand in ChatGPT | Genezio";
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute(
+      "content",
+      "Control your brand's presence in AI search results. Genezio helps you outrank competitors, and drive high-intent traffic from LLMs. Book a free demo now!"
+    );
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Enhanced Hero Section */}

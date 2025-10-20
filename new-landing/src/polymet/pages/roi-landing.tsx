@@ -9,6 +9,14 @@ import { RoiSimpleFinalCtaSection } from "@/polymet/components/roi-simple-final-
 import { GartnerResearchBanner } from "@/polymet/components/gartner-research-banner";
 
 export default function RoiLanding() {
+  document.title = "Enterprise AI Chatbot Testing & Optimization Platform | Genezio";
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute(
+      "content",
+      "Enterprise AI testing and evaluation for chatbots. Optimize for accuracy, mitigate risk, and boost revenue with Genezio's powerful simulation platform."
+    );
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
