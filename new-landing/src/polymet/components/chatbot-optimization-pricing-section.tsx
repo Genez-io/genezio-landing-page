@@ -15,6 +15,7 @@ import {
   ArrowRightIcon
 } from "lucide-react";
 import axios from "axios";
+import { blockedProviders } from "@/utils/blocked-email-providers";
 
 export function ChatbotOptimizationPricingSection() {
   const [formData, setFormData] = useState({
@@ -25,21 +26,35 @@ export function ChatbotOptimizationPricingSection() {
   });
 
   const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (
-    e: React.TargetEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value
     }));
+    if (errorMessage) setErrorMessage("");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSuccess(false);
+    setErrorMessage("");
     console.log("Chatbot Optimization Request:", formData);
+
+    const email = formData.email.trim().toLowerCase();
+    const domain = email.split("@")[1] || "";
+  
+    if (!domain || blockedProviders.some((p) => domain.includes(p))) {
+      setErrorMessage(
+        "Please use your company email address."
+      );
+      return;
+    }
+
     // Handle form submission
     const data = JSON.stringify({
       company: formData.company,
@@ -66,6 +81,7 @@ export function ChatbotOptimizationPricingSection() {
       .catch((error) => {
         console.log(error);
       });
+    setErrorMessage("");
     setSuccess(true);
     setFormData({ email: "", message: "", company: "", chatbotVolume: "" });
   };
@@ -194,6 +210,11 @@ export function ChatbotOptimizationPricingSection() {
                 <CheckIcon className="inline h-5 w-5 mr-2" />
                 <span className="font-semibold">Thank you!</span> We'll get back
                 to you within 24 hours.
+              </div>
+            )}
+            {errorMessage && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-800 rounded-lg">
+                 {errorMessage}
               </div>
             )}
 
