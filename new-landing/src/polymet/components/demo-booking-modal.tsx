@@ -19,6 +19,7 @@ import {
   MailIcon
 } from "lucide-react";
 import axios from "axios";
+import { blockedProviders } from "@/utils/blocked-email-providers";
 
 interface DemoBookingModalProps {
   isOpen: boolean;
@@ -35,6 +36,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -44,10 +46,23 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
       ...prev,
       [name]: value
     }));
+    if (errorMessage) setErrorMessage("");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage("");
+
+    // Client-side quick block for common free email providers (UX only)
+    const email = (formData.email || "").trim().toLowerCase();
+    const domain = email.split("@")[1] || "";
+    if (!domain || blockedProviders.some((p) => domain.includes(p))) {
+      setErrorMessage(
+        "Please use your company email address."
+      );
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Simulate API call
@@ -142,6 +157,12 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6 mt-4">
+          {errorMessage && (
+            <div className="p-4 bg-red-50 border border-red-200 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-200 rounded-lg">
+              {errorMessage}
+            </div>
+          )}
+
           {/* Name Field */}
           <div className="space-y-2">
             <Label htmlFor="fullName" className="flex items-center gap-2">
