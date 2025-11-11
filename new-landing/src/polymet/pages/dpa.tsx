@@ -597,39 +597,12 @@ export default function GenezioDPA_ExactDocument() {
                 </TableHeader>
                 <TableBody>
                   <TableRow className="hover:bg-gray-50">
-                    <TableCell>Microsoft</TableCell>
-                    <TableCell>Hosts data stored in Microsoft Azure</TableCell>
-                    <TableCell>EU</TableCell>
-                    <TableCell>
-                      As required under the Main Agreement, unless otherwise required by the law or
-                      by sub-processor's binding rules
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="bg-blue-50 hover:bg-gray-50">
-                    <TableCell>Google Cloud</TableCell>
+                    <TableCell>Amazon AWS</TableCell>
                     <TableCell>Data storage, Training and Processing</TableCell>
                     <TableCell>EU</TableCell>
                     <TableCell>
                       As required under the Main Agreement, unless otherwise required by the law or
-                      by sub-processor's binding rules
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="hover:bg-gray-50">
-                    <TableCell>Meta</TableCell>
-                    <TableCell>Advertising Campaigns</TableCell>
-                    <TableCell>EU</TableCell>
-                    <TableCell>
-                      As required under the Main Agreement, unless otherwise required by the law or
-                      by sub-processor's binding rules
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="bg-blue-50 hover:bg-gray-50">
-                    <TableCell>OpenAI</TableCell>
-                    <TableCell>General purpose AI</TableCell>
-                    <TableCell>EU</TableCell>
-                    <TableCell>
-                      As required under the Main Agreement, unless otherwise required by the law or
-                      by sub-processor's binding rules
+                      by sub-processor’s binding rules
                     </TableCell>
                   </TableRow>
                   <TableRow className="hover:bg-gray-50">
@@ -638,16 +611,61 @@ export default function GenezioDPA_ExactDocument() {
                     <TableCell>EU</TableCell>
                     <TableCell>
                       As required under the Main Agreement, unless otherwise required by the law or
-                      by sub-processor's binding rules
+                      by sub-processor’s binding rules
                     </TableCell>
                   </TableRow>
-                  <TableRow className="bg-blue-50 hover:bg-gray-50">
-                    <TableCell>Amazon AWS</TableCell>
+                  <TableRow className="hover:bg-gray-50">
+                    <TableCell>Google Cloud</TableCell>
                     <TableCell>Data storage, Training and Processing</TableCell>
                     <TableCell>EU</TableCell>
                     <TableCell>
                       As required under the Main Agreement, unless otherwise required by the law or
-                      by sub-processor's binding rules
+                      by sub-processor’s binding rules
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="hover:bg-gray-50">
+                    <TableCell>Meta</TableCell>
+                    <TableCell>Advertising Campaigns</TableCell>
+                    <TableCell>EU</TableCell>
+                    <TableCell>
+                      As required under the Main Agreement, unless otherwise required by the law or
+                      by sub-processor’s binding rules
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="hover:bg-gray-50">
+                    <TableCell>Microsoft</TableCell>
+                    <TableCell>Data hosting stored in Microsoft Azure</TableCell>
+                    <TableCell>EU</TableCell>
+                    <TableCell>
+                      As required under the Main Agreement, unless otherwise required by the law or
+                      by sub-processor’s binding rules
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="hover:bg-gray-50">
+                    <TableCell>MongoDB</TableCell>
+                    <TableCell>Database hosting and data storage</TableCell>
+                    <TableCell>EU</TableCell>
+                    <TableCell>
+                      As required under the Main Agreement, unless otherwise required by the law or
+                      by sub-processor’s binding rules
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="hover:bg-gray-50">
+                    <TableCell>OpenAI</TableCell>
+                    <TableCell>General purpose AI</TableCell>
+                    <TableCell>EU</TableCell>
+                    <TableCell>
+                      As required under the Main Agreement, unless otherwise required by the law or
+                      by sub-processor’s binding rules
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="hover:bg-gray-50">
+                    <TableCell>OVH</TableCell>
+                    <TableCell>Cloud hosting and infrastructure services</TableCell>
+                    <TableCell>EU</TableCell>
+                    <TableCell>
+                      As required under the Main Agreement, unless otherwise required by the law or
+                      by sub-processor’s binding rules
                     </TableCell>
                   </TableRow>
                 </TableBody>

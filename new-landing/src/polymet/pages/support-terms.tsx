@@ -29,7 +29,6 @@ export default function GenezioSupportTerms() {
               capitalized terms not otherwise defined here will have the meaning specified in the
               Agreement. The Support Terms may be regularly updated by Genezio.
             </p>
-
             <h2 className="text-3xl font-bold text-blue-900 mt-16">1. Definitions</h2>
             <ul className="space-y-5 text-sm">
               <li>
@@ -55,7 +54,6 @@ export default function GenezioSupportTerms() {
                 Customer.
               </li>
             </ul>
-
             <h2 className="text-3xl font-bold text-blue-900 mt-16">2. Incident Support</h2>
             <p>
               <strong>First Line Support.</strong> Before submitting a Service Request, Customer
@@ -78,7 +76,6 @@ export default function GenezioSupportTerms() {
               Technical support may include, on a case-by-case basis, depending on the Incident,
               responses to diagnosis and rectification of Incidents such as workarounds or fixes.
             </p>
-
             <h2 className="text-3xl font-bold text-blue-900 mt-16">3. Support Exclusions</h2>
             <p>
               Unless otherwise mutually agreed in writing, Genezio has no obligation to provide
@@ -108,10 +105,8 @@ export default function GenezioSupportTerms() {
                 (all of the foregoing being herein referred to as the “Exclusions”).
               </li>
             </ol>
-
             <h2 className="text-3xl font-bold text-blue-900 mt-16">4. Priority Levels</h2>
             <p className="mb-6">The following support service levels are defined and apply:</p>
-
             <Table className="border-2 border-blue-300 text-sm">
               <TableHeader className="bg-blue-900 text-white">
                 <TableRow>
@@ -164,7 +159,6 @@ export default function GenezioSupportTerms() {
                 </TableRow>
               </TableBody>
             </Table>
-
             <p className="mt-8 text-sm">
               * Genezio will provide Incident support during business days, Monday to Friday except
               national holidays in Romania (“Business Days”), between 9:00 and 18:00 EET during
@@ -190,28 +184,17 @@ export default function GenezioSupportTerms() {
               make commercially reasonable efforts to respond to Service Requests, but is not bound
               by the response times prescribed herein.
             </p>
-
             <h2 className="text-3xl font-bold text-blue-900 mt-16">5. Support Cooperation</h2>
             <p>
               As a precondition for requesting Support, Customer agrees that it and its Users will
               use reasonable efforts to:
             </p>
-            <ol className="list-lower-roman pl-8 space-y-3 mt-4">
-              <li>
-                to clearly understand the problem and provide the first line support before
-                consulting Genezio;
-              </li>
-              <li>
-                provide Genezio with sufficient information and data for Genezio to adequately
-                address the potential problem;
-              </li>
-              <li>
-                utilize sufficient resources to understand the instructions from Genezio in
-                addressing the problem, and make reasonable attempts to correct the problem as
-                suggested by Genezio.
-              </li>
-            </ol>
-            <p className="mt-6">
+            (i) to clearly understand the problem and provide the first line support before
+            consulting Genezio; (ii) provide Genezio with sufficient information and data for
+            Genezio to adequately address the potential problem; (iii) utilize sufficient resources
+            to understand the instructions from Genezio in addressing the problem, and make
+            reasonable attempts to correct the problem as suggested by Genezio.
+            <p className="mt-2">
               The Customer acknowledges that the time required for resolution of Incidents may vary
               depending on the specific circumstances of each problem, including, without
               limitation, the nature of the Incident, the extent and accuracy of information
