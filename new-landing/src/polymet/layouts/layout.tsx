@@ -27,7 +27,7 @@ export default function Layout({ children, currentPage, setCurrentPage }: Layout
           <div className="container mx-auto px-4 md:px-6" id="jrk11b">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8" id="qvm33w">
               {/* Company Info */}
-              <div className="md:col-span-2" id="gm92qi">
+              <div className="md:col-span-1" id="gm92qi">
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2" id="tzwr5n">
                   Genezio
                 </h3>
@@ -74,6 +74,39 @@ export default function Layout({ children, currentPage, setCurrentPage }: Layout
                     >
                       hello@genezio.com
                     </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Support */}
+              <div>
+                <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4 uppercase tracking-wider">
+                  Support
+                </h4>
+                <ul className="space-y-3">
+                  <li>
+                    <Link
+                      to="/dpa"
+                      className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                    >
+                      Data Processing Agreement
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/terms"
+                      className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                    >
+                      Term And Conditions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/support-terms"
+                      className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                    >
+                      Support Terms
+                    </Link>
                   </li>
                 </ul>
               </div>

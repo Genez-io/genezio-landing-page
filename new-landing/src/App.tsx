@@ -5,6 +5,9 @@ import Home from "@/polymet/pages/home/home";
 import RoiLanding from "@/polymet/pages/roi-landing";
 import BrandPresence from "@/polymet/pages/brand-presence";
 import ChatbotOptimization from "@/polymet/pages/chatbot-optimization";
+import DPA from "@/polymet/pages/dpa";
+import Terms from "@/polymet/pages/terms";
+import SupportTerms from "@/polymet/pages/support-terms";
 
 export default function MainApp() {
   const [currentPage, setCurrentPage] = useState("roi-landing");
@@ -17,6 +20,33 @@ export default function MainApp() {
           element={
             <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
               <RoiLanding />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/dpa"
+          element={
+            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+              <DPA />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/terms"
+          element={
+            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+              <Terms />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/support-terms"
+          element={
+            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+              <SupportTerms />
             </Layout>
           }
         />
