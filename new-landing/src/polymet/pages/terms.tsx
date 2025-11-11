@@ -375,19 +375,14 @@ export default function GenezioTermsAndConditions() {
                 Order accepted by the Parties, (ii) additional terms for new Product
                 features/functionalities, and (iii) this Agreement.
               </li>
+              <li>
+                <strong>Unusual Clauses.</strong> Each Party expressly understands and accepts all
+                the terms and provisions of this Agreement, including Section 2 (License and
+                Intellectual Property Rights), Section 3 (Financial Terms), Section 4 (Acceptable
+                Use), Section 5 (Warranty and Liability), Section 6 (Term and Termination), Section
+                7 (Confidentiality), Section 8 (Miscellaneous).
+              </li>
             </ol>
-
-            <Separator className="my-20 border-2 border-blue-900" />
-
-            <div className="bg-amber-50 border-2 border-amber-400 rounded-lg p-8 text-center">
-              <p className="text-xl font-bold text-amber-900">
-                Unusual Clauses. Each Party expressly understands and accepts all the terms and
-                provisions of this Agreement, including Section 2 (License and Intellectual Property
-                Rights), Section 3 (Financial Terms), Section 4 (Acceptable Use), Section 5
-                (Warranty and Liability), Section 6 (Term and Termination), Section 7
-                (Confidentiality), Section 8 (Miscellaneous).
-              </p>
-            </div>
           </div>
         </ScrollArea>
       </div>

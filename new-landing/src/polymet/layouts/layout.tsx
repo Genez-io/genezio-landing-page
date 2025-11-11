@@ -86,14 +86,6 @@ export default function Layout({ children, currentPage, setCurrentPage }: Layout
                 <ul className="space-y-3">
                   <li>
                     <Link
-                      to="/dpa"
-                      className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
-                    >
-                      Data Processing Agreement
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       to="/terms"
                       className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
                     >
@@ -106,6 +98,14 @@ export default function Layout({ children, currentPage, setCurrentPage }: Layout
                       className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
                     >
                       Support Terms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/dpa"
+                      className="text-slate-600 hover:text-purple-600 dark:text-slate-400 dark:hover:text-purple-400 transition-colors"
+                    >
+                      Data Processing Agreement
                     </Link>
                   </li>
                 </ul>
