@@ -1,50 +1,97 @@
-import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "@/polymet/layouts/layout";
-import Home from "@/polymet/pages/home/home";
-import RoiLanding from "@/polymet/pages/roi-landing";
-import BrandPresence from "@/polymet/pages/brand-presence";
-import ChatbotOptimization from "@/polymet/pages/chatbot-optimization";
+import { GenezioLayout } from "@/polymet/layouts/genezio-layout";
+import { GenezioLanding } from "@/polymet/pages/genezio-landing";
+import { GenezioPricing } from "@/polymet/pages/genezio-pricing";
+import { LeadGeneration } from "@/polymet/pages/lead-generation";
+import { IncreaseConversion } from "@/polymet/pages/increase-conversion";
+import { IncreaseCsat } from "@/polymet/pages/increase-csat";
+import { Glossary } from "@/polymet/pages/glossary";
+import { GlossaryTerm } from "@/polymet/pages/glossary-term";
+// import { Blog } from "@/polymet/pages/blog";
+import { BlogPost } from "@/polymet/pages/blog-post";
 
-export default function MainApp() {
-  const [currentPage, setCurrentPage] = useState("roi-landing");
-
+export default function GenezioApp() {
   return (
     <Router>
       <Routes>
         <Route
           path="/"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <RoiLanding />
-            </Layout>
+            <GenezioLayout>
+              <GenezioLanding />
+            </GenezioLayout>
           }
         />
 
         <Route
-          path="/home"
+          path="/pricing"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <Home />
-            </Layout>
+            <GenezioLayout>
+              <GenezioPricing />
+            </GenezioLayout>
           }
         />
 
         <Route
-          path="/brand-presence"
+          path="/conversational-brand-presence"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <BrandPresence />
-            </Layout>
+            <GenezioLayout>
+              <LeadGeneration />
+            </GenezioLayout>
           }
         />
 
         <Route
-          path="/chatbot-optimization"
+          path="/increase-conversion"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <ChatbotOptimization />
-            </Layout>
+            <GenezioLayout>
+              <IncreaseConversion />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/increase-csat"
+          element={
+            <GenezioLayout>
+              <IncreaseCsat />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/glossary"
+          element={
+            <GenezioLayout>
+              <Glossary />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/glossary/:slug"
+          element={
+            <GenezioLayout>
+              <GlossaryTerm />
+            </GenezioLayout>
+          }
+        />
+
+        {/* <Route
+          path="/blog"
+          element={
+            <GenezioLayout>
+              <Blog />
+            </GenezioLayout>
+          }
+        /> */}
+
+        <Route
+          path="/blog/:slug"
+          element={
+            <GenezioLayout>
+              <BlogPost />
+            </GenezioLayout>
           }
         />
       </Routes>
