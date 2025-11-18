@@ -91,7 +91,7 @@ export function GenezioHeroSection() {
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight">
           <span className="text-white">
             Make{" "}
-            <span className="inline-block min-w-[300px] text-left">
+            <span className="inline-block text-center">
               {displayedText}
               <span className="animate-pulse">|</span>
             </span>

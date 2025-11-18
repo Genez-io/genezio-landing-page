@@ -115,16 +115,17 @@ export function GenezioDashboardSection() {
                     Brand Presence
                   </h3>
                   <div className="flex items-center gap-2 bg-[#1C1C20] border border-[#2A2A30] rounded-lg px-3 py-1">
-                    <span className="text-3xl font-bold text-white">63%</span>
+                    {/* text sm mobile */}
+                    <span className="text-md font-bold text-white">63%</span>
                     <div className="w-5 h-5 rounded-full border-2 border-[#B0B0B3] flex items-center justify-center">
                       <span className="text-[#B0B0B3] text-xs">i</span>
                     </div>
                   </div>
                 </div>
-                <div className="border border-blue-500/30 bg-blue-500/5 text-white px-3 py-1.5 rounded-md text-sm flex items-center">
+                {/* <div className="border border-blue-500/30 bg-blue-500/5 text-white px-3 py-1.5 rounded-md text-sm flex items-center">
                   <ExternalLinkIcon className="w-4 h-4 mr-2" />
                   Competitors List
-                </div>
+                </div> */}
               </div>
 
               <p className="text-sm text-[#B0B0B3] mb-6">
