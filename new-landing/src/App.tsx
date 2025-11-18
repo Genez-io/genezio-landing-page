@@ -9,6 +9,9 @@ import { Glossary } from "@/polymet/pages/glossary";
 import { GlossaryTerm } from "@/polymet/pages/glossary-term";
 // import { Blog } from "@/polymet/pages/blog";
 import { BlogPost } from "@/polymet/pages/blog-post";
+import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
+import { SupportTerms } from "./polymet/pages/support-terms";
+import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
 
 export default function GenezioApp() {
   return (
@@ -91,6 +94,33 @@ export default function GenezioApp() {
           element={
             <GenezioLayout>
               <BlogPost />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/terms-and-conditions"
+          element={
+            <GenezioLayout>
+              <TermsAndConditions />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/support-terms"
+          element={
+            <GenezioLayout>
+              <SupportTerms />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/data-processing-agreement"
+          element={
+            <GenezioLayout>
+              <DataProcessingAgreement />
             </GenezioLayout>
           }
         />
