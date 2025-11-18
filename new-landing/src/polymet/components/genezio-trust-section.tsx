@@ -2,32 +2,28 @@ export function GenezioTrustSection() {
   const companies = [
     {
       name: "ERSTE BCR",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Erste_Bank_logo.svg/2560px-Erste_Bank_logo.svg.png",
+      logo: "images/erste-logo.svg"
     },
     {
       name: "Banca Transilvania",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Banca_Transilvania_logo.svg/2560px-Banca_Transilvania_logo.svg.png",
+      logo: "images/bt-logo.svg"
     },
     {
       name: "Pluxee",
-      logo: "https://companieslogo.com/img/orig/PLUX.PA-8ec3d1e5.png",
-    },
-    {
-      name: "Superbet",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Superbet_logo.svg/2560px-Superbet_logo.svg.png",
+      logo: "images/pluxee-logo.png"
     },
     {
       name: "Druid",
-      logo: "https://druid.ai/wp-content/uploads/2023/05/druid-logo-white.svg",
+      logo: "images/druid-logo.svg"
     },
     {
       name: "FlowX",
-      logo: "https://flowx.ai/wp-content/uploads/2023/01/flowx-logo-white.svg",
+      logo: "images/flowx-logo.png"
     },
     {
       name: "CBRE",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/CBRE_Group_logo.svg/2560px-CBRE_Group_logo.svg.png",
-    },
+      logo: "images/cbre-logo.png"
+    }
   ];
 
   return (
@@ -42,7 +38,7 @@ export function GenezioTrustSection() {
           <div
             className="flex"
             style={{
-              animation: "scroll 30s linear infinite",
+              animation: "scroll 30s linear infinite"
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.animationPlayState = "paused";
@@ -63,7 +59,7 @@ export function GenezioTrustSection() {
                     alt={company.name}
                     className="max-w-full max-h-full object-contain transition-all duration-300"
                     style={{
-                      filter: "brightness(0) invert(1) opacity(0.6)",
+                      filter: "brightness(0) invert(1) opacity(0.6)"
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.filter =
@@ -89,7 +85,7 @@ export function GenezioTrustSection() {
                     alt={company.name}
                     className="max-w-full max-h-full object-contain transition-all duration-300"
                     style={{
-                      filter: "brightness(0) invert(1) opacity(0.6)",
+                      filter: "brightness(0) invert(1) opacity(0.6)"
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.filter =
@@ -116,7 +112,7 @@ export function GenezioTrustSection() {
                   transform: translateX(-50%);
                 }
               }
-            `,
+            `
             }}
           />
         </div>
