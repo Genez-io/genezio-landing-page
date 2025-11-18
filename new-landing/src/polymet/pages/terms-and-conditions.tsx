@@ -162,7 +162,17 @@ export function TermsAndConditions() {
               </li>
             </ol>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              3. Financial Terms
+              3. Publicity and Marketing Activities
+            </h2>
+               <ol className="space-y-6 list-decimal pl-8">
+              <li>
+              Genezio may publicly identify the Customer as a client and use the Customer’s name and logo on Genezio’s website and other marketing or promotional materials by default. Both Parties agree to follow any marketing and communication guidelines provided by the other Party when engaging in marketing activities related to that Party under this Agreement.
+              </li>
+             
+            </ol>
+
+            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+              4. Financial Terms
             </h2>
             <ol className="space-y-6 list-decimal pl-8">
               <li>
@@ -201,7 +211,7 @@ export function TermsAndConditions() {
               </li>
             </ol>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              4. Acceptable Use
+              5. Acceptable Use
             </h2>
             <ol className="space-y-4 list-decimal pl-8">
               <li>
@@ -237,7 +247,7 @@ export function TermsAndConditions() {
               </li>
             </ol>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              5. Warranty and Liability
+              6. Warranty and Liability
             </h2>
             <ol className="space-y-6 list-decimal pl-8">
               <li>
@@ -290,7 +300,7 @@ export function TermsAndConditions() {
               </li>
             </ol>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              6. Term and Termination
+              7. Term and Termination
             </h2>
             <ol className="space-y-6 list-decimal pl-8">
               <li>
@@ -355,7 +365,7 @@ export function TermsAndConditions() {
               </li>
             </ol>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              7. Confidentiality
+              8. Confidentiality
             </h2>
             <ol className="space-y-4 list-decimal pl-8">
               <li>
@@ -393,7 +403,7 @@ export function TermsAndConditions() {
               </li>
             </ol>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              8. Miscellaneous
+              9. Miscellaneous
             </h2>
             <ol className="space-y-6 list-decimal pl-8">
               <li>
