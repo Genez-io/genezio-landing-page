@@ -179,7 +179,7 @@ export function GenezioDifferentiatorsSection() {
                 className="relative border border-[#1C1C20] rounded-2xl bg-[#0A0A0C] overflow-hidden group hover:border-blue-500/30 transition-all duration-300"
               >
                 {/* Vertical divider line */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1C1C20] to-transparent" />
+                {/* <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1C1C20] to-transparent" /> */}
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[300px] md:min-h-[400px]">
                   {/* Left Column - Text Content */}
