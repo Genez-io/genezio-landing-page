@@ -85,6 +85,7 @@
     "react-feather": "latest",
     "react-flow": "latest",
     "react-force-graph": "latest",
+    "react-helmet": "^6.1.0",
     "react-hook-form": "latest",
     "react-hot-toast": "latest",
     "react-intersection-observer": "latest",
