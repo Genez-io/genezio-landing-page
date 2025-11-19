@@ -7,11 +7,7 @@ export function GenezioFooter() {
           <div className="col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
               <span className="text-white text-xl font-semibold">
-                <img
-                  src="/images/logo-white.svg"
-                  alt="Genezio Logo"
-                  className="h-8 w-auto"
-                />
+                <img src="/images/logo-white.svg" alt="Genezio Logo" className="h-8 w-auto" />
               </span>
             </a>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -42,10 +38,7 @@ export function GenezioFooter() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
+                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                   Increase In-Chat Shopping (soon)
                 </a>
               </li>
@@ -59,7 +52,7 @@ export function GenezioFooter() {
                   href="/terms-and-conditions"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
-                  Term And Conditions
+                  Terms And Conditions
                 </a>
               </li>
               <li>

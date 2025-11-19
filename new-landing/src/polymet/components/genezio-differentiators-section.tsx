@@ -18,7 +18,7 @@ import {
   LightbulbIcon,
   PenToolIcon,
   Share2Icon,
-  StarIcon
+  StarIcon,
 } from "lucide-react";
 
 // Static Persona Scenario Component - Young Professional Only
@@ -28,26 +28,26 @@ function PersonaScenarioSelector() {
       name: "Young Professional",
       icon: BriefcaseIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: true
+      isSelected: true,
     },
     {
       name: "B2B Buyer",
       icon: ShoppingBagIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: false
+      isSelected: false,
     },
     {
       name: "Developer",
       icon: CodeIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: false
+      isSelected: false,
     },
     {
       name: "Journalist",
       icon: NewspaperIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: false
-    }
+      isSelected: false,
+    },
   ];
 
   // Always show Young Professional (first persona)
@@ -85,9 +85,7 @@ function PersonaScenarioSelector() {
             <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
               <PersonaIcon className="w-6 h-6 text-blue-400" />
             </div>
-            <h5 className="text-lg font-bold text-white">
-              {selectedPersona.name}
-            </h5>
+            <h5 className="text-lg font-bold text-white">{selectedPersona.name}</h5>
           </div>
 
           {/* User Query - Static */}
@@ -112,36 +110,36 @@ export function GenezioDifferentiatorsSection() {
       title: "Multi-Turn Conversation Simulation",
       description:
         "Go beyond one-shot prompts. Genezio runs full, realistic multi-turn dialogues to evaluate how AI engines represent your brand in real user scenarios.",
-      visual: "conversation"
+      visual: "conversation",
     },
     {
       icon: UsersIcon,
       title: "Persona-Based Scenarios",
       description:
         "Each conversation adapts to real customer personas — B2B buyer, developer, journalist, consumer — revealing how perception changes by audience and intent.",
-      visual: "personas"
+      visual: "personas",
     },
     {
       icon: SettingsIcon,
       title: "Platform-Adaptive Query Intelligence",
       description:
         "Different AI platforms require different query approaches. Genezio automatically adapts — using search queries for AI Overview, conversational questions for AI Mode and ChatGPT-like interfaces.",
-      visual: "platform"
+      visual: "platform",
     },
     {
       icon: LightbulbIcon,
       title: "Actionable Insights with Measurable Impact",
       description:
         "Transform AI visibility data into concrete actions. Get specific recommendations for website improvements, blog posts, social media threads, and review strategies to boost your AI presence.",
-      visual: "actionable"
+      visual: "actionable",
     },
     {
       icon: FileTextIcon,
       title: "AI Citation Intelligence",
       description:
         "Identify which content sources are cited by AI engines and which are missing. Correct outdated references and boost trustworthiness in AI-generated answers.",
-      visual: "citations"
-    }
+      visual: "citations",
+    },
   ];
 
   return (
@@ -162,9 +160,8 @@ export function GenezioDifferentiatorsSection() {
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto px-4">
-            Genezio goes beyond AEO (Answer Engine Optimization) and SEO —
-            combining simulation, analytics, and optimization in one intelligent
-            ecosystem.
+            Genezio goes beyond AEO (Answer Engine Optimization) and SEO — combining simulation,
+            analytics, and optimization in one intelligent ecosystem.
           </p>
         </div>
 
@@ -179,7 +176,7 @@ export function GenezioDifferentiatorsSection() {
                 className="relative border border-[#1C1C20] rounded-2xl bg-[#0A0A0C] overflow-hidden group hover:border-blue-500/30 transition-all duration-300"
               >
                 {/* Vertical divider line */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1C1C20] to-transparent" />
+                {/* <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1C1C20] to-transparent md:hidden" /> */}
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[300px] md:min-h-[400px]">
                   {/* Left Column - Text Content */}
@@ -243,9 +240,7 @@ export function GenezioDifferentiatorsSection() {
                             <div className="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
                               <SettingsIcon className="w-4 h-4 text-blue-400" />
                             </div>
-                            <span className="text-sm font-semibold text-white">
-                              AI Overview
-                            </span>
+                            <span className="text-sm font-semibold text-white">AI Overview</span>
                             <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-blue-500/20">
                               Search Query
                             </span>
@@ -263,9 +258,7 @@ export function GenezioDifferentiatorsSection() {
                             <div className="w-full border-t border-blue-500/20"></div>
                           </div>
                           <div className="relative flex justify-center text-xs">
-                            <span className="bg-[#050506] px-2 text-gray-500">
-                              vs
-                            </span>
+                            <span className="bg-[#050506] px-2 text-gray-500">vs</span>
                           </div>
                         </div>
 
@@ -296,26 +289,23 @@ export function GenezioDifferentiatorsSection() {
                           {
                             icon: PenToolIcon,
                             title: "Website Improvements",
-                            description:
-                              "Update product pages with AI-friendly content"
+                            description: "Update product pages with AI-friendly content",
                           },
                           {
                             icon: FileTextIcon,
                             title: "Blog Post",
-                            description:
-                              "Create comprehensive guide on key topics"
+                            description: "Create comprehensive guide on key topics",
                           },
                           {
                             icon: Share2Icon,
                             title: "Social Media Threads",
-                            description:
-                              "Share insights to boost brand authority"
+                            description: "Share insights to boost brand authority",
                           },
                           {
                             icon: StarIcon,
                             title: "Reviews",
-                            description: "Encourage customer testimonials"
-                          }
+                            description: "Encourage customer testimonials",
+                          },
                         ].map((action, idx) => {
                           const ActionIcon = action.icon;
                           return (
@@ -345,37 +335,27 @@ export function GenezioDifferentiatorsSection() {
                       // Citations table visual with mock data
                       <div className="w-full space-y-3">
                         <div className="grid grid-cols-[auto_1fr_auto] gap-4 pb-3 border-b border-blue-500/20">
-                          <span className="text-xs font-semibold text-gray-400">
-                            #
-                          </span>
-                          <span className="text-xs font-semibold text-gray-400">
-                            Source
-                          </span>
-                          <span className="text-xs font-semibold text-gray-400">
-                            Citations
-                          </span>
+                          <span className="text-xs font-semibold text-gray-400">#</span>
+                          <span className="text-xs font-semibold text-gray-400">Source</span>
+                          <span className="text-xs font-semibold text-gray-400">Citations</span>
                         </div>
                         {[
                           { source: "techcrunch.com", citations: 847 },
                           { source: "forbes.com", citations: 623 },
                           { source: "wired.com", citations: 512 },
                           { source: "theverge.com", citations: 389 },
-                          { source: "...", citations: null }
+                          { source: "...", citations: null },
                         ].map((item, idx) => (
                           <div
                             key={idx}
                             className="grid grid-cols-[auto_1fr_auto] gap-4 items-center py-2 hover:bg-blue-500/5 rounded transition-colors duration-200"
                           >
-                            <div className="text-sm text-[#B0B0B3] font-mono">
-                              {idx + 1}.
-                            </div>
+                            <div className="text-sm text-[#B0B0B3] font-mono">{idx + 1}.</div>
                             <div className="flex items-center gap-3">
                               <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center flex-shrink-0">
                                 <FileTextIcon className="w-3 h-3 text-blue-400" />
                               </div>
-                              <span className="text-sm text-white font-medium">
-                                {item.source}
-                              </span>
+                              <span className="text-sm text-white font-medium">{item.source}</span>
                             </div>
                             {item.citations !== null ? (
                               <div className="px-3 py-1 rounded bg-blue-500/20 border border-blue-500/30">
