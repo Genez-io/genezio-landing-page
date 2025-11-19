@@ -2,28 +2,28 @@ export function GenezioTrustSection() {
   const companies = [
     {
       name: "ERSTE BCR",
-      logo: "images/erste-logo.svg"
+      logo: "images/erste-logo.svg",
     },
     {
       name: "Banca Transilvania",
-      logo: "images/bt-logo.svg"
+      logo: "images/bt-logo.svg",
     },
     {
       name: "Pluxee",
-      logo: "images/pluxee-logo.png"
+      logo: "images/pluxee-logo.png",
     },
     {
       name: "Druid",
-      logo: "images/druid-logo.svg"
+      logo: "images/druid-logo.svg",
     },
     {
       name: "FlowX",
-      logo: "images/flowx-logo.png"
+      logo: "images/flowx-logo.png",
     },
     {
       name: "CBRE",
-      logo: "images/cbre-logo.png"
-    }
+      logo: "images/cbre-logo.png",
+    },
   ];
 
   return (
@@ -38,7 +38,7 @@ export function GenezioTrustSection() {
           <div
             className="flex"
             style={{
-              animation: "scroll 30s linear infinite"
+              animation: "scroll 15s linear infinite",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.animationPlayState = "paused";
@@ -59,15 +59,14 @@ export function GenezioTrustSection() {
                     alt={company.name}
                     className="max-w-full max-h-full object-contain transition-all duration-300"
                     style={{
-                      filter: "brightness(0) invert(1) opacity(0.6)"
+                      filter: "brightness(0) invert(1) opacity(0.6)",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.filter =
                         "brightness(0) invert(1) opacity(1) drop-shadow(0 0 20px rgba(192, 132, 252, 0.6))";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.filter =
-                        "brightness(0) invert(1) opacity(0.6)";
+                      e.currentTarget.style.filter = "brightness(0) invert(1) opacity(0.6)";
                     }}
                   />
                 </div>
@@ -85,15 +84,14 @@ export function GenezioTrustSection() {
                     alt={company.name}
                     className="max-w-full max-h-full object-contain transition-all duration-300"
                     style={{
-                      filter: "brightness(0) invert(1) opacity(0.6)"
+                      filter: "brightness(0) invert(1) opacity(0.6)",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.filter =
                         "brightness(0) invert(1) opacity(1) drop-shadow(0 0 20px rgba(192, 132, 252, 0.6))";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.filter =
-                        "brightness(0) invert(1) opacity(0.6)";
+                      e.currentTarget.style.filter = "brightness(0) invert(1) opacity(0.6)";
                     }}
                   />
                 </div>
@@ -112,7 +110,7 @@ export function GenezioTrustSection() {
                   transform: translateX(-50%);
                 }
               }
-            `
+            `,
             }}
           />
         </div>
