@@ -246,9 +246,7 @@ export function GenezioDifferentiatorsSection() {
                             </span>
                           </div>
                           <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-4">
-                            <p className="text-blue-300 text-sm font-medium">
-                              toy shopping platform
-                            </p>
+                            <p className="text-blue-300 text-sm font-medium">Lego sets sales</p>
                           </div>
                         </div>
 
@@ -277,7 +275,7 @@ export function GenezioDifferentiatorsSection() {
                           </div>
                           <div className="bg-[#1C1C20]/80 border border-purple-500/20 rounded-lg p-4">
                             <p className="text-purple-300 text-sm font-medium">
-                              What is the best platform to buy toys from?
+                              Where can I find LEGO sets on sale?
                             </p>
                           </div>
                         </div>
