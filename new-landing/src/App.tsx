@@ -1,80 +1,127 @@
-import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "@/polymet/layouts/layout";
-import Home from "@/polymet/pages/home/home";
-import RoiLanding from "@/polymet/pages/roi-landing";
-import BrandPresence from "@/polymet/pages/brand-presence";
-import ChatbotOptimization from "@/polymet/pages/chatbot-optimization";
-import DPA from "@/polymet/pages/dpa";
-import Terms from "@/polymet/pages/terms";
-import SupportTerms from "@/polymet/pages/support-terms";
+import { GenezioLayout } from "@/polymet/layouts/genezio-layout";
+import { GenezioLanding } from "@/polymet/pages/genezio-landing";
+import { GenezioPricing } from "@/polymet/pages/genezio-pricing";
+import { LeadGeneration } from "@/polymet/pages/lead-generation";
+import { IncreaseConversion } from "@/polymet/pages/increase-conversion";
+import { IncreaseCsat } from "@/polymet/pages/increase-csat";
+import { Glossary } from "@/polymet/pages/glossary";
+import { GlossaryTerm } from "@/polymet/pages/glossary-term";
+// import { Blog } from "@/polymet/pages/blog";
+import { BlogPost } from "@/polymet/pages/blog-post";
+import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
+import { SupportTerms } from "./polymet/pages/support-terms";
+import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
 
-export default function MainApp() {
-  const [currentPage, setCurrentPage] = useState("roi-landing");
-
+export default function GenezioApp() {
   return (
     <Router>
       <Routes>
         <Route
           path="/"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <RoiLanding />
-            </Layout>
+            <GenezioLayout>
+              <GenezioLanding />
+            </GenezioLayout>
           }
         />
 
         <Route
-          path="/dpa"
+          path="/pricing"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <DPA />
-            </Layout>
+            <GenezioLayout>
+              <GenezioPricing />
+            </GenezioLayout>
           }
         />
 
         <Route
-          path="/terms"
+          path="/conversational-brand-presence"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <Terms />
-            </Layout>
+            <GenezioLayout>
+              <LeadGeneration />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/increase-conversion"
+          element={
+            <GenezioLayout>
+              <IncreaseConversion />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/increase-csat"
+          element={
+            <GenezioLayout>
+              <IncreaseCsat />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/glossary"
+          element={
+            <GenezioLayout>
+              <Glossary />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/glossary/:slug"
+          element={
+            <GenezioLayout>
+              <GlossaryTerm />
+            </GenezioLayout>
+          }
+        />
+
+        {/* <Route
+          path="/blog"
+          element={
+            <GenezioLayout>
+              <Blog />
+            </GenezioLayout>
+          }
+        /> */}
+
+        <Route
+          path="/blog/:slug"
+          element={
+            <GenezioLayout>
+              <BlogPost />
+            </GenezioLayout>
+          }
+        />
+
+        <Route
+          path="/terms-and-conditions"
+          element={
+            <GenezioLayout>
+              <TermsAndConditions />
+            </GenezioLayout>
           }
         />
 
         <Route
           path="/support-terms"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+            <GenezioLayout>
               <SupportTerms />
-            </Layout>
+            </GenezioLayout>
           }
         />
 
         <Route
-          path="/home"
+          path="/data-processing-agreement"
           element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <Home />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/brand-presence"
-          element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <BrandPresence />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/chatbot-optimization"
-          element={
-            <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
-              <ChatbotOptimization />
-            </Layout>
+            <GenezioLayout>
+              <DataProcessingAgreement />
+            </GenezioLayout>
           }
         />
       </Routes>
