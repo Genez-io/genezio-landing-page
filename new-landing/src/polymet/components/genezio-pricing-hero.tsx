@@ -7,10 +7,11 @@ import {
   TrendingUpIcon,
   BarChartIcon,
   ShieldIcon,
-  ArrowRightIcon
+  ArrowRightIcon,
 } from "lucide-react";
 import axios from "axios";
 import React from "react";
+import { Helmet } from "react-helmet";
 
 interface GenezioPricingHeroProps {
   selectedAudience: "brands" | "agencies";
@@ -21,32 +22,32 @@ const brandFeatures = [
     icon: SearchIcon,
     title: "Brand Presence Monitoring",
     description:
-      "Track how your brand appears across ChatGPT, Claude, Gemini, Perplexity, and Google AI Overviews"
+      "Track how your brand appears across ChatGPT, Claude, Gemini, Perplexity, and Google AI Overviews",
   },
   {
     icon: TrendingUpIcon,
     title: "Actionable Optimization Insights",
     description:
-      "Get data-driven recommendations to improve your AI-driven brand discovery and visibility"
+      "Get data-driven recommendations to improve your AI-driven brand discovery and visibility",
   },
   {
     icon: BarChartIcon,
     title: "Brand Perception Analysis",
     description:
-      "Understand how AI perceives and positions your brand, including sentiment analysis and key attributes highlighted in responses"
+      "Understand how AI perceives and positions your brand, including sentiment analysis and key attributes highlighted in responses",
   },
   {
     icon: MessageSquareIcon,
     title: "Persona-Based Scenario Generation",
     description:
-      "Generate multi-turn conversations from the perspective of different user personas with dedicated scenarios to see how your brand performs across various customer journeys"
+      "Generate multi-turn conversations from the perspective of different user personas with dedicated scenarios to see how your brand performs across various customer journeys",
   },
   {
     icon: ShieldIcon,
     title: "Competitive Positioning Intelligence",
     description:
-      "See how you stack up against competitors in your industry and identify opportunities to differentiate your brand in AI responses"
-  }
+      "See how you stack up against competitors in your industry and identify opportunities to differentiate your brand in AI responses",
+  },
 ];
 
 const agencyFeatures = [
@@ -54,25 +55,25 @@ const agencyFeatures = [
     icon: SearchIcon,
     title: "All Features for Brands",
     description:
-      "Access to all brand monitoring features including AI platform tracking, optimization insights, perception analysis, scenario testing, and competitive intelligence"
+      "Access to all brand monitoring features including AI platform tracking, optimization insights, perception analysis, scenario testing, and competitive intelligence",
   },
   {
     icon: TrendingUpIcon,
     title: "Agency Workspace Management",
     description:
-      "Manage multiple client workspaces with team collaboration tools, role-based permissions, and centralized billing for seamless agency operations"
+      "Manage multiple client workspaces with team collaboration tools, role-based permissions, and centralized billing for seamless agency operations",
   },
   {
     icon: BarChartIcon,
     title: "One Dashboard to Monitor All Clients",
     description:
-      "Track all your clients' brands from a single unified dashboard with cross-client analytics, comparative insights, and portfolio-wide performance metrics"
-  }
+      "Track all your clients' brands from a single unified dashboard with cross-client analytics, comparative insights, and portfolio-wide performance metrics",
+  },
 ];
 
 export function GenezioPricingHero({
   selectedAudience,
-  onAudienceChange
+  onAudienceChange,
 }: GenezioPricingHeroProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
@@ -83,7 +84,7 @@ export function GenezioPricingHero({
     company: "",
     phone: "",
     interest: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -117,7 +118,7 @@ export function GenezioPricingHero({
       email: formData.email,
       company: formData.company,
       phone: formData.phone,
-      message: message
+      message: message,
     });
 
     const config = {
@@ -125,9 +126,9 @@ export function GenezioPricingHero({
       maxBodyLength: Infinity,
       url: "https://1e1bf19f-113b-4eb6-b80a-75862aa6ff01.us-east-1.cloud.genez.io/demo",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      data: data
+      data: data,
     };
 
     setIsSubmitting(true);
@@ -144,11 +145,18 @@ export function GenezioPricingHero({
     setIsSubmitting(false);
   };
 
-  const features =
-    selectedAudience === "brands" ? brandFeatures : agencyFeatures;
+  const features = selectedAudience === "brands" ? brandFeatures : agencyFeatures;
 
   return (
     <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-6 overflow-hidden bg-[#0A0A0B]">
+      <Helmet>
+        <title>Genezio Pricing: Flexible plans for your brand journey</title>
+        <meta
+          name="description"
+          content="Get flexible plans for Genezio's Brand Presence platform. Track & optimize your AI brand visibility across ChatGPT, Claude, Gemini & more. Request a demo!"
+        />
+      </Helmet>
+
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-600/5 via-purple-600/5 to-transparent pointer-events-none" />
 
@@ -159,8 +167,8 @@ export function GenezioPricingHero({
             Flexible plans for your brand journey
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto px-4">
-            Get in touch to find the right plan for your team — and grow as your
-            AI brand visibility expands.
+            Get in touch to find the right plan for your team — and grow as your AI brand visibility
+            expands.
           </p>
         </div>
 
@@ -200,9 +208,7 @@ export function GenezioPricingHero({
                 Custom pricing
               </h3>
               <p className="text-lg md:text-xl font-semibold text-blue-400 text-center mb-2">
-                {selectedAudience === "brands"
-                  ? "Starting at $499"
-                  : "Starting at $999"}
+                {selectedAudience === "brands" ? "Starting at $499" : "Starting at $999"}
               </p>
               <p className="text-sm md:text-base text-white/60 text-center">
                 {selectedAudience === "brands"
@@ -226,9 +232,7 @@ export function GenezioPricingHero({
                       <h3 className="text-base md:text-lg font-semibold text-white mb-1">
                         {feature.title}
                       </h3>
-                      <p className="text-white/60 text-sm leading-relaxed">
-                        {feature.description}
-                      </p>
+                      <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 );
@@ -238,12 +242,10 @@ export function GenezioPricingHero({
 
           {/* Right Column - Lead Form */}
           <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-2xl p-6 md:p-8 lg:p-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Get in Touch
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Get in Touch</h2>
             <p className="text-sm md:text-base text-white/60 mb-6 md:mb-8">
-              Complete the form below to request a custom offer or schedule a
-              personalized demo of our platform
+              Complete the form below to request a custom offer or schedule a personalized demo of
+              our platform
             </p>
 
             {isSubmitted ? (
@@ -252,18 +254,14 @@ export function GenezioPricingHero({
                   Thank you for your submission!
                 </h3>
                 <p className="text-white/60">
-                  We appreciate your interest and will get back to you within 24
-                  hours.
+                  We appreciate your interest and will get back to you within 24 hours.
                 </p>
               </div>
             ) : null}
 
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-white mb-2"
-                >
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                   Full Name *
                 </label>
                 <Input
@@ -271,18 +269,13 @@ export function GenezioPricingHero({
                   type="text"
                   placeholder="John Doe"
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500/20 h-12"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-white mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Work Email *
                 </label>
                 <Input
@@ -290,18 +283,13 @@ export function GenezioPricingHero({
                   type="email"
                   placeholder="your@company.com"
                   value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500/20 h-12"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="company"
-                  className="block text-sm font-medium text-white mb-2"
-                >
+                <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                   Company Name *
                 </label>
                 <Input
@@ -309,35 +297,25 @@ export function GenezioPricingHero({
                   type="text"
                   placeholder="Your Company"
                   value={formData.company}
-                  onChange={(e) =>
-                    setFormData({ ...formData, company: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500/20 h-12"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="interest"
-                  className="block text-sm font-medium text-white mb-2"
-                >
+                <label htmlFor="interest" className="block text-sm font-medium text-white mb-2">
                   I'm interested in *
                 </label>
                 <select
                   id="interest"
                   value={formData.interest}
-                  onChange={(e) =>
-                    setFormData({ ...formData, interest: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 text-white h-12 rounded-md px-3 focus:border-blue-500 focus:ring-blue-500/20 focus:outline-none"
                 >
                   <option value="" className="bg-[#0A0A0B] text-white/60">
                     Select an option
                   </option>
-                  <option
-                    value="custom-offer"
-                    className="bg-[#0A0A0B] text-white"
-                  >
+                  <option value="custom-offer" className="bg-[#0A0A0B] text-white">
                     Getting a custom offer
                   </option>
                   <option value="demo" className="bg-[#0A0A0B] text-white">
@@ -350,10 +328,7 @@ export function GenezioPricingHero({
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-white mb-2"
-                >
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   Additional Information (optional)
                 </label>
                 <Textarea
@@ -361,9 +336,7 @@ export function GenezioPricingHero({
                   placeholder="Tell us about your needs, team size, or any specific questions you have..."
                   rows={4}
                   value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500/20 resize-none"
                 />
               </div>
