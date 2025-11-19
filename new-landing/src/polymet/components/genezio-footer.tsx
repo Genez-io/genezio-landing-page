@@ -59,7 +59,7 @@ export function GenezioFooter() {
                   href="/terms-and-conditions"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
-                  Term And Conditions
+                  Terms And Conditions
                 </a>
               </li>
               <li>
