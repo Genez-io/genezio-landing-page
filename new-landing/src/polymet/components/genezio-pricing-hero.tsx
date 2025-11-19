@@ -208,7 +208,7 @@ export function GenezioPricingHero({
                 Custom pricing
               </h3>
               <p className="text-lg md:text-xl font-semibold text-blue-400 text-center mb-2">
-                {selectedAudience === "brands" ? "Starting at $499" : "Starting at $999"}
+                {selectedAudience === "brands" ? "Starting at 499€" : "Starting at 999€"}
               </p>
               <p className="text-sm md:text-base text-white/60 text-center">
                 {selectedAudience === "brands"

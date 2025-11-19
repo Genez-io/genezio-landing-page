@@ -3,7 +3,7 @@ import { CheckIcon, XIcon } from "lucide-react";
 
 export function GenezioBrandPlans() {
   const features = [
-    { name: "Price", professional: "$499/month", enterprise: "Custom" },
+    { name: "Price", professional: "499€/month", enterprise: "Custom" },
     {
       name: "LLM Platforms",
       professional: "ChatGPT, Perplexity, Google AI Overviews",
@@ -39,9 +39,7 @@ export function GenezioBrandPlans() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Plans for Brands
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Plans for Brands</h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Monitor and optimize your brand's presence across AI platforms
           </p>
@@ -52,16 +50,13 @@ export function GenezioBrandPlans() {
           {/* Professional Plan */}
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
             <div className="mb-8">
-              <div className="text-sm text-blue-400 font-semibold mb-2">
-                PROFESSIONAL
-              </div>
+              <div className="text-sm text-blue-400 font-semibold mb-2">PROFESSIONAL</div>
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-5xl font-bold text-white">$499</span>
+                <span className="text-5xl font-bold text-white">499€</span>
                 <span className="text-white/60">/month</span>
               </div>
               <p className="text-white/60">
-                Perfect for growing brands looking to monitor and optimize their
-                AI presence
+                Perfect for growing brands looking to monitor and optimize their AI presence
               </p>
             </div>
             <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-base font-medium">
@@ -75,15 +70,12 @@ export function GenezioBrandPlans() {
               MOST POPULAR
             </div>
             <div className="mb-8">
-              <div className="text-sm text-blue-400 font-semibold mb-2">
-                ENTERPRISE
-              </div>
+              <div className="text-sm text-blue-400 font-semibold mb-2">ENTERPRISE</div>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-5xl font-bold text-white">Custom</span>
               </div>
               <p className="text-white/60">
-                Advanced features and unlimited resources for enterprise-scale
-                brands
+                Advanced features and unlimited resources for enterprise-scale brands
               </p>
             </div>
             <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-medium">
@@ -98,15 +90,9 @@ export function GenezioBrandPlans() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="text-left py-4 px-6 text-white font-semibold">
-                    Features
-                  </th>
-                  <th className="text-center py-4 px-6 text-white font-semibold">
-                    Professional
-                  </th>
-                  <th className="text-center py-4 px-6 text-white font-semibold">
-                    Enterprise
-                  </th>
+                  <th className="text-left py-4 px-6 text-white font-semibold">Features</th>
+                  <th className="text-center py-4 px-6 text-white font-semibold">Professional</th>
+                  <th className="text-center py-4 px-6 text-white font-semibold">Enterprise</th>
                 </tr>
               </thead>
               <tbody>
@@ -124,9 +110,7 @@ export function GenezioBrandPlans() {
                           <XIcon className="w-5 h-5 text-white/20 mx-auto" />
                         )
                       ) : (
-                        <span className="text-white/80">
-                          {feature.professional}
-                        </span>
+                        <span className="text-white/80">{feature.professional}</span>
                       )}
                     </td>
                     <td className="py-4 px-6 text-center">
@@ -137,9 +121,7 @@ export function GenezioBrandPlans() {
                           <XIcon className="w-5 h-5 text-white/20 mx-auto" />
                         )
                       ) : (
-                        <span className="text-white/80">
-                          {feature.enterprise}
-                        </span>
+                        <span className="text-white/80">{feature.enterprise}</span>
                       )}
                     </td>
                   </tr>
