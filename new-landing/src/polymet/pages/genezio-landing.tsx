@@ -13,9 +13,9 @@ export function GenezioLanding() {
     <div className="min-h-screen bg-[#050506]">
       <GenezioHeroSection />
 
-      <GenezioTestimonialSection />
 
       <GenezioTrustSection />
+      <GenezioTestimonialSection />
 
       <GenezioDashboardSection />
 
