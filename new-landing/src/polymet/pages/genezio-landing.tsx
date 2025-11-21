@@ -6,11 +6,14 @@ import { GenezioBrandedQuestionsSection } from "@/polymet/components/genezio-bra
 import { GenezioInsightsSection } from "@/polymet/components/genezio-insights-section";
 import { GenezioEnterpriseSection } from "@/polymet/components/genezio-enterprise-section";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
+import { GenezioTestimonialSection } from "../components/genezio-testimonial-section"
 
 export function GenezioLanding() {
   return (
     <div className="min-h-screen bg-[#050506]">
       <GenezioHeroSection />
+
+      <GenezioTestimonialSection />
 
       <GenezioTrustSection />
 
