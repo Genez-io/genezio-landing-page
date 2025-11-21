@@ -115,7 +115,7 @@ export function GenezioHeroSection() {
           <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
             Genezio helps you understand, monitor,
             <br />
-            and optimize how AI mention your brand.
+            and optimize how AI mentions your brand.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4">
