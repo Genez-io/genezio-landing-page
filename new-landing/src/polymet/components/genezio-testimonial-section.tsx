@@ -11,7 +11,7 @@ export function GenezioTestimonialSection() {
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-transparent to-purple-500/[0.03] pointer-events-none"></div>
 
                     {/* Content */}
-                    <div className="relative p-8 md:p-16">
+                    <div className="relative p-8 md:p-16 mt-10 md:mt-0">
                         {/* Quote Icon and Tag */}
                         <div className="flex items-center gap-4 mb-8">
                             <QuoteIcon className="w-12 h-12 text-blue-500/20" />
