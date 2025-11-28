@@ -6,18 +6,11 @@ import {
   BarChart3Icon,
   CalendarIcon,
 } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 export function ConversionHero() {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#050506] pt-20">
-      <Helmet>
-        <title>Optimize Your AI Agent's Conversations for Higher ROI | Genezio</title>
-        <meta
-          name="description"
-          content="Master AI conversations that shape your brand. Genezio optimizes your AI agent's interactions to boost performance & brand presence. Get started!"
-        />
-      </Helmet>
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-transparent" />
 
@@ -49,19 +42,20 @@ export function ConversionHero() {
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-white/70 leading-relaxed">
-              Analyze real conversations your AI agent has with customers. Classify, extract
-              insights, and test improvements before deployment.
+              Analyze real conversations your AI agent has with customers.
+              Classify, extract insights, and test improvements before
+              deployment.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <a href="/pricing" className="w-full sm:w-auto">
+              <Link to="/pricing" className="w-full sm:w-auto">
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/25">
                   <SparklesIcon className="w-5 h-5 mr-2" />
                   Analyze My Conversations
                 </Button>
-              </a>
-              <a href="/pricing" className="w-full sm:w-auto">
+              </Link>
+              <Link to="/pricing" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
@@ -70,12 +64,12 @@ export function ConversionHero() {
                   <CalendarIcon className="w-5 h-5 mr-2" />
                   Book a Demo
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Right Visual - Homepage AI Agent Simulation */}
-          <div className="relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 min-h-[500px] flex flex-col">
+          <div className="relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 min-h-[400px] sm:min-h-[500px] flex flex-col">
             {/* Browser Chrome */}
             <div className="mb-4">
               <div className="flex items-center gap-2 mb-3">
@@ -91,7 +85,7 @@ export function ConversionHero() {
             </div>
 
             {/* Homepage Content */}
-            <div className="flex-1 bg-white/[0.02] border border-white/10 rounded-xl p-6 mb-4 relative overflow-hidden">
+            <div className="flex-1 bg-white/[0.02] border border-white/10 rounded-xl p-4 sm:p-6 mb-4 relative overflow-visible">
               {/* Simulated Homepage */}
               <div className="space-y-4">
                 <div className="h-8 w-48 bg-white/10 rounded" />
@@ -110,7 +104,7 @@ export function ConversionHero() {
               </div>
 
               {/* AI Agent Chat Widget */}
-              <div className="absolute bottom-4 right-4 w-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Chat Header */}
                 <div className="bg-gradient-to-r from-blue-600/80 to-cyan-600/80 backdrop-blur-sm px-4 py-3 border-b border-blue-500/30">
                   <div className="flex items-center gap-2">
@@ -118,7 +112,9 @@ export function ConversionHero() {
                       <SparklesIcon className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-white">AI Assistant</div>
+                      <div className="text-sm font-semibold text-white">
+                        AI Assistant
+                      </div>
                       <div className="text-xs text-white/70">Online</div>
                     </div>
                   </div>
@@ -132,7 +128,9 @@ export function ConversionHero() {
                       <SparklesIcon className="w-3 h-3 text-blue-400" />
                     </div>
                     <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">
-                      <p className="text-xs text-white">Hi! How can I help you today?</p>
+                      <p className="text-xs text-white">
+                        Hi! How can I help you today?
+                      </p>
                     </div>
                   </div>
 
@@ -142,7 +140,9 @@ export function ConversionHero() {
                       <MessageSquareIcon className="w-3 h-3 text-white/60" />
                     </div>
                     <div className="bg-blue-600/40 border border-blue-500/30 rounded-lg rounded-tr-sm px-3 py-2 max-w-[85%]">
-                      <p className="text-xs text-white">What pricing plans do you offer?</p>
+                      <p className="text-xs text-white">
+                        What pricing plans do you offer?
+                      </p>
                     </div>
                   </div>
 
