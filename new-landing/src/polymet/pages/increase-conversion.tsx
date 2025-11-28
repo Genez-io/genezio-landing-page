@@ -5,11 +5,14 @@ import { ConversionTestimonials } from "@/polymet/components/conversion-testimon
 import { CrossAnalysis } from "@/polymet/components/cross-analysis";
 import { MultiTurnTesting } from "@/polymet/components/multi-turn-testing";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
+import { BtTestimonialSection } from "@/polymet/components/bt-testimonial-section";
 
 export function IncreaseConversion() {
   return (
     <div className="min-h-screen bg-[#050506]">
       <ConversionHero />
+
+      <BtTestimonialSection />
 
       <ConversionProcess />
 
