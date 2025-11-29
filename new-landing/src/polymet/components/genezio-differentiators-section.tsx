@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import {
   MessageCircleIcon,
   UsersIcon,
@@ -18,7 +18,7 @@ import {
   LightbulbIcon,
   PenToolIcon,
   Share2Icon,
-  StarIcon,
+  StarIcon
 } from "lucide-react";
 
 // Static Persona Scenario Component - Young Professional Only
@@ -28,26 +28,26 @@ function PersonaScenarioSelector() {
       name: "Young Professional",
       icon: BriefcaseIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: true,
+      isSelected: true
     },
     {
       name: "B2B Buyer",
       icon: ShoppingBagIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: false,
+      isSelected: false
     },
     {
       name: "Developer",
       icon: CodeIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: false,
+      isSelected: false
     },
     {
       name: "Journalist",
       icon: NewspaperIcon,
       question: "Where should I open a bank account with the best mobile app?",
-      isSelected: false,
-    },
+      isSelected: false
+    }
   ];
 
   // Always show Young Professional (first persona)
@@ -63,10 +63,11 @@ function PersonaScenarioSelector() {
           return (
             <div
               key={index}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border ${persona.isSelected
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border ${
+                persona.isSelected
                   ? "bg-blue-500/20 border-blue-500/50 text-blue-300"
                   : "bg-[#1C1C20]/50 border-blue-500/20 text-gray-400"
-                }`}
+              }`}
             >
               <Icon className="w-4 h-4" />
 
@@ -111,36 +112,36 @@ export function GenezioDifferentiatorsSection() {
       title: "Multi-Turn Conversation Simulation",
       description:
         "Go beyond one-shot prompts. Genezio runs full, realistic multi-turn dialogues to evaluate how AI engines represent your brand in real user scenarios.",
-      visual: "conversation",
+      visual: "conversation"
     },
     {
       icon: UsersIcon,
       title: "Persona-Based Scenarios",
       description:
         "Each conversation adapts to real customer personas — B2B buyer, developer, journalist, consumer — revealing how perception changes by audience and intent.",
-      visual: "personas",
+      visual: "personas"
     },
     {
       icon: SettingsIcon,
       title: "Platform-Adaptive Query Intelligence",
       description:
         "Different AI platforms require different query approaches. Genezio automatically adapts — using search queries for AI Overview, conversational questions for AI Mode and ChatGPT-like interfaces.",
-      visual: "platform",
+      visual: "platform"
     },
     {
       icon: LightbulbIcon,
       title: "Actionable Insights with Measurable Impact",
       description:
         "Transform AI visibility data into concrete actions. Get specific recommendations for website improvements, blog posts, social media threads, and review strategies to boost your AI presence.",
-      visual: "actionable",
+      visual: "actionable"
     },
     {
       icon: FileTextIcon,
       title: "AI Citation Intelligence",
       description:
         "Identify which content sources are cited by AI engines and which are missing. Correct outdated references and boost trustworthiness in AI-generated answers.",
-      visual: "citations",
-    },
+      visual: "citations"
+    }
   ];
 
   return (
@@ -314,25 +315,25 @@ export function GenezioDifferentiatorsSection() {
                                 icon: PenToolIcon,
                                 title: "Website Improvements",
                                 description:
-                                  "Update product pages with AI-friendly content",
+                                  "Update product pages with AI-friendly content"
                               },
                               {
                                 icon: FileTextIcon,
                                 title: "Blog Post",
                                 description:
-                                  "Create comprehensive guide on key topics",
+                                  "Create comprehensive guide on key topics"
                               },
                               {
                                 icon: Share2Icon,
                                 title: "Social Media Threads",
                                 description:
-                                  "Share insights to boost brand authority",
+                                  "Share insights to boost brand authority"
                               },
                               {
                                 icon: StarIcon,
                                 title: "Reviews",
-                                description: "Encourage customer testimonials",
-                              },
+                                description: "Encourage customer testimonials"
+                              }
                             ].map((action, idx) => {
                               const ActionIcon = action.icon;
                               return (
@@ -377,7 +378,7 @@ export function GenezioDifferentiatorsSection() {
                               { source: "forbes.com", citations: 623 },
                               { source: "wired.com", citations: 512 },
                               { source: "theverge.com", citations: 389 },
-                              { source: "...", citations: null },
+                              { source: "...", citations: null }
                             ].map((item, idx) => (
                               <div
                                 key={idx}
@@ -520,25 +521,25 @@ export function GenezioDifferentiatorsSection() {
                                 icon: PenToolIcon,
                                 title: "Website Improvements",
                                 description:
-                                  "Update product pages with AI-friendly content",
+                                  "Update product pages with AI-friendly content"
                               },
                               {
                                 icon: FileTextIcon,
                                 title: "Blog Post",
                                 description:
-                                  "Create comprehensive guide on key topics",
+                                  "Create comprehensive guide on key topics"
                               },
                               {
                                 icon: Share2Icon,
                                 title: "Social Media Threads",
                                 description:
-                                  "Share insights to boost brand authority",
+                                  "Share insights to boost brand authority"
                               },
                               {
                                 icon: StarIcon,
                                 title: "Reviews",
-                                description: "Encourage customer testimonials",
-                              },
+                                description: "Encourage customer testimonials"
+                              }
                             ].map((action, idx) => {
                               const ActionIcon = action.icon;
                               return (
@@ -583,7 +584,7 @@ export function GenezioDifferentiatorsSection() {
                               { source: "forbes.com", citations: 623 },
                               { source: "wired.com", citations: 512 },
                               { source: "theverge.com", citations: 389 },
-                              { source: "...", citations: null },
+                              { source: "...", citations: null }
                             ].map((item, idx) => (
                               <div
                                 key={idx}
