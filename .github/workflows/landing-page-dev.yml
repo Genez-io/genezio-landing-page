@@ -68,7 +68,7 @@ jobs:
         run: npm install
       - name: Build landing page
         working-directory: ./new-landing
-        run: npm run build
+        run: npm run build:ssg
       - name: Copy Deployment Platform Landing Page to dist
         run: |
           mkdir -p new-landing/dist/blog/
