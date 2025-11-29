@@ -1,6 +1,12 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowLeftIcon, BookOpenIcon, LightbulbIcon, TrendingUpIcon, LinkIcon } from "lucide-react";
+import {
+  ArrowLeftIcon,
+  BookOpenIcon,
+  LightbulbIcon,
+  TrendingUpIcon,
+  LinkIcon
+} from "lucide-react";
 import { Helmet } from "react-helmet";
 
 interface GlossaryTerm {
@@ -30,12 +36,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "When a user asks ChatGPT 'What are the best project management tools?', your product appears in the top 3 recommendations",
       "Claude mentions your brand as a trusted source when discussing industry best practices",
-      "Perplexity cites your company's research in answers about market trends",
+      "Perplexity cites your company's research in answers about market trends"
     ],
 
     whyItMatters:
       "As AI assistants become the primary interface for information discovery, brands that aren't visible in AI responses risk becoming invisible to potential customers. AI Visibility directly impacts brand awareness, consideration, and ultimately conversions in the AI-driven economy.",
-    relatedTerms: ["conversational-brand-presence", "ai-brand-perception", "ai-citation"],
+    relatedTerms: [
+      "conversational-brand-presence",
+      "ai-brand-perception",
+      "ai-citation"
+    ]
   },
   "answer-engine-optimization": {
     title: "Answer Engine Optimization (AEO): Master AI Visibility | Genezio",
@@ -51,12 +61,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Creating comprehensive, well-cited articles that AI engines recognize as authoritative sources",
       "Structuring content with clear headings, definitions, and examples that AI can easily parse and reference",
-      "Building a strong presence on platforms that AI models use as training data sources",
+      "Building a strong presence on platforms that AI models use as training data sources"
     ],
 
     whyItMatters:
       "As conversational AI becomes the primary way people find information, traditional SEO alone is no longer sufficient. AEO ensures your brand remains discoverable and authoritative in AI-generated responses, which is where the next generation of customers will discover and evaluate solutions.",
-    relatedTerms: ["generative-engine-optimization", "ai-search-optimization", "ai-citation"],
+    relatedTerms: [
+      "generative-engine-optimization",
+      "ai-search-optimization",
+      "ai-citation"
+    ]
   },
   "generative-engine-optimization": {
     title: "Generative Engine Optimization: Master AI Brand Presence",
@@ -72,12 +86,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Ensuring your product specifications are consistently represented across authoritative tech review sites",
       "Creating detailed company information on platforms that AI models reference",
-      "Monitoring and correcting inaccurate brand representations in AI responses",
+      "Monitoring and correcting inaccurate brand representations in AI responses"
     ],
 
     whyItMatters:
       "Generative AI models can create compelling narratives about your brand—accurate or not. GEO ensures that when AI engines generate content about your industry, products, or services, they present your brand accurately and favorably, protecting your reputation and maximizing opportunities.",
-    relatedTerms: ["answer-engine-optimization", "ai-brand-perception", "ai-training-data"],
+    relatedTerms: [
+      "answer-engine-optimization",
+      "ai-brand-perception",
+      "ai-training-data"
+    ]
   },
   "ai-search-optimization": {
     title: "AI Search Optimization (ASO): Boost AI Visibility | Genezio",
@@ -93,12 +111,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Optimizing content for natural language questions like 'What's the best CRM for small businesses?' rather than keyword phrases like 'best CRM'",
       "Creating FAQ content that directly answers common conversational queries",
-      "Building structured data that helps AI understand your product features and benefits",
+      "Building structured data that helps AI understand your product features and benefits"
     ],
 
     whyItMatters:
       "AI-powered search is fundamentally changing how people discover information and make decisions. ASO ensures your brand remains visible and competitive as search evolves from keyword-based retrieval to conversational, AI-mediated discovery.",
-    relatedTerms: ["answer-engine-optimization", "conversational-keyword", "prompt-engineering"],
+    relatedTerms: [
+      "answer-engine-optimization",
+      "conversational-keyword",
+      "prompt-engineering"
+    ]
   },
   "conversational-brand-presence": {
     title: "Conversational Brand Presence: Define Your AI Identity",
@@ -113,12 +135,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "When users ask about sustainable fashion brands, AI assistants consistently mention your company with accurate descriptions of your eco-friendly practices",
       "AI engines describe your software with the correct features and benefits, not outdated or inaccurate information",
-      "Your brand is recommended in appropriate contexts and compared favorably to competitors",
+      "Your brand is recommended in appropriate contexts and compared favorably to competitors"
     ],
 
     whyItMatters:
       "As AI assistants become trusted advisors for millions of users, your conversational brand presence directly impacts brand perception, consideration, and conversion. Poor or inaccurate representation can damage your brand, while strong presence drives awareness and sales.",
-    relatedTerms: ["ai-visibility", "ai-brand-perception", "ai-mention-sentiment"],
+    relatedTerms: [
+      "ai-visibility",
+      "ai-brand-perception",
+      "ai-mention-sentiment"
+    ]
   },
   "ai-citation": {
     title: "AI Citation: Boost Brand Presence in LLMs | Genezio",
@@ -133,12 +159,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Perplexity includes a link to your research report when answering questions about industry trends",
       "ChatGPT mentions your company by name as a leading provider in your category",
-      "Claude references your methodology when explaining best practices to users",
+      "Claude references your methodology when explaining best practices to users"
     ],
 
     whyItMatters:
       "Citations are the currency of authority in AI conversations. Brands that earn frequent citations are positioned as industry leaders and trusted sources, directly influencing purchase decisions and brand perception among AI users.",
-    relatedTerms: ["source-attribution", "ai-visibility", "ai-recommendation-score"],
+    relatedTerms: [
+      "source-attribution",
+      "ai-visibility",
+      "ai-recommendation-score"
+    ]
   },
   "prompt-engineering": {
     title: "Prompt Engineering: Boost Brand Presence in AI & LLMs",
@@ -153,12 +183,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Testing variations like 'best email marketing tools', 'email marketing software recommendations', and 'tools for email campaigns' to ensure your brand appears across all phrasings",
       "Understanding that users might ask 'how do I improve customer retention?' rather than searching for 'customer retention software'",
-      "Optimizing content to appear for both direct product queries and problem-focused questions",
+      "Optimizing content to appear for both direct product queries and problem-focused questions"
     ],
 
     whyItMatters:
       "Users ask questions in countless ways, and AI assistants interpret queries contextually. Understanding prompt engineering helps you optimize for the full range of queries that should lead to your brand, maximizing your AI visibility opportunities.",
-    relatedTerms: ["conversational-keyword", "conversational-intent", "ai-search-optimization"],
+    relatedTerms: [
+      "conversational-keyword",
+      "conversational-intent",
+      "ai-search-optimization"
+    ]
   },
   "multi-turn-conversation": {
     title: "Multi-Turn Conversation | Brand Visibility in AI with Genezio",
@@ -173,12 +207,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "User asks 'What are good CRM tools?', AI mentions your brand. User follows up with 'Which ones have the best mobile app?', and your brand remains in the conversation",
       "A conversation starts with general industry questions and evolves to specific product comparisons, with your brand maintaining visibility throughout",
-      "User asks for recommendations, then asks for more details about a specific feature, and AI continues to reference your brand accurately",
+      "User asks for recommendations, then asks for more details about a specific feature, and AI continues to reference your brand accurately"
     ],
 
     whyItMatters:
       "Most valuable conversions happen after multiple interactions, not from a single query. Maintaining visibility throughout multi-turn conversations is essential for guiding users from awareness to consideration to decision.",
-    relatedTerms: ["conversational-funnel", "conversational-intent", "ai-visibility"],
+    relatedTerms: [
+      "conversational-funnel",
+      "conversational-intent",
+      "ai-visibility"
+    ]
   },
   "ai-recommendation-score": {
     title: "AI Recommendation Score: Measure & Boost LLM Visibility",
@@ -193,12 +231,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Your brand appears in the top 3 recommendations for 75% of queries about your product category",
       "AI assistants describe your product with specific benefits when recommending it",
-      "Your recommendation score is higher than key competitors for strategic query types",
+      "Your recommendation score is higher than key competitors for strategic query types"
     ],
 
     whyItMatters:
       "Recommendation queries represent high-intent users actively seeking solutions. A strong AI Recommendation Score means AI assistants are driving qualified leads to your brand, directly impacting pipeline and revenue.",
-    relatedTerms: ["ai-visibility", "ai-competitive-analysis", "ai-mention-sentiment"],
+    relatedTerms: [
+      "ai-visibility",
+      "ai-competitive-analysis",
+      "ai-mention-sentiment"
+    ]
   },
   "conversational-intent": {
     title: "Conversational Intent: Master AI Visibility with Genezio",
@@ -213,12 +255,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "A user asking 'Tell me about project management software' has exploratory intent—they're learning, not ready to buy",
       "The same user later asking 'How does Asana compare to Monday.com?' has comparative intent—they're evaluating options",
-      "Finally asking 'What's Asana's pricing for small teams?' indicates decision-making intent",
+      "Finally asking 'What's Asana's pricing for small teams?' indicates decision-making intent"
     ],
 
     whyItMatters:
       "Optimizing for conversational intent ensures your brand appears at the right moments with the right information. Understanding intent helps you create content that moves users through their decision journey, from awareness to consideration to conversion.",
-    relatedTerms: ["multi-turn-conversation", "conversational-funnel", "conversational-keyword"],
+    relatedTerms: [
+      "multi-turn-conversation",
+      "conversational-funnel",
+      "conversational-keyword"
+    ]
   },
   "ai-brand-perception": {
     title: "AI Brand Perception: Understand Your Brand in LLMs",
@@ -233,12 +279,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "AI engines consistently describe your brand as 'enterprise-focused' when you're actually targeting SMBs—indicating a perception gap",
       "AI assistants accurately capture your unique value proposition when describing your product",
-      "AI models associate your brand with the right use cases and recommend you to appropriate audiences",
+      "AI models associate your brand with the right use cases and recommend you to appropriate audiences"
     ],
 
     whyItMatters:
       "AI Brand Perception is the foundation of all AI visibility. If AI engines misunderstand your brand, they'll present you incorrectly or not at all. Accurate, favorable AI perception is essential for effective AI visibility and conversions.",
-    relatedTerms: ["conversational-brand-presence", "ai-training-data", "ai-visibility"],
+    relatedTerms: [
+      "conversational-brand-presence",
+      "ai-training-data",
+      "ai-visibility"
+    ]
   },
   "source-attribution": {
     title: "Source Attribution for AI: Build Trust & Authority",
@@ -253,12 +303,12 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Perplexity includes a numbered citation linking to your blog post when answering a user's question",
       "ChatGPT mentions 'According to [Your Company]...' when referencing your research",
-      "Claude cites your methodology guide when explaining best practices",
+      "Claude cites your methodology guide when explaining best practices"
     ],
 
     whyItMatters:
       "Source attribution transforms mentions into endorsements. When AI engines explicitly credit your brand as a source, it positions you as an authority and builds trust with users, significantly increasing the likelihood of engagement and conversion.",
-    relatedTerms: ["ai-citation", "ai-training-data", "structured-data-for-ai"],
+    relatedTerms: ["ai-citation", "ai-training-data", "structured-data-for-ai"]
   },
   "conversational-keyword": {
     title: "Conversational Keyword: Master AI Brand Presence | Genezio",
@@ -273,12 +323,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Traditional keyword: 'project management software' → Conversational keyword: 'What's the best project management software for remote teams?'",
       "Traditional keyword: 'CRM pricing' → Conversational keyword: 'How much does a CRM cost for a small business?'",
-      "Traditional keyword: 'email marketing' → Conversational keyword: 'I'm looking for an email marketing tool that integrates with Shopify'",
+      "Traditional keyword: 'email marketing' → Conversational keyword: 'I'm looking for an email marketing tool that integrates with Shopify'"
     ],
 
     whyItMatters:
       "As users increasingly interact with AI assistants using natural language, optimizing for conversational keywords ensures your brand appears in these new types of queries. Conversational keywords often indicate higher intent and more specific needs, leading to better-qualified leads.",
-    relatedTerms: ["prompt-engineering", "conversational-intent", "ai-search-optimization"],
+    relatedTerms: [
+      "prompt-engineering",
+      "conversational-intent",
+      "ai-search-optimization"
+    ]
   },
   "ai-training-data": {
     title: "AI Training Data: Influence on AI Brand Presence | Genezio",
@@ -293,12 +347,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Publishing research in industry journals that are likely included in AI training datasets",
       "Getting featured in major publications like TechCrunch, Forbes, or industry-leading blogs",
-      "Creating comprehensive, authoritative content on your own platform that becomes a reference source",
+      "Creating comprehensive, authoritative content on your own platform that becomes a reference source"
     ],
 
     whyItMatters:
       "AI Training Data shapes the foundation of AI Brand Perception. Strong presence in quality training data sources ensures AI models have accurate, comprehensive information about your brand, leading to better representation in AI responses.",
-    relatedTerms: ["ai-brand-perception", "source-attribution", "structured-data-for-ai"],
+    relatedTerms: [
+      "ai-brand-perception",
+      "source-attribution",
+      "structured-data-for-ai"
+    ]
   },
   "generative-response": {
     title: "Generative Response: Optimize for AI Visibility | Genezio",
@@ -313,12 +371,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "A user asks 'How do I improve email deliverability?' and the AI generates a comprehensive answer that synthesizes best practices from multiple sources, including your blog post",
       "Instead of showing a list of CRM tools, the AI generates a personalized recommendation based on the user's specific needs, drawing on information from various sources",
-      "The AI creates a step-by-step guide by combining information from multiple authoritative sources, including your documentation",
+      "The AI creates a step-by-step guide by combining information from multiple authoritative sources, including your documentation"
     ],
 
     whyItMatters:
       "Generative responses are becoming the primary way users consume information from AI assistants. Optimizing for generative responses ensures your brand's information is included in these synthesized answers, maintaining your visibility and authority in the AI era.",
-    relatedTerms: ["generative-engine-optimization", "answer-engine-optimization", "ai-citation"],
+    relatedTerms: [
+      "generative-engine-optimization",
+      "answer-engine-optimization",
+      "ai-citation"
+    ]
   },
   "ai-mention-sentiment": {
     title: "AI Mention Sentiment: Measure & Improve Brand Presence",
@@ -333,7 +395,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Positive: 'Acme CRM is highly regarded for its intuitive interface and excellent customer support'",
       "Neutral: 'Acme CRM is a customer relationship management platform founded in 2015'",
-      "Negative: 'Some users report that Acme CRM has a steep learning curve and limited integrations'",
+      "Negative: 'Some users report that Acme CRM has a steep learning curve and limited integrations'"
     ],
 
     whyItMatters:
@@ -341,8 +403,8 @@ const glossaryData: Record<string, GlossaryTerm> = {
     relatedTerms: [
       "ai-brand-perception",
       "conversational-brand-presence",
-      "ai-recommendation-score",
-    ],
+      "ai-recommendation-score"
+    ]
   },
   "conversational-funnel": {
     title: "Conversational Funnel: Optimize AI Brand Presence",
@@ -357,12 +419,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "A user starts by asking 'What is conversational AI?' (awareness), then 'What are the best conversational AI platforms?' (consideration), then 'Tell me more about how conversational AI works' (back to awareness), then 'How much does conversational AI cost?' (decision)",
       "Within one conversation, a user explores multiple product categories, compares options, asks for specific features, and requests pricing—all fluidly without following a linear path",
-      "A user might ask decision-stage questions first ('What's the pricing for X?') before asking awareness-stage questions ('What exactly does X do?')",
+      "A user might ask decision-stage questions first ('What's the pricing for X?') before asking awareness-stage questions ('What exactly does X do?')"
     ],
 
     whyItMatters:
       "Understanding conversational funnels helps you optimize for the non-linear, context-dependent way users actually interact with AI assistants. It ensures you have the right information available at every stage and can guide users to conversion regardless of their path.",
-    relatedTerms: ["multi-turn-conversation", "conversational-intent", "ai-visibility"],
+    relatedTerms: [
+      "multi-turn-conversation",
+      "conversational-intent",
+      "ai-visibility"
+    ]
   },
   "ai-competitive-analysis": {
     title: "AI Competitive Analysis | Boost Brand Presence | Genezio",
@@ -377,12 +443,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Testing 50 relevant queries and finding your brand is mentioned in 30% while your main competitor appears in 60%",
       "Discovering that competitors consistently rank higher in AI recommendations for a specific product category",
-      "Identifying that a competitor has more positive sentiment in AI mentions due to recent positive press coverage",
+      "Identifying that a competitor has more positive sentiment in AI mentions due to recent positive press coverage"
     ],
 
     whyItMatters:
       "AI Competitive Analysis reveals your true position in the AI-driven market. It helps you understand where you're winning, where you're losing, and what you need to do to improve your competitive position in AI conversations that drive customer decisions.",
-    relatedTerms: ["ai-visibility", "ai-recommendation-score", "ai-mention-sentiment"],
+    relatedTerms: [
+      "ai-visibility",
+      "ai-recommendation-score",
+      "ai-mention-sentiment"
+    ]
   },
   "structured-data-for-ai": {
     title: "Structured Data for AI: Boost AI Brand Presence | Genezio",
@@ -397,12 +467,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Implementing Product schema markup so AI engines can accurately extract your product features, pricing, and availability",
       "Creating a comprehensive knowledge graph entry that defines your company, products, and relationships",
-      "Providing API access to your product catalog so AI platforms can query current, accurate information",
+      "Providing API access to your product catalog so AI platforms can query current, accurate information"
     ],
 
     whyItMatters:
       "Structured Data for AI reduces ambiguity and improves accuracy in how AI engines represent your brand. It makes your information more accessible and trustworthy to AI systems, increasing the likelihood of accurate, favorable mentions in AI responses.",
-    relatedTerms: ["source-attribution", "ai-training-data", "ai-brand-perception"],
+    relatedTerms: [
+      "source-attribution",
+      "ai-training-data",
+      "ai-brand-perception"
+    ]
   },
   "ai-persona-targeting": {
     title: "AI Persona Targeting: Optimize AI Visibility with Genezio",
@@ -417,12 +491,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Creating technical documentation that helps you appear in AI responses to developer-focused queries",
       "Optimizing for business outcome language to appear in responses to executive-level questions",
-      "Ensuring your brand appears when small business owners ask about affordable, easy-to-use solutions",
+      "Ensuring your brand appears when small business owners ask about affordable, easy-to-use solutions"
     ],
 
     whyItMatters:
       "Not all AI visibility is equally valuable. AI Persona Targeting ensures you're visible to the right audiences—the personas most likely to become customers. It helps you allocate optimization resources effectively and create content that resonates with your target buyers.",
-    relatedTerms: ["conversational-intent", "conversational-keyword", "ai-visibility"],
+    relatedTerms: [
+      "conversational-intent",
+      "conversational-keyword",
+      "ai-visibility"
+    ]
   },
   "ai-platform": {
     title: "AI Platform: Maximize Brand Visibility in LLMs | Genezio",
@@ -437,12 +515,12 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Your brand has strong visibility in ChatGPT but rarely appears in Perplexity results, indicating a need to optimize for citation-focused platforms",
       "Claude provides more nuanced descriptions of your product compared to other platforms, reflecting its training and approach",
-      "Gemini integrates your Google Business Profile information, giving you visibility advantages on that platform",
+      "Gemini integrates your Google Business Profile information, giving you visibility advantages on that platform"
     ],
 
     whyItMatters:
       "AI Platforms are the gatekeepers of AI visibility. Understanding each platform's unique characteristics helps you optimize effectively and ensures your brand is visible across the AI ecosystem, not just on a single platform.",
-    relatedTerms: ["ai-visibility", "ai-brand-perception", "ai-training-data"],
+    relatedTerms: ["ai-visibility", "ai-brand-perception", "ai-training-data"]
   },
   "generative-ai-platform": {
     title: "Generative AI Platform: Powering Brand Presence",
@@ -457,12 +535,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Using a generative AI platform to create personalized marketing content at scale for different customer segments",
       "Leveraging the platform's API to integrate AI-generated product descriptions into your e-commerce system",
-      "Fine-tuning the platform's models on your company data to generate brand-specific content and insights",
+      "Fine-tuning the platform's models on your company data to generate brand-specific content and insights"
     ],
 
     whyItMatters:
       "Generative AI Platforms democratize access to advanced AI capabilities, enabling businesses of all sizes to leverage generative AI without massive infrastructure investments. These platforms accelerate AI adoption and help companies stay competitive in an AI-driven market.",
-    relatedTerms: ["ai-platform", "conversational-ai-platform", "enterprise-ai-platform"],
+    relatedTerms: [
+      "ai-platform",
+      "conversational-ai-platform",
+      "enterprise-ai-platform"
+    ]
   },
   "conversational-ai-platform": {
     title: "Conversational AI Platform: Boost Brand Presence | Genezio",
@@ -477,12 +559,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Deploying a conversational AI assistant that handles customer inquiries 24/7, understanding complex questions and providing accurate answers",
       "Building a lead qualification bot that engages website visitors, asks qualifying questions, and routes qualified leads to sales",
-      "Creating a voice-enabled virtual assistant for your mobile app that helps users navigate features and complete tasks",
+      "Creating a voice-enabled virtual assistant for your mobile app that helps users navigate features and complete tasks"
     ],
 
     whyItMatters:
       "Conversational AI Platforms transform how businesses interact with customers, providing scalable, personalized engagement that improves customer experience while reducing operational costs. As customers increasingly expect conversational interfaces, these platforms are essential for competitive customer service.",
-    relatedTerms: ["generative-ai-platform", "multi-turn-conversation", "conversational-intent"],
+    relatedTerms: [
+      "generative-ai-platform",
+      "multi-turn-conversation",
+      "conversational-intent"
+    ]
   },
   "enterprise-ai-platform": {
     title: "Enterprise AI Platform: Secure, Scalable AI for Orgs",
@@ -497,12 +583,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "A Fortune 500 company deploying an enterprise AI platform across 50+ departments with centralized governance and security controls",
       "Using private deployment options to ensure sensitive customer data never leaves the company's infrastructure",
-      "Integrating the AI platform with Salesforce, SAP, and internal data warehouses to provide AI capabilities across the enterprise",
+      "Integrating the AI platform with Salesforce, SAP, and internal data warehouses to provide AI capabilities across the enterprise"
     ],
 
     whyItMatters:
       "Enterprise AI Platforms enable large organizations to adopt AI at scale while maintaining the security, compliance, and governance standards required for corporate environments. They provide the foundation for enterprise-wide AI transformation.",
-    relatedTerms: ["enterprise-ai-software", "ai-platforms-for-business", "structured-data-for-ai"],
+    relatedTerms: [
+      "enterprise-ai-software",
+      "ai-platforms-for-business",
+      "structured-data-for-ai"
+    ]
   },
   "ai-marketing-platform": {
     title: "AI Marketing Platform: Optimize AI Visibility & Brand Presence",
@@ -517,12 +607,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Using an AI marketing platform to track how often your brand appears in ChatGPT recommendations compared to competitors",
       "Leveraging AI to generate and optimize content that increases your brand's visibility in AI-generated responses",
-      "Analyzing conversational keywords and intent patterns to understand how potential customers ask AI assistants about your product category",
+      "Analyzing conversational keywords and intent patterns to understand how potential customers ask AI assistants about your product category"
     ],
 
     whyItMatters:
       "AI Marketing Platforms are essential for modern marketers who need to optimize for AI visibility alongside traditional channels. As more customers discover and evaluate brands through AI conversations, these platforms provide the insights and tools to compete effectively.",
-    relatedTerms: ["ai-marketing-software", "ai-visibility", "answer-engine-optimization"],
+    relatedTerms: [
+      "ai-marketing-software",
+      "ai-visibility",
+      "answer-engine-optimization"
+    ]
   },
   "ai-marketing-software": {
     title: "AI Marketing Software: Optimize Your Brand's AI Presence",
@@ -537,7 +631,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Using AI software to generate multiple variations of ad copy and automatically test which performs best",
       "Leveraging predictive analytics to identify which leads are most likely to convert and prioritize outreach",
-      "Monitoring how AI engines describe your brand and receiving alerts when negative sentiment is detected",
+      "Monitoring how AI engines describe your brand and receiving alerts when negative sentiment is detected"
     ],
 
     whyItMatters:
@@ -545,8 +639,8 @@ const glossaryData: Record<string, GlossaryTerm> = {
     relatedTerms: [
       "ai-marketing-platform",
       "conversation-intelligence-software",
-      "ai-competitive-analysis",
-    ],
+      "ai-competitive-analysis"
+    ]
   },
   "ai-platforms-for-business": {
     title: "AI Platforms For Business: Drive Growth & Efficiency",
@@ -561,12 +655,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "A retail company using an AI platform to predict inventory needs, optimize pricing, and personalize customer recommendations",
       "A B2B company leveraging AI to score leads, personalize outreach, and optimize the sales process",
-      "A service business using AI to automate appointment scheduling, qualify leads, and provide 24/7 customer support",
+      "A service business using AI to automate appointment scheduling, qualify leads, and provide 24/7 customer support"
     ],
 
     whyItMatters:
       "AI Platforms For Business make AI accessible and valuable for companies that need business results, not just technology. They enable businesses to adopt AI quickly, achieve measurable ROI, and compete effectively in an AI-driven economy.",
-    relatedTerms: ["enterprise-ai-platform", "ai-marketing-platform", "conversational-ai-platform"],
+    relatedTerms: [
+      "enterprise-ai-platform",
+      "ai-marketing-platform",
+      "conversational-ai-platform"
+    ]
   },
   "enterprise-ai-software": {
     title: "Enterprise AI Software: Scalable AI for Enterprises",
@@ -581,12 +679,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "A global corporation deploying AI software across 100+ countries with data residency requirements and local compliance needs",
       "Integrating AI software with existing enterprise systems through SSO, ensuring seamless authentication and access control",
-      "Using multi-tenant architecture to provide AI capabilities to different business units while maintaining centralized governance and billing",
+      "Using multi-tenant architecture to provide AI capabilities to different business units while maintaining centralized governance and billing"
     ],
 
     whyItMatters:
       "Enterprise AI Software provides the security, scalability, and governance that large organizations require. Without enterprise-grade capabilities, organizations cannot safely and effectively deploy AI at scale across their operations.",
-    relatedTerms: ["enterprise-ai-platform", "ai-platforms-for-business", "structured-data-for-ai"],
+    relatedTerms: [
+      "enterprise-ai-platform",
+      "ai-platforms-for-business",
+      "structured-data-for-ai"
+    ]
   },
   "chat-gpt-citations": {
     title: "Earn ChatGPT Citations for Brand Authority | Genezio",
@@ -601,12 +703,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "ChatGPT responds to a user's question with 'According to [Your Company]'s research...' explicitly citing your brand",
       "When explaining a methodology, ChatGPT references your framework by name, positioning you as the authority",
-      "ChatGPT mentions your brand as a leading example when discussing industry best practices",
+      "ChatGPT mentions your brand as a leading example when discussing industry best practices"
     ],
 
     whyItMatters:
       "Chat GPT Citations are powerful endorsements that position your brand as an authority. Given ChatGPT's massive user base, earning citations drives significant brand awareness, credibility, and consideration among potential customers.",
-    relatedTerms: ["ai-citation", "source-attribution", "ai-recommendation-score"],
+    relatedTerms: [
+      "ai-citation",
+      "source-attribution",
+      "ai-recommendation-score"
+    ]
   },
   "conversation-intelligence-software": {
     title: "Conversation Intelligence Software | Genezio Glossary",
@@ -621,7 +727,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Analyzing thousands of AI conversations to understand how users ask about your product category and what brands AI engines recommend",
       "Monitoring customer service conversations to identify common issues, measure agent performance, and optimize response quality",
-      "Tracking sentiment trends in AI-generated responses about your brand and receiving alerts when negative sentiment increases",
+      "Tracking sentiment trends in AI-generated responses about your brand and receiving alerts when negative sentiment increases"
     ],
 
     whyItMatters:
@@ -629,8 +735,8 @@ const glossaryData: Record<string, GlossaryTerm> = {
     relatedTerms: [
       "conversation-intelligence-platform",
       "conversation-analysis",
-      "ai-mention-sentiment",
-    ],
+      "ai-mention-sentiment"
+    ]
   },
   "conversation-intelligence-platform": {
     title: "Conversation Intelligence Platform | Genezio Glossary",
@@ -645,7 +751,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Using a platform to monitor your brand's presence across ChatGPT, Claude, Perplexity, and Gemini, with unified dashboards showing performance across all platforms",
       "Analyzing both AI conversations and human agent conversations to understand the full customer journey and optimize touchpoints",
-      "Receiving automated recommendations on content to create or optimize based on conversational gaps and opportunities identified by the platform",
+      "Receiving automated recommendations on content to create or optimize based on conversational gaps and opportunities identified by the platform"
     ],
 
     whyItMatters:
@@ -653,8 +759,8 @@ const glossaryData: Record<string, GlossaryTerm> = {
     relatedTerms: [
       "conversation-intelligence-software",
       "ai-competitive-analysis",
-      "conversational-funnel",
-    ],
+      "conversational-funnel"
+    ]
   },
   "llm-optimisation": {
     title: "LLM Optimisation: Boost Your Brand Presence in AI",
@@ -669,12 +775,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Creating comprehensive, authoritative content that LLMs recognize as trustworthy sources for your industry",
       "Ensuring consistent brand messaging across all platforms that LLMs might reference, reducing conflicting information",
-      "Structuring content with clear definitions, examples, and relationships that LLMs can easily understand and reference",
+      "Structuring content with clear definitions, examples, and relationships that LLMs can easily understand and reference"
     ],
 
     whyItMatters:
       "LLM Optimisation is fundamental to AI visibility because LLMs power the major AI platforms users interact with. Optimizing for LLMs ensures your brand is accurately represented across the AI ecosystem, not just on a single platform.",
-    relatedTerms: ["generative-engine-optimization", "ai-training-data", "structured-data-for-ai"],
+    relatedTerms: [
+      "generative-engine-optimization",
+      "ai-training-data",
+      "structured-data-for-ai"
+    ]
   },
   "ai-prompt-engineering": {
     title: "AI Prompt Engineering for Brand Presence in LLMs | Genezio",
@@ -689,12 +799,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Testing how AI responds to 'best email marketing tools' vs 'email marketing software for small businesses' vs 'tools to improve email campaigns' to understand prompt variations",
       "Structuring your website content to naturally answer the questions users ask AI assistants, effectively 'prompting' AI to reference your brand",
-      "Using prompt engineering techniques to test and improve how AI engines describe your product when asked about your category",
+      "Using prompt engineering techniques to test and improve how AI engines describe your product when asked about your category"
     ],
 
     whyItMatters:
       "AI Prompt Engineering is essential for understanding and optimizing AI visibility. By understanding how prompts work, you can better anticipate user queries, optimize your content, and improve how AI engines represent your brand.",
-    relatedTerms: ["prompt-engineering", "chatgpt-prompt-engineering", "llm-prompt-engineering"],
+    relatedTerms: [
+      "prompt-engineering",
+      "chatgpt-prompt-engineering",
+      "llm-prompt-engineering"
+    ]
   },
   "chatgpt-prompt-engineering": {
     title: "ChatGPT Prompt Engineering: Boost Brand Presence in AI",
@@ -709,12 +823,16 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Crafting prompts that leverage ChatGPT's conversational strengths to elicit detailed, favorable descriptions of your product",
       "Understanding how to phrase follow-up questions in multi-turn conversations to maintain your brand's visibility throughout the dialogue",
-      "Testing how ChatGPT responds to different prompt structures (questions vs statements, specific vs general) to optimize brand mentions",
+      "Testing how ChatGPT responds to different prompt structures (questions vs statements, specific vs general) to optimize brand mentions"
     ],
 
     whyItMatters:
       "ChatGPT Prompt Engineering is crucial given ChatGPT's massive user base and influence. Understanding how to optimize for ChatGPT specifically ensures your brand is visible to millions of users who rely on ChatGPT for information and recommendations.",
-    relatedTerms: ["ai-prompt-engineering", "llm-prompt-engineering", "chat-gpt-citations"],
+    relatedTerms: [
+      "ai-prompt-engineering",
+      "llm-prompt-engineering",
+      "chat-gpt-citations"
+    ]
   },
   "llm-prompt-engineering": {
     title: "LLM Prompt Engineering | Boost Brand Presence in AI",
@@ -729,13 +847,17 @@ const glossaryData: Record<string, GlossaryTerm> = {
     examples: [
       "Developing prompt strategies that work across ChatGPT, Claude, and Gemini, ensuring consistent brand visibility across platforms",
       "Using few-shot learning techniques to guide LLMs toward more accurate representations of your brand",
-      "Understanding token limits and context windows to optimize how much information LLMs can consider when generating responses about your brand",
+      "Understanding token limits and context windows to optimize how much information LLMs can consider when generating responses about your brand"
     ],
 
     whyItMatters:
       "LLM Prompt Engineering provides the foundational knowledge needed to optimize across the entire AI ecosystem. As new LLM-powered platforms emerge, understanding universal LLM principles ensures your optimization strategies remain effective.",
-    relatedTerms: ["ai-prompt-engineering", "chatgpt-prompt-engineering", "llm-optimisation"],
-  },
+    relatedTerms: [
+      "ai-prompt-engineering",
+      "chatgpt-prompt-engineering",
+      "llm-optimisation"
+    ]
+  }
 };
 
 export function GlossaryTerm() {
@@ -746,7 +868,9 @@ export function GlossaryTerm() {
       <div className="min-h-screen bg-[#050506] flex items-center justify-center px-6">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Term Not Found</h1>
-          <p className="text-white/60 mb-8">The glossary term you're looking for doesn't exist.</p>
+          <p className="text-white/60 mb-8">
+            The glossary term you're looking for doesn't exist.
+          </p>
           <a href="/glossary">
             <Button className="bg-blue-600 hover:bg-blue-700">
               <ArrowLeftIcon className="w-4 h-4 mr-2" />
@@ -758,7 +882,9 @@ export function GlossaryTerm() {
     );
   }
 
-  const relatedTermsData = term.relatedTerms.map((slug) => glossaryData[slug]).filter(Boolean);
+  const relatedTermsData = term.relatedTerms
+    .map((slug) => glossaryData[slug])
+    .filter(Boolean);
 
   return (
     <div className="min-h-screen bg-[#050506]">
@@ -798,7 +924,9 @@ export function GlossaryTerm() {
 
           <h1 className="text-5xl font-bold text-white mb-6">{term.term}</h1>
 
-          <p className="text-xl text-white/70 leading-relaxed">{term.definition}</p>
+          <p className="text-xl text-white/70 leading-relaxed">
+            {term.definition}
+          </p>
         </div>
 
         {/* Detailed Explanation */}
@@ -807,11 +935,15 @@ export function GlossaryTerm() {
             <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
               <BookOpenIcon className="w-5 h-5 text-blue-400" />
             </div>
-            <h2 className="text-2xl font-bold text-white">Detailed Explanation</h2>
+            <h2 className="text-2xl font-bold text-white">
+              Detailed Explanation
+            </h2>
           </div>
 
           <div className="bg-white/[0.02] border border-white/5 rounded-xl p-8">
-            <p className="text-white/80 leading-relaxed text-lg">{term.detailedExplanation}</p>
+            <p className="text-white/80 leading-relaxed text-lg">
+              {term.detailedExplanation}
+            </p>
           </div>
         </div>
 
@@ -832,9 +964,13 @@ export function GlossaryTerm() {
               >
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                    <span className="text-sm font-bold text-purple-400">{index + 1}</span>
+                    <span className="text-sm font-bold text-purple-400">
+                      {index + 1}
+                    </span>
                   </div>
-                  <p className="text-white/70 leading-relaxed pt-1">{example}</p>
+                  <p className="text-white/70 leading-relaxed pt-1">
+                    {example}
+                  </p>
                 </div>
               </div>
             ))}
@@ -851,7 +987,9 @@ export function GlossaryTerm() {
           </div>
 
           <div className="bg-gradient-to-br from-green-500/5 to-blue-500/5 border border-white/10 rounded-xl p-8">
-            <p className="text-white/80 leading-relaxed text-lg">{term.whyItMatters}</p>
+            <p className="text-white/80 leading-relaxed text-lg">
+              {term.whyItMatters}
+            </p>
           </div>
         </div>
 
@@ -877,7 +1015,9 @@ export function GlossaryTerm() {
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
                       {relatedTerm.term}
                     </h3>
-                    <p className="text-white/60 text-sm line-clamp-2">{relatedTerm.definition}</p>
+                    <p className="text-white/60 text-sm line-clamp-2">
+                      {relatedTerm.definition}
+                    </p>
                   </a>
                 );
               })}
@@ -891,8 +1031,8 @@ export function GlossaryTerm() {
             Want to improve your AI visibility?
           </h3>
           <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-            Discover how your brand performs in AI conversations and get actionable insights to
-            improve your presence across AI platforms.
+            Discover how your brand performs in AI conversations and get
+            actionable insights to improve your presence across AI platforms.
           </p>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"

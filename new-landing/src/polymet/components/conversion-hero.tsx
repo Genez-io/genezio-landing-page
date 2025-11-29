@@ -3,10 +3,9 @@ import {
   TrendingUpIcon,
   SparklesIcon,
   MessageSquareIcon,
-  BarChart3Icon,
-  CalendarIcon,
+  CalendarIcon
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export function ConversionHero() {
   return (
