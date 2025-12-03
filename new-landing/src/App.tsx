@@ -12,6 +12,7 @@ import { BlogPost } from "@/polymet/pages/blog-post";
 import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
 import { SupportTerms } from "./polymet/pages/support-terms";
 import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
+import { AboutGenezio } from "./polymet/pages/about-genezio";
 import "./index.css";
 
 export default function GenezioApp() {
@@ -94,6 +95,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <TermsAndConditions />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/aboutgenezio"
+        element={
+          <GenezioLayout>
+            <AboutGenezio />
           </GenezioLayout>
         }
       />
