@@ -54,6 +54,7 @@ const routes = [
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",
+  "/aboutgenezio",
 ];
 
 const template = fs.readFileSync(
