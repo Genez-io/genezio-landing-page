@@ -50,6 +50,7 @@ export function AboutHeroSection() {
                     {/* CTA buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button
+                            onClick={() => window.location.href = "/"}
                             size="lg"
                             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-lg"
                         >
