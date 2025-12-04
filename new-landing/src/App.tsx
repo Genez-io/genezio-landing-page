@@ -8,6 +8,7 @@ import { IncreaseConversion } from "@/polymet/pages/increase-conversion";
 import { IncreaseCsat } from "@/polymet/pages/increase-csat";
 import { Glossary } from "@/polymet/pages/glossary";
 import { GlossaryTerm } from "@/polymet/pages/glossary-term";
+import { Blog } from "@/polymet/pages/blog";
 import { BlogPost } from "@/polymet/pages/blog-post";
 import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
 import { SupportTerms } from "./polymet/pages/support-terms";
@@ -77,6 +78,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <GlossaryTerm />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/blog/"
+        element={
+          <GenezioLayout>
+            <Blog />
           </GenezioLayout>
         }
       />
