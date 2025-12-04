@@ -78,9 +78,8 @@ export function GenezioHeader() {
             >
               Platform
               <ChevronDownIcon
-                className={`w-4 h-4 transition-transform ${
-                  platformMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform ${platformMenuOpen ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
@@ -176,9 +175,8 @@ export function GenezioHeader() {
             >
               Resources
               <ChevronDownIcon
-                className={`w-4 h-4 transition-transform ${
-                  resourcesMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform ${resourcesMenuOpen ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
@@ -213,7 +211,7 @@ export function GenezioHeader() {
 
                     {/* Blog */}
                     <a
-                      href="#"
+                      href="/blog/"
                       onClick={() => setResourcesMenuOpen(false)}
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
@@ -226,9 +224,6 @@ export function GenezioHeader() {
                             <div className="text-white font-semibold text-sm group-hover:text-emerald-400 transition-colors">
                               Blog
                             </div>
-                            <span className="px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30">
-                              COMING SOON
-                            </span>
                           </div>
                           <div className="text-white/60 text-xs leading-relaxed">
                             Insights & best practices
@@ -348,15 +343,12 @@ export function GenezioHeader() {
                     </div>
                   </a>
                   <a
-                    href="#"
+                    href="/blog/"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-2"
                   >
                     <div className="flex items-center gap-2">
                       <div className="text-white text-sm font-medium">Blog</div>
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30">
-                        COMING SOON
-                      </span>
                     </div>
                     <div className="text-white/60 text-xs">
                       Insights & best practices
