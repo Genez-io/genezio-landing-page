@@ -29,8 +29,18 @@ export function Blog() {
   // Sort posts by date (newest first)
   const sortedPosts = [...blogPosts].sort((a, b) => b.timestamp - a.timestamp);
 
-  const featuredPosts = sortedPosts.slice(0, 2);
-  const regularPosts = sortedPosts.slice(2);
+  // Filter by search query
+  const searchFilteredPosts = sortedPosts.filter((post) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      post.title.toLowerCase().includes(query) ||
+      post.excerpt.toLowerCase().includes(query) ||
+      post.category.toLowerCase().includes(query)
+    );
+  });
+
+  const featuredPosts = searchFilteredPosts.slice(0, 2);
+  const regularPosts = searchFilteredPosts.slice(2);
 
   const filteredPosts =
     selectedCategory === "All"
@@ -81,7 +91,7 @@ export function Blog() {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
+          {/* <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
             {categories.map((category) => (
               <button
                 key={category}
@@ -94,7 +104,7 @@ export function Blog() {
                 {category}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
