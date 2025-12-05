@@ -119,8 +119,6 @@ export function Blog() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredPosts.map((post) => {
                 const Icon = post.icon;
-
-                console.log(post.id)
                 return (
                   <a
                     key={post.id}
