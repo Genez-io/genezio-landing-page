@@ -108,7 +108,7 @@ export function BlogPost() {
             </div>
 
             {/* Share Buttons */}
-            <div className="ml-auto flex items-center gap-2">
+            {/* <div className="ml-auto flex items-center gap-2">
               <Button
                 variant="outline"
                 size="sm"
@@ -117,7 +117,7 @@ export function BlogPost() {
                 <ShareIcon className="w-4 h-4 mr-2" />
                 Share
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Article Content */}
