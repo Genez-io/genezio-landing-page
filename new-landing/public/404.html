@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Genezio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #050506;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        /* Background gradients */
+        .gradient-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .gradient-1 {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 500px;
+            height: 500px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50%;
+            filter: blur(120px);
+        }
+
+        .gradient-2 {
+            position: absolute;
+            bottom: 25%;
+            right: 25%;
+            width: 500px;
+            height: 500px;
+            background: rgba(168, 85, 247, 0.1);
+            border-radius: 50%;
+            filter: blur(120px);
+        }
+
+        /* 404 Number */
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 32px;
+            background: linear-gradient(to bottom right, #ffffff, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (min-width: 768px) {
+            .error-code {
+                font-size: 180px;
+            }
+        }
+
+        /* Message */
+        .message {
+            margin-bottom: 48px;
+        }
+
+        .message h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .message h2 {
+                font-size: 32px;
+            }
+        }
+
+        .message p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 448px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .message p {
+                font-size: 18px;
+            }
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 64px;
+            align-items: center;
+        }
+
+        @media (min-width: 640px) {
+            .buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 20px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .btn {
+                width: auto;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #3b82f6, #a855f7);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Icon styles */
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Links section */
+        .links-section {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .links-section p {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background gradients -->
+    <div class="gradient-bg">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- 404 Number -->
+        <h1 class="error-code">404</h1>
+
+        <!-- Message -->
+        <div class="message">
+            <h2>Page Not Found</h2>
+            <p>The page you're looking for doesn't exist or has been moved.</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                Go to Homepage
+            </a>
+            
+            <button onclick="window.history.back()" class="btn btn-secondary">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Go Back
+            </button>
+        </div>
+
+        <!-- Helpful Links -->
+        <div class="links-section">
+            <p>Looking for something specific?</p>
+            <div class="links">
+                <a href="/conversational-brand-presence">Lead Generation</a>
+                <a href="/increase-conversion">Increase Conversion</a>
+                <a href="/pricing">Pricing</a>
+                <a href="/glossary">Glossary</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
