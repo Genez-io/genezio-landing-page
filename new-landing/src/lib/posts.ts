@@ -108,7 +108,14 @@ export function getAllPosts(): BlogPost[] {
         const gradientIndex = filename.length % gradients.length;
 
         // Extract content (remove frontmatter)
-        const contentBody = content.replace(/^---\n[\s\S]*?\n---/, "").trim();
+        let contentBody = content.replace(/^---\n[\s\S]*?\n---/, "").trim();
+
+        // Replace Hugo-style external-link shortcodes with Markdown links
+        // Pattern: {{< external-link link="URL" >}}TEXT{{< /external-link >}}
+        contentBody = contentBody.replace(
+            /{{<\s*external-link\s+link="([^"]+)"\s*>}}(.*?){{<\s*\/external-link\s*>}}/g,
+            "[$2]($1)"
+        );
 
         posts.push({
             id: filename,

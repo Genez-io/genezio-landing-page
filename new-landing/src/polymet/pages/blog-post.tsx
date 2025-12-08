@@ -124,8 +124,17 @@ export function BlogPost() {
           <div className="prose prose-invert prose-lg max-w-none mb-16 text-white/80">
             <ReactMarkdown
               components={{
-                // Custom components to style markdown elements if needed
-                // For now relying on prose-invert which handles dark mode typography
+                a: ({ node, ...props }) => {
+                  const isExternal = props.href?.startsWith("http");
+                  return (
+                    <a
+                      {...props}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noopener noreferrer" : undefined}
+                      className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1"
+                    />
+                  );
+                },
               }}
             >
               {post.content}
