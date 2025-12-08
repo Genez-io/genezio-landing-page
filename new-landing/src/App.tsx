@@ -15,6 +15,7 @@ import { SupportTerms } from "./polymet/pages/support-terms";
 import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
 import { AboutGenezio } from "./polymet/pages/about-genezio";
 import "./index.css";
+import BlogAuthor from "./polymet/pages/blog-author";
 
 export default function GenezioApp() {
   return (
@@ -96,6 +97,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <BlogPost />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/blog/author/:name"
+        element={
+          <GenezioLayout>
+            <BlogAuthor />
           </GenezioLayout>
         }
       />

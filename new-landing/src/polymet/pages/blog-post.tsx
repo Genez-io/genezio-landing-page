@@ -87,7 +87,7 @@ export function BlogPost() {
               </div>
               <div>
                 <div className="text-sm font-medium text-white">
-                  {post.author}
+                  <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>{post.author}</a>
                 </div>
                 <div className="text-xs text-white/40">{post.authorRole}</div>
               </div>
@@ -190,7 +190,9 @@ export function BlogPost() {
               </div>
               <div>
                 <div className="text-lg font-semibold text-white mb-1">
-                  {post.author}
+                  <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>
+                    {post.author}
+                  </a>
                 </div>
                 <div className="text-sm text-white/60 mb-3">
                   {post.authorRole}
