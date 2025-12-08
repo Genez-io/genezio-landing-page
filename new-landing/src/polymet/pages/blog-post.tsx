@@ -124,6 +124,42 @@ export function BlogPost() {
           <div className="prose prose-invert prose-lg max-w-none mb-16 text-white/80">
             <ReactMarkdown
               components={{
+                h1: ({ node, ...props }) => (
+                  <h1
+                    className="text-4xl font-bold text-white mt-12 mb-6 leading-tight"
+                    {...props}
+                  />
+                ),
+                h2: ({ node, ...props }) => (
+                  <h2
+                    className="text-3xl font-bold text-white mt-10 mb-5 leading-snug"
+                    {...props}
+                  />
+                ),
+                h3: ({ node, ...props }) => (
+                  <h3
+                    className="text-2xl font-bold text-white mt-8 mb-4 leading-snug"
+                    {...props}
+                  />
+                ),
+                h4: ({ node, ...props }) => (
+                  <h4
+                    className="text-xl font-bold text-white mt-6 mb-3"
+                    {...props}
+                  />
+                ),
+                h5: ({ node, ...props }) => (
+                  <h5
+                    className="text-lg font-bold text-white mt-4 mb-2"
+                    {...props}
+                  />
+                ),
+                h6: ({ node, ...props }) => (
+                  <h6
+                    className="text-base font-bold text-white mt-4 mb-2"
+                    {...props}
+                  />
+                ),
                 a: ({ node, ...props }) => {
                   const isExternal = props.href?.startsWith("http");
                   return (
