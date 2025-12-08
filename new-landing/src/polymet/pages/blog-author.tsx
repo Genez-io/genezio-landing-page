@@ -14,7 +14,7 @@ import { getAllPosts } from "@/lib/posts";
 const authors: Record<string, any> = {
     "andra-pitis": {
         "name": "Andra Pitis",
-        "role": "Head of Marketing",
+        "role": "Contributor",
         "bio": 'Andra Pitiș is passionate about technology, design, and how people interact with digital products. At DeployApps, she worked as a UI/UX Designer, helping shape an intuitive experience for developers and refining the serverless platform. She loves finding the perfect balance between functionality and simplicity, making technology easier to use and more accessible for everyone.\n\nShe studied Computer Science at The University of Manchester and went on to pursue a Master’s in User Experience Design at Universitat de Barcelona. Along the way, she also explored technical writing and project management, gaining a broad perspective on building great products. Now, she’s an Engineering Program Manager at Adobe, but she stays connected to the startup world and the process of creating things that truly make a difference.',
         "image": "/authors/andra-pitis.webp",
         "location": "Remote",
@@ -35,7 +35,7 @@ const authors: Record<string, any> = {
     },
     "andreia-ocanoaia": {
         "name": "Andreia Ocanoaia",
-        "role": "Head of Design",
+        "role": "Contributor",
         "bio": 'Andreia Ocanoaia is the Head of Design at DeployApps, where she leads the creative vision and user experience strategy for the platform. With a strong background in UI/UX design and a passion for crafting intuitive digital products, Andreia ensures that DeployApps is not only functional but also visually engaging and easy to navigate for developers.\n\nBringing years of experience in designing for tech-driven solutions, Andreia focuses on bridging the gap between complex functionality and seamless usability. Her work is central to delivering a polished, developer-friendly experience that empowers users to deploy applications with confidence and ease.',
         "image": "/authors/andreia-ocanoaia.webp",
         "location": "Remote",
@@ -77,7 +77,7 @@ const authors: Record<string, any> = {
     },
     "bogdan-ripa": {
         "name": "Bogdan Ripa",
-        "role": "Advisor",
+        "role": "Contributor",
         "bio": "Bogdan Ripa is a co-founder and product leader with a strong entrepreneurial background. He co-founded InterAKT Online, which was later acquired by Adobe, where he played a key role in scaling the Romanian campus and driving product innovation. After eight years at Adobe, he transitioned back into the startup ecosystem, leading Vector Watch’s product management before its acquisition by Fitbit, where he contributed to gamification and social features. He then served as SVP of Product Management at UiPath, expanding its product suite with automation and AI-driven solutions. Currently, Bogdan is the Co-Founder and CPO at DeployApps, focusing on developer productivity and application deployment. He also advises MyBenefits, guiding product and growth strategies. With expertise in agile methodologies, product-market fit, and scaling tech products, Bogdan continues to shape the future of software development and automation.",
         "image": "/authors/bogdan-ripa.webp",
         "location": "Remote",
@@ -98,7 +98,7 @@ const authors: Record<string, any> = {
     },
     "bogdan-vlad": {
         "name": "Bogdan Vlad",
-        "role": "Full Stack Developer",
+        "role": "Contributor",
         "bio": "Bogdan Vlad is the Co-Founder and Chief Technology Officer at DeployApps, where he leads the development of tools that make serverless app creation faster and more accessible. With over a decade of experience in software engineering, he’s worked on everything from mobile platforms to embedded systems, mastering technologies like Java, Objective C, Swift, Golang, and more. Before starting DeployApps, Bogdan held roles at companies like Fitbit and Vector Watch, where he built innovative solutions for IoT and mobile applications, even earning a patent for energy-efficient display technology. A strong believer in giving back, he’s been an active mentor, speaker, and teacher in the tech community, empowering developers to push boundaries and create impactful products. When he’s not busy driving innovation at DeployApps, Bogdan enjoys exploring new frameworks and contributing to open-source projects.",
         "image": "/authors/bogdan-vlad.webp",
         "location": "Remote",
@@ -119,7 +119,7 @@ const authors: Record<string, any> = {
     },
     "costin-sin": {
         "name": "Costin Sin",
-        "role": "Software Engineer",
+        "role": "Contributor",
         "bio": "Costin Sin is a software engineer with a knack for solving complex problems and building efficient, scalable solutions. During his time at DeployApps, he made over 2000 GitHub contributions, redesigning key components like the YAML configuration format, enabling Next.js support, and integrating PostgreSQL and MongoDB hosting. His work has had a significant impact on making DeployApps’s serverless platform more accessible and user-friendly for developers. With a Bachelor’s degree in Computer Science from the University POLITEHNICA of Bucharest, Costin has also been active in academia as a Teaching Assistant, helping students master subjects like operating systems, data structures, and assembly programming. Currently, he’s continuing to tackle big challenges as a Software Engineer at Google, where his passion for technology and innovation shines.",
         "image": "/authors/costin-sin.webp",
         "location": "Remote",
@@ -140,7 +140,7 @@ const authors: Record<string, any> = {
     },
     "cristi-miloiu": {
         "name": "Cristi Miloiu",
-        "role": "Software Engineer",
+        "role": "Contributor",
         "bio": "Cristi Miloiu is a Software Engineer at DeployApps, where he focuses on building innovative features and creating tools that empower developers. A key part of his work includes implementing deployment support for Python frameworks like FastAPI, Flask, and Django, as well as enhancing the Node.js ecosystem by adding support for NestJS and maintaining compatibility with Next.js. Cristi has also contributed to the platform by developing user management features, including GoogleAuth and email-password authentication, and by improving the developer experience through clear documentation and tutorials. Currently in his final year at the Faculty of Electronics, Telecommunications, and Information Technology at the University POLITEHNICA of Bucharest, Cristi has been working in the tech field since his first year of university. He actively develops both open-source projects and community-driven initiatives. Passionate about volunteering, he has also served as a tech coordinator, helping others grow and succeed in their projects.",
         "image": "/authors/cristi-miloiu.webp",
         "location": "Remote",
@@ -161,7 +161,7 @@ const authors: Record<string, any> = {
     },
     "denisa-lera": {
         "name": "Denisa Lera",
-        "role": "Software Engineer",
+        "role": "Contributor",
         "bio": "Lera Denisa is an Assistant Manager at Genezio, where she plays a key role in ensuring smooth operations and organizational efficiency. With experience in accounting, event coordination, and social media management, she combines analytical precision with creative communication. Her role extends to creating engaging LinkedIn and X content, as well as supporting the company’s brand presence through strategic initiatives. Soon to take on graphic design, Denisa is expanding her skill set to bring a more visual and innovative approach to Genezio’s projects. Known for her adaptability, attention to detail, and forward-thinking mindset, she contributes to both day-to-day management and long-term growth",
         "image": "/authors/denisa-lera.webp",
         "location": "Remote",
@@ -182,7 +182,7 @@ const authors: Record<string, any> = {
     },
     "horatiu-voicu": {
         "name": "Horatiu Voicu",
-        "role": "Software Engineer",
+        "role": "Contributor",
         "bio": "Horatiu Voicu is a seasoned Digital Marketing Consultant with over a decade of experience in SEO, PPC, and online strategy. Founder of Voiqu, he has been part of the Google Partners program since 2015, offering expertise in search engine optimization, campaign management, and analytics. Horatiu has worked with prominent organizations, including ANSWEAR.com and MTH Digital, optimizing paid search campaigns, managing large-scale budgets, and increasing ROI. Horatiu’s skill set extends to technical SEO, advanced website audits, and international marketing. With a strong foundation in digital tools like Google Analytics and HubSpot, he has also supported non-profits like WWF Romania by enhancing data tracking and ad grant utilization. Known for his critical thinking and passion for innovation, Horatiu continues to help businesses grow through strategic planning and measurable outcomes.",
         "image": "/authors/horatiu-voicu.webp",
         "location": "Remote",
@@ -287,7 +287,7 @@ const authors: Record<string, any> = {
     },
     "rares-istoc": {
         "name": "Rares Istoc",
-        "role": "CTO - Cube",
+        "role": "Contributor",
         "bio": "Rares Istoc is a Senior Software Engineer and Solution Architect with over 7 years of experience in designing and implementing complex software solutions. As the CTO and Co-Founder of Cube Digital, he has played a key role in delivering innovative and scalable products across various industries, including e-commerce, MedTech, and SaaS platforms. With a deep understanding of technologies such as Python, Golang, and TypeScript, Rares specializes in building end-to-end solutions and crafting efficient architectures tailored to unique business needs. Passionate about solving real-world problems, Rares combines technical expertise with a hands-on approach to product development. He is committed to continuous learning, currently exploring Rust and MLOps, and is dedicated to sharing knowledge within the tech community. His work consistently reflects his drive for excellence and his ability to adapt and deliver impactful solutions.",
         "image": "/authors/rares-istoc.webp",
         "location": "Remote",
@@ -308,7 +308,7 @@ const authors: Record<string, any> = {
     },
     "stefan-iordache": {
         "name": "Stefan Iordache",
-        "role": "Software Developer",
+        "role": "Contributor",
         "bio": "Ștefan is a Software Developer at DeployApps, contributing to the platform’s innovative solutions for simplifying app development and deployment. With a strong foundation in Go and TypeScript, Ștefan is passionate about creating efficient, scalable systems that empower developers worldwide. A University POLITEHNICA of Bucharest graduate, Ștefan has demonstrated technical excellence through his academic achievements, including participation in the National Informatics Olympiad, and practical experience as a Co-Founder at CodeTruck.io. His dedication to continuous improvement extends to his involvement in student organizations, where he supported IT initiatives. With a focus on clean code and developer-first solutions, Ștefan plays an integral role in driving DeployApps’s mission to redefine the development experience.",
         "image": "/authors/stefan-iordache.webp",
         "location": "Remote",
@@ -329,7 +329,7 @@ const authors: Record<string, any> = {
     },
     "tudor-anghelescu": {
         "name": "Tudor Anghelescu",
-        "role": "Frontend Developer",
+        "role": "Contributor",
         "bio": "Anghelescu Tudor is a Frontend Developer at DeployApps, specializing in crafting responsive, user-friendly interfaces that empower developers to seamlessly deploy applications. With a solid foundation in React.js, Redux, and Styled Components, Tudor excels in building scalable, intuitive web applications. Tudor brings over four years of professional experience working with innovative teams, including roles at leekz and Sportya, where he honed his skills in front-end development and software design. Passionate about technology and collaboration, Tudor is driven to stay ahead of industry trends, continuously refining his skills to create cutting-edge digital experiences.",
         "image": "/authors/tudor-anghelescu.webp",
         "location": "Remote",
@@ -350,7 +350,7 @@ const authors: Record<string, any> = {
     },
     "virgil-turcu": {
         "name": "Virgil Turcu",
-        "role": "Software Developer",
+        "role": "Contributor",
         "bio": "Virgil Turcu is a Developer at DeployApps, contributing to the enhancement and development of user-friendly web applications. Specializing in React.js, Redux.js, and Front-End Development, Virgil is passionate about creating seamless digital experiences. A recent graduate from the University of Bucharest, where he focused on Web Development, Virgil brings a strong foundation in CSS, JavaScript, and modern front-end frameworks. He has been actively involved in streamlining deployment processes, including integrating GitHub repositories directly into development workflows. Dedicated to continuous learning and innovation, Virgil thrives in collaborative environments and is driven to contribute to cutting-edge technological solutions.",
         "image": "/authors/virgil-turcu.webp",
         "location": "Remote",
