@@ -197,9 +197,6 @@ export function BlogPost() {
                 <div className="text-sm text-white/60 mb-3">
                   {post.authorRole}
                 </div>
-                <p className="text-sm text-white/60 leading-relaxed">
-                  Contributor at Genezio.
-                </p>
               </div>
             </div>
           </div>
