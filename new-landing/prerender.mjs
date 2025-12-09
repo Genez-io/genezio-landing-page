@@ -55,7 +55,41 @@ const routes = [
   "/support-terms",
   "/terms-and-conditions",
   "/aboutgenezio",
+  "/blog",
 ];
+
+// Dynamically add blog post routes
+const postsDir = path.resolve(__dirname, "src/posts");
+if (fs.existsSync(postsDir)) {
+  const postFiles = fs.readdirSync(postsDir).filter((file) => file.endsWith(".md"));
+  postFiles.forEach((file) => {
+    const slug = file.replace(".md", "");
+    routes.push(`/blog/${slug}`);
+  });
+  console.log(`Added ${postFiles.length} blog post routes.`);
+} else {
+  console.warn("Posts directory not found:", postsDir);
+}
+
+// Dynamically add author routes
+const authorFile = path.resolve(__dirname, "src/polymet/pages/blog-author.tsx");
+if (fs.existsSync(authorFile)) {
+  const content = fs.readFileSync(authorFile, "utf-8");
+  const authorMatches = content.matchAll(/"([a-z0-9-]+)":\s*\{/g);
+  let authorCount = 0;
+  for (const match of authorMatches) {
+    // Basic validation to avoid matching non-author keys that might look similar
+    // The structure is quite specific: "slug": {
+    const slug = match[1];
+    if (["social", "stats", "expertise"].includes(slug)) continue;
+
+    routes.push(`/blog/author/${slug}`);
+    authorCount++;
+  }
+  console.log(`Added ${authorCount} author routes.`);
+} else {
+  console.warn("Author file not found:", authorFile);
+}
 
 const template = fs.readFileSync(
   path.resolve(__dirname, "dist/index.html"),
