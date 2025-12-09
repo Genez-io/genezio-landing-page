@@ -1,106 +1,16 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 import {
   SearchIcon,
   ArrowRightIcon,
   ClockIcon,
   CalendarIcon,
-  TrendingUpIcon,
-  TargetIcon,
   SparklesIcon,
-  BrainIcon,
-  ZapIcon,
-  BarChartIcon
 } from "lucide-react";
 import { useState } from "react";
 
-const blogPosts = [
-  {
-    id: "ai-search-optimization-2024",
-    title: "The Complete Guide to AI Search Optimization in 2024",
-    excerpt:
-      "Discover how leading brands are adapting their strategies to thrive in the age of conversational AI and search engines.",
-    category: "AI Search",
-    readTime: "8 min read",
-    date: "March 15, 2024",
-    author: "Sarah Chen",
-    authorRole: "Head of AI Strategy",
-    featured: true,
-    icon: SparklesIcon,
-    gradient: "from-blue-500 to-purple-500"
-  },
-  {
-    id: "brand-visibility-ai-engines",
-    title: "How to Increase Your Brand Visibility in AI Engines",
-    excerpt:
-      "Learn the proven tactics to ensure your brand appears prominently in ChatGPT, Claude, Perplexity, and other AI platforms.",
-    category: "Brand Strategy",
-    readTime: "6 min read",
-    date: "March 12, 2024",
-    author: "Michael Torres",
-    authorRole: "Brand Strategist",
-    featured: true,
-    icon: TrendingUpIcon,
-    gradient: "from-emerald-500 to-teal-500"
-  },
-  {
-    id: "conversational-marketing-future",
-    title: "The Future of Conversational Marketing",
-    excerpt:
-      "Explore how AI-powered conversations are transforming customer engagement and what it means for your marketing strategy.",
-    category: "Marketing",
-    readTime: "7 min read",
-    date: "March 10, 2024",
-    author: "Emily Rodriguez",
-    authorRole: "Marketing Director",
-    featured: false,
-    icon: TargetIcon,
-    gradient: "from-blue-500 to-cyan-500"
-  },
-  {
-    id: "measuring-ai-brand-presence",
-    title: "Measuring Your AI Brand Presence: Key Metrics",
-    excerpt:
-      "Understanding the metrics that matter when tracking your brand's performance across AI platforms and conversational interfaces.",
-    category: "Analytics",
-    readTime: "5 min read",
-    date: "March 8, 2024",
-    author: "David Kim",
-    authorRole: "Data Analyst",
-    featured: false,
-    icon: BarChartIcon,
-    gradient: "from-purple-500 to-pink-500"
-  },
-  {
-    id: "ai-training-data-optimization",
-    title: "Optimizing Your Content for AI Training Data",
-    excerpt:
-      "Best practices for structuring your content to be effectively captured and represented by AI language models.",
-    category: "Content Strategy",
-    readTime: "9 min read",
-    date: "March 5, 2024",
-    author: "Lisa Anderson",
-    authorRole: "Content Strategist",
-    featured: false,
-    icon: BrainIcon,
-    gradient: "from-orange-500 to-red-500"
-  },
-  {
-    id: "real-time-ai-monitoring",
-    title: "Real-Time AI Monitoring: Stay Ahead of the Curve",
-    excerpt:
-      "How continuous monitoring of AI platforms helps you adapt quickly and maintain competitive advantage in conversational search.",
-    category: "Technology",
-    readTime: "6 min read",
-    date: "March 3, 2024",
-    author: "James Wilson",
-    authorRole: "Tech Lead",
-    featured: false,
-    icon: ZapIcon,
-    gradient: "from-yellow-500 to-orange-500"
-  }
-];
+import { getAllPosts } from "@/lib/posts";
+
+const blogPosts = getAllPosts();
 
 const categories = [
   "All",
@@ -116,8 +26,21 @@ export function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const featuredPosts = blogPosts.filter((post) => post.featured);
-  const regularPosts = blogPosts.filter((post) => !post.featured);
+  // Sort posts by date (newest first)
+  const sortedPosts = [...blogPosts].sort((a, b) => b.timestamp - a.timestamp);
+
+  // Filter by search query
+  const searchFilteredPosts = sortedPosts.filter((post) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      post.title.toLowerCase().includes(query) ||
+      post.excerpt.toLowerCase().includes(query) ||
+      post.category.toLowerCase().includes(query)
+    );
+  });
+
+  const featuredPosts = searchFilteredPosts.slice(0, 2);
+  const regularPosts = searchFilteredPosts.slice(2);
 
   const filteredPosts =
     selectedCategory === "All"
@@ -168,21 +91,20 @@ export function Blog() {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
+          {/* <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                  selectedCategory === category
-                    ? "bg-white/10 text-white border border-white/20"
-                    : "bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white"
-                }`}
+                className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all ${selectedCategory === category
+                  ? "bg-white/10 text-white border border-white/20"
+                  : "bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white"
+                  } `}
               >
                 {category}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -205,13 +127,13 @@ export function Blog() {
                   >
                     {/* Gradient overlay */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
+                      className={`absolute inset - 0 bg - gradient - to - br ${post.gradient} opacity - 0 group - hover: opacity - 5 transition - opacity`}
                     />
 
                     <div className="relative">
                       {/* Icon */}
                       <div
-                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${post.gradient} opacity-20 flex items-center justify-center mb-6`}
+                        className={`w - 14 h - 14 rounded - xl bg - gradient - to - br ${post.gradient} opacity - 20 flex items - center justify - center mb - 6`}
                       >
                         <Icon className="w-7 h-7 text-white" />
                       </div>
@@ -285,13 +207,13 @@ export function Blog() {
                 >
                   {/* Gradient overlay */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
+                    className={`absolute inset - 0 bg - gradient - to - br ${post.gradient} opacity - 0 group - hover: opacity - 5 transition - opacity`}
                   />
 
                   <div className="relative">
                     {/* Icon */}
                     <div
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${post.gradient} opacity-20 flex items-center justify-center mb-4`}
+                      className={`w - 12 h - 12 rounded - xl bg - gradient - to - br ${post.gradient} opacity - 20 flex items - center justify - center mb - 4`}
                     >
                       <Icon className="w-6 h-6 text-white" />
                     </div>

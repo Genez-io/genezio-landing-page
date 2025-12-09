@@ -8,12 +8,14 @@ import { IncreaseConversion } from "@/polymet/pages/increase-conversion";
 import { IncreaseCsat } from "@/polymet/pages/increase-csat";
 import { Glossary } from "@/polymet/pages/glossary";
 import { GlossaryTerm } from "@/polymet/pages/glossary-term";
+import { Blog } from "@/polymet/pages/blog";
 import { BlogPost } from "@/polymet/pages/blog-post";
 import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
 import { SupportTerms } from "./polymet/pages/support-terms";
 import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
 import { AboutGenezio } from "./polymet/pages/about-genezio";
 import "./index.css";
+import BlogAuthor from "./polymet/pages/blog-author";
 
 export default function GenezioApp() {
   return (
@@ -82,10 +84,28 @@ export default function GenezioApp() {
       />
 
       <Route
+        path="/blog/"
+        element={
+          <GenezioLayout>
+            <Blog />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
         path="/blog/:slug"
         element={
           <GenezioLayout>
             <BlogPost />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/blog/author/:name"
+        element={
+          <GenezioLayout>
+            <BlogAuthor />
           </GenezioLayout>
         }
       />
