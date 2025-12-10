@@ -48,8 +48,6 @@ So while AI agents can save time and help with workloads, they can also become a
 
 AI agent security is about making sure your AI agent behaves the way it's supposed to. It includes testing the agent's responses, tracking what it says over time, and checking how it holds up when people try to manipulate it.
 
-It also involves setting up the agent in a secure infrastructure. Companies can deploy their agents {{< external-link link="<https://genezio.com/blog/serverless-monitoring-observability/>" >}}on serverless, secure platforms{{< /external-link >}} that take care of hosting it.
-
 Companies need to test their agents on an ongoing basis. Real-world use means people will ask weird, tricky, and even hostile questions. And every so often, all it takes is a clever prompt to get an agent to reveal things it shouldn't: internal instructions, private user data, or even plausible but incorrect facts.
 
 The real risk is that AI agents don't only repeat back what they've been told. They generate responses based on patterns in their training. That's what makes them flexible, but it also means things can go off track. And when the agent is out there speaking for the company, the fallout from one inappropriate answer can be serious. A wrong diagnosis, a leaked file, or a bizarre message can damage trust and even bring legal trouble.
@@ -70,9 +68,7 @@ If you're responsible for customer care, this is the kind of failure you want to
 
 ## How Genezio helps with AI agent security
 
-If you've already deployed your AI agent in a secure environment, that's a good start. If you haven't, or you're unsure, you can start there. Genezio offers a simple way to {{< external-link link="<https://genezio.com/>" >}}deploy your agent{{< /external-link >}} through its serverless cloud platform. Still, deployment is only the first layer. What really matters is what the agent does once it's live.
-
-Genezio's AI agent tester is designed to assist with that. It's built to help Customer Care Executives keep their agents secure, responsible, and on-topic, without the need for deep technical expertise.
+Genezio's AI agent tester is designed to assist with security. It's built to help Customer Care Executives keep their agents secure, responsible, and on-topic, without the need for deep technical expertise.
 
 Here's how it works:
 
