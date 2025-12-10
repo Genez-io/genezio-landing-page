@@ -13,6 +13,40 @@ import axios from "axios";
 import React from "react";
 import { Helmet } from "react-helmet";
 
+const blockedProviders = [
+  "gmail",
+  "googlemail",
+  "yahoo",
+  "outlook",
+  "hotmail",
+  "icloud",
+  "aol",
+  "protonmail",
+  "mail.com",
+  "zoho",
+  "wacold",
+  "zudpck",
+  "email",
+];
+
+function isCompanyEmail(email: string): boolean {
+  if (!email || !email.includes("@")) return false;
+  const domain = email.split("@")[1].toLowerCase();
+
+  for (const provider of blockedProviders) {
+    const p = provider.toLowerCase();
+    if (
+      domain === p ||
+      domain.endsWith("." + p) ||
+      domain.startsWith(p + ".")
+    ) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 interface GenezioPricingHeroProps {
   selectedAudience: "brands" | "agencies";
   onAudienceChange: (audience: "brands" | "agencies") => void;
@@ -100,6 +134,11 @@ export function GenezioPricingHero({
       return;
     }
 
+    if (!isCompanyEmail(formData.email)) {
+      alert("Please use your company email address.");
+      return;
+    }
+
     if (!formData.company) {
       alert("Please enter your company name.");
       return;
@@ -111,7 +150,6 @@ export function GenezioPricingHero({
     }
 
     const message = `Interest in: ${formData.interest}\n${formData.message}`;
-
     // Handle form submission
     const data = JSON.stringify({
       name: formData.name,
