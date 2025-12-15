@@ -20,7 +20,7 @@ interface GenezioPricingHeroProps {
 const brandFeatures = [
   {
     icon: SearchIcon,
-    title: "Brand Presence Monitoring",
+    title: "Brand Visibility Monitoring",
     description:
       "Track how your brand appears across ChatGPT, Claude, Gemini, Perplexity, and Google AI Overviews",
   },
@@ -177,21 +177,19 @@ export function GenezioPricingHero({
           <div className="inline-flex bg-white/5 rounded-lg p-1 border border-white/10">
             <button
               onClick={() => onAudienceChange("brands")}
-              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${
-                selectedAudience === "brands"
+              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${selectedAudience === "brands"
                   ? "bg-blue-600 text-white"
                   : "text-white/60 hover:text-white"
-              }`}
+                }`}
             >
               For Brands
             </button>
             <button
               onClick={() => onAudienceChange("agencies")}
-              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${
-                selectedAudience === "agencies"
+              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${selectedAudience === "agencies"
                   ? "bg-blue-600 text-white"
                   : "text-white/60 hover:text-white"
-              }`}
+                }`}
             >
               For Agencies
             </button>

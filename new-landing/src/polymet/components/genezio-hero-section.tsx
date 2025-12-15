@@ -124,7 +124,7 @@ export function GenezioHeroSection() {
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-purple-500/30 w-full"
               >
-                Analyze Your Brand Presence in AI
+                Analyze Your AI Brand Visibility
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Button>
             </a>

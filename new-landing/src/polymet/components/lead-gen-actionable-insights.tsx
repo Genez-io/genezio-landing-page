@@ -119,7 +119,7 @@ export function LeadGenActionableInsights() {
                 Get Your First Insights in 48 Hours
               </h3>
               <p className="text-base sm:text-lg text-white/70 leading-relaxed">
-                Start monitoring your brand's AI presence today and receive
+                Start monitoring your brand's AI visibility today and receive
                 actionable recommendations to increase your lead generation.
               </p>
             </div>

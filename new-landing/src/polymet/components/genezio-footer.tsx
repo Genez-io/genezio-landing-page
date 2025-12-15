@@ -13,7 +13,7 @@ export function GenezioFooter() {
             <p className="text-gray-400 text-sm leading-relaxed">
               The Conversational Optimization Platform
               <br />
-              that powers your brand presence in AI.
+              that powers your brand visibility in AI.
             </p>
           </div>
 
