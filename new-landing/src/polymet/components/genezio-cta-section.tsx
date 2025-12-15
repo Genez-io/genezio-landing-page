@@ -58,7 +58,7 @@ export function GenezioCtaSection() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
             >
               <SparklesIcon className="w-5 h-5 mr-2" />
-              Analyze Your Brand Presence in AI
+              Analyze Your AI Brand Visibility
             </Button>
           </a>
           <a href="/pricing" className="w-full sm:w-auto">

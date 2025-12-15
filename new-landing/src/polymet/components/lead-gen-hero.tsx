@@ -95,7 +95,7 @@ export function LeadGenHero() {
               {/* Subheadline */}
               <p className="text-base sm:text-lg text-white/70 leading-relaxed">
                 Monitor how AI platforms perceive and recommend your brand. Get actionable insights
-                from AI conversations to optimize your presence and capture more leads.
+                from AI conversations to optimize your visibility and capture more leads.
               </p>
 
               {/* CTA Buttons */}

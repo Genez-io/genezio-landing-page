@@ -63,11 +63,10 @@ function PersonaScenarioSelector() {
           return (
             <div
               key={index}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border ${
-                persona.isSelected
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border ${persona.isSelected
                   ? "bg-blue-500/20 border-blue-500/50 text-blue-300"
                   : "bg-[#1C1C20]/50 border-blue-500/20 text-gray-400"
-              }`}
+                }`}
             >
               <Icon className="w-4 h-4" />
 
@@ -132,7 +131,7 @@ export function GenezioDifferentiatorsSection() {
       icon: LightbulbIcon,
       title: "Actionable Insights with Measurable Impact",
       description:
-        "Transform AI visibility data into concrete actions. Get specific recommendations for website improvements, blog posts, social media threads, and review strategies to boost your AI presence.",
+        "Transform AI visibility data into concrete actions. Get specific recommendations for website improvements, blog posts, social media threads, and review strategies to boost your AI visibility.",
       visual: "actionable"
     },
     {
