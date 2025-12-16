@@ -68,11 +68,8 @@ jobs:
         run: npm install
       - name: Build landing page
         working-directory: ./new-landing
-        run: npm run build
-      - name: Copy Deployment Platform Landing Page to dist
-        run: |
-          mkdir -p new-landing/dist/blog/
-          cp -r deployment-platform/public/* new-landing/dist/blog/
+        run: npm run build:ssg
+
       - name: Deploy deploy
         working-directory: ./
         run: genezio deploy --frontend --stage dev

@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /?utm_
+Disallow: /?deviceId=
+Disallow: /*?ref=
+Allow: /
+
+Allow: /llm.txt
+
+Sitemap: https://genezio.com/sitemap.xml
+Sitemap: https://genezio.com/blog/sitemap.xml
+Sitemap: https://genezio.com/imagessitemap.xml

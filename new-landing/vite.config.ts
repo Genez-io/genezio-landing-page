@@ -3,10 +3,20 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import { fileURLToPath } from "url";
 
+// ES Module equivalent of __dirname
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: "index.html"
+    }
+  },
+  ssr: {
+    noExternal: ["react-router"]
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -15,11 +25,5 @@ export default defineConfig({
       "@lib": path.resolve(__dirname, "./src/lib"),
       "(components)": path.resolve(__dirname, "./src/(components)")
     }
-  },
-  server: {
-    // Vite uses SPA fallback by default, so no need for historyApiFallback
-  },
-  build: {
-    outDir: "dist"
   }
 });
