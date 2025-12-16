@@ -54,6 +54,7 @@ const routes = [
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",
+  "/privacy-policy",
   "/aboutgenezio",
   "/blog",
 ];
