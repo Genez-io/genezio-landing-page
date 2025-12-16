@@ -19,7 +19,8 @@ const staticRoutes = [
     '/terms-and-conditions',
     '/support-terms',
     '/data-processing-agreement',
-    '/privacy-policy'
+    '/privacy-policy',
+    '/policy'
 ];
 
 function extractGlossarySlugs() {
