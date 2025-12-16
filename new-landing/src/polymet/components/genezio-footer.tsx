@@ -65,6 +65,14 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
+                  href="/privacy-policy"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
                   href="/data-processing-agreement"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
