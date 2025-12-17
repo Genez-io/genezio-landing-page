@@ -22,9 +22,9 @@ url: /perplexity-vs-chatgpt/
 
 ## TL;DR
 
-*ChatGPT and Perplexity do not search the web the same way. When given identical scenarios, they produced 300 search queries with only 1 literal match.
-*Perplexity behaves like a real-time, comparison-driven search engine.
-*ChatGPT behaves like an analyst that investigates context before answering.
+* ChatGPT and Perplexity do not search the web the same way. When given identical scenarios, they produced 300 search queries with only 1 literal match.
+* Perplexity behaves like a real-time, comparison-driven search engine.
+* ChatGPT behaves like an analyst that investigates context before answering.
 
 These differences mean that visibility in one AI system does not translate to visibility in another, a fundamental shift for SEO, content teams, and brand leaders.
 
