@@ -179,6 +179,15 @@ export function BlogPost() {
                 tr: ({ node, ...props }) => (
                   <tr className="hover:bg-white/5 transition-colors" {...props} />
                 ),
+                ul: ({ node, ...props }) => (
+                  <ul className="list-disc pl-6 mb-6 text-white/80 space-y-2" {...props} />
+                ),
+                ol: ({ node, ...props }) => (
+                  <ol className="list-decimal pl-6 mb-6 text-white/80 space-y-2" {...props} />
+                ),
+                li: ({ node, ...props }) => (
+                  <li className="leading-relaxed" {...props} />
+                ),
                 th: ({ node, ...props }) => (
                   <th className="p-4 border-b border-white/10" {...props} />
                 ),
