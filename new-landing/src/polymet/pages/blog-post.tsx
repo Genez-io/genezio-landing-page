@@ -1,14 +1,12 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { useParams } from "react-router";
+import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
-import {
-  ArrowLeftIcon,
-  ClockIcon,
-  CalendarIcon,
-  ShareIcon,
-  SparklesIcon,
-} from "lucide-react";
+import { Tweet } from "react-tweet";
+import { ArrowLeftIcon, ClockIcon, CalendarIcon, SparklesIcon } from "lucide-react";
 import { getPostById, getAllPosts } from "@/lib/posts";
+import { authors } from "./blog-author";
 
 export function BlogPost() {
   const { slug } = useParams<{
@@ -34,6 +32,15 @@ export function BlogPost() {
   const relatedPosts = getAllPosts()
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
+
+  // Preprocess content to replace tweet shortcodes with marker links
+  const contentWithTweets = React.useMemo(() => {
+    if (!post.content) return "";
+    return post.content.replace(
+      /{{<\s*tweet\s+"(https?:\/\/twitter\.com\/[^\/]+\/status\/(\d+))"\s*>}}/g,
+      (_, url, id) => `[TWEET_EMBED__${id}](${url})`
+    );
+  }, [post.content]);
 
   return (
     <div className="min-h-screen bg-[#050506]">
@@ -77,14 +84,29 @@ export function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 pb-8 mb-8 border-b border-white/10">
             {/* Author */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">
-                  {post.author
-                    .split(" ")
-                    .map((n: string) => n[0])
-                    .join("")}
-                </span>
-              </div>
+              {(() => {
+                const authorKey = post.author?.toLowerCase()?.split(" ")?.join("-");
+                const authorData = authors[authorKey];
+                if (authorData?.image) {
+                  return (
+                    <img
+                      src={authorData.image}
+                      alt={post.author}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-white/10"
+                    />
+                  );
+                }
+                return (
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                    <span className="text-white font-semibold text-sm">
+                      {post.author
+                        .split(" ")
+                        .map((n: string) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                );
+              })()}
               <div>
                 <div className="text-sm font-medium text-white">
                   <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>{post.author}</a>
@@ -123,6 +145,7 @@ export function BlogPost() {
           {/* Article Content */}
           <div className="prose prose-invert prose-lg max-w-none mb-16 text-white/80">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 h1: ({ node, ...props }) => (
                   <h1
@@ -141,6 +164,29 @@ export function BlogPost() {
                     className="text-2xl font-bold text-white mt-8 mb-4 leading-snug"
                     {...props}
                   />
+                ),
+                table: ({ node, ...props }) => (
+                  <div className="overflow-x-auto my-8 border border-white/10 rounded-lg">
+                    <table className="w-full text-left border-collapse" {...props} />
+                  </div>
+                ),
+                thead: ({ node, ...props }) => (
+                  <thead className="bg-white/5 text-white font-semibold" {...props} />
+                ),
+                tbody: ({ node, ...props }) => (
+                  <tbody className="divide-y divide-white/10 text-white/80" {...props} />
+                ),
+                tr: ({ node, ...props }) => (
+                  <tr className="hover:bg-white/5 transition-colors" {...props} />
+                ),
+                th: ({ node, ...props }) => (
+                  <th className="p-4 border-b border-white/10" {...props} />
+                ),
+                td: ({ node, ...props }) => (
+                  <td className="p-4 align-top" {...props} />
+                ),
+                p: ({ node, ...props }) => (
+                  <p className="mb-3 leading-relaxed text-white/80" {...props} />
                 ),
                 h4: ({ node, ...props }) => (
                   <h4
@@ -161,33 +207,62 @@ export function BlogPost() {
                   />
                 ),
                 a: ({ node, ...props }) => {
+                  const children = props.children;
+                  // Check if this is our tweet marker
+                  if (
+                    typeof children === "string" &&
+                    children.startsWith("TWEET_EMBED__")
+                  ) {
+                    const id = children.replace("TWEET_EMBED__", "");
+                    return (
+                      <div className="flex justify-center my-8 not-prose tweet-container">
+                        <Tweet id={id} />
+                      </div>
+                    );
+                  }
+
                   const isExternal = props.href?.startsWith("http");
                   return (
                     <a
                       {...props}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
-                      className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-400 hover:text-blue-300 transition-colors break-all"
                     />
                   );
                 },
               }}
             >
-              {post.content}
+              {contentWithTweets}
             </ReactMarkdown>
           </div>
 
           {/* Author Bio - simplified as we don't have bio in frontmatter yet */}
           <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-8 mb-16">
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-semibold text-lg">
-                  {post.author
-                    .split(" ")
-                    .map((n: string) => n[0])
-                    .join("")}
-                </span>
-              </div>
+              {(() => {
+                const authorKey = post.author?.toLowerCase()?.split(" ")?.join("-");
+                const authorData = authors[authorKey];
+                if (authorData?.image) {
+                  return (
+                    <img
+                      src={authorData.image}
+                      alt={post.author}
+                      className="w-16 h-16 rounded-full object-cover border-2 border-white/10 flex-shrink-0"
+                    />
+                  );
+                }
+                return (
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-semibold text-lg">
+                      {post.author
+                        .split(" ")
+                        .map((n: string) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                );
+              })()}
               <div>
                 <div className="text-lg font-semibold text-white mb-1">
                   <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>
