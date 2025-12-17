@@ -169,6 +169,9 @@ export function BlogPost() {
                 td: ({ node, ...props }) => (
                   <td className="p-4 align-top" {...props} />
                 ),
+                p: ({ node, ...props }) => (
+                  <p className="mb-3 leading-relaxed text-white/80" {...props} />
+                ),
                 h4: ({ node, ...props }) => (
                   <h4
                     className="text-xl font-bold text-white mt-6 mb-3"
