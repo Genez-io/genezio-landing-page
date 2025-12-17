@@ -74,7 +74,7 @@ if (fs.existsSync(postsDir)) {
 }
 
 // Dynamically add author routes
-const authorFile = path.resolve(__dirname, "src/polymet/pages/blog-author.tsx");
+const authorFile = path.resolve(__dirname, "src/lib/authors.ts");
 if (fs.existsSync(authorFile)) {
   const content = fs.readFileSync(authorFile, "utf-8");
   const authorMatches = content.matchAll(/"([a-z0-9-]+)":\s*\{/g);
