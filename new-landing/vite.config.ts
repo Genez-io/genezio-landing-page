@@ -15,7 +15,7 @@ export default defineConfig({
     }
   },
   ssr: {
-    noExternal: ["react-router"]
+    noExternal: ["react-router", "react-tweet"]
   },
   resolve: {
     alias: {
