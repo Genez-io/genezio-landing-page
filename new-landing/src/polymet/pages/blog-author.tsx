@@ -77,7 +77,7 @@ const authors: Record<string, any> = {
     },
     "bogdan-ripa": {
         "name": "Bogdan Ripa",
-        "role": "Contributor",
+        "role": "Cofounder & CPO",
         "bio": "Bogdan Ripa is a co-founder and product leader with a strong entrepreneurial background. He co-founded InterAKT Online, which was later acquired by Adobe, where he played a key role in scaling the Romanian campus and driving product innovation. After eight years at Adobe, he transitioned back into the startup ecosystem, leading Vector Watch’s product management before its acquisition by Fitbit, where he contributed to gamification and social features. He then served as SVP of Product Management at UiPath, expanding its product suite with automation and AI-driven solutions. Currently, Bogdan is the Co-Founder and CPO at DeployApps, focusing on developer productivity and application deployment. He also advises MyBenefits, guiding product and growth strategies. With expertise in agile methodologies, product-market fit, and scaling tech products, Bogdan continues to shape the future of software development and automation.",
         "image": "/authors/bogdan-ripa.webp",
         "location": "Remote",
@@ -98,7 +98,7 @@ const authors: Record<string, any> = {
     },
     "bogdan-vlad": {
         "name": "Bogdan Vlad",
-        "role": "Contributor",
+        "role": "Cofounder & CTO",
         "bio": "Bogdan Vlad is the Co-Founder and Chief Technology Officer at DeployApps, where he leads the development of tools that make serverless app creation faster and more accessible. With over a decade of experience in software engineering, he’s worked on everything from mobile platforms to embedded systems, mastering technologies like Java, Objective C, Swift, Golang, and more. Before starting DeployApps, Bogdan held roles at companies like Fitbit and Vector Watch, where he built innovative solutions for IoT and mobile applications, even earning a patent for energy-efficient display technology. A strong believer in giving back, he’s been an active mentor, speaker, and teacher in the tech community, empowering developers to push boundaries and create impactful products. When he’s not busy driving innovation at DeployApps, Bogdan enjoys exploring new frameworks and contributing to open-source projects.",
         "image": "/authors/bogdan-vlad.webp",
         "location": "Remote",
@@ -182,7 +182,7 @@ const authors: Record<string, any> = {
     },
     "horatiu-voicu": {
         "name": "Horatiu Voicu",
-        "role": "Contributor",
+        "role": "Growth Marketer",
         "bio": "Horatiu Voicu is a seasoned Digital Marketing Consultant with over a decade of experience in SEO, PPC, and online strategy. Founder of Voiqu, he has been part of the Google Partners program since 2015, offering expertise in search engine optimization, campaign management, and analytics. Horatiu has worked with prominent organizations, including ANSWEAR.com and MTH Digital, optimizing paid search campaigns, managing large-scale budgets, and increasing ROI. Horatiu’s skill set extends to technical SEO, advanced website audits, and international marketing. With a strong foundation in digital tools like Google Analytics and HubSpot, he has also supported non-profits like WWF Romania by enhancing data tracking and ad grant utilization. Known for his critical thinking and passion for innovation, Horatiu continues to help businesses grow through strategic planning and measurable outcomes.",
         "image": "/authors/horatiu-voicu.webp",
         "location": "Remote",
@@ -245,7 +245,7 @@ const authors: Record<string, any> = {
     },
     "paul-cionca": {
         "name": "Paula Cionca",
-        "role": "Contributor",
+        "role": "Cofounder & CMO",
         "bio": "Paula Cionca (Avasiloaie) is the Co-Founder of DeployApps, where she combines her expertise in product management and business analysis to create innovative tools for developers. With over five years of experience in the software industry, Paula has a proven track record of transforming ideas into high-quality products through her deep understanding of agile methodologies and the product development lifecycle.",
         "image": "/authors/paula-cionca.webp",
         "location": "Remote",
@@ -266,7 +266,7 @@ const authors: Record<string, any> = {
     },
     "radu-dumitrescu": {
         "name": "Radu Dumitrescu",
-        "role": "Contributor",
+        "role": "Cofounder and CPO",
         "bio": "Radu-Andrei Dumitrescu leads as a Technical Product Owner and Developer. With a passion for simplifying complex development workflows, Radu has played a pivotal role in building DeployApps’s innovative platform, empowering developers to focus on coding while minimizing deployment headaches. A graduate of University POLITEHNICA of Bucharest, Radu’s expertise spans software engineering, big data, and entrepreneurship. Before joining DeployApps, he co-founded and exited CodeTruck.io and held leadership roles in the Big Data Division at Technology Reply, showcasing his ability to deliver results across diverse technical landscapes. Radu is deeply committed to fostering innovation and sharing knowledge through workshops, tutorials, and community engagement, continually pushing the boundaries of what’s possible in technology.",
         "image": "/authors/radu-dumitrescu.webp",
         "location": "Remote",
