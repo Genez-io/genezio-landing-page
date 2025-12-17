@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import { Tweet } from "react-tweet";
 import { ArrowLeftIcon, ClockIcon, CalendarIcon, SparklesIcon } from "lucide-react";
 import { getPostById, getAllPosts } from "@/lib/posts";
-import { authors } from "./blog-author";
+import { authors } from "@/lib/authors";
 
 export function BlogPost() {
   const { slug } = useParams<{
