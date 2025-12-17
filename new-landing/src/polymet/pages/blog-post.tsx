@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import { Tweet } from "react-tweet";
 import { ArrowLeftIcon, ClockIcon, CalendarIcon, SparklesIcon } from "lucide-react";
 import { getPostById, getAllPosts } from "@/lib/posts";
+import { authors } from "./blog-author";
 
 export function BlogPost() {
   const { slug } = useParams<{
@@ -83,14 +84,29 @@ export function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 pb-8 mb-8 border-b border-white/10">
             {/* Author */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">
-                  {post.author
-                    .split(" ")
-                    .map((n: string) => n[0])
-                    .join("")}
-                </span>
-              </div>
+              {(() => {
+                const authorKey = post.author?.toLowerCase()?.split(" ")?.join("-");
+                const authorData = authors[authorKey];
+                if (authorData?.image) {
+                  return (
+                    <img
+                      src={authorData.image}
+                      alt={post.author}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-white/10"
+                    />
+                  );
+                }
+                return (
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                    <span className="text-white font-semibold text-sm">
+                      {post.author
+                        .split(" ")
+                        .map((n: string) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                );
+              })()}
               <div>
                 <div className="text-sm font-medium text-white">
                   <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>{post.author}</a>
@@ -224,14 +240,29 @@ export function BlogPost() {
           {/* Author Bio - simplified as we don't have bio in frontmatter yet */}
           <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-8 mb-16">
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-semibold text-lg">
-                  {post.author
-                    .split(" ")
-                    .map((n: string) => n[0])
-                    .join("")}
-                </span>
-              </div>
+              {(() => {
+                const authorKey = post.author?.toLowerCase()?.split(" ")?.join("-");
+                const authorData = authors[authorKey];
+                if (authorData?.image) {
+                  return (
+                    <img
+                      src={authorData.image}
+                      alt={post.author}
+                      className="w-16 h-16 rounded-full object-cover border-2 border-white/10 flex-shrink-0"
+                    />
+                  );
+                }
+                return (
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-semibold text-lg">
+                      {post.author
+                        .split(" ")
+                        .map((n: string) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                );
+              })()}
               <div>
                 <div className="text-lg font-semibold text-white mb-1">
                   <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>

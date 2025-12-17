@@ -3,15 +3,13 @@ import { Link, useParams } from "react-router";
 import {
     ArrowLeftIcon,
     LinkedinIcon,
-    TwitterIcon,
-    MailIcon,
     ClockIcon,
     CalendarIcon,
 } from "lucide-react";
 import { getAllPosts } from "@/lib/posts";
 
 // Author data
-const authors: Record<string, any> = {
+export const authors: Record<string, any> = {
     "andra-pitis": {
         "name": "Andra Pitis",
         "role": "Contributor",
