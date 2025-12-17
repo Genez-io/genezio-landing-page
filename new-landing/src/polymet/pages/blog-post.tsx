@@ -227,7 +227,7 @@ export function BlogPost() {
                       {...props}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
-                      className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1"
+                      className="text-blue-400 hover:text-blue-300 transition-colors break-all"
                     />
                   );
                 },
