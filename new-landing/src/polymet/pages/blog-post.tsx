@@ -42,6 +42,12 @@ export function BlogPost() {
     );
   }, [post.content]);
 
+  React.useEffect(() => {
+    if (post) {
+      document.title = `${post.title}`;
+    }
+  }, [post]);
+
   return (
     <div className="min-h-screen bg-[#050506]">
       {/* Back Button */}
