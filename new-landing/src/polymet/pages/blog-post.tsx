@@ -1,13 +1,10 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { useParams } from "react-router";
+import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
-import {
-  ArrowLeftIcon,
-  ClockIcon,
-  CalendarIcon,
-  ShareIcon,
-  SparklesIcon,
-} from "lucide-react";
+import { Tweet } from "react-tweet";
+import { ArrowLeftIcon, ClockIcon, CalendarIcon, SparklesIcon } from "lucide-react";
 import { getPostById, getAllPosts } from "@/lib/posts";
 
 export function BlogPost() {
@@ -34,6 +31,15 @@ export function BlogPost() {
   const relatedPosts = getAllPosts()
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
+
+  // Preprocess content to replace tweet shortcodes with marker links
+  const contentWithTweets = React.useMemo(() => {
+    if (!post.content) return "";
+    return post.content.replace(
+      /{{<\s*tweet\s+"(https?:\/\/twitter\.com\/[^\/]+\/status\/(\d+))"\s*>}}/g,
+      (_, url, id) => `[TWEET_EMBED__${id}](${url})`
+    );
+  }, [post.content]);
 
   return (
     <div className="min-h-screen bg-[#050506]">
@@ -123,6 +129,7 @@ export function BlogPost() {
           {/* Article Content */}
           <div className="prose prose-invert prose-lg max-w-none mb-16 text-white/80">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 h1: ({ node, ...props }) => (
                   <h1
@@ -141,6 +148,26 @@ export function BlogPost() {
                     className="text-2xl font-bold text-white mt-8 mb-4 leading-snug"
                     {...props}
                   />
+                ),
+                table: ({ node, ...props }) => (
+                  <div className="overflow-x-auto my-8 border border-white/10 rounded-lg">
+                    <table className="w-full text-left border-collapse" {...props} />
+                  </div>
+                ),
+                thead: ({ node, ...props }) => (
+                  <thead className="bg-white/5 text-white font-semibold" {...props} />
+                ),
+                tbody: ({ node, ...props }) => (
+                  <tbody className="divide-y divide-white/10 text-white/80" {...props} />
+                ),
+                tr: ({ node, ...props }) => (
+                  <tr className="hover:bg-white/5 transition-colors" {...props} />
+                ),
+                th: ({ node, ...props }) => (
+                  <th className="p-4 border-b border-white/10" {...props} />
+                ),
+                td: ({ node, ...props }) => (
+                  <td className="p-4 align-top" {...props} />
                 ),
                 h4: ({ node, ...props }) => (
                   <h4
@@ -161,6 +188,20 @@ export function BlogPost() {
                   />
                 ),
                 a: ({ node, ...props }) => {
+                  const children = props.children;
+                  // Check if this is our tweet marker
+                  if (
+                    typeof children === "string" &&
+                    children.startsWith("TWEET_EMBED__")
+                  ) {
+                    const id = children.replace("TWEET_EMBED__", "");
+                    return (
+                      <div className="flex justify-center my-8 not-prose tweet-container">
+                        <Tweet id={id} />
+                      </div>
+                    );
+                  }
+
                   const isExternal = props.href?.startsWith("http");
                   return (
                     <a
@@ -173,7 +214,7 @@ export function BlogPost() {
                 },
               }}
             >
-              {post.content}
+              {contentWithTweets}
             </ReactMarkdown>
           </div>
 
