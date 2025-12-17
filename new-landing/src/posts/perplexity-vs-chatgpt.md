@@ -20,17 +20,25 @@ readTime: 8
 url: /perplexity-vs-chatgpt/
 ---
 
-ChatGPT and Perplexity do not search the web the same way. When given identical scenarios regarding the UK banking industry, they produced 300 search queries with only 1 literal match.
+## TL;DR
 
-Perplexity behaves like a real-time, comparison-driven search engine. ChatGPT behaves like an analyst that investigates context before answering. These differences mean that visibility in one AI system does not translate to visibility in another—a fundamental shift for SEO, content teams, and brand leaders.
+*ChatGPT and Perplexity do not search the web the same way. When given identical scenarios, they produced 300 search queries with only 1 literal match.
+*Perplexity behaves like a real-time, comparison-driven search engine.
+*ChatGPT behaves like an analyst that investigates context before answering.
 
-LLMs are searching the web in real-time. Large Language Models don't simply produce responses; they analyze users' questions, search the web, reason, and summarize. Those searches reveal something far more interesting than the final response: they expose how each model *thinks*, what it prioritizes, and how it decides what sources are worth consulting.
+These differences mean that visibility in one AI system does not translate to visibility in another, a fundamental shift for SEO, content teams, and brand leaders.
 
+## LLMs are searching the web in real-time
+
+Large Language Models don't simply produce responses, they **analyze user's questions, search the web, reason** and **summarize**.
+Those searches reveal something far more interesting than the final response: they expose how each model thinks, what it prioritizes, and how it decides what sources are worth consulting.
 In this analysis, we look beyond surface-level outputs and focus instead on the **information-seeking behavior** of two popular AI systems: **ChatGPT** and **Perplexity**.
-
-Using Genezio's AI Visibility platform, we ran the same banking-industry conversational scenarios against both systems and extracted the actual web search queries each model executed while forming its responses. By analyzing these queries side-by-side, we can observe what kinds of information each model looks for, how they frame their searches, and where their priorities meaningfully diverge.
-
-The goal of this article is not to evaluate which system is "better," but to understand **how they differ**, and what those differences mean for brands, content teams, SEO, and GEO strategies aiming to be visible in AI-generated answers.
+Using Genezio's AI Visibility platform, we ran the same banking-industry conversational scenarios against both systems and extracted the **actual web search queries** each model executed while forming its responses. By analyzing these queries side-by-side, we can observe:
+* what kinds of information each model looks for,
+* how they frame their searches,
+* and where their priorities meaningfully diverge.
+The goal of this article is not to evaluate which system is "better," but to understand **how they differ**, and what those differences mean for brands, content teams, SEO and GEO strategies aiming to be visible in AI-generated answers.
+Let's dive in.
 
 ## Headline finding: almost no overlap in search queries
 
@@ -59,7 +67,7 @@ The following table breaks down the structural differences between the two model
 | **"Starts with 'which'"** | 11.3% | 4.7% |
 | **Contains a year (e.g., 2025/2026)** | 21.3% | 79.3% |
 
-## Perplexity: freshness-first, listicle-shaped search behavior
+### Perplexity: freshness-first, listicle-shaped search behavior
 
 Perplexity tends to formulate **short, high-signal queries** that look like classic SEO list pages, strongly anchored to **time relevance**.
 
@@ -71,7 +79,7 @@ Example Perplexity-style queries:
 
 This behavior signals that Perplexity is optimized to quickly surface **up-to-date, comparative content** that can be cited and summarized with minimal additional reasoning.
 
-## ChatGPT: context-first, investigative search behavior
+### ChatGPT: context-first, investigative search behavior
 
 ChatGPT, by contrast, issues **longer and more descriptive queries** that aim to understand **why** something is true, not just **what ranks highest**.
 
@@ -83,7 +91,7 @@ Example ChatGPT-style queries:
 
 This pattern indicates that ChatGPT is searching in order to **build an explanation**, not just retrieve a list.
 
-## Why this distinction matters
+### Why this distinction matters
 
 Although both systems may answer similar user questions, they arrive there through very different paths:
 
