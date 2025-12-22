@@ -6,6 +6,7 @@ import {
     ZapIcon,
     BarChartIcon,
 } from "lucide-react";
+import { authors } from "./authors";
 
 export interface BlogPost {
     id: string;
@@ -117,6 +118,9 @@ export function getAllPosts(): BlogPost[] {
             "[$2]($1)"
         );
 
+        const authorKey = frontmatter.author?.toLowerCase()?.split(" ")?.join("-");
+        const authorData = authors[authorKey];
+
         posts.push({
             id: filename,
             title: frontmatter.title || "Untitled",
@@ -130,7 +134,7 @@ export function getAllPosts(): BlogPost[] {
             }) : "Recent",
             timestamp: frontmatter.date ? new Date(frontmatter.date).getTime() : 0,
             author: frontmatter.author || "Genezio Team",
-            authorRole: "Contributor", // Not in frontmatter usually
+            authorRole: authorData?.role || "Contributor",
             featured: true, // As requested
             icon: icons[iconIndex],
             gradient: gradients[gradientIndex],
