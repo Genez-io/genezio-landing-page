@@ -4,7 +4,7 @@ date: 2025-12-22
 tags:
   - GEO
   - AI Conversations
-author: Paula
+author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
 
 thumbnail: /images/bcr-success-story.webp
