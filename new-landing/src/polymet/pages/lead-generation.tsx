@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { LeadGenHero } from "@/polymet/components/lead-gen-hero";
 import { LeadGenDataSources } from "@/polymet/components/lead-gen-data-sources";
 import { LeadGenPersonas } from "@/polymet/components/lead-gen-personas";
@@ -7,18 +8,27 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 
 export function LeadGeneration() {
   return (
-    <div className="min-h-screen bg-[#050506]">
-      <LeadGenHero />
+    <>
+      <Helmet>
+        <title>Conversational Brand Presence | Lead Generation with Genezio</title>
+        <meta
+          name="description"
+          content="Use Genezio to understand and expand your conversational brand presence. Simulate AI conversations, analyze personas, and turn AI visibility into qualified leads."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#050506]">
+        <LeadGenHero />
 
-      <LeadGenDataSources />
+        <LeadGenDataSources />
 
-      <LeadGenPersonas />
+        <LeadGenPersonas />
 
-      <LeadGenActionableInsights />
+        <LeadGenActionableInsights />
 
-      <LeadGenIntelligence />
+        <LeadGenIntelligence />
 
-      <GenezioCtaSection />
-    </div>
+        <GenezioCtaSection />
+      </div>
+    </>
   );
 }

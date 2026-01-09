@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { ConversionHero } from "@/polymet/components/conversion-hero";
 import { ConversionProcess } from "@/polymet/components/conversion-process";
 import { ConversationAnalysis } from "@/polymet/components/conversation-analysis";
@@ -9,22 +10,31 @@ import { BtTestimonialSection } from "@/polymet/components/bt-testimonial-sectio
 
 export function IncreaseConversion() {
   return (
-    <div className="min-h-screen bg-[#050506]">
-      <ConversionHero />
+    <>
+      <Helmet>
+        <title>Increase Conversion from AI Conversations | Genezio</title>
+        <meta
+          name="description"
+          content="Turn AI-powered conversations into revenue. Genezio analyzes multi-turn chats, surfaces drop-off points, and helps you optimize conversational funnels for higher conversion."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#050506]">
+        <ConversionHero />
 
-      <BtTestimonialSection />
+        <BtTestimonialSection />
 
-      <ConversionProcess />
+        <ConversionProcess />
 
-      <ConversationAnalysis />
+        <ConversationAnalysis />
 
-      <ConversionTestimonials />
+        <ConversionTestimonials />
 
-      <CrossAnalysis />
+        <CrossAnalysis />
 
-      <MultiTurnTesting />
+        <MultiTurnTesting />
 
-      <GenezioCtaSection />
-    </div>
+        <GenezioCtaSection />
+      </div>
+    </>
   );
 }

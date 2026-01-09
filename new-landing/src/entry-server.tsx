@@ -1,5 +1,6 @@
 import { StaticRouter } from "react-router";
 import { renderToString } from "react-dom/server";
+import { Helmet } from "react-helmet";
 import GenezioApp from "./App";
 
 export function render(url: string) {
@@ -9,5 +10,11 @@ export function render(url: string) {
     </StaticRouter>
   );
 
-  return appHtml;
+  // Collect Helmet data after rendering
+  const helmet = Helmet.renderStatic();
+
+  return {
+    appHtml,
+    helmet,
+  };
 }

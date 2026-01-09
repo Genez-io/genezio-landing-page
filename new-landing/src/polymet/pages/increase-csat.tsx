@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { CsatHero } from "@/polymet/components/csat-hero";
 import { ConversationClassification } from "@/polymet/components/conversation-classification";
 import { CsatTestimonialBanner } from "@/polymet/components/csat-testimonial-banner";
@@ -7,18 +8,27 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 
 export function IncreaseCsat() {
   return (
-    <div className="min-h-screen bg-[#050506]">
-      <CsatHero />
+    <>
+      <Helmet>
+        <title>Increase CSAT with AI Conversation Intelligence | Genezio</title>
+        <meta
+          name="description"
+          content="Improve customer satisfaction by analyzing AI and human conversations. Genezio helps you classify intent, reduce escalations, and measure agent performance across channels."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#050506]">
+        <CsatHero />
 
-      <ConversationClassification />
+        <ConversationClassification />
 
-      <CsatTestimonialBanner />
+        <CsatTestimonialBanner />
 
-      <EscalationReduction />
+        <EscalationReduction />
 
-      <AgentScoringCards />
+        <AgentScoringCards />
 
-      <GenezioCtaSection />
-    </div>
+        <GenezioCtaSection />
+      </div>
+    </>
   );
 }
