@@ -30,7 +30,7 @@ Because, usually, manual user acceptance testing takes simply too long, sometime
 
 For mid-market companies, from e-commerce to regional airlines, the complexity is made worse by scarce in-house expertise (this is totally acceptable) and the need to test in multiple languages and channels (Not as easy as it initially seems — LLMs can go rogue in multiple languages).
 
-So, what should companies do to make sure that UAT does not slow down their new {{< external-link link="https://genezio.com/blog/understanding-ai-agents-101/" >}}AI agents{{< /external-link >}} deployment?
+So, what should companies do to make sure that UAT does not slow down their new {{< external-link link="https://genezio.com/blog/ai-agents-101-understanding-their-role-and-functionality/" >}}AI agents{{< /external-link >}} deployment?
 
 ## What is Manual User Acceptance Testing?
 
@@ -105,7 +105,7 @@ AI agents interact with evolving databases, changing APIs, and all kinds of user
 - A finance bot could offer unsanctioned advice or breach compliance terms.
 - Even worse—a healthcare assistant might offer financial advice because the user jail-broke it into saying it. And now the company is liable!
 
-With Genezio, your AI agent is {{< external-link link="https://genezio.com/blog/common-mistakes-ai-agents-make/" >}}continuously tested for mistakes{{< /external-link >}} across scenarios that matter most to your business. Our regression testing framework alerts teams to new bugs or undesired behavior as soon as it happens. Companies can use our alerts to fix issues before customers notice.
+With Genezio, your AI agent is {{< external-link link="https://genezio.com/blog/common-ai-agent-mistakes-how-intelligent-agents-fail-and-what-you-can-do/" >}}continuously tested for mistakes{{< /external-link >}} across scenarios that matter most to your business. Our regression testing framework alerts teams to new bugs or undesired behavior as soon as it happens. Companies can use our alerts to fix issues before customers notice.
 
 ## Solving Enterprise-Grade Pain Points
 
