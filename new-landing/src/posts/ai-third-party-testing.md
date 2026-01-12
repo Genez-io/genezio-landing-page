@@ -34,7 +34,7 @@ In this article, we\'ll explore why AI third-party testing matters for AI safety
 
 ## What are AI agents?
 
-AI agents are software programs that perform tasks humans used to do. Businesses use them to assist customers, process data, and automate workflows. Some {{< external-link link="<https://genezio.com/blog/understanding-ai-agents-101/>" >}}AI agents{{< /external-link >}} answer customer questions in natural-sounding language, while others generate reports or help with financial decisions. But AI agents, like LLMs, don't always get things right, which is why they need testing before they're put to work.
+AI agents are software programs that perform tasks humans used to do. Businesses use them to assist customers, process data, and automate workflows. Some {{< external-link link="<https://genezio.com/blog/ai-agents-101-understanding-their-role-and-functionality/>" >}}AI agents{{< /external-link >}} answer customer questions in natural-sounding language, while others generate reports or help with financial decisions. But AI agents, like LLMs, don't always get things right, which is why they need testing before they're put to work.
 
 ## What is AI third-party testing?
 
