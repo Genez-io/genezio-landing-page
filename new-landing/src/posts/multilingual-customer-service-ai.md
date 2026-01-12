@@ -66,4 +66,4 @@ Your customers don't speak just English, and your AI shouldn't either. The cost 
 
 With Genezio, you don't need to hire an army of multilingual engineers or rely on guesswork. Their platform makes it simple and reliable to ensure your AI customer service agents are as effective in Spanish, Japanese, or Flemish as they are in English. You can get a one-time evaluation or choose to keep tabs on your bot with weekly or even daily reports.
 
-**Ready to take your multilingual customer service seriously? Try {{< external-link link="http://genezio.com" >}}Genezio{{< /external-link >}} for free or book a demo now.**
+**Ready to take your multilingual customer service seriously? Try {{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}} for free or book a demo now.**
