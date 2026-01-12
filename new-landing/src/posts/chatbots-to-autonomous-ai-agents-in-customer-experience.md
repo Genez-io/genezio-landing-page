@@ -79,7 +79,7 @@ Companies implemented these solutions to handle a wider range of customer servic
 
 ### Fourth Generation: LLM-Powered Autonomous AI Agents
 
-With the introduction of Large Language Models (LLMs) like GPT-4, Claude, and Gemini, we entered the current generation of customer experience automation: {{< external-link link="https://genezio.com/blog/understanding-ai-agents-101/" >}}autonomous AI agents{{< /external-link >}}. These systems leverage the immense knowledge and reasoning capabilities of foundation models combined with specialized components for task execution.
+With the introduction of Large Language Models (LLMs) like GPT-4, Claude, and Gemini, we entered the current generation of customer experience automation: {{< external-link link="https://genezio.com/blog/ai-agents-101-understanding-their-role-and-functionality/" >}}autonomous AI agents{{< /external-link >}}. These systems leverage the immense knowledge and reasoning capabilities of foundation models combined with specialized components for task execution.
 
 Defining characteristics of autonomous AI agents:
 - **Foundation model intelligence**: Built on LLMs with billions of parameters
@@ -127,7 +127,7 @@ Modern AI agents connect to various knowledge sources to provide accurate, up-to
 - **Customer data**: Integration with CRM systems for personalized assistance
 - **Vector databases**: Semantic search capabilities for finding relevant information quickly
 
-This layer typically implements {{< external-link link="https://genezio.com/blog/retrieval-augmented-generation-is-fixing-llm/" >}}Retrieval-Augmented Generation (RAG){{< /external-link >}} to enhance the foundation model's responses with specific, accurate information from trusted sources.
+This layer typically implements {{< external-link link="https://genezio.com/blog/rag-is-fixing-llms/" >}}Retrieval-Augmented Generation (RAG){{< /external-link >}} to enhance the foundation model's responses with specific, accurate information from trusted sources.
 
 #### Tool Use and Integration Layer
 

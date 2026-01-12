@@ -46,7 +46,7 @@ Traditional customer service systems are relatively predictable. If you update a
 
 Let's say your chatbot accidentally tells a customer their refund is guaranteed when it's not. Or imagine it says something that gets flagged as discriminatory or biased. That's a PR nightmare waiting to happen.
 
-With continuous testing, you simulate a wide range of customer interactions on a regular basis. You can monitor for tone, compliance with policy, brand consistency, and overall {{< external-link link="https://genezio.com/blog/how-can-i-test-the-effectiveness-of-my-ai-agent/" >}}effectiveness{{< /external-link >}}. And when something goes off the rails, you can catch it fast and fix it before it hurts your business.
+With continuous testing, you simulate a wide range of customer interactions on a regular basis. You can monitor for tone, compliance with policy, brand consistency, and overall {{< external-link link="https://genezio.com/blog/how-can-i-test-my-ai-agent/" >}}effectiveness{{< /external-link >}}. And when something goes off the rails, you can catch it fast and fix it before it hurts your business.
 
 ## The Klarna case
 
