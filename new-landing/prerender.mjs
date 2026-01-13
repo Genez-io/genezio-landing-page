@@ -31,6 +31,7 @@ const routes = [
   "/glossary/answer-engine-optimization",
   "/glossary/chat-gpt-citations",
   "/glossary/chatgpt-prompt-engineering",
+  "/glossary/conversation-analysis",
   "/glossary/conversation-intelligence-platform",
   "/glossary/conversation-intelligence-software",
   "/glossary/conversational-ai-platform",
