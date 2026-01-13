@@ -22,7 +22,7 @@ A fundamental change in how information is discovered is being driven by **Gen Z
 
 This behavioral shift is also reflected in commercial contexts. A 2024 HubSpot report corroborates this trend, revealing that 76% of consumers find GenAI-enabled search to be "somewhat" or "much" more appealing than traditional search. Among those who have already used it for shopping, 79% rated the experience as "somewhat" or "far" better. The ability to ask a complex product-related question and receive a single, consolidated recommendation is a powerful value proposition.
 
-![A pie chart showing user trust in AI answers. 45.6% say 'Yes, most of the time.' 30.7% say 'Sometimes, if it sounds smart.' 22.8% say 'Not really, I trust classic sources.' A sliver says 'I don't use AI.'](https://genezio.com/blog/posts/trusted-ai-more-than-google.webp)
+![A pie chart showing user trust in AI answers. 45.6% say 'Yes, most of the time.' 30.7% say 'Sometimes, if it sounds smart.' 22.8% say 'Not really, I trust classic sources.' A sliver says 'I don't use AI.'](https://genezio.com/images/trusted-ai-more-than-google.webp)
 
 ## The Anatomy of a New Habit
 
