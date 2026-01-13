@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /blog/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp
+thumbnail: /images/ai-agent-security-best-ways-to-secure-your-ai-agent.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
 # meta data start
 description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
 meta_og_url: "https://genezio.com/blog/ai-agent-security/"
 
-meta_og_image: "https://genezio.com/blog/posts/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
+meta_og_image: "https://genezio.com/images/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -38,7 +38,7 @@ In this article, we'll break down what AI agent security means, why testing matt
 
 AI agents are software systems that use large language models (LLMs) and other tools to handle tasks for people. They can answer questions, make decisions, or carry out actions based on what users say. You'll find them in customer service, retail chatbots, healthcare tools, banking support, and more.
 
-![GM dealer chatbot talked into selling Chevy Tahoe for $1](https://genezio.com/blog/posts/gm-dealer-chatbot-talked-into-selling-chevy-tahoe-for-$1.webp)
+![GM dealer chatbot talked into selling Chevy Tahoe for $1](https://genezio.com/images/gm-dealer-chatbot-talked-into-selling-chevy-tahoe-for-$1.webp)
 
 Unlike traditional software that relies on fixed scripts, AI agents respond based on patterns in language. They take in what the user says, figure out the intent, and generate a response each time. That makes them flexible, but also harder to predict. An AI agent trained to answer support questions might start giving legal or medical advice if the conversation drifts. And sometimes, people push them in that direction on purpose, just to see how far they can go.
 

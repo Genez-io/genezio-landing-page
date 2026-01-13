@@ -39,6 +39,12 @@ const glossaryTerms: GlossaryTerm[] = [
     category: "Optimization"
   },
   {
+    term: "Conversation Analysis",
+    definition:
+      "The methodology of using AI to transcribe and evaluate customer interactions (calls, chats, emails) to assess agent performance, compliance, and customer sentiment.",
+    category: "Optimization"
+  },
+  {
     term: "Conversational Brand Presence",
     definition:
       "How your brand is represented, mentioned, and recommended in AI-driven conversations. This includes the context, sentiment, and accuracy of brand mentions across AI platforms.",

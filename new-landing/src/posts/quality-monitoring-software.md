@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /blog/posts/quality-monitoring-software.webp
+thumbnail: /images/quality-monitoring-software.webp
 preview: In this article, we’ll look at how quality monitoring software, like Genezio, helps businesses keep their AI agents on the right track, and make sure they benefit both customers and support teams.
 # meta data start
 description: Quality monitoring software improves AI agents performance in customer support. Learn how Genezio makes AI testing and monitoring easier.
 meta_og_url: "https://genezio.com/blog/quality-monitoring-software/"
 
-meta_og_image: "https://genezio.com/blog/posts/quality-monitoring-software.webp"
+meta_og_image: "https://genezio.com/images/quality-monitoring-software.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -24,7 +24,7 @@ AI agents are becoming part of daily life in customer support. They can answer q
 
 With more and more companies using AI in customer support, it becomes important to check how these agents are working. Quality monitoring software helps teams and Customer Care Experts review AI conversations to make sure replies are accurate, follow the rules, and reflect what the company would normally say. Without this kind of testing, AI agents can give out wrong or confusing information. That can frustrate customers and even cause problems with compliance.
 
-![Al Adoption in Customer Interactions](https://genezio.com/blog/posts/ai-adoption-in-customer-interactions.webp)
+![Al Adoption in Customer Interactions](https://genezio.com/images/ai-adoption-in-customer-interactions.webp)
 
 Source: Metrigy and Napkin.ai
 

@@ -762,6 +762,29 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "conversational-funnel"
     ]
   },
+  "conversation-analysis": {
+    title: "Conversation Analysis: AI-Driven Support QA & Insights | Genezio",
+    metaDescription:
+      "Transform support teams with Conversation Analysis. Use AI to automate QA, measure agent performance, and decode customer sentiment across every interaction.",
+    term: "Conversation Analysis",
+    definition:
+      "The methodology of using AI to transcribe and evaluate customer interactions (calls, chats, emails) to assess agent performance, compliance, and customer sentiment.",
+    category: "Optimization",
+    detailedExplanation:
+      "While 'Conversation Intelligence' refers to the software, Conversation Analysis is the strategic application of that technology. It replaces manual, random QA sampling with 100% coverage of all customer interactions. By processing audio and text logs, this analysis identifies patterns in agent behavior (empathy, objection handling) and customer intent. It allows managers to move from subjective feedback to data-driven coaching, pinpointing exactly where team members excel or need support. This process directly optimizes operational metrics like Average Handling Time (AHT) and Customer Satisfaction (CSAT).",
+    examples: [
+      "Analyzing 100% of support calls to automatically score agents on empathy and script compliance",
+      "Aggregating negative sentiment clusters to identify a new product bug before it becomes a widespread issue",
+      "Reviewing top-performing agents' conversations to build a 'best practices' training model for new hires"
+    ],
+    whyItMatters:
+      "Support and sales teams can no longer rely on reviewing just 2% of their calls. Conversation Analysis ensures no critical customer feedback is missed and provides an objective, scalable way to improve team performance and customer experience simultaneously.",
+    relatedTerms: [
+      "conversation-intelligence-platform",
+      "ai-mention-sentiment",
+      "ai-citation"
+    ]
+  },
   "llm-optimisation": {
     title: "LLM Optimisation: Boost Your Brand Presence in AI",
     metaDescription:

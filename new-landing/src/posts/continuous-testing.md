@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /blog/posts/continuous-testing-for-ai-chatbots.webp
+thumbnail: /images/continuous-testing-for-ai-chatbots.webp
 preview: Instead of testing once during development and hoping for the best, you set up a system that keeps checking how the chatbot performs as users interact with it and as updates roll in.
 # meta data start
 description: Learn how continuous testing with Genezio helps teams monitor chatbot behavior and fix issues fast.
 meta_og_url: "https://genezio.com/blog/continuous-testing/"
 
-meta_og_image: "https://genezio.com/posts/continuous-testing-for-ai-chatbots.webp"
+meta_og_image: "https://genezio.com/images/continuous-testing-for-ai-chatbots.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -30,7 +30,7 @@ So, it's not enough to build a chatbot and run a few pre-launch tests. You need 
 
 If you're integrating an AI model or using a third-party chatbot provider, you may have no idea when updates roll out or how those changes affect your customers. That unpredictability is why continuous testing is a must. And the good news? {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} makes this process simple, even for without developers, so your team can detect and prevent problems before they cost you a customer---or your reputation.
 
-![AI Assistants understand complex problems better](https://genezio.com/blog/posts/understand-complex-problems-better.webp)
+![AI Assistants understand complex problems better](https://genezio.com/images/understand-complex-problems-better.webp)
 
 ## What is continuous testing?
 

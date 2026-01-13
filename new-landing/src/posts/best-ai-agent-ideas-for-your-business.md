@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /blog/posts/The-Best-AI-Agent-Ideas-for-Your-Business.webp
+thumbnail: /images/The-Best-AI-Agent-Ideas-for-Your-Business.webp
 preview: In this article, we'll look at some of the best AI agent ideas for your business and explain how the right AI testing solution can prevent failures and keep your AI agents reliable.
 # meta data start
 description: Discover the best AI agent ideas for your business. Learn how Genezio helps test and monitor AI agents for reliable performance.
 meta_og_url: "https://genezio.com/blog/best-ai-agent-ideas-for-your-business/"
 
-meta_og_image: "https://genezio.com/blog/posts/The-Best-AI-Agent-Ideas-for-Your-Business.webp"
+meta_og_image: "https://genezio.com/images/The-Best-AI-Agent-Ideas-for-Your-Business.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -42,7 +42,7 @@ There are plenty of AI agent ideas out there, but some stand out as especially u
 
 This AI agent idea comes from a real-world use: {{< external-link link="<https://www.linkedin.com/posts/bernhardhauser_i-built-an-ai-agent-inside-gmail-that-can-ugcPost-7304910969984499712-RcwQ/>" >}}an AI assistant{{< /external-link >}} that reads incoming support emails, checks knowledge base articles, and drafts replies. If it's confident in the answer, it sends the reply automatically. Otherwise, it flags the response for human review.
 
-![Google support agent](https://genezio.com/blog/posts/google-support-agent.webp)
+![Google support agent](https://genezio.com/images/google-support-agent.webp)
 
 Now, Customer Care Executives should consider that an agent like this one (either the solution we're mentioning here or any other) could reply with something that is off-limits. So, regular testing with a platform like Genezio makes sure that the agent is actually inside the bounds you'd expect it to be.
 
@@ -56,7 +56,7 @@ This AI agent tracks how users interact with a website --- such as clicks, scrol
 
 {{< external-link link="<https://www.hotjar.com/product-ai-surveys/>" >}}Hotjar's AI-powered{{< /external-link >}} surveys are a great example of this. Hotjar collects feedback alongside behavioral data to help businesses understand why users behave a certain way. Its AI suggests survey questions based on user actions, and makes it easier to identify friction points and improve the website experience.
 
-![Hotjar User Insights](https://genezio.com/blog/posts/hotjar-user-insights.webp)
+![Hotjar User Insights](https://genezio.com/images/hotjar-user-insights.webp)
 
 The AI agent can then suggest changes, like adjusting CTA placements or fixing confusing navigation. (An ideal AI agent should also make the changes.) It can also run A/B tests on layouts or headlines to see what works better. The risk is that AI might misinterpret user behavior, and recommend changes that don't actually improve engagement. Regular AI testing helps keep it on track, as it makes sure the AI understands user behavior correctly and submits changes _that really work_.
 
@@ -66,7 +66,7 @@ Companies like {{< external-link link="<https://forethought.ai/?source=genezio.c
 
 But AI chatbots can mess up. For instance, if a bot doesn't understand a refund question, it might respond with something like, "Thanks for reaching out!" --- not useful at all. Sometimes customers might ask random or silly things to test the bot, and it could give a completely irrelevant or off-topic answer. Worse, chatbots can sometimes spill sensitive information by mistake. For instance, if a customer asks a chatbot for personal account details, and the bot isn't properly trained, it might mistakenly share private data, and cause big security problems. This is also how a man tricked a Nissan AI agent into offering a $1 car.
 
-![Forethought - AI Chatbot Example](https://genezio.com/blog/posts/forethought-scale-customer-support-with-advanced-agentic-ai.webp)
+![Forethought - AI Chatbot Example](https://genezio.com/images/forethought-scale-customer-support-with-advanced-agentic-ai.webp)
 
 This is why an AI testing solution like Genezio is so important for a Customer Care team or a business. The platform simulates and monitors the chatbot's responses for accuracy, and makes sure the AI doesn't just perform well in theory but also in real-world situations. AI testing also helps stop the bot from giving off-topic or even offensive answers. So, when the bot encounters a tricky question, it's less likely to make a mistake, and if it does, it's flagged before it reaches the customer.
 

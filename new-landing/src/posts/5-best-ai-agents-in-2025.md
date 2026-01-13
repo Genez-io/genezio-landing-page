@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /blog/posts/The-5-Best-AI-Agents-in-2025.webp
+thumbnail: /images/The-5-Best-AI-Agents-in-2025.webp
 preview: In this article, we'll take a look at the 5 best AI agents for 2025 and discuss why testing them is necessary to protect customer trust and satisfaction.
 # meta data start
 description: Discover the 5 best AI agents for customer service in 2025 — including Intercom Fin, Sendbird and Genezio. Learn how to test and monitor AI to avoid costly support mistakes.
 meta_og_url: "https://genezio.com/blog/5-best-ai-agents-in-2025/"
 
-meta_og_image: "https://genezio.com/blog/posts/The-5-Best-AI-Agents-in-2025.webp"
+meta_og_image: "https://genezio.com/images/The-5-Best-AI-Agents-in-2025.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -44,7 +44,7 @@ AI agents are being used across different areas of customer service. Here's a li
 
 {{< external-link link="https://www.intercom.com/fin" >}}Intercom's Fin{{< /external-link >}} and {{< external-link link="https://sendbird.com/" >}}Sendbird's{{< /external-link >}} AI-powered chatbots are making it easier for businesses to handle customer service. Intercom\'s Fin can answer routine questions and take action based on your company\'s tone, policies, and Knowledge Base. It can also perform tasks like optimizing tickets and managing workflows, and in this way, allow human agents to focus on more complex issues. Similarly, Sendbird integrates chatbots into messaging platforms, so it can respond to customers on platforms like WhatsApp or in-app chats, and help Customer Care teams handle many inquiries at once.
 
-![6 reasons why Intercom is the best choice](https://genezio.com/blog/posts/6-reasons-why-intercom-is-the-best-choice.webp)
+![6 reasons why Intercom is the best choice](https://genezio.com/images/6-reasons-why-intercom-is-the-best-choice.webp)
 
 Still, while these tools are effective in managing routine tasks, Customer Care Experts need to test them regularly to avoid mistakes in real conversations. Without testing, a chatbot might confidently share private information or respond with something off-topic when the request is too specific or unusual. In one real case, a customer contacted {{< external-link link="https://www.bbc.com/news/technology-68025677" >}}DPD's chatbot{{< /external-link >}} about a missing parcel. When the bot couldn't solve the issue, the conversation took a strange turn. It started saying things like "DPD is useless" and even began to utter profanities (or to swear, in plain English). The exchange quickly spread online.
 
@@ -58,7 +58,7 @@ That type of AI failure in customer support can be costly. To make sure that AI 
 
 {{< external-link link="https://forethought.ai/" >}}Forethought{{< /external-link >}} is offering real-time support to customer service agents during active customer interactions. Its {{< external-link link="https://forethought.ai/platform/assist/" >}}Assist tool{{< /external-link >}} integrates with different helpdesk platforms and reads incoming tickets to instantly suggest replies, look up related past conversations, and surface helpful knowledge base articles. Assist can also summarize conversations, and speed up the time it takes for an agent to understand the issue.
 
-![Forethought Scale Customer Support with Advanced Agentic Al](https://genezio.com/blog/posts/forethought-scale-customer-support-with-advanced-agentic-ai.webp)
+![Forethought Scale Customer Support with Advanced Agentic Al](https://genezio.com/images/forethought-scale-customer-support-with-advanced-agentic-ai.webp)
 
 This kind of real-time help can save time. But it also needs to be used carefully. If an AI suggests a rushed or out-of-context answer, a live agent might send it without checking too closely, especially during busy hours. That can lead to replies that miss the point or even go against company policy. A simple mix-up in tone or meaning might turn a routine ticket into a follow-up complaint.
 
@@ -78,7 +78,7 @@ So testing is necessary. Genezio can simulate these kinds of situations to help 
 
 Let's say a customer clicks "return item", but then has to jump through three separate screens to actually finish the request. The AI can flag that as a point where people drop off. Or it might notice that agents are copying the same info into two different tools during a support call. These are the kinds of patterns Celonis looks for. Still, it can also get things wrong. For example, the AI might say, "Customers are skipping this confirmation screen, let's remove it." But maybe that screen is there to stop people from accidentally canceling their order. Without it, support tickets might spike.
 
-![Celonis - Make Al work for your enterprise](https://genezio.com/blog/posts/celonis-make-ai-work-for-your-enterprise.webp)
+![Celonis - Make Al work for your enterprise](https://genezio.com/images/celonis-make-ai-work-for-your-enterprise.webp)
 
 Customer Care teams should review AI recommendations carefully before making updates. And this is where AI agent testing tools can help. You can run a simulation that shows what happens when you make those changes—how users react, what questions they ask, and where they get stuck. If removing the confirmation screen leads to more people reaching out to support, you'll see that right away. If a new flow looks good on paper but makes things more confusing in practice, that'll show up too.
 

@@ -5,12 +5,12 @@ tags:
   - AI
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
-thumbnail: /blog/images/genezioai101.webp
+thumbnail: /images/genezioai101.webp
 preview: In today's rapidly evolving technological landscape, artificial intelligence and intelligent agents have moved from science fiction to practical business tools. Whether you're a developer looking to integrate AI capabilities into your applications or a business owner seeking to leverage automation for competitive advantage, understanding AI agents is becoming increasingly critical.
 # meta data start
 description: Learn about AI intelligent agents, their types, real-world applications, and how to deploy your own using Genezio's infrastructure. Transform your business now.
 meta_og_url: "https://genezio.com/blog/understanding-ai-agents-101/"
-meta_og_image: "https://genezio.com/blog/images/genezioai101.webp"
+meta_og_image: "https://genezio.com/images/genezioai101.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -54,7 +54,7 @@ At the heart of every **intelligent agent in AI** is what's known as the agent l
 
 This cycle, sometimes referred to as OODA (Observe, Orient, Decide, Act), forms the fundamental operational pattern for **artificial intelligence and intelligent agents**. The sophistication of each step determines the agent's overall capabilities.
 
-![aiagent](/blog/posts/aiagent1011.webp)
+![aiagent](/images/aiagent1011.webp)
 
 ## Types of AI Agents
 
@@ -94,7 +94,7 @@ The most advanced category, these agents can improve their performance over time
 
 To understand how an **intelligent agent in artificial intelligence** operates, we use the PEAS framework:
 
-![aiagent](/blog/posts/aiagent1012.webp)
+![aiagent](/images/aiagent1012.webp)
 
 To see how this works in practice, let’s apply the PEAS framework to an e-commerce recommendation agent:
 
@@ -194,7 +194,7 @@ Common frameworks for developing intelligent agents include:
 
 - **TensorFlow Agents** and **Stable Baselines** for reinforcement learning, providing pre-built implementations of RL algorithms.
 - **Rasa** and **Dialogflow** for building conversational AI agents with natural language understanding and dialogue management.
-- **LangChain** and **LlamaIndex** for {{< external-link link="https://deployapps.dev/blog/data-analyst-agent-langgraph-genezio/#introduction" >}}developing LLM-based agents{{< /external-link >}}, enabling efficient orchestration of large language models and knowledge retrieval.
+- **LangChain** and **LlamaIndex** for developing LLM-based agents, enabling efficient orchestration of large language models and knowledge retrieval.
 - **Ray RLlib** for scalable and distributed reinforcement learning, optimizing training for complex environments.
 
 ### 3. Design Your Agent Architecture
