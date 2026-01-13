@@ -20,8 +20,6 @@ readTime: 7
 url: /ai-third-party-testing/
 ---
 
-# AI Third-Party Testing: Why Independent Testing Matters for AI Agents
-
 According to Anthropic, one of the biggest challenges in AI today is the need for independent testing. As the Anthropic team explained in a {{< external-link link="<https://www.anthropic.com/news/third-party-testing>" >}}2024 write-up{{< /external-link >}}, AI agents are being deployed in high-stakes environments. For example, they handle customer service, process financial transactions, and even assist in medical diagnoses. Still, many businesses deploy them without proper testing, which opens the door to potential financial losses, legal issues, and damage to their reputation.
 
 As businesses continue to increase their AI investments, the need for independent testing becomes even clearer. A recent McKinsey report shows that {{< external-link link="<https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work>" >}}92% of companies{{< /external-link >}} plan to invest more in generative AI over the next three years. Yet, at the same time, businesses are facing a huge challenge in AI adoption: limited in-house expertise. IBM's Global AI Adoption Index found that {{< external-link link="<https://www.multivu.com/players/English/9240059-ibm-2023-global-ai-adoption-index-report/>" >}}33% of companies{{< /external-link >}} identify a lack of AI skills as a major barrier to success.
