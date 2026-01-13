@@ -5,12 +5,12 @@ tags:
   - AI
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
-thumbnail: /blog/posts/how-to-set-up-a-chatbot.webp
+thumbnail: /images/how-to-set-up-a-chatbot.webp
 preview: For any CXO planning to launch a customer-facing chatbot, understanding the setup process is critical. This guide walks through the essential steps, from choosing a platform to the importance of rigorous evaluation, ensuring your AI agent is an asset, not a liability.
 # meta data start
 description: Learn how to set up a chatbot, test, and evaluate them using Genezio’s simulation evals for high-performance customer service.
 meta_og_url: "https://genezio.com/blog/how-to-set-up-chatbot/"
-meta_og_image: "https://genezio.com/blog/posts/how-to-set-up-a-chatbot.webp"
+meta_og_image: "https://genezio.com/images/how-to-set-up-a-chatbot.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -24,7 +24,7 @@ Gartner projects over 80% of customer interactions to be handled autonomously by
 
 That’s why evaluating your chatbot before launch is a business-critical task. And with tools like **Genezio**, even non-technical staff can run AI evals to make sure your chatbot doesn’t become a liability.
 
-![How should customer service teams adapt to the rise of agentic AI?](https://genezio.com/blog/posts/how-should-customer-service-teams-adapt-to-agentic-ai.webp)
+![How should customer service teams adapt to the rise of agentic AI?](https://genezio.com/images/how-should-customer-service-teams-adapt-to-agentic-ai.webp)
 
 ## How to Set Up a Chatbot in 6 Steps for Non-Technical Business Stakeholders
 
