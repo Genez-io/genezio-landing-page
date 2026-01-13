@@ -5,12 +5,12 @@ tags:
   - AI
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
-thumbnail: /blog/posts/uat-slows-down-chatbot-launches.webp
+thumbnail: /images/uat-slows-down-chatbot-launches.webp
 preview: Manual user acceptance testing (UAT) is a step in software development in which actual users test software in real-life situations to make sure it works for what they need to do. 
 # meta data start
 description: Manual User Acceptance Testing, or manual UAT, can make an AI chatbot deployment get stuck in development hell. This is what to do instead.
 meta_og_url: "https://genezio.com/blog/manual-user-acceptance-testing-uat/"
-meta_og_image: "https://genezio.com/blog/posts/uat-slows-down-chatbot-launches.webp"
+meta_og_image: "https://genezio.com/images/uat-slows-down-chatbot-launches.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -38,7 +38,7 @@ Manual user acceptance testing (UAT) is a step in software development in which 
 
 Manual UAT is done by actual, non-technical users. A company's staff can do UAT because they're replicating the behavior their potential users will have. This is why user acceptance testing is different to QA, or quality assurance, testing.
 
-![ai agent for cx launch](/blog/posts/ai-agent-for-cx-launch.webp)
+![ai agent for cx launch](/images/ai-agent-for-cx-launch.webp)
 
 ## The Problem: Manual User Acceptance Testing is a Bottleneck
 
