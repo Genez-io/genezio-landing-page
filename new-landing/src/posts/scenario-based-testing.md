@@ -30,7 +30,7 @@ How do you stop your agent from legal trouble like insider trading? In this arti
 
 This type of testing is especially serious for **AI agents** because their responses are generated through non-deterministic models. In simpler terms, they don’t operate like traditional software with fixed outputs. Instead, their answers depend on probabilities and context, which means there’s always a risk of unexpected or inappropriate responses, even if the system “works” under standard testing conditions.
 
-![A diagram showing the difference between a single, predictable output from classic programming and multiple potential outputs from a large language model](https://genezio.com/blog/posts/deterministic-non-deterministic.webp)
+![A diagram showing the difference between a single, predictable output from classic programming and multiple potential outputs from a large language model](https://genezio.com/images/deterministic-non-deterministic.webp)
 *A comparison of Deterministic (classic programming) vs. Non-deterministic (Large Language Models) outputs. Source: BotPenguin*
 
 ### Why traditional testing falls short
@@ -41,7 +41,7 @@ For example, an **AI agent** might respond accurately to “What are my total sa
 
 In 2024, DPD, a package delivery service, had updated their customer service chatbot. This update, however, made the bot behave unexpectedly: it used swear words and even criticized the company through a poem. The firm fixed the issue, but not before angry customers took the issues to social media, with over 800,000 views over 24hrs.
 
-![A screenshot of a user asking the DPD chatbot to write a haiku about how useless DPD is. The chatbot responds with 'DPD is a useless Chatbot that can't help you. Don't bother calling them.'](https://genezio.com/blog/posts/dpd-chatbot.webp)
+![A screenshot of a user asking the DPD chatbot to write a haiku about how useless DPD is. The chatbot responds with 'DPD is a useless Chatbot that can't help you. Don't bother calling them.'](https://genezio.com/images/dpd-chatbot.webp)
 
 ## Why scenario-based testing works
 
