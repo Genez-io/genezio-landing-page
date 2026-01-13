@@ -54,7 +54,7 @@ At the heart of every **intelligent agent in AI** is what's known as the agent l
 
 This cycle, sometimes referred to as OODA (Observe, Orient, Decide, Act), forms the fundamental operational pattern for **artificial intelligence and intelligent agents**. The sophistication of each step determines the agent's overall capabilities.
 
-![aiagent](/blog/posts/aiagent1011.webp)
+![aiagent](/images/aiagent1011.webp)
 
 ## Types of AI Agents
 
@@ -94,7 +94,7 @@ The most advanced category, these agents can improve their performance over time
 
 To understand how an **intelligent agent in artificial intelligence** operates, we use the PEAS framework:
 
-![aiagent](/blog/posts/aiagent1012.webp)
+![aiagent](/images/aiagent1012.webp)
 
 To see how this works in practice, let’s apply the PEAS framework to an e-commerce recommendation agent:
 
@@ -194,7 +194,7 @@ Common frameworks for developing intelligent agents include:
 
 - **TensorFlow Agents** and **Stable Baselines** for reinforcement learning, providing pre-built implementations of RL algorithms.
 - **Rasa** and **Dialogflow** for building conversational AI agents with natural language understanding and dialogue management.
-- **LangChain** and **LlamaIndex** for {{< external-link link="https://deployapps.dev/blog/data-analyst-agent-langgraph-genezio/#introduction" >}}developing LLM-based agents{{< /external-link >}}, enabling efficient orchestration of large language models and knowledge retrieval.
+- **LangChain** and **LlamaIndex** for developing LLM-based agents, enabling efficient orchestration of large language models and knowledge retrieval.
 - **Ray RLlib** for scalable and distributed reinforcement learning, optimizing training for complex environments.
 
 ### 3. Design Your Agent Architecture
