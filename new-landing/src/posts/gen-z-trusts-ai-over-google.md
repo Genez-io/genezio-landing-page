@@ -5,12 +5,12 @@ tags:
   - AI
 author: Denisa Lera
 linkedIn: https://www.linkedin.com/in/denisa-lera-2661aa233/
-thumbnail: /blog/posts/gen-z-trusts-ai-over-google.webp
+thumbnail: /images/gen-z-trusts-ai-over-google.webp
 preview: A fundamental change in how information is discovered is being driven by Gen Z and younger millennials. Our recent survey of over 100 respondents under 29 shows that 76.3% now trust answers from an AI more than from a traditional Google search.
 # meta data start
 description: A survey of users under 29 reveals that 76.3% now trust answers from an AI more than from a traditional Google search, signaling a shift in brand discovery.
 meta_og_url: "https://genezio.com/blog/gen-z-trusts-ai-over-google/"
-meta_og_image: "https://genezio.com/blog/posts/gen-z-trusts-ai-over-google.webp"
+meta_og_image: "https://genezio.com/images/gen-z-trusts-ai-over-google.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
