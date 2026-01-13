@@ -6,13 +6,13 @@ tags:
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
-thumbnail: /blog/posts/ai-chatbot-testing-whatsapp-voice-web.webp
+thumbnail: /images/ai-chatbot-testing-whatsapp-voice-web.webp
 preview: In this article, we’ll explain why you should do simultaneous AI chatbot testing with tools such as Genezio before entrusting customer service to a gen AI.
 # meta data start
 description: See to it that AI agents act consistently across WhatsApp, voice, and web platforms with Genezio’s AI chatbot testing solution.
 meta_og_url: "https://genezio.com/blog/ai-chatbot-testing/"
 
-meta_og_image: "https://genezio.com/blog/posts/ai-chatbot-testing-whatsapp-voice-web.webp"
+meta_og_image: "https://genezio.com/images/ai-chatbot-testing-whatsapp-voice-web.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
@@ -34,7 +34,7 @@ If your chatbot is answering customers on WhatsApp, your website, and over the p
 
 In July 2022, {{< external-link link="<https://www.theguardian.com/world/2024/feb/16/air-canada-chatbot-lawsuit>" >}}Air Canada{{< /external-link >}} made headlines for all the wrong reasons when its AI-powered chatbot misinformed a customer about bereavement fares. The bot told a man he could retroactively apply a discount after purchasing his ticket for his grandmother's funeral. But when he contacted support for reimbursement, the airline refused, and claimed the bot was a "separate legal entity that is responsible for its own actions". The issue escalated to small claims court, where the judge ruled against the airline, and stated that Air Canada is responsible for all information provided by its chatbot. The company had to reimburse the ticket and pay damages.
 
-![Air Canada Chatbot Case Study](https://genezio.com/blog/posts/air-canada-ordered-to-pay-customer-who-was-misled-by-airline's-chatbot.webp)
+![Air Canada Chatbot Case Study](https://genezio.com/images/air-canada-ordered-to-pay-customer-who-was-misled-by-airline's-chatbot.webp)
 
 This wasn't a minor error. It demonstrated how a single misleading response from an AI agent---especially one acting as an official voice of a brand---can lead to legal, financial, and reputational damage.
 
