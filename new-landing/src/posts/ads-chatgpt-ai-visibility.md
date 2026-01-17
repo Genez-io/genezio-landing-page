@@ -6,7 +6,7 @@ tags:
   - ChatGPT Ads
   - Conversational Optimization
   - AI-Driven Discovery
-author: Paula Cioanca
+author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
 
 thumbnail: /images/ads-chatgpt-ai-visibility.webp
