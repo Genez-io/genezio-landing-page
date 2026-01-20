@@ -50,20 +50,20 @@ export function ConversionHero() {
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <Link to="/pricing" className="w-full sm:w-auto">
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/25">
-                  <SparklesIcon className="w-5 h-5 mr-2" />
+                  
                   Analyze My Conversations
                 </Button>
               </Link>
-              <Link to="/pricing" className="w-full sm:w-auto">
+              <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
                   className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
                 >
-                  <CalendarIcon className="w-5 h-5 mr-2" />
+                 
                   Book a Demo
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
 
