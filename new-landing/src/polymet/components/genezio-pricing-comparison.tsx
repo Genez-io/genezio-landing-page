@@ -104,6 +104,7 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
+                    onClick={() => window.location.href = "https://app.genezio.ai/sign-in"}
                   >
                     Get Started
                   </Button>
@@ -126,6 +127,7 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20"
+                    onClick={() => window.location.href = "https://app.genezio.ai/sign-in"}
                   >
                     Get Started
                   </Button>
@@ -141,6 +143,7 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
+                    onClick={() => window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"}
                   >
                     Contact Sales
                   </Button>

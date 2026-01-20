@@ -187,6 +187,13 @@ export function GenezioPricingHero({
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
                       : "bg-white/10 hover:bg-white/15 text-white border border-white/20"
                   }`}
+                  onClick={() => {
+                    if (plan.cta === "Contact us") {
+                      window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
+                    } else {
+                      window.location.href = "https://app.genezio.ai/sign-in";
+                    }
+                  }}
                 >
                   {plan.cta}
                 </Button>
