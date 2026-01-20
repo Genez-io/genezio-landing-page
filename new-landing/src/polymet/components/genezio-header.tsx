@@ -247,7 +247,7 @@ export function GenezioHeader() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="/pricing">
+          <a href="https://app.genezio.ai/sign-in">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all">
               Get Started
             </Button>
