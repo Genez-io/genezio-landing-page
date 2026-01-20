@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, CalendarIcon } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { CalendarIcon, TrendingUpIcon, SearchIcon } from "lucide-react";
 
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
@@ -10,6 +11,7 @@ export function GenezioHeroSection() {
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const [brandUrl, setBrandUrl] = useState<string>("")
 
   useEffect(() => {
     const currentPlatform = platforms[currentPlatformIndex];
@@ -40,6 +42,34 @@ export function GenezioHeroSection() {
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
   }, [displayedText, isDeleting, currentPlatformIndex, typingSpeed, platforms]);
+
+  const handleAnalyze = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const rawInput = brandUrl.trim();
+    if (!rawInput) return;
+
+    
+    let parsed: URL;
+    try {
+      parsed = new URL(rawInput);
+    } catch {
+      try {
+        parsed = new URL(`http://${rawInput}`);
+      } catch {
+        return;
+      }
+    }
+
+    const hostname = parsed.hostname.replace(/^www\./i, "");
+    const brandName = hostname.split(".")[0] || hostname;
+
+    const redirectUrl = new URL("https://app.genezio.ai/sign-up");
+    redirectUrl.searchParams.set("brandUrl", rawInput);
+    redirectUrl.searchParams.set("brandName", brandName);
+
+    window.location.assign(redirectUrl.toString());
+  };
 
   return (
     <>
@@ -118,17 +148,40 @@ export function GenezioHeroSection() {
             and optimize how AI mentions your brand.
           </p>
 
+          <div className="max-w-2xl mx-auto mb-8 md:mb-12 px-4">
+          <form
+            onSubmit={handleAnalyze}
+            className="flex flex-col sm:flex-row gap-3"
+          >
+            <div className="relative flex-1">
+              <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Input
+                type="text"
+                inputMode="url"
+                autoCapitalize="none"
+                autoCorrect="off"
+                placeholder="Enter your website URL (e.g., example.com)"
+                value={brandUrl}
+                onChange={(e) => setBrandUrl(e.target.value)}
+                className="w-full pl-12 pr-4 py-6 bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-xl focus:bg-white/15 focus:border-blue-400/50 transition-all"
+              />
+            </div>
+            <Button
+              type="submit"
+              size="lg"
+              disabled={!brandUrl.trim()}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-6 font-semibold rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-purple-500/30 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap sm:w-auto w-full"
+            >
+                <>
+                  <TrendingUpIcon className="w-5 h-5 mr-2" />
+                  Get Free Analysis
+                </>
+            </Button>
+          </form>
+        </div>
+
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4">
-            <a href="/pricing" className="w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-purple-500/30 w-full"
-              >
-                Analyze Your AI Brand Visibility
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
-            <a href="/pricing" className="w-full sm:w-auto">
+            <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 variant="outline"
