@@ -645,14 +645,14 @@ export function GenezioDifferentiatorsSection() {
 
         {/* CTA */}
         <div className="text-center">
-          <Link to="/pricing">
+          <a href="https://app.genezio.ai/sign-in">
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Start Your AI Visibility Audit
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

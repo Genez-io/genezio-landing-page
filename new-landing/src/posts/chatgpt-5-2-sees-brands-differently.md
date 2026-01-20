@@ -1,6 +1,6 @@
 ---
 title: "GPT-5.2 Isn’t just smarter. It sees brands differently."
-date: 2025-11-29
+date: 2025-12-29
 tags:
   - AI
 author: Paula Cionca

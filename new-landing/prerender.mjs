@@ -31,6 +31,7 @@ const routes = [
   "/glossary/answer-engine-optimization",
   "/glossary/chat-gpt-citations",
   "/glossary/chatgpt-prompt-engineering",
+  "/glossary/conversation-analysis",
   "/glossary/conversation-intelligence-platform",
   "/glossary/conversation-intelligence-software",
   "/glossary/conversational-ai-platform",
@@ -102,12 +103,23 @@ const template = fs.readFileSync(
 const { render } = await import("./dist/server/entry-server.js");
 
 for (const url of routes) {
-  const appHtml = await render(url);
+  const { appHtml, helmet } = await render(url);
 
-  const html = template.replace(
-    '<div id="root"><!--app-html--></div>',
-    `<div id="root">${appHtml}</div>`
-  );
+  const headHtml = [
+    helmet.title?.toString() ?? "",
+    helmet.meta?.toString() ?? "",
+    helmet.link?.toString() ?? "",
+    helmet.script?.toString() ?? "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const html = template
+    .replace("<!--app-helmet-head-->", headHtml)
+    .replace(
+      '<div id="root"><!--app-html--></div>',
+      `<div id="root">${appHtml}</div>`
+    );
 
   const filePath =
     url === "/"
