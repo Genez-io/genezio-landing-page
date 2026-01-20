@@ -88,13 +88,16 @@ export function GenezioInsightsSection() {
                 </p>
 
                 {/* CTA */}
-                <Button
-                  variant="outline"
-                  onClick={() => (window.location.href = "/pricing")}
-                  className="w-full border-blue-500/30 hover:border-blue-400 bg-transparent text-white hover:bg-blue-500/10 hover:text-white transition-all duration-300"
-                >
-                  Book a Demo
-                </Button>
+                <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
+                  <Button
+                    
+                    variant="outline"
+                    className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
+                  >
+                    
+                    Book a Demo
+                  </Button>
+                </a>
               </div>
             );
           })}
