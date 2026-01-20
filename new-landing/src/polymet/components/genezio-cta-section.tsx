@@ -52,7 +52,7 @@ export function GenezioCtaSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-          <a href="https://app.genezio.ai/sign-in" className="w-full sm:w-auto">
+          <a href="https://app.genezio.ai/sign-up" className="w-full sm:w-auto">
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"

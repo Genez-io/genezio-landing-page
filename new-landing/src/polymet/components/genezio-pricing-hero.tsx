@@ -191,7 +191,7 @@ export function GenezioPricingHero({
                     if (plan.cta === "Contact us") {
                       window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
                     } else {
-                      window.location.href = "https://app.genezio.ai/sign-in";
+                      window.location.href = "https://app.genezio.ai/sign-up";
                     }
                   }}
                 >
