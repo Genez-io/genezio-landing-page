@@ -250,7 +250,7 @@ export function GenezioHeader() {
         <Button
             variant="outline"
             className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
-            onClick={() => window.open('https://calendly.com/genezio', '_blank')}
+            onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
           >
             Book a Demo
           </Button>
