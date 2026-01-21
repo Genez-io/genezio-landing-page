@@ -102,12 +102,28 @@ const template = fs.readFileSync(
 // importăm bundle-ul SSR generat de Vite
 const { render } = await import("./dist/server/entry-server.js");
 
+// Default meta image tags (used as fallback if not set in Helmet)
+const defaultMetaImageTags = `
+    <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+`;
+
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
+
+  // Check if og:image is already set in helmet
+  const helmetMeta = helmet.meta?.toString() ?? "";
+  const hasOgImage = helmetMeta.includes('property="og:image"') || helmetMeta.includes("property='og:image'");
 
   const headHtml = [
     helmet.title?.toString() ?? "",
     helmet.meta?.toString() ?? "",
+    // Add default meta image tags if not already present
+    !hasOgImage ? defaultMetaImageTags : "",
     helmet.link?.toString() ?? "",
     helmet.script?.toString() ?? "",
   ]
