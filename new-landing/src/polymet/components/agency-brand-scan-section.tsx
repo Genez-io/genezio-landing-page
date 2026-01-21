@@ -11,18 +11,47 @@ import {
 import { useState } from "react";
 
 export function AgencyBrandScanSection() {
-  const [brandName, setBrandName] = useState("");
-  const [isScanning, setIsScanning] = useState(false);
+  const [brandUrl, setBrandUrl] = useState("");
 
-  const handleScan = () => {
-    if (brandName.trim()) {
-      setIsScanning(true);
-      // Simulate scanning
-      setTimeout(() => {
-        setIsScanning(false);
-        // In real implementation, this would trigger the scan
-      }, 2000);
+//   const handleScan = () => {
+//     if (brandName.trim()) {
+//       setIsScanning(true);
+//       // Simulate scanning
+//       setTimeout(() => {
+//         setIsScanning(false);
+//         // In real implementation, this would trigger the scan
+//       }, 2000);
+//     }
+//   };
+
+  const handleAnalyze = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    
+
+    const rawInput = brandUrl.trim();
+    if (!rawInput) return;
+
+    
+    let parsed: URL;
+    try {
+      parsed = new URL(rawInput);
+    } catch {
+      try {
+        parsed = new URL(`http://${rawInput}`);
+      } catch {
+        return;
+      }
     }
+
+    const hostname = parsed.hostname.replace(/^www\./i, "");
+    const brandName = hostname.split(".")[0] || hostname;
+
+    const redirectUrl = new URL("https://app.genezio.ai/sign-up");
+    redirectUrl.searchParams.set("brandUrl", rawInput);
+    redirectUrl.searchParams.set("brandName", brandName);
+
+    window.location.assign(redirectUrl.toString());
   };
 
   return (
@@ -50,34 +79,26 @@ export function AgencyBrandScanSection() {
               Insights into visibility, citations, and recommendations.
             </p>
 
+
+
             {/* Scan Input */}
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Input
                 type="text"
                 placeholder="Enter domain (e.g., nike.com, tesla.com, starbucks.com)"
-                value={brandName}
-                onChange={(e) => setBrandName(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && handleScan()}
+                value={brandUrl}
+                onChange={(e) => setBrandUrl(e.target.value)}
                 className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500"
               />
 
               <Button
                 size="lg"
-                onClick={handleScan}
-                disabled={!brandName.trim() || isScanning}
+                onClick={handleAnalyze}
+                disabled={!brandUrl.trim()}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 font-medium w-full sm:w-auto"
               >
-                {isScanning ? (
-                  <>
-                    <SparklesIcon className="w-4 h-4 mr-2 animate-spin" />
-                    Scanning...
-                  </>
-                ) : (
-                  <>
                     <SearchIcon className="w-4 h-4 mr-2" />
                     Scan Now
-                  </>
-                )}
               </Button>
             </div>
 
