@@ -8,215 +8,382 @@ import {
 
 export function GenezioAgencyPlans() {
   return (
-    <section className="py-20 px-6 bg-[#050506]">
+    <section className="pb-12 md:pb-20 px-4 md:px-6 bg-[#050506] pt-10">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Plans for Agencies
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Agency Pricing
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Manage multiple clients and deliver exceptional AI insights at scale
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
+            Scale your GEO services with our comprehensive agency plan
           </p>
         </div>
+        {/* Main Pricing Card */}
+        <div className="max-w-4xl mx-auto mb-8 md:mb-16">
+          <div className="relative bg-white/5 border border-blue-500/50 rounded-2xl p-6 md:p-8 shadow-lg shadow-blue-500/10">
+            {/* Popular Badge */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1.5">
+                <SparklesIcon className="w-3.5 h-3.5" />
+                Agency Plan
+              </div>
+            </div>
 
-        {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Agency Growth Plan */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
-            <div className="mb-8">
-              <div className="text-sm text-blue-400 font-semibold mb-2">
-                AGENCY GROWTH
+            {/* Plan Header */}
+            <div className="mb-6">
+              <div className="flex items-baseline justify-center gap-1 mb-3">
+                <span className="text-3xl md:text-4xl font-bold text-white">
+                  €999
+                </span>
+                <span className="text-white/60 text-sm">/month</span>
               </div>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-5xl font-bold text-white">$999</span>
-                <span className="text-white/60">/month</span>
-              </div>
-              <p className="text-white/60 mb-8">
-                Ideal for growing agencies managing multiple client projects and
-                new business pitches
+              <p className="text-sm text-white/60 text-center">
+                Perfect for agencies scaling GEO services
               </p>
             </div>
 
-            {/* Features */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Agency Workspace Management
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Centralized dashboard to manage all clients
-                  </div>
-                </div>
+            {/* Key Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              {/* Feature 1 */}
+              <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-400 mb-1">3</div>
+                <div className="text-white/70 text-xs">Brands to Monitor</div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    1 Active Client Workspace
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Full-featured workspace for your main client
-                  </div>
-                </div>
+              {/* Feature 2 */}
+              <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-400 mb-1">5</div>
+                <div className="text-white/70 text-xs">LLMs to Track per brand</div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    10 Trial Workspaces per month
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Perfect for pitches and new client demos
-                  </div>
+              {/* Feature 3 */}
+              <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-400 mb-1">
+                  7,500
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    100 Prompt Volume searches/month
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Analyze search volume trends
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Add-ons available
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Scale with additional workspaces as needed
-                  </div>
+                <div className="text-white/70 text-xs">
+                  Conversations to Analyze per brand
                 </div>
               </div>
             </div>
 
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-base font-medium">
-              Get Started
-            </Button>
-          </div>
-
-          {/* Agency Enterprise Plan */}
-          <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 border-2 border-blue-500/50 rounded-2xl p-8 relative">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-6 py-2 rounded-full">
-              RECOMMENDED
-            </div>
-            <div className="mb-8">
-              <div className="text-sm text-blue-400 font-semibold mb-2">
-                AGENCY ENTERPRISE
-              </div>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-5xl font-bold text-white">Custom</span>
-              </div>
-              <p className="text-white/60 mb-8">
-                Tailored solutions for agencies managing dozens of clients and
-                global brands
+            {/* CTA Buttons */}
+            <div className="space-y-3">
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20">
+                Start Free Trial
+              </Button>
+              <Button className="w-full bg-white/10 hover:bg-white/15 text-white border border-white/20 py-6 text-base font-semibold rounded-lg transition-all duration-200">
+                Book a Demo
+              </Button>
+              <p className="text-center text-white/50 text-sm">
+                Cancel anytime. 7 days free trial
               </p>
             </div>
-
-            {/* Features */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Agency Workspace Management
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Advanced multi-client dashboard
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <SparklesIcon className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Tailored Client & Trial Workspaces
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Custom workspace allocation based on your needs
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <UsersIcon className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Dedicated Agency Partner
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Personal success manager for your agency
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <SparklesIcon className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Go-to-Market Support
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Strategic guidance for client acquisition
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <HeadphonesIcon className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Premium Slack Support
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Priority support via dedicated Slack channel
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckIcon className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-
-                <div>
-                  <div className="text-white font-medium">
-                    Custom Integrations
-                  </div>
-                  <div className="text-sm text-white/60">
-                    Tailored integrations with your tech stack
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-medium">
-              Contact Sales
-            </Button>
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-6 py-3">
-            <SparklesIcon className="w-5 h-5 text-blue-400" />
+        {/* Detailed Features Table with Add-ons Column */}
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 text-center">
+            What's included
+          </h3>
 
-            <span className="text-white/80">
-              All agency plans include full brand plan features for each
-              workspace
-            </span>
+          {/* Mobile: Card Layout */}
+          <div className="md:hidden space-y-4">
+            {[
+              {
+                feature: "Personas per brand",
+                included: "3",
+                addon: "Additional personas",
+              },
+              { feature: "Languages", included: "All", addon: "-" },
+              {
+                feature: "Monitoring locations per brand",
+                included: "3",
+                addon: "Multi-market tracking",
+              },
+              { feature: "Topics per brand", included: "10", addon: "-" },
+              {
+                feature: "Scenarios per brand",
+                included: "50",
+                addon: "Additional scenarios",
+              },
+              {
+                feature: "AI models (LLM)",
+                included: "5 LLMs",
+                addon: "Additional AI engines",
+              },
+              { feature: "Run frequency", included: "Daily", addon: "-" },
+              {
+                feature: "Statements",
+                included: "Yes",
+                addon: "-",
+              },
+              {
+                feature: "Keywords",
+                included: "Yes",
+                addon: "-",
+              },
+              {
+                feature: "Citations",
+                included: "Yes",
+                addon: "-",
+              },
+              {
+                feature: "Sentiment analysis",
+                included: "All conversations\nTop 2000 citations",
+                addon: "-",
+              },
+              {
+                feature: "Content generation",
+                included: "10 per day",
+                addon: "-",
+                comingSoon: true,
+              },
+              { feature: "Data retention", included: "Unlimited", addon: "-" },
+              {
+                feature: "Competitor monitoring",
+                included: "Unlimited",
+                addon: "Custom competitor sets",
+              },
+              { feature: "Seats", included: "Unlimited", addon: "-" },
+              { feature: "Insights", included: "10/day/customer", addon: "Additional insights" },
+
+              { feature: "Exports", included: "Yes", addon: "-" },
+              {
+                feature: "Onboarding & Account Manager",
+                included: "Yes",
+                addon: "-",
+              },
+              {
+                feature: "Support",
+                included: "Email & Account Manager",
+                addon: "Dedicated success manager",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/20 rounded-2xl p-4 space-y-3"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="text-white font-semibold text-sm">
+                    {item.feature}
+                  </div>
+                  {item.comingSoon && (
+                    <span className="text-xs px-2 py-0.5 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300">
+                      Coming soon
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-white/60 text-xs">Included:</div>
+                  <div className="text-white font-medium text-sm text-right">
+                    {item.included.split("\n").map((line, i) => (
+                      <div key={i}>{line}</div>
+                    ))}
+                  </div>
+                </div>
+                {item.addon !== "-" && (
+                  <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                    <div className="text-white/60 text-xs">Add-on:</div>
+                    <div className="text-white/60 text-xs text-right">
+                      {item.addon}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
+
+          {/* Desktop: Table Layout */}
+          <div className="hidden md:block bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
+            {/* Table Header */}
+            <div className="grid grid-cols-3 gap-6 p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-b border-white/20">
+              <div className="text-white font-semibold text-sm uppercase tracking-wider">
+                Feature
+              </div>
+              <div className="text-white font-semibold text-sm uppercase tracking-wider text-center">
+                Included
+              </div>
+              <div className="text-white font-semibold text-sm uppercase tracking-wider text-center">
+                Available Add-ons
+              </div>
+            </div>
+
+            <div className="divide-y divide-white/5">
+              {/* Table Rows */}
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Personas per brand
+                </div>
+                <div className="text-white font-semibold text-center">3</div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional personas
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Languages</div>
+                <div className="text-white font-semibold text-center">All</div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional languages
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Monitoring locations per brand
+                </div>
+                <div className="text-white font-semibold text-center">3</div>
+                <div className="text-white/60 text-center text-sm">
+                  Multi-market tracking
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Topics per brand
+                </div>
+                <div className="text-white font-semibold text-center">10</div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional topics
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Scenarios per brand
+                </div>
+                <div className="text-white font-semibold text-center">50</div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional scenarios
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  AI models (LLM)
+                  <div className="text-xs text-white/50 mt-1">
+                    e.g., ChatGPT, Claude, Gemini, Perplexity, Grok
+                  </div>
+                </div>
+                <div className="text-white font-semibold text-center">
+                  5 LLMs
+                </div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional AI engines
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Run frequency</div>
+                <div className="text-white font-semibold text-center">
+                  Daily
+                </div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Statements
+                </div>
+                <div className="text-white font-semibold text-center">Yes</div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Keywords
+                </div>
+                <div className="text-white font-semibold text-center">Yes</div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Citations
+                </div>
+                <div className="text-white font-semibold text-center">Yes</div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Sentiment analysis
+                </div>
+                <div className="text-white font-semibold text-center">
+                  <div>All conversations</div>
+                  <div className="text-sm text-white/60 font-normal">
+                    Top 2000 citations
+                  </div>
+                </div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional citations
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="flex items-center gap-2">
+                  <div className="text-white/70 font-medium">
+                    Content generation
+                  </div>
+                  <span className="text-xs px-2 py-0.5 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300">
+                    Coming soon
+                  </span>
+                </div>
+                <div className="text-white font-semibold text-center">
+                  10 per day
+                </div>
+                <div className="text-white/60 text-center text-sm">
+                  Additional content
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Data retention</div>
+                <div className="text-white font-semibold text-center">
+                  Unlimited
+                </div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Competitor monitoring
+                </div>
+                <div className="text-white font-semibold text-center">
+                  Unlimited
+                </div>
+                <div className="text-white/60 text-center text-sm">
+                  Custom competitor sets
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Seats</div>
+                <div className="text-white font-semibold text-center">
+                  Unlimited
+                </div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Insights</div>
+                <div className="text-white font-semibold text-center">
+                  10/day/customer
+                </div>
+                <div className="text-white/60 text-center text-sm">Additional insights</div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Exports</div>
+                <div className="text-white font-semibold text-center">Yes</div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Onboarding & Account Manager
+                </div>
+                <div className="text-white font-semibold text-center">Yes</div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">Support</div>
+                <div className="text-white font-semibold text-center">
+                  Email & Account Manager
+                </div>
+                <div className="text-white/60 text-center text-sm">
+                  Dedicated success manager
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>
