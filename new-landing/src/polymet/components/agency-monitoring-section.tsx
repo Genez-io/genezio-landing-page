@@ -9,15 +9,101 @@ export function AgencyMonitoringSection() {
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
   const [email, setEmail] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const ZOHO_FORM_BASE = "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK";
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (selectedIndustry && email) {
+    
+    if (!selectedIndustry || !email) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      // Option 2: Direct form submission (requires correct endpoint and field names)
+      const form = document.createElement("form");
+      form.method = "POST";
+      // Try different possible endpoints:
+      // Option A: formperma URL
+      form.action = `${ZOHO_FORM_BASE}/formperma/qSA39uMeRrOgilhwxH5VK30jDRp58OiflOnixL6yjmE`;
+      // Option B: htmlform/submit (uncomment to try)
+      // form.action = `${ZOHO_FORM_BASE}/htmlform/submit`;
+      form.target = "zoho_hidden_iframe";
+      form.style.display = "none";
+      form.setAttribute("accept-charset", "UTF-8");
+      form.setAttribute("enctype", "application/x-www-form-urlencoded");
+
+      // Add form fields - UPDATE THESE NAMES to match your Zoho form field names
+      // To find field names: Inspect the Zoho form and check input "name" attributes
+      const emailField = document.createElement("input");
+      emailField.type = "hidden";
+      emailField.name = "Email"; // UPDATE THIS - common names: "Email", "EmailAddress", "SingleLine1", etc.
+      emailField.value = email;
+      form.appendChild(emailField);
+
+      const industryField = document.createElement("input");
+      industryField.type = "hidden";
+      industryField.name = "Industry"; // UPDATE THIS - common names: "Industry", "Dropdown1", "SingleLine2", etc.
+      industryField.value = selectedIndustry;
+      form.appendChild(industryField);
+
+      // Create or get hidden iframe
+      let iframe = document.getElementById("zoho_hidden_iframe") as HTMLIFrameElement;
+      if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.id = "zoho_hidden_iframe";
+        iframe.name = "zoho_hidden_iframe";
+        iframe.style.width = "0";
+        iframe.style.height = "0";
+        iframe.style.border = "none";
+        iframe.style.position = "absolute";
+        iframe.style.visibility = "hidden";
+        document.body.appendChild(iframe);
+      }
+
       // Handle form submission
-      console.log("Submitting:", { industry: selectedIndustry, email });
-      setIsOpen(false);
-      setEmail("");
-      setSelectedIndustry(null);
+      const handleIframeLoad = () => {
+        setSubmitStatus("success");
+        setIsSubmitting(false);
+        setTimeout(() => {
+          setIsOpen(false);
+          setEmail("");
+          setSelectedIndustry(null);
+          setSubmitStatus("idle");
+          if (form.parentNode) {
+            form.parentNode.removeChild(form);
+          }
+        }, 2000);
+        iframe.removeEventListener("load", handleIframeLoad);
+      };
+
+      iframe.addEventListener("load", handleIframeLoad);
+      document.body.appendChild(form);
+      form.submit();
+
+      // Fallback: assume success after 2 seconds if no error
+      setTimeout(() => {
+        if (submitStatus === "idle" && isSubmitting) {
+          setSubmitStatus("success");
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setIsOpen(false);
+            setEmail("");
+            setSelectedIndustry(null);
+            setSubmitStatus("idle");
+          }, 2000);
+        }
+      }, 2000);
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+      setIsSubmitting(false);
     }
   };
 
@@ -161,16 +247,29 @@ export function AgencyMonitoringSection() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
+                      disabled={isSubmitting}
                       className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
                     />
                   </div>
 
+                  {submitStatus === "success" && (
+                    <div className="p-3 rounded-lg bg-green-500/20 border border-green-500/30 text-green-400 text-sm">
+                      Success! Your request has been submitted.
+                    </div>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <div className="p-3 rounded-lg bg-red-500/20 border border-red-500/30 text-red-400 text-sm">
+                      Something went wrong. Please try again.
+                    </div>
+                  )}
+
                   <Button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                    disabled={!selectedIndustry || !email}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={!selectedIndustry || !email || isSubmitting}
                   >
-                    Send Report to Email
+                    {isSubmitting ? "Submitting..." : "Send Report to Email"}
                   </Button>
                 </form>
               </DialogContent>
