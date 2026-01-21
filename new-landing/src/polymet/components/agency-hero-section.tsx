@@ -51,7 +51,7 @@ export function AgencyHeroSection() {
 
             {/* CTA buttons - Get Started + Contact Us */}
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4 max-w-md sm:max-w-none mx-auto">
-              <Link to="/pricing" className="w-full sm:w-auto">
+              <Link to="https://app.genezio.ai/sign-up" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-blue-500/30 w-full"
@@ -59,13 +59,15 @@ export function AgencyHeroSection() {
                   Get Started
                 </Button>
               </Link>
-              <Button
+              <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
+                <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/20 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full sm:w-auto"
               >
                 Contact Us
               </Button>
+              </a>
             </div>
 
             {/* Brands Section - Horizontal Scrolling Animation */}

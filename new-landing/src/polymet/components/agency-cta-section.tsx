@@ -29,7 +29,7 @@ export function AgencyCtaSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/pricing">
+              <Link to="https://app.genezio.ai/sign-up">
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg font-medium w-full sm:w-auto"
@@ -38,6 +38,7 @@ export function AgencyCtaSection() {
                 </Button>
               </Link>
               <Button
+                onClick={() => window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"}
                 size="lg"
                 variant="outline"
                 className="border-white/30 bg-white/10 hover:bg-white/20 text-white hover:text-white px-8 h-14 text-lg font-medium w-full sm:w-auto backdrop-blur-sm"

@@ -68,10 +68,11 @@ export function GenezioAgencyPlans() {
 
             {/* CTA Buttons */}
             <div className="space-y-3">
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20">
+              <Button onClick={() => window.location.href = "https://app.genezio.ai/sign-up"} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20">
                 Start Free Trial
               </Button>
-              <Button className="w-full bg-white/10 hover:bg-white/15 text-white border border-white/20 py-6 text-base font-semibold rounded-lg transition-all duration-200">
+
+              <Button onClick={() => window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"} className="w-full bg-white/10 hover:bg-white/15 text-white border border-white/20 py-6 text-base font-semibold rounded-lg transition-all duration-200">
                 Book a Demo
               </Button>
               <p className="text-center text-white/50 text-sm">
