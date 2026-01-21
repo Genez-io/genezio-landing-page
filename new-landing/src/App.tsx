@@ -17,6 +17,7 @@ import { PrivacyPolicy } from "./polymet/pages/privacy-policy";
 import { AboutGenezio } from "./polymet/pages/about-genezio";
 import "./index.css";
 import BlogAuthor from "./polymet/pages/blog-author";
+import { Agencies } from "./polymet/pages/agencies";
 
 export default function GenezioApp() {
   return (
@@ -165,6 +166,14 @@ export default function GenezioApp() {
         }
       />
 
+      <Route
+        path="/agencies"
+        element={
+          <GenezioLayout>
+            <Agencies />
+          </GenezioLayout>
+        }
+      />
 
     </Routes>
   );

@@ -9,15 +9,15 @@ export function GenezioPricingComparison() {
         { feature: "Brands", starter: "1", growth: "1", enterprise: "Multiple" },
         { feature: "AI models (LLMs)", starter: "2", growth: "4", enterprise: "10" },
         { feature: "Languages", starter: "1", growth: "2", enterprise: "All" },
-        { feature: "Monitoring locations / brand", starter: "1", growth: "1", enterprise: "3+" },
-        { feature: "Personas / brand", starter: "1", growth: "2", enterprise: "3" },
+        { feature: "Locations", starter: "1", growth: "1", enterprise: "Custom" },
+        { feature: "Personas / brand", starter: "1", growth: "2", enterprise: "Custom" },
       ],
     },
     {
       title: "Analysis & monitoring",
       rows: [
-        { feature: "Topics / brand", starter: "5", growth: "10", enterprise: "15" },
-        { feature: "Scenarios / brand", starter: "20", growth: "30", enterprise: "50" },
+        { feature: "Topics / brand", starter: "5", growth: "10", enterprise: "Custom" },
+        { feature: "Scenarios / brand", starter: "50", growth: "50", enterprise: "Custom", subtext: { starter: "3,000 conversations", growth: "12,000 conversations", enterprise: "Custom" } },
         { feature: "AI Statements", starter: "check", growth: "check", enterprise: "check" },
         { feature: "AI Keywords", starter: "check", growth: "check", enterprise: "check" },
         { feature: "AI Citations", starter: "check", growth: "check", enterprise: "check" },
@@ -29,7 +29,7 @@ export function GenezioPricingComparison() {
     {
       title: "Activation & output",
       rows: [
-        { feature: "AI content generation", starter: "1 / day", growth: "5 / day", enterprise: "10 / day" },
+        { feature: "AI content generation", starter: "1 / day", growth: "5 / day", enterprise: "10 / day", comingSoon: true },
         { feature: "Insights / day", starter: "1", growth: "5", enterprise: "10+" },
         { feature: "Exports", starter: "check", growth: "check", enterprise: "check" },
       ],
@@ -52,7 +52,7 @@ export function GenezioPricingComparison() {
     },
   ];
 
-  const renderCell = (value: string) => {
+  const renderCell = (value: string, subtext?: string) => {
     if (value === "check") {
       return (
         <div className="flex justify-center">
@@ -65,7 +65,12 @@ export function GenezioPricingComparison() {
     if (value === "–") {
       return <span className="text-white/20">–</span>;
     }
-    return <span className="text-white/60 font-medium">{value}</span>;
+    return (
+      <div className="flex flex-col items-center gap-1">
+        <span className="text-white/60 font-medium">{value}</span>
+        {subtext && <span className="text-xs text-white/40">{subtext}</span>}
+      </div>
+    );
   };
 
   return (
@@ -80,8 +85,6 @@ export function GenezioPricingComparison() {
             Compare all features across our plans to find the perfect fit
           </p>
         </div>
-
-
 
         {/* Desktop Table */}
         <div className="hidden lg:block overflow-x-auto">
@@ -103,10 +106,10 @@ export function GenezioPricingComparison() {
                     </div>
                   </div>
                   <Button
+                    onClick={() => window.open('https://app.genezio.ai/sign-up', '_blank')}
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
-                    onClick={() => window.location.href = "https://app.genezio.ai/sign-up"}
                   >
-                    Get Started
+                    Start Free Trial
                   </Button>
                 </div>
               </div>
@@ -126,10 +129,10 @@ export function GenezioPricingComparison() {
                     </div>
                   </div>
                   <Button
+                    onClick={() => window.open('https://app.genezio.ai/sign-up', '_blank')}
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20"
-                    onClick={() => window.location.href = "https://app.genezio.ai/sign-up"}
                   >
-                    Get Started
+                    Start Free Trial
                   </Button>
                 </div>
               </div>
@@ -142,17 +145,17 @@ export function GenezioPricingComparison() {
                     </div>
                   </div>
                   <Button
+                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
-                    onClick={() => window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"}
                   >
-                    Contact Sales
+                    Book a Demo
                   </Button>
                 </div>
               </div>
             </div>
-
             <div className="mt-10"></div>
             <div className="pt-10"></div>
+
 
             {/* Table Body */}
             {sections.map((section, sectionIndex) => (
@@ -171,16 +174,23 @@ export function GenezioPricingComparison() {
                     className="grid grid-cols-4 border-b border-white/[0.06] last:border-b-0 hover:bg-white/[0.02] transition-colors duration-150"
                   >
                     <div className="px-8 py-4 flex items-center">
-                      <span className="text-sm text-white/70">{row.feature}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm text-white/70">{row.feature}</span>
+                        {row.comingSoon && (
+                          <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                            Coming Soon
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] text-sm">
-                      {renderCell(row.starter)}
+                      {renderCell(row.starter, row.subtext?.starter)}
                     </div>
                     <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] bg-gradient-to-b from-blue-600/[0.03] to-purple-600/[0.03] text-sm">
-                      {renderCell(row.growth)}
+                      {renderCell(row.growth, row.subtext?.growth)}
                     </div>
                     <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] text-sm">
-                      {renderCell(row.enterprise)}
+                      {renderCell(row.enterprise, row.subtext?.enterprise)}
                     </div>
                   </div>
                 ))}
@@ -220,14 +230,14 @@ export function GenezioPricingComparison() {
                   <div className="text-xs text-white/40 mb-4">Tailored pricing</div>
                 )}
                 <Button
+                  onClick={() => plan === "Enterprise" ? window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank') : window.open('https://app.genezio.ai/sign-up', '_blank')}
                   className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
                     plan === "Growth"
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
                   }`}
                 >
-                  {plan === "Enterprise" ? "Contact Sales" : "Get Started"}
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  {plan === "Enterprise" ? "Book a Demo" : "Start Free Trial"}
                 </Button>
               </div>
 
@@ -242,14 +252,26 @@ export function GenezioPricingComparison() {
                   <div className="p-6 space-y-3">
                     {section.rows.map((row, rowIndex) => (
                       <div key={rowIndex} className="flex justify-between items-center gap-4">
-                        <span className="text-sm text-white/70">{row.feature}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-white/70">{row.feature}</span>
+                          {row.comingSoon && (
+                            <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide">
+                              Soon
+                            </span>
+                          )}
+                        </div>
                         <div className="text-sm flex-shrink-0">
                           {renderCell(
                             plan === "Starter"
                               ? row.starter
                               : plan === "Growth"
                               ? row.growth
-                              : row.enterprise
+                              : row.enterprise,
+                            plan === "Starter"
+                              ? row.subtext?.starter
+                              : plan === "Growth"
+                              ? row.subtext?.growth
+                              : row.subtext?.enterprise
                           )}
                         </div>
                       </div>

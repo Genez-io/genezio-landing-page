@@ -7,9 +7,11 @@ import {
   TargetIcon,
   ShoppingBagIcon,
   BookOpenIcon,
-  FileTextIcon
+  FileTextIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router";
+
 
 export function GenezioHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,17 +87,17 @@ export function GenezioHeader() {
 
             {/* Mega Menu Dropdown */}
             {platformMenuOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[420px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute top-full left-0 mt-6 w-[400px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Arrow pointer */}
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
+                <div className="absolute -top-2 left-8 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
 
                 <div className="relative">
-                  {/* Left Section - Platform Items */}
                   <div className="p-6">
-                    <div className="space-y-1">
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">For Teams</div>
+                      <div className="space-y-1">
                       {/* Increase Lead Generation */}
-                      <a
-                        href="/conversational-brand-presence"
+                      <Link
+                        to="/conversational-brand-presence"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                       >
@@ -112,11 +114,11 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
 
                       {/* Increase Conversion */}
-                      <a
-                        href="/increase-conversion"
+                      <Link
+                        to="/increase-conversion"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                       >
@@ -133,11 +135,12 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
 
                       {/* Increase In-Chat Shopping */}
-                      <a
-                        href="#"
+                      <Link
+                        // to="/increase-in-chat-shopping"
+                        to="#"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                       >
@@ -146,11 +149,11 @@ export function GenezioHeader() {
                             <ShoppingBagIcon className="w-5 h-5 text-purple-400" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-0.5">
+                            <div className="flex items-center gap-2 mb-0.5 flex-wrap">
                               <div className="text-white font-semibold text-sm group-hover:text-purple-400 transition-colors">
                                 Increase In-Chat Shopping
                               </div>
-                              <span className="px-2 py-0.5 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
+                              <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
                                 COMING SOON
                               </span>
                             </div>
@@ -159,7 +162,7 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -314,11 +317,11 @@ export function GenezioHeader() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-2"
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                       <div className="text-white text-sm font-medium">
                         Increase In-Chat Shopping
                       </div>
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
+                      <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
                         COMING SOON
                       </span>
                     </div>

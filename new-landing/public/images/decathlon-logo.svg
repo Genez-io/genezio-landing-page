@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <defs>
+    <style>
+      .text {
+        fill: #fff;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+      }
+    </style>
+  </defs>
+  <text x="10" y="35" class="text">DECATHLON</text>
+</svg>
