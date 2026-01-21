@@ -247,6 +247,13 @@ export function GenezioHeader() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
+        <Button
+            variant="outline"
+            className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            onClick={() => window.open('https://calendly.com/genezio', '_blank')}
+          >
+            Book a Demo
+          </Button>
           <a href="https://app.genezio.ai/sign-up">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all">
               Get Started
@@ -367,7 +374,7 @@ export function GenezioHeader() {
             </a>
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-              <a href="/pricing" onClick={() => setMobileMenuOpen(false)}>
+              <a href="https://app.genezio.ai/sign-up" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
                   Get Started
                 </Button>

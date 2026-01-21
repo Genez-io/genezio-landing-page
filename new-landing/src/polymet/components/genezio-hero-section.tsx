@@ -12,6 +12,7 @@ export function GenezioHeroSection() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [brandUrl, setBrandUrl] = useState<string>("")
+  const [highlightInput, setHighlightInput] = useState(false);
 
   useEffect(() => {
     const currentPlatform = platforms[currentPlatformIndex];
@@ -45,6 +46,12 @@ export function GenezioHeroSection() {
 
   const handleAnalyze = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!brandUrl.trim()) {
+      setHighlightInput(true);
+      setTimeout(() => setHighlightInput(false), 2000);
+      return;
+    }
 
     const rawInput = brandUrl.trim();
     if (!rawInput) return;
@@ -161,22 +168,29 @@ export function GenezioHeroSection() {
                 autoCorrect="off"
                 placeholder="Enter your website URL (e.g., example.com)"
                 value={brandUrl}
-                onChange={(e) => setBrandUrl(e.target.value)}
-                className="w-full pl-12 pr-4 py-6 bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-xl focus:bg-white/15 focus:border-blue-400/50 transition-all"
+                onChange={(e) => {
+                  setBrandUrl(e.target.value)
+                  if (highlightInput) setHighlightInput(false);
+                }}
+                className={`w-full pl-12 pr-4 py-6 bg-white/10 text-white placeholder:text-gray-500 rounded-xl transition-all ${
+                  highlightInput
+                    ? "border-2 border-blue-500 ring-4 ring-blue-500/30 animate-pulse"
+                    : "border border-white/20 focus:bg-white/15 focus:border-blue-400/50"
+                }`}
               />
             </div>
             <Button
               type="submit"
               size="lg"
-              disabled={!brandUrl.trim()}
+              // disabled={isAnalyzing}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-6 font-semibold rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-purple-500/30 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap sm:w-auto w-full"
             >
-                  Get Free Analysis
+              Get Free Analysis
             </Button>
           </form>
         </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4">
+        <div className="md:hidden flex justify-center mb-6 px-4">
             <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
               <Button
                 size="lg"
