@@ -72,7 +72,7 @@ export function GenezioHeroSection() {
     const brandName = hostname.split(".")[0] || hostname;
 
     const redirectUrl = new URL("https://app.genezio.ai/sign-up");
-    redirectUrl.searchParams.set("brandUrl", rawInput);
+    // redirectUrl.searchParams.set("brandUrl", rawInput);
     redirectUrl.searchParams.set("brandName", brandName);
 
     window.location.assign(redirectUrl.toString());
@@ -166,7 +166,7 @@ export function GenezioHeroSection() {
                 inputMode="url"
                 autoCapitalize="none"
                 autoCorrect="off"
-                placeholder="Enter your website URL (e.g., example.com)"
+                placeholder="Enter your brand name (e.g., Netflix)"
                 value={brandUrl}
                 onChange={(e) => {
                   setBrandUrl(e.target.value)

@@ -6,7 +6,6 @@ import { AgencyScaleSection } from "../components/agency-scale-section";
 import { AgencyMonitoringSection } from "../components/agency-monitoring-section";
 import { AgencyTestimonialsSection } from "../components/agency-testimonials-section";
 import { GenezioAgencyPlans } from "../components/genezio-agency-plans";
-import { AgencyFaqSection } from "../components/genezio-agency-faq";
 import { AgencyCtaSection } from "../components/agency-cta-section";
 
 export function Agencies() {
@@ -20,7 +19,6 @@ export function Agencies() {
       <AgencyMonitoringSection />
       <AgencyTestimonialsSection />
       <GenezioAgencyPlans />
-      <AgencyFaqSection />
       <AgencyCtaSection />
     </div>
   );

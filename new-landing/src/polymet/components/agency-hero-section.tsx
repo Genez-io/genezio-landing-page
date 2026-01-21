@@ -79,140 +79,103 @@ export function AgencyHeroSection() {
 
                 {/* Scrolling container */}
                 <div className="flex animate-scroll">
-                  {/* First set of brands */}
-                  <div className="flex gap-4 sm:gap-6 md:gap-12 px-2 sm:px-3 md:px-6">
+                  <div className="flex gap-8 sm:gap-10 md:gap-16 px-2 sm:px-3 md:px-6">
                     {[
                       {
-                        name: "Nike",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "Decathlon",
+                        logo: "/images/decathlon-logo.svg",
                       },
                       {
-                        name: "Adidas",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "Orange",
+                        logo: "/images/orange-logo.svg",
                       },
                       {
-                        name: "Tesla",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "PPC Energy",
+                        logo: "/images/ppc-energy-logo.svg",
                       },
                       {
-                        name: "Apple",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "SCUT",
+                        logo: "/images/scut-logo.svg",
                       },
                       {
-                        name: "Microsoft",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "ErsteGroup",
+                        logo: "/images/erste-logo.svg",
                       },
                       {
-                        name: "Amazon",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "BT",
+                        logo: "/images/bt-logo.svg",
                       },
                       {
-                        name: "Google",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "CBRE",
+                        logo: "/images/cbre-logo.png",
                       },
                       {
-                        name: "Meta",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "Kaufland",
+                        logo: "/images/kaufland-logo.svg",
                       },
                       {
-                        name: "Netflix",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "Pluxee",
+                        logo: "/images/pluxee-logo.png",
                       },
                       {
-                        name: "Spotify",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "SmartBill",
+                        logo: "/images/smartbill-logo.svg",
                       },
                       {
-                        name: "Samsung",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "DruidAI",
+                        logo: "/images/druid-logo.svg",
                       },
                       {
-                        name: "Intel",
-                        logo: "https://github.com/polymet-ai.png",
+                        name: "Decathlon",
+                        logo: "/images/decathlon-logo.svg",
+                      },
+                      {
+                        name: "Orange",
+                        logo: "/images/orange-logo.svg",
+                      },
+                      {
+                        name: "PPC Energy",
+                        logo: "/images/ppc-energy-logo.svg",
+                      },
+                      {
+                        name: "SCUT",
+                        logo: "/images/scut-logo.svg",
+                      },
+                      {
+                        name: "ErsteGroup",
+                        logo: "/images/erste-logo.svg",
+                      },
+                      {
+                        name: "BT",
+                        logo: "/images/bt-logo.svg",
+                      },
+                      {
+                        name: "CBRE",
+                        logo: "/images/cbre-logo.png",
+                      },
+                      {
+                        name: "Kaufland",
+                        logo: "/images/kaufland-logo.svg",
+                      },
+                      {
+                        name: "Pluxee",
+                        logo: "/images/pluxee-logo.png",
+                      },
+                      {
+                        name: "SmartBill",
+                        logo: "/images/smartbill-logo.svg",
+                      },
+                      {
+                        name: "DruidAI",
+                        logo: "/images/druid-logo.svg",
                       },
                     ].map((brand, index) => (
-                      <div
-                        key={`brand-1-${index}`}
-                        className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0 group"
-                      >
+                      <div key={`brand-1-${index}`} className="flex items-center justify-center flex-shrink-0 group">
                         <img
                           src={brand.logo}
                           alt={brand.name}
-                          className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 rounded-full grayscale opacity-50 group-hover:opacity-80 transition-all duration-300"
+                          className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 grayscale opacity-50 group-hover:opacity-80 transition-all duration-300 object-contain"
                         />
-
-                        <span className="text-white/50 group-hover:text-white/80 font-medium transition-all duration-300 text-xs sm:text-sm md:text-base whitespace-nowrap">
-                          {brand.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex gap-4 sm:gap-6 md:gap-12 px-2 sm:px-3 md:px-6">
-                    {[
-                      {
-                        name: "Nike",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Adidas",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Tesla",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Apple",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Microsoft",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Amazon",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Google",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Meta",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Netflix",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Spotify",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Samsung",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                      {
-                        name: "Intel",
-                        logo: "https://github.com/polymet-ai.png",
-                      },
-                    ].map((brand, index) => (
-                      <div
-                        key={`brand-2-${index}`}
-                        className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0 group"
-                      >
-                        <img
-                          src={brand.logo}
-                          alt={brand.name}
-                          className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 rounded-full grayscale opacity-50 group-hover:opacity-80 transition-all duration-300"
-                        />
-
-                        <span className="text-white/50 group-hover:text-white/80 font-medium transition-all duration-300 text-xs sm:text-sm md:text-base whitespace-nowrap">
-                          {brand.name}
-                        </span>
                       </div>
                     ))}
                   </div>

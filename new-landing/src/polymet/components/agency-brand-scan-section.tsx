@@ -48,7 +48,7 @@ export function AgencyBrandScanSection() {
     const brandName = hostname.split(".")[0] || hostname;
 
     const redirectUrl = new URL("https://app.genezio.ai/sign-up");
-    redirectUrl.searchParams.set("brandUrl", rawInput);
+    // redirectUrl.searchParams.set("brandUrl", rawInput);
     redirectUrl.searchParams.set("brandName", brandName);
 
     window.location.assign(redirectUrl.toString());
@@ -85,7 +85,7 @@ export function AgencyBrandScanSection() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Input
                 type="text"
-                placeholder="Enter domain (e.g., nike.com, tesla.com, starbucks.com)"
+                placeholder="Enter brand name (e.g., Nike, Tesla, Starbucks)"
                 value={brandUrl}
                 onChange={(e) => setBrandUrl(e.target.value)}
                 className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500"
