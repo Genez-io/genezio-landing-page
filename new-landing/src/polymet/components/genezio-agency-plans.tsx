@@ -140,11 +140,6 @@ export function GenezioAgencyPlans() {
                 comingSoon: true,
               },
               { feature: "Data retention", included: "Unlimited", addon: "-" },
-              {
-                feature: "Competitor monitoring",
-                included: "Unlimited",
-                addon: "Custom competitor sets",
-              },
               { feature: "Seats", included: "Unlimited", addon: "-" },
               { feature: "Insights", included: "10/day/customer", addon: "Additional insights" },
 
@@ -333,17 +328,7 @@ export function GenezioAgencyPlans() {
                 </div>
                 <div className="text-white/60 text-center text-sm">-</div>
               </div>
-              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
-                <div className="text-white/70 font-medium">
-                  Competitor monitoring
-                </div>
-                <div className="text-white font-semibold text-center">
-                  Unlimited
-                </div>
-                <div className="text-white/60 text-center text-sm">
-                  Custom competitor sets
-                </div>
-              </div>
+             
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">Seats</div>
                 <div className="text-white font-semibold text-center">

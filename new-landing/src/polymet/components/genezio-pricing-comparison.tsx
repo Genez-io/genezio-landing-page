@@ -39,7 +39,6 @@ export function GenezioPricingComparison() {
       rows: [
         { feature: "Data retention", starter: "1 month", growth: "6 months", enterprise: "Unlimited" },
         { feature: "Seats", starter: "2", growth: "5", enterprise: "Unlimited" },
-        { feature: "Competitor monitoring", starter: "Up to 3", growth: "Up to 5", enterprise: "Unlimited" },
       ],
     },
     {
