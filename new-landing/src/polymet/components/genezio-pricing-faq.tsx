@@ -33,17 +33,12 @@ export function GenezioPricingFaq() {
     {
       question: "Is there a free trial?",
       answer:
-        "Yes, we offer a 14-day free trial for all plans. No credit card required to start. You'll get full access to all features in your chosen plan.",
+        "Yes, we offer a 7-day free trial for all plans. You'll get full access to all features in your chosen plan.",
     },
     {
       question: "What are multi-turn conversations?",
       answer:
         "Multi-turn conversations are extended dialogues where users ask follow-up questions. Genezio tracks these to understand how your brand is discussed in deeper, more complex interactions with AI models.",
-    },
-    {
-      question: "How does AI content generation work?",
-      answer:
-        "Genezio helps you generate optimized content that improves how AI models represent your brand. Based on our analysis, we suggest content improvements and generate brand-aligned responses that AI models can reference.",
     },
     {
       question: "What kind of support do you provide?",
