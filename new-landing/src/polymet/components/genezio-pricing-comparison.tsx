@@ -8,8 +8,8 @@ export function GenezioPricingComparison() {
       rows: [
         { feature: "Brands", starter: "1", growth: "1", enterprise: "Multiple" },
         { feature: "AI models (LLMs)", starter: "2", growth: "4", enterprise: "10" },
-        { feature: "Languages", starter: "1", growth: "2", enterprise: "All" },
-        { feature: "Locations", starter: "1", growth: "1", enterprise: "Custom" },
+        { feature: "Languages / brand", starter: "1", growth: "2", enterprise: "All" },
+        { feature: "Locations / brand", starter: "1", growth: "1", enterprise: "Custom" },
         { feature: "Personas / brand", starter: "1", growth: "2", enterprise: "Custom" },
       ],
     },
