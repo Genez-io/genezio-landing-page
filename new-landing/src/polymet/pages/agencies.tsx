@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { AgencyHeroSection } from "../components/agency-hero-section";
 import { AgencyBrandScanSection } from "../components/agency-brand-scan-section";
 import { AgencyGeoSection } from "../components/agency-geo-section";
@@ -10,7 +11,15 @@ import { AgencyCtaSection } from "../components/agency-cta-section";
 
 export function Agencies() {
   return (
-    <div className="min-h-screen bg-[#050506]">
+    <>
+      <Helmet>
+        <title>Genezio for Agencies | AI Visibility & GEO Solutions</title>
+        <meta
+          name="description"
+          content="Empower your agency with Genezio's GEO platform. Monitor brand presence, optimize AI mentions, and deliver measurable results for your clients in the age of Generative AI."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#050506]">
       <AgencyHeroSection />
       <AgencyBrandScanSection />
       <AgencyGeoSection />
@@ -21,5 +30,6 @@ export function Agencies() {
       <GenezioAgencyPlans />
       <AgencyCtaSection />
     </div>
+    </>
   );
 }

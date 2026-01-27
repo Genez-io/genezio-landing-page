@@ -59,6 +59,7 @@ const routes = [
   "/policy",
   "/aboutgenezio",
   "/blog",
+  "/agencies",
 ];
 
 // Dynamically add blog post routes
