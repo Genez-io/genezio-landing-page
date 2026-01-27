@@ -104,7 +104,7 @@ const { render } = await import("./dist/server/entry-server.js");
 
 // Default meta image tags (used as fallback if not set in Helmet)
 const defaultMetaImageTags = `
-    <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+    <meta name="image" property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/webp" />
