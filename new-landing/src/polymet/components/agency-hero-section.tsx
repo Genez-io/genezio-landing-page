@@ -21,12 +21,12 @@ export function AgencyHeroSection() {
           animation-play-state: paused;
         }
       `}</style>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050506] pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-24 pb-12 px-4">
         {/* Simplified background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="text-center mb-8 md:mb-12 px-2 sm:px-4 md:px-16 py-4 md:py-8 mt-0 md:mt-4">
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <div className="text-center mb-10 md:mb-12 px-2 sm:px-4 md:px-12 py-2 md:py-8 mt-0 md:mt-4">
             {/* Badge above title */}
             <div className="flex justify-center mb-4 md:mb-6">
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
@@ -50,7 +50,7 @@ export function AgencyHeroSection() {
             </p>
 
             {/* CTA buttons - Get Started + Contact Us */}
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4 max-w-md sm:max-w-none mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-10 md:mb-12 px-2 sm:px-4 max-w-md sm:max-w-none mx-auto">
               <Link to="https://app.genezio.ai/sign-up" className="w-full sm:w-auto">
                 <Button
                   size="lg"
@@ -71,7 +71,7 @@ export function AgencyHeroSection() {
             </div>
 
             {/* Brands Section - Horizontal Scrolling Animation */}
-            <div className="max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 lg:mt-32 overflow-hidden">
+            <div className="hidden md:block max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 lg:mt-24 overflow-hidden">
               <div className="relative">
                 {/* Gradient overlays for fade effect */}
                 <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 md:w-32 bg-gradient-to-r from-[#050506] to-transparent z-10" />
