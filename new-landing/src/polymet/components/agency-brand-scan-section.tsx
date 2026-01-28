@@ -12,6 +12,7 @@ import { useState } from "react";
 
 export function AgencyBrandScanSection() {
   const [brandUrl, setBrandUrl] = useState("");
+  const [highlightInput, setHighlightInput] = useState(false);
 
 //   const handleScan = () => {
 //     if (brandName.trim()) {
@@ -27,7 +28,11 @@ export function AgencyBrandScanSection() {
   const handleAnalyze = (e: React.FormEvent) => {
     e.preventDefault();
 
-    
+    if (!brandUrl.trim()) {
+      setHighlightInput(true);
+      setTimeout(() => setHighlightInput(false), 2000);
+      return;
+    }
 
     const rawInput = brandUrl.trim();
     if (!rawInput) return;
@@ -87,14 +92,20 @@ export function AgencyBrandScanSection() {
                 type="text"
                 placeholder="Enter brand name (e.g., Nike, Tesla, Starbucks)"
                 value={brandUrl}
-                onChange={(e) => setBrandUrl(e.target.value)}
-                className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-blue-500 focus:ring-blue-500"
+                onChange={(e) => {
+                  setBrandUrl(e.target.value);
+                  if (highlightInput) setHighlightInput(false);
+                }}
+                className={`flex-1 h-12 bg-white/10 text-white placeholder:text-white/40 rounded-lg transition-all ${
+                  highlightInput
+                    ? "border-2 border-blue-500 ring-4 ring-blue-500/30 animate-pulse"
+                    : "border border-white/20 focus:border-blue-500 focus:ring-blue-500"
+                }`}
               />
 
               <Button
                 size="lg"
                 onClick={handleAnalyze}
-                disabled={!brandUrl.trim()}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 font-medium w-full sm:w-auto"
               >
                     <SearchIcon className="w-4 h-4 mr-2" />
