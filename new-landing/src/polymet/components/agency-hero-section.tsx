@@ -170,11 +170,16 @@ export function AgencyHeroSection() {
                         logo: "/images/druid-logo.svg",
                       },
                     ].map((brand, index) => (
-                      <div key={`brand-1-${index}`} className="flex items-center justify-center flex-shrink-0 group">
+                      <div
+                        key={`brand-1-${index}`}
+                        className="flex items-center justify-center flex-shrink-0 group"
+                      >
                         <img
                           src={brand.logo}
                           alt={brand.name}
-                          className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 grayscale opacity-50 group-hover:opacity-80 transition-all duration-300 object-contain"
+                          className={`w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 grayscale opacity-50 group-hover:opacity-80 transition-all duration-300 object-contain ${
+                            brand.name === "BT" ? "scale-75" : ""
+                          }`}
                         />
                       </div>
                     ))}
