@@ -105,10 +105,12 @@ const { render } = await import("./dist/server/entry-server.js");
 
 // Default meta image tags (used as fallback if not set in Helmet)
 const defaultMetaImageTags = `
-    <meta name="image" property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+    <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+    <meta property="og:image:secure_url" content="https://genezio.com/images/genezio-black-logo.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Genezio - The Future is Conversational — Lead it." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
 `;
