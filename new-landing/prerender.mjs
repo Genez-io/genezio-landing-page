@@ -103,39 +103,206 @@ const template = fs.readFileSync(
 // importăm bundle-ul SSR generat de Vite
 const { render } = await import("./dist/server/entry-server.js");
 
-// Default meta image tags (used as fallback if not set in Helmet)
-const defaultMetaImageTags = `
-    <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
-    <meta property="og:image:secure_url" content="https://genezio.com/images/genezio-black-logo.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="Genezio - The Future is Conversational — Lead it." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
-`;
+const escapeRegExp = (value) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const stripOverriddenHead = (html, helmet, extraMetaKeys = []) => {
+  let output = html;
+
+  const helmetTitle = helmet.title?.toString() ?? "";
+  const helmetMeta = helmet.meta?.toString() ?? "";
+  const helmetLink = helmet.link?.toString() ?? "";
+  const helmetScript = helmet.script?.toString() ?? "";
+
+  if (helmetTitle.trim()) {
+    output = output.replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "");
+  }
+
+  const metaAttrRegex = /<meta[^>]*(?:name|property)=["']([^"']+)["'][^>]*>/gi;
+  const metaKeys = new Set(extraMetaKeys);
+  for (const match of helmetMeta.matchAll(metaAttrRegex)) {
+    metaKeys.add(match[1]);
+  }
+
+  for (const key of metaKeys) {
+    const keyRegex = new RegExp(
+      `<meta\\b[^>]*\\b(?:name|property)=["']${escapeRegExp(
+        key
+      )}["'][^>]*>`,
+      "gi"
+    );
+    output = output.replace(keyRegex, "");
+  }
+
+  const linkTagRegex = /<link[^>]*>/gi;
+  for (const match of helmetLink.matchAll(linkTagRegex)) {
+    const tag = match[0];
+    const relMatch = tag.match(/\brel=["']([^"']+)["']/i);
+    const hrefMatch = tag.match(/\bhref=["']([^"']+)["']/i);
+    if (!relMatch || !hrefMatch) continue;
+    const rel = relMatch[1];
+    const href = hrefMatch[1];
+    const linkRegex = new RegExp(
+      `<link\\b[^>]*\\brel=["']${escapeRegExp(
+        rel
+      )}["'][^>]*\\bhref=["']${escapeRegExp(href)}["'][^>]*>`,
+      "gi"
+    );
+    output = output.replace(linkRegex, "");
+  }
+
+  const scriptTagRegex = /<script[^>]*>[\s\S]*?<\/script>/gi;
+  for (const match of helmetScript.matchAll(scriptTagRegex)) {
+    const tag = match[0];
+    const srcMatch = tag.match(/\bsrc=["']([^"']+)["']/i);
+    if (!srcMatch) continue;
+    const src = srcMatch[1];
+    const scriptRegex = new RegExp(
+      `<script\\b[^>]*\\bsrc=["']${escapeRegExp(src)}["'][^>]*>[\\s\\S]*?<\\/script>`,
+      "gi"
+    );
+    output = output.replace(scriptRegex, "");
+  }
+
+  return output;
+};
+
+const extractMetaContent = (metaHtml, attribute, key) => {
+  const pattern = new RegExp(
+    `<meta\\b[^>]*\\b${attribute}=["']${escapeRegExp(
+      key
+    )}["'][^>]*\\bcontent=["']([^"']+)["'][^>]*>`,
+    "i"
+  );
+  const match = metaHtml.match(pattern);
+  return match ? match[1] : "";
+};
+
+const upsertMetaProperty = (headHtml, property, content) => {
+  const metaTagRegex = new RegExp(
+    `<meta\\b[^>]*\\bproperty=["']${escapeRegExp(
+      property
+    )}["'][^>]*>`,
+    "gi"
+  );
+  const cleaned = headHtml.replace(metaTagRegex, "").trim();
+  const tag = `    <meta property="${property}" content="${content}" />`;
+  return cleaned ? `${cleaned}\n${tag}` : tag;
+};
+
+const upsertMetaName = (headHtml, name, content) => {
+  const metaTagRegex = new RegExp(
+    `<meta\\b[^>]*\\bname=["']${escapeRegExp(name)}["'][^>]*>`,
+    "gi"
+  );
+  const cleaned = headHtml.replace(metaTagRegex, "").trim();
+  const tag = `    <meta name="${name}" content="${content}" />`;
+  return cleaned ? `${cleaned}\n${tag}` : tag;
+};
 
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
 
-  // Only skip default og:image if helmet already has one with a valid absolute URL (LinkedIn requires absolute URLs)
-  const helmetMeta = helmet.meta?.toString() ?? "";
-  const ogImageMatch = helmetMeta.match(/property=["']og:image["'][^>]*content=["'](https?:\/\/[^"']+)["']/i) || helmetMeta.match(/content=["'](https?:\/\/[^"']+)["'][^>]*property=["']og:image["']/i);
-  const hasOgImage = ogImageMatch && ogImageMatch[1] && ogImageMatch[1].startsWith("http");
-
   const headHtml = [
     helmet.title?.toString() ?? "",
     helmet.meta?.toString() ?? "",
-    // Add default meta image tags if not already present
-    !hasOgImage ? defaultMetaImageTags : "",
     helmet.link?.toString() ?? "",
     helmet.script?.toString() ?? "",
   ]
     .filter(Boolean)
     .join("\n");
 
-  const html = template
-    .replace("<!--app-helmet-head-->", headHtml)
+  const helmetTitleText = (helmet.title?.toString() ?? "")
+    .replace(/<[^>]+>/g, "")
+    .trim();
+  const helmetMetaHtml = helmet.meta?.toString() ?? "";
+  const helmetDescription = extractMetaContent(
+    helmetMetaHtml,
+    "name",
+    "description"
+  );
+  const helmetOgImage = extractMetaContent(
+    helmetMetaHtml,
+    "property",
+    "og:image"
+  );
+  const helmetOgImageType = extractMetaContent(
+    helmetMetaHtml,
+    "property",
+    "og:image:type"
+  );
+  const helmetTwitterImage = extractMetaContent(
+    helmetMetaHtml,
+    "name",
+    "twitter:image"
+  );
+
+  let mergedHeadHtml = headHtml;
+  if (helmetTitleText) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:title",
+      helmetTitleText
+    );
+    mergedHeadHtml = upsertMetaName(
+      mergedHeadHtml,
+      "twitter:title",
+      helmetTitleText
+    );
+  }
+  if (helmetDescription) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:description",
+      helmetDescription
+    );
+    mergedHeadHtml = upsertMetaName(
+      mergedHeadHtml,
+      "twitter:description",
+      helmetDescription
+    );
+  }
+  if (helmetOgImage) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:image",
+      helmetOgImage
+    );
+  }
+  if (helmetOgImageType) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:image:type",
+      helmetOgImageType
+    );
+  }
+  if (helmetTwitterImage) {
+    mergedHeadHtml = upsertMetaName(
+      mergedHeadHtml,
+      "twitter:image",
+      helmetTwitterImage
+    );
+  }
+
+  const extraMetaKeys = [];
+  if (helmetTitleText) {
+    extraMetaKeys.push("og:title", "twitter:title");
+  }
+  if (helmetDescription) {
+    extraMetaKeys.push("og:description", "twitter:description");
+  }
+  if (helmetOgImage) {
+    extraMetaKeys.push("og:image");
+  }
+  if (helmetOgImageType) {
+    extraMetaKeys.push("og:image:type");
+  }
+  if (helmetTwitterImage) {
+    extraMetaKeys.push("twitter:image");
+  }
+
+  const html = stripOverriddenHead(template, helmet, extraMetaKeys)
+    .replace("<!--app-helmet-head-->", mergedHeadHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${appHtml}</div>`

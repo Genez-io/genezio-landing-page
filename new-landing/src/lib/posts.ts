@@ -12,6 +12,7 @@ export interface BlogPost {
     id: string;
     title: string;
     excerpt: string;
+    description?: string;
     category: string;
     readTime: string;
     date: string;
@@ -22,6 +23,8 @@ export interface BlogPost {
     gradient: string;
     content: string;
     timestamp: number;
+    metaOgImage?: string;
+    metaOgUrl?: string;
 }
 
 const icons = [
@@ -125,6 +128,7 @@ export function getAllPosts(): BlogPost[] {
             id: filename,
             title: frontmatter.title || "Untitled",
             excerpt: frontmatter.preview || frontmatter.description || "No description",
+            description: frontmatter.description || frontmatter.preview || "",
             category: category,
             readTime: (frontmatter.readTime ? `${frontmatter.readTime} min read` : "5 min read"),
             date: frontmatter.date ? new Date(frontmatter.date).toLocaleDateString("en-US", {
@@ -139,6 +143,8 @@ export function getAllPosts(): BlogPost[] {
             icon: icons[iconIndex],
             gradient: gradients[gradientIndex],
             content: contentBody,
+            metaOgImage: frontmatter.meta_og_image || "",
+            metaOgUrl: frontmatter.meta_og_url || "",
         });
     }
 

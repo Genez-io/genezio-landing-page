@@ -4,7 +4,13 @@ import { useParams } from "react-router";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import { Tweet } from "react-tweet";
-import { ArrowLeftIcon, ClockIcon, CalendarIcon, SparklesIcon } from "lucide-react";
+import { Helmet } from "react-helmet";
+import {
+  ArrowLeftIcon,
+  ClockIcon,
+  CalendarIcon,
+  SparklesIcon
+} from "lucide-react";
 import { getPostById, getAllPosts } from "@/lib/posts";
 import { authors } from "@/lib/authors";
 
@@ -50,6 +56,19 @@ export function BlogPost() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
+      <Helmet>
+        <title>{post.title}</title>
+        <meta name="description" content={post.description || post.excerpt} />
+        <meta property="og:title" content={post.title} />
+        <meta
+          property="og:description"
+          content={post.description || post.excerpt}
+        />
+        {post.metaOgUrl && <meta property="og:url" content={post.metaOgUrl} />}
+        {post.metaOgImage && (
+          <meta property="og:image" content={post.metaOgImage} />
+        )}
+      </Helmet>
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
         <div className="max-w-4xl mx-auto">
@@ -91,7 +110,10 @@ export function BlogPost() {
             {/* Author */}
             <div className="flex items-center gap-3">
               {(() => {
-                const authorKey = post.author?.toLowerCase()?.split(" ")?.join("-");
+                const authorKey = post.author
+                  ?.toLowerCase()
+                  ?.split(" ")
+                  ?.join("-");
                 const authorData = authors[authorKey];
                 if (authorData?.image) {
                   return (
@@ -115,7 +137,11 @@ export function BlogPost() {
               })()}
               <div>
                 <div className="text-sm font-medium text-white">
-                  <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>{post.author}</a>
+                  <a
+                    href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}
+                  >
+                    {post.author}
+                  </a>
                 </div>
                 <div className="text-xs text-white/40">{post.authorRole}</div>
               </div>
@@ -173,23 +199,41 @@ export function BlogPost() {
                 ),
                 table: ({ node, ...props }) => (
                   <div className="overflow-x-auto my-8 border border-white/10 rounded-lg">
-                    <table className="w-full text-left border-collapse" {...props} />
+                    <table
+                      className="w-full text-left border-collapse"
+                      {...props}
+                    />
                   </div>
                 ),
                 thead: ({ node, ...props }) => (
-                  <thead className="bg-white/5 text-white font-semibold" {...props} />
+                  <thead
+                    className="bg-white/5 text-white font-semibold"
+                    {...props}
+                  />
                 ),
                 tbody: ({ node, ...props }) => (
-                  <tbody className="divide-y divide-white/10 text-white/80" {...props} />
+                  <tbody
+                    className="divide-y divide-white/10 text-white/80"
+                    {...props}
+                  />
                 ),
                 tr: ({ node, ...props }) => (
-                  <tr className="hover:bg-white/5 transition-colors" {...props} />
+                  <tr
+                    className="hover:bg-white/5 transition-colors"
+                    {...props}
+                  />
                 ),
                 ul: ({ node, ...props }) => (
-                  <ul className="list-disc pl-6 mb-6 text-white/80 space-y-2" {...props} />
+                  <ul
+                    className="list-disc pl-6 mb-6 text-white/80 space-y-2"
+                    {...props}
+                  />
                 ),
                 ol: ({ node, ...props }) => (
-                  <ol className="list-decimal pl-6 mb-6 text-white/80 space-y-2" {...props} />
+                  <ol
+                    className="list-decimal pl-6 mb-6 text-white/80 space-y-2"
+                    {...props}
+                  />
                 ),
                 li: ({ node, ...props }) => (
                   <li className="leading-relaxed" {...props} />
@@ -201,7 +245,10 @@ export function BlogPost() {
                   <td className="p-4 align-top" {...props} />
                 ),
                 p: ({ node, ...props }) => (
-                  <p className="mb-3 leading-relaxed text-white/80" {...props} />
+                  <p
+                    className="mb-3 leading-relaxed text-white/80"
+                    {...props}
+                  />
                 ),
                 h4: ({ node, ...props }) => (
                   <h4
@@ -245,7 +292,7 @@ export function BlogPost() {
                       className="text-blue-400 hover:text-blue-300 transition-colors break-all"
                     />
                   );
-                },
+                }
               }}
             >
               {contentWithTweets}
@@ -256,7 +303,10 @@ export function BlogPost() {
           <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-8 mb-16">
             <div className="flex items-start gap-4">
               {(() => {
-                const authorKey = post.author?.toLowerCase()?.split(" ")?.join("-");
+                const authorKey = post.author
+                  ?.toLowerCase()
+                  ?.split(" ")
+                  ?.join("-");
                 const authorData = authors[authorKey];
                 if (authorData?.image) {
                   return (
@@ -280,7 +330,9 @@ export function BlogPost() {
               })()}
               <div>
                 <div className="text-lg font-semibold text-white mb-1">
-                  <a href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}>
+                  <a
+                    href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}
+                  >
                     {post.author}
                   </a>
                 </div>
