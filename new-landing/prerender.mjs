@@ -182,40 +182,12 @@ for (const url of routes) {
   // Prepend our OG image as the first <img> in the body so "first image" fallback is our logo.
   const rootContent = `<img src="${OG_IMAGE_URL}" alt="Genezio" width="1200" height="627" fetchpriority="high" style="position:absolute;left:-9999px;top:0;width:1200px;height:627px;visibility:hidden;pointer-events:none;" />${appHtml}`;
 
-  let html = template
+  const html = template
     .replace("<!--app-helmet-head-->", headHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${rootContent}</div>`
     );
-
-  // Homepage: replace entire <head> so only our OG tags exist (no template clutter).
-  if (isHomepage) {
-    html = html.replace(
-      /<head[^>]*>[\s\S]*?<\/head>/i,
-      `<head>${HOMEPAGE_OG_HEAD}
-    <link rel="icon" type="image/svg+xml" href="/polymet-logo.svg" />
-    <meta name="robots" content="max-image-preview:large" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-PP95P9BW");
-    </script>
-    <!-- End Google Tag Manager -->
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Genezio","url":"https://genezio.com","applicationCategory":"BusinessApplication","operatingSystem":"Web Browser","description":"Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them."}
-    </script>
-  </head>`
-    );
-  }
 
   const filePath =
     url === "/"
