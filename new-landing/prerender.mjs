@@ -115,19 +115,30 @@ const defaultMetaImageTags = `
     <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
 `;
 
+// Remove any og:image / twitter:image from Helmet output so our intended image is never overwritten (e.g. by "first image" behavior)
+function stripOgImageFromMeta(metaHtml) {
+  if (!metaHtml || typeof metaHtml !== "string") return metaHtml;
+  return metaHtml
+    .replace(/<meta[^>]*property=["']og:image[^"']*["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:image[^"']*["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*property=["']og:image:[^"']*["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:image:[^"']*["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*name=["']twitter:image["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*name=["']twitter:image["'][^>]*\/?>/gi, "")
+    .replace(/\n\s*\n/g, "\n")
+    .trim();
+}
+
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
 
-  // Only skip default og:image if helmet already has one with a valid absolute URL (LinkedIn requires absolute URLs)
-  const helmetMeta = helmet.meta?.toString() ?? "";
-  const ogImageMatch = helmetMeta.match(/property=["']og:image["'][^>]*content=["'](https?:\/\/[^"']+)["']/i) || helmetMeta.match(/content=["'](https?:\/\/[^"']+)["'][^>]*property=["']og:image["']/i);
-  const hasOgImage = ogImageMatch && ogImageMatch[1] && ogImageMatch[1].startsWith("http");
+  const helmetMetaRaw = helmet.meta?.toString() ?? "";
+  const helmetMeta = stripOgImageFromMeta(helmetMetaRaw);
 
   const headHtml = [
     helmet.title?.toString() ?? "",
-    helmet.meta?.toString() ?? "",
-    // Add default meta image tags if not already present
-    !hasOgImage ? defaultMetaImageTags : "",
+    helmetMeta,
+    defaultMetaImageTags,
     helmet.link?.toString() ?? "",
     helmet.script?.toString() ?? "",
   ]
