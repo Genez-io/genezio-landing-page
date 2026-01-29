@@ -103,90 +103,42 @@ const template = fs.readFileSync(
 // importăm bundle-ul SSR generat de Vite
 const { render } = await import("./dist/server/entry-server.js");
 
-// Must match deployed origin (same as vite SITE_URL)
-const SITE_URL = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://genezio.com").replace(/\/$/, "");
-const OG_IMAGE_URL = `${SITE_URL}/images/genezio-black-logo.png`;
-
-// Default meta image tags (always injected; Helmet og:image is stripped so this wins)
-// Use PNG for og:image (LinkedIn accepts JPG/PNG; some crawlers prefer PNG)
+// Default meta image tags (used as fallback if not set in Helmet)
 const defaultMetaImageTags = `
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="${OG_IMAGE_URL}" />
-    <meta property="og:image:secure_url" content="${OG_IMAGE_URL}" />
+    <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+    <meta property="og:image:secure_url" content="https://genezio.com/images/genezio-black-logo.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:alt" content="Genezio - The Future is Conversational — Lead it." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="${OG_IMAGE_URL}" />
-`;
-
-// Remove any og:image / twitter:image / og:type from Helmet so our intended OG image and type win.
-function stripOgImageFromMeta(metaHtml) {
-  if (!metaHtml || typeof metaHtml !== "string") return metaHtml;
-  return metaHtml
-    .replace(/<meta[^>]*property=["']og:image[^"']*["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:image[^"']*["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*property=["']og:image:[^"']*["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:image:[^"']*["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*name=["']twitter:image["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*name=["']twitter:image["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*property=["']og:type["'][^>]*\/?>/gi, "")
-    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:type["'][^>]*\/?>/gi, "")
-    .replace(/\n\s*\n/g, "\n")
-    .trim();
-}
-
-// For homepage only: build a minimal head with ONLY our og:image so nothing can override it.
-const HOMEPAGE_OG_HEAD = `
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="${SITE_URL}/" />
-    <meta property="og:site_name" content="Genezio" />
-    <meta property="og:title" content="Genezio — Make AI talk about your brand" />
-    <meta property="og:description" content="Understand, monitor & optimize how AI mentions your brand. GEO platform for marketing teams." />
-    <meta property="og:image" content="${OG_IMAGE_URL}" />
-    <meta property="og:image:secure_url" content="${OG_IMAGE_URL}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Genezio" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="${OG_IMAGE_URL}" />
-    <meta name="description" content="Genezio helps you understand, monitor & optimize your brand's presence in AI. Analyze visibility, track competitors & shape your narrative. Book a demo!" />
-    <title>Make ChatGPT Talk About Your Brand in AI | Genezio</title>
+    <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
 `;
 
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
 
-  const isHomepage = url === "/";
+  // Only skip default og:image if helmet already has one with a valid absolute URL (LinkedIn requires absolute URLs)
+  const helmetMeta = helmet.meta?.toString() ?? "";
+  const ogImageMatch = helmetMeta.match(/property=["']og:image["'][^>]*content=["'](https?:\/\/[^"']+)["']/i) || helmetMeta.match(/content=["'](https?:\/\/[^"']+)["'][^>]*property=["']og:image["']/i);
+  const hasOgImage = ogImageMatch && ogImageMatch[1] && ogImageMatch[1].startsWith("http");
 
-  const headHtml = isHomepage
-    ? HOMEPAGE_OG_HEAD
-    : (() => {
-        const helmetMetaRaw = helmet.meta?.toString() ?? "";
-        const helmetMeta = stripOgImageFromMeta(helmetMetaRaw);
-        return [
-          helmet.title?.toString() ?? "",
-          helmetMeta,
-          defaultMetaImageTags,
-          helmet.link?.toString() ?? "",
-          helmet.script?.toString() ?? "",
-        ]
-          .filter(Boolean)
-          .join("\n");
-      })();
-
-  // Prepend our OG image as the first <img> in the body so "first image" fallback is our logo.
-  const rootContent = `<img src="${OG_IMAGE_URL}" alt="Genezio" width="1200" height="627" fetchpriority="high" style="position:absolute;left:-9999px;top:0;width:1200px;height:627px;visibility:hidden;pointer-events:none;" />${appHtml}`;
+  const headHtml = [
+    helmet.title?.toString() ?? "",
+    helmet.meta?.toString() ?? "",
+    // Add default meta image tags if not already present
+    !hasOgImage ? defaultMetaImageTags : "",
+    helmet.link?.toString() ?? "",
+    helmet.script?.toString() ?? "",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   const html = template
     .replace("<!--app-helmet-head-->", headHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
-      `<div id="root">${rootContent}</div>`
+      `<div id="root">${appHtml}</div>`
     );
 
   const filePath =
