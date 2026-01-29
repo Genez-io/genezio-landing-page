@@ -105,16 +105,17 @@ const { render } = await import("./dist/server/entry-server.js");
 
 // Must match deployed origin (same as vite SITE_URL)
 const SITE_URL = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://genezio.com").replace(/\/$/, "");
-const OG_IMAGE_URL = `${SITE_URL}/images/genezio-black-logo.jpg`;
+const OG_IMAGE_URL = `${SITE_URL}/images/genezio-black-logo.png`;
 
 // Default meta image tags (always injected; Helmet og:image is stripped so this wins)
+// Use PNG for og:image (LinkedIn accepts JPG/PNG; some crawlers prefer PNG)
 const defaultMetaImageTags = `
     <meta property="og:type" content="website" />
     <meta property="og:image" content="${OG_IMAGE_URL}" />
     <meta property="og:image:secure_url" content="${OG_IMAGE_URL}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="Genezio - The Future is Conversational — Lead it." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="${OG_IMAGE_URL}" />
