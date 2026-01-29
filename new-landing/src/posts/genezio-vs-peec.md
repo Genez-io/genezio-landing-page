@@ -72,6 +72,9 @@ Peec AI tracks prompts. You input a question, and it tracks the answer.
 **Genezio tracks conversations.** Real users rarely ask a single question and stop. They explore, object, and ask for clarifications. Genezio simulates these **stateful, multi-turn dialogues**.
 
 ![Genezio Conversation Analysis](/images/genezio-conversation-details-1.webp)
+
+Since conversations rarely end after the first response, Genezio continues the interaction with follow-up questions to track visibility and brand recommendation at the point where the conversation concludes, often when a decision, or even a purchase, is made.
+
 ![Genezio Conversation Analysis](/images/genezio-conversation-details-2.webp)
 
 Genezio analyzes how your brand enters or exits the consideration set as the conversation evolves. This reveals your brand's resilience under scrutiny.
