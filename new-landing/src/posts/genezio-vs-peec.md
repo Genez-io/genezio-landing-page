@@ -5,8 +5,8 @@ tags:
   - AI
   - Tool Comparison
   - AI Visibility
-author: Paula Cionca
-linkedIn: https://www.linkedin.com/in/paula-cionca/
+author: Bogdan Ripa
+linkedIn: https://www.linkedin.com/in/bogdanripa/
 
 thumbnail: /images/genezio-vs-peec.webp
 preview: Looking for Peec AI alternatives? Discover how Genezio goes beyond static monitoring to track real user journeys, multi-turn conversations, and hidden queries.
