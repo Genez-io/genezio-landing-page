@@ -108,7 +108,7 @@ const defaultMetaImageTags = `
     <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
     <meta property="og:image:secure_url" content="https://genezio.com/images/genezio-black-logo.jpg" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:height" content="627" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:alt" content="Genezio - The Future is Conversational — Lead it." />
     <meta name="twitter:card" content="summary_large_image" />
@@ -118,9 +118,10 @@ const defaultMetaImageTags = `
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
 
-  // Check if og:image is already set in helmet
+  // Only skip default og:image if helmet already has one with a valid absolute URL (LinkedIn requires absolute URLs)
   const helmetMeta = helmet.meta?.toString() ?? "";
-  const hasOgImage = helmetMeta.includes('property="og:image"') || helmetMeta.includes("property='og:image'");
+  const ogImageMatch = helmetMeta.match(/property=["']og:image["'][^>]*content=["'](https?:\/\/[^"']+)["']/i) || helmetMeta.match(/content=["'](https?:\/\/[^"']+)["'][^>]*property=["']og:image["']/i);
+  const hasOgImage = ogImageMatch && ogImageMatch[1] && ogImageMatch[1].startsWith("http");
 
   const headHtml = [
     helmet.title?.toString() ?? "",
