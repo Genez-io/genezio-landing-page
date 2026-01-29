@@ -137,32 +137,85 @@ function stripOgImageFromMeta(metaHtml) {
     .trim();
 }
 
+// For homepage only: build a minimal head with ONLY our og:image so nothing can override it.
+const HOMEPAGE_OG_HEAD = `
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${SITE_URL}/" />
+    <meta property="og:site_name" content="Genezio" />
+    <meta property="og:title" content="Genezio — Make AI talk about your brand" />
+    <meta property="og:description" content="Understand, monitor & optimize how AI mentions your brand. GEO platform for marketing teams." />
+    <meta property="og:image" content="${OG_IMAGE_URL}" />
+    <meta property="og:image:secure_url" content="${OG_IMAGE_URL}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Genezio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="${OG_IMAGE_URL}" />
+    <meta name="description" content="Genezio helps you understand, monitor & optimize your brand's presence in AI. Analyze visibility, track competitors & shape your narrative. Book a demo!" />
+    <title>Make ChatGPT Talk About Your Brand in AI | Genezio</title>
+`;
+
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
 
-  const helmetMetaRaw = helmet.meta?.toString() ?? "";
-  const helmetMeta = stripOgImageFromMeta(helmetMetaRaw);
+  const isHomepage = url === "/";
 
-  const headHtml = [
-    helmet.title?.toString() ?? "",
-    helmetMeta,
-    defaultMetaImageTags,
-    helmet.link?.toString() ?? "",
-    helmet.script?.toString() ?? "",
-  ]
-    .filter(Boolean)
-    .join("\n");
+  const headHtml = isHomepage
+    ? HOMEPAGE_OG_HEAD
+    : (() => {
+        const helmetMetaRaw = helmet.meta?.toString() ?? "";
+        const helmetMeta = stripOgImageFromMeta(helmetMetaRaw);
+        return [
+          helmet.title?.toString() ?? "",
+          helmetMeta,
+          defaultMetaImageTags,
+          helmet.link?.toString() ?? "",
+          helmet.script?.toString() ?? "",
+        ]
+          .filter(Boolean)
+          .join("\n");
+      })();
 
-  // Prepend our OG image as the first <img> in the body. Use full 1200x627 and hide off-screen
-  // so scrapers that pick "first valid image" (many ignore 1px/tiny images) use our logo, not partner logos.
+  // Prepend our OG image as the first <img> in the body so "first image" fallback is our logo.
   const rootContent = `<img src="${OG_IMAGE_URL}" alt="Genezio" width="1200" height="627" fetchpriority="high" style="position:absolute;left:-9999px;top:0;width:1200px;height:627px;visibility:hidden;pointer-events:none;" />${appHtml}`;
 
-  const html = template
+  let html = template
     .replace("<!--app-helmet-head-->", headHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${rootContent}</div>`
     );
+
+  // Homepage: replace entire <head> so only our OG tags exist (no template clutter).
+  if (isHomepage) {
+    html = html.replace(
+      /<head[^>]*>[\s\S]*?<\/head>/i,
+      `<head>${HOMEPAGE_OG_HEAD}
+    <link rel="icon" type="image/svg+xml" href="/polymet-logo.svg" />
+    <meta name="robots" content="max-image-preview:large" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PP95P9BW");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Genezio","url":"https://genezio.com","applicationCategory":"BusinessApplication","operatingSystem":"Web Browser","description":"Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them."}
+    </script>
+  </head>`
+    );
+  }
 
   const filePath =
     url === "/"
