@@ -109,6 +109,7 @@ const OG_IMAGE_URL = `${SITE_URL}/images/genezio-black-logo.jpg`;
 
 // Default meta image tags (always injected; Helmet og:image is stripped so this wins)
 const defaultMetaImageTags = `
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="${OG_IMAGE_URL}" />
     <meta property="og:image:secure_url" content="${OG_IMAGE_URL}" />
     <meta property="og:image:width" content="1200" />
@@ -119,7 +120,7 @@ const defaultMetaImageTags = `
     <meta name="twitter:image" content="${OG_IMAGE_URL}" />
 `;
 
-// Remove any og:image / twitter:image from Helmet output so our intended image is never overwritten (e.g. by "first image" behavior)
+// Remove any og:image / twitter:image / og:type from Helmet so our intended OG image and type win.
 function stripOgImageFromMeta(metaHtml) {
   if (!metaHtml || typeof metaHtml !== "string") return metaHtml;
   return metaHtml
@@ -129,6 +130,8 @@ function stripOgImageFromMeta(metaHtml) {
     .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:image:[^"']*["'][^>]*\/?>/gi, "")
     .replace(/<meta[^>]*name=["']twitter:image["'][^>]*\/?>/gi, "")
     .replace(/<meta[^>]*content=["'][^"']*["'][^>]*name=["']twitter:image["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*property=["']og:type["'][^>]*\/?>/gi, "")
+    .replace(/<meta[^>]*content=["'][^"']*["'][^>]*property=["']og:type["'][^>]*\/?>/gi, "")
     .replace(/\n\s*\n/g, "\n")
     .trim();
 }
@@ -149,9 +152,9 @@ for (const url of routes) {
     .filter(Boolean)
     .join("\n");
 
-  // Prepend our OG image as the first <img> in the body so scrapers that fall back to
-  // "first raster image" (e.g. skip SVG) use our logo instead of a partner logo (e.g. pluxee-logo.png).
-  const rootContent = `<img src="${OG_IMAGE_URL}" alt="Genezio" width="1200" height="627" fetchpriority="high" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;clip:rect(0,0,0,0);" />${appHtml}`;
+  // Prepend our OG image as the first <img> in the body. Use full 1200x627 and hide off-screen
+  // so scrapers that pick "first valid image" (many ignore 1px/tiny images) use our logo, not partner logos.
+  const rootContent = `<img src="${OG_IMAGE_URL}" alt="Genezio" width="1200" height="627" fetchpriority="high" style="position:absolute;left:-9999px;top:0;width:1200px;height:627px;visibility:hidden;pointer-events:none;" />${appHtml}`;
 
   const html = template
     .replace("<!--app-helmet-head-->", headHtml)
