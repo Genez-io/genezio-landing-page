@@ -9,13 +9,15 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 export function IncreaseCsat() {
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Increase CSAT with AI Conversation Intelligence | Genezio</title>
         <meta
           name="description"
           content="Improve customer satisfaction by analyzing AI and human conversations. Genezio helps you classify intent, reduce escalations, and measure agent performance across channels."
         />
-      </Helmet>
+        </Helmet>
+      )}
       <div className="min-h-screen bg-[#050506]">
         <CsatHero />
 

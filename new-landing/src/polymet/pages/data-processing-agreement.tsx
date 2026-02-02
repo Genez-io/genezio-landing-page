@@ -3,13 +3,15 @@ import { Helmet } from "react-helmet";
 export function DataProcessingAgreement() {
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Genezio Data Processing Agreement (DPA) & GDPR Compliance</title>
         <meta
           name="description"
           content="Review Genezio's Data Processing Agreement (DPA) outlining our commitment to GDPR compliance, data security, and your personal data protection as a processor."
         />
-      </Helmet>
+        </Helmet>
+      )}
       <div className="min-h-screen bg-[#050506]">
         <div className="max-w-4xl mx-auto px-4 md:px-6 pt-32 md:pt-40 pb-20 md:pb-24">
           {/* Header */}

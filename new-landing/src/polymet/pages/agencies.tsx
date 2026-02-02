@@ -12,13 +12,15 @@ import { AgencyCtaSection } from "../components/agency-cta-section";
 export function Agencies() {
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Genezio for Agencies | AI Visibility & GEO Solutions</title>
         <meta
           name="description"
           content="Empower your agency with Genezio's GEO platform. Monitor brand presence, optimize AI mentions, and deliver measurable results for your clients in the age of Generative AI."
         />
-      </Helmet>
+        </Helmet>
+      )}
       <div className="min-h-screen bg-[#050506]">
       <AgencyHeroSection />
       <AgencyBrandScanSection />

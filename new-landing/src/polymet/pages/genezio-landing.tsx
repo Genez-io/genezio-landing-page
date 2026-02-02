@@ -12,13 +12,15 @@ import { GenezioTestimonialSection } from "../components/genezio-testimonial-sec
 export function GenezioLanding() {
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Genezio | Make ChatGPT talk about your brand</title>
         <meta
           name="description"
           content="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across ChatGPT, Perplexity, Gemini, and more."
         />
-      </Helmet>
+        </Helmet>
+      )}
       <div className="min-h-screen bg-[#050506]">
         <GenezioHeroSection />
 

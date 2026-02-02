@@ -53,13 +53,15 @@ export function LeadGenHero() {
 
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Turn AI Conversations Into Qualified Leads | Genezio</title>
         <meta
           name="description"
           content="Monitor & optimize your brand's AI presence. Turn AI conversations into qualified leads with Genezio's actionable insights. Book a demo today!"
         />
-      </Helmet>
+        </Helmet>
+      )}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#050506] pt-20">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent" />
