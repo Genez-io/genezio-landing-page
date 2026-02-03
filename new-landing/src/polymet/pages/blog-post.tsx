@@ -56,7 +56,8 @@ export function BlogPost() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>{post.title}</title>
         <meta name="description" content={post.description || post.excerpt} />
         <meta property="og:title" content={post.title} />
@@ -68,7 +69,8 @@ export function BlogPost() {
         {post.metaOgImage && (
           <meta property="og:image" content={post.metaOgImage} />
         )}
-      </Helmet>
+        </Helmet>
+      )}
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
         <div className="max-w-4xl mx-auto">

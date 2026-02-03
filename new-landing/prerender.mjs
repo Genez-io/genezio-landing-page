@@ -307,6 +307,10 @@ for (const url of routes) {
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${appHtml}</div>`
     );
+  const cleanedHtml = html.replace(
+    /\s*data-react-helmet=(["'])true\1/g,
+    ""
+  );
 
   const filePath =
     url === "/"
@@ -314,7 +318,7 @@ for (const url of routes) {
       : path.resolve(__dirname, "dist", `.${url}`, "index.html");
 
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, html, "utf-8");
+  fs.writeFileSync(filePath, cleanedHtml, "utf-8");
 
   console.log("Generated", filePath);
 }
