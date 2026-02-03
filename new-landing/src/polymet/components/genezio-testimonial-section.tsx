@@ -1,4 +1,4 @@
-import { QuoteIcon } from "lucide-react";
+import { LinkedinIcon, QuoteIcon } from "lucide-react";
 import bcrLogo from "../../assets/bcr.svg";
 
 export function GenezioTestimonialSection() {
@@ -63,13 +63,41 @@ export function GenezioTestimonialSection() {
                                     </div>
 
                                     {/* Person Info */}
-                                    <div>
-                                        <p className="text-lg font-semibold text-white mb-2">
-                                            I. Stanimir
-                                        </p>
-                                        <p className="text-sm text-white/50 leading-relaxed">
-                                            Director of Marketing and Communication
-                                        </p>
+                                    <div className="flex items-start gap-4">
+                                      <a
+                                        href="https://www.linkedin.com/in/ionutstanimir/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-shrink-0 group"
+                                      >
+                                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-blue-500/50 transition-colors">
+                                          <img
+                                            src="/images/ionut-stanimir.webp"
+                                            alt="I. Stanimir"
+                                            className="w-full h-full object-cover"
+                                          />
+                                        </div>
+                                      </a>
+
+                                        <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <p className="text-lg font-semibold text-white">
+                          I. Stanimir
+                        </p>
+                        <a
+                          href="https://www.linkedin.com/in/ionutstanimir/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white/40 hover:text-blue-400 transition-colors"
+                          aria-label="LinkedIn Profile"
+                        >
+                          <LinkedinIcon className="w-4 h-4" />
+                        </a>
+                      </div>
+                      <p className="text-sm text-white/50 leading-relaxed">
+                        Director of Marketing and Communication
+                      </p>
+                    </div>
                                     </div>
                                 </div>
 
