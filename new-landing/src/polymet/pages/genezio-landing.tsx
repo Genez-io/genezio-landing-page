@@ -14,7 +14,7 @@ export function GenezioLanding() {
     <>
       {import.meta.env.SSR && (
         <Helmet>
-        <title>Genezio | Make ChatGPT talk about your brand</title>
+        <title>Brand Visibility in AI Conversations | Genezio</title>
         <meta
           name="description"
           content="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across ChatGPT, Perplexity, Gemini, and more."
