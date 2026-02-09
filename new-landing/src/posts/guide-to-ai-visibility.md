@@ -71,7 +71,7 @@ By meticulously defining your brand objectives and personas, you establish a rob
 
 Configuring precise AI analysis parameters and geo-targeting represents a critical phase in understanding your brand's digital visibility across different regional contexts. This step transforms raw data collection into strategic intelligence that reveals how AI platforms perceive and represent your brand.
 
-![Analyst setting geo parameters for AI analysis](https://genezio.com/images/organization-15327/1770615742437_image.webp)
+![Analyst setting geo parameters for AI analysis](https://genezio.com/images/1770615742437_image.webp)
 
 Optimising AI parameter settings allows brands to enhance monitoring precision and uncover nuanced insights about regional consumer engagement. The process involves selecting sophisticated tracking mechanisms that capture **contextual variations in brand representation**.
 
