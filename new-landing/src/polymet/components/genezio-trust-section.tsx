@@ -5,6 +5,10 @@ export function GenezioTrustSection() {
       logo: "images/erste-logo.svg",
     },
     {
+      name: "slsp",
+      logo: "images/logo-slsp.svg",
+    },
+    {
       name: "Banca Transilvania",
       logo: "images/bt-logo.svg",
     },
