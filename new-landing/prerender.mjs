@@ -125,10 +125,11 @@ const stripOverriddenHead = (html, helmet, extraMetaKeys = []) => {
   }
 
   for (const key of metaKeys) {
+    // [\s\S] matches newlines so multi-line meta tags from index.html are stripped
     const keyRegex = new RegExp(
-      `<meta\\b[^>]*\\b(?:name|property)=["']${escapeRegExp(
+      `<meta\\b[\\s\\S]*?\\b(?:name|property)=["']${escapeRegExp(
         key
-      )}["'][^>]*>`,
+      )}["'][\\s\\S]*?>`,
       "gi"
     );
     output = output.replace(keyRegex, "");
@@ -212,11 +213,11 @@ for (const url of routes) {
     .filter(Boolean)
     .join("\n");
 
-  const helmetTitleText = (helmet.title?.toString() ?? "")
+  let helmetTitleText = (helmet.title?.toString() ?? "")
     .replace(/<[^>]+>/g, "")
     .trim();
   const helmetMetaHtml = helmet.meta?.toString() ?? "";
-  const helmetDescription = extractMetaContent(
+  let helmetDescription = extractMetaContent(
     helmetMetaHtml,
     "name",
     "description"
@@ -237,7 +238,39 @@ for (const url of routes) {
     "twitter:image"
   );
 
+  // Override meta title and description for specific routes if needed
+  if (url === "/pricing") {
+    helmetTitleText = "Flexible plans for your AI brand visibility";
+    helmetDescription =
+      "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
+  }
+
   let mergedHeadHtml = headHtml;
+
+  // Force specific title and meta description for /pricing in the final HTML
+  if (url === "/pricing") {
+    const pricingTitle =
+      "Flexible plans for your AI brand visibility";
+    const pricingDescription =
+      "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
+
+    // Remove any existing <title> and <meta name="description"> from the head HTML
+    mergedHeadHtml = mergedHeadHtml
+      .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "")
+      .replace(
+        /<meta\b[^>]*\bname=["']description["'][^>]*>/gi,
+        ""
+      )
+      .trim();
+
+    // Prepend the desired title and description so they are present in the final HTML
+    const titleTag = `    <title>${pricingTitle}</title>`;
+    const descriptionTag = `    <meta name="description" content="${pricingDescription}" />`;
+    mergedHeadHtml = [titleTag, descriptionTag, mergedHeadHtml]
+      .filter(Boolean)
+      .join("\n");
+  }
+
   if (helmetTitleText) {
     mergedHeadHtml = upsertMetaProperty(
       mergedHeadHtml,
@@ -301,12 +334,46 @@ for (const url of routes) {
     extraMetaKeys.push("twitter:image");
   }
 
-  const html = stripOverriddenHead(template, helmet, extraMetaKeys)
+  // For /pricing, ensure template default <title> is stripped (Helmet may be empty in SSR)
+  const helmetForStrip =
+    url === "/pricing" && helmetTitleText
+      ? {
+          ...helmet,
+          title: {
+            toString: () =>
+              "<title>Flexible plans for your AI brand visibility</title>",
+          },
+        }
+      : helmet;
+
+  let html = stripOverriddenHead(template, helmetForStrip, extraMetaKeys)
     .replace("<!--app-helmet-head-->", mergedHeadHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${appHtml}</div>`
     );
+
+  // Safety net for /pricing: remove any leftover default title/og:title from index.html
+  if (url === "/pricing") {
+    const defaultTitle = "Genezio | Make ChatGPT talk about your brand";
+    html = html.replace(
+      new RegExp(
+        `<title[^>]*>\\s*${escapeRegExp(defaultTitle)}\\s*</title>`,
+        "gi"
+      ),
+      ""
+    );
+    html = html.replace(
+      new RegExp(
+        `<meta[\\s\\S]*?property=["']og:title["'][\\s\\S]*?content=["']${escapeRegExp(
+          defaultTitle
+        )}["'][\\s\\S]*?>`,
+        "gi"
+      ),
+      ""
+    );
+  }
+
   const cleanedHtml = html.replace(
     /\s*data-react-helmet=(["'])true\1/g,
     ""
