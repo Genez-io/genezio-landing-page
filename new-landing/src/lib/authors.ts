@@ -90,7 +90,7 @@ export const authors: Record<string, any> = {
         "image": "/authors/bogdan-vlad.webp",
         "location": "Remote",
         "social": {
-            "linkedin": "https://www.linkedin.com/in/vlad-bogdan-florentin-022026227/",
+            "linkedin": "https://www.linkedin.com/in/iulian-bogdan-vlad/",
             "twitter": "https://twitter.com",
             "email": "contact@genezio.com"
         },
@@ -174,8 +174,8 @@ export const authors: Record<string, any> = {
         "image": "/authors/horatiu-voicu.webp",
         "location": "Remote",
         "social": {
-            "linkedin": "https://www.linkedin.com/in/horatiu-voicu/",
-            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/in/voiqu/",
+            "twitter": "https://x.com/voiqu",
             "email": "contact@genezio.com"
         },
         "stats": {
@@ -237,7 +237,7 @@ export const authors: Record<string, any> = {
         "image": "/authors/paula-cionca.webp",
         "location": "Remote",
         "social": {
-            "linkedin": "",
+            "linkedin": "https://www.linkedin.com/in/paula-cionca/",
             "twitter": "https://twitter.com",
             "email": "contact@genezio.com"
         },
@@ -258,7 +258,7 @@ export const authors: Record<string, any> = {
         "image": "/authors/radu-dumitrescu.webp",
         "location": "Remote",
         "social": {
-            "linkedin": "",
+            "linkedin": "https://www.linkedin.com/in/radu-andrei-dumitrescu/",
             "twitter": "https://twitter.com",
             "email": "contact@genezio.com"
         },
