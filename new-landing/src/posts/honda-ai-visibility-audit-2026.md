@@ -39,7 +39,7 @@ This report analyzes the features, pricing, user experience, and data quality of
 The audit for Honda on Genezio provided the most granular data regarding *how* the brand is perceived across different customer types.
 
 * **Overall Visibility:** Genezio assigned Honda a **75% Brand Visibility** score based on 1,646 conversations over 31 days.
-* **Competitive Landscape:** Interestingly, Genezio identified **Toyota (81%)** as the leader, followed by Honda, and then **Subaru (63%)**. This differs from other tools which often place American manufacturers or luxury German brands closer to Honda.
+* **Competitive Landscape:** Interestingly, Genezio identified **Toyota (80%)** as the leader, followed by Honda, and then **Subaru (65%)**. This differs from other tools which often place American manufacturers or luxury German brands closer to Honda.
 * **Scenario Performance:** The platform broke down performance by specific buying scenarios. For "Best value SUVs for working families," Honda achieved **100% visibility**. However, for "SUVs good for towing and hauling," visibility dropped to **28%**, indicating a specific strategic gap.
 
 ![Genezio Brand Performance Overview](/images/genezio-brand-performance.webp)
@@ -79,7 +79,7 @@ Genezio offers a tiered structure:
 ### The Honda.com Audit Findings
 Profound’s audit painted a slightly different picture than Genezio, highlighting the variance in how these tools calculate "visibility."
 
-* **Visibility Score:** Profound gave American Honda Motor Co., Inc. a **50.8%** visibility score.
+* **Visibility Score:** Profound gave American Honda Motor Co., Inc. a **46.7%** visibility score.
 * **Sentiment Analysis:** Profound excels here. It identified that **55.9%** of mentions were positive (citing "Support for American Jobs"), while **44.1%** were negative (citing "Poor Paint Quality" and "Transmission Issues").
 * **Share of Voice:** In their matrix view, Profound showed Honda with a **51.1%** Share of Voice on ChatGPT, trailing behind Toyota at **68.9%** and Ford at **60%**.
 
@@ -99,7 +99,7 @@ Profound’s audit painted a slightly different picture than Genezio, highlighti
 ### The Honda.com Audit Findings
 Peec AI’s analysis was straightforward and focused on static prompt tracking.
 
-* **Visibility:** Peec reported a **35%** visibility for Honda, significantly lower than Genezio or Profound. It ranked Honda #3 behind Hyundai (43%) and Toyota (41%).
+* **Visibility:** Peec reported a **35%** visibility for Honda, significantly lower than Genezio or Profound. It ranked Honda #4 behind Hyundai (43%), Toyota (41%), and Kia (37%).
 * **Sentiment:** It assigned a sentiment score of **80** (out of 100), which is relatively high.
 * **Top Sources:** It identified reddit.com and youtube.com as the dominant sources for Honda, with Reddit holding a massive 53% usage rate in citations.
 
@@ -137,8 +137,8 @@ Semrush brings its traditional "score" mentality to AI.
 ![Writesonic Dashboard](/images/writesonic-dashboard.webp)
 
 ### The Honda.com Audit Findings
-* **Visibility:** Reported a **60.4%** AI Visibility score.
-* **Rank:** Ranked Honda **1st** in their leaderboard, ahead of Toyota (39%).
+* **Visibility:** Reported a **62.1%** AI Visibility score.
+* **Rank:** Ranked Honda **1st** in their leaderboard, ahead of Toyota (37%).
 * **Citations:** Identified automobiles.honda.com as a top cited source, but noted a low citation share (2.1%) from external sources.
 
 ### Key Features & Functionality
@@ -172,10 +172,10 @@ Semrush brings its traditional "score" mentality to AI.
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Core Philosophy** | Complex AEO Analysis / Web Interface | Enterprise AEO / Sentiment | Static Monitoring | Hybrid SEO/GEO | Content Action / Repair |
 | **Unit of Analysis** | Multi-Turn AI Conversations | Answer Engine Responses | Static Prompts | Keywords/Prompts | Content Gaps |
-| **Honda Visibility** | 75% (2nd place) | 50.8% | 35% (3rd place) | 87/100 (High) | 60.4% (1st place) |
+| **Honda Visibility** | 75% (2nd place) | 46.7% | 35% (4rd place) | 87/100 (High) | 62.1% (1st place) |
 | **Top Competitor** | Toyota | Toyota | Hyundai | Toyota | Toyota |
 | **Pricing Entry** | €199/mo | Enterprise/Custom | €89/mo | $99/mo (Add-on) | $99/mo |
-| **Unique Feature** | Buyer Personas & Query Fanout | Negative Sentiment Drivers | Win/Loss Prompt Lists | SEO Data Integration | "Fix it" Content Generator |
+| **Unique Feature** | Multi-turn conversations & Query Fanout | Negative Sentiment Drivers | Win/Loss Prompt Lists | SEO Data Integration | "Fix it" Content Generator |
 
 ## Recommendation
 
@@ -197,7 +197,7 @@ While I must remain objective, the data supports the conclusion that **Genezio**
 
 ## Conclusion regarding Honda.com
 
-The audits reveal that **Honda is a dominant but vulnerable player in AI search**. While it consistently ranks in the top 3 across all tools, it faces fierce competition from Toyota (often the leader) and Hyundai. The disparity in visibility scores (ranging from 35% to 87%) highlights the volatility of AI measurement.
+The audits reveal that **Honda is a dominant but vulnerable player in AI search**. While it consistently ranks in the top 3 across all tools, it faces fierce competition from Toyota (often the leader) and Hyundai. The disparity in visibility scores (ranging from 35% to 85%) highlights the volatility of AI measurement.
 
 However, the qualitative insights are consistent: Honda wins on **practicality and reliability** but loses ground on **sentiment regarding specific defects** and **luxury comparisons**.
 
