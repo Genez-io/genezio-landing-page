@@ -1,5 +1,5 @@
 ---
-title: "The State of AI Visibility 2026: Audit of Honda.com Across Major GEO Platforms"
+title: "The State of AI Visibility 2026: A Multi-Platform GEO Audit"
 date: 2026-02-12
 tags:
   - GEO Audit
