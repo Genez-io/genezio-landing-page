@@ -95,6 +95,10 @@ if (fs.existsSync(authorFile)) {
   console.warn("Author file not found:", authorFile);
 }
 
+// Inline favicon (data URL) so it appears on every prerendered page in production
+const FAVICON_LINK =
+  '<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjI1MCAzMTAgMTQwMCAxNDAwIj48cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDAwIiB4PSIyNTAiIHk9IjMxMCIgcng9IjIwMCIgcnk9IjIwMCIgZmlsbD0iIzAwMCIvPjxwYXRoIGZpbGw9IiMwMmY4YTIiIGQ9Ik03NzguOTIsMTQyNS44OWMtMjYuNDgsMC00OC4wMi0yMS41NC00OC4wMi00OC4wMnYtMjQ4LjM5YzAtMjYuNTItMjEuNS00OC4wMi00OC4wMi00OC4wMmgtMTY3LjA5Yy0yNi40OCwwLTQ4LjAyLTIxLjU0LTQ4LjAyLTQ4LjAydi0xOTkuMWMwLTI2LjQ4LDIxLjU0LTQ4LjAyLDQ4LjAyLTQ4LjAyaDE2Ny4wOWMyNi41MiwwLDQ4LjAyLTIxLjUsNDguMDItNDguMDJ2LTExNi44M2MwLTI2LjQ4LDIxLjU0LTQ4LjAyLDQ4LjAyLTQ4LjAyaDE0OC44NGMyNi40OCwwLDQ4LjAyLDIxLjU0LDQ4LjAyLDQ4LjAydjE0OC44NGMwLDI2LjQ4LTIxLjU0LDQ4LjAyLTQ4LjAyLDQ4LjAyaC0xMTYuODNjLTI2LjUyLDAtNDguMDIsMjEuNS00OC4wMiw0OC4wMnYxMzUuMDhjMCwyNi41MiwyMS41LDQ4LjAyLDQ4LjAyLDQ4LjAyaDIxNi4zOGMyNi41MiwwLDQ4LjAyLTIxLjUsNDguMDItNDguMDJ2LTMyOS43MWMwLTI2LjQ4LDIxLjU0LTQ4LjAyLDQ4LjAyLTQ4LjAyaDM2MS43MmMyNi40OCwwLDQ4LjAyLDIxLjU0LDQ4LjAyLDQ4LjAydjM2MS43MmMwLDI2LjQ4LTIxLjU0LDQ4LjAyLTQ4LjAyLDQ4LjAyaC0zMjkuNzFjLTI2LjUyLDAtNDguMDIsMjEuNS00OC4wMiw0OC4wMnYyNDguMzljMCwyNi40OC0yMS41NCw0OC4wMi00OC4wMiw0OC4wMmgtMjgwLjRaIi8+PC9zdmc+" />';
+
 const template = fs.readFileSync(
   path.resolve(__dirname, "dist/index.html"),
   "utf-8"
@@ -245,7 +249,7 @@ for (const url of routes) {
       "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
   }
 
-  let mergedHeadHtml = headHtml;
+  let mergedHeadHtml = FAVICON_LINK + "\n" + headHtml;
 
   // Force specific title and meta description for /pricing in the final HTML
   if (url === "/pricing") {
