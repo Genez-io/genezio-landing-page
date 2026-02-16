@@ -95,10 +95,6 @@ if (fs.existsSync(authorFile)) {
   console.warn("Author file not found:", authorFile);
 }
 
-// Inline favicon (data URL) so it appears on every prerendered page in production
-const FAVICON_LINK =
-  '<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjI1MCAzMTAgMTQwMCAxNDAwIj48cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDAwIiB4PSIyNTAiIHk9IjMxMCIgcng9IjIwMCIgcnk9IjIwMCIgZmlsbD0iIzAwMCIvPjxwYXRoIGZpbGw9IiMwMmY4YTIiIGQ9Ik03NzguOTIsMTQyNS44OWMtMjYuNDgsMC00OC4wMi0yMS41NC00OC4wMi00OC4wMnYtMjQ4LjM5YzAtMjYuNTItMjEuNS00OC4wMi00OC4wMi00OC4wMmgtMTY3LjA5Yy0yNi40OCwwLTQ4LjAyLTIxLjU0LTQ4LjAyLTQ4LjAydi0xOTkuMWMwLTI2LjQ4LDIxLjU0LTQ4LjAyLDQ4LjAyLTQ4LjAyaDE2Ny4wOWMyNi41MiwwLDQ4LjAyLTIxLjUsNDguMDItNDguMDJ2LTExNi44M2MwLTI2LjQ4LDIxLjU0LTQ4LjAyLDQ4LjAyLTQ4LjAyaDE0OC44NGMyNi40OCwwLDQ4LjAyLDIxLjU0LDQ4LjAyLDQ4LjAydjE0OC44NGMwLDI2LjQ4LTIxLjU0LDQ4LjAyLTQ4LjAyLDQ4LjAyaC0xMTYuODNjLTI2LjUyLDAtNDguMDIsMjEuNS00OC4wMiw0OC4wMnYxMzUuMDhjMCwyNi41MiwyMS41LDQ4LjAyLDQ4LjAyLDQ4LjAyaDIxNi4zOGMyNi41MiwwLDQ4LjAyLTIxLjUsNDguMDItNDguMDJ2LTMyOS43MWMwLTI2LjQ4LDIxLjU0LTQ4LjAyLDQ4LjAyLTQ4LjAyaDM2MS43MmMyNi40OCwwLDQ4LjAyLDIxLjU0LDQ4LjAyLDQ4LjAydjM2MS43MmMwLDI2LjQ4LTIxLjU0LDQ4LjAyLTQ4LjAyLDQ4LjAyaC0zMjkuNzFjLTI2LjUyLDAtNDguMDIsMjEuNS00OC4wMiw0OC4wMnYyNDguMzljMCwyNi40OC0yMS41NCw0OC4wMi00OC4wMiw0OC4wMmgtMjgwLjRaIi8+PC9zdmc+" />';
-
 const template = fs.readFileSync(
   path.resolve(__dirname, "dist/index.html"),
   "utf-8"
@@ -129,11 +125,10 @@ const stripOverriddenHead = (html, helmet, extraMetaKeys = []) => {
   }
 
   for (const key of metaKeys) {
-    // [\s\S] matches newlines so multi-line meta tags from index.html are stripped
     const keyRegex = new RegExp(
-      `<meta\\b[\\s\\S]*?\\b(?:name|property)=["']${escapeRegExp(
+      `<meta\\b[^>]*\\b(?:name|property)=["']${escapeRegExp(
         key
-      )}["'][\\s\\S]*?>`,
+      )}["'][^>]*>`,
       "gi"
     );
     output = output.replace(keyRegex, "");
@@ -217,11 +212,11 @@ for (const url of routes) {
     .filter(Boolean)
     .join("\n");
 
-  let helmetTitleText = (helmet.title?.toString() ?? "")
+  const helmetTitleText = (helmet.title?.toString() ?? "")
     .replace(/<[^>]+>/g, "")
     .trim();
   const helmetMetaHtml = helmet.meta?.toString() ?? "";
-  let helmetDescription = extractMetaContent(
+  const helmetDescription = extractMetaContent(
     helmetMetaHtml,
     "name",
     "description"
@@ -242,39 +237,7 @@ for (const url of routes) {
     "twitter:image"
   );
 
-  // Override meta title and description for specific routes if needed
-  if (url === "/pricing") {
-    helmetTitleText = "Flexible plans for your AI brand visibility";
-    helmetDescription =
-      "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
-  }
-
-  let mergedHeadHtml = FAVICON_LINK + "\n" + headHtml;
-
-  // Force specific title and meta description for /pricing in the final HTML
-  if (url === "/pricing") {
-    const pricingTitle =
-      "Flexible plans for your AI brand visibility";
-    const pricingDescription =
-      "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
-
-    // Remove any existing <title> and <meta name="description"> from the head HTML
-    mergedHeadHtml = mergedHeadHtml
-      .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "")
-      .replace(
-        /<meta\b[^>]*\bname=["']description["'][^>]*>/gi,
-        ""
-      )
-      .trim();
-
-    // Prepend the desired title and description so they are present in the final HTML
-    const titleTag = `    <title>${pricingTitle}</title>`;
-    const descriptionTag = `    <meta name="description" content="${pricingDescription}" />`;
-    mergedHeadHtml = [titleTag, descriptionTag, mergedHeadHtml]
-      .filter(Boolean)
-      .join("\n");
-  }
-
+  let mergedHeadHtml = headHtml;
   if (helmetTitleText) {
     mergedHeadHtml = upsertMetaProperty(
       mergedHeadHtml,
@@ -338,46 +301,12 @@ for (const url of routes) {
     extraMetaKeys.push("twitter:image");
   }
 
-  // For /pricing, ensure template default <title> is stripped (Helmet may be empty in SSR)
-  const helmetForStrip =
-    url === "/pricing" && helmetTitleText
-      ? {
-          ...helmet,
-          title: {
-            toString: () =>
-              "<title>Flexible plans for your AI brand visibility</title>",
-          },
-        }
-      : helmet;
-
-  let html = stripOverriddenHead(template, helmetForStrip, extraMetaKeys)
+  const html = stripOverriddenHead(template, helmet, extraMetaKeys)
     .replace("<!--app-helmet-head-->", mergedHeadHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${appHtml}</div>`
     );
-
-  // Safety net for /pricing: remove any leftover default title/og:title from index.html
-  if (url === "/pricing") {
-    const defaultTitle = "Genezio | Make ChatGPT talk about your brand";
-    html = html.replace(
-      new RegExp(
-        `<title[^>]*>\\s*${escapeRegExp(defaultTitle)}\\s*</title>`,
-        "gi"
-      ),
-      ""
-    );
-    html = html.replace(
-      new RegExp(
-        `<meta[\\s\\S]*?property=["']og:title["'][\\s\\S]*?content=["']${escapeRegExp(
-          defaultTitle
-        )}["'][\\s\\S]*?>`,
-        "gi"
-      ),
-      ""
-    );
-  }
-
   const cleanedHtml = html.replace(
     /\s*data-react-helmet=(["'])true\1/g,
     ""
