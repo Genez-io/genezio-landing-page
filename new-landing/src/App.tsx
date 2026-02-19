@@ -68,15 +68,6 @@ export default function GenezioApp() {
       />
 
       <Route
-        path="/policy"
-        element={
-          <GenezioLayout>
-            <PrivacyPolicy />
-          </GenezioLayout>
-        }
-      />
-
-      <Route
         path="/increase-csat"
         element={
           <GenezioLayout>
