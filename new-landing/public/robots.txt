@@ -7,3 +7,4 @@ Allow: /
 Allow: /llm.txt
 
 Sitemap: https://genezio.com/sitemap.xml
+Sitemap: https://genezio.com/imagessitemap.xml
