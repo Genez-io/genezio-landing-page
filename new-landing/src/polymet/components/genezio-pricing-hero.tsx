@@ -91,7 +91,7 @@ export function GenezioPricingHero({
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 mt-8 md:mt-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
-            Flexible plans for your brand journey
+            Scalable solutions for your AI brand visibility
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto px-4">
             Start with a free trial and scale as your AI visibility growa.
