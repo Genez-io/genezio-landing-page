@@ -71,10 +71,8 @@ export function GenezioPricingHero({
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 mt-8 md:mt-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 max-w-4xl mx-auto">
-            {selectedAudience === "brands"
-              ? "Flexible plans for your AI brand visibility"
-              : "Empower every client to own their AI presence"}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+            Scalable solutions for your AI brand visibility
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto px-4">
             {selectedAudience === "brands"
