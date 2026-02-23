@@ -11,13 +11,15 @@ import { BtTestimonialSection } from "@/polymet/components/bt-testimonial-sectio
 export function IncreaseConversion() {
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Increase Conversion from AI Conversations | Genezio</title>
         <meta
           name="description"
           content="Turn AI-powered conversations into revenue. Genezio analyzes multi-turn chats, surfaces drop-off points, and helps you optimize conversational funnels for higher conversion."
         />
-      </Helmet>
+        </Helmet>
+      )}
       <div className="min-h-screen bg-[#050506]">
         <ConversionHero />
 

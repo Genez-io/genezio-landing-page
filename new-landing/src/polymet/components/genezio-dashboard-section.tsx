@@ -511,7 +511,7 @@ export function GenezioDashboardSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <a href="https://app.genezio.ai/sign-in">
+          <a href="https://app.genezio.ai/sign-up">
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"

@@ -258,13 +258,15 @@ export function Glossary() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>AI Search & Visibility Glossary | Genezio</title>
         <meta
           name="description"
           content="Explore Genezio’s AI Search & Visibility glossary. Learn key terms like GEO, AEO, AI visibility, conversational intent, and more to understand your brand’s AI presence."
         />
-      </Helmet>
+        </Helmet>
+      )}
       {/* Hero Section */}
       <div className="relative pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">

@@ -9,13 +9,15 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 export function LeadGeneration() {
   return (
     <>
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>Conversational Brand Presence | Lead Generation with Genezio</title>
         <meta
           name="description"
           content="Use Genezio to understand and expand your conversational brand presence. Simulate AI conversations, analyze personas, and turn AI visibility into qualified leads."
         />
-      </Helmet>
+        </Helmet>
+      )}
       <div className="min-h-screen bg-[#050506]">
         <LeadGenHero />
 

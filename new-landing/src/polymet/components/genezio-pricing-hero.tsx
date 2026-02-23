@@ -17,7 +17,7 @@ export function GenezioPricingHero({
       description: "For teams exploring AI brand visibility",
       features: [
         "2 AI models monitored",
-        "50 scenarios per model",
+        "50 scenarios",
         "Daily AI visibility insights",
         "Data retention: 1 month",
       ],
@@ -31,10 +31,10 @@ export function GenezioPricingHero({
       description: "For marketing teams optimizing AI presence",
       features: [
         "4 AI models monitored",
-        "50 scenarios per model",
+        "50 scenarios",
         "Multi-turn conversations",
         "Daily AI visibility insights",
-        "AI content generation: 5 / day",
+        "AI content generation",
         "Data retention: 6 months",
       ],
 
@@ -61,29 +61,10 @@ export function GenezioPricingHero({
     },
   ];
 
-  const agencyPlan = {
-    name: "Agency Partner",
-    price: "Custom",
-    description: "For agencies managing multiple client brands",
-    features: [
-      "Unlimited brands monitored",
-      "All AI models included",
-      "Unlimited AI conversations tracked",
-      "Multi-turn conversations",
-      "White-label reporting",
-      "Client dashboard access",
-      "Priority support & training",
-      "Dedicated account manager",
-      "Custom integrations",
-      "Revenue sharing opportunities",
-    ],
-    cta: "Contact us",
-  };
-
-  const plans = selectedAudience === "brands" ? brandPlans : [agencyPlan];
+  const plans = selectedAudience === "brands" ? brandPlans : [];
 
   return (
-    <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-6 overflow-hidden bg-[#0A0A0B]">
+    <section className="relative pt-24 md:pt-32 pb-3 md:pb-5 px-4 md:px-6 overflow-hidden bg-[#0A0A0B]">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-600/5 via-purple-600/5 to-transparent pointer-events-none" />
 
@@ -94,7 +75,9 @@ export function GenezioPricingHero({
             Scalable solutions for your AI brand visibility
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto px-4">
-            Start with a free trial and scale as your AI visibility growa.
+            {selectedAudience === "brands"
+              ? "Start with a free trial and scale as your AI visibility grows."
+              : "Transparent pricing with flexible add-ons"}
           </p>
         </div>
 
@@ -125,84 +108,79 @@ export function GenezioPricingHero({
         </div>
 
         {/* Pricing Cards and Form Layout */}
-        <div className="space-y-8 md:space-y-12 max-w-7xl mx-auto">
-          {/* Pricing Cards Grid */}
-          <div className={`grid gap-6 lg:gap-8 ${
-            selectedAudience === "brands"
-              ? "md:grid-cols-3"
-              : "md:grid-cols-1 max-w-2xl mx-auto"
-          }`}>
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/5 border rounded-2xl p-6 md:p-8 flex flex-col ${
-                  plan.popular
-                    ? "border-blue-500/50 shadow-lg shadow-blue-500/10"
-                    : "border-white/10"
-                }`}
-              >
-                {/* Popular Badge */}
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
-                      Most popular
-                    </div>
-                  </div>
-                )}
-
-                {/* Plan Header */}
-                <div className="mb-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                    {plan.name}
-                  </h3>
-                  <div className="flex items-baseline gap-1 mb-3">
-                    <span className="text-3xl md:text-4xl font-bold text-white">
-                      {plan.price}
-                    </span>
-                    {plan.price !== "Custom" && (
-                      <span className="text-white/60 text-sm">/month</span>
-                    )}
-                  </div>
-                  <p className="text-sm text-white/60">{plan.description}</p>
-                </div>
-
-                {/* Features */}
-                <div className="flex-1 mb-6">
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <CheckIcon className="w-3 h-3 text-blue-400" />
-                        </div>
-                        <span className="text-sm text-white/80">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* CTA Button */}
-                <Button
-                  className={`w-full py-6 text-base font-semibold rounded-lg transition-all duration-200 ${
+        {selectedAudience === "brands" && (
+          <div className="space-y-8 md:space-y-12 max-w-7xl mx-auto">
+            {/* Pricing Cards Grid */}
+            <div className="flex flex-col gap-4">
+              <p className="text-xs text-white/40 text-center mb-2">
+                Prices shown are exclusive of any applicable taxes.
+              </p>
+              <div className="grid gap-6 lg:gap-8 md:grid-cols-3">
+                {plans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`relative bg-white/5 border rounded-2xl p-6 md:p-8 flex flex-col ${
                     plan.popular
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
-                      : "bg-white/10 hover:bg-white/15 text-white border border-white/20"
+                      ? "border-blue-500/50 shadow-lg shadow-blue-500/10"
+                      : "border-white/10"
                   }`}
-                  onClick={() => {
-                    if (plan.cta === "Contact us") {
-                      window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
-                    } else {
-                      window.location.href = "https://app.genezio.ai/sign-in";
-                    }
-                  }}
                 >
-                  {plan.cta}
-                </Button>
+                  {/* Popular Badge */}
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
+                        Most popular
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Plan Header */}
+                  <div className="mb-6">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
+                    <div className="flex items-baseline gap-1 mb-3">
+                      <span className="text-3xl md:text-4xl font-bold text-white">
+                        {plan.price}
+                      </span>
+                      {plan.price !== "Custom" && (
+                        <span className="text-white/60 text-sm">/month</span>
+                      )}
+                    </div>
+                    <p className="text-sm text-white/60">{plan.description}</p>
+                  </div>
+
+                  {/* Features */}
+                  <div className="flex-1 mb-6">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <CheckIcon className="w-3 h-3 text-blue-400" />
+                          </div>
+                          <span className="text-sm text-white/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* CTA Button */}
+                  <Button
+                    className={`w-full py-6 text-base font-semibold rounded-lg transition-all duration-200 ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
+                        : "bg-white/10 hover:bg-white/15 text-white border border-white/20"
+                    }`}
+                    onClick={() => plan.cta === "Contact us" ? window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank') : window.open('https://app.genezio.ai/sign-up', '_blank')}
+                  >
+                    {plan.cta}
+                  </Button>
+                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-
-
-        </div>
+        )}
       </div>
     </section>
   );

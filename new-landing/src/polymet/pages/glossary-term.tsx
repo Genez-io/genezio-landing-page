@@ -911,10 +911,12 @@ export function GlossaryTerm() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
-      <Helmet>
+      {import.meta.env.SSR && (
+        <Helmet>
         <title>{term.title}</title>
         <meta name="description" content={term.metaDescription} />
-      </Helmet>
+        </Helmet>
+      )}
       {/* Header */}
       <div className="border-b border-white/5">
         <div className="max-w-4xl mx-auto px-6 py-6">

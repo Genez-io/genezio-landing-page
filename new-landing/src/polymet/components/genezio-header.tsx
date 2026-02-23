@@ -7,9 +7,12 @@ import {
   TargetIcon,
   ShoppingBagIcon,
   BookOpenIcon,
-  FileTextIcon
+  FileTextIcon,
+  UsersIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router";
+
 
 export function GenezioHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,17 +88,21 @@ export function GenezioHeader() {
 
             {/* Mega Menu Dropdown */}
             {platformMenuOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[420px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute top-full left-0 mt-6 w-[720px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Arrow pointer */}
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
+                <div className="absolute -top-2 left-8 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
 
                 <div className="relative">
-                  {/* Left Section - Platform Items */}
-                  <div className="p-6">
-                    <div className="space-y-1">
+                  <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* For Teams column */}
+                    <div>
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">
+                        For Teams
+                      </div>
+                      <div className="space-y-1">
                       {/* Increase Lead Generation */}
-                      <a
-                        href="/conversational-brand-presence"
+                      <Link
+                        to="/conversational-brand-presence"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                       >
@@ -112,11 +119,11 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
 
                       {/* Increase Conversion */}
-                      <a
-                        href="/increase-conversion"
+                      <Link
+                        to="/increase-conversion"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                       >
@@ -133,11 +140,12 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
 
                       {/* Increase In-Chat Shopping */}
-                      <a
-                        href="#"
+                      <Link
+                        // to="/increase-in-chat-shopping"
+                        to="#"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                       >
@@ -146,11 +154,11 @@ export function GenezioHeader() {
                             <ShoppingBagIcon className="w-5 h-5 text-purple-400" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-0.5">
+                            <div className="flex items-center gap-2 mb-0.5 flex-wrap">
                               <div className="text-white font-semibold text-sm group-hover:text-purple-400 transition-colors">
                                 Increase In-Chat Shopping
                               </div>
-                              <span className="px-2 py-0.5 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
+                              <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
                                 COMING SOON
                               </span>
                             </div>
@@ -159,7 +167,77 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
+                    </div>
+                  </div>
+
+                    {/* Partners column */}
+                    <div className="md:border-l md:border-white/10 md:pl-6">
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">
+                        Partners
+                      </div>
+                      <Link
+                        to="/agencies"
+                        onClick={() => setPlatformMenuOpen(false)}
+                        className="group block p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 hover:border-blue-500/20 transition-all"
+                      >
+                        <div className="flex items-start gap-3 mb-4">
+                          <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <UsersIcon className="w-5 h-5 text-blue-400" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-white font-semibold text-sm mb-1 group-hover:text-blue-400 transition-colors">
+                              For Agencies
+                            </div>
+                            <div className="text-white/60 text-xs leading-relaxed">
+                              Manage multiple brands effortlessly
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Visual: Multiple Brand Cards */}
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <div className="flex-1 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center px-2 gap-2">
+                              <div className="w-5 h-5 rounded bg-white/10 flex items-center justify-center">
+                                <div className="w-2 h-2 rounded-full bg-white/60" />
+                              </div>
+                              <div className="text-[10px] text-white/70 font-medium">
+                                Brand A
+                              </div>
+                            </div>
+                            <div className="text-[10px] text-emerald-400 font-semibold">
+                              ↑ 24%
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="flex-1 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center px-2 gap-2">
+                              <div className="w-5 h-5 rounded bg-white/10 flex items-center justify-center">
+                                <div className="w-2 h-2 rounded-full bg-white/60" />
+                              </div>
+                              <div className="text-[10px] text-white/70 font-medium">
+                                Brand B
+                              </div>
+                            </div>
+                            <div className="text-[10px] text-emerald-400 font-semibold">
+                              ↑ 18%
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="flex-1 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center px-2 gap-2">
+                              <div className="w-5 h-5 rounded bg-white/10 flex items-center justify-center">
+                                <div className="w-2 h-2 rounded-full bg-white/60" />
+                              </div>
+                              <div className="text-[10px] text-white/70 font-medium">
+                                Brand C
+                              </div>
+                            </div>
+                            <div className="text-[10px] text-emerald-400 font-semibold">
+                              ↑ 31%
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -247,7 +325,14 @@ export function GenezioHeader() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="https://app.genezio.ai/sign-in">
+        <Button
+            variant="outline"
+            className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
+          >
+            Book a Demo
+          </Button>
+          <a href="https://app.genezio.ai/sign-up">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all">
               Get Started
             </Button>
@@ -272,51 +357,74 @@ export function GenezioHeader() {
         <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/5">
           <nav className="flex flex-col px-4 py-4 space-y-3">
             {/* Platform Mobile Submenu */}
-            <div className="space-y-2">
-              <div className="text-white/80 text-sm font-medium py-2">
-                Platform
-              </div>
-              <div className="pl-4 space-y-3 border-l-2 border-white/10">
-                <div className="space-y-2">
-                  <a
-                    href="/conversational-brand-presence"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      Increase Lead Generation
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      Conversational Brand Presence
-                    </div>
-                  </a>
-                  <a
-                    href="/increase-conversion"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      Increase Conversion
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      Marketing Agent Performance
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="flex items-center gap-2">
+            <div className="space-y-4">
+              <div>
+                <div className="text-white/80 text-sm font-medium py-2">
+                  Platform
+                </div>
+                <div className="pl-4 space-y-3 border-l-2 border-white/10">
+                  <div className="space-y-2">
+                    <a
+                      href="/conversational-brand-presence"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
                       <div className="text-white text-sm font-medium">
-                        Increase In-Chat Shopping
+                        Increase Lead Generation
                       </div>
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">
-                        COMING SOON
-                      </span>
+                      <div className="text-white/60 text-xs">
+                        Conversational Brand Presence
+                      </div>
+                    </a>
+                    <a
+                      href="/increase-conversion"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Increase Conversion
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Marketing Agent Performance
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <div className="text-white text-sm font-medium">
+                          Increase In-Chat Shopping
+                        </div>
+                        <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
+                          COMING SOON
+                        </span>
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        E-commerce Performance
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Partners Mobile Submenu */}
+              <div>
+                <div className="text-white/80 text-sm font-medium py-2">
+                  Partners
+                </div>
+                <div className="pl-4 space-y-3 border-l-2 border-white/10">
+                  <a
+                    href="/agencies"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">
+                      For Agencies
                     </div>
                     <div className="text-white/60 text-xs">
-                      E-commerce Performance
+                      Manage multiple brands effortlessly
                     </div>
                   </a>
                 </div>
@@ -367,7 +475,7 @@ export function GenezioHeader() {
             </a>
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-              <a href="/pricing" onClick={() => setMobileMenuOpen(false)}>
+              <a href="https://app.genezio.ai/sign-up" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
                   Get Started
                 </Button>
