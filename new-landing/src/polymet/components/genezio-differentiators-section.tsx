@@ -108,37 +108,37 @@ export function GenezioDifferentiatorsSection() {
   const differentiators = [
     {
       icon: MessageCircleIcon,
-      title: "Multi-Turn Conversation Simulation",
+      title: "Increase AI-driven conversions",
       description:
-        "Go beyond one-shot prompts. Genezio runs full, realistic multi-turn dialogues to evaluate how AI engines represent your brand in real user scenarios.",
+        "Multi-turn conversations reveal true buying intent as users refine their needs through follow-up questions. Optimize your brand positioning to appear in these high-intent AI recommendations, turning AI visibility into measurable revenue growth.",
       visual: "conversation"
     },
     {
       icon: UsersIcon,
-      title: "Persona-Based Scenarios",
+      title: "Win every buyer persona",
       description:
-        "Each conversation adapts to real customer personas — B2B buyer, developer, journalist, consumer — revealing how perception changes by audience and intent.",
+        "Understand how different decision-makers perceive your brand in AI conversations. Tailor your strategy to win B2B buyers, developers, journalists, and consumers — each with personalized messaging that converts.",
       visual: "personas"
     },
     {
       icon: SettingsIcon,
-      title: "Platform-Adaptive Query Intelligence",
+      title: "Dominate all AI platforms",
       description:
-        "Different AI platforms require different query approaches. Genezio automatically adapts — using search queries for AI Overview, conversational questions for AI Mode and ChatGPT-like interfaces.",
+        "Capture customers across ChatGPT, Google AI Overviews, Perplexity, Claude, and Gemini. Our platform-adaptive intelligence ensures your brand wins recommendations everywhere your customers search.",
       visual: "platform"
     },
     {
       icon: LightbulbIcon,
-      title: "Actionable Insights with Measurable Impact",
+      title: "Get actionable strategies, not just data",
       description:
-        "Transform AI visibility data into concrete actions. Get specific recommendations for website improvements, blog posts, social media threads, and review strategies to boost your AI visibility.",
+        "Receive specific, prioritized actions that directly impact your AI visibility: website optimizations, content strategies, and citation improvements, all proven to increase brand recommendations by AI engines.",
       visual: "actionable"
     },
     {
       icon: FileTextIcon,
-      title: "AI Citation Intelligence",
+      title: "Build trust and authority in AI answers",
       description:
-        "Identify which content sources are cited by AI engines and which are missing. Correct outdated references and boost trustworthiness in AI-generated answers.",
+        "Identify which sources AI engines cite or miss, update outdated content to improve accuracy, and analyze citation sentiment to understand how your brand is perceived.",
       visual: "citations"
     }
   ];
@@ -152,18 +152,16 @@ export function GenezioDifferentiatorsSection() {
         {/* Header */}
         <div className="text-center mb-12 md:mb-20">
           <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
-            Visibility, Accuracy, and Trust
+            Drive measurable business outcomes
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
-            <span className="text-white">The only platform built for</span>{" "}
+            <span className="text-white">The platform built for</span>{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
-              Generative Search & Conversational Optimization.
+              Generative Search and Answer Engine Optimization
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto px-4">
-            Genezio goes beyond AEO (Answer Engine Optimization) and SEO —
-            combining simulation, analytics, and optimization in one intelligent
-            ecosystem.
+            Genezio predicts which AI conversations drive conversions and gives you the exact strategies to win them. Turn AI visibility into measurable business outcomes.
           </p>
         </div>
 
