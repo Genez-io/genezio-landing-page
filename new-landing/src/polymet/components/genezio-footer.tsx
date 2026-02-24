@@ -11,9 +11,9 @@ export function GenezioFooter() {
               </span>
             </a>
             <p className="text-gray-400 text-sm leading-relaxed">
-              The Conversational Optimization Platform
+              The platform built for Generative Search
               <br />
-              that powers your brand visibility in AI.
+              and Answer Engine Optimization.
             </p>
           </div>
 
