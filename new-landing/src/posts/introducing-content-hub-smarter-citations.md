@@ -34,8 +34,7 @@ This update strengthens Genezio's core promise: turning AI Visibility from somet
 
 ## Content Hub: Turn AI Insights Into Publishable Authority
 
-![Editing a Genezio-generated article via the chat interface](/images/content-hub-chat-interface.webp)  
-*Editing a Genezio-generated article via the chat interface*
+![Editing a Genezio-generated article via the chat interface](/images/content-hub-chat-interface.webp  "Editing a Genezio-generated article via the chat interface")  
 
 Most brands create content based on intuition, SEO tradition, or internal assumptions. But LLMs don't think like traditional search engines.
 
@@ -78,8 +77,7 @@ The real value: you move from reactive monitoring to proactive influence, with a
 
 ## Monitored Citations: Measure the Real Impact of What You Publish
 
-![Managing your monitored citations](/images/monitored-citations.webp)  
-*Managing your monitored citations*
+![Managing your monitored citations](/images/monitored-citations.webp "Managing your monitored citations")  
 
 Publishing content is only valuable if it changes how AI talks about you.
 
@@ -103,8 +101,7 @@ That level of clarity fundamentally changes decision-making.
 
 ## Automated Citation Categorization: Make Smarter Publishing Decisions
 
-![Automated citations categorization](/images/automated-citations-categorization.webp)  
-*Automated citations categorization*
+![Automated citations categorization](/images/automated-citations-categorization.webp "Automated citations categorization")  
 
 One of the hardest strategic questions is: *Where should we publish to influence AI systems?*
 
@@ -129,8 +126,7 @@ The value is not in the categorization itself. The value is in knowing where inf
 
 ## Real-Time Awareness: See the Latest Conversations
 
-![Most Recent 5 Conversations](/images/recent-conversations.webp)  
-*Most Recent 5 Conversations*
+![Most Recent 5 Conversations](/images/recent-conversations.webp "Most Recent 5 Conversations")  
 
 AI narratives shift.
 
@@ -146,8 +142,7 @@ AI Visibility becomes dynamic, not static.
 
 ## Import & Export: Bring AI Visibility Into Your Broader Strategy
 
-![Importing citations to be monitored](/images/import-citations.webp)  
-*Importing citations to be monitored*
+![Importing citations to be monitored](/images/import-citations.webp "Importing citations to be monitored")  
 
 AI Visibility does not live in isolation.
 
