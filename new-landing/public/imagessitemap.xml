@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://genezio.com/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
       <image:image>
         <image:loc>https://genezio.com/images/erste-logo.svg</image:loc>
@@ -32,188 +32,17 @@
   </url>
   <url>
     <loc>https://genezio.com/increase-conversion/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
         <image:loc>https://genezio.com/images/1655112774883.webp</image:loc>
       </image:image>
   </url>
   <url>
-    <loc>https://genezio.com/blog/how-can-i-test-my-ai-agent/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/overall-experience-with-chatbots.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/microsoft-is-deleting-its-al-chatbots.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/5-best-ai-agents-in-2025/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/6-reasons-why-intercom-is-the-best-choice.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/forethought-scale-customer-support-with-advanced-agentic-ai.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/celonis-make-ai-work-for-your-enterprise.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/continuous-testing/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/understand-complex-problems-better.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/rag-is-fixing-llms/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/rag-fix-llm-rag-framework.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/rag-fix-llm-open-source-dedicated-databases.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/rag-fix-llm-multi-agent-rag.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/perplexity-vs-chatgpt/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/authors/bogdan-ripa.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/author/denisa-lera/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/authors/denisa-lera.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/rule-based-chatbots.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/nlp-enhanced-virtual-assistants.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/scenario-based-testing/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/deterministic-non-deterministic.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/dpd-chatbot.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/ai-agent-security/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/gm-dealer-chatbot-talked-into-selling-chevy-tahoe-for-$1.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/ai-chatbot-testing/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/air-canada-ordered-to-pay-customer-who-was-misled-by-airline's-chatbot.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/chatgpt-5-2-sees-brands-differently/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/gpt-5-2-sees-brands-differently.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/genezio-vs-peec/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/authors/bogdan-ripa.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/genezio-vs-peec.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/peec-static-prompts.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/genezio-conversation-details-1.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/genezio-conversation-details-2.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/genezio-fanout-queries.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/from-tracking-ai-to-behavioral-modeling/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/from-tracking-ai-to-behavioral-modeling.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/zero-query-overlaps.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/deciphering-fan-out-implicit-queries/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/deciphering-fan-out-implicit-queries.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
     <loc>https://genezio.com/blog/honda-ai-visibility-audit-2026/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
@@ -253,18 +82,153 @@
       </image:image>
   </url>
   <url>
-    <loc>https://genezio.com/blog/author/bogdan-ripa/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://genezio.com/blog/rag-is-fixing-llms/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://genezio.com/authors/bogdan-ripa.webp</image:loc>
+        <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/rag-fix-llm-rag-framework.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/rag-fix-llm-open-source-dedicated-databases.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/rag-fix-llm-multi-agent-rag.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/continuous-testing/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/understand-complex-problems-better.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/author/denisa-lera/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/denisa-lera.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/rule-based-chatbots.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/nlp-enhanced-virtual-assistants.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/scenario-based-testing/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/deterministic-non-deterministic.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/dpd-chatbot.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/ai-agent-security/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/gm-dealer-chatbot-talked-into-selling-chevy-tahoe-for-$1.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/ai-chatbot-testing/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/air-canada-ordered-to-pay-customer-who-was-misled-by-airline's-chatbot.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/deciphering-fan-out-implicit-queries/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/deciphering-fan-out-implicit-queries.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/from-tracking-ai-to-behavioral-modeling/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/from-tracking-ai-to-behavioral-modeling.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/zero-query-overlaps.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/chatgpt-5-2-sees-brands-differently/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/gpt-5-2-sees-brands-differently.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/genezio-vs-peec/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-vs-peec.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/peec-static-prompts.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-conversation-details-1.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-conversation-details-2.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-fanout-queries.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/brand-mentions-in-chatgpt-gemini-claude/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/brand-mentions-in-chatgpt-gemini-claude.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/top-cited-domains-on-llms.webp</image:loc>
       </image:image>
   </url>
   <url>
     <loc>https://genezio.com/blog/ai-third-party-testing/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/genezio-my-test-agents-interface.webp</image:loc>
@@ -278,8 +242,8 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/how-to-set-up-chatbot/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/how-should-customer-service-teams-adapt-to-agentic-ai.webp</image:loc>
@@ -287,8 +251,8 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/best-ai-agent-ideas-for-your-business/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/google-support-agent.webp</image:loc>
@@ -302,38 +266,53 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/agent-evaluation/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/high-level-diagram-of-agentbench.webp</image:loc>
       </image:image>
   </url>
   <url>
+    <loc>https://genezio.com/blog/mastering-company-brand-presence/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/mastering-company-brand-presence-2026.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-actionable-insights-sentiment.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-brand-performance-overview.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/how-can-i-test-my-ai-agent/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/overall-experience-with-chatbots.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/microsoft-is-deleting-its-al-chatbots.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
     <loc>https://genezio.com/blog/2025-recap-2026-roadmap/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/genezio-2025-recap-2026-roadmap.webp</image:loc>
       </image:image>
   </url>
   <url>
-    <loc>https://genezio.com/blog/multilingual-customer-service-ai/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/online-shoppers-and-language-preferences.webp</image:loc>
-      </image:image>
-      <image:image>
-        <image:loc>https://genezio.com/images/configure-your-simulation-agents.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
     <loc>https://genezio.com/blog/prompt-injection-attack/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/ignore-previous-instructions-tweet.webp</image:loc>
@@ -341,35 +320,17 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/chatbot-testing-without-developers/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/salesforce-survey-top-reasons-customers-stopped-buying-from-a-brand-in-the-last-year.webp</image:loc>
       </image:image>
   </url>
   <url>
-    <loc>https://genezio.com/blog/bcr-success-story/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/bcr-success-story.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://genezio.com/blog/ads-chatgpt-ai-visibility/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/images/ads-chatgpt-ai-visibility.webp</image:loc>
-      </image:image>
-  </url>
-  <url>
     <loc>https://genezio.com/blog/guide-to-ai-visibility/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/1770615730901_image.webp</image:loc>
@@ -385,9 +346,96 @@
       </image:image>
   </url>
   <url>
+    <loc>https://genezio.com/blog/bcr-success-story/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/bcr-success-story.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/introducing-content-hub-smarter-citations/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-release-content-hub.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/content-hub-chat-interface.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/monitored-citations.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/automated-citations-categorization.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/recent-conversations.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/import-citations.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/ai-visibility-lifecycle.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/genezio-vs-semrush/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-vs-semrush.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-multi-turn-example.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/semrush-single-prompt-example.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-detailed-citation-analysis.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-my-citations-tracked-urls.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/semrush-citation-perception-overview.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-persona-profile-setup.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/5-best-ai-agents-in-2025/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/6-reasons-why-intercom-is-the-best-choice.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/forethought-scale-customer-support-with-advanced-agentic-ai.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/celonis-make-ai-work-for-your-enterprise.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/ads-chatgpt-ai-visibility/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/ads-chatgpt-ai-visibility.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
     <loc>https://genezio.com/blog/evals-for-ai-agents/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/chevy-tahoe-for-1.webp</image:loc>
@@ -395,8 +443,8 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/gen-z-trusts-ai-over-google/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/authors/denisa-lera.webp</image:loc>
@@ -407,8 +455,8 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/top-3-ai-monitoring-tools-in-2025/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/chatbots-are-limited-in-the-solutions-they-provide.webp</image:loc>
@@ -425,17 +473,29 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/manual-user-acceptance-testing-uat/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/ai-agent-for-cx-launch.webp</image:loc>
       </image:image>
   </url>
   <url>
+    <loc>https://genezio.com/blog/multilingual-customer-service-ai/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/images/online-shoppers-and-language-preferences.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/configure-your-simulation-agents.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
     <loc>https://genezio.com/blog/ai-benefits-in-customer-service/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/consumer-opinions-on-ai-agents.webp</image:loc>
@@ -445,21 +505,27 @@
       </image:image>
   </url>
   <url>
-    <loc>https://genezio.com/blog/brand-mentions-in-chatgpt-gemini-claude/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
-        <image:loc>https://genezio.com/images/brand-mentions-in-chatgpt-gemini-claude.webp</image:loc>
+        <image:loc>https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp</image:loc>
       </image:image>
       <image:image>
-        <image:loc>https://genezio.com/images/top-cited-domains-on-llms.webp</image:loc>
+        <image:loc>https://genezio.com/images/ai-platforms-interfaces.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/bcr-customer-success-story.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-brand-performance-overview.webp</image:loc>
       </image:image>
   </url>
   <url>
     <loc>https://genezio.com/blog/content-types-that-drive-llm-mentions/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/content-types-that-drive-llm-mentions.webp</image:loc>
@@ -467,8 +533,8 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/quality-monitoring-software/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/images/ai-adoption-in-customer-interactions.webp</image:loc>
@@ -476,8 +542,8 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/ai-agents-101-understanding-their-role-and-functionality/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
@@ -491,20 +557,17 @@
   </url>
   <url>
     <loc>https://genezio.com/blog/zero-query-overlaps/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
-      <image:image>
-        <image:loc>https://genezio.com/authors/bogdan-ripa.webp</image:loc>
-      </image:image>
       <image:image>
         <image:loc>https://genezio.com/images/zero-query-overlaps.webp</image:loc>
       </image:image>
   </url>
   <url>
     <loc>https://genezio.com/blog/author/horatiu-voicu/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
       <image:image>
         <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
