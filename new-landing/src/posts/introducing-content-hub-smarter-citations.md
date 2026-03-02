@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Content Hub, Smarter Citations & More"
-date: 2026-03-05
+date: 2026-03-02
 tags:
   - Release Notes
   - Content Hub
