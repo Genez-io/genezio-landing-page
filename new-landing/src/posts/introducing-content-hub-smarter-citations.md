@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Content Hub, Smarter Citations & More"
-date: 2026-03-05
+date: 2026-03-02
 tags:
   - Release Notes
   - Content Hub
@@ -46,7 +46,7 @@ Instead of guessing what might work, you start from:
 * The angles they expand into  
 * The sources they repeatedly trust
 
-The result?
+The result? 
 
 Content that is designed to:
 
