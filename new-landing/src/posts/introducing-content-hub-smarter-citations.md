@@ -46,7 +46,7 @@ Instead of guessing what might work, you start from:
 * The angles they expand into  
 * The sources they repeatedly trust
 
-The result?
+The result? 
 
 Content that is designed to:
 
