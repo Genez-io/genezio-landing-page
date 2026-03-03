@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
-
 import { useState, useEffect } from "react";
 const platforms = ["ChatGPT", "Perplexity", "Claude", "Gemini"];
 
@@ -79,6 +78,7 @@ export function GenezioHeroSection() {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
+
         {/* Floating particles in background */}
         <div className="absolute inset-0 overflow-hidden pb-20">
           {/* Purple/orange particles scattered */}

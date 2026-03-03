@@ -8,6 +8,7 @@ import { GenezioInsightsSection } from "@/polymet/components/genezio-insights-se
 import { GenezioEnterpriseSection } from "@/polymet/components/genezio-enterprise-section";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import { GenezioTestimonialSection } from "../components/genezio-testimonial-section";
+import { IndustryLeaderboardBanner } from "@/polymet/components/industry-leaderboard-banner";
 
 export function GenezioLanding() {
   return (
@@ -22,6 +23,8 @@ export function GenezioLanding() {
         </Helmet>
       )}
       <div className="min-h-screen bg-[#050506]">
+        <IndustryLeaderboardBanner />
+
         <GenezioHeroSection />
 
         <GenezioTrustSection />
