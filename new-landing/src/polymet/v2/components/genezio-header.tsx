@@ -8,7 +8,7 @@ export function GenezioHeaderV2() {
       <div className="max-w-[1600px] mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/landing-v2" className="flex items-center gap-2 group">
+          <Link to="/ai-search-optimization-tool/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center shadow-lg">
               <svg
                 viewBox="0 0 24 24"
