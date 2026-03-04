@@ -251,7 +251,7 @@ export function GenezioAgencyPlans() {
               </div>
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">
-                  AI models (LLM)
+                   Answer Engines tracked
                   <div className="text-xs text-white/50 mt-1">
                     e.g., ChatGPT, Claude, Gemini, Perplexity, Grok
                   </div>

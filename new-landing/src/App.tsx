@@ -18,6 +18,7 @@ import { AboutGenezio } from "./polymet/pages/about-genezio";
 import "./index.css";
 import BlogAuthor from "./polymet/pages/blog-author";
 import { Agencies } from "./polymet/pages/agencies";
+import { IndustryLeaderboards } from "./polymet/pages/industry-leaderboards";
 
 export default function GenezioApp() {
   return (
@@ -162,6 +163,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <Agencies />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/industry-leaderboards"
+        element={
+          <GenezioLayout>
+            <IndustryLeaderboards />
           </GenezioLayout>
         }
       />
