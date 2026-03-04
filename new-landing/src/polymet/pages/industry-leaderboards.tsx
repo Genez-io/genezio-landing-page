@@ -61,7 +61,7 @@ export function IndustryLeaderboards() {
         "Track AI visibility rankings for UK fast-fashion brands. See which retailers are capturing AI-driven shopping recommendations.",
       topBrands: ["Zara", "H&M", "Primark", "ASOS", "Boohoo"],
       gradient: "from-gray-700 to-gray-600",
-      url: "https://app.genezio.ai/brand-report/-19/Healthcare%20Providers%20&%20Clinics?demo=account",
+      url: "https://app.genezio.ai/brand-report/-64/Fast%20Fashion?demo=account",
     },
     {
       id: "banking",
