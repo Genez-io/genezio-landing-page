@@ -60,6 +60,7 @@ const routes = [
   "/blog",
   "/agencies",
   "/industry-leaderboards",
+  "/ai-search-optimization-tool/",
 ];
 
 // Dynamically add blog post routes

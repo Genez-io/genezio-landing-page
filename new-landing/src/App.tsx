@@ -19,6 +19,8 @@ import "./index.css";
 import BlogAuthor from "./polymet/pages/blog-author";
 import { Agencies } from "./polymet/pages/agencies";
 import { IndustryLeaderboards } from "./polymet/pages/industry-leaderboards";
+import { GenezioLandingV2 } from "@/polymet/v2/pages/genezio-landing";
+import { GenezioLayoutV2 } from "@/polymet/v2/layouts/genezio-layout";
 
 export default function GenezioApp() {
   return (
@@ -29,6 +31,15 @@ export default function GenezioApp() {
           <GenezioLayout>
             <GenezioLanding />
           </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/ai-search-optimization-tool/"
+        element={
+          <GenezioLayoutV2>
+            <GenezioLandingV2 />
+          </GenezioLayoutV2>
         }
       />
 
