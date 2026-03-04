@@ -13,10 +13,10 @@ export function GenezioPricingHero({
   const brandPlans = [
     {
       name: "Starter",
-      price: "€199",
+      price: "€99",
       description: "For teams exploring AI brand visibility",
       features: [
-        "2 AI models monitored",
+        "2 Answer Engines tracked",
         "50 scenarios",
         "Daily AI visibility insights",
         "Data retention: 1 month",
@@ -30,7 +30,7 @@ export function GenezioPricingHero({
       price: "€299",
       description: "For marketing teams optimizing AI presence",
       features: [
-        "4 AI models monitored",
+        "4 Answer Engines tracked",
         "50 scenarios",
         "Multi-turn conversations",
         "Daily AI visibility insights",
@@ -46,7 +46,7 @@ export function GenezioPricingHero({
       price: "Custom",
       description: "For multi-market brands",
       features: [
-        "10 AI models monitored",
+        "10 Answer Engines tracked",
         "Custom AI conversations tracked",
         "Daily AI visibility insights",
         "AI content generation custom",

@@ -7,7 +7,7 @@ export function GenezioPricingComparison() {
       title: "Coverage & scale",
       rows: [
         { feature: "Brands", starter: "1", growth: "1", enterprise: "Multiple" },
-        { feature: "AI models (LLMs)", starter: "2", growth: "4", enterprise: "10" },
+        { feature: "Answer Engines tracked", starter: "ChatGPT, Google AI Overviews", growth: "ChatGPT, Perplexity, Google AI Overviews, Google Gemini", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"  },
         { feature: "Languages / brand", starter: "1", growth: "2", enterprise: "All" },
         { feature: "Locations / brand", starter: "1", growth: "1", enterprise: "Custom" },
         { feature: "Personas / brand", starter: "1", growth: "2", enterprise: "Custom" },
@@ -64,6 +64,24 @@ export function GenezioPricingComparison() {
     if (value === "–") {
       return <span className="text-white/20">–</span>;
     }
+
+    // Render long, comma-separated lists (like Answer Engines) as a vertical, centered list
+    if (value.includes(",")) {
+      const items = value.split(",").map((item) => item.trim());
+      return (
+        <div className="flex flex-col items-center justify-center gap-1 max-w-xs text-center">
+          {items.map((item, index) => (
+            <span
+              key={index}
+              className="text-xs leading-tight text-white/70"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      );
+    }
+
     return (
       <div className="flex flex-col items-center gap-1">
         <span className="text-white/60 font-medium">{value}</span>
@@ -100,7 +118,7 @@ export function GenezioPricingComparison() {
                   <div className="text-center">
                     <div className="text-sm font-medium text-white/60 mb-2">Starter</div>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-3xl font-bold text-white">€199</span>
+                      <span className="text-3xl font-bold text-white">€99</span>
                       <span className="text-sm text-white/40 ml-1">/month</span>
                     </div>
                   </div>
@@ -221,7 +239,7 @@ export function GenezioPricingComparison() {
                 </div>
                 <div className="mb-1">
                   <span className="text-3xl font-bold text-white">
-                    {plan === "Starter" ? "€199" : plan === "Growth" ? "€299" : "Custom"}
+                    {plan === "Starter" ? "€99" : plan === "Growth" ? "€299" : "Custom"}
                   </span>
                   {plan !== "Enterprise" && <span className="text-sm text-white/40 ml-1">/month</span>}
                 </div>
