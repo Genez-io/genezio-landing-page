@@ -8,21 +8,12 @@ export function GenezioHeaderV2() {
       <div className="max-w-[1600px] mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/ai-search-optimization-tool/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center shadow-lg">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="w-5 h-5"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 4h7v7H4V4zm0 9h7v7H4v-7zm9-9h7v7h-7V4zm0 9h7v7h-7v-7z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-foreground">genezio</span>
+          <Link to="/ai-search-optimization-tool/" className="flex items-center group">
+            <img
+              src="https://genezio.com/images/logo-dark.svg"
+              alt="genezio"
+              className="h-8"
+            />
           </Link>
 
           {/* Action buttons */}
