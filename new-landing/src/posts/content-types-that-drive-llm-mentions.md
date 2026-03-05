@@ -123,7 +123,7 @@ LLM visibility is heavily influenced by how frequently the brand appears in exte
 ### Case study: UK Universities
 Oxford, Manchester, Buckingham, Cambridge, and Warwick consistently surfaced because they had strong citation density, appearance across authoritative sources, and recurring mentions in rankings. In AI discovery, **presence creates presence**: brands with more external footprint become more visible in model outputs.
 
-## Conclusion: The 6 content types that shape LLM recommendations the most
+## Conclusion: The 6 Types of Content Cited by LLMs
 
 * High-authority informational sources  
 * Rankings and structured comparative content
