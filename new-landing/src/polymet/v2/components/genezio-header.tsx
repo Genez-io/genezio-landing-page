@@ -10,9 +10,14 @@ export function GenezioHeaderV2() {
           {/* Logo */}
           <Link to="/ai-search-optimization-tool/" className="flex items-center group">
             <img
+              src="https://genezio.com/images/icon-dark.svg"
+              alt="genezio"
+              className="h-8 block sm:hidden"
+            />
+            <img
               src="https://genezio.com/images/logo-dark.svg"
               alt="genezio"
-              className="h-8"
+              className="h-8 hidden sm:block"
             />
           </Link>
 
