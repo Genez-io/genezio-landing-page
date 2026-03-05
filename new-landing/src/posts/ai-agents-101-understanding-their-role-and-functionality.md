@@ -107,9 +107,9 @@ To see how this works in practice, let’s apply the PEAS framework to an e-comm
 
 Understanding this operational structure clarifies how different **AI intelligent agents** function in their specific domains.
 
-## The Anatomy of Modern AI Agents
+## AI Agent Capabilities
 
-Modern **AI agents** integrate several key components that enable sophisticated behavior and adaptability.
+Modern **AI agents** integrate several capabilities that enable sophisticated behavior and adaptability.
 
 ### Foundation Models
 

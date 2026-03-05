@@ -53,6 +53,7 @@ export function GenezioPricingHero({
         "Unlimited data retention",
         "Dedicated onboarding & Account Manager",
         "Dedicated Slack support",
+        "Chat with Your Data",
         "SSO / SAML + SOC2 compliance",
       ],
 
