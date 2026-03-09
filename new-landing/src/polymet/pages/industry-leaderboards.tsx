@@ -10,8 +10,30 @@ import {
   ArrowRightIcon,
 } from "lucide-react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet";
+import { useEffect } from "react";
+
+const PAGE_TITLE = "AI Visibility Industry Leaderboards for 5 UK industries | Genezio";
+const PAGE_DESCRIPTION = "See how top competitors perform in AI visibility across 5 UK industries. Discover which brands dominate ChatGPT, Perplexity, and Google AI Overviews.";
+
+function setMeta(attr: "name" | "property", key: string, content: string) {
+  const el =
+    document.querySelector(`meta[${attr}="${key}"]`) ||
+    document.createElement("meta");
+  el.setAttribute(attr, key);
+  el.setAttribute("content", content);
+  if (!el.parentNode) document.head.appendChild(el);
+}
 
 export function IndustryLeaderboards() {
+  useEffect(() => {
+    document.title = PAGE_TITLE;
+    setMeta("name", "description", PAGE_DESCRIPTION);
+    setMeta("property", "og:title", PAGE_TITLE);
+    setMeta("property", "og:description", PAGE_DESCRIPTION);
+    setMeta("name", "twitter:title", PAGE_TITLE);
+    setMeta("name", "twitter:description", PAGE_DESCRIPTION);
+  }, []);
   const industries = [
     {
       id: "retail-supermarkets",
@@ -78,6 +100,14 @@ export function IndustryLeaderboards() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
+      <Helmet>
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESCRIPTION} />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-8 md:px-12 lg:px-20 relative overflow-hidden">
         {/* Background gradient effects */}
