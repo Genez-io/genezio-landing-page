@@ -1,5 +1,5 @@
 ---
-title: "Why Manual User Acceptance Testing, or UAT, Slows Down Chatbot Launches"
+title: "Why Manual User Acceptance Testing (UAT) Slows Down Launches"
 date: 2025-04-24
 tags:
   - AI

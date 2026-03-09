@@ -1,5 +1,5 @@
 ---
-title: "Retrieval-Augmented Generation (RAG) Is Fixing LLMs—But Is It Enough?"
+title: "Retrieval-Augmented Generation for LLMs: How and Why It Matters"
 date: 2025-03-25
 tags:
   - AI

@@ -1,5 +1,5 @@
 ---
-title: "Common AI Agent Mistakes: How Intelligent Agents Fail and What You Can Do"
+title: "AI Agent Mistakes: How Intelligent Agents Fail and What To Do"
 date: 2025-03-10
 tags:
   - AI

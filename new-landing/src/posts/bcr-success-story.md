@@ -1,5 +1,5 @@
 ---
-title: "From Traditional SEO to GEO: How a Leading Erste Group Bank Dominated AI Conversations using Genezio"
+title: "How a Leading Erste Group Bank Dominated AI Conversations"
 date: 2025-12-22
 tags:
   - GEO

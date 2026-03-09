@@ -1,5 +1,5 @@
 ---
-title: "Building the Future of Conversational Optimization: 2025 Review & 2026 Outlook"
+title: "Building the Future of Conversational Optimization: 2026 Outlook"
 date: 2026-01-05
 tags:
   - Company Update
