@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/from-tracking-ai-to-behavioral-modeling.webp
 preview: Move from basic AI tracking to advanced behavioral modeling. Discover how Genezio decodes LLM reasoning to ensure your brand gets recommended, not just mentioned.
 # meta data start
-description: Move from basic AI tracking to advanced behavioral modeling. Discover how Genezio decodes LLM reasoning to ensure your brand gets recommended, not just mentioned.
+description: Move from basic AI tracking to advanced behavioral modeling. Discover how Genezio decodes LLM reasoning to ensure your brand gets recommended.
 meta_og_url: "https://genezio.com/blog/from-tracking-ai-to-behavioral-modeling/"
 
 meta_og_image: "https://genezio.com/images/from-tracking-ai-to-behavioral-modeling.webp"

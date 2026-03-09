@@ -9,7 +9,7 @@ linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/continuous-testing-for-ai-chatbots.webp
 preview: Instead of testing once during development and hoping for the best, you set up a system that keeps checking how the chatbot performs as users interact with it and as updates roll in.
 # meta data start
-description: Learn how continuous testing with Genezio helps teams monitor chatbot behavior and fix issues fast.
+description: Learn how Genezio uses continuous testing to monitor AI chatbots, catch regressions early, and prevent risky responses before they reach users.
 meta_og_url: "https://genezio.com/blog/continuous-testing/"
 
 meta_og_image: "https://genezio.com/images/continuous-testing-for-ai-chatbots.webp"

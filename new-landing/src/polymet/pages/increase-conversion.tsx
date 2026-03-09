@@ -13,11 +13,11 @@ export function IncreaseConversion() {
     <>
       {import.meta.env.SSR && (
         <Helmet>
-        <title>Increase Conversion from AI Conversations | Genezio</title>
-        <meta
-          name="description"
-          content="Turn AI-powered conversations into revenue. Genezio analyzes multi-turn chats, surfaces drop-off points, and helps you optimize conversational funnels for higher conversion."
-        />
+          <title>Increase Conversion from AI Conversations | Genezio</title>
+          <meta
+            name="description"
+            content="Turn AI-powered conversations into revenue. Genezio analyzes multi-turn chats, surfaces drop-off points, and helps you optimize conversational funnels."
+          />
         </Helmet>
       )}
       <div className="min-h-screen bg-[#050506]">

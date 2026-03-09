@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/voiqu/
 thumbnail: /images/honda-ai-visibility-audit-2026.webp
 preview: We audited Honda.com across Genezio, Profound, Peec AI, Semrush, Writesonic, and Otterly.AI. See how different tools perceive the same brand in the age of AI.
 # meta data start
-description: We audited Honda.com across Genezio, Profound, Peec AI, Semrush, Writesonic, and Otterly.AI to compare the leading AI Visibility platforms of 2026. Read the full analysis.
+description: We audited Honda.com across Genezio, Profound, Peec AI, Semrush, Writesonic, and Otterly.AI to compare the leading AI Visibility platforms of 2026.
 meta_og_url: "https://genezio.com/blog/honda-ai-visibility-audit-2026/"
 
 meta_og_image: "https://genezio.com/images/honda-ai-visibility-audit-2026.webp"

@@ -13,7 +13,7 @@ linkedIn: https://www.linkedin.com/in/bogdanripa/
 thumbnail: /images/genezio-release-content-hub.webp
 preview: The latest Genezio release turns AI Visibility from something you observe into something you actively improve. Introducing the Content Hub, Monitored Citations, and more.
 # meta data start
-description: The latest Genezio release turns AI Visibility from something you observe into something you actively improve. Introducing the Content Hub, Monitored Citations, and more.
+description: The latest Genezio release turns AI Visibility into something you actively improve. Introducing the Content Hub, Monitored Citations, and more.
 meta_og_url: "https://genezio.com/blog/introducing-content-hub-smarter-citations/"
 
 meta_og_image: "https://genezio.com/images/genezio-release-content-hub.webp"

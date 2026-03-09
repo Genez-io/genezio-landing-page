@@ -1,5 +1,5 @@
 ---
-title: "What Type of Content Influences LLMs the Most When Deciding Which Brands to Mention?"
+title: "What Type of Content Influences LLMs When Deciding the Mentions?"
 date: 2026-01-17
 tags:
   - Brand Mentions
