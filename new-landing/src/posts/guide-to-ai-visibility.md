@@ -226,7 +226,7 @@ To refine your AI visibility strategy, validate insights against real-world perf
 
 ## Recommended
 
-- [AI Competitive Analysis | Boost Brand Presence | Genezio](https://genezio.com/glossary/ai-competitive-analysis)
-- [AI Visibility: Measure & Improve LLM Brand Presence](https://genezio.com/glossary/ai-visibility)
-- [AI Brand Perception: Understand Your Brand in LLMs](https://genezio.com/glossary/ai-brand-perception)
-- [What ChatGPT Ads mean for brand visibility in AI conversations](https://genezio.com/blog/ads-chatgpt-ai-visibility)
+- [AI Competitive Analysis | Boost Brand Presence | Genezio](https://genezio.com/glossary/ai-competitive-analysis/)
+- [AI Visibility: Measure & Improve LLM Brand Presence](https://genezio.com/glossary/ai-visibility/)
+- [AI Brand Perception: Understand Your Brand in LLMs](https://genezio.com/glossary/ai-brand-perception/)
+- [What ChatGPT Ads mean for brand visibility in AI conversations](https://genezio.com/blog/ads-chatgpt-ai-visibility/)

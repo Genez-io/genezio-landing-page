@@ -117,7 +117,7 @@ function BlogAuthor() {
         <div className="px-6 pt-8">
           <div className="max-w-7xl mx-auto">
             <Link
-              to="/blog"
+              to="/blog/"
               className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
             >
               <ArrowLeftIcon className="w-4 h-4" />
