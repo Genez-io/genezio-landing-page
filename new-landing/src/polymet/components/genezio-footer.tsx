@@ -23,7 +23,7 @@ export function GenezioFooter() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="/conversational-brand-presence"
+                  href="/conversational-brand-presence/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Increase Lead Generation
@@ -31,7 +31,7 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
-                  href="/increase-conversion"
+                  href="/increase-conversion/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Increase Conversion
@@ -49,7 +49,7 @@ export function GenezioFooter() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="/terms-and-conditions"
+                  href="/terms-and-conditions/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Terms And Conditions
@@ -57,7 +57,7 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
-                  href="/support-terms"
+                  href="/support-terms/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Support Terms
@@ -65,7 +65,7 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
-                  href="/privacy-policy"
+                  href="/privacy-policy/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Privacy Policy
@@ -73,7 +73,7 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
-                  href="/data-processing-agreement"
+                  href="/data-processing-agreement/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Data Processing Agreement

@@ -333,7 +333,7 @@ export function Glossary() {
                       return (
                         <a
                           key={index}
-                          href={`/glossary/${slug}`}
+                          href={`/glossary/${slug}/`}
                           className="block group bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-white/10 transition-all cursor-pointer"
                         >
                           <div className="flex items-start justify-between gap-4 mb-3">

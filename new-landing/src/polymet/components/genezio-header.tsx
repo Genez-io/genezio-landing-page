@@ -100,76 +100,76 @@ export function GenezioHeader() {
                         For Teams
                       </div>
                       <div className="space-y-1">
-                      {/* Increase Lead Generation */}
-                      <Link
-                        to="/conversational-brand-presence"
-                        onClick={() => setPlatformMenuOpen(false)}
-                        className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                      >
-                        <div className="flex items-start gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                            <TrendingUpIcon className="w-5 h-5 text-emerald-400" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
-                              Increase Lead Generation
+                        {/* Increase Lead Generation */}
+                        <Link
+                          to="/conversational-brand-presence/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                              <TrendingUpIcon className="w-5 h-5 text-emerald-400" />
                             </div>
-                            <div className="text-white/60 text-xs leading-relaxed">
-                              Conversational Brand Presence
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* Increase Conversion */}
-                      <Link
-                        to="/increase-conversion"
-                        onClick={() => setPlatformMenuOpen(false)}
-                        className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                      >
-                        <div className="flex items-start gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                            <TargetIcon className="w-5 h-5 text-blue-400" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
-                              Increase Conversion
-                            </div>
-                            <div className="text-white/60 text-xs leading-relaxed">
-                              Marketing Agent Performance
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* Increase In-Chat Shopping */}
-                      <Link
-                        // to="/increase-in-chat-shopping"
-                        to="#"
-                        onClick={() => setPlatformMenuOpen(false)}
-                        className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                      >
-                        <div className="flex items-start gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                            <ShoppingBagIcon className="w-5 h-5 text-purple-400" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                              <div className="text-white font-semibold text-sm group-hover:text-purple-400 transition-colors">
-                                Increase In-Chat Shopping
+                            <div className="flex-1 min-w-0">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
+                                Increase Lead Generation
                               </div>
-                              <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
-                                COMING SOON
-                              </span>
-                            </div>
-                            <div className="text-white/60 text-xs leading-relaxed">
-                              E-commerce Performance
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                Conversational Brand Presence
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </Link>
+                        </Link>
+
+                        {/* Increase Conversion */}
+                        <Link
+                          to="/increase-conversion/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                              <TargetIcon className="w-5 h-5 text-blue-400" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
+                                Increase Conversion
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                Marketing Agent Performance
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+
+                        {/* Increase In-Chat Shopping */}
+                        <Link
+                          // to="/increase-in-chat-shopping/"
+                          to="#"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
+                              <ShoppingBagIcon className="w-5 h-5 text-purple-400" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                                <div className="text-white font-semibold text-sm group-hover:text-purple-400 transition-colors">
+                                  Increase In-Chat Shopping
+                                </div>
+                                <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
+                                  COMING SOON
+                                </span>
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                E-commerce Performance
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
 
                     {/* Partners column */}
                     <div className="md:border-l md:border-white/10 md:pl-6">
@@ -177,7 +177,7 @@ export function GenezioHeader() {
                         Partners
                       </div>
                       <Link
-                        to="/agencies"
+                        to="/agencies/"
                         onClick={() => setPlatformMenuOpen(false)}
                         className="group block p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 hover:border-blue-500/20 transition-all"
                       >
@@ -268,7 +268,7 @@ export function GenezioHeader() {
                   <div className="space-y-1">
                     {/* Glossary */}
                     <a
-                      href="/glossary"
+                      href="/glossary/"
                       onClick={() => setResourcesMenuOpen(false)}
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
@@ -316,7 +316,7 @@ export function GenezioHeader() {
           </div>
 
           <a
-            href="/pricing"
+            href="/pricing/"
             className="text-white/80 hover:text-white transition-colors text-sm font-medium"
           >
             Pricing
@@ -325,7 +325,7 @@ export function GenezioHeader() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-        <Button
+          <Button
             variant="outline"
             className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
