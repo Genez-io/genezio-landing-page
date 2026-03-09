@@ -365,7 +365,7 @@ export function GenezioHeader() {
                 <div className="pl-4 space-y-3 border-l-2 border-white/10">
                   <div className="space-y-2">
                     <a
-                      href="/conversational-brand-presence"
+                      href="/conversational-brand-presence/"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
                     >
@@ -377,7 +377,7 @@ export function GenezioHeader() {
                       </div>
                     </a>
                     <a
-                      href="/increase-conversion"
+                      href="/increase-conversion/"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
                     >
@@ -416,7 +416,7 @@ export function GenezioHeader() {
                 </div>
                 <div className="pl-4 space-y-3 border-l-2 border-white/10">
                   <a
-                    href="/agencies"
+                    href="/agencies/"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-2"
                   >
@@ -439,7 +439,7 @@ export function GenezioHeader() {
               <div className="pl-4 space-y-3 border-l-2 border-white/10">
                 <div className="space-y-2">
                   <a
-                    href="/glossary"
+                    href="/glossary/"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-2"
                   >
@@ -467,7 +467,7 @@ export function GenezioHeader() {
             </div>
 
             <a
-              href="/pricing"
+              href="/pricing/"
               onClick={() => setMobileMenuOpen(false)}
               className="text-white/80 hover:text-white transition-colors text-sm font-medium py-2"
             >

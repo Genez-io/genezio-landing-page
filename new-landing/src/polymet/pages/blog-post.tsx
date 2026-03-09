@@ -26,7 +26,7 @@ export function BlogPost() {
       <div className="min-h-screen bg-[#050506] flex items-center justify-center text-white">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post not found</h1>
-          <a href="/blog" className="text-blue-400 hover:underline">
+          <a href="/blog/" className="text-blue-400 hover:underline">
             Back to Blog
           </a>
         </div>
@@ -58,24 +58,24 @@ export function BlogPost() {
     <div className="min-h-screen bg-[#050506]">
       {import.meta.env.SSR && (
         <Helmet>
-        <title>{post.title}</title>
-        <meta name="description" content={post.description || post.excerpt} />
-        <meta property="og:title" content={post.title} />
-        <meta
-          property="og:description"
-          content={post.description || post.excerpt}
-        />
-        {post.metaOgUrl && <meta property="og:url" content={post.metaOgUrl} />}
-        {post.metaOgImage && (
-          <meta property="og:image" content={post.metaOgImage} />
-        )}
+          <title>{post.title}</title>
+          <meta name="description" content={post.description || post.excerpt} />
+          <meta property="og:title" content={post.title} />
+          <meta
+            property="og:description"
+            content={post.description || post.excerpt}
+          />
+          {post.metaOgUrl && <meta property="og:url" content={post.metaOgUrl} />}
+          {post.metaOgImage && (
+            <meta property="og:image" content={post.metaOgImage} />
+          )}
         </Helmet>
       )}
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
         <div className="max-w-4xl mx-auto">
           <a
-            href="/blog"
+            href="/blog/"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors group"
           >
             <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -140,7 +140,7 @@ export function BlogPost() {
               <div>
                 <div className="text-sm font-medium text-white">
                   <a
-                    href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}
+                    href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}/`}
                   >
                     {post.author}
                   </a>
@@ -333,7 +333,7 @@ export function BlogPost() {
               <div>
                 <div className="text-lg font-semibold text-white mb-1">
                   <a
-                    href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}`}
+                    href={`/blog/author/${post.author?.toLowerCase()?.split(" ")?.join("-")}/`}
                   >
                     {post.author}
                   </a>
@@ -355,7 +355,7 @@ export function BlogPost() {
                 {relatedPosts.map((relatedPost) => (
                   <a
                     key={relatedPost.id}
-                    href={`/blog/${relatedPost.id}`}
+                    href={`/blog/${relatedPost.id}/`}
                     className="group bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all"
                   >
                     <div className="text-xs font-medium text-blue-400 mb-3">
@@ -388,13 +388,13 @@ export function BlogPost() {
                 across AI platforms and conversational search engines.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/pricing">
+                <a href="/pricing/">
                   <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold px-8 py-6 rounded-xl text-base">
                     Get Started
                     <ArrowLeftIcon className="w-5 h-5 ml-2 rotate-180" />
                   </Button>
                 </a>
-                <a href="/conversational-brand-presence">
+                <a href="/conversational-brand-presence/">
                   <Button
                     variant="outline"
                     className="bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/20 font-semibold px-8 py-6 rounded-xl text-base"

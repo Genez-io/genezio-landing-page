@@ -894,7 +894,7 @@ export function GlossaryTerm() {
           <p className="text-white/60 mb-8">
             The glossary term you're looking for doesn't exist.
           </p>
-          <a href="/glossary">
+          <a href="/glossary/">
             <Button className="bg-blue-600 hover:bg-blue-700">
               <ArrowLeftIcon className="w-4 h-4 mr-2" />
               Back to Glossary
@@ -913,15 +913,15 @@ export function GlossaryTerm() {
     <div className="min-h-screen bg-[#050506]">
       {import.meta.env.SSR && (
         <Helmet>
-        <title>{term.title}</title>
-        <meta name="description" content={term.metaDescription} />
+          <title>{term.title}</title>
+          <meta name="description" content={term.metaDescription} />
         </Helmet>
       )}
       {/* Header */}
       <div className="border-b border-white/5">
         <div className="max-w-4xl mx-auto px-6 py-6">
           <a
-            href="/glossary"
+            href="/glossary/"
             className="inline-flex items-center gap-3 text-white hover:text-blue-400 transition-colors group"
           >
             <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-blue-500/10 border border-white/10 group-hover:border-blue-500/30 flex items-center justify-center transition-all">
@@ -1034,7 +1034,7 @@ export function GlossaryTerm() {
                 return (
                   <a
                     key={index}
-                    href={`/glossary/${relatedSlug}`}
+                    href={`/glossary/${relatedSlug}/`}
                     className="group bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-white/10 transition-all"
                   >
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
@@ -1061,7 +1061,7 @@ export function GlossaryTerm() {
           </p>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
-            onClick={() => (window.location.href = "/pricing")}
+            onClick={() => (window.location.href = "/pricing/")}
           >
             Get Started
           </Button>

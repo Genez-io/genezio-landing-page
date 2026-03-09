@@ -123,7 +123,7 @@ export function LeadGenActionableInsights() {
                 actionable recommendations to increase your lead generation.
               </p>
             </div>
-            <a href="/pricing">
+            <a href="/pricing/">
               <Button className="w-full lg:w-auto bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25 flex-shrink-0">
                 <SparklesIcon className="w-5 h-5 mr-2" />
                 Get my Insights
