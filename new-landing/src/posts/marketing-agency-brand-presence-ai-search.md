@@ -31,7 +31,7 @@ These AI interfaces synthesize information from vast data repositories and prese
 
 ## The New Frontier: Why AI Brand Presence Matters for Marketing Agencies
 
-Traditional SEO tools track keyword rankings and website clicks, but they do not capture how brands appear inside AI-generated answers. This shift means that brands can be highly visible in organic search yet invisible or misrepresented within {{< external-link link="https://genezio.com/conversational-brand-presence" >}}AI conversations{{< /external-link >}}. As more users rely on AI for discovery and decision-making, marketing agencies must expand their visibility strategies beyond blue-link rankings.
+Traditional SEO tools track keyword rankings and website clicks, but they do not capture how brands appear inside AI-generated answers. This shift means that brands can be highly visible in organic search yet invisible or misrepresented within {{< external-link link="https://genezio.com/conversational-brand-presence/" >}}AI conversations{{< /external-link >}}. As more users rely on AI for discovery and decision-making, marketing agencies must expand their visibility strategies beyond blue-link rankings.
 
 AI brand presence refers to how frequently, prominently, and accurately a brand is mentioned, cited, or linked within AI-generated answers. It directly influences customer trust and buying decisions as AI increasingly acts as the initial brand touchpoint.
 

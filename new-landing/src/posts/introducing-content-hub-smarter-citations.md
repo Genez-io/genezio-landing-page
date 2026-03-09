@@ -164,7 +164,7 @@ Now, you can:
 4. Measure citation impact  
 5. Refine continuously
 
-{{< external-link link="https://www.genezio.com" >}}Genezio{{< /external-link >}} now supports the full AI Visibility lifecycle:
+{{< external-link link="https://genezio.com" >}}Genezio{{< /external-link >}} now supports the full AI Visibility lifecycle:
 
 ![Full AI Visibility lifecycle diagram](/images/ai-visibility-lifecycle.webp)
 
