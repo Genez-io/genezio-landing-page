@@ -15,11 +15,11 @@ export function GenezioLanding() {
     <>
       {import.meta.env.SSR && (
         <Helmet>
-        <title>Brand Visibility in AI Conversations | Genezio</title>
-        <meta
-          name="description"
-          content="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across ChatGPT, Perplexity, Gemini, and more."
-        />
+          <title>Brand Visibility in AI Conversations | Genezio</title>
+          <meta
+            name="description"
+            content="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across LLMs."
+          />
         </Helmet>
       )}
       <div className="min-h-screen bg-[#050506]">
