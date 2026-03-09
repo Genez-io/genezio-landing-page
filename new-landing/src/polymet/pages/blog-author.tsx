@@ -192,7 +192,7 @@ function BlogAuthor() {
                   return (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.id}`}
+                      to={`/blog/${post.id}/`}
                       className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all overflow-hidden"
                     >
                       {/* Gradient overlay */}
