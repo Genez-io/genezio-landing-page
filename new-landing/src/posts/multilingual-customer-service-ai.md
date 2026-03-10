@@ -1,5 +1,5 @@
 ---
-title: "Multilingual Customer Service: Cost of Multilingual Misfires in AI Customer Service"
+title: "Multilingual Customer Service: Cost of Misfires in AI CS"
 date: 2025-06-30
 tags:
   - AI

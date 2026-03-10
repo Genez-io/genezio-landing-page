@@ -34,6 +34,7 @@ Finding clarity among rapidly shifting digital conversations can feel challengin
 - [Step 3: Simulate AI Interactions With Relevant Scenarios](#step-3-simulate-ai-interactions-with-relevant-scenarios)
 - [Step 4: Measure And Interpret AI Brand Visibility Results](#step-4-measure-and-interpret-ai-brand-visibility-results)
 - [Step 5: Refine Strategy Based On Verified Insights](#step-5-refine-strategy-based-on-verified-insights)
+- [Brand Visibility Analysis Methodology](#brand-visibility-analysis-methodology)
 
 ## Quick Summary
 
@@ -176,6 +177,23 @@ The following table summarises how each stage of the AI brand visibility process
 | Measure & Interpret Results | Data collection and analysis | Informs actionable strategic decisions |
 | Refine Strategy | Continuous improvement | Ensures sustained competitive advantage |
 
+## Brand Visibility Analysis Methodology
+
+Now that you understand the step-by-step process, it is important to contextualise these actions within a broader, continuous methodology. This framework shifts traditional SEO into the realm of Large Language Models (LLMs), using a systematic approach to extract and quantify how AI perceives your brand across all the stages we just covered.
+
+A comprehensive AI visibility methodology relies on moving beyond simple keyword tracking to evaluate complex conversational outputs. Key pillars include:
+
+**Unbiased Prompt Engineering:** Crafting neutral, scenario-based prompts to test organic AI responses without leading the model.
+
+**Multi-Model Cross-Testing:** Analysing your presence across major LLMs (such as ChatGPT, Gemini, and Claude) to capture a holistic market view.
+
+**Contextual Sentiment Scoring:** Evaluating not just if your brand is mentioned, but whether it is framed positively, positioned as a primary recommendation, or simply listed as an alternative.
+
+**AI Share of Voice (SOV):** Measuring the frequency and prominence of your brand's mentions against direct competitors within specific conversations.
+
+**Example in Action:**
+If you represent a retail bank, your methodology might involve prompting three different LLMs with the unbiased query: "Which digital banks offer the best travel rewards and zero foreign transaction fees?" You would then record the data to see if your brand is recommended first, evaluate the sentiment of the AI's description (e.g., is your mobile app praised for ease of use?), and calculate how often you appear compared to competitors like Monzo, Revolut, or Chase.
+
 ## Take Control of Your Brand's AI Visibility Today
 
 The challenge of understanding how AI platforms perceive and represent your brand is more critical than ever. This article highlights the importance of defining **precise brand objectives**, applying **geo-targeted analysis**, and **simulating realistic AI interactions** to reveal potential communication gaps. If you aim to transform these complex processes into actionable insights that enhance your brand presence across conversational AI, Genezio provides the perfect solution.
@@ -208,7 +226,7 @@ To refine your AI visibility strategy, validate insights against real-world perf
 
 ## Recommended
 
-- [AI Competitive Analysis | Boost Brand Presence | Genezio](https://genezio.com/glossary/ai-competitive-analysis)
-- [AI Visibility: Measure & Improve LLM Brand Presence](https://genezio.com/glossary/ai-visibility)
-- [AI Brand Perception: Understand Your Brand in LLMs](https://genezio.com/glossary/ai-brand-perception)
-- [What ChatGPT Ads mean for brand visibility in AI conversations](https://genezio.com/blog/ads-chatgpt-ai-visibility)
+- [AI Competitive Analysis | Boost Brand Presence | Genezio](https://genezio.com/glossary/ai-competitive-analysis/)
+- [AI Visibility: Measure & Improve LLM Brand Presence](https://genezio.com/glossary/ai-visibility/)
+- [AI Brand Perception: Understand Your Brand in LLMs](https://genezio.com/glossary/ai-brand-perception/)
+- [What ChatGPT Ads mean for brand visibility in AI conversations](https://genezio.com/blog/ads-chatgpt-ai-visibility/)

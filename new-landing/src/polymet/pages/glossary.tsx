@@ -260,11 +260,11 @@ export function Glossary() {
     <div className="min-h-screen bg-[#050506]">
       {import.meta.env.SSR && (
         <Helmet>
-        <title>AI Search & Visibility Glossary | Genezio</title>
-        <meta
-          name="description"
-          content="Explore Genezio’s AI Search & Visibility glossary. Learn key terms like GEO, AEO, AI visibility, conversational intent, and more to understand your brand’s AI presence."
-        />
+          <title>AI Search & Visibility Glossary | Genezio</title>
+          <meta
+            name="description"
+            content="Explore Genezio’s AI Search & Visibility glossary. Learn key terms like GEO, AEO, AI visibility, and more to understand your brand’s AI presence."
+          />
         </Helmet>
       )}
       {/* Hero Section */}
@@ -333,7 +333,7 @@ export function Glossary() {
                       return (
                         <a
                           key={index}
-                          href={`/glossary/${slug}`}
+                          href={`/glossary/${slug}/`}
                           className="block group bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-white/10 transition-all cursor-pointer"
                         >
                           <div className="flex items-start justify-between gap-4 mb-3">

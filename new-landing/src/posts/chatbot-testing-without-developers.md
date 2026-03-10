@@ -9,7 +9,7 @@ linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/chatbot-testing-without-developers.webp
 preview: This article will walk you through chatbot testing without developers with Genezio. Designed by cloud computing experts but built specifically for non-technical users.
 # meta data start
-description: Chatbot testing without developers is easy and free with Genezio’s simulation based evals.
+description: Learn how Genezio helps teams test chatbots without developers using no-code simulations, continuous monitoring, and detailed AI eval reports.
 meta_og_url: "https://genezio.com/blog/chatbot-testing-without-developers/"
 
 meta_og_image: "https://genezio.com/images/chatbot-testing-without-developers.webp"

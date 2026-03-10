@@ -145,6 +145,11 @@ export function GenezioAgencyPlans() {
 
               { feature: "Exports", included: "Yes", addon: "-" },
               {
+                feature: "Chat with Your Data",
+                included: "Yes",
+                addon: "-",
+              },
+              {
                 feature: "Onboarding & Account Manager",
                 included: "Yes",
                 addon: "-",
@@ -346,6 +351,13 @@ export function GenezioAgencyPlans() {
 
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">Exports</div>
+                <div className="text-white font-semibold text-center">Yes</div>
+                <div className="text-white/60 text-center text-sm">-</div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
+                <div className="text-white/70 font-medium">
+                  Chat with Your Data
+                </div>
                 <div className="text-white font-semibold text-center">Yes</div>
                 <div className="text-white/60 text-center text-sm">-</div>
               </div>

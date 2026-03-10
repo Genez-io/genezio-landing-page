@@ -1,5 +1,5 @@
 ---
-title: "Quality Monitoring Software: How To Make Sure AI Agents Benefit Support and Customers"
+title: "QMS: How To Make Sure AI Agents Benefit Support and Customers"
 date: 2025-05-23
 tags:
   - AI

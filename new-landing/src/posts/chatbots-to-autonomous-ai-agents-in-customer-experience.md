@@ -1,5 +1,5 @@
 ---
-title: "The AI Agent Evolution in Customer Experience: From Simple Chatbots to Intelligent Autonomous Systems"
+title: "The AI Evolution in CX: From Chatbots to Intelligent Systems"
 date: 2025-04-07
 tags:
   - AI

@@ -4,13 +4,13 @@ export function PrivacyPolicy() {
     return (
         <>
             {import.meta.env.SSR && (
-              <Helmet>
-                <title>Genezio Privacy Policy - Official Legal Agreement</title>
-                <meta
-                    name="description"
-                    content="Review Genezio's Privacy Policy. Understand how we collect, use, and protect your personal data."
-                />
-              </Helmet>
+                <Helmet>
+                    <title>Genezio Privacy Policy - Official Legal Agreement</title>
+                    <meta
+                        name="description"
+                        content="Understand Genezio’s Privacy Policy, including how we collect, use, store, and protect personal data when you use our website and services."
+                    />
+                </Helmet>
             )}
             <div className="min-h-screen bg-[#050506]">
                 <div className="max-w-4xl mx-auto px-4 md:px-6 pt-32 md:pt-40 pb-20 md:pb-24">

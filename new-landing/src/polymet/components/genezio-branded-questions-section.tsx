@@ -146,7 +146,7 @@ export function GenezioBrandedQuestionsSection() {
             <div>
               <Button
                 variant="outline"
-                onClick={() => (window.location.href = "/pricing")}
+                onClick={() => (window.location.href = "/pricing/")}
                 className="bg-transparent border-blue-500/50 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400 hover:text-blue-300 transition-all duration-300 px-6 py-5 text-base font-semibold w-full"
               >
                 Analyze Your Brand Perception

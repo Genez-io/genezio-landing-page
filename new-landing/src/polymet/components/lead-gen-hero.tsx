@@ -55,11 +55,11 @@ export function LeadGenHero() {
     <>
       {import.meta.env.SSR && (
         <Helmet>
-        <title>Turn AI Conversations Into Qualified Leads | Genezio</title>
-        <meta
-          name="description"
-          content="Monitor & optimize your brand's AI presence. Turn AI conversations into qualified leads with Genezio's actionable insights. Book a demo today!"
-        />
+          <title>Turn AI Conversations Into Qualified Leads | Genezio</title>
+          <meta
+            name="description"
+            content="Monitor & optimize your brand's AI presence. Turn AI conversations into qualified leads with Genezio's actionable insights. Book a demo today!"
+          />
         </Helmet>
       )}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#050506] pt-20">
@@ -102,9 +102,9 @@ export function LeadGenHero() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
-                <a href="/pricing" className="w-full sm:w-auto">
+                <a href="/pricing/" className="w-full sm:w-auto">
                   <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25">
-                
+
                     Start Monitoring
                   </Button>
                 </a>
@@ -114,7 +114,7 @@ export function LeadGenHero() {
                     variant="outline"
                     className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
                   >
-                    
+
                     Book a Demo
                   </Button>
                 </a>

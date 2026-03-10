@@ -1,5 +1,5 @@
 ---
-title: "Genezio vs. Semrush: What marketers and marketing agencies need to know"
+title: "Genezio vs Semrush: What marketing agencies need to know"
 date: 2026-02-25
 tags:
   - Tool Comparison

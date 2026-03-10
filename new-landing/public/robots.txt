@@ -1,10 +1,17 @@
 User-agent: *
-Disallow: /?utm_
-Disallow: /?deviceId=
+Disallow: /*?utm_
+Disallow: /*&utm_
+Disallow: /*?deviceId=
+Disallow: /*&deviceId=
 Disallow: /*?ref=
-Allow: /
+Disallow: /*&ref=
 
-Allow: /llm.txt
+Disallow: /docs/
+Disallow: /careers/
+Disallow: /genezio-documentation/
+
+Allow: /
+Allow: /llms.txt
 
 Sitemap: https://genezio.com/sitemap.xml
 Sitemap: https://genezio.com/imagessitemap.xml
