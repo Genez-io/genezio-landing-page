@@ -24,23 +24,23 @@ export function IndustryLeaderboards() {
       gradient: "from-gray-700 to-gray-600",
       url: "https://app.genezio.ai/brand-report/-29/Retail%20&%20Supermarkets?demo=account",
     },
-    {
-      id: "universities-education",
-      name: "Universities & Education Platforms",
-      location: "UK",
-      icon: GraduationCapIcon,
-      description:
-        "Compare AI visibility across UK universities and education platforms. Understand which institutions are winning in AI-powered student searches.",
-      topBrands: [
-        "Oxford",
-        "Cambridge",
-        "Imperial College",
-        "UCL",
-        "Edinburgh",
-      ],
-      gradient: "from-gray-700 to-gray-600",
-      url: "https://app.genezio.ai/brand-report/-35/Universities%20&%20Education%20Platforms?demo=account",
-    },
+    // {
+    //   id: "universities-education",
+    //   name: "Universities & Education Platforms",
+    //   location: "UK",
+    //   icon: GraduationCapIcon,
+    //   description:
+    //     "Compare AI visibility across UK universities and education platforms. Understand which institutions are winning in AI-powered student searches.",
+    //   topBrands: [
+    //     "Oxford",
+    //     "Cambridge",
+    //     "Imperial College",
+    //     "UCL",
+    //     "Edinburgh",
+    //   ],
+    //   gradient: "from-gray-700 to-gray-600",
+    //   url: "https://app.genezio.ai/brand-report/-35/Universities%20&%20Education%20Platforms?demo=account",
+    // },
     {
       id: "healthcare-providers",
       name: "Healthcare Providers & Clinics",
