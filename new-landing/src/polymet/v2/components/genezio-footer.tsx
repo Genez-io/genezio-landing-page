@@ -2,16 +2,16 @@ import { Link } from "react-router";
 
 export function GenezioFooterV2() {
   const productLinks = [
-    { label: "Increase Lead Generation", href: "/conversational-brand-presence" },
-    { label: "Increase Conversion", href: "/increase-conversion" },
+    { label: "Increase Lead Generation", href: "/conversational-brand-presence/" },
+    { label: "Increase Conversion", href: "/increase-conversion/" },
     { label: "Increase In-Chat Shopping (soon)", href: "#" },
   ];
 
   const supportLinks = [
-    { label: "Terms And Conditions", href: "/terms-and-conditions" },
-    { label: "Support Terms", href: "/support-terms" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Data Processing Agreement", href: "/data-processing-agreement" },
+    { label: "Terms And Conditions", href: "/terms-and-conditions/" },
+    { label: "Support Terms", href: "/support-terms/" },
+    { label: "Privacy Policy", href: "/privacy-policy/" },
+    { label: "Data Processing Agreement", href: "/data-processing-agreement/" },
   ];
 
   return (
@@ -21,21 +21,8 @@ export function GenezioFooterV2() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16">
           {/* Brand section */}
           <div className="space-y-4">
-            <Link to="/landing-v2" className="inline-flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-foreground rounded flex items-center justify-center">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="w-5 h-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 4h7v7H4V4zm0 9h7v7H4v-7zm9-9h7v7h-7V4zm0 9h7v7h-7v-7z"
-                    fill="hsl(var(--background))"
-                  />
-                </svg>
-              </div>
-              <span className="text-xl font-bold text-foreground">genezio</span>
+            <Link to="/ai-search-optimization-tool/" className="inline-flex items-center gap-2 group">
+              <img src="https://genezio.com/images/logo-dark.svg" alt="genezio" class="h-8 block sm:block"></img>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               The platform built for Generative Search and Answer Engine Optimization.
