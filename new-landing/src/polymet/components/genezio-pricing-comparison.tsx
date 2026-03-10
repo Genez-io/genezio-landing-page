@@ -30,6 +30,7 @@ export function GenezioPricingComparison() {
       title: "Activation & output",
       rows: [
         { feature: "AI content generation", starter: "1 / day", growth: "5 / day", enterprise: "10 / day", comingSoon: true },
+        { feature: "Chat with Your Data", starter: "-", growth: "-", enterprise: "check" },
         { feature: "Insights / day", starter: "1", growth: "5", enterprise: "10+" },
         { feature: "Exports", starter: "check", growth: "check", enterprise: "check" },
       ],
