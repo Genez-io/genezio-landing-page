@@ -124,7 +124,7 @@ export function GenezioHeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center mb-10">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight">
             <span className="text-white">
               Make{" "}
@@ -197,10 +197,27 @@ export function GenezioHeroSection() {
             </a>
           </div>
 
-          <p className="text-sm text-gray-500 font-medium">
-            The Future is Conversational —{" "}
-            <span className="text-blue-400 font-semibold">Lead it.</span>
-          </p>
+          <div className="flex justify-center px-4 mt-12">
+          <div className="text-center">
+            <p className="text-xs md:text-sm text-gray-500 mb-0">
+              The Future is Conversational —{" "}
+              <button
+                onClick={() => window.open('https://app.genezio.ai/brand-report/49/Natwest?demo=account', '_blank')}
+                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium"
+              >
+                Try interactive demo
+                <svg
+                  className="w-3 h-3 transition-transform duration-200 hover:translate-x-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </p>
+          </div>
+        </div>
         </div>
       </section>
     </>

@@ -9,6 +9,7 @@ import {
   BookOpenIcon,
   FileTextIcon,
   UsersIcon,
+  TrophyIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
@@ -309,6 +310,26 @@ export function GenezioHeader() {
                         </div>
                       </div>
                     </a>
+
+                    <Link
+                      to="/industry-leaderboards"
+                      onClick={() => setResourcesMenuOpen(false)}
+                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+                          <TrophyIcon className="w-5 h-5 text-amber-400" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-amber-400 transition-colors">
+                            Leaderboards
+                          </div>
+                          <div className="text-white/60 text-xs leading-relaxed">
+                            Industry AI visibility rankings
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -462,6 +483,18 @@ export function GenezioHeader() {
                       Insights & best practices
                     </div>
                   </a>
+                  <Link
+                    to="/industry-leaderboards"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">
+                      Leaderboards
+                    </div>
+                    <div className="text-white/60 text-xs">
+                      Industry AI visibility rankings
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
