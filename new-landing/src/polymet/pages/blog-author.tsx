@@ -6,8 +6,7 @@ import {
   ClockIcon,
   CalendarIcon,
 } from "lucide-react";
-import { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { getAllPosts } from "@/lib/posts";
 
 import { authors } from "@/lib/authors";
@@ -46,15 +45,6 @@ const AUTHOR_META: Record<
   },
 };
 
-function setMeta(attr: "name" | "property", key: string, content: string) {
-  const el =
-    document.querySelector(`meta[${attr}="${key}"]`) ||
-    document.createElement("meta");
-  el.setAttribute(attr, key);
-  el.setAttribute("content", content);
-  if (!el.parentNode) document.head.appendChild(el);
-}
-
 function BlogAuthor() {
   const { name } = useParams<{ name: string }>();
   // Default to luis-minvielle if name is missing
@@ -86,15 +76,6 @@ function BlogAuthor() {
     description: author.bio,
   };
 
-  useEffect(() => {
-    document.title = meta.title;
-    setMeta("name", "description", meta.description);
-    setMeta("property", "og:title", meta.title);
-    setMeta("property", "og:description", meta.description);
-    setMeta("name", "twitter:title", meta.title);
-    setMeta("name", "twitter:description", meta.description);
-  }, [meta.title, meta.description]);
-
   const allBlogPosts = getAllPosts();
   // Filter posts where the author name matches the author's name
   const authorPosts = allBlogPosts.filter((post) => post.author === author.name);
@@ -104,14 +85,11 @@ function BlogAuthor() {
 
   return (
     <>
-      <Helmet>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.description} />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-      </Helmet>
+      <PolymetSEO
+        title={meta.title}
+        description={meta.description}
+        canonicalPath={`/blog/author/${slug}/`}
+      />
       <div className="min-h-screen bg-[#050506]">
         {/* Back Button */}
         <div className="px-6 pt-8">

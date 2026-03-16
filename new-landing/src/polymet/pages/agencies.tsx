@@ -1,26 +1,22 @@
-import { Helmet } from "react-helmet";
-import { AgencyHeroSection } from "../components/agency-hero-section";
-import { AgencyBrandScanSection } from "../components/agency-brand-scan-section";
-import { AgencyGeoSection } from "../components/agency-geo-section";
-import { AgencyContentStrategySection } from "../components/agency-content-strategy-section";
-import { AgencyScaleSection } from "../components/agency-scale-section";
-import { AgencyMonitoringSection } from "../components/agency-monitoring-section";
-import { AgencyTestimonialsSection } from "../components/agency-testimonials-section";
-import { GenezioAgencyPlans } from "../components/genezio-agency-plans";
-import { AgencyCtaSection } from "../components/agency-cta-section";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
+import { AgencyHeroSection } from "@/polymet/components/agency-hero-section";
+import { AgencyBrandScanSection } from "@/polymet/components/agency-brand-scan-section";
+import { AgencyGeoSection } from "@/polymet/components/agency-geo-section";
+import { AgencyContentStrategySection } from "@/polymet/components/agency-content-strategy-section";
+import { AgencyScaleSection } from "@/polymet/components/agency-scale-section";
+import { AgencyMonitoringSection } from "@/polymet/components/agency-monitoring-section";
+import { AgencyTestimonialsSection } from "@/polymet/components/agency-testimonials-section";
+import { GenezioAgencyPlans } from "@/polymet/components/genezio-agency-plans";
+import { AgencyCtaSection } from "@/polymet/components/agency-cta-section";
 
 export function Agencies() {
   return (
     <>
-      {import.meta.env.SSR && (
-        <Helmet>
-        <title>Genezio for Agencies | AI Visibility & GEO Solutions</title>
-        <meta
-          name="description"
-          content="Empower your agency with Genezio's GEO platform. Monitor brand presence, optimize AI mentions, and deliver measurable results for your clients in the age of Generative AI."
-        />
-        </Helmet>
-      )}
+      <PolymetSEO
+        title="Genezio for Agencies | AI Visibility & GEO Solutions"
+        description="Empower your agency with Genezio's GEO platform. Monitor brand presence, optimize AI mentions, and deliver measurable results for your clients in the age of Generative AI."
+        canonicalPath="/agencies/"
+      />
       <div className="min-h-screen bg-[#050506]">
       <AgencyHeroSection />
       <AgencyBrandScanSection />

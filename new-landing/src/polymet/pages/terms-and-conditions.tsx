@@ -1,17 +1,13 @@
-import { Helmet } from "react-helmet";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
 export function TermsAndConditions() {
   return (
     <>
-      {import.meta.env.SSR && (
-        <Helmet>
-        <title>Genezio Terms and Conditions - Official Legal Agreement</title>
-        <meta
-          name="description"
-          content="Review Genezio's comprehensive Terms and Conditions. Understand our legal agreement for platform use, licenses, financial terms, and user responsibilities."
-        />
-        </Helmet>
-      )}
+      <PolymetSEO
+        title="Genezio Terms and Conditions - Official Legal Agreement"
+        description="Review Genezio's comprehensive Terms and Conditions. Understand our legal agreement for platform use, licenses, financial terms, and user responsibilities."
+        canonicalPath="/terms-and-conditions/"
+      />
       <div className="min-h-screen bg-[#050506]">
         <div className="max-w-4xl mx-auto px-4 md:px-6 pt-32 md:pt-40 pb-20 md:pb-24">
           {/* Header */}

@@ -6,8 +6,8 @@ import {
   CalendarIcon,
   SparklesIcon,
 } from "lucide-react";
-import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { useState } from "react";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
 import { getAllPosts } from "@/lib/posts";
 
@@ -17,37 +17,9 @@ const BLOG_TITLE = "Genezio Blog: Insights on GEO & AI Brand Visibility";
 const BLOG_DESCRIPTION =
   "Master Generative Engine Optimization (GEO). Expert analysis on tracking AI brand visibility, and optimizing your presence in AI conversations.";
 
-function setMeta(attr: "name" | "property", key: string, content: string) {
-  const el =
-    document.querySelector(`meta[${attr}="${key}"]`) ||
-    document.createElement("meta");
-  el.setAttribute(attr, key);
-  el.setAttribute("content", content);
-  if (!el.parentNode) document.head.appendChild(el);
-}
-
-const categories = [
-  "All",
-  "AI Search",
-  "Brand Strategy",
-  "Marketing",
-  "Analytics",
-  "Content Strategy",
-  "Technology"
-];
-
 export function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  useEffect(() => {
-    document.title = BLOG_TITLE;
-    setMeta("name", "description", BLOG_DESCRIPTION);
-    setMeta("property", "og:title", BLOG_TITLE);
-    setMeta("property", "og:description", BLOG_DESCRIPTION);
-    setMeta("name", "twitter:title", BLOG_TITLE);
-    setMeta("name", "twitter:description", BLOG_DESCRIPTION);
-  }, []);
+  const [selectedCategory] = useState("All");
 
   // Sort posts by date (newest first)
   const sortedPosts = [...blogPosts].sort((a, b) => b.timestamp - a.timestamp);
@@ -72,14 +44,11 @@ export function Blog() {
 
   return (
     <>
-      <Helmet>
-        <title>{BLOG_TITLE}</title>
-        <meta name="description" content={BLOG_DESCRIPTION} />
-        <meta property="og:title" content={BLOG_TITLE} />
-        <meta property="og:description" content={BLOG_DESCRIPTION} />
-        <meta name="twitter:title" content={BLOG_TITLE} />
-        <meta name="twitter:description" content={BLOG_DESCRIPTION} />
-      </Helmet>
+      <PolymetSEO
+        title={BLOG_TITLE}
+        description={BLOG_DESCRIPTION}
+        canonicalPath="/blog/"
+      />
       <div className="min-h-screen bg-[#050506]">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">

@@ -61,6 +61,9 @@ export function GenezioTrustSection() {
                   <img
                     src={company.logo}
                     alt={company.name}
+                    width={160}
+                    height={80}
+                    loading="lazy"
                     className="max-w-full max-h-full object-contain transition-all duration-300"
                     style={{
                       filter: "brightness(0) invert(1) opacity(0.6)",
@@ -86,6 +89,9 @@ export function GenezioTrustSection() {
                   <img
                     src={company.logo}
                     alt={company.name}
+                    width={160}
+                    height={80}
+                    loading="lazy"
                     className="max-w-full max-h-full object-contain transition-all duration-300"
                     style={{
                       filter: "brightness(0) invert(1) opacity(0.6)",

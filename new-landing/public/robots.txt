@@ -13,5 +13,27 @@ Disallow: /genezio-documentation/
 Allow: /
 Allow: /llms.txt
 
+# AI Crawlers - Explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 Sitemap: https://genezio.com/sitemap.xml
 Sitemap: https://genezio.com/imagessitemap.xml

@@ -56,7 +56,7 @@ const routes = [
   "/support-terms",
   "/terms-and-conditions",
   "/privacy-policy",
-  "/aboutgenezio",
+  "/about-genezio",
   "/blog",
   "/agencies",
   "/industry-leaderboards",
@@ -107,21 +107,16 @@ const { render } = await import("./dist/server/entry-server.js");
 const escapeRegExp = (value) =>
   value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const stripOverriddenHead = (html, helmet, extraMetaKeys = []) => {
+const stripOverriddenHead = (html, helmetTitleText, helmetMetaHtml, extraMetaKeys = []) => {
   let output = html;
 
-  const helmetTitle = helmet.title?.toString() ?? "";
-  const helmetMeta = helmet.meta?.toString() ?? "";
-  const helmetLink = helmet.link?.toString() ?? "";
-  const helmetScript = helmet.script?.toString() ?? "";
-
-  if (helmetTitle.trim()) {
+  if (helmetTitleText.trim()) {
     output = output.replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "");
   }
 
   const metaAttrRegex = /<meta[^>]*(?:name|property)=["']([^"']+)["'][^>]*>/gi;
   const metaKeys = new Set(extraMetaKeys);
-  for (const match of helmetMeta.matchAll(metaAttrRegex)) {
+  for (const match of helmetMetaHtml.matchAll(metaAttrRegex)) {
     metaKeys.add(match[1]);
   }
 
@@ -135,35 +130,8 @@ const stripOverriddenHead = (html, helmet, extraMetaKeys = []) => {
     output = output.replace(keyRegex, "");
   }
 
-  const linkTagRegex = /<link[^>]*>/gi;
-  for (const match of helmetLink.matchAll(linkTagRegex)) {
-    const tag = match[0];
-    const relMatch = tag.match(/\brel=["']([^"']+)["']/i);
-    const hrefMatch = tag.match(/\bhref=["']([^"']+)["']/i);
-    if (!relMatch || !hrefMatch) continue;
-    const rel = relMatch[1];
-    const href = hrefMatch[1];
-    const linkRegex = new RegExp(
-      `<link\\b[^>]*\\brel=["']${escapeRegExp(
-        rel
-      )}["'][^>]*\\bhref=["']${escapeRegExp(href)}["'][^>]*>`,
-      "gi"
-    );
-    output = output.replace(linkRegex, "");
-  }
-
-  const scriptTagRegex = /<script[^>]*>[\s\S]*?<\/script>/gi;
-  for (const match of helmetScript.matchAll(scriptTagRegex)) {
-    const tag = match[0];
-    const srcMatch = tag.match(/\bsrc=["']([^"']+)["']/i);
-    if (!srcMatch) continue;
-    const src = srcMatch[1];
-    const scriptRegex = new RegExp(
-      `<script\\b[^>]*\\bsrc=["']${escapeRegExp(src)}["'][^>]*>[\\s\\S]*?<\\/script>`,
-      "gi"
-    );
-    output = output.replace(scriptRegex, "");
-  }
+  // Always strip canonical so the correct one from current page gets added
+  output = output.replace(/<link[^>]*rel=["']canonical["'][^>]*>/gi, "");
 
   return output;
 };
@@ -204,19 +172,25 @@ const upsertMetaName = (headHtml, name, content) => {
 for (const url of routes) {
   const { appHtml, helmet } = await render(url);
 
-  const headHtml = [
-    helmet.title?.toString() ?? "",
-    helmet.meta?.toString() ?? "",
-    helmet.link?.toString() ?? "",
-    helmet.script?.toString() ?? "",
-  ]
-    .filter(Boolean)
-    .join("\n");
+  // React 19 + react-helmet-async v3 bypasses HelmetProvider context and leaves tags inside appHtml.
+  let titleMatch = appHtml.match(/<title[^>]*>[\s\S]*?<\/title>/i);
+  let metaMatches = appHtml.match(/<meta[^>]*>/ig) || [];
+  let linkMatches = appHtml.match(/<link[^>]*rel=["']canonical["'][^>]*>/ig) || [];
 
-  const helmetTitleText = (helmet.title?.toString() ?? "")
+  const headHtmlParts = [];
+  if (titleMatch) headHtmlParts.push(titleMatch[0]);
+  headHtmlParts.push(...metaMatches, ...linkMatches);
+  const headHtml = headHtmlParts.join("\n");
+
+  let cleanAppHtml = appHtml
+    .replace(/<title[^>]*>[\s\S]*?<\/title>/ig, "")
+    .replace(/<meta[^>]*>/ig, "")
+    .replace(/<link[^>]*rel=["']canonical["'][^>]*>/ig, "");
+
+  const helmetTitleText = (titleMatch ? titleMatch[0] : "")
     .replace(/<[^>]+>/g, "")
     .trim();
-  const helmetMetaHtml = helmet.meta?.toString() ?? "";
+  const helmetMetaHtml = metaMatches.join("\n");
   const helmetDescription = extractMetaContent(
     helmetMetaHtml,
     "name",
@@ -302,11 +276,11 @@ for (const url of routes) {
     extraMetaKeys.push("twitter:image");
   }
 
-  const html = stripOverriddenHead(template, helmet, extraMetaKeys)
+  const html = stripOverriddenHead(template, helmetTitleText, helmetMetaHtml, extraMetaKeys)
     .replace("<!--app-helmet-head-->", mergedHeadHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
-      `<div id="root">${appHtml}</div>`
+      `<div id="root">${cleanAppHtml}</div>`
     );
   const cleanedHtml = html.replace(
     /\s*data-react-helmet=(["'])true\1/g,

@@ -17,7 +17,7 @@ export function IndustryLeaderboardBanner() {
               🎉 Industry Leaderboards Now Public!
             </span>
             <span className="hidden md:inline text-white/70">
-              See how top competitors perform in AI visibility across 5 UK industries
+              See how top competitors perform in AI visibility across 4 UK industries
             </span>
           </div>
 

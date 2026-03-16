@@ -7,7 +7,7 @@ import {
   TrendingUpIcon,
   LinkIcon
 } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
 interface GlossaryTerm {
   term: string;
@@ -911,12 +911,11 @@ export function GlossaryTerm() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
-      {import.meta.env.SSR && (
-        <Helmet>
-          <title>{term.title}</title>
-          <meta name="description" content={term.metaDescription} />
-        </Helmet>
-      )}
+      <PolymetSEO
+        title={term.title}
+        description={term.metaDescription}
+        canonicalPath={`/glossary/${slug}/`}
+      />
       {/* Header */}
       <div className="border-b border-white/5">
         <div className="max-w-4xl mx-auto px-6 py-6">
