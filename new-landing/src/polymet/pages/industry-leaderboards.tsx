@@ -13,7 +13,7 @@ import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
 const PAGE_TITLE = "AI Visibility Industry Leaderboards for 5 UK industries | Genezio";
-const PAGE_DESCRIPTION = "See how top competitors perform in AI visibility across 5 UK industries. Discover which brands dominate ChatGPT, Perplexity, and Google AI Overviews.";
+const PAGE_DESCRIPTION = "See how top competitors perform in AI visibility across 4 UK industries. Discover which brands dominate ChatGPT, Perplexity, and Google AI Overviews.";
 
 export function IndustryLeaderboards() {
   const industries = [
@@ -181,7 +181,7 @@ export function IndustryLeaderboards() {
                 visibility and drive more conversions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="https://app.genezio.ai/sign-up">
+                <Link to="https://app.genezio.ai/sign-up">
                   <Button
                     size="lg"
                     className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-base font-semibold rounded-lg transition-all duration-300 hover:scale-105"
