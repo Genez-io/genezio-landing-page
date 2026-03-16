@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { Input } from "@/components/ui/input";
 import { SearchIcon, BookOpenIcon } from "lucide-react";
 import { useState } from "react";
@@ -258,15 +258,11 @@ export function Glossary() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
-      {import.meta.env.SSR && (
-        <Helmet>
-          <title>AI Search & Visibility Glossary | Genezio</title>
-          <meta
-            name="description"
-            content="Explore Genezio’s AI Search & Visibility glossary. Learn key terms like GEO, AEO, AI visibility, and more to understand your brand’s AI presence."
-          />
-        </Helmet>
-      )}
+      <PolymetSEO
+        title="AI Search & Visibility Glossary | Genezio"
+        description="Explore Genezio’s AI Search & Visibility glossary. Learn key terms like GEO, AEO, AI visibility, and more to understand your brand’s AI presence."
+        canonicalPath="/glossary/"
+      />
       {/* Hero Section */}
       <div className="relative pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">

@@ -7,10 +7,15 @@ import App from "./App";
 window.React = React;
 window.ReactDOM = ReactDOM;
 
+import { HelmetProvider } from "react-helmet-async";
+
 function Main() {
   return (
     <React.StrictMode>
-      <App />
+      {/* @ts-ignore */}
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </React.StrictMode>
   );
 }

@@ -56,7 +56,7 @@ const routes = [
   "/support-terms",
   "/terms-and-conditions",
   "/privacy-policy",
-  "/aboutgenezio",
+  "/about-genezio",
   "/blog",
   "/agencies",
   "/industry-leaderboards",

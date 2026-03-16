@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioHeroSection } from "@/polymet/components/genezio-hero-section";
 import { GenezioTrustSection } from "@/polymet/components/genezio-trust-section";
 import { GenezioDashboardSection } from "@/polymet/components/genezio-dashboard-section";
@@ -13,15 +13,11 @@ import { IndustryLeaderboardBanner } from "@/polymet/components/industry-leaderb
 export function GenezioLanding() {
   return (
     <>
-      {import.meta.env.SSR && (
-        <Helmet>
-          <title>Brand Visibility in AI Conversations | Genezio</title>
-          <meta
-            name="description"
-            content="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across LLMs."
-          />
-        </Helmet>
-      )}
+      <PolymetSEO
+        title="Brand Visibility in AI Conversations | Genezio"
+        description="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across LLMs."
+        canonicalPath="/"
+      />
       <div className="min-h-screen bg-[#050506]">
         <IndustryLeaderboardBanner />
 

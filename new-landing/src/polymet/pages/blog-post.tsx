@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import { Tweet } from "react-tweet";
-import { Helmet } from "react-helmet";
+import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import {
   ArrowLeftIcon,
   ClockIcon,
@@ -48,29 +48,15 @@ export function BlogPost() {
     );
   }, [post.content]);
 
-  React.useEffect(() => {
-    if (post) {
-      document.title = `${post.title}`;
-    }
-  }, [post]);
-
   return (
     <div className="min-h-screen bg-[#050506]">
-      {import.meta.env.SSR && (
-        <Helmet>
-          <title>{post.title}</title>
-          <meta name="description" content={post.description || post.excerpt} />
-          <meta property="og:title" content={post.title} />
-          <meta
-            property="og:description"
-            content={post.description || post.excerpt}
-          />
-          {post.metaOgUrl && <meta property="og:url" content={post.metaOgUrl} />}
-          {post.metaOgImage && (
-            <meta property="og:image" content={post.metaOgImage} />
-          )}
-        </Helmet>
-      )}
+      <PolymetSEO
+        title={post.title}
+        description={post.description || post.excerpt}
+        canonicalPath={`/blog/${slug}/`}
+        ogUrl={post.metaOgUrl}
+        ogImage={post.metaOgImage}
+      />
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
         <div className="max-w-4xl mx-auto">

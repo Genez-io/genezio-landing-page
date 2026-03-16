@@ -132,7 +132,7 @@ export default function GenezioApp() {
       />
 
       <Route
-        path="/aboutgenezio"
+        path="/about-genezio"
         element={
           <GenezioLayout>
             <AboutGenezio />

@@ -56,6 +56,9 @@ export function GenezioTestimonialSection() {
                                             <img
                                                 src={bcrLogo}
                                                 alt="BCR - Banca Comercială Română"
+                                                width={120}
+                                                height={40}
+                                                loading="lazy"
                                                 className="h-10 w-auto"
                                             />
 
@@ -74,6 +77,9 @@ export function GenezioTestimonialSection() {
                                           <img
                                             src="/images/ionut-stanimir.webp"
                                             alt="I. Stanimir"
+                                            width={64}
+                                            height={64}
+                                            loading="lazy"
                                             className="w-full h-full object-cover"
                                           />
                                         </div>

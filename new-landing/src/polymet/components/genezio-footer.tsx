@@ -2,12 +2,12 @@ export function GenezioFooter() {
   return (
     <footer className="bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* Brand */}
           <div className="col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
+            <a href="/" className="flex items-center gap-2 mb-4" aria-label="Genezio Homepage">
               <span className="text-white text-xl font-semibold">
-                <img src="/images/logo-white.svg" alt="Genezio Logo" className="h-8 w-auto" />
+                <img src="/images/logo-white.svg" alt="Genezio Logo" width={120} height={32} className="h-8 w-auto" />
               </span>
             </a>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -44,6 +44,47 @@ export function GenezioFooter() {
               </li>
             </ul>
           </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="/blog/"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/glossary/"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Glossary
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/industry-leaderboards/"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Industry Leaderboards
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about-genezio/"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  About Genezio
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
           <div>
             <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
