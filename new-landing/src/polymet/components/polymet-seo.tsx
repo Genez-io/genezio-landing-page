@@ -36,7 +36,9 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }
       setMeta("name", "twitter:description", description);
       
       if (ogImage) setMeta("property", "og:image", ogImage);
-      if (ogUrl) setMeta("property", "og:url", ogUrl);
+
+      const finalOgUrl = ogUrl || url;
+      if (finalOgUrl) setMeta("property", "og:url", finalOgUrl);
 
       if (url) {
         let linkEl = document.querySelector('link[rel="canonical"]');
@@ -52,6 +54,8 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }
     return () => clearTimeout(timeout);
   }, [title, description, ogImage, ogUrl, url]);
 
+  const finalOgUrl = ogUrl || url;
+
   return (
     // @ts-ignore
     <Helmet>
@@ -62,7 +66,7 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta property="og:image" content={ogImage} />}
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      {finalOgUrl && <meta property="og:url" content={finalOgUrl} />}
       {url && <link rel="canonical" href={url} />}
     </Helmet>
   );
