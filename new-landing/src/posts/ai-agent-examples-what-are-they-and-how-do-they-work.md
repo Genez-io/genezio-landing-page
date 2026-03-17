@@ -9,13 +9,13 @@ thumbnail: /blog/images/effortless.webp
 preview: What was once a futuristic concept—AIs making real decisions and automating complex tasks independently—is now our reality. “AI agents” is the latest buzzword you may have seen floating around 𝕏 and such, and while many people swear they have the most advanced AI agents, a lot of them either are a downright sham. But the AI agents market is, in fact, developing rapidly, with a projection to grow from USD 5.1 billion in 2024 to USD 47.1 billion by 2030.
 # meta data start
 description: Look into AI agent examples like OpenAI’s Deep Research, Waymo’s self-driving cars, and Nightingale’s security drones.
-meta_og_url: "https://genezio.com/blog/ai-agent-examples/"
+meta_og_url: "https://genezio.com/blog/ai-agent-examples-what-are-they-and-how-do-they-work/"
 meta_og_image: "https://genezio.com/blog/images/effortless.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 12
-url: /ai-agent-examples/
+url: /ai-agent-examples-what-are-they-and-how-do-they-work/
 ---
 
 What was once a futuristic concept—AIs making real decisions and automating complex tasks independently—is now our reality. “AI agents” is the latest buzzword you may have seen floating around 𝕏 and such, and while many people swear they have the most advanced AI agents, a lot of them either are a downright sham. But the AI agents market is, in fact, developing rapidly, with a {{< external-link link="https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html" >}}projection{{< /external-link >}} to grow from USD 5.1 billion in 2024 to USD 47.1 billion by 2030.
