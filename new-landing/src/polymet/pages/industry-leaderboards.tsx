@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
-const PAGE_TITLE = "AI Visibility Industry Leaderboards for 5 UK industries | Genezio";
+const PAGE_TITLE = "AI Visibility Industry Leaderboards for 4 UK industries | Genezio";
 const PAGE_DESCRIPTION = "See how top competitors perform in AI visibility across 4 UK industries. Discover which brands dominate ChatGPT, Perplexity, and Google AI Overviews.";
 
 export function IndustryLeaderboards() {
