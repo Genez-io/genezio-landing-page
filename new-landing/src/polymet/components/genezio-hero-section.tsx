@@ -1,46 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { SearchIcon } from "lucide-react";
+import { SearchIcon, PlayCircleIcon } from "lucide-react";
+import { Link } from "react-router";
 import { useState, useEffect } from "react";
-const platforms = ["ChatGPT", "Perplexity", "Claude", "Gemini"];
+import chatgptLogo from "@/assets/chatgpt-icon.svg";
+import claudeLogo from "@/assets/claude-icon.svg";
+import geminiLogo from "@/assets/gemini-icon.svg";
+import perplexityLogo from "@/assets/perplexity-icon.svg";
 
 export function GenezioHeroSection() {
+  const platforms = [
+    {
+      name: "ChatGPT",
+      logo: chatgptLogo,
+    },
+    {
+      name: "Perplexity",
+      logo: perplexityLogo,
+    },
+    {
+      name: "Claude",
+      logo: claudeLogo,
+    },
+    {
+      name: "Gemini",
+      logo: geminiLogo,
+    },
+  ];
+
   const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(150);
-  const [brandUrl, setBrandUrl] = useState<string>("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [brandUrl, setBrandUrl] = useState("");
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [showResults, setShowResults] = useState(false);
   const [highlightInput, setHighlightInput] = useState(false);
-
-  useEffect(() => {
-    const currentPlatform = platforms[currentPlatformIndex];
-
-    const handleTyping = () => {
-      if (!isDeleting) {
-        // Typing forward
-        if (displayedText.length < currentPlatform.length) {
-          setDisplayedText(currentPlatform.slice(0, displayedText.length + 1));
-          setTypingSpeed(150);
-        } else {
-          // Finished typing, wait then start deleting
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
-      } else {
-        // Deleting
-        if (displayedText.length > 0) {
-          setDisplayedText(displayedText.slice(0, -1));
-          setTypingSpeed(75);
-        } else {
-          // Finished deleting, move to next platform
-          setIsDeleting(false);
-          setCurrentPlatformIndex((prev) => (prev + 1) % platforms.length);
-        }
-      }
-    };
-
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, currentPlatformIndex, typingSpeed, platforms]);
 
   const handleAnalyze = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,175 +44,83 @@ export function GenezioHeroSection() {
       return;
     }
 
-    const rawInput = brandUrl.trim();
-    if (!rawInput) return;
-
-    let parsed: URL;
-    try {
-      parsed = new URL(rawInput);
-    } catch {
-      try {
-        parsed = new URL(`http://${rawInput}`);
-      } catch {
-        return;
-      }
-    }
-
-    const hostname = parsed.hostname.replace(/^www\./i, "");
-    const brandName = hostname.split(".")[0] || hostname;
-
-    const redirectUrl = new URL("https://app.genezio.ai/sign-up");
-    // redirectUrl.searchParams.set("brandUrl", rawInput);
-    redirectUrl.searchParams.set("brandName", brandName);
-
-    window.location.assign(redirectUrl.toString());
+    setIsAnalyzing(true);
+    // Simulate analysis
+    setTimeout(() => {
+      setIsAnalyzing(false);
+      setShowResults(true);
+    }, 2000);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Fade out
+      setIsVisible(false);
+
+      // Wait for fade out, then change platform and fade in
+      setTimeout(() => {
+        setCurrentPlatformIndex((prev) => (prev + 1) % platforms.length);
+        setIsVisible(true);
+      }, 500);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [platforms.length]);
+
   return (
-    <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black mb-15 pb-15">
+    <section className="relative flex items-center justify-center overflow-hidden bg-[#050506] pt-32 pb-20">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
 
-        {/* Floating particles in background */}
-        <div className="absolute inset-0 overflow-hidden pb-20">
-          {/* Purple/orange particles scattered */}
-          <div
-            className="absolute top-[15%] left-[10%] w-1.5 h-1.5 bg-[#C084FC] rounded-full animate-pulse"
-            style={{ animationDuration: "3s" }}
-          />
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight flex flex-col items-center md:block">
+          <span className="text-white block md:inline">Get recommended by </span>
+          <span
+            className="text-white transition-all duration-500 inline-flex items-center justify-center gap-3 min-w-[200px] md:min-w-[260px] mt-2 md:mt-0"
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? "translateY(0)" : "translateY(-10px)",
+            }}
+          >
+            <img
+              src={platforms[currentPlatformIndex].logo}
+              alt={platforms[currentPlatformIndex].name}
+              className="h-8 w-8 object-contain"
+            />
+            <span>{platforms[currentPlatformIndex].name}</span>
+          </span>
+        </h1>
 
-          <div
-            className="absolute top-[25%] right-[15%] w-1 h-1 bg-[#C084FC]/60 rounded-full animate-pulse"
-            style={{ animationDuration: "4s", animationDelay: "0.5s" }}
-          />
+        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-6 md:mx-[180px] mb-10 leading-relaxed">
+          Track how AI engines see your brand and optimize your presence to win
+          more recommendations.
+        </p>
 
-          <div
-            className="absolute top-[35%] left-[20%] w-1 h-1 bg-[#C084FC]/40 rounded-full animate-pulse"
-            style={{ animationDuration: "5s", animationDelay: "1s" }}
-          />
-
-          <div
-            className="absolute top-[45%] right-[25%] w-1.5 h-1.5 bg-[#C084FC]/50 rounded-full animate-pulse"
-            style={{ animationDuration: "3.5s", animationDelay: "1.5s" }}
-          />
-
-          <div
-            className="absolute bottom-[30%] left-[15%] w-1 h-1 bg-[#C084FC]/30 rounded-full animate-pulse"
-            style={{ animationDuration: "4.5s", animationDelay: "2s" }}
-          />
-
-          <div
-            className="absolute bottom-[20%] right-[20%] w-1.5 h-1.5 bg-[#C084FC]/70 rounded-full animate-pulse"
-            style={{ animationDuration: "3s", animationDelay: "0.8s" }}
-          />
-
-          <div
-            className="absolute top-[50%] left-[50%] w-1 h-1 bg-[#C084FC]/50 rounded-full animate-pulse"
-            style={{ animationDuration: "4s", animationDelay: "1.2s" }}
-          />
-
-          <div
-            className="absolute top-[60%] right-[35%] w-1 h-1 bg-[#C084FC]/40 rounded-full animate-pulse"
-            style={{ animationDuration: "5s", animationDelay: "0.3s" }}
-          />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight">
-            <span className="text-white">
-              Make{" "}
-              <span className="inline-block text-center">
-                {displayedText}
-                <span className="animate-pulse">|</span>
-              </span>
-            </span>
-            <br />
-
-            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-[#C084FC] bg-clip-text text-transparent font-extrabold">
-              talk about your brand.
-            </span>
-          </h1>
-
-          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
-            Genezio helps you understand, monitor, and optimize <br /> how AI
-            mentions your brand.
-          </p>
-
-          <div className="max-w-2xl mx-auto mb-8 md:mb-12 px-4">
-            <form
-              onSubmit={handleAnalyze}
-              className="flex flex-col sm:flex-row gap-3"
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <a href="https://app.genezio.ai/sign-up">
+            <Button
+              size="default"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
             >
-              <div className="relative flex-1">
-                <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <Input
-                  type="text"
-                  inputMode="url"
-                  autoCapitalize="none"
-                  autoCorrect="off"
-                  placeholder="Enter your brand name (e.g., Netflix)"
-                  value={brandUrl}
-                  onChange={(e) => {
-                    setBrandUrl(e.target.value);
-                    if (highlightInput) setHighlightInput(false);
-                  }}
-                  className={`w-full pl-12 pr-4 py-6 bg-white/10 text-white placeholder:text-gray-500 rounded-xl transition-all ${
-                    highlightInput
-                      ? "border-2 border-blue-500 ring-4 ring-blue-500/30 animate-pulse"
-                      : "border border-white/20 focus:bg-white/15 focus:border-blue-400/50"
-                  }`}
-                />
-              </div>
-              <Button
-                type="submit"
-                size="lg"
-                // disabled={isAnalyzing}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-6 font-semibold rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-purple-500/30 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap sm:w-auto w-full"
-              >
-                Get Free Analysis
-              </Button>
-            </form>
-          </div>
-
-          <div className="md:hidden flex justify-center mb-6 px-4">
-            <a
-              target="_blank"
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/20 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
-              >
-                Book a Demo
-              </Button>
-            </a>
-          </div>
-
-          <div className="flex justify-center px-4 mt-12">
-          <div className="text-center">
-            <p className="text-xs md:text-sm text-gray-500 mb-0">
-              The Future is Conversational —{" "}
-              <button
-                onClick={() => window.open('https://app.genezio.ai/brand-report/49/Natwest?demo=account', '_blank')}
-                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium"
-              >
-                Try interactive demo
-                <svg
-                  className="w-3 h-3 transition-transform duration-200 hover:translate-x-0.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </p>
-          </div>
+              Get Free Analysis
+            </Button>
+          </a>
+          <button
+          onClick={() => window.open('https://app.genezio.ai/brand-report/49/Natwest?demo=account', '_blank')}
+            className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium group"
+          >
+            <PlayCircleIcon className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors" />
+            Try Interactive Demo
+          </button>
         </div>
-        </div>
-      </section>
-    </>
+
+        {/* Small subtitle */}
+        <p className="text-sm text-gray-500">
+          No credit card required • Free 7-day trial
+        </p>
+      </div>
+    </section>
   );
 }

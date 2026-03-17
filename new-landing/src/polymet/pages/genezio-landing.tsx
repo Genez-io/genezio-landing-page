@@ -9,6 +9,7 @@ import { GenezioEnterpriseSection } from "@/polymet/components/genezio-enterpris
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import { GenezioTestimonialSection } from "../components/genezio-testimonial-section";
 import { IndustryLeaderboardBanner } from "@/polymet/components/industry-leaderboard-banner";
+import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic-section";
 
 export function GenezioLanding() {
   return (
@@ -25,7 +26,7 @@ export function GenezioLanding() {
 
         <GenezioTrustSection />
         <GenezioTestimonialSection />
-
+        <GenezioAiTrafficSection />
         <GenezioDashboardSection />
 
         <GenezioDifferentiatorsSection />

@@ -1,13 +1,118 @@
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router";
+import { useState } from "react";
 import {
-  CalendarIcon,
-  ChevronDownIcon,
+  BarChart3Icon,
+  MessageSquareIcon,
+  UsersIcon,
+  FileTextIcon,
+  MessageCircleIcon,
+  TagIcon,
+  ThumbsUpIcon,
+  ZapIcon,
   SettingsIcon,
-  ExternalLinkIcon
+  EyeIcon,
+  XIcon,
+  CalendarIcon,
+  CpuIcon,
 } from "lucide-react";
 
 export function GenezioDashboardSection() {
+  const [viewMode, setViewMode] = useState<"visibility" | "recommendation">("visibility");
+  const [showFilters, setShowFilters] = useState(false);
+  const [selectedDateRange, setSelectedDateRange] = useState("Last 30 days");
+  const [selectedModels, setSelectedModels] = useState<string[]>(["ChatGPT", "Claude", "Gemini", "Perplexity"]);
+
+  // Data for Visibility mode
+  const visibilityData = [
+    {
+      topic: "Best project management tools for remote teams",
+      yourBrand: "84%",
+      compA: "65%",
+      compB: "72%",
+      compC: "23%",
+      compD: "58%",
+    },
+    {
+      topic: "Most affordable collaboration software",
+      yourBrand: "78%",
+      compA: "51%",
+      compB: "78%",
+      compC: "12%",
+      compD: "67%",
+    },
+    {
+      topic: "Tools with best integrations for developers",
+      yourBrand: "81%",
+      compA: "82%",
+      compB: "61%",
+      compC: "90%",
+      compD: "38%",
+    },
+    {
+      topic: "Easiest to use for non-technical teams",
+      yourBrand: "72%",
+      compA: "43%",
+      compB: "68%",
+      compC: "29%",
+      compD: "55%",
+    },
+    {
+      topic: "Best value for growing startups",
+      yourBrand: "67%",
+      compA: "72%",
+      compB: "59%",
+      compC: "31%",
+      compD: "64%",
+    },
+  ];
+
+  // Data for Recommendation mode
+  const recommendationData = [
+    {
+      topic: "Best project management tools for remote teams",
+      yourBrand: "86%",
+      compA: "78%",
+      compB: "82%",
+      compC: "34%",
+      compD: "61%",
+    },
+    {
+      topic: "Most affordable collaboration software",
+      yourBrand: "81%",
+      compA: "62%",
+      compB: "85%",
+      compC: "19%",
+      compD: "73%",
+    },
+    {
+      topic: "Tools with best integrations for developers",
+      yourBrand: "83%",
+      compA: "87%",
+      compB: "68%",
+      compC: "47%",
+      compD: "52%",
+    },
+    {
+      topic: "Easiest to use for non-technical teams",
+      yourBrand: "75%",
+      compA: "56%",
+      compB: "74%",
+      compC: "38%",
+      compD: "63%",
+    },
+    {
+      topic: "Best value for growing startups",
+      yourBrand: "69%",
+      compA: "81%",
+      compB: "67%",
+      compC: "42%",
+      compD: "71%",
+    },
+  ];
+
+  // Select data based on view mode
+  const tableData = viewMode === "visibility" ? visibilityData : recommendationData;
   return (
     <section className="py-32 bg-[#050506] relative overflow-hidden">
       {/* Background decoration */}
@@ -17,53 +122,64 @@ export function GenezioDashboardSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Understand your{" "}
+            Track AI{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
-              AI visibility
-            </span>{" "}
-            and competitive position
+              visibility & recommendations
+            </span>
           </h2>
           <p className="text-lg text-[#B0B0B3] max-w-3xl mx-auto">
-            Track visibility, monitor competitors, and optimize your presence
-            across all conversations, buyer personas, and platforms.
+            Monitor your brand visibility and how often AI engines recommend you vs competitors. See which platforms, topics, and buyer personas drive the most recommendations and track your competitive position over time.
           </p>
         </div>
 
         {/* Dashboard mockup */}
-        <div className="relative max-w-6xl mx-auto overflow-hidden">
+        <div className="relative max-w-6xl mx-auto">
+          <div className="transform hover:scale-[1.01] transition-all duration-700 ease-out">
           {/* Browser chrome */}
-          <div className="bg-[#1C1C20] rounded-t-xl border border-[#2A2A30] border-b-0 p-2 md:p-4">
+          <div className="bg-[#1C1C20] rounded-t-xl border border-[#2A2A30] border-b-0 px-4 py-3 sticky top-0 z-20">
             {/* Navigation header - Brand and Menu */}
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-[#2A2A30] gap-2 md:gap-0">
+            <div className="flex items-center justify-between">
               {/* Left side - Brand info */}
-              <div className="flex items-center gap-3 py-3">
-                <div className="text-white font-semibold text-lg">
-                  Your Brand
+              <div className="flex items-center gap-2">
+                <div className="text-white font-bold text-sm leading-none whitespace-nowrap">
+                  Brand Performance Report
                 </div>
               </div>
 
-              {/* Right side - Tab navigation */}
-              <div className="flex items-center gap-1 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-white bg-[#0E0E10] rounded-t-lg border-b-2 border-blue-500 whitespace-nowrap">
-                  Overview
-                </div>
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-[#B0B0B3] rounded-t-lg whitespace-nowrap">
-                  Insights
-                </div>
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-[#B0B0B3] rounded-t-lg whitespace-nowrap">
-                  Performance
-                </div>
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-[#B0B0B3] rounded-t-lg whitespace-nowrap">
-                  Citations
-                </div>
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-[#B0B0B3] rounded-t-lg whitespace-nowrap">
-                  Statements
-                </div>
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-[#B0B0B3] rounded-t-lg whitespace-nowrap">
-                  Keywords
-                </div>
-                <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-[#B0B0B3] rounded-t-lg whitespace-nowrap">
-                  LLM Platforms
+              {/* Right side - Tab navigation with icons */}
+              <div className="max-w-full overflow-x-auto md:overflow-visible">
+                <div className="flex items-center gap-0.5 md:flex-nowrap min-w-max">
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                    <BarChart3Icon className="w-3.5 h-3.5" />
+                    Overview
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                    <MessageSquareIcon className="w-3.5 h-3.5" />
+                    Conversations
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-white bg-[#0E0E10] rounded-md flex items-center gap-1.5 whitespace-nowrap">
+                    <UsersIcon className="w-3.5 h-3.5" />
+                    Competitors
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                    <FileTextIcon className="w-3.5 h-3.5" />
+                    Citations
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                    <MessageCircleIcon className="w-3.5 h-3.5" />
+                    Statements
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                    <TagIcon className="w-3.5 h-3.5" />
+                    Query fanouts
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors flex items-center gap-1.5 whitespace-nowrap">
+                    <ZapIcon className="w-3.5 h-3.5" />
+                    Actions
+                  </button>
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors">
+                    <SettingsIcon className="w-3.5 h-3.5" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -71,435 +187,258 @@ export function GenezioDashboardSection() {
 
           {/* Dashboard content */}
           <div className="bg-[#0E0E10] border border-[#2A2A30] rounded-b-xl p-4 md:p-8">
-            {/* Filters bar */}
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8 pb-6 border-b border-[#2A2A30]">
-              {/* Left side - Time period buttons */}
-              <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
-                <div className="border border-[#2A2A30] bg-[#1C1C20] text-white/60 px-3 py-1.5 rounded-md text-sm">
-                  Last 24 hours
-                </div>
-                <div className="border border-[#2A2A30] bg-[#1C1C20] text-white/60 px-3 py-1.5 rounded-md text-sm">
-                  Last 7 days
-                </div>
-                <div className="border border-blue-500/50 bg-[#2A2A30] text-white px-3 py-1.5 rounded-md text-sm">
-                  Last 30 days
-                </div>
-                <div className="border border-[#2A2A30] bg-[#1C1C20] text-white/60 px-3 py-1.5 rounded-md text-sm flex items-center gap-2">
-                  Custom range
-                  <ChevronDownIcon className="w-3 h-3" />
-                </div>
-              </div>
 
-              {/* Right side - Dropdown filters */}
-              <div className="flex items-center gap-3 overflow-x-auto w-full md:w-auto">
-                <div className="border border-[#2A2A30] bg-[#1C1C20] text-white px-3 py-1.5 rounded-md text-sm flex items-center">
-                  All Topics
-                  <ChevronDownIcon className="w-4 h-4 ml-2" />
-                </div>
-                <div className="border border-[#2A2A30] bg-[#1C1C20] text-white px-3 py-1.5 rounded-md text-sm flex items-center">
-                  All Platforms
-                  <ChevronDownIcon className="w-4 h-4 ml-2" />
-                </div>
-                <div className="border border-[#2A2A30] bg-[#1C1C20] text-white px-3 py-1.5 rounded-md text-sm flex items-center">
-                  All Personas
-                  <ChevronDownIcon className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </div>
-
-            {/* Brand Presence Card */}
+            {/* Competitors by Topic Table */}
             <div className="mb-8">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <h3 className="text-white text-xl font-bold">
-                    Brand Visibility
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-6">
+                <div>
+                  <h3 className="text-white text-2xl font-bold mb-2">
+                    Competitors by Topic
                   </h3>
-                  <div className="flex items-center gap-2 bg-[#1C1C20] border border-[#2A2A30] rounded-lg px-3 py-1">
-                    {/* text sm mobile */}
-                    <span className="text-md font-bold text-white">63%</span>
-                    <div className="w-5 h-5 rounded-full border-2 border-[#B0B0B3] flex items-center justify-center">
-                      <span className="text-[#B0B0B3] text-xs">i</span>
-                    </div>
-                  </div>
+                  <p className="text-sm text-[#B0B0B3]">
+                    Brand {viewMode === "visibility" ? "visibility" : "recommendations"} across topics
+                  </p>
                 </div>
-                {/* <div className="border border-blue-500/30 bg-blue-500/5 text-white px-3 py-1.5 rounded-md text-sm flex items-center">
-                  <ExternalLinkIcon className="w-4 h-4 mr-2" />
-                  Competitors List
-                </div> */}
-              </div>
-
-              <p className="text-sm text-[#B0B0B3] mb-6">
-                based on{" "}
-                <span className="text-white font-semibold">
-                  45k conversations
-                </span>{" "}
-                that we ran over the last{" "}
-                <span className="text-white font-semibold">9 days</span>
-              </p>
-
-              {/* Competitor selection */}
-              <div className="mb-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30] bg-purple-600/20 flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 text-purple-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-
-                    <div className="w-2 h-2 rounded-full bg-purple-500" />
-
-                    <span className="text-white text-sm font-medium">
-                      Your Brand
-                    </span>
-                    <span className="text-[#B0B0B3] text-xs">You</span>
+                <div className="flex items-center gap-2 md:gap-3 flex-wrap justify-start md:justify-end">
+                  {/* View Mode Switch */}
+                  <div className="flex items-center bg-[#1C1C20] border border-[#2A2A30] rounded-md p-1">
+                    <button
+                      onClick={() => setViewMode("visibility")}
+                      className={`px-3 py-1.5 text-xs font-medium rounded transition-colors flex items-center gap-1.5 ${
+                        viewMode === "visibility"
+                          ? "bg-[#0E0E10] text-white"
+                          : "text-[#B0B0B3] hover:text-white"
+                      }`}
+                    >
+                      <EyeIcon className="w-3.5 h-3.5" />
+                      Visibility
+                    </button>
+                    <button
+                      onClick={() => setViewMode("recommendation")}
+                      className={`px-3 py-1.5 text-xs font-medium rounded transition-colors flex items-center gap-1.5 ${
+                        viewMode === "recommendation"
+                          ? "bg-[#0E0E10] text-white"
+                          : "text-[#B0B0B3] hover:text-white"
+                      }`}
+                    >
+                      <ThumbsUpIcon className="w-3.5 h-3.5" />
+                      Recommendation
+                    </button>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30] bg-gray-600/20 flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 text-gray-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-
-                    <div className="w-2 h-2 rounded-full bg-[#1F2937]" />
-
-                    <span className="text-white text-sm">Competitor A</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30] bg-blue-900/20 flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 text-blue-900"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-
-                    <div className="w-2 h-2 rounded-full bg-[#1E3A8A]" />
-
-                    <span className="text-white text-sm">Competitor B</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30] bg-teal-800/20 flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 text-teal-800"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-
-                    <div className="w-2 h-2 rounded-full bg-[#0F766E]" />
-
-                    <span className="text-white text-sm">Competitor C</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30] bg-amber-700/20 flex items-center justify-center">
-                      <svg
-                        className="w-3 h-3 text-amber-700"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-
-                    <div className="w-2 h-2 rounded-full bg-[#D97706]" />
-
-                    <span className="text-white text-sm">Competitor D</span>
-                  </div>
-
-                  <div className="flex items-center gap-2 opacity-50">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30]" />
-
-                    <div className="w-2 h-2 rounded-full bg-gray-400" />
-
-                    <span className="text-[#B0B0B3] text-sm">Competitor E</span>
-                  </div>
-
-                  <div className="flex items-center gap-2 opacity-50">
-                    <div className="w-4 h-4 rounded border border-[#2A2A30]" />
-
-                    <div className="w-2 h-2 rounded-full bg-gray-400" />
-
-                    <span className="text-[#B0B0B3] text-sm">Competitor F</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Chart area */}
-              <div className="relative bg-[#050506] border border-[#2A2A30] rounded-lg p-3 md:p-6 h-64 md:h-80 overflow-hidden">
-                {/* Y-axis labels */}
-                <div className="absolute left-2 top-6 bottom-12 flex flex-col justify-between text-xs text-[#B0B0B3]">
-                  <span>100</span>
-                  <span>75</span>
-                  <span>50</span>
-                  <span>25</span>
-                  <span>0</span>
-                </div>
-
-                {/* Chart grid */}
-                <div className="ml-8 h-full relative">
-                  {/* Grid lines */}
-                  <div className="absolute inset-0 flex flex-col justify-between">
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-full h-px bg-[#2A2A30]" />
-                    ))}
-                  </div>
-
-                  {/* Simulated chart lines */}
-                  <svg
-                    className="absolute inset-0 w-full h-full"
-                    preserveAspectRatio="none"
-                    viewBox="0 0 1000 250"
+                  <button
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="border border-[#2A2A30] bg-[#1C1C20] text-white px-4 py-2 rounded-md text-sm flex items-center gap-2 hover:bg-[#2A2A30] transition-colors"
                   >
-                    {/* Main line - Your Brand (solid purple line with dots) - starts at 50, dips at Nov 4, rises at Nov 7 - NOW ON TOP */}
-                    <path
-                      d="M 0 125 L 50 122 L 100 118 L 150 114 L 200 110 L 250 105 L 300 100 L 350 95 L 400 90 L 450 85 L 500 80 L 550 77 L 600 74 L 650 78 L 700 75 L 750 68 L 800 63 L 850 62 L 900 61 L 950 60 L 1000 59"
-                      stroke="#8B5CF6"
-                      strokeWidth="2.5"
-                      fill="none"
-                    />
-
-                    {/* Dots on Your Brand line - dips at Nov 4 (650), rises at Nov 7 (800) */}
-                    <circle cx="0" cy="125" r="3" fill="#8B5CF6" />
-
-                    <circle cx="50" cy="122" r="3" fill="#8B5CF6" />
-
-                    <circle cx="100" cy="118" r="3" fill="#8B5CF6" />
-
-                    <circle cx="150" cy="114" r="3" fill="#8B5CF6" />
-
-                    <circle cx="200" cy="110" r="3" fill="#8B5CF6" />
-
-                    <circle cx="250" cy="105" r="3" fill="#8B5CF6" />
-
-                    <circle cx="300" cy="100" r="3" fill="#8B5CF6" />
-
-                    <circle cx="350" cy="95" r="3" fill="#8B5CF6" />
-
-                    <circle cx="400" cy="90" r="3" fill="#8B5CF6" />
-
-                    <circle cx="450" cy="85" r="3" fill="#8B5CF6" />
-
-                    <circle cx="500" cy="80" r="3" fill="#8B5CF6" />
-
-                    <circle cx="550" cy="77" r="3" fill="#8B5CF6" />
-
-                    <circle cx="600" cy="74" r="3" fill="#8B5CF6" />
-
-                    <circle cx="650" cy="78" r="3" fill="#8B5CF6" />
-
-                    <circle cx="700" cy="75" r="3" fill="#8B5CF6" />
-
-                    <circle cx="750" cy="68" r="3" fill="#8B5CF6" />
-
-                    <circle cx="800" cy="63" r="3" fill="#8B5CF6" />
-
-                    <circle cx="850" cy="62" r="3" fill="#8B5CF6" />
-
-                    <circle cx="900" cy="61" r="3" fill="#8B5CF6" />
-
-                    <circle cx="950" cy="60" r="3" fill="#8B5CF6" />
-
-                    <circle cx="1000" cy="59" r="3" fill="#8B5CF6" />
-
-                    {/* Competitor A - dashed line (top, black) - linear until Oct 30 (position 450) */}
-                    <path
-                      d="M 0 50 L 50 50 L 100 50 L 150 50 L 200 50 L 250 50 L 300 50 L 350 50 L 400 50 L 450 50 L 500 54 L 600 49 L 700 56 L 800 51 L 900 54 L 1000 50"
-                      stroke="#1F2937"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeDasharray="6,4"
-                    />
-
-                    {/* Dots on Competitor A line - linear until Oct 30 (450) */}
-                    <circle cx="0" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="50" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="100" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="150" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="200" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="250" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="300" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="350" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="400" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="450" cy="50" r="2.5" fill="#1F2937" />
-
-                    <circle cx="500" cy="54" r="2.5" fill="#1F2937" />
-
-                    <circle cx="600" cy="49" r="2.5" fill="#1F2937" />
-
-                    <circle cx="700" cy="56" r="2.5" fill="#1F2937" />
-
-                    <circle cx="800" cy="51" r="2.5" fill="#1F2937" />
-
-                    <circle cx="900" cy="54" r="2.5" fill="#1F2937" />
-
-                    <circle cx="1000" cy="50" r="2.5" fill="#1F2937" />
-
-                    {/* Competitor B - dashed line (middle-top, dark blue) - oscillates more */}
-                    <path
-                      d="M 0 75 L 100 80 L 200 72 L 300 78 L 400 70 L 500 82 L 600 74 L 700 81 L 800 73 L 900 79 L 1000 75"
-                      stroke="#1E3A8A"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeDasharray="6,4"
-                    />
-
-                    {/* Dots on Competitor B line */}
-                    <circle cx="0" cy="75" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="100" cy="80" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="200" cy="72" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="300" cy="78" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="400" cy="70" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="500" cy="82" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="600" cy="74" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="700" cy="81" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="800" cy="73" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="900" cy="79" r="2.5" fill="#1E3A8A" />
-
-                    <circle cx="1000" cy="75" r="2.5" fill="#1E3A8A" />
-
-                    {/* Competitor C - dashed line (bottom, teal) - oscillates more */}
-                    <path
-                      d="M 0 195 L 100 200 L 200 190 L 300 198 L 400 188 L 500 202 L 600 192 L 700 201 L 800 191 L 900 199 L 1000 195"
-                      stroke="#0F766E"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeDasharray="6,4"
-                    />
-
-                    {/* Dots on Competitor C line */}
-                    <circle cx="0" cy="195" r="2.5" fill="#0F766E" />
-
-                    <circle cx="100" cy="200" r="2.5" fill="#0F766E" />
-
-                    <circle cx="200" cy="190" r="2.5" fill="#0F766E" />
-
-                    <circle cx="300" cy="198" r="2.5" fill="#0F766E" />
-
-                    <circle cx="400" cy="188" r="2.5" fill="#0F766E" />
-
-                    <circle cx="500" cy="202" r="2.5" fill="#0F766E" />
-
-                    <circle cx="600" cy="192" r="2.5" fill="#0F766E" />
-
-                    <circle cx="700" cy="201" r="2.5" fill="#0F766E" />
-
-                    <circle cx="800" cy="191" r="2.5" fill="#0F766E" />
-
-                    <circle cx="900" cy="199" r="2.5" fill="#0F766E" />
-
-                    <circle cx="1000" cy="195" r="2.5" fill="#0F766E" />
-
-                    {/* Competitor D - dashed line (middle-bottom, orange/amber) - oscillates more */}
-                    <path
-                      d="M 0 125 L 100 130 L 200 120 L 300 128 L 400 118 L 500 132 L 600 122 L 700 131 L 800 121 L 900 129 L 1000 125"
-                      stroke="#D97706"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeDasharray="6,4"
-                    />
-
-                    {/* Dots on Competitor D line */}
-                    <circle cx="0" cy="125" r="2.5" fill="#D97706" />
-
-                    <circle cx="100" cy="130" r="2.5" fill="#D97706" />
-
-                    <circle cx="200" cy="120" r="2.5" fill="#D97706" />
-
-                    <circle cx="300" cy="128" r="2.5" fill="#D97706" />
-
-                    <circle cx="400" cy="118" r="2.5" fill="#D97706" />
-
-                    <circle cx="500" cy="132" r="2.5" fill="#D97706" />
-
-                    <circle cx="600" cy="122" r="2.5" fill="#D97706" />
-
-                    <circle cx="700" cy="131" r="2.5" fill="#D97706" />
-
-                    <circle cx="800" cy="121" r="2.5" fill="#D97706" />
-
-                    <circle cx="900" cy="129" r="2.5" fill="#D97706" />
-
-                    <circle cx="1000" cy="125" r="2.5" fill="#D97706" />
-                  </svg>
-
-                  {/* X-axis dates - all dates visible */}
-                  <div className="absolute bottom-0 left-0 right-0 flex justify-between text-[10px] text-[#B0B0B3] pt-2 overflow-x-auto">
-                    <span className="whitespace-nowrap">Oct 15</span>
-                    <span className="whitespace-nowrap">Oct 22</span>
-                    <span className="whitespace-nowrap">Oct 24</span>
-                    <span className="whitespace-nowrap">Oct 25</span>
-                    <span className="whitespace-nowrap">Oct 26</span>
-                    <span className="whitespace-nowrap">Oct 27</span>
-                    <span className="whitespace-nowrap">Oct 28</span>
-                    <span className="whitespace-nowrap">Oct 29</span>
-                    <span className="whitespace-nowrap">Oct 30</span>
-                    <span className="whitespace-nowrap">Oct 31</span>
-                    <span className="whitespace-nowrap">Nov 01</span>
-                    <span className="whitespace-nowrap">Nov 02</span>
-                    <span className="whitespace-nowrap">Nov 03</span>
-                    <span className="whitespace-nowrap">Nov 04</span>
-                    <span className="whitespace-nowrap">Nov 05</span>
-                    <span className="whitespace-nowrap">Nov 06</span>
-                    <span className="whitespace-nowrap">Nov 07</span>
-                    <span className="whitespace-nowrap">Nov 08</span>
-                    <span className="whitespace-nowrap">Nov 09</span>
-                    <span className="whitespace-nowrap">Nov 11</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                    </svg>
+                    Filters
+                  </button>
+                  <button className="border border-[#2A2A30] bg-[#1C1C20] text-white p-2 rounded-md hover:bg-[#2A2A30] transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              {/* Filters Drawer Overlay */}
+              {showFilters && (
+                <>
+                  {/* Backdrop */}
+                  <div
+                    className="fixed inset-0 bg-black/60 z-40 transition-opacity"
+                    onClick={() => setShowFilters(false)}
+                  />
+
+                  {/* Drawer */}
+                  <div className="fixed top-0 right-0 h-full w-full max-w-md bg-[#1C1C20] border-l border-[#2A2A30] z-50 shadow-2xl overflow-y-auto">
+                    {/* Drawer Header */}
+                    <div className="sticky top-0 bg-[#1C1C20] border-b border-[#2A2A30] px-6 py-4 flex items-center justify-between">
+                      <h4 className="text-white font-semibold text-lg">Filters</h4>
+                      <button
+                        onClick={() => setShowFilters(false)}
+                        className="text-[#B0B0B3] hover:text-white transition-colors p-1 hover:bg-[#2A2A30] rounded"
+                      >
+                        <XIcon className="w-5 h-5" />
+                      </button>
+                    </div>
+
+                    {/* Drawer Content */}
+                    <div className="p-6 space-y-6">
+                      {/* Date Range Filter */}
+                      <div>
+                        <label className="flex items-center gap-2 text-sm font-medium text-white mb-3">
+                          <CalendarIcon className="w-4 h-4" />
+                          Date Range
+                        </label>
+                        <select
+                          value={selectedDateRange}
+                          onChange={(e) => setSelectedDateRange(e.target.value)}
+                          className="w-full bg-[#0E0E10] border border-[#2A2A30] text-white rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        >
+                          <option value="Last 7 days">Last 7 days</option>
+                          <option value="Last 30 days">Last 30 days</option>
+                          <option value="Last 90 days">Last 90 days</option>
+                          <option value="Last 6 months">Last 6 months</option>
+                          <option value="Last year">Last year</option>
+                          <option value="Custom range">Custom range</option>
+                        </select>
+                      </div>
+
+                      {/* AI Models Filter */}
+                      <div>
+                        <label className="flex items-center gap-2 text-sm font-medium text-white mb-3">
+                          <CpuIcon className="w-4 h-4" />
+                          AI Models
+                        </label>
+                        <div className="space-y-2">
+                          {["ChatGPT", "Claude", "Gemini", "Perplexity"].map((model) => (
+                            <label key={model} className="flex items-center gap-2 cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={selectedModels.includes(model)}
+                                onChange={(e) => {
+                                  if (e.target.checked) {
+                                    setSelectedModels([...selectedModels, model]);
+                                  } else {
+                                    setSelectedModels(selectedModels.filter((m) => m !== model));
+                                  }
+                                }}
+                                className="w-4 h-4 rounded border-[#2A2A30] bg-[#0E0E10] text-purple-500 focus:ring-purple-500 focus:ring-offset-0"
+                              />
+                              <span className="text-sm text-white">{model}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Drawer Footer */}
+                    <div className="sticky bottom-0 bg-[#1C1C20] border-t border-[#2A2A30] px-6 py-4 flex items-center gap-3">
+                      <Button
+                        onClick={() => setShowFilters(false)}
+                        className="flex-1 bg-white hover:bg-gray-100 text-black px-6 py-2 text-sm font-medium"
+                      >
+                        Apply Filters
+                      </Button>
+                      <Button
+                        onClick={() => {
+                          setSelectedDateRange("Last 30 days");
+                          setSelectedModels(["ChatGPT", "Claude", "Gemini", "Perplexity"]);
+                        }}
+                        variant="outline"
+                        className="border-[#2A2A30] bg-transparent text-white hover:bg-[#2A2A30] px-6 py-2 text-sm"
+                      >
+                        Reset
+                      </Button>
+                    </div>
                   </div>
+                </>
+              )}
+
+              {/* Table */}
+              <div className="bg-[#050506] border border-[#2A2A30] rounded-lg overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-[#2A2A30]">
+                        <th className="text-left py-4 px-6 text-sm font-semibold text-white bg-[#0E0E10]">
+                          Topic
+                        </th>
+                        <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
+                              <span className="text-purple-400 text-xs font-bold">YB</span>
+                            </div>
+                            <span className="text-white text-xs">Your Brand</span>
+                          </div>
+                        </th>
+                        <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="w-8 h-8 rounded-full bg-gray-600/20 flex items-center justify-center">
+                              <span className="text-gray-400 text-xs font-bold">CA</span>
+                            </div>
+                            <span className="text-white text-xs">Comp A</span>
+                          </div>
+                        </th>
+                        <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="w-8 h-8 rounded-full bg-blue-900/20 flex items-center justify-center">
+                              <span className="text-blue-400 text-xs font-bold">CB</span>
+                            </div>
+                            <span className="text-white text-xs">Comp B</span>
+                          </div>
+                        </th>
+                        <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="w-8 h-8 rounded-full bg-teal-800/20 flex items-center justify-center">
+                              <span className="text-teal-400 text-xs font-bold">CC</span>
+                            </div>
+                            <span className="text-white text-xs">Comp C</span>
+                          </div>
+                        </th>
+                        <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="w-8 h-8 rounded-full bg-amber-700/20 flex items-center justify-center">
+                              <span className="text-amber-400 text-xs font-bold">CD</span>
+                            </div>
+                            <span className="text-white text-xs">Comp D</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tableData.map((row, index) => {
+                        // Determine if cells should be red
+                        const isToolsIntegrations = row.topic === "Tools with best integrations for developers";
+                        const isBestValue = row.topic === "Best value for growing startups";
+                        
+                        return (
+                          <tr
+                            key={index}
+                            className={`${
+                              index < tableData.length - 1 ? "border-b border-[#2A2A30]" : ""
+                            } hover:bg-[#0E0E10]/50 transition-colors`}
+                          >
+                            <td className="py-4 px-6 text-sm text-white">
+                              {row.topic}
+                            </td>
+                            <td className="py-4 px-4 text-center">
+                              <span className="text-sm font-semibold text-white">
+                                {row.yourBrand}
+                              </span>
+                            </td>
+                            <td className="py-4 px-4 text-center">
+                              <span className={`text-sm font-semibold ${
+                                isToolsIntegrations || isBestValue ? "text-red-500" : "text-white"
+                              }`}>
+                                {row.compA}
+                              </span>
+                            </td>
+                            <td className="py-4 px-4 text-center">
+                              <span className="text-sm font-semibold text-white">
+                                {row.compB}
+                              </span>
+                            </td>
+                            <td className="py-4 px-4 text-center">
+                              <span className={`text-sm font-semibold ${
+                                isToolsIntegrations ? "text-red-500" : "text-white"
+                              }`}>
+                                {row.compC}
+                              </span>
+                            </td>
+                            <td className="py-4 px-4 text-center">
+                              <span className="text-sm font-semibold text-white">
+                                {row.compD}
+                              </span>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -507,18 +446,22 @@ export function GenezioDashboardSection() {
 
           {/* Glow effect - Mobile responsive */}
           <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-2xl md:blur-3xl -z-10 opacity-50" />
+          
+          {/* 3D Shadow - natural depth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/30 to-black/60 blur-3xl translate-y-6 scale-95 -z-20 rounded-xl" />
+          </div>
         </div>
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <a href="https://app.genezio.ai/sign-up">
+          <Link to="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO">
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Get Started Today
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
