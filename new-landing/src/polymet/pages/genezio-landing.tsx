@@ -15,9 +15,10 @@ export function GenezioLanding() {
   return (
     <>
       <PolymetSEO
-        title="Brand Visibility in AI Conversations | Genezio"
-        description="Genezio is a Generative Engine Optimization (GEO) platform that helps brands understand, monitor, and optimize how AI mentions them across LLMs."
+        title="Genezio | Optimize Your AI Presence to Win Recommendations"
+        description="Discover how AI engines see your brand. Optimize your presence to win more AI recommendations. Start your free 7-day trial today, no credit card required!"
         canonicalPath="/"
+        ogImage="https://genezio.com/images/genezio-black-logo.webp"
       />
       <div className="min-h-screen bg-[#050506]">
         <IndustryLeaderboardBanner />

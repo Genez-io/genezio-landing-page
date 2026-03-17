@@ -74,7 +74,7 @@ export function GenezioHeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight flex flex-col items-center md:block">
+        <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight flex flex-col items-center md:block">
           <span className="text-white block md:inline">Get recommended by </span>
           <span
             className="text-white transition-all duration-500 inline-flex items-center justify-center gap-3 min-w-[200px] md:min-w-[260px] mt-2 md:mt-0"
@@ -90,12 +90,12 @@ export function GenezioHeroSection() {
             />
             <span>{platforms[currentPlatformIndex].name}</span>
           </span>
-        </h1>
+        </div>
 
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-6 md:mx-[180px] mb-10 leading-relaxed">
+        <h1 className="text-base md:text-lg text-gray-400 max-w-2xl mx-6 md:mx-[180px] mb-10 leading-relaxed">
           Track how AI engines see your brand and optimize your presence to win
           more recommendations.
-        </p>
+        </h1>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
