@@ -7,9 +7,11 @@ interface PolymetSEOProps {
   canonicalPath?: string;
   ogImage?: string;
   ogUrl?: string;
+  ogType?: string;
+  schema?: Record<string, unknown>;
 }
 
-export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }: PolymetSEOProps) {
+export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl, ogType = "website", schema }: PolymetSEOProps) {
   const url = canonicalPath ? `https://genezio.com${canonicalPath.startsWith('/') ? canonicalPath : '/' + canonicalPath}` : undefined;
 
   useEffect(() => {
@@ -32,6 +34,8 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }
       setMeta("name", "description", description);
       setMeta("property", "og:title", title);
       setMeta("property", "og:description", description);
+      setMeta("property", "og:type", ogType);
+      setMeta("property", "og:site_name", "Genezio");
       setMeta("name", "twitter:title", title);
       setMeta("name", "twitter:description", description);
       
@@ -49,10 +53,22 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }
         }
         linkEl.setAttribute("href", url);
       }
+
+      // Inject JSON-LD schema
+      if (schema) {
+        let scriptEl = document.querySelector('script[data-polymet-schema]');
+        if (!scriptEl) {
+          scriptEl = document.createElement("script");
+          scriptEl.setAttribute("type", "application/ld+json");
+          scriptEl.setAttribute("data-polymet-schema", "true");
+          document.head.appendChild(scriptEl);
+        }
+        scriptEl.textContent = JSON.stringify(schema);
+      }
     }, 100);
 
     return () => clearTimeout(timeout);
-  }, [title, description, ogImage, ogUrl, url]);
+  }, [title, description, ogImage, ogUrl, ogType, url, schema]);
 
   const finalOgUrl = ogUrl || url;
 
@@ -63,11 +79,18 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl }
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Genezio" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta property="og:image" content={ogImage} />}
       {finalOgUrl && <meta property="og:url" content={finalOgUrl} />}
       {url && <link rel="canonical" href={url} />}
+      {schema && (
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      )}
     </Helmet>
   );
 }
