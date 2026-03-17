@@ -1,3 +1,5 @@
+import React, { useEffect, useRef } from "react";
+
 export function GenezioTrustSection() {
   const companies = [
     {
@@ -28,6 +30,42 @@ export function GenezioTrustSection() {
       name: "CBRE",
       logo: "images/cbre-logo.png",
     },
+    {
+      name: "Bitdefender",
+      logo: "images/bitdefender.png",
+    },
+    {
+      name: "ERSTE BCR",
+      logo: "images/erste-logo.svg",
+    },
+    {
+      name: "slsp",
+      logo: "images/logo-slsp.svg",
+    },
+    {
+      name: "Banca Transilvania",
+      logo: "images/bt-logo.svg",
+    },
+    {
+      name: "Pluxee",
+      logo: "images/pluxee-logo.png",
+    },
+    {
+      name: "Druid",
+      logo: "images/druid-logo.svg",
+    },
+    {
+      name: "FlowX",
+      logo: "images/flowx-logo.png",
+    },
+    {
+      name: "CBRE",
+      logo: "images/cbre-logo.png",
+    },
+    {
+      name: "Bitdefender",
+      logo: "images/bitdefender.png",
+    },
   ];
 
   return (
@@ -39,22 +77,10 @@ export function GenezioTrustSection() {
 
         <div className="relative overflow-hidden">
           {/* Infinite scrolling carousel */}
-          <div
-            className="flex"
-            style={{
-              animation: "scroll 15s linear infinite",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.animationPlayState = "paused";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.animationPlayState = "running";
-            }}
-          >
-            {/* First set of logos */}
+          <Marquee>
             {companies.map((company, index) => (
               <div
-                key={`first-${index}`}
+                key={index}
                 className="flex-shrink-0 mx-8 md:mx-12 flex items-center justify-center group"
               >
                 <div className="relative w-32 h-16 md:w-40 md:h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
@@ -79,52 +105,63 @@ export function GenezioTrustSection() {
                 </div>
               </div>
             ))}
-            {/* Duplicate set for seamless loop */}
-            {companies.map((company, index) => (
-              <div
-                key={`second-${index}`}
-                className="flex-shrink-0 mx-8 md:mx-12 flex items-center justify-center group"
-              >
-                <div className="relative w-32 h-16 md:w-40 md:h-20 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    width={160}
-                    height={80}
-                    loading="lazy"
-                    className="max-w-full max-h-full object-contain transition-all duration-300"
-                    style={{
-                      filter: "brightness(0) invert(1) opacity(0.6)",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.filter =
-                        "brightness(0) invert(1) opacity(1) drop-shadow(0 0 20px rgba(192, 132, 252, 0.6))";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.filter = "brightness(0) invert(1) opacity(0.6)";
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-              @keyframes scroll {
-                0% {
-                  transform: translateX(0);
-                }
-                100% {
-                  transform: translateX(-50%);
-                }
-              }
-            `,
-            }}
-          />
+          </Marquee>
         </div>
       </div>
     </section>
+  );
+}
+
+type MarqueeProps = {
+  children: React.ReactNode;
+};
+
+function Marquee({ children }: MarqueeProps) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const offsetRef = useRef(0);
+  const pausedRef = useRef(false);
+
+  useEffect(() => {
+    let frameId: number;
+
+    const step = () => {
+      const el = containerRef.current;
+
+      if (el && !pausedRef.current) {
+        const speed = 0.6; // pixels per frame
+        offsetRef.current -= speed;
+
+        const contentWidth = el.scrollWidth;
+        const resetPoint = contentWidth / 2;
+
+        if (-offsetRef.current >= resetPoint) {
+          offsetRef.current = 0;
+        }
+
+        el.style.transform = `translateX(${offsetRef.current}px)`;
+      }
+
+      frameId = requestAnimationFrame(step);
+    };
+
+    frameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(frameId);
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="flex will-change-transform"
+      onMouseEnter={() => {
+        pausedRef.current = true;
+      }}
+      onMouseLeave={() => {
+        pausedRef.current = false;
+      }}
+    >
+      {children}
+      {children}
+    </div>
   );
 }
