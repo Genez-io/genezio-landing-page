@@ -48,6 +48,40 @@ export function BlogPost() {
     );
   }, [post.content]);
 
+  let customSchema: Record<string, unknown> | undefined = undefined;
+  if (post.id === "ai-recommendation-vs-ai-visibility") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the main difference between AI Visibility and AI Recommendation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Visibility simply means your brand is mentioned or listed by an AI model in response to a user's query, which doesn't guarantee endorsement and can sometimes include negative context. AI Recommendation, on the other hand, is a proactive, explicit endorsement by the AI, positioning your brand as the best or most suitable option to meet the user's specific intent, which significantly drives conversions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are Large Language Models (LLMs) considered \"zero-click gatekeepers\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LLMs act as zero-click gatekeepers because they synthesize vast amounts of information and provide direct, comprehensive answers right within the conversational interface. This eliminates the need for users to click through traditional search engine links to find what they are looking for, effectively collapsing the traditional discovery and conversion funnel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can brands successfully transition their strategy from SEO to Artificial Engine Optimization (AEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To succeed in AEO, brands must shift their focus from simple keyword matching to establishing semantic proximity and entity authority. This involves implementing robust structured data, accumulating authoritative third-party citations, proactively managing brand sentiment across the web, and aligning content tightly with complex, multi-turn user constraints to ensure LLMs confidently and explicitly recommend them."
+          }
+        }
+      ]
+    };
+  }
+
   return (
     <div className="min-h-screen bg-[#050506]">
       <PolymetSEO
@@ -56,6 +90,7 @@ export function BlogPost() {
         canonicalPath={`/blog/${slug}/`}
         ogUrl={post.metaOgUrl}
         ogImage={post.metaOgImage}
+        schema={customSchema}
       />
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
