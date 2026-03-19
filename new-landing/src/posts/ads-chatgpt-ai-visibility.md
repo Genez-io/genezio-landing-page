@@ -75,7 +75,7 @@ Crucially, these estimates would apply to **ad opportunities**, not to answers t
 
 ## How AI decides which brands to mention
 
-AI recommendations are not driven by advertising. They emerge from how models interpret the information available about a brand across the broader information ecosystem.
+[AI recommendations](/blog/ai-recommendation-vs-ai-visibility/) are not driven by advertising. They emerge from how models interpret the information available about a brand across the broader information ecosystem.
 
 In practice, AI answers are shaped by:
 * How clearly a brand is described across authoritative sources.
