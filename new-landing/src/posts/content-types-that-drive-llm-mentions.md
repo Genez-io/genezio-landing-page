@@ -100,7 +100,7 @@ This enables the model to justify its answer logically.
 Many of the scenarios in the report highlight outcome-driven criteria, such as “best universities for employability after a Business degree”. Universities with high-visibility outcome data were significantly more present in AI answers.
 
 ## 5. Intent-Aligned Content
-**AI recommendations depend on how well content matches real user intent.** 
+**[AI recommendations](/blog/ai-recommendation-vs-ai-visibility/) depend on how well content matches real user intent.** 
 
 LLMs prioritize content that maps to the actual phrasing and needs behind queries. The UK Universities dataset reveals four dominant intent clusters:
 * **Skills-based** (e.g., “best computing degrees for AI careers”) 

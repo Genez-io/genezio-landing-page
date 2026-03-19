@@ -573,4 +573,40 @@
         <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
       </image:image>
   </url>
+  <url>
+    <loc>https://genezio.com/blog/ai-recommendation-vs-ai-visibility/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/ai-recommendation-vs-ai-visibility-why-being-mentioned-by-chatgpt-isnt-enough.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/zero-click-content-chart-pink.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-visibility-vs-recommendation.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/rag-flowchat.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/ai-recommendation-vs-ai-visibility-in-chatgpt.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-recommendation-performance-chart.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-topic-performance-chart.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/4-pillars-aeo-seo.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/rich-snippets-test-results.webp</image:loc>
+      </image:image>
+  </url>
 </urlset>
