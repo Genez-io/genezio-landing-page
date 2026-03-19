@@ -1,5 +1,5 @@
 ---
-title: "Recommendation vs Visibility: Why ChatGPT Mentions are not Enough"
+title: "AI Visibility vs Recommendation: Mentions Aren't Enough"
 date: 2026-03-19
 tags:
   - AI Recommendation
