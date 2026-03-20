@@ -23,7 +23,7 @@ readTime: 11
 url: /ai-recommendation-vs-ai-visibility/
 ---
 
-# **Recommendation vs. Visibility: Why Being Mentioned by ChatGPT Isn't Enough**
+## **Recommendation vs. Visibility: Why Being Mentioned by ChatGPT Isn't Enough**
 
 ![AI Recommendation vs AI Visibility: Evolving from SEO to AEO](/images/ai-recommendation-vs-ai-visibility-why-being-mentioned-by-chatgpt-isnt-enough.webp)
 
