@@ -17,7 +17,7 @@ export function GenezioPricingComparison() {
       title: "Analysis & monitoring",
       rows: [
         { feature: "Topics / brand", starter: "5", growth: "10", enterprise: "Custom" },
-        { feature: "Scenarios / brand", starter: "20", growth: "30", enterprise: "Custom", subtext: { starter: "3,000 conversations", growth: "12,000 conversations", enterprise: "Custom" } },
+        { feature: "Scenarios / brand", starter: "20", growth: "30", enterprise: "Custom"},
         { feature: "AI Statements", starter: "check", growth: "check", enterprise: "check" },
         { feature: "AI Keywords", starter: "check", growth: "check", enterprise: "check" },
         { feature: "AI Citations", starter: "check", growth: "check", enterprise: "check" },
@@ -67,8 +67,11 @@ export function GenezioPricingComparison() {
       return <span className="text-white/20">–</span>;
     }
 
-    // Render long, comma-separated lists (like Answer Engines) as a vertical, centered list
-    if (value.includes(",")) {
+    // Render long, comma-separated lists (like Answer Engines) as a vertical, centered list.
+    // IMPORTANT: Don't split numeric thousands separators like "Top 1,000".
+    const isCommaSeparatedList =
+      value.includes(",") && /,\s*[A-Za-z]/.test(value);
+    if (isCommaSeparatedList) {
       const items = value.split(",").map((item) => item.trim());
       return (
         <div className="flex flex-col items-center justify-center gap-1 max-w-xs text-center">
