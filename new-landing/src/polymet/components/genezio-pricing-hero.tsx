@@ -17,7 +17,7 @@ export function GenezioPricingHero({
       description: "For teams exploring AI brand visibility",
       features: [
         "2 Answer Engines tracked",
-        "50 scenarios",
+        "20 scenarios",
         "Daily AI visibility insights",
         "Data retention: 1 month",
       ],
@@ -30,8 +30,8 @@ export function GenezioPricingHero({
       price: "€299",
       description: "For marketing teams optimizing AI presence",
       features: [
-        "4 Answer Engines tracked",
-        "50 scenarios",
+        "3 Answer Engines tracked",
+        "30 scenarios",
         "Multi-turn conversations",
         "Daily AI visibility insights",
         "AI content generation",
