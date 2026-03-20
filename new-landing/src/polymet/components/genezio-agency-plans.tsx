@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
-  CheckIcon,
   SparklesIcon,
-  UsersIcon,
-  HeadphonesIcon,
 } from "lucide-react";
 
 export function GenezioAgencyPlans() {
@@ -32,7 +29,10 @@ export function GenezioAgencyPlans() {
 
             {/* Plan Header */}
             <div className="mb-6">
-              <div className="flex items-baseline justify-center gap-1 mb-3">
+              <div className="flex items-baseline justify-center gap-2 mb-3">
+                <span className="text-white/60 text-sm font-medium">
+                  Starting from
+                </span>
                 <span className="text-3xl md:text-4xl font-bold text-white">
                   €999
                 </span>
@@ -52,13 +52,13 @@ export function GenezioAgencyPlans() {
               </div>
               {/* Feature 2 */}
               <div className="bg-white/5 border border-white/10 rounded-lg p-4">
-                <div className="text-2xl font-bold text-blue-400 mb-1">5</div>
+                <div className="text-2xl font-bold text-blue-400 mb-1">2-5</div>
                 <div className="text-white/70 text-xs">LLMs to Track per brand</div>
               </div>
               {/* Feature 3 */}
               <div className="bg-white/5 border border-white/10 rounded-lg p-4">
                 <div className="text-2xl font-bold text-blue-400 mb-1">
-                  7,500
+                  Up to 6,000
                 </div>
                 <div className="text-white/70 text-xs">
                   Conversations to Analyze per brand
@@ -72,7 +72,7 @@ export function GenezioAgencyPlans() {
                 Start Free Trial
               </Button>
               <Button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')} className="w-full bg-white/10 hover:bg-white/15 text-white border border-white/20 py-6 text-base font-semibold rounded-lg transition-all duration-200">
-                Book a Demo
+                Contact Us for Custom Enterprise Offer
               </Button>
               <p className="text-center text-white/50 text-sm">
                 Cancel anytime. 7 days free trial
@@ -101,10 +101,15 @@ export function GenezioAgencyPlans() {
                 included: "3",
                 addon: "Multi-market tracking",
               },
-              { feature: "Topics per brand", included: "10", addon: "-" },
+              { feature: "Topics per brand", included: "5", addon: "-" },
               {
                 feature: "Scenarios per brand",
-                included: "50",
+                included: "20",
+                addon: "Additional scenarios",
+              },
+              {
+                feature: "Answer Engines tracked",
+                included: "Up to 5 LLMs",
                 addon: "Additional scenarios",
               },
               {
@@ -135,13 +140,13 @@ export function GenezioAgencyPlans() {
               },
               {
                 feature: "Content generation",
-                included: "10 per day",
+                included: "1 per day",
                 addon: "-",
-                comingSoon: true,
+                // comingSoon: true,
               },
               { feature: "Data retention", included: "Unlimited", addon: "-" },
               { feature: "Seats", included: "Unlimited", addon: "-" },
-              { feature: "Insights", included: "10/day/customer", addon: "Additional insights" },
+              { feature: "Insights", included: "1/day/customer", addon: "Additional insights" },
 
               { feature: "Exports", included: "Yes", addon: "-" },
               {
@@ -240,7 +245,7 @@ export function GenezioAgencyPlans() {
                 <div className="text-white/70 font-medium">
                   Topics per brand
                 </div>
-                <div className="text-white font-semibold text-center">10</div>
+                <div className="text-white font-semibold text-center">5</div>
                 <div className="text-white/60 text-center text-sm">
                   Additional topics
                 </div>
@@ -249,7 +254,7 @@ export function GenezioAgencyPlans() {
                 <div className="text-white/70 font-medium">
                   Scenarios per brand
                 </div>
-                <div className="text-white font-semibold text-center">50</div>
+                <div className="text-white font-semibold text-center">20</div>
                 <div className="text-white/60 text-center text-sm">
                   Additional scenarios
                 </div>
@@ -262,7 +267,7 @@ export function GenezioAgencyPlans() {
                   </div>
                 </div>
                 <div className="text-white font-semibold text-center">
-                  5 LLMs
+                  Up to 5 LLMs
                 </div>
                 <div className="text-white/60 text-center text-sm">
                   Additional AI engines
@@ -315,12 +320,10 @@ export function GenezioAgencyPlans() {
                   <div className="text-white/70 font-medium">
                     Content generation
                   </div>
-                  <span className="text-xs px-2 py-0.5 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300">
-                    Coming soon
-                  </span>
+                 
                 </div>
                 <div className="text-white font-semibold text-center">
-                  10 per day
+                  1 per day
                 </div>
                 <div className="text-white/60 text-center text-sm">
                   Additional content
@@ -344,7 +347,7 @@ export function GenezioAgencyPlans() {
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">Insights</div>
                 <div className="text-white font-semibold text-center">
-                  10/day/customer
+                  1/day/customer
                 </div>
                 <div className="text-white/60 text-center text-sm">Additional insights</div>
               </div>
