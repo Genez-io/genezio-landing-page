@@ -7,8 +7,8 @@ export function GenezioPricingComparison() {
       title: "Coverage & scale",
       rows: [
         { feature: "Brands", starter: "1", growth: "1", enterprise: "Multiple" },
-        { feature: "Answer Engines tracked", starter: "ChatGPT, Google AI Overviews", growth: "ChatGPT, Perplexity, Google AI Overviews, Google Gemini", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"  },
-        { feature: "Languages / brand", starter: "1", growth: "2", enterprise: "All" },
+        { feature: "Answer Engines tracked", starter: "ChatGPT, Google AI Overviews", growth: "ChatGPT, Perplexity, Google AI Overviews", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"  },
+        { feature: "Languages / brand", starter: "1", growth: "1", enterprise: "All" },
         { feature: "Locations / brand", starter: "1", growth: "1", enterprise: "Custom" },
         { feature: "Personas / brand", starter: "1", growth: "2", enterprise: "Custom" },
       ],
@@ -17,7 +17,7 @@ export function GenezioPricingComparison() {
       title: "Analysis & monitoring",
       rows: [
         { feature: "Topics / brand", starter: "5", growth: "10", enterprise: "Custom" },
-        { feature: "Scenarios / brand", starter: "50", growth: "50", enterprise: "Custom", subtext: { starter: "3,000 conversations", growth: "12,000 conversations", enterprise: "Custom" } },
+        { feature: "Scenarios / brand", starter: "20", growth: "30", enterprise: "Custom", subtext: { starter: "3,000 conversations", growth: "12,000 conversations", enterprise: "Custom" } },
         { feature: "AI Statements", starter: "check", growth: "check", enterprise: "check" },
         { feature: "AI Keywords", starter: "check", growth: "check", enterprise: "check" },
         { feature: "AI Citations", starter: "check", growth: "check", enterprise: "check" },
@@ -29,7 +29,7 @@ export function GenezioPricingComparison() {
     {
       title: "Activation & output",
       rows: [
-        { feature: "AI content generation", starter: "1 / day", growth: "5 / day", enterprise: "10 / day", comingSoon: true },
+        { feature: "AI content generation", starter: "1 / week", growth: "1 / day", enterprise: "10 / day", comingSoon: false },
         { feature: "Chat with Your Data", starter: "-", growth: "-", enterprise: "check" },
         { feature: "Insights / day", starter: "1", growth: "5", enterprise: "10+" },
         { feature: "Exports", starter: "check", growth: "check", enterprise: "check" },
@@ -39,6 +39,7 @@ export function GenezioPricingComparison() {
       title: "Data & governance",
       rows: [
         { feature: "Data retention", starter: "1 month", growth: "6 months", enterprise: "Unlimited" },
+        { feature: "Competitor SWOT analysis", starter: "1", growth: "Up to 3", enterprise: "Unlimited" },
         { feature: "Seats", starter: "2", growth: "5", enterprise: "Unlimited" },
       ],
     },
