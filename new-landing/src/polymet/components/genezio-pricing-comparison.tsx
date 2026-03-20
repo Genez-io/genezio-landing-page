@@ -1,8 +1,28 @@
-import { CheckIcon, ArrowRightIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function GenezioPricingComparison() {
-  const sections = [
+  type PlanRowSubtext = {
+    starter: string;
+    growth: string;
+    enterprise: string;
+  };
+
+  type PlanRow = {
+    feature: string;
+    starter: string;
+    growth: string;
+    enterprise: string;
+    comingSoon?: boolean;
+    subtext?: PlanRowSubtext;
+  };
+
+  type PlanSection = {
+    title: string;
+    rows: PlanRow[];
+  };
+
+  const sections: PlanSection[] = [
     {
       title: "Coverage & scale",
       rows: [
