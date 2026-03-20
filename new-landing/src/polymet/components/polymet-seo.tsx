@@ -87,7 +87,7 @@ export function PolymetSEO({ title, description, canonicalPath, ogImage, ogUrl, 
       {finalOgUrl && <meta property="og:url" content={finalOgUrl} />}
       {url && <link rel="canonical" href={url} />}
       {schema && (
-        <script type="application/ld+json">
+        <script type="application/ld+json" data-polymet-schema="true">
           {JSON.stringify(schema)}
         </script>
       )}
