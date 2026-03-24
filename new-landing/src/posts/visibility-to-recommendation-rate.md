@@ -10,13 +10,13 @@ tags:
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 
-thumbnail: /images/visibility-to-recommendation-rate-vrr.webp
+thumbnail: /images/visibility-to-recommendation-rate.webp
 preview: To survive the shift driven by generative AI, brands must pivot from Share of Voice to the Visibility-to-Recommendation Rate (VRR).
 # meta data start
 description: To survive the shift driven by generative AI, brands must pivot from Share of Voice to the Visibility-to-Recommendation Rate (VRR).
-meta_og_url: "https://genezio.com/blog/visibility-to-recommendation-rate-vrr/"
+meta_og_url: "https://genezio.com/blog/visibility-to-recommendation-rate/"
 
-meta_og_image: "https://genezio.com/images/visibility-to-recommendation-rate-vrr.webp"
+meta_og_image: "https://genezio.com/images/visibility-to-recommendation-rate.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
