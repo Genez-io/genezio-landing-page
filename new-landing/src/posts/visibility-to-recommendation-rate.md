@@ -24,13 +24,13 @@ readTime: 8
 url: /visibility-to-recommendation-rate/
 ---
 
-![Visibility-to-Recommendation Rate (VRR) concept for measuring AI market share](/images/visibility-to-recommendation-rate-vrr.webp)
+![Visibility-to-Recommendation Rate (VRR) concept for measuring AI market share](/images/visibility-to-recommendation-rate.webp)
 
 For years, digital marketers have worshipped at the altar of Share of Voice (SOV). It was the ultimate metric for brand visibility. But right now, we are living through a massive structural shift driven by generative AI and Large Language Models (LLMs). As these engines dynamically personalize user experiences, flat metrics like SOV are quickly becoming obsolete.
 
 To survive this shift, brands need to fundamentally rethink how they measure visibility. The focus must pivot to the **Visibility-to-Recommendation Rate (VRR)**.
 
-As an active practitioner of [Artificial Engine Optimization (AEO)](/blog/ai-recommendation-vs-ai-visibility/), I want to share a framework that proves why your brand's AI market share is no longer a single, uniform number. Instead, it is fragmented across a complex web of user personas. Understanding this is the key to dominating AI-driven recommendation engines.
+As an active practitioner of [Artificial Engine Optimization (AEO)](/images/ai-recommendation-vs-ai-visibility/), I want to share a framework that proves why your brand's AI market share is no longer a single, uniform number. Instead, it is fragmented across a complex web of user personas. Understanding this is the key to dominating AI-driven recommendation engines.
 
 ## The End of Flat Metrics (From SOV to VRR)
 
@@ -52,7 +52,7 @@ Why does this matter commercially?
 
 By offering a direct recommendation, the AI entirely removes decision fatigue, essentially acting as a highly trusted, autonomous consultant. VRR doesn't just capture passive visibility; it measures high-intent advocacy.
 
-![How user personas shape AI market share and generative search results](/images/ai-market-share-user-personas.webp)
+![How user personas shape AI market share and generative search results](/images/conversion-rate-llm-search.webp)
 
 ## The Platform Advantage: How We Measure VRR
 
@@ -81,7 +81,7 @@ So, how does the AI decide who wins? Through advanced semantic context parsing, 
 
 Even though the baseline interest is the same, the LLM parses these distinct features and tailors its recommendations accordingly. Your brand’s AI market share is essentially a matrix of micro-market shares, depending entirely on how well your data aligns with these specific contexts.
 
-![Comparing traditional Share of Voice (SOV) to the new Visibility-to-Recommendation Rate (VRR)](/images/share-of-voice-vs-vrr.webp)
+![Comparing traditional Share of Voice (SOV) to the new Visibility-to-Recommendation Rate (VRR)](/images/ai-user-personas-definition.webp)
 
 ## The Methodology: Fanout Queries in AEO
 
@@ -96,7 +96,7 @@ If your base topic is "Sustainable Fashion," an effective fanout strategy adds e
 
 By iteratively feeding these diverse, persona-driven prompts to an LLM, you can map the AI's decision tree. This reveals the exact thresholds where your brand’s VRR grows or drops, giving you the data you need to fix your brand narrative.
 
-![Formula and calculation for Visibility-to-Recommendation Rate (VRR) in Artificial Engine Optimization](/images/vrr-calculation-formula-aeo.webp)
+![Formula and calculation for Visibility-to-Recommendation Rate (VRR) in Artificial Engine Optimization](/images/query-fanouts-asos.webp)
 
 ## The VRR Hierarchy: 3 Dimensions of Consistency
 
@@ -117,7 +117,7 @@ But hitting "Recommended" once isn't enough. A high VRR must be stable across th
 
 This isn't just theory. We utilized our platform to map LLM recommendation patterns within the highly competitive UK Fashion sector. We generated a rigorous matrix of 1,869 unique query fanout permutations and analyzed 918 distinct, multi-turn LLM conversations over a 31-day period.
 
-![Artificial Engine Optimization (AEO) metrics and dynamic personalization in LLMs](/images/artificial-engine-optimization-aeo-metrics.webp)
+![Artificial Engine Optimization (AEO) metrics and dynamic personalization in LLMs](/images/asos-brand-performance-overview.webp)
 
 Examining our platform's 'Scenarios' data reveals how semantic context parsing operates. For instance, we tracked the micro-market share of a "social media manager" seeking "stylish workwear" with a strict "budget under £100 per piece," demanding "sustainable fabric choices" and "clear return policies" in London. Simultaneously, we ran tests for a "festival season" shopper prioritizing "inclusivity," "eco-friendly brands," and "fast delivery."  
 The resulting data from these 1,869 experiments illustrates the current dynamics of AI ecosystems. Looking at our Top 10 Competitors by Recommendation data, AI market share in the UK fashion sector appears polarized.
@@ -134,7 +134,7 @@ When we tracked VRR across these intent-driven personas, ASOS and Boohoo activel
 
 Conversely, legacy brands suffered. H\&M sits at a 20% VRR, while Mango practically flatlined at a 4% recommendation rate. They might be passively indexed thousands of times, but they fail to secure explicit endorsements. In the Zero-Sum game of LLMs, being visible without being recommended means you are losing.
 
-![Large Language Models (LLMs) creating personalized narratives and brand recommendations](/images/llm-personalized-narrative-recommendation.webp)
+![Large Language Models (LLMs) creating personalized narratives and brand recommendations](/images/asos-best-clothing-company-in-the-uk-recommender.webp)
 
 ## Conclusion: Navigating the Generative Paradigm
 
