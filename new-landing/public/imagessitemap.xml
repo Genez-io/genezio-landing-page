@@ -609,4 +609,31 @@
         <image:loc>https://genezio.com/images/rich-snippets-test-results.webp</image:loc>
       </image:image>
   </url>
+  <url>
+    <loc>https://genezio.com/blog/visibility-to-recommendation-rate/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/horatiu-voicu.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/visibility-to-recommendation-rate-vrr.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/ai-market-share-user-personas.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/share-of-voice-vs-vrr.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/vrr-calculation-formula-aeo.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/artificial-engine-optimization-aeo-metrics.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/llm-personalized-narrative-recommendation.webp</image:loc>
+      </image:image>
+  </url>
 </urlset>

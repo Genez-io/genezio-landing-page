@@ -189,7 +189,7 @@ A comprehensive AI visibility methodology relies on moving beyond simple keyword
 
 **Contextual Sentiment Scoring:** Evaluating not just if your brand is mentioned, but whether it is framed positively, positioned as a primary recommendation, or simply listed as an alternative.
 
-**AI Share of Voice (SOV):** Measuring the frequency and prominence of your brand's mentions against direct competitors within specific conversations.
+**[AI Share of Voice (SOV)](/blog/visibility-to-recommendation-rate/):** Measuring the frequency and prominence of your brand's mentions against direct competitors within specific conversations.
 
 **Example in Action:**
 If you represent a retail bank, your methodology might involve prompting three different LLMs with the unbiased query: "Which digital banks offer the best travel rewards and zero foreign transaction fees?" You would then record the data to see if your brand is recommended first, evaluate the sentiment of the AI's description (e.g., is your mobile app praised for ease of use?), and calculate how often you appear compared to competitors like Monzo, Revolut, or Chase.
