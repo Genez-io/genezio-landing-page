@@ -80,6 +80,53 @@ export function BlogPost() {
         }
       ]
     };
+  } else if (post.id === "visibility-to-recommendation-rate") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the fundamental difference between Share of Voice (SOV) and Visibility-to-Recommendation Rate (VRR)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SOV measures how often a brand is passively mentioned across keywords, assuming a traditional search environment where users view multiple links. VRR measures the percentage of times an AI explicitly endorses a brand as the definitive best choice out of all the times it was considered, tracking how stable that endorsement is across varying prompts, time, and AI platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does VRR impact revenue more than traditional search metrics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Data shows that users who receive an explicit recommendation from an AI assistant convert 5 times better than those navigating traditional search results. The AI acts as a trusted consultant, removing decision friction. VRR directly measures your ability to capture these high-intent, high-converting users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a \"Fanout Query\" in Artificial Engine Optimization (AEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Fanout Query takes a core topic (e.g., \"Sustainable Fashion\") and expands it into hundreds of permutations by adding contextual constraints (e.g., \"under £100,\" \"London delivery\"). This allows marketers to map exactly how AI models recommend brands across diverse user personas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Genezio track VRR differently than other tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike basic keyword trackers, our platform measures VRR by configuring advanced user Personas and tracking brand endorsements across complex, multi-turn conversations. We also use specialized AI agents (Recommender and Comparer) to force the LLM to make definitive choices, ensuring we measure true market dominance, not just passing mentions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is \"Zero-Sum Visibility\" a critical concept in generative AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike search engines that provide 10 visible links, an LLM typically synthesizes an answer that highlights one definitive solution. If the AI explicitly recommends your competitor as the best fit for that specific query, your effective visibility and market power for that interaction drop to zero."
+          }
+        }
+      ]
+    };
   }
 
   return (

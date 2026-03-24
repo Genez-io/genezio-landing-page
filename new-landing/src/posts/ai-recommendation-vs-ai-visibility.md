@@ -164,7 +164,7 @@ Different AI engines apply distinct methodologies to calculate what constitutes 
 
 ### **New KPIs of AEO: Why Recommendation KPI is the New Gold Standard**
 
-Marketers traditionally measure "Share of Voice" (SOV) and "Search Volume" to gauge visibility and brand interest. However, in the AI-first era, these metrics capture only early-stage awareness.
+Marketers traditionally measure ["Share of Voice" (SOV)](/blog/visibility-to-recommendation-rate/) and "Search Volume" to gauge visibility and brand interest. However, in the AI-first era, these metrics capture only early-stage awareness.
 
 **Recommendation** emerges as the critical KPI, measuring how often an AI explicitly endorses your brand as the preferred choice. Unlike SOV, which tracks mere mentions, Recommendation index correlates with bottom-of-funnel conversion intent and directly influences purchasing decisions.
 
