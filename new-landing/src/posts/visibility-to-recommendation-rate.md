@@ -1,5 +1,5 @@
 ---
-title: "Visibility-to-Recommendation Rate: AI Share is Shaped by Personas"
+title: "Visibility-to-Recommendation: AI Market Share is Shaped by Personas"
 date: 2026-03-24
 tags:
   - AI Market Share
