@@ -1,13 +1,10 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   ShoppingCartIcon,
   HeartPulseIcon,
   ShirtIcon,
   BuildingIcon,
-  TrendingUpIcon,
-  TrendingDownIcon,
-  MinusIcon,
   ArrowRightIcon,
   ZapIcon,
   BarChart2Icon,
@@ -38,7 +35,6 @@ const COUNTRIES = [
   { code: "EU", label: "Europe",         flag: "🇪🇺" },
 ];
 
-type Trend = "up" | "down" | "stable";
 type CountryCode = "UK" | "US" | "EU";
 
 interface BrandEntry {
@@ -51,8 +47,6 @@ interface BrandEntry {
   perplexity: number;
   gemini: number;
   claude: number;
-  trend: Trend;
-  trendValue: number;
 }
 
 interface Industry {
@@ -61,6 +55,181 @@ interface Industry {
   icon: any;
   url: Record<CountryCode, string>;
   countries: Record<CountryCode, BrandEntry[]>;
+}
+
+/* ─── Deterministic pseudo-random for chart history ─── */
+function seededRand(seed: number): number {
+  const x = Math.sin(seed + 1) * 10000;
+  return x - Math.floor(x);
+}
+
+function generateHistory(name: string, endValue: number, days = 30): number[] {
+  const seed = name.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  const startDelta = (seededRand(seed) - 0.4) * 12;
+  const start = Math.max(10, Math.min(99, endValue + startDelta));
+  const result: number[] = [];
+  for (let i = 0; i < days; i++) {
+    const t = i / (days - 1);
+    const base = start + (endValue - start) * t;
+    const noise = (seededRand(seed * (i + 7) * 13) - 0.5) * 4;
+    result.push(Math.max(5, Math.min(99, Math.round(base + noise))));
+  }
+  return result;
+}
+
+/* ─── Line chart for top 3 brands ─── */
+const CHART_COLORS = ["#818cf8", "#f472b6", "#fbbf24"];
+
+function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }) {
+  const top3 = brands.slice(0, 3);
+  const W = 800;
+  const H = 160;
+  const PAD = { top: 12, right: 16, bottom: 32, left: 36 };
+  const innerW = W - PAD.left - PAD.right;
+  const innerH = H - PAD.top - PAD.bottom;
+  const days = 30;
+
+  const series = top3.map((b, i) => ({
+    brand: b,
+    color: CHART_COLORS[i],
+    data: generateHistory(b.name + b.visibility, b.visibility, days),
+  }));
+
+  const allVals = series.flatMap((s) => s.data);
+  const minV = Math.max(0, Math.floor(Math.min(...allVals) / 5) * 5 - 5);
+  const maxV = Math.min(100, Math.ceil(Math.max(...allVals) / 5) * 5 + 5);
+
+  function toX(i: number) {
+    return PAD.left + (i / (days - 1)) * innerW;
+  }
+  function toY(v: number) {
+    return PAD.top + innerH - ((v - minV) / (maxV - minV)) * innerH;
+  }
+  function pathD(data: number[]) {
+    return data
+      .map((v, i) => `${i === 0 ? "M" : "L"}${toX(i).toFixed(1)},${toY(v).toFixed(1)}`)
+      .join(" ");
+  }
+
+  const now = new Date();
+  const monthLabels: { label: string; x: number }[] = [];
+  for (let i = 0; i < days; i += 7) {
+    const d = new Date(now);
+    d.setDate(d.getDate() - (days - 1 - i));
+    monthLabels.push({
+      label: d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      x: toX(i),
+    });
+  }
+
+  const yTicks = [minV, Math.round((minV + maxV) / 2), maxV];
+
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
+      <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <div>
+          <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">
+            30-day AI Visibility trend
+          </p>
+          <p className="text-sm text-gray-400 mt-0.5">Top 3 brands this month</p>
+        </div>
+        <div className="flex items-center gap-5 flex-wrap">
+          {series.map((s) => (
+            <div key={s.brand.name} className="flex items-center gap-2">
+              <div className="w-8 h-0.5 rounded-full" style={{ background: s.color }} />
+              <div className="flex items-center gap-1.5">
+                <div className="w-4 h-4 rounded bg-white/10 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={faviconUrl(s.brand.website, 32)}
+                    alt={s.brand.name}
+                    className="w-3 h-3 object-contain"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                  />
+                </div>
+                <span className="text-xs text-gray-300 font-medium">{s.brand.name}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="overflow-x-auto">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          className="w-full"
+          style={{ minWidth: 340, height: H }}
+          preserveAspectRatio="none"
+        >
+          {/* Grid lines */}
+          {yTicks.map((v) => (
+            <g key={v}>
+              <line
+                x1={PAD.left} y1={toY(v)} x2={W - PAD.right} y2={toY(v)}
+                stroke="rgba(255,255,255,0.06)" strokeWidth="1"
+              />
+              <text x={PAD.left - 6} y={toY(v) + 4} textAnchor="end"
+                fill="rgba(255,255,255,0.3)" fontSize="10" fontFamily="monospace">
+                {v}%
+              </text>
+            </g>
+          ))}
+
+          {/* X axis labels */}
+          {monthLabels.map(({ label, x }) => (
+            <text key={label} x={x} y={H - 4} textAnchor="middle"
+              fill="rgba(255,255,255,0.25)" fontSize="9" fontFamily="sans-serif">
+              {label}
+            </text>
+          ))}
+
+          {/* Area fills */}
+          {series.map((s) => {
+            const areaD =
+              pathD(s.data) +
+              ` L${toX(days - 1).toFixed(1)},${(PAD.top + innerH).toFixed(1)}` +
+              ` L${toX(0).toFixed(1)},${(PAD.top + innerH).toFixed(1)} Z`;
+            return (
+              <path
+                key={`area-${s.brand.name}`}
+                d={areaD}
+                fill={s.color}
+                opacity={0.06}
+              />
+            );
+          })}
+
+          {/* Lines */}
+          {series.map((s) => (
+            <path
+              key={`line-${s.brand.name}`}
+              d={pathD(s.data)}
+              fill="none"
+              stroke={s.color}
+              strokeWidth="2"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+          ))}
+
+          {/* End-point dots */}
+          {series.map((s) => {
+            const last = s.data[s.data.length - 1];
+            return (
+              <circle
+                key={`dot-${s.brand.name}`}
+                cx={toX(days - 1)}
+                cy={toY(last)}
+                r="4"
+                fill={s.color}
+                stroke="#050506"
+                strokeWidth="2"
+              />
+            );
+          })}
+        </svg>
+      </div>
+    </div>
+  );
 }
 
 const industries: Industry[] = [
@@ -75,31 +244,31 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "Barclays",   initials: "BA", color: "#00AEEF", website: "https://www.barclays.co.uk",   visibility: 87, chatgpt: 91, perplexity: 85, gemini: 88, claude: 84, trend: "up",     trendValue: 4 },
-        { name: "HSBC",       initials: "HS", color: "#DB0011", website: "https://www.hsbc.co.uk",       visibility: 83, chatgpt: 88, perplexity: 80, gemini: 82, claude: 82, trend: "stable", trendValue: 0 },
-        { name: "Lloyds",     initials: "LL", color: "#006A4D", website: "https://www.lloydsbank.com",   visibility: 79, chatgpt: 82, perplexity: 77, gemini: 80, claude: 77, trend: "up",     trendValue: 2 },
-        { name: "NatWest",    initials: "NW", color: "#42145F", website: "https://www.natwest.com",      visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73, trend: "down",   trendValue: 3 },
-        { name: "Santander",  initials: "SA", color: "#EC0000", website: "https://www.santander.co.uk",  visibility: 68, chatgpt: 70, perplexity: 66, gemini: 68, claude: 68, trend: "up",     trendValue: 1 },
-        { name: "Halifax",    initials: "HA", color: "#0076BE", website: "https://www.halifax.co.uk",    visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60, trend: "down",   trendValue: 2 },
-        { name: "Nationwide", initials: "NA", color: "#1B3D6E", website: "https://www.nationwide.co.uk", visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54, trend: "stable", trendValue: 0 },
+        { name: "Barclays",   initials: "BA", color: "#00AEEF", website: "https://www.barclays.co.uk",    visibility: 87, chatgpt: 91, perplexity: 85, gemini: 88, claude: 84 },
+        { name: "HSBC",       initials: "HS", color: "#DB0011", website: "https://www.hsbc.co.uk",        visibility: 83, chatgpt: 88, perplexity: 80, gemini: 82, claude: 82 },
+        { name: "Lloyds",     initials: "LL", color: "#006A4D", website: "https://www.lloydsbank.com",    visibility: 79, chatgpt: 82, perplexity: 77, gemini: 80, claude: 77 },
+        { name: "NatWest",    initials: "NW", color: "#42145F", website: "https://www.natwest.com",       visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73 },
+        { name: "Santander",  initials: "SA", color: "#EC0000", website: "https://www.santander.co.uk",   visibility: 68, chatgpt: 70, perplexity: 66, gemini: 68, claude: 68 },
+        { name: "Halifax",    initials: "HA", color: "#0076BE", website: "https://www.halifax.co.uk",     visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60 },
+        { name: "Nationwide", initials: "NA", color: "#1B3D6E", website: "https://www.nationwide.co.uk",  visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54 },
       ],
       US: [
-        { name: "JPMorgan Chase", initials: "JP", color: "#003087", website: "https://www.jpmorganchase.com", visibility: 92, chatgpt: 94, perplexity: 91, gemini: 93, claude: 90, trend: "up",     trendValue: 3 },
-        { name: "Bank of America",initials: "BA", color: "#E31837", website: "https://www.bankofamerica.com", visibility: 88, chatgpt: 90, perplexity: 86, gemini: 89, claude: 87, trend: "stable", trendValue: 0 },
-        { name: "Wells Fargo",    initials: "WF", color: "#D71E28", website: "https://www.wellsfargo.com",    visibility: 84, chatgpt: 86, perplexity: 82, gemini: 85, claude: 83, trend: "down",   trendValue: 2 },
-        { name: "Citibank",       initials: "CI", color: "#003B8E", website: "https://www.citi.com",          visibility: 79, chatgpt: 81, perplexity: 77, gemini: 80, claude: 78, trend: "up",     trendValue: 5 },
-        { name: "Goldman Sachs",  initials: "GS", color: "#6EB2FF", website: "https://www.goldmansachs.com",  visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73, trend: "up",     trendValue: 2 },
-        { name: "Morgan Stanley", initials: "MS", color: "#004B8D", website: "https://www.morganstanley.com", visibility: 69, chatgpt: 71, perplexity: 67, gemini: 70, claude: 68, trend: "stable", trendValue: 0 },
-        { name: "US Bank",        initials: "US", color: "#002F6C", website: "https://www.usbank.com",        visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57, trend: "down",   trendValue: 1 },
+        { name: "JPMorgan Chase",  initials: "JP", color: "#003087", website: "https://www.jpmorganchase.com",  visibility: 92, chatgpt: 94, perplexity: 91, gemini: 93, claude: 90 },
+        { name: "Bank of America", initials: "BA", color: "#E31837", website: "https://www.bankofamerica.com",  visibility: 88, chatgpt: 90, perplexity: 86, gemini: 89, claude: 87 },
+        { name: "Wells Fargo",     initials: "WF", color: "#D71E28", website: "https://www.wellsfargo.com",     visibility: 84, chatgpt: 86, perplexity: 82, gemini: 85, claude: 83 },
+        { name: "Citibank",        initials: "CI", color: "#003B8E", website: "https://www.citi.com",           visibility: 79, chatgpt: 81, perplexity: 77, gemini: 80, claude: 78 },
+        { name: "Goldman Sachs",   initials: "GS", color: "#6EB2FF", website: "https://www.goldmansachs.com",   visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73 },
+        { name: "Morgan Stanley",  initials: "MS", color: "#004B8D", website: "https://www.morganstanley.com",  visibility: 69, chatgpt: 71, perplexity: 67, gemini: 70, claude: 68 },
+        { name: "US Bank",         initials: "US", color: "#002F6C", website: "https://www.usbank.com",         visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57 },
       ],
       EU: [
-        { name: "BNP Paribas",    initials: "BN", color: "#007B5E", website: "https://www.bnpparibas.com",    visibility: 85, chatgpt: 87, perplexity: 83, gemini: 86, claude: 84, trend: "up",     trendValue: 3 },
-        { name: "Deutsche Bank",  initials: "DB", color: "#0018A8", website: "https://www.db.com",            visibility: 81, chatgpt: 83, perplexity: 79, gemini: 82, claude: 80, trend: "stable", trendValue: 0 },
-        { name: "ING",            initials: "IN", color: "#FF6200", website: "https://www.ing.com",           visibility: 77, chatgpt: 79, perplexity: 75, gemini: 78, claude: 76, trend: "up",     trendValue: 4 },
-        { name: "UniCredit",      initials: "UC", color: "#E2001A", website: "https://www.unicreditgroup.eu", visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70, trend: "down",   trendValue: 2 },
-        { name: "Société Générale",initials:"SG", color: "#E60028", website: "https://www.societegenerale.com",visibility: 66, chatgpt: 68, perplexity: 64, gemini: 67, claude: 65, trend: "up",    trendValue: 1 },
-        { name: "ABN AMRO",       initials: "AB", color: "#009A44", website: "https://www.abnamro.com",       visibility: 60, chatgpt: 62, perplexity: 58, gemini: 61, claude: 59, trend: "down",   trendValue: 3 },
-        { name: "Rabobank",       initials: "RA", color: "#FF6600", website: "https://www.rabobank.com",      visibility: 54, chatgpt: 56, perplexity: 52, gemini: 55, claude: 53, trend: "stable", trendValue: 0 },
+        { name: "BNP Paribas",     initials: "BN", color: "#007B5E", website: "https://www.bnpparibas.com",     visibility: 85, chatgpt: 87, perplexity: 83, gemini: 86, claude: 84 },
+        { name: "Deutsche Bank",   initials: "DB", color: "#0018A8", website: "https://www.db.com",             visibility: 81, chatgpt: 83, perplexity: 79, gemini: 82, claude: 80 },
+        { name: "ING",             initials: "IN", color: "#FF6200", website: "https://www.ing.com",            visibility: 77, chatgpt: 79, perplexity: 75, gemini: 78, claude: 76 },
+        { name: "UniCredit",       initials: "UC", color: "#E2001A", website: "https://www.unicreditgroup.eu",  visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70 },
+        { name: "Société Générale",initials: "SG", color: "#E60028", website: "https://www.societegenerale.com",visibility: 66, chatgpt: 68, perplexity: 64, gemini: 67, claude: 65 },
+        { name: "ABN AMRO",        initials: "AB", color: "#009A44", website: "https://www.abnamro.com",        visibility: 60, chatgpt: 62, perplexity: 58, gemini: 61, claude: 59 },
+        { name: "Rabobank",        initials: "RA", color: "#FF6600", website: "https://www.rabobank.com",       visibility: 54, chatgpt: 56, perplexity: 52, gemini: 55, claude: 53 },
       ],
     },
   },
@@ -114,31 +283,31 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "Tesco",       initials: "TE", color: "#EE1C25", website: "https://www.tesco.com",          visibility: 91, chatgpt: 93, perplexity: 90, gemini: 91, claude: 90, trend: "up",     trendValue: 3 },
-        { name: "Sainsbury's", initials: "SA", color: "#FF7200", website: "https://www.sainsburys.co.uk",   visibility: 84, chatgpt: 86, perplexity: 83, gemini: 84, claude: 83, trend: "stable", trendValue: 0 },
-        { name: "Asda",        initials: "AS", color: "#7DC242", website: "https://www.asda.com",           visibility: 80, chatgpt: 83, perplexity: 78, gemini: 80, claude: 79, trend: "up",     trendValue: 5 },
-        { name: "Morrisons",   initials: "MO", color: "#FFDC00", website: "https://groceries.morrisons.com",visibility: 72, chatgpt: 74, perplexity: 70, gemini: 73, claude: 71, trend: "down",   trendValue: 2 },
-        { name: "Waitrose",    initials: "WA", color: "#5D8233", website: "https://www.waitrose.com",       visibility: 68, chatgpt: 70, perplexity: 66, gemini: 69, claude: 67, trend: "up",     trendValue: 1 },
-        { name: "Aldi",        initials: "AL", color: "#002D72", website: "https://www.aldi.co.uk",         visibility: 62, chatgpt: 64, perplexity: 60, gemini: 63, claude: 61, trend: "up",     trendValue: 6 },
-        { name: "Lidl",        initials: "LI", color: "#0050AA", website: "https://www.lidl.co.uk",         visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57, trend: "stable", trendValue: 0 },
+        { name: "Tesco",       initials: "TE", color: "#EE1C25", website: "https://www.tesco.com",           visibility: 91, chatgpt: 93, perplexity: 90, gemini: 91, claude: 90 },
+        { name: "Sainsbury's", initials: "SA", color: "#FF7200", website: "https://www.sainsburys.co.uk",    visibility: 84, chatgpt: 86, perplexity: 83, gemini: 84, claude: 83 },
+        { name: "Asda",        initials: "AS", color: "#7DC242", website: "https://www.asda.com",            visibility: 80, chatgpt: 83, perplexity: 78, gemini: 80, claude: 79 },
+        { name: "Morrisons",   initials: "MO", color: "#FFDC00", website: "https://groceries.morrisons.com", visibility: 72, chatgpt: 74, perplexity: 70, gemini: 73, claude: 71 },
+        { name: "Waitrose",    initials: "WA", color: "#5D8233", website: "https://www.waitrose.com",        visibility: 68, chatgpt: 70, perplexity: 66, gemini: 69, claude: 67 },
+        { name: "Aldi",        initials: "AL", color: "#002D72", website: "https://www.aldi.co.uk",          visibility: 62, chatgpt: 64, perplexity: 60, gemini: 63, claude: 61 },
+        { name: "Lidl",        initials: "LI", color: "#0050AA", website: "https://www.lidl.co.uk",          visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57 },
       ],
       US: [
-        { name: "Walmart",      initials: "WA", color: "#0071CE", website: "https://www.walmart.com",      visibility: 95, chatgpt: 97, perplexity: 94, gemini: 96, claude: 93, trend: "stable", trendValue: 0 },
-        { name: "Amazon",       initials: "AM", color: "#FF9900", website: "https://www.amazon.com",       visibility: 93, chatgpt: 95, perplexity: 92, gemini: 94, claude: 91, trend: "up",     trendValue: 2 },
-        { name: "Target",       initials: "TA", color: "#CC0000", website: "https://www.target.com",       visibility: 86, chatgpt: 88, perplexity: 84, gemini: 87, claude: 85, trend: "up",     trendValue: 4 },
-        { name: "Kroger",       initials: "KR", color: "#004990", website: "https://www.kroger.com",       visibility: 78, chatgpt: 80, perplexity: 76, gemini: 79, claude: 77, trend: "stable", trendValue: 0 },
-        { name: "Costco",       initials: "CO", color: "#005DAA", website: "https://www.costco.com",       visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73, trend: "up",     trendValue: 3 },
-        { name: "Whole Foods",  initials: "WF", color: "#00674B", website: "https://www.wholefoodsmarket.com",visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64, trend: "down", trendValue: 1 },
-        { name: "Trader Joe's", initials: "TJ", color: "#CC0000", website: "https://www.traderjoes.com",   visibility: 59, chatgpt: 61, perplexity: 57, gemini: 60, claude: 58, trend: "up",     trendValue: 5 },
+        { name: "Walmart",      initials: "WA", color: "#0071CE", website: "https://www.walmart.com",          visibility: 95, chatgpt: 97, perplexity: 94, gemini: 96, claude: 93 },
+        { name: "Amazon",       initials: "AM", color: "#FF9900", website: "https://www.amazon.com",           visibility: 93, chatgpt: 95, perplexity: 92, gemini: 94, claude: 91 },
+        { name: "Target",       initials: "TA", color: "#CC0000", website: "https://www.target.com",           visibility: 86, chatgpt: 88, perplexity: 84, gemini: 87, claude: 85 },
+        { name: "Kroger",       initials: "KR", color: "#004990", website: "https://www.kroger.com",           visibility: 78, chatgpt: 80, perplexity: 76, gemini: 79, claude: 77 },
+        { name: "Costco",       initials: "CO", color: "#005DAA", website: "https://www.costco.com",           visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73 },
+        { name: "Whole Foods",  initials: "WF", color: "#00674B", website: "https://www.wholefoodsmarket.com", visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64 },
+        { name: "Trader Joe's", initials: "TJ", color: "#CC0000", website: "https://www.traderjoes.com",       visibility: 59, chatgpt: 61, perplexity: 57, gemini: 60, claude: 58 },
       ],
       EU: [
-        { name: "Carrefour",   initials: "CA", color: "#003399", website: "https://www.carrefour.com",    visibility: 88, chatgpt: 90, perplexity: 86, gemini: 89, claude: 87, trend: "stable", trendValue: 0 },
-        { name: "Lidl",        initials: "LI", color: "#0050AA", website: "https://www.lidl.com",         visibility: 84, chatgpt: 86, perplexity: 82, gemini: 85, claude: 83, trend: "up",     trendValue: 5 },
-        { name: "Aldi",        initials: "AL", color: "#002D72", website: "https://www.aldi.com",         visibility: 80, chatgpt: 82, perplexity: 78, gemini: 81, claude: 79, trend: "up",     trendValue: 3 },
-        { name: "REWE",        initials: "RE", color: "#CC0000", website: "https://www.rewe.de",          visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70, trend: "down",   trendValue: 2 },
-        { name: "E.Leclerc",   initials: "EL", color: "#003399", website: "https://www.e.leclerc",        visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64, trend: "stable", trendValue: 0 },
-        { name: "Jumbo",       initials: "JU", color: "#FFC400", website: "https://www.jumbo.com",        visibility: 57, chatgpt: 59, perplexity: 55, gemini: 58, claude: 56, trend: "up",     trendValue: 4 },
-        { name: "Edeka",       initials: "ED", color: "#E30613", website: "https://www.edeka.de",         visibility: 52, chatgpt: 54, perplexity: 50, gemini: 53, claude: 51, trend: "down",   trendValue: 1 },
+        { name: "Carrefour", initials: "CA", color: "#003399", website: "https://www.carrefour.com", visibility: 88, chatgpt: 90, perplexity: 86, gemini: 89, claude: 87 },
+        { name: "Lidl",      initials: "LI", color: "#0050AA", website: "https://www.lidl.com",      visibility: 84, chatgpt: 86, perplexity: 82, gemini: 85, claude: 83 },
+        { name: "Aldi",      initials: "AL", color: "#002D72", website: "https://www.aldi.com",      visibility: 80, chatgpt: 82, perplexity: 78, gemini: 81, claude: 79 },
+        { name: "REWE",      initials: "RE", color: "#CC0000", website: "https://www.rewe.de",       visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70 },
+        { name: "E.Leclerc", initials: "EL", color: "#003399", website: "https://www.e.leclerc",    visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64 },
+        { name: "Jumbo",     initials: "JU", color: "#FFC400", website: "https://www.jumbo.com",     visibility: 57, chatgpt: 59, perplexity: 55, gemini: 58, claude: 56 },
+        { name: "Edeka",     initials: "ED", color: "#E30613", website: "https://www.edeka.de",      visibility: 52, chatgpt: 54, perplexity: 50, gemini: 53, claude: 51 },
       ],
     },
   },
@@ -153,31 +322,31 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "NHS",              initials: "NH", color: "#005EB8", website: "https://www.nhs.uk",               visibility: 95, chatgpt: 97, perplexity: 94, gemini: 95, claude: 94, trend: "stable", trendValue: 0 },
-        { name: "Bupa",             initials: "BU", color: "#1E9BD7", website: "https://www.bupa.co.uk",            visibility: 88, chatgpt: 90, perplexity: 87, gemini: 89, claude: 86, trend: "up",     trendValue: 2 },
-        { name: "Nuffield Health",  initials: "NU", color: "#00539B", website: "https://www.nuffieldhealth.com",    visibility: 79, chatgpt: 81, perplexity: 78, gemini: 79, claude: 78, trend: "up",     trendValue: 4 },
-        { name: "Spire Healthcare", initials: "SP", color: "#E4003A", website: "https://www.spirehealthcare.com",   visibility: 73, chatgpt: 75, perplexity: 72, gemini: 73, claude: 72, trend: "stable", trendValue: 0 },
-        { name: "BMI Healthcare",   initials: "BM", color: "#003087", website: "https://www.bmihealthcare.co.uk",   visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64, trend: "down",   trendValue: 3 },
-        { name: "Vitality",         initials: "VI", color: "#E8175D", website: "https://www.vitality.co.uk",        visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57, trend: "up",     trendValue: 5 },
-        { name: "AXA Health",       initials: "AX", color: "#00008F", website: "https://www.axahealth.co.uk",       visibility: 52, chatgpt: 54, perplexity: 50, gemini: 53, claude: 51, trend: "down",   trendValue: 1 },
+        { name: "NHS",              initials: "NH", color: "#005EB8", website: "https://www.nhs.uk",               visibility: 95, chatgpt: 97, perplexity: 94, gemini: 95, claude: 94 },
+        { name: "Bupa",             initials: "BU", color: "#1E9BD7", website: "https://www.bupa.co.uk",            visibility: 88, chatgpt: 90, perplexity: 87, gemini: 89, claude: 86 },
+        { name: "Nuffield Health",  initials: "NU", color: "#00539B", website: "https://www.nuffieldhealth.com",    visibility: 79, chatgpt: 81, perplexity: 78, gemini: 79, claude: 78 },
+        { name: "Spire Healthcare", initials: "SP", color: "#E4003A", website: "https://www.spirehealthcare.com",   visibility: 73, chatgpt: 75, perplexity: 72, gemini: 73, claude: 72 },
+        { name: "BMI Healthcare",   initials: "BM", color: "#003087", website: "https://www.bmihealthcare.co.uk",   visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64 },
+        { name: "Vitality",         initials: "VI", color: "#E8175D", website: "https://www.vitality.co.uk",        visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57 },
+        { name: "AXA Health",       initials: "AX", color: "#00008F", website: "https://www.axahealth.co.uk",       visibility: 52, chatgpt: 54, perplexity: 50, gemini: 53, claude: 51 },
       ],
       US: [
-        { name: "UnitedHealth",  initials: "UH", color: "#196ECF", website: "https://www.unitedhealthgroup.com", visibility: 91, chatgpt: 93, perplexity: 89, gemini: 92, claude: 90, trend: "up",     trendValue: 3 },
-        { name: "CVS Health",    initials: "CV", color: "#CC0000", website: "https://www.cvshealth.com",         visibility: 86, chatgpt: 88, perplexity: 84, gemini: 87, claude: 85, trend: "stable", trendValue: 0 },
-        { name: "Aetna",         initials: "AE", color: "#7B2D8B", website: "https://www.aetna.com",             visibility: 80, chatgpt: 82, perplexity: 78, gemini: 81, claude: 79, trend: "up",     trendValue: 4 },
-        { name: "Blue Cross",    initials: "BC", color: "#00338D", website: "https://www.bcbs.com",              visibility: 76, chatgpt: 78, perplexity: 74, gemini: 77, claude: 75, trend: "down",   trendValue: 2 },
-        { name: "Kaiser",        initials: "KA", color: "#003087", website: "https://www.kaiserpermanente.org",  visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70, trend: "stable", trendValue: 0 },
-        { name: "Humana",        initials: "HU", color: "#00A651", website: "https://www.humana.com",            visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64, trend: "up",     trendValue: 2 },
-        { name: "Cigna",         initials: "CI", color: "#006298", website: "https://www.cigna.com",             visibility: 59, chatgpt: 61, perplexity: 57, gemini: 60, claude: 58, trend: "down",   trendValue: 1 },
+        { name: "UnitedHealth", initials: "UH", color: "#196ECF", website: "https://www.unitedhealthgroup.com", visibility: 91, chatgpt: 93, perplexity: 89, gemini: 92, claude: 90 },
+        { name: "CVS Health",   initials: "CV", color: "#CC0000", website: "https://www.cvshealth.com",         visibility: 86, chatgpt: 88, perplexity: 84, gemini: 87, claude: 85 },
+        { name: "Aetna",        initials: "AE", color: "#7B2D8B", website: "https://www.aetna.com",             visibility: 80, chatgpt: 82, perplexity: 78, gemini: 81, claude: 79 },
+        { name: "Blue Cross",   initials: "BC", color: "#00338D", website: "https://www.bcbs.com",              visibility: 76, chatgpt: 78, perplexity: 74, gemini: 77, claude: 75 },
+        { name: "Kaiser",       initials: "KA", color: "#003087", website: "https://www.kaiserpermanente.org",  visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70 },
+        { name: "Humana",       initials: "HU", color: "#00A651", website: "https://www.humana.com",            visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64 },
+        { name: "Cigna",        initials: "CI", color: "#006298", website: "https://www.cigna.com",             visibility: 59, chatgpt: 61, perplexity: 57, gemini: 60, claude: 58 },
       ],
       EU: [
-        { name: "Fresenius",    initials: "FR", color: "#005CA9", website: "https://www.fresenius.com",   visibility: 82, chatgpt: 84, perplexity: 80, gemini: 83, claude: 81, trend: "up",     trendValue: 3 },
-        { name: "AXA Health",   initials: "AX", color: "#00008F", website: "https://www.axa.com",         visibility: 77, chatgpt: 79, perplexity: 75, gemini: 78, claude: 76, trend: "stable", trendValue: 0 },
-        { name: "Allianz Care", initials: "AL", color: "#003781", website: "https://www.allianzcare.com",  visibility: 72, chatgpt: 74, perplexity: 70, gemini: 73, claude: 71, trend: "up",     trendValue: 2 },
-        { name: "Generali",     initials: "GE", color: "#C8102E", website: "https://www.generali.com",    visibility: 67, chatgpt: 69, perplexity: 65, gemini: 68, claude: 66, trend: "down",   trendValue: 1 },
-        { name: "DKV",          initials: "DK", color: "#006DB7", website: "https://www.dkv.com",         visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60, trend: "stable", trendValue: 0 },
-        { name: "Bupa Global",  initials: "BG", color: "#1E9BD7", website: "https://www.bupaglobal.com",  visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54, trend: "up",     trendValue: 4 },
-        { name: "VGZ",          initials: "VG", color: "#009640", website: "https://www.vgz.nl",          visibility: 48, chatgpt: 50, perplexity: 46, gemini: 49, claude: 47, trend: "down",   trendValue: 2 },
+        { name: "Fresenius",    initials: "FR", color: "#005CA9", website: "https://www.fresenius.com",    visibility: 82, chatgpt: 84, perplexity: 80, gemini: 83, claude: 81 },
+        { name: "AXA Health",   initials: "AX", color: "#00008F", website: "https://www.axa.com",          visibility: 77, chatgpt: 79, perplexity: 75, gemini: 78, claude: 76 },
+        { name: "Allianz Care", initials: "AL", color: "#003781", website: "https://www.allianzcare.com",   visibility: 72, chatgpt: 74, perplexity: 70, gemini: 73, claude: 71 },
+        { name: "Generali",     initials: "GE", color: "#C8102E", website: "https://www.generali.com",     visibility: 67, chatgpt: 69, perplexity: 65, gemini: 68, claude: 66 },
+        { name: "DKV",          initials: "DK", color: "#006DB7", website: "https://www.dkv.com",          visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60 },
+        { name: "Bupa Global",  initials: "BG", color: "#1E9BD7", website: "https://www.bupaglobal.com",   visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54 },
+        { name: "VGZ",          initials: "VG", color: "#009640", website: "https://www.vgz.nl",           visibility: 48, chatgpt: 50, perplexity: 46, gemini: 49, claude: 47 },
       ],
     },
   },
@@ -192,31 +361,31 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "Zara",    initials: "ZA", color: "#888", website: "https://www.zara.com",    visibility: 90, chatgpt: 92, perplexity: 89, gemini: 91, claude: 88, trend: "up",     trendValue: 2 },
-        { name: "H&M",     initials: "HM", color: "#E50010", website: "https://www.hm.com",  visibility: 85, chatgpt: 87, perplexity: 84, gemini: 86, claude: 83, trend: "stable", trendValue: 0 },
-        { name: "ASOS",    initials: "AS", color: "#2D2D2D", website: "https://www.asos.com",visibility: 80, chatgpt: 82, perplexity: 79, gemini: 81, claude: 78, trend: "up",     trendValue: 3 },
-        { name: "Primark", initials: "PR", color: "#003087", website: "https://www.primark.com",visibility: 76, chatgpt: 78, perplexity: 74, gemini: 77, claude: 75, trend: "up",  trendValue: 7 },
-        { name: "Shein",   initials: "SH", color: "#EE1C25", website: "https://www.shein.com",visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70, trend: "up",   trendValue: 9 },
-        { name: "Boohoo",  initials: "BO", color: "#FF008D", website: "https://www.boohoo.com",visibility: 60, chatgpt: 62, perplexity: 58, gemini: 61, claude: 59, trend: "down", trendValue: 4 },
-        { name: "Topshop", initials: "TO", color: "#555",    website: "https://www.topshop.com",visibility: 53, chatgpt: 55, perplexity: 51, gemini: 54, claude: 52, trend: "down",trendValue: 2 },
+        { name: "Zara",    initials: "ZA", color: "#888",    website: "https://www.zara.com",    visibility: 90, chatgpt: 92, perplexity: 89, gemini: 91, claude: 88 },
+        { name: "H&M",     initials: "HM", color: "#E50010", website: "https://www.hm.com",      visibility: 85, chatgpt: 87, perplexity: 84, gemini: 86, claude: 83 },
+        { name: "ASOS",    initials: "AS", color: "#2D2D2D", website: "https://www.asos.com",    visibility: 80, chatgpt: 82, perplexity: 79, gemini: 81, claude: 78 },
+        { name: "Primark", initials: "PR", color: "#003087", website: "https://www.primark.com", visibility: 76, chatgpt: 78, perplexity: 74, gemini: 77, claude: 75 },
+        { name: "Shein",   initials: "SH", color: "#EE1C25", website: "https://www.shein.com",   visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70 },
+        { name: "Boohoo",  initials: "BO", color: "#FF008D", website: "https://www.boohoo.com",  visibility: 60, chatgpt: 62, perplexity: 58, gemini: 61, claude: 59 },
+        { name: "Topshop", initials: "TO", color: "#555",    website: "https://www.topshop.com", visibility: 53, chatgpt: 55, perplexity: 51, gemini: 54, claude: 52 },
       ],
       US: [
-        { name: "Nike",           initials: "NK", color: "#111",    website: "https://www.nike.com",          visibility: 94, chatgpt: 96, perplexity: 92, gemini: 95, claude: 93, trend: "up",     trendValue: 2 },
-        { name: "Gap",            initials: "GA", color: "#003087", website: "https://www.gap.com",           visibility: 82, chatgpt: 84, perplexity: 80, gemini: 83, claude: 81, trend: "stable", trendValue: 0 },
-        { name: "Shein",          initials: "SH", color: "#EE1C25", website: "https://www.shein.com",         visibility: 78, chatgpt: 80, perplexity: 76, gemini: 79, claude: 77, trend: "up",     trendValue: 8 },
-        { name: "H&M",            initials: "HM", color: "#E50010", website: "https://www.hm.com",            visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73, trend: "stable", trendValue: 0 },
-        { name: "Zara",           initials: "ZA", color: "#888",    website: "https://www.zara.com",          visibility: 70, chatgpt: 72, perplexity: 68, gemini: 71, claude: 69, trend: "up",     trendValue: 3 },
-        { name: "American Eagle", initials: "AE", color: "#003087", website: "https://www.ae.com",            visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60, trend: "down",   trendValue: 2 },
-        { name: "Old Navy",       initials: "ON", color: "#004B8D", website: "https://www.oldnavy.gap.com",   visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54, trend: "down",   trendValue: 1 },
+        { name: "Nike",           initials: "NK", color: "#111",    website: "https://www.nike.com",        visibility: 94, chatgpt: 96, perplexity: 92, gemini: 95, claude: 93 },
+        { name: "Gap",            initials: "GA", color: "#003087", website: "https://www.gap.com",         visibility: 82, chatgpt: 84, perplexity: 80, gemini: 83, claude: 81 },
+        { name: "Shein",          initials: "SH", color: "#EE1C25", website: "https://www.shein.com",       visibility: 78, chatgpt: 80, perplexity: 76, gemini: 79, claude: 77 },
+        { name: "H&M",            initials: "HM", color: "#E50010", website: "https://www.hm.com",          visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73 },
+        { name: "Zara",           initials: "ZA", color: "#888",    website: "https://www.zara.com",        visibility: 70, chatgpt: 72, perplexity: 68, gemini: 71, claude: 69 },
+        { name: "American Eagle", initials: "AE", color: "#003087", website: "https://www.ae.com",          visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60 },
+        { name: "Old Navy",       initials: "ON", color: "#004B8D", website: "https://www.oldnavy.gap.com", visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54 },
       ],
       EU: [
-        { name: "Zara",     initials: "ZA", color: "#888",    website: "https://www.zara.com",     visibility: 92, chatgpt: 94, perplexity: 90, gemini: 93, claude: 91, trend: "up",     trendValue: 2 },
-        { name: "H&M",      initials: "HM", color: "#E50010", website: "https://www.hm.com",       visibility: 87, chatgpt: 89, perplexity: 85, gemini: 88, claude: 86, trend: "stable", trendValue: 0 },
-        { name: "Mango",    initials: "MA", color: "#FF6B35", website: "https://www.mango.com",    visibility: 79, chatgpt: 81, perplexity: 77, gemini: 80, claude: 78, trend: "up",     trendValue: 4 },
-        { name: "Shein",    initials: "SH", color: "#EE1C25", website: "https://www.shein.com",    visibility: 75, chatgpt: 77, perplexity: 73, gemini: 76, claude: 74, trend: "up",     trendValue: 7 },
-        { name: "Reserved", initials: "RE", color: "#1A1A1A", website: "https://www.reserved.com", visibility: 64, chatgpt: 66, perplexity: 62, gemini: 65, claude: 63, trend: "up",     trendValue: 3 },
-        { name: "C&A",      initials: "CA", color: "#003087", website: "https://www.c-and-a.com",  visibility: 57, chatgpt: 59, perplexity: 55, gemini: 58, claude: 56, trend: "stable", trendValue: 0 },
-        { name: "Vero Moda",initials: "VM", color: "#2D2D2D", website: "https://www.veromoda.com", visibility: 50, chatgpt: 52, perplexity: 48, gemini: 51, claude: 49, trend: "down",   trendValue: 2 },
+        { name: "Zara",      initials: "ZA", color: "#888",    website: "https://www.zara.com",     visibility: 92, chatgpt: 94, perplexity: 90, gemini: 93, claude: 91 },
+        { name: "H&M",       initials: "HM", color: "#E50010", website: "https://www.hm.com",       visibility: 87, chatgpt: 89, perplexity: 85, gemini: 88, claude: 86 },
+        { name: "Mango",     initials: "MA", color: "#FF6B35", website: "https://www.mango.com",    visibility: 79, chatgpt: 81, perplexity: 77, gemini: 80, claude: 78 },
+        { name: "Shein",     initials: "SH", color: "#EE1C25", website: "https://www.shein.com",    visibility: 75, chatgpt: 77, perplexity: 73, gemini: 76, claude: 74 },
+        { name: "Reserved",  initials: "RE", color: "#1A1A1A", website: "https://www.reserved.com", visibility: 64, chatgpt: 66, perplexity: 62, gemini: 65, claude: 63 },
+        { name: "C&A",       initials: "CA", color: "#003087", website: "https://www.c-and-a.com",  visibility: 57, chatgpt: 59, perplexity: 55, gemini: 58, claude: 56 },
+        { name: "Vero Moda", initials: "VM", color: "#2D2D2D", website: "https://www.veromoda.com", visibility: 50, chatgpt: 52, perplexity: 48, gemini: 51, claude: 49 },
       ],
     },
   },
@@ -224,77 +393,48 @@ const industries: Industry[] = [
 
 const scrollingBrandsByCountry: Record<CountryCode, { name: string; website: string }[]> = {
   UK: [
-    { name: "Tesco", website: "https://www.tesco.com" },
-    { name: "Barclays", website: "https://www.barclays.co.uk" },
-    { name: "Bupa", website: "https://www.bupa.co.uk" },
-    { name: "Zara", website: "https://www.zara.com" },
-    { name: "HSBC", website: "https://www.hsbc.co.uk" },
-    { name: "H&M", website: "https://www.hm.com" },
-    { name: "Sainsbury's", website: "https://www.sainsburys.co.uk" },
-    { name: "Nuffield Health", website: "https://www.nuffieldhealth.com" },
-    { name: "Lloyds", website: "https://www.lloydsbank.com" },
-    { name: "ASOS", website: "https://www.asos.com" },
-    { name: "NHS", website: "https://www.nhs.uk" },
-    { name: "Primark", website: "https://www.primark.com" },
+    { name: "Tesco",          website: "https://www.tesco.com" },
+    { name: "Barclays",       website: "https://www.barclays.co.uk" },
+    { name: "Bupa",           website: "https://www.bupa.co.uk" },
+    { name: "Zara",           website: "https://www.zara.com" },
+    { name: "HSBC",           website: "https://www.hsbc.co.uk" },
+    { name: "H&M",            website: "https://www.hm.com" },
+    { name: "Sainsbury's",    website: "https://www.sainsburys.co.uk" },
+    { name: "Nuffield Health",website: "https://www.nuffieldhealth.com" },
+    { name: "Lloyds",         website: "https://www.lloydsbank.com" },
+    { name: "ASOS",           website: "https://www.asos.com" },
+    { name: "NHS",            website: "https://www.nhs.uk" },
+    { name: "Primark",        website: "https://www.primark.com" },
   ],
   US: [
-    { name: "Walmart", website: "https://www.walmart.com" },
-    { name: "JPMorgan", website: "https://www.jpmorganchase.com" },
-    { name: "UnitedHealth", website: "https://www.unitedhealthgroup.com" },
-    { name: "Nike", website: "https://www.nike.com" },
-    { name: "Amazon", website: "https://www.amazon.com" },
-    { name: "Bank of America", website: "https://www.bankofamerica.com" },
-    { name: "CVS Health", website: "https://www.cvshealth.com" },
-    { name: "Gap", website: "https://www.gap.com" },
-    { name: "Target", website: "https://www.target.com" },
+    { name: "Walmart",       website: "https://www.walmart.com" },
+    { name: "JPMorgan",      website: "https://www.jpmorganchase.com" },
+    { name: "UnitedHealth",  website: "https://www.unitedhealthgroup.com" },
+    { name: "Nike",          website: "https://www.nike.com" },
+    { name: "Amazon",        website: "https://www.amazon.com" },
+    { name: "Bank of America",website: "https://www.bankofamerica.com" },
+    { name: "CVS Health",    website: "https://www.cvshealth.com" },
+    { name: "Gap",           website: "https://www.gap.com" },
+    { name: "Target",        website: "https://www.target.com" },
     { name: "Goldman Sachs", website: "https://www.goldmansachs.com" },
-    { name: "Aetna", website: "https://www.aetna.com" },
-    { name: "Shein", website: "https://www.shein.com" },
+    { name: "Aetna",         website: "https://www.aetna.com" },
+    { name: "Shein",         website: "https://www.shein.com" },
   ],
   EU: [
-    { name: "Carrefour", website: "https://www.carrefour.com" },
-    { name: "BNP Paribas", website: "https://www.bnpparibas.com" },
-    { name: "Fresenius", website: "https://www.fresenius.com" },
-    { name: "Zara", website: "https://www.zara.com" },
-    { name: "Deutsche Bank", website: "https://www.db.com" },
-    { name: "Lidl", website: "https://www.lidl.com" },
-    { name: "AXA Health", website: "https://www.axa.com" },
-    { name: "H&M", website: "https://www.hm.com" },
-    { name: "ING", website: "https://www.ing.com" },
-    { name: "Mango", website: "https://www.mango.com" },
+    { name: "Carrefour",    website: "https://www.carrefour.com" },
+    { name: "BNP Paribas",  website: "https://www.bnpparibas.com" },
+    { name: "Fresenius",    website: "https://www.fresenius.com" },
+    { name: "Zara",         website: "https://www.zara.com" },
+    { name: "Deutsche Bank",website: "https://www.db.com" },
+    { name: "Lidl",         website: "https://www.lidl.com" },
+    { name: "AXA Health",   website: "https://www.axa.com" },
+    { name: "H&M",          website: "https://www.hm.com" },
+    { name: "ING",          website: "https://www.ing.com" },
+    { name: "Mango",        website: "https://www.mango.com" },
     { name: "Allianz Care", website: "https://www.allianzcare.com" },
-    { name: "Aldi", website: "https://www.aldi.com" },
+    { name: "Aldi",         website: "https://www.aldi.com" },
   ],
 };
-
-function TrendBadge({ trend, value }: { trend: Trend; value: number }) {
-  if (trend === "up") return (
-    <span className="inline-flex items-center gap-0.5 text-emerald-400 text-xs font-semibold">
-      <TrendingUpIcon className="w-3 h-3" />+{value}%
-    </span>
-  );
-  if (trend === "down") return (
-    <span className="inline-flex items-center gap-0.5 text-red-400 text-xs font-semibold">
-      <TrendingDownIcon className="w-3 h-3" />-{value}%
-    </span>
-  );
-  return (
-    <span className="inline-flex items-center gap-0.5 text-gray-500 text-xs font-semibold">
-      <MinusIcon className="w-3 h-3" />—
-    </span>
-  );
-}
-
-function ScoreBar({ value }: { value: number }) {
-  return (
-    <div className="flex items-center gap-2">
-      <div className="w-16 h-1.5 bg-white/10 rounded-full overflow-hidden">
-        <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500" style={{ width: `${value}%` }} />
-      </div>
-      <span className="text-sm font-semibold text-white tabular-nums w-8">{value}</span>
-    </div>
-  );
-}
 
 function BrandLogo({ brand }: { brand: BrandEntry }) {
   const [imgError, setImgError] = useState(false);
@@ -337,7 +477,10 @@ export function IndustryLeaderboards() {
 
   const current = industries.find((i) => i.id === activeIndustry)!;
   const brands = current.countries[activeCountry];
-  const sorted = [...brands].sort((a, b) => b.visibility - a.visibility).map((b, i) => ({ ...b, rank: i + 1 }));
+  const sorted = useMemo(
+    () => [...brands].sort((a, b) => b.visibility - a.visibility).map((b, i) => ({ ...b, rank: i + 1 })),
+    [brands]
+  );
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
 
   useEffect(() => {
@@ -405,26 +548,21 @@ export function IndustryLeaderboards() {
         </div>
       </section>
 
-      {/* ── Filters + Table ── */}
+      {/* ── Filters + Chart + Table ── */}
       <section className="pb-20 md:pb-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto">
 
-          {/* Filter row — Country + Industry */}
+          {/* Filter row */}
           <div className="flex flex-col sm:flex-row gap-3 mb-8 items-start sm:items-center justify-between">
-            {/* Country selector */}
+            {/* Country */}
             <div className="flex items-center gap-1 p-1 rounded-xl bg-white/[0.04] border border-white/10">
               {COUNTRIES.map((c) => {
                 const active = activeCountry === c.code;
                 return (
-                  <button
-                    key={c.code}
-                    onClick={() => setActiveCountry(c.code as CountryCode)}
+                  <button key={c.code} onClick={() => setActiveCountry(c.code as CountryCode)}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                      active
-                        ? "bg-white text-black shadow-sm"
-                        : "text-gray-400 hover:text-white"
-                    }`}
-                  >
+                      active ? "bg-white text-black shadow-sm" : "text-gray-400 hover:text-white"
+                    }`}>
                     <span className="text-base leading-none">{c.flag}</span>
                     <span className="hidden sm:inline">{c.label}</span>
                     <span className="inline sm:hidden">{c.code}</span>
@@ -439,44 +577,40 @@ export function IndustryLeaderboards() {
                 const Icon = ind.icon;
                 const active = activeIndustry === ind.id;
                 return (
-                  <button
-                    key={ind.id}
-                    onClick={() => setActiveIndustry(ind.id)}
+                  <button key={ind.id} onClick={() => setActiveIndustry(ind.id)}
                     className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 border ${
                       active
                         ? "bg-white text-black border-white shadow-lg"
                         : "bg-white/[0.04] text-gray-400 border-white/10 hover:bg-white/[0.08] hover:text-white"
-                    }`}
-                  >
-                    <Icon className="w-3.5 h-3.5" />
-                    {ind.label}
+                    }`}>
+                    <Icon className="w-3.5 h-3.5" />{ind.label}
                   </button>
                 );
               })}
             </div>
           </div>
 
+          {/* Chart for top 3 */}
+          <TopThreeChart brands={sorted} />
+
           {/* Table */}
           <div className="rounded-2xl border border-white/10 overflow-hidden">
             {/* Header */}
-            <div className="grid grid-cols-[40px_1fr_130px_repeat(4,52px)_80px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
+            <div className="grid grid-cols-[40px_1fr_150px_repeat(4,60px)] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
               {LLM_PLATFORMS.map((p) => (
                 <LlmLogo key={p.key} platform={p} />
               ))}
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">30d</span>
             </div>
 
             {/* Rows */}
             {sorted.map((brand, idx) => (
-              <div
-                key={`${activeCountry}-${brand.name}`}
-                className={`grid grid-cols-[40px_1fr_130px_repeat(4,52px)_80px] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
+              <div key={`${activeCountry}-${activeIndustry}-${brand.name}`}
+                className={`grid grid-cols-[40px_1fr_150px_repeat(4,60px)] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
                   idx < sorted.length - 1 ? "border-b border-white/[0.06]" : ""
-                }`}
-              >
+                }`}>
                 {/* Rank */}
                 <div>
                   {brand.rank <= 3 ? (
@@ -494,20 +628,23 @@ export function IndustryLeaderboards() {
                   <span className="text-sm font-semibold text-white truncate">{brand.name}</span>
                 </div>
 
-                {/* Visibility */}
-                <ScoreBar value={brand.visibility} />
+                {/* Visibility bar + % */}
+                <div className="flex items-center gap-2">
+                  <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                      style={{ width: `${brand.visibility}%` }} />
+                  </div>
+                  <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
+                </div>
 
                 {/* Platform scores */}
                 {LLM_PLATFORMS.map((p) => (
                   <div key={p.key} className="flex justify-center">
                     <span className="text-sm font-bold tabular-nums" style={{ color: p.color }}>
-                      {brand[p.key as keyof typeof brand] as number}
+                      {brand[p.key as keyof typeof brand] as number}%
                     </span>
                   </div>
                 ))}
-
-                {/* Trend */}
-                <TrendBadge trend={brand.trend} value={brand.trendValue} />
               </div>
             ))}
           </div>
@@ -516,7 +653,7 @@ export function IndustryLeaderboards() {
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
             <p className="text-sm text-gray-500">
               Showing {sorted.length} brands ·{" "}
-              <span className="text-gray-400">Scores reflect average AI mention rate across all platforms</span>
+              <span className="text-gray-400">Average AI mention rate across all platforms</span>
             </p>
             <a href={current.url[activeCountry]} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/[0.06] border border-white/15 text-sm font-semibold text-white hover:bg-white/[0.12] transition-all duration-200 group">
