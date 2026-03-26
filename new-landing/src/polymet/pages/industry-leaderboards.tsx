@@ -513,8 +513,9 @@ export function IndustryLeaderboards() {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-            <span className="text-white">See who's winning </span>
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI search</span>
+            <span className="text-white">Your competitors are already in </span>
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI answers.</span>
+            <span className="text-white"> Are you?</span>
           </h1>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-10">
             Real AI visibility rankings across industries — powered by thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
