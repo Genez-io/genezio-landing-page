@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   ShoppingCartIcon,
@@ -15,12 +15,42 @@ import {
   SparklesIcon,
   ExternalLinkIcon,
 } from "lucide-react";
-import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
 const PAGE_TITLE = "AI Visibility Industry Leaderboards | Genezio";
 const PAGE_DESCRIPTION =
   "See which brands are winning AI search across UK industries. Real data from ChatGPT, Perplexity, Gemini & Claude.";
+
+function faviconUrl(website: string, size = 48) {
+  return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(website)}&size=${size}`;
+}
+
+const LLM_PLATFORMS = [
+  {
+    key: "chatgpt",
+    label: "ChatGPT",
+    website: "https://chatgpt.com",
+    color: "#10A37F",
+  },
+  {
+    key: "perplexity",
+    label: "Perplexity",
+    website: "https://perplexity.ai",
+    color: "#1FB8CD",
+  },
+  {
+    key: "gemini",
+    label: "Gemini",
+    website: "https://gemini.google.com",
+    color: "#4285F4",
+  },
+  {
+    key: "claude",
+    label: "Claude",
+    website: "https://claude.ai",
+    color: "#D4A373",
+  },
+];
 
 type Trend = "up" | "down" | "stable";
 
@@ -29,6 +59,7 @@ interface BrandEntry {
   name: string;
   initials: string;
   color: string;
+  website: string;
   visibility: number;
   chatgpt: number;
   perplexity: number;
@@ -55,97 +86,13 @@ const industries: Industry[] = [
     location: "UK",
     url: "https://app.genezio.ai/brand-report/-49/Banking?demo=account",
     brands: [
-      {
-        rank: 1,
-        name: "Barclays",
-        initials: "BA",
-        color: "#00AEEF",
-        visibility: 87,
-        chatgpt: 91,
-        perplexity: 85,
-        gemini: 88,
-        claude: 84,
-        trend: "up",
-        trendValue: 4,
-      },
-      {
-        rank: 2,
-        name: "HSBC",
-        initials: "HS",
-        color: "#DB0011",
-        visibility: 83,
-        chatgpt: 88,
-        perplexity: 80,
-        gemini: 82,
-        claude: 82,
-        trend: "stable",
-        trendValue: 0,
-      },
-      {
-        rank: 3,
-        name: "Lloyds",
-        initials: "LL",
-        color: "#006A4D",
-        visibility: 79,
-        chatgpt: 82,
-        perplexity: 77,
-        gemini: 80,
-        claude: 77,
-        trend: "up",
-        trendValue: 2,
-      },
-      {
-        rank: 4,
-        name: "NatWest",
-        initials: "NW",
-        color: "#42145F",
-        visibility: 74,
-        chatgpt: 76,
-        perplexity: 72,
-        gemini: 75,
-        claude: 73,
-        trend: "down",
-        trendValue: 3,
-      },
-      {
-        rank: 5,
-        name: "Santander",
-        initials: "SA",
-        color: "#EC0000",
-        visibility: 68,
-        chatgpt: 70,
-        perplexity: 66,
-        gemini: 68,
-        claude: 68,
-        trend: "up",
-        trendValue: 1,
-      },
-      {
-        rank: 6,
-        name: "Halifax",
-        initials: "HA",
-        color: "#0076BE",
-        visibility: 61,
-        chatgpt: 63,
-        perplexity: 59,
-        gemini: 62,
-        claude: 60,
-        trend: "down",
-        trendValue: 2,
-      },
-      {
-        rank: 7,
-        name: "Nationwide",
-        initials: "NA",
-        color: "#1B3D6E",
-        visibility: 55,
-        chatgpt: 57,
-        perplexity: 53,
-        gemini: 56,
-        claude: 54,
-        trend: "stable",
-        trendValue: 0,
-      },
+      { rank: 1, name: "Barclays", initials: "BA", color: "#00AEEF", website: "https://www.barclays.co.uk", visibility: 87, chatgpt: 91, perplexity: 85, gemini: 88, claude: 84, trend: "up", trendValue: 4 },
+      { rank: 2, name: "HSBC", initials: "HS", color: "#DB0011", website: "https://www.hsbc.co.uk", visibility: 83, chatgpt: 88, perplexity: 80, gemini: 82, claude: 82, trend: "stable", trendValue: 0 },
+      { rank: 3, name: "Lloyds", initials: "LL", color: "#006A4D", website: "https://www.lloydsbank.com", visibility: 79, chatgpt: 82, perplexity: 77, gemini: 80, claude: 77, trend: "up", trendValue: 2 },
+      { rank: 4, name: "NatWest", initials: "NW", color: "#42145F", website: "https://www.natwest.com", visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73, trend: "down", trendValue: 3 },
+      { rank: 5, name: "Santander", initials: "SA", color: "#EC0000", website: "https://www.santander.co.uk", visibility: 68, chatgpt: 70, perplexity: 66, gemini: 68, claude: 68, trend: "up", trendValue: 1 },
+      { rank: 6, name: "Halifax", initials: "HA", color: "#0076BE", website: "https://www.halifax.co.uk", visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60, trend: "down", trendValue: 2 },
+      { rank: 7, name: "Nationwide", initials: "NA", color: "#1B3D6E", website: "https://www.nationwide.co.uk", visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54, trend: "stable", trendValue: 0 },
     ],
   },
   {
@@ -155,97 +102,13 @@ const industries: Industry[] = [
     location: "UK",
     url: "https://app.genezio.ai/brand-report/-29/Retail%20&%20Supermarkets?demo=account",
     brands: [
-      {
-        rank: 1,
-        name: "Tesco",
-        initials: "TE",
-        color: "#EE1C25",
-        visibility: 91,
-        chatgpt: 93,
-        perplexity: 90,
-        gemini: 91,
-        claude: 90,
-        trend: "up",
-        trendValue: 3,
-      },
-      {
-        rank: 2,
-        name: "Sainsbury's",
-        initials: "SA",
-        color: "#FF7200",
-        visibility: 84,
-        chatgpt: 86,
-        perplexity: 83,
-        gemini: 84,
-        claude: 83,
-        trend: "stable",
-        trendValue: 0,
-      },
-      {
-        rank: 3,
-        name: "Asda",
-        initials: "AS",
-        color: "#7DC242",
-        visibility: 80,
-        chatgpt: 83,
-        perplexity: 78,
-        gemini: 80,
-        claude: 79,
-        trend: "up",
-        trendValue: 5,
-      },
-      {
-        rank: 4,
-        name: "Morrisons",
-        initials: "MO",
-        color: "#FFDC00",
-        visibility: 72,
-        chatgpt: 74,
-        perplexity: 70,
-        gemini: 73,
-        claude: 71,
-        trend: "down",
-        trendValue: 2,
-      },
-      {
-        rank: 5,
-        name: "Waitrose",
-        initials: "WA",
-        color: "#5D8233",
-        visibility: 68,
-        chatgpt: 70,
-        perplexity: 66,
-        gemini: 69,
-        claude: 67,
-        trend: "up",
-        trendValue: 1,
-      },
-      {
-        rank: 6,
-        name: "Aldi",
-        initials: "AL",
-        color: "#002D72",
-        visibility: 62,
-        chatgpt: 64,
-        perplexity: 60,
-        gemini: 63,
-        claude: 61,
-        trend: "up",
-        trendValue: 6,
-      },
-      {
-        rank: 7,
-        name: "Lidl",
-        initials: "LI",
-        color: "#0050AA",
-        visibility: 58,
-        chatgpt: 60,
-        perplexity: 56,
-        gemini: 59,
-        claude: 57,
-        trend: "stable",
-        trendValue: 0,
-      },
+      { rank: 1, name: "Tesco", initials: "TE", color: "#EE1C25", website: "https://www.tesco.com", visibility: 91, chatgpt: 93, perplexity: 90, gemini: 91, claude: 90, trend: "up", trendValue: 3 },
+      { rank: 2, name: "Sainsbury's", initials: "SA", color: "#FF7200", website: "https://www.sainsburys.co.uk", visibility: 84, chatgpt: 86, perplexity: 83, gemini: 84, claude: 83, trend: "stable", trendValue: 0 },
+      { rank: 3, name: "Asda", initials: "AS", color: "#7DC242", website: "https://www.asda.com", visibility: 80, chatgpt: 83, perplexity: 78, gemini: 80, claude: 79, trend: "up", trendValue: 5 },
+      { rank: 4, name: "Morrisons", initials: "MO", color: "#FFDC00", website: "https://groceries.morrisons.com", visibility: 72, chatgpt: 74, perplexity: 70, gemini: 73, claude: 71, trend: "down", trendValue: 2 },
+      { rank: 5, name: "Waitrose", initials: "WA", color: "#5D8233", website: "https://www.waitrose.com", visibility: 68, chatgpt: 70, perplexity: 66, gemini: 69, claude: 67, trend: "up", trendValue: 1 },
+      { rank: 6, name: "Aldi", initials: "AL", color: "#002D72", website: "https://www.aldi.co.uk", visibility: 62, chatgpt: 64, perplexity: 60, gemini: 63, claude: 61, trend: "up", trendValue: 6 },
+      { rank: 7, name: "Lidl", initials: "LI", color: "#0050AA", website: "https://www.lidl.co.uk", visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57, trend: "stable", trendValue: 0 },
     ],
   },
   {
@@ -255,97 +118,13 @@ const industries: Industry[] = [
     location: "UK",
     url: "https://app.genezio.ai/brand-report/-31/Healthcare%20Providers%20&%20Clinics?demo=account",
     brands: [
-      {
-        rank: 1,
-        name: "Bupa",
-        initials: "BU",
-        color: "#1E9BD7",
-        visibility: 88,
-        chatgpt: 90,
-        perplexity: 87,
-        gemini: 89,
-        claude: 86,
-        trend: "up",
-        trendValue: 2,
-      },
-      {
-        rank: 2,
-        name: "Nuffield Health",
-        initials: "NU",
-        color: "#00539B",
-        visibility: 79,
-        chatgpt: 81,
-        perplexity: 78,
-        gemini: 79,
-        claude: 78,
-        trend: "up",
-        trendValue: 4,
-      },
-      {
-        rank: 3,
-        name: "Spire Healthcare",
-        initials: "SP",
-        color: "#E4003A",
-        visibility: 73,
-        chatgpt: 75,
-        perplexity: 72,
-        gemini: 73,
-        claude: 72,
-        trend: "stable",
-        trendValue: 0,
-      },
-      {
-        rank: 4,
-        name: "BMI Healthcare",
-        initials: "BM",
-        color: "#003087",
-        visibility: 65,
-        chatgpt: 67,
-        perplexity: 63,
-        gemini: 66,
-        claude: 64,
-        trend: "down",
-        trendValue: 3,
-      },
-      {
-        rank: 5,
-        name: "NHS",
-        initials: "NH",
-        color: "#005EB8",
-        visibility: 95,
-        chatgpt: 97,
-        perplexity: 94,
-        gemini: 95,
-        claude: 94,
-        trend: "stable",
-        trendValue: 0,
-      },
-      {
-        rank: 6,
-        name: "Vitality",
-        initials: "VI",
-        color: "#E8175D",
-        visibility: 58,
-        chatgpt: 60,
-        perplexity: 56,
-        gemini: 59,
-        claude: 57,
-        trend: "up",
-        trendValue: 5,
-      },
-      {
-        rank: 7,
-        name: "AXA Health",
-        initials: "AX",
-        color: "#00008F",
-        visibility: 52,
-        chatgpt: 54,
-        perplexity: 50,
-        gemini: 53,
-        claude: 51,
-        trend: "down",
-        trendValue: 1,
-      },
+      { rank: 1, name: "NHS", initials: "NH", color: "#005EB8", website: "https://www.nhs.uk", visibility: 95, chatgpt: 97, perplexity: 94, gemini: 95, claude: 94, trend: "stable", trendValue: 0 },
+      { rank: 2, name: "Bupa", initials: "BU", color: "#1E9BD7", website: "https://www.bupa.co.uk", visibility: 88, chatgpt: 90, perplexity: 87, gemini: 89, claude: 86, trend: "up", trendValue: 2 },
+      { rank: 3, name: "Nuffield Health", initials: "NU", color: "#00539B", website: "https://www.nuffieldhealth.com", visibility: 79, chatgpt: 81, perplexity: 78, gemini: 79, claude: 78, trend: "up", trendValue: 4 },
+      { rank: 4, name: "Spire Healthcare", initials: "SP", color: "#E4003A", website: "https://www.spirehealthcare.com", visibility: 73, chatgpt: 75, perplexity: 72, gemini: 73, claude: 72, trend: "stable", trendValue: 0 },
+      { rank: 5, name: "BMI Healthcare", initials: "BM", color: "#003087", website: "https://www.bmihealthcare.co.uk", visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64, trend: "down", trendValue: 3 },
+      { rank: 6, name: "Vitality", initials: "VI", color: "#E8175D", website: "https://www.vitality.co.uk", visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57, trend: "up", trendValue: 5 },
+      { rank: 7, name: "AXA Health", initials: "AX", color: "#00008F", website: "https://www.axahealth.co.uk", visibility: 52, chatgpt: 54, perplexity: 50, gemini: 53, claude: 51, trend: "down", trendValue: 1 },
     ],
   },
   {
@@ -355,113 +134,41 @@ const industries: Industry[] = [
     location: "UK",
     url: "https://app.genezio.ai/brand-report/-64/Fast%20Fashion?demo=account",
     brands: [
-      {
-        rank: 1,
-        name: "Zara",
-        initials: "ZA",
-        color: "#FFFFFF",
-        visibility: 90,
-        chatgpt: 92,
-        perplexity: 89,
-        gemini: 91,
-        claude: 88,
-        trend: "up",
-        trendValue: 2,
-      },
-      {
-        rank: 2,
-        name: "H&M",
-        initials: "HM",
-        color: "#E50010",
-        visibility: 85,
-        chatgpt: 87,
-        perplexity: 84,
-        gemini: 86,
-        claude: 83,
-        trend: "stable",
-        trendValue: 0,
-      },
-      {
-        rank: 3,
-        name: "ASOS",
-        initials: "AS",
-        color: "#2D2D2D",
-        visibility: 80,
-        chatgpt: 82,
-        perplexity: 79,
-        gemini: 81,
-        claude: 78,
-        trend: "up",
-        trendValue: 3,
-      },
-      {
-        rank: 4,
-        name: "Primark",
-        initials: "PR",
-        color: "#003087",
-        visibility: 76,
-        chatgpt: 78,
-        perplexity: 74,
-        gemini: 77,
-        claude: 75,
-        trend: "up",
-        trendValue: 7,
-      },
-      {
-        rank: 5,
-        name: "Boohoo",
-        initials: "BO",
-        color: "#FF008D",
-        visibility: 60,
-        chatgpt: 62,
-        perplexity: 58,
-        gemini: 61,
-        claude: 59,
-        trend: "down",
-        trendValue: 4,
-      },
-      {
-        rank: 6,
-        name: "Topshop",
-        initials: "TO",
-        color: "#1A1A1A",
-        visibility: 53,
-        chatgpt: 55,
-        perplexity: 51,
-        gemini: 54,
-        claude: 52,
-        trend: "down",
-        trendValue: 2,
-      },
-      {
-        rank: 7,
-        name: "Shein",
-        initials: "SH",
-        color: "#EE1C25",
-        visibility: 71,
-        chatgpt: 73,
-        perplexity: 69,
-        gemini: 72,
-        claude: 70,
-        trend: "up",
-        trendValue: 9,
-      },
+      { rank: 1, name: "Zara", initials: "ZA", color: "#888", website: "https://www.zara.com", visibility: 90, chatgpt: 92, perplexity: 89, gemini: 91, claude: 88, trend: "up", trendValue: 2 },
+      { rank: 2, name: "H&M", initials: "HM", color: "#E50010", website: "https://www.hm.com", visibility: 85, chatgpt: 87, perplexity: 84, gemini: 86, claude: 83, trend: "stable", trendValue: 0 },
+      { rank: 3, name: "ASOS", initials: "AS", color: "#2D2D2D", website: "https://www.asos.com", visibility: 80, chatgpt: 82, perplexity: 79, gemini: 81, claude: 78, trend: "up", trendValue: 3 },
+      { rank: 4, name: "Primark", initials: "PR", color: "#003087", website: "https://www.primark.com", visibility: 76, chatgpt: 78, perplexity: 74, gemini: 77, claude: 75, trend: "up", trendValue: 7 },
+      { rank: 5, name: "Shein", initials: "SH", color: "#EE1C25", website: "https://www.shein.com", visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70, trend: "up", trendValue: 9 },
+      { rank: 6, name: "Boohoo", initials: "BO", color: "#FF008D", website: "https://www.boohoo.com", visibility: 60, chatgpt: 62, perplexity: 58, gemini: 61, claude: 59, trend: "down", trendValue: 4 },
+      { rank: 7, name: "Topshop", initials: "TO", color: "#555", website: "https://www.topshop.com", visibility: 53, chatgpt: 55, perplexity: 51, gemini: 54, claude: 52, trend: "down", trendValue: 2 },
     ],
   },
 ];
 
-const platformColors: Record<string, string> = {
-  chatgpt: "#10A37F",
-  perplexity: "#1FB8CD",
-  gemini: "#4285F4",
-  claude: "#D4A373",
-};
-
 const scrollingBrands = [
-  "Tesco", "Barclays", "Bupa", "Zara", "HSBC", "H&M", "Sainsbury's",
-  "Nuffield Health", "Lloyds", "ASOS", "Asda", "Spire Healthcare",
-  "Primark", "NatWest", "Waitrose", "Vitality", "Boohoo", "Santander",
-  "Morrisons", "AXA Health", "Aldi", "Lidl", "NHS",
+  { name: "Tesco", website: "https://www.tesco.com" },
+  { name: "Barclays", website: "https://www.barclays.co.uk" },
+  { name: "Bupa", website: "https://www.bupa.co.uk" },
+  { name: "Zara", website: "https://www.zara.com" },
+  { name: "HSBC", website: "https://www.hsbc.co.uk" },
+  { name: "H&M", website: "https://www.hm.com" },
+  { name: "Sainsbury's", website: "https://www.sainsburys.co.uk" },
+  { name: "Nuffield Health", website: "https://www.nuffieldhealth.com" },
+  { name: "Lloyds", website: "https://www.lloydsbank.com" },
+  { name: "ASOS", website: "https://www.asos.com" },
+  { name: "Asda", website: "https://www.asda.com" },
+  { name: "Spire Healthcare", website: "https://www.spirehealthcare.com" },
+  { name: "Primark", website: "https://www.primark.com" },
+  { name: "NatWest", website: "https://www.natwest.com" },
+  { name: "Waitrose", website: "https://www.waitrose.com" },
+  { name: "NHS", website: "https://www.nhs.uk" },
+  { name: "Boohoo", website: "https://www.boohoo.com" },
+  { name: "Santander", website: "https://www.santander.co.uk" },
+  { name: "Morrisons", website: "https://groceries.morrisons.com" },
+  { name: "AXA Health", website: "https://www.axahealth.co.uk" },
+  { name: "Aldi", website: "https://www.aldi.co.uk" },
+  { name: "Lidl", website: "https://www.lidl.co.uk" },
+  { name: "Shein", website: "https://www.shein.com" },
 ];
 
 function TrendBadge({ trend, value }: { trend: Trend; value: number }) {
@@ -486,13 +193,13 @@ function TrendBadge({ trend, value }: { trend: Trend; value: number }) {
   );
 }
 
-function ScoreBar({ value, max = 100 }: { value: number; max?: number }) {
+function ScoreBar({ value }: { value: number }) {
   return (
     <div className="flex items-center gap-2">
       <div className="w-16 h-1.5 bg-white/10 rounded-full overflow-hidden">
         <div
           className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
-          style={{ width: `${(value / max) * 100}%` }}
+          style={{ width: `${value}%` }}
         />
       </div>
       <span className="text-sm font-semibold text-white tabular-nums w-8">
@@ -502,17 +209,72 @@ function ScoreBar({ value, max = 100 }: { value: number; max?: number }) {
   );
 }
 
-function PlatformDot({ score, platform }: { score: number; platform: string }) {
-  const color = platformColors[platform] ?? "#888";
+function BrandLogo({ brand }: { brand: BrandEntry }) {
+  const [imgError, setImgError] = useState(false);
+
+  if (imgError) {
+    return (
+      <div
+        className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0"
+        style={{
+          background: `${brand.color}20`,
+          color: brand.color,
+          border: `1px solid ${brand.color}40`,
+        }}
+      >
+        {brand.initials}
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center overflow-hidden shrink-0 border border-white/10">
+      <img
+        src={faviconUrl(brand.website, 48)}
+        alt={brand.name}
+        className="w-5 h-5 object-contain"
+        onError={() => setImgError(true)}
+      />
+    </div>
+  );
+}
+
+function LlmLogo({ platform }: { platform: typeof LLM_PLATFORMS[number] }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <div className="flex flex-col items-center gap-1">
-      <span
-        className="text-xs font-bold tabular-nums"
-        style={{ color }}
-      >
-        {score}
-      </span>
+      {imgError ? (
+        <span className="text-xs font-bold" style={{ color: platform.color }}>
+          {platform.label.slice(0, 3).toUpperCase()}
+        </span>
+      ) : (
+        <img
+          src={faviconUrl(platform.website, 32)}
+          alt={platform.label}
+          title={platform.label}
+          className="w-5 h-5 object-contain rounded"
+          onError={() => setImgError(true)}
+        />
+      )}
     </div>
+  );
+}
+
+function PlatformScore({
+  score,
+  platform,
+}: {
+  score: number;
+  platform: typeof LLM_PLATFORMS[number];
+}) {
+  return (
+    <span
+      className="text-sm font-bold tabular-nums"
+      style={{ color: platform.color }}
+    >
+      {score}
+    </span>
   );
 }
 
@@ -521,20 +283,23 @@ export function IndustryLeaderboards() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const current = industries.find((i) => i.id === activeIndustry)!;
-  const sorted = [...current.brands].sort((a, b) => b.visibility - a.visibility).map((b, i) => ({ ...b, rank: i + 1 }));
+  const sorted = [...current.brands]
+    .sort((a, b) => b.visibility - a.visibility)
+    .map((b, i) => ({ ...b, rank: i + 1 }));
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
     let pos = 0;
     const speed = 0.5;
-    const half = el.scrollWidth / 2;
-    const raf = requestAnimationFrame(function step() {
+    let raf: number;
+    const step = () => {
       pos += speed;
-      if (pos >= half) pos = 0;
+      if (pos >= el.scrollWidth / 2) pos = 0;
       el.scrollLeft = pos;
-      requestAnimationFrame(step);
-    });
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, []);
 
@@ -570,14 +335,16 @@ export function IndustryLeaderboards() {
             thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
           </p>
 
-          {/* Stats strip */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             {[
               { icon: BarChart2Icon, label: "4 UK Industries tracked" },
               { icon: GlobeIcon, label: "4 AI Platforms monitored" },
               { icon: SparklesIcon, label: "Updated weekly" },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-sm text-gray-400">
+              <div
+                key={label}
+                className="flex items-center gap-2 text-sm text-gray-400"
+              >
                 <Icon className="w-4 h-4 text-purple-400" />
                 {label}
               </div>
@@ -591,16 +358,23 @@ export function IndustryLeaderboards() {
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#050506] to-transparent z-10 pointer-events-none" />
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-hidden whitespace-nowrap py-3"
+            className="flex gap-4 overflow-x-hidden whitespace-nowrap py-3"
             style={{ scrollbarWidth: "none" }}
           >
             {[...scrollingBrands, ...scrollingBrands].map((brand, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-gray-400 font-medium shrink-0"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-gray-300 font-medium shrink-0"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                {brand}
+                <img
+                  src={faviconUrl(brand.website, 32)}
+                  alt={brand.name}
+                  className="w-4 h-4 object-contain rounded"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                {brand.name}
               </span>
             ))}
           </div>
@@ -610,7 +384,6 @@ export function IndustryLeaderboards() {
       {/* ── Industry Tabs + Table ── */}
       <section className="pb-20 md:pb-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto">
-
           {/* Tab bar */}
           <div className="flex flex-wrap gap-2 mb-8">
             {industries.map((ind) => {
@@ -633,28 +406,41 @@ export function IndustryLeaderboards() {
             })}
           </div>
 
-          {/* Table header */}
+          {/* Table */}
           <div className="rounded-2xl border border-white/10 overflow-hidden">
-            <div className="grid grid-cols-[40px_1fr_120px_repeat(4,60px)_80px] gap-4 px-5 py-3 bg-white/[0.03] border-b border-white/10">
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: platformColors.chatgpt }}>GPT</span>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: platformColors.perplexity }}>PPX</span>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: platformColors.gemini }}>GEM</span>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: platformColors.claude }}>CLD</span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">30d</span>
+            {/* Header */}
+            <div className="grid grid-cols-[40px_1fr_130px_repeat(4,52px)_80px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
+              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                #
+              </span>
+              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                Brand
+              </span>
+              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                AI Visibility
+              </span>
+              {LLM_PLATFORMS.map((p) => (
+                <div key={p.key} className="flex justify-center">
+                  <LlmLogo platform={p} />
+                </div>
+              ))}
+              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                30d
+              </span>
             </div>
 
+            {/* Rows */}
             {sorted.map((brand, idx) => (
               <div
                 key={brand.name}
-                className={`grid grid-cols-[40px_1fr_120px_repeat(4,60px)_80px] gap-4 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
-                  idx < sorted.length - 1 ? "border-b border-white/[0.06]" : ""
+                className={`grid grid-cols-[40px_1fr_130px_repeat(4,52px)_80px] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
+                  idx < sorted.length - 1
+                    ? "border-b border-white/[0.06]"
+                    : ""
                 }`}
               >
                 {/* Rank */}
-                <div className="flex items-center">
+                <div>
                   {brand.rank <= 3 ? (
                     <span
                       className={`text-sm font-bold ${
@@ -676,16 +462,7 @@ export function IndustryLeaderboards() {
 
                 {/* Brand */}
                 <div className="flex items-center gap-3 min-w-0">
-                  <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0"
-                    style={{
-                      background: `${brand.color}20`,
-                      color: brand.color === "#FFFFFF" ? "#aaa" : brand.color,
-                      border: `1px solid ${brand.color}40`,
-                    }}
-                  >
-                    {brand.initials}
-                  </div>
+                  <BrandLogo brand={brand} />
                   <span className="text-sm font-semibold text-white truncate">
                     {brand.name}
                   </span>
@@ -695,10 +472,14 @@ export function IndustryLeaderboards() {
                 <ScoreBar value={brand.visibility} />
 
                 {/* Platform scores */}
-                <PlatformDot score={brand.chatgpt} platform="chatgpt" />
-                <PlatformDot score={brand.perplexity} platform="perplexity" />
-                <PlatformDot score={brand.gemini} platform="gemini" />
-                <PlatformDot score={brand.claude} platform="claude" />
+                {LLM_PLATFORMS.map((p) => (
+                  <div key={p.key} className="flex justify-center">
+                    <PlatformScore
+                      score={brand[p.key as keyof typeof brand] as number}
+                      platform={p}
+                    />
+                  </div>
+                ))}
 
                 {/* Trend */}
                 <TrendBadge trend={brand.trend} value={brand.trendValue} />
@@ -706,7 +487,7 @@ export function IndustryLeaderboards() {
             ))}
           </div>
 
-          {/* View full report CTA */}
+          {/* Footer */}
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
             <p className="text-sm text-gray-500">
               Showing {sorted.length} brands ·{" "}
@@ -753,7 +534,9 @@ export function IndustryLeaderboards() {
                 },
               ].map(({ step, title, body }) => (
                 <div key={step} className="space-y-2">
-                  <div className="text-3xl font-black text-white/10 font-mono">{step}</div>
+                  <div className="text-3xl font-black text-white/10 font-mono">
+                    {step}
+                  </div>
                   <h3 className="text-sm font-bold text-white">{title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
                 </div>
@@ -767,7 +550,11 @@ export function IndustryLeaderboards() {
       <section className="pb-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            How does <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">your brand</span> rank?
+            How does{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              your brand
+            </span>{" "}
+            rank?
           </h2>
           <p className="text-base text-[#B0B0B3] max-w-xl mx-auto">
             Get a personalised AI visibility report for your brand — see exactly
