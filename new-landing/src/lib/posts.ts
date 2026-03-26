@@ -95,7 +95,7 @@ function extractFirstTag(content: string): string {
 }
 
 export function getAllPosts(): BlogPost[] {
-    const modules = import.meta.glob("../posts/*.md", { as: "raw", eager: true });
+    const modules = import.meta.glob("../posts/*.md", { query: "?raw", import: "default", eager: true });
 
     const posts: BlogPost[] = [];
 
