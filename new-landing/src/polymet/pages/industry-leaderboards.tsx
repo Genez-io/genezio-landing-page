@@ -83,11 +83,14 @@ const CHART_COLORS = ["#818cf8", "#f472b6", "#fbbf24"];
 function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }) {
   const top3 = brands.slice(0, 3);
   const W = 800;
-  const H = 160;
-  const PAD = { top: 12, right: 16, bottom: 32, left: 36 };
+  const H = 280;
+  const PAD = { top: 16, right: 20, bottom: 36, left: 42 };
   const innerW = W - PAD.left - PAD.right;
   const innerH = H - PAD.top - PAD.bottom;
   const days = 30;
+
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
   const series = top3.map((b, i) => ({
     brand: b,
@@ -111,6 +114,15 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
       .join(" ");
   }
 
+  function handleMouseMove(e: React.MouseEvent<SVGSVGElement>) {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const rect = svg.getBoundingClientRect();
+    const svgX = ((e.clientX - rect.left) / rect.width) * W;
+    const rawIdx = Math.round(((svgX - PAD.left) / innerW) * (days - 1));
+    setHoverIdx(Math.max(0, Math.min(days - 1, rawIdx)));
+  }
+
   const now = new Date();
   const monthLabels: { label: string; x: number }[] = [];
   for (let i = 0; i < days; i += 7) {
@@ -123,6 +135,21 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
   }
 
   const yTicks = [minV, Math.round((minV + maxV) / 2), maxV];
+
+  const hoverDate =
+    hoverIdx !== null
+      ? (() => {
+          const d = new Date(now);
+          d.setDate(d.getDate() - (days - 1 - hoverIdx));
+          return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+        })()
+      : null;
+
+  // Tooltip x position as % of chart inner width (for CSS positioning)
+  const tooltipLeftPct =
+    hoverIdx !== null
+      ? ((toX(hoverIdx) - PAD.left) / innerW) * 100
+      : null;
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
@@ -153,21 +180,56 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
         </div>
       </div>
 
-      <div className="overflow-x-auto">
+      {/* Chart area — relative container for tooltip overlay */}
+      <div
+        className="relative overflow-x-auto"
+        style={{
+          paddingLeft: PAD.left / (W / 100) + "%",
+          paddingRight: PAD.right / (W / 100) + "%",
+        }}
+      >
+        {/* Tooltip */}
+        {hoverIdx !== null && tooltipLeftPct !== null && (
+          <div
+            className="absolute top-2 z-10 pointer-events-none"
+            style={{
+              left: `clamp(0px, calc(${tooltipLeftPct}% - 68px), calc(100% - 140px))`,
+            }}
+          >
+            <div className="bg-[#1a1a2e] border border-white/15 rounded-xl px-3 py-2.5 shadow-xl shadow-black/40 min-w-[130px]">
+              <p className="text-[10px] text-gray-500 font-semibold mb-1.5">{hoverDate}</p>
+              {series.map((s) => (
+                <div key={s.brand.name} className="flex items-center justify-between gap-3 py-0.5">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: s.color }} />
+                    <span className="text-xs text-gray-400 truncate max-w-[80px]">{s.brand.name}</span>
+                  </div>
+                  <span className="text-xs font-bold tabular-nums" style={{ color: s.color }}>
+                    {s.data[hoverIdx]}%
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <svg
+          ref={svgRef}
           viewBox={`0 0 ${W} ${H}`}
-          className="w-full"
-          style={{ minWidth: 340, height: H }}
+          className="w-full cursor-crosshair"
+          style={{ minWidth: 340, height: H, display: "block" }}
           preserveAspectRatio="none"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={() => setHoverIdx(null)}
         >
           {/* Grid lines */}
           {yTicks.map((v) => (
             <g key={v}>
               <line
                 x1={PAD.left} y1={toY(v)} x2={W - PAD.right} y2={toY(v)}
-                stroke="rgba(255,255,255,0.06)" strokeWidth="1"
+                stroke="rgba(255,255,255,0.06)" strokeWidth="1" strokeDasharray="4 4"
               />
-              <text x={PAD.left - 6} y={toY(v) + 4} textAnchor="end"
+              <text x={PAD.left - 8} y={toY(v) + 4} textAnchor="end"
                 fill="rgba(255,255,255,0.3)" fontSize="10" fontFamily="monospace">
                 {v}%
               </text>
@@ -176,27 +238,11 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
 
           {/* X axis labels */}
           {monthLabels.map(({ label, x }) => (
-            <text key={label} x={x} y={H - 4} textAnchor="middle"
+            <text key={label} x={x} y={H - 6} textAnchor="middle"
               fill="rgba(255,255,255,0.25)" fontSize="9" fontFamily="sans-serif">
               {label}
             </text>
           ))}
-
-          {/* Area fills */}
-          {series.map((s) => {
-            const areaD =
-              pathD(s.data) +
-              ` L${toX(days - 1).toFixed(1)},${(PAD.top + innerH).toFixed(1)}` +
-              ` L${toX(0).toFixed(1)},${(PAD.top + innerH).toFixed(1)} Z`;
-            return (
-              <path
-                key={`area-${s.brand.name}`}
-                d={areaD}
-                fill={s.color}
-                opacity={0.06}
-              />
-            );
-          })}
 
           {/* Lines */}
           {series.map((s) => (
@@ -215,17 +261,35 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
           {series.map((s) => {
             const last = s.data[s.data.length - 1];
             return (
-              <circle
-                key={`dot-${s.brand.name}`}
-                cx={toX(days - 1)}
-                cy={toY(last)}
-                r="4"
-                fill={s.color}
-                stroke="#050506"
-                strokeWidth="2"
+              <circle key={`dot-end-${s.brand.name}`}
+                cx={toX(days - 1)} cy={toY(last)} r="4"
+                fill={s.color} stroke="#050506" strokeWidth="2"
               />
             );
           })}
+
+          {/* Hover cursor line + dots */}
+          {hoverIdx !== null && (
+            <g>
+              <line
+                x1={toX(hoverIdx)} y1={PAD.top}
+                x2={toX(hoverIdx)} y2={PAD.top + innerH}
+                stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="3 3"
+              />
+              {series.map((s) => (
+                <circle key={`hover-dot-${s.brand.name}`}
+                  cx={toX(hoverIdx)} cy={toY(s.data[hoverIdx])} r="5"
+                  fill={s.color} stroke="#050506" strokeWidth="2"
+                />
+              ))}
+            </g>
+          )}
+
+          {/* Transparent overlay for mouse events */}
+          <rect
+            x={PAD.left} y={PAD.top} width={innerW} height={innerH}
+            fill="transparent"
+          />
         </svg>
       </div>
     </div>
