@@ -145,10 +145,10 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
         })()
       : null;
 
-  // Tooltip x position as % of chart inner width (for CSS positioning)
+  // Tooltip x position as % of full SVG width (maps to % of container since SVG is 100% wide)
   const tooltipLeftPct =
     hoverIdx !== null
-      ? ((toX(hoverIdx) - PAD.left) / innerW) * 100
+      ? (toX(hoverIdx) / W) * 100
       : null;
 
   return (
@@ -181,13 +181,7 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
       </div>
 
       {/* Chart area — relative container for tooltip overlay */}
-      <div
-        className="relative overflow-x-auto"
-        style={{
-          paddingLeft: PAD.left / (W / 100) + "%",
-          paddingRight: PAD.right / (W / 100) + "%",
-        }}
-      >
+      <div className="relative overflow-x-auto">
         {/* Tooltip */}
         {hoverIdx !== null && tooltipLeftPct !== null && (
           <div
