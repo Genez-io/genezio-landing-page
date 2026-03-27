@@ -1,53 +1,72 @@
-import { CheckIcon, ArrowRightIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function GenezioPricingComparison() {
-  const sections = [
+  type PlanRowSubtext = {
+    growth: string;
+    enterprise: string;
+  };
+
+  type PlanRow = {
+    feature: string;
+    growth: string;
+    enterprise: string;
+    comingSoon?: boolean;
+    subtext?: PlanRowSubtext;
+  };
+
+  type PlanSection = {
+    title: string;
+    rows: PlanRow[];
+  };
+
+  const sections: PlanSection[] = [
     {
       title: "Coverage & scale",
       rows: [
-        { feature: "Brands", starter: "1", growth: "1", enterprise: "Multiple" },
-        { feature: "Answer Engines tracked", starter: "ChatGPT, Google AI Overviews", growth: "ChatGPT, Perplexity, Google AI Overviews, Google Gemini", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"  },
-        { feature: "Languages / brand", starter: "1", growth: "2", enterprise: "All" },
-        { feature: "Locations / brand", starter: "1", growth: "1", enterprise: "Custom" },
-        { feature: "Personas / brand", starter: "1", growth: "2", enterprise: "Custom" },
+        { feature: "Brands", growth: "1", enterprise: "Multiple" },
+        { feature: "Answer Engines tracked", growth: "ChatGPT, Perplexity, Google AI Overviews", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"  },
+        { feature: "Languages / brand", growth: "1", enterprise: "All" },
+        { feature: "Locations / brand", growth: "1", enterprise: "Custom" },
+        { feature: "Personas / brand", growth: "2", enterprise: "Custom" },
       ],
     },
     {
       title: "Analysis & monitoring",
       rows: [
-        { feature: "Topics / brand", starter: "5", growth: "10", enterprise: "Custom" },
-        { feature: "Scenarios / brand", starter: "50", growth: "50", enterprise: "Custom", subtext: { starter: "3,000 conversations", growth: "12,000 conversations", enterprise: "Custom" } },
-        { feature: "AI Statements", starter: "check", growth: "check", enterprise: "check" },
-        { feature: "AI Keywords", starter: "check", growth: "check", enterprise: "check" },
-        { feature: "AI Citations", starter: "check", growth: "check", enterprise: "check" },
-        { feature: "Sentiment – per conversation", starter: "check", growth: "check", enterprise: "check" },
-        { feature: "Sentiment – per citation", starter: "Top 100", growth: "Top 1,000", enterprise: "Top 10,000" },
-        { feature: "Sentiment – per statement", starter: "Top 100", growth: "Top 1,000", enterprise: "Top 10,000" },
+        { feature: "Topics / brand", growth: "10", enterprise: "Custom" },
+        { feature: "Scenarios / brand", growth: "30", enterprise: "Custom"},
+        { feature: "AI Statements", growth: "check", enterprise: "check" },
+        { feature: "AI Keywords", growth: "check", enterprise: "check" },
+        { feature: "AI Citations", growth: "check", enterprise: "check" },
+        { feature: "Sentiment – per conversation", growth: "check", enterprise: "check" },
+        { feature: "Sentiment – per citation", growth: "Top 1,000", enterprise: "Top 10,000" },
+        { feature: "Sentiment – per statement", growth: "Top 1,000", enterprise: "Top 10,000" },
       ],
     },
     {
       title: "Activation & output",
       rows: [
-        { feature: "AI content generation", starter: "1 / day", growth: "5 / day", enterprise: "10 / day", comingSoon: true },
-        { feature: "Chat with Your Data", starter: "-", growth: "-", enterprise: "check" },
-        { feature: "Insights / day", starter: "1", growth: "5", enterprise: "10+" },
-        { feature: "Exports", starter: "check", growth: "check", enterprise: "check" },
+        { feature: "AI content generation", growth: "1 / day", enterprise: "10 / day", comingSoon: false },
+        { feature: "Chat with Your Data", growth: "-", enterprise: "check" },
+        { feature: "Insights / day", growth: "5", enterprise: "10+" },
+        { feature: "Exports", growth: "check", enterprise: "check" },
       ],
     },
     {
       title: "Data & governance",
       rows: [
-        { feature: "Data retention", starter: "1 month", growth: "6 months", enterprise: "Unlimited" },
-        { feature: "Seats", starter: "2", growth: "5", enterprise: "Unlimited" },
+        { feature: "Data retention", growth: "6 months", enterprise: "Unlimited" },
+        { feature: "Competitor SWOT analysis", growth: "Up to 3", enterprise: "Unlimited" },
+        { feature: "Seats", growth: "5", enterprise: "Unlimited" },
       ],
     },
     {
       title: "Support",
       rows: [
-        { feature: "Support type", starter: "Email", growth: "Email", enterprise: "Slack + Email" },
-        { feature: "Account Manager", starter: "–", growth: "–", enterprise: "check" },
-        { feature: "Onboarding", starter: "–", growth: "–", enterprise: "check" },
+        { feature: "Support type", growth: "Email", enterprise: "Slack + Email" },
+        { feature: "Account Manager", growth: "–", enterprise: "check" },
+        { feature: "Onboarding", growth: "–", enterprise: "check" },
       ],
     },
   ];
@@ -66,8 +85,11 @@ export function GenezioPricingComparison() {
       return <span className="text-white/20">–</span>;
     }
 
-    // Render long, comma-separated lists (like Answer Engines) as a vertical, centered list
-    if (value.includes(",")) {
+    // Render long, comma-separated lists (like Answer Engines) as a vertical, centered list.
+    // IMPORTANT: Don't split numeric thousands separators like "Top 1,000".
+    const isCommaSeparatedList =
+      value.includes(",") && /,\s*[A-Za-z]/.test(value);
+    if (isCommaSeparatedList) {
       const items = value.split(",").map((item) => item.trim());
       return (
         <div className="flex flex-col items-center justify-center gap-1 max-w-xs text-center">
@@ -108,28 +130,11 @@ export function GenezioPricingComparison() {
         <div className="hidden lg:block overflow-x-auto">
           <div className="border border-white/[0.08] rounded-2xl overflow-hidden backdrop-blur-sm">
             {/* Sticky Table Header */}
-            <div className="sticky top-20 z-20 grid grid-cols-4 bg-[#050506] backdrop-blur-md border-b border-white/[0.08]">
+            <div className="sticky top-20 z-20 grid grid-cols-3 bg-[#050506] backdrop-blur-md border-b border-white/[0.08]">
               <div className="px-8 py-6 flex items-center">
                 <span className="text-xs font-medium text-white/40 uppercase tracking-widest">
                   Feature
                 </span>
-              </div>
-              <div className="px-6 py-8 border-l border-white/[0.08]">
-                <div className="flex flex-col items-center space-y-4">
-                  <div className="text-center">
-                    <div className="text-sm font-medium text-white/60 mb-2">Starter</div>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-3xl font-bold text-white">€99</span>
-                      <span className="text-sm text-white/40 ml-1">/month</span>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => window.open('https://app.genezio.ai/sign-up', '_blank')}
-                    className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
-                  >
-                    Start Free Trial
-                  </Button>
-                </div>
               </div>
               <div className="px-6 py-8 border-l border-white/[0.08] bg-gradient-to-b from-blue-600/[0.08] to-purple-600/[0.08] relative">
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
@@ -189,7 +194,7 @@ export function GenezioPricingComparison() {
                 {section.rows.map((row, rowIndex) => (
                   <div
                     key={rowIndex}
-                    className="grid grid-cols-4 border-b border-white/[0.06] last:border-b-0 hover:bg-white/[0.02] transition-colors duration-150"
+                    className="grid grid-cols-3 border-b border-white/[0.06] last:border-b-0 hover:bg-white/[0.02] transition-colors duration-150"
                   >
                     <div className="px-8 py-4 flex items-center">
                       <div className="flex items-center gap-2">
@@ -200,9 +205,6 @@ export function GenezioPricingComparison() {
                           </span>
                         )}
                       </div>
-                    </div>
-                    <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] text-sm">
-                      {renderCell(row.starter, row.subtext?.starter)}
                     </div>
                     <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] bg-gradient-to-b from-blue-600/[0.03] to-purple-600/[0.03] text-sm">
                       {renderCell(row.growth, row.subtext?.growth)}
@@ -219,7 +221,7 @@ export function GenezioPricingComparison() {
 
         {/* Mobile Cards */}
         <div className="lg:hidden space-y-6">
-          {["Starter", "Growth", "Enterprise"].map((plan, planIndex) => (
+          {["Growth", "Enterprise"].map((plan, planIndex) => (
             <div
               key={planIndex}
               className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${
@@ -240,7 +242,7 @@ export function GenezioPricingComparison() {
                 </div>
                 <div className="mb-1">
                   <span className="text-3xl font-bold text-white">
-                    {plan === "Starter" ? "€99" : plan === "Growth" ? "€299" : "Custom"}
+                    {plan === "Growth" ? "€299" : "Custom"}
                   </span>
                   {plan !== "Enterprise" && <span className="text-sm text-white/40 ml-1">/month</span>}
                 </div>
@@ -280,14 +282,10 @@ export function GenezioPricingComparison() {
                         </div>
                         <div className="text-sm flex-shrink-0">
                           {renderCell(
-                            plan === "Starter"
-                              ? row.starter
-                              : plan === "Growth"
+                            plan === "Growth"
                               ? row.growth
                               : row.enterprise,
-                            plan === "Starter"
-                              ? row.subtext?.starter
-                              : plan === "Growth"
+                            plan === "Growth"
                               ? row.subtext?.growth
                               : row.subtext?.enterprise
                           )}

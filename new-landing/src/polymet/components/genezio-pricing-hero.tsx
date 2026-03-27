@@ -12,26 +12,12 @@ export function GenezioPricingHero({
 }: GenezioPricingHeroProps) {
   const brandPlans = [
     {
-      name: "Starter",
-      price: "€99",
-      description: "For teams exploring AI brand visibility",
-      features: [
-        "2 Answer Engines tracked",
-        "50 scenarios",
-        "Daily AI visibility insights",
-        "Data retention: 1 month",
-      ],
-
-      cta: "Start Free Trial",
-      popular: false,
-    },
-    {
       name: "Growth",
       price: "€299",
       description: "For marketing teams optimizing AI presence",
       features: [
-        "4 Answer Engines tracked",
-        "50 scenarios",
+        "3 Answer Engines tracked",
+        "30 scenarios",
         "Multi-turn conversations",
         "Daily AI visibility insights",
         "AI content generation",
@@ -116,67 +102,85 @@ export function GenezioPricingHero({
               <p className="text-xs text-white/40 text-center mb-2">
                 Prices shown are exclusive of any applicable taxes.
               </p>
-              <div className="grid gap-6 lg:gap-8 md:grid-cols-3">
+              <div
+                className={`grid gap-6 lg:gap-8 ${
+                  plans.length === 2
+                    ? "md:grid-cols-2 max-w-5xl mx-auto justify-items-center"
+                    : "md:grid-cols-3"
+                }`}
+              >
                 {plans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white/5 border rounded-2xl p-6 md:p-8 flex flex-col ${
-                    plan.popular
-                      ? "border-blue-500/50 shadow-lg shadow-blue-500/10"
-                      : "border-white/10"
-                  }`}
-                >
-                  {/* Popular Badge */}
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
-                        Most popular
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Plan Header */}
-                  <div className="mb-6">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                      {plan.name}
-                    </h3>
-                    <div className="flex items-baseline gap-1 mb-3">
-                      <span className="text-3xl md:text-4xl font-bold text-white">
-                        {plan.price}
-                      </span>
-                      {plan.price !== "Custom" && (
-                        <span className="text-white/60 text-sm">/month</span>
-                      )}
-                    </div>
-                    <p className="text-sm text-white/60">{plan.description}</p>
-                  </div>
-
-                  {/* Features */}
-                  <div className="flex-1 mb-6">
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start gap-3">
-                          <div className="w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <CheckIcon className="w-3 h-3 text-blue-400" />
-                          </div>
-                          <span className="text-sm text-white/80">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA Button */}
-                  <Button
-                    className={`w-full py-6 text-base font-semibold rounded-lg transition-all duration-200 ${
+                  <div
+                    key={index}
+                    className={`relative w-full bg-white/5 border rounded-2xl p-6 md:p-8 flex flex-col ${
                       plan.popular
-                        ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
-                        : "bg-white/10 hover:bg-white/15 text-white border border-white/20"
+                        ? "border-blue-500/50 shadow-lg shadow-blue-500/10"
+                        : "border-white/10"
                     }`}
-                    onClick={() => plan.cta === "Contact us" ? window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank') : window.open('https://app.genezio.ai/sign-up', '_blank')}
                   >
-                    {plan.cta}
-                  </Button>
-                </div>
+                    {/* Popular Badge */}
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
+                          Most popular
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Plan Header */}
+                    <div className="mb-6">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                        {plan.name}
+                      </h3>
+                      <div className="flex items-baseline gap-1 mb-3">
+                        <span className="text-3xl md:text-4xl font-bold text-white">
+                          {plan.price}
+                        </span>
+                        {plan.price !== "Custom" && (
+                          <span className="text-white/60 text-sm">/month</span>
+                        )}
+                      </div>
+                      <p className="text-sm text-white/60">{plan.description}</p>
+                    </div>
+
+                    {/* Features */}
+                    <div className="flex-1 mb-6">
+                      <ul className="space-y-3">
+                        {plan.features.map((feature, featureIndex) => (
+                          <li
+                            key={featureIndex}
+                            className="flex items-start gap-3"
+                          >
+                            <div className="w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <CheckIcon className="w-3 h-3 text-blue-400" />
+                            </div>
+                            <span className="text-sm text-white/80">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* CTA Button */}
+                    <Button
+                      className={`w-full py-6 text-base font-semibold rounded-lg transition-all duration-200 ${
+                        plan.popular
+                          ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
+                          : "bg-white/10 hover:bg-white/15 text-white border border-white/20"
+                      }`}
+                      onClick={() =>
+                        plan.cta === "Contact us"
+                          ? window.open(
+                              "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
+                              "_blank"
+                            )
+                          : window.open("https://app.genezio.ai/sign-up", "_blank")
+                      }
+                    >
+                      {plan.cta}
+                    </Button>
+                  </div>
                 ))}
               </div>
             </div>
