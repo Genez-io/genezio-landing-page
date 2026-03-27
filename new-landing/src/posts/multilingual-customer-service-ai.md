@@ -3,6 +3,9 @@ title: "Multilingual Customer Service: Cost of Misfires in AI CS"
 date: 2025-06-30
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 

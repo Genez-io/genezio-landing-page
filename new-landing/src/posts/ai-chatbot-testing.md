@@ -3,6 +3,9 @@ title: "AI Chatbot Testing: Testing WhatsApp, Voice, & Chatbots in One Place"
 date: 2025-06-13
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -70,4 +73,4 @@ If your business is using AI to power customer support on multiple platforms, yo
 
 Genezio's scope currently focuses on text agents, so depending on your solution layout, you might be able to also test voice agents, especially if they're powered by an LLM.
 
-Don't wait for a viral PR nightmare to realize your chatbot isn't behaving as it should. **Book a demo and get your free {{< external-link link="<https://genezio.com/#cta-buttons>" >}}AI chatbot testing with Genezio{{< /external-link >}}.**
+Don't wait for a viral PR nightmare to realize your chatbot isn't behaving as it should. **Book a demo and get your free [AI chatbot testing with Genezio](/increase-conversion/).**

@@ -3,6 +3,9 @@ title: "LLM Anomaly Detection: How to Keep AI Responses on Track"
 date: 2025-04-10
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -22,7 +25,7 @@ url: /llm-anomaly-detection/
 
 Large language models (LLMs) don't always behave the way you expect. They can go off-topic, return inaccurate data, or overlook important instructions. Genezio's focus on LLM anomaly detection helps businesses test and monitor AI agents and catch (and address!) those harmful behaviors before they happen with clients.
 
-{{< external-link link="https://genezio.com/#cta-buttons" >}}Try for free{{< /external-link >}} {{< external-link link="https://genezio.com/#cta-buttons" >}}Book your demo{{< /external-link >}}
+[Try for free](/increase-conversion/) [Book your demo](/increase-conversion/)
 
 ## What are Large Language Models (LLMs)?
 
@@ -88,7 +91,7 @@ Some businesses add extra tools to support regular testing.
 - **CX Automation**: Uses AI to speed up customer support and keep conversations accurate and consistent.
 - **LLM Hallucination Detection**: Catches false or made-up responses before they reach customers.
 
-{{< external-link link="https://genezio.com/#cta-buttons" >}}Learn More{{< /external-link >}}
+[Learn More](/increase-conversion/)
 
 ## What Real AI Mistakes Look Like in Practice
 
@@ -98,10 +101,10 @@ AI can sound confident even when it's wrong. Without testing, mistakes can cost 
 - **OpenAI Whisper**: In hospital tests, the OpenAI Whisper transcription model made up entire sentences that were never spoken by patients or doctors.
 - **Chevrolet**: AI system was manipulated into confirming a car purchase for one dollar, which damaged the dealership's reputation.
 
-These AI failures all started with unchecked anomalies. {{< external-link link="https://genezio.com/#cta-buttons" >}}Test now{{< /external-link >}}
+These AI failures all started with unchecked anomalies. [Test now](/increase-conversion/)
 
 ## Start Using LLM Anomaly Detection Today
 
 Genezio supports fast LLM anomaly detection, with a free report ready in 24 hours. Find out where your AI agents need adjustment before they go live.
 
-{{< external-link link="https://genezio.com/#cta-buttons" >}}Try Genezio now{{< /external-link >}} {{< external-link link="https://genezio.com/#cta-buttons" >}}Schedule a Demo{{< /external-link >}}
+[Try Genezio now](/increase-conversion/) [Schedule a Demo](/increase-conversion/)

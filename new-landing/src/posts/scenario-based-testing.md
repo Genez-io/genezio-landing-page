@@ -3,6 +3,9 @@ title: "Scenario-Based Testing: AI Agent Evals for Companies"
 date: 2025-08-14
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/scenario-based-testing.webp
@@ -57,4 +60,4 @@ Because **Genezio** supports non-technical users, it's perfect for bringing cros
 
 **AI agents** are often the first point of contact between a business and its customers. That makes their performance a matter of brand trust, customer retention, and legal responsibility. **Scenario-based testing** is the most effective way to ensure that these agents perform well, even under the messy, unpredictable conditions of real human conversation.
 
-{{< external-link link="https://genezio.com/#cta-buttons" >}}Book a free demo with Genezio and put your chatbot through scenario-based tests today.{{< /external-link >}}
+[Book a free demo with Genezio and put your chatbot through scenario-based tests today.](/increase-conversion/)

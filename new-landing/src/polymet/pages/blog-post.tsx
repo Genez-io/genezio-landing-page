@@ -138,6 +138,8 @@ export function BlogPost() {
         ogUrl={post.metaOgUrl}
         ogImage={post.metaOgImage}
         schema={customSchema}
+        authorName={post.author}
+        datePublished={post.date}
       />
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
