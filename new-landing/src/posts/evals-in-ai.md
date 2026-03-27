@@ -3,6 +3,9 @@ title: "What are Evals in AI? Test Agents with Genezio"
 date: 2025-08-14
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /blog/posts/evals-in-ai.webp
@@ -78,4 +81,4 @@ As the **AI** market matures, evals are quickly becoming a best practice for any
 
 Whether you're launching a new chatbot or improving an existing one, **Genezio** allows your team to test agents, cut back on potential risks, and build better customer experiences from day one.
 
-Make your AI Agent trustworthy. {{< external-link link="https://genezio.com/#cta-buttons" >}}Run your evals in AI with Genezio for free or schedule a demo and get your results in 24 hrs!{{< /external-link >}}
+Make your AI Agent trustworthy. [Run your evals in AI with Genezio for free or schedule a demo and get your results in 24 hrs!](/increase-conversion/)

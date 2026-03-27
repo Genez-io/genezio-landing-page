@@ -3,6 +3,9 @@ title: "Evals for AI Agents: Differences with QA Testing"
 date: 2025-06-30
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 

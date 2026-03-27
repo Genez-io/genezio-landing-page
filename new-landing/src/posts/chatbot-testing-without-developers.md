@@ -3,6 +3,9 @@ title: "Chatbot Testing Without Developers"
 date: 2025-06-13
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -72,4 +75,4 @@ Genezio gives Customer Care Experts clear and reliable chatbot testing without d
 
 Genezio helps you stay one step ahead by catching inappropriate or risky behavior before it reaches your customers, and continuing to monitor for issues after launch. Whether you prefer one-time evaluations or ongoing monitoring, Genezio delivers detailed, easy-to-understand reports that highlight what's working and what needs fixing. That means fewer surprises in production, more confident deployments, and AI agents your team, and your customers, can trust.
 
-**Try Genezio for free and {{< external-link link="<https://genezio.com/#cta-buttons>" >}}run chatbot testing{{< /external-link >}} without developers today.**
+**Try Genezio for free and [run chatbot testing](/increase-conversion/) without developers today.**

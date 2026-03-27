@@ -110,9 +110,9 @@ const escapeRegExp = (value) =>
 const stripOverriddenHead = (html, helmetTitleText, helmetMetaHtml, extraMetaKeys = []) => {
   let output = html;
 
-  if (helmetTitleText.trim()) {
-    output = output.replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "");
-  }
+  // Always strip any pre-existing title tags from the template to prevent duplicates.
+  // The Helmet-managed title (with data-rh="true") will be injected via headHtmlParts.
+  output = output.replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "");
 
   const metaAttrRegex = /<meta[^>]*(?:name|property)=["']([^"']+)["'][^>]*>/gi;
   const metaKeys = new Set(extraMetaKeys);
@@ -155,7 +155,7 @@ const upsertMetaProperty = (headHtml, property, content) => {
     "gi"
   );
   const cleaned = headHtml.replace(metaTagRegex, "").trim();
-  const tag = `    <meta property="${property}" content="${content}" />`;
+  const tag = `    <meta data-rh="true" property="${property}" content="${content}" />`;
   return cleaned ? `${cleaned}\n${tag}` : tag;
 };
 
@@ -165,7 +165,7 @@ const upsertMetaName = (headHtml, name, content) => {
     "gi"
   );
   const cleaned = headHtml.replace(metaTagRegex, "").trim();
-  const tag = `    <meta name="${name}" content="${content}" />`;
+  const tag = `    <meta data-rh="true" name="${name}" content="${content}" />`;
   return cleaned ? `${cleaned}\n${tag}` : tag;
 };
 
@@ -177,9 +177,32 @@ for (const url of routes) {
   let metaMatches = appHtml.match(/<meta[^>]*>/ig) || [];
   let linkMatches = appHtml.match(/<link[^>]*rel=["']canonical["'][^>]*>/ig) || [];
 
+
   const headHtmlParts = [];
-  if (titleMatch) headHtmlParts.push(titleMatch[0]);
-  headHtmlParts.push(...metaMatches, ...linkMatches);
+  if (titleMatch) {
+    let titleHTML = titleMatch[0];
+    if (!titleHTML.includes('data-rh="true"')) {
+      titleHTML = titleHTML.replace('<title', '<title data-rh="true"');
+    }
+    headHtmlParts.push(titleHTML);
+  }
+
+  const processedMetaMatches = metaMatches.map(m => {
+    if (!m.includes('data-rh="true"')) {
+      return m.replace('<meta', '<meta data-rh="true"');
+    }
+    return m;
+  });
+
+  const processedLinkMatches = linkMatches.map(l => {
+    if (!l.includes('data-rh="true"')) {
+      return l.replace('<link', '<link data-rh="true"');
+    }
+    return l;
+  });
+
+  headHtmlParts.push(...processedMetaMatches, ...processedLinkMatches);
+
   const headHtml = headHtmlParts.join("\n");
 
   let cleanAppHtml = appHtml
@@ -282,10 +305,7 @@ for (const url of routes) {
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${cleanAppHtml}</div>`
     );
-  const cleanedHtml = html.replace(
-    /\s*data-react-helmet=(["'])true\1/g,
-    ""
-  );
+  const cleanedHtml = html;
 
   const filePath =
     url === "/"

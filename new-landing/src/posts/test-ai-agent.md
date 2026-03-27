@@ -3,6 +3,9 @@ title: "How To Test AI Agent Performance (Behavior and Accuracy)"
 date: 2025-05-12
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -22,7 +25,7 @@ url: /test-ai-agent/
 
 AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios. It is easy to set up, and it runs as often as you need to so you can fine-tune your agents.
 
-{{< external-link link="https://genezio.com/#cta-buttons" >}}Schedule a Demo{{< /external-link >}}
+[Schedule a Demo](/increase-conversion/)
 
 ## What are AI Agents?
 
@@ -100,4 +103,4 @@ The chatbot (formerly Bing Chat) showed anger and refused to continue a conversa
 
 ## Use Genezio to Test AI Agent Behavior Now 
 
-Customer Care Executives can use Genezio to test AI agent behavior, {{< external-link link="https://genezio.com/blog/llm-anomaly-detection/" >}}check for anomalies{{< /external-link >}}, and fix issues before they go live. {{< external-link link="https://genezio.com/#cta-buttons" >}}Start testing your AI agent today{{< /external-link >}} and receive your first report in just 24 hours. 
+Customer Care Executives can use Genezio to test AI agent behavior, {{< external-link link="https://genezio.com/blog/llm-anomaly-detection/" >}}check for anomalies{{< /external-link >}}, and fix issues before they go live. [Start testing your AI agent today](/increase-conversion/) and receive your first report in just 24 hours. 

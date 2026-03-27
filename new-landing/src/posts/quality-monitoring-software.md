@@ -3,6 +3,9 @@ title: "QMS: How To Make Sure AI Agents Benefit Support and Customers"
 date: 2025-05-23
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -76,4 +79,4 @@ In industries like banking, healthcare, or travel, where trust is hard to earn a
 
 Quality monitoring also helps teams adjust as support needs change. Customer questions are getting more specific, and support now happens across more platforms. That makes it harder to keep replies consistent. Genezio helps you review how agents are handling different types of requests, spot unclear or incomplete replies, and follow up with targeted updates. Over time, that means fewer repeat issues, more confident support teams, and a better experience on both ends.
 
-**Try Genezio for free or book a demo to get your first {{< external-link link="https://genezio.com/#cta-buttons" >}}ai agent quality monitoring report{{< /external-link >}} in 24 hours. You can run one-time tests or set up continuous monitoring—whatever your AI agents need.**
+**Try Genezio for free or book a demo to get your first [ai agent quality monitoring report](/increase-conversion/) in 24 hours. You can run one-time tests or set up continuous monitoring—whatever your AI agents need.**

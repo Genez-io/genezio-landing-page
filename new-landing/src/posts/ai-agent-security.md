@@ -3,6 +3,9 @@ title: "AI Agent Security: Best Ways to Secure your AI Agent"
 date: 2025-05-15
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -88,4 +91,4 @@ Genezio gives you a simple and quick way to test for that. It helps you catch in
 
 You can test your agent with a simulation by just pasting a URL. That's all.
 
-{{< external-link link="<https://genezio.com/#cta-buttons>" >}}Try Genezio for free{{< /external-link >}} and get your first AI agent security report in just 24 hours.
+[Try Genezio for free](/increase-conversion/) and get your first AI agent security report in just 24 hours.

@@ -3,6 +3,9 @@ title: "Agent Evaluation: A Framework for Businesses"
 date: 2025-06-13
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -85,4 +88,4 @@ The Agent Companion whitepaper gives businesses a uniform blueprint for assessin
 
 Genezio is that tool. It helps you track your bots' factuality, {{< external-link link="https://genezio.com/blog/llm-hallucination-detection/" >}}hallucinations{{< /external-link >}}, tracks risky patterns and even examines prompt injection attacks. You can choose to get a one-time report, or set up continuous monitoring and receive periodic reports.
 
-**Begin running your {{< external-link link="https://genezio.com/#cta-buttons" >}}agent evaluations with Genezio{{< /external-link >}} for free and get your first report in 24hrs.**
+**Begin running your [agent evaluations with Genezio](/increase-conversion/) for free and get your first report in 24hrs.**

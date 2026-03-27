@@ -3,6 +3,9 @@ title: "AI Agents 101: Understanding Their Role and Functionality"
 date: 2025-03-04
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 thumbnail: /images/genezioai101.webp

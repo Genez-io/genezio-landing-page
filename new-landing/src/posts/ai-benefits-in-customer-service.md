@@ -3,6 +3,9 @@ title: "What are the Benefits of Using AI in Customer Service?"
 date: 2025-06-03
 tags:
   - AI
+  - AI Agent Testing
+  - Conversation Optimization
+  - AI Chatbot
 author: Luis Minvielle
 linkedIn: https://www.linkedin.com/in/luisminv/
 
@@ -82,4 +85,4 @@ Once the agent is live, Genezio keeps checking for problems like hallucinations,
 
 For Customer Care Experts, that means fewer surprises. And an extra layer of assurance that the AI is doing what it's supposed to do.
 
-**The benefits of using AI in customer service only matter if the answers are correct. Genezio helps make sure they are. {{< external-link link="<https://genezio.com/#cta-buttons>" >}}Try Genezio for free{{< /external-link >}} or book a demo to start testing today!**
+**The benefits of using AI in customer service only matter if the answers are correct. Genezio helps make sure they are. [Try Genezio for free](/increase-conversion/) or book a demo to start testing today!**
