@@ -431,6 +431,39 @@ function TopThreeChartSkeleton() {
   );
 }
 
+function LeaderboardTableSkeleton({ rows = 8 }: { rows?: number }) {
+  return (
+    <div className="rounded-2xl border border-white/10 overflow-hidden animate-pulse">
+      <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
+        <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
+        <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
+        <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
+      </div>
+
+      {Array.from({ length: rows }).map((_, idx) => (
+        <div
+          key={idx}
+          className={`grid grid-cols-[40px_1fr_170px] gap-3 items-center px-5 py-4 ${
+            idx < rows - 1 ? "border-b border-white/[0.06]" : ""
+          }`}
+        >
+          <div className="h-4 w-8 rounded bg-white/10" />
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10" />
+            <div className="h-4 w-40 max-w-[60%] rounded bg-white/10" />
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
+              <div className="h-full w-8 rounded-full bg-white/15" />
+            </div>
+            <div className="h-4 w-10 rounded bg-white/10" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const industries: Industry[] = [
   {
     id: "banking",
@@ -713,6 +746,7 @@ export function IndustryLeaderboards() {
     );
   }, [isDynamicIndustryUK, apiOverviews]);
   const shouldShowChartLoading = isDynamicIndustryUK && (isLoadingApiBrands || apiOverviews.length === 0);
+  const shouldShowTableLoading = isDynamicIndustryUK && (isLoadingApiBrands || apiBrands.length === 0);
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
 
   useEffect(() => {
@@ -892,48 +926,52 @@ export function IndustryLeaderboards() {
           )}
 
           {/* Table */}
-          <div className="rounded-2xl border border-white/10 overflow-hidden">
-            {/* Header */}
-            <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
-            </div>
-
-            {/* Rows */}
-            {top10.map((brand, idx) => (
-              <div key={`${activeCountry}-${activeIndustry}-${brand.name}`}
-                className={`grid grid-cols-[40px_1fr_170px] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
-                  idx < top10.length - 1 ? "border-b border-white/[0.06]" : ""
-                }`}>
-                {/* Rank */}
-                <div>
-                  {brand.rank <= 3 ? (
-                    <span className={`text-sm font-bold ${brand.rank === 1 ? "text-yellow-400" : brand.rank === 2 ? "text-gray-300" : "text-amber-600"}`}>
-                      #{brand.rank}
-                    </span>
-                  ) : (
-                    <span className="text-sm text-gray-600 font-semibold">{brand.rank}</span>
-                  )}
-                </div>
-
-                {/* Brand */}
-                <div className="flex items-center gap-3 min-w-0">
-                  <BrandLogo brand={brand} />
-                  <span className="text-sm font-semibold text-white truncate">{brand.name}</span>
-                </div>
-
-                {/* Visibility bar + % */}
-                <div className="flex items-center gap-2">
-                  <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
-                    <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
-                      style={{ width: `${brand.visibility}%` }} />
-                  </div>
-                  <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
-                </div>
+          {shouldShowTableLoading ? (
+            <LeaderboardTableSkeleton rows={8} />
+          ) : (
+            <div className="rounded-2xl border border-white/10 overflow-hidden">
+              {/* Header */}
+              <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
+                <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
+                <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
+                <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
               </div>
-            ))}
-          </div>
+
+              {/* Rows */}
+              {top10.map((brand, idx) => (
+                <div key={`${activeCountry}-${activeIndustry}-${brand.name}`}
+                  className={`grid grid-cols-[40px_1fr_170px] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
+                    idx < top10.length - 1 ? "border-b border-white/[0.06]" : ""
+                  }`}>
+                  {/* Rank */}
+                  <div>
+                    {brand.rank <= 3 ? (
+                      <span className={`text-sm font-bold ${brand.rank === 1 ? "text-yellow-400" : brand.rank === 2 ? "text-gray-300" : "text-amber-600"}`}>
+                        #{brand.rank}
+                      </span>
+                    ) : (
+                      <span className="text-sm text-gray-600 font-semibold">{brand.rank}</span>
+                    )}
+                  </div>
+
+                  {/* Brand */}
+                  <div className="flex items-center gap-3 min-w-0">
+                    <BrandLogo brand={brand} />
+                    <span className="text-sm font-semibold text-white truncate">{brand.name}</span>
+                  </div>
+
+                  {/* Visibility bar + % */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                      <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                        style={{ width: `${brand.visibility}%` }} />
+                    </div>
+                    <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* Footer */}
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
