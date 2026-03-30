@@ -565,7 +565,7 @@ export function IndustryLeaderboards() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.15),transparent_70%)] pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-            <ZapIcon className="w-3.5 h-3.5 text-yellow-400" />
+            <ZapIcon className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Live AI Visibility Data · UK · US · EU
             </span>
@@ -585,7 +585,7 @@ export function IndustryLeaderboards() {
               { icon: SparklesIcon,  label: "Updated weekly" },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-sm text-gray-400">
-                <Icon className="w-4 h-4 text-purple-400" />{label}
+                <Icon className="w-4 h-4 text-gray-500" />{label}
               </div>
             ))}
           </div>
