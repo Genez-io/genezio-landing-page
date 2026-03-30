@@ -22,13 +22,6 @@ function faviconUrl(website: string, size = 48) {
   return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(website)}&size=${size}`;
 }
 
-const LLM_PLATFORMS = [
-  { key: "chatgpt",    label: "ChatGPT",    website: "https://chatgpt.com",         color: "#10A37F" },
-  { key: "perplexity", label: "Perplexity", website: "https://perplexity.ai",        color: "#1FB8CD" },
-  { key: "gemini",     label: "Gemini",     website: "https://gemini.google.com",    color: "#4285F4" },
-  { key: "claude",     label: "Claude",     website: "https://claude.ai",            color: "#D4A373" },
-];
-
 const COUNTRIES = [
   { code: "UK", label: "United Kingdom", flag: "🇬🇧" },
   { code: "US", label: "United States",  flag: "🇺🇸" },
@@ -54,6 +47,95 @@ interface Industry {
   icon: any;
   url: Record<CountryCode, string>;
   countries: Record<CountryCode, BrandEntry[]>;
+}
+
+type ApiNumericValue = number | { source?: string; parsedValue?: number };
+
+interface BrandMetricsCompany {
+  name: string;
+  presence_percent: ApiNumericValue;
+  website?: string;
+}
+
+interface BrandMetricsOverview {
+  companies: BrandMetricsCompany[];
+  period_date: string;
+}
+
+interface BrandMetricsResponse {
+  model_overviews: BrandMetricsOverview[];
+}
+
+interface ChartSeriesOverride {
+  name: string;
+  website: string;
+  data: number[];
+}
+
+const BRAND_METRICS_MODELS = ["chatgpt.com", "google-ai-overview"];
+const DYNAMIC_INDUSTRY_CONFIG: Partial<
+  Record<
+    string,
+    {
+      brandId: number;
+      topicIds: number[];
+      token: string;
+      models?: string[];
+    }
+  >
+> = {
+  banking: {
+    brandId: -49,
+    topicIds: [269, 265, 264, 263, 262, 261, 260, 259, 520, 272],
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTUyNTY5LCJqdGkiOiIyZTJhYmVhMS1kNzA0LTRkNGEtOThjYS1lZTE2OTZkMWFmYmYifQ.zY_KQZ5rsB7So8QdSQnykPGqwoVsjqijCqIE8_syrDs",
+    models: ["chatgpt.com", "google-ai-overview", "perplexity", "google-ai-mode", "gpt-5.2"],
+  },
+  fashion: {
+    brandId: -64,
+    topicIds: [397, 396, 398, 572, 483],
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTQ5MzA5LCJqdGkiOiIyNTY3MWZiYS03MjVhLTQxZTItOGEzMy1jY2IxYjg4OTZiY2MifQ.iI2HcioMBvEv6AEg87yp1GZb9_LODJeqnGqZYfZdb4Y",
+  },
+  healthcare: {
+    brandId: -31,
+    topicIds: [96, 95, 94, 511],
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTUyMTg4LCJqdGkiOiJmNDJlMzM3NS0zZjRkLTQyMWQtYWRmNC1mOGU0NjZiMThiMTEifQ.Ri939zWcorIFrbGlnrgNse1TDRW9AdmNFOa8yUOyc_8",
+  },
+  retail: {
+    brandId: -29,
+    topicIds: [90, 89, 88, 518],
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTUyNTA4LCJqdGkiOiI0YTJiOGVkNi1mYTBiLTQxNjEtOTQ5NC04MDkzMWExM2UyZGUifQ.ed22XHPZ6iRgAauZuruIZc8vhVDJFNI7UGx1A2NZn8s",
+  },
+};
+
+function toNumber(value: ApiNumericValue): number {
+  if (typeof value === "number") return value;
+  if (typeof value?.parsedValue === "number") return value.parsedValue;
+  if (typeof value?.source === "string") {
+    const parsed = Number(value.source);
+    if (!Number.isNaN(parsed)) return parsed;
+  }
+  return 0;
+}
+
+function initialsFor(name: string): string {
+  const cleaned = name.trim();
+  if (!cleaned) return "NA";
+  const parts = cleaned.split(/\s+/).filter(Boolean);
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return `${parts[0][0] ?? ""}${parts[1][0] ?? ""}`.toUpperCase();
+}
+
+function colorFor(name: string): string {
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const hue = Math.abs(hash) % 360;
+  return `hsl(${hue}, 70%, 52%)`;
 }
 
 /* ─── Deterministic pseudo-random for chart history ─── */
@@ -84,11 +166,15 @@ function TopThreeChart({
   startOverrides,
   yAxis,
   endOverrides,
+  seriesOverride,
+  xLabelsOverride,
 }: {
   brands: (BrandEntry & { rank: number })[];
   startOverrides?: Record<string, number>;
   yAxis?: { min: number; max: number; ticks: number[] };
   endOverrides?: Record<string, number>;
+  seriesOverride?: ChartSeriesOverride[];
+  xLabelsOverride?: string[];
 }) {
   const top3 = brands.slice(0, 3);
   const W = 800;
@@ -96,12 +182,12 @@ function TopThreeChart({
   const PAD = { top: 16, right: 20, bottom: 36, left: 42 };
   const innerW = W - PAD.left - PAD.right;
   const innerH = H - PAD.top - PAD.bottom;
-  const days = 30;
+  const days = seriesOverride?.[0]?.data.length ?? 30;
 
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
-  const series = top3.map((b, i) => {
+  const generatedSeries = top3.map((b, i) => {
     const endValue = endOverrides?.[b.name] ?? b.visibility;
     const raw = generateHistory(b.name + endValue, endValue, days);
     const desiredStart = startOverrides?.[b.name];
@@ -114,6 +200,13 @@ function TopThreeChart({
           })();
     return { brand: b, color: CHART_COLORS[i], data };
   });
+  const series = seriesOverride && seriesOverride.length > 0
+    ? seriesOverride.slice(0, 3).map((s, i) => ({
+        brand: { name: s.name, website: s.website },
+        color: CHART_COLORS[i],
+        data: s.data,
+      }))
+    : generatedSeries;
 
   const allVals = series.flatMap((s) => s.data);
   const minV =
@@ -144,12 +237,19 @@ function TopThreeChart({
 
   const now = new Date();
   const monthLabels: { label: string; x: number }[] = [];
-  for (let i = 0; i < days; i += 7) {
+  const xStep = Math.max(1, Math.floor(days / 5));
+  for (let i = 0; i < days; i += xStep) {
     const d = new Date(now);
     d.setDate(d.getDate() - (days - 1 - i));
     monthLabels.push({
-      label: d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      label: xLabelsOverride?.[i] ?? d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
       x: toX(i),
+    });
+  }
+  if (monthLabels[monthLabels.length - 1]?.x !== toX(days - 1)) {
+    monthLabels.push({
+      label: xLabelsOverride?.[days - 1] ?? new Date(now).toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      x: toX(days - 1),
     });
   }
 
@@ -309,6 +409,30 @@ function TopThreeChart({
   );
 }
 
+function TopThreeChartSkeleton() {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6 animate-pulse">
+      <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <div>
+          <div className="h-3 w-44 rounded bg-white/10 mb-2" />
+          <div className="h-3 w-32 rounded bg-white/10" />
+        </div>
+        <div className="flex items-center gap-5 flex-wrap">
+          {[0, 1, 2].map((i) => (
+            <div key={i} className="flex items-center gap-2">
+              <div className="w-8 h-0.5 rounded-full bg-white/15" />
+              <div className="h-3 w-20 rounded bg-white/10" />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="relative h-[280px] rounded-xl border border-white/5 bg-white/[0.01] overflow-hidden">
+        <div className="absolute inset-0 bg-white/[0.04] animate-pulse" />
+      </div>
+    </div>
+  );
+}
+
 const industries: Industry[] = [
   {
     id: "banking",
@@ -320,25 +444,7 @@ const industries: Industry[] = [
       EU: "https://app.genezio.ai/brand-report/-49/Banking?demo=account",
     },
     countries: {
-      UK: [
-        { name: "Monzo",               initials: "MO", color: "#FF5A5F", website: "https://monzo.com",                 visibility: 67, chatgpt: 67, gemini: 91, perplexity: 60, claude: 59 },
-        { name: "Starling Bank",       initials: "SB", color: "#5B3DF5", website: "https://www.starlingbank.com",      visibility: 68, chatgpt: 61, gemini: 81, perplexity: 58, claude: 80 },
-        { name: "HSBC UK",             initials: "HS", color: "#DB0011", website: "https://www.hsbc.co.uk",             visibility: 56, chatgpt: 70, gemini: 42, perplexity: 63, claude: 55 },
-        { name: "Barclays",            initials: "BA", color: "#00AEEF", website: "https://www.barclays.co.uk",         visibility: 60, chatgpt: 67, gemini: 60, perplexity: 52, claude: 60 },
-        { name: "NatWest",             initials: "NW", color: "#42145F", website: "https://www.natwest.com",            visibility: 57, chatgpt: 66, gemini: 43, perplexity: 60, claude: 81 },
-        { name: "Lloyds Banking Group",initials: "LB", color: "#006A4D", website: "https://www.lloydsbankinggroup.com", visibility: 46, chatgpt: 69, gemini: 16, perplexity: 51, claude: 49 },
-        { name: "Santander",           initials: "SA", color: "#EC0000", website: "https://www.santander.co.uk",        visibility: 75, chatgpt: 60, gemini: 85, perplexity: 57, claude: 87 },
-        { name: "Chase",               initials: "CH", color: "#1E40AF", website: "https://www.chase.co.uk",            visibility: 45, chatgpt: 57, gemini: 39, perplexity: 45, claude: 40 },
-        { name: "First Direct",        initials: "FD", color: "#111827", website: "https://www.firstdirect.com",        visibility: 40, chatgpt: 42, gemini: 27, perplexity: 44, claude: 50 },
-        { name: "Revolut",             initials: "RE", color: "#111111", website: "https://www.revolut.com",            visibility: 31, chatgpt: 34, gemini: 31, perplexity: 28, claude: 29 },
-        { name: "Halifax",             initials: "HA", color: "#0076BE", website: "https://www.halifax.co.uk",          visibility: 25, chatgpt: 20, gemini: 18, perplexity: 41, claude: 26 },
-        { name: "Royal Bank of Scotland", initials: "RB", color: "#1B3D6E", website: "https://www.rbs.co.uk",           visibility: 17, chatgpt: 22, gemini: 13, perplexity: 21, claude: 21 },
-        { name: "TSB",                 initials: "TS", color: "#00A3E0", website: "https://www.tsb.co.uk",              visibility: 15, chatgpt: 16, gemini: 14, perplexity: 22, claude: 17 },
-        { name: "Tesco Bank",          initials: "TB", color: "#EE1C25", website: "https://www.tescobank.com",          visibility: 14, chatgpt: 16, gemini: 14, perplexity: 17, claude: 14 },
-        { name: "Virgin Money",        initials: "VM", color: "#C8102E", website: "https://uk.virginmoney.com",         visibility: 15, chatgpt: 16, gemini: 10, perplexity: 26, claude: 15 },
-        { name: "Tide",                initials: "TI", color: "#2563EB", website: "https://www.tide.co",                visibility: 12, chatgpt: 9,  gemini: 18, perplexity: 9,  claude: 11 },
-        { name: "Wise",                initials: "WI", color: "#22c55e", website: "https://wise.com",                   visibility: 10, chatgpt: 7,  gemini: 14, perplexity: 9,  claude: 9 },
-      ],
+      UK: [],
       US: [
         { name: "JPMorgan Chase",  initials: "JP", color: "#003087", website: "https://www.jpmorganchase.com",  visibility: 92, chatgpt: 94, perplexity: 91, gemini: 93, claude: 90 },
         { name: "Bank of America", initials: "BA", color: "#E31837", website: "https://www.bankofamerica.com",  visibility: 88, chatgpt: 90, perplexity: 86, gemini: 89, claude: 87 },
@@ -369,24 +475,7 @@ const industries: Industry[] = [
       EU: "https://app.genezio.ai/brand-report/-29/Retail%20&%20Supermarkets?demo=account",
     },
     countries: {
-      UK: [
-        { name: "Tesco",             initials: "TE", color: "#EE1C25", website: "https://www.tesco.com",                 visibility: 97, chatgpt: 97, gemini: 97, perplexity: 95, claude: 96 },
-        { name: "Sainsbury's",       initials: "SA", color: "#FF7200", website: "https://www.sainsburys.co.uk",          visibility: 88, chatgpt: 96, gemini: 79, perplexity: 94, claude: 78 },
-        { name: "Asda",              initials: "AS", color: "#7DC242", website: "https://www.asda.com",                  visibility: 88, chatgpt: 90, gemini: 85, perplexity: 88, claude: 84 },
-        { name: "Waitrose",          initials: "WA", color: "#5D8233", website: "https://www.waitrose.com",              visibility: 68, chatgpt: 64, gemini: 71, perplexity: 62, claude: 70 },
-        { name: "Morrisons",         initials: "MO", color: "#FFDC00", website: "https://groceries.morrisons.com",       visibility: 55, chatgpt: 79, gemini: 31, perplexity: 77, claude: 30 },
-        { name: "Ocado",             initials: "OC", color: "#7C3AED", website: "https://www.ocado.com",                 visibility: 47, chatgpt: 52, gemini: 41, perplexity: 50, claude: 40 },
-        { name: "Lidl",              initials: "LI", color: "#0050AA", website: "https://www.lidl.co.uk",                visibility: 47, chatgpt: 39, gemini: 54, perplexity: 37, claude: 53 },
-        { name: "Marks & Spencer",   initials: "MS", color: "#111827", website: "https://www.marksandspencer.com",       visibility: 42, chatgpt: 33, gemini: 51, perplexity: 31, claude: 50 },
-        { name: "Co-op",             initials: "CO", color: "#00B5E2", website: "https://www.coop.co.uk",                visibility: 35, chatgpt: 54, gemini: 16, perplexity: 52, claude: 15 },
-        { name: "Aldi",              initials: "AL", color: "#002D72", website: "https://www.aldi.co.uk",                visibility: 34, chatgpt: 28, gemini: 40, perplexity: 26, claude: 39 },
-        { name: "Iceland",           initials: "IC", color: "#E11D48", website: "https://www.iceland.co.uk",             visibility: 22, chatgpt: 26, gemini: 18, perplexity: 24, claude: 17 },
-        { name: "Argos",             initials: "AR", color: "#D32F2F", website: "https://www.argos.co.uk",               visibility: 16, chatgpt: 8,  gemini: 24, perplexity: 7,  claude: 23 },
-        { name: "Amazon Fresh",      initials: "AF", color: "#FF9900", website: "https://www.amazon.co.uk/amazonfresh", visibility: 12, chatgpt: 10, gemini: 13, perplexity: 9,  claude: 12 },
-        { name: "IKEA",              initials: "IK", color: "#0058A3", website: "https://www.ikea.com/gb/en",            visibility: 5,  chatgpt: 0,  gemini: 10, perplexity: 0,  claude: 9 },
-        { name: "Amazon",            initials: "AM", color: "#FF9900", website: "https://www.amazon.co.uk",             visibility: 3,  chatgpt: 4,  gemini: 1,  perplexity: 3,  claude: 1 },
-        { name: "Carrefour",         initials: "CA", color: "#003399", website: "https://www.carrefour.com",            visibility: 2,  chatgpt: 3,  gemini: 0,  perplexity: 2,  claude: 0 },
-      ],
+      UK: [],
       US: [
         { name: "Walmart",      initials: "WA", color: "#0071CE", website: "https://www.walmart.com",          visibility: 95, chatgpt: 97, perplexity: 94, gemini: 96, claude: 93 },
         { name: "Amazon",       initials: "AM", color: "#FF9900", website: "https://www.amazon.com",           visibility: 93, chatgpt: 95, perplexity: 92, gemini: 94, claude: 91 },
@@ -417,25 +506,7 @@ const industries: Industry[] = [
       EU: "https://app.genezio.ai/brand-report/-31/Healthcare%20Providers%20&%20Clinics?demo=account",
     },
     countries: {
-      UK: [
-        { name: "Spire",                    initials: "SP", color: "#E4003A", website: "https://www.spirehealthcare.com",             visibility: 80, chatgpt: 61, gemini: 99, perplexity: 59, claude: 98 },
-        { name: "Circle Health Group",      initials: "CH", color: "#1E40AF", website: "https://www.circlehealthgroup.co.uk",         visibility: 80, chatgpt: 67, gemini: 93, perplexity: 66, claude: 92 },
-        { name: "HCA Healthcare UK",         initials: "HC", color: "#0EA5E9", website: "https://www.hcahealthcare.co.uk",             visibility: 61, chatgpt: 65, gemini: 57, perplexity: 63, claude: 56 },
-        { name: "Bupa",                     initials: "BU", color: "#1E9BD7", website: "https://www.bupa.co.uk",                       visibility: 61, chatgpt: 58, gemini: 64, perplexity: 57, claude: 63 },
-        { name: "Nuffield Health",          initials: "NU", color: "#00539B", website: "https://www.nuffieldhealth.com",               visibility: 57, chatgpt: 57, gemini: 57, perplexity: 56, claude: 56 },
-        { name: "The London Clinic",        initials: "LC", color: "#111827", website: "https://www.thelondonclinic.co.uk",            visibility: 52, chatgpt: 58, gemini: 45, perplexity: 57, claude: 44 },
-        { name: "AXA Health",               initials: "AX", color: "#00008F", website: "https://www.axahealth.co.uk",                  visibility: 47, chatgpt: 43, gemini: 51, perplexity: 42, claude: 50 },
-        { name: "VitalityHealth",           initials: "VI", color: "#E8175D", website: "https://www.vitality.co.uk",                   visibility: 45, chatgpt: 39, gemini: 51, perplexity: 38, claude: 50 },
-        { name: "Aviva",                    initials: "AV", color: "#F59E0B", website: "https://www.aviva.co.uk",                      visibility: 42, chatgpt: 43, gemini: 41, perplexity: 41, claude: 40 },
-        { name: "Cromwell Hospital",        initials: "CR", color: "#10B981", website: "https://www.cromwellhospital.com",             visibility: 31, chatgpt: 35, gemini: 26, perplexity: 34, claude: 25 },
-        { name: "Ramsay Health Care UK",    initials: "RA", color: "#2563EB", website: "https://www.ramsayhealth.co.uk",               visibility: 30, chatgpt: 43, gemini: 16, perplexity: 41, claude: 15 },
-        { name: "The Wellington Hospital",  initials: "WE", color: "#6B7280", website: "https://www.hcahealthcare.co.uk/locations/the-wellington-hospital", visibility: 25, chatgpt: 30, gemini: 19, perplexity: 29, claude: 18 },
-        { name: "The Princess Grace Hospital", initials: "PG", color: "#9333EA", website: "https://www.hcahealthcare.co.uk/locations/the-princess-grace-hospital", visibility: 22, chatgpt: 29, gemini: 14, perplexity: 28, claude: 13 },
-        { name: "The Harley Street Clinic", initials: "HS", color: "#DC2626", website: "https://www.hcahealthcare.co.uk/locations/the-harley-street-clinic",      visibility: 21, chatgpt: 22, gemini: 19, perplexity: 21, claude: 18 },
-        { name: "The Exeter",               initials: "EX", color: "#0F766E", website: "https://www.nuffieldhealth.com/hospitals/exeter",visibility: 15, chatgpt: 10, gemini: 19, perplexity: 10, claude: 18 },
-        { name: "The Portland Hospital",    initials: "PO", color: "#D97706", website: "https://www.hcahealthcare.co.uk/locations/the-portland-hospital",         visibility: 7,  chatgpt: 6,  gemini: 7,  perplexity: 6,  claude: 7 },
-        { name: "Royal Brompton & Harefield NHS Foundation Trust", initials: "RB", color: "#005EB8", website: "https://www.rbht.nhs.uk", visibility: 5,  chatgpt: 4,  gemini: 6,  perplexity: 4,  claude: 6 },
-      ],
+      UK: [],
       US: [
         { name: "UnitedHealth", initials: "UH", color: "#196ECF", website: "https://www.unitedhealthgroup.com", visibility: 91, chatgpt: 93, perplexity: 89, gemini: 92, claude: 90 },
         { name: "CVS Health",   initials: "CV", color: "#CC0000", website: "https://www.cvshealth.com",         visibility: 86, chatgpt: 88, perplexity: 84, gemini: 87, claude: 85 },
@@ -466,35 +537,7 @@ const industries: Industry[] = [
       EU: "https://app.genezio.ai/brand-report/-64/Fast%20Fashion?demo=account",
     },
     countries: {
-      UK: [
-        // Values aligned to the screenshot (ChatGPT + Google AI Overview);
-        // other platform fields are filled to keep the table compatible.
-        { name: "ASOS",                 initials: "AS", color: "#111827", website: "https://www.asos.com",                 visibility: 46, chatgpt: 47, gemini: 45, perplexity: 46, claude: 44 },
-        { name: "Boohoo",               initials: "BO", color: "#FF008D", website: "https://www.boohoo.com",               visibility: 35, chatgpt: 40, gemini: 29, perplexity: 39, claude: 28 },
-        { name: "Next",                 initials: "NE", color: "#0F172A", website: "https://www.next.co.uk",               visibility: 40, chatgpt: 42, gemini: 38, perplexity: 41, claude: 37 },
-        { name: "John Lewis & Partners",initials: "JL", color: "#111827", website: "https://www.johnlewis.com",            visibility: 22, chatgpt: 29, gemini: 15, perplexity: 28, claude: 14 },
-        { name: "New Look",             initials: "NL", color: "#EF4444", website: "https://www.newlook.com",              visibility: 22, chatgpt: 23, gemini: 21, perplexity: 22, claude: 20 },
-        { name: "Amazon UK",            initials: "AM", color: "#FF9900", website: "https://www.amazon.co.uk",             visibility: 12, chatgpt: 19, gemini: 5,  perplexity: 18, claude: 4 },
-        { name: "Club L London",        initials: "CL", color: "#8B5CF6", website: "https://clubllondon.com",              visibility: 12, chatgpt: 7,  gemini: 17, perplexity: 6,  claude: 16 },
-        { name: "Little Black Dress",   initials: "LB", color: "#64748B", website: "https://www.littleblackdress.co.uk",   visibility: 11, chatgpt: 7,  gemini: 15, perplexity: 6,  claude: 14 },
-        { name: "PrettyLittleThing",    initials: "PL", color: "#F43F5E", website: "https://www.prettylittlething.com",   visibility: 8,  chatgpt: 6,  gemini: 10, perplexity: 5,  claude: 9 },
-        { name: "Debenhams",            initials: "DE", color: "#D946EF", website: "https://www.debenhams.com",            visibility: 10, chatgpt: 5,  gemini: 15, perplexity: 4,  claude: 14 },
-        { name: "H&M",                  initials: "HM", color: "#E50010", website: "https://www.hm.com",                   visibility: 19, chatgpt: 16, gemini: 21, perplexity: 15, claude: 20 },
-        { name: "Zara",                 initials: "ZA", color: "#888888", website: "https://www.zara.com",                  visibility: 18, chatgpt: 17, gemini: 19, perplexity: 16, claude: 18 },
-        { name: "BoohooMAN",            initials: "BM", color: "#111111", website: "https://www.boohooman.com",             visibility: 9,  chatgpt: 9,  gemini: 8,  perplexity: 8,  claude: 7 },
-        { name: "Very",                 initials: "VE", color: "#7C3AED", website: "https://www.very.co.uk",               visibility: 8,  chatgpt: 10, gemini: 6,  perplexity: 9,  claude: 5 },
-        { name: "Dorothy Perkins",      initials: "DP", color: "#F97316", website: "https://www.dorothyperkins.com",       visibility: 8,  chatgpt: 7,  gemini: 9,  perplexity: 6,  claude: 8 },
-        { name: "Ever-Pretty",          initials: "EP", color: "#22C55E", website: "https://www.ever-pretty.co.uk",        visibility: 9,  chatgpt: 11, gemini: 8,  perplexity: 10, claude: 7 },
-        { name: "Phase Eight",          initials: "PE", color: "#0EA5E9", website: "https://www.phase-eight.com",          visibility: 4,  chatgpt: 3,  gemini: 5,  perplexity: 3,  claude: 4 },
-        { name: "High Street Outlet",   initials: "HS", color: "#334155", website: "https://www.highstreetoutlet.com",     visibility: 6,  chatgpt: 6,  gemini: 6,  perplexity: 5,  claude: 5 },
-        { name: "Uniqlo",               initials: "UN", color: "#DC2626", website: "https://www.uniqlo.com/uk/en",          visibility: 3,  chatgpt: 2,  gemini: 3,  perplexity: 2,  claude: 3 },
-        { name: "Urban Outfitters",     initials: "UO", color: "#111827", website: "https://www.urbanoutfitters.com/en-gb",visibility: 4,  chatgpt: 3,  gemini: 4,  perplexity: 3,  claude: 4 },
-        { name: "River Island",         initials: "RI", color: "#0F172A", website: "https://www.riverisland.com",          visibility: 4,  chatgpt: 4,  gemini: 3,  perplexity: 3,  claude: 3 },
-        { name: "Mango",                initials: "MA", color: "#FF6B35", website: "https://shop.mango.com/gb",            visibility: 3,  chatgpt: 2,  gemini: 3,  perplexity: 2,  claude: 3 },
-        { name: "Oasis",                initials: "OA", color: "#16A34A", website: "https://www.oasisfashion.com",         visibility: 4,  chatgpt: 4,  gemini: 3,  perplexity: 3,  claude: 3 },
-        { name: "Amazon",               initials: "AM", color: "#FF9900", website: "https://www.amazon.com",              visibility: 3,  chatgpt: 1,  gemini: 3,  perplexity: 1,  claude: 2 },
-        { name: "Bershka",              initials: "BE", color: "#6B7280", website: "https://www.bershka.com/gb",           visibility: 3,  chatgpt: 2,  gemini: 3,  perplexity: 2,  claude: 3 },
-      ],
+      UK: [],
       US: [
         { name: "Nike",           initials: "NK", color: "#111",    website: "https://www.nike.com",        visibility: 94, chatgpt: 96, perplexity: 92, gemini: 95, claude: 93 },
         { name: "Gap",            initials: "GA", color: "#003087", website: "https://www.gap.com",         visibility: 82, chatgpt: 84, perplexity: 80, gemini: 83, claude: 81 },
@@ -580,36 +623,106 @@ function BrandLogo({ brand }: { brand: BrandEntry }) {
   );
 }
 
-function LlmLogo({ platform }: { platform: typeof LLM_PLATFORMS[number] }) {
-  const [imgError, setImgError] = useState(false);
-  const forceWhite = platform.key === "chatgpt";
-  return (
-    <div className="flex justify-center">
-      {imgError ? (
-        <span className="text-xs font-bold" style={{ color: platform.color }}>
-          {platform.label.slice(0, 3).toUpperCase()}
-        </span>
-      ) : (
-        <img
-          src={faviconUrl(platform.website, 32)}
-          alt={platform.label}
-          title={platform.label}
-          className="w-5 h-5 object-contain rounded"
-          style={forceWhite ? { filter: "brightness(0) invert(1)" } : undefined}
-          onError={() => setImgError(true)}
-        />
-      )}
-    </div>
-  );
-}
-
 export function IndustryLeaderboards() {
   const [activeIndustry, setActiveIndustry] = useState("banking");
   const [activeCountry, setActiveCountry] = useState<CountryCode>("UK");
+  const [apiBrands, setApiBrands] = useState<BrandEntry[]>([]);
+  const [apiOverviews, setApiOverviews] = useState<BrandMetricsOverview[]>([]);
+  const [isLoadingApiBrands, setIsLoadingApiBrands] = useState(false);
+  const [apiBrandsError, setApiBrandsError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const current = industries.find((i) => i.id === activeIndustry)!;
-  const brands = current.countries[activeCountry];
+  const dynamicIndustryConfig = activeCountry === "UK" ? DYNAMIC_INDUSTRY_CONFIG[activeIndustry] : undefined;
+  const isDynamicIndustryUK = Boolean(dynamicIndustryConfig);
+
+  useEffect(() => {
+    if (!dynamicIndustryConfig) return;
+
+    const token =
+      (import.meta.env.VITE_GENEZIO_LEADERBOARD_TOKEN as string | undefined) ||
+      dynamicIndustryConfig.token;
+    if (!token) {
+      setApiBrands([]);
+      setApiOverviews([]);
+      setApiBrandsError("Missing API token. Set VITE_GENEZIO_LEADERBOARD_TOKEN.");
+      return;
+    }
+
+    const controller = new AbortController();
+    const fetchBrandMetrics = async () => {
+      try {
+        setIsLoadingApiBrands(true);
+        setApiBrandsError(null);
+
+        const endDate = new Date();
+        endDate.setHours(23, 59, 59, 999);
+        const startDate = new Date(endDate);
+        startDate.setDate(startDate.getDate() - 30);
+        startDate.setHours(0, 0, 0, 0);
+
+        const params = new URLSearchParams({
+          metric_type: "mentioned",
+          aggregation_type: "daily",
+          start_date: startDate.toISOString(),
+          end_date: endDate.toISOString(),
+        });
+        for (const topicId of dynamicIndustryConfig.topicIds) params.append("topic_ids", String(topicId));
+        const models = dynamicIndustryConfig.models ?? BRAND_METRICS_MODELS;
+        for (const model of models) params.append("models_name", model);
+
+        const res = await fetch(`https://app.backend.genezio.ai/api/v1/sql/brand/overview/${dynamicIndustryConfig.brandId}/brand-metrics?${params.toString()}`, {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          signal: controller.signal,
+        });
+
+        if (!res.ok) {
+          throw new Error(`Request failed with status ${res.status}`);
+        }
+
+        const payload = (await res.json()) as BrandMetricsResponse;
+        const overviews = payload.model_overviews ?? [];
+        const latestOverview = overviews[overviews.length - 1];
+        const companies = latestOverview?.companies ?? [];
+
+        const mapped = companies
+          .map((company) => {
+            const visibility = Math.round(toNumber(company.presence_percent));
+            return {
+              name: company.name,
+              initials: initialsFor(company.name),
+              color: colorFor(company.name),
+              website: company.website || "https://www.google.com",
+              visibility,
+              chatgpt: visibility,
+              perplexity: visibility,
+              gemini: visibility,
+              claude: visibility,
+            } satisfies BrandEntry;
+          })
+          .sort((a, b) => b.visibility - a.visibility);
+
+        setApiOverviews(overviews);
+        setApiBrands(mapped);
+      } catch (error) {
+        if ((error as Error).name === "AbortError") return;
+        setApiBrands([]);
+        setApiOverviews([]);
+        setApiBrandsError((error as Error).message || "Failed to load leaderboard data.");
+      } finally {
+        setIsLoadingApiBrands(false);
+      }
+    };
+
+    void fetchBrandMetrics();
+    return () => controller.abort();
+  }, [dynamicIndustryConfig]);
+
+  const brands = isDynamicIndustryUK ? apiBrands : current.countries[activeCountry];
   // Table order should match the authored lists (screenshots).
   const ranked = useMemo(() => brands.map((b, i) => ({ ...b, rank: i + 1 })), [brands]);
   const chartBrands = useMemo(() => {
@@ -638,6 +751,31 @@ export function IndustryLeaderboards() {
   }, [ranked, activeIndustry, activeCountry]);
 
   const top10 = useMemo(() => ranked.slice(0, 10), [ranked]);
+  const dynamicChartSeries = useMemo(() => {
+    if (!isDynamicIndustryUK || apiOverviews.length === 0) return undefined;
+    const topThreeNames = ranked.slice(0, 3).map((b) => b.name);
+    if (topThreeNames.length === 0) return undefined;
+
+    const nameToWebsite = new Map(ranked.map((b) => [b.name, b.website]));
+    return topThreeNames.map((name) => {
+      const data = apiOverviews.map((overview) => {
+        const company = overview.companies.find((c) => c.name === name);
+        return Math.round(toNumber(company?.presence_percent ?? 0));
+      });
+      return {
+        name,
+        website: nameToWebsite.get(name) || "https://www.google.com",
+        data,
+      } satisfies ChartSeriesOverride;
+    });
+  }, [isDynamicIndustryUK, apiOverviews, ranked]);
+
+  const dynamicChartLabels = useMemo(() => {
+    if (!isDynamicIndustryUK || apiOverviews.length === 0) return undefined;
+    return apiOverviews.map((overview) =>
+      new Date(overview.period_date).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+    );
+  }, [isDynamicIndustryUK, apiOverviews]);
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
 
   useEffect(() => {
@@ -769,55 +907,66 @@ export function IndustryLeaderboards() {
           </div>
 
           {/* Chart for top 3 */}
-          <TopThreeChart
-            brands={chartBrands}
-            startOverrides={
-              activeIndustry === "banking" && activeCountry === "UK"
-                ? { "Monzo": 62, "Starling Bank": 59, "HSBC UK": 58 }
-                : activeIndustry === "retail" && activeCountry === "UK"
-                  ? { "Tesco": 97, "Sainsbury's": 91, "Asda": 80 }
+          {isLoadingApiBrands && isDynamicIndustryUK && (
+            <div className="mb-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300">
+              Loading live leaderboard data...
+            </div>
+          )}
+          {apiBrandsError && (
+            <div className="mb-4 rounded-xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+              {apiBrandsError}
+            </div>
+          )}
+          {isLoadingApiBrands && isDynamicIndustryUK && ranked.length === 0 ? (
+            <TopThreeChartSkeleton />
+          ) : (
+            <TopThreeChart
+              brands={chartBrands}
+              seriesOverride={dynamicChartSeries}
+              xLabelsOverride={dynamicChartLabels}
+              startOverrides={
+                activeIndustry === "banking" && activeCountry === "UK"
+                  ? { "Monzo": 62, "Starling Bank": 59, "HSBC UK": 58 }
+                  : activeIndustry === "retail" && activeCountry === "UK"
+                    ? { "Tesco": 97, "Sainsbury's": 91, "Asda": 80 }
+                    : activeIndustry === "healthcare" && activeCountry === "UK"
+                      ? { "Spire": 72, "Circle Health Group": 60, "HCA Healthcare UK": 58 }
+                      : activeIndustry === "fashion" && activeCountry === "UK"
+                      ? undefined
+                  : undefined
+              }
+              yAxis={
+                activeIndustry === "retail" && activeCountry === "UK"
+                  ? { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] }
                   : activeIndustry === "healthcare" && activeCountry === "UK"
-                    ? { "Spire": 72, "Circle Health Group": 60, "HCA Healthcare UK": 58 }
-                    : activeIndustry === "fashion" && activeCountry === "UK"
-                    ? { "Boohoo": 52, "ASOS": 62, "Next": 33 }
-                : undefined
-            }
-            yAxis={
-              activeIndustry === "retail" && activeCountry === "UK"
-                ? { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] }
-                : activeIndustry === "healthcare" && activeCountry === "UK"
-                  ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
-                  : activeIndustry === "fashion" && activeCountry === "UK"
                     ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
-                    : activeIndustry === "banking" && activeCountry === "UK"
+                    : activeIndustry === "fashion" && activeCountry === "UK"
                       ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
-                : undefined
-            }
-            endOverrides={
-              activeIndustry === "banking" && activeCountry === "UK"
-                ? { "Monzo": 60, "Starling Bank": 58, "HSBC UK": 57 }
-                : activeIndustry === "fashion" && activeCountry === "UK"
-                  ? { "Boohoo": 41, "ASOS": 38, "Next": 37 }
-                : undefined
-            }
-          />
+                      : activeIndustry === "banking" && activeCountry === "UK"
+                        ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
+                  : undefined
+              }
+              endOverrides={
+                activeIndustry === "banking" && activeCountry === "UK"
+                  ? { "Monzo": 60, "Starling Bank": 58, "HSBC UK": 57 }
+                  : undefined
+              }
+            />
+          )}
 
           {/* Table */}
           <div className="rounded-2xl border border-white/10 overflow-hidden">
             {/* Header */}
-            <div className="grid grid-cols-[40px_1fr_150px_repeat(4,60px)] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
+            <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
-              {LLM_PLATFORMS.map((p) => (
-                <LlmLogo key={p.key} platform={p} />
-              ))}
             </div>
 
             {/* Rows */}
             {top10.map((brand, idx) => (
               <div key={`${activeCountry}-${activeIndustry}-${brand.name}`}
-                className={`grid grid-cols-[40px_1fr_150px_repeat(4,60px)] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
+                className={`grid grid-cols-[40px_1fr_170px] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
                   idx < top10.length - 1 ? "border-b border-white/[0.06]" : ""
                 }`}>
                 {/* Rank */}
@@ -845,15 +994,6 @@ export function IndustryLeaderboards() {
                   </div>
                   <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
                 </div>
-
-                {/* Platform scores */}
-                {LLM_PLATFORMS.map((p) => (
-                  <div key={p.key} className="flex justify-center">
-                    <span className="text-sm font-bold tabular-nums" style={{ color: p.color }}>
-                      {brand[p.key as keyof typeof brand] as number}%
-                    </span>
-                  </div>
-                ))}
               </div>
             ))}
           </div>
