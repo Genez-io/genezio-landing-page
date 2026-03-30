@@ -566,7 +566,7 @@ export function IndustryLeaderboards() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
             <ZapIcon className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              Live AI Visibility Data · UK · US · EU
+              Live AI Visibility Data · UK · US
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
@@ -580,7 +580,7 @@ export function IndustryLeaderboards() {
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             {[
               { icon: BarChart2Icon, label: "4 Industries tracked" },
-              { icon: GlobeIcon,     label: "3 Markets: UK · US" },
+              { icon: GlobeIcon,     label: "2 Markets: UK · US" },
               { icon: SparklesIcon,  label: "Updated weekly" },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-sm text-gray-400">
