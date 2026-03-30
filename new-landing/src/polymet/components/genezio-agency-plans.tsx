@@ -150,7 +150,7 @@ export function GenezioAgencyPlans() {
 
               { feature: "Exports", included: "Yes", addon: "-" },
               {
-                feature: "Chat with Your Data",
+                feature: "Geo Assistant",
                 included: "Yes",
                 addon: "-",
               },
@@ -261,7 +261,7 @@ export function GenezioAgencyPlans() {
               </div>
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">
-                   Answer Engines tracked
+                  Answer Engines tracked
                   <div className="text-xs text-white/50 mt-1">
                     e.g., ChatGPT, Claude, Gemini, Perplexity, Grok
                   </div>
@@ -320,7 +320,7 @@ export function GenezioAgencyPlans() {
                   <div className="text-white/70 font-medium">
                     Content generation
                   </div>
-                 
+
                 </div>
                 <div className="text-white font-semibold text-center">
                   1 per day
@@ -336,7 +336,7 @@ export function GenezioAgencyPlans() {
                 </div>
                 <div className="text-white/60 text-center text-sm">-</div>
               </div>
-             
+
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">Seats</div>
                 <div className="text-white font-semibold text-center">
@@ -359,7 +359,7 @@ export function GenezioAgencyPlans() {
               </div>
               <div className="grid grid-cols-3 gap-6 p-5 hover:bg-white/5 transition-all duration-200">
                 <div className="text-white/70 font-medium">
-                  Chat with Your Data
+                  Geo Assistant
                 </div>
                 <div className="text-white font-semibold text-center">Yes</div>
                 <div className="text-white/60 text-center text-sm">-</div>

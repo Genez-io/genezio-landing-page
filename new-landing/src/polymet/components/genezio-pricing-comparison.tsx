@@ -25,7 +25,7 @@ export function GenezioPricingComparison() {
       title: "Coverage & scale",
       rows: [
         { feature: "Brands", growth: "1", enterprise: "Multiple" },
-        { feature: "Answer Engines tracked", growth: "ChatGPT, Perplexity, Google AI Overviews", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"  },
+        { feature: "Answer Engines tracked", growth: "ChatGPT, Perplexity, Google AI Overviews", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews" },
         { feature: "Languages / brand", growth: "1", enterprise: "All" },
         { feature: "Locations / brand", growth: "1", enterprise: "Custom" },
         { feature: "Personas / brand", growth: "2", enterprise: "Custom" },
@@ -35,7 +35,7 @@ export function GenezioPricingComparison() {
       title: "Analysis & monitoring",
       rows: [
         { feature: "Topics / brand", growth: "10", enterprise: "Custom" },
-        { feature: "Scenarios / brand", growth: "30", enterprise: "Custom"},
+        { feature: "Scenarios / brand", growth: "30", enterprise: "Custom" },
         { feature: "AI Statements", growth: "check", enterprise: "check" },
         { feature: "AI Keywords", growth: "check", enterprise: "check" },
         { feature: "AI Citations", growth: "check", enterprise: "check" },
@@ -48,7 +48,7 @@ export function GenezioPricingComparison() {
       title: "Activation & output",
       rows: [
         { feature: "AI content generation", growth: "1 / day", enterprise: "10 / day", comingSoon: false },
-        { feature: "Chat with Your Data", growth: "-", enterprise: "check" },
+        { feature: "Geo Assistant", growth: "-", enterprise: "check" },
         { feature: "Insights / day", growth: "5", enterprise: "10+" },
         { feature: "Exports", growth: "check", enterprise: "check" },
       ],
@@ -224,11 +224,10 @@ export function GenezioPricingComparison() {
           {["Growth", "Enterprise"].map((plan, planIndex) => (
             <div
               key={planIndex}
-              className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${
-                plan === "Growth"
+              className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${plan === "Growth"
                   ? "border-blue-500/20 bg-gradient-to-b from-blue-600/[0.08] to-purple-600/[0.08]"
                   : "border-white/[0.08]"
-              }`}
+                }`}
             >
               {/* Plan Header */}
               <div className="bg-white/[0.03] p-6 text-center border-b border-white/[0.08]">
@@ -251,11 +250,10 @@ export function GenezioPricingComparison() {
                 )}
                 <Button
                   onClick={() => plan === "Enterprise" ? window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank') : window.open('https://app.genezio.ai/sign-up', '_blank')}
-                  className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
-                    plan === "Growth"
+                  className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${plan === "Growth"
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
-                  }`}
+                    }`}
                 >
                   {plan === "Enterprise" ? "Book a Demo" : "Start Free Trial"}
                 </Button>
