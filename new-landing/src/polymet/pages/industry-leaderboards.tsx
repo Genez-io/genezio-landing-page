@@ -411,23 +411,21 @@ function TopThreeChart({
 
 function TopThreeChartSkeleton() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6 animate-pulse">
-      <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+    <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
+      <div className="flex items-center justify-between mb-4">
         <div>
-          <div className="h-3 w-44 rounded bg-white/10 mb-2" />
-          <div className="h-3 w-32 rounded bg-white/10" />
+          <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">
+            30-day AI Visibility trend
+          </p>
+          <p className="text-sm text-gray-400 mt-0.5">Top 3 brands this month</p>
         </div>
-        <div className="flex items-center gap-5 flex-wrap">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="flex items-center gap-2">
-              <div className="w-8 h-0.5 rounded-full bg-white/15" />
-              <div className="h-3 w-20 rounded bg-white/10" />
-            </div>
-          ))}
+        <div className="inline-flex items-center gap-2 text-sm text-gray-300">
+          <span className="w-4 h-4 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
+          Loading chart data...
         </div>
       </div>
-      <div className="relative h-[280px] rounded-xl border border-white/5 bg-white/[0.01] overflow-hidden">
-        <div className="absolute inset-0 bg-white/[0.04] animate-pulse" />
+      <div className="relative h-[280px] rounded-xl border border-white/5 bg-white/[0.01] overflow-hidden animate-pulse">
+        <div className="absolute inset-0 bg-white/[0.04]" />
       </div>
     </div>
   );
@@ -590,6 +588,8 @@ export function IndustryLeaderboards() {
       try {
         setIsLoadingApiBrands(true);
         setApiBrandsError(null);
+        setApiBrands([]);
+        setApiOverviews([]);
 
         const endDate = new Date();
         endDate.setHours(23, 59, 59, 999);
@@ -853,7 +853,7 @@ export function IndustryLeaderboards() {
               {apiBrandsError}
             </div>
           )}
-          {isLoadingApiBrands && isDynamicIndustryUK && ranked.length === 0 ? (
+          {isLoadingApiBrands && isDynamicIndustryUK ? (
             <TopThreeChartSkeleton />
           ) : (
             <TopThreeChart
