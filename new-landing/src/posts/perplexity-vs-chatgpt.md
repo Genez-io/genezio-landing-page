@@ -1,5 +1,5 @@
 ---
-title: "ChatGPT Searches Like an Analyst. Perplexity Searches Like a Shopper."
+title: "ChatGPT Searches Like an Analyst. Perplexity Like a Shopper."
 date: 2025-12-17
 tags:
   - AI

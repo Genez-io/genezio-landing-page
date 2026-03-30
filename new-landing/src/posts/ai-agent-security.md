@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /images/ai-agent-security-best-ways-to-secure-your-ai-agent.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
 # meta data start
-description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
+description: Protect your brand's reputation. Discover how to test AI agent security, catch hallucinations, and prevent costly vulnerabilities using Genezio.
 meta_og_url: "https://genezio.com/blog/ai-agent-security/"
 
 meta_og_image: "https://genezio.com/images/ai-agent-security-best-ways-to-secure-your-ai-agent.webp"

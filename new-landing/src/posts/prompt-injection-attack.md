@@ -1,5 +1,5 @@
 ---
-title: "Prompt Injection Attacks: How to Avoid Them with Evals and Testing"
+title: "Prompt Injection: How to Avoid Them with Evals and Testing"
 date: 2025-07-30
 tags:
   - AI

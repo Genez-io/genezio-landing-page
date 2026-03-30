@@ -1,5 +1,5 @@
 ---
-title: "Visibility-to-Recommendation: AI Market Share is Shaped by Personas"
+title: "From Visibility to Recommendation: Personas Shape AI Market Share"
 date: 2026-03-24
 tags:
   - AI Market Share
@@ -30,7 +30,7 @@ For years, digital marketers have worshipped at the altar of Share of Voice (SOV
 
 To survive this shift, brands need to fundamentally rethink how they measure visibility. The focus must pivot to the **Visibility-to-Recommendation Rate (VRR)**.
 
-As an active practitioner of [Artificial Engine Optimization (AEO)](/images/ai-recommendation-vs-ai-visibility/), I want to share a framework that proves why your brand's AI market share is no longer a single, uniform number. Instead, it is fragmented across a complex web of user personas. Understanding this is the key to dominating AI-driven recommendation engines.
+As an active practitioner of [Answer Engine Optimization (AEO)](/glossary/answer-engine-optimization/), I want to share a framework that proves why your brand's AI market share is no longer a single, uniform number. Instead, it is fragmented across a complex web of user personas. Understanding this is the key to dominating AI-driven recommendation engines.
 
 ## The End of Flat Metrics (From SOV to VRR)
 
