@@ -83,10 +83,12 @@ function TopThreeChart({
   brands,
   startOverrides,
   yAxis,
+  endOverrides,
 }: {
   brands: (BrandEntry & { rank: number })[];
   startOverrides?: Record<string, number>;
   yAxis?: { min: number; max: number; ticks: number[] };
+  endOverrides?: Record<string, number>;
 }) {
   const top3 = brands.slice(0, 3);
   const W = 800;
@@ -100,7 +102,8 @@ function TopThreeChart({
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
   const series = top3.map((b, i) => {
-    const raw = generateHistory(b.name + b.visibility, b.visibility, days);
+    const endValue = endOverrides?.[b.name] ?? b.visibility;
+    const raw = generateHistory(b.name + endValue, endValue, days);
     const desiredStart = startOverrides?.[b.name];
     const data =
       desiredStart === undefined
@@ -611,7 +614,7 @@ export function IndustryLeaderboards() {
   const ranked = useMemo(() => brands.map((b, i) => ({ ...b, rank: i + 1 })), [brands]);
   const chartBrands = useMemo(() => {
     if (activeIndustry === "banking" && activeCountry === "UK") {
-      const preferred = ["Monzo", "HSBC UK", "Starling Bank"];
+      const preferred = ["Monzo", "Starling Bank", "HSBC UK"];
       const picked = preferred
         .map((n) => ranked.find((b) => b.name === n))
         .filter(Boolean) as (BrandEntry & { rank: number })[];
@@ -625,7 +628,7 @@ export function IndustryLeaderboards() {
       return picked.length === 3 ? picked : ranked;
     }
     if (activeIndustry === "fashion" && activeCountry === "UK") {
-      const preferred = ["ASOS", "Boohoo", "Next"];
+      const preferred = ["Boohoo", "ASOS", "Next"];
       const picked = preferred
         .map((n) => ranked.find((b) => b.name === n))
         .filter(Boolean) as (BrandEntry & { rank: number })[];
@@ -770,13 +773,13 @@ export function IndustryLeaderboards() {
             brands={chartBrands}
             startOverrides={
               activeIndustry === "banking" && activeCountry === "UK"
-                ? { "Monzo": 62, "HSBC UK": 59, "Starling Bank": 59 }
+                ? { "Monzo": 62, "Starling Bank": 59, "HSBC UK": 58 }
                 : activeIndustry === "retail" && activeCountry === "UK"
                   ? { "Tesco": 97, "Sainsbury's": 91, "Asda": 80 }
                   : activeIndustry === "healthcare" && activeCountry === "UK"
                     ? { "Spire": 72, "Circle Health Group": 60, "HCA Healthcare UK": 58 }
                     : activeIndustry === "fashion" && activeCountry === "UK"
-                      ? { "ASOS": 61, "Boohoo": 52, "Next": 33 }
+                    ? { "Boohoo": 52, "ASOS": 62, "Next": 33 }
                 : undefined
             }
             yAxis={
@@ -786,6 +789,15 @@ export function IndustryLeaderboards() {
                   ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
                   : activeIndustry === "fashion" && activeCountry === "UK"
                     ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
+                    : activeIndustry === "banking" && activeCountry === "UK"
+                      ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
+                : undefined
+            }
+            endOverrides={
+              activeIndustry === "banking" && activeCountry === "UK"
+                ? { "Monzo": 60, "Starling Bank": 58, "HSBC UK": 57 }
+                : activeIndustry === "fashion" && activeCountry === "UK"
+                  ? { "Boohoo": 41, "ASOS": 38, "Next": 37 }
                 : undefined
             }
           />
