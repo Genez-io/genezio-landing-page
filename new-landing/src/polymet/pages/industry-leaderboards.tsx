@@ -79,7 +79,15 @@ function generateHistory(name: string, endValue: number, days = 30): number[] {
 /* ─── Line chart for top 3 brands ─── */
 const CHART_COLORS = ["#818cf8", "#f472b6", "#fbbf24"];
 
-function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }) {
+function TopThreeChart({
+  brands,
+  startOverrides,
+  yAxis,
+}: {
+  brands: (BrandEntry & { rank: number })[];
+  startOverrides?: Record<string, number>;
+  yAxis?: { min: number; max: number; ticks: number[] };
+}) {
   const top3 = brands.slice(0, 3);
   const W = 800;
   const H = 280;
@@ -91,15 +99,24 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
-  const series = top3.map((b, i) => ({
-    brand: b,
-    color: CHART_COLORS[i],
-    data: generateHistory(b.name + b.visibility, b.visibility, days),
-  }));
+  const series = top3.map((b, i) => {
+    const raw = generateHistory(b.name + b.visibility, b.visibility, days);
+    const desiredStart = startOverrides?.[b.name];
+    const data =
+      desiredStart === undefined
+        ? raw
+        : (() => {
+            const delta = desiredStart - raw[0];
+            return raw.map((v) => Math.max(0, Math.min(100, Math.round(v + delta))));
+          })();
+    return { brand: b, color: CHART_COLORS[i], data };
+  });
 
   const allVals = series.flatMap((s) => s.data);
-  const minV = Math.max(0, Math.floor(Math.min(...allVals) / 5) * 5 - 5);
-  const maxV = Math.min(100, Math.ceil(Math.max(...allVals) / 5) * 5 + 5);
+  const minV =
+    yAxis?.min ?? Math.max(0, Math.floor(Math.min(...allVals) / 5) * 5 - 5);
+  const maxV =
+    yAxis?.max ?? Math.min(100, Math.ceil(Math.max(...allVals) / 5) * 5 + 5);
 
   function toX(i: number) {
     return PAD.left + (i / (days - 1)) * innerW;
@@ -133,7 +150,7 @@ function TopThreeChart({ brands }: { brands: (BrandEntry & { rank: number })[] }
     });
   }
 
-  const yTicks = [minV, Math.round((minV + maxV) / 2), maxV];
+  const yTicks = yAxis?.ticks ?? [minV, Math.round((minV + maxV) / 2), maxV];
 
   const hoverDate =
     hoverIdx !== null
@@ -592,6 +609,30 @@ export function IndustryLeaderboards() {
   const brands = current.countries[activeCountry];
   // Table order should match the authored lists (screenshots).
   const ranked = useMemo(() => brands.map((b, i) => ({ ...b, rank: i + 1 })), [brands]);
+  const chartBrands = useMemo(() => {
+    if (activeIndustry === "banking" && activeCountry === "UK") {
+      const preferred = ["Monzo", "HSBC UK", "Starling Bank"];
+      const picked = preferred
+        .map((n) => ranked.find((b) => b.name === n))
+        .filter(Boolean) as (BrandEntry & { rank: number })[];
+      return picked.length === 3 ? picked : ranked;
+    }
+    if (activeIndustry === "retail" && activeCountry === "UK") {
+      const preferred = ["Tesco", "Sainsbury's", "Asda"];
+      const picked = preferred
+        .map((n) => ranked.find((b) => b.name === n))
+        .filter(Boolean) as (BrandEntry & { rank: number })[];
+      return picked.length === 3 ? picked : ranked;
+    }
+    if (activeIndustry === "fashion" && activeCountry === "UK") {
+      const preferred = ["ASOS", "Boohoo", "Next"];
+      const picked = preferred
+        .map((n) => ranked.find((b) => b.name === n))
+        .filter(Boolean) as (BrandEntry & { rank: number })[];
+      return picked.length === 3 ? picked : ranked;
+    }
+    return ranked;
+  }, [ranked, activeIndustry, activeCountry]);
 
   const top10 = useMemo(() => ranked.slice(0, 10), [ranked]);
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
@@ -725,7 +766,29 @@ export function IndustryLeaderboards() {
           </div>
 
           {/* Chart for top 3 */}
-          <TopThreeChart brands={ranked} />
+          <TopThreeChart
+            brands={chartBrands}
+            startOverrides={
+              activeIndustry === "banking" && activeCountry === "UK"
+                ? { "Monzo": 62, "HSBC UK": 59, "Starling Bank": 59 }
+                : activeIndustry === "retail" && activeCountry === "UK"
+                  ? { "Tesco": 97, "Sainsbury's": 91, "Asda": 80 }
+                  : activeIndustry === "healthcare" && activeCountry === "UK"
+                    ? { "Spire": 72, "Circle Health Group": 60, "HCA Healthcare UK": 58 }
+                    : activeIndustry === "fashion" && activeCountry === "UK"
+                      ? { "ASOS": 61, "Boohoo": 52, "Next": 33 }
+                : undefined
+            }
+            yAxis={
+              activeIndustry === "retail" && activeCountry === "UK"
+                ? { min: 0, max: 100, ticks: [0, 25, 50, 75, 100] }
+                : activeIndustry === "healthcare" && activeCountry === "UK"
+                  ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
+                  : activeIndustry === "fashion" && activeCountry === "UK"
+                    ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
+                : undefined
+            }
+          />
 
           {/* Table */}
           <div className="rounded-2xl border border-white/10 overflow-hidden">
@@ -786,7 +849,7 @@ export function IndustryLeaderboards() {
           {/* Footer */}
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
             <p className="text-sm text-gray-500">
-              Showing {Math.min(10, ranked.length)} of {ranked.length} brands ·{" "}
+              Showing {Math.min(10, ranked.length)} of {ranked.length > 10 ? "10" : ranked.length} brands ·{" "}
               <span className="text-gray-400">Average AI mention rate across all platforms</span>
             </p>
             <a href={current.url[activeCountry]} target="_blank" rel="noopener noreferrer"
