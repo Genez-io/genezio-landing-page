@@ -590,10 +590,10 @@ export function IndustryLeaderboards() {
 
   const current = industries.find((i) => i.id === activeIndustry)!;
   const brands = current.countries[activeCountry];
-  const sorted = useMemo(
-    () => [...brands].sort((a, b) => b.visibility - a.visibility).map((b, i) => ({ ...b, rank: i + 1 })),
-    [brands]
-  );
+  // Table order should match the authored lists (screenshots).
+  const ranked = useMemo(() => brands.map((b, i) => ({ ...b, rank: i + 1 })), [brands]);
+
+  const top10 = useMemo(() => ranked.slice(0, 10), [ranked]);
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
 
   useEffect(() => {
@@ -725,7 +725,7 @@ export function IndustryLeaderboards() {
           </div>
 
           {/* Chart for top 3 */}
-          <TopThreeChart brands={sorted} />
+          <TopThreeChart brands={ranked} />
 
           {/* Table */}
           <div className="rounded-2xl border border-white/10 overflow-hidden">
@@ -740,10 +740,10 @@ export function IndustryLeaderboards() {
             </div>
 
             {/* Rows */}
-            {sorted.map((brand, idx) => (
+            {top10.map((brand, idx) => (
               <div key={`${activeCountry}-${activeIndustry}-${brand.name}`}
                 className={`grid grid-cols-[40px_1fr_150px_repeat(4,60px)] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
-                  idx < sorted.length - 1 ? "border-b border-white/[0.06]" : ""
+                  idx < top10.length - 1 ? "border-b border-white/[0.06]" : ""
                 }`}>
                 {/* Rank */}
                 <div>
@@ -786,7 +786,7 @@ export function IndustryLeaderboards() {
           {/* Footer */}
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
             <p className="text-sm text-gray-500">
-              Showing {sorted.length} brands ·{" "}
+              Showing {Math.min(10, ranked.length)} of {ranked.length} brands ·{" "}
               <span className="text-gray-400">Average AI mention rate across all platforms</span>
             </p>
             <a href={current.url[activeCountry]} target="_blank" rel="noopener noreferrer"
