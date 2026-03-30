@@ -1,5 +1,5 @@
 ---
-title: "AI Third-Party Testing: Why Independent Testing Matters for AI Agents"
+title: "AI 3-Party Testing: Why Independent Testing Matters for AI Agents"
 date: 2025-03-31
 tags:
   - AI

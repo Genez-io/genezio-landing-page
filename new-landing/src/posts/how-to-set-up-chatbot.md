@@ -1,5 +1,5 @@
 ---
-title: "How to Set Up a Chatbot: A CXO's Guide to Launching AI Agents Safely"
+title: "How to Set Up a Chatbot: A CXO's Guide to Launching AI Agents"
 date: 2025-07-29
 tags:
   - AI

@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/luisminv/
 thumbnail: /blog/posts/ai-agent-performance-v1.webp
 preview: AI agents can help support teams move faster, but small mistakes can carry big risks. Genezio lets businesses and Customer Care Executives test AI agents for accuracy, compliance, and behavior in real-world scenarios.
 # meta data start
-description: Learn how to test AI agents with Genezio. Simulate real-world scenarios, check accuracy, and catch anomalies before they reach your customers.
+description: Stop AI agents from giving wrong or off-topic answers. Discover how Genezio helps you test performance, track costs, and ensure response accuracy.
 meta_og_url: "https://genezio.com/blog/test-ai-agent/"
 
 meta_og_image: "https://genezio.com/posts/ai-agent-performance-v1.webp"
