@@ -712,6 +712,7 @@ export function IndustryLeaderboards() {
       new Date(overview.period_date).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
     );
   }, [isDynamicIndustryUK, apiOverviews]);
+  const shouldShowChartLoading = isDynamicIndustryUK && (isLoadingApiBrands || apiOverviews.length === 0);
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
 
   useEffect(() => {
@@ -843,7 +844,7 @@ export function IndustryLeaderboards() {
           </div>
 
           {/* Chart for top 3 */}
-          {isLoadingApiBrands && isDynamicIndustryUK && (
+          {shouldShowChartLoading && (
             <div className="mb-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300">
               Loading live leaderboard data...
             </div>
@@ -853,7 +854,7 @@ export function IndustryLeaderboards() {
               {apiBrandsError}
             </div>
           )}
-          {isLoadingApiBrands && isDynamicIndustryUK ? (
+          {shouldShowChartLoading ? (
             <TopThreeChartSkeleton />
           ) : (
             <TopThreeChart
