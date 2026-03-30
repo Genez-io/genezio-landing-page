@@ -301,13 +301,23 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "Barclays",   initials: "BA", color: "#00AEEF", website: "https://www.barclays.co.uk",    visibility: 87, chatgpt: 91, perplexity: 85, gemini: 88, claude: 84 },
-        { name: "HSBC",       initials: "HS", color: "#DB0011", website: "https://www.hsbc.co.uk",        visibility: 83, chatgpt: 88, perplexity: 80, gemini: 82, claude: 82 },
-        { name: "Lloyds",     initials: "LL", color: "#006A4D", website: "https://www.lloydsbank.com",    visibility: 79, chatgpt: 82, perplexity: 77, gemini: 80, claude: 77 },
-        { name: "NatWest",    initials: "NW", color: "#42145F", website: "https://www.natwest.com",       visibility: 74, chatgpt: 76, perplexity: 72, gemini: 75, claude: 73 },
-        { name: "Santander",  initials: "SA", color: "#EC0000", website: "https://www.santander.co.uk",   visibility: 68, chatgpt: 70, perplexity: 66, gemini: 68, claude: 68 },
-        { name: "Halifax",    initials: "HA", color: "#0076BE", website: "https://www.halifax.co.uk",     visibility: 61, chatgpt: 63, perplexity: 59, gemini: 62, claude: 60 },
-        { name: "Nationwide", initials: "NA", color: "#1B3D6E", website: "https://www.nationwide.co.uk",  visibility: 55, chatgpt: 57, perplexity: 53, gemini: 56, claude: 54 },
+        { name: "Monzo",               initials: "MO", color: "#FF5A5F", website: "https://monzo.com",                 visibility: 67, chatgpt: 67, gemini: 91, perplexity: 60, claude: 59 },
+        { name: "Starling Bank",       initials: "SB", color: "#5B3DF5", website: "https://www.starlingbank.com",      visibility: 68, chatgpt: 61, gemini: 81, perplexity: 58, claude: 80 },
+        { name: "HSBC UK",             initials: "HS", color: "#DB0011", website: "https://www.hsbc.co.uk",             visibility: 56, chatgpt: 70, gemini: 42, perplexity: 63, claude: 55 },
+        { name: "Barclays",            initials: "BA", color: "#00AEEF", website: "https://www.barclays.co.uk",         visibility: 60, chatgpt: 67, gemini: 60, perplexity: 52, claude: 60 },
+        { name: "NatWest",             initials: "NW", color: "#42145F", website: "https://www.natwest.com",            visibility: 57, chatgpt: 66, gemini: 43, perplexity: 60, claude: 81 },
+        { name: "Lloyds Banking Group",initials: "LB", color: "#006A4D", website: "https://www.lloydsbankinggroup.com", visibility: 46, chatgpt: 69, gemini: 16, perplexity: 51, claude: 49 },
+        { name: "Santander",           initials: "SA", color: "#EC0000", website: "https://www.santander.co.uk",        visibility: 75, chatgpt: 60, gemini: 85, perplexity: 57, claude: 87 },
+        { name: "Chase",               initials: "CH", color: "#1E40AF", website: "https://www.chase.co.uk",            visibility: 45, chatgpt: 57, gemini: 39, perplexity: 45, claude: 40 },
+        { name: "First Direct",        initials: "FD", color: "#111827", website: "https://www.firstdirect.com",        visibility: 40, chatgpt: 42, gemini: 27, perplexity: 44, claude: 50 },
+        { name: "Revolut",             initials: "RE", color: "#111111", website: "https://www.revolut.com",            visibility: 31, chatgpt: 34, gemini: 31, perplexity: 28, claude: 29 },
+        { name: "Halifax",             initials: "HA", color: "#0076BE", website: "https://www.halifax.co.uk",          visibility: 25, chatgpt: 20, gemini: 18, perplexity: 41, claude: 26 },
+        { name: "Royal Bank of Scotland", initials: "RB", color: "#1B3D6E", website: "https://www.rbs.co.uk",           visibility: 17, chatgpt: 22, gemini: 13, perplexity: 21, claude: 21 },
+        { name: "TSB",                 initials: "TS", color: "#00A3E0", website: "https://www.tsb.co.uk",              visibility: 15, chatgpt: 16, gemini: 14, perplexity: 22, claude: 17 },
+        { name: "Tesco Bank",          initials: "TB", color: "#EE1C25", website: "https://www.tescobank.com",          visibility: 14, chatgpt: 16, gemini: 14, perplexity: 17, claude: 14 },
+        { name: "Virgin Money",        initials: "VM", color: "#C8102E", website: "https://uk.virginmoney.com",         visibility: 15, chatgpt: 16, gemini: 10, perplexity: 26, claude: 15 },
+        { name: "Tide",                initials: "TI", color: "#2563EB", website: "https://www.tide.co",                visibility: 12, chatgpt: 9,  gemini: 18, perplexity: 9,  claude: 11 },
+        { name: "Wise",                initials: "WI", color: "#22c55e", website: "https://wise.com",                   visibility: 10, chatgpt: 7,  gemini: 14, perplexity: 9,  claude: 9 },
       ],
       US: [
         { name: "JPMorgan Chase",  initials: "JP", color: "#003087", website: "https://www.jpmorganchase.com",  visibility: 92, chatgpt: 94, perplexity: 91, gemini: 93, claude: 90 },
@@ -340,13 +350,22 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "Tesco",       initials: "TE", color: "#EE1C25", website: "https://www.tesco.com",           visibility: 91, chatgpt: 93, perplexity: 90, gemini: 91, claude: 90 },
-        { name: "Sainsbury's", initials: "SA", color: "#FF7200", website: "https://www.sainsburys.co.uk",    visibility: 84, chatgpt: 86, perplexity: 83, gemini: 84, claude: 83 },
-        { name: "Asda",        initials: "AS", color: "#7DC242", website: "https://www.asda.com",            visibility: 80, chatgpt: 83, perplexity: 78, gemini: 80, claude: 79 },
-        { name: "Morrisons",   initials: "MO", color: "#FFDC00", website: "https://groceries.morrisons.com", visibility: 72, chatgpt: 74, perplexity: 70, gemini: 73, claude: 71 },
-        { name: "Waitrose",    initials: "WA", color: "#5D8233", website: "https://www.waitrose.com",        visibility: 68, chatgpt: 70, perplexity: 66, gemini: 69, claude: 67 },
-        { name: "Aldi",        initials: "AL", color: "#002D72", website: "https://www.aldi.co.uk",          visibility: 62, chatgpt: 64, perplexity: 60, gemini: 63, claude: 61 },
-        { name: "Lidl",        initials: "LI", color: "#0050AA", website: "https://www.lidl.co.uk",          visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57 },
+        { name: "Tesco",             initials: "TE", color: "#EE1C25", website: "https://www.tesco.com",                 visibility: 97, chatgpt: 97, gemini: 97, perplexity: 95, claude: 96 },
+        { name: "Sainsbury's",       initials: "SA", color: "#FF7200", website: "https://www.sainsburys.co.uk",          visibility: 88, chatgpt: 96, gemini: 79, perplexity: 94, claude: 78 },
+        { name: "Asda",              initials: "AS", color: "#7DC242", website: "https://www.asda.com",                  visibility: 88, chatgpt: 90, gemini: 85, perplexity: 88, claude: 84 },
+        { name: "Waitrose",          initials: "WA", color: "#5D8233", website: "https://www.waitrose.com",              visibility: 68, chatgpt: 64, gemini: 71, perplexity: 62, claude: 70 },
+        { name: "Morrisons",         initials: "MO", color: "#FFDC00", website: "https://groceries.morrisons.com",       visibility: 55, chatgpt: 79, gemini: 31, perplexity: 77, claude: 30 },
+        { name: "Ocado",             initials: "OC", color: "#7C3AED", website: "https://www.ocado.com",                 visibility: 47, chatgpt: 52, gemini: 41, perplexity: 50, claude: 40 },
+        { name: "Lidl",              initials: "LI", color: "#0050AA", website: "https://www.lidl.co.uk",                visibility: 47, chatgpt: 39, gemini: 54, perplexity: 37, claude: 53 },
+        { name: "Marks & Spencer",   initials: "MS", color: "#111827", website: "https://www.marksandspencer.com",       visibility: 42, chatgpt: 33, gemini: 51, perplexity: 31, claude: 50 },
+        { name: "Co-op",             initials: "CO", color: "#00B5E2", website: "https://www.coop.co.uk",                visibility: 35, chatgpt: 54, gemini: 16, perplexity: 52, claude: 15 },
+        { name: "Aldi",              initials: "AL", color: "#002D72", website: "https://www.aldi.co.uk",                visibility: 34, chatgpt: 28, gemini: 40, perplexity: 26, claude: 39 },
+        { name: "Iceland",           initials: "IC", color: "#E11D48", website: "https://www.iceland.co.uk",             visibility: 22, chatgpt: 26, gemini: 18, perplexity: 24, claude: 17 },
+        { name: "Argos",             initials: "AR", color: "#D32F2F", website: "https://www.argos.co.uk",               visibility: 16, chatgpt: 8,  gemini: 24, perplexity: 7,  claude: 23 },
+        { name: "Amazon Fresh",      initials: "AF", color: "#FF9900", website: "https://www.amazon.co.uk/amazonfresh", visibility: 12, chatgpt: 10, gemini: 13, perplexity: 9,  claude: 12 },
+        { name: "IKEA",              initials: "IK", color: "#0058A3", website: "https://www.ikea.com/gb/en",            visibility: 5,  chatgpt: 0,  gemini: 10, perplexity: 0,  claude: 9 },
+        { name: "Amazon",            initials: "AM", color: "#FF9900", website: "https://www.amazon.co.uk",             visibility: 3,  chatgpt: 4,  gemini: 1,  perplexity: 3,  claude: 1 },
+        { name: "Carrefour",         initials: "CA", color: "#003399", website: "https://www.carrefour.com",            visibility: 2,  chatgpt: 3,  gemini: 0,  perplexity: 2,  claude: 0 },
       ],
       US: [
         { name: "Walmart",      initials: "WA", color: "#0071CE", website: "https://www.walmart.com",          visibility: 95, chatgpt: 97, perplexity: 94, gemini: 96, claude: 93 },
@@ -379,13 +398,23 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "NHS",              initials: "NH", color: "#005EB8", website: "https://www.nhs.uk",               visibility: 95, chatgpt: 97, perplexity: 94, gemini: 95, claude: 94 },
-        { name: "Bupa",             initials: "BU", color: "#1E9BD7", website: "https://www.bupa.co.uk",            visibility: 88, chatgpt: 90, perplexity: 87, gemini: 89, claude: 86 },
-        { name: "Nuffield Health",  initials: "NU", color: "#00539B", website: "https://www.nuffieldhealth.com",    visibility: 79, chatgpt: 81, perplexity: 78, gemini: 79, claude: 78 },
-        { name: "Spire Healthcare", initials: "SP", color: "#E4003A", website: "https://www.spirehealthcare.com",   visibility: 73, chatgpt: 75, perplexity: 72, gemini: 73, claude: 72 },
-        { name: "BMI Healthcare",   initials: "BM", color: "#003087", website: "https://www.bmihealthcare.co.uk",   visibility: 65, chatgpt: 67, perplexity: 63, gemini: 66, claude: 64 },
-        { name: "Vitality",         initials: "VI", color: "#E8175D", website: "https://www.vitality.co.uk",        visibility: 58, chatgpt: 60, perplexity: 56, gemini: 59, claude: 57 },
-        { name: "AXA Health",       initials: "AX", color: "#00008F", website: "https://www.axahealth.co.uk",       visibility: 52, chatgpt: 54, perplexity: 50, gemini: 53, claude: 51 },
+        { name: "Spire",                    initials: "SP", color: "#E4003A", website: "https://www.spirehealthcare.com",             visibility: 80, chatgpt: 61, gemini: 99, perplexity: 59, claude: 98 },
+        { name: "Circle Health Group",      initials: "CH", color: "#1E40AF", website: "https://www.circlehealthgroup.co.uk",         visibility: 80, chatgpt: 67, gemini: 93, perplexity: 66, claude: 92 },
+        { name: "HCA Healthcare UK",         initials: "HC", color: "#0EA5E9", website: "https://www.hcahealthcare.co.uk",             visibility: 61, chatgpt: 65, gemini: 57, perplexity: 63, claude: 56 },
+        { name: "Bupa",                     initials: "BU", color: "#1E9BD7", website: "https://www.bupa.co.uk",                       visibility: 61, chatgpt: 58, gemini: 64, perplexity: 57, claude: 63 },
+        { name: "Nuffield Health",          initials: "NU", color: "#00539B", website: "https://www.nuffieldhealth.com",               visibility: 57, chatgpt: 57, gemini: 57, perplexity: 56, claude: 56 },
+        { name: "The London Clinic",        initials: "LC", color: "#111827", website: "https://www.thelondonclinic.co.uk",            visibility: 52, chatgpt: 58, gemini: 45, perplexity: 57, claude: 44 },
+        { name: "AXA Health",               initials: "AX", color: "#00008F", website: "https://www.axahealth.co.uk",                  visibility: 47, chatgpt: 43, gemini: 51, perplexity: 42, claude: 50 },
+        { name: "VitalityHealth",           initials: "VI", color: "#E8175D", website: "https://www.vitality.co.uk",                   visibility: 45, chatgpt: 39, gemini: 51, perplexity: 38, claude: 50 },
+        { name: "Aviva",                    initials: "AV", color: "#F59E0B", website: "https://www.aviva.co.uk",                      visibility: 42, chatgpt: 43, gemini: 41, perplexity: 41, claude: 40 },
+        { name: "Cromwell Hospital",        initials: "CR", color: "#10B981", website: "https://www.cromwellhospital.com",             visibility: 31, chatgpt: 35, gemini: 26, perplexity: 34, claude: 25 },
+        { name: "Ramsay Health Care UK",    initials: "RA", color: "#2563EB", website: "https://www.ramsayhealth.co.uk",               visibility: 30, chatgpt: 43, gemini: 16, perplexity: 41, claude: 15 },
+        { name: "The Wellington Hospital",  initials: "WE", color: "#6B7280", website: "https://www.hcahealthcare.co.uk/locations/the-wellington-hospital", visibility: 25, chatgpt: 30, gemini: 19, perplexity: 29, claude: 18 },
+        { name: "The Princess Grace Hospital", initials: "PG", color: "#9333EA", website: "https://www.hcahealthcare.co.uk/locations/the-princess-grace-hospital", visibility: 22, chatgpt: 29, gemini: 14, perplexity: 28, claude: 13 },
+        { name: "The Harley Street Clinic", initials: "HS", color: "#DC2626", website: "https://www.hcahealthcare.co.uk/locations/the-harley-street-clinic",      visibility: 21, chatgpt: 22, gemini: 19, perplexity: 21, claude: 18 },
+        { name: "The Exeter",               initials: "EX", color: "#0F766E", website: "https://www.nuffieldhealth.com/hospitals/exeter",visibility: 15, chatgpt: 10, gemini: 19, perplexity: 10, claude: 18 },
+        { name: "The Portland Hospital",    initials: "PO", color: "#D97706", website: "https://www.hcahealthcare.co.uk/locations/the-portland-hospital",         visibility: 7,  chatgpt: 6,  gemini: 7,  perplexity: 6,  claude: 7 },
+        { name: "Royal Brompton & Harefield NHS Foundation Trust", initials: "RB", color: "#005EB8", website: "https://www.rbht.nhs.uk", visibility: 5,  chatgpt: 4,  gemini: 6,  perplexity: 4,  claude: 6 },
       ],
       US: [
         { name: "UnitedHealth", initials: "UH", color: "#196ECF", website: "https://www.unitedhealthgroup.com", visibility: 91, chatgpt: 93, perplexity: 89, gemini: 92, claude: 90 },
@@ -418,13 +447,33 @@ const industries: Industry[] = [
     },
     countries: {
       UK: [
-        { name: "Zara",    initials: "ZA", color: "#888",    website: "https://www.zara.com",    visibility: 90, chatgpt: 92, perplexity: 89, gemini: 91, claude: 88 },
-        { name: "H&M",     initials: "HM", color: "#E50010", website: "https://www.hm.com",      visibility: 85, chatgpt: 87, perplexity: 84, gemini: 86, claude: 83 },
-        { name: "ASOS",    initials: "AS", color: "#2D2D2D", website: "https://www.asos.com",    visibility: 80, chatgpt: 82, perplexity: 79, gemini: 81, claude: 78 },
-        { name: "Primark", initials: "PR", color: "#003087", website: "https://www.primark.com", visibility: 76, chatgpt: 78, perplexity: 74, gemini: 77, claude: 75 },
-        { name: "Shein",   initials: "SH", color: "#EE1C25", website: "https://www.shein.com",   visibility: 71, chatgpt: 73, perplexity: 69, gemini: 72, claude: 70 },
-        { name: "Boohoo",  initials: "BO", color: "#FF008D", website: "https://www.boohoo.com",  visibility: 60, chatgpt: 62, perplexity: 58, gemini: 61, claude: 59 },
-        { name: "Topshop", initials: "TO", color: "#555",    website: "https://www.topshop.com", visibility: 53, chatgpt: 55, perplexity: 51, gemini: 54, claude: 52 },
+        // Values aligned to the screenshot (ChatGPT + Google AI Overview);
+        // other platform fields are filled to keep the table compatible.
+        { name: "ASOS",                 initials: "AS", color: "#111827", website: "https://www.asos.com",                 visibility: 46, chatgpt: 47, gemini: 45, perplexity: 46, claude: 44 },
+        { name: "Boohoo",               initials: "BO", color: "#FF008D", website: "https://www.boohoo.com",               visibility: 35, chatgpt: 40, gemini: 29, perplexity: 39, claude: 28 },
+        { name: "Next",                 initials: "NE", color: "#0F172A", website: "https://www.next.co.uk",               visibility: 40, chatgpt: 42, gemini: 38, perplexity: 41, claude: 37 },
+        { name: "John Lewis & Partners",initials: "JL", color: "#111827", website: "https://www.johnlewis.com",            visibility: 22, chatgpt: 29, gemini: 15, perplexity: 28, claude: 14 },
+        { name: "New Look",             initials: "NL", color: "#EF4444", website: "https://www.newlook.com",              visibility: 22, chatgpt: 23, gemini: 21, perplexity: 22, claude: 20 },
+        { name: "Amazon UK",            initials: "AM", color: "#FF9900", website: "https://www.amazon.co.uk",             visibility: 12, chatgpt: 19, gemini: 5,  perplexity: 18, claude: 4 },
+        { name: "Club L London",        initials: "CL", color: "#8B5CF6", website: "https://clubllondon.com",              visibility: 12, chatgpt: 7,  gemini: 17, perplexity: 6,  claude: 16 },
+        { name: "Little Black Dress",   initials: "LB", color: "#64748B", website: "https://www.littleblackdress.co.uk",   visibility: 11, chatgpt: 7,  gemini: 15, perplexity: 6,  claude: 14 },
+        { name: "PrettyLittleThing",    initials: "PL", color: "#F43F5E", website: "https://www.prettylittlething.com",   visibility: 8,  chatgpt: 6,  gemini: 10, perplexity: 5,  claude: 9 },
+        { name: "Debenhams",            initials: "DE", color: "#D946EF", website: "https://www.debenhams.com",            visibility: 10, chatgpt: 5,  gemini: 15, perplexity: 4,  claude: 14 },
+        { name: "H&M",                  initials: "HM", color: "#E50010", website: "https://www.hm.com",                   visibility: 19, chatgpt: 16, gemini: 21, perplexity: 15, claude: 20 },
+        { name: "Zara",                 initials: "ZA", color: "#888888", website: "https://www.zara.com",                  visibility: 18, chatgpt: 17, gemini: 19, perplexity: 16, claude: 18 },
+        { name: "BoohooMAN",            initials: "BM", color: "#111111", website: "https://www.boohooman.com",             visibility: 9,  chatgpt: 9,  gemini: 8,  perplexity: 8,  claude: 7 },
+        { name: "Very",                 initials: "VE", color: "#7C3AED", website: "https://www.very.co.uk",               visibility: 8,  chatgpt: 10, gemini: 6,  perplexity: 9,  claude: 5 },
+        { name: "Dorothy Perkins",      initials: "DP", color: "#F97316", website: "https://www.dorothyperkins.com",       visibility: 8,  chatgpt: 7,  gemini: 9,  perplexity: 6,  claude: 8 },
+        { name: "Ever-Pretty",          initials: "EP", color: "#22C55E", website: "https://www.ever-pretty.co.uk",        visibility: 9,  chatgpt: 11, gemini: 8,  perplexity: 10, claude: 7 },
+        { name: "Phase Eight",          initials: "PE", color: "#0EA5E9", website: "https://www.phase-eight.com",          visibility: 4,  chatgpt: 3,  gemini: 5,  perplexity: 3,  claude: 4 },
+        { name: "High Street Outlet",   initials: "HS", color: "#334155", website: "https://www.highstreetoutlet.com",     visibility: 6,  chatgpt: 6,  gemini: 6,  perplexity: 5,  claude: 5 },
+        { name: "Uniqlo",               initials: "UN", color: "#DC2626", website: "https://www.uniqlo.com/uk/en",          visibility: 3,  chatgpt: 2,  gemini: 3,  perplexity: 2,  claude: 3 },
+        { name: "Urban Outfitters",     initials: "UO", color: "#111827", website: "https://www.urbanoutfitters.com/en-gb",visibility: 4,  chatgpt: 3,  gemini: 4,  perplexity: 3,  claude: 4 },
+        { name: "River Island",         initials: "RI", color: "#0F172A", website: "https://www.riverisland.com",          visibility: 4,  chatgpt: 4,  gemini: 3,  perplexity: 3,  claude: 3 },
+        { name: "Mango",                initials: "MA", color: "#FF6B35", website: "https://shop.mango.com/gb",            visibility: 3,  chatgpt: 2,  gemini: 3,  perplexity: 2,  claude: 3 },
+        { name: "Oasis",                initials: "OA", color: "#16A34A", website: "https://www.oasisfashion.com",         visibility: 4,  chatgpt: 4,  gemini: 3,  perplexity: 3,  claude: 3 },
+        { name: "Amazon",               initials: "AM", color: "#FF9900", website: "https://www.amazon.com",              visibility: 3,  chatgpt: 1,  gemini: 3,  perplexity: 1,  claude: 2 },
+        { name: "Bershka",              initials: "BE", color: "#6B7280", website: "https://www.bershka.com/gb",           visibility: 3,  chatgpt: 2,  gemini: 3,  perplexity: 2,  claude: 3 },
       ],
       US: [
         { name: "Nike",           initials: "NK", color: "#111",    website: "https://www.nike.com",        visibility: 94, chatgpt: 96, perplexity: 92, gemini: 95, claude: 93 },
@@ -513,6 +562,7 @@ function BrandLogo({ brand }: { brand: BrandEntry }) {
 
 function LlmLogo({ platform }: { platform: typeof LLM_PLATFORMS[number] }) {
   const [imgError, setImgError] = useState(false);
+  const forceWhite = platform.key === "chatgpt";
   return (
     <div className="flex justify-center">
       {imgError ? (
@@ -520,8 +570,14 @@ function LlmLogo({ platform }: { platform: typeof LLM_PLATFORMS[number] }) {
           {platform.label.slice(0, 3).toUpperCase()}
         </span>
       ) : (
-        <img src={faviconUrl(platform.website, 32)} alt={platform.label} title={platform.label}
-          className="w-5 h-5 object-contain rounded" onError={() => setImgError(true)} />
+        <img
+          src={faviconUrl(platform.website, 32)}
+          alt={platform.label}
+          title={platform.label}
+          className="w-5 h-5 object-contain rounded"
+          style={forceWhite ? { filter: "brightness(0) invert(1)" } : undefined}
+          onError={() => setImgError(true)}
+        />
       )}
     </div>
   );
