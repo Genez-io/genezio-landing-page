@@ -64,6 +64,11 @@ export function PolymetSEO({
       applicationCategory: "Generative Engine Optimization, AI Agents Testing",
       operatingSystem: "Cloud",
       description: "Track how AI engines see your brand and optimize your presence to win more recommendations",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: "16",
+      },
     };
 
     const path = canonicalPath || "";
@@ -76,36 +81,33 @@ export function PolymetSEO({
         baseOrg,
         {
           ...baseApp,
-          offers: {
-            "@type": "OfferCatalog",
-            name: "Genezio Pricing Plans",
-            description: "Flexible plans for growth and enterprise scale",
-            itemListElement: [
-              {
-                "@type": "Offer",
-                name: "Growth",
-                description: "For scaling teams",
-                price: "299",
+          offers: [
+            {
+              "@type": "Offer",
+              name: "Growth",
+              description: "For scaling teams",
+              price: "299",
+              priceCurrency: "EUR",
+            },
+            {
+              "@type": "Offer",
+              name: "Enterprise",
+              description: "For large-scale operations",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                price: "0",
                 priceCurrency: "EUR",
+                description: "Custom/Contact for quote",
               },
-              {
-                "@type": "Offer",
-                name: "Enterprise",
-                description: "For large-scale operations",
-                priceSpecification: {
-                  "@type": "PriceSpecification",
-                  price: "Custom/Contact for quote",
-                },
-              },
-              {
-                "@type": "Offer",
-                name: "Agency",
-                description: "For partners managing multiple clients",
-                price: "999",
-                priceCurrency: "EUR",
-              },
-            ],
-          },
+            },
+            {
+              "@type": "Offer",
+              name: "Agency",
+              description: "For partners managing multiple clients",
+              price: "999",
+              priceCurrency: "EUR",
+            },
+          ],
         },
       ];
     } else if (path.startsWith("/blog/author/")) {
