@@ -25,11 +25,16 @@ export function GenezioPricingComparison() {
       title: "Coverage & scale",
       rows: [
         { feature: "Brands", growth: "1", enterprise: "Multiple" },
-        { feature: "Answer Engines tracked", growth: "ChatGPT, Perplexity, Google AI Overviews", enterprise: "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews" },
+        {
+          feature: "Answer Engines tracked",
+          growth: "ChatGPT, Google AI Overviews",
+          enterprise:
+            "ChatGPT, Perplexity, Google AI Mode, Google Gemini, Microsoft Copilot, Meta AI, Grok, DeepSeek, Anthropic Claude, Google AI Overviews"
+        },
         { feature: "Languages / brand", growth: "1", enterprise: "All" },
         { feature: "Locations / brand", growth: "1", enterprise: "Custom" },
-        { feature: "Personas / brand", growth: "2", enterprise: "Custom" },
-      ],
+        { feature: "Personas / brand", growth: "2", enterprise: "Custom" }
+      ]
     },
     {
       title: "Analysis & monitoring",
@@ -39,36 +44,65 @@ export function GenezioPricingComparison() {
         { feature: "AI Statements", growth: "check", enterprise: "check" },
         { feature: "AI Keywords", growth: "check", enterprise: "check" },
         { feature: "AI Citations", growth: "check", enterprise: "check" },
-        { feature: "Sentiment – per conversation", growth: "check", enterprise: "check" },
-        { feature: "Sentiment – per citation", growth: "Top 1,000", enterprise: "Top 10,000" },
-        { feature: "Sentiment – per statement", growth: "Top 1,000", enterprise: "Top 10,000" },
-      ],
+        {
+          feature: "Sentiment – per conversation",
+          growth: "check",
+          enterprise: "check"
+        },
+        {
+          feature: "Sentiment – per citation",
+          growth: "Top 1,000",
+          enterprise: "Top 10,000"
+        },
+        {
+          feature: "Sentiment – per statement",
+          growth: "Top 1,000",
+          enterprise: "Top 10,000"
+        }
+      ]
     },
     {
       title: "Activation & output",
       rows: [
-        { feature: "AI content generation", growth: "1 / day", enterprise: "10 / day", comingSoon: false },
+        {
+          feature: "AI content generation",
+          growth: "1 / day",
+          enterprise: "10 / day",
+          comingSoon: false
+        },
         { feature: "Geo Assistant", growth: "-", enterprise: "check" },
         { feature: "Insights / day", growth: "5", enterprise: "10+" },
-        { feature: "Exports", growth: "check", enterprise: "check" },
-      ],
+        { feature: "Exports", growth: "check", enterprise: "check" }
+      ]
     },
     {
       title: "Data & governance",
       rows: [
-        { feature: "Data retention", growth: "6 months", enterprise: "Unlimited" },
-        { feature: "Competitor SWOT analysis", growth: "Up to 3", enterprise: "Unlimited" },
-        { feature: "Seats", growth: "5", enterprise: "Unlimited" },
-      ],
+        {
+          feature: "Data retention",
+          growth: "6 months",
+          enterprise: "Unlimited"
+        },
+        {
+          feature: "Competitor SWOT analysis",
+          growth: "Up to 3",
+          enterprise: "Unlimited"
+        },
+        { feature: "Seats", growth: "5", enterprise: "Unlimited" }
+      ]
     },
     {
       title: "Support",
       rows: [
-        { feature: "Support type", growth: "Email", enterprise: "Slack + Email" },
+        {
+          feature: "Support type",
+          growth: "Email",
+          enterprise: "Slack + Email"
+        },
         { feature: "Account Manager", growth: "–", enterprise: "check" },
-        { feature: "Onboarding", growth: "–", enterprise: "check" },
-      ],
-    },
+        { feature: "Onboarding", growth: "–", enterprise: "check" }
+      ]
+    }
   ];
 
   const renderCell = (value: string, subtext?: string) => {
@@ -94,10 +128,7 @@ export function GenezioPricingComparison() {
       return (
         <div className="flex flex-col items-center justify-center gap-1 max-w-xs text-center">
           {items.map((item, index) => (
-            <span
-              key={index}
-              className="text-xs leading-tight text-white/70"
-            >
+            <span key={index} className="text-xs leading-tight text-white/70">
               {item}
             </span>
           ))}
@@ -141,18 +172,24 @@ export function GenezioPricingComparison() {
                 <div className="flex flex-col items-center space-y-4">
                   <div className="text-center">
                     <div className="inline-flex items-center gap-2 mb-2">
-                      <span className="text-sm font-medium text-white/60">Growth</span>
+                      <span className="text-sm font-medium text-white/60">
+                        Growth
+                      </span>
                       <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
                         Popular
                       </span>
                     </div>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-3xl font-bold text-white">€299</span>
+                      <span className="text-3xl font-bold text-white">
+                        €299
+                      </span>
                       <span className="text-sm text-white/40 ml-1">/month</span>
                     </div>
                   </div>
                   <Button
-                    onClick={() => window.open('https://app.genezio.ai/sign-up', '_blank')}
+                    onClick={() =>
+                      window.open("https://app.genezio.ai/sign-up", "_blank")
+                    }
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20"
                   >
                     Start Free Trial
@@ -162,13 +199,22 @@ export function GenezioPricingComparison() {
               <div className="px-6 py-8 border-l border-white/[0.08]">
                 <div className="flex flex-col items-center space-y-4">
                   <div className="text-center">
-                    <div className="text-sm font-medium text-white/60 mb-2">Enterprise</div>
+                    <div className="text-sm font-medium text-white/60 mb-2">
+                      Enterprise
+                    </div>
                     <div className="flex flex-col items-center">
-                      <span className="text-3xl font-bold text-white">Custom</span>
+                      <span className="text-3xl font-bold text-white">
+                        Custom
+                      </span>
                     </div>
                   </div>
                   <Button
-                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
+                        "_blank"
+                      )
+                    }
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
                   >
                     Book a Demo
@@ -178,7 +224,6 @@ export function GenezioPricingComparison() {
             </div>
             <div className="mt-10"></div>
             <div className="pt-10"></div>
-
 
             {/* Table Body */}
             {sections.map((section, sectionIndex) => (
@@ -198,7 +243,9 @@ export function GenezioPricingComparison() {
                   >
                     <div className="px-8 py-4 flex items-center">
                       <div className="flex items-center gap-2">
-                        <span className="text-sm text-white/70">{row.feature}</span>
+                        <span className="text-sm text-white/70">
+                          {row.feature}
+                        </span>
                         {row.comingSoon && (
                           <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
                             Coming Soon
@@ -224,10 +271,11 @@ export function GenezioPricingComparison() {
           {["Growth", "Enterprise"].map((plan, planIndex) => (
             <div
               key={planIndex}
-              className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${plan === "Growth"
+              className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${
+                plan === "Growth"
                   ? "border-blue-500/20 bg-gradient-to-b from-blue-600/[0.08] to-purple-600/[0.08]"
                   : "border-white/[0.08]"
-                }`}
+              }`}
             >
               {/* Plan Header */}
               <div className="bg-white/[0.03] p-6 text-center border-b border-white/[0.08]">
@@ -243,17 +291,29 @@ export function GenezioPricingComparison() {
                   <span className="text-3xl font-bold text-white">
                     {plan === "Growth" ? "€299" : "Custom"}
                   </span>
-                  {plan !== "Enterprise" && <span className="text-sm text-white/40 ml-1">/month</span>}
+                  {plan !== "Enterprise" && (
+                    <span className="text-sm text-white/40 ml-1">/month</span>
+                  )}
                 </div>
                 {plan === "Enterprise" && (
-                  <div className="text-xs text-white/40 mb-4">Tailored pricing</div>
+                  <div className="text-xs text-white/40 mb-4">
+                    Tailored pricing
+                  </div>
                 )}
                 <Button
-                  onClick={() => plan === "Enterprise" ? window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank') : window.open('https://app.genezio.ai/sign-up', '_blank')}
-                  className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${plan === "Growth"
+                  onClick={() =>
+                    plan === "Enterprise"
+                      ? window.open(
+                          "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
+                          "_blank"
+                        )
+                      : window.open("https://app.genezio.ai/sign-up", "_blank")
+                  }
+                  className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
+                    plan === "Growth"
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
-                    }`}
+                  }`}
                 >
                   {plan === "Enterprise" ? "Book a Demo" : "Start Free Trial"}
                 </Button>
@@ -261,7 +321,10 @@ export function GenezioPricingComparison() {
 
               {/* Plan Features */}
               {sections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="border-b border-white/[0.06] last:border-b-0">
+                <div
+                  key={sectionIndex}
+                  className="border-b border-white/[0.06] last:border-b-0"
+                >
                   <div className="bg-white/[0.03] px-6 py-3">
                     <h4 className="text-xs font-semibold text-white/50 uppercase tracking-widest">
                       {section.title}
@@ -269,9 +332,14 @@ export function GenezioPricingComparison() {
                   </div>
                   <div className="p-6 space-y-3">
                     {section.rows.map((row, rowIndex) => (
-                      <div key={rowIndex} className="flex justify-between items-center gap-4">
+                      <div
+                        key={rowIndex}
+                        className="flex justify-between items-center gap-4"
+                      >
                         <div className="flex items-center gap-2">
-                          <span className="text-sm text-white/70">{row.feature}</span>
+                          <span className="text-sm text-white/70">
+                            {row.feature}
+                          </span>
                           {row.comingSoon && (
                             <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide">
                               Soon
@@ -280,9 +348,7 @@ export function GenezioPricingComparison() {
                         </div>
                         <div className="text-sm flex-shrink-0">
                           {renderCell(
-                            plan === "Growth"
-                              ? row.growth
-                              : row.enterprise,
+                            plan === "Growth" ? row.growth : row.enterprise,
                             plan === "Growth"
                               ? row.subtext?.growth
                               : row.subtext?.enterprise
@@ -300,7 +366,8 @@ export function GenezioPricingComparison() {
         {/* Note */}
         <div className="mt-12 text-center">
           <p className="text-xs text-white/30">
-            All plans include Statements, Keywords, and Citations tracking by default
+            All plans include Statements, Keywords, and Citations tracking by
+            default
           </p>
         </div>
       </div>
