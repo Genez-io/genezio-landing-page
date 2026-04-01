@@ -48,10 +48,9 @@ export function ConversionHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <Link to="/pricing/" className="w-full sm:w-auto">
+              <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/25">
-
-                  Analyze My Conversations
+                  Request an Analysis
                 </Button>
               </Link>
               <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">

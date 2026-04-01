@@ -140,8 +140,8 @@ export function MultiTurnTesting() {
                     key={index}
                     onClick={() => setSelectedPersona(index)}
                     className={`w-full text-left bg-white/[0.02] backdrop-blur-sm border rounded-xl p-4 transition-all ${selectedPersona === index
-                        ? "border-blue-500/50 bg-white/[0.04]"
-                        : "border-white/10 hover:border-blue-500/30"
+                      ? "border-blue-500/50 bg-white/[0.04]"
+                      : "border-white/10 hover:border-blue-500/30"
                       }`}
                   >
                     <div className="flex items-center gap-3">
@@ -309,10 +309,10 @@ export function MultiTurnTesting() {
               Create unlimited test conversations for any persona, scenario, or
               campaign update. Ensure quality before deployment.
             </p>
-            <a href="/pricing/">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
               <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-6 text-base font-semibold rounded-xl">
                 <FlaskConicalIcon className="w-5 h-5 mr-2" />
-                Start Testing
+                Talk to our Experts
               </Button>
             </a>
           </div>
