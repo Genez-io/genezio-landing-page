@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { SearchIcon, PlayCircleIcon } from "lucide-react";
-import { Link } from "react-router";
+import { PlayCircleIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 import chatgptLogo from "@/assets/chatgpt-icon.svg";
 import claudeLogo from "@/assets/claude-icon.svg";
@@ -30,28 +28,6 @@ export function GenezioHeroSection() {
 
   const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const [brandUrl, setBrandUrl] = useState("");
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [showResults, setShowResults] = useState(false);
-  const [highlightInput, setHighlightInput] = useState(false);
-
-  const handleAnalyze = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!brandUrl.trim()) {
-      setHighlightInput(true);
-      setTimeout(() => setHighlightInput(false), 2000);
-      return;
-    }
-
-    setIsAnalyzing(true);
-    // Simulate analysis
-    setTimeout(() => {
-      setIsAnalyzing(false);
-      setShowResults(true);
-    }, 2000);
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       // Fade out
@@ -99,27 +75,37 @@ export function GenezioHeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <a href="https://app.genezio.ai/sign-up">
+          <a
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               size="default"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
             >
-              Get Free Analysis
+              Book a Demo
             </Button>
           </a>
-          <button
-          onClick={() => window.open('https://app.genezio.ai/brand-report/49/Natwest?demo=account', '_blank')}
-            className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium group"
-          >
-            <PlayCircleIcon className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors" />
-            Try Interactive Demo
-          </button>
+          <a href="https://app.genezio.ai/sign-up">
+            <Button
+              variant="outline"
+              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            >
+              Get Started
+            </Button>
+          </a>
         </div>
 
-        {/* Small subtitle */}
-        <p className="text-sm text-gray-500">
-          No credit card required • Free 7-day trial
-        </p>
+        <button
+          onClick={() =>
+            window.open("https://app.genezio.ai/brand-report/49/Natwest?demo=account", "_blank")
+          }
+          className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium group"
+        >
+          <PlayCircleIcon className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors" />
+          Try Interactive Demo
+        </button>
       </div>
     </section>
   );
