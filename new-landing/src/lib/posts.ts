@@ -105,6 +105,9 @@ export function getAllPosts(): BlogPost[] {
         const frontmatter = parseFrontmatter(content);
         const filename = path.split("/").pop()?.replace(".md", "") || "";
 
+        // Skip draft posts
+        if (frontmatter.draft === "true") continue;
+
         // Extract tag manually if not in simple frontmatter
         const category = extractFirstTag(content);
 
