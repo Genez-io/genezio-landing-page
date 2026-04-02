@@ -43,6 +43,11 @@ const AUTHOR_META: Record<
     description:
       "Read insights from Denisa Lera on generational shifts in AI adoption. Explore her research on why Gen Z and Millennials trust AI over Google search.",
   },
+  "andrei-pitis": {
+    title: "Andrei Pitis: The Complete Guide to GEO | Genezio",
+    description:
+      "Read insights from Andrei Pitis on GEO, AI brand visibility strategies, and the future of search.",
+  },
 };
 
 function BlogAuthor() {

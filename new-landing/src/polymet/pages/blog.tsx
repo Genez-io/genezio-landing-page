@@ -195,7 +195,7 @@ export function Blog() {
         {/* All Posts Grid */}
         <section className="px-6 pb-32">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-8">All Articles</h2>
+            <h2 className="text-2xl font-bold text-white mb-8">AI Visibility & Recommendation Deep Dives</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => {

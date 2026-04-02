@@ -154,7 +154,6 @@ export const authors: Record<string, any> = {
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/denisa-lera/",
-            "twitter": "https://twitter.com",
             "email": "contact@genezio.com"
         },
         "stats": {
@@ -163,7 +162,7 @@ export const authors: Record<string, any> = {
             "expertise": [
                 "Cloud",
                 "Serverless",
-                "DevOps"
+                "Operations"
             ]
         }
     },
@@ -182,9 +181,35 @@ export const authors: Record<string, any> = {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "DevOps"
+                "SEO",
+                "Digital Marketing",
+                "PPC",
+                "Analytics",
+                "Growth Marketing",
+                "GEO"
+            ]
+        }
+    },
+    "andrei-pitis": {
+        "name": "Andrei Pitis",
+        "role": "Co-Founder & CEO",
+        "bio": "Andrei Pitiș is a prominent tech entrepreneur, angel investor, and the Co-Founder & CEO of Genezio. With over 30 years of experience in the IT industry, he previously co-founded Vector Watch (acquired by Fitbit) and has played a pivotal role in shaping the Eastern European tech ecosystem.",
+        "image": "/authors/andrei-pitis.webp",
+        "location": "Remote",
+        "social": {
+            "linkedin": "https://www.linkedin.com/in/andreipitis/",
+            "twitter": "https://x.com/apitis",
+            "email": "ap@genezio.com"
+        },
+        "stats": {
+            "articles": 1,
+            "readers": "5k",
+            "expertise": [
+                "Tech Entrepreneurship",
+                "Angel Investing",
+                "Product Strategy",
+                "Venture Capital",
+                "Ecosystem Building"
             ]
         }
     },
