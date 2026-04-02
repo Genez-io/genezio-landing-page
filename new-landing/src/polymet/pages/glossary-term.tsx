@@ -880,6 +880,29 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "chatgpt-prompt-engineering",
       "llm-optimisation"
     ]
+  },
+  "query-fan-out": {
+    title: "Query Fan-Out: Optimizing AI Search & RAG | Genezio",
+    metaDescription:
+      "Learn what Query Fan-Out is and how it optimizes AI platforms, RAG systems, & search engines by breaking down user queries into parallel sub-queries.",
+    term: "Query Fan-Out",
+    definition:
+      "An architectural technique where a single user request (query) is automatically broken down or multiplied into several parallel sub-queries to retrieve complex and comprehensive information from various data sources.",
+    category: "Technical",
+    detailedExplanation:
+      "Query Fan-Out (sometimes referred to as query expansion) optimizes the performance of generative search engines and RAG (Retrieval-Augmented Generation) systems. When a user asks a complex question, the AI assistant doesn't rely on a single, monolithic search. Instead, the system analyzes the intent behind the question and \"fans it out\" in multiple directions. The algorithm generates variations of the original query and sends them simultaneously to different databases, vector indexes, or APIs. Subsequently, the AI collects all these disparate responses, filters them, and synthesizes a unified final answer. This method prevents hallucinations, increases the recall rate, and ensures all facets of a topic are thoroughly covered.",
+    examples: [
+      "A broad question like \"How do I optimize for AI?\" automatically generates background sub-queries such as \"AEO techniques,\" \"LLM optimization,\" and \"generative chat visibility.\"",
+      "The system simultaneously routes queries to multiple sources: searching for technical specifications in a documentation database while concurrently pulling customer reviews from forums.",
+      "Identifying multiple entities within a lengthy prompt and triggering separate, detailed searches for each entity before formulating a final recommendation."
+    ],
+    whyItMatters:
+      "For visibility strategies in the AI era, Query Fan-Out is essential because it illustrates how virtual assistants assemble answers from varied fragments of information. For brands, understanding this concept means their visibility can massively increase if they provide granular, specific content capable of answering these hidden \"sub-queries,\" thereby capturing traffic and mentions from a much wider spectrum of searches.",
+    relatedTerms: [
+      "llm-optimisation",
+      "generative-response",
+      "ai-search-optimization"
+    ]
   }
 };
 
@@ -912,8 +935,8 @@ export function GlossaryTerm() {
   return (
     <div className="min-h-screen bg-[#050506]">
       <PolymetSEO
-        title={term.title}
-        description={term.metaDescription}
+        title={term.title || term.term}
+        description={term.metaDescription || term.definition}
         canonicalPath={`/glossary/${slug}/`}
       />
       {/* Header */}

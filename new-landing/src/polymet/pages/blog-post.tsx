@@ -132,7 +132,7 @@ export function BlogPost() {
   return (
     <div className="min-h-screen bg-[#050506]">
       <PolymetSEO
-        title={post.title}
+        title={post.metaTitle || post.title}
         description={post.description || post.excerpt}
         canonicalPath={`/blog/${slug}/`}
         ogUrl={post.metaOgUrl}

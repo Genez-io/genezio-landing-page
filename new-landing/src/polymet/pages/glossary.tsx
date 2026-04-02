@@ -229,6 +229,12 @@ const glossaryTerms: GlossaryTerm[] = [
     definition:
       "The art and science of crafting effective prompts for Large Language Models (LLMs) like GPT-4, Claude, and Gemini. LLM prompt engineering requires understanding model architectures, training data, and response patterns to optimize for accuracy and brand representation.",
     category: "Technical"
+  },
+  {
+    term: "Query Fan-Out",
+    definition:
+      "An architectural technique where a single user request (query) is automatically broken down or multiplied into several parallel sub-queries to retrieve complex and comprehensive information from various data sources.",
+    category: "Technical"
   }
 ];
 

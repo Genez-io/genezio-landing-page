@@ -25,6 +25,7 @@ export interface BlogPost {
     timestamp: number;
     metaOgImage?: string;
     metaOgUrl?: string;
+    metaTitle?: string;
 }
 
 const icons = [
@@ -145,6 +146,7 @@ export function getAllPosts(): BlogPost[] {
             content: contentBody,
             metaOgImage: frontmatter.meta_og_image || "",
             metaOgUrl: frontmatter.meta_og_url || "",
+            metaTitle: frontmatter.metaTitle || undefined,
         });
     }
 
