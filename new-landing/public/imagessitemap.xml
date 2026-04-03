@@ -636,4 +636,25 @@
         <image:loc>https://genezio.com/images/llm-personalized-narrative-recommendation.webp</image:loc>
       </image:image>
   </url>
+  <url>
+    <loc>https://genezio.com/blog/what-is-geo-complete-guide/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/andrei-pitis.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/what-is-geo-complete-guide.webp</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://genezio.com/blog/author/andrei-pitis/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/andrei-pitis.webp</image:loc>
+      </image:image>
+  </url>
 </urlset>
