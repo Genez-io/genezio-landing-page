@@ -1,8 +1,7 @@
 ---
 title: "What is GEO? Why Generative Engine Optimization Should Track Recommendations, Not Just Visibility"
 metaTitle: "What is GEO? Why Visibility Is the Wrong Metric"
-draft: true
-date: 2026-04-02
+date: 2026-04-03
 tags:
   - AI
   - GEO
