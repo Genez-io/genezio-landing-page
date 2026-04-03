@@ -50,6 +50,7 @@ const routes = [
   "/glossary/prompt-engineering",
   "/glossary/source-attribution",
   "/glossary/structured-data-for-ai",
+  "/glossary/query-fan-out",
 
   "/increase-conversion",
   "/pricing",
