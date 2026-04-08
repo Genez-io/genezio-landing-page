@@ -20,7 +20,6 @@ customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
 url: /how-multi-turn-chatbots-break-geo/
-draft: true
 ---
 
 ![The Chatbot Menu is Back: Why It Breaks Most GEO Tools](/images/how-multi-turn-chatbots-break-geo.webp)

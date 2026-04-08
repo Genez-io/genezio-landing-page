@@ -1,7 +1,7 @@
 ---
 title: "The Future of Content Isn't AI vs. Humans - It's Who Writes the Brief"
 metaTitle: "The Future of Content Isn't AI vs. Humans"
-date: 2026-04-07
+date: 2026-04-08
 tags:
   - AI
   - Chatbots
@@ -9,9 +9,9 @@ author: Bogdan Ripa
 linkedIn: https://www.linkedin.com/in/bogdanripa/
 
 thumbnail: /images/future-of-content-brief-not-writer.webp
-preview: The AI vs. human content debate misses the point. The real advantage is who controls the brief \- and whether it's built on fan-out query data.
+preview: The AI vs. human content debate misses the point. The real advantage is who controls the brief and whether it's built on fan-out query data.
 # meta data start
-description: The AI vs. human content debate misses the point. The real advantage is who controls the brief \- and whether it's built on fan-out query data.
+description: The AI vs. human content debate misses the point. The real advantage is who controls the brief and whether it's built on fan-out query data.
 meta_og_url: "https://genezio.com/blog/future-of-content-brief-not-writer/"
 
 meta_og_image: "https://genezio.com/images/future-of-content-brief-not-writer.webp"
