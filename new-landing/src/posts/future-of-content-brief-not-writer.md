@@ -1,7 +1,7 @@
 ---
 title: "The Future of Content Isn't AI vs. Humans - It's Who Writes the Brief"
 metaTitle: "The Future of Content Isn't AI vs. Humans"
-date: 2026-04-07
+date: 2026-04-08
 tags:
   - AI
   - Chatbots

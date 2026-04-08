@@ -1,7 +1,7 @@
 ---
 title: The Chatbot That Asks You to "Choose From This List" Is Back. And It Breaks Most GEO Tools
 metaTitle: "The Chatbot Menu is Back: Why It Breaks Most GEO Tools"
-date: 2026-04-08
+date: 2026-04-07
 tags:
   - AI
   - Chatbots
