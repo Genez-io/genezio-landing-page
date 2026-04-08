@@ -1,7 +1,7 @@
 ---
 title: The Chatbot That Asks You to "Choose From This List" Is Back. And It Breaks Most GEO Tools
 metaTitle: "The Chatbot Menu is Back: Why It Breaks Most GEO Tools"
-date: 2026-04-07
+date: 2026-04-08
 tags:
   - AI
   - Chatbots
@@ -20,7 +20,6 @@ customHeader: "White header"
 customFooter: "White footer"
 readTime: 7
 url: /how-multi-turn-chatbots-break-geo/
-draft: true
 ---
 
 ![The Chatbot Menu is Back: Why It Breaks Most GEO Tools](/images/how-multi-turn-chatbots-break-geo.webp)
