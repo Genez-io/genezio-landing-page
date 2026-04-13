@@ -705,4 +705,16 @@
         <image:loc>https://genezio.com/images/how-multi-turn-chatbots-break-geo.webp</image:loc>
       </image:image>
   </url>
+  <url>
+    <loc>https://genezio.com/blog/genezio-vs-ahrefs-brand-radar/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/bogdan-ripa.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/genezio-vs-ahref.webp</image:loc>
+      </image:image>
+  </url>
 </urlset>
