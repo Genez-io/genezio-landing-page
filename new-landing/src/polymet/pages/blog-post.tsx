@@ -137,9 +137,11 @@ export function BlogPost() {
         canonicalPath={`/blog/${slug}/`}
         ogUrl={post.metaOgUrl}
         ogImage={post.metaOgImage}
+        ogType="article"
         schema={customSchema}
         authorName={post.author}
         datePublished={post.date}
+        tags={post.tags}
       />
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
