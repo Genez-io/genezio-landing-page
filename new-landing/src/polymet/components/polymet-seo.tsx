@@ -153,10 +153,14 @@ export function PolymetSEO({
 
       const articleSchema = {
         "@context": "https://schema.org",
-        "@type": "TechArticle",
+        "@type": "BlogPosting",
         headline: title,
         description: description,
+        image: ogImage || undefined,
         datePublished: datePublished,
+        dateModified: datePublished,
+        mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
+        url: url,
         keywords: tags ? tags.join(", ") : undefined,
         author: personSchema,
         publisher: baseOrg,
@@ -194,9 +198,17 @@ export function PolymetSEO({
     }
 
     return null;
-  }, [schema, canonicalPath, title, description, url, authorName, datePublished, tags, termName, termDefinition]);
+  }, [schema, canonicalPath, title, description, url, ogImage, authorName, datePublished, tags, termName, termDefinition]);
 
   const finalOgUrl = ogUrl || url;
+
+  // Build author URL for article:author meta tag
+  const authorSlug = authorName
+    ? authorName.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^\w-]+/g, "").replace(/--+/g, "-")
+    : null;
+  const authorUrl = authorSlug ? `https://genezio.com/blog/author/${authorSlug}/` : undefined;
+
+  const isArticle = ogType === "article";
 
   return (
     <>
@@ -211,8 +223,13 @@ export function PolymetSEO({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {ogImage && <meta property="og:image" content={ogImage} />}
+        {ogImage && <meta name="twitter:image" content={ogImage} />}
         {finalOgUrl && <meta property="og:url" content={finalOgUrl} />}
         {url && <link rel="canonical" href={url} />}
+        {isArticle && datePublished && <meta property="article:published_time" content={datePublished} />}
+        {isArticle && datePublished && <meta property="article:modified_time" content={datePublished} />}
+        {isArticle && authorUrl && <meta property="article:author" content={authorUrl} />}
+        {isArticle && tags && tags.map((tag, i) => <meta key={i} property="article:tag" content={tag} />)}
       </Helmet>
       {generatedSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generatedSchema) }} />

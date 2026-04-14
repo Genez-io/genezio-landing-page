@@ -26,6 +26,7 @@ export interface BlogPost {
     metaOgImage?: string;
     metaOgUrl?: string;
     metaTitle?: string;
+    tags?: string[];
 }
 
 const icons = [
@@ -95,6 +96,15 @@ function extractFirstTag(content: string): string {
     return "General";
 }
 
+// Extract all tags from YAML list format in frontmatter
+function extractAllTags(content: string): string[] {
+    const tagsSection = content.match(/tags:\s*\n((?:\s*-\s*.+\n?)*)/);
+    if (!tagsSection) return [];
+    const tagLines = tagsSection[1].match(/\s*-\s*(.+)/g);
+    if (!tagLines) return [];
+    return tagLines.map(line => line.replace(/\s*-\s*/, "").trim()).filter(Boolean);
+}
+
 export function getAllPosts(): BlogPost[] {
     const modules = import.meta.glob("../posts/*.md", { as: "raw", eager: true });
 
@@ -150,6 +160,7 @@ export function getAllPosts(): BlogPost[] {
             metaOgImage: frontmatter.meta_og_image || "",
             metaOgUrl: frontmatter.meta_og_url || "",
             metaTitle: frontmatter.metaTitle || undefined,
+            tags: extractAllTags(content),
         });
     }
 

@@ -235,6 +235,11 @@ for (const url of routes) {
     "name",
     "twitter:image"
   );
+  const helmetOgType = extractMetaContent(
+    helmetMetaHtml,
+    "property",
+    "og:type"
+  );
 
   let mergedHeadHtml = headHtml;
   if (helmetTitleText) {
@@ -282,6 +287,13 @@ for (const url of routes) {
       helmetTwitterImage
     );
   }
+  if (helmetOgType) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:type",
+      helmetOgType
+    );
+  }
 
   const extraMetaKeys = [];
   if (helmetTitleText) {
@@ -298,6 +310,9 @@ for (const url of routes) {
   }
   if (helmetTwitterImage) {
     extraMetaKeys.push("twitter:image");
+  }
+  if (helmetOgType) {
+    extraMetaKeys.push("og:type");
   }
 
   const html = stripOverriddenHead(template, helmetTitleText, helmetMetaHtml, extraMetaKeys)

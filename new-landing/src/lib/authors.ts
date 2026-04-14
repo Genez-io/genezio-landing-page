@@ -64,43 +64,48 @@ export const authors: Record<string, any> = {
     },
     "bogdan-ripa": {
         "name": "Bogdan Ripa",
-        "role": "Cofounder & CPO",
-        "bio": "Bogdan Ripa is a co-founder and product leader with a strong entrepreneurial background. He co-founded InterAKT Online, which was later acquired by Adobe, where he played a key role in scaling the Romanian campus and driving product innovation. After eight years at Adobe, he transitioned back into the startup ecosystem, leading Vector Watch’s product management before its acquisition by Fitbit, where he contributed to gamification and social features. He then served as SVP of Product Management at UiPath, expanding its product suite with automation and AI-driven solutions. Currently, Bogdan is the Co-Founder and CPO at Genezio, focusing on developer productivity and application deployment. He also advises MyBenefits, guiding product and growth strategies. With expertise in agile methodologies, product-market fit, and scaling tech products, Bogdan continues to shape the future of software development and automation.",
+        "role": "Co-Founder and CPO",
+        "bio": "Entrepreneur at heart, Bogdan co-founded his first startup, InterAKT Online, at just 21 years old. He started by doing consultancy for web apps using open-source technologies and ended up automating their own work by building products for web developers. With a strong track record in scaling tech products, he has held key leadership roles, including SVP of Product Management at UiPath, Senior Director of Product Management at Fitbit, and Product Director at Vector Watch. Currently, Bogdan is the Co-Founder and CPO at Genezio, focusing on product strategy and nailing product-market fit. Recently, he has been deeply exploring AI, leveraging tools like Claude to push boundaries. He also brings strong knowledge of MCP Servers and modern AI integrations.",
         "image": "/authors/bogdan-ripa.webp",
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/bogdanripa/",
-            "twitter": "https://twitter.com",
+            "twitter": "https://x.com/bogdanripa",
+            "github": "https://github.com/bogdanripa",
             "email": "contact@genezio.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "DevOps"
+                "Product Management",
+                "SaaS",
+                "Agile Methodologies",
+                "AI Automation",
+                "MCP Servers"
             ]
         }
     },
     "bogdan-vlad": {
         "name": "Bogdan Vlad",
-        "role": "Cofounder & CTO",
-        "bio": "Bogdan Vlad is the Co-Founder and Chief Technology Officer at Genezio, where he leads the development of tools that make serverless app creation faster and more accessible. With over a decade of experience in software engineering, he’s worked on everything from mobile platforms to embedded systems, mastering technologies like Java, Objective C, Swift, Golang, and more. Before starting Genezio, Bogdan held roles at companies like Fitbit and Vector Watch, where he built innovative solutions for IoT and mobile applications, even earning a patent for energy-efficient display technology. A strong believer in giving back, he’s been an active mentor, speaker, and teacher in the tech community, empowering developers to push boundaries and create impactful products. When he’s not busy driving innovation at Genezio, Bogdan enjoys exploring new frameworks and contributing to open-source projects.",
+        "role": "Co-Founder and CTO",
+        "bio": "Bogdan Vlad is the Co-Founder and Chief Technology Officer at Genezio. As a Software Engineer with a rich background across various programming languages, he has a strong track record in mobile development and embedded systems. Before Genezio, Bogdan held key technical and leadership roles, including Lead Software Engineer at Neobility, Staff Engineer at Fitbit focused on transport layer protocols, and Lead Software Engineer at Vector Watch. His innovative work in the field includes holding a US patent for systems and methods for operating an energy-efficient display. Academically, he earned a Master's degree in Computer Science with Greatest Distinction from Vrije Universiteit Brussel. Recently, he shows a deep focus on AI and advanced backend architectures.",
         "image": "/authors/bogdan-vlad.webp",
         "location": "Remote",
         "social": {
-            "linkedin": "https://www.linkedin.com/in/iulian-bogdan-vlad/",
-            "twitter": "https://twitter.com",
-            "email": "contact@genezio.com"
+            "linkedin": "https://www.linkedin.com/in/iulian-bogdan-vlad-22221453/",
+            "email": "contact@genezio.com",
+            "github": "https://github.com/vladiulianbogdan"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "DevOps"
+                "iOS & Android Development",
+                "Embedded Systems",
+                "AI & LLM Integration",
+                "Backend Architecture",
+                "Java & C++"
             ]
         }
     },
@@ -127,22 +132,25 @@ export const authors: Record<string, any> = {
     },
     "cristi-miloiu": {
         "name": "Cristi Miloiu",
-        "role": "Contributor",
-        "bio": "Cristi Miloiu is a Software Engineer at Genezio, where he focuses on building innovative features and creating tools that empower developers. A key part of his work includes implementing deployment support for Python frameworks like FastAPI, Flask, and Django, as well as enhancing the Node.js ecosystem by adding support for NestJS and maintaining compatibility with Next.js. Cristi has also contributed to the platform by developing user management features, including GoogleAuth and email-password authentication, and by improving the developer experience through clear documentation and tutorials. Currently in his final year at the Faculty of Electronics, Telecommunications, and Information Technology at the University POLITEHNICA of Bucharest, Cristi has been working in the tech field since his first year of university. He actively develops both open-source projects and community-driven initiatives. Passionate about volunteering, he has also served as a tech coordinator, helping others grow and succeed in their projects.",
+        "role": "Software Engineer",
+        "bio": "Cristi Miloiu is a Software Engineer and Builder focused on AI Agents and Cloud Architecture at Genezio. As a core member of the team, he helped secure a €2M pre-seed round and transitioned the platform towards LLM brand visibility and enterprise AI agent testing solutions. He is the owner and maintainer of the backend and agents codebase, having engineered Red/Blue Team Agents and architected critical infrastructure systems. Highly active in the open-source and developer community, Cristi made over 6,000 GitHub contributions in the last year alone.\n\nHe holds a Bachelor's degree in Computer Science from the National University of Science and Technology Politehnica Bucharest and is currently pursuing his Master's in Information Systems Engineering at the same university. Beyond his technical work, Cristi is a dedicated community leader; he managed the IT Department for the League of Electronics Students and actively mentors at Innovation Labs and The Bucharest Hackathon. His innovative projects have earned him multiple accolades, including 1st Place at the Electron Hackathon.",
         "image": "/authors/cristi-miloiu.webp",
-        "location": "Remote",
+        "location": "Bucharest, Romania",
         "social": {
-            "linkedin": "https://www.linkedin.com/in/cristian-miloiu/",
-            "twitter": "https://twitter.com",
-            "email": "contact@genezio.com"
+            "linkedin": "https://www.linkedin.com/in/cristi-miloiu-3a174a267",
+            "email": "contact@genezio.com",
+            "github": "https://github.com/cristim67",
+            "website": "https://cristimiloiu.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "DevOps"
+                "AI Agents",
+                "Cloud Architecture",
+                "Python & FastAPI",
+                "TypeScript",
+                "Next.js & React"
             ]
         }
     },
@@ -153,40 +161,42 @@ export const authors: Record<string, any> = {
         "image": "/authors/denisa-lera.webp",
         "location": "Remote",
         "social": {
-            "linkedin": "https://www.linkedin.com/in/denisa-lera/",
+            "linkedin": "https://www.linkedin.com/in/denisa-lera-2661aa233/",
             "email": "contact@genezio.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "Operations"
+                "Operations Management",
+                "Financial Planning",
+                "Digital Marketing",
+                "Business Administration"
             ]
         }
     },
     "horatiu-voicu": {
         "name": "Horatiu Voicu",
-        "role": "Growth Marketer",
-        "bio": "Horatiu Voicu is a seasoned Digital Marketing Consultant with over a decade of experience in SEO, PPC, and online strategy. Founder of Voiqu, he has been part of the Google Partners program since 2015, offering expertise in search engine optimization, campaign management, and analytics. Horatiu has worked with prominent organizations, including ANSWEAR.com and MTH Digital, optimizing paid search campaigns, managing large-scale budgets, and increasing ROI. Horatiu’s skill set extends to technical SEO, advanced website audits, and international marketing. With a strong foundation in digital tools like Google Analytics and HubSpot, he has also supported non-profits like WWF Romania by enhancing data tracking and ad grant utilization. Known for his critical thinking and passion for innovation, Horatiu continues to help businesses grow through strategic planning and measurable outcomes.",
+        "role": "Growth Marketing Specialist",
+        "bio": "Horatiu Voicu is a Growth Marketing Specialist at Genezio with over a decade of experience in digital marketing, specializing in high-performance strategies across Google Ads, Meta Ads, and full-funnel tracking ecosystems. At Genezio, he focuses on the launch of AI Agents Testing and GEO/AEO tool. He is also the founder of Voiqu, helping B2B SaaS and E-commerce brands unlock their true growth potential through deep data architecture, AI automation, and omnichannel performance marketing. A long-standing member of the Google Partners program since 2014, Horatiu combines technical marketing with a strong focus on Generative Engine Optimization (GEO) and LLM brand visibility.",
         "image": "/authors/horatiu-voicu.webp",
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/voiqu/",
             "twitter": "https://x.com/voiqu",
+            "github": "https://github.com/horatiu-io",
+            "website": "https://voiqu.com/",
             "email": "contact@genezio.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "SEO",
-                "Digital Marketing",
-                "PPC",
-                "Analytics",
                 "Growth Marketing",
-                "GEO"
+                "SEO & GEO",
+                "AI Automation",
+                "LLM Brand Visibility",
+                "PPC & Analytics"
             ]
         }
     },
@@ -199,7 +209,7 @@ export const authors: Record<string, any> = {
         "social": {
             "linkedin": "https://www.linkedin.com/in/andreipitis/",
             "twitter": "https://x.com/apitis",
-            "email": "ap@genezio.com"
+            "email": "contact@genezio.com"
         },
         "stats": {
             "articles": 1,
@@ -221,7 +231,7 @@ export const authors: Record<string, any> = {
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/kristopher-sandoval-95a703b6/",
-            "twitter": "https://twitter.com",
+            "twitter": "https://x.com/KristopherLeads",
             "email": "contact@genezio.com"
         },
         "stats": {
@@ -242,7 +252,6 @@ export const authors: Record<string, any> = {
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/luisminv/",
-            "twitter": "https://twitter.com",
             "email": "contact@genezio.com"
         },
         "stats": {
@@ -251,7 +260,8 @@ export const authors: Record<string, any> = {
             "expertise": [
                 "Cloud",
                 "Serverless",
-                "DevOps"
+                "AI",
+                "LLM"
             ]
         }
     },
@@ -263,16 +273,17 @@ export const authors: Record<string, any> = {
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/paula-cionca/",
-            "twitter": "https://twitter.com",
             "email": "contact@genezio.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "DevOps"
+                "Marketing Strategy",
+                "GEO & AI Visibility",
+                "Business Analysis",
+                "Product Development",
+                "Public Speaking"
             ]
         }
     },
@@ -284,7 +295,7 @@ export const authors: Record<string, any> = {
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/radu-andrei-dumitrescu/",
-            "twitter": "https://twitter.com",
+            "github": "https://github.com/radu1122",
             "email": "contact@genezio.com"
         },
         "stats": {
@@ -347,16 +358,20 @@ export const authors: Record<string, any> = {
         "location": "Remote",
         "social": {
             "linkedin": "https://www.linkedin.com/in/anghelescu-tudor-b73739193/",
-            "twitter": "https://twitter.com",
+            "twitter": "https://x.com/TudorAng01",
+            "github": "https://github.com/Tudor-Ang",
+            "website": "https://tudor-anghelescu.com/",
             "email": "contact@genezio.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
-                "Cloud",
-                "Serverless",
-                "DevOps"
+                "Next.js & React",
+                "TypeScript",
+                "TailwindCSS",
+                "WebSockets",
+                "Frontend Architecture"
             ]
         }
     },
