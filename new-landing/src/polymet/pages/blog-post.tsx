@@ -137,6 +137,8 @@ export function BlogPost() {
         canonicalPath={`/blog/${slug}/`}
         ogUrl={post.metaOgUrl}
         ogImage={post.metaOgImage}
+        ogImageWidth="1920"
+        ogImageHeight="1080"
         ogType="article"
         schema={customSchema}
         authorName={post.author}

@@ -240,6 +240,16 @@ for (const url of routes) {
     "property",
     "og:type"
   );
+  const helmetOgImageWidth = extractMetaContent(
+    helmetMetaHtml,
+    "property",
+    "og:image:width"
+  );
+  const helmetOgImageHeight = extractMetaContent(
+    helmetMetaHtml,
+    "property",
+    "og:image:height"
+  );
 
   let mergedHeadHtml = headHtml;
   if (helmetTitleText) {
@@ -294,6 +304,20 @@ for (const url of routes) {
       helmetOgType
     );
   }
+  if (helmetOgImageWidth) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:image:width",
+      helmetOgImageWidth
+    );
+  }
+  if (helmetOgImageHeight) {
+    mergedHeadHtml = upsertMetaProperty(
+      mergedHeadHtml,
+      "og:image:height",
+      helmetOgImageHeight
+    );
+  }
 
   const extraMetaKeys = [];
   if (helmetTitleText) {
@@ -313,6 +337,12 @@ for (const url of routes) {
   }
   if (helmetOgType) {
     extraMetaKeys.push("og:type");
+  }
+  if (helmetOgImageWidth) {
+    extraMetaKeys.push("og:image:width");
+  }
+  if (helmetOgImageHeight) {
+    extraMetaKeys.push("og:image:height");
   }
 
   const html = stripOverriddenHead(template, helmetTitleText, helmetMetaHtml, extraMetaKeys)

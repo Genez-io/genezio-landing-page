@@ -15,6 +15,8 @@ interface PolymetSEOProps {
   tags?: string[];
   termName?: string;
   termDefinition?: string;
+  ogImageWidth?: string;
+  ogImageHeight?: string;
 }
 
 export function slugify(text: string) {
@@ -40,6 +42,8 @@ export function PolymetSEO({
   tags,
   termName,
   termDefinition,
+  ogImageWidth,
+  ogImageHeight,
 }: PolymetSEOProps) {
   const url = canonicalPath
     ? `https://genezio.com${canonicalPath.startsWith('/') ? canonicalPath : '/' + canonicalPath}`
@@ -223,6 +227,8 @@ export function PolymetSEO({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {ogImage && <meta property="og:image" content={ogImage} />}
+        {ogImage && ogImageWidth && <meta property="og:image:width" content={ogImageWidth} />}
+        {ogImage && ogImageHeight && <meta property="og:image:height" content={ogImageHeight} />}
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         {finalOgUrl && <meta property="og:url" content={finalOgUrl} />}
         {url && <link rel="canonical" href={url} />}
