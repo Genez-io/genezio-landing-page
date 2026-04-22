@@ -126,7 +126,7 @@ export function GenezioFooter() {
 
         {/* Bottom bar */}
         <div className="pt-6 md:pt-8 border-t border-white/5 flex justify-center items-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Genezio. All rights reserved.
           </p>
         </div>

@@ -1,16 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
 import {
   MessageCircleIcon,
   UsersIcon,
-  TargetIcon,
   FileTextIcon,
   SettingsIcon,
   CheckCircle2Icon,
-  TrendingUpIcon,
-  BarChart3Icon,
-  FileIcon,
-  ShieldIcon,
   BriefcaseIcon,
   CodeIcon,
   NewspaperIcon,
@@ -84,9 +78,9 @@ function PersonaScenarioSelector() {
             <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
               <PersonaIcon className="w-6 h-6 text-blue-400" />
             </div>
-            <h5 className="text-lg font-bold text-white">
+            <p className="text-lg font-bold text-white">
               {selectedPersona.name}
-            </h5>
+            </p>
           </div>
 
           {/* User Query - Static */}
@@ -168,8 +162,6 @@ export function GenezioDifferentiatorsSection() {
         {/* Grid of differentiators - Two Column Layout */}
         <div className="space-y-6 md:space-y-8 mb-12 md:mb-16">
           {differentiators.map((item, index) => {
-            const Icon = item.icon;
-
             return (
               <div
                 key={index}
@@ -278,7 +270,7 @@ export function GenezioDifferentiatorsSection() {
                                 <div className="w-full border-t border-blue-500/20"></div>
                               </div>
                               <div className="relative flex justify-center text-xs">
-                                <span className="bg-[#050506] px-2 text-gray-500">
+                                <span className="bg-[#050506] px-2 text-white">
                                   vs
                                 </span>
                               </div>
@@ -343,9 +335,9 @@ export function GenezioDifferentiatorsSection() {
                                       <ActionIcon className="w-5 h-5 text-blue-400" />
                                     </div>
                                     <div className="flex-1">
-                                      <h6 className="text-sm font-bold text-white mb-1">
+                                      <p className="text-sm font-bold text-white mb-1">
                                         {action.title}
-                                      </h6>
+                                      </p>
                                       <p className="text-xs text-gray-400 leading-relaxed">
                                         {action.description}
                                       </p>
@@ -484,7 +476,7 @@ export function GenezioDifferentiatorsSection() {
                                 <div className="w-full border-t border-blue-500/20"></div>
                               </div>
                               <div className="relative flex justify-center text-xs">
-                                <span className="bg-[#050506] px-2 text-gray-500">
+                                <span className="bg-[#050506] px-2 text-white">
                                   vs
                                 </span>
                               </div>
@@ -549,9 +541,9 @@ export function GenezioDifferentiatorsSection() {
                                       <ActionIcon className="w-5 h-5 text-blue-400" />
                                     </div>
                                     <div className="flex-1">
-                                      <h6 className="text-sm font-bold text-white mb-1">
+                                      <p className="text-sm font-bold text-white mb-1">
                                         {action.title}
-                                      </h6>
+                                      </p>
                                       <p className="text-xs text-gray-400 leading-relaxed">
                                         {action.description}
                                       </p>

@@ -368,6 +368,8 @@ export function GenezioHeader() {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? (
             <XIcon className="w-6 h-6" />
