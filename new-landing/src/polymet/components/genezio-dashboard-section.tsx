@@ -177,7 +177,7 @@ export function GenezioDashboardSection() {
                     <ZapIcon className="w-3.5 h-3.5" />
                     Actions
                   </button>
-                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors">
+                  <button className="px-2.5 py-1.5 text-xs font-medium text-[#B0B0B3] hover:text-white hover:bg-[#2A2A30] rounded-md transition-colors" aria-label="Settings">
                     <SettingsIcon className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -235,8 +235,8 @@ export function GenezioDashboardSection() {
                     </svg>
                     Filters
                   </button>
-                  <button className="border border-[#2A2A30] bg-[#1C1C20] text-white p-2 rounded-md hover:bg-[#2A2A30] transition-colors">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <button className="border border-[#2A2A30] bg-[#1C1C20] text-white p-2 rounded-md hover:bg-[#2A2A30] transition-colors" aria-label="More options">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                     </svg>
                   </button>
