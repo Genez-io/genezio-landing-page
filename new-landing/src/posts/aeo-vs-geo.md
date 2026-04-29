@@ -73,7 +73,7 @@ Think about it from the user's perspective. When someone asks ChatGPT "Which CRM
 
 The worst position to be in is high visibility but low recommendation. Your brand appears in AI conversations frequently, but when users push for a specific suggestion, AI recommends your competitor instead. You're present enough to be considered but not preferred enough to be chosen.
 
-Measuring recommendation requires a different approach. You can't just count how often your brand appears. You need to track how often AI explicitly recommends you, and under what conditions. That means running enough conversations to get statistically meaningful data, not just a handful of sample queries.
+Measuring recommendation requires a different approach. You can't just count how often your brand appears. You need to track how often AI explicitly recommends you, and under what conditions. That means running enough conversations to get statistically meaningful data, not just a handful of sample queries. For a deeper dive into how this applies to enterprise B2B marketing, see our guide on why [visibility is only half the picture](/blog/visibility-is-half-the-picture/).
 
 ## Why statistical rigor matters
 

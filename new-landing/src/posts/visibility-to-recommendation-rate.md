@@ -140,7 +140,7 @@ Conversely, legacy brands suffered. H\&M sits at a 20% VRR, while Mango practica
 
 The shift from Share of Voice (SOV) to Visibility-to-Recommendation Rate (VRR) is a fundamental evolution in marketing. Generative AI engines are actively replacing flat search results with hyper-specific, persona-driven endorsements.
 
-To survive, brands must transition to Artificial Engine Optimization (AEO). By deploying automated fanout queries, utilizing specialized AI agents, and rigorously tracking VRR across multi-turn conversations, you can reverse-engineer the recommendation process. The goal is no longer just to be seen; it is to secure the explicit, context-aligned endorsement that drives 5x higher conversions.
+To survive, brands must transition to Artificial Engine Optimization (AEO). By deploying automated fanout queries, utilizing specialized AI agents, and rigorously tracking VRR across multi-turn conversations, you can reverse-engineer the recommendation process. The goal is no longer just to be seen; it is to secure the explicit, context-aligned endorsement that drives 5x higher conversions. For B2B marketing leaders, understanding this [visibility-recommendation gap](/blog/visibility-is-half-the-picture/) is the difference between appearing in a brief and winning the deal.
 
 ## Frequently Asked Questions (FAQ)
 

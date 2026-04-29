@@ -71,7 +71,7 @@ Visibility and recommendation are not the same thing. A brand can appear in hund
 
 The standard GEO definition stops at the first sentence. Most tools on the market stop there too. How often you appear, in which queries, across which models. Useful data. Necessary, even.
 
-But the question that drives revenue, the one a CMO needs answered before going to their board, is whether AI recommends them. And the only way to answer it is to simulate the actual conversations your customers are having.
+But the question that drives revenue, the one a CMO needs answered before going to their board, is whether AI recommends them. And the only way to answer it is to simulate the actual conversations your customers are having. This is especially true for B2B brands, where [visibility is only half the picture](/blog/visibility-is-half-the-picture/).
 
 ## How recommendation tracking works
 
