@@ -71,7 +71,7 @@ The practical impact of recommendations is profound:
 
 #### **Why Marketers Must Care**
 
-Data from Genezio's platform confirms a critical gap between visibility and recommendation. Many brands are frequently mentioned but rarely recommended. This disconnect means brands might be present in AI conversations but lose out to competitors who actually capture the top endorsement, and the customer.
+Data from Genezio's platform confirms a critical gap between visibility and recommendation. Many brands are frequently mentioned but rarely recommended. This disconnect means brands might be present in AI conversations but lose out to competitors who actually capture the top endorsement, and the customer. This is why for B2B brands, [visibility is only half the picture](/blog/visibility-is-half-the-picture/).
 
 ### **The Technical Anatomy of "Visibility" vs. "Recommendation"**
 
