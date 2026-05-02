@@ -88,7 +88,7 @@ Notice what is missing from this list: raw mention count. It is not absent becau
 
 ## How recommendation is actually measured (and why most tools can't)
 
-Tracking recommendation is structurally different from tracking visibility. You can't get a meaningful recommendation rate by running a few prompts and counting how often your brand is named in the answer. The answer changes across conversations, across engines, across phrasings, and across the buyer persona doing the asking.
+Tracking recommendation is structurally different from tracking visibility. You can't get a meaningful recommendation rate by running a few prompts and counting how often your brand is named in the answer. The answer changes across conversations, across engines, across phrasings, and across the buyer persona doing the asking—which is why [multi-turn conversation simulation](/blog/four-agents-four-questions/) is required.
 
 Three things have to be in place for recommendation tracking to mean anything.
 

@@ -741,4 +741,16 @@
         <image:loc>https://genezio.com/images/visibility-is-half-the-picture.webp</image:loc>
       </image:image>
   </url>
+  <url>
+    <loc>https://genezio.com/blog/four-agents-four-questions/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+      <image:image>
+        <image:loc>https://genezio.com/authors/paula-cionca.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>https://genezio.com/images/four-agents-four-questions.webp</image:loc>
+      </image:image>
+  </url>
 </urlset>
