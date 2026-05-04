@@ -53,13 +53,13 @@ Most AEO approaches also rely on single-prompt queries. The tool sends a questio
 
 ## What GEO measures differently
 
-GEO, or Generative Engine Optimization, emerged as a broader term for optimizing across all generative AI systems, not just answer engines. But the more meaningful distinction isn't the name. It's the methodology.
+GEO, or Generative Engine Optimization, emerged as a broader term for optimizing generative AI systems, not just answer engines. But the more meaningful distinction isn't the name. It's the methodology.
 
 The reality is that users don't ask AI a single question and accept the first answer. They have conversations. They follow up. They add context. A user researching banks might start with "What are the best banks in the UK?" then ask "Which ones have good mobile apps?" then narrow to "What about for someone who travels frequently?" Each turn in that conversation shifts how AI weighs different brands.
 
 Tracking only the first response misses this dynamic. A brand might appear in the initial answer but get filtered out by the third turn. Or a brand might not appear at first but get recommended once the user adds specific criteria that match its strengths.
 
-This is why multi-turn conversation simulation matters. Instead of running single prompts, you simulate the full conversation flow that a real customer persona would have. You define who the user is (a 35-year-old parent in London looking for a savings account, for example) and you run that conversation through multiple exchanges.
+This is why multi-turn conversation simulation matters. Instead of running single prompts, you [simulate the full conversation flow](/blog/four-agents-four-questions/) that a real customer persona would have. You define who the user is (a 35-year-old parent in London looking for a savings account, for example) and you run that conversation through multiple exchanges.
 
 The data looks completely different. Brands that seem to have strong visibility in single-prompt tests sometimes have weak recommendation rates in multi-turn simulations. The AI mentions them early but doesn't recommend them when pushed. Other brands with moderate visibility turn out to have strong recommendation rates because they perform well on follow-up criteria.
 

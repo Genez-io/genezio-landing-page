@@ -83,7 +83,7 @@ The recommendation shifts across turns. A brand that shows up in the first respo
 
 This is why single-prompt tracking is like inspecting one brick and concluding you've audited the building. The full conversation is where the recommendation decision gets made, not in the opening exchange.
 
-At Genezio, we build user personas that match our clients' actual customer profiles. We run those personas through multi-turn conversations across AI models, ChatGPT, Perplexity, Gemini, Copilot, AI Overviews, with infrastructure distributed geographically. A UK persona runs from UK servers. A US persona runs from US servers. The AI's response changes based on where the conversation originates. A server in Virginia asking about London banks gives different data than a server in London.
+At Genezio, we build user personas that match our clients' actual customer profiles. We run those personas through multi-turn conversations [across every stage of the buyer journey](/blog/four-agents-four-questions/) on engines like ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews, with infrastructure distributed geographically. A UK persona runs from UK servers. A US persona runs from US servers. The AI's response changes based on where the conversation originates. A server in Virginia asking about London banks gives different data than a server in London.
 
 ## Sample size is not optional
 
