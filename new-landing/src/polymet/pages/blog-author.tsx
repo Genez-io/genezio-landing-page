@@ -46,7 +46,7 @@ const AUTHOR_META: Record<
   "andrei-pitis": {
     title: "Andrei Pitis: The Complete Guide to GEO | Genezio",
     description:
-      "Read insights from Andrei Pitis on GEO, AI brand visibility strategies, and the future of search.",
+      "Read insights from Andrei Pitis, Co-Founder & CEO of Genezio, on GEO, AI brand visibility strategies, and the future of search.",
   },
 };
 
