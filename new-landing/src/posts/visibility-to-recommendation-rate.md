@@ -113,6 +113,8 @@ But hitting "Recommended" once isn't enough. A high VRR must be stable across th
 2. **Temporal Consistency:** Does the recommendation survive algorithm updates and new training data drops?  
 3. **Platform Consistency:** Are you recommended across different engines (ChatGPT, Perplexity, Gemini)?
 
+Achieving this consistency requires [statistical rigor and large sample sizes](/blog/confidence-intervals-for-cmos/), as a single prompt is often just a "coin flip" in a probabilistic system.
+
 ## The Theory in Action: Mapping the UK Fashion Matrix
 
 This isn't just theory. We utilized our platform to map LLM recommendation patterns within the highly competitive UK Fashion sector. We generated a rigorous matrix of 1,869 unique query fanout permutations and analyzed 918 distinct, multi-turn LLM conversations over a 31-day period.
