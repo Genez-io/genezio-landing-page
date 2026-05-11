@@ -65,6 +65,21 @@ const LEGACY_REDIRECTS = [
   { from: "/docs/troubleshooting/", to: "https://deployapps.dev/docs/" },
   { from: "/docs/tutorials/connect-to-mongo-atlas/", to: "https://deployapps.dev/docs/" },
   { from: "/tags/tutorials/", to: "/blog/" },
+  { from: "/ai-search-optimization-tool/", to: "/" },
+
+  // Drafted authors who no longer contribute to the current platform
+  { from: "/blog/author/andra-pitis/", to: "/blog/" },
+  { from: "/blog/author/andreia-ocanoaia/", to: "/blog/" },
+  { from: "/blog/author/bogdan-ciobanu/", to: "/blog/" },
+  { from: "/blog/author/bogdan-vlad/", to: "/blog/" },
+  { from: "/blog/author/costin-sin/", to: "/blog/" },
+  { from: "/blog/author/cristi-miloiu/", to: "/blog/" },
+  { from: "/blog/author/kristopher-sandoval/", to: "/blog/" },
+  { from: "/blog/author/radu-dumitrescu/", to: "/blog/" },
+  { from: "/blog/author/rares-istoc/", to: "/blog/" },
+  { from: "/blog/author/stefan-iordache/", to: "/blog/" },
+  { from: "/blog/author/tudor-anghelescu/", to: "/blog/" },
+  { from: "/blog/author/virgil-turcu/", to: "/blog/" },
 ];
 
 export default function GenezioApp() {
@@ -79,6 +94,7 @@ export default function GenezioApp() {
         }
       />
 
+/*
       <Route
         path="/ai-search-optimization-tool/"
         element={
@@ -87,6 +103,7 @@ export default function GenezioApp() {
           </GenezioLayoutV2>
         }
       />
+*/
 
       <Route
         path="/pricing"

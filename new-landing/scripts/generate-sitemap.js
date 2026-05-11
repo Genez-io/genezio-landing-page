@@ -23,7 +23,6 @@ const staticRoutes = [
     '/industry-leaderboards',
     '/about-genezio',
     '/agencies',
-    '/ai-search-optimization-tool/',
     '/blog'
 ];
 
@@ -85,18 +84,30 @@ function loadAuthors() {
     if (!fs.existsSync(authorsPath)) return { images: {}, slugs: [] };
 
     const content = fs.readFileSync(authorsPath, 'utf-8');
-    // Extract images and slugs using regex since it's a TS file
-    // Refined regex to only match top-level author keys (indented by 4 spaces)
-    const authorRegex = /^\s{4}"([^"]+)":\s*{[\s\S]*?"image":\s*"([^"]+)"/gm;
+    // Extract authors by matching the slug and the block content until the next top-level key or end of object
+    // This is more robust than a single regex for multiple properties
+    const authorBlocks = content.split(/^\s{4}"/gm).slice(1);
+    
     const authorImages = {};
     const authorSlugs = [];
-    let match;
 
-    while ((match = authorRegex.exec(content)) !== null) {
-        const slug = match[1];
-        authorImages[slug] = match[2];
-        authorSlugs.push(`/blog/author/${slug}/`);
-    }
+    authorBlocks.forEach(block => {
+        const slugMatch = block.match(/^([^"]+)":\s*{/);
+        if (!slugMatch) return;
+        
+        const slug = slugMatch[1];
+        
+        // Skip if drafted
+        if (block.includes('"draft": true')) {
+            return;
+        }
+
+        const imageMatch = block.match(/"image":\s*"([^"]+)"/);
+        if (imageMatch) {
+            authorImages[slug] = imageMatch[1];
+            authorSlugs.push(`/blog/author/${slug}/`);
+        }
+    });
 
     return { images: authorImages, slugs: authorSlugs };
 }

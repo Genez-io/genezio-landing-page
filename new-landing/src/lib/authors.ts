@@ -1,5 +1,6 @@
 export const authors: Record<string, any> = {
     "andra-pitis": {
+        "draft": true,
         "name": "Andra Pitis",
         "role": "Contributor",
         "bio": 'Andra Pitiș is passionate about technology, design, and how people interact with digital products. At Genezio, she worked as a UI/UX Designer, helping shape an intuitive experience for developers and refining the serverless platform. She loves finding the perfect balance between functionality and simplicity, making technology easier to use and more accessible for everyone.\n\nShe studied Computer Science at The University of Manchester and went on to pursue a Master’s in User Experience Design at Universitat de Barcelona. Along the way, she also explored technical writing and project management, gaining a broad perspective on building great products. Now, she’s an Engineering Program Manager at Adobe, but she stays connected to the startup world and the process of creating things that truly make a difference.',
@@ -21,6 +22,7 @@ export const authors: Record<string, any> = {
         }
     },
     "andreia-ocanoaia": {
+        "draft": true,
         "name": "Andreia Ocanoaia",
         "role": "Contributor",
         "bio": 'Andreia Ocanoaia is the Head of Design at Genezio, where she leads the creative vision and user experience strategy for the platform. With a strong background in UI/UX design and a passion for crafting intuitive digital products, Andreia ensures that Genezio is not only functional but also visually engaging and easy to navigate for developers.\n\nBringing years of experience in designing for tech-driven solutions, Andreia focuses on bridging the gap between complex functionality and seamless usability. Her work is central to delivering a polished, developer-friendly experience that empowers users to deploy applications with confidence and ease.',
@@ -42,6 +44,7 @@ export const authors: Record<string, any> = {
         }
     },
     "bogdan-ciobanu": {
+        "draft": true,
         "name": "Bogdan Ciobanu",
         "role": "Contributor",
         "bio": 'Bogdan Ciobanu is a software engineer at Genezio and a passionate researcher in quantum computing and communication at University POLITEHNICA of Bucharest. At Genezio, he’s focused on building reliable and efficient solutions for developers, combining his expertise in software engineering with his curiosity for cutting-edge technology. With a strong academic background, Bogdan has worked as a Teaching Assistant for courses like Numerical Methods and Modeling and Simulation, helping students tackle complex problems in computer science. He’s also had several internships at Google, where he gained hands-on experience working on large-scale, impactful projects. Whether he’s coding, teaching, or researching, Bogdan is always driven by a desire to innovate and push the boundaries of what’s possible.',
@@ -87,6 +90,7 @@ export const authors: Record<string, any> = {
         }
     },
     "bogdan-vlad": {
+        "draft": true,
         "name": "Bogdan Vlad",
         "role": "Co-Founder and CTO",
         "bio": "Bogdan Vlad is the Co-Founder and Chief Technology Officer at Genezio. As a Software Engineer with a rich background across various programming languages, he has a strong track record in mobile development and embedded systems. Before Genezio, Bogdan held key technical and leadership roles, including Lead Software Engineer at Neobility, Staff Engineer at Fitbit focused on transport layer protocols, and Lead Software Engineer at Vector Watch. His innovative work in the field includes holding a US patent for systems and methods for operating an energy-efficient display. Academically, he earned a Master's degree in Computer Science with Greatest Distinction from Vrije Universiteit Brussel. Recently, he shows a deep focus on AI and advanced backend architectures.",
@@ -110,6 +114,7 @@ export const authors: Record<string, any> = {
         }
     },
     "costin-sin": {
+        "draft": true,
         "name": "Costin Sin",
         "role": "Contributor",
         "bio": "Costin Sin is a software engineer with a knack for solving complex problems and building efficient, scalable solutions. During his time at Genezio, he made over 2000 GitHub contributions, redesigning key components like the YAML configuration format, enabling Next.js support, and integrating PostgreSQL and MongoDB hosting. His work has had a significant impact on making Genezio’s serverless platform more accessible and user-friendly for developers. With a Bachelor’s degree in Computer Science from the University POLITEHNICA of Bucharest, Costin has also been active in academia as a Teaching Assistant, helping students master subjects like operating systems, data structures, and assembly programming. Currently, he’s continuing to tackle big challenges as a Software Engineer at Google, where his passion for technology and innovation shines.",
@@ -131,6 +136,7 @@ export const authors: Record<string, any> = {
         }
     },
     "cristi-miloiu": {
+        "draft": true,
         "name": "Cristi Miloiu",
         "role": "Software Engineer",
         "bio": "Cristi Miloiu is a Software Engineer and Builder focused on AI Agents and Cloud Architecture at Genezio. As a core member of the team, he helped secure a €2M pre-seed round and transitioned the platform towards LLM brand visibility and enterprise AI agent testing solutions. He is the owner and maintainer of the backend and agents codebase, having engineered Red/Blue Team Agents and architected critical infrastructure systems. Highly active in the open-source and developer community, Cristi made over 6,000 GitHub contributions in the last year alone.\n\nHe holds a Bachelor's degree in Computer Science from the National University of Science and Technology Politehnica Bucharest and is currently pursuing his Master's in Information Systems Engineering at the same university. Beyond his technical work, Cristi is a dedicated community leader; he managed the IT Department for the League of Electronics Students and actively mentors at Innovation Labs and The Bucharest Hackathon. His innovative projects have earned him multiple accolades, including 1st Place at the Electron Hackathon.",
@@ -224,6 +230,7 @@ export const authors: Record<string, any> = {
         }
     },
     "kristopher-sandoval": {
+        "draft": true,
         "name": "Kristopher Sandoval",
         "role": "Contributor",
         "bio": "Kristopher Sandoval is a seasoned marketing professional with over a decade of experience crafting impactful campaigns and leading teams across companies like Amazon, Fandom, and thatgamecompany. At Genezio, he combines his expertise in brand strategy and content creation to drive meaningful engagement with the developer community. Kristopher is also a prolific author and thought leader, contributing to Nordic APIs with over 300 articles and whitepapers on topics like API design, product lifecycle management, and developer advocacy. Whether organizing events like SkyFest or launching product-led growth strategies, Kristopher brings creativity and passion to everything he does, always striving to make technology approachable and exciting.",
@@ -288,6 +295,7 @@ export const authors: Record<string, any> = {
         }
     },
     "radu-dumitrescu": {
+        "draft": true,
         "name": "Radu Dumitrescu",
         "role": "Cofounder and CPO",
         "bio": "Radu-Andrei Dumitrescu leads as a Technical Product Owner and Developer. With a passion for simplifying complex development workflows, Radu has played a pivotal role in building Genezio’s innovative platform, empowering developers to focus on coding while minimizing deployment headaches. A graduate of University POLITEHNICA of Bucharest, Radu’s expertise spans software engineering, big data, and entrepreneurship. Before joining Genezio, he co-founded and exited CodeTruck.io and held leadership roles in the Big Data Division at Technology Reply, showcasing his ability to deliver results across diverse technical landscapes. Radu is deeply committed to fostering innovation and sharing knowledge through workshops, tutorials, and community engagement, continually pushing the boundaries of what’s possible in technology.",
@@ -309,6 +317,7 @@ export const authors: Record<string, any> = {
         }
     },
     "rares-istoc": {
+        "draft": true,
         "name": "Rares Istoc",
         "role": "Contributor",
         "bio": "Rares Istoc is a Senior Software Engineer and Solution Architect with over 7 years of experience in designing and implementing complex software solutions. As the CTO and Co-Founder of Cube Digital, he has played a key role in delivering innovative and scalable products across various industries, including e-commerce, MedTech, and SaaS platforms. With a deep understanding of technologies such as Python, Golang, and TypeScript, Rares specializes in building end-to-end solutions and crafting efficient architectures tailored to unique business needs. Passionate about solving real-world problems, Rares combines technical expertise with a hands-on approach to product development. He is committed to continuous learning, currently exploring Rust and MLOps, and is dedicated to sharing knowledge within the tech community. His work consistently reflects his drive for excellence and his ability to adapt and deliver impactful solutions.",
@@ -330,6 +339,7 @@ export const authors: Record<string, any> = {
         }
     },
     "stefan-iordache": {
+        "draft": true,
         "name": "Stefan Iordache",
         "role": "Contributor",
         "bio": "Ștefan is a Software Developer at Genezio, contributing to the platform’s innovative solutions for simplifying app development and deployment. With a strong foundation in Go and TypeScript, Ștefan is passionate about creating efficient, scalable systems that empower developers worldwide. A University POLITEHNICA of Bucharest graduate, Ștefan has demonstrated technical excellence through his academic achievements, including participation in the National Informatics Olympiad, and practical experience as a Co-Founder at CodeTruck.io. His dedication to continuous improvement extends to his involvement in student organizations, where he supported IT initiatives. With a focus on clean code and developer-first solutions, Ștefan plays an integral role in driving Genezio’s mission to redefine the development experience.",
@@ -351,6 +361,7 @@ export const authors: Record<string, any> = {
         }
     },
     "tudor-anghelescu": {
+        "draft": true,
         "name": "Tudor Anghelescu",
         "role": "Contributor",
         "bio": "Anghelescu Tudor is a Frontend Developer at Genezio, specializing in crafting responsive, user-friendly interfaces that empower developers to seamlessly deploy applications. With a solid foundation in React.js, Redux, and Styled Components, Tudor excels in building scalable, intuitive web applications. Tudor brings over four years of professional experience working with innovative teams, including roles at leekz and Sportya, where he honed his skills in front-end development and software design. Passionate about technology and collaboration, Tudor is driven to stay ahead of industry trends, continuously refining his skills to create cutting-edge digital experiences.",
@@ -376,6 +387,7 @@ export const authors: Record<string, any> = {
         }
     },
     "virgil-turcu": {
+        "draft": true,
         "name": "Virgil Turcu",
         "role": "Contributor",
         "bio": "Virgil Turcu is a Developer at Genezio, contributing to the enhancement and development of user-friendly web applications. Specializing in React.js, Redux.js, and Front-End Development, Virgil is passionate about creating seamless digital experiences. A recent graduate from the University of Bucharest, where he focused on Web Development, Virgil brings a strong foundation in CSS, JavaScript, and modern front-end frameworks. He has been actively involved in streamlining deployment processes, including integrating GitHub repositories directly into development workflows. Dedicated to continuous learning and innovation, Virgil thrives in collaborative environments and is driven to contribute to cutting-edge technological solutions.",

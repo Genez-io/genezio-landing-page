@@ -61,7 +61,6 @@ const routes = [
   "/blog",
   "/agencies",
   "/industry-leaderboards",
-  "/ai-search-optimization-tool/",
   "/blog/affordable-cloud-hosting/",
   "/blog/ai-agent-examples/",
   "/blog/ai-agent-tools/",
@@ -114,17 +113,24 @@ if (fs.existsSync(postsDir)) {
 const authorFile = path.resolve(__dirname, "src/lib/authors.ts");
 if (fs.existsSync(authorFile)) {
   const content = fs.readFileSync(authorFile, "utf-8");
-  const authorMatches = content.matchAll(/"([a-z0-9-]+)":\s*\{/g);
+  // Extract authors by matching the slug and the block content until the next top-level key or end of object
+  const authorBlocks = content.split(/^\s{4}"/gm).slice(1);
+  
   let authorCount = 0;
-  for (const match of authorMatches) {
-    // Basic validation to avoid matching non-author keys that might look similar
-    // The structure is quite specific: "slug": {
-    const slug = match[1];
-    if (["social", "stats", "expertise"].includes(slug)) continue;
+  authorBlocks.forEach(block => {
+      const slugMatch = block.match(/^([^"]+)":\s*{/);
+      if (!slugMatch) return;
+      
+      const slug = slugMatch[1];
+      
+      // Skip if drafted or a metadata key
+      if (block.includes('"draft": true') || ["social", "stats", "expertise"].includes(slug)) {
+          return;
+      }
 
-    routes.push(`/blog/author/${slug}`);
-    authorCount++;
-  }
+      routes.push(`/blog/author/${slug}`);
+      authorCount++;
+  });
   console.log(`Added ${authorCount} author routes.`);
 } else {
   console.warn("Author file not found:", authorFile);
