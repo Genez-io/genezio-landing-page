@@ -37,6 +37,17 @@ export function AgencyFaqSection() {
       answer:
         "Agency plans include email and Slack support. Enterprise customers get a dedicated success manager, priority support, and regular strategy calls.",
     },
+    {
+      question: "Where can I learn more about Genezio for Agencies?",
+      answer: (
+        <>
+          You can find detailed information about our specialized features, case studies, and {" "}
+          <a href="/agencies/" className="text-blue-400 hover:underline">
+            solutions for agencies
+          </a>{' '}on our dedicated agencies page.
+        </>
+      ),
+    },
   ];
 
   return (

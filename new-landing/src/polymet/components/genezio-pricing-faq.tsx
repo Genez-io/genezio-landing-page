@@ -45,6 +45,18 @@ export function GenezioPricingFaq() {
       answer:
         "All plans include email support with 24-hour response time. Enterprise customers get dedicated Slack support, a dedicated account manager, and priority assistance.",
     },
+    {
+      question: "Do you offer plans for marketing agencies?",
+      answer: (
+        <>
+          Yes! We have specialized plans for marketing agencies that manage multiple brands. You can learn more about our agency-specific features on our{" "}
+          <a href="/agencies/" className="text-blue-400 hover:underline">
+            dedicated agencies page
+          </a>
+          .
+        </>
+      ),
+    },
   ];
 
   return (

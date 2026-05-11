@@ -14,20 +14,20 @@ export function Agencies() {
     <>
       <PolymetSEO
         title="Genezio for Agencies | AI Visibility & GEO Solutions"
-        description="Empower your agency with Genezio's GEO platform. Monitor brand presence, optimize AI mentions, and deliver measurable results for your clients in the age of Generative AI."
+        description="Empower your agency with Genezio's GEO platform. Monitor brand presence, improve AI recommendations, and deliver results for clients in the age of Gen AI"
         canonicalPath="/agencies/"
       />
       <div className="min-h-screen bg-[#050506]">
-      <AgencyHeroSection />
-      <AgencyBrandScanSection />
-      <AgencyGeoSection />
-      <AgencyContentStrategySection />
-      <AgencyScaleSection />
-      <AgencyMonitoringSection />
-      <AgencyTestimonialsSection />
-      <GenezioAgencyPlans />
-      <AgencyCtaSection />
-    </div>
+        <AgencyHeroSection />
+        <AgencyBrandScanSection />
+        <AgencyGeoSection />
+        <AgencyContentStrategySection />
+        <AgencyScaleSection />
+        <AgencyMonitoringSection />
+        <AgencyTestimonialsSection />
+        <GenezioAgencyPlans />
+        <AgencyCtaSection />
+      </div>
     </>
   );
 }
