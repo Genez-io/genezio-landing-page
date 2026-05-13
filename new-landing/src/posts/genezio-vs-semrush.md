@@ -43,7 +43,7 @@ While Semrush suits marketing teams requiring extensive SEO and content marketin
 
 | Feature | Genezio AI visibility tool | Semrush One with AI Visibility Toolkit |
 | :--- | :--- | :--- |
-| **Ease of Setup** | Intuitive, designed for SMBs and scalable for agencies | More complex; best for SEO-savvy marketing teams |
+| **Ease of Setup** | Intuitive, designed for SMBs and scalable for {{< external-link link="https://genezio.com/agencies/" >}}agencies{{< /external-link >}} | More complex; best for SEO-savvy marketing teams |
 | **Platform Coverage** | ChatGPT, Perplexity, Google AI Overviews, Claude | Expanded: ChatGPT, Gemini, Claude, DeepSeek, Grok |
 | **Multi-turn Conversation Simulation** | Yes, realistic multi-turn dialogues with Genezio’s unique Multi-Turn Logic utilizing four Topic Types: Prompter, Introspector, Comparer, Recommender, adapted to persona scenarios | No, mostly single prompt tracking without persona adaptation; conversational questions are asked but stop at one response, no multi-turn or persona adaptation |
 | **Persona-Based Questions** | Yes, with tailored persona scenarios | No persona customization |
@@ -147,9 +147,9 @@ Brands of all sizes benefit from:
 
 This makes Genezio the superior choice for any marketer seeking transparency, adaptability, and real-time AI brand visibility.
 
-## Why Genezio is also perfect for marketing agencies
+## Why Genezio is also perfect for {{< external-link link="https://genezio.com/agencies/" >}}marketing agencies{{< /external-link >}}
 
-Marketing agencies need flexible, scalable tools that cater to the diverse needs of multiple clients across various industries. Genezio’s AI visibility tool is designed with agencies in mind, offering multi-brand management capabilities that allow agencies to oversee and optimize AI visibility for all their clients within a single platform.
+{{< external-link link="https://genezio.com/agencies/" >}}Marketing agencies{{< /external-link >}} need flexible, scalable tools that cater to the diverse needs of multiple clients across various industries. Genezio’s AI visibility tool is designed with agencies in mind, offering multi-brand management capabilities that allow agencies to oversee and optimize AI visibility for all their clients within a single platform.
 
 Key benefits for agencies include:
 * **Multi-Brand & Multi-Region Support:** Manage visibility across several clients and geographies efficiently. 

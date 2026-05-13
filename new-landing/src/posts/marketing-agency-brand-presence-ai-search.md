@@ -57,7 +57,7 @@ This intelligence allows agencies to provide client reports that explain not onl
 
 ## Spotlight on Genezio: A Leading AI Brand Visibility Platform for Marketing Agencies
 
-Among the emerging category of AI visibility tools, Genezio stands out as a comprehensive platform explicitly designed to help marketing agencies and brands understand, monitor, and optimize their AI brand presence.
+Among the emerging category of AI visibility tools, Genezio stands out as a comprehensive platform explicitly designed to help {{< external-link link="https://genezio.com/agencies/" >}}marketing agencies{{< /external-link >}} and brands understand, monitor, and optimize their AI brand presence.
 
 ### Key Features and Benefits of Genezio for Agencies
 
@@ -101,4 +101,4 @@ The era of AI-driven search has redefined brand presence for marketing agencies.
 
 By leveraging tools that let agencies simulate user queries to see how AI responds about a brand, agencies gain unparalleled insight and control over AI-driven brand narratives. Genezio exemplifies a cutting-edge solution that transforms AI visibility from an abstract challenge into a tangible growth driver.
 
-Marketing agencies that adopt {{< external-link link="https://genezio.com/" >}}AI visibility platforms{{< /external-link >}} like Genezio position themselves, and their clients, to lead confidently in an AI-first search landscape, ensuring brands are not just found but trusted and chosen when it truly matters.
+{{< external-link link="https://genezio.com/agencies/" >}}Marketing agencies{{< /external-link >}} that adopt {{< external-link link="https://genezio.com/" >}}AI visibility platforms{{< /external-link >}} like Genezio position themselves, and their clients, to lead confidently in an AI-first search landscape, ensuring brands are not just found but trusted and chosen when it truly matters.
