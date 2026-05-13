@@ -24,7 +24,7 @@ url: /future-of-content-brief-not-writer/
 
 ![The Future of Content Isn't AI vs. Humans](/images/future-of-content-brief-not-writer.webp)
 
-We onboard dozens of brands at Genezio every quarter. And there's one conversation I keep having \- with CMOs, with agency leads, with content teams of every size. It always starts the same way: "Should we use AI to write our content, or keep it human?"
+We onboard dozens of brands at Genezio every quarter. And there's one conversation I keep having \- with CMOs, with {{< external-link link="https://genezio.com/agencies/" >}}agency leads{{< /external-link >}}, with content teams of every size. It always starts the same way: "Should we use AI to write our content, or keep it human?"
 
 That's the wrong question. And the sooner we stop asking it, the better.
 

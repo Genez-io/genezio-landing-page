@@ -102,7 +102,7 @@ Genezio extracts these queries, allowing your SEO team to create content that an
 
 **Peec AI** is positioned as an affordable entry point. It is an excellent choice for teams with limited budgets who need basic visibility tracking without complex configuration.
 
-**Genezio** is an enterprise-grade platform designed for brands and agencies who need to **win**. It offers {{< external-link link="https://genezio.com/pricing/" >}}self-service onboarding with a free trial{{< /external-link >}}, but its architecture supports complex multi-tenant agency setups and deep forensic analysis of brand reputation.
+**Genezio** is an enterprise-grade platform designed for brands and {{< external-link link="https://genezio.com/agencies/" >}}agencies{{< /external-link >}} who need to **win**. It offers {{< external-link link="https://genezio.com/pricing/" >}}self-service onboarding with a free trial{{< /external-link >}}, but its architecture supports complex multi-tenant agency setups and deep forensic analysis of brand reputation.
 
 ## The Verdict
 

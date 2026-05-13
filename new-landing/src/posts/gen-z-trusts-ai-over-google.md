@@ -68,3 +68,25 @@ The era of passive monitoring is over. While your competitors are still optimizi
 ## Conclusion: Start controlling your AI narrative. Be visible where it matters most.
 
 A young, tech-forward audience is leading a charge away from traditional search and toward AI-powered answers. The trust has shifted. The starting point for discovery has moved from the search bar to the chat prompt. The question every business leader should be asking today is not "Are we on Google?" but **"Do we know what AI is saying about us?"**
+
+## Frequently Asked Questions
+
+#### What percentage of Gen Z and younger millennials trust AI over Google?
+
+According to our survey of over 100 respondents under 29, 76.3% now trust answers from an AI more than from a traditional Google search. Of these, 45.6% trust AI answers "most of the time" and 30.7% trust them "sometimes, if it sounds smart."
+
+#### How often does Gen Z use AI tools like ChatGPT?
+
+Nearly 90% of surveyed Gen Z and younger millennial respondents use AI tools every day for tasks ranging from coding assistance and information summarization to creative brainstorming. ChatGPT is the tool of choice for over 80% of respondents.
+
+#### Do AI recommendations influence Gen Z purchasing decisions?
+
+Yes. While only 6% of users have made a purchase solely based on an AI recommendation, a significant 27% have purchased a product or service after getting input from an AI. This demonstrates AI's powerful role as a "Trusted Advisor" in shaping the consideration set before final purchasing decisions are made.
+
+#### What is the difference between SEO and GEO (Generative Engine Optimization)?
+
+SEO (Search Engine Optimization) focuses on ranking favorably on Google through keywords and backlinks. GEO (Generative Engine Optimization) focuses on controlling your AI Narrative — the sum of everything a Large Language Model says about your brand, products, and competitors in AI-generated conversations, which is where Gen Z increasingly starts their discovery journey.
+
+#### How can brands manage their presence in AI conversations?
+
+Brands need to move beyond traditional SEO and start monitoring how LLMs portray them in nuanced conversations. This involves conducting comprehensive narrative audits across major AI platforms, tracking competitive positioning in AI-generated recommendations, and identifying inaccuracies or negative sentiment in the AI's knowledge that could steer customers away.

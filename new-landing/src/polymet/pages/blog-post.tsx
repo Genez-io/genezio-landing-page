@@ -127,6 +127,178 @@ export function BlogPost() {
         }
       ]
     };
+  } else if (post.id === "guide-to-ai-visibility") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the first steps in conducting AI visibility analysis for brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To begin, outline your brand's objectives and identify key personas that reflect your target audience. Conduct comprehensive market research and create detailed persona profiles to enhance your understanding of user behaviour and needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I configure AI analysis parameters for my brand's visibility study?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Configure AI analysis parameters by defining geographical targeting scopes, selecting relevant languages, and setting demographic filtering criteria. Focus on creating a contextual framework that reveals how AI platforms perceive your brand within different regional environments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the purpose of simulating AI interactions in this analysis process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simulating AI interactions allows you to anticipate how AI systems might interpret your brand's messaging across various scenarios. Design diverse conversation scenarios to test these interactions and gain insights into potential misrepresentations before they occur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I effectively measure my brand's AI visibility results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Measure AI brand visibility by establishing baseline performance indicators and evaluating both quantitative and qualitative metrics. Use these insights to decode your brand's narrative and identify any gaps in communication, then adjust your strategies accordingly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What steps should I take to refine my visibility strategy based on AI insights?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To refine your AI visibility strategy, validate insights against real-world performance metrics and identify emerging communication patterns. Develop targeted messaging improvements and establish continuous learning mechanisms to optimise your brand's digital representation over time."
+          }
+        }
+      ]
+    };
+  } else if (post.id === "bcr-success-story") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between SEO and GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO (Search Engine Optimization) focuses on increasing visibility in classic search engines, relying on backlinks and keywords. GEO (Generative Engine Optimization) aims to optimize content so it can be retrieved and cited by Artificial Intelligence models (LLMs) like ChatGPT or Gemini, emphasizing authority, structure, and context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is success measured in AI visibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brands use the Genezio platform to monitor the Visibility Score and Confidence Level. These indicators show how frequently and with what sentiment the brand is mentioned in AI-generated responses for specific user scenarios compared to competitors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is AI optimization important in the financial sector?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because users, especially younger demographics (Gen Z), are increasingly using AI assistants to compare financial products and discover offers before visiting a bank's website for the final transaction."
+          }
+        }
+      ]
+    };
+  } else if (post.id === "content-types-that-drive-llm-mentions") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of content do LLMs prioritize when making brand recommendations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LLMs prioritize six key content types: high-authority informational sources, structured rankings and comparative guides, well-organized product or program pages, evidence-based content with measurable outcomes, intent-aligned content that matches real user queries, and brands with a strong citation footprint across credible external domains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do LLMs decide which brands to mention in their responses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike search engines that rely on keywords and backlinks, LLMs generate recommendations based on structured knowledge, reasoning patterns, and source authority. They favor brands whose content is easy to reason about, appears in reliable and structured sources, offers clear evidence with predictable formatting, and matches the intent behind real user questions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are rankings and comparative guides so important for AI visibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rankings and structured comparisons are the highest-influence content format for LLMs because they provide a clear hierarchy or scoring framework that models can use as anchors in their reasoning chains. This allows AI systems to confidently recommend one brand over another with logical justification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a citation footprint and why does it matter for GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A citation footprint refers to how frequently a brand appears across external authoritative sources such as directory listings, comparison guides, editorial reviews, and Wikipedia entries. In AI-driven discovery, presence creates presence — brands with more external coverage become more visible in LLM outputs because models treat widely-cited entities as more trustworthy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can brands optimize their content to be mentioned by AI models like ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brands should focus on creating structured, evidence-based content that aligns with real user intent. This includes publishing clear product pages with organized headings, providing measurable outcomes and statistics, appearing in authoritative third-party rankings, and building a wide citation footprint across credible external domains. Tools like Genezio can help identify which queries and scenarios influence AI recommendations."
+          }
+        }
+      ]
+    };
+  } else if (post.id === "gen-z-trusts-ai-over-google") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What percentage of Gen Z and younger millennials trust AI over Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to our survey of over 100 respondents under 29, 76.3% now trust answers from an AI more than from a traditional Google search. Of these, 45.6% trust AI answers \"most of the time\" and 30.7% trust them \"sometimes, if it sounds smart.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often does Gen Z use AI tools like ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nearly 90% of surveyed Gen Z and younger millennial respondents use AI tools every day for tasks ranging from coding assistance and information summarization to creative brainstorming. ChatGPT is the tool of choice for over 80% of respondents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do AI recommendations influence Gen Z purchasing decisions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While only 6% of users have made a purchase solely based on an AI recommendation, a significant 27% have purchased a product or service after getting input from an AI. This demonstrates AI's powerful role as a \"Trusted Advisor\" in shaping the consideration set before final purchasing decisions are made."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between SEO and GEO (Generative Engine Optimization)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO (Search Engine Optimization) focuses on ranking favorably on Google through keywords and backlinks. GEO (Generative Engine Optimization) focuses on controlling your AI Narrative — the sum of everything a Large Language Model says about your brand, products, and competitors in AI-generated conversations, which is where Gen Z increasingly starts their discovery journey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can brands manage their presence in AI conversations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brands need to move beyond traditional SEO and start monitoring how LLMs portray them in nuanced conversations. This involves conducting comprehensive narrative audits across major AI platforms, tracking competitive positioning in AI-generated recommendations, and identifying inaccuracies or negative sentiment in the AI's knowledge that could steer customers away."
+          }
+        }
+      ]
+    };
   }
 
   return (
