@@ -18,6 +18,8 @@ readTime: 8
 url: /gen-z-trusts-ai-over-google/
 ---
 
+![76% of Gen Z and Younger Millennials Now Trust AI Over Google](https://genezio.com/images/gen-z-trusts-ai-over-google.webp)
+
 A fundamental change in how information is discovered is being driven by **Gen Z** and younger millennials. Our recent survey of over 100 respondents under 29 shows that **76.3%** now trust answers from an AI more than from a traditional Google search. The implication is clear: the battle for brand perception is no longer won on the search results page but in the AI chat window, as the habit of "Ask ChatGPT" begins to replace "Google it."
 
 This behavioral shift is also reflected in commercial contexts. A 2024 HubSpot report corroborates this trend, revealing that 76% of consumers find GenAI-enabled search to be "somewhat" or "much" more appealing than traditional search. Among those who have already used it for shopping, 79% rated the experience as "somewhat" or "far" better. The ability to ask a complex product-related question and receive a single, consolidated recommendation is a powerful value proposition.
