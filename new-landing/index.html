@@ -8,6 +8,7 @@
   <link rel="icon" href="/genezio-logo-fav.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/genezio-logo-fav.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="alternate" type="application/rss+xml" title="Genezio Blog RSS Feed" href="/rss.xml" />
   <meta name="robots" content="max-image-preview:large" />
   <!-- title is set dynamically per page via react-helmet-async -->
   <!-- Open Graph (must be early for LinkedIn; clear cache at linkedin.com/post-inspector after deploy) -->
@@ -30,6 +31,20 @@
   <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.webp" />
   <meta name="twitter:image:alt" content="Genezio - The Future is Conversational — Lead it." />
   <!--app-helmet-head-->
+
+  <!-- Google News / Discover Publisher Center Snippet -->
+  <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+  <script>
+    (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+      basicSubscriptions.init({
+        type: "NewsArticle",
+        isPartOfType: ["Product"],
+        isPartOfProductId: "CAow8KW3DA:openaccess",
+        clientOptions: { theme: "light", lang: "en" },
+      });
+    });
+  </script>
+
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {

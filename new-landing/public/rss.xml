@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>Genezio Blog</title>
+    <link>https://genezio.com/blog/</link>
+    <description>The platform built for Generative Search and Answer Engine Optimization.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 May 2026 12:18:27 GMT</lastBuildDate>
+    <atom:link href="https://genezio.com/rss.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+        <title><![CDATA[Confidence intervals for CMOs: why a single prompt is a coin flip dressed up as a metric]]></title>
+        <link>https://genezio.com/blog/confidence-intervals-for-cmos/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/confidence-intervals-for-cmos/</guid>
+        <description><![CDATA[AI search tools without confidence intervals are feeding CMOs noise. Learn why a single prompt is a coin flip and how to demand statistical rigor in GEO.]]></description>
+        <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/confidence-intervals-for-cmos.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Four Agents, Four Questions: How AI Actually Sees Your Brand]]></title>
+        <link>https://genezio.com/blog/four-agents-four-questions/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/four-agents-four-questions/</guid>
+        <description><![CDATA[AI visibility isn't enough. Discover how Genezio's 4 AI agents—Prompter, Recommender, Comparer, and Introspector—help brands win AI search recommendations.]]></description>
+        <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/four-agents-four-questions.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Visibility Is Half the Picture: A B2B Marketing Leader's Guide to Measuring AI Brand Performance]]></title>
+        <link>https://genezio.com/blog/visibility-is-half-the-picture/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/visibility-is-half-the-picture/</guid>
+        <description><![CDATA[Visibility in AI search isn't enough for B2B Brands. Learn why marketing leaders must measure AI recommendations and head-to-head comparisons to win deals]]></description>
+        <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/visibility-is-half-the-picture.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Best GEO Tools in 2026: An Honest Look at What Actually Matters]]></title>
+        <link>https://genezio.com/blog/best-geo-tools-2026/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/best-geo-tools-2026/</guid>
+        <description><![CDATA[An honest comparison of GEO tools in 2026, Profound, Peec, Semrush, and Genezio, evaluated on recommendation tracking, methodology, and statistical rigor.]]></description>
+        <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/best-geo-tools-2026.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Genezio vs Ahrefs Brand Radar: Big Data Doesn't Mean the Right Data]]></title>
+        <link>https://genezio.com/blog/genezio-vs-ahrefs-brand-radar/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/genezio-vs-ahrefs-brand-radar/</guid>
+        <description><![CDATA[Ahrefs Brand Radar measures AI visibility, but Genezio measures AI recommendations. Learn why big data isn't always the right data for your GEO strategy.]]></description>
+        <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/genezio-vs-ahref.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[The Future of Content Isn't AI vs. Humans - It's Who Writes the Brief]]></title>
+        <link>https://genezio.com/blog/future-of-content-brief-not-writer/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/future-of-content-brief-not-writer/</guid>
+        <description><![CDATA[The AI vs. human content debate misses the point. The real advantage is who controls the brief and whether it's built on fan-out query data.]]></description>
+        <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/future-of-content-brief-not-writer.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[The Chatbot That Asks You to "Choose From This List" Is Back. And It Breaks Most GEO Tools]]></title>
+        <link>https://genezio.com/blog/how-multi-turn-chatbots-break-geo/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/how-multi-turn-chatbots-break-geo/</guid>
+        <description><![CDATA[AI is moving from simple answers to complex decision flows. Learn why this breaks traditional GEO tracking tools and how your brand can adapt.]]></description>
+        <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/how-multi-turn-chatbots-break-geo.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AEO vs GEO: What's the Difference and Why It Matters]]></title>
+        <link>https://genezio.com/blog/aeo-vs-geo/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/aeo-vs-geo/</guid>
+        <description><![CDATA[Explore the difference between Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO), and why AI recommendations beat visibility]]></description>
+        <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/aeo-vs-geo.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Genezio vs Profound: Visibility and Recommendation Are Not the Same Metric]]></title>
+        <link>https://genezio.com/blog/genezio-vs-profound/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/genezio-vs-profound/</guid>
+        <description><![CDATA[Comparing Genezio vs Profound? Learn why tracking AI visibility falls short, and how measuring true AI recommendations drives actual pipeline and revenue.]]></description>
+        <pubDate>Fri, 03 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/genezio-vs-profound.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[What is GEO? Why Generative Engine Optimization Should Track Recommendations, Not Just Visibility]]></title>
+        <link>https://genezio.com/blog/what-is-geo-complete-guide/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/what-is-geo-complete-guide/</guid>
+        <description><![CDATA[GA4 is blind to 99% of your AI traffic. Discover the complete guide to GEO and learn how to get your brand recommended by AI, not just mentioned.]]></description>
+        <pubDate>Fri, 03 Apr 2026 00:00:00 GMT</pubDate>
+        <author>Andrei Pitis</author>
+        <enclosure url="https://genezio.com/images/what-is-geo-complete-guide.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[From Visibility to Recommendation: Personas Shape AI Market Share]]></title>
+        <link>https://genezio.com/blog/visibility-to-recommendation-rate/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/visibility-to-recommendation-rate/</guid>
+        <description><![CDATA[To survive the shift driven by generative AI, brands must pivot from Share of Voice to the Visibility-to-Recommendation Rate (VRR).]]></description>
+        <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/visibility-to-recommendation-rate.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AI Visibility vs Recommendation: Mentions Aren't Enough]]></title>
+        <link>https://genezio.com/blog/ai-recommendation-vs-ai-visibility/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-recommendation-vs-ai-visibility/</guid>
+        <description><![CDATA[The digital marketing landscape has entered a new era. Traditional SEO is evolving into AEO. Discover why AI recommendation is the new standard.]]></description>
+        <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/ai-recommendation-vs-ai-visibility-why-being-mentioned-by-chatgpt-isnt-enough.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Introducing the Content Hub, Smarter Citations & More]]></title>
+        <link>https://genezio.com/blog/introducing-content-hub-smarter-citations/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/introducing-content-hub-smarter-citations/</guid>
+        <description><![CDATA[The latest Genezio release turns AI Visibility into something you actively improve. Introducing the Content Hub, Monitored Citations, and more.]]></description>
+        <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/genezio-release-content-hub.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Mastering Brand Presence in 2026: AI-Powered Measurement Tools]]></title>
+        <link>https://genezio.com/blog/mastering-company-brand-presence/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/mastering-company-brand-presence/</guid>
+        <description><![CDATA[In 2026, company brand presence transcends traditional boundaries. Discover actionable strategies and AI-powered tools to optimize your visibility.]]></description>
+        <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/mastering-company-brand-presence-2026.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Marketing Agency Brand Presence in the Age of AI Search]]></title>
+        <link>https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</guid>
+        <description><![CDATA[Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.]]></description>
+        <pubDate>Sun, 01 Mar 2026 22:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Genezio vs Semrush: What marketing agencies need to know]]></title>
+        <link>https://genezio.com/blog/genezio-vs-semrush/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/genezio-vs-semrush/</guid>
+        <description><![CDATA[Compare Genezio and Semrush One to see which AI visibility platform best supports your GEO, perception management, and conversational search strategy.]]></description>
+        <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/genezio-vs-semrush.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[The Genezio Difference: From AI Tracking to Behavioral Modeling]]></title>
+        <link>https://genezio.com/blog/from-tracking-ai-to-behavioral-modeling/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/from-tracking-ai-to-behavioral-modeling/</guid>
+        <description><![CDATA[Move from basic AI tracking to advanced behavioral modeling. Discover how Genezio decodes LLM reasoning to ensure your brand gets recommended.]]></description>
+        <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/from-tracking-ai-to-behavioral-modeling.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[What Influences Brand Mentions in ChatGPT, Gemini & Claude?]]></title>
+        <link>https://genezio.com/blog/brand-mentions-in-chatgpt-gemini-claude/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/brand-mentions-in-chatgpt-gemini-claude/</guid>
+        <description><![CDATA[Want to rank in ChatGPT, Gemini, and Claude? Discover the core LLM ranking logic, from entity clarity to trusted citations, that drives AI brand mentions.]]></description>
+        <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/brand-mentions-in-chatgpt-gemini-claude.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Deciphering Fan-out and Implicit Queries in ChatGPT & Gemini]]></title>
+        <link>https://genezio.com/blog/deciphering-fan-out-implicit-queries/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/deciphering-fan-out-implicit-queries/</guid>
+        <description><![CDATA[Master Generative Engine Optimization. Discover how Implicit and Fan-out Queries shape AI search and how the queries ChatGPT and Gemini use impact visibility.]]></description>
+        <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/deciphering-fan-out-implicit-queries.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[The State of AI Visibility 2026: A Multi-Platform GEO Audit]]></title>
+        <link>https://genezio.com/blog/honda-ai-visibility-audit-2026/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/honda-ai-visibility-audit-2026/</guid>
+        <description><![CDATA[We audited Honda.com across Genezio, Profound, Peec AI, Semrush, Writesonic, and Otterly.AI to compare the leading AI Visibility platforms of 2026.]]></description>
+        <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/honda-ai-visibility-audit-2026.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Step-by-Step Guide to AI Visibility Analysis for Brands]]></title>
+        <link>https://genezio.com/blog/guide-to-ai-visibility/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/guide-to-ai-visibility/</guid>
+        <description><![CDATA[Master AI visibility analysis with our 5-step guide. Learn how to define personas, simulate AI interactions & optimize your brand’s presence in LLMs]]></description>
+        <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/1770615730901_image.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Zero query overlaps between GPT-5.2 (API) and ChatGPT.com]]></title>
+        <link>https://genezio.com/blog/zero-query-overlaps/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/zero-query-overlaps/</guid>
+        <description><![CDATA[Zero query overlaps found between GPT-5.2 API and ChatGPT.com. Our study of 3,645 conversations reveals distinct search behaviors and what they mean.]]></description>
+        <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/zero-query-overlaps.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Genezio vs. Peec AI: A Comprehensive Comparison for Marketers]]></title>
+        <link>https://genezio.com/blog/genezio-vs-peec/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/genezio-vs-peec/</guid>
+        <description><![CDATA[Looking for Peec AI alternatives? Discover how Genezio goes beyond static monitoring to track real user journeys, multi-turn conversations, and hidden queries.]]></description>
+        <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/genezio-vs-peec.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[What ChatGPT Ads mean for brand visibility in AI conversations]]></title>
+        <link>https://genezio.com/blog/ads-chatgpt-ai-visibility/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ads-chatgpt-ai-visibility/</guid>
+        <description><![CDATA[ChatGPT is testing ads, but AI answers remain independent. What this means for brand visibility, trust, and winning in AI-driven discovery.]]></description>
+        <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/ads-chatgpt-ai-visibility.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[What Type of Content Influences LLMs When Deciding the Mentions?]]></title>
+        <link>https://genezio.com/blog/content-types-that-drive-llm-mentions/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/content-types-that-drive-llm-mentions/</guid>
+        <description><![CDATA[Discover how LLMs decide which brands to mention. Based on analysis of 2,900+ citations, we reveal the 6 content formats that master GEO.]]></description>
+        <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/content-types-that-drive-llm-mentions.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Building the Future of Conversational Optimization: 2026 Outlook]]></title>
+        <link>https://genezio.com/blog/2025-recap-2026-roadmap/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/2025-recap-2026-roadmap/</guid>
+        <description><![CDATA[Discover Genezio’s 2025 evolution into a Conversational Optimization Platform and explore the 2026 roadmap, featuring AI intent grouping and self-serve tools.]]></description>
+        <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/genezio-2025-recap-2026-roadmap.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[GPT-5.2 Isn’t just smarter. It sees brands differently.]]></title>
+        <link>https://genezio.com/blog/chatgpt-5-2-sees-brands-differently/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/chatgpt-5-2-sees-brands-differently/</guid>
+        <description><![CDATA[GPT-5.2 reshapes brand visibility. See how the new reasoning modes and Aug 2025 cutoff change your narrative. Read the full analysis now.]]></description>
+        <pubDate>Mon, 29 Dec 2025 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/gpt-5-2-sees-brands-differently.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[How a Leading Erste Group Bank Dominated AI Conversations]]></title>
+        <link>https://genezio.com/blog/bcr-success-story/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/bcr-success-story/</guid>
+        <description><![CDATA[Discover how BCR, a key entity within the major European financial player Erste Group, adopted a GEO strategy to stay relevant for the new generation of people.]]></description>
+        <pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/bcr-success-story.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[ChatGPT Searches Like an Analyst. Perplexity Like a Shopper.]]></title>
+        <link>https://genezio.com/blog/perplexity-vs-chatgpt/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/perplexity-vs-chatgpt/</guid>
+        <description><![CDATA[ChatGPT acts like an analyst; Perplexity acts like a shopper. Discover the massive differences in their search queries and what it means for your AI visibility.]]></description>
+        <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+        <author>Bogdan Ripa</author>
+        <enclosure url="https://genezio.com/images/perplexity-vs-chatgpt.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[76% of Gen Z and Younger Millennials Now Trust AI Over Google]]></title>
+        <link>https://genezio.com/blog/gen-z-trusts-ai-over-google/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/gen-z-trusts-ai-over-google/</guid>
+        <description><![CDATA[A survey of users under 29 reveals that 76.3% now trust answers from an AI more than from a traditional Google search, signaling a shift in brand discovery.]]></description>
+        <pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate>
+        <author>Denisa Lera</author>
+        <enclosure url="https://genezio.com/images/gen-z-trusts-ai-over-google-thumbanil.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[What are Evals in AI? Test Agents with Genezio]]></title>
+        <link>https://genezio.com/blog/evals-in-ai/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/evals-in-ai/</guid>
+        <description><![CDATA[Evals in AI are assessments that determine reliability. Learn why they matter for customer service bots, and how Genezio helps you test agents.]]></description>
+        <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/blog/posts/evals-in-ai.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Scenario-Based Testing: AI Agent Evals for Companies]]></title>
+        <link>https://genezio.com/blog/scenario-based-testing/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/scenario-based-testing/</guid>
+        <description><![CDATA[Scenario-based testing for AI agents helps companies simulate real-world interactions and prevent brand-damaging incidents before they happen.]]></description>
+        <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/scenario-based-testing.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Prompt Injection: How to Avoid Them with Evals and Testing]]></title>
+        <link>https://genezio.com/blog/prompt-injection-attack/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/prompt-injection-attack/</guid>
+        <description><![CDATA[Prompt injection attacks are the #1 security threat to AI chatbots. Learn how Genezio helps protect your AI agents through evals and testing.]]></description>
+        <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/prompt-injection-attacks.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[How to Set Up a Chatbot: A CXO's Guide to Launching AI Agents]]></title>
+        <link>https://genezio.com/blog/how-to-set-up-chatbot/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/how-to-set-up-chatbot/</guid>
+        <description><![CDATA[Learn how to set up a chatbot, test, and evaluate them using Genezio’s simulation evals for high-performance customer service.]]></description>
+        <pubDate>Tue, 29 Jul 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/how-to-set-up-a-chatbot.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Continuous Testing for AI Chatbots]]></title>
+        <link>https://genezio.com/blog/continuous-testing/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/continuous-testing/</guid>
+        <description><![CDATA[Learn how Genezio uses continuous testing to monitor AI chatbots, catch regressions early, and prevent risky responses before they reach users.]]></description>
+        <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/continuous-testing-for-ai-chatbots.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Evals for AI Agents: Differences with QA Testing]]></title>
+        <link>https://genezio.com/blog/evals-for-ai-agents/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/evals-for-ai-agents/</guid>
+        <description><![CDATA[QA testing ensures your chatbot works, but only evals for AI agents can test how it behaves. Learn how to test AI agents with Genezio.]]></description>
+        <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/evals-for-ai-agents.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Multilingual Customer Service: Cost of Misfires in AI CS]]></title>
+        <link>https://genezio.com/blog/multilingual-customer-service-ai/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/multilingual-customer-service-ai/</guid>
+        <description><![CDATA[Multilingual Customer Service misfires damage trust. Genezio’s AI evals catch issues across languages—no tech skills required.]]></description>
+        <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/multilingual-customer-service.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Agent Evaluation: A Framework for Businesses]]></title>
+        <link>https://genezio.com/blog/agent-evaluation/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/agent-evaluation/</guid>
+        <description><![CDATA[Agent evaluations are regulated tests that check the quality of your chatbot and guarantee that AI customer service agents are reliable.]]></description>
+        <pubDate>Fri, 13 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/agent-evaluation-a-framework-for-businesses.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AI Chatbot Testing: WhatsApp, Voice, & Chatbots in One Place]]></title>
+        <link>https://genezio.com/blog/ai-chatbot-testing/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-chatbot-testing/</guid>
+        <description><![CDATA[See to it that AI agents act consistently across WhatsApp, voice, and web platforms with Genezio’s AI chatbot testing solution.]]></description>
+        <pubDate>Fri, 13 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/ai-chatbot-testing-whatsapp-voice-web.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Chatbot Testing Without Developers]]></title>
+        <link>https://genezio.com/blog/chatbot-testing-without-developers/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/chatbot-testing-without-developers/</guid>
+        <description><![CDATA[Learn how Genezio helps teams test chatbots without developers using no-code simulations, continuous monitoring, and detailed AI eval reports.]]></description>
+        <pubDate>Fri, 13 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/chatbot-testing-without-developers.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[5 Best AI Agents in 2025 (and How to Keep Them Reliable)]]></title>
+        <link>https://genezio.com/blog/5-best-ai-agents-in-2025/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/5-best-ai-agents-in-2025/</guid>
+        <description><![CDATA[Discover the 5 best AI agents for customer service in 2025 — including Sendbird and Genezio. Learn how to test and monitor AI to avoid costly mistakes.]]></description>
+        <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/The-5-Best-AI-Agents-in-2025.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[What are the Benefits of Using AI in Customer Service?]]></title>
+        <link>https://genezio.com/blog/ai-benefits-in-customer-service/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-benefits-in-customer-service/</guid>
+        <description><![CDATA[AI can speed up support and reduce costs, but it can also make mistakes. Genezio’s tester helps catch AI failures before they reach customers]]></description>
+        <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/What-Are-the-Benefits-of-Using-AI-in-Customer-Service.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[The Best AI Agent Ideas for your Business]]></title>
+        <link>https://genezio.com/blog/best-ai-agent-ideas-for-your-business/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/best-ai-agent-ideas-for-your-business/</guid>
+        <description><![CDATA[Discover the best AI agent ideas for your business. Learn how Genezio helps test and monitor AI agents for reliable performance.]]></description>
+        <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/The-Best-AI-Agent-Ideas-for-Your-Business.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[QMS: How To Make Sure AI Agents Benefit Support and Customers]]></title>
+        <link>https://genezio.com/blog/quality-monitoring-software/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/quality-monitoring-software/</guid>
+        <description><![CDATA[Quality monitoring software improves AI agents performance in customer support. Learn how Genezio makes AI testing and monitoring easier.]]></description>
+        <pubDate>Fri, 23 May 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/quality-monitoring-software.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Top 3 AI Monitoring Tools in 2025 for Customer Care & Compliance]]></title>
+        <link>https://genezio.com/blog/top-3-ai-monitoring-tools-in-2025/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/top-3-ai-monitoring-tools-in-2025/</guid>
+        <description><![CDATA[Top AI Monitoring Tools in 2025. Comparing Genezio, Arize, and Fiddler to choose the right solution for customer-facing AI agents.]]></description>
+        <pubDate>Fri, 23 May 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/top-3-ai-monitoring-tools-in-2025.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AI Agent Security: Best Ways to Secure your AI Agent]]></title>
+        <link>https://genezio.com/blog/ai-agent-security/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-agent-security/</guid>
+        <description><![CDATA[Protect your brand's reputation. Discover how to test AI agent security, catch hallucinations, and prevent costly vulnerabilities using Genezio.]]></description>
+        <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/ai-agent-security-best-ways-to-secure-your-ai-agent.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[How Genezio Solves AI Hallucination in Customer Service]]></title>
+        <link>https://genezio.com/blog/ai-hallucination-in-customer-service/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-hallucination-in-customer-service/</guid>
+        <description><![CDATA[AI agents can make mistakes. Learn how Genezio helps you catch those errors for a better customer experience.]]></description>
+        <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/blog/posts/ai-hallucination-in-customer-service-a-solution.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[How Can I Test the Effectiveness of My AI Agent?]]></title>
+        <link>https://genezio.com/blog/how-can-i-test-my-ai-agent/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/how-can-i-test-my-ai-agent/</guid>
+        <description><![CDATA[Learn how to test AI agents using real-world simulations. Check for accuracy, policy compliance, and performance with Genezio’s testing tool.]]></description>
+        <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/how-can-i-test-the-effectiveness-of-my-ai-agent.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[How To Test AI Agent Performance (Behavior and Accuracy)]]></title>
+        <link>https://genezio.com/blog/test-ai-agent/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/test-ai-agent/</guid>
+        <description><![CDATA[Stop AI agents from giving wrong or off-topic answers. Discover how Genezio helps you test performance, track costs, and ensure response accuracy.]]></description>
+        <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/blog/posts/ai-agent-performance-v1.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Why Manual User Acceptance Testing (UAT) Slows Down Launches]]></title>
+        <link>https://genezio.com/blog/manual-user-acceptance-testing-uat/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/manual-user-acceptance-testing-uat/</guid>
+        <description><![CDATA[Manual User Acceptance Testing, or manual UAT, can make an AI chatbot deployment get stuck in development hell. This is what to do instead.]]></description>
+        <pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/uat-slows-down-chatbot-launches.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[LLM Anomaly Detection: How to Keep AI Responses on Track]]></title>
+        <link>https://genezio.com/blog/llm-anomaly-detection/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/llm-anomaly-detection/</guid>
+        <description><![CDATA[Learn how Genezio detects LLM anomalies to keep AI agents accurate, compliant, and reliable with testing, monitoring, and real-world simulations.]]></description>
+        <pubDate>Thu, 10 Apr 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/blog/posts/llm-anomaly-detection-how-to-keep-ai-responses-on-track.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[LLM Hallucination Detection for AI Agents in Customer Service]]></title>
+        <link>https://genezio.com/blog/llm-hallucination-detection/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/llm-hallucination-detection/</guid>
+        <description><![CDATA[Prevent AI from making costly mistakes. Genezio’s LLM hallucination detection helps businesses test AI agents to stay on track and compliant.]]></description>
+        <pubDate>Thu, 10 Apr 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/blog/posts/llm-hallucination-detection-for-ai-agents-in-customer-service.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[The AI Evolution in CX: From Chatbots to Intelligent Systems]]></title>
+        <link>https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/chatbots-to-autonomous-ai-agents-in-customer-experience/</guid>
+        <description><![CDATA[Learn how autonomous AI agents revolutionize customer experience, delivering personalized support at scale while reducing service costs by 60-80%.]]></description>
+        <pubDate>Mon, 07 Apr 2025 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/chatbots-to-autonomous-ai-agents-in-customer-experience.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AI 3-Party Testing: Why Independent Testing Matters for AI Agents]]></title>
+        <link>https://genezio.com/blog/ai-third-party-testing/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-third-party-testing/</guid>
+        <description><![CDATA[AI third-party testing helps businesses flag AI mistakes, mitigate risks, and keep AI agents reliable. Learn how Genezio makes AI testing easier.]]></description>
+        <pubDate>Mon, 31 Mar 2025 00:00:00 GMT</pubDate>
+        <author>Luis Minvielle</author>
+        <enclosure url="https://genezio.com/images/ai-third-party-testing.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Retrieval-Augmented Generation for LLMs: How and Why It Matters]]></title>
+        <link>https://genezio.com/blog/rag-is-fixing-llms/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/rag-is-fixing-llms/</guid>
+        <description><![CDATA[Learn how Retrieval-Augmented Generation (RAG) solves LLM hallucinations and outdated knowledge issues while enhancing AI accuracy and reliability]]></description>
+        <pubDate>Tue, 25 Mar 2025 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/rag-is-fixing-llms-but-is-it-enough.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AI Agent Mistakes: How Intelligent Agents Fail and What To Do]]></title>
+        <link>https://genezio.com/blog/common-ai-agent-mistakes-how-intelligent-agents-fail-and-what-you-can-do/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/common-ai-agent-mistakes-how-intelligent-agents-fail-and-what-you-can-do/</guid>
+        <description><![CDATA[Explore the common mistakes AI agents make and how intelligent agents can fail. Learn now and uncover the challenges of AI-powered virtual agents.]]></description>
+        <pubDate>Mon, 10 Mar 2025 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/blog/images/ai-mistakes.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[AI Agents 101: Understanding Their Role and Functionality]]></title>
+        <link>https://genezio.com/blog/ai-agents-101-understanding-their-role-and-functionality/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/ai-agents-101-understanding-their-role-and-functionality/</guid>
+        <description><![CDATA[Learn about AI intelligent agents, their types, real-world applications, and how to deploy your own using Genezio's infrastructure. Transform your business now.]]></description>
+        <pubDate>Tue, 04 Mar 2025 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/genezioai101.webp" type="image/webp" length="0" />
+    </item>
+</channel>
+</rss>
