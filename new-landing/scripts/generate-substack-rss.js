@@ -6,24 +6,38 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const BASE_URL = 'https://genezio.com';
-const RSS_FILE = '/tmp/substack-feed.xml';
+const RSS_FILE = path.join(__dirname, '../public/substack-feed.xml');
 
 // A simple function to convert basic Markdown to HTML
 function basicMarkdownToHtml(md) {
     if (!md) return '';
+    
+    // Remove Hugo shortcodes like {{< external-link ... >}} or {{< figure ... >}}
+    // Try to extract content from them if possible, or just strip them
     let html = md
+        .replace(/\{\{< external-link link="(.*?)" >\}\}\[(.*?)\]\{\{< \/external-link >\}\}/gim, '<a href="$1">$2</a>')
+        .replace(/\{\{< (.*?) >\}\}/gim, '') // Strip remaining shortcodes
         .replace(/^### (.*$)/gim, '<h3>$1</h3>')
         .replace(/^## (.*$)/gim, '<h2>$1</h2>')
         .replace(/^# (.*$)/gim, '<h1>$1</h1>')
         .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
         .replace(/\*(.*)\*/gim, '<em>$1</em>')
-        .replace(/!\[(.*?)\]\((.*?)\)/gim, '<img alt="$1" src="https://genezio.com$2" />')
+        .replace(/!\[(.*?)\]\((.*?)\)/gim, (match, alt, src) => {
+            const absoluteSrc = src.startsWith('http') ? src : `https://genezio.com${src}`;
+            return `<p><img alt="${alt}" src="${absoluteSrc}" /></p>`;
+        })
         .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>')
-        .replace(/\n$/gim, '<br />')
         .split('\n')
-        .filter(line => line.trim() !== '')
-        .map(line => line.startsWith('<') ? line : `<p>${line}</p>`)
-        .join('\\n');
+        .map(line => line.trim())
+        .filter(line => line !== '')
+        .map(line => {
+            if (line.startsWith('<h') || line.startsWith('<p') || line.startsWith('<ul') || line.startsWith('<li')) {
+                return line;
+            }
+            return `<p>${line}</p>`;
+        })
+        .join('\n');
+        
     return html;
 }
 
@@ -90,13 +104,21 @@ function generateRss() {
     <description>The platform built for Generative Search and Answer Engine Optimization.</description>
     <language>en-us</language>
     <lastBuildDate>${today}</lastBuildDate>
-    <atom:link href="${BASE_URL}/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="${BASE_URL}/substack-feed.xml" rel="self" type="application/rss+xml" />
     
 ${blogPosts.map(post => {
+    // Convert Markdown to HTML
+    let htmlBody = basicMarkdownToHtml(post.bodyMarkdown);
+    
     // Substack looks for an image at the top of content:encoded for the cover image
-    const htmlBody = basicMarkdownToHtml(post.bodyMarkdown);
-    const coverImageHtml = post.thumbnail ? `<p><img src="${BASE_URL}${post.thumbnail}" alt="Cover Image" /></p>` : '';
-    const fullHtml = coverImageHtml + htmlBody;
+    // Check if the body already starts with an image (likely the same as thumbnail)
+    const bodyStartsWithImage = htmlBody.trim().startsWith('<p><img') || htmlBody.trim().startsWith('<img');
+    
+    let fullHtml = '';
+    if (!bodyStartsWithImage && post.thumbnail) {
+        fullHtml += `<p><img src="${BASE_URL}${post.thumbnail}" alt="Cover Image" /></p>\n`;
+    }
+    fullHtml += htmlBody;
 
     return `    <item>
         <title><![CDATA[${post.title}]]></title>
