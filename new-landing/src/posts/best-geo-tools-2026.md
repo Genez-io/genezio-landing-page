@@ -44,7 +44,7 @@ That's a fundamentally different question. And it changes how you should evaluat
 
 ## How I'm evaluating these tools
 
-I'm not going to pretend objectivity here. I'm a co-founder of one of these tools. What I can promise is factual accuracy about what each tool does and doesn't do, based on direct product experience and publicly available information.
+I'm not going to pretend objectivity here. I'm a co-founder of one of these tools. What I can promise is factual [accuracy](/blog/decision-grade-geo-aeo-intelligence/) about what each tool does and doesn't do, based on direct product experience and publicly available information.
 
 The criteria that matter for a serious GEO evaluation in 2026:
 
