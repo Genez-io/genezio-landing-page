@@ -124,7 +124,7 @@ Genezio's relevance scoring flags these cases automatically and helps you triage
 
 This dimension is one of the least discussed in the GEO/AEO category and one of the most consequential. Most platforms don't surface this signal at all, which means their data quality silently degrades over time without anyone noticing.
 
-![Brand Visibility Confidence Intervals Genezio](/images/brand-visibility-confidence-intervals-genezio.webp)
+![Prompt Relevance Score in Genezio](/images/prompt-relevance-score.webp)
 
 ---
 
