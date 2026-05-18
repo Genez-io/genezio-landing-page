@@ -1,6 +1,6 @@
 ---
 title: "The Best Accurate Data Platform for AI Search Optimization: Decision-Grade GEO/AEO Intelligence"
-metaTitle: "Decision-Grade GEO/AEO Intelligence Platform | Genezio"
+metaTitle: "Best Accurate Data Platform for AI Search Optimization | Genezio"
 date: 2026-05-18
 tags:
   - AI Search Optimization
