@@ -299,6 +299,77 @@ export function BlogPost() {
         }
       ]
     };
+  } else if (post.id === "decision-grade-geo-aeo-intelligence") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does data accuracy matter more for AI search optimization than for traditional SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In SEO, data sources are relatively standardized. Search Console, your analytics platform, established rank trackers, all measure roughly the same things using methodologies the industry converged on over two decades. AI search is different. Methodology is still evolving and varies dramatically between platforms. The platform you choose effectively defines what reality looks like for your AI search program."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between \"AI visibility\" and \"AI recommendations\" in Genezio's methodology?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visibility is whether your brand appears in an AI response. Recommendation is whether AI explicitly suggests your brand as a top option, describing it substantively rather than relegating it to a passing mention. The two are tracked separately because the gap between them is the most actionable diagnostic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is multi-turn measurement important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Real buyers don't ask AI a single question and stop. They ask, see options, then refine. Each refinement narrows the recommended set. A brand that appears in the initial top-5 but gets dropped at the first refinement has a problem that single-turn measurement won't reveal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does persona segmentation matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The same product is perceived differently by different buyer types. AI may recommend you to developers and a competitor to procurement leads within the same company evaluating the same purchase. Aggregate recommendation rates hide this. Persona-segmented data tells you not just whether you're recommended, but to whom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do confidence intervals matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI search metrics are built on samples. Without confidence intervals, you can't tell whether a change reflects real movement or random variation in a small sample. Genezio attaches statistical confidence to every metric. The practical impact: decisions get made on signal rather than noise, and executive reporting can survive challenge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is prompt relevance scoring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A monitoring program is only as accurate as the prompts you're running and the competitors you're tracking. Both can drift out of alignment with your market. When a prompt returns no brand matches, yours or your competitors, that's a signal. Either your competitor set is incomplete (AI is recommending brands you haven't classified) or the prompt isn't relevant. Genezio surfaces these cases and shows you what AI actually returned, letting you triage in real time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Genezio appropriate for enterprise procurement requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Genezio is built with enterprise procurement in mind: documented data handling, role-based access, multi-brand governance, and audit capabilities support standard vendor review processes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Genezio different from SEO platforms that have added AI features?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO suites like Semrush and Ahrefs have added AI modules to their existing suites. Genezio is purpose-built for AI search optimization rather than as a feature layer on a different foundation. The differences show up where it matters: recommendation tracking as a first-class metric, multi-turn handling, persona segmentation, and statistical confidence."
+          }
+        }
+      ]
+    };
   }
 
   return (
