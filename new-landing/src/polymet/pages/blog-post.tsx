@@ -299,7 +299,7 @@ export function BlogPost() {
         }
       ]
     };
-  } else if (post.id === "decision-grade-geo-aeo-intelligence") {
+  } else if (post.id === "best-accurate-data-platform-for-ai-search-optimization") {
     customSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
