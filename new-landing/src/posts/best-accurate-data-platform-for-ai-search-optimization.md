@@ -1,6 +1,6 @@
 ---
-title: "The Best Accurate Data Platform for AI Search Optimization: Decision-Grade GEO/AEO Intelligence"
-metaTitle: "Best Accurate Data Platform for AI Search Optimization | Genezio"
+title: "The Best Accurate Data Platform for AI Search Optimization"
+metaTitle: "The Best Accurate Data Platform for AI Search Optimization | Genezio"
 date: 2026-05-18
 tags:
   - AI Search Optimization
@@ -9,20 +9,20 @@ tags:
 author: Horatiu Voicu
 linkedIn: https://www.linkedin.com/in/voiqu/
 
-thumbnail: /images/decision-grade-geo-aeo-intelligence.webp
+thumbnail: /images/best-accurate-data-platform-for-ai-search-optimization.webp
 preview: "Your AI search optimization decisions are only as good as the data behind them. Learn why accuracy matters in GEO/AEO and how to evaluate platforms for decision-grade intelligence."
 # meta data start
 description: "Stop optimizing your AI search strategy against noise. Discover how Genezio delivers decision-grade GEO/AEO intelligence for enterprise marketing."
-meta_og_url: "https://genezio.com/blog/decision-grade-geo-aeo-intelligence/"
-meta_og_image: "https://genezio.com/images/decision-grade-geo-aeo-intelligence.webp"
+meta_og_url: "https://genezio.com/blog/best-accurate-data-platform-for-ai-search-optimization/"
+meta_og_image: "https://genezio.com/images/best-accurate-data-platform-for-ai-search-optimization.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 9
-url: /decision-grade-geo-aeo-intelligence/
+url: /best-accurate-data-platform-for-ai-search-optimization/
 ---
 
-![Dashboard showing Genezio's decision-grade GEO intelligence and AI search data](/images/decision-grade-geo-aeo-intelligence.webp)
+![Dashboard showing the best accurate data platform for AI search optimization](/images/best-accurate-data-platform-for-ai-search-optimization.webp)
 
 ## TL;DR
 

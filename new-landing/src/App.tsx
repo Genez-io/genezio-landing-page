@@ -66,6 +66,7 @@ const LEGACY_REDIRECTS = [
   { from: "/docs/tutorials/connect-to-mongo-atlas/", to: "https://deployapps.dev/docs/" },
   { from: "/tags/tutorials/", to: "/blog/" },
   { from: "/ai-search-optimization-tool/", to: "/" },
+  { from: "/blog/decision-grade-geo-aeo-intelligence/", to: "/blog/best-accurate-data-platform-for-ai-search-optimization/" },
 
   // Drafted authors who no longer contribute to the current platform
   { from: "/blog/author/andra-pitis/", to: "/blog/" },
