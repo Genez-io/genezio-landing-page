@@ -119,7 +119,7 @@ Semrush identifies the underlying themes shaping brand portrayal, for example, "
 
 Genezio delivers execution-ready actionable insights pinpointing exact pages where your brand is missing, identifying highly cited domains, detecting winning content patterns, and generating pre-filled article workflows. 
 
-The result is operational guidance: clear next steps such as “publish on this domain,” “create this comparison article,” or “replicate this high-performing content pattern.” In addition, Genezio offers a Content Hub creation feature (public beta) designed to systematically build AI-citable authority around priority topics.
+The result is operational guidance: clear next steps such as “publish on this domain,” “create this comparison article,” or “replicate this high-performing content pattern.” In addition, Genezio offers a Content Hub creation feature (public beta) designed to systematically build AI-citable authority around priority topics. This workflow is built on [data-driven briefs rather than empty drafts](/blog/briefs-not-articles/), ensuring content matches real user queries before it is written.
 
 Semrush surfaces high-level AI Strategic Opportunities based on LLM outputs. It highlights positioning gaps, [Share of Voice](/blog/visibility-to-recommendation-rate/) differences, and thematic weaknesses, then recommends broad content or narrative adjustments (e.g., improve authority, publish on certain topics, strengthen messaging). The output is strategic and directional, helping teams understand *where* they stand and *what* areas require improvement.
 

@@ -897,7 +897,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "Identifying multiple entities within a lengthy prompt and triggering separate, detailed searches for each entity before formulating a final recommendation."
     ],
     whyItMatters:
-      "For visibility strategies in the AI era, Query Fan-Out is essential because it illustrates how virtual assistants assemble answers from varied fragments of information. For brands, understanding this concept means their visibility can massively increase if they provide granular, specific content capable of answering these hidden \"sub-queries,\" thereby capturing traffic and mentions from a much wider spectrum of searches.",
+      "For visibility strategies in the AI era, Query Fan-Out is essential because it illustrates how virtual assistants assemble answers from varied fragments of information. For brands, understanding this concept means their visibility can massively increase if they provide granular, specific content capable of answering these hidden \"sub-queries\"—a strategy best executed using [data-backed briefs](/blog/briefs-not-articles/) rather than blank drafts—thereby capturing traffic and mentions from a much wider spectrum of searches.",
     relatedTerms: [
       "llm-optimisation",
       "generative-response",

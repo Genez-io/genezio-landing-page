@@ -38,7 +38,7 @@ This update strengthens Genezio's core promise: turning AI Visibility from somet
 
 Most brands create content based on intuition, SEO tradition, or internal assumptions. But LLMs don't think like traditional search engines.
 
-The Content Hub helps you create content that is aligned with how AI assistants actually gather information, structure answers, and decide what to cite.
+The Content Hub helps you create content that is aligned with how AI assistants actually gather information, structure answers, and decide what to cite. This process begins with [data-backed briefs, not articles](/blog/briefs-not-articles/), to guide content creation before drafting.
 
 Instead of guessing what might work, you start from:
 
