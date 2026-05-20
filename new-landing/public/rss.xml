@@ -5,9 +5,18 @@
     <link>https://genezio.com/blog/</link>
     <description>The platform built for Generative Search and Answer Engine Optimization.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 09:27:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 09:00:00 GMT</lastBuildDate>
     <atom:link href="https://genezio.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+        <title><![CDATA[Briefs, not articles: why we hand teams the blueprint, not the building]]></title>
+        <link>https://genezio.com/blog/briefs-not-articles/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/briefs-not-articles/</guid>
+        <description><![CDATA[Stop writing generic articles for AI search. Learn how Genezio's data-driven content briefs help marketing teams win LLM citations and visibility.]]></description>
+        <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/briefs-not-articles.webp" type="image/webp" length="0" />
+    </item>
     <item>
         <title><![CDATA[The Best Accurate Data Platform for AI Search Optimization]]></title>
         <link>https://genezio.com/blog/best-accurate-data-platform-for-ai-search-optimization/</link>

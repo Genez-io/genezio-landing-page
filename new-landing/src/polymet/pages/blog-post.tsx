@@ -370,6 +370,45 @@ export function BlogPost() {
         }
       ]
     };
+  } else if (post.id === "briefs-not-articles") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does Genezio focus on content briefs instead of generating complete articles directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generating complete articles without strategic guiding parameters produces generic content that repeats competitor language or hallucinates facts. By generating a data-backed content brief first, Genezio ensures your content is specific, optimized for chunkability, and targeted to the precise queries and context that AI search engines actually use to make recommendations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the main factors that determine whether AI cites or recommends a brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three main factors drive AI citations: chunkability (structuring content in self-contained, easily extractable units), specificity (concrete claims with figures, certifications, and product codes), and citation frequency (how frequently external, authoritative sites reference your brand or product)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a query fan-out and how does it affect content creation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A query fan-out refers to the multiple, highly specific ways real buyers phrase search queries in conversation with AI. Instead of relying on static, outdated search keywords, content briefs utilize these verbatim, conversational phrasings to structure articles around actual customer intent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does starting with a detailed content brief prevent AI hallucinations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI models hallucinate context when given a blank prompt. A detailed brief contains verified product specifications, verified competitor positioning, and explicit source URLs, restricting the writing process to verified facts and making the output over 95% accurate."
+          }
+        }
+      ]
+    };
   }
 
   return (
