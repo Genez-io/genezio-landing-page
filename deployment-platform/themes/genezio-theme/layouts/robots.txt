@@ -5,6 +5,9 @@ Disallow: /*?deviceId=
 Disallow: /*?ref=
 Allow: /
 
+User-agent: SaaSBrowserBot
+Disallow: /
+
 Sitemap: https://genezio.com/sitemap.xml
 
 Sitemap: https://genezio.com/docs/sitemap.xml 
