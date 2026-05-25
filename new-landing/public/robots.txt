@@ -35,5 +35,8 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: SaaSBrowserBot
+Disallow: /
+
 Sitemap: https://genezio.com/sitemap.xml
 Sitemap: https://genezio.com/imagessitemap.xml
