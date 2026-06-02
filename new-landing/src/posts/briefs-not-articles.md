@@ -1,6 +1,6 @@
 ---
 title: "Briefs, not articles: why we hand teams the blueprint, not the building"
-metaTitle: "Briefs, not articles: why we hand teams the blueprint, not the building"
+metaTitle: "Briefs, not articles: why we hand the blueprint, not the building"
 date: 2026-05-20
 tags:
 	- Content Strategy

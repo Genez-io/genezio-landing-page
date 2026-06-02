@@ -94,6 +94,7 @@ const routes = [
   "/docs/troubleshooting/",
   "/docs/tutorials/connect-to-mongo-atlas/",
   "/tags/tutorials/",
+  "/ai-search-optimization-tool/",
 ];
 
 // Dynamically add blog post routes
