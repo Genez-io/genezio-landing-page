@@ -409,6 +409,61 @@ export function BlogPost() {
         }
       ]
     };
+  } else if (post.id === "genezio-vs-profound-ai-visibility-platform") {
+    customSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between GEO and AEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal — being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI engines should I track first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start where your buyers already are: ChatGPT and Google AI Overviews for reach, Perplexity for research-stage buyers, then Claude and Gemini. Watch for plans that lock the engines you need behind enterprise tiers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many prompts do I need to track?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enough to cover your real buyer questions, not a round number. Twenty-five to fifty high-intent prompts is a solid pilot. What matters more is how many conversations run behind each prompt, because that's what gives the score a confidence interval instead of a guess."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I just measure AI traffic in my analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly no, and this is where teams get a false sense of security. GA4 routinely shows a fraction of a percent of traffic from AI. When we pulled one client's server logs, the real number was orders of magnitude higher than GA4 reported. Analytics undercounts AI conversations badly, which is exactly why measuring recommendation directly matters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do SEO tools replace a GEO platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For baseline mention monitoring, an SEO suite add-on is fine — especially if you already use it. For recommendation optimization, perception analysis, and a prioritized action plan, a purpose-built GEO platform does what a suite add-on wasn't designed to do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Genezio measure recommendations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By simulating multi-turn conversations as your configured customer personas, across engines and geographies, at a sample size large enough to report a recommendation rate with a confidence interval — then mapping the gaps to specific actions on your website, content, and citations."
+          }
+        }
+      ]
+    };
   }
 
   return (
