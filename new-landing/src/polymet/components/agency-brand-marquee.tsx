@@ -28,35 +28,19 @@ function brandLogoFilter(brand: Brand, hovered: boolean) {
   return `grayscale(1) opacity(${opacity})`;
 }
 
-const LOGO_ROW_HEIGHT = "h-12 sm:h-16 md:h-20";
-
-function logoImageClass(name: Brand["name"]) {
-  switch (name) {
-    case "BT":
-      return "h-9 w-auto sm:h-12 md:h-16";
-    case "404 Agency":
-      return "h-9 w-auto sm:h-12 md:h-16 max-w-[6rem] md:max-w-[7.5rem]";
-    case "Data Revolt":
-      return "h-8 w-auto sm:h-11 md:h-14 max-w-[9rem] md:max-w-[11rem]";
-    case "Decathlon":
-      return "h-10 w-auto sm:h-14 md:h-[4.5rem]";
-    default:
-      return "h-10 w-auto sm:h-14 md:h-20";
-  }
-}
+const LOGO_SLOT =
+  "h-12 w-28 sm:h-14 sm:w-32 md:h-16 md:w-36 flex shrink-0 items-center justify-center px-4 md:px-6";
 
 function BrandLogo({ brand }: { brand: Brand }) {
   const { name, logo } = brand;
 
   return (
-    <div
-      className={`flex shrink-0 items-center justify-center px-5 md:px-8 group ${LOGO_ROW_HEIGHT}`}
-    >
+    <div className={`group ${LOGO_SLOT}`}>
       <img
         src={logo}
         alt={name}
         loading="lazy"
-        className={`object-contain object-center transition-transform duration-300 group-hover:scale-110 ${logoImageClass(name)}`}
+        className="max-h-full max-w-full object-contain object-center transition-transform duration-300 group-hover:scale-110"
         style={{ filter: brandLogoFilter(brand, false) }}
         onMouseEnter={(event) => {
           event.currentTarget.style.filter = brandLogoFilter(brand, true);
