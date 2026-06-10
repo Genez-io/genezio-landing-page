@@ -1,23 +1,71 @@
 import React, { useEffect, useRef } from "react";
 
 const TRUSTED_COMPANIES = [
-  { name: "ERSTE BCR", logo: "images/erste-logo.svg" },
-  { name: "slsp", logo: "images/logo-slsp.svg" },
-  { name: "Banca Transilvania", logo: "images/bt-logo.svg" },
-  { name: "Pluxee", logo: "images/pluxee-logo.png" },
-  { name: "Druid", logo: "images/druid-logo.svg" },
-  { name: "FlowX", logo: "images/flowx-logo.png" },
-  { name: "CBRE", logo: "images/cbre-logo.png" },
-  { name: "Bitdefender", logo: "images/bitdefender.png" },
-  { name: "Lexters", logo: "images/lexters-logo.svg" },
-  { name: "Auchan", logo: "images/auchan-logo.svg", slot: "wide" },
-  { name: "Vodafone", logo: "images/vodafone-logo.svg", slot: "compact" },
+  {
+    name: "ERSTE BCR",
+    logo: "images/erste-logo.svg",
+    url: "https://www.bcr.ro",
+  },
+  {
+    name: "slsp",
+    logo: "images/logo-slsp.svg",
+    url: "https://www.slsp.sk",
+  },
+  {
+    name: "Banca Transilvania",
+    logo: "images/bt-logo.svg",
+    url: "https://www.bancatransilvania.ro",
+  },
+  {
+    name: "Pluxee",
+    logo: "images/pluxee-logo.png",
+    url: "https://www.pluxee.ro",
+  },
+  {
+    name: "Druid",
+    logo: "images/druid-logo.svg",
+    url: "https://www.druidai.com",
+  },
+  {
+    name: "FlowX",
+    logo: "images/flowx-logo.png",
+    url: "https://www.flowx.ai",
+  },
+  {
+    name: "CBRE",
+    logo: "images/cbre-logo.png",
+    url: "https://www.cbre.com",
+  },
+  {
+    name: "Bitdefender",
+    logo: "images/bitdefender.png",
+    url: "https://www.bitdefender.com",
+  },
+  {
+    name: "Lexters",
+    logo: "images/lexters-logo.svg",
+    url: "https://lexters.com",
+  },
+  {
+    name: "Auchan",
+    logo: "images/auchan-logo.svg",
+    url: "https://www.auchan.ro",
+    slot: "wide",
+  },
+  {
+    name: "Vodafone",
+    logo: "images/vodafone-logo.svg",
+    url: "https://www.vodafone.com",
+    slot: "compact",
+  },
 ] as const;
 
 type TrustedCompany = (typeof TRUSTED_COMPANIES)[number];
 
 function logoSlotClass(company: TrustedCompany) {
-  switch (company.slot) {
+  const slot = "slot" in company ? company.slot : undefined;
+
+  switch (slot) {
     case "wide":
       return "w-36 h-16 md:w-44 md:h-20";
     case "compact":
@@ -53,8 +101,12 @@ export function GenezioTrustSection() {
                 key={company.name}
                 className="flex-shrink-0 mx-8 md:mx-12 flex items-center justify-center group"
               >
-                <div
-                  className={`relative flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${logoSlotClass(company)}`}
+                <a
+                  href={company.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${company.name} website`}
+                  className={`relative flex items-center justify-center transition-all duration-300 group-hover:scale-110 cursor-pointer ${logoSlotClass(company)}`}
                 >
                   <img
                     src={company.logo}
@@ -71,7 +123,7 @@ export function GenezioTrustSection() {
                       e.currentTarget.style.filter = logoFilter(false);
                     }}
                   />
-                </div>
+                </a>
               </div>
             ))}
           </Marquee>

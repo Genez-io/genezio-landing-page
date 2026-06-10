@@ -1,19 +1,73 @@
 import { useEffect, useRef } from "react";
 
 export const AGENCY_BRANDS = [
-  { name: "404 Agency", logo: "/images/404-agency-logo.svg", invert: true },
-  { name: "Data Revolt", logo: "/images/data-revolt-logo.svg", invert: true },
-  { name: "Orange", logo: "/images/orange-logo.svg" },
-  { name: "PPC Energy", logo: "/images/ppc-energy-logo.svg" },
-  { name: "SCUT", logo: "/images/scut-logo.svg" },
-  { name: "ErsteGroup", logo: "/images/erste-logo.svg" },
-  { name: "BT", logo: "/images/bt-logo.svg" },
-  { name: "CBRE", logo: "/images/cbre-logo.png" },
-  { name: "Kaufland", logo: "/images/kaufland-logo.svg" },
-  { name: "Pluxee", logo: "/images/pluxee-logo.png" },
-  { name: "SmartBill", logo: "/images/smartbill-logo.svg" },
-  { name: "DruidAI", logo: "/images/druid-logo.svg" },
-  { name: "Decathlon", logo: "/images/decathlon-logo.svg" },
+  {
+    name: "404 Agency",
+    logo: "/images/404-agency-logo.svg",
+    url: "https://www.404.agency/en/",
+    invert: true,
+  },
+  {
+    name: "Data Revolt",
+    logo: "/images/data-revolt-logo.svg",
+    url: "https://datarevolt.agency/",
+    invert: true,
+  },
+  {
+    name: "Orange",
+    logo: "/images/orange-logo.svg",
+    url: "https://www.orange.ro",
+  },
+  {
+    name: "PPC Energy",
+    logo: "/images/ppc-energy-logo.svg",
+    url: "https://www.ppcenergy.ro",
+  },
+  {
+    name: "SCUT",
+    logo: "/images/scut-logo.svg",
+    url: "https://www.scut.com",
+  },
+  {
+    name: "ErsteGroup",
+    logo: "/images/erste-logo.svg",
+    url: "https://www.erstegroup.com",
+  },
+  {
+    name: "BT",
+    logo: "/images/bt-logo.svg",
+    url: "https://www.bancatransilvania.ro",
+  },
+  {
+    name: "CBRE",
+    logo: "/images/cbre-logo.png",
+    url: "https://www.cbre.com",
+  },
+  {
+    name: "Kaufland",
+    logo: "/images/kaufland-logo.svg",
+    url: "https://www.kaufland.ro",
+  },
+  {
+    name: "Pluxee",
+    logo: "/images/pluxee-logo.png",
+    url: "https://www.pluxee.ro",
+  },
+  {
+    name: "SmartBill",
+    logo: "/images/smartbill-logo.svg",
+    url: "https://www.smartbill.ro",
+  },
+  {
+    name: "DruidAI",
+    logo: "/images/druid-logo.svg",
+    url: "https://www.druidai.com",
+  },
+  {
+    name: "Decathlon",
+    logo: "/images/decathlon-logo.svg",
+    url: "https://www.decathlon.ro",
+  },
 ] as const;
 
 type Brand = (typeof AGENCY_BRANDS)[number];
@@ -32,10 +86,16 @@ const LOGO_SLOT =
   "h-12 w-28 sm:h-14 sm:w-32 md:h-16 md:w-36 flex shrink-0 items-center justify-center px-4 md:px-6";
 
 function BrandLogo({ brand }: { brand: Brand }) {
-  const { name, logo } = brand;
+  const { name, logo, url } = brand;
 
   return (
-    <div className={`group ${LOGO_SLOT}`}>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Visit ${name} website`}
+      className={`group ${LOGO_SLOT} cursor-pointer`}
+    >
       <img
         src={logo}
         alt={name}
@@ -49,7 +109,7 @@ function BrandLogo({ brand }: { brand: Brand }) {
           event.currentTarget.style.filter = brandLogoFilter(brand, false);
         }}
       />
-    </div>
+    </a>
   );
 }
 
