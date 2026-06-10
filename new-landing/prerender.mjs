@@ -53,6 +53,7 @@ const routes = [
   "/glossary/query-fan-out",
 
   "/increase-conversion",
+  "/pricing",
   "/support-terms",
   "/terms-and-conditions",
   "/privacy-policy",
