@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT Decides Who You Compete Against Before It Reads a Single Page."
 metaTitle: "ChatGPT Fanout: How AI Picks Your Competitors Before Searching"
-date: 2026-06-10
+date: 2026-06-09 
 tags:
   - AI Research
   - ChatGPT
