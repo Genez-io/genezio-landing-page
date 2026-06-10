@@ -15,7 +15,7 @@ export function GenezioLanding() {
   return (
     <>
       <PolymetSEO
-        title="Genezio | Make AI Scream Your Name From the Rooftops 🚀"
+        title="Genezio | Optimize Your AI Presence to Win Recommendations"
         description="Discover how AI engines see your brand. Optimize your presence to win more AI recommendations. Start your free 7-day trial today, no credit card required!"
         canonicalPath="/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
