@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioPricingHero } from "@/polymet/components/genezio-pricing-hero";
+import { GenezioEnterprisePlan } from "@/polymet/components/genezio-enterprise-plan";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
-import { GenezioAgencyPlans } from "@/polymet/components/genezio-agency-plans";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
 
 const PRICING_TITLE = "Flexible plans for your AI brand visibility";
@@ -162,11 +162,12 @@ export function GenezioPricing() {
         />
         {selectedAudience === "brands" ? (
           <>
+            <GenezioEnterprisePlan variant="brands" />
             <GenezioPricingFaq />
           </>
         ) : (
           <>
-            <GenezioAgencyPlans />
+            <GenezioEnterprisePlan variant="agencies" />
             <AgencyFaqSection />
           </>
         )}
