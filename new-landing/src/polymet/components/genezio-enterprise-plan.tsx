@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, ChevronDownIcon } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const CALENDAR_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
 
+const TITLE_PREFIX = "One plan, built around your ";
+
 interface EnterprisePlanContent {
   eyebrow: string;
-  sectionTitle: string;
+  titleWord: string;
   sectionSubtitle: string;
   description: string;
   features: string[];
@@ -16,7 +24,7 @@ interface EnterprisePlanContent {
 const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
   brands: {
     eyebrow: "Enterprise",
-    sectionTitle: "One plan, built around your brand",
+    titleWord: "brand",
     sectionSubtitle:
       "No fixed tiers. Your plan is shaped by the engines, markets, and volume you actually need.",
     description:
@@ -39,7 +47,7 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
   },
   agencies: {
     eyebrow: "Agency Enterprise",
-    sectionTitle: "One plan, built around your agency",
+    titleWord: "agency",
     sectionSubtitle:
       "Scale GEO services across every client. Pay for the brands, engines, and volume you manage — nothing you don't.",
     description:
@@ -68,19 +76,81 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
 
 interface GenezioEnterprisePlanProps {
   variant: "brands" | "agencies";
+  /**
+   * When provided, the last word of the title ("brand" / "agency") becomes an
+   * inline switch that flips between the two audiences. Used on /pricing.
+   */
+  onVariantChange?: (variant: "brands" | "agencies") => void;
+  /** Adds top spacing so the title clears the fixed navbar when it opens the page. */
+  isPageHero?: boolean;
 }
 
-export function GenezioEnterprisePlan({ variant }: GenezioEnterprisePlanProps) {
+export function GenezioEnterprisePlan({
+  variant,
+  onVariantChange,
+  isPageHero = false,
+}: GenezioEnterprisePlanProps) {
   const content = CONTENT[variant];
+  const interactive = typeof onVariantChange === "function";
+  const Heading = isPageHero ? "h1" : "h2";
+
+  const titleWordSwitch = (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          className="group relative inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent outline-none transition-opacity hover:opacity-90 focus-visible:opacity-90"
+        >
+          <span className="underline decoration-blue-400/40 decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-purple-400/60">
+            {content.titleWord}
+          </span>
+          <ChevronDownIcon className="h-[0.7em] w-[0.7em] flex-shrink-0 text-blue-400/80 transition-transform group-data-[state=open]:rotate-180" />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="center"
+        sideOffset={10}
+        className="min-w-[180px] rounded-xl border border-white/10 bg-[#0E0E10]/95 p-1.5 backdrop-blur-md"
+      >
+        {(["brands", "agencies"] as const).map((v) => (
+          <DropdownMenuItem
+            key={v}
+            onSelect={() => onVariantChange?.(v)}
+            className={`cursor-pointer rounded-lg px-3 py-2.5 text-base font-medium focus:bg-white/[0.06] ${
+              v === variant ? "text-white" : "text-white/60"
+            }`}
+          >
+            <span className="flex w-full items-center justify-between gap-3">
+              your {CONTENT[v].titleWord}
+              {v === variant && (
+                <CheckIcon className="h-4 w-4 text-blue-400" />
+              )}
+            </span>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 
   return (
-    <section className="relative py-12 md:py-20 px-4 md:px-6 bg-[#050506]">
+    <section
+      className={`relative px-4 md:px-6 bg-[#050506] ${
+        isPageHero ? "pt-28 md:pt-36 pb-12 md:pb-20" : "py-12 md:py-20"
+      }`}
+    >
       <div className="relative max-w-6xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            {content.sectionTitle}
-          </h2>
+          <Heading className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            {interactive ? (
+              <>
+                {TITLE_PREFIX}
+                {titleWordSwitch}
+              </>
+            ) : (
+              `${TITLE_PREFIX}${content.titleWord}`
+            )}
+          </Heading>
           <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
             {content.sectionSubtitle}
           </p>

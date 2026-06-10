@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
-import { GenezioPricingHero } from "@/polymet/components/genezio-pricing-hero";
 import { GenezioEnterprisePlan } from "@/polymet/components/genezio-enterprise-plan";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
@@ -156,18 +155,22 @@ export function GenezioPricing() {
         }}
       />
       <div className="min-h-screen bg-[#050506]">
-        <GenezioPricingHero
-          selectedAudience={selectedAudience}
-          onAudienceChange={setSelectedAudience}
-        />
         {selectedAudience === "brands" ? (
           <>
-            <GenezioEnterprisePlan variant="brands" />
+            <GenezioEnterprisePlan
+              variant="brands"
+              onVariantChange={setSelectedAudience}
+              isPageHero
+            />
             <GenezioPricingFaq />
           </>
         ) : (
           <>
-            <GenezioEnterprisePlan variant="agencies" />
+            <GenezioEnterprisePlan
+              variant="agencies"
+              onVariantChange={setSelectedAudience}
+              isPageHero
+            />
             <AgencyFaqSection />
           </>
         )}
