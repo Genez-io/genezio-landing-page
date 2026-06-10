@@ -67,8 +67,6 @@
     "highcharts": "^11.4.7",
     "highcharts-react-official": "^3.2.1",
     "input-otp": "^1.4.2",
-    "jspdf": "^2.5.1",
-    "jspdf-autotable": "^3.8.3",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.477.0",
     "mapbox-gl": "^1.13.3",

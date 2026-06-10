@@ -348,18 +348,20 @@ export function GenezioHeader() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
+          <a href="https://app.genezio.ai/sign-in">
+            <Button
+              variant="outline"
+              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            >
+              Login
+            </Button>
+          </a>
           <Button
-            variant="outline"
-            className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all"
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
           >
             Book a Demo
           </Button>
-          <a href="https://app.genezio.ai/sign-up">
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all">
-              Get Started
-            </Button>
-          </a>
         </div>
 
         {/* Mobile menu button */}

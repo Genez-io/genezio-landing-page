@@ -8,7 +8,7 @@ interface GenezioPricingHeroProps {
 
 export function GenezioPricingHero({
   selectedAudience,
-  onAudienceChange,
+  onAudienceChange
 }: GenezioPricingHeroProps) {
   const brandPlans = [
     {
@@ -16,16 +16,16 @@ export function GenezioPricingHero({
       price: "€299",
       description: "For marketing teams optimizing AI presence",
       features: [
-        "3 Answer Engines tracked",
+        "2 Answer Engines tracked",
         "30 scenarios",
         "Multi-turn conversations",
         "Daily AI visibility insights",
         "AI content generation",
-        "Data retention: 6 months",
+        "Data retention: 6 months"
       ],
 
       cta: "Start Free Trial",
-      popular: true,
+      popular: true
     },
     {
       name: "Enterprise",
@@ -40,12 +40,12 @@ export function GenezioPricingHero({
         "Dedicated onboarding & Account Manager",
         "Dedicated Slack support",
         "Geo Assistant",
-        "SSO / SAML + SOC2 compliance",
+        "SSO / SAML + SOC2 compliance"
       ],
 
       cta: "Contact us",
-      popular: false,
-    },
+      popular: false
+    }
   ];
 
   const plans = selectedAudience === "brands" ? brandPlans : [];
@@ -73,19 +73,21 @@ export function GenezioPricingHero({
           <div className="inline-flex bg-white/5 rounded-lg p-1 border border-white/10">
             <button
               onClick={() => onAudienceChange("brands")}
-              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${selectedAudience === "brands"
+              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${
+                selectedAudience === "brands"
                   ? "bg-blue-600 text-white"
                   : "text-white/60 hover:text-white"
-                }`}
+              }`}
             >
               For Brands
             </button>
             <button
               onClick={() => onAudienceChange("agencies")}
-              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${selectedAudience === "agencies"
+              className={`px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-medium transition-all ${
+                selectedAudience === "agencies"
                   ? "bg-blue-600 text-white"
                   : "text-white/60 hover:text-white"
-                }`}
+              }`}
             >
               For Agencies
             </button>
@@ -101,18 +103,20 @@ export function GenezioPricingHero({
                 Prices shown are exclusive of any applicable taxes.
               </p>
               <div
-                className={`grid gap-6 lg:gap-8 ${plans.length === 2
+                className={`grid gap-6 lg:gap-8 ${
+                  plans.length === 2
                     ? "md:grid-cols-2 max-w-5xl mx-auto justify-items-center"
                     : "md:grid-cols-3"
-                  }`}
+                }`}
               >
                 {plans.map((plan, index) => (
                   <div
                     key={index}
-                    className={`relative w-full bg-white/5 border rounded-2xl p-6 md:p-8 flex flex-col ${plan.popular
+                    className={`relative w-full bg-white/5 border rounded-2xl p-6 md:p-8 flex flex-col ${
+                      plan.popular
                         ? "border-blue-500/50 shadow-lg shadow-blue-500/10"
                         : "border-white/10"
-                      }`}
+                    }`}
                   >
                     {/* Popular Badge */}
                     {plan.popular && (
@@ -136,7 +140,9 @@ export function GenezioPricingHero({
                           <span className="text-white/60 text-sm">/month</span>
                         )}
                       </div>
-                      <p className="text-sm text-white/60">{plan.description}</p>
+                      <p className="text-sm text-white/60">
+                        {plan.description}
+                      </p>
                     </div>
 
                     {/* Features */}
@@ -160,17 +166,21 @@ export function GenezioPricingHero({
 
                     {/* CTA Button */}
                     <Button
-                      className={`w-full py-6 text-base font-semibold rounded-lg transition-all duration-200 ${plan.popular
+                      className={`w-full py-6 text-base font-semibold rounded-lg transition-all duration-200 ${
+                        plan.popular
                           ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
                           : "bg-white/10 hover:bg-white/15 text-white border border-white/20"
-                        }`}
+                      }`}
                       onClick={() =>
                         plan.cta === "Contact us"
                           ? window.open(
-                            "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
-                            "_blank"
-                          )
-                          : window.open("https://app.genezio.ai/sign-up", "_blank")
+                              "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
+                              "_blank"
+                            )
+                          : window.open(
+                              "https://app.genezio.ai/sign-up",
+                              "_blank"
+                            )
                       }
                     >
                       {plan.cta}
