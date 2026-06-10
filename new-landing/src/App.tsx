@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router";
 import { GenezioLayout } from "@/polymet/layouts/genezio-layout";
 import { GenezioLanding } from "@/polymet/pages/genezio-landing";
-import { GenezioPricing } from "@/polymet/pages/genezio-pricing";
 import { LeadGeneration } from "@/polymet/pages/lead-generation";
 import { IncreaseConversion } from "@/polymet/pages/increase-conversion";
 import { IncreaseCsat } from "@/polymet/pages/increase-csat";
@@ -105,15 +104,6 @@ export default function GenezioApp() {
         }
       />
 */
-
-      <Route
-        path="/pricing"
-        element={
-          <GenezioLayout>
-            <GenezioPricing />
-          </GenezioLayout>
-        }
-      />
 
       <Route
         path="/conversational-brand-presence"

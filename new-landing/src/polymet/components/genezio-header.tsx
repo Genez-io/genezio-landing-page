@@ -338,12 +338,6 @@ export function GenezioHeader() {
             )}
           </div>
 
-          <a
-            href="/pricing/"
-            className="text-white/80 hover:text-white transition-colors text-sm font-medium"
-          >
-            Pricing
-          </a>
         </nav>
 
         {/* CTA Buttons */}
@@ -504,14 +498,6 @@ export function GenezioHeader() {
                 </div>
               </div>
             </div>
-
-            <a
-              href="/pricing/"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white/80 hover:text-white transition-colors text-sm font-medium py-2"
-            >
-              Pricing
-            </a>
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
               <a href="https://app.genezio.ai/sign-up" onClick={() => setMobileMenuOpen(false)}>
