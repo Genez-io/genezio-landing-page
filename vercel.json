@@ -1,0 +1,364 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "cd new-landing && pnpm install --no-frozen-lockfile",
+  "buildCommand": "cd new-landing && pnpm run build",
+  "outputDirectory": "new-landing/dist",
+  "redirects": [
+    {
+      "source": "/blog/affordable-cloud-hosting/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/affordable-cloud-hosting",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-agent-examples/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-agent-examples",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-agent-tools/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-agent-tools",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aws-lambda-alternatives/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aws-lambda-alternatives",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/common-mistakes-ai-agents-make/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/common-mistakes-ai-agents-make",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/create-your-first-app-using-chatgpt/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/create-your-first-app-using-chatgpt",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/create-your-first-web3-app/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/create-your-first-web3-app",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/implement-a-shopping-cart-using-typescript-redis-and-react/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/implement-a-shopping-cart-using-typescript-redis-and-react",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/integrate-stripe-payments/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/integrate-stripe-payments",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/now-available-neon-postgres/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/now-available-neon-postgres",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/retrieval-augmented-generation-is-fixing-llm/",
+      "destination": "/blog/rag-is-fixing-llms/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/retrieval-augmented-generation-is-fixing-llm",
+      "destination": "/blog/rag-is-fixing-llms/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/understanding-ai-agents-101/",
+      "destination": "/blog/ai-agents-101-understanding-their-role-and-functionality/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/understanding-ai-agents-101",
+      "destination": "/blog/ai-agents-101-understanding-their-role-and-functionality/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/decision-grade-geo-aeo-intelligence/",
+      "destination": "/blog/best-accurate-data-platform-for-ai-search-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/decision-grade-geo-aeo-intelligence",
+      "destination": "/blog/best-accurate-data-platform-for-ai-search-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/images/decision-grade-geo-aeo-intelligence.webp",
+      "destination": "/images/best-accurate-data-platform-for-ai-search-optimization.webp",
+      "permanent": true
+    },
+    {
+      "source": "/deploy-nextjs-apps/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deploy-nextjs-apps",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deploy-nodejs-express-on-genezio-serverless/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deploy-nodejs-express-on-genezio-serverless",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deployment-platform/deploy-django-on-genezio-serverless/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deployment-platform/deploy-django-on-genezio-serverless",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deployment-platform/deploy-nextjs-apps/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/deployment-platform/deploy-nextjs-apps",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-tool/cli-commands/account/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-tool/cli-commands/account",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-tool/cli-commands/login/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-tool/cli-commands/login",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-tool/cli-commands/ls/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-tool/cli-commands/ls",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/features/cron-jobs/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/features/cron-jobs",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/features/custom-domain-configuration/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/features/custom-domain-configuration",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/features/databases/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/features/databases",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/frameworks/fastify/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/frameworks/fastify",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/getting-started/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/getting-started",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/integrations/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/integrations",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/integrations/neon-postgres/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/integrations/neon-postgres",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/project-structure/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/project-structure",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/project-structure/backend-environment-variables/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/project-structure/backend-environment-variables",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/project-structure/genezio-configuration-file/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/project-structure/genezio-configuration-file",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/troubleshooting/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/troubleshooting",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/connect-to-mongo-atlas/",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/tutorials/connect-to-mongo-atlas",
+      "destination": "https://deployapps.dev/docs/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/tutorials/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/tutorials",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-search-optimization-tool/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-search-optimization-tool",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
