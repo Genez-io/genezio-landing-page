@@ -12,39 +12,27 @@ export function GenezioPricingHero({
 }: GenezioPricingHeroProps) {
   const brandPlans = [
     {
-      name: "Growth",
-      price: "€299",
-      description: "For marketing teams optimizing AI presence",
-      features: [
-        "2 Answer Engines tracked",
-        "30 scenarios",
-        "Multi-turn conversations",
-        "Daily AI visibility insights",
-        "AI content generation",
-        "Data retention: 6 months"
-      ],
-
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
       name: "Enterprise",
       price: "Custom",
-      description: "For multi-market brands",
+      description:
+        "Tailored AI visibility for multi-market brands and teams. Pricing is built around the engines, markets, and volume you need.",
       features: [
-        "10 Answer Engines tracked",
-        "Custom AI conversations tracked",
+        "All Answer Engines tracked (ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot, Meta AI, Grok, DeepSeek, Claude, AI Overviews)",
+        "Custom number of brands, languages & locations",
+        "Custom topics, scenarios & AI conversations tracked",
+        "Sentiment per conversation, citation & statement",
         "Daily AI visibility insights",
-        "AI content generation custom",
+        "Custom AI content generation",
+        "Geo Assistant",
         "Unlimited data retention",
+        "Unlimited competitor SWOT analysis & seats",
         "Dedicated onboarding & Account Manager",
         "Dedicated Slack support",
-        "Geo Assistant",
         "SSO / SAML + SOC2 compliance"
       ],
 
       cta: "Contact us",
-      popular: false
+      popular: true
     }
   ];
 
@@ -63,8 +51,8 @@ export function GenezioPricingHero({
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto px-4">
             {selectedAudience === "brands"
-              ? "Start with a free trial and scale as your AI visibility grows."
-              : "Transparent pricing with flexible add-ons"}
+              ? "Custom Enterprise pricing that scales with your AI visibility needs."
+              : "Custom Enterprise pricing with flexible add-ons"}
           </p>
         </div>
 
@@ -104,9 +92,11 @@ export function GenezioPricingHero({
               </p>
               <div
                 className={`grid gap-6 lg:gap-8 ${
-                  plans.length === 2
-                    ? "md:grid-cols-2 max-w-5xl mx-auto justify-items-center"
-                    : "md:grid-cols-3"
+                  plans.length === 1
+                    ? "max-w-2xl mx-auto justify-items-center"
+                    : plans.length === 2
+                      ? "md:grid-cols-2 max-w-5xl mx-auto justify-items-center"
+                      : "md:grid-cols-3"
                 }`}
               >
                 {plans.map((plan, index) => (
@@ -119,7 +109,7 @@ export function GenezioPricingHero({
                     }`}
                   >
                     {/* Popular Badge */}
-                    {plan.popular && (
+                    {plan.popular && plans.length > 1 && (
                       <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
                           Most popular

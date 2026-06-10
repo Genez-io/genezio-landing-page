@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioPricingHero } from "@/polymet/components/genezio-pricing-hero";
-import { GenezioPricingComparison } from "@/polymet/components/genezio-pricing-comparison";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
 import { GenezioAgencyPlans } from "@/polymet/components/genezio-agency-plans";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
@@ -51,18 +50,26 @@ export function GenezioPricing() {
             },
             {
               "@type": "Question",
-              "name": "Can I switch plans later?",
+              "name": "How does Enterprise pricing work?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle, and we'll prorate any differences."
+                "text": "Genezio is offered as a custom Enterprise plan tailored to your needs. Pricing is built around the answer engines, markets, languages, and conversation volume you want to track. Book a demo and our team will put together a quote that fits your brand."
               }
             },
             {
               "@type": "Question",
-              "name": "Is there a free trial?",
+              "name": "Can I adjust my plan later?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we offer a 7-day free trial for all plans. You'll get full access to all features in your chosen plan."
+                "text": "Yes. Your Enterprise plan is fully flexible — you can scale engines, markets, personas, and volume up or down at any time. Just talk to your dedicated account manager and we'll adjust your plan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I get started?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Book a demo with our team and we'll set you up with a custom evaluation of the platform. You can also run a free brand scan to instantly see your AI visibility scores, citations, and top AI keywords."
               }
             },
             {
@@ -155,7 +162,6 @@ export function GenezioPricing() {
         />
         {selectedAudience === "brands" ? (
           <>
-            <GenezioPricingComparison />
             <GenezioPricingFaq />
           </>
         ) : (

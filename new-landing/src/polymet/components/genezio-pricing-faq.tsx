@@ -26,14 +26,19 @@ export function GenezioPricingFaq() {
         "We monitor major AI models including ChatGPT, Claude, Perplexity, Gemini, and other leading conversational AI platforms. The number of models you can monitor depends on your plan.",
     },
     {
-      question: "Can I switch plans later?",
+      question: "How does Enterprise pricing work?",
       answer:
-        "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle, and we'll prorate any differences.",
+        "Genezio is offered as a custom Enterprise plan tailored to your needs. Pricing is built around the answer engines, markets, languages, and conversation volume you want to track. Book a demo and our team will put together a quote that fits your brand.",
     },
     {
-      question: "Is there a free trial?",
+      question: "Can I adjust my plan later?",
       answer:
-        "Yes, we offer a 7-day free trial for all plans. You'll get full access to all features in your chosen plan.",
+        "Yes. Your Enterprise plan is fully flexible — you can scale engines, markets, personas, and volume up or down at any time. Just talk to your dedicated account manager and we'll adjust your plan.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Book a demo with our team and we'll set you up with a custom evaluation of the platform. You can also run a free brand scan to instantly see your AI visibility scores, citations, and top AI keywords.",
     },
     {
       question: "What are multi-turn conversations?",

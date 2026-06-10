@@ -30,16 +30,12 @@ export function GenezioAgencyPlans() {
             {/* Plan Header */}
             <div className="mb-6">
               <div className="flex items-baseline justify-center gap-2 mb-3">
-                <span className="text-white/60 text-sm font-medium">
-                  Starting from
-                </span>
                 <span className="text-3xl md:text-4xl font-bold text-white">
-                  €999
+                  Custom
                 </span>
-                <span className="text-white/60 text-sm">/month</span>
               </div>
               <p className="text-sm text-white/60 text-center">
-                Perfect for agencies scaling GEO services
+                Custom Enterprise pricing for agencies scaling GEO services
               </p>
             </div>
 
@@ -68,14 +64,11 @@ export function GenezioAgencyPlans() {
 
             {/* CTA Buttons */}
             <div className="space-y-3">
-              <Button onClick={() => window.open('https://app.genezio.ai/sign-up', '_blank')} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20">
-                Start Free Trial
-              </Button>
-              <Button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')} className="w-full bg-white/10 hover:bg-white/15 text-white border border-white/20 py-6 text-base font-semibold rounded-lg transition-all duration-200">
-                Contact Us for Custom Enterprise Offer
+              <Button onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20">
+                Contact Sales
               </Button>
               <p className="text-center text-white/50 text-sm">
-                Cancel anytime. 7 days free trial
+                Custom Enterprise offer tailored to your agency
               </p>
             </div>
           </div>
