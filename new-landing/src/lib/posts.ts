@@ -8,12 +8,15 @@ import {
 } from "lucide-react";
 import { authors } from "./authors";
 
+export type BlogPostType = "research";
+
 export interface BlogPost {
     id: string;
     title: string;
     excerpt: string;
     description?: string;
     category: string;
+    postType?: BlogPostType;
     readTime: string;
     date: string;
     author: string;
@@ -144,6 +147,7 @@ export function getAllPosts(): BlogPost[] {
             excerpt: frontmatter.preview || frontmatter.description || "No description",
             description: frontmatter.description || frontmatter.preview || "",
             category: category,
+            postType: frontmatter.type === "research" ? "research" : undefined,
             readTime: (frontmatter.readTime ? `${frontmatter.readTime} min read` : "5 min read"),
             date: frontmatter.date ? new Date(frontmatter.date).toLocaleDateString("en-US", {
                 year: "numeric",
