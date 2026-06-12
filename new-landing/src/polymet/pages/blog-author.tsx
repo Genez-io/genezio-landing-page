@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { getAllPosts } from "@/lib/posts";
+import { BlogPostTypeBadge } from "@/polymet/components/blog-post-type-badge";
 
 import { authors } from "@/lib/authors";
 
@@ -192,7 +193,10 @@ function BlogAuthor() {
                         </div>
 
                         {/* Category & Read Time */}
-                        <div className="flex items-center gap-3 mb-3">
+                        <div className="flex flex-wrap items-center gap-2 mb-3">
+                          {post.postType && (
+                            <BlogPostTypeBadge type={post.postType} size="sm" />
+                          )}
                           <span className="text-xs font-medium text-blue-400">
                             {post.category}
                           </span>
