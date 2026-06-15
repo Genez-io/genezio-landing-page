@@ -16,14 +16,14 @@ thumbnail: /images/chatgpt-fanout-brand-injection.webp
 preview: ChatGPT injects competitors into internal search before loading web results. We analyzed 220K fanouts to reveal how AI picks competitors (9.9% rate) & trusted sources by industry.
 # meta data start
 description: ChatGPT decides your competitors before reading. Fanout injects competitors (9.9%) & industry sources. 220K fanouts analyzed. 97% searched brands survive.
-meta_og_url: "https://genezio.com/blog/chatgpt-fanout-brand-injection/"
+meta_og_url: "https://genezio.com/research/chatgpt-fanout-brand-injection/"
 
 meta_og_image: "https://genezio.com/images/chatgpt-fanout-brand-injection.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /chatgpt-fanout-brand-injection/
+url: /research/chatgpt-fanout-brand-injection/
 ---
 
 ![chatgpt fanout brand injection](/images/chatgpt-fanout-brand-injection.webp)

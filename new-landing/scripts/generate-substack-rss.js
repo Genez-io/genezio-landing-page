@@ -75,6 +75,11 @@ function getBlogPosts() {
         const content = fs.readFileSync(fullPath, 'utf-8');
         const { frontmatter, body } = parseFrontmatter(content);
         const id = file.replace('.md', '');
+        const isResearch = frontmatter.type === 'research';
+
+        if (isResearch) {
+            return null;
+        }
 
         return {
             id,
@@ -88,7 +93,7 @@ function getBlogPosts() {
         };
     });
 
-    return posts.sort((a, b) => b.date.getTime() - a.date.getTime());
+    return posts.filter(Boolean).sort((a, b) => b.date.getTime() - a.date.getTime());
 }
 
 function generateRss() {

@@ -7,7 +7,7 @@ import {
   CalendarIcon,
 } from "lucide-react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
-import { getAllPosts } from "@/lib/posts";
+import { getBlogPosts } from "@/lib/posts";
 import { BlogPostTypeBadge } from "@/polymet/components/blog-post-type-badge";
 
 import { authors } from "@/lib/authors";
@@ -82,7 +82,7 @@ function BlogAuthor() {
     description: author.bio,
   };
 
-  const allBlogPosts = getAllPosts();
+  const allBlogPosts = getBlogPosts();
   // Filter posts where the author name matches the author's name
   const authorPosts = allBlogPosts.filter((post) => post.author === author.name);
 

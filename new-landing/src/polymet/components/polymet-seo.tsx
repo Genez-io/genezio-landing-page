@@ -133,6 +133,43 @@ export function PolymetSEO({
         worksFor: baseOrg,
       };
       return schema ? { "@context": "https://schema.org", "@graph": [personSchema, schema] } : personSchema;
+    } else if (path.startsWith("/research/") && path !== "/research/") {
+      const authorKey = authorName ? slugify(authorName) : null;
+      const authorData = authorKey ? authors[authorKey] : null;
+
+      const personSchema = {
+        "@type": "Person",
+        name: authorData?.name || authorName || "Genezio Team",
+        jobTitle: authorData?.role || "Expert contributor at Genezio",
+        url: authorData
+          ? `https://genezio.com/blog/author/${slugify(authorData.name)}/`
+          : authorName
+            ? `https://genezio.com/blog/author/${slugify(authorName)}/`
+            : "https://genezio.com/",
+        description: authorData?.bio || undefined,
+        image: authorData?.image ? `https://genezio.com${authorData.image}` : undefined,
+        sameAs: authorData?.social
+          ? [authorData.social.linkedin, authorData.social.twitter].filter(Boolean)
+          : undefined,
+        knowsAbout: authorData?.stats?.expertise || undefined,
+        worksFor: baseOrg,
+      };
+
+      const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        headline: title,
+        description: description,
+        image: ogImage || undefined,
+        datePublished: datePublished,
+        dateModified: datePublished,
+        mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
+        url: url,
+        keywords: tags ? tags.join(", ") : undefined,
+        author: personSchema,
+        publisher: baseOrg,
+      };
+      return schema ? { "@context": "https://schema.org", "@graph": [articleSchema, schema] } : articleSchema;
     } else if (path.startsWith("/blog/")) {
       const authorKey = authorName ? slugify(authorName) : null;
       const authorData = authorKey ? authors[authorKey] : null;

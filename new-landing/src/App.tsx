@@ -11,6 +11,7 @@ import { Glossary } from "@/polymet/pages/glossary";
 import { GlossaryTerm } from "@/polymet/pages/glossary-term";
 import { Blog } from "@/polymet/pages/blog";
 import { BlogPost } from "@/polymet/pages/blog-post";
+import { Research } from "@/polymet/pages/research";
 import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
 import { SupportTerms } from "./polymet/pages/support-terms";
 import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
@@ -66,6 +67,7 @@ const LEGACY_REDIRECTS = [
   { from: "/docs/tutorials/connect-to-mongo-atlas/", to: "https://deployapps.dev/docs/" },
   { from: "/tags/tutorials/", to: "/blog/" },
   { from: "/ai-search-optimization-tool/", to: "/" },
+  { from: "/blog/chatgpt-fanout-brand-injection/", to: "/research/chatgpt-fanout-brand-injection/" },
   { from: "/blog/decision-grade-geo-aeo-intelligence/", to: "/blog/best-accurate-data-platform-for-ai-search-optimization/" },
 
   // Drafted authors who no longer contribute to the current platform
@@ -188,6 +190,24 @@ export default function GenezioApp() {
           />
         ));
       })}
+
+      <Route
+        path="/research/"
+        element={
+          <GenezioLayout>
+            <Research />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/research/:slug"
+        element={
+          <GenezioLayout>
+            <BlogPost />
+          </GenezioLayout>
+        }
+      />
 
       <Route
         path="/blog/"

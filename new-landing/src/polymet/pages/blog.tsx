@@ -9,10 +9,10 @@ import {
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
-import { getAllPosts } from "@/lib/posts";
+import { getBlogPosts } from "@/lib/posts";
 import { BlogPostTypeBadge } from "@/polymet/components/blog-post-type-badge";
 
-const blogPosts = getAllPosts();
+const blogPosts = getBlogPosts();
 
 const BLOG_TITLE = "Genezio Blog: Insights on GEO & AI Brand Visibility";
 const BLOG_DESCRIPTION =
