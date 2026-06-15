@@ -16,14 +16,14 @@ thumbnail: /images/chatgpt-fanout-brand-injection.webp
 preview: ChatGPT injects competitors into internal search before loading web results. We analyzed 220K fanouts to reveal how AI picks competitors (9.9% rate) & trusted sources by industry.
 # meta data start
 description: ChatGPT decides your competitors before reading. Fanout injects competitors (9.9%) & industry sources. 220K fanouts analyzed. 97% searched brands survive.
-meta_og_url: "https://genezio.com/blog/chatgpt-fanout-brand-injection/"
+meta_og_url: "https://genezio.com/research/chatgpt-fanout-brand-injection/"
 
 meta_og_image: "https://genezio.com/images/chatgpt-fanout-brand-injection.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /chatgpt-fanout-brand-injection/
+url: /research/chatgpt-fanout-brand-injection/
 ---
 
 ![chatgpt fanout brand injection](/images/chatgpt-fanout-brand-injection.webp)
@@ -92,4 +92,4 @@ It isn't something you check once and file away. ChatGPT rewrites its fanouts on
 
 ### Methodology
 
-We analyzed query fanouts captured from ChatGPT's live search, meaning the model's own internal web queries, the ones generated before any result returns. The mention and survival rates draw on a 220,193-fanout corpus (164 brands, 60 days), and the volunteered-brand analysis comes from two prompt-verified cohorts totaling 31,470 prompts. "Volunteered" means a brand that appears in the fanout but not in the user's prompt, matched alias-aware and split into the user's own brand versus competitors. Survival is measured against the platform's extracted answer brands, at the conversation level. The per-industry figures are the share of each industry's fanouts that named a given source or competitor; we show a percentage where a source clears a meaningful threshold, and the industries come from the brands in our cohorts. The named competitor sets and the strongest named authorities are exact; "reviews" is generic and counted by keyword. The one-sided-comparison rate (25.4%) comes from 21,608 comparer conversations, measured across all of a prompt's fanouts; which of the two brands gets dropped is close to even (own 50.4%, competitor 44.5%). The data is observational and skews heavily to ChatGPT, since it's the engine that exposes its fanouts. For contrast, Perplexity volunteers a competitor just 0.6% of the time.
+We analyzed query fanouts captured from ChatGPT's live search, meaning the model's own internal web queries, the ones generated before any result returns. The mention and survival rates draw on a 220,193-fanout corpus, and the volunteered-brand analysis comes from two prompt-verified cohorts totaling 31,470 prompts. "Volunteered" means a brand that appears in the fanout but not in the user's prompt, matched alias-aware and split into the user's own brand versus competitors. Survival is measured against the platform's extracted answer brands, at the conversation level. The per-industry figures are the share of each industry's fanouts that named a given source or competitor; we show a percentage where a source clears a meaningful threshold, and the industries come from the brands in our cohorts. The named competitor sets and the strongest named authorities are exact; "reviews" is generic and counted by keyword. The one-sided-comparison rate (25.4%) comes from 21,608 comparer conversations, measured across all of a prompt's fanouts; which of the two brands gets dropped is close to even (own 50.4%, competitor 44.5%). The data is observational and skews heavily to ChatGPT, since it's the engine that exposes its fanouts. For contrast, Perplexity volunteers a competitor just 0.6% of the time.

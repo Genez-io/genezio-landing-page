@@ -6,7 +6,7 @@ import { AgencyContentStrategySection } from "@/polymet/components/agency-conten
 import { AgencyScaleSection } from "@/polymet/components/agency-scale-section";
 import { AgencyMonitoringSection } from "@/polymet/components/agency-monitoring-section";
 import { AgencyTestimonialsSection } from "@/polymet/components/agency-testimonials-section";
-import { GenezioAgencyPlans } from "@/polymet/components/genezio-agency-plans";
+import { GenezioEnterprisePlan } from "@/polymet/components/genezio-enterprise-plan";
 import { AgencyCtaSection } from "@/polymet/components/agency-cta-section";
 
 export function Agencies() {
@@ -25,7 +25,7 @@ export function Agencies() {
         <AgencyScaleSection />
         <AgencyMonitoringSection />
         <AgencyTestimonialsSection />
-        <GenezioAgencyPlans />
+        <GenezioEnterprisePlan variant="agencies" />
         <AgencyCtaSection />
       </div>
     </>

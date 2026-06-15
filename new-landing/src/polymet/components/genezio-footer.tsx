@@ -59,6 +59,14 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
+                  href="/research/"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Research
+                </a>
+              </li>
+              <li>
+                <a
                   href="/glossary/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >

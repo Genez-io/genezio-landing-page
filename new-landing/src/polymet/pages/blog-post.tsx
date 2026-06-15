@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { useParams } from "react-router";
+import { useParams, Navigate, useLocation } from "react-router";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import { Tweet } from "react-tweet";
@@ -11,7 +11,7 @@ import {
   CalendarIcon,
   SparklesIcon
 } from "lucide-react";
-import { getPostById, getAllPosts } from "@/lib/posts";
+import { getPostById, getAllPosts, getPostPath } from "@/lib/posts";
 import { authors } from "@/lib/authors";
 import { BlogPostTypeBadge } from "@/polymet/components/blog-post-type-badge";
 
@@ -19,25 +19,47 @@ export function BlogPost() {
   const { slug } = useParams<{
     slug: string;
   }>();
+  const location = useLocation();
+  const isResearchSection = location.pathname.startsWith("/research/");
 
   const post = getPostById(slug || "");
 
   if (!post) {
+    const backPath = isResearchSection ? "/research/" : "/blog/";
+    const backLabel = isResearchSection ? "Back to Research" : "Back to Blog";
+
     return (
       <div className="min-h-screen bg-[#050506] flex items-center justify-center text-white">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post not found</h1>
-          <a href="/blog/" className="text-blue-400 hover:underline">
-            Back to Blog
+          <a href={backPath} className="text-blue-400 hover:underline">
+            {backLabel}
           </a>
         </div>
       </div>
     );
   }
 
-  // Simple related posts logic: same category, exclude current
+  if (post.postType === "research" && !isResearchSection) {
+    return <Navigate to={`/research/${slug}/`} replace />;
+  }
+
+  if (!post.postType && isResearchSection) {
+    return <Navigate to={`/blog/${slug}/`} replace />;
+  }
+
+  const sectionBasePath = isResearchSection ? "/research" : "/blog";
+  const sectionLabel = isResearchSection ? "Research" : "Blog";
+  const postPath = getPostPath(post);
+
+  // Simple related posts logic: same category, exclude current, same section
   const relatedPosts = getAllPosts()
-    .filter((p) => p.category === post.category && p.id !== post.id)
+    .filter(
+      (p) =>
+        p.category === post.category &&
+        p.id !== post.id &&
+        (isResearchSection ? p.postType === "research" : p.postType !== "research")
+    )
     .slice(0, 3);
 
   // Preprocess content to replace tweet shortcodes with marker links
@@ -472,7 +494,7 @@ export function BlogPost() {
       <PolymetSEO
         title={post.metaTitle || post.title}
         description={post.description || post.excerpt}
-        canonicalPath={`/blog/${slug}/`}
+        canonicalPath={postPath}
         ogUrl={post.metaOgUrl}
         ogImage={post.metaOgImage}
         ogImageWidth="1920"
@@ -487,12 +509,12 @@ export function BlogPost() {
       <div className="pt-24 pb-8 px-6">
         <div className="max-w-4xl mx-auto">
           <a
-            href="/blog/"
+            href={`${sectionBasePath}/`}
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors group"
           >
             <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
 
-            <span className="text-sm font-medium">Back to Blog</span>
+            <span className="text-sm font-medium">Back to {sectionLabel}</span>
           </a>
         </div>
       </div>
@@ -771,7 +793,7 @@ export function BlogPost() {
                 {relatedPosts.map((relatedPost) => (
                   <a
                     key={relatedPost.id}
-                    href={`/blog/${relatedPost.id}/`}
+                    href={getPostPath(relatedPost)}
                     className="group bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all"
                   >
                     <div className="text-xs font-medium text-blue-400 mb-3">

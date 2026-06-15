@@ -8,6 +8,7 @@ import {
   ShoppingBagIcon,
   BookOpenIcon,
   FileTextIcon,
+  FlaskConicalIcon,
   UsersIcon,
   TrophyIcon,
 } from "lucide-react";
@@ -313,6 +314,26 @@ export function GenezioHeader() {
                       </div>
                     </a>
 
+                    <a
+                      href="/research/"
+                      onClick={() => setResourcesMenuOpen(false)}
+                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
+                          <FlaskConicalIcon className="w-5 h-5 text-violet-400" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-violet-400 transition-colors">
+                            Research
+                          </div>
+                          <div className="text-white/60 text-xs leading-relaxed">
+                            Original AI search studies
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
                     <Link
                       to="/industry-leaderboards"
                       onClick={() => setResourcesMenuOpen(false)}
@@ -487,6 +508,16 @@ export function GenezioHeader() {
                     </div>
                     <div className="text-white/60 text-xs">
                       Insights & best practices
+                    </div>
+                  </a>
+                  <a
+                    href="/research/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">Research</div>
+                    <div className="text-white/60 text-xs">
+                      Original AI search studies
                     </div>
                   </a>
                   <Link

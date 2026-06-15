@@ -23,7 +23,8 @@ const staticRoutes = [
     '/industry-leaderboards',
     '/about-genezio',
     '/agencies',
-    '/blog'
+    '/blog',
+    '/research'
 ];
 
 /**
@@ -126,12 +127,12 @@ function getBlogPosts(authorImages) {
         const content = fs.readFileSync(fullPath, 'utf-8');
         const frontmatter = parseFrontmatter(content);
         const id = file.replace('.md', '');
-
+        const isResearch = frontmatter.type === 'research';
         const authorKey = frontmatter.author?.toLowerCase()?.split(" ")?.join("-");
 
         return {
             id,
-            slug: `/blog/${id}/`,
+            slug: isResearch ? `/research/${id}/` : `/blog/${id}/`,
             title: frontmatter.title || id,
             thumbnail: frontmatter.thumbnail,
             authorImage: authorImages[authorKey],

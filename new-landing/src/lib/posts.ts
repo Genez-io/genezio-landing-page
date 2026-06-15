@@ -108,6 +108,11 @@ function extractAllTags(content: string): string[] {
     return tagLines.map(line => line.replace(/\s*-\s*/, "").trim()).filter(Boolean);
 }
 
+export function getPostPath(post: Pick<BlogPost, "id" | "postType">): string {
+    const base = post.postType === "research" ? "/research" : "/blog";
+    return `${base}/${post.id}/`;
+}
+
 export function getAllPosts(): BlogPost[] {
     const modules = import.meta.glob("../posts/*.md", { as: "raw", eager: true });
 
@@ -174,4 +179,12 @@ export function getAllPosts(): BlogPost[] {
 export function getPostById(id: string): BlogPost | undefined {
     const posts = getAllPosts();
     return posts.find((post) => post.id === id);
+}
+
+export function getBlogPosts(): BlogPost[] {
+    return getAllPosts().filter((post) => post.postType !== "research");
+}
+
+export function getResearchPosts(): BlogPost[] {
+    return getAllPosts().filter((post) => post.postType === "research");
 }

@@ -10,7 +10,7 @@ export function AgencyFaqSection() {
     {
       question: "How many brands can I monitor?",
       answer:
-        "The agency plan includes 3 brands. You can add more brands as needed with our flexible add-ons. Each additional brand includes full monitoring, AI tracking, and insights.",
+        "Your agency plan is custom — we scope the number of brands around your client roster. You can add more brands at any time with flexible add-ons, and each brand includes full monitoring, AI tracking, and insights.",
     },
     {
       question: "Can I manage multiple clients?",
@@ -20,12 +20,12 @@ export function AgencyFaqSection() {
     {
       question: "What AI engines do you track?",
       answer:
-        "The agency plan tracks 2 AI engines (e.g., ChatGPT, Perplexity, Google AI Mode). You can add more engines with our enterprise add-ons to get comprehensive coverage across all major LLMs.",
+        "We track up to 5 answer engines per brand (e.g., ChatGPT, Claude, Gemini, Perplexity, Grok). You can add more engines with our enterprise add-ons to get comprehensive coverage across all major LLMs.",
     },
     {
       question: "How does the free brand scan work?",
       answer:
-        "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. Free as part of the 7-day trial and takes less than 10 minutes.",
+        "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. It takes less than 10 minutes and is a great way to preview the platform before talking to our team.",
     },
     {
       question: "Can I white-label reports for clients?",

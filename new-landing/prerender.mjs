@@ -59,6 +59,7 @@ const routes = [
   "/privacy-policy",
   "/about-genezio",
   "/blog",
+  "/research",
   "/agencies",
   "/industry-leaderboards",
   "/blog/affordable-cloud-hosting/",
@@ -103,7 +104,9 @@ if (fs.existsSync(postsDir)) {
   const postFiles = fs.readdirSync(postsDir).filter((file) => file.endsWith(".md"));
   postFiles.forEach((file) => {
     const slug = file.replace(".md", "");
-    routes.push(`/blog/${slug}`);
+    const content = fs.readFileSync(path.join(postsDir, file), "utf-8");
+    const isResearch = /^type:\s*research\s*$/m.test(content);
+    routes.push(isResearch ? `/research/${slug}` : `/blog/${slug}`);
   });
   console.log(`Added ${postFiles.length} blog post routes.`);
 } else {
