@@ -49,6 +49,11 @@ const AUTHOR_META: Record<
     description:
       "Read insights from Andrei Pitis, Co-Founder & CEO of Genezio, on GEO, AI brand visibility strategies, and the future of search.",
   },
+  "bogdan-vlad": {
+    title: "Bogdan Vlad: AI Integration & Backend Architecture | Genezio",
+    description:
+      "Read technical insights by Bogdan Vlad, Co-Founder & CTO of Genezio. Deep dives into AI integration, backend architectures, and developer tooling.",
+  },
 };
 
 function BlogAuthor() {

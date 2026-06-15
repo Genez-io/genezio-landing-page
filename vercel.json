@@ -17,6 +17,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/chatgpt-fanout-brand-injection/",
+      "destination": "/research/chatgpt-fanout-brand-injection/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chatgpt-fanout-brand-injection",
+      "destination": "/research/chatgpt-fanout-brand-injection/",
+      "permanent": true
+    },
+    {
       "source": "/blog/affordable-cloud-hosting/",
       "destination": "/blog/",
       "permanent": true
