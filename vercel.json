@@ -6,6 +6,17 @@
   "outputDirectory": "new-landing/dist",
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.genezio.com"
+        }
+      ],
+      "destination": "https://genezio.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/blog/affordable-cloud-hosting/",
       "destination": "/blog/",
       "permanent": true

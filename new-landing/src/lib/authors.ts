@@ -90,7 +90,6 @@ export const authors: Record<string, any> = {
         }
     },
     "bogdan-vlad": {
-        "draft": true,
         "name": "Bogdan Vlad",
         "role": "Co-Founder and CTO",
         "bio": "Bogdan Vlad is the Co-Founder and Chief Technology Officer at Genezio. As a Software Engineer with a rich background across various programming languages, he has a strong track record in mobile development and embedded systems. Before Genezio, Bogdan held key technical and leadership roles, including Lead Software Engineer at Neobility, Staff Engineer at Fitbit focused on transport layer protocols, and Lead Software Engineer at Vector Watch. His innovative work in the field includes holding a US patent for systems and methods for operating an energy-efficient display. Academically, he earned a Master's degree in Computer Science with Greatest Distinction from Vrije Universiteit Brussel. Recently, he shows a deep focus on AI and advanced backend architectures.",

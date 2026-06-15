@@ -74,7 +74,6 @@ const LEGACY_REDIRECTS = [
   { from: "/blog/author/andra-pitis/", to: "/blog/" },
   { from: "/blog/author/andreia-ocanoaia/", to: "/blog/" },
   { from: "/blog/author/bogdan-ciobanu/", to: "/blog/" },
-  { from: "/blog/author/bogdan-vlad/", to: "/blog/" },
   { from: "/blog/author/costin-sin/", to: "/blog/" },
   { from: "/blog/author/cristi-miloiu/", to: "/blog/" },
   { from: "/blog/author/kristopher-sandoval/", to: "/blog/" },
