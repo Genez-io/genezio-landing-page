@@ -88,13 +88,6 @@ export function PolymetSEO({
           offers: [
             {
               "@type": "Offer",
-              name: "Growth",
-              description: "For scaling teams",
-              price: "299",
-              priceCurrency: "EUR",
-            },
-            {
-              "@type": "Offer",
               name: "Enterprise",
               description: "For large-scale operations",
               priceSpecification: {
@@ -103,14 +96,7 @@ export function PolymetSEO({
                 priceCurrency: "EUR",
                 description: "Custom/Contact for quote",
               },
-            },
-            {
-              "@type": "Offer",
-              name: "Agency",
-              description: "For partners managing multiple clients",
-              price: "999",
-              priceCurrency: "EUR",
-            },
+            }
           ],
         },
       ];

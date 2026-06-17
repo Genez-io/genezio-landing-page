@@ -63,9 +63,7 @@ The Genezio dashboard is clean but dense with data. The "Brand Performance Repor
 ![Genezio Citation Analysis](/images/genezio-citation-analysis.webp)
 
 ### Pricing
-Genezio offers a tiered structure:
-* **Growth:** €299/month (4 models, 50 scenarios, multi-turn conversations).
-* **Agency:** €999/month (Monitor 3 brands, white-label reports).
+Genezio offers a custom pricing shaped by the answer engines, markets, and volume you actually need.
 
 **Verdict:** Genezio is built for enterprise-level SEOs who need to measure and improve brand visibility in AI-powered search environments. If you need to know *why* an LLM recommends a competitor (e.g., specific personas or geographic contexts), Genezio offers the deepest forensic capabilities.
 
@@ -173,7 +171,7 @@ Semrush brings its traditional "score" mentality to AI.
 | **Unit of Analysis** | Multi-Turn AI Conversations | Answer Engine Responses | Static Prompts | Keywords/Prompts | Content Gaps |
 | **Honda Visibility** | 75% (2nd place) | 46.7% | 35% (4rd place) | 87/100 (High) | 62.1% (1st place) |
 | **Top Competitor** | Toyota | Toyota | Hyundai | Toyota | Toyota |
-| **Pricing Entry** | €299/mo | Enterprise/Custom | €89/mo | $99/mo (Add-on) | $99/mo |
+| **Pricing Entry** | Enterprise/Custom | Enterprise/Custom | €89/mo | $99/mo (Add-on) | $99/mo |
 | **Unique Feature** | Multi-turn conversations & Query Fanout | Negative Sentiment Drivers | Win/Loss Prompt Lists | SEO Data Integration | "Fix it" Content Generator |
 
 ## Recommendation
