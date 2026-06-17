@@ -53,7 +53,7 @@ While Semrush suits marketing teams requiring extensive SEO and content marketin
 | **Actionable Recommendations** | Automated multi-channel strategy guidance | SEO-centric but fragmented across add-ons |
 | **Content Generation Hub** | Available in Beta without extra cost | Priced at $60 extra as an add-on |
 | **Security & Enterprise Features** | SOC 2 Type II certified; multi-brand, global scale | Standard compliance; features vary by add-on |
-| **Pricing** | Plans from €299/month | Starting around $199/month + costly add-ons (eg., each additional user costs $45/mo) |
+| **Pricing** | Enterprise/Custom | Starting around $199/month + costly add-ons (eg., each additional user costs $45/mo) |
 
 ## Deep dive: The Genezio difference
 
@@ -127,9 +127,7 @@ Semrush is strategic and diagnostic; Genezio is tactical, action-driven, and alr
 
 ### 7. Security, scalability, and pricing
 
-Genezio is SOC 2 Type II certified, supporting enterprise-grade security with features for managing multiple brands globally. Its tiered pricing from €299/month offers SMBs access to advanced features without hidden add-ons. 
-
-The Growth plan includes 5 users. In contrast, Semrush plans provide access for one user by default and charge $45 per additional user, which increases total cost as teams expand. 
+Genezio is SOC 2 Type II certified, supporting enterprise-grade security with features for managing multiple brands globally. Its pricing is shaped by the engines, markets, and volume you actually need.
 
 Semrush’s pricing is multi-layered, starting around $199/month but requiring multiple expensive add-ons for full AI marketing capability, making budgeting complex especially for SMBs.
 
