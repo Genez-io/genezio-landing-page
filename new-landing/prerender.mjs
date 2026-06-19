@@ -82,7 +82,7 @@ if (fs.existsSync(glossaryPath)) {
   console.warn("Glossary file not found:", glossaryPath);
 }
 
-// Dynamically add glossary alias redirect routes
+// Dynamically add glossary alias (legacy slug) routes
 const glossaryTermPath = path.resolve(__dirname, "src/polymet/pages/glossary-term.tsx");
 if (fs.existsSync(glossaryTermPath)) {
   const content = fs.readFileSync(glossaryTermPath, "utf-8");
