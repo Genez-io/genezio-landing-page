@@ -14,44 +14,6 @@ const routes = [
   "/data-processing-agreement",
   "/glossary",
 
-  "/glossary/ai-brand-perception",
-  "/glossary/ai-citation",
-  "/glossary/ai-competitive-analysis",
-  "/glossary/ai-marketing-platform",
-  "/glossary/ai-marketing-software",
-  "/glossary/ai-mention-sentiment",
-  "/glossary/ai-persona-targeting",
-  "/glossary/ai-platform",
-  "/glossary/ai-platforms-for-business",
-  "/glossary/ai-prompt-engineering",
-  "/glossary/ai-recommendation-score",
-  "/glossary/ai-search-optimization",
-  "/glossary/ai-training-data",
-  "/glossary/ai-visibility",
-  "/glossary/answer-engine-optimization",
-  "/glossary/chat-gpt-citations",
-  "/glossary/chatgpt-prompt-engineering",
-  "/glossary/conversation-analysis",
-  "/glossary/conversation-intelligence-platform",
-  "/glossary/conversation-intelligence-software",
-  "/glossary/conversational-ai-platform",
-  "/glossary/conversational-brand-presence",
-  "/glossary/conversational-funnel",
-  "/glossary/conversational-intent",
-  "/glossary/conversational-keyword",
-  "/glossary/enterprise-ai-platform",
-  "/glossary/enterprise-ai-software",
-  "/glossary/generative-ai-platform",
-  "/glossary/generative-engine-optimization",
-  "/glossary/generative-response",
-  "/glossary/llm-optimisation",
-  "/glossary/llm-prompt-engineering",
-  "/glossary/multi-turn-conversation",
-  "/glossary/prompt-engineering",
-  "/glossary/source-attribution",
-  "/glossary/structured-data-for-ai",
-  "/glossary/query-fan-out",
-
   "/increase-conversion",
   "/pricing",
   "/support-terms",
@@ -97,6 +59,49 @@ const routes = [
   "/tags/tutorials/",
   "/ai-search-optimization-tool/",
 ];
+
+// Dynamically add glossary routes
+const glossaryPath = path.resolve(__dirname, "src/polymet/pages/glossary.tsx");
+if (fs.existsSync(glossaryPath)) {
+  const content = fs.readFileSync(glossaryPath, "utf-8");
+  const termRegex = /term:\s*"([^"]+)"/g;
+  let match;
+  let glossaryCount = 0;
+
+  while ((match = termRegex.exec(content)) !== null) {
+    const term = match[1];
+    const slug = term
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+    routes.push(`/glossary/${slug}`);
+    glossaryCount++;
+  }
+  console.log(`Added ${glossaryCount} glossary routes.`);
+} else {
+  console.warn("Glossary file not found:", glossaryPath);
+}
+
+// Dynamically add glossary alias redirect routes
+const glossaryTermPath = path.resolve(__dirname, "src/polymet/pages/glossary-term.tsx");
+if (fs.existsSync(glossaryTermPath)) {
+  const content = fs.readFileSync(glossaryTermPath, "utf-8");
+  const aliasesMatch = content.match(/const slugAliases:\s*Record<string,\s*string>\s*=\s*{([\s\S]*?)}/);
+  if (aliasesMatch) {
+    const aliasesBlock = aliasesMatch[1];
+    const aliasRegex = /"([^"]+)":\s*"([^"]+)"/g;
+    let match;
+    let aliasCount = 0;
+    while ((match = aliasRegex.exec(aliasesBlock)) !== null) {
+      const alias = match[1];
+      routes.push(`/glossary/${alias}`);
+      aliasCount++;
+    }
+    console.log(`Added ${aliasCount} glossary alias redirect routes.`);
+  }
+} else {
+  console.warn("Glossary term file not found:", glossaryTermPath);
+}
 
 // Dynamically add blog post routes
 const postsDir = path.resolve(__dirname, "src/posts");
