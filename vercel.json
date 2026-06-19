@@ -380,6 +380,86 @@
       "source": "/ai-search-optimization-tool",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/careers/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/llm-optimisation/",
+      "destination": "/glossary/llm-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/llm-optimisation",
+      "destination": "/glossary/llm-optimization",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/schemaorg-markup/",
+      "destination": "/glossary/structured-data-for-ai/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/schemaorg-markup",
+      "destination": "/glossary/structured-data-for-ai",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/schema-org-markup/",
+      "destination": "/glossary/structured-data-for-ai/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/schema-org-markup",
+      "destination": "/glossary/structured-data-for-ai",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/ai-prompt-engineering/",
+      "destination": "/glossary/prompt-engineering/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/ai-prompt-engineering",
+      "destination": "/glossary/prompt-engineering",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/chatgpt-prompt-engineering/",
+      "destination": "/glossary/prompt-engineering/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/chatgpt-prompt-engineering",
+      "destination": "/glossary/prompt-engineering",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/llm-prompt-engineering/",
+      "destination": "/glossary/prompt-engineering/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/llm-prompt-engineering",
+      "destination": "/glossary/prompt-engineering",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/api/",
+      "destination": "/glossary/application-programming-interface/",
+      "permanent": true
+    },
+    {
+      "source": "/glossary/api",
+      "destination": "/glossary/application-programming-interface",
+      "permanent": true
     }
   ]
 }

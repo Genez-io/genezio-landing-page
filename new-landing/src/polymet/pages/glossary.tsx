@@ -207,34 +207,130 @@ const glossaryTerms: GlossaryTerm[] = [
     category: "Optimization"
   },
   {
-    term: "LLM Optimisation",
+    term: "LLM Optimization",
+    acronym: "LLMO",
     definition:
-      "The process of optimizing content and data to improve how Large Language Models (LLMs) understand and represent your brand. LLM optimization ensures accurate brand representation in AI responses and maximizes visibility across AI platforms powered by LLMs.",
+      "The practice of structuring and publishing content so that Large Language Models can easily ingest, understand, and reproduce it accurately. LLMO focuses on the model layer beneath answer engines, complementing GEO and AEO to ensure accurate brand representation across AI platforms.",
     category: "Optimization"
-  },
-  {
-    term: "AI Prompt Engineering",
-    definition:
-      "The practice of designing and refining prompts to achieve optimal results from AI systems. In a marketing context, it involves understanding how to structure queries and content so AI models provide accurate, favorable responses about your brand.",
-    category: "Technical"
-  },
-  {
-    term: "ChatGPT Prompt Engineering",
-    definition:
-      "Specialized prompt engineering techniques specifically for ChatGPT. This includes understanding ChatGPT's unique capabilities, limitations, and response patterns to craft prompts that elicit desired outputs and optimize brand visibility in ChatGPT conversations.",
-    category: "Technical"
-  },
-  {
-    term: "LLM Prompt Engineering",
-    definition:
-      "The art and science of crafting effective prompts for Large Language Models (LLMs) like GPT-4, Claude, and Gemini. LLM prompt engineering requires understanding model architectures, training data, and response patterns to optimize for accuracy and brand representation.",
-    category: "Technical"
   },
   {
     term: "Query Fan-Out",
     definition:
       "An architectural technique where a single user request (query) is automatically broken down or multiplied into several parallel sub-queries to retrieve complex and comprehensive information from various data sources.",
     category: "Technical"
+  },
+  {
+    term: "Large Language Model",
+    acronym: "LLM",
+    definition:
+      "An AI model trained on vast amounts of text to understand and generate human-like language. LLMs such as GPT-4, Claude, and Gemini power the conversational AI platforms where brand visibility is now measured and optimized.",
+    category: "Technical"
+  },
+  {
+    term: "AI Agent",
+    definition:
+      "An autonomous AI system that can plan, take actions, and use tools to complete tasks on a user's behalf, rather than only answering a single question. Agents increasingly search the web and select sources independently, making brand presence in their reasoning steps a new visibility frontier.",
+    category: "Core Concepts"
+  },
+  {
+    term: "Agentic Search",
+    definition:
+      "A search process driven by an AI agent that breaks a goal into steps, issues multiple queries, evaluates results, and synthesizes an answer autonomously. Unlike a single keyword search, agentic search means a brand must be discoverable across an entire reasoning chain.",
+    category: "Core Concepts"
+  },
+  {
+    term: "AI Overviews",
+    definition:
+      "AI-generated summaries that appear at the top of a search results page, answering a query directly by synthesizing multiple sources. Because they often satisfy the user without a click, being cited within an AI Overview is critical for maintaining visibility.",
+    category: "Core Concepts"
+  },
+  {
+    term: "AI Mode",
+    definition:
+      "A conversational, AI-first interface within a search engine that replaces the traditional list of blue links with a generated, dialogue-based answer. AI Mode shifts visibility competition from ranking positions to citation and recommendation within the generated response.",
+    category: "Core Concepts"
+  },
+  {
+    term: "Zero-Click Search",
+    definition:
+      "A search where the user's need is met directly on the results page, through an AI Overview, featured snippet, or generated answer, without clicking through to any website. Zero-click behavior makes AI citation and brand mention more valuable than raw traffic.",
+    category: "Core Concepts"
+  },
+  {
+    term: "AI Hallucination",
+    definition:
+      "When an AI model generates information that is plausible-sounding but factually incorrect or fabricated. Hallucinations about a brand (wrong pricing, features, or claims) pose a reputational risk that AI visibility monitoring is designed to detect and correct.",
+    category: "Technical"
+  },
+  {
+    term: "Web Crawler",
+    definition:
+      "An automated bot that systematically browses and downloads web pages so their content can be indexed. AI crawlers (such as GPTBot and others) determine which pages are available as training data and citation sources for generative engines.",
+    category: "Technical"
+  },
+  {
+    term: "llms.txt",
+    definition:
+      "A proposed standard file placed at a website's root that provides large language models with a curated, machine-readable summary of the site's most important content. It functions like robots.txt for the AI era, guiding how generative engines read and represent a brand.",
+    category: "Technical"
+  },
+  {
+    term: "Knowledge Graph",
+    definition:
+      "A structured network of entities (people, places, brands, products) and the relationships between them, used by search and AI systems to understand context. A strong, accurate knowledge-graph presence improves how confidently AI engines describe and recommend a brand.",
+    category: "Technical"
+  },
+  {
+    term: "Entity",
+    definition:
+      "A distinct, uniquely identifiable thing, such as a brand, product, person, or place, that AI and search systems recognize and reason about. Establishing your brand as a well-defined entity is foundational to consistent AI representation.",
+    category: "Technical"
+  },
+  {
+    term: "Model Context Protocol Server",
+    acronym: "MCP Server",
+    definition:
+      "A server implementing the Model Context Protocol, an open standard that lets AI models and agents securely connect to external tools, data sources, and services. MCP servers expand the data an AI can draw on when generating answers about a brand.",
+    category: "Technical"
+  },
+  {
+    term: "AI Visibility Tool",
+    definition:
+      "Software that tracks how often, how prominently, and how accurately a brand appears across AI-generated responses on platforms like ChatGPT, Claude, Perplexity, and Gemini. These tools convert conversational mentions into measurable visibility and recommendation metrics.",
+    category: "Optimization"
+  },
+  {
+    term: "Rank Tracking",
+    definition:
+      "The ongoing measurement of where a brand or page appears across search results and, increasingly, across AI-generated answers. In an AI-search context, rank tracking expands to monitoring citation frequency and recommendation position within generative responses.",
+    category: "Metrics"
+  },
+  {
+    term: "Share of Voice",
+    acronym: "SOV",
+    definition:
+      "The proportion of AI responses in a category that mention or recommend your brand relative to competitors. Share of Voice quantifies competitive dominance in conversational AI, much as it traditionally did for advertising and search.",
+    category: "Metrics"
+  },
+  {
+    term: "Sentiment Analysis",
+    definition:
+      "The automated evaluation of whether a brand mention is positive, neutral, or negative in tone. Applied to AI-generated responses, sentiment analysis reveals not just whether a brand is mentioned, but how favorably it is characterized.",
+    category: "Metrics"
+  },
+  {
+    term: "Application Programming Interface",
+    acronym: "API",
+    definition:
+      "A defined set of rules and endpoints that lets one software system request data or actions from another in a predictable, structured way. APIs are how applications talk to each other, and the building blocks that AI tools and MCP servers often wrap.",
+    category: "Technical"
+  },
+  {
+    term: "Visibility-to-Recommendation Rate",
+    acronym: "VRR",
+    definition:
+      "The percentage of times an AI engine explicitly endorses a brand as the best choice for a specific user, out of all the times that brand was considered. VRR measures high-intent advocacy, going beyond passive mentions to capture actual recommendation.",
+    category: "Metrics"
   }
 ];
 
