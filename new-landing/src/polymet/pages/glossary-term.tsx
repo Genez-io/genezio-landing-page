@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams } from "react-router";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,6 +21,41 @@ interface GlossaryTerm {
   relatedTerms: string[];
   title?: string;
   metaDescription?: string;
+}
+
+// Renders plain text while converting markdown-style links [label](url) into
+// real anchors. External URLs open in a new tab; internal paths stay in-app.
+function renderRichText(text: string) {
+  const parts: (string | React.JSX.Element)[] = [];
+  const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = linkRe.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    const label = match[1];
+    const url = match[2];
+    const isExternal = /^https?:\/\//i.test(url);
+    parts.push(
+      <a
+        key={key++}
+        href={url}
+        className="text-purple-400 underline hover:text-purple-300"
+        {...(isExternal
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+      >
+        {label}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+  return parts;
 }
 
 const glossaryData: Record<string, GlossaryTerm> = {
@@ -90,7 +126,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
     ],
 
     whyItMatters:
-      "Generative AI models can create compelling narratives about your brand—accurate or not. GEO ensures that when AI engines generate content about your industry, products, or services, they present your brand accurately and favorably, protecting your reputation and maximizing opportunities.",
+      "Generative AI models can create compelling narratives about your brand, accurate or not. GEO ensures that when AI engines generate content about your industry, products, or services, they present your brand accurately and favorably, protecting your reputation and maximizing opportunities.",
     relatedTerms: [
       "answer-engine-optimization",
       "ai-brand-perception",
@@ -107,7 +143,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "The process of optimizing your digital presence to rank higher in AI-powered search results and conversational responses. ASO combines traditional SEO principles with AI-specific strategies.",
     category: "Optimization",
     detailedExplanation:
-      "AI Search Optimization (ASO) represents the convergence of traditional search optimization with the unique requirements of AI-powered search and conversational interfaces. While it builds on SEO fundamentals like content quality and authority, ASO adds new dimensions: optimizing for natural language queries, ensuring content is structured for AI comprehension, building presence on AI training data sources, and monitoring brand representation across AI platforms. ASO recognizes that AI search behaves differently than traditional search—it's conversational, context-aware, and synthesizes information rather than just ranking pages. Effective ASO requires understanding both how users interact with AI assistants and how AI models process and prioritize information.",
+      "AI Search Optimization (ASO) represents the convergence of traditional search optimization with the unique requirements of AI-powered search and conversational interfaces. While it builds on SEO fundamentals like content quality and authority, ASO adds new dimensions: optimizing for natural language queries, ensuring content is structured for AI comprehension, building presence on AI training data sources, and monitoring brand representation across AI platforms. ASO recognizes that AI search behaves differently than traditional search: it's conversational, context-aware, and synthesizes information rather than just ranking pages. Effective ASO requires understanding both how users interact with AI assistants and how AI models process and prioritize information.",
     examples: [
       "Optimizing content for natural language questions like 'What's the best CRM for small businesses?' rather than keyword phrases like 'best CRM'",
       "Creating FAQ content that directly answers common conversational queries",
@@ -131,7 +167,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "How your brand is represented, mentioned, and recommended in AI-driven conversations. This includes the context, sentiment, and accuracy of brand mentions across AI platforms.",
     category: "Core Concepts",
     detailedExplanation:
-      "Conversational Brand Presence goes beyond simple visibility to encompass the quality, context, and sentiment of how your brand appears in AI conversations. It's not just about being mentioned—it's about being mentioned in the right context, with accurate information, and with positive sentiment. This includes how AI engines describe your products, what they say about your brand values, how they compare you to competitors, and in what situations they recommend you. Strong conversational brand presence means AI assistants present your brand as a trusted, relevant solution when users have needs you can address. It requires actively managing your brand's information across the sources AI models reference and monitoring how AI platforms currently represent you.",
+      "Conversational Brand Presence goes beyond simple visibility to encompass the quality, context, and sentiment of how your brand appears in AI conversations. It's not just about being mentioned, it's about being mentioned in the right context, with accurate information, and with positive sentiment. This includes how AI engines describe your products, what they say about your brand values, how they compare you to competitors, and in what situations they recommend you. Strong conversational brand presence means AI assistants present your brand as a trusted, relevant solution when users have needs you can address. It requires actively managing your brand's information across the sources AI models reference and monitoring how AI platforms currently represent you.",
     examples: [
       "When users ask about sustainable fashion brands, AI assistants consistently mention your company with accurate descriptions of your eco-friendly practices",
       "AI engines describe your software with the correct features and benefits, not outdated or inaccurate information",
@@ -155,7 +191,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "When an AI engine references or mentions your brand, product, or content as a source in its generated response. Citations are crucial for building AI visibility and credibility.",
     category: "Metrics",
     detailedExplanation:
-      "AI Citations represent one of the most valuable forms of AI visibility. When an AI engine cites your brand, content, or research in its response, it's not just mentioning you—it's positioning you as an authoritative source. Citations can be explicit (directly naming your brand or linking to your content) or implicit (referencing your ideas or data without direct attribution). The frequency, context, and prominence of citations indicate your brand's authority in the AI's knowledge base. Unlike traditional backlinks, AI citations happen in real-time conversations and directly influence user perception and decision-making. Building citation-worthy content requires creating original research, authoritative guides, and well-structured information that AI models recognize as trustworthy sources.",
+      "AI Citations represent one of the most valuable forms of AI visibility. When an AI engine cites your brand, content, or research in its response, it's not just mentioning you, it's positioning you as an authoritative source. Citations can be explicit (directly naming your brand or linking to your content) or implicit (referencing your ideas or data without direct attribution). The frequency, context, and prominence of citations indicate your brand's authority in the AI's knowledge base. Unlike traditional backlinks, AI citations happen in real-time conversations and directly influence user perception and decision-making. Building citation-worthy content requires creating original research, authoritative guides, and well-structured information that AI models recognize as trustworthy sources.",
     examples: [
       "Perplexity includes a link to your research report when answering questions about industry trends",
       "ChatGPT mentions your company by name as a leading provider in your category",
@@ -203,7 +239,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "An extended dialogue between a user and an AI where context is maintained across multiple exchanges. Brands need to maintain visibility throughout these conversations, not just in initial responses.",
     category: "Core Concepts",
     detailedExplanation:
-      "Multi-Turn Conversations represent a fundamental shift from traditional search behavior. Instead of a single query and result, users engage in extended dialogues with AI assistants, asking follow-up questions, requesting clarifications, and exploring topics in depth. In these conversations, context builds over multiple exchanges, and the AI's responses evolve based on the full conversation history. For brands, this means visibility in the initial response isn't enough—you need to maintain relevance and presence as the conversation develops. A user might start by asking about a general category, then narrow down to specific features, then ask for comparisons, then request pricing information. Your brand needs to remain visible and relevant throughout this journey. This requires comprehensive content that addresses not just initial queries but also the natural follow-up questions users ask.",
+      "Multi-Turn Conversations represent a fundamental shift from traditional search behavior. Instead of a single query and result, users engage in extended dialogues with AI assistants, asking follow-up questions, requesting clarifications, and exploring topics in depth. In these conversations, context builds over multiple exchanges, and the AI's responses evolve based on the full conversation history. For brands, this means visibility in the initial response isn't enough; you need to maintain relevance and presence as the conversation develops. A user might start by asking about a general category, then narrow down to specific features, then ask for comparisons, then request pricing information. Your brand needs to remain visible and relevant throughout this journey. This requires comprehensive content that addresses not just initial queries but also the natural follow-up questions users ask.",
     examples: [
       "User asks 'What are good CRM tools?', AI mentions your brand. User follows up with 'Which ones have the best mobile app?', and your brand remains in the conversation",
       "A conversation starts with general industry questions and evolves to specific product comparisons, with your brand maintaining visibility throughout",
@@ -227,7 +263,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "A metric measuring how frequently and favorably AI engines recommend your brand when users ask for product or service suggestions in your category.",
     category: "Metrics",
     detailedExplanation:
-      "AI Recommendation Score quantifies your brand's performance in one of the most valuable AI visibility scenarios: direct recommendations. When users ask AI assistants for suggestions—'What's the best...', 'Can you recommend...', 'What should I use for...'—the brands mentioned in the response have a significant advantage. The AI Recommendation Score measures not just whether you're mentioned, but how prominently (first, second, third?), how frequently (in what percentage of relevant queries?), and how favorably (with what context and sentiment?). This metric is crucial because recommendation queries often indicate high purchase intent. A strong AI Recommendation Score means AI assistants are actively promoting your brand to potential customers. Improving this score requires building authority, ensuring accurate brand information, and optimizing for the specific types of recommendation queries relevant to your business.",
+      "AI Recommendation Score quantifies your brand's performance in one of the most valuable AI visibility scenarios: direct recommendations. When users ask AI assistants for suggestions ('What's the best...', 'Can you recommend...', 'What should I use for...'), the brands mentioned in the response have a significant advantage. The AI Recommendation Score measures not just whether you're mentioned, but how prominently (first, second, third?), how frequently (in what percentage of relevant queries?), and how favorably (with what context and sentiment?). This metric is crucial because recommendation queries often indicate high purchase intent. A strong AI Recommendation Score means AI assistants are actively promoting your brand to potential customers. Improving this score requires building authority, ensuring accurate brand information, and optimizing for the specific types of recommendation queries relevant to your business.",
     examples: [
       "Your brand appears in the top 3 recommendations for 75% of queries about your product category",
       "AI assistants describe your product with specific benefits when recommending it",
@@ -251,10 +287,10 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "The underlying goal or need a user has when engaging with an AI assistant. Understanding conversational intent helps optimize for relevant AI visibility opportunities.",
     category: "Core Concepts",
     detailedExplanation:
-      "Conversational Intent goes deeper than traditional search intent. While search intent categorizes queries as informational, navigational, or transactional, conversational intent recognizes the nuanced, evolving nature of AI conversations. Users might start with exploratory intent, shift to comparative intent, then move to decision-making intent—all within a single conversation. Understanding conversational intent requires analyzing not just what users ask, but why they're asking, what they're trying to accomplish, and what information they need at each stage. For brands, this means creating content that addresses different intent types and optimizing to appear at the right moments in the user's journey. It also means recognizing that the same query can have different intents depending on context, and AI assistants interpret intent based on the full conversation, not just the current question.",
+      "Conversational Intent goes deeper than traditional search intent. While search intent categorizes queries as informational, navigational, or transactional, conversational intent recognizes the nuanced, evolving nature of AI conversations. Users might start with exploratory intent, shift to comparative intent, then move to decision-making intent, all within a single conversation. Understanding conversational intent requires analyzing not just what users ask, but why they're asking, what they're trying to accomplish, and what information they need at each stage. For brands, this means creating content that addresses different intent types and optimizing to appear at the right moments in the user's journey. It also means recognizing that the same query can have different intents depending on context, and AI assistants interpret intent based on the full conversation, not just the current question.",
     examples: [
-      "A user asking 'Tell me about project management software' has exploratory intent—they're learning, not ready to buy",
-      "The same user later asking 'How does Asana compare to Monday.com?' has comparative intent—they're evaluating options",
+      "A user asking 'Tell me about project management software' has exploratory intent; they're learning, not ready to buy",
+      "The same user later asking 'How does Asana compare to Monday.com?' has comparative intent; they're evaluating options",
       "Finally asking 'What's Asana's pricing for small teams?' indicates decision-making intent"
     ],
 
@@ -275,9 +311,9 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "How AI engines characterize and describe your brand based on their training data and available information. This perception directly influences how you're presented to users.",
     category: "Core Concepts",
     detailedExplanation:
-      "AI Brand Perception represents how AI models 'understand' and characterize your brand based on the information they've been trained on and can access. This perception is formed from countless sources: your website, news articles, reviews, social media, industry publications, and more. The AI synthesizes all this information to create a mental model of your brand—what you do, who you serve, what makes you unique, how you compare to competitors. This perception directly influences how AI assistants describe you to users. If the AI perceives you as a premium brand, it will describe you that way. If it associates you with specific use cases or industries, it will recommend you in those contexts. Managing AI Brand Perception requires understanding how AI currently perceives you, identifying any inaccuracies or gaps, and strategically building your presence across sources that influence AI understanding.",
+      "AI Brand Perception represents how AI models 'understand' and characterize your brand based on the information they've been trained on and can access. This perception is formed from countless sources: your website, news articles, reviews, social media, industry publications, and more. The AI synthesizes all this information to create a mental model of your brand: what you do, who you serve, what makes you unique, how you compare to competitors. This perception directly influences how AI assistants describe you to users. If the AI perceives you as a premium brand, it will describe you that way. If it associates you with specific use cases or industries, it will recommend you in those contexts. Managing AI Brand Perception requires understanding how AI currently perceives you, identifying any inaccuracies or gaps, and strategically building your presence across sources that influence AI understanding.",
     examples: [
-      "AI engines consistently describe your brand as 'enterprise-focused' when you're actually targeting SMBs—indicating a perception gap",
+      "AI engines consistently describe your brand as 'enterprise-focused' when you're actually targeting SMBs, indicating a perception gap",
       "AI assistants accurately capture your unique value proposition when describing your product",
       "AI models associate your brand with the right use cases and recommend you to appropriate audiences"
     ],
@@ -299,7 +335,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "The practice of AI engines crediting specific sources when generating responses. Strong source attribution increases brand authority and trust in AI conversations.",
     category: "Technical",
     detailedExplanation:
-      "Source Attribution in AI responses is similar to citations in academic writing—it credits the sources of information used to generate a response. Some AI platforms (like Perplexity) prominently display source attribution with links, while others (like ChatGPT) may mention sources within the response or not attribute at all. For brands, strong source attribution means your content, research, or expertise is explicitly credited when AI engines reference your information. This builds authority and trust, as users can see that the AI is drawing on your expertise. Earning source attribution requires creating high-quality, authoritative content that AI models recognize as credible sources. It also involves ensuring your content is accessible and properly structured so AI engines can easily reference and attribute it.",
+      "Source Attribution in AI responses is similar to citations in academic writing; it credits the sources of information used to generate a response. Some AI platforms (like Perplexity) prominently display source attribution with links, while others (like ChatGPT) may mention sources within the response or not attribute at all. For brands, strong source attribution means your content, research, or expertise is explicitly credited when AI engines reference your information. This builds authority and trust, as users can see that the AI is drawing on your expertise. Earning source attribution requires creating high-quality, authoritative content that AI models recognize as credible sources. It also involves ensuring your content is accessible and properly structured so AI engines can easily reference and attribute it.",
     examples: [
       "Perplexity includes a numbered citation linking to your blog post when answering a user's question",
       "ChatGPT mentions 'According to [Your Company]...' when referencing your research",
@@ -308,7 +344,11 @@ const glossaryData: Record<string, GlossaryTerm> = {
 
     whyItMatters:
       "Source attribution transforms mentions into endorsements. When AI engines explicitly credit your brand as a source, it positions you as an authority and builds trust with users, significantly increasing the likelihood of engagement and conversion.",
-    relatedTerms: ["ai-citation", "ai-training-data", "structured-data-for-ai"]
+    relatedTerms: [
+      "ai-citation",
+      "ai-training-data",
+      "structured-data-for-ai"
+    ]
   },
   "conversational-keyword": {
     title: "Conversational Keyword: Master AI Brand Presence | Genezio",
@@ -343,11 +383,11 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "The corpus of information used to train AI models. Your brand's presence in quality training data sources influences how AI engines understand and represent you.",
     category: "Technical",
     detailedExplanation:
-      "AI Training Data is the foundation of how AI models understand the world, including your brand. AI models are trained on vast datasets that typically include web content, books, articles, research papers, and other text sources. The information about your brand in these training datasets directly influences how AI engines perceive and represent you. If your brand has strong presence in authoritative sources that are part of training data, AI models will have more accurate and comprehensive understanding of your brand. If your presence is limited or only in low-quality sources, AI models may have incomplete or inaccurate perceptions. While you can't directly control what data AI models are trained on, you can strategically build your presence on platforms and publications that are likely to be included in training datasets: authoritative industry publications, academic sources, major news outlets, and well-established platforms.",
+      "AI Training Data is the foundation of how AI models understand the world, including your brand. AI models are trained on vast datasets that typically include web content, books, articles, research papers, and other text sources. In practice, much of this comes from a handful of large, publicly available corpora: Common Crawl (a massive, regularly refreshed snapshot of the open web) is the single biggest source for most models, supplemented by Wikipedia for encyclopedic facts, GitHub for code, Project Gutenberg and other book collections for long-form prose, and curated datasets drawn from news, forums like Reddit, and academic repositories. The information about your brand sitting inside these sources directly influences how AI engines perceive and represent you. If your brand has strong presence in authoritative sources that feed these corpora, AI models will have a more accurate and comprehensive understanding of it. If your presence is limited or confined to low-quality sources, models may form incomplete or inaccurate perceptions. While you can't directly control what data AI models are trained on, you can strategically build presence on the kinds of platforms most likely to be included: Wikipedia and Wikidata, authoritative industry publications, academic sources, major news outlets, and well-established, widely-linked websites that Common Crawl reliably captures.",
     examples: [
-      "Publishing research in industry journals that are likely included in AI training datasets",
-      "Getting featured in major publications like TechCrunch, Forbes, or industry-leading blogs",
-      "Creating comprehensive, authoritative content on your own platform that becomes a reference source"
+      "Establishing an accurate, well-sourced Wikipedia and Wikidata presence, since both are heavily used in training corpora",
+      "Getting featured in major publications and widely-linked sites that Common Crawl captures across its web snapshots",
+      "Publishing comprehensive, authoritative content on your own platform that becomes a reference source other sites cite and link to"
     ],
 
     whyItMatters:
@@ -367,7 +407,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "An AI-created answer that synthesizes information from multiple sources rather than simply retrieving existing content. Optimizing for generative responses requires different strategies than traditional SEO.",
     category: "Core Concepts",
     detailedExplanation:
-      "Generative Responses represent a fundamental shift from traditional search results. Instead of returning a list of links to existing content, AI engines generate new, original responses by synthesizing information from multiple sources. The AI doesn't just find and display your content—it reads, understands, and incorporates your information into a newly created answer. This means traditional SEO tactics like keyword density and meta descriptions are less relevant. What matters is whether your content contains information the AI finds valuable enough to include in its synthesis. Optimizing for generative responses requires creating comprehensive, authoritative content that provides unique value. It means ensuring your information is accurate and well-structured so AI can correctly understand and incorporate it. It also means building authority so AI models trust your information enough to include it in their responses.",
+      "Generative Responses represent a fundamental shift from traditional search results. Instead of returning a list of links to existing content, AI engines generate new, original responses by synthesizing information from multiple sources. The AI doesn't just find and display your content; it reads, understands, and incorporates your information into a newly created answer. This means traditional SEO tactics like keyword density and meta descriptions are less relevant. What matters is whether your content contains information the AI finds valuable enough to include in its synthesis. Optimizing for generative responses requires creating comprehensive, authoritative content that provides unique value. It means ensuring your information is accurate and well-structured so AI can correctly understand and incorporate it. It also means building authority so AI models trust your information enough to include it in their responses.",
     examples: [
       "A user asks 'How do I improve email deliverability?' and the AI generates a comprehensive answer that synthesizes best practices from multiple sources, including your blog post",
       "Instead of showing a list of CRM tools, the AI generates a personalized recommendation based on the user's specific needs, drawing on information from various sources",
@@ -391,7 +431,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "The emotional tone and context in which AI engines mention your brand. Positive sentiment in AI responses drives better conversion and brand perception.",
     category: "Metrics",
     detailedExplanation:
-      "AI Mention Sentiment measures not just whether your brand is mentioned, but how it's mentioned. The sentiment can be positive ('highly recommended', 'industry leader', 'excellent for...'), neutral (factual mentions without positive or negative framing), or negative ('limited features', 'not suitable for...', 'users report issues with...'). Sentiment is influenced by the information available about your brand in sources AI models reference: reviews, news articles, social media, industry analysis, and more. Positive sentiment significantly impacts user perception and conversion—users are much more likely to consider brands that AI assistants describe favorably. Managing AI Mention Sentiment requires monitoring how AI engines currently describe your brand, understanding what sources influence that sentiment, and strategically building positive presence across those sources. It also involves addressing any negative information that might be influencing AI perceptions.",
+      "AI Mention Sentiment measures not just whether your brand is mentioned, but how it's mentioned. The sentiment can be positive ('highly recommended', 'industry leader', 'excellent for...'), neutral (factual mentions without positive or negative framing), or negative ('limited features', 'not suitable for...', 'users report issues with...'). Sentiment is influenced by the information available about your brand in sources AI models reference: reviews, news articles, social media, industry analysis, and more. Positive sentiment significantly impacts user perception and conversion; users are much more likely to consider brands that AI assistants describe favorably. Managing AI Mention Sentiment requires monitoring how AI engines currently describe your brand, understanding what sources influence that sentiment, and strategically building positive presence across those sources. It also involves addressing any negative information that might be influencing AI perceptions.",
     examples: [
       "Positive: 'Acme CRM is highly regarded for its intuitive interface and excellent customer support'",
       "Neutral: 'Acme CRM is a customer relationship management platform founded in 2015'",
@@ -415,10 +455,10 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "The journey users take from initial AI conversation to conversion. Unlike traditional funnels, conversational funnels are non-linear and context-dependent.",
     category: "Core Concepts",
     detailedExplanation:
-      "The Conversational Funnel reimagines the customer journey for the AI era. Traditional marketing funnels are linear (awareness → consideration → decision) and based on discrete touchpoints (ad click → landing page → form submission). Conversational funnels are fluid and non-linear. A user might move from awareness to decision and back to consideration within a single conversation. They might ask exploratory questions, then specific product questions, then general questions again as they think through their decision. The AI maintains context throughout, and users can jump between stages naturally. For brands, this means you need visibility and relevant information at every stage, because users can enter and move through the funnel in unpredictable ways. It also means the conversation itself is the funnel—there's no separate landing page or form. The AI conversation is where awareness, consideration, and decision all happen.",
+      "The Conversational Funnel reimagines the customer journey for the AI era. Traditional marketing funnels are linear (awareness → consideration → decision) and based on discrete touchpoints (ad click → landing page → form submission). Conversational funnels are fluid and non-linear. A user might move from awareness to decision and back to consideration within a single conversation. They might ask exploratory questions, then specific product questions, then general questions again as they think through their decision. The AI maintains context throughout, and users can jump between stages naturally. For brands, this means you need visibility and relevant information at every stage, because users can enter and move through the funnel in unpredictable ways. It also means the conversation itself is the funnel; there's no separate landing page or form. The AI conversation is where awareness, consideration, and decision all happen.",
     examples: [
       "A user starts by asking 'What is conversational AI?' (awareness), then 'What are the best conversational AI platforms?' (consideration), then 'Tell me more about how conversational AI works' (back to awareness), then 'How much does conversational AI cost?' (decision)",
-      "Within one conversation, a user explores multiple product categories, compares options, asks for specific features, and requests pricing—all fluidly without following a linear path",
+      "Within one conversation, a user explores multiple product categories, compares options, asks for specific features, and requests pricing, all fluidly without following a linear path",
       "A user might ask decision-stage questions first ('What's the pricing for X?') before asking awareness-stage questions ('What exactly does X do?')"
     ],
 
@@ -463,11 +503,11 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "Organized information formats that help AI engines better understand and represent your content. This includes schema markup, knowledge graphs, and API-accessible data.",
     category: "Technical",
     detailedExplanation:
-      "Structured Data for AI involves organizing your brand information in formats that AI engines can easily parse, understand, and reference. While AI models can process unstructured text, structured data provides clear, unambiguous information that reduces the risk of misinterpretation. This includes schema markup on your website (product schemas, organization schemas, FAQ schemas), knowledge graph entities (like Google Knowledge Graph or Wikidata), and API-accessible data that AI platforms can query. Structured data is particularly important for factual information like product specifications, pricing, company details, and relationships between entities. By providing structured data, you help AI engines accurately understand and represent your brand, reducing the risk of errors or omissions in AI-generated responses. It also makes your information more accessible to AI platforms that prioritize structured sources.",
+      "Structured Data for AI involves organizing your brand information in formats that AI engines can easily parse, understand, and reference. While AI models can process unstructured text, structured data provides clear, unambiguous information that reduces the risk of misinterpretation. The most common implementation is schema.org markup (typically as JSON-LD), a shared vocabulary that major search engines created and document in Google's [structured data search gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery), which lists every supported type such as Product, Review, FAQ, Organization, and Event. Google uses these microformats to understand page content and to power rich results in Search, and the same clarity helps AI engines extract facts accurately. Beyond on-page markup, structured data also includes knowledge graph entities (like Google Knowledge Graph or Wikidata) and API-accessible data that AI platforms can query. It is particularly important for factual information like product specifications, pricing, company details, and relationships between entities. Before publishing, validate your markup with the [Schema.org Validator](https://validator.schema.org/) (or Google's Rich Results Test) to catch syntax errors that would otherwise prevent engines from reading it. Note that, per Google's own guidance, structured data is not strictly required for generative AI search, but it remains a strong, low-risk signal that improves accuracy and rich-result eligibility.",
     examples: [
       "Implementing Product schema markup so AI engines can accurately extract your product features, pricing, and availability",
-      "Creating a comprehensive knowledge graph entry that defines your company, products, and relationships",
-      "Providing API access to your product catalog so AI platforms can query current, accurate information"
+      "Validating your JSON-LD with the [Schema.org Validator](https://validator.schema.org/) before deployment to catch errors that block parsing",
+      "Checking which markup types are supported and how they render using Google's [structured data search gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery)"
     ],
 
     whyItMatters:
@@ -495,7 +535,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
     ],
 
     whyItMatters:
-      "Not all AI visibility is equally valuable. AI Persona Targeting ensures you're visible to the right audiences—the personas most likely to become customers. It helps you allocate optimization resources effectively and create content that resonates with your target buyers.",
+      "Not all AI visibility is equally valuable. AI Persona Targeting ensures you're visible to the right audiences, the personas most likely to become customers. It helps you allocate optimization resources effectively and create content that resonates with your target buyers.",
     relatedTerms: [
       "conversational-intent",
       "conversational-keyword",
@@ -520,7 +560,11 @@ const glossaryData: Record<string, GlossaryTerm> = {
 
     whyItMatters:
       "AI Platforms are the gatekeepers of AI visibility. Understanding each platform's unique characteristics helps you optimize effectively and ensures your brand is visible across the AI ecosystem, not just on a single platform.",
-    relatedTerms: ["ai-visibility", "ai-brand-perception", "ai-training-data"]
+    relatedTerms: [
+      "ai-visibility",
+      "ai-brand-perception",
+      "ai-training-data"
+    ]
   },
   "generative-ai-platform": {
     title: "Generative AI Platform: Powering Brand Presence",
@@ -603,7 +647,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "A specialized platform that applies artificial intelligence to marketing activities. These platforms help marketers optimize campaigns, personalize customer experiences, predict trends, and measure AI-driven brand visibility across conversational channels.",
     category: "Core Concepts",
     detailedExplanation:
-      "AI Marketing Platforms bring artificial intelligence capabilities specifically to marketing use cases. These platforms help marketers leverage AI for content optimization, audience segmentation, predictive analytics, campaign automation, and personalization at scale. Modern AI marketing platforms increasingly focus on conversational AI visibility—measuring and optimizing how brands appear in AI-generated responses across platforms like ChatGPT, Claude, and Perplexity. They provide insights into AI brand perception, recommendation scores, citation frequency, and competitive positioning in AI conversations. Features typically include AI-powered content generation, sentiment analysis, conversational keyword research, multi-turn conversation testing, and AI visibility tracking. For marketing teams, these platforms provide the tools and insights needed to succeed in an AI-driven marketing landscape where traditional SEO and advertising are supplemented by AI visibility optimization.",
+      "AI Marketing Platforms bring artificial intelligence capabilities specifically to marketing use cases. These platforms help marketers leverage AI for content optimization, audience segmentation, predictive analytics, campaign automation, and personalization at scale. Modern AI marketing platforms increasingly focus on conversational AI visibility, measuring and optimizing how brands appear in AI-generated responses across platforms like ChatGPT, Claude, and Perplexity. They provide insights into AI brand perception, recommendation scores, citation frequency, and competitive positioning in AI conversations. Features typically include AI-powered content generation, sentiment analysis, conversational keyword research, multi-turn conversation testing, and AI visibility tracking. For marketing teams, these platforms provide the tools and insights needed to succeed in an AI-driven marketing landscape where traditional SEO and advertising are supplemented by AI visibility optimization.",
     examples: [
       "Using an AI marketing platform to track how often your brand appears in ChatGPT recommendations compared to competitors",
       "Leveraging AI to generate and optimize content that increases your brand's visibility in AI-generated responses",
@@ -785,100 +829,29 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "ai-citation"
     ]
   },
-  "llm-optimisation": {
-    title: "LLM Optimisation: Boost Your Brand Presence in AI",
+  "llm-optimization": {
+    title: "LLM Optimization (LLMO): Make Content AI Can Reproduce",
     metaDescription:
-      "Master LLM Optimisation to ensure accurate brand representation and maximum visibility across ChatGPT, Claude, Gemini & other AI platforms. Get started!",
-    term: "LLM Optimisation",
+      "What is LLM Optimization (LLMO)? Learn how to structure content so LLMs like ChatGPT, Claude & Gemini ingest, understand & reproduce your brand accurately.",
+    term: "LLM Optimization",
+    acronym: "LLMO",
     definition:
-      "The process of optimizing content and data to improve how Large Language Models (LLMs) understand and represent your brand. LLM optimization ensures accurate brand representation in AI responses and maximizes visibility across AI platforms powered by LLMs.",
+      "The practice of structuring and publishing content so that Large Language Models can easily ingest, understand, and reproduce it accurately. LLMO focuses on the model layer beneath answer engines, complementing GEO and AEO to ensure accurate brand representation across AI platforms.",
     category: "Optimization",
     detailedExplanation:
-      "LLM Optimisation focuses specifically on optimizing for Large Language Models—the AI technology powering platforms like ChatGPT (GPT-4), Claude, Gemini, and others. LLMs process and generate text based on patterns learned from massive training datasets. Optimizing for LLMs requires understanding how these models work: they prioritize authoritative sources, understand context and relationships, and synthesize information from multiple sources. LLM optimization involves creating comprehensive, well-structured content that LLMs can easily parse and understand, building presence on authoritative platforms likely included in training data, ensuring consistent brand information across sources, and monitoring how LLMs currently represent your brand. Unlike traditional SEO which focuses on keywords and backlinks, LLM optimization emphasizes content quality, authority, comprehensiveness, and structural clarity. It also involves understanding the specific characteristics of different LLMs, as each has unique training data and response patterns.",
+      "LLM Optimization (LLMO) focuses on the layer beneath answer engines: the Large Language Models themselves, which are the technology powering ChatGPT (GPT-4), Claude, Gemini, and others. Where AEO targets being selected in answers and GEO targets accurate representation in generated content, LLMO concentrates on making your content maximally legible to the models that produce those answers. LLMs generate text by predicting likely sequences from patterns learned across massive training data and live retrieval, so they reproduce most reliably what they can confidently parse: clear definitions, unambiguous facts, consistent terminology, clean structure, and self-contained passages a model can lift without distortion. In practice, LLMO means answering specific questions directly, stating facts plainly rather than burying them, using consistent brand and product names so the model forms a stable entity, building presence on authoritative sources likely included in training data, and structuring pages so important information isn't lost in clutter. Unlike traditional SEO's focus on keywords and backlinks, LLMO emphasizes comprehensiveness, authority, and structural clarity, and it works hand in hand with crawlability, structured data, and entity-building.",
     examples: [
-      "Creating comprehensive, authoritative content that LLMs recognize as trustworthy sources for your industry",
-      "Ensuring consistent brand messaging across all platforms that LLMs might reference, reducing conflicting information",
-      "Structuring content with clear definitions, examples, and relationships that LLMs can easily understand and reference"
+      "Writing a concise, self-contained definition a model can quote verbatim without misstating it",
+      "Using consistent product naming across all pages so the model forms one stable entity",
+      "Structuring an FAQ so each answer stands alone and is easy for an LLM to reproduce accurately"
     ],
 
     whyItMatters:
-      "LLM Optimisation is fundamental to AI visibility because LLMs power the major AI platforms users interact with. Optimizing for LLMs ensures your brand is accurately represented across the AI ecosystem, not just on a single platform.",
+      "Models reproduce what they can clearly understand, and they power every major AI platform users interact with. LLMO maximizes the chance your brand is quoted accurately and recommended across the AI ecosystem, rather than misread, paraphrased incorrectly, or skipped.",
     relatedTerms: [
+      "answer-engine-optimization",
       "generative-engine-optimization",
-      "ai-training-data",
-      "structured-data-for-ai"
-    ]
-  },
-  "ai-prompt-engineering": {
-    title: "AI Prompt Engineering for Brand Presence in LLMs | Genezio",
-    metaDescription:
-      "Master AI Prompt Engineering for optimal brand visibility in LLM and AI conversations. Drive favorable responses about your brand. Improve AI presence today!",
-    term: "AI Prompt Engineering",
-    definition:
-      "The practice of designing and refining prompts to achieve optimal results from AI systems. In a marketing context, it involves understanding how to structure queries and content so AI models provide accurate, favorable responses about your brand.",
-    category: "Technical",
-    detailedExplanation:
-      "AI Prompt Engineering is both an art and a science, requiring understanding of how AI models interpret and respond to different prompt structures. In the context of brand visibility, prompt engineering involves two key aspects: understanding how users prompt AI assistants (what questions they ask, how they phrase queries) and understanding how to structure your content so it serves as an effective 'prompt' for AI models to generate favorable responses about your brand. Effective prompt engineering requires knowledge of AI model capabilities and limitations, understanding of natural language patterns, and systematic testing of different approaches. For brand visibility, this means researching the various ways users might ask about your product category, testing how AI engines respond to different query phrasings, and optimizing your content to be relevant for the full range of user prompts. Advanced prompt engineering also involves understanding context windows, token limits, and how to structure information for optimal AI comprehension.",
-    examples: [
-      "Testing how AI responds to 'best email marketing tools' vs 'email marketing software for small businesses' vs 'tools to improve email campaigns' to understand prompt variations",
-      "Structuring your website content to naturally answer the questions users ask AI assistants, effectively 'prompting' AI to reference your brand",
-      "Using prompt engineering techniques to test and improve how AI engines describe your product when asked about your category"
-    ],
-
-    whyItMatters:
-      "AI Prompt Engineering is essential for understanding and optimizing AI visibility. By understanding how prompts work, you can better anticipate user queries, optimize your content, and improve how AI engines represent your brand.",
-    relatedTerms: [
-      "prompt-engineering",
-      "chatgpt-prompt-engineering",
-      "llm-prompt-engineering"
-    ]
-  },
-  "chatgpt-prompt-engineering": {
-    title: "ChatGPT Prompt Engineering: Boost Brand Presence in AI",
-    metaDescription:
-      "Master ChatGPT prompt engineering to optimize your brand's visibility in AI conversations. Learn to craft prompts that drive presence & mentions.",
-    term: "ChatGPT Prompt Engineering",
-    definition:
-      "Specialized prompt engineering techniques specifically for ChatGPT. This includes understanding ChatGPT's unique capabilities, limitations, and response patterns to craft prompts that elicit desired outputs and optimize brand visibility in ChatGPT conversations.",
-    category: "Technical",
-    detailedExplanation:
-      "ChatGPT Prompt Engineering focuses specifically on optimizing for ChatGPT's unique characteristics. ChatGPT has specific response patterns, capabilities, and limitations that differ from other AI platforms. It excels at conversational depth, creative tasks, and maintaining context across multi-turn conversations. ChatGPT prompt engineering involves understanding these strengths and crafting prompts (both user queries and content structure) that leverage them. For brand visibility, this means understanding how ChatGPT interprets different query types, how it maintains context in conversations, and how it decides which brands to mention in responses. Effective ChatGPT prompt engineering also involves understanding the differences between ChatGPT versions (GPT-3.5 vs GPT-4), how ChatGPT handles different conversation styles (formal vs casual), and how to structure follow-up prompts to maintain brand visibility throughout multi-turn conversations. Testing is crucial—systematically trying different prompt approaches and analyzing ChatGPT's responses to identify patterns and opportunities.",
-    examples: [
-      "Crafting prompts that leverage ChatGPT's conversational strengths to elicit detailed, favorable descriptions of your product",
-      "Understanding how to phrase follow-up questions in multi-turn conversations to maintain your brand's visibility throughout the dialogue",
-      "Testing how ChatGPT responds to different prompt structures (questions vs statements, specific vs general) to optimize brand mentions"
-    ],
-
-    whyItMatters:
-      "ChatGPT Prompt Engineering is crucial given ChatGPT's massive user base and influence. Understanding how to optimize for ChatGPT specifically ensures your brand is visible to millions of users who rely on ChatGPT for information and recommendations.",
-    relatedTerms: [
-      "ai-prompt-engineering",
-      "llm-prompt-engineering",
-      "chat-gpt-citations"
-    ]
-  },
-  "llm-prompt-engineering": {
-    title: "LLM Prompt Engineering | Boost Brand Presence in AI",
-    metaDescription:
-      "Master LLM Prompt Engineering for consistent brand representation across GPT-4, Claude, & Gemini. Optimize your brand's AI visibility. Discover your stats!",
-    term: "LLM Prompt Engineering",
-    definition:
-      "The art and science of crafting effective prompts for Large Language Models (LLMs) like GPT-4, Claude, and Gemini. LLM prompt engineering requires understanding model architectures, training data, and response patterns to optimize for accuracy and brand representation.",
-    category: "Technical",
-    detailedExplanation:
-      "LLM Prompt Engineering encompasses the broader discipline of optimizing prompts across all Large Language Models. While specific platforms like ChatGPT have unique characteristics, LLM prompt engineering focuses on universal principles that apply across models. This includes understanding how LLMs process language (tokenization, attention mechanisms, context windows), how they generate responses (sampling strategies, temperature settings), and how they prioritize information (recency, authority, relevance). For brand visibility, LLM prompt engineering involves understanding how to structure content so LLMs recognize it as authoritative and relevant, how to anticipate the diverse ways users might prompt LLMs about your category, and how to test and optimize across multiple LLM platforms. Advanced LLM prompt engineering also involves understanding few-shot learning (providing examples in prompts), chain-of-thought prompting (guiding LLMs through reasoning steps), and how to structure prompts for specific tasks (summarization, comparison, recommendation). The goal is to optimize for consistent, favorable brand representation across all LLM-powered platforms.",
-    examples: [
-      "Developing prompt strategies that work across ChatGPT, Claude, and Gemini, ensuring consistent brand visibility across platforms",
-      "Using few-shot learning techniques to guide LLMs toward more accurate representations of your brand",
-      "Understanding token limits and context windows to optimize how much information LLMs can consider when generating responses about your brand"
-    ],
-
-    whyItMatters:
-      "LLM Prompt Engineering provides the foundational knowledge needed to optimize across the entire AI ecosystem. As new LLM-powered platforms emerge, understanding universal LLM principles ensures your optimization strategies remain effective.",
-    relatedTerms: [
-      "ai-prompt-engineering",
-      "chatgpt-prompt-engineering",
-      "llm-optimisation"
+      "llmstxt"
     ]
   },
   "query-fan-out": {
@@ -897,18 +870,448 @@ const glossaryData: Record<string, GlossaryTerm> = {
       "Identifying multiple entities within a lengthy prompt and triggering separate, detailed searches for each entity before formulating a final recommendation."
     ],
     whyItMatters:
-      "For visibility strategies in the AI era, Query Fan-Out is essential because it illustrates how virtual assistants assemble answers from varied fragments of information. For brands, understanding this concept means their visibility can massively increase if they provide granular, specific content capable of answering these hidden \"sub-queries\"—a strategy best executed using [data-backed briefs](/blog/briefs-not-articles/) rather than blank drafts—thereby capturing traffic and mentions from a much wider spectrum of searches.",
+      "For visibility strategies in the AI era, Query Fan-Out is essential because it illustrates how virtual assistants assemble answers from varied fragments of information. For brands, understanding this concept means their visibility can massively increase if they provide granular, specific content capable of answering these hidden \"sub-queries\" (a strategy best executed using [data-backed briefs](/blog/briefs-not-articles/) rather than blank drafts), thereby capturing traffic and mentions from a much wider spectrum of searches.",
     relatedTerms: [
-      "llm-optimisation",
+      "llm-optimization",
       "generative-response",
       "ai-search-optimization"
+    ]
+  },
+  "large-language-model": {
+    title: "Large Language Model (LLM): How AI Generates Answers",
+    metaDescription:
+      "What is a Large Language Model (LLM)? Understand how models like GPT-4, Claude & Gemini generate answers, and why LLMs decide your brand's AI visibility.",
+    term: "Large Language Model",
+    acronym: "LLM",
+    definition:
+      "An AI model trained on vast amounts of text to understand and generate human-like language. LLMs such as GPT-4, Claude, and Gemini power the conversational AI platforms where brand visibility is now measured and optimized.",
+    category: "Technical",
+    detailedExplanation:
+      "A Large Language Model is a neural network trained on enormous volumes of text to predict and generate language. By learning statistical patterns across billions of words, an LLM can answer questions, summarize documents, compare products, and recommend brands in natural, conversational language. The models that matter most for brand visibility each draw on a mix of training data, retrieval from the live web, and built-in reasoning to construct an answer. Genezio tracks brand presence across the major engines and model families that users actually rely on today, including OpenAI's GPT-5.4, GPT-4.1, GPT-4o Mini, and the GPT-4o Search Preview, ChatGPT itself, Anthropic's Claude, Google Gemini, Google AI Overview and Google AI Mode, Microsoft Copilot, Perplexity, DeepSeek, and Grok. Because each engine has different training data, retrieval behavior, and answer style, the same query can surface very different brands from one model to the next, which is exactly why visibility has to be measured per-engine rather than assumed to be uniform. And because an LLM does not simply return a ranked list of links but synthesizes a single response, the question of whether your brand is mentioned, cited, or recommended is decided inside the model's generation process. Understanding how LLMs ingest, weight, and reproduce information is therefore the foundation of every AI-visibility strategy.",
+    examples: [
+      "A user asks ChatGPT to recommend accounting software and the LLM names three brands in a single paragraph rather than listing ten links",
+      "The same prompt run through Gemini, Perplexity, and Claude returns different recommended brands, revealing engine-specific visibility gaps",
+      "Google AI Overview and AI Mode synthesize an answer at the top of the results page, characterizing your brand based on patterns learned during training and live retrieval"
+    ],
+    whyItMatters:
+      "LLMs are the engines that decide how and whether your brand appears in AI answers. Knowing how they work lets you structure content the model can ingest accurately, so your brand is represented favorably rather than omitted or misdescribed.",
+    relatedTerms: [
+      "ai-visibility",
+      "generative-response",
+      "ai-training-data"
+    ]
+  },
+  "ai-agent": {
+    title: "What Is an AI Agent? Autonomous AI & Brand Visibility",
+    metaDescription:
+      "What is an AI agent? Learn how autonomous AI agents plan, search & use tools, and why agentic behavior creates a new frontier for brand visibility.",
+    term: "AI Agent",
+    definition:
+      "An autonomous AI system that can plan, take actions, and use tools to complete tasks on a user's behalf, rather than only answering a single question. Agents increasingly search the web and select sources independently, making brand presence in their reasoning steps a new visibility frontier.",
+    category: "Core Concepts",
+    detailedExplanation:
+      "An AI agent goes beyond answering a single prompt. Given a goal, it can decompose the task into steps, decide which tools or data sources to use, execute actions such as web searches or API calls, evaluate the results, and iterate until the objective is met. Modern agents built on large language models can browse the web, read multiple pages, compare options, and even complete transactions. For brands, this represents a profound shift: instead of optimizing for a single answer, you must ensure your brand is discoverable and favorably represented across every step of an agent's reasoning chain: the sources it chooses to read, the comparisons it makes, and the criteria it applies. As agents take over more research and purchasing decisions, the brands they surface during their autonomous process will capture disproportionate consideration.",
+    examples: [
+      "A user asks an AI agent to 'find and book the best-reviewed plumber nearby,' and the agent searches, compares reviews, and shortlists providers autonomously",
+      "An agent researching software options reads documentation, pricing pages, and third-party reviews before recommending a shortlist",
+      "A shopping agent compares specifications and prices across retailers, then completes a purchase on the user's behalf"
+    ],
+    whyItMatters:
+      "AI agents are becoming intermediaries between customers and brands, making decisions across multiple steps. If your brand isn't visible in the sources and comparisons an agent relies on, it's excluded before the user ever sees a recommendation.",
+    relatedTerms: [
+      "agentic-search",
+      "ai-visibility",
+      "conversational-ai-platform"
+    ]
+  },
+  "agentic-search": {
+    title: "Agentic Search: Multi-Step AI Research & Visibility",
+    metaDescription:
+      "What is agentic search? Learn how AI agents break goals into multi-step searches, and why your brand must be visible across the whole reasoning chain.",
+    term: "Agentic Search",
+    definition:
+      "A search process driven by an AI agent that breaks a goal into steps, issues multiple queries, evaluates results, and synthesizes an answer autonomously. Unlike a single keyword search, agentic search means a brand must be discoverable across an entire reasoning chain.",
+    category: "Core Concepts",
+    detailedExplanation:
+      "Agentic search replaces the single query-and-results model with an iterative, goal-driven process. An AI agent interprets the user's intent, generates a series of sub-queries, retrieves and reads multiple sources, assesses whether it has enough information, and refines its search until it can synthesize a confident answer. The mechanism that generates those parallel sub-queries is known as [Query Fan-Out](/glossary/query-fan-out/): the agent 'fans out' one goal into many concurrent searches, then collects and reconciles the results. This mirrors how a skilled human researcher works, but at machine speed and scale. For visibility, agentic search raises the bar: it is no longer enough to rank for one keyword or be cited once. Your brand needs consistent, accurate presence across the many sources and sub-topics an agent explores (technical specs, reviews, comparisons, and context) so that it survives the agent's filtering and appears in the final synthesis. Granular, well-structured content that answers the specific sub-questions a fan-out generates is the most reliable way to be picked up across these multi-step searches.",
+    examples: [
+      "An agent answering 'best CRM for a 10-person agency' separately searches pricing, integrations, ease of use, and reviews before recommending",
+      "A research agent issues follow-up queries to fill gaps it detects in its first round of results",
+      "An agent cross-checks a claim across several independent sources before including it in the final answer"
+    ],
+    whyItMatters:
+      "Because agentic search assembles answers from many fragments, brands with deep, specific content across sub-topics win visibility, while those with thin coverage are filtered out during the agent's evaluation steps.",
+    relatedTerms: [
+      "ai-agent",
+      "query-fan-out",
+      "ai-search-optimization"
+    ]
+  },
+  "ai-overviews": {
+    title: "AI Overviews: Get Cited in Google's AI Summaries",
+    metaDescription:
+      "What are AI Overviews? Learn how Google's AI summaries answer queries on the results page, and how to get your brand cited inside them to keep visibility.",
+    term: "AI Overviews",
+    definition:
+      "AI-generated summaries that appear at the top of a search results page, answering a query directly by synthesizing multiple sources. Because they often satisfy the user without a click, being cited within an AI Overview is critical for maintaining visibility.",
+    category: "Core Concepts",
+    detailedExplanation:
+      "AI Overviews are AI-generated answer blocks that appear above traditional search results, synthesizing information from multiple web sources into a concise summary with linked citations. Rather than scanning a list of links, the user reads a direct answer, often resolving their question without clicking through to any site. This makes the citation slots inside an AI Overview the most valuable real estate on the page. To be included, content must be authoritative, clearly structured, and directly responsive to the query the overview is answering. Brands that earn citations within AI Overviews retain visibility and capture the residual clicks; brands that don't are effectively pushed below the fold of the new AI-first results page. Monitoring which queries trigger overviews, and whether your brand is cited within them, is now a core part of AI search optimization.",
+    examples: [
+      "A user searches 'how to recondition a hybrid battery' and an AI Overview summarizes the process, citing two specialist sources",
+      "A product-comparison query returns an AI Overview that names specific brands as recommended options",
+      "An informational query is fully answered by the overview, so only the cited sources receive any visibility"
+    ],
+    whyItMatters:
+      "AI Overviews intercept clicks that previously went to ranked pages. If your brand isn't cited inside them, you lose visibility even when you rank well organically, making AI Overview citations essential to defend.",
+    relatedTerms: [
+      "zero-click-search",
+      "ai-citation",
+      "ai-mode"
+    ]
+  },
+  "ai-mode": {
+    title: "AI Mode: Conversational Search & Brand Visibility",
+    metaDescription:
+      "What is AI Mode in search? Learn how conversational, AI-first search replaces blue links, and how to keep your brand visible in generated answers.",
+    term: "AI Mode",
+    definition:
+      "A conversational, AI-first interface within a search engine that replaces the traditional list of blue links with a generated, dialogue-based answer. AI Mode shifts visibility competition from ranking positions to citation and recommendation within the generated response.",
+    category: "Core Concepts",
+    detailedExplanation:
+      "AI Mode is a search experience in which the engine responds to a query with a generated, conversational answer rather than a ranked list of links, and lets the user continue the conversation with follow-up questions. It collapses the traditional results page into a dialogue, drawing on both the model's knowledge and live retrieval to construct each response. In this environment, the concept of a 'ranking position' largely disappears; what matters is whether your brand is mentioned, cited, or recommended inside the generated answer, and whether it persists as the conversation deepens across multiple turns. Optimizing for AI Mode means ensuring your content is structured for synthesis, your brand is consistently and accurately represented across the sources the engine trusts, and your information answers the natural-language follow-ups users are likely to ask.",
+    examples: [
+      "A user enters AI Mode, asks for the best electric SUVs, and refines the answer over several follow-up questions",
+      "The engine recommends brands conversationally and adjusts its suggestions as the user adds constraints",
+      "A brand cited in the first answer must remain present as the user narrows the conversation to specific features"
+    ],
+    whyItMatters:
+      "As search engines roll out AI Mode, the familiar link-ranking game is being replaced by recommendation inside generated answers. Brands that adapt keep their visibility; those that rely solely on classic SEO lose ground.",
+    relatedTerms: [
+      "ai-overviews",
+      "multi-turn-conversation",
+      "conversational-brand-presence"
+    ]
+  },
+  "zero-click-search": {
+    title: "Zero-Click Search: Why AI Answers Reduce Clicks",
+    metaDescription:
+      "What is zero-click search? Learn how AI Overviews and generated answers satisfy users without a click, and why brand mentions now matter more than traffic.",
+    term: "Zero-Click Search",
+    definition:
+      "A search where the user's need is met directly on the results page, through an AI Overview, featured snippet, or generated answer, without clicking through to any website. Zero-click behavior makes AI citation and brand mention more valuable than raw traffic.",
+    category: "Core Concepts",
+    detailedExplanation:
+      "Zero-click search describes the growing share of searches that end without the user visiting any website, because the answer is delivered directly on the results page. The concept was identified and popularized by Rand Fishkin (co-founder of Moz and later SparkToro), who traced the trend back to around 2011, when Google began answering more queries directly with features like weather boxes, calculators, and knowledge panels, and whose later clickstream studies showed zero-click searches climbing past 50% and then roughly two-thirds of all Google searches. Featured snippets accelerated the shift; AI Overviews and conversational AI answers have pushed it further still. When the engine synthesizes a complete answer, the user has no reason to click, but the brands cited or recommended inside that answer still capture attention, trust, and consideration. This reframes the goal of search visibility: instead of measuring success purely by clicks and sessions, brands must measure how often they are mentioned, cited, and recommended within the answers themselves. In a zero-click world, being part of the answer is the new equivalent of ranking first.",
+    examples: [
+      "A user gets a full definition from an AI Overview and never visits the cited pages, yet remembers the brand named in it",
+      "A 'best of' query is answered conversationally, surfacing three brands without any click-through",
+      "A factual query is resolved on the page, so visibility depends entirely on being one of the cited sources"
+    ],
+    whyItMatters:
+      "As clicks decline, traffic-based metrics understate your real AI presence. Tracking citations and mentions reveals the visibility you're earning or losing inside zero-click answers.",
+    relatedTerms: [
+      "ai-overviews",
+      "ai-citation",
+      "ai-visibility"
+    ]
+  },
+  "ai-hallucination": {
+    title: "AI Hallucination: Protect Your Brand From False Claims",
+    metaDescription:
+      "What is an AI hallucination? Learn how LLMs generate false brand information (wrong pricing or features) and how to detect and correct it.",
+    term: "AI Hallucination",
+    definition:
+      "When an AI model generates information that is plausible-sounding but factually incorrect or fabricated. Hallucinations about a brand (wrong pricing, features, or claims) pose a reputational risk that AI visibility monitoring is designed to detect and correct.",
+    category: "Technical",
+    detailedExplanation:
+      "An AI hallucination occurs when a large language model produces confident, fluent output that is not grounded in fact. Because LLMs generate text by predicting likely word sequences rather than retrieving verified records, they can invent details (nonexistent product features, incorrect prices, fabricated policies, or false comparisons) and present them as authoritative. For brands, hallucinations are a direct reputational and commercial risk: a user may be told your product lacks a feature it actually has, or quoted a price you never set. These errors typically arise when the model lacks accurate, well-structured information about your brand and fills the gap with guesswork. The defenses are to maintain consistent, machine-readable brand information across the sources models trust, and to actively monitor AI responses so hallucinations can be detected and corrected before they spread.",
+    examples: [
+      "An AI assistant tells a user your software doesn't integrate with a tool it actually supports",
+      "A model quotes an outdated or invented price for your product",
+      "An LLM attributes a competitor's feature to your brand, or fabricates a policy you never published"
+    ],
+    whyItMatters:
+      "Hallucinations can misinform thousands of users at scale and damage trust before you notice. Monitoring AI responses lets you catch false claims early and supply the accurate information needed to correct them.",
+    relatedTerms: [
+      "ai-brand-perception",
+      "generative-response",
+      "ai-training-data"
+    ]
+  },
+  "web-crawler": {
+    title: "Web Crawler: How AI Bots Find & Index Your Content",
+    metaDescription:
+      "What is a web crawler? Learn how crawlers and AI bots like GPTBot index your pages, and why they decide which content becomes an AI citation source.",
+    term: "Web Crawler",
+    definition:
+      "An automated bot that systematically browses and downloads web pages so their content can be indexed. AI crawlers (such as GPTBot and others) determine which pages are available as training data and citation sources for generative engines.",
+    category: "Technical",
+    detailedExplanation:
+      "A web crawler is an automated program that navigates the web by following links, downloading pages, and passing their content to an index. Traditional search crawlers like Googlebot built the indexes behind classic search results. In the AI era, a new class of crawlers, such as GPTBot, ClaudeBot, and PerplexityBot, gather content that feeds model training and live retrieval. Whether your pages can be crawled, and how cleanly their content is structured, directly determines whether your brand can become a citation source in AI answers. Controls like the robots.txt file and the emerging llms.txt standard let you signal which crawlers may access which content. You can see crawling in action, and audit your own site the way a bot does, with desktop crawling tools like [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider/) or the classic free utility [Xenu's Link Sleuth](http://home.snafu.de/tilman/xenulink.html), which follow your internal links, flag broken URLs and redirect chains, and map exactly which pages a crawler can and cannot reach. Ensuring important pages are crawlable, fast, and well-structured is a prerequisite for AI visibility: content a crawler can't read can't be cited.",
+    examples: [
+      "GPTBot crawls your documentation, making it available for ChatGPT to reference in answers",
+      "Running [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) or [Xenu's Link Sleuth](http://home.snafu.de/tilman/xenulink.html) on your own site to see crawling in action and find broken links or orphaned pages",
+      "Configuring robots.txt to allow specific AI crawlers while restricting others"
+    ],
+    whyItMatters:
+      "If AI crawlers can't access your content, your brand can't appear in AI answers, regardless of quality. Managing crawlability is the entry ticket to being cited by generative engines.",
+    relatedTerms: [
+      "llmstxt",
+      "structured-data-for-ai",
+      "ai-training-data"
+    ]
+  },
+  "llmstxt": {
+    title: "llms.txt: Guide AI Models to Your Best Content",
+    metaDescription:
+      "What is llms.txt? Learn how this proposed standard gives LLMs a curated, machine-readable map of your most important content, like robots.txt for AI.",
+    term: "llms.txt",
+    definition:
+      "A proposed standard file placed at a website's root that provides large language models with a curated, machine-readable summary of the site's most important content. It functions like robots.txt for the AI era, guiding how generative engines read and represent a brand.",
+    category: "Technical",
+    detailedExplanation:
+      "llms.txt is an emerging proposed standard: a Markdown file placed at the root of a website (for example, /llms.txt) that gives large language models a concise, curated map of the site's most important content. Where robots.txt tells crawlers what they may or may not access, llms.txt goes further by highlighting and summarizing the pages a model should prioritize when reasoning about the site (documentation, key product pages, policies, and authoritative explainers) often with links and short descriptions in clean, easily parsed text. Adoption is still early and not universally honored. Importantly, Google has stated plainly that it does not use llms.txt: in its [guide to optimizing for generative AI search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), Google says you don't need to create new machine-readable files, AI text files, or special markup to appear in Google Search or its generative AI features, because Search itself doesn't use them, and that maintaining an llms.txt for other services neither helps nor harms your Google rankings, since Google simply ignores it. In other words, treat llms.txt as a low-cost, optional signal aimed at the other AI systems and tools that do consume it, not as a Google ranking tactic. Solid crawlability, clean HTML, and structured data remain the dependable fundamentals.",
+    examples: [
+      "An llms.txt that links a model to your core product docs, pricing, and a brand overview in plain Markdown",
+      "Maintaining an llms.txt for AI tools and services that consume it, while knowing per [Google's own guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) that Google Search ignores it",
+      "Pointing AI engines that support the file to the canonical version of frequently duplicated content"
+    ],
+    whyItMatters:
+      "llms.txt lets you actively shape how AI models read your site instead of leaving it to chance, improving the accuracy and prominence of your brand in generated answers.",
+    relatedTerms: [
+      "web-crawler",
+      "structured-data-for-ai",
+      "llm-optimization"
+    ]
+  },
+  "knowledge-graph": {
+    title: "Knowledge Graph: Establish Your Brand as an Entity",
+    metaDescription:
+      "What is a knowledge graph? Learn how AI and search systems map entities and relationships, and why a strong knowledge-graph presence boosts AI accuracy.",
+    term: "Knowledge Graph",
+    definition:
+      "A structured network of entities (people, places, brands, products) and the relationships between them, used by search and AI systems to understand context. A strong, accurate knowledge-graph presence improves how confidently AI engines describe and recommend a brand.",
+    category: "Technical",
+    detailedExplanation:
+      "A knowledge graph is a structured database that represents real-world things as entities and maps the relationships between them, linking a brand to its founders, products, industry, and competitors, for example. Search engines and AI systems use knowledge graphs to disambiguate names, verify facts, and understand context, so they can answer questions confidently rather than guessing. When your brand is well represented in the major knowledge graphs, with consistent names, descriptions, and connections across authoritative sources, AI engines can describe and recommend you accurately and with confidence. When your entity is poorly defined or inconsistent, models are more likely to confuse you with others, omit you, or hallucinate details. Building knowledge-graph presence involves consistent structured data, authoritative third-party references, and clear entity signals across the web.",
+    examples: [
+      "An AI assistant correctly distinguishes your brand from a similarly named company because the knowledge graph defines each as a separate entity",
+      "A model accurately states your brand's industry and founding because those relationships are mapped in a knowledge graph",
+      "Consistent Organization data across sources strengthens your entity and reduces misidentification"
+    ],
+    whyItMatters:
+      "A strong knowledge-graph presence is what lets AI engines describe and recommend your brand confidently and correctly, while a weak one invites confusion, omission, and hallucination.",
+    relatedTerms: [
+      "entity",
+      "structured-data-for-ai",
+      "ai-brand-perception"
+    ]
+  },
+  "entity": {
+    title: "Entity in SEO & AI: Why Your Brand Must Be Defined",
+    metaDescription:
+      "What is an entity in SEO and AI? Learn how search and AI systems recognize brands, products, and people, and why being a clear entity drives AI visibility.",
+    term: "Entity",
+    definition:
+      "A distinct, uniquely identifiable thing, such as a brand, product, person, or place, that AI and search systems recognize and reason about. Establishing your brand as a well-defined entity is foundational to consistent AI representation.",
+    category: "Technical",
+    detailedExplanation:
+      "In search and AI, an entity is a distinct, uniquely identifiable concept: a specific brand, product, person, place, or organization, that systems can recognize, distinguish from similar things, and reason about. Modern engines have shifted from matching strings of text to understanding entities and the relationships between them, which is why entity clarity now underpins visibility. When your brand is a clearly defined entity, supported by consistent naming, structured data, and authoritative references, AI models can confidently attach the right attributes to it: your products, your category, your reputation. When your entity is ambiguous or fragmented across the web, models may merge you with a namesake, attribute competitors' traits to you, or leave you out entirely. Establishing and reinforcing your entity is therefore a prerequisite for accurate, prominent representation in AI answers.",
+    examples: [
+      "An AI engine recognizes your company as a specific entity and never confuses it with an unrelated business of the same name",
+      "A model correctly associates your products, founders, and industry with your brand entity",
+      "Consistent entity signals across the web let an assistant recommend you in exactly the right context"
+    ],
+    whyItMatters:
+      "Being a well-defined entity is the difference between AI engines describing your brand accurately and confusing, omitting, or misrepresenting it. Entity clarity is the foundation of reliable AI visibility.",
+    relatedTerms: [
+      "knowledge-graph",
+      "structured-data-for-ai",
+      "ai-brand-perception"
+    ]
+  },
+  "model-context-protocol-server": {
+    title: "MCP Server: How AI Connects to Tools & Data",
+    metaDescription:
+      "What is an MCP server? Learn how the Model Context Protocol lets AI models and agents connect securely to external tools and data sources.",
+    term: "Model Context Protocol Server",
+    acronym: "MCP Server",
+    definition:
+      "A server implementing the Model Context Protocol, an open standard that lets AI models and agents securely connect to external tools, data sources, and services. MCP servers expand the data an AI can draw on when generating answers about a brand.",
+    category: "Technical",
+    detailedExplanation:
+      "The Model Context Protocol (MCP) is an open standard that defines how AI applications connect to external systems (databases, APIs, file stores, and business tools) in a consistent, secure way. An MCP server is a service that exposes a specific tool or data source through this protocol, so any MCP-compatible AI model or agent can call it without bespoke integration work. It helps to contrast MCP with a traditional [Application Programming Interface](/glossary/application-programming-interface/): a conventional API is built for developers who write custom code against its specific endpoints, whereas an MCP server wraps capabilities (often the very same underlying APIs) in a standardized, self-describing interface that an AI model can discover and use on its own, in natural language, without a developer hand-coding each integration. In short, an API is how software talks to software; MCP is how an AI model talks to tools. In practice, MCP servers let an AI assistant query a live product catalog, read a CRM, search a knowledge base, or take actions in a connected app, extending the model beyond its training data. For brands, MCP matters because the data an AI can reach through these connections shapes the answers it gives: structured, well-maintained, MCP-accessible information is more likely to be surfaced accurately. As agents proliferate, MCP is becoming the plumbing that determines which real-time sources an AI consults.",
+    examples: [
+      "An AI agent calls an MCP server to pull live pricing from a product catalog before answering",
+      "A support assistant uses an MCP server to read a knowledge base and respond with current information",
+      "Wrapping an existing REST [API](/glossary/application-programming-interface/) in an MCP server so AI agents can use it without custom-coded integrations"
+    ],
+    whyItMatters:
+      "MCP servers decide which live data and tools an AI can reach. Exposing accurate, well-structured brand data through them increases the chance your information is surfaced correctly in AI answers and agent workflows.",
+    relatedTerms: [
+      "ai-agent",
+      "application-programming-interface",
+      "structured-data-for-ai"
+    ]
+  },
+  "application-programming-interface": {
+    title: "Application Programming Interface (API): The Basics",
+    metaDescription:
+      "What is an API? Learn how application programming interfaces let software talk to software, and how they differ from MCP servers in the AI era.",
+    term: "Application Programming Interface",
+    acronym: "API",
+    definition:
+      "A defined set of rules and endpoints that lets one software system request data or actions from another in a predictable, structured way. APIs are how applications talk to each other, and the building blocks that AI tools and MCP servers often wrap.",
+    category: "Technical",
+    detailedExplanation:
+      "An API (Application Programming Interface) is a contract between two software systems: it specifies the requests one program can make to another: what endpoints exist, what parameters they accept, and what data or actions they return. When you check the weather in an app, book a flight, or log in with your Google account, APIs are quietly moving data between services behind the scenes. APIs are built primarily for developers, who write custom code against each API's specific structure and authentication. This is the key distinction from a [Model Context Protocol server](/glossary/model-context-protocol-server/): an API is how software talks to software, requiring a developer to integrate each one by hand, whereas an MCP server wraps capabilities (frequently the same underlying APIs) in a standardized, self-describing interface that an AI model can discover and call on its own. In the AI visibility context, APIs matter in two ways: they are how platforms like Genezio deliver structured data and metrics to your own systems, and they are the raw integration layer that AI agents ultimately reach, directly or through MCP, when they fetch live information about your brand. Exposing clean, well-documented APIs makes your data easier for both developers and AI systems to consume accurately.",
+    examples: [
+      "A weather app calls a weather provider's API to display the current forecast",
+      "Pulling your brand's AI-visibility metrics from a platform's API into your own dashboard",
+      "An AI agent reaching a product-catalog API (directly or wrapped in an [MCP server](/glossary/model-context-protocol-server/)) to fetch live pricing"
+    ],
+    whyItMatters:
+      "APIs are the connective tissue of modern software and the foundation AI tools build on. Understanding the difference between a raw API and an AI-native interface like MCP clarifies how your data actually reaches AI systems, and how to make it accessible and accurate.",
+    relatedTerms: [
+      "model-context-protocol-server",
+      "structured-data-for-ai",
+      "ai-platform"
+    ]
+  },
+  "ai-visibility-tool": {
+    title: "AI Visibility Tool: Track Your Brand Across LLMs",
+    metaDescription:
+      "What is an AI visibility tool? Learn how these platforms track how often, prominently & accurately your brand appears across ChatGPT, Claude & Perplexity.",
+    term: "AI Visibility Tool",
+    definition:
+      "Software that tracks how often, how prominently, and how accurately a brand appears across AI-generated responses on platforms like ChatGPT, Claude, Perplexity, and Gemini. These tools convert conversational mentions into measurable visibility and recommendation metrics.",
+    category: "Optimization",
+    detailedExplanation:
+      "An AI visibility tool measures something traditional analytics can't: how your brand shows up inside AI-generated answers. Rather than tracking rankings or clicks, these platforms run representative prompts across multiple AI engines (ChatGPT, Claude, Perplexity, Gemini and others) and analyze the responses to determine whether your brand is mentioned, how prominently, in what sentiment, against which competitors, and citing which sources. The best tools track this over time and across personas and multi-turn conversations, turning a previously invisible channel into concrete metrics like mention rate, recommendation rate, share of voice, and citation sources. This visibility data is the foundation for AEO and GEO work: it shows where you're winning, where competitors dominate, and which sources AI engines actually rely on, so optimization effort can be directed where it changes outcomes.",
+    examples: [
+      "A dashboard showing how often ChatGPT recommends your brand versus three named competitors",
+      "Tracking which third-party sources AI engines cite when describing your category",
+      "Monitoring sentiment and accuracy of brand mentions across engines over a 90-day window"
+    ],
+    whyItMatters:
+      "You can't improve what you can't measure. An AI visibility tool turns opaque AI answers into metrics, revealing exactly where your brand is mentioned, recommended, or missing, so optimization is data-driven, not guesswork.",
+    relatedTerms: [
+      "ai-visibility",
+      "share-of-voice",
+      "ai-competitive-analysis"
+    ]
+  },
+  "rank-tracking": {
+    title: "Rank Tracking in the AI Era: Beyond Blue Links",
+    metaDescription:
+      "What is rank tracking? Learn how monitoring search positions now extends to citation frequency and recommendation position inside AI-generated answers.",
+    term: "Rank Tracking",
+    definition:
+      "The ongoing measurement of where a brand or page appears across search results and, increasingly, across AI-generated answers. In an AI-search context, rank tracking expands to monitoring citation frequency and recommendation position within generative responses.",
+    category: "Metrics",
+    detailedExplanation:
+      "Rank tracking is the practice of systematically monitoring where your content appears for the queries that matter to you. In traditional SEO, this meant recording your position in search results over time to gauge progress and respond to changes. As search shifts toward AI Overviews, AI Mode, and conversational engines, rank tracking is expanding well beyond the blue-link list: it now includes whether your brand is cited within an AI Overview, where it appears in a recommendation list inside a generated answer, and how consistently it surfaces across engines and follow-up turns. Modern rank tracking therefore blends classic position monitoring with AI-answer monitoring, giving a complete picture of visibility as the results page transforms. The metrics that matter increasingly look like citation frequency and recommendation order rather than a single numeric rank.",
+    examples: [
+      "Tracking your organic position alongside whether you're cited in the AI Overview for the same query",
+      "Monitoring how high your brand appears when an AI engine lists recommended options",
+      "Comparing citation frequency across ChatGPT, Perplexity, and Gemini for a key query set"
+    ],
+    whyItMatters:
+      "As the results page becomes AI-first, classic rank tracking alone misses where visibility is now won or lost. Extending it to AI answers keeps your measurement aligned with how users actually find brands.",
+    relatedTerms: [
+      "ai-overviews",
+      "ai-recommendation-score",
+      "ai-visibility-tool"
+    ]
+  },
+  "share-of-voice": {
+    title: "Share of Voice in AI: Measure Competitive Dominance",
+    metaDescription:
+      "What is Share of Voice (SOV) in AI search? Learn how to measure how often AI recommends your brand versus competitors, and quantify your category dominance.",
+    term: "Share of Voice",
+    acronym: "SOV",
+    definition:
+      "The proportion of AI responses in a category that mention or recommend your brand relative to competitors. Share of Voice quantifies competitive dominance in conversational AI, much as it traditionally did for advertising and search.",
+    category: "Metrics",
+    detailedExplanation:
+      "Share of Voice (SOV) has long measured a brand's slice of total market presence in advertising and search. Applied to AI search, SOV becomes the share of relevant AI responses in which your brand is mentioned or recommended, measured against the competitors that appear alongside you. To calculate it, an AI visibility tool runs a representative set of category prompts across engines and counts how often each brand surfaces, producing a competitive ranking. A high AI Share of Voice means that when users ask AI assistants about your category, your brand is consistently part of the conversation; a low SOV means competitors are capturing the recommendations. Because AI answers often name only a few options, SOV is a particularly revealing metric: the gap between being one of the three brands mentioned and being absent is enormous. Tracking SOV over time shows whether your AEO and GEO efforts are translating into competitive ground gained.",
+    examples: [
+      "Your brand appears in 40% of AI answers about your category while your nearest competitor appears in 25%",
+      "Measuring SOV before and after a content campaign to gauge competitive impact",
+      "Identifying a category where a competitor holds dominant SOV so you can prioritize it"
+    ],
+    whyItMatters:
+      "AI answers name only a few brands, so SOV captures competitive reality better than any single metric. It shows whether you're winning or losing the recommendation race in your category.",
+    relatedTerms: [
+      "ai-competitive-analysis",
+      "ai-recommendation-score",
+      "ai-visibility-tool"
+    ]
+  },
+  "sentiment-analysis": {
+    title: "Sentiment Analysis: How Favorably AI Describes You",
+    metaDescription:
+      "What is sentiment analysis in AI visibility? Learn how to measure whether AI mentions your brand positively, neutrally, or negatively, not just whether it's named.",
+    term: "Sentiment Analysis",
+    definition:
+      "The automated evaluation of whether a brand mention is positive, neutral, or negative in tone. Applied to AI-generated responses, sentiment analysis reveals not just whether a brand is mentioned, but how favorably it is characterized.",
+    category: "Metrics",
+    detailedExplanation:
+      "Sentiment analysis uses natural-language processing to classify the emotional tone of text as positive, neutral, or negative. In the context of AI visibility, it is applied to the way AI engines describe your brand: a mention alone tells you that you're visible, but sentiment tells you whether that visibility helps or hurts. An AI assistant might recommend your product enthusiastically, mention it with a caveat, or frame it unfavorably against a competitor; each carries very different commercial consequences. By analyzing sentiment across many AI responses, you can detect patterns: which features draw praise, which complaints recur, and whether certain engines characterize you more harshly than others. This turns qualitative impressions into a trackable metric, letting you prioritize the content and corrections that will most improve how AI engines talk about your brand.",
+    examples: [
+      "An AI engine recommends your product but notes a recurring complaint, flagged as mixed sentiment",
+      "Tracking whether sentiment toward your brand improves after you correct inaccurate third-party content",
+      "Comparing how positively different AI engines describe your brand in the same scenario"
+    ],
+    whyItMatters:
+      "Being mentioned isn't enough if the mention is unfavorable. Sentiment analysis reveals how AI engines actually characterize your brand, so you can address negative framing before it shapes buyer decisions at scale.",
+    relatedTerms: [
+      "ai-mention-sentiment",
+      "ai-brand-perception",
+      "conversational-brand-presence"
+    ]
+  },
+  "visibility-to-recommendation-rate": {
+    title: "Visibility-to-Recommendation Rate (VRR): The AI Metric",
+    metaDescription:
+      "What is Visibility-to-Recommendation Rate (VRR)? Learn why brands are pivoting from Share of Voice to VRR, the percentage of times AI explicitly recommends you.",
+    term: "Visibility-to-Recommendation Rate",
+    acronym: "VRR",
+    definition:
+      "The percentage of times an AI engine explicitly endorses a brand as the best choice for a specific user, out of all the times that brand was considered. VRR measures high-intent advocacy, going beyond passive mentions to capture actual recommendation.",
+    category: "Metrics",
+    detailedExplanation:
+      "Visibility-to-Recommendation Rate (VRR) is a metric built for the generative-AI era, where engines synthesize one personalized answer instead of listing ten links. Traditional Share of Voice counts how often a brand is mentioned, assuming a flat landscape where every user sees the same results. VRR measures something sharper: the percentage of times an AI explicitly recommends your brand as the definitive best choice, out of all the times it was in consideration. This matters because in an LLM answer, visibility without endorsement is nearly worthless, what Genezio calls 'zero-sum visibility,' where the AI crowns one winner and your effective share for that interaction drops to zero if a competitor is chosen. Genezio's research frames a four-level hierarchy of AI presence (indexed, cited, suggested, and recommended) with VRR measuring that top tier. A strong VRR must also be consistent across three dimensions: prompt variability (does the recommendation survive different phrasings?), time (does it survive model updates?), and platform (are you recommended across ChatGPT, Perplexity, Gemini, and others?). Because a single prompt is essentially a coin flip in a probabilistic system, measuring VRR reliably requires large samples and persona-driven, multi-turn testing. You can read the full framework in Genezio's article on [Visibility-to-Recommendation Rate](/blog/visibility-to-recommendation-rate/).",
+    examples: [
+      "ASOS and Boohoo captured 46% and 35% VRR in Genezio's UK fashion study, while a legacy brand flatlined near 4%, visible but rarely recommended",
+      "Measuring whether an AI still recommends your brand when the user rephrases the question or asks follow-ups in a multi-turn conversation",
+      "Comparing VRR across ChatGPT, Perplexity, and Gemini to find engines where you're considered but not endorsed"
+    ],
+    whyItMatters:
+      "Users who receive an explicit AI recommendation convert far better than those clicking traditional search results, because the AI removes decision friction by naming a single best option. VRR measures your ability to win that endorsement, making it a far better predictor of revenue than passive mention counts.",
+    relatedTerms: [
+      "share-of-voice",
+      "ai-recommendation-score",
+      "ai-persona-targeting"
     ]
   }
 };
 
 export function GlossaryTerm() {
   const { slug } = useParams<{ slug: string }>();
-  const term = slug ? glossaryData[slug] : null;
+  // Legacy slug redirects: old indexed URLs resolve to their current canonical slug
+  // (prevents 404s and preserves link equity after a term was renamed/consolidated).
+  const slugAliases: Record<string, string> = {
+    "llm-optimisation": "llm-optimization",
+    "schemaorg-markup": "structured-data-for-ai",
+    "schema-org-markup": "structured-data-for-ai",
+    "ai-prompt-engineering": "prompt-engineering",
+    "chatgpt-prompt-engineering": "prompt-engineering",
+    "llm-prompt-engineering": "prompt-engineering"
+  };
+  const canonicalSlug = slug ? slugAliases[slug] || slug : null;
+  const term = canonicalSlug ? glossaryData[canonicalSlug] : null;
   if (!term) {
     return (
       <div className="min-h-screen bg-[#050506] flex items-center justify-center px-6">
@@ -937,7 +1340,7 @@ export function GlossaryTerm() {
       <PolymetSEO
         title={term.title || term.term}
         description={term.metaDescription || term.definition}
-        canonicalPath={`/glossary/${slug}/`}
+        canonicalPath={`/glossary/${canonicalSlug}/`}
       />
       {/* Header */}
       <div className="border-b border-white/5">
@@ -989,7 +1392,7 @@ export function GlossaryTerm() {
 
           <div className="bg-white/[0.02] border border-white/5 rounded-xl p-8">
             <p className="text-white/80 leading-relaxed text-lg">
-              {term.detailedExplanation}
+              {renderRichText(term.detailedExplanation)}
             </p>
           </div>
         </div>
@@ -1016,7 +1419,7 @@ export function GlossaryTerm() {
                     </span>
                   </div>
                   <p className="text-white/70 leading-relaxed pt-1">
-                    {example}
+                    {renderRichText(example)}
                   </p>
                 </div>
               </div>
@@ -1035,7 +1438,7 @@ export function GlossaryTerm() {
 
           <div className="bg-gradient-to-br from-green-500/5 to-blue-500/5 border border-white/10 rounded-xl p-8">
             <p className="text-white/80 leading-relaxed text-lg">
-              {term.whyItMatters}
+              {renderRichText(term.whyItMatters)}
             </p>
           </div>
         </div>
