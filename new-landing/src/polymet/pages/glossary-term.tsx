@@ -1252,7 +1252,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "sentiment-analysis": {
     title: "Sentiment Analysis: How Favorably AI Describes You",
     metaDescription:
-      "What is sentiment analysis in AI visibility? Learn how to measure whether AI mentions your brand positively, neutrally, or negatively, not just whether it's named.",
+      "Does AI recommend or just mention your brand? Learn to track if AI mentions are positive, neutral, or negative to protect your brand's AI presence.",
     term: "Sentiment Analysis",
     definition:
       "The automated evaluation of whether a brand mention is positive, neutral, or negative in tone. Applied to AI-generated responses, sentiment analysis reveals not just whether a brand is mentioned, but how favorably it is characterized.",

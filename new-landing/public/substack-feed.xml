@@ -5,9 +5,125 @@
     <link>https://genezio.com/blog/</link>
     <description>The platform built for Generative Search and Answer Engine Optimization.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 May 2026 09:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 09:52:21 GMT</lastBuildDate>
     <atom:link href="https://genezio.com/substack-feed.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+        <title><![CDATA[Genezio vs Profound: Which AI Visibility Platform Actually Gets You Recommended?]]></title>
+        <link>https://genezio.com/blog/genezio-vs-profound-ai-visibility-platform/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/genezio-vs-profound-ai-visibility-platform/</guid>
+        <description><![CDATA[Genezio vs Profound and the rest: how to choose an AI visibility platform that increases AI recommendations, not just mentions. Buyer framework + pricing.]]></description>
+        <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <media:content url="https://genezio.com/images/genezio-profound-brand-recommendation.webp" medium="image" />
+        <content:encoded><![CDATA[<p><img alt="Genezio vs Profound: Which AI Visibility Platform Actually Gets You Recommended?" src="https://genezio.com/images/genezio-profound-brand-recommendation.webp" /></p>
+<p>Most AI visibility tools on the market are good at one thing: telling you whether your brand showed up in an AI answer. Then they stop.</p>
+<p>The problem is that showing up and being recommended are not the same event. ChatGPT can mention your brand in a list of eight options and still steer the buyer toward a competitor in the next sentence. That mention counts as "visibility" in almost every tool. It does nothing for your pipeline.</p>
+<p>So when a marketing leader asks me "Genezio vs Profound: which AI visibility platform should we buy?", the real question underneath it is sharper: which tool actually changes whether AI recommends you? That distinction is where the buying decision gets made, and it's the axis this comparison is built on.</p>
+<p>To be fair, recommendation measurement used to be a gap for Genezio too. A few months ago we put serious focus on it, because we kept seeing brands with strong visibility scores losing every "best \[category\]" answer to a competitor. This article is what we learned, turned into a buyer's framework you can run this week.</p>
+<h2>The quick verdict</h2>
+<p>Here is the short version for anyone who reads one paragraph before forwarding this to their team.</p>
+<p><strong>AI visibility<em>* is whether your brand appears in AI answers. *</em>AI recommendation</strong> is whether the AI tells the buyer to choose you. They correlate loosely and diverge often. A brand can have high visibility and a low recommendation rate, which means it's present in the conversation and losing it. If you only need to know whether you're showing up, most tools will do. If you need to know whether you're winning, and what to change when you're not, you need a platform built around recommendation, not mentions.</p>
+<p><img alt="Genezio Recommandation Rate" src="https://genezio.com/images/genezio-honda-recommandation-rate.webp" /></p>
+<p>Decision rules:</p>
+<p>- <strong>Choose Genezio if</strong> your KPI is how often AI recommends you versus competitors, you want that number with statistical confidence, and you want a prioritized list of actions to move it. Built for marketing and PR teams that have to prove impact and act on it.</p>
+<p>- <strong>Choose Profound if</strong> you want a broad answer-engine analytics suite with panel-derived prompt demand data and built-in content generation agents, and you have the budget and analyst time to work the dashboards.</p>
+<p>- <strong>Choose Semrush or Ahrefs if</strong> you already live inside their SEO suite every day and want baseline AI-mention monitoring bolted onto your existing workflow, not a recommendation-optimization program.</p>
+<p>| Tool | Best for |</p>
+<p>| :---- | :---- |</p>
+<p>| <strong>Genezio</strong> | Recommendation-first measurement \+ an executable action plan |</p>
+<p>| <strong>Profound</strong> | Answer-engine analytics, prompt demand data, content agents |</p>
+<p>| <strong>Semrush / Ahrefs</strong> | AI-mention monitoring as an add-on to an existing SEO suite |</p>
+<p>| <strong>Peec AI / OtterlyAI</strong> | Lower-cost prompt tracking and competitive visibility |</p>
+<h2>Why visibility is not recommendation</h2>
+<p>Here is the scenario every B2B marketer should test. A buyer asks ChatGPT, "What's the best project management tool for a 200-person agency?" Your brand appears in the answer. Your visibility tool logs a win.</p>
+<p>Read the actual sentence, though. The model wrote: "Tools like Asana, Monday, and \[your brand\] are options, but for an agency that size, most teams go with Asana for its workload views." You were visible. You were not recommended. The buyer just got pointed somewhere else.</p>
+<p><img alt="Genezio Visibility Rate" src="https://genezio.com/images/genezio-honda-visibility-rate.webp" /></p>
+<p>This is the trap: <strong>Visibility ≠ Recommendation</strong>. High visibility with a low recommendation rate is arguably worse than being invisible, because it feels like progress on a dashboard while you keep losing the decision. The goal isn't to be mentioned more. It's to optimize your presence to win more recommendations.</p>
+<p>Two things separate a recommendation number you can trust from a vanity metric.</p>
+<p>The first is how the answer is generated. We don't run a prompt once and record the result. We simulate full multi-turn conversations as your actual customer personas, a developer evaluating tools behaves differently from a procurement lead, and the recommendation flips depending on which one is asking and how the conversation unfolds across turns. A single prompt is a snapshot. A conversation is how buyers actually behave.</p>
+<p>The second is sample size. Run a brand through 1,000 conversations and you get noise. Run it through 100,000 and you can report a recommendation rate as 73.2% ± 4.1%, a real percentage with a confidence interval, not a vibe pulled from a handful of queries. That's the difference between a metric you can take to your CEO and one you have to apologize for.</p>
+<h2>How to choose an AI visibility tool: a weighted scorecard</h2>
+<p>Don't pick on feature count. Score against what actually drives the outcome you're accountable for. Run this with your SEO, content, and PR leads in a 30-minute workshop, weight each row to your context, and score every shortlisted tool 1–5.</p>
+<p>| Criterion | Why it matters | Weight |</p>
+<p>| :---- | :---- | :---- |</p>
+<p>| Recommendation measurement | Whether the tool measures recommendation, not just mentions | 25% |</p>
+<p>| Statistical rigor | Confidence intervals and sample size behind every number | 15% |</p>
+<p>| Engine coverage | ChatGPT, Google AI Overviews, Perplexity, Claude, Gemini | 10% |</p>
+<p>| Persona / prompt strategy | Multi-turn persona conversations vs single-prompt checks | 10% |</p>
+<p>| Action recommendations | Prioritized, specific actions vs generic observations | 15% |</p>
+<p>| Citation & source analysis | Which publishers shape the AI's narrative about you | 10% |</p>
+<p>| Perception analysis | Sentiment, extracted brand values, factual accuracy, SWOT | 5% |</p>
+<p>| Reporting / exports / API | Stakeholder reporting and data portability | 5% |</p>
+<p>| Security & multi-brand | SOC 2, SSO, multiple brands, roles and permissions | 5% |</p>
+<p>Ten demo questions worth asking every vendor on your shortlist:</p>
+<p>1. Do you measure recommendation rate or only visibility? How do you define each?</p>
+<p>2. How many conversations sit behind a single brand's score, and what's the confidence interval?</p>
+<p>3. Are these single prompts or multi-turn conversations? Can I configure personas?</p>
+<p>4. Which engines are included on my plan versus locked behind enterprise?</p>
+<p>5. When my recommendation rate drops, what specific actions does the tool give me?</p>
+<p>6. Can you show which sources the AI cites when it recommends a competitor over me?</p>
+<p>7. Can you detect when an AI states something factually wrong about my brand?</p>
+<p>8. How do exports, scheduled reports, and API access work?</p>
+<p>9. SOC 2 Type II? SSO? How many brands and seats are included?</p>
+<p>10. What does the per-prompt, per-seat, and per-engine cost look like at the coverage I actually need?</p>
+<p><img alt="Genezio KPIs" src="https://genezio.com/images/genezio-kpis.webp" /></p>
+<h2>Genezio vs Profound: Feature Comparison</h2>
+<p>Both platforms are serious. They optimize for different jobs.</p>
+<h3>Profound</h3>
+<p><strong>Best for:</strong> Enterprise teams that want a full answer-engine analytics stack and have the budget and analyst time to run it.</p>
+<p><strong>Key strengths:</strong> Answer Engine Insights, Prompt Volumes (panel-derived demand data, a genuine strength most tools don't have), Agent Analytics for AI crawler and traffic interpretation, and Agents for content generation. Strong historical, time-series reporting.</p>
+<p><strong>Limitations:</strong> Built around visibility and share of voice, not a recommendation KPI. The $99 Starter plan covers ChatGPT only with 50 prompts and one seat; meaningful multi-engine coverage starts at the $399 Growth plan, which still caps at 100 prompts and a single region. Action guidance leans toward content generation rather than a prioritized cross-channel backlog.</p>
+<p><strong>Pricing signals:</strong> Starter $99/mo, Growth $399/mo, Enterprise custom (10+ engines, SSO/SAML, SOC 2, API). Prices current as of June 2026\.</p>
+<p><strong>Ideal team:</strong> Enterprise marketing org with dedicated analysts running an AEO program.</p>
+<h3>Genezio</h3>
+<p><strong>Best for:</strong> Marketing and PR teams whose KPI is being recommended, and who need to act on the result.</p>
+<p><strong>Key strengths:</strong> Recommendation rate as the primary metric, measured through multi-turn persona conversations at scale with confidence intervals. Competitive <a href="/industry-leaderboards/">benchmarking on recommendation</a> over time. Citation and source analysis tied to narrative accuracy. Direct AI perception analysis, branded questions, extracted values, sentiment, SWOT, and detection of factual misrepresentation. Prioritized action recommendations across website, content, and citations: actionable strategies, not just data.</p>
+<p><strong>Limitations:</strong> Genezio is not a content-generation engine. It tells you precisely what to fix and in what order; It can help you with briefs and drafts, but your team or your agency does the writing. If all you want is the cheapest possible mention tracker, that's not what this is built for.</p>
+<p><strong>Pricing signals:</strong> Quote-based, with enterprise plans including SOC 2 Type II and multi-brand management. Talk to the team for coverage-based pricing.</p>
+<p><strong>Ideal team:</strong> Mid-market to enterprise brand that has to defend a recommendation number to leadership and turn it into a backlog.</p>
+<p>| Capability | Genezio | Profound |</p>
+<p>| :---- | :---- | :---- |</p>
+<p>| Primary KPI | Recommendation rate (with confidence intervals) | Visibility / share of voice |</p>
+<p>| Competitive benchmarking | Yes, on recommendation over time | Yes, on visibility |</p>
+<p>| Persona segmentation | Multi-turn persona conversations | Primarily single-prompt tracking |</p>
+<p>| Citation / source analysis | Yes, tied to narrative accuracy | Yes |</p>
+<p>| Action recommendations | Prioritized actions: web, content, citations | Opportunities panel \+ content Agents |</p>
+<p>| Prompt discovery | Persona-driven scenarios and topics | Prompt Volumes (panel-derived demand) |</p>
+<p>| Agent / content workflows | No (action briefs, not generation) | Yes (content generation agents) |</p>
+<p>| Perception analysis (values, sentiment, SWOT) | Yes | Partial (sentiment) |</p>
+<p>| Exports / API | Yes | Yes (higher tiers) |</p>
+<p>| Security / compliance | SOC 2 Type II, multi-brand | SOC 2, SSO on Enterprise |</p>
+<p>The honest read: if you want demand data and a content generator inside one analytics suite, Profound has real depth. If your problem is that AI keeps recommending someone else and you need to know why and what to do about it, that's the axis Genezio is built on.</p>
+<h2>How Genezio compares to Semrush, Ahrefs, Peec AI, and OtterlyAI</h2>
+<p>The wider market splits into two types. SEO suites that added AI features, and dedicated <a href="/glossary/generative-engine-optimization/">GEO platforms</a>. Knowing which type you're evaluating matters more than any single feature.</p>
+<p>| Tool | Type | Strength | Limit | Choose when | Pricing signal (June 2026\) |</p>
+<p>| :---- | :---- | :---- | :---- | :---- | :---- |</p>
+<p>| <strong>Semrush (AI Visibility Toolkit)</strong> | SEO suite add-on | Lives inside your existing Semrush workflow | Mention monitoring, not recommendation optimization | You already run Semrush daily | $99/mo per domain (25 prompts); Semrush One bundles from $199/mo |</p>
+<p>| <strong>Ahrefs (Brand Radar)</strong> | SEO suite add-on | Huge search-backed prompt database, broad research | Add-on cost stacks fast; directional, not action-first | You're deep in Ahrefs and want breadth | Base Ahrefs from $129/mo \+ $199/mo per AI index, or $699/mo for all six engines |</p>
+<p>| <strong>Peec AI</strong> | GEO specialist | Clean prompt tracking, unlimited seats | Monitoring-focused, light on what to do next | You want straightforward competitive visibility | $95 / $245 / $495 per mo (50 / 150 / 350 prompts) |</p>
+<p>| <strong>OtterlyAI</strong> | GEO specialist | Cheapest entry point, fast setup, GEO audits | Budget monitoring; thinner on strategy and engines | You want low-cost monitoring to start | $29 / $189 / $489 per mo (15 / 100 / 400 prompts) |</p>
+<p>| <strong>Genezio</strong> | GEO specialist | Recommendation KPI, persona conversations, action plans | Not a content generator | You need to win recommendations and act on it | Quote-based; SOC 2 Type II, multi-brand |</p>
+<p>The suites are great if your team already uses them and you want a baseline. They tell you when you appear. They were not built to tell you whether you were recommended, why a competitor was chosen, or what to do this week to change it.</p>
+<h2>A 30-day pilot to prove it</h2>
+<p>You don't need a six-month commitment to test any of this. Run a focused pilot and let the recommendation number decide.</p>
+<p>- <strong>Week 1: Baseline.</strong> Pick your top 2-5 buyer prompts and a competitor set. Measure your recommendation rate and theirs across ChatGPT, Google AI Overviews, Perplexity, Claude, and Gemini. This is your starting line.</p>
+<p>- <strong>Week 2: Citation gaps.</strong> Identify the sources the AI cites when it recommends competitors over you. Fix three content pages and your structured data so the right sources can find and cite you.</p>
+<p>- <strong>Week 3: Narrative and PR.</strong> Correct any factual misrepresentations the model is repeating about you. Target two or three high-cited publishers for outreach or fresh content.</p>
+<p>- <strong>Week 4: Re-measure and report.</strong> Re-run the same prompts. Report the change in recommendation rate, not just visibility, to your stakeholders.</p>
+<p>Success criteria: a measurable lift in recommendation rate on your priority prompts, a shrinking gap to your top competitor, and a backlog of dated, owned actions. One client of ours added a single question to their onboarding flow as part of this kind of loop; AI attribution went from single digits to 36% in one quarter. The point of the pilot isn't a prettier dashboard. It's proof the number moves when you act.</p>
+<h2>FAQ</h2>
+<p><strong>What's the difference between GEO and AEO?</strong> GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal, being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions.</p>
+<p><strong>Which AI engines should I track first?</strong> Start where your buyers already are: ChatGPT and Google AI Overviews for reach, Perplexity for research-stage buyers, then Claude and Gemini. Watch for plans that lock the engines you need behind enterprise tiers.</p>
+<p><strong>How many prompts do I need to track?</strong> Enough to cover your real buyer questions, not a round number. Twenty-five to fifty high-intent prompts is a solid pilot. What matters more is how many conversations run behind each prompt, because that's what gives the score a confidence interval instead of a guess.</p>
+<p><strong>Can I just measure AI traffic in my analytics?</strong> Mostly no, and this is where teams get a false sense of security. GA4 routinely shows a fraction of a percent of traffic from AI. When we pulled one client's server logs, the real number was orders of magnitude higher than GA4 reported. Analytics undercounts AI conversations badly, which is exactly why measuring recommendation directly matters.</p>
+<p><strong>Do SEO tools replace a GEO platform?</strong> For baseline mention monitoring, an SEO suite add-on is fine, especially if you already use it. For recommendation optimization, perception analysis, and a prioritized action plan, a purpose-built GEO platform does what a suite add-on wasn't designed to do.</p>
+<p><strong>How does Genezio measure recommendations?</strong> By simulating multi-turn conversations as your configured customer personas, across engines and geographies, at a sample size large enough to report a recommendation rate with a confidence interval, then mapping the gaps to specific actions on your website, content, and citations.</p>
+<p>---</p>
+<p>The brands that win the next two years won't be the ones that got mentioned the most. They'll be the ones that noticed when AI started recommending a competitor and did something about it before the quarter closed. If that's the number you're accountable for, that's the number <a href="/">Genezio</a> is built to move.</p>
+<p>---</p>
+<p><strong>Pricing note:</strong> All competitor pricing verified against current vendor and review sources as of June 2026\. Ahrefs Brand Radar in particular changed from earlier flat pricing to a per-index/bundle add-on model, confirm on the vendor pricing page before publishing.</p>]]></content:encoded>
+    </item>
     <item>
         <title><![CDATA[Briefs, not articles: why we hand teams the blueprint, not the building]]></title>
         <link>https://genezio.com/blog/briefs-not-articles/</link>
@@ -83,9 +199,9 @@
 <p>---</p>
 <h2>FAQ</h2>
 <p><strong>Why does Genezio focus on content briefs instead of generating complete articles directly?</strong></p>
-<p>Generating complete articles without strategic guiding parameters produces generic content that repeats competitor language or hallucinates facts. By generating a data-backed content brief first, Genezio ensures your content is specific, optimized for chunkability, and targeted to the precise queries and context that AI search engines actually use to make recommendations.</p>
+<p>Generating complete articles without strategic guiding parameters produces commoditized content that repeats competitor language or hallucinates facts. By generating a data-backed content brief first, Genezio ensures your content is specific, fact-checked, and targeted to the precise queries and context that AI search engines actually use to make recommendations.</p>
 <p><strong>What are the main factors that determine whether AI cites or recommends a brand?</strong></p>
-<p>Three main factors drive AI citations: chunkability (structuring content in self-contained, easily extractable units), specificity (concrete claims with figures, certifications, and product codes), and citation frequency (how frequently external, authoritative sites reference your brand or product).</p>
+<p>Three main factors drive AI citations: structuring content in self-contained, easily extractable units, specificity (concrete claims with figures, certifications, and product codes), and citation frequency (how frequently external, authoritative sites reference your brand or product).</p>
 <p><strong>What is a query fan-out and how does it affect content creation?</strong></p>
 <p>A query fan-out refers to the multiple, highly specific ways real buyers phrase search queries in conversation with AI. Instead of relying on static, outdated search keywords, content briefs utilize these verbatim, conversational phrasings to structure articles around actual customer intent.</p>
 <p><strong>How does starting with a detailed content brief prevent AI hallucinations?</strong></p>
@@ -415,7 +531,7 @@
 <h2>How I'm evaluating these tools</h2>
 <p>I'm not going to pretend objectivity here. I'm a co-founder of one of these tools. What I can promise is factual <a href="/blog/best-accurate-data-platform-for-ai-search-optimization/">accuracy</a> about what each tool does and doesn't do, based on direct product experience and publicly available information.</p>
 <p>The criteria that matter for a serious GEO evaluation in 2026:</p>
-<p><strong>Conversation methodology.</strong> Does the tool run single prompts through an API, or does it simulate multi-turn conversations the way real users actually interact with AI? This isn't a minor distinction. Our <a href="/blog/zero-query-overlaps/">zero-query-overlap research</a> showed that API-based prompt tracking and actual ChatGPT.com conversations produce fundamentally different results.</p>
+<p><strong>Conversation methodology.</strong> Does the tool run single prompts through an API, or does it simulate multi-turn conversations the way real users actually interact with AI? This isn't a minor distinction. Our <a href="/research/zero-query-overlaps/">zero-query-overlap research</a> showed that API-based prompt tracking and actual ChatGPT.com conversations produce fundamentally different results.</p>
 <p><strong>What gets measured.</strong> Visibility, sentiment, citation tracking, or recommendation? Most tools stop at visibility. Very few measure whether AI actively recommends your brand.</p>
 <p><strong>Statistical rigor.</strong> Sample size matters. Running 100 prompts gives you noise. Running 100,000 conversations with confidence intervals gives you something you can actually take to your board. GenOptima's recent Q1 benchmark showed AI citation coverage doubling in just 14 days, which means monthly monitoring with small sample sizes is basically guesswork.</p>
 <p><strong>Multi-model coverage.</strong> ChatGPT, Perplexity, Gemini, Copilot, Claude, Google AI Mode, AI Overviews. Recent data shows Copilot citation rates running roughly 9x Google AI Mode. A tool that covers three models isn't giving you the full picture.</p>
@@ -1276,7 +1392,7 @@
 <p>| <strong>Actionable Recommendations</strong> | Automated multi-channel strategy guidance | SEO-centric but fragmented across add-ons |</p>
 <p>| <strong>Content Generation Hub</strong> | Available in Beta without extra cost | Priced at $60 extra as an add-on |</p>
 <p>| <strong>Security & Enterprise Features</strong> | SOC 2 Type II certified; multi-brand, global scale | Standard compliance; features vary by add-on |</p>
-<p>| <strong>Pricing</strong> | Plans from €299/month | Starting around $199/month + costly add-ons (eg., each additional user costs $45/mo) |</p>
+<p>| <strong>Pricing</strong> | Enterprise/Custom | Starting around $199/month + costly add-ons (eg., each additional user costs $45/mo) |</p>
 <h2>Deep dive: The Genezio difference</h2>
 <h3>1. Multi-turn conversation simulation</h3>
 <p>Genezio offers advanced multi-turn simulation that mimics realistic dialogues AI engines encounter when users ask extended, nuanced queries about your brand. This goes beyond the typical single prompt analysis most tools, including Semrush, provide.</p>
@@ -1316,8 +1432,7 @@
 <p>Semrush surfaces high-level AI Strategic Opportunities based on LLM outputs. It highlights positioning gaps, <a href="/blog/visibility-to-recommendation-rate/">Share of Voice</a> differences, and thematic weaknesses, then recommends broad content or narrative adjustments (e.g., improve authority, publish on certain topics, strengthen messaging). The output is strategic and directional, helping teams understand <em>where* they stand and *what</em> areas require improvement.</p>
 <p>Semrush is strategic and diagnostic; Genezio is tactical, action-driven, and already execution-enabled for conversational AI visibility.</p>
 <h3>7. Security, scalability, and pricing</h3>
-<p>Genezio is SOC 2 Type II certified, supporting enterprise-grade security with features for managing multiple brands globally. Its tiered pricing from €299/month offers SMBs access to advanced features without hidden add-ons.</p>
-<p>The Growth plan includes 5 users. In contrast, Semrush plans provide access for one user by default and charge $45 per additional user, which increases total cost as teams expand.</p>
+<p>Genezio is SOC 2 Type II certified, supporting enterprise-grade security with features for managing multiple brands globally. Its pricing is shaped by the engines, markets, and volume you actually need.</p>
 <p>Semrush’s pricing is multi-layered, starting around $199/month but requiring multiple expensive add-ons for full AI marketing capability, making budgeting complex especially for SMBs.</p>
 <h2>Why Genezio is ideal for small and medium brands (SMBs)</h2>
 <p>Although optimized for SMBs with straightforward, scalable pricing and ease of use, the Genezio AI visibility tool is equally suited to larger brands and agencies needing sophisticated, live conversational AI monitoring.</p>
@@ -1537,9 +1652,7 @@
 <p>The Genezio dashboard is clean but dense with data. The "Brand Performance Report" serves as a central hub, offering immediate visualization of visibility trends over time. The onboarding flow is self-service, taking roughly 1-2 minutes to set up a brand and generate default topics.</p>
 <p><img alt="Genezio Citation Analysis" src="https://genezio.com/images/genezio-citation-analysis.webp" /></p>
 <h3>Pricing</h3>
-<p>Genezio offers a tiered structure:</p>
-<p>* <strong>Growth:</strong> €299/month (4 models, 50 scenarios, multi-turn conversations).</p>
-<p>* <strong>Agency:</strong> €999/month (Monitor 3 brands, white-label reports).</p>
+<p>Genezio offers a custom pricing shaped by the answer engines, markets, and volume you actually need.</p>
 <p><strong>Verdict:</strong> Genezio is built for enterprise-level SEOs who need to measure and improve brand visibility in AI-powered search environments. If you need to know <em>why</em> an LLM recommends a competitor (e.g., specific personas or geographic contexts), Genezio offers the deepest forensic capabilities.</p>
 <h2>2. Profound: The Enterprise Intelligence Suite</h2>
 <p><strong>Positioning:</strong> Profound positions itself as a high-end, enterprise-grade solution focused on "Answer Engine Optimization" (AEO). It feels less like a marketing tool and more like a business intelligence suite.</p>
@@ -1611,7 +1724,7 @@
 <p>| <strong>Unit of Analysis</strong> | Multi-Turn AI Conversations | Answer Engine Responses | Static Prompts | Keywords/Prompts | Content Gaps |</p>
 <p>| <strong>Honda Visibility</strong> | 75% (2nd place) | 46.7% | 35% (4rd place) | 87/100 (High) | 62.1% (1st place) |</p>
 <p>| <strong>Top Competitor</strong> | Toyota | Toyota | Hyundai | Toyota | Toyota |</p>
-<p>| <strong>Pricing Entry</strong> | €299/mo | Enterprise/Custom | €89/mo | $99/mo (Add-on) | $99/mo |</p>
+<p>| <strong>Pricing Entry</strong> | Enterprise/Custom | Enterprise/Custom | €89/mo | $99/mo (Add-on) | $99/mo |</p>
 <p>| <strong>Unique Feature</strong> | Multi-turn conversations & Query Fanout | Negative Sentiment Drivers | Win/Loss Prompt Lists | SEO Data Integration | "Fix it" Content Generator |</p>
 <h2>Recommendation</h2>
 <h3>Why Genezio Wins on Strategy</h3>
@@ -1766,132 +1879,6 @@
 <p>- <a href="https://genezio.com/blog/ads-chatgpt-ai-visibility/">What ChatGPT Ads mean for brand visibility in AI conversations</a></p>]]></content:encoded>
     </item>
     <item>
-        <title><![CDATA[Zero query overlaps between GPT-5.2 (API) and ChatGPT.com]]></title>
-        <link>https://genezio.com/blog/zero-query-overlaps/</link>
-        <guid isPermaLink="true">https://genezio.com/blog/zero-query-overlaps/</guid>
-        <description><![CDATA[Zero query overlaps found between GPT-5.2 API and ChatGPT.com. Our study of 3,645 conversations reveals distinct search behaviors and what they mean.]]></description>
-        <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
-        <author>Bogdan Ripa</author>
-        <media:content url="https://genezio.com/images/zero-query-overlaps.webp" medium="image" />
-        <content:encoded><![CDATA[<p><img alt="Zero query overlaps between GPT-5.2 (API) and ChatGPT.com" src="https://genezio.com/images/zero-query-overlaps.webp" /></p>
-<h2>TL;DR</h2>
-<p>Over the last 27 days we used Genezio to run 3,645 conversations in the UK banking space and compare two execution paths:</p>
-<p>* <strong>GPT-5.2 via API</strong></p>
-<p>* <strong>ChatGPT.com via the web interface (UI)</strong></p>
-<p>What we wanted to understand was not "which model is smarter", but something much more practical for brands: <strong>When a scenario is identical, do the two paths search the web the same way, and therefore build answers from the same evidence?</strong></p>
-<p>The short version: <strong>no</strong>. In this research, the API and the UI behaved like two different "web research engines," generating different search queries and pulling meaningfully different sets of pages.</p>
-<p>Below is the analysis that matters for AI Visibility measurement.</p>
-<h2>How we measured "what the model did" (without reading every answer)</h2>
-<p>When ChatGPT (or the API) decides to use the web, there are two observable footprints you can capture at scale:</p>
-<p>1.  <strong>Query fanouts:</strong> the <em>search-like</em> queries the system generates behind the scenes (often multiple per conversation).</p>
-<p>2.  <strong>Sources (or citations):</strong> the URLs it ends up using/citing as evidence for the response.</p>
-<p>Genezio captures both, per scenario and per run, letting you compare behavior across execution paths.</p>
-<p>This post focuses on those two signals because they are:</p>
-<p>* Quantifiable at scale.</p>
-<p>* Directly tied to the final answer (different evidence leads to a different recommendations/mentions).</p>
-<h2>Finding 1: Query fanouts didn't overlap at all</h2>
-<p>Across all runs:</p>
-<p>* <strong>Total unique query fanouts:</strong> 3,856</p>
-<p>* <strong>ChatGPT.com-only fanouts:</strong> 2,785 (72.2%)</p>
-<p>* <strong>GPT-5.2-only fanouts:</strong> 1,071 (27.8%)</p>
-<p>* <strong>Fanouts used by both:</strong> 0</p>
-<p>That last number is the headline: <strong>not a single query appeared in both paths</strong> in our dataset.</p>
-<h3>What the query shape suggests</h3>
-<p>Even from the examples, you can see a stylistic difference:</p>
-<p><em> <strong>ChatGPT.com UI fanouts</strong> skew *longer, more descriptive, more "comparison-style"</em> queries (e.g., "ranked by how quickly and easily new customers can open an account online").</p>
-<p><em> <strong>API fanouts</strong> skew *shorter, more canonical, often with explicit year ranges and brand terms</em> (e.g., "customer service satisfaction ranking 2026", "Barclays personal loan representative APR…").</p>
-<p>There's also a repeat-pattern difference:</p>
-<p><em> <strong>UI:** 3,131 fanout *instances* across 2,785 unique queries, so *</em>1.12 uses/query</strong>.</p>
-<p><em> <strong>API:** 1,440 fanout *instances* across 1,071 unique queries, so *</em>1.34 uses/query</strong>.</p>
-<p><strong>Interpretation:</strong> the UI generates <em>more varied* queries; the API repeats *fewer "standard"</em> queries more often.</p>
-<h2>Finding 2: The API crawled more unique pages, but the UI reused a smaller set more heavily</h2>
-<p>Across all runs, we saw <strong>5,701 unique source URLs</strong>.</p>
-<p><strong>Breakdown:</strong></p>
-<p>* <strong>Sources used by ChatGPT.com:</strong> 2,843 unique URLs (49.9% of all sources)</p>
-<p>* <strong>Sources used by GPT-5.2 API:</strong> 3,562 unique URLs (62.5% of all sources)</p>
-<p>* <strong>Used by both:</strong> 704 (12.3%)</p>
-<p>So the API touched <strong>more unique pages</strong> overall.</p>
-<p>But when we look at <strong>how often</strong> pages were used:</p>
-<p>* <strong>Total source-uses (citations/events):</strong></p>
-<p>* UI: 37,448</p>
-<p>* API: 27,817</p>
-<p>And the UI was more concentrated:</p>
-<p>Top 50 sources account for <strong>28.0%<em>* of UI source-uses vs *</em>23.0%</strong> for API source-uses.</p>
-<p><strong>Interpretation:</strong></p>
-<p><em> <strong>API</strong> behaves more like an explorer: *more distinct pages</em>, fewer repeats.</p>
-<p><em> <strong>UI</strong> behaves more like a curator: *fewer distinct pages</em>, reused more often.</p>
-<h2>Finding 3: The UI and API "trusted" different kinds of websites</h2>
-<p>This shows up clearly in the "UI-only" and "API-only" lists:</p>
-<p><em> <strong>UI-only sources</strong> are dominated by *review/aggregator and comparison content</em>.</p>
-<p><em> <strong>API-only sources</strong> include more *first-party bank pages</em> and more "specialist / niche" pages.</p>
-<p>To quantify "first-party tilt," we did a lightweight domain-based classification (domains containing common bank names like nationwide/hsbc/barclays/etc.):</p>
-<p><strong>API pulled ~4.4× more source-uses from bank-like domains</strong> than the UI did (10,345 vs 2,333).</p>
-<p>Even within the 704 overlapping sources, the weighting is wildly different. For example:</p>
-<p>* Some comparison pages are heavily UI-weighted (e.g., one URL was cited 234 times in UI vs once in API).</p>
-<p>* Some bank product pages are heavily API-weighted (e.g., one URL was cited 130 times in API vs once in UI).</p>
-<p>This is exactly what you'd expect if the two paths have different retrieval heuristics (or different "web research stacks"), even when the scenario is the same.</p>
-<p>If we dig even deeper into the data, here is what we see:</p>
-<p>| Domain type | UI share of source-uses | API share of source-uses | What it means |</p>
-<p>| :--- | :--- | :--- | :--- |</p>
-<p>| <strong>Bank / issuer (first-party)</strong> | 6.1% | 36.0% | API over-indexes on bank-owned sites (~4.4× vs UI) |</p>
-<p>| <strong>News / media</strong> | 7.2% | 21.2% | API cites media ~2.2× more |</p>
-<p>| <strong>Comparison / aggregator</strong> | 32.2% | 11.0% | UI leans heavily toward comparison content (~3× vs API) |</p>
-<p>| <strong>Reference (e.g., Wikipedia)</strong> | 5.1% | 0.9% | UI uses reference far more |</p>
-<p>| <strong>Government / regulator</strong> | 2.2% | 2.2% | Similar |</p>
-<p>| <strong>Other</strong> | 47.2% | 28.6% | UI has a much larger “long tail” |</p>
-<h2>Finding 4: Differences persisted across topics and scenarios</h2>
-<p>The data we looked at includes multiple topics, each with a few scenarios, and the same "split-brain" behavior shows up repeatedly:</p>
-<p>* <strong>Zero overlap in query fanouts</strong> holds per topic (not just globally).</p>
-<p>* The <strong>balance</strong> of source usage varies by topic (some topics are UI-heavier, others API-heavier), suggesting that retrieval divergence interacts with the subject matter.</p>
-<h2>Examples: what each path actually searched for and cited</h2>
-<p>To make the differences tangible, here are real “top” examples from our dataset.</p>
-<h3>Query fanouts (what the system searched for)</h3>
-<p><strong>ChatGPT.com UI (more “comparison-style”, longer):</strong></p>
-<p>* “top UK banks for innovation in mobile banking features…” (33×)</p>
-<p>* “UK banks ranked by how quickly and easily new customers can open an account online” (8×)</p>
-<p>* “UK banks best business banking accounts and digital tools for SMEs…” (8×)</p>
-<p><strong>GPT-5.2 API (more “keyword/year/product”, shorter):</strong></p>
-<p>* “UK banks top cashback credit cards 2025” (26×)</p>
-<p>* “UK bank customer service satisfaction ranking 2025 2026” (17×)</p>
-<p>* “Barclays personal loan representative APR apply online…” (9×)</p>
-<h3>Sources (what got cited/used)</h3>
-<p><strong>ChatGPT.com UI (aggregators/comparisons):</strong></p>
-<p>* `https://moneyzine.com/uk/banking/best-online-banks-uk/` (350x)</p>
-<p>* `https://www.monito.com/en/wiki/best-online-banks-uk` (336x)</p>
-<p>* `https://www.compareremit.com/money-transfer-tips/best-online-banks-in-the-united-kingdom/` (295x)</p>
-<p><strong>GPT-5.2 API (more first-party + niche):</strong></p>
-<p>* `https://www.nationwide.co.uk/loans/loan-rates` (130x)</p>
-<p>* `https://classiads.co.uk/best-mobile-banking-apps-in-the-uk-for-2025/` (125x)</p>
-<p>* `https://www.yourmoney.com/saving-banking/challenger-brands-top-bank-customer-satisfaction-table/` (105x)</p>
-<p><strong>Shared, but weighted differently:</strong></p>
-<p>* `https://www.ft.com/content/bd7d806c-5028-4a93-a04b-81c72af6bb95` (296x UI vs 505x API)</p>
-<p>* `https://www.gov.uk/government/news/how-does-your-bank-rank-cma-releases-satisfaction-survey-ratings` (256x UI vs 282x API)</p>
-<p>* `https://moneyweek.com/personal-finance/bank-accounts/best-and-worst-uk-banks-for-online-banking` (384x UI vs 55x API)</p>
-<h2>What this means for "AI Visibility" as a KPI</h2>
-<p>If you define <strong>AI Visibility</strong> as:</p>
-<p>> "How likely is my brand to be mentioned/recommended in the experience real users actually have in ChatGPT?"</p>
-<p>…then <strong>the execution path matters</strong>.</p>
-<p>This research shows that:</p>
-<p>1.  The UI and API don't just phrase queries differently, they often end up in <strong>different evidence universes</strong> (different queries, different pages, different weighting).</p>
-<p>2.  When the evidence changes, <strong>rankings, comparisons, and brand mentions will change</strong> - even if the prompt/scenario is identical.</p>
-<p>So the practical recommendation is:</p>
-<h3>For AI Visibility Scoring, prioritize the ChatGPT.com web interface runs</h3>
-<p>If your goal is to measure how a brand appears <strong>to end users inside ChatGPT<em>*, you should compute your AI Visibility Score primarily from *</em>web-interface scenario runs</strong>, because that's the surface your customers use, and (based on this research) it does not behave like the API in its web retrieval.</p>
-<h2>When the API is still valuable</h2>
-<p>The GPT-5.2 API path can still be extremely useful for:</p>
-<p>* <strong>Controlled experiments</strong> (repeatability, parameter control)</p>
-<p>* <strong>Monitoring a wider evidence set</strong> (it crawls more unique pages here)</p>
-<p>* <strong>First-party content diagnostics</strong> (it over-indexed on bank-owned domains)</p>
-<p>But: <strong>don't assume API-based measurements translate 1:1 to the UI experience.</strong></p>
-<h2>Bottom line</h2>
-<p>In this UK banking study (3,645 conversations, 27 days), the ChatGPT.com UI and the GPT-5.2 API behaved like two different web-research systems:</p>
-<p>* <strong>0% overlap</strong> in query fanouts (3,856 unique fanouts; none shared).</p>
-<p>* <strong>Different web coverage</strong> (API touched more unique pages; UI reused fewer pages more heavily).</p>
-<p>* <strong>Different source preference</strong> (UI skewed to aggregators; API skewed more toward bank domains and niche sources).</p>
-<p>If you care about measuring your brand's real <strong>AI Visibility in ChatGPT<em>*, you should treat *</em>the web interface</strong> as the primary measurement surface, and use the API as a complementary diagnostic lens, not a proxy.</p>
-<p>If you’d like to validate any of this yourself, we’re sharing the raw dataset used for the analysis (a ZIP containing the three JSON files), so you can recompute the stats, slice by topic/scenario/time, and explore the query fanouts and source domains directly; we encourage you to draw your own conclusions about how ChatGPT.com and the GPT-5.2 API behave, and if you spot something interesting (or something we missed), we’d love to hear it and incorporate it into a follow-up.</p>]]></content:encoded>
-    </item>
-    <item>
         <title><![CDATA[Genezio vs. Peec AI: A Comprehensive Comparison for Marketers]]></title>
         <link>https://genezio.com/blog/genezio-vs-peec/</link>
         <guid isPermaLink="true">https://genezio.com/blog/genezio-vs-peec/</guid>
@@ -1947,7 +1934,7 @@
 <p>Genezio extracts these queries, allowing your SEO team to create content that answers the <strong>exact</strong> questions the AI is asking the web.</p>
 <h2>Pricing and Philosophy</h2>
 <p><strong>Peec AI</strong> is positioned as an affordable entry point. It is an excellent choice for teams with limited budgets who need basic visibility tracking without complex configuration.</p>
-<p><strong>Genezio<em>* is an enterprise-grade platform designed for brands and agencies who need to *</em>win</strong>. It offers self-service onboarding with a free trial, but its architecture supports complex multi-tenant agency setups and deep forensic analysis of brand reputation.</p>
+<p><strong>Genezio</strong> is tailored for multi-market brands and teams. We scope pricing around the answer engines, markets, and conversation volume that matter to you, so you only pay for what moves the needle.</p>
 <h2>The Verdict</h2>
 <p><strong>Choose Peec AI if:</strong></p>
 <p>* You are a small team just starting with AI visibility.</p>

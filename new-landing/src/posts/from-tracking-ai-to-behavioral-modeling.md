@@ -42,7 +42,7 @@ To understand where the industry is heading, we must look at how different layer
 | **Logic** | Keyword-based | Single-Turn Prompts | Multi-Turn Scenarios |
 | **Output** | Visibility Score | Mention Count | Perception Audit & Briefs |
 
-## The Production Gap: {{< external-link link="https://genezio.com/blog/zero-query-overlaps/" >}}Web Interface vs. API{{< /external-link >}}
+## The Production Gap: {{< external-link link="https://genezio.com/research/zero-query-overlaps/" >}}Web Interface vs. API{{< /external-link >}}
 
 A major differentiator for Genezio is its execution environment.
 

@@ -1,5 +1,6 @@
 ---
 title: "Zero query overlaps between GPT-5.2 (API) and ChatGPT.com"
+type: research
 date: 2026-02-04
 tags:
   - AI Visibility
@@ -13,14 +14,14 @@ thumbnail: /images/zero-query-overlaps.webp
 preview: Zero query overlaps found between GPT-5.2 API and ChatGPT.com. Our study of 3,645 conversations reveals distinct search behaviors.
 # meta data start
 description: Zero query overlaps found between GPT-5.2 API and ChatGPT.com. Our study of 3,645 conversations reveals distinct search behaviors and what they mean.
-meta_og_url: "https://genezio.com/blog/zero-query-overlaps/"
+meta_og_url: "https://genezio.com/research/zero-query-overlaps/"
 
 meta_og_image: "https://genezio.com/images/zero-query-overlaps.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 6
-url: /zero-query-overlaps/
+url: /research/zero-query-overlaps/
 ---
 
 ![Zero query overlaps between GPT-5.2 (API) and ChatGPT.com](/images/zero-query-overlaps.webp)
