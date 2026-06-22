@@ -59,7 +59,7 @@ Geography is the strongest filter for fan-out behavior. When an AI detects a loc
 
 ## 3. The API vs. Web Interface Gap in Fan-out
 
-A major pitfall in {{< external-link link="https://genezio.com/blog/zero-query-overlaps/" >}}AI visibility tracking is relying on API data{{< /external-link >}}.
+A major pitfall in {{< external-link link="https://genezio.com/research/zero-query-overlaps/" >}}AI visibility tracking is relying on API data{{< /external-link >}}.
 
 * **Limited Fan-out in APIs:** Standard API calls often perform a "shallow" search or no search at all to save latency and cost.
 * **Deep Fan-out in Web Interfaces:** The consumer-facing versions (what your customers use) perform "Deep Fan-out," searching 5-10 sources simultaneously.

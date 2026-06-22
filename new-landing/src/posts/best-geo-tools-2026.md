@@ -48,7 +48,7 @@ I'm not going to pretend objectivity here. I'm a co-founder of one of these tool
 
 The criteria that matter for a serious GEO evaluation in 2026:
 
-**Conversation methodology.** Does the tool run single prompts through an API, or does it simulate multi-turn conversations the way real users actually interact with AI? This isn't a minor distinction. Our [zero-query-overlap research](/blog/zero-query-overlaps/) showed that API-based prompt tracking and actual ChatGPT.com conversations produce fundamentally different results.
+**Conversation methodology.** Does the tool run single prompts through an API, or does it simulate multi-turn conversations the way real users actually interact with AI? This isn't a minor distinction. Our [zero-query-overlap research](/research/zero-query-overlaps/) showed that API-based prompt tracking and actual ChatGPT.com conversations produce fundamentally different results.
 
 **What gets measured.** Visibility, sentiment, citation tracking, or recommendation? Most tools stop at visibility. Very few measure whether AI actively recommends your brand.
 

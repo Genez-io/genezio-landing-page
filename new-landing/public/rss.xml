@@ -5,7 +5,7 @@
     <link>https://genezio.com/blog/</link>
     <description>The platform built for Generative Search and Answer Engine Optimization.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2026 14:26:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 09:52:08 GMT</lastBuildDate>
     <atom:link href="https://genezio.com/rss.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -223,15 +223,6 @@
         <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
         <author>Paula Cionca</author>
         <enclosure url="https://genezio.com/images/1770615730901_image.webp" type="image/webp" length="0" />
-    </item>
-    <item>
-        <title><![CDATA[Zero query overlaps between GPT-5.2 (API) and ChatGPT.com]]></title>
-        <link>https://genezio.com/blog/zero-query-overlaps/</link>
-        <guid isPermaLink="true">https://genezio.com/blog/zero-query-overlaps/</guid>
-        <description><![CDATA[Zero query overlaps found between GPT-5.2 API and ChatGPT.com. Our study of 3,645 conversations reveals distinct search behaviors and what they mean.]]></description>
-        <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
-        <author>Bogdan Ripa</author>
-        <enclosure url="https://genezio.com/images/zero-query-overlaps.webp" type="image/webp" length="0" />
     </item>
     <item>
         <title><![CDATA[Genezio vs. Peec AI: A Comprehensive Comparison for Marketers]]></title>
