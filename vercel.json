@@ -27,6 +27,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/zero-query-overlaps/",
+      "destination": "/research/zero-query-overlaps/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/zero-query-overlaps",
+      "destination": "/research/zero-query-overlaps/",
+      "permanent": true
+    },
+    {
       "source": "/blog/affordable-cloud-hosting/",
       "destination": "/blog/",
       "permanent": true
