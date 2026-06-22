@@ -52,15 +52,70 @@ export function BlogPost() {
   const sectionLabel = isResearchSection ? "Research" : "Blog";
   const postPath = getPostPath(post);
 
-  // Simple related posts logic: same category, exclude current, same section
-  const relatedPosts = getAllPosts()
-    .filter(
-      (p) =>
-        p.category === post.category &&
-        p.id !== post.id &&
-        (isResearchSection ? p.postType === "research" : p.postType !== "research")
-    )
-    .slice(0, 3);
+  // Related posts logic: score by tag overlap + title pattern similarity
+  // For research posts: include blog posts as candidates (relaxed filter)
+  // For blog posts: only show other blog posts
+  const relatedPosts = React.useMemo(() => {
+    const currentTags = post.tags || [];
+    // Extract a pattern prefix from the title (e.g. "genezio vs" from "Genezio vs Profound: ...")
+    const titleLower = post.title.toLowerCase();
+    const vsMatch = titleLower.match(/^(.+?\s+vs\.?)\s+/i);
+    const titlePattern = vsMatch ? vsMatch[1] : null;
+
+    const candidates = getAllPosts()
+      .filter(
+        (p) =>
+          p.id !== post.id &&
+          // Research section: allow all posts (blog + research)
+          // Blog section: only blog posts
+          (isResearchSection ? true : p.postType !== "research")
+      );
+
+    const scored = candidates
+      .map((p) => {
+        let score = 0;
+        const pTags = p.tags || [];
+
+        // Score: +2 for each shared tag
+        for (const tag of currentTags) {
+          if (pTags.includes(tag)) score += 2;
+        }
+
+        // Score: +1 for same category (first tag)
+        if (p.category === post.category) score += 1;
+
+        // Score: +5 for matching title pattern (e.g. both are "genezio vs ..." articles)
+        if (titlePattern && p.title.toLowerCase().startsWith(titlePattern)) {
+          score += 5;
+        }
+
+        // Score: +3 bonus for same section (research with research, blog with blog)
+        const sameSection = isResearchSection
+          ? p.postType === "research"
+          : p.postType !== "research";
+        if (sameSection) score += 3;
+
+        return { post: p, score };
+      })
+      .sort((a, b) => b.score - a.score);
+
+    // Take top scored matches first, then fill remaining slots with recent posts
+    const topScored = scored.filter((item) => item.score > 0).slice(0, 3);
+
+    if (topScored.length < 3) {
+      const usedIds = new Set(topScored.map((item) => item.post.id));
+      const fillers = candidates
+        .filter((p) => !usedIds.has(p.id))
+        .sort((a, b) => b.timestamp - a.timestamp)
+        .slice(0, 3 - topScored.length);
+      return [
+        ...topScored.map((item) => item.post),
+        ...fillers,
+      ];
+    }
+
+    return topScored.map((item) => item.post);
+  }, [post, isResearchSection]);
 
   // Preprocess content to replace tweet shortcodes with marker links
   const contentWithTweets = React.useMemo(() => {
@@ -787,21 +842,28 @@ export function BlogPost() {
           {relatedPosts.length > 0 && (
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">
-                Related Articles
+                {isResearchSection
+                  ? "Read more studies on AI Search"
+                  : "Read more about GEO, AI Search & Testing"}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {relatedPosts.map((relatedPost) => (
                   <a
                     key={relatedPost.id}
                     href={getPostPath(relatedPost)}
-                    className="group bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all"
+                    className="group bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all flex flex-col"
                   >
                     <div className="text-xs font-medium text-blue-400 mb-3">
                       {relatedPost.category}
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-blue-400 transition-colors leading-snug">
+                    <h3 className="text-base font-semibold text-white group-hover:text-blue-400 transition-colors leading-snug mb-3">
                       {relatedPost.title}
                     </h3>
+                    {relatedPost.excerpt && relatedPost.excerpt !== "No description" && (
+                      <p className="text-sm text-white/50 leading-relaxed line-clamp-3 mt-auto">
+                        {relatedPost.excerpt}
+                      </p>
+                    )}
                   </a>
                 ))}
               </div>
