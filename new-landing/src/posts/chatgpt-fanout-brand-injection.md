@@ -86,7 +86,9 @@ The last one is about the fights you lose by default. When a user names two bran
 
 The fix isn't a "Uniqlo vs M\&S" page, because that's not what the model searched for. It searched for a durability question with only the rival's name attached. So what saves you from getting skipped is being unmissable on the dimension the model queried and the sources it trusts for your category, so even a search built around your competitor turns you up.
 
-It isn't something you check once and file away. ChatGPT rewrites its fanouts on every run and reaches into memory each time, so the sources and competitors it pulls from keep moving. The only way to know whether you're being volunteered or skipped is to watch the fanouts over time, run as the personas your actual customers represent. That's the thing [Genezio](https://genezio.com) is built to do. It runs full multi-turn conversations as your real customer personas, captures the fanouts as they happen, and reports recommendation rates with proper confidence intervals rather than a single snapshot. The fanout is the earliest point at which your brand's fate gets decided, so it's the earliest point worth watching.
+It isn't something you check once and file away. ChatGPT rewrites its fanouts on every run and reaches into memory each time, so the sources and competitors it pulls from keep moving. The only way to know whether you're being volunteered or skipped is to watch the fanouts over time, run as the personas your actual customers represent.
+
+That's exactly what Genezio is built to do. It runs full multi-turn conversations as your real customer personas, captures the fanouts as they happen, and reports recommendation rates with proper confidence intervals rather than a single snapshot. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see exactly which competitors and sources AI is injecting into conversations about your brand.
 
 ---
 

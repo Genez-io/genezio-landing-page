@@ -141,3 +141,5 @@ Content strategy stops chasing keywords AI already maps to you, and starts addre
 The conversation with the CEO changes. Instead of "we are visible in 67% of AI responses in our category," the report reads "we win 67% ± 3% of head-to-head comparisons against our top three competitors, up from 54% last quarter, driven primarily by closing the security perception gap." That is a different conversation, and it leads to different decisions.
 
 The companies that figure this out in 2026 will not be doing better SEO. They will be doing something the SEO playbook cannot describe: actively shaping how an evaluator that never sleeps thinks about their brand, and measuring the result with the statistical rigor that lets them know whether the work is paying off.  
+
+If you are ready to shift your B2B strategy from simply showing up to actually winning the deal, we can help. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how Genezio's Introspector and Comparer agents can measure and shape your AI brand performance.

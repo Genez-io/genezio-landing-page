@@ -144,4 +144,4 @@ For brands, the question is no longer: “How do we rank in one AI system?” It
 
 If you want to understand how GPT-5.2 sees your brand and how it differs from Perplexity, Claude, and others, you can analyze your AI Visibility and full narrative footprint on Genezio.
 
-{{< external-link link="https://genezio.com/" >}}Try Genezio for free{{< /external-link >}}
+Don't let your brand narrative be rewritten without you. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see exactly how the latest reasoning models perceive your brand and how to win the recommendation.

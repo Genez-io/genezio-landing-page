@@ -126,4 +126,4 @@ If you've made it this far, here's the honest summary of what we think works in 
 
 **Monitor what AI engines actually say about you.** Don't guess—measure. The landscape changes weekly, and what worked last month might not work next month.
 
-{{< external-link link="https://genezio.com/glossary/ai-visibility/" >}}Visibility in AI{{< /external-link >}} is no longer about being ranked. It's about being selected—and that selection process works in ways that are fundamentally different from everything we learned about traditional SEO.
+Visibility in AI is no longer about being ranked. It's about being selected—and that selection process works in ways that are fundamentally different from everything we learned about traditional SEO. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see exactly how ChatGPT, Gemini, and Claude currently perceive your brand, and how to start winning the mentions that matter.

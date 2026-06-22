@@ -116,4 +116,4 @@ Genezio helps teams:
 * Identify the queries and scenarios that influence AI answers.
 * See where competitors are preferred—and why.
 
-{{< external-link link="https://genezio.com/" >}}Learn more at Genezio.com{{< /external-link >}}
+Don't let your organic visibility become a blind spot while competitors buy the ad space around it. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how your brand is represented in the conversations that matter most.

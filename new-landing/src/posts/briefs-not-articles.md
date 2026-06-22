@@ -143,7 +143,9 @@ Citations are won by content that's chunkable, specific, and anchored against th
 
 The article is the easy part. The brief is the work.
 
-The teams that figure out which one to invest in are the teams whose content will keep getting cited a year from now.  
+The teams that figure out which one to invest in are the teams whose content will keep getting cited a year from now. 
+
+[Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how Genezio's data-driven briefs can transform your AI search visibility.
 
 ---
 

@@ -113,4 +113,4 @@ The CMOs who get this right will run smaller, sharper measurement programs that 
 
 Statistical rigor isn't an academic flex. It's the line between knowing what's happening and guessing what's happening. In a category where the buyer is increasingly an AI, knowing is going to matter more than it ever did.
 
-Numbers without error bars are stories. Make sure your team is reading data, not fiction.  
+Numbers without error bars are stories. Make sure your team is reading data, not fiction. If you are ready to transition from dashboards that guess to platforms that measure with statistical rigor, [book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today.
