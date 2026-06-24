@@ -158,4 +158,4 @@ The risk isn't picking the wrong tool. The risk is waiting too long to pick any 
 
 The question for your evaluation isn't which tool has the best dashboard. It's which one measures the thing that actually changes outcomes, whether AI recommends you, not just whether it knows you exist.
 
-*Genezio tracks whether AI recommends your brand, not just whether it mentions you. Run a free analysis at [genezio.com](https://genezio.com).*
+Ready to see how your brand actually stacks up? Instead of guessing with point estimates, let’s run the math. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to discover how Genezio’s multi-turn, persona-based architecture can lift your true recommendation rate.

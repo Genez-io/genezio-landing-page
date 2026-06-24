@@ -127,4 +127,4 @@ If your team is preparing a board update on AI as a channel, the prompter alone 
 
 Single-prompt tracking is the floor. The four-agent setup is what you build on top of it once AI stops being a dashboard and starts being a channel.
 
-The marketing teams that figure that out first are the ones writing next year's case studies.  
+The marketing teams that figure that out first are the ones writing next year's case studies. If you are ready to move beyond basic visibility and see exactly how AI evaluates your brand across all four dimensions, we can help. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to set up your agents and start measuring what actually matters.

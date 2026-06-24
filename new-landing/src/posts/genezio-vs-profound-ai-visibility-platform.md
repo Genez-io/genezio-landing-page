@@ -37,7 +37,7 @@ To be fair, recommendation measurement used to be a gap for Genezio too. A few m
 
 Here is the short version for anyone who reads one paragraph before forwarding this to their team.
 
-**AI visibility** is whether your brand appears in AI answers. **AI recommendation** is whether the AI tells the buyer to choose you. They correlate loosely and diverge often. A brand can have high visibility and a low recommendation rate, which means it's present in the conversation and losing it. If you only need to know whether you're showing up, most tools will do. If you need to know whether you're winning, and what to change when you're not, you need a platform built around recommendation, not mentions.
+**AI visibility** is whether your brand appears in AI answers. **[AI recommendation](/blog/visibility-to-recommendation-rate/)** is whether the AI tells the buyer to choose you. They correlate loosely and diverge often. A brand can have high visibility and a low recommendation rate, which means it's present in the conversation and losing it. If you only need to know whether you're showing up, most tools will do. If you need to know whether you're winning, and what to change when you're not, you need a platform built around recommendation, not mentions.
 
 ![Genezio Recommandation Rate](/images/genezio-honda-recommandation-rate.webp)
 
@@ -62,7 +62,7 @@ Read the actual sentence, though. The model wrote: "Tools like Asana, Monday, an
 
 ![Genezio Visibility Rate](/images/genezio-honda-visibility-rate.webp)
 
-This is the trap: **Visibility ≠ Recommendation**. High visibility with a low recommendation rate is arguably worse than being invisible, because it feels like progress on a dashboard while you keep losing the decision. The goal isn't to be mentioned more. It's to optimize your presence to win more recommendations.
+This is the trap: **[Visibility ≠ Recommendation](/blog/visibility-is-half-the-picture/)**. High visibility with a low recommendation rate is arguably worse than being invisible, because it feels like progress on a dashboard while you keep losing the decision. The goal isn't to be mentioned more. It's to optimize your presence to win more recommendations.
 
 Two things separate a recommendation number you can trust from a vanity metric.
 
@@ -146,7 +146,7 @@ The wider market splits into two types. SEO suites that added AI features, and d
 | **Ahrefs (Brand Radar)** | SEO suite add-on | Huge search-backed prompt database, broad research | Add-on cost stacks fast; directional, not action-first | You're deep in Ahrefs and want breadth | Base Ahrefs from $129/mo \+ $199/mo per AI index, or $699/mo for all six engines |
 | **Peec AI** | GEO specialist | Clean prompt tracking, unlimited seats | Monitoring-focused, light on what to do next | You want straightforward competitive visibility | $95 / $245 / $495 per mo (50 / 150 / 350 prompts) |
 | **OtterlyAI** | GEO specialist | Cheapest entry point, fast setup, GEO audits | Budget monitoring; thinner on strategy and engines | You want low-cost monitoring to start | $29 / $189 / $489 per mo (15 / 100 / 400 prompts) |
-| **Genezio** | GEO specialist | Recommendation KPI, persona conversations, action plans | Not a content generator | You need to win recommendations and act on it | Quote-based; SOC 2 Type II, multi-brand |
+| **Genezio** | GEO specialist | Recommendation KPI, persona conversations, action plans | Not a content generator | You need to win recommendations and act on it | Engine, market & volume-based pricing |
 
 The suites are great if your team already uses them and you want a baseline. They tell you when you appear. They were not built to tell you whether you were recommended, why a competitor was chosen, or what to do this week to change it.
 
@@ -163,7 +163,7 @@ Success criteria: a measurable lift in recommendation rate on your priority prom
 
 ## FAQ
 
-**What's the difference between GEO and AEO?** GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal, being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions.
+**What's the [difference between GEO and AEO](/blog/aeo-vs-geo/)?** GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal, being present and chosen in AI-generated answers. The practical question isn't the label; it's whether a tool measures recommendation or only mentions.
 
 **Which AI engines should I track first?** Start where your buyers already are: ChatGPT and Google AI Overviews for reach, Perplexity for research-stage buyers, then Claude and Gemini. Watch for plans that lock the engines you need behind enterprise tiers.
 
@@ -177,9 +177,9 @@ Success criteria: a measurable lift in recommendation rate on your priority prom
 
 ---
 
-The brands that win the next two years won't be the ones that got mentioned the most. They'll be the ones that noticed when AI started recommending a competitor and did something about it before the quarter closed. If that's the number you're accountable for, that's the number [Genezio](/) is built to move.
+The brands that win the next two years won't be the ones that got mentioned the most. They'll be the ones that noticed when AI started recommending a competitor and did something about it before the quarter closed. If that's the number you're accountable for, that's the number Genezio is built to move. [Book your demo](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) to see it in action.
 
 ---
 
 
-**Pricing note:** All competitor pricing verified against current vendor and review sources as of June 2026\. Ahrefs Brand Radar in particular changed from earlier flat pricing to a per-index/bundle add-on model, confirm on the vendor pricing page before publishing.
+**Pricing note:** All competitor pricing verified against current vendor and review sources as of June 2026\. Ahrefs Brand Radar in particular changed from earlier flat pricing to a per-index/bundle add-on model.

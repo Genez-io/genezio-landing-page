@@ -32,7 +32,7 @@ In 2026, the term "keyword" has been replaced by more complex mechanical process
 
 A **Fan-out Query** occurs when an AI model takes a single user prompt and "fans it out" into multiple parallel search operations. Unlike a traditional search engine that looks for one set of results, an AI acts as an orchestrator.
 
-If a user asks, *"What are the best energy-efficient heaters available in Bucharest?"*, the AI doesn't just search that phrase. It executes a fan-out strategy:
+If a user asks, *"What are the best energy-efficient heaters available in London?"*, the AI doesn't just search that phrase. It executes a fan-out strategy:
 * **Search A:** "Top-rated energy-efficient heater models 2026"
 * **Search B:** "Current electricity prices in the UK vs. heater consumption"
 * **Search C:** "Local retailers in London with in-stock heating appliances"
@@ -50,7 +50,7 @@ ChatGPT and Gemini do not "fan out" in the same way. Their internal branching lo
 
 **The GEO Strategy:** To be visible, a brand must ensure it is the "answer" to multiple branches of the fan-out. If you only optimize for "pricing" but miss the "sustainability" branch, the AI may pick a competitor who covers both.
 
-## 2. Location-Aware Fan-out: The Bucharest vs. London Split
+## 2. Location-Aware Fan-out
 
 Geography is the strongest filter for fan-out behavior. When an AI detects a local intent, it triggers specific **Local Fan-out Queries**.
 
@@ -79,7 +79,7 @@ Because fan-out queries are dynamic and can change based on the model's "mood" (
 | :--- | :--- |
 | **Dominate the Fan-out** | Create content that covers all "sub-queries" (Price, Specs, Reviews, Local Stock). |
 | **Technical GEO** | Use Schema.org to make your data "branch-friendly" for AI crawlers. |
-| **Local Authority** | Get mentioned on local .ro domains to win the geographic fan-out branch. |
+| **Local Authority** | Get mentioned on local domains to win the geographic fan-out branch. |
 | **Monitor Drift** | Use Genezio to see if your brand is losing visibility in specific fan-out queries. |
 
 ## How Genezio Tracks Fan-out Performance
@@ -90,4 +90,4 @@ Genezio is designed for this multi-branch reality. We don't just track if you "r
 * **Geo-Specific Simulation:** We execute fan-out searches from specific local IPs to ensure the AI's internal search is hitting local Romanian databases and retailers.
 * **Cross-Model Visibility:** Compare how effectively you capture the fan-out logic in Gemini versus ChatGPT.
 
-Ready to map the fan-out queries for your brand? {{< external-link link="https://genezio.com/" >}}Try Genezio today.{{< /external-link >}}
+Ready to map the fan-out queries for your brand? [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see exactly how AI models expand queries in your category, and learn how to dominate every branch of the conversation.

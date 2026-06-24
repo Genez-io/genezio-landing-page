@@ -69,10 +69,6 @@ The platform provided structured content briefs specifically designed to be easi
 
 Genezio provided a clear metric: the Visibility Score. This indicator became the currency in discussions with the management team, offering a clear picture of the bank's position in AI responses compared to competitors. Furthermore, the Confidence Level metric helped eliminate statistical uncertainty, giving the data the accuracy needed for high-level business decisions.
 
-### Winning the Trust of Algorithms (and Humans)
-
-The impact of using Genezio was visible in a **60% Success Rate**: Following content optimization based on Genezio analyses, approximately 60% of published articles began appearing in AI recommendations (ChatGPT, AI Overviews).
-
 ### Next-Level Content Generation
 
 While the current strategy relies on expert human writing guided by Genezio briefs, the team also got an exclusive preview of the platform’s upcoming Content Generation feature. The team was pleasantly surprised by the quality and nuance of the generated draft, noting that it managed to capture the brand's tone and the technical depth required for financial topics far better than generic tools. This successful pilot has created high anticipation within the team, who are eager to fully test and integrate this feature to scale their content production without compromising on quality.
@@ -85,9 +81,8 @@ The impact of using Genezio was visible in 60% Success Rate: Following content o
 
 The BCR case study demonstrates that the most effective digital strategy is not about choosing between traditional search and AI, but mastering both. While traditional SEO remains a fundamental pillar for transactional intent, Generative Engine Optimization (GEO) has become the critical layer needed to capture the conversational research phase.
 By integrating Genezio, BCR - part of the Erste Group - did not replace their existing efforts but expanded them. They proved that a hybrid approach, optimizing for both search engines and LLMs, is the only way to ensure total visibility in a fragmented digital landscape.
-Are you ready to complete your marketing mix with AI insights?
 
-{{< external-link link="https://genezio.com/pricing/" >}}Request a Genezio Demo{{< /external-link >}}
+Are you ready to complete your marketing mix with AI insights? [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how Genezio can help your brand capture the AI conversation.
 
 ## FAQ
 

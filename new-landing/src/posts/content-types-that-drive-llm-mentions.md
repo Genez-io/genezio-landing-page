@@ -148,7 +148,7 @@ In the age of AI-driven discovery, **visibility belongs to brands whose content 
 * See where competitors are preferred and why.
 * Optimize content for AI-driven discovery (AEO / GEO), not just traditional search.
 
-If you want to understand how AI systems talk about your brand and how to influence those conversations, Genezio provides the visibility and insights to act with confidence.
+If you want to understand how AI systems talk about your brand and how to influence those conversations, Genezio provides the visibility and insights to act with confidence. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how your current content maps against LLM preferences and how to start winning the mentions that matter.
 
 ## Frequently Asked Questions
 
@@ -172,4 +172,4 @@ A citation footprint refers to how frequently a brand appears across external au
 
 Brands should focus on creating structured, evidence-based content that aligns with real user intent. This includes publishing clear product pages with organized headings, providing measurable outcomes and statistics, appearing in authoritative third-party rankings, and building a wide citation footprint across credible external domains. Tools like Genezio can help identify which queries and scenarios influence AI recommendations.
 
-To learn more or request access, visit {{< external-link link="https://genezio.com/" >}} www.genezio.com {{< /external-link >}} or contact us at {{< external-link link="mailto:contact@genezio.com" >}} contact@genezio.com {{< /external-link >}} .
+To learn more or request access to the full UK Universities dataset, visit [genezio.com](https://genezio.com/) or contact us at [contact@genezio.com](mailto:contact@genezio.com).

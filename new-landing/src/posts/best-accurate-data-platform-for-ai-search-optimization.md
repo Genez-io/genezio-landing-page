@@ -194,7 +194,7 @@ If you ask the differentiating questions of any platform, you'll quickly separat
 
 **Run your baseline.** Within 24 to 48 hours, you'll have visibility into your current recommendation rate, mention rate, competitive position by persona, citation sources, multi-turn outcomes, and any low-relevance prompts that need triage.
 
-**Review the insights.** Genezio surfaces prioritized recommendations, specific content fixes, citation targets. 
+Ready to stop optimizing against noise? If you are evaluating GEO platforms and need decision-grade intelligence to drive your enterprise strategy, we can help. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how Genezio's accurate data can secure your brand's AI search visibility.
 
 ---
 

@@ -213,7 +213,7 @@ The era of generative AI demands a shift in marketing KPIs and brand monitoring 
 
 As AI engines become primary channels for purchase decisions, your brand’s future growth depends on its ability to be explicitly recommended when it matters most.
 
-**Get started with {{< external-link link="https://genezio.com/" >}}Genezio{{< /external-link >}} today, turn AI visibility from a vanity metric into a strategic revenue growth engine.**
+Stop tracking vanity metrics and start measuring what actually drives zero-click conversions. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see how Genezio can help you dominate the AI recommendation layer.
 
 ***
 
