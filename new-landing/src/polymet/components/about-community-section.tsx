@@ -27,14 +27,14 @@ export function AboutCommunitySection() {
               <p className="text-[#B0B0B3] leading-relaxed text-sm">
                 Through our{" "}
                 <a
-                  href="/glossary"
+                  href="/glossary/"
                   className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
                 >
                   glossary
                 </a>{" "}
                 and{" "}
                 <a
-                  href="/blog"
+                  href="/blog/"
                   className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
                 >
                   blog
