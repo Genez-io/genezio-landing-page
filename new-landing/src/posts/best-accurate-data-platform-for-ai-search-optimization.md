@@ -1,6 +1,6 @@
 ---
 title: "The Best Accurate Data Platform for AI Search Optimization"
-metaTitle: "The Best Accurate Data Platform for AI Search Optimization | Genezio"
+metaTitle: "The Best Accurate Data Platform for AI Search | Genezio"
 date: 2026-05-18
 tags:
   - AI Search Optimization
