@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How LLM Search Works | Genezio Docs</title>
+  <meta name="description" content="How LLM Search Works in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Genezio Docs</a>
+      <nav aria-label="Top navigation"></nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="active" href="how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1>How LLM Search Works</h1>
+<p>answer engines such as ChatGPT, Claude, Gemini, and Perplexity answer questions differently from traditional search engines.</p>
+<p>Instead of returning a list of links, these systems generate an AI-generated answer by retrieving information from multiple sources and combining it into a single response.</p>
+<p>Understanding how this process works helps explain why certain brands, sources, and claims appear in AI-generated answers.</p>
+<hr />
+<h2>The Traditional Search Model</h2>
+<p>In traditional search engines, the interaction usually follows this pattern:</p>
+<ol>
+<li>A user enters a search query.</li>
+<li>The search engine retrieves pages from its index.</li>
+<li>Pages are ranked according to relevance and authority.</li>
+<li>The user selects one or more links to visit.</li>
+</ol>
+<p>Visibility is therefore determined by <strong>ranking position</strong> and <strong>click-through rate</strong>.</p>
+<hr />
+<h2>The Answer Engine Search Model</h2>
+<p>AI-engine-powered systems follow a different process.</p>
+<p>Instead of returning links, they generate a direct answer based on information retrieved from multiple sources.</p>
+<p>A simplified flow looks like this:</p>
+<ol>
+<li>The user asks a question.</li>
+<li>The AI system expands the query into multiple related searches.</li>
+<li>Relevant documents and sources are retrieved.</li>
+<li>The model combines information from those sources.</li>
+<li>A natural language answer is generated.</li>
+<li>Some systems include citations or links to sources.</li>
+</ol>
+<p>Because the final answer is AI-generated, visibility is determined by <strong>whether a brand or source is included in the generated response</strong>, not only whether its webpage ranks highly.</p>
+<hr />
+<h2>Step 1: The User Question</h2>
+<p>The process begins when a user asks a question in natural language.</p>
+<p>Examples:</p>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>What are the best running shoes for marathon training?</strong></em></p></blockquote>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>Which CRM is best for startups?</strong></em></p></blockquote>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>What is the best ski resort in Switzerland for beginners?</strong></em></p></blockquote>
+<p>Unlike traditional keyword search, these questions are often longer and more conversational.</p>
+<hr />
+<h2>Step 2: Query Expansion</h2>
+<p>answer engines rarely rely on the original question alone.</p>
+<p>Instead, they expand it into several related queries to gather more information. These expanded searches are often referred to as <strong>follow-up searches (called query fanouts)</strong>.</p>
+<p>For example, the question:</p>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>What are the best running shoes for marathon training?</strong></em></p></blockquote>
+<p>may internally expand into queries such as:</p>
+<ul>
+<li>best marathon running shoes</li>
+<li>long distance running shoes reviews</li>
+<li>nike vs adidas marathon shoes</li>
+<li>top marathon racing shoes</li>
+</ul>
+<p>This process allows the AI system to explore multiple perspectives and retrieve a broader set of sources.</p>
+<hr />
+<h2>Step 3: Retrieval of Sources</h2>
+<p>The system then retrieves information from various sources on the web.</p>
+<p>These sources may include:</p>
+<ul>
+<li>brand websites</li>
+<li>editorial articles</li>
+<li>product reviews</li>
+<li>comparison pages</li>
+<li>forums and communities</li>
+<li>news sites</li>
+</ul>
+<p>The retrieved documents provide the factual material used to generate the final answer.</p>
+<hr />
+<h2>Step 4: Synthesis</h2>
+<p>After retrieving relevant information, the model analyzes and combines it.</p>
+<p>Rather than quoting a single page, the model may merge information from several sources to produce a coherent explanation.</p>
+<p>For example, an answer might include:</p>
+<ul>
+<li>a list of recommended products</li>
+<li>summaries of key advantages</li>
+<li>comparisons between alternatives</li>
+</ul>
+<p>This synthesis step is one of the main differences between AI-generated answers and traditional search results.</p>
+<hr />
+<h2>Step 5: Answer Generation</h2>
+<p>Finally, the model produces a natural language response.</p>
+<p>An answer might look like this:</p>
+<blockquote><p>Popular marathon running shoes include the Nike Alphafly, Adidas Adios Pro, and Saucony Endorphin Elite due to their energy return and lightweight design.</p></blockquote>
+<p>Depending on the system, the response may also include:</p>
+<ul>
+<li>links to sources</li>
+<li>citations</li>
+<li>follow-up suggestions</li>
+<li>additional context</li>
+</ul>
+<hr />
+<h2>Why This Matters for Visibility</h2>
+<p>Because answer engines generate an AI-generated answer, users may interact primarily with the response itself rather than clicking through multiple links.</p>
+<p>This means that visibility depends on:</p>
+<ul>
+<li>whether a brand is mentioned</li>
+<li>whether its website is cited</li>
+<li>whether it appears in comparisons or recommendations</li>
+</ul>
+<p>A brand can therefore have strong search rankings but limited presence in AI answers if it is rarely referenced or associated with the topic.</p>
+<hr />
+<h2>What This Means for Organizations</h2>
+<p>Organizations that want to appear in AI-generated answers need to understand how answer engines gather and combine information.</p>
+<p>Important factors include:</p>
+<ul>
+<li>how clearly a brand is associated with a topic</li>
+<li>whether authoritative sources reference the brand</li>
+<li>whether the brand&#39;s own content answers common user questions</li>
+<li>how competitors are represented in the same category</li>
+</ul>
+<p>Because AI-engine answers are generated from multiple sources, visibility depends on a broader web presence rather than a single optimized page.</p>
+<hr />
+<h2>How Genezio Analyzes This Process</h2>
+<p>Genezio helps teams understand how answer engine search works in practice.</p>
+<p>It does this by:</p>
+<ul>
+<li>running realistic conversations with AI systems</li>
+<li>extracting the queries the model explores</li>
+<li>identifying the sources used in answers</li>
+<li>detecting brand mentions and citations</li>
+<li>comparing visibility across competitors</li>
+</ul>
+<p>This allows organizations to observe how AI systems interpret their category and how their brand appears within those answers.</p>
+<hr />
+<h2>Next Steps</h2>
+<p>To continue learning about how AI systems retrieve and use information, see:</p>
+<ul>
+<li><a href="./query-fanouts-explained.html">Introduction -&gt; Query Fanouts Explained</a></li>
+<li><a href="../core-concepts/citations.html">Core Concepts -&gt; Citations</a></li>
+<li><a href="../core-concepts/perceptions.html">Core Concepts -&gt; Perceptions</a></li>
+</ul>
+<p>These pages explain how Genezio extracts structured insights from AI-generated answers.</p>
+    </main>
+  </div>
+  <script>
+    (function(){
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      var scrollY=0;
+      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      btn.addEventListener('click',open);
+      ov.addEventListener('click',close);
+      if(cls)cls.addEventListener('click',close);
+      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    })();
+  </script>
+</body>
+</html>
