@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generating Personas from Documents | Genezio Docs</title>
+  <meta name="description" content="Generating Personas from Documents in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Genezio Docs</a>
+      <nav aria-label="Top navigation"></nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="active" href="setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="setup-guide.html">Setup Guide</a></li><li><a class="" href="sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="create-scenarios.html">Create Scenarios</a></li><li><a class="active" href="generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="topic-tags.html">Topic Tags</a></li><li><a class="" href="your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../introduction/what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="../introduction/what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="../introduction/why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="../introduction/how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="../introduction/query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="../introduction/how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="../introduction/how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="../introduction/what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="../introduction/how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="../introduction/how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1>Generating Personas from Documents</h1>
+<p>If you already have persona research documented somewhere, the fastest way to get a persona into Genezio is to <strong>upload that document</strong>. The platform reads it and generates the persona for you.</p>
+<p>This is the path most new teams should take. Building a persona from a real document — one that already encodes how your business thinks about a customer segment — is dramatically faster than filling out an empty form, and the resulting persona is usually better.</p>
+<hr />
+<h2>Why Start From a Document</h2>
+<p>Personas are the single biggest lever on result quality in Genezio. A weak persona produces weak conversations, which produce weak insights. A strong persona — grounded in real audience knowledge — sets the platform up to do its best work.</p>
+<p>Most teams <strong>already have</strong> that audience knowledge written down. It just lives outside Genezio:</p>
+<ul>
+<li>a buyer-persona document from the brand or research team</li>
+<li>an internal customer-research deck</li>
+<li>a job description for the role your product serves</li>
+<li>customer-success notes, sales discovery summaries, ICP one-pagers, ideal-customer write-ups</li>
+</ul>
+<p>Document import lets you bring that work in directly, instead of recreating it from scratch in a form.</p>
+<hr />
+<h2>What You Get</h2>
+<p>Upload a document and Genezio generates a complete persona for the brand: name, role, country, city, language, and the supporting context that drives how conversations are framed.</p>
+<p>The persona is <strong>saved immediately</strong> — it&#39;s a real, usable persona for the brand from the moment generation finishes. You can edit it after the fact the same way you&#39;d edit any other persona, in case anything needs adjustment.</p>
+<p>Each upload produces <strong>one persona</strong>. If your source document describes several distinct personas, upload it separately for each one (or split the document beforehand).</p>
+<hr />
+<h2>When to Use This vs. the Form</h2>
+<table>
+<thead><tr><th style="text-align:left">Situation</th><th style="text-align:left">Recommended path</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">You already have a persona doc, research deck, or job description</td><td style="text-align:left"><strong>Upload the document</strong></td></tr>
+<tr><td style="text-align:left">You have ICP notes living in a Notion page, sales playbook, or any other document</td><td style="text-align:left"><strong>Upload the document</strong></td></tr>
+<tr><td style="text-align:left">You&#39;re starting from a blank slate with no persona research</td><td style="text-align:left">Fill out the form, or write a short doc first and then upload it</td></tr>
+<tr><td style="text-align:left">You want quick variation on an existing persona</td><td style="text-align:left">Clone the existing persona and edit</td></tr>
+</tbody>
+</table>
+<p>If you&#39;re not sure your document is &quot;good enough&quot; to use, upload it anyway. Generation is fast, the result is editable, and starting from a real document usually beats starting from nothing.</p>
+<hr />
+<h2>Tips for a Good Result</h2>
+<ul>
+<li><strong>Use the most specific, current document you have.</strong> Stale documents produce stale personas.</li>
+<li><strong>Include role and context, not just demographics.</strong> A persona that knows the buyer&#39;s job-to-be-done generates better conversations than one that only knows their age and location.</li>
+<li><strong>If the source describes multiple audiences, split first.</strong> You&#39;ll get a sharper persona by uploading the relevant section than the whole thing.</li>
+<li><strong>Review the persona after generation.</strong> It&#39;s editable for a reason — small tweaks (a clearer name, a more specific city, a refined description) usually pay off in the conversations the platform runs.</li>
+</ul>
+<hr />
+<h2>Related Pages</h2>
+<ul>
+<li><a href="../core-concepts/personas.html">Core Concepts -&gt; Personas</a></li>
+<li><a href="setup-guide.html">Setup Guide</a></li>
+<li><a href="your-first-week.html">Your First Week</a></li>
+</ul>
+    </main>
+  </div>
+  <script>
+    (function(){
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      var scrollY=0;
+      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      btn.addEventListener('click',open);
+      ov.addEventListener('click',close);
+      if(cls)cls.addEventListener('click',close);
+      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    })();
+  </script>
+</body>
+</html>

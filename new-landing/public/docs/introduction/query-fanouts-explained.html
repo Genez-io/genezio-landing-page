@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Query Fanouts Explained | Genezio Docs</title>
+  <meta name="description" content="Query Fanouts Explained in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Genezio Docs</a>
+      <nav aria-label="Top navigation"></nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="how-llm-search-works.html">How LLM Search Works</a></li><li><a class="active" href="query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1>Query Fanouts Explained</h1>
+<p>When a user asks a question to an AI system such as ChatGPT, Claude, Gemini, or Perplexity, the model rarely relies on the exact question alone to generate an answer.</p>
+<p>Instead, the system expands the original question into multiple related searches in order to gather more information. These expanded searches are called <strong>follow-up searches (called query fanouts)</strong>.</p>
+<p>Query fanouts help the AI system explore a topic from several angles, retrieve more relevant sources, and generate a more complete answer.</p>
+<hr />
+<h2>What Is a Query Fanout?</h2>
+<p>A <strong>query fanout</strong> is an additional search query generated internally by the AI system to support answering the user&#39;s question.</p>
+<p>Rather than searching for a single phrase, the system produces several variations and related questions that help it gather information from different sources.</p>
+<p>For example, a user might ask:</p>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>What are the best running shoes for marathon training?</strong></em></p></blockquote>
+<p>The AI system may internally generate queries such as:</p>
+<ul>
+<li>best marathon running shoes</li>
+<li>long distance running shoe reviews</li>
+<li>nike vs adidas marathon shoes</li>
+<li>best racing shoes for marathon runners</li>
+<li>top cushioned marathon shoes</li>
+</ul>
+<p>These queries allow the system to retrieve content covering different perspectives on the topic.</p>
+<hr />
+<h2>Why Answer Engines Use Query Fanouts</h2>
+<p>User questions are often broad, ambiguous, or incomplete. A single search query may not retrieve enough information to generate a high-quality answer.</p>
+<p>Query fanouts help the AI system:</p>
+<ul>
+<li>explore multiple interpretations of a question</li>
+<li>retrieve information from different sources</li>
+<li>compare alternatives</li>
+<li>validate claims across several documents</li>
+</ul>
+<p>By expanding the search space, the model can build a more comprehensive understanding of the topic before generating its response.</p>
+<hr />
+<h2>How Query Fanouts Influence Answers</h2>
+<p>The fanout queries determine which documents and sources are retrieved during the information gathering step.</p>
+<p>Those sources then influence:</p>
+<ul>
+<li>which brands appear in the answer</li>
+<li>which sources are cited</li>
+<li>what claims are included</li>
+<li>how competitors are compared</li>
+</ul>
+<p>For example, if a fanout query includes:</p>
+<blockquote class="query-fanout"><p><strong>Query fanout:</strong> <em><strong>best CRM for startups 2024</strong></em></p></blockquote>
+<p>The AI system may retrieve comparison pages, review articles, and vendor websites discussing startup CRMs. The brands mentioned in those sources are therefore more likely to appear in the final answer.</p>
+<p>This means that <strong>query fanouts strongly influence AI Recommendations and Visibility</strong>.</p>
+<hr />
+<h2>Example of Query Fanouts in Practice</h2>
+<p>Consider the question:</p>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>Which CRM is best for startups?</strong></em></p></blockquote>
+<p>Possible fanout queries may include:</p>
+<ul>
+<li><strong>Query fanout:</strong> <em>best CRM software for startups</em></li>
+<li><strong>Query fanout:</strong> <em>HubSpot vs Pipedrive for small businesses</em></li>
+<li><strong>Query fanout:</strong> <em>affordable CRM tools for startups</em></li>
+<li><strong>Query fanout:</strong> <em>startup sales management software</em></li>
+<li><strong>Query fanout:</strong> <em>CRM comparison for early stage companies</em></li>
+</ul>
+<p>Each of these searches may retrieve different articles, reviews, or vendor pages. The information gathered from those sources is then combined into a single answer.</p>
+<hr />
+<h2>Why Query Fanouts Matter for Brands</h2>
+<p>Because fanout queries determine which sources are retrieved, they also influence which brands appear in AI-generated answers.</p>
+<p>If a brand is frequently mentioned in sources related to those fanout queries, it is more likely to appear in the final response.</p>
+<p>If a brand is absent from those sources, it may not appear in the answer even if it is a strong product in the category.</p>
+<p>Understanding query fanouts therefore helps organizations identify:</p>
+<ul>
+<li>what questions AI systems explore when answering a topic</li>
+<li>which sources influence the answer</li>
+<li>where their brand is missing from the information landscape</li>
+</ul>
+<hr />
+<h2>How Genezio Uses Query Fanouts</h2>
+<p>Genezio extracts and analyzes query fanouts generated during AI conversations.</p>
+<p>This allows teams to understand:</p>
+<ul>
+<li>what the AI system is actually searching for</li>
+<li>which queries drive source retrieval</li>
+<li>which topics influence brand visibility</li>
+<li>where new content opportunities exist</li>
+</ul>
+<p>For example, if Genezio detects that AI systems frequently explore queries such as:</p>
+<ul>
+<li>&quot;best CRM for early stage startups&quot;</li>
+<li>&quot;CRM tools for SaaS founders&quot;</li>
+</ul>
+<p>but a brand has little content or coverage around those topics, that gap may represent an opportunity to improve AI Recommendations and Visibility.</p>
+<hr />
+<h2>Query Fanouts vs Keywords</h2>
+<p>Query fanouts are similar to keywords but reflect how AI systems explore a topic rather than how users type short search queries.</p>
+<p>Traditional SEO often focuses on optimizing pages for individual keywords.</p>
+<p>In AI-powered search, understanding the broader set of fanout queries can be more important because these queries determine which sources are retrieved during answer generation.</p>
+<hr />
+<h2>Next Steps</h2>
+<p>To learn how fanout queries influence AI answers, continue with:</p>
+<ul>
+<li><a href="../core-concepts/citations.html">Core Concepts -&gt; Citations</a></li>
+<li><a href="../core-concepts/perceptions.html">Core Concepts -&gt; Perceptions</a></li>
+<li><a href="../insights/ai-visibility-score.html">Insights -&gt; Visibility Score</a></li>
+</ul>
+<p>These pages explain how Genezio analyzes AI responses and transforms them into structured insights.</p>
+    </main>
+  </div>
+  <script>
+    (function(){
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      var scrollY=0;
+      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      btn.addEventListener('click',open);
+      ov.addEventListener('click',close);
+      if(cls)cls.addEventListener('click',close);
+      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    })();
+  </script>
+</body>
+</html>
