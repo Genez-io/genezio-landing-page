@@ -7,6 +7,7 @@ import {
   TargetIcon,
   ShoppingBagIcon,
   BookOpenIcon,
+  BookMarkedIcon,
   FileTextIcon,
   FlaskConicalIcon,
   UsersIcon,
@@ -270,6 +271,27 @@ export function GenezioHeader() {
 
                 <div className="relative p-4">
                   <div className="space-y-1">
+                    {/* Docs */}
+                    <a
+                      href="/docs/"
+                      onClick={() => setResourcesMenuOpen(false)}
+                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                          <BookMarkedIcon className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-cyan-400 transition-colors">
+                            Docs
+                          </div>
+                          <div className="text-white/60 text-xs leading-relaxed">
+                            Product documentation &amp; guides
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
                     {/* Glossary */}
                     <a
                       href="/glossary/"
@@ -486,6 +508,16 @@ export function GenezioHeader() {
               </div>
               <div className="pl-4 space-y-3 border-l-2 border-white/10">
                 <div className="space-y-2">
+                  <a
+                    href="/docs/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">Docs</div>
+                    <div className="text-white/60 text-xs">
+                      Product documentation &amp; guides
+                    </div>
+                  </a>
                   <a
                     href="/glossary/"
                     onClick={() => setMobileMenuOpen(false)}
