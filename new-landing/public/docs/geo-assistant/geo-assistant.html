@@ -14,20 +14,97 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
       <a class="brand" href="/" aria-label="Genezio Homepage"><img class="brand-logo" src="/images/logo-white.svg" alt="Genezio" /></a>
-      <span class="brand-docs">Docs</span>
       <nav class="topbar-nav" aria-label="Main navigation">
-        <a href="/">Platform</a>
-        <a href="/blog/">Resources</a>
-        <a href="/pricing/">Pricing</a>
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Platform <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-platform">
+            <div class="nav-menu-grid">
+              <div class="menu-col">
+                <div class="menu-col-label">For Teams</div>
+                <a class="menu-tile" href="/conversational-brand-presence/">
+                  <div class="menu-ico emerald"><i data-lucide="trending-up"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Lead Generation</div><div class="menu-st">Conversational Brand Presence</div></div>
+                </a>
+                <a class="menu-tile" href="/increase-conversion/">
+                  <div class="menu-ico blue"><i data-lucide="target"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Conversion</div><div class="menu-st">Marketing Agent Performance</div></div>
+                </a>
+                <a class="menu-tile" href="#">
+                  <div class="menu-ico purple"><i data-lucide="shopping-bag"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase In-Chat Shopping <span class="menu-badge">COMING SOON</span></div><div class="menu-st">E-commerce Performance</div></div>
+                </a>
+              </div>
+              <div class="menu-col partners">
+                <div class="menu-col-label">Partners</div>
+                <a class="partner-card" href="/agencies/">
+                  <div class="menu-tile" style="padding:0">
+                    <div class="menu-ico agency"><i data-lucide="users"></i></div>
+                    <div class="menu-text"><div class="menu-tt">For Agencies</div><div class="menu-st">Manage multiple brands effortlessly</div></div>
+                  </div>
+                  <div class="partner-rows">
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand A</div><span class="partner-delta">&#8593; 24%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand B</div><span class="partner-delta">&#8593; 18%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand C</div><span class="partner-delta">&#8593; 31%</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Resources <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-resources">
+            <a class="menu-tile" href="/docs/">
+              <div class="menu-ico cyan"><i data-lucide="book-marked"></i></div>
+              <div class="menu-text"><div class="menu-tt">Docs</div><div class="menu-st">Product documentation &amp; guides</div></div>
+            </a>
+            <a class="menu-tile" href="/glossary/">
+              <div class="menu-ico blue"><i data-lucide="book-open"></i></div>
+              <div class="menu-text"><div class="menu-tt">Glossary</div><div class="menu-st">AI Search terminology guide</div></div>
+            </a>
+            <a class="menu-tile" href="/blog/">
+              <div class="menu-ico emerald"><i data-lucide="file-text"></i></div>
+              <div class="menu-text"><div class="menu-tt">Blog</div><div class="menu-st">Insights &amp; best practices</div></div>
+            </a>
+            <a class="menu-tile" href="/research/">
+              <div class="menu-ico violet"><i data-lucide="flask-conical"></i></div>
+              <div class="menu-text"><div class="menu-tt">Research</div><div class="menu-st">Original AI search studies</div></div>
+            </a>
+            <a class="menu-tile" href="/industry-leaderboards">
+              <div class="menu-ico amber"><i data-lucide="trophy"></i></div>
+              <div class="menu-text"><div class="menu-tt">Leaderboards</div><div class="menu-st">Industry AI visibility rankings</div></div>
+            </a>
+          </div>
+        </div>
+        <a class="nav-link" href="/pricing/">Pricing</a>
       </nav>
       <div class="topbar-cta">
         <a class="btn-login" href="https://app.genezio.ai/sign-in">Login</a>
         <a class="btn-demo" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a>
       </div>
+      <button class="topbar-burger" id="site-burger" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+    <div class="site-mobile" id="site-mobile">
+      <div class="m-label">Platform</div>
+      <div class="m-group">
+        <a href="/conversational-brand-presence/">Increase Lead Generation<span class="m-sub">Conversational Brand Presence</span></a>
+        <a href="/increase-conversion/">Increase Conversion<span class="m-sub">Marketing Agent Performance</span></a>
+        <a href="/agencies/">For Agencies<span class="m-sub">Manage multiple brands effortlessly</span></a>
+      </div>
+      <div class="m-label">Resources</div>
+      <div class="m-group">
+        <a href="/docs/">Docs<span class="m-sub">Product documentation &amp; guides</span></a>
+        <a href="/glossary/">Glossary<span class="m-sub">AI Search terminology guide</span></a>
+        <a href="/blog/">Blog<span class="m-sub">Insights &amp; best practices</span></a>
+        <a href="/research/">Research<span class="m-sub">Original AI search studies</span></a>
+        <a href="/industry-leaderboards">Leaderboards<span class="m-sub">Industry AI visibility rankings</span></a>
+      </div>
+      <a class="m-label" href="/pricing/" style="display:block">Pricing</a>
+      <div class="m-cta"><a class="btn-demo" style="display:block;text-align:center" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a></div>
     </div>
   </header>
+  <div class="docs-subbar"><button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Open documentation menu"><i data-lucide="panel-left-open"></i> Documentation</button></div>
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
   <div class="layout">
     <aside class="sidebar" aria-label="Documentation navigation">
@@ -159,16 +236,35 @@
 </ul>
     </main>
   </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     (function(){
-      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      if(window.lucide){lucide.createIcons();}
+      // Header dropdowns
+      var items=[].slice.call(document.querySelectorAll('.nav-item[data-dropdown]'));
+      document.querySelectorAll('[data-dropdown-trigger]').forEach(function(btn){
+        btn.addEventListener('click',function(e){
+          e.stopPropagation();
+          var item=btn.closest('.nav-item');
+          var willOpen=!item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');});
+          if(willOpen)item.classList.add('open');
+        });
+      });
+      document.addEventListener('click',function(e){
+        if(!e.target.closest('.nav-item[data-dropdown]'))items.forEach(function(i){i.classList.remove('open');});
+      });
+      // Mobile site nav
+      var burger=document.getElementById('site-burger'),sm=document.getElementById('site-mobile');
+      if(burger&&sm)burger.addEventListener('click',function(){sm.classList.toggle('open');});
+      // Docs sidebar drawer (mobile)
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),tg=document.getElementById('sidebar-toggle');
       var scrollY=0;
-      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
-      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
-      btn.addEventListener('click',open);
-      ov.addEventListener('click',close);
-      if(cls)cls.addEventListener('click',close);
-      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+      function openSb(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function closeSb(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      if(tg)tg.addEventListener('click',openSb);
+      if(ov)ov.addEventListener('click',closeSb);
+      if(sb)sb.addEventListener('click',function(e){if(e.target.tagName==='A')closeSb();});
     })();
   </script>
 </body>
