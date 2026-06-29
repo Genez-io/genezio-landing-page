@@ -1,7 +1,0 @@
-name: genezio-landing-page
-region: us-east-1
-yamlVersion: 2
-frontend:
-  path: ./new-landing
-  subdomain: genezio-landing-page
-  publish: ./dist
