@@ -6,7 +6,6 @@ Disallow: /*&deviceId=
 Disallow: /*?ref=
 Disallow: /*&ref=
 
-Disallow: /docs/
 Disallow: /careers/
 Disallow: /genezio-documentation/
 
@@ -40,3 +39,4 @@ Disallow: /
 
 Sitemap: https://genezio.com/sitemap.xml
 Sitemap: https://genezio.com/imagessitemap.xml
+Sitemap: https://genezio.com/docs/sitemap.xml
