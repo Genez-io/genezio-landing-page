@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How AI Citations Work | Genezio Docs</title>
+  <meta name="description" content="How AI Citations Work in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Genezio Docs</a>
+      <nav aria-label="Top navigation"></nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="active" href="how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1>How AI Citations Work</h1>
+<p>When AI systems such as ChatGPT, Claude, Gemini, or Perplexity generate answers, they often rely on information retrieved from external sources. Some systems make this process visible by including <strong>citations</strong>-links or references to the pages that influenced the generated response.</p>
+<p>AI citations help explain <strong>where information in an answer came from</strong> and allow users to explore the original sources.</p>
+<hr />
+<h2>What Is an AI Citation?</h2>
+<p>An <strong>AI citation</strong> is a reference to a source that contributed information to an AI-generated answer.</p>
+<p>Depending on the system, citations may appear as:</p>
+<ul>
+<li>links to websites</li>
+<li>numbered references</li>
+<li>inline source indicators</li>
+<li>expandable source lists</li>
+</ul>
+<p>For example, an AI answer might include a claim like:</p>
+<blockquote><p>The best CRM platforms for startups include HubSpot, Pipedrive, and Zoho CRM.</p></blockquote>
+<p>The answer may include citations pointing to:</p>
+<ul>
+<li>comparison articles</li>
+<li>software review sites</li>
+<li>vendor documentation</li>
+<li>editorial content</li>
+</ul>
+<p>These citations help users verify the information and learn more about the topic.</p>
+<hr />
+<h2>Why AI Systems Use Citations</h2>
+<p>Citations serve several purposes in AI-generated answers.</p>
+<h3>Transparency</h3>
+<p>They show users where the information came from, allowing them to verify the claims made in the answer.</p>
+<h3>Credibility</h3>
+<p>Answers supported by reputable sources are generally considered more trustworthy.</p>
+<h3>Exploration</h3>
+<p>Citations allow users to click through to original articles or resources for deeper research.</p>
+<hr />
+<h2>How Citations Are Selected</h2>
+<p>Citations usually originate from the <strong>documents retrieved during the retrieval stage</strong> of the AI search process.</p>
+<p>The process typically looks like this:</p>
+<ol>
+<li>The user asks a question.</li>
+<li>The system generates related queries (follow-up searches, called query fanouts).</li>
+<li>Relevant documents are retrieved.</li>
+<li>The model analyzes those documents.</li>
+<li>The model generates an answer using the information.</li>
+<li>Some of the retrieved sources are displayed as citations.</li>
+</ol>
+<p>Because citations come from retrieved documents, they reflect the sources the model considered most relevant or useful for constructing the answer.</p>
+<hr />
+<h2>What Citations Reveal</h2>
+<p>Citations provide important signals about how AI systems understand a topic.</p>
+<p>They reveal:</p>
+<ul>
+<li>which websites influence AI answers</li>
+<li>which sources are considered authoritative</li>
+<li>where information about a topic is concentrated</li>
+<li>which brands are associated with a topic</li>
+</ul>
+<p>For example, if multiple AI systems frequently cite the same review sites or editorial articles for a category, those sources likely have strong influence on how AI systems interpret that topic.</p>
+<hr />
+<h2>Citations vs Mentions</h2>
+<p>A brand appearing in an AI answer does not always mean the brand&#39;s own website was cited.</p>
+<p>Two scenarios are common:</p>
+<h3>Brand Mention Without Citation</h3>
+<p>The model mentions a brand based on information gathered from third-party sources.</p>
+<p>Example:</p>
+<blockquote><p>Popular project management tools include Notion, Asana, and Monday.com.</p></blockquote>
+<p>In this case, the answer may cite review articles rather than the official product websites.</p>
+<h3>Brand Website Citation</h3>
+<p>The answer includes a direct reference to the brand&#39;s website or documentation.</p>
+<p>Example:</p>
+<blockquote><p>According to the Notion documentation, teams can use databases to manage tasks and workflows.</p></blockquote>
+<p>Both types of visibility are important but represent different kinds of influence.</p>
+<hr />
+<h2>Why Citations Matter for AI Recommendations</h2>
+<p>Citations help explain <strong>why certain brands appear in AI answers</strong>.</p>
+<p>If a brand or its website is frequently cited, it signals that the AI system considers those sources useful or relevant when answering questions about a topic.</p>
+<p>Brands that rarely appear in cited sources may have lower visibility in AI answers.</p>
+<p>Understanding which sources are cited can therefore help organizations identify:</p>
+<ul>
+<li>influential websites in their category</li>
+<li>content that shapes AI responses</li>
+<li>opportunities to improve visibility</li>
+</ul>
+<hr />
+<h2>How Genezio Analyzes Citations</h2>
+<p>Genezio extracts citations from AI-generated answers and analyzes them across many conversations.</p>
+<p>This allows teams to see:</p>
+<ul>
+<li>which sources are most frequently cited</li>
+<li>which sources mention their brand</li>
+<li>which sources mention competitors</li>
+<li>which sources dominate a specific topic</li>
+</ul>
+<p>By aggregating this information, Genezio helps organizations understand the <strong>information landscape that AI systems rely on</strong>.</p>
+<hr />
+<h2>Example</h2>
+<p>Consider the question:</p>
+<blockquote class="user-question"><p><strong>User query:</strong> <em><strong>What are the best tools for managing a startup sales pipeline?</strong></em></p></blockquote>
+<p>An AI system might generate an answer mentioning:</p>
+<ul>
+<li>HubSpot</li>
+<li>Pipedrive</li>
+<li>Salesforce</li>
+</ul>
+<p>The citations might include:</p>
+<ul>
+<li>software comparison websites</li>
+<li>SaaS review platforms</li>
+<li>blog articles comparing CRM tools</li>
+</ul>
+<p>Even if the official vendor websites are not cited directly, the third-party sources that mention those brands help shape the answer.</p>
+<hr />
+<h2>Next Steps</h2>
+<p>To continue exploring how Genezio analyzes AI answers, see:</p>
+<ul>
+<li><a href="../core-concepts/perceptions.html">Core Concepts -&gt; Perceptions</a></li>
+<li><a href="../insights/ai-visibility-score.html">Insights -&gt; Visibility Score</a></li>
+<li><a href="../insights/share-of-voice.html">Insights -&gt; Share of Voice</a></li>
+</ul>
+<p>These pages explain how citations and brand mentions are converted into measurable visibility insights.</p>
+    </main>
+  </div>
+  <script>
+    (function(){
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      var scrollY=0;
+      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      btn.addEventListener('click',open);
+      ov.addEventListener('click',close);
+      if(cls)cls.addEventListener('click',close);
+      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    })();
+  </script>
+</body>
+</html>

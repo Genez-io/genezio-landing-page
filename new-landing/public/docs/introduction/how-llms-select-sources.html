@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How LLMs Select Sources | Genezio Docs</title>
+  <meta name="description" content="How LLMs Select Sources in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Genezio Docs</a>
+      <nav aria-label="Top navigation"></nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="active" href="how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1>How LLMs Select Sources</h1>
+<p>When an AI system such as ChatGPT, Claude, Gemini, or Perplexity answers a question, it typically relies on information retrieved from multiple sources on the web.</p>
+<p>These sources provide the factual material that the model uses to generate its response. Understanding how these sources are selected helps explain why certain websites, brands, or claims appear in AI-generated answers.</p>
+<hr />
+<h2>Retrieval Before Generation</h2>
+<p>Most modern AI search systems follow a pattern where <strong>the answer engine pulls in and uses sources to build its answer</strong>.</p>
+<p>In this process:</p>
+<ol>
+<li>A user asks a question.</li>
+<li>The system retrieves relevant documents or passages.</li>
+<li>The answer engine analyzes the retrieved information.</li>
+<li>The model generates an AI-generated answer.</li>
+</ol>
+<p>Because the model uses retrieved information as context, the documents selected during the retrieval stage strongly influence the final answer.</p>
+<hr />
+<h2>Where Sources Come From</h2>
+<p>AI systems typically retrieve information from a combination of sources, including:</p>
+<ul>
+<li>websites indexed by search engines</li>
+<li>editorial articles</li>
+<li>product reviews</li>
+<li>comparison pages</li>
+<li>documentation sites</li>
+<li>forums and communities</li>
+<li>training data and web sources</li>
+</ul>
+<p>Some systems rely on external search engines, while others use their own internal indexes or knowledge sources.</p>
+<hr />
+<h2>Factors That Influence Source Selection</h2>
+<p>Several factors influence which sources are retrieved when answering a question.</p>
+<h3>Relevance to the Query</h3>
+<p>The most important factor is whether the content is relevant to the question or related queries generated by the system.</p>
+<p>If a page clearly answers a specific question, it is more likely to be retrieved.</p>
+<h3>Authority and Trust</h3>
+<p>Sources that are widely recognized as authoritative may be prioritized.</p>
+<p>These may include:</p>
+<ul>
+<li>well-known publications</li>
+<li>established websites</li>
+<li>industry experts</li>
+<li>frequently cited resources</li>
+</ul>
+<p>Authority signals can come from links, citations, reputation, and historical reliability.</p>
+<h3>Content Clarity</h3>
+<p>Content that clearly explains a topic or provides structured information is often easier for AI systems to interpret and use.</p>
+<p>For example, pages that include:</p>
+<ul>
+<li>clear headings</li>
+<li>lists</li>
+<li>comparisons</li>
+<li>concise explanations</li>
+</ul>
+<p>may be more easily incorporated into generated answers.</p>
+<h3>Coverage of the Topic</h3>
+<p>Sources that comprehensively cover a topic are more likely to be retrieved.</p>
+<p>If a page addresses multiple related questions or provides deep explanations, it may be selected more frequently than a page that only mentions the topic briefly.</p>
+<h3>Consistency Across Sources</h3>
+<p>If multiple sources repeat similar claims or mention the same brands, the AI system may treat those signals as stronger evidence when generating its answer.</p>
+<hr />
+<h2>How Sources Influence AI Answers</h2>
+<p>Once relevant documents are retrieved, the model uses them as context to generate its response.</p>
+<p>During this stage, the model may:</p>
+<ul>
+<li>summarize information from multiple sources</li>
+<li>compare products or services</li>
+<li>merge explanations from different documents</li>
+<li>extract key facts or recommendations</li>
+</ul>
+<p>Because the answer is AI-generated, the final response may not match any single page exactly. Instead, it reflects a combination of information gathered during retrieval.</p>
+<hr />
+<h2>Citations in AI Answers</h2>
+<p>Some AI systems include citations or links that indicate which sources influenced the response.</p>
+<p>These citations may point to:</p>
+<ul>
+<li>articles</li>
+<li>documentation pages</li>
+<li>product pages</li>
+<li>review sites</li>
+</ul>
+<p>Citations help users verify where information came from and provide transparency about the sources used to generate the answer.</p>
+<hr />
+<h2>Why Source Selection Matters for Brands</h2>
+<p>Because AI systems build answers from retrieved sources, brands that appear frequently in those sources are more likely to appear in AI-generated responses.</p>
+<p>This means that visibility in AI answers depends on:</p>
+<ul>
+<li>being mentioned by relevant sources</li>
+<li>having content that answers common questions</li>
+<li>appearing in comparisons and reviews</li>
+<li>being associated with the topic across the web</li>
+</ul>
+<p>If a brand rarely appears in the sources retrieved for a topic, it may have limited visibility in AI-generated answers.</p>
+    </main>
+  </div>
+  <script>
+    (function(){
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      var scrollY=0;
+      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      btn.addEventListener('click',open);
+      ov.addEventListener('click',close);
+      if(cls)cls.addEventListener('click',close);
+      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How the 5 Agents Work | Genezio Docs</title>
+  <meta name="description" content="How the 5 Agents Work in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Genezio Docs</a>
+      <nav aria-label="Top navigation"></nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="active" href="how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1>How the 5 Agents Work</h1>
+<p><em>Genezio runs five types of AI conversations to understand your brand&#39;s presence. Each type answers a different question — and not all of them count toward your score. Here&#39;s why that&#39;s a feature, not a limitation.</em></p>
+<blockquote><p><strong>Think of it like this:</strong> Imagine hiring five different mystery shoppers to evaluate your brand. Each one walks into a store (or asks an AI) with a different brief. The results they bring back reveal very different things about how you&#39;re perceived.</p></blockquote>
+<hr />
+<h2>Agent 1: Prompter Agent</h2>
+<p><strong>Counts toward: AI Visibility %</strong></p>
+<p><strong>What it simulates:</strong> A user at the top of the funnel — exploring a category, not yet committed to any brand. They ask open-ended discovery questions.</p>
+<p><strong>Example queries:</strong></p>
+<ul>
+<li>&quot;What are the best CRM tools for a startup?&quot;</li>
+<li>&quot;What software should I use for project management?&quot;</li>
+<li>&quot;What tools do marketing teams use for analytics?&quot;</li>
+</ul>
+<p><strong>Why it matters for you:</strong> This is how most buyers start their research. If you&#39;re absent here, you&#39;re being filtered out before the shortlist even forms. Prompter conversations are the biggest driver of AI Visibility %.</p>
+<p><strong>Content implication:</strong> Category pillar pages · &quot;Best of&quot; content · In-depth guides · Original research</p>
+<hr />
+<h2>Agent 2: Recommender Agent</h2>
+<p><strong>Counts toward: AI Recommendations % and AI Visibility %</strong></p>
+<p><strong>What it simulates:</strong> A user ready to make a decision. They&#39;ve done some research and now they want the AI to pick something specific for their situation. These are often multi-step conversations.</p>
+<p><strong>Example queries:</strong></p>
+<ul>
+<li>&quot;I&#39;m a solo founder with a team of 3. Recommend a CRM that&#39;s easy to set up and under $50/month.&quot;</li>
+<li>&quot;What&#39;s the best project management tool for a remote design team of 10?&quot;</li>
+</ul>
+<p><strong>Why it matters for you:</strong> This is the highest-intent moment in the AI buyer journey. If a user asks AI to recommend something and your name doesn&#39;t come up, you&#39;ve lost a qualified lead. AI Recommendations % is your conversion metric.</p>
+<p><strong>Content implication:</strong> Use-case landing pages · Persona-specific content · ROI calculators</p>
+<hr />
+<h2>Agent 3: Introspector Agent</h2>
+<p><strong>Does not count toward KPIs</strong></p>
+<p><strong>What it simulates:</strong> A user who already knows your brand and wants to learn more. They ask the AI directly about you by name.</p>
+<p><strong>Example queries:</strong></p>
+<ul>
+<li>&quot;What is HubSpot?&quot;</li>
+<li>&quot;What does Salesforce do?&quot;</li>
+<li>&quot;Tell me about Notion&#39;s pricing model.&quot;</li>
+</ul>
+<p><strong>Why it doesn&#39;t count toward your score:</strong> If the user mentions your brand in the question, the AI will almost always mention it in the answer — that&#39;s not meaningful. Including these would artificially inflate your Visibility score and make it useless as a benchmark.</p>
+<p><strong>What it&#39;s useful for instead:</strong> Understanding how AI describes your brand. What claims does it make? Are those claims accurate? This feeds directly into your Perceptions analysis — the accuracy layer underneath the score.</p>
+<p><strong>Content implication:</strong> Brand narrative analysis · Claim accuracy monitoring · Positioning audit</p>
+<hr />
+<h2>Agent 4: Comparer Agent</h2>
+<p><strong>Does not count toward KPIs — this is a competitive analysis tool</strong></p>
+<p><strong>What it simulates:</strong> A user actively evaluating you against a specific competitor. They&#39;ve narrowed their options and want a head-to-head verdict.</p>
+<p><strong>Example queries:</strong></p>
+<ul>
+<li>&quot;HubSpot vs Pipedrive: which is better for a startup?&quot;</li>
+<li>&quot;Notion vs Asana for a remote team?&quot;</li>
+<li>&quot;Should I use Salesforce or HubSpot?&quot;</li>
+</ul>
+<p><strong>Why it doesn&#39;t count toward your score:</strong> Both brands are named in the question, so both will always appear in the answer. Like the Introspector, including these would distort your metrics.</p>
+<p><strong>What it&#39;s actually for:</strong> The Comparer is an <strong>analysis tool</strong>. It takes the brand-level KPIs that Genezio has already calculated from Prompter and Recommender conversations and puts them in competitive context. It also runs head-to-head AI conversations to reveal how answer engines frame you against specific competitors — what strengths it highlights, what weaknesses it mentions, and who it picks as the better fit.</p>
+<p>Think of it this way: Prompter and Recommender tell you <em>your score</em>. Comparer tells you <em>why you&#39;re winning or losing against a specific rival</em>.</p>
+<p><strong>Content implication:</strong> Competitive intelligence · &quot;vs&quot; comparison page strategy · Win/loss narrative</p>
+<hr />
+<h2>Agent 5: Fact Checker Agent</h2>
+<p><strong>Does not count toward KPIs — this is an accuracy measurement tool</strong></p>
+<p><strong>What it simulates:</strong> A factual probe. Instead of asking the answer engine open-ended questions, you give it specific verifiable claims about your brand (pricing, features, founding year, customer counts, certifications) and measure whether it confirms, contradicts, or dodges each one.</p>
+<p><strong>Example claims:</strong></p>
+<ul>
+<li>&quot;Our product offers a free tier.&quot;</li>
+<li>&quot;We were founded in 2019.&quot;</li>
+<li>&quot;We are SOC 2 Type II certified.&quot;</li>
+</ul>
+<p><strong>Per-claim outcomes:</strong></p>
+<ul>
+<li><strong>True</strong> — the engine confirms the claim</li>
+<li><strong>False</strong> — the engine contradicts the claim</li>
+<li><strong>Indecisive</strong> — the engine doesn&#39;t take a clear position</li>
+</ul>
+<p><strong>Why it doesn&#39;t count toward your score:</strong> The claims are stated in the prompt, so the conversation isn&#39;t measuring discovery. It&#39;s measuring accuracy — a different axis from visibility and recommendation.</p>
+<p><strong>What it&#39;s actually for:</strong> Fact Checker is most useful for brands where factual accuracy directly affects buyer trust or regulatory standing — security, financial services, healthcare, regulated industries. It also pairs with the <a href="../core-concepts/knowledge-base.html">Knowledge Base</a> and <a href="../core-concepts/perceptions.html">Grounded Perceptions</a> to form a complete accuracy stack: KB defines truth, Fact Checker actively tests whether answer engines confirm it, Grounded Perceptions show whether engines spontaneously match it.</p>
+<p><strong>Content implication:</strong> Update product/pricing/certification pages so the right facts are public and crawlable · Correct third-party listings · Publish authoritative reference content for high-risk claims</p>
+<p>See <a href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a> for the full feature page.</p>
+<hr />
+<h2>Quick Reference Summary</h2>
+<table>
+<thead><tr><th style="text-align:left">Agent</th><th style="text-align:left">User Intent</th><th style="text-align:left">Brand Named?</th><th style="text-align:left">Role</th><th style="text-align:left">Best Used For</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left"><strong>Prompter</strong></td><td style="text-align:left">Exploring a category</td><td style="text-align:left">No</td><td style="text-align:left">✓ Measures AI Visibility</td><td style="text-align:left">Awareness measurement</td></tr>
+<tr><td style="text-align:left"><strong>Recommender</strong></td><td style="text-align:left">Ready to decide</td><td style="text-align:left">No</td><td style="text-align:left">✓ Measures AI Recommendations + Visibility</td><td style="text-align:left">Intent measurement</td></tr>
+<tr><td style="text-align:left"><strong>Introspector</strong></td><td style="text-align:left">Learning about a brand</td><td style="text-align:left">Yes</td><td style="text-align:left">Narrative analysis (not KPIs)</td><td style="text-align:left">Narrative &amp; accuracy audit</td></tr>
+<tr><td style="text-align:left"><strong>Comparer</strong></td><td style="text-align:left">Comparing options</td><td style="text-align:left">Yes (both)</td><td style="text-align:left">Competitive analysis (not KPIs)</td><td style="text-align:left">Competitive positioning</td></tr>
+<tr><td style="text-align:left"><strong>Fact Checker</strong></td><td style="text-align:left">Verifying specific claims</td><td style="text-align:left">Yes</td><td style="text-align:left">Accuracy measurement (not KPIs)</td><td style="text-align:left">Hallucination &amp; factual monitoring</td></tr>
+</tbody>
+</table>
+<blockquote><p><strong>Two agents measure. Three agents analyze.</strong> Prompter and Recommender generate your KPIs. Introspector, Comparer, and Fact Checker help you understand the narratives, competitive dynamics, and factual accuracy behind those numbers. All five are essential — but they play different roles.</p></blockquote>
+<hr />
+<p><em>Next: <a href="from-data-to-content-strategy.html">From Data to Content Strategy</a></em></p>
+    </main>
+  </div>
+  <script>
+    (function(){
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),btn=document.getElementById('sidebar-toggle'),cls=document.getElementById('sidebar-close');
+      var scrollY=0;
+      function open(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function close(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      btn.addEventListener('click',open);
+      ov.addEventListener('click',close);
+      if(cls)cls.addEventListener('click',close);
+      sb.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    })();
+  </script>
+</body>
+</html>
