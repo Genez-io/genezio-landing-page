@@ -717,6 +717,37 @@ li + li {
   background: var(--bg-elevated-2);
 }
 
+.landing-hero {
+  margin-bottom: 22px;
+}
+
+.landing-hero h1 {
+  margin: 6px 0 10px;
+}
+
+.landing-hero > p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.landing-card {
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.landing-card:hover {
+  border-color: rgba(129, 140, 248, 0.40);
+}
+
+.landing-card a {
+  font-size: 16px;
+}
+
+.landing-card p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .results-list {
   list-style: none;
   margin: 0;

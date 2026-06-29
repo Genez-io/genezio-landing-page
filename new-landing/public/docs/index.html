@@ -4,11 +4,188 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Documentation | Genezio Docs</title>
-  <meta http-equiv="refresh" content="0; url=introduction/what-is-genezio.html" />
-  <link rel="canonical" href="introduction/what-is-genezio.html" />
+  <meta name="description" content="Genezio documentation — measure and improve how AI answer engines recommend your brand." />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <p>Redirecting to <a href="introduction/what-is-genezio.html">introduction/what-is-genezio.html</a>...</p>
-  <script>window.location.replace("introduction/what-is-genezio.html");</script>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Genezio Homepage"><img class="brand-logo" src="/images/logo-white.svg" alt="Genezio" /></a>
+      <nav class="topbar-nav" aria-label="Main navigation">
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Platform <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-platform">
+            <div class="nav-menu-grid">
+              <div class="menu-col">
+                <div class="menu-col-label">For Teams</div>
+                <a class="menu-tile" href="/conversational-brand-presence/">
+                  <div class="menu-ico emerald"><i data-lucide="trending-up"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Lead Generation</div><div class="menu-st">Conversational Brand Presence</div></div>
+                </a>
+                <a class="menu-tile" href="/increase-conversion/">
+                  <div class="menu-ico blue"><i data-lucide="target"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Conversion</div><div class="menu-st">Marketing Agent Performance</div></div>
+                </a>
+                <a class="menu-tile" href="#">
+                  <div class="menu-ico purple"><i data-lucide="shopping-bag"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase In-Chat Shopping <span class="menu-badge">COMING SOON</span></div><div class="menu-st">E-commerce Performance</div></div>
+                </a>
+              </div>
+              <div class="menu-col partners">
+                <div class="menu-col-label">Partners</div>
+                <a class="partner-card" href="/agencies/">
+                  <div class="menu-tile" style="padding:0">
+                    <div class="menu-ico agency"><i data-lucide="users"></i></div>
+                    <div class="menu-text"><div class="menu-tt">For Agencies</div><div class="menu-st">Manage multiple brands effortlessly</div></div>
+                  </div>
+                  <div class="partner-rows">
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand A</div><span class="partner-delta">&#8593; 24%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand B</div><span class="partner-delta">&#8593; 18%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand C</div><span class="partner-delta">&#8593; 31%</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Resources <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-resources">
+            <a class="menu-tile" href="/docs/">
+              <div class="menu-ico cyan"><i data-lucide="book-marked"></i></div>
+              <div class="menu-text"><div class="menu-tt">Docs</div><div class="menu-st">Product documentation &amp; guides</div></div>
+            </a>
+            <a class="menu-tile" href="/glossary/">
+              <div class="menu-ico blue"><i data-lucide="book-open"></i></div>
+              <div class="menu-text"><div class="menu-tt">Glossary</div><div class="menu-st">AI Search terminology guide</div></div>
+            </a>
+            <a class="menu-tile" href="/blog/">
+              <div class="menu-ico emerald"><i data-lucide="file-text"></i></div>
+              <div class="menu-text"><div class="menu-tt">Blog</div><div class="menu-st">Insights &amp; best practices</div></div>
+            </a>
+            <a class="menu-tile" href="/research/">
+              <div class="menu-ico violet"><i data-lucide="flask-conical"></i></div>
+              <div class="menu-text"><div class="menu-tt">Research</div><div class="menu-st">Original AI search studies</div></div>
+            </a>
+            <a class="menu-tile" href="/industry-leaderboards">
+              <div class="menu-ico amber"><i data-lucide="trophy"></i></div>
+              <div class="menu-text"><div class="menu-tt">Leaderboards</div><div class="menu-st">Industry AI visibility rankings</div></div>
+            </a>
+          </div>
+        </div>
+        <a class="nav-link" href="/pricing/">Pricing</a>
+      </nav>
+      <div class="topbar-cta">
+        <a class="btn-login" href="https://app.genezio.ai/sign-in">Login</a>
+        <a class="btn-demo" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a>
+      </div>
+      <button class="topbar-burger" id="site-burger" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+    <div class="site-mobile" id="site-mobile">
+      <div class="m-label">Platform</div>
+      <div class="m-group">
+        <a href="/conversational-brand-presence/">Increase Lead Generation<span class="m-sub">Conversational Brand Presence</span></a>
+        <a href="/increase-conversion/">Increase Conversion<span class="m-sub">Marketing Agent Performance</span></a>
+        <a href="/agencies/">For Agencies<span class="m-sub">Manage multiple brands effortlessly</span></a>
+      </div>
+      <div class="m-label">Resources</div>
+      <div class="m-group">
+        <a href="/docs/">Docs<span class="m-sub">Product documentation &amp; guides</span></a>
+        <a href="/glossary/">Glossary<span class="m-sub">AI Search terminology guide</span></a>
+        <a href="/blog/">Blog<span class="m-sub">Insights &amp; best practices</span></a>
+        <a href="/research/">Research<span class="m-sub">Original AI search studies</span></a>
+        <a href="/industry-leaderboards">Leaderboards<span class="m-sub">Industry AI visibility rankings</span></a>
+      </div>
+      <a class="m-label" href="/pricing/" style="display:block">Pricing</a>
+      <div class="m-cta"><a class="btn-demo" style="display:block;text-align:center" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a></div>
+    </div>
+  </header>
+  <div class="docs-subbar"><button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Open documentation menu"><i data-lucide="panel-left-open"></i> Documentation</button></div>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="introduction/what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="introduction/what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="introduction/why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="introduction/how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="introduction/query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="introduction/how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="introduction/how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="introduction/what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="introduction/how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="introduction/how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="core-concepts/brands.html">Brands</a></li><li><a class="" href="core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="core-concepts/users.html">Users</a></li><li><a class="" href="core-concepts/personas.html">Personas</a></li><li><a class="" href="core-concepts/topics.html">Topics</a></li><li><a class="" href="core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="core-concepts/conversations.html">Conversations</a></li><li><a class="" href="core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="core-concepts/citations.html">Citations</a></li><li><a class="" href="core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="core-concepts/competitors.html">Competitors</a></li><li><a class="" href="core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="core-concepts/products.html">Products</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="content-hub/briefs.html">Briefs</a></li><li><a class="" href="content-hub/content-analysis.html">Content Analysis</a></li><li><a class="" href="content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <article>
+    <header class="landing-hero">
+      <p class="kicker">Documentation</p>
+      <h1>Genezio Docs</h1>
+      <p>Learn how to measure and improve how AI answer engines like ChatGPT, Claude, Gemini, and Perplexity recommend your brand. Pick a section below to get started.</p>
+    </header>
+    <ul class="section-grid"><li class="landing-card"><a href="getting-started/setup-guide.html"><strong>Getting Started</strong></a><p>Step-by-step onboarding for new teams.</p></li><li class="landing-card"><a href="introduction/what-is-genezio.html"><strong>Introduction</strong></a><p>Understand AI Recommendations, Visibility, and how Genezio works.</p></li><li class="landing-card"><a href="core-concepts/brands.html"><strong>Core Concepts</strong></a><p>Learn the core data model used across the platform.</p></li><li class="landing-card"><a href="genezio-agents/prompter-agent.html"><strong>Genezio Agents</strong></a><p>Agent types used to run conversations in Genezio.</p></li><li class="landing-card"><a href="analysis/creating-scenarios.html"><strong>Running Conversations</strong></a><p>Configure and run analysis workflows.</p></li><li class="landing-card"><a href="insights/your-kpis-explained.html"><strong>Insights</strong></a><p>Interpret metrics and translate them into decisions.</p></li><li class="landing-card"><a href="content-hub/content-hub.html"><strong>Content Hub</strong></a><p>Create and optimize source-worthy content.</p></li><li class="landing-card"><a href="geo-assistant/geo-assistant.html"><strong>Geo Assistant</strong></a><p>Chat with your brand data — investigate, report, and decide what to do next.</p></li><li class="landing-card"><a href="agentic-commerce/agentic-commerce-readiness.html"><strong>Agentic Commerce</strong></a><p>Make your store ready for AI shopping agents.</p></li><li class="landing-card"><a href="integrations/cdn-log-integration.html"><strong>Integrations</strong></a><p>Connect Genezio with your analytics stack.</p></li></ul>
+  </article>
+    </main>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    (function(){
+      if(window.lucide){lucide.createIcons();}
+      // Header dropdowns
+      var items=[].slice.call(document.querySelectorAll('.nav-item[data-dropdown]'));
+      document.querySelectorAll('[data-dropdown-trigger]').forEach(function(btn){
+        btn.addEventListener('click',function(e){
+          e.stopPropagation();
+          var item=btn.closest('.nav-item');
+          var willOpen=!item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');});
+          if(willOpen)item.classList.add('open');
+        });
+      });
+      document.addEventListener('click',function(e){
+        if(!e.target.closest('.nav-item[data-dropdown]'))items.forEach(function(i){i.classList.remove('open');});
+      });
+      // Mobile site nav
+      var burger=document.getElementById('site-burger'),sm=document.getElementById('site-mobile');
+      if(burger&&sm)burger.addEventListener('click',function(){sm.classList.toggle('open');});
+      // Docs sidebar drawer (mobile)
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),tg=document.getElementById('sidebar-toggle');
+      var scrollY=0;
+      function openSb(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function closeSb(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      if(tg)tg.addEventListener('click',openSb);
+      if(ov)ov.addEventListener('click',closeSb);
+      if(sb)sb.addEventListener('click',function(e){if(e.target.tagName==='A')closeSb();});
+    })();
+  </script>
 </body>
 </html>
