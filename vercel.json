@@ -6,6 +6,11 @@
   "outputDirectory": "new-landing/dist",
   "redirects": [
     {
+      "source": "/docs",
+      "destination": "/docs/",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "has": [
         {
