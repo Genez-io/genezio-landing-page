@@ -178,42 +178,47 @@
     },
     {
       "source": "/deploy-nextjs-apps/",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deploy-nextjs-apps",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deploy-nodejs-express-on-genezio-serverless/",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deploy-nodejs-express-on-genezio-serverless",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deployment-platform/deploy-django-on-genezio-serverless/",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deployment-platform/deploy-django-on-genezio-serverless",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deployment-platform/deploy-nextjs-apps/",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
       "permanent": true
     },
     {
       "source": "/deployment-platform/deploy-nextjs-apps",
-      "destination": "https://deployapps.dev/docs/",
+      "destination": "https://genezio.com/",
+      "permanent": true
+    },
+    {
+      "source": "/docs/:path((?!.*\\.html$).+)",
+      "destination": "https://genezio.com/docs/",
       "permanent": true
     },
     {
