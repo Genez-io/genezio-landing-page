@@ -213,7 +213,7 @@
     },
     {
       "source": "/docs/:path((?!.*\\.html$).+)",
-      "destination": "https://genezio.com/docs/:path",
+      "destination": "https://genezio.com/docs/",
       "permanent": true
     },
     {
