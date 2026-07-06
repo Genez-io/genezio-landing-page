@@ -217,7 +217,7 @@
       "permanent": true
     },
     {
-      "source": "/docs/:path((?!.*\\.(html|css|js|xml|png|jpg|jpeg|svg|webp|ico|woff|woff2)$).+)",
+      "source": "/docs/:path((?!.*\\.(?:html|css|js|xml|png|jpg|jpeg|svg|webp|ico|woff|woff2)$).+)",
       "destination": "https://genezio.com/docs/",
       "permanent": true
     },
