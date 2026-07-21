@@ -181,61 +181,74 @@
   </aside>
     <main class="content" id="main-content">
       <h1 id="cdn-log-integration">CDN Log Integration</h1>
-<p><strong>CDN log analysis</strong> lets you upload your own server-side access logs to Genezio and see exactly which pages AI crawlers are fetching from your site — then compare that against the pages AI engines actually cite in their answers.</p>
-<p>This turns your raw CDN and web server logs into a clear picture of how AI answer engines discover, crawl, and use your content. It complements Genezio&#39;s citation data with first-party evidence straight from your own infrastructure.</p>
+<p><strong>CDN log analysis</strong> turns your own server-side access logs into a picture of how answer engines actually use your website — which pages they fetch, when they fetch them, and whether that lines up with the pages they end up citing.</p>
+<p>It complements Genezio&#39;s citation data with first-party evidence straight from your own infrastructure. Log ingestion is arranged <strong>on request, per customer</strong> — see <a href="#requesting-log-ingestion">Requesting Log Ingestion</a> below.</p>
 <hr />
 <h2 id="why-it-matters">Why It Matters</h2>
-<p>Citation tracking tells you which of your pages show up in AI answers. CDN log analysis tells you the other half of the story: what AI crawlers are actually fetching in the first place.</p>
-<p>Together, they help you answer questions like:</p>
+<p>Citation tracking tells you which of your pages show up in AI answers. Your logs tell you the other half of the story: what answer engines are doing on your site in the first place.</p>
+<p>There are two distinct behaviours in those logs, and separating them is the whole point.</p>
+<h3 id="1-training-crawls">1. Training crawls</h3>
+<p>Answer engines crawl the web to build and refresh the models behind their answers. Your logs show <strong>which of your pages they visit for training purposes</strong> — which parts of your site have been absorbed into what the model knows, and which have been passed over.</p>
+<h3 id="2-real-time-answer-enrichment">2. Real-time answer enrichment</h3>
+<p>This is the more valuable signal. Answer engines also fetch pages <strong>in real time, in the middle of answering a specific question</strong>, to enrich that answer with current information.</p>
+<p>When you see a page accessed this way, you&#39;re watching your content get pulled into a live answer as it&#39;s being written. That tells you which pages are actively load-bearing for AI answers right now — a fundamentally different and more actionable thing than &quot;this page was crawled at some point.&quot;</p>
+<h3 id="questions-this-answers">Questions this answers</h3>
 <ul>
-<li>Are AI engines crawling my most important content, or ignoring it?</li>
+<li>Are answer engines crawling my most important content, or ignoring it?</li>
+<li>Which pages get fetched in real time to support live answers?</li>
 <li>Which high-value pages do AI bots never visit?</li>
 <li>Which pages get crawled often but are never cited?</li>
-<li>Is my crawl budget going to the content I care about?</li>
 </ul>
-<p>Because it draws on your own server logs, this is direct, first-party evidence — not an estimate. It gives you a ground-truth view to pair with the citation insights elsewhere in Genezio.</p>
+<p>Because it draws on your own server logs, this is direct, first-party evidence — not an estimate.</p>
 <hr />
-<h2 id="what-you-can-upload">What You Can Upload</h2>
-<p>You upload your <strong>CDN or web server access logs</strong> — the standard logs your CDN or origin server already records for every request:</p>
+<h2 id="pairing-with-ga4">Pairing With GA4</h2>
+<p>Log data is most useful when read <strong>alongside your Google Analytics (GA4) data</strong>.</p>
+<p>Your CDN logs show what the answer engines did — the crawls and the real-time fetches. GA4 shows what humans did. Corroborating the two gives you a much fuller understanding of how answer engines consume the content you publish, and what happens to the people who arrive as a result of it.</p>
+<hr />
+<h2 id="what-gets-ingested">What Gets Ingested</h2>
+<p>Genezio ingests your <strong>CDN or web server access logs</strong> — the standard logs your CDN or origin already records for every request:</p>
 <ul>
-<li>The URLs and paths visitors and bots requested</li>
-<li>The user agents identifying who made each request (including AI crawlers)</li>
+<li>the URLs and paths that were requested</li>
+<li>the user agents identifying who made each request, including AI crawlers</li>
+<li>the timing of each request, which is what makes real-time answer enrichment visible</li>
 </ul>
 <p>These are the same logs your infrastructure team can typically export from your CDN or web server. No special instrumentation is required.</p>
 <hr />
 <h2 id="how-it-works">How It Works</h2>
 <h3 id="clustering-by-keyword">Clustering by keyword</h3>
-<p>Raw logs are long lists of individual URLs, which are hard to read on their own. Genezio <strong>clusters</strong> your log entries by keyword, grouping requested paths into themes so you can see traffic at the level of topics rather than single URLs.</p>
-<p>You can run <strong>multiple clusterings</strong> on the same logs — cluster them one way, save it, then cluster them another way for a different perspective. Saved clusterings stay available so you can revisit or compare them later.</p>
+<p>Raw logs are long lists of individual URLs, which are hard to read on their own. Genezio <strong>clusters</strong> your log entries by keyword, grouping requested paths into themes so you can see activity at the level of topics rather than single URLs.</p>
+<p>Multiple <strong>clusterings</strong> can be run on the same logs — cluster them one way, save it, then cluster them another way for a different perspective. Saved clusterings stay available so you can revisit or compare them later.</p>
 <h3 id="crawler-breakdown">Crawler breakdown</h3>
-<p>Genezio produces a <strong>crawler breakdown</strong> that identifies which bots and crawlers are hitting your site, with particular emphasis on <strong>AI crawlers</strong> — the crawlers AI answer engines use to fetch and index content for their responses.</p>
-<p>This shows you who is actually visiting, separating AI engine crawlers from search engines, scrapers, and ordinary traffic.</p>
+<p>Genezio produces a <strong>crawler breakdown</strong> identifying which bots and crawlers are hitting your site, with particular emphasis on <strong>AI crawlers</strong> — the crawlers answer engines use to fetch content.</p>
+<p>This separates AI engine traffic from search engines, scrapers, and ordinary visitors.</p>
 <h3 id="ai-crawler-traffic-vs-citations">AI-crawler traffic vs. citations</h3>
-<p>The most valuable view connects the two halves of the story: Genezio analyzes <strong>AI-crawler traffic against your citations</strong>, checking whether the pages AI crawlers are fetching line up with the pages that actually get cited in AI answers.</p>
-<p>This is where gaps surface — important pages AI bots ignore, or pages they crawl heavily but never cite — so you know where to focus.</p>
+<p>The most valuable view connects the two halves of the story: Genezio analyzes <strong>AI-crawler traffic against your citations</strong>, checking whether the pages answer engines fetch line up with the pages that actually get cited in AI answers.</p>
+<p>This is where gaps surface — important pages AI bots ignore, or pages they fetch heavily but never cite.</p>
 <hr />
 <h2 id="reading-the-results">Reading the Results</h2>
 <p>When reviewing your CDN log analysis, look for:</p>
 <ul>
-<li><strong>Coverage gaps</strong> — high-value pages that AI crawlers rarely or never fetch.</li>
+<li><strong>Real-time fetches</strong> — pages being pulled during live answers. Treat these as your highest-value content and protect them.</li>
+<li><strong>Coverage gaps</strong> — high-value pages that answer engines rarely or never fetch.</li>
 <li><strong>Crawled-but-not-cited pages</strong> — content AI bots fetch but that never appears in answers, which may signal a content or relevance issue.</li>
-<li><strong>Crawler mix</strong> — how much of your bot traffic comes from AI engines versus other crawlers.</li>
-<li><strong>Theme-level patterns</strong> — using your keyword clusters to see which content areas get the most AI-crawler attention.</li>
+<li><strong>Crawler mix</strong> — how much of your bot traffic comes from answer engines versus other crawlers.</li>
+<li><strong>Theme-level patterns</strong> — using your keyword clusters to see which content areas get the most attention.</li>
 </ul>
 <hr />
-<h2 id="how-to-get-started">How to Get Started</h2>
+<h2 id="requesting-log-ingestion">Requesting Log Ingestion</h2>
+<p>CDN log ingestion is <strong>not self-serve</strong>. It is arranged on demand for each customer.</p>
 <ol>
-<li>Go to <strong>Settings -&gt; Integrations</strong> and open CDN Log Integration.</li>
-<li>Upload your CDN or web server access logs.</li>
-<li>Run a clustering to group the requested paths by keyword, and save it. Run additional clusterings if you want a different view of the same logs.</li>
-<li>Review the crawler breakdown to see which AI crawlers are visiting, then open the AI-crawler-traffic-vs-citations analysis to spot coverage and citation gaps.</li>
+<li><strong>Contact Genezio</strong> and tell us you want your CDN or server logs ingested.</li>
+<li>Genezio works with you and your infrastructure team on how the logs are delivered.</li>
+<li>Once the logs are in, you can review the crawler breakdown, run and save keyword clusterings, and compare AI-crawler traffic against your citations.</li>
 </ol>
-<p>You can also explore all of this through the <a href="../geo-assistant/geo-assistant.html">Geo Assistant</a> — most CDN log operations are exposed as assistant tools, so you can simply ask about your CDN log clusters, crawler breakdown, and how crawl activity compares to your citations.</p>
+<p>You can also explore all of this through the <a href="../geo-assistant/geo-assistant.html">Geo Assistant</a> — most CDN log operations are exposed as assistant tools, so you can simply ask about your log clusters, crawler breakdown, and how crawl activity compares to your citations.</p>
 <hr />
 <h2 id="related-pages">Related Pages</h2>
 <ul>
 <li><a href="../core-concepts/citations.html">Citations</a></li>
 <li><a href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li>
+<li><a href="../insights/actionable-insights.html">Insights -&gt; Actionable Insights</a></li>
 </ul>
     </main>
   </div>
