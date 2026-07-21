@@ -97,7 +97,7 @@
     <loc>https://genezio.com/docs/core-concepts/knowledge-base.html</loc>
   </url>
   <url>
-    <loc>https://genezio.com/docs/core-concepts/products.html</loc>
+    <loc>https://genezio.com/docs/core-concepts/master-filters.html</loc>
   </url>
   <url>
     <loc>https://genezio.com/docs/genezio-agents/prompter-agent.html</loc>
@@ -151,7 +151,7 @@
     <loc>https://genezio.com/docs/content-hub/briefs.html</loc>
   </url>
   <url>
-    <loc>https://genezio.com/docs/content-hub/content-analysis.html</loc>
+    <loc>https://genezio.com/docs/content-hub/content-analyzer.html</loc>
   </url>
   <url>
     <loc>https://genezio.com/docs/content-hub/editing-articles.html</loc>
@@ -169,6 +169,21 @@
     <loc>https://genezio.com/docs/geo-assistant/actions-geo-can-take.html</loc>
   </url>
   <url>
+    <loc>https://genezio.com/docs/shopping/product-visibility.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/shopping/shopping-overview.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/shopping/products.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/shopping/product-details.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/shopping/merchants-and-retailers.html</loc>
+  </url>
+  <url>
     <loc>https://genezio.com/docs/agentic-commerce/agentic-commerce-readiness.html</loc>
   </url>
   <url>
@@ -176,5 +191,8 @@
   </url>
   <url>
     <loc>https://genezio.com/docs/integrations/cdn-log-integration.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/security/enterprise-sso-and-scim.html</loc>
   </url>
 </urlset>
