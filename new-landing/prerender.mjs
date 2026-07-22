@@ -15,6 +15,8 @@ const routes = [
   "/glossary",
 
   "/increase-conversion",
+  "/content-hub",
+  "/content-analysis",
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",

@@ -12,6 +12,7 @@ import {
   FlaskConicalIcon,
   UsersIcon,
   TrophyIcon,
+  ScanSearchIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
@@ -169,6 +170,54 @@ export function GenezioHeader() {
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
                                 E-commerce Performance
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+
+                      {/* Products */}
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mt-6 mb-3">
+                        Products
+                      </div>
+                      <div className="space-y-1">
+                        {/* Content Hub */}
+                        <Link
+                          to="/content-hub/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                              <FileTextIcon className="w-5 h-5 text-blue-400" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
+                                Content Hub
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                Data-backed content briefs
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+
+                        {/* Content Analysis */}
+                        <Link
+                          to="/content-analysis/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
+                              <ScanSearchIcon className="w-5 h-5 text-purple-400" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-purple-400 transition-colors">
+                                Content Analysis
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                Crawlability & citable-content audits
                               </div>
                             </div>
                           </div>
@@ -476,6 +525,39 @@ export function GenezioHeader() {
                       </div>
                     </a>
                   </div>
+                </div>
+              </div>
+
+              {/* Products Mobile Submenu */}
+              <div>
+                <div className="text-white/80 text-sm font-medium py-2">
+                  Products
+                </div>
+                <div className="pl-4 space-y-3 border-l-2 border-white/10">
+                  <a
+                    href="/content-hub/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">
+                      Content Hub
+                    </div>
+                    <div className="text-white/60 text-xs">
+                      Data-backed content briefs
+                    </div>
+                  </a>
+                  <a
+                    href="/content-analysis/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">
+                      Content Analysis
+                    </div>
+                    <div className="text-white/60 text-xs">
+                      Crawlability & citable-content audits
+                    </div>
+                  </a>
                 </div>
               </div>
 

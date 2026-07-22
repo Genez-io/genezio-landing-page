@@ -121,6 +121,40 @@ import {
           </div>
   
   
+          {/* Hidden-traffic stats band */}
+          <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {[
+              {
+                value: "12–15%",
+                label:
+                  "of global searches now run through AI tools — up from 5–6% a year earlier",
+              },
+              {
+                value: "~64%",
+                label: "of AI Mode users click nothing at all",
+              },
+              {
+                value: "~70%",
+                label: "of AI traffic arrives with no referrer",
+              },
+              {
+                value: "−34%",
+                label: "Google referrals to publishers, year over year",
+              },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 hover:border-blue-500/30 transition-all duration-300"
+              >
+                <div className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2 leading-none">
+                  {stat.value}
+                </div>
+                <div className="text-xs md:text-sm text-white/60 leading-snug">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     );
