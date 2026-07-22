@@ -9,6 +9,7 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import { GenezioTestimonialSection } from "../components/genezio-testimonial-section";
 import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic-section";
 import { GenezioProofSection } from "@/polymet/components/genezio-proof-section";
+import { GenezioProductPillarsSection } from "@/polymet/components/genezio-product-pillars-section";
 import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-reader-section";
 import { GenezioFlywheelSection } from "@/polymet/components/genezio-flywheel-section";
 
@@ -48,10 +49,11 @@ export function GenezioLanding() {
 
         <GenezioTrustSection />
 
-        {/* Why it matters → the blackout → proof → how you win */}
+        {/* Why it matters → the blackout → proof → the product → how you win */}
         <GenezioRobotReaderSection />
         <GenezioAiTrafficSection />
         <GenezioProofSection />
+        <GenezioProductPillarsSection />
         <GenezioFlywheelSection />
 
         {/* Product + social proof */}
