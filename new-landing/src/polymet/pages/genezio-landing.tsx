@@ -11,6 +11,11 @@ import { GenezioTestimonialSection } from "../components/genezio-testimonial-sec
 import { IndustryLeaderboardBanner } from "@/polymet/components/industry-leaderboard-banner";
 import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic-section";
 import { GenezioProofSection } from "@/polymet/components/genezio-proof-section";
+import { GenezioShiftSection } from "@/polymet/components/genezio-shift-section";
+import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-reader-section";
+import { GenezioOfficialSection } from "@/polymet/components/genezio-official-section";
+import { GenezioPlaybookSection } from "@/polymet/components/genezio-playbook-section";
+import { GenezioFlywheelSection } from "@/polymet/components/genezio-flywheel-section";
 
 export function GenezioLanding() {
   return (
@@ -49,17 +54,24 @@ export function GenezioLanding() {
         <GenezioHeroSection />
 
         <GenezioTrustSection />
-        <GenezioTestimonialSection />
+
+        {/* Narrative arc: the shift → how answers work → the blackout → proof */}
+        <GenezioShiftSection />
+        <GenezioRobotReaderSection />
         <GenezioAiTrafficSection />
         <GenezioProofSection />
-        <GenezioDashboardSection />
 
+        {/* The market is real → how to win → the operating model */}
+        <GenezioOfficialSection />
+        <GenezioPlaybookSection />
+        <GenezioFlywheelSection />
+
+        {/* Product + social proof */}
         <GenezioDifferentiatorsSection />
-
+        <GenezioDashboardSection />
         <GenezioBrandedQuestionsSection />
-
         <GenezioInsightsSection />
-
+        <GenezioTestimonialSection />
         <GenezioEnterpriseSection />
 
         <GenezioCtaSection />
