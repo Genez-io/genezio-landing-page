@@ -156,15 +156,15 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                              <ShoppingBagIcon className="w-5 h-5 text-purple-400" />
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-pink-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                              <ShoppingBagIcon className="w-5 h-5 text-emerald-400" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                                <div className="text-white font-semibold text-sm group-hover:text-purple-400 transition-colors">
+                                <div className="text-white font-semibold text-sm group-hover:text-emerald-400 transition-colors">
                                   Increase In-Chat Shopping
                                 </div>
-                                <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
+                                <span className="px-2.5 py-1 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-md border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
                                   COMING SOON
                                 </span>
                               </div>
@@ -188,7 +188,7 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                               <FileTextIcon className="w-5 h-5 text-blue-400" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -209,11 +209,11 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                              <ScanSearchIcon className="w-5 h-5 text-purple-400" />
+                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                              <ScanSearchIcon className="w-5 h-5 text-emerald-400" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-purple-400 transition-colors">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
                                 Content Analysis
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
@@ -348,7 +348,7 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                           <BookOpenIcon className="w-5 h-5 text-blue-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -391,11 +391,11 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
-                          <FlaskConicalIcon className="w-5 h-5 text-violet-400" />
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                          <FlaskConicalIcon className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-violet-400 transition-colors">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
                             Research
                           </div>
                           <div className="text-white/60 text-xs leading-relaxed">
@@ -449,7 +449,7 @@ export function GenezioHeader() {
             </Button>
           </a>
           <Button
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all"
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
           >
             Book a Demo
@@ -516,7 +516,7 @@ export function GenezioHeader() {
                         <div className="text-white text-sm font-medium">
                           Increase In-Chat Shopping
                         </div>
-                        <span className="px-2.5 py-1 text-[10px] font-semibold bg-purple-500/20 text-purple-300 rounded-md border border-purple-500/30 whitespace-nowrap flex-shrink-0">
+                        <span className="px-2.5 py-1 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-md border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
                           COMING SOON
                         </span>
                       </div>
@@ -660,7 +660,7 @@ export function GenezioHeader() {
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
               <a href="https://app.genezio.ai/sign-up" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
+                <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
                   Get Started
                 </Button>
               </a>

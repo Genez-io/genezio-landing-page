@@ -37,7 +37,7 @@ export function GenezioProductPillarsSection() {
       href: "/content-analysis/",
       cta: "Learn more",
       external: false,
-      accent: "purple",
+      accent: "emerald",
     },
     {
       icon: FileTextIcon,
@@ -47,7 +47,7 @@ export function GenezioProductPillarsSection() {
       href: "/content-hub/",
       cta: "Learn more",
       external: false,
-      accent: "purple",
+      accent: "emerald",
     },
   ];
 
@@ -62,7 +62,7 @@ export function GenezioProductPillarsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             One platform to{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
               win the recommendation
             </span>
           </h2>
@@ -84,12 +84,12 @@ export function GenezioProductPillarsSection() {
                     className={`w-12 h-12 rounded-xl border flex items-center justify-center ${
                       isBlue
                         ? "bg-blue-500/10 border-blue-500/30"
-                        : "bg-purple-500/10 border-purple-500/30"
+                        : "bg-emerald-500/10 border-emerald-500/30"
                     }`}
                   >
                     <Icon
                       className={`w-6 h-6 ${
-                        isBlue ? "text-blue-400" : "text-purple-400"
+                        isBlue ? "text-blue-400" : "text-emerald-400"
                       }`}
                     />
                   </div>
@@ -103,7 +103,7 @@ export function GenezioProductPillarsSection() {
                 </p>
                 <span
                   className={`inline-flex items-center gap-1.5 text-sm font-semibold ${
-                    isBlue ? "text-blue-400" : "text-purple-400"
+                    isBlue ? "text-blue-400" : "text-emerald-400"
                   }`}
                 >
                   {pillar.cta}

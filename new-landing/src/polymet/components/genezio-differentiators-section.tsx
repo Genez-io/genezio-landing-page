@@ -150,7 +150,7 @@ export function GenezioDifferentiatorsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             <span className="text-white">The platform built for</span>{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">
               Generative Search and Answer Engine Optimization
             </span>
           </h2>
@@ -196,7 +196,7 @@ export function GenezioDifferentiatorsSection() {
                       </div>
 
                       {/* Right Column - Visual */}
-                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent order-2">
+                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500/5 via-emerald-500/5 to-transparent order-2">
                         {/* Render different visuals based on card type */}
                         {item.visual === "conversation" ? (
                           // Multi-turn conversation visual with real conversation
@@ -279,18 +279,18 @@ export function GenezioDifferentiatorsSection() {
                             {/* ChatGPT/Claude - Conversational */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                                  <MessageCircleIcon className="w-4 h-4 text-purple-400" />
+                                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                                  <MessageCircleIcon className="w-4 h-4 text-emerald-400" />
                                 </div>
                                 <span className="text-sm font-semibold text-white">
                                   ChatGPT / Claude
                                 </span>
-                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-purple-500/20">
+                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-emerald-500/20">
                                   Conversational
                                 </span>
                               </div>
-                              <div className="bg-[#1C1C20]/80 border border-purple-500/20 rounded-lg p-4">
-                                <p className="text-purple-300 text-sm font-medium">
+                              <div className="bg-[#1C1C20]/80 border border-emerald-500/20 rounded-lg p-4">
+                                <p className="text-emerald-300 text-sm font-medium">
                                   What's the best lightweight laptop for travel?
                                 </p>
                               </div>
@@ -377,7 +377,7 @@ export function GenezioDifferentiatorsSection() {
                                   {idx + 1}.
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center flex-shrink-0">
+                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-emerald-500/30 flex items-center justify-center flex-shrink-0">
                                     <FileTextIcon className="w-3 h-3 text-blue-400" />
                                   </div>
                                   <span className="text-sm text-white font-medium">
@@ -402,7 +402,7 @@ export function GenezioDifferentiatorsSection() {
                   ) : (
                     <>
                       {/* Left Column - Visual */}
-                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent order-2 lg:order-1">
+                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500/5 via-emerald-500/5 to-transparent order-2 lg:order-1">
                         {/* Same visual content */}
                         {item.visual === "conversation" ? (
                           // Multi-turn conversation visual with real conversation
@@ -485,18 +485,18 @@ export function GenezioDifferentiatorsSection() {
                             {/* ChatGPT/Claude - Conversational */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                                  <MessageCircleIcon className="w-4 h-4 text-purple-400" />
+                                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                                  <MessageCircleIcon className="w-4 h-4 text-emerald-400" />
                                 </div>
                                 <span className="text-sm font-semibold text-white">
                                   ChatGPT / Claude
                                 </span>
-                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-purple-500/20">
+                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-emerald-500/20">
                                   Conversational
                                 </span>
                               </div>
-                              <div className="bg-[#1C1C20]/80 border border-purple-500/20 rounded-lg p-4">
-                                <p className="text-purple-300 text-sm font-medium">
+                              <div className="bg-[#1C1C20]/80 border border-emerald-500/20 rounded-lg p-4">
+                                <p className="text-emerald-300 text-sm font-medium">
                                   What's the best lightweight laptop for travel?
                                 </p>
                               </div>
@@ -583,7 +583,7 @@ export function GenezioDifferentiatorsSection() {
                                   {idx + 1}.
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center flex-shrink-0">
+                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-emerald-500/30 flex items-center justify-center flex-shrink-0">
                                     <FileTextIcon className="w-3 h-3 text-blue-400" />
                                   </div>
                                   <span className="text-sm text-white font-medium">
@@ -638,7 +638,7 @@ export function GenezioDifferentiatorsSection() {
           <a href="https://app.genezio.ai/sign-up">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Start Your AI Visibility Audit
             </Button>

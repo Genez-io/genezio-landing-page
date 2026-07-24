@@ -9,7 +9,7 @@ export function GenezioInsightsSection() {
       title: "Boost Visibility & Conversion",
       description:
         "Track visibility and sentiment across AI engines. Identify prompts and conversations that drive discovery and conversion.",
-      color: "from-blue-500 to-purple-500"
+      color: "from-blue-500 to-emerald-500"
     },
     {
       icon: MegaphoneIcon,
@@ -25,14 +25,14 @@ export function GenezioInsightsSection() {
       title: "Lead with GEO",
       description:
         "Optimize content and citations for generative engines, ensuring accuracy and ranking across AI platforms.",
-      color: "from-purple-500 to-blue-500"
+      color: "from-emerald-500 to-blue-500"
     }
   ];
 
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(192,132,252,0.05),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16, 185, 129,0.05),transparent_50%)]" />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(77,195,255,0.05),transparent_50%)]" />
 
@@ -41,7 +41,7 @@ export function GenezioInsightsSection() {
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             From conversations to{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">
               outcomes
             </span>
             .

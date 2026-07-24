@@ -32,7 +32,7 @@ export function GenezioEnterpriseSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-emerald-500/20 mb-6">
             <BuildingIcon className="w-8 h-8 text-blue-400" />
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -52,7 +52,7 @@ export function GenezioEnterpriseSection() {
                 key={index}
                 className="group p-6 rounded-xl border border-[#1C1C20] bg-[#0E0E10] hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center mb-4 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 flex items-center justify-center mb-4 group-hover:from-blue-500/30 group-hover:to-emerald-500/30 transition-all duration-300">
                   <Icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
@@ -69,7 +69,7 @@ export function GenezioEnterpriseSection() {
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" target="_blank">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               Talk to Enterprise Sales
             </Button>

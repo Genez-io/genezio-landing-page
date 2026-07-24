@@ -8,7 +8,7 @@ export function GenezioTestimonialSection() {
                 {/* Main Testimonial Card */}
                 <div className="relative bg-gradient-to-br from-[#0E0E10] to-[#1A1A1F] border border-white/5 rounded-3xl overflow-hidden">
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-transparent to-purple-500/[0.03] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-transparent to-emerald-500/[0.03] pointer-events-none"></div>
 
                     {/* Content */}
                     <div className="relative p-8 md:p-16 mt-10 md:mt-0">

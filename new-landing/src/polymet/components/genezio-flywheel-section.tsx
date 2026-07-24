@@ -42,7 +42,7 @@ export function GenezioFlywheelSection() {
 
   return (
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
@@ -54,7 +54,7 @@ export function GenezioFlywheelSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             From invisible to recommended:{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
               the flywheel
             </span>
           </h2>

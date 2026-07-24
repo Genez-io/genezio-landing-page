@@ -36,7 +36,7 @@ function ContentHubHero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           You can't buy the recommendation.
           <br />
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             You earn it with content.
           </span>
         </h1>
@@ -52,7 +52,7 @@ function ContentHubHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
             >
               Book a Demo
             </Button>
@@ -193,7 +193,7 @@ function BriefAnatomy() {
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Every brief is a{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
                 blueprint for a citable answer
               </span>
             </h2>
@@ -213,7 +213,7 @@ function BriefAnatomy() {
           <div className="relative bg-[#0A0A0C] border border-blue-500/20 rounded-2xl p-6 md:p-8 shadow-2xl shadow-blue-500/5">
             <div className="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/30 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-blue-500/30 flex items-center justify-center">
                   <FileTextIcon className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
@@ -261,7 +261,7 @@ function BriefAnatomy() {
 function BriefsVsDirect() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
@@ -314,8 +314,8 @@ function BriefsVsDirect() {
             <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-white/50 rounded-md border border-white/10 mb-6">
               WHEN YOU NEED SPEED
             </span>
-            <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center mb-6">
-              <PenLineIcon className="w-6 h-6 text-purple-400" />
+            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6">
+              <PenLineIcon className="w-6 h-6 text-emerald-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
               Direct content generation
@@ -333,7 +333,7 @@ function BriefsVsDirect() {
                 "Edit, approve, publish",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2Icon className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2Icon className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <span className="text-white/80 text-sm">{item}</span>
                 </li>
               ))}
@@ -430,7 +430,7 @@ function FlywheelPublish() {
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Hub is the{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Publish
           </span>{" "}
           step of the loop

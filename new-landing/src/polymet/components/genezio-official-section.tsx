@@ -42,7 +42,7 @@ export function GenezioOfficialSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             The answer engine is now a{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
               revenue channel
             </span>{" "}
             — and the platforms are saying so out loud

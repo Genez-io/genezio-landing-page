@@ -69,7 +69,7 @@ function logoFilter(hovered: boolean) {
   const opacity = hovered ? 1 : 0.6;
 
   return hovered
-    ? `brightness(0) invert(1) opacity(${opacity}) drop-shadow(0 0 20px rgba(192, 132, 252, 0.6))`
+    ? `brightness(0) invert(1) opacity(${opacity}) drop-shadow(0 0 20px rgba(16, 185, 129, 0.6))`
     : `brightness(0) invert(1) opacity(${opacity})`;
 }
 

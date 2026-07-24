@@ -27,12 +27,12 @@ function ContentAnalysisHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-emerald-500/10 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
-          <ScanSearchIcon className="w-4 h-4 text-purple-400" />
-          <span className="text-sm text-purple-400 font-medium">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <ScanSearchIcon className="w-4 h-4 text-emerald-400" />
+          <span className="text-sm text-emerald-400 font-medium">
             Content Analysis
           </span>
         </div>
@@ -40,7 +40,7 @@ function ContentAnalysisHero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           Your content's most important reader
           <br />
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             doesn't have eyes.
           </span>
         </h1>
@@ -56,7 +56,7 @@ function ContentAnalysisHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
             >
               Book a Demo
             </Button>
@@ -102,16 +102,16 @@ function TwoModes() {
         "Alerts when access or structure regresses",
         "Verify that a change actually moved visibility",
       ],
-      accent: "purple",
+      accent: "emerald",
     },
   ];
 
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-purple-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
             Two moments, one system
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -129,25 +129,25 @@ function TwoModes() {
                 className={`bg-[#0A0A0C] border rounded-2xl p-8 md:p-10 transition-all duration-300 ${
                   isBlue
                     ? "border-blue-500/20 hover:border-blue-500/40"
-                    : "border-purple-500/20 hover:border-purple-500/40"
+                    : "border-emerald-500/20 hover:border-emerald-500/40"
                 }`}
               >
                 <div
                   className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-6 ${
                     isBlue
                       ? "bg-blue-500/10 border-blue-500/30"
-                      : "bg-purple-500/10 border-purple-500/30"
+                      : "bg-emerald-500/10 border-emerald-500/30"
                   }`}
                 >
                   <Icon
                     className={`w-6 h-6 ${
-                      isBlue ? "text-blue-400" : "text-purple-400"
+                      isBlue ? "text-blue-400" : "text-emerald-400"
                     }`}
                   />
                 </div>
                 <div
                   className={`text-xs font-mono tracking-widest mb-3 ${
-                    isBlue ? "text-blue-400" : "text-purple-400"
+                    isBlue ? "text-blue-400" : "text-emerald-400"
                   }`}
                 >
                   {mode.tag}
@@ -163,7 +163,7 @@ function TwoModes() {
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle2Icon
                         className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          isBlue ? "text-blue-400" : "text-purple-400"
+                          isBlue ? "text-blue-400" : "text-emerald-400"
                         }`}
                       />
                       <span className="text-white/80 text-sm">{point}</span>
@@ -299,12 +299,12 @@ function ContentQuality() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: text + checks */}
           <div>
-            <p className="text-sm text-purple-400 uppercase tracking-wider mb-4 font-semibold">
+            <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
               The content layer
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Will the machine{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
                 keep what it reads?
               </span>
             </h2>
@@ -322,7 +322,7 @@ function ContentQuality() {
                     key={index}
                     className="bg-[#0A0A0C] border border-[#1C1C20] rounded-xl p-5"
                   >
-                    <Icon className="w-5 h-5 text-purple-400 mb-3" />
+                    <Icon className="w-5 h-5 text-emerald-400 mb-3" />
                     <h3 className="text-sm font-bold text-white mb-1">
                       {check.title}
                     </h3>
@@ -399,16 +399,16 @@ function FlywheelDiagnoseVerify() {
   return (
     <section className="py-16 md:py-28 bg-[#050506] relative">
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm text-purple-400 uppercase tracking-wider mb-4 font-semibold">
+        <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
           Where it fits
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Analysis powers{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Diagnose
           </span>{" "}
           and{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Verify
           </span>
         </h2>
@@ -424,14 +424,14 @@ function FlywheelDiagnoseVerify() {
               <div
                 className={`px-5 py-3 rounded-xl border font-mono text-sm tracking-wider ${
                   step.active
-                    ? "bg-purple-500/15 border-purple-500/50 text-purple-300 font-semibold"
+                    ? "bg-emerald-500/15 border-emerald-500/50 text-emerald-300 font-semibold"
                     : "bg-[#0A0A0C] border-[#1C1C20] text-white/50"
                 }`}
               >
                 {`0${index + 1} · ${step.label}`}
               </div>
               {index < loop.length - 1 && (
-                <ArrowRightIcon className="w-5 h-5 text-purple-500/40" />
+                <ArrowRightIcon className="w-5 h-5 text-emerald-500/40" />
               )}
             </div>
           ))}

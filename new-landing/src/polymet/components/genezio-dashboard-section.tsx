@@ -116,14 +116,14 @@ export function GenezioDashboardSection() {
   return (
     <section className="py-32 bg-[#050506] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(192,132,252,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16, 185, 129,0.08),transparent_70%)]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Track AI{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">
               visibility & recommendations
             </span>
           </h2>
@@ -276,7 +276,7 @@ export function GenezioDashboardSection() {
                         <select
                           value={selectedDateRange}
                           onChange={(e) => setSelectedDateRange(e.target.value)}
-                          className="w-full bg-[#0E0E10] border border-[#2A2A30] text-white rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                          className="w-full bg-[#0E0E10] border border-[#2A2A30] text-white rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
                         >
                           <option value="Last 7 days">Last 7 days</option>
                           <option value="Last 30 days">Last 30 days</option>
@@ -306,7 +306,7 @@ export function GenezioDashboardSection() {
                                     setSelectedModels(selectedModels.filter((m) => m !== model));
                                   }
                                 }}
-                                className="w-4 h-4 rounded border-[#2A2A30] bg-[#0E0E10] text-purple-500 focus:ring-purple-500 focus:ring-offset-0"
+                                className="w-4 h-4 rounded border-[#2A2A30] bg-[#0E0E10] text-emerald-500 focus:ring-emerald-500 focus:ring-offset-0"
                               />
                               <span className="text-sm text-white">{model}</span>
                             </label>
@@ -349,8 +349,8 @@ export function GenezioDashboardSection() {
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
-                              <span className="text-purple-400 text-xs font-bold">YB</span>
+                            <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                              <span className="text-emerald-400 text-xs font-bold">YB</span>
                             </div>
                             <span className="text-white text-xs">Your Brand</span>
                           </div>
@@ -445,7 +445,7 @@ export function GenezioDashboardSection() {
           </div>
 
           {/* Glow effect - Mobile responsive */}
-          <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-2xl md:blur-3xl -z-10 opacity-50" />
+          <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-blue-500/20 via-emerald-500/20 to-blue-500/20 blur-2xl md:blur-3xl -z-10 opacity-50" />
           
           {/* 3D Shadow - natural depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/30 to-black/60 blur-3xl translate-y-6 scale-95 -z-20 rounded-xl" />
@@ -457,7 +457,7 @@ export function GenezioDashboardSection() {
           <Link to="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Get Started Today
             </Button>
