@@ -128,6 +128,16 @@ export function GenezioFooter() {
                   Data Processing Agreement
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://trust.genezio.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Trust Center
+                </a>
+              </li>
             </ul>
           </div>
         </div>
