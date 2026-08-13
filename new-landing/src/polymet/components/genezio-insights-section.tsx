@@ -9,7 +9,7 @@ export function GenezioInsightsSection() {
       title: "Boost Visibility & Conversion",
       description:
         "Track visibility and sentiment across AI engines. Identify prompts and conversations that drive discovery and conversion.",
-      color: "from-blue-500 to-emerald-500"
+      color: "bg-emerald-500"
     },
     {
       icon: MegaphoneIcon,
@@ -17,7 +17,7 @@ export function GenezioInsightsSection() {
       title: "Shape Your AI Narrative",
       description:
         "Understand how AI engines perceive your narrative. Monitor sentiment and correct misrepresentations in real time.",
-      color: "from-cyan-500 to-blue-500"
+      color: "bg-emerald-500"
     },
     {
       icon: SearchIcon,
@@ -25,7 +25,7 @@ export function GenezioInsightsSection() {
       title: "Lead with GEO",
       description:
         "Optimize content and citations for generative engines, ensuring accuracy and ranking across AI platforms.",
-      color: "from-emerald-500 to-blue-500"
+      color: "bg-emerald-500"
     }
   ];
 
@@ -41,7 +41,7 @@ export function GenezioInsightsSection() {
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             From conversations to{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">
+            <span className="text-emerald-400 font-extrabold">
               outcomes
             </span>
             .
@@ -64,12 +64,12 @@ export function GenezioInsightsSection() {
               >
                 {/* Gradient top border */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.color} rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  className={`absolute top-0 left-0 right-0 h-1 ${item.color} rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                 />
 
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 rounded-lg bg-gradient-to-br ${item.color} p-[1px] mb-6`}
+                  className={`w-14 h-14 rounded-lg ${item.color} p-[1px] mb-6`}
                 >
                   <div className="w-full h-full bg-[#050506] rounded-lg flex items-center justify-center">
                     <Icon className="w-7 h-7 text-white" />

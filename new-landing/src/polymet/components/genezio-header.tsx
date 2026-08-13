@@ -113,7 +113,7 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                               <TrendingUpIcon className="w-5 h-5 text-emerald-400" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -134,7 +134,7 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                               <TargetIcon className="w-5 h-5 text-blue-400" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -156,7 +156,7 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-pink-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                               <ShoppingBagIcon className="w-5 h-5 text-emerald-400" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -188,7 +188,7 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                               <FileTextIcon className="w-5 h-5 text-blue-400" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -209,7 +209,7 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                               <ScanSearchIcon className="w-5 h-5 text-emerald-400" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -327,7 +327,7 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
                           <BookMarkedIcon className="w-5 h-5 text-cyan-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -348,7 +348,7 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                           <BookOpenIcon className="w-5 h-5 text-blue-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -369,7 +369,7 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                           <FileTextIcon className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -391,7 +391,7 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                           <FlaskConicalIcon className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -411,7 +411,7 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-amber-500/20 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
                           <TrophyIcon className="w-5 h-5 text-amber-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -449,7 +449,7 @@ export function GenezioHeader() {
             </Button>
           </a>
           <Button
-            className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all"
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
           >
             Book a Demo
@@ -660,7 +660,7 @@ export function GenezioHeader() {
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
               <a href="https://app.genezio.ai/sign-up" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
+                <Button className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
                   Get Started
                 </Button>
               </a>

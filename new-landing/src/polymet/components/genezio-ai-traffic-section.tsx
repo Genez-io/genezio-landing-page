@@ -23,7 +23,7 @@ import {
   
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               AI traffic is already{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+              <span className="text-emerald-400">
                 double-digit percentage
               </span>{" "}
               of your total traffic
@@ -54,9 +54,9 @@ import {
   
               {/* AI Response - Right */}
               <div className="flex justify-end animate-in fade-in slide-in-from-right duration-700" style={{ animationDelay: "0.3s" }}>
-                <div className="max-w-[85%] bg-gradient-to-br from-blue-500/10 to-emerald-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
+                <div className="max-w-[85%] bg-blue-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
                       <SparklesIcon className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-white/70 text-sm font-medium">AI Discovery Reality</span>
@@ -92,9 +92,9 @@ import {
   
               {/* AI Response - Right */}
               <div className="flex justify-end animate-in fade-in slide-in-from-right duration-700" style={{ animationDelay: "0.9s" }}>
-                <div className="max-w-[85%] bg-gradient-to-br from-blue-500/10 to-emerald-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
+                <div className="max-w-[85%] bg-blue-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
                       <ThumbsUpIcon className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-white/70 text-sm font-medium">The Critical Difference</span>
@@ -146,7 +146,7 @@ import {
                 key={index}
                 className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-2 leading-none">
+                <div className="text-2xl md:text-3xl font-extrabold text-emerald-400 mb-2 leading-none">
                   {stat.value}
                 </div>
                 <div className="text-xs md:text-sm text-white/60 leading-snug">

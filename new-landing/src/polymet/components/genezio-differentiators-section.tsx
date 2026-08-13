@@ -150,7 +150,7 @@ export function GenezioDifferentiatorsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             <span className="text-white">The platform built for</span>{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">
+            <span className="text-emerald-400 font-extrabold">
               Generative Search and Answer Engine Optimization
             </span>
           </h2>
@@ -377,7 +377,7 @@ export function GenezioDifferentiatorsSection() {
                                   {idx + 1}.
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                                  <div className="w-6 h-6 rounded bg-blue-500/30 flex items-center justify-center flex-shrink-0">
                                     <FileTextIcon className="w-3 h-3 text-blue-400" />
                                   </div>
                                   <span className="text-sm text-white font-medium">
@@ -583,7 +583,7 @@ export function GenezioDifferentiatorsSection() {
                                   {idx + 1}.
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                                  <div className="w-6 h-6 rounded bg-blue-500/30 flex items-center justify-center flex-shrink-0">
                                     <FileTextIcon className="w-3 h-3 text-blue-400" />
                                   </div>
                                   <span className="text-sm text-white font-medium">
@@ -638,7 +638,7 @@ export function GenezioDifferentiatorsSection() {
           <a href="https://app.genezio.ai/sign-up">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Start Your AI Visibility Audit
             </Button>

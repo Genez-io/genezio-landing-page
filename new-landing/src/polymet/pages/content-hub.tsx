@@ -36,7 +36,7 @@ function ContentHubHero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           You can't buy the recommendation.
           <br />
-          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          <span className="text-emerald-400">
             You earn it with content.
           </span>
         </h1>
@@ -52,7 +52,7 @@ function ContentHubHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
             >
               Book a Demo
             </Button>
@@ -77,9 +77,9 @@ function MeasurementToBrief() {
     {
       icon: SearchIcon,
       label: "ASK",
-      title: "What your customers actually ask",
+      title: "What people ask AI in your category",
       description:
-        "Real conversational prompts — not keywords — across every persona and market.",
+        "The real conversational prompts buyers use — not keywords — across every persona and market.",
     },
     {
       icon: LayersIcon,
@@ -193,7 +193,7 @@ function BriefAnatomy() {
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Every brief is a{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 blueprint for a citable answer
               </span>
             </h2>
@@ -213,7 +213,7 @@ function BriefAnatomy() {
           <div className="relative bg-[#0A0A0C] border border-blue-500/20 rounded-2xl p-6 md:p-8 shadow-2xl shadow-blue-500/5">
             <div className="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-emerald-500/20 border border-blue-500/30 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
                   <FileTextIcon className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
@@ -430,7 +430,7 @@ function FlywheelPublish() {
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Hub is the{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          <span className="text-emerald-400">
             Publish
           </span>{" "}
           step of the loop

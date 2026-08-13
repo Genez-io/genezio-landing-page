@@ -23,7 +23,7 @@ export function GenezioProductPillarsSection() {
       icon: MessagesSquareIcon,
       name: "Conversation & fanout intelligence",
       description:
-        "Understand what your customers actually ask AI — the real multi-turn conversations, query fanouts, and the sources engines pull to answer.",
+        "Understand what people ask AI in your category — the real multi-turn conversations, query fanouts, and the sources engines pull to answer.",
       href: "/conversational-brand-presence/",
       cta: "Learn more",
       external: false,
@@ -33,7 +33,7 @@ export function GenezioProductPillarsSection() {
       icon: ScanSearchIcon,
       name: "Content Analysis",
       description:
-        "Check whether engines can crawl your content and whether they'll keep it — crawlability, robots.txt, llms.txt, schema, structure and evidence, pre- and post-publish.",
+        "Check whether AI can read your page and whether it's built to get cited — crawler access, coverage, structure, citations, and readability, pre- and post-publish.",
       href: "/content-analysis/",
       cta: "Learn more",
       external: false,
@@ -62,7 +62,7 @@ export function GenezioProductPillarsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             One platform to{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               win the recommendation
             </span>
           </h2>

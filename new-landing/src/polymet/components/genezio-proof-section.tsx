@@ -39,7 +39,7 @@ export function GenezioProofSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Small traffic.{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Outsized revenue.
             </span>
           </h2>
@@ -53,7 +53,7 @@ export function GenezioProofSection() {
         {/* Hero stat + grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-5 md:gap-6">
           {/* Headline first-party stat */}
-          <div className="lg:row-span-2 bg-gradient-to-br from-emerald-500/10 to-blue-500/5 border border-emerald-500/40 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
+          <div className="lg:row-span-2 bg-emerald-500/10 border border-emerald-500/40 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
             <div className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-emerald-400 leading-none mb-6">
               37%
             </div>

@@ -54,7 +54,7 @@ export function GenezioFlywheelSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             From invisible to recommended:{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               the flywheel
             </span>
           </h2>

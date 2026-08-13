@@ -80,7 +80,7 @@ export function GenezioBrandedQuestionsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             <span className="text-white">Discover What AI Engines</span>{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent font-extrabold">
+            <span className="text-emerald-400 font-extrabold">
               Really Think About Your Brand
             </span>
           </h2>

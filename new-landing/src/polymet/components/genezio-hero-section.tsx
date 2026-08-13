@@ -15,7 +15,7 @@ export function GenezioHeroSection() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
               <span className="block text-white">The world stopped</span>
               <span className="block text-white">searching.</span>
-              <span className="block bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+              <span className="block text-emerald-400">
                 It started asking.
               </span>
             </h1>
@@ -33,7 +33,7 @@ export function GenezioHeroSection() {
               >
                 <Button
                   size="default"
-                  className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
                 >
                   Book a Demo
                 </Button>
@@ -73,12 +73,12 @@ export function GenezioHeroSection() {
 
             {/* The question — the new way people search */}
             <div className="relative max-w-md ml-auto">
-              <div className="absolute -inset-3 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-3 bg-blue-500/10 rounded-3xl blur-2xl" />
               <div className="relative bg-[#0E0E12] border border-blue-500/25 rounded-3xl rounded-bl-md p-7 md:p-8 shadow-2xl shadow-emerald-500/10">
                 <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
                   "What's the best wearable I could get for my husband to help
                   him{" "}
-                  <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent font-semibold">
+                  <span className="text-emerald-400 font-semibold">
                     monitor his sleep
                   </span>
                   ?"

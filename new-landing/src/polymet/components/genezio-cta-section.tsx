@@ -37,7 +37,7 @@ export function GenezioCtaSection() {
           <span className="text-white">Ready to win</span>
           <br />
 
-          <span className="bg-gradient-to-r from-blue-500 via-emerald-500 to-[#34D399] bg-clip-text text-transparent font-extrabold">
+          <span className="text-emerald-400 font-extrabold">
             AI recommendations?
           </span>
         </h2>
@@ -52,7 +52,7 @@ export function GenezioCtaSection() {
         <a href="https://app.genezio.ai/sign-up" className="w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
             >
               Get Started with Genezio
             </Button>
@@ -79,7 +79,7 @@ export function GenezioCtaSection() {
           // <a href="https://app.genezio.ai/sign-up" className="w-full sm:w-auto">
           //   <Button
           //     size="lg"
-          //     className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
+          //     className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
           //   >
           //     Analyze Your AI Brand Visibility
           //   </Button>

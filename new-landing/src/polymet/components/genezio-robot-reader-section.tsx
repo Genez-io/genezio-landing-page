@@ -29,7 +29,7 @@ export function GenezioRobotReaderSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             Your content's most important reader{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               doesn't have eyes.
             </span>
           </h2>

@@ -6,12 +6,9 @@ import {
   FileCheck2Icon,
   ActivityIcon,
   BotIcon,
-  FileCodeIcon,
-  MapIcon,
   ShieldCheckIcon,
   CodeIcon,
   Heading1Icon,
-  TableIcon,
   QuoteIcon,
   GaugeIcon,
   CheckCircle2Icon,
@@ -40,23 +37,21 @@ function ContentAnalysisHero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           Your content's most important reader
           <br />
-          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          <span className="text-emerald-400">
             doesn't have eyes.
           </span>
         </h1>
 
         <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Content Analysis checks whether AI engines can reach your content and
-          whether they'll keep it once they do — before you publish, and every
-          day after. The technical crawlability and the content itself, on one
-          score.
+          Content Analysis tells you if AI can read your page — and if it's
+          built to get cited. Before you publish, and every day after.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
             >
               Book a Demo
             </Button>
@@ -179,44 +174,48 @@ function TwoModes() {
   );
 }
 
-/* ───────────────────  TECHNICAL / CRAWLABILITY  ─────────────────── */
-function TechnicalAnalysis() {
-  const checks = [
+/* ───────────────────  THE QUESTIONS WE ANSWER  ─────────────────── */
+function QuestionsAnswered() {
+  const questions = [
     {
       icon: BotIcon,
-      title: "AI crawler access",
-      description:
-        "Are GPTBot, ClaudeBot, PerplexityBot and Google-Extended actually allowed — or quietly blocked?",
+      q: "Can AI even reach this page?",
+      gloss: "Crawlers and AI bots can actually fetch and render it.",
     },
     {
-      icon: FileCodeIcon,
-      title: "robots.txt",
-      description:
-        "The rules that decide whether an engine may fetch the page at all, read line by line.",
+      icon: QuoteIcon,
+      q: "How often does AI already cite this domain?",
+      gloss: "Your domain's existing citation footprint across engines.",
     },
     {
-      icon: MapIcon,
-      title: "Sitemap & discoverability",
-      description:
-        "Is the page in your sitemap, internally linked, and reachable without dead ends?",
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: "llms.txt",
-      description:
-        "The emerging standard for telling models what matters on your site — present and correct?",
-    },
-    {
-      icon: CodeIcon,
-      title: "Structured data & schema",
-      description:
-        "Product, FAQ, and article schema that let engines extract facts cleanly.",
+      icon: ScanSearchIcon,
+      q: "Does it cover the questions AI asks?",
+      gloss: "Coverage against the prompts engines fan out in your category.",
     },
     {
       icon: FileCheck2Icon,
-      title: "Renders without JavaScript",
-      description:
-        "Many crawlers don't run JS. If your content only exists after hydration, it's invisible.",
+      q: "Is this the kind of article AI cites here?",
+      gloss: "Format and depth match what engines actually cite for this query.",
+    },
+    {
+      icon: ShieldCheckIcon,
+      q: "Does it help your brand — without sounding like an ad?",
+      gloss: "Persuasive for you, still neutral enough to be quoted.",
+    },
+    {
+      icon: Heading1Icon,
+      q: "Is it structured to get cited?",
+      gloss: "Headings, structure, and extractable, evidence-backed claims.",
+    },
+    {
+      icon: GaugeIcon,
+      q: "Is it easy to read?",
+      gloss: "Clear and readable — for people and for machines.",
+    },
+    {
+      icon: CodeIcon,
+      q: "Is the page technically AI-readable?",
+      gloss: "robots.txt, schema, and rendering that don't get in the way.",
     },
   ];
 
@@ -224,35 +223,34 @@ function TechnicalAnalysis() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
-            The technical layer
+          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+            What Content Analysis answers
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
-            Can the engine even reach you?
+            Eight questions we answer for every page
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto">
-            The best content in the world earns nothing if a crawler can't fetch
-            it, read it, or parse it. Content Analysis audits crawlability end to
-            end.
+            From "can AI reach it?" to "is it built to get cited?" — the
+            technical and the content, in one clear read.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {checks.map((check, index) => {
-            const Icon = check.icon;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+          {questions.map((item, index) => {
+            const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300"
               >
-                <div className="w-11 h-11 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-blue-400" />
+                <div className="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-emerald-400" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {check.title}
+                <h3 className="text-base font-bold text-white mb-2 leading-snug">
+                  {item.q}
                 </h3>
                 <p className="text-[#B0B0B3] text-sm leading-relaxed">
-                  {check.description}
+                  {item.gloss}
                 </p>
               </div>
             );
@@ -265,74 +263,28 @@ function TechnicalAnalysis() {
 
 /* ─────────────────────  CONTENT QUALITY  ───────────────────── */
 function ContentQuality() {
-  const checks = [
-    {
-      icon: Heading1Icon,
-      title: "Structure & headings",
-      description:
-        "A clean, hierarchical outline the model can navigate and lift answers from.",
-    },
-    {
-      icon: TableIcon,
-      title: "Comparison tables",
-      description:
-        "Structured comparisons — you vs competitors — are what engines quote most.",
-    },
-    {
-      icon: QuoteIcon,
-      title: "Claims backed by evidence",
-      description:
-        "Specific, sourced claims survive. Vague marketing copy gets dropped.",
-    },
-    {
-      icon: GaugeIcon,
-      title: "Specificity & facts",
-      description:
-        "Prices, specs, numbers, dates — stated plainly. The facts a machine keeps.",
-    },
-  ];
-
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: text + checks */}
+          {/* Left: text */}
           <div>
             <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
               The content layer
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Will the machine{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 keep what it reads?
               </span>
             </h2>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-8">
+            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
               "Engaging" and "citable" are now two different disciplines. During
               a fanout the engine skips your ads and hooks and extracts facts,
               comparisons, and evidence. Content Analysis scores your page on
               exactly what survives.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {checks.map((check, index) => {
-                const Icon = check.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-[#0A0A0C] border border-[#1C1C20] rounded-xl p-5"
-                  >
-                    <Icon className="w-5 h-5 text-emerald-400 mb-3" />
-                    <h3 className="text-sm font-bold text-white mb-1">
-                      {check.title}
-                    </h3>
-                    <p className="text-[#B0B0B3] text-xs leading-relaxed">
-                      {check.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
 
           {/* Right: human vs machine visual */}
@@ -404,11 +356,11 @@ function FlywheelDiagnoseVerify() {
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Analysis powers{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          <span className="text-emerald-400">
             Diagnose
           </span>{" "}
           and{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          <span className="text-emerald-400">
             Verify
           </span>
         </h2>
@@ -446,7 +398,7 @@ export function ContentAnalysis() {
     <>
       <PolymetSEO
         title="Content Analysis — Crawlability & Citable-Content Audits | Genezio"
-        description="Genezio Content Analysis checks whether AI engines can crawl your content and whether they'll keep it — pre-publish and post-publish. robots.txt, llms.txt, AI crawler access, schema, structure, and evidence, on one score. Book a demo!"
+        description="Genezio Content Analysis tells you if AI can read your page and whether it's built to get cited — pre-publish and post-publish. AI crawler access, coverage, structure, citations, and readability, in one read. Book a demo!"
         canonicalPath="/content-analysis/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
@@ -458,7 +410,7 @@ export function ContentAnalysis() {
               name: "What does Genezio Content Analysis check?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Content Analysis audits two layers: the technical crawlability of a page (robots.txt, sitemap, llms.txt, AI crawler access for GPTBot/ClaudeBot/PerplexityBot, structured data, and whether it renders without JavaScript) and the content itself (structure, headings, comparison tables, evidence-backed claims, and specificity) — the facts an answer engine keeps.",
+                text: "Content Analysis answers eight questions for every page: can AI reach it, how often AI already cites the domain, whether it covers the questions AI asks, whether it's the kind of article AI cites for that query, whether it helps the brand without sounding like an ad, whether it's structured to get cited, whether it's easy to read, and whether the page is technically AI-readable (crawler access, schema, and rendering).",
               },
             },
             {
@@ -475,7 +427,7 @@ export function ContentAnalysis() {
       <div className="min-h-screen bg-[#050506]">
         <ContentAnalysisHero />
         <TwoModes />
-        <TechnicalAnalysis />
+        <QuestionsAnswered />
         <ContentQuality />
         <FlywheelDiagnoseVerify />
         <GenezioCtaSection />
