@@ -21,7 +21,7 @@ import {
             <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded bg-white/5 border border-white/10 flex items-center justify-center">
-                  <BarChart3Icon className="w-4 h-4 text-zinc-400" />
+                  <BarChart3Icon className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
                   <div className="text-white text-sm font-medium">
@@ -30,7 +30,7 @@ import {
                   <div className="text-white/60 text-xs">Overall AI presence</div>
                 </div>
               </div>
-              <div className="text-2xl font-bold text-zinc-400">87</div>
+              <div className="text-2xl font-bold text-emerald-400">87</div>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 rounded-lg bg-white/5 border border-white/10">
@@ -152,15 +152,16 @@ import {
     ];
   
     return (
-      <section className="relative py-12 md:py-24 bg-[#050506] px-6 md:px-8 lg:px-16">
+      <section className="relative py-24 md:py-32 bg-[#050506] px-6 md:px-8 lg:px-16">
+        {/* Top hairline divider */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div className="max-w-7xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Scale your agency{" "}
-              <span className="text-zinc-400">effortlessly</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              Scale your agency effortlessly
             </h2>
-            <p className="text-base md:text-xl text-white/60 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
               Manage multiple brands with powerful monitoring, competitive
               intelligence, and automated content strategies. Lead where customers
               ask and search.
@@ -172,22 +173,22 @@ import {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-[#0E0E10] border border-white/10 p-6 md:p-8 hover:border-white/20 transition-all duration-300">
+                className="group relative rounded-2xl bg-[#0A0A0C] border border-white/10 p-6 md:p-8 hover:border-white/20 transition-colors">
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex p-3 rounded-xl bg-white/5 border border-white/10">
-                    <feature.icon className="w-6 h-6 text-zinc-400" />
+                  <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    <feature.icon className="w-5 h-5 text-emerald-400" />
                   </div>
                 </div>
-  
+
                 {/* Text Content */}
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-white/70 mb-6 leading-relaxed">
+                <p className="text-white/60 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
-  
+
                 {/* Visual Preview */}
                 <div className="rounded-xl bg-[#050506] border border-white/10 p-4 md:p-6">
                   {feature.visual}

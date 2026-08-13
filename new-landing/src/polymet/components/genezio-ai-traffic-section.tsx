@@ -15,36 +15,23 @@ function BandLabel({ children }: { children: React.ReactNode }) {
 
 export function GenezioAiTrafficSection() {
   const hiddenStats = [
+    { value: "~64%", label: "of AI users click nothing at all — they just take the answer" },
     {
       value: "12–15%",
-      label:
-        "of global searches now run through AI tools, up from 5–6% a year earlier",
+      label: "of all searches now happen inside AI tools, up from 5–6% a year ago",
     },
-    { value: "~64%", label: "of AI Mode users click nothing at all" },
-    { value: "~70%", label: "of AI traffic arrives with no referrer" },
-    { value: "−34%", label: "Google referrals to publishers, year over year" },
   ];
 
   const revenueStats = [
     {
-      value: "+42%",
-      label: "better conversion, AI-referred vs non-AI retail traffic",
-      source: "Adobe · Q1 2026 · 1T+ visits",
-    },
-    {
-      value: "13×",
-      label: "growth in AI-referred orders, year over year",
-      source: "Shopify · Q1 2026",
-    },
-    {
       value: "4.4×",
-      label: "conversion rate of AI visitors vs standard organic",
+      label: "higher conversion from AI visitors vs standard organic traffic",
       source: "Semrush · 2026",
     },
     {
-      value: "0.5→12%",
-      label: "of traffic → of signups: a ~23× conversion premium",
-      source: "Ahrefs case study",
+      value: "+42%",
+      label: "better conversion, AI-referred vs non-AI retail traffic",
+      source: "Adobe · Q1 2026",
     },
   ];
 
@@ -70,16 +57,16 @@ export function GenezioAiTrafficSection() {
 
         {/* Part 1 — invisible in analytics */}
         <BandLabel>Invisible in analytics</BandLabel>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto mb-6">
           {hiddenStats.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 hover:border-white/20 transition-colors duration-300"
+              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors duration-300"
             >
-              <div className="text-2xl md:text-3xl font-extrabold text-white mb-2 leading-none">
+              <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
                 {stat.value}
               </div>
-              <div className="text-xs md:text-sm text-white/60 leading-snug">
+              <div className="text-sm text-white/60 leading-snug">
                 {stat.label}
               </div>
             </div>
@@ -109,26 +96,26 @@ export function GenezioAiTrafficSection() {
 
         {/* Part 2 — outsized in revenue */}
         <BandLabel>Outsized in revenue</BandLabel>
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {/* Headline first-party stat */}
-          <div className="lg:row-span-2 bg-white/5 border border-white/20 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
-            <div className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-emerald-400 leading-none mb-6">
+          <div className="bg-white/5 border border-white/20 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
+            <div className="text-6xl md:text-7xl font-extrabold text-emerald-400 leading-none mb-5">
               37%
             </div>
-            <div className="text-lg md:text-xl font-semibold text-white leading-snug mb-3">
-              of new account signups arrived recommended by answer engines
+            <div className="text-lg font-semibold text-white leading-snug mb-3">
+              of new signups arrived recommended by answer engines
             </div>
             <div className="text-sm text-[#B0B0B3]">
-              Genezio customer, first-party data. This is already happening.
+              Genezio customer, first-party data. Already happening.
             </div>
           </div>
 
           {revenueStats.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 flex flex-col justify-center hover:border-white/20 transition-colors duration-300"
+              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col justify-center hover:border-white/20 transition-colors duration-300"
             >
-              <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
+              <div className="text-4xl md:text-5xl font-extrabold text-white mb-3 leading-none">
                 {stat.value}
               </div>
               <div className="text-sm text-white/80 leading-snug mb-2">

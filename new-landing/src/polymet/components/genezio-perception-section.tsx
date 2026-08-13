@@ -15,8 +15,10 @@ const DEMO_URL =
 
 /* ── Radar geometry (SSR-safe, deterministic) ─────────────────────── */
 const AXES = ["Perception", "Visibility", "Recommendation", "Sentiment", "Accuracy"];
-const CX = 160;
-const CY = 160;
+const VBW = 440;
+const VBH = 360;
+const CX = 220;
+const CY = 175;
 const R = 118;
 const N = AXES.length;
 
@@ -34,7 +36,7 @@ const RINGS = [0.25, 0.5, 0.75, 1].map((f) =>
   AXES.map((_, i) => pt(i, R * f).join(",")).join(" ")
 );
 const LABELS = AXES.map((name, i) => {
-  const [x, y] = pt(i, R + 20);
+  const [x, y] = pt(i, R + 16);
   const anchor = x < CX - 6 ? "end" : x > CX + 6 ? "start" : "middle";
   return { name, x, y, anchor };
 });
@@ -61,7 +63,7 @@ function RadarCard() {
       </div>
 
       {/* radar */}
-      <svg viewBox="0 0 320 340" className="w-full h-auto" role="img" aria-label="Radar comparing your brand to a competitor across five AI perception dimensions">
+      <svg viewBox={`0 0 ${VBW} ${VBH}`} className="w-full h-auto" role="img" aria-label="Radar comparing your brand to a competitor across five AI perception dimensions">
         {/* grid rings */}
         {RINGS.map((points, i) => (
           <polygon
@@ -136,12 +138,12 @@ function RadarCard() {
 
 export function GenezioPerceptionSection() {
   const points = [
-    { icon: BrainIcon, text: "How AI engines actually perceive your brand" },
-    { icon: CompassIcon, text: "How you're positioned within your industry" },
-    { icon: GitCompareIcon, text: "How you stack up against your key competitors" },
-    { icon: TrophyIcon, text: "What those competitors do well, and where they win" },
-    { icon: TargetIcon, text: "What to do to win the recommendation over them" },
-    { icon: RefreshCwIcon, text: "How to correct the perceptions AI gets wrong" },
+    { icon: BrainIcon, text: "How AI engines perceive your brand" },
+    { icon: CompassIcon, text: "Where you sit in your industry" },
+    { icon: GitCompareIcon, text: "How you compare to key competitors" },
+    { icon: TrophyIcon, text: "What competitors do well" },
+    { icon: TargetIcon, text: "How to win the recommendation" },
+    { icon: RefreshCwIcon, text: "How to fix what AI gets wrong" },
   ];
 
   return (
@@ -158,9 +160,8 @@ export function GenezioPerceptionSection() {
               Today, you have to know how AI sees your brand
             </h2>
             <p className="text-base md:text-lg text-white/60 leading-relaxed mb-8">
-              Answer engines are the new front page. Winning a recommendation
-              starts with a clear picture of how AI perceives your brand, how it
-              ranks you against competitors, and where it's getting you wrong.
+              Answer engines are the new front page. Winning starts with a clear
+              picture of how AI sees, ranks, and sometimes misreads your brand.
             </p>
 
             <ul className="space-y-3.5 mb-10">

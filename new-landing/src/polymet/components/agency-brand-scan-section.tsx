@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   SearchIcon,
-  SparklesIcon,
   BarChart3Icon,
   TrendingUpIcon,
   TargetIcon,
   LightbulbIcon,
 } from "lucide-react";
 import { useState } from "react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 export function AgencyBrandScanSection() {
   const [brandUrl, setBrandUrl] = useState("");
@@ -60,27 +60,24 @@ export function AgencyBrandScanSection() {
   };
 
   return (
-    <section className="relative py-12 md:py-24 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
+    <section className="relative py-24 md:py-32 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
+      {/* Top hairline divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-6">
-              <SparklesIcon className="w-4 h-4 text-zinc-400" />
-              <span className="text-sm font-semibold text-zinc-300">
-                Free Brand Scan
-              </span>
-            </div>
+            <HeroEyebrow className="mb-6 w-fit">Free brand scan</HeroEyebrow>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Start with a free
               <br />
-              <span className="text-zinc-400">AI visibility scan</span>
+              AI visibility scan
               <br />
               for one client
             </h2>
 
-            <p className="text-lg text-white/70 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-white/60 mb-8 leading-relaxed">
               Insights into visibility, citations, and recommendations.
             </p>
 
@@ -96,17 +93,17 @@ export function AgencyBrandScanSection() {
                   setBrandUrl(e.target.value);
                   if (highlightInput) setHighlightInput(false);
                 }}
-                className={`flex-1 h-12 bg-white/10 text-white placeholder:text-white/40 rounded-lg transition-all ${
+                className={`flex-1 h-12 bg-white/5 text-white placeholder:text-white/40 rounded-xl transition-all ${
                   highlightInput
-                    ? "border-2 border-zinc-500 ring-4 ring-zinc-500/30 animate-pulse"
-                    : "border border-white/20 focus:border-zinc-500 focus:ring-zinc-500"
+                    ? "border-2 border-emerald-400 ring-4 ring-emerald-400/30 animate-pulse"
+                    : "border border-white/10 focus:border-white/20"
                 }`}
               />
 
               <Button
                 size="lg"
                 onClick={handleAnalyze}
-                className="bg-zinc-600 hover:bg-zinc-700 text-white px-8 h-12 font-medium w-full sm:w-auto"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 h-12 font-semibold rounded-xl transition-colors duration-200 w-full sm:w-auto"
               >
                     <SearchIcon className="w-4 h-4 mr-2" />
                     Scan Now
@@ -115,9 +112,9 @@ export function AgencyBrandScanSection() {
 
             {/* What You'll Get */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <BarChart3Icon className="w-5 h-5 text-zinc-400" />
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-[#0A0A0C] border border-white/10 hover:border-white/20 transition-colors">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <BarChart3Icon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -129,9 +126,9 @@ export function AgencyBrandScanSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <TrendingUpIcon className="w-5 h-5 text-zinc-400" />
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-[#0A0A0C] border border-white/10 hover:border-white/20 transition-colors">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <TrendingUpIcon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -141,9 +138,9 @@ export function AgencyBrandScanSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <TargetIcon className="w-5 h-5 text-zinc-400" />
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-[#0A0A0C] border border-white/10 hover:border-white/20 transition-colors">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <TargetIcon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -153,9 +150,9 @@ export function AgencyBrandScanSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <LightbulbIcon className="w-5 h-5 text-zinc-400" />
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-[#0A0A0C] border border-white/10 hover:border-white/20 transition-colors">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <LightbulbIcon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -169,7 +166,7 @@ export function AgencyBrandScanSection() {
 
           {/* Right side - Visual Preview */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 md:p-8">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0A0A0C] p-6 md:p-8">
               {/* Mock Dashboard Preview */}
               <div className="space-y-6">
                 {/* Header */}
@@ -184,7 +181,7 @@ export function AgencyBrandScanSection() {
                     <div className="text-white/60 text-sm mb-1">
                       Visibility score
                     </div>
-                    <div className="text-3xl font-bold text-zinc-400">87</div>
+                    <div className="text-3xl font-bold text-emerald-400">87</div>
                   </div>
                 </div>
 
@@ -192,7 +189,7 @@ export function AgencyBrandScanSection() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-2 h-2 rounded-full bg-zinc-400" />
+                      <div className="w-2 h-2 rounded-full bg-white/40" />
                       <div className="text-white/60 text-xs">
                         ChatGPT mentions
                       </div>
@@ -221,13 +218,13 @@ export function AgencyBrandScanSection() {
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="text-white/60 text-xs mb-3">Top keywords</div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-medium">
                       best running shoes online under 300$
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-medium">
                       lightweight athletic sneakers for winter 2026
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-medium">
                       premium sportswear brands
                     </span>
                   </div>
@@ -236,8 +233,8 @@ export function AgencyBrandScanSection() {
                 {/* Insights */}
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-2 mb-2">
-                    <LightbulbIcon className="w-4 h-4 text-zinc-400" />
-                    <div className="text-zinc-300 text-sm font-semibold">
+                    <LightbulbIcon className="w-4 h-4 text-emerald-400" />
+                    <div className="text-white text-sm font-semibold">
                       34 insights found
                     </div>
                   </div>
