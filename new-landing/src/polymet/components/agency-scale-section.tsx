@@ -55,8 +55,8 @@ import {
           <div className="space-y-3">
             <div className="p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-2 mb-2">
-                <SearchIcon className="w-4 h-4 text-zinc-400" />
-                <div className="text-zinc-300 text-sm font-semibold">
+                <SearchIcon className="w-4 h-4 text-emerald-400" />
+                <div className="text-white text-sm font-semibold">
                   34 insights
                 </div>
               </div>
@@ -71,7 +71,7 @@ import {
               </div>
               <div className="flex items-center justify-between p-2 rounded bg-white/5 border border-white/10">
                 <div className="text-white text-xs">sustainable materials</div>
-                <div className="text-zinc-400 text-xs font-medium">Medium</div>
+                <div className="text-white/50 text-xs font-medium">Medium</div>
               </div>
             </div>
           </div>
@@ -85,18 +85,18 @@ import {
           <div className="space-y-3">
             <div className="p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-2 mb-3">
-                <FileTextIcon className="w-4 h-4 text-zinc-400" />
+                <FileTextIcon className="w-4 h-4 text-emerald-400" />
                 <div className="text-white text-sm font-medium">
                   Content strategy
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-zinc-400" />
+                  <div className="w-2 h-2 rounded-full bg-emerald-400" />
                   <div className="text-white/70 text-xs">See top keywords</div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-zinc-400" />
+                  <div className="w-2 h-2 rounded-full bg-emerald-400" />
                   <div className="text-white/70 text-xs">
                     Identify top citations domain
                   </div>
@@ -118,7 +118,7 @@ import {
         description: "Real-time tracking of LLM citations and references.",
         visual: (
           <div className="space-y-3">
-            <div className="p-3 rounded-lg bg-white/5 border border-white/15">
+            <div className="p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-2 mb-2">
                 <BellIcon className="w-4 h-4 text-emerald-400" />
                 <div className="text-emerald-300 text-sm font-semibold">
