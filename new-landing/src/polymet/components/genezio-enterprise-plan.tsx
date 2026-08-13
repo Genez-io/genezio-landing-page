@@ -17,6 +17,8 @@ interface EnterprisePlanContent {
   titleWord: string;
   sectionSubtitle: string;
   description: string;
+  enginesLabel: string;
+  engines: string[];
   features: string[];
   note: string;
 }
@@ -29,8 +31,20 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
       "No fixed tiers. Your plan is shaped by the engines, markets, and volume you actually need.",
     description:
       "Tailored AI visibility for multi-market brands and teams. We scope pricing around the answer engines, markets, and conversation volume that matter to you, so you only pay for what moves the needle.",
+    enginesLabel: "All answer engines tracked",
+    engines: [
+      "ChatGPT",
+      "Perplexity",
+      "Google AI Mode",
+      "Gemini",
+      "Copilot",
+      "Meta AI",
+      "Grok",
+      "DeepSeek",
+      "Claude",
+      "AI Overviews",
+    ],
     features: [
-      "All Answer Engines tracked, ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot, Meta AI, Grok, DeepSeek, Claude, AI Overviews",
       "Custom number of brands, languages & locations",
       "Custom topics, scenarios & AI conversations tracked",
       "Sentiment per conversation, citation & statement",
@@ -55,10 +69,11 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
       "Scale GEO services across every client. Pay for the brands, engines, and volume you manage, nothing you don't.",
     description:
       "Custom Enterprise pricing for agencies scaling GEO services across multiple clients. Manage every brand from one workspace and expand with flexible add-ons as your roster grows.",
+    enginesLabel: "Up to 5 answer engines per brand",
+    engines: ["ChatGPT", "Claude", "Gemini", "Perplexity", "Grok"],
     features: [
       "Multi-client workspace management",
       "Custom number of brands monitored",
-      "Up to 5 Answer Engines per brand, ChatGPT, Claude, Gemini, Perplexity, Grok",
       "Custom personas, topics & scenarios per brand",
       "All languages & multi-market monitoring",
       "Daily run frequency",
@@ -160,7 +175,7 @@ export function GenezioEnterprisePlan({
         </div>
 
         {/* Full-width enterprise panel */}
-        <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-blue-600/[0.1] via-[#0A0A0B] to-emerald-600/[0.1] shadow-2xl shadow-blue-500/5">
+        <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-[#0A0A0B] shadow-2xl shadow-black/20">
           {/* Decorative glows */}
           <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-blue-600/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-emerald-600/20 blur-3xl" />
@@ -220,6 +235,27 @@ export function GenezioEnterprisePlan({
               <h3 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-6">
                 What's included
               </h3>
+
+              {/* Answer engines, full width across both columns */}
+              <div className="mb-7 pb-7 border-b border-white/10">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckIcon className="h-4 w-4 flex-shrink-0 text-emerald-400" />
+                  <span className="text-sm font-semibold text-white/90">
+                    {content.enginesLabel}
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {content.engines.map((engine) => (
+                    <span
+                      key={engine}
+                      className="inline-flex items-center rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs font-medium text-white/70"
+                    >
+                      {engine}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
                 {content.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
