@@ -13,12 +13,12 @@ export function GenezioPricingFaq() {
     {
       question: "Why is Genezio enterprise-only, with no self-serve tiers?",
       answer:
-        "AI visibility is different for every brand — the engines that matter, the markets and languages you sell in, the personas who buy, and the volume of conversations worth tracking all vary. Fixed tiers would either overcharge or under-serve. Instead, our team scopes a plan with you so you only pay for what moves the needle. Every engagement is sales-assisted and starts with a demo.",
+        "AI visibility is different for every brand, the engines that matter, the markets and languages you sell in, the personas who buy, and the volume of conversations worth tracking all vary. Fixed tiers would either overcharge or under-serve. Instead, our team scopes a plan with you so you only pay for what moves the needle. Every engagement is sales-assisted and starts with a demo.",
     },
     {
       question: "How does pricing actually work?",
       answer:
-        "Pricing is built around four levers: the answer engines you track (ChatGPT, Gemini, Perplexity, Google AI Overviews, Copilot, Claude and more), the markets and languages you cover, the personas, topics and scenarios you monitor, and your conversation volume. Book a demo and we'll put together a quote scoped to your footprint — no fixed tiers, no per-seat surprises.",
+        "Pricing is built around four levers: the answer engines you track (ChatGPT, Gemini, Perplexity, Google AI Overviews, Copilot, Claude and more), the markets and languages you cover, the personas, topics and scenarios you monitor, and your conversation volume. Book a demo and we'll put together a quote scoped to your footprint, no fixed tiers, no per-seat surprises.",
     },
     {
       question: "What's included in the platform?",
@@ -40,14 +40,14 @@ export function GenezioPricingFaq() {
           <a href="/in-chat-shopping/" className="text-emerald-400 hover:underline">
             In-Chat Shopping
           </a>{" "}
-          (AI product intelligence). You scope the volume — not the feature set.
+          (AI product intelligence). You scope the volume, not the feature set.
         </>
       ),
     },
     {
       question: "Which answer engines and markets do you cover?",
       answer:
-        "We track all the major answer engines — ChatGPT, Google AI Overviews & AI Mode, Gemini, Perplexity, Copilot, Claude, Grok, DeepSeek and Meta AI — across any market and language you operate in. We run realistic, multi-turn conversations per persona and per market, because the same question gets a different answer in London than in New York.",
+        "We track all the major answer engines, ChatGPT, Google AI Overviews & AI Mode, Gemini, Perplexity, Copilot, Claude, Grok, DeepSeek and Meta AI, across any market and language you operate in. We run realistic, multi-turn conversations per persona and per market, because the same question gets a different answer in London than in New York.",
     },
     {
       question: "How fast can we get live, and what does onboarding look like?",
@@ -62,18 +62,18 @@ export function GenezioPricingFaq() {
     {
       question: "Can we scale the plan up or down later?",
       answer:
-        "Yes. Your plan is fully flexible — add engines, markets, personas, brands or volume as you grow, or adjust down between cycles. Your account manager handles the change; there are no rigid tiers to jump between.",
+        "Yes. Your plan is fully flexible, add engines, markets, personas, brands or volume as you grow, or adjust down between cycles. Your account manager handles the change; there are no rigid tiers to jump between.",
     },
     {
       question: "What support do enterprise customers get?",
       answer:
-        "A named account manager, dedicated Slack support, priority assistance, and regular strategy reviews — so AI visibility becomes an ongoing program, not a one-off report.",
+        "A named account manager, dedicated Slack support, priority assistance, and regular strategy reviews, so AI visibility becomes an ongoing program, not a one-off report.",
     },
     {
       question: "Do you offer plans for marketing agencies?",
       answer: (
         <>
-          Yes — we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. See our{" "}
+          Yes, we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. See our{" "}
           <a href="/agencies/" className="text-emerald-400 hover:underline">
             agencies page
           </a>

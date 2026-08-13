@@ -47,7 +47,7 @@ export function GenezioInsightsSection() {
             .
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto px-4">
-            Genezio helps teams go beyond visibility — turning conversational
+            Genezio helps teams go beyond visibility, turning conversational
             data into measurable brand performance.
           </p>
         </div>

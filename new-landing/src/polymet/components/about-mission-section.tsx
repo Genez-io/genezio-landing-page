@@ -21,8 +21,8 @@ export function AboutMissionSection() {
         </h2>
 
         <p className="text-xl md:text-2xl text-white/90 font-medium mb-6 leading-relaxed max-w-3xl mx-auto">
-          Help brands earn trustworthy AI recommendations — not just
-          appearances — by turning AI-generated conversations into measurable,
+          Help brands earn trustworthy AI recommendations, not just
+          appearances, by turning AI-generated conversations into measurable,
           actionable growth opportunities.
         </p>
 

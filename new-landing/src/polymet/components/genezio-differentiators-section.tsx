@@ -111,7 +111,7 @@ export function GenezioDifferentiatorsSection() {
       icon: UsersIcon,
       title: "Win every buyer persona",
       description:
-        "Understand how different decision-makers perceive your brand in AI conversations. Tailor your strategy to win B2B buyers, developers, journalists, and consumers — each with personalized messaging that converts.",
+        "Understand how different decision-makers perceive your brand in AI conversations. Tailor your strategy to win B2B buyers, developers, journalists, and consumers, each with personalized messaging that converts.",
       visual: "personas"
     },
     {

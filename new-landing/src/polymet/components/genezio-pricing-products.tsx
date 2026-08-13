@@ -13,14 +13,14 @@ export function GenezioPricingProducts() {
       icon: BarChart3Icon,
       name: "Monitor & benchmark",
       description:
-        "Visibility, recommendation share, sentiment & citations — per engine, persona, and market.",
+        "Visibility, recommendation share, sentiment & citations, per engine, persona, and market.",
       to: "/conversational-brand-presence/",
     },
     {
       icon: FileTextIcon,
       name: "Content Hub",
       description:
-        "Data-backed content briefs your team can ship — and drafts them when you need speed.",
+        "Data-backed content briefs your team can ship, and drafts them when you need speed.",
       to: "/content-hub/",
     },
     {
@@ -34,7 +34,7 @@ export function GenezioPricingProducts() {
       icon: ShoppingBagIcon,
       name: "In-Chat Shopping",
       description:
-        "AI product intelligence — how AI ranks, prices, sources, and sells your products.",
+        "AI product intelligence, how AI ranks, prices, sources, and sells your products.",
       to: "/in-chat-shopping/",
     },
   ];
@@ -51,7 +51,7 @@ export function GenezioPricingProducts() {
             Every enterprise plan includes the full platform
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-5">
-            Measure, diagnose, publish, and sell — the complete suite, scoped to
+            Measure, diagnose, publish, and sell, the complete suite, scoped to
             the engines, markets, and volume you need.
           </p>
         </div>

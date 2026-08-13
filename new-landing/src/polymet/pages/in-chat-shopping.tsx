@@ -84,7 +84,7 @@ function ShoppingHero() {
             <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
               When shoppers ask an assistant what to buy, winning the brand isn't
               the same as winning the sale. In-Chat Shopping shows how AI ranks,
-              prices, sources, and sells your products — so you know exactly where
+              prices, sources, and sells your products, so you know exactly where
               the recommendation converts, and where it slips.
             </p>
 
@@ -122,7 +122,7 @@ function ShoppingHero() {
               <div className="flex justify-start mb-6">
                 <div className="bg-[#1C1C20]/70 border border-white/10 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[92%]">
                   <p className="text-sm text-gray-200 leading-relaxed">
-                    Your brand is a great choice — for this use case, consider{" "}
+                    Your brand is a great choice, for this use case, consider{" "}
                     <span className="text-white font-semibold bg-emerald-500/15 border border-emerald-500/30 rounded px-1.5 py-0.5">
                       one of these models…
                     </span>
@@ -155,32 +155,32 @@ function ShoppingHero() {
   );
 }
 
-/* ─────────────  WHAT WE ANALYZE — 4 dimensions  ───────────── */
+/* ─────────────  WHAT WE ANALYZE, 4 dimensions  ───────────── */
 function WhatWeAnalyze() {
   const dims = [
     {
       icon: MessageSquareIcon,
       name: "Conversations",
       description:
-        "Every shopping conversation buyers have with AI — the intent behind them, the questions they ask, and how your category gets compared before a decision.",
+        "Every shopping conversation buyers have with AI, the intent behind them, the questions they ask, and how your category gets compared before a decision.",
     },
     {
       icon: PackageIcon,
       name: "Products",
       description:
-        "How AI ranks and recommends each of your products — visibility, recommendation share, and the duplicate listings that quietly compete with themselves.",
+        "How AI ranks and recommends each of your products, visibility, recommendation share, and the duplicate listings that quietly compete with themselves.",
     },
     {
       icon: StoreIcon,
       name: "Retailers",
       description:
-        "Where AI routes the sale — which marketplace wins your product, how your own store performs, and who frames the price shoppers are shown.",
+        "Where AI routes the sale, which marketplace wins your product, how your own store performs, and who frames the price shoppers are shown.",
     },
     {
       icon: BookOpenIcon,
       name: "Sources",
       description:
-        "What AI reads before it recommends — the reviews and pages it trusts, how much is first-party, and the sentiment shaping the answer.",
+        "What AI reads before it recommends, the reviews and pages it trusts, how much is first-party, and the sentiment shaping the answer.",
     },
   ];
   return (
@@ -195,7 +195,7 @@ function WhatWeAnalyze() {
             Four layers behind every AI shopping answer
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
-            In-Chat Shopping reads the whole buying moment — not just whether
+            In-Chat Shopping reads the whole buying moment, not just whether
             you're mentioned, but everything that decides whether AI sells your
             product.
           </p>
@@ -224,14 +224,14 @@ function WhatWeAnalyze() {
   );
 }
 
-/* ─────────────  WHAT IT REVEALS — general insights  ───────────── */
+/* ─────────────  WHAT IT REVEALS, general insights  ───────────── */
 function WhatItReveals() {
   const insights = [
     {
       icon: TrophyIcon,
       title: "Brand vs product gap",
       description:
-        "See where AI recommends your brand but never names your product — the win that stops converting.",
+        "See where AI recommends your brand but never names your product, the win that stops converting.",
     },
     {
       icon: CopyIcon,
@@ -243,19 +243,19 @@ function WhatItReveals() {
       icon: StoreIcon,
       title: "Winning marketplace",
       description:
-        "Find which marketplace AI recommends your product from most — and how your own store stacks up.",
+        "Find which marketplace AI recommends your product from most, and how your own store stacks up.",
     },
     {
       icon: TagIcon,
       title: "Price & source authorship",
       description:
-        "Learn who frames your price and who writes your product story — third-party reviews or your own pages.",
+        "Learn who frames your price and who writes your product story, third-party reviews or your own pages.",
     },
     {
       icon: QuoteIcon,
       title: "Repeated objections",
       description:
-        "Surface the complaints AI converges on across engines — and the sources they come from.",
+        "Surface the complaints AI converges on across engines, and the sources they come from.",
     },
     {
       icon: PackageIcon,
@@ -409,7 +409,7 @@ function ProductLevelView() {
           </div>
         </div>
         <p className="text-center text-xs text-white/30 mt-8">
-          Illustrative view — every brand's numbers are different.
+          Illustrative view, every brand's numbers are different.
         </p>
       </div>
     </section>
@@ -440,7 +440,7 @@ function MarketplacePerformance() {
             </h2>
             <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-6">
               When your product is sold through marketplaces, In-Chat Shopping
-              shows which one AI recommends it from most — so you know where the
+              shows which one AI recommends it from most, so you know where the
               sale really happens, and where to double down on stock, reviews,
               and merchandising, or push your own store.
             </p>
@@ -448,14 +448,14 @@ function MarketplacePerformance() {
               <div className="flex items-center gap-3 bg-[#0A0A0C] border border-emerald-500/25 rounded-xl p-5">
                 <TrophyIcon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-sm text-white/80">
-                  Know your best-performing shelf — where AI sends the most
+                  Know your best-performing shelf, where AI sends the most
                   buyers.
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-[#0A0A0C] border border-amber-500/25 rounded-xl p-5">
                 <MapPinIcon className="w-5 h-5 text-amber-400 flex-shrink-0" />
                 <span className="text-sm text-white/80">
-                  Spot where your own store is underrepresented — a
+                  Spot where your own store is underrepresented, a
                   direct-margin opportunity.
                 </span>
               </div>
@@ -474,7 +474,7 @@ function MarketplacePerformance() {
               ))}
             </div>
             <p className="text-xs text-white/40 mt-6">
-              Illustrative — share of a product's AI recommendations by
+              Illustrative, share of a product's AI recommendations by
               marketplace.
             </p>
           </div>
@@ -488,8 +488,8 @@ export function InChatShopping() {
   return (
     <>
       <PolymetSEO
-        title="In-Chat Shopping — AI Product Intelligence | Genezio"
-        description="AI recommends your brand — but does it name your product? Genezio In-Chat Shopping analyzes AI shopping across four layers — conversations, products, retailers, and sources — so you know how AI ranks, prices, and sells your products across ChatGPT and Google AI Overview. Book a demo!"
+        title="In-Chat Shopping, AI Product Intelligence | Genezio"
+        description="AI recommends your brand, but does it name your product? Genezio In-Chat Shopping analyzes AI shopping across four layers, conversations, products, retailers, and sources, so you know how AI ranks, prices, and sells your products across ChatGPT and Google AI Overview. Book a demo!"
         canonicalPath="/in-chat-shopping/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
@@ -501,7 +501,7 @@ export function InChatShopping() {
               name: "What does Genezio In-Chat Shopping analyze?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "In-Chat Shopping analyzes AI shopping across four layers: conversations (the shopping questions buyers ask AI), products (how AI ranks and recommends each SKU, including duplicate listings), retailers (which marketplace AI routes the sale to and who frames your price), and sources (what AI reads before recommending and the sentiment it carries) — across ChatGPT and Google AI Overview.",
+                text: "In-Chat Shopping analyzes AI shopping across four layers: conversations (the shopping questions buyers ask AI), products (how AI ranks and recommends each SKU, including duplicate listings), retailers (which marketplace AI routes the sale to and who frames your price), and sources (what AI reads before recommending and the sentiment it carries), across ChatGPT and Google AI Overview.",
               },
             },
             {

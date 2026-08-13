@@ -13,7 +13,7 @@ export function CsatTestimonialBanner() {
           optimize responses for peak demand periods. We've reduced call center
           volume by 40% while maintaining compliance standards."
           <footer className="mt-6 text-white/70 text-base not-italic">
-            — Operations Lead from Energy Corporation
+, Operations Lead from Energy Corporation
           </footer>
         </blockquote>
       </div>

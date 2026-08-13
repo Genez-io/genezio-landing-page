@@ -6,7 +6,7 @@ export function ConversionTestimonials() {
       initials: "MD",
       bgColor: "bg-blue-500",
       quote:
-        '"We launched a Q&A chatbot but soon realized it wasn\'t meeting customer expectations—some answers were inaccurate, causing frustration and churn. Genezio helped us identify gaps across key personas and gave our vendors the feedback they needed to improve fast. Now, the chatbot performs better and is generating leads."',
+        '"We launched a Q&A chatbot but soon realized it wasn\'t meeting customer expectations, some answers were inaccurate, causing frustration and churn. Genezio helped us identify gaps across key personas and gave our vendors the feedback they needed to improve fast. Now, the chatbot performs better and is generating leads."',
       industry: "Technology",
       metric: "+340% leads",
       metricColor: "text-emerald-400",

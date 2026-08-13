@@ -127,7 +127,7 @@ import {
               {
                 value: "12–15%",
                 label:
-                  "of global searches now run through AI tools — up from 5–6% a year earlier",
+                  "of global searches now run through AI tools, up from 5–6% a year earlier",
               },
               {
                 value: "~64%",

@@ -13,7 +13,7 @@ export function GenezioProductPillarsSection() {
       icon: BarChart3Icon,
       name: "Monitor & benchmark",
       description:
-        "See how AI represents your brand in every conversation — visibility, recommendation share, and sentiment vs competitors, per engine, persona, and market.",
+        "See how AI represents your brand in every conversation, visibility, recommendation share, and sentiment vs competitors, per engine, persona, and market.",
       href: "https://app.genezio.ai/brand-report/49/Natwest?demo=account",
       cta: "See it live",
       external: true,
@@ -23,7 +23,7 @@ export function GenezioProductPillarsSection() {
       icon: MessagesSquareIcon,
       name: "Conversation & fanout intelligence",
       description:
-        "Understand what people ask AI in your category — the real multi-turn conversations, query fanouts, and the sources engines pull to answer.",
+        "Understand what people ask AI in your category, the real multi-turn conversations, query fanouts, and the sources engines pull to answer.",
       href: "/conversational-brand-presence/",
       cta: "Learn more",
       external: false,
@@ -33,7 +33,7 @@ export function GenezioProductPillarsSection() {
       icon: ScanSearchIcon,
       name: "Content Analysis",
       description:
-        "Check whether AI can read your page and whether it's built to get cited — crawler access, coverage, structure, citations, and readability, pre- and post-publish.",
+        "Check whether AI can read your page and whether it's built to get cited, crawler access, coverage, structure, citations, and readability, pre- and post-publish.",
       href: "/content-analysis/",
       cta: "Learn more",
       external: false,
@@ -43,7 +43,7 @@ export function GenezioProductPillarsSection() {
       icon: FileTextIcon,
       name: "Content Hub",
       description:
-        "Turn every gap into a data-backed content brief your team can ship — and generate the draft directly when you need speed.",
+        "Turn every gap into a data-backed content brief your team can ship, and generate the draft directly when you need speed.",
       href: "/content-hub/",
       cta: "Learn more",
       external: false,
@@ -68,7 +68,7 @@ export function GenezioProductPillarsSection() {
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
             Measure how AI sees your brand, diagnose what's holding you back, and
-            ship the content that moves it — end to end.
+            ship the content that moves it, end to end.
           </p>
         </div>
 

@@ -39,9 +39,9 @@ export function AboutCommunitySection() {
                 >
                   blog
                 </a>
-                , we help marketers understand terms such as GEO, AEO, AI
+               , we help marketers understand terms such as GEO, AEO, AI
                 visibility, and recommendation rate. Good decisions require
-                shared language — especially in a rapidly evolving industry.
+                shared language, especially in a rapidly evolving industry.
               </p>
             </div>
 

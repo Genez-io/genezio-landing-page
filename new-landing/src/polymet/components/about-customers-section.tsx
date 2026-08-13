@@ -53,7 +53,7 @@ export function AboutCustomersSection() {
               analytics.
             </p>
             <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
-              Genezio gives everyone the same operating picture — whether the
+              Genezio gives everyone the same operating picture, whether the
               work happens in-house, with a PR partner, or through multiple
               content agencies.
             </p>

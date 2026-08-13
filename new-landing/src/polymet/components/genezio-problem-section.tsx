@@ -31,7 +31,7 @@ export function GenezioProblemsSection() {
               Grok, Meta AI, Copilot, and many others.
               <br />
               <br />
-              If AI doesn't mention your brand — or gets your story wrong —
+              If AI doesn't mention your brand, or gets your story wrong, 
               you're losing visibility, trust, and revenue without realizing it.
             </p>
           </div>

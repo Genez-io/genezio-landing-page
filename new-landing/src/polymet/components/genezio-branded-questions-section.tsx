@@ -86,7 +86,7 @@ export function GenezioBrandedQuestionsSection() {
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto px-4">
             Ask AI engines branded questions directly and extract deep insights
-            — from perceived values to comprehensive SWOT analysis.
+, from perceived values to comprehensive SWOT analysis.
           </p>
         </div>
 
@@ -262,7 +262,7 @@ export function GenezioBrandedQuestionsSection() {
             </span>{" "}
             reveal how AI engines perceive your brand's core attributes. Genezio
             extracts sentiment, values, and competitive positioning directly
-            from AI responses — giving you actionable intelligence to shape your
+            from AI responses, giving you actionable intelligence to shape your
             brand narrative.
           </p>
         </div>

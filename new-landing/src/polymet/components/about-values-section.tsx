@@ -31,7 +31,7 @@ const values = [
     icon: ShieldCheckIcon,
     title: "Trust Through Evidence",
     description:
-      "Our real-world impact comes from citation monitoring, source analysis, and persona-based testing that show why AI says what it says — giving teams evidence they can use in strategy and reporting.",
+      "Our real-world impact comes from citation monitoring, source analysis, and persona-based testing that show why AI says what it says, giving teams evidence they can use in strategy and reporting.",
     color: "bg-emerald-500",
   },
 ];

@@ -10,7 +10,7 @@ const achievements = [
     icon: BuildingIcon,
     title: "Enterprise Trust & Adoption",
     description:
-      "Trusted by brands including BCR, Bitdefender, Vodafone, CBRE, FlowX, and Auchan — demonstrating traction with both enterprise and high-growth teams.",
+      "Trusted by brands including BCR, Bitdefender, Vodafone, CBRE, FlowX, and Auchan, demonstrating traction with both enterprise and high-growth teams.",
     metric: "Fortune 500",
     metricLabel: "Clients",
     color: "bg-emerald-500",
@@ -19,7 +19,7 @@ const achievements = [
     icon: TrendingUpIcon,
     title: "Measured Customer Impact",
     description:
-      "In Genezio's BCR customer story, brand presence in AI conversations on key topics grew by double digits in just a few weeks — practical lift, not theoretical potential.",
+      "In Genezio's BCR customer story, brand presence in AI conversations on key topics grew by double digits in just a few weeks, practical lift, not theoretical potential.",
     metric: "2x+",
     metricLabel: "Growth",
     color: "bg-emerald-500",
@@ -28,7 +28,7 @@ const achievements = [
     icon: BrainIcon,
     title: "AI Recommendation Innovation",
     description:
-      "Genezio differentiates through multi-turn, persona-led conversational analysis and direct brand-perception workflows — going beyond standard mention tracking.",
+      "Genezio differentiates through multi-turn, persona-led conversational analysis and direct brand-perception workflows, going beyond standard mention tracking.",
     metric: "AI-Native",
     metricLabel: "Platform",
     color: "bg-emerald-500",

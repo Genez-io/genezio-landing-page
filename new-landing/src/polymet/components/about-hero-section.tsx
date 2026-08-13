@@ -37,7 +37,7 @@ export function AboutHeroSection() {
             Genezio was built for a new reality in digital discovery: buyers
             increasingly ask AI systems for recommendations before they ever
             click a link. We help marketing teams win actual AI
-            recommendations — not just mentions.
+            recommendations, not just mentions.
           </p>
 
           {/* CTA buttons */}

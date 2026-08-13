@@ -6,7 +6,7 @@ export function GenezioPlaybookSection() {
       icon: SearchIcon,
       label: "ASK",
       title: "What do your customers actually ask?",
-      description: "Real conversational prompts — not keywords.",
+      description: "Real conversational prompts, not keywords.",
     },
     {
       icon: LayersIcon,
@@ -17,13 +17,13 @@ export function GenezioPlaybookSection() {
     {
       icon: TargetIcon,
       label: "APPEAR",
-      title: "Do you show up — and how are you framed?",
+      title: "Do you show up, and how are you framed?",
       description: "Presence, share of recommendation, sentiment vs competitors.",
     },
   ];
 
   const media = [
-    { label: "WHAT", detail: "to publish — citable, machine-readable" },
+    { label: "WHAT", detail: "to publish, citable, machine-readable" },
     { label: "WHERE", detail: "your domain vs the third parties LLMs actually cite" },
     { label: "WHO", detail: "which persona is asking" },
     { label: "WHICH MARKET", detail: "answers change by geography and language" },
@@ -46,7 +46,7 @@ export function GenezioPlaybookSection() {
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto mt-6">
             Today there's exactly one lever for the organic answer: content. But
-            you build the strategy on three questions — then plan it like media.
+            you build the strategy on three questions, then plan it like media.
           </p>
         </div>
 

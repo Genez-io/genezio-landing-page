@@ -299,7 +299,7 @@ function TopThreeChart({
         </div>
       </div>
 
-      {/* Chart area — relative container for tooltip overlay */}
+      {/* Chart area, relative container for tooltip overlay */}
       <div className="relative overflow-x-auto">
         {/* Tooltip */}
         {hoverIdx !== null && tooltipLeftPct !== null && (
@@ -784,7 +784,7 @@ export function IndustryLeaderboards() {
             <span className="text-white"> Are you?</span>
           </h1>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-10">
-            Real AI visibility rankings across industries — powered by thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
+            Real AI visibility rankings across industries, powered by thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             {[
@@ -995,9 +995,9 @@ export function IndustryLeaderboards() {
             <h2 className="text-lg font-bold text-white mb-6">How AI Visibility Scores work</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { step: "01", title: "Real queries, real AI engines", body: "Genezio runs thousands of industry-specific queries across ChatGPT, Perplexity, Gemini, and Claude — the same questions real users are asking." },
-                { step: "02", title: "Brand mention detection", body: "Each AI response is analysed to detect which brands are recommended, mentioned, or cited — and in what context." },
-                { step: "03", title: "Visibility score aggregation", body: "The visibility score represents the percentage of relevant AI conversations in which a brand is mentioned — averaged across all platforms." },
+                { step: "01", title: "Real queries, real AI engines", body: "Genezio runs thousands of industry-specific queries across ChatGPT, Perplexity, Gemini, and Claude, the same questions real users are asking." },
+                { step: "02", title: "Brand mention detection", body: "Each AI response is analysed to detect which brands are recommended, mentioned, or cited, and in what context." },
+                { step: "03", title: "Visibility score aggregation", body: "The visibility score represents the percentage of relevant AI conversations in which a brand is mentioned, averaged across all platforms." },
               ].map(({ step, title, body }) => (
                 <div key={step} className="space-y-2">
                   <div className="text-3xl font-black text-white/10 font-mono">{step}</div>
@@ -1019,7 +1019,7 @@ export function IndustryLeaderboards() {
             rank?
           </h2>
           <p className="text-base text-[#B0B0B3] max-w-xl mx-auto">
-            Get a personalised AI visibility report for your brand — see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
+            Get a personalised AI visibility report for your brand, see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">

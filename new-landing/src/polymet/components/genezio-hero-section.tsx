@@ -28,7 +28,7 @@ export function GenezioHeroSection() {
 
             <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
               Enterprise brands trust Genezio to track how AI engines see them
-              across every market — and to win the recommendation, not just the
+              across every market, and to win the recommendation, not just the
               mention.
             </p>
 
@@ -78,7 +78,7 @@ export function GenezioHeroSection() {
               <div className="h-3 w-[60%] ml-auto bg-white/15 rounded-full" />
             </div>
 
-            {/* The question — the new way people search */}
+            {/* The question, the new way people search */}
             <div className="relative max-w-md ml-auto">
               <div className="absolute -inset-3 bg-blue-500/10 rounded-3xl blur-2xl" />
               <div className="relative bg-[#0E0E12] border border-blue-500/25 rounded-3xl rounded-bl-md p-7 md:p-8 shadow-2xl shadow-emerald-500/10">

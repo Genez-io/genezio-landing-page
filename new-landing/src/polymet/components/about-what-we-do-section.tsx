@@ -12,14 +12,14 @@ const capabilities = [
     icon: EyeIcon,
     title: "AI Visibility & Recommendation Tracking",
     description:
-      "Track your brand across ChatGPT, Google AI Overviews, Gemini, Perplexity, and Claude — measuring not just mentions, but actual recommendations.",
+      "Track your brand across ChatGPT, Google AI Overviews, Gemini, Perplexity, and Claude, measuring not just mentions, but actual recommendations.",
     color: "bg-emerald-500",
   },
   {
     icon: UsersIcon,
     title: "Persona-Based Conversation Analysis",
     description:
-      "See how AI-generated conversations change for developers, B2B buyers, journalists, or consumers — revealing persona-specific recommendation patterns.",
+      "See how AI-generated conversations change for developers, B2B buyers, journalists, or consumers, revealing persona-specific recommendation patterns.",
     color: "bg-emerald-500",
   },
   {
@@ -47,7 +47,7 @@ const capabilities = [
     icon: GlobeIcon,
     title: "Multi-Brand & Global Support",
     description:
-      "Manage several brands, countries, languages, or agency relationships from one dashboard — ideal for enterprise and agency teams.",
+      "Manage several brands, countries, languages, or agency relationships from one dashboard, ideal for enterprise and agency teams.",
     color: "bg-emerald-500",
   },
 ];

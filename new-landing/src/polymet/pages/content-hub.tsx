@@ -43,7 +43,7 @@ function ContentHubHero() {
 
         <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           Content Hub turns what AI engines say about your brand into
-          data-backed content briefs your team can ship — and drafts them for
+          data-backed content briefs your team can ship, and drafts them for
           you when you need speed. Every brief is built from the real
           conversations, fanouts, and sources driving the answers today.
         </p>
@@ -79,7 +79,7 @@ function MeasurementToBrief() {
       label: "ASK",
       title: "What people ask AI in your category",
       description:
-        "The real conversational prompts buyers use — not keywords — across every persona and market.",
+        "The real conversational prompts buyers use, not keywords, across every persona and market.",
     },
     {
       icon: LayersIcon,
@@ -91,7 +91,7 @@ function MeasurementToBrief() {
     {
       icon: TargetIcon,
       label: "APPEAR",
-      title: "Where you're missing — and why",
+      title: "Where you're missing, and why",
       description:
         "The gaps: sources engines trust where your brand is absent, per engine and region.",
     },
@@ -204,7 +204,7 @@ function BriefAnatomy() {
               and which trusted sources you need to show up in.
             </p>
             <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
-              Hand it to your in-house team or your agency — the strategy is
+              Hand it to your in-house team or your agency, the strategy is
               already done.
             </p>
           </div>
@@ -291,7 +291,7 @@ function BriefsVsDirect() {
             </h3>
             <p className="text-[#B0B0B3] leading-relaxed mb-6">
               The strategic layer. Genezio decides what to write, for whom,
-              where, and why it will get cited — then your writers do what they
+              where, and why it will get cited, then your writers do what they
               do best. You keep full editorial control and brand voice.
             </p>
             <ul className="space-y-3">
@@ -322,8 +322,8 @@ function BriefsVsDirect() {
             </h3>
             <p className="text-[#B0B0B3] leading-relaxed mb-6">
               Need a first draft now? Content Hub can generate the full piece
-              from the same brief — machine-readable, structured, and citable
-              from line one — ready for your team to review and refine.
+              from the same brief, machine-readable, structured, and citable
+              from line one, ready for your team to review and refine.
             </p>
             <ul className="space-y-3">
               {[
@@ -351,7 +351,7 @@ function PlanLikeMedia() {
     {
       icon: FileTextIcon,
       label: "WHAT",
-      description: "to publish — citable, machine-readable, evidence-backed",
+      description: "to publish, citable, machine-readable, evidence-backed",
     },
     {
       icon: GlobeIcon,
@@ -366,7 +366,7 @@ function PlanLikeMedia() {
     {
       icon: MapPinIcon,
       label: "WHICH MARKET",
-      description: "answers change by geography and language — plan per market",
+      description: "answers change by geography and language, plan per market",
     },
   ];
 
@@ -468,8 +468,8 @@ export function ContentHub() {
   return (
     <>
       <PolymetSEO
-        title="Content Hub — Data-Backed Content Briefs for AI Search | Genezio"
-        description="Genezio Content Hub turns AI-engine data into prioritized content briefs your team can ship — and generates the drafts too. Win recommendations in ChatGPT, Gemini, Perplexity & AI Overviews. Book a demo!"
+        title="Content Hub, Data-Backed Content Briefs for AI Search | Genezio"
+        description="Genezio Content Hub turns AI-engine data into prioritized content briefs your team can ship, and generates the drafts too. Win recommendations in ChatGPT, Gemini, Perplexity & AI Overviews. Book a demo!"
         canonicalPath="/content-hub/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
@@ -481,7 +481,7 @@ export function ContentHub() {
               name: "What does Genezio Content Hub generate?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Content Hub generates data-backed content briefs from real AI-engine data — the conversations, query fanouts, and sources driving answers about your category. Briefs are the primary output so your writers keep full editorial control, and Content Hub can also generate the full draft directly when you need speed.",
+                text: "Content Hub generates data-backed content briefs from real AI-engine data, the conversations, query fanouts, and sources driving answers about your category. Briefs are the primary output so your writers keep full editorial control, and Content Hub can also generate the full draft directly when you need speed.",
               },
             },
             {
@@ -489,7 +489,7 @@ export function ContentHub() {
               name: "What is inside a Content Hub brief?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Each brief includes the target conversation, the query fanout to cover, the persona and market, the trusted sources to earn or cite, and the must-answer questions, facts, and comparisons the AI engines keep — structured so the resulting content is citable.",
+                text: "Each brief includes the target conversation, the query fanout to cover, the persona and market, the trusted sources to earn or cite, and the must-answer questions, facts, and comparisons the AI engines keep, structured so the resulting content is citable.",
               },
             },
           ],

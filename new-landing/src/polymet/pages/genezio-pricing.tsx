@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioEnterprisePlan } from "@/polymet/components/genezio-enterprise-plan";
 import { GenezioPricingProducts } from "@/polymet/components/genezio-pricing-products";
+import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
 
@@ -61,7 +62,7 @@ export function GenezioPricing() {
               "name": "Can I adjust my plan later?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Your Enterprise plan is fully flexible — you can scale engines, markets, personas, and volume up or down at any time. Just talk to your dedicated account manager and we'll adjust your plan."
+                "text": "Yes. Your Enterprise plan is fully flexible, you can scale engines, markets, personas, and volume up or down at any time. Just talk to your dedicated account manager and we'll adjust your plan."
               }
             },
             {
@@ -164,6 +165,7 @@ export function GenezioPricing() {
               isPageHero
             />
             <GenezioPricingProducts />
+            <GenezioGroupLevelView />
             <GenezioPricingFaq />
           </>
         ) : (
@@ -174,6 +176,7 @@ export function GenezioPricing() {
               isPageHero
             />
             <GenezioPricingProducts />
+            <GenezioGroupLevelView />
             <AgencyFaqSection />
           </>
         )}

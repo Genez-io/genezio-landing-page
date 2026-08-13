@@ -64,8 +64,8 @@ export function AboutStorySection() {
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto leading-relaxed">
-            Founded by product and cloud experts — including co-founders Bogdan
-            Ripa and Paula Cionca — Genezio grew around a simple insight: in AI
+            Founded by product and cloud experts, including co-founders Bogdan
+            Ripa and Paula Cionca, Genezio grew around a simple insight: in AI
             search, visibility alone is not enough.
           </p>
         </div>
@@ -98,7 +98,7 @@ export function AboutStorySection() {
               <span className="text-white font-medium">
                 operating system for AI search visibility
               </span>
-              , recommendation optimization, and cross-team execution.
+             , recommendation optimization, and cross-team execution.
             </p>
           </div>
 

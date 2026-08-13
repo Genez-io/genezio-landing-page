@@ -55,7 +55,7 @@ function ContentAnalysisHero() {
         </h1>
 
         <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Content Analysis tells you if AI can read your page — and if it's
+          Content Analysis tells you if AI can read your page, and if it's
           built to get cited. Before you publish, and every day after.
         </p>
 
@@ -90,7 +90,7 @@ function TwoModes() {
       tag: "BEFORE YOU PUBLISH",
       title: "Pre-publish analysis",
       description:
-        "Paste a draft or a URL and see how an answer engine will read it — before it goes live. Catch what's holding it back while you can still fix it.",
+        "Paste a draft or a URL and see how an answer engine will read it, before it goes live. Catch what's holding it back while you can still fix it.",
       points: [
         "Score a draft against the topic AI is answering",
         "See what a crawler would keep vs skip",
@@ -187,7 +187,7 @@ function ReportAnatomy() {
             Every page, scored on 8 checks
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto">
-            Five checks on the content itself, three on how it's published — one
+            Five checks on the content itself, three on how it's published, one
             clear read on whether AI will cite it.
           </p>
         </div>
@@ -203,7 +203,7 @@ function ReportAnatomy() {
                 </div>
                 <div className="text-white/40 text-xs mt-1">
                   1,620 words · Analyzed Aug 2026 · Topic: Project management
-                  tools — Recommender
+                  tools, Recommender
                 </div>
               </div>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 self-start whitespace-nowrap">
@@ -214,7 +214,7 @@ function ReportAnatomy() {
               Strong fit for this topic
             </h3>
             <p className="text-sm text-[#B0B0B3] leading-relaxed">
-              This article closely answers what people ask AI here — a strong
+              This article closely answers what people ask AI here, a strong
               candidate to be cited. Two content checks have room to improve
               before it's a lock.
             </p>
@@ -254,7 +254,7 @@ function ReportAnatomy() {
           </div>
         </div>
         <p className="text-center text-xs text-white/30 mt-4">
-          Illustrative report — sample data.
+          Illustrative report, sample data.
         </p>
       </div>
     </section>
@@ -299,7 +299,7 @@ function InsideAnalysis() {
             Inside a check
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
-            Not a score you have to trust — evidence you can act on
+            Not a score you have to trust, evidence you can act on
           </h2>
         </div>
 
@@ -313,7 +313,7 @@ function InsideAnalysis() {
               </span>
             </div>
             <p className="text-sm text-[#B0B0B3] mb-6">
-              What kind of page AI actually cites for this topic — and where
+              What kind of page AI actually cites for this topic, and where
               yours fits.
             </p>
             <div className="space-y-3">
@@ -377,7 +377,7 @@ function InsideAnalysis() {
               ))}
             </div>
             <p className="text-xs text-amber-300/80 mt-4">
-              Add quotations and a comparison table — the fastest GEO wins here.
+              Add quotations and a comparison table, the fastest GEO wins here.
             </p>
           </div>
 
@@ -423,7 +423,7 @@ function InsideAnalysis() {
                 #1
               </span>
               <span className="text-sm text-white/70">
-                of 1,180 domains AI cites for your brand — top 1%
+                of 1,180 domains AI cites for your brand, top 1%
               </span>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-auto">
@@ -457,12 +457,12 @@ function ActionPlan() {
     {
       impact: "High impact",
       strong: true,
-      text: "Add a citable subsection covering the exact feature AI keeps asking about — with specifics and a source link.",
+      text: "Add a citable subsection covering the exact feature AI keeps asking about, with specifics and a source link.",
     },
     {
       impact: "High impact",
       strong: true,
-      text: "Add a short quotation from an authoritative source — a proven lever for getting cited.",
+      text: "Add a short quotation from an authoritative source, a proven lever for getting cited.",
     },
     {
       impact: "Worth doing",
@@ -554,7 +554,7 @@ function FlywheelDiagnoseVerify() {
         </h2>
         <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-12">
           It finds what's holding a page back before launch, and confirms the
-          fix actually moved visibility after — the two checkpoints that keep
+          fix actually moved visibility after, the two checkpoints that keep
           the loop honest.
         </p>
 
@@ -585,8 +585,8 @@ export function ContentAnalysis() {
   return (
     <>
       <PolymetSEO
-        title="Content Analysis — Will AI Cite Your Content? | Genezio"
-        description="Genezio Content Analysis scores every page on 8 checks — can AI reach it, does it cover what people ask, is it built to get cited — pre-publish and post-publish, then turns findings into an action plan. Book a demo!"
+        title="Content Analysis, Will AI Cite Your Content? | Genezio"
+        description="Genezio Content Analysis scores every page on 8 checks, can AI reach it, does it cover what people ask, is it built to get cited, pre-publish and post-publish, then turns findings into an action plan. Book a demo!"
         canonicalPath="/content-analysis/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{

@@ -21,7 +21,7 @@ export function GenezioFlywheelSection() {
       icon: StethoscopeIcon,
       label: "DIAGNOSE",
       title: "Find the gaps",
-      detail: "Where you're absent and why — technical and content.",
+      detail: "Where you're absent and why, technical and content.",
       link: { to: "/content-analysis/", label: "Content Analysis" },
     },
     {
@@ -59,7 +59,7 @@ export function GenezioFlywheelSection() {
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
-            Not a project — a loop. Engines re-crawl continuously, so every turn
+            Not a project, a loop. Engines re-crawl continuously, so every turn
             spins the wheel faster and early movers compound.
           </p>
         </div>

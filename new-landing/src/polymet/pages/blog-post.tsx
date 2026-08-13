@@ -317,7 +317,7 @@ export function BlogPost() {
           "name": "What is a citation footprint and why does it matter for GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A citation footprint refers to how frequently a brand appears across external authoritative sources such as directory listings, comparison guides, editorial reviews, and Wikipedia entries. In AI-driven discovery, presence creates presence — brands with more external coverage become more visible in LLM outputs because models treat widely-cited entities as more trustworthy."
+            "text": "A citation footprint refers to how frequently a brand appears across external authoritative sources such as directory listings, comparison guides, editorial reviews, and Wikipedia entries. In AI-driven discovery, presence creates presence, brands with more external coverage become more visible in LLM outputs because models treat widely-cited entities as more trustworthy."
           }
         },
         {
@@ -364,7 +364,7 @@ export function BlogPost() {
           "name": "What is the difference between SEO and GEO (Generative Engine Optimization)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SEO (Search Engine Optimization) focuses on ranking favorably on Google through keywords and backlinks. GEO (Generative Engine Optimization) focuses on controlling your AI Narrative — the sum of everything a Large Language Model says about your brand, products, and competitors in AI-generated conversations, which is where Gen Z increasingly starts their discovery journey."
+            "text": "SEO (Search Engine Optimization) focuses on ranking favorably on Google through keywords and backlinks. GEO (Generative Engine Optimization) focuses on controlling your AI Narrative, the sum of everything a Large Language Model says about your brand, products, and competitors in AI-generated conversations, which is where Gen Z increasingly starts their discovery journey."
           }
         },
         {
@@ -497,7 +497,7 @@ export function BlogPost() {
           "name": "What's the difference between GEO and AEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal — being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions."
+            "text": "GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal, being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions."
           }
         },
         {
@@ -529,7 +529,7 @@ export function BlogPost() {
           "name": "Do SEO tools replace a GEO platform?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For baseline mention monitoring, an SEO suite add-on is fine — especially if you already use it. For recommendation optimization, perception analysis, and a prioritized action plan, a purpose-built GEO platform does what a suite add-on wasn't designed to do."
+            "text": "For baseline mention monitoring, an SEO suite add-on is fine, especially if you already use it. For recommendation optimization, perception analysis, and a prioritized action plan, a purpose-built GEO platform does what a suite add-on wasn't designed to do."
           }
         },
         {
@@ -537,7 +537,7 @@ export function BlogPost() {
           "name": "How does Genezio measure recommendations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "By simulating multi-turn conversations as your configured customer personas, across engines and geographies, at a sample size large enough to report a recommendation rate with a confidence interval — then mapping the gaps to specific actions on your website, content, and citations."
+            "text": "By simulating multi-turn conversations as your configured customer personas, across engines and geographies, at a sample size large enough to report a recommendation rate with a confidence interval, then mapping the gaps to specific actions on your website, content, and citations."
           }
         }
       ]

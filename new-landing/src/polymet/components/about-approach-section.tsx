@@ -14,7 +14,7 @@ const pillars = [
     icon: MessageCircleIcon,
     title: "Analyze Real Conversations",
     description:
-      "Instead of relying only on static prompt snapshots, Genezio emphasizes multi-turn interactions and scenario logic. This reveals how recommendations shift between discovery, comparison, and decision stages — critical for teams evaluating AI-generated conversation visibility by persona.",
+      "Instead of relying only on static prompt snapshots, Genezio emphasizes multi-turn interactions and scenario logic. This reveals how recommendations shift between discovery, comparison, and decision stages, critical for teams evaluating AI-generated conversation visibility by persona.",
     color: "bg-emerald-500",
   },
   {

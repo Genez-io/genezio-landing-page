@@ -10,7 +10,7 @@ export function AgencyFaqSection() {
     {
       question: "How many brands can I monitor?",
       answer:
-        "Your agency plan is custom — we scope the number of brands around your client roster. You can add more brands at any time with flexible add-ons, and each brand includes full monitoring, AI tracking, and insights.",
+        "Your agency plan is custom, we scope the number of brands around your client roster. You can add more brands at any time with flexible add-ons, and each brand includes full monitoring, AI tracking, and insights.",
     },
     {
       question: "Can I manage multiple clients?",

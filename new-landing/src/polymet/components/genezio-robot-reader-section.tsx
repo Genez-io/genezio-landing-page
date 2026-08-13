@@ -2,7 +2,7 @@ import { EyeOffIcon, XCircleIcon } from "lucide-react";
 
 export function GenezioRobotReaderSection() {
   const kept = [
-    "Battery life, specs, and form factor — stated plainly",
+    "Battery life, specs, and form factor, stated plainly",
     "Accuracy backed by study data, cited",
     "Structured comparison: you vs competitors",
     "Pricing & terms, clear and machine-readable",
@@ -36,7 +36,7 @@ export function GenezioRobotReaderSection() {
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto mt-6">
             During an AI answer, the reader on your page skips your ads, ignores
             your hooks, and extracts only facts, comparisons, and evidence.
-            Everything else is dropped — including the ads that paid for the
+            Everything else is dropped, including the ads that paid for the
             page.
           </p>
         </div>
@@ -49,12 +49,12 @@ export function GenezioRobotReaderSection() {
             </div>
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-xs font-mono text-white/40 bg-white/5 rounded-md px-3 py-2.5 line-through">
-                <XCircleIcon className="w-4 h-4" /> display ad — 728×90
+                <XCircleIcon className="w-4 h-4" /> display ad, 728×90
               </div>
               <div className="h-3 w-4/5 bg-white/10 rounded" />
               <div className="h-3 w-3/5 bg-white/5 rounded" />
               <div className="flex items-center gap-2 text-xs font-mono text-white/40 bg-white/5 rounded-md px-3 py-2.5 line-through">
-                <XCircleIcon className="w-4 h-4" /> hero video — autoplay
+                <XCircleIcon className="w-4 h-4" /> hero video, autoplay
               </div>
               <div className="h-3 w-3/4 bg-white/10 rounded" />
               <div className="flex items-center gap-2 text-xs font-mono text-white/40 bg-white/5 rounded-md px-3 py-2.5 line-through">

@@ -28,16 +28,17 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
     sectionSubtitle:
       "No fixed tiers. Your plan is shaped by the engines, markets, and volume you actually need.",
     description:
-      "Tailored AI visibility for multi-market brands and teams. We scope pricing around the answer engines, markets, and conversation volume that matter to you — so you only pay for what moves the needle.",
+      "Tailored AI visibility for multi-market brands and teams. We scope pricing around the answer engines, markets, and conversation volume that matter to you, so you only pay for what moves the needle.",
     features: [
-      "All Answer Engines tracked — ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot, Meta AI, Grok, DeepSeek, Claude, AI Overviews",
+      "All Answer Engines tracked, ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot, Meta AI, Grok, DeepSeek, Claude, AI Overviews",
       "Custom number of brands, languages & locations",
       "Custom topics, scenarios & AI conversations tracked",
       "Sentiment per conversation, citation & statement",
       "Daily AI visibility insights",
-      "Content Hub — data-backed content briefs & generation",
-      "Content Analysis — crawlability & citable-content audits",
-      "In-Chat Shopping — AI product intelligence",
+      "Content Hub, data-backed content briefs & generation",
+      "Content Analysis, crawlability & citable-content audits",
+      "In-Chat Shopping, AI product intelligence",
+      "Group-level view, roll up multiple brands into one report",
       "Geo Assistant",
       "Unlimited data retention",
       "Unlimited competitor SWOT analysis & seats",
@@ -51,13 +52,13 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
     eyebrow: "Agency Enterprise",
     titleWord: "agency",
     sectionSubtitle:
-      "Scale GEO services across every client. Pay for the brands, engines, and volume you manage — nothing you don't.",
+      "Scale GEO services across every client. Pay for the brands, engines, and volume you manage, nothing you don't.",
     description:
       "Custom Enterprise pricing for agencies scaling GEO services across multiple clients. Manage every brand from one workspace and expand with flexible add-ons as your roster grows.",
     features: [
       "Multi-client workspace management",
       "Custom number of brands monitored",
-      "Up to 5 Answer Engines per brand — ChatGPT, Claude, Gemini, Perplexity, Grok",
+      "Up to 5 Answer Engines per brand, ChatGPT, Claude, Gemini, Perplexity, Grok",
       "Custom personas, topics & scenarios per brand",
       "All languages & multi-market monitoring",
       "Daily run frequency",

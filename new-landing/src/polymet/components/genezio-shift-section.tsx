@@ -5,7 +5,7 @@ export function GenezioShiftSection() {
     {
       value: "12–15%",
       label:
-        "of global searches now run through AI tools — up from 5–6% a year earlier",
+        "of global searches now run through AI tools, up from 5–6% a year earlier",
     },
     {
       value: "~900M",
@@ -37,7 +37,7 @@ export function GenezioShiftSection() {
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
-            Buying questions that used to be keywords are now conversations —
+            Buying questions that used to be keywords are now conversations, 
             and they're moving to AI at scale.
           </p>
         </div>

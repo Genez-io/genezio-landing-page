@@ -44,7 +44,7 @@ export function GenezioProofSection() {
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
-            Leads recommended by answer engines are few — and remarkably good.
+            Leads recommended by answer engines are few, and remarkably good.
             The AI already did the comparison shopping, so the click is a
             decision, not a browse.
           </p>

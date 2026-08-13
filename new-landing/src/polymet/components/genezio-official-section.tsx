@@ -4,7 +4,7 @@ export function GenezioOfficialSection() {
   const openaiStats = [
     { value: "~20%", label: "of ChatGPT queries carry direct commercial intent" },
     { value: "$100M", label: "annualized ad revenue in under two months of pilot" },
-    { value: "$100B", label: "ad-revenue ambition by 2030 — a tenth of digital ad spend" },
+    { value: "$100B", label: "ad-revenue ambition by 2030, a tenth of digital ad spend" },
   ];
 
   const timeline = [
@@ -45,7 +45,7 @@ export function GenezioOfficialSection() {
             <span className="text-emerald-400">
               revenue channel
             </span>{" "}
-            — and the platforms are saying so out loud
+, and the platforms are saying so out loud
           </h2>
         </div>
 
@@ -57,7 +57,7 @@ export function GenezioOfficialSection() {
               advertising business now.<span className="text-blue-400">"</span>
             </p>
             <p className="text-sm text-white/50 mt-4">
-              OpenAI at Cannes Lions · June 2026 — its first appearance on
+              OpenAI at Cannes Lions · June 2026, its first appearance on
               advertising's biggest stage
             </p>
           </div>
@@ -84,7 +84,7 @@ export function GenezioOfficialSection() {
         <div className="max-w-5xl mx-auto">
           <p className="text-sm text-center text-[#B0B0B3] mb-8">
             Google isn't adding ads to AI. It's rebuilding ads{" "}
-            <span className="text-white font-semibold">as</span> AI — five
+            <span className="text-white font-semibold">as</span> AI, five
             launches in five months.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
@@ -111,7 +111,7 @@ export function GenezioOfficialSection() {
           <p className="text-center text-sm md:text-base text-white/80 mt-10 max-w-2xl mx-auto">
             Performance ads in AI are arriving. But the organic recommendation{" "}
             <span className="text-blue-400 font-semibold">
-              cannot be bought — only earned.
+              cannot be bought, only earned.
             </span>
           </p>
         </div>
