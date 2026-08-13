@@ -1,23 +1,37 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
   ScanSearchIcon,
   FileCheck2Icon,
   ActivityIcon,
-  BotIcon,
-  ShieldCheckIcon,
-  CodeIcon,
-  Heading1Icon,
-  QuoteIcon,
-  GaugeIcon,
   CheckCircle2Icon,
-  XCircleIcon,
+  AlertTriangleIcon,
+  FileTextIcon,
+  ServerIcon,
+  BarChart3Icon,
+  ListChecksIcon,
+  BotIcon,
+  QuoteIcon,
   ArrowRightIcon,
 } from "lucide-react";
 
 const DEMO_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
+
+/* Status pill shared by the report visuals. All data on this page is illustrative. */
+function StatusPill({ good }: { good: boolean }) {
+  return good ? (
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 whitespace-nowrap">
+      <CheckCircle2Icon className="w-3.5 h-3.5" /> Looking good
+    </span>
+  ) : (
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30 whitespace-nowrap">
+      <AlertTriangleIcon className="w-3.5 h-3.5" /> Room to improve
+    </span>
+  );
+}
 
 /* ─────────────────────────────  HERO  ───────────────────────────── */
 function ContentAnalysisHero() {
@@ -37,9 +51,7 @@ function ContentAnalysisHero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           Your content's most important reader
           <br />
-          <span className="text-emerald-400">
-            doesn't have eyes.
-          </span>
+          <span className="text-emerald-400">doesn't have eyes.</span>
         </h1>
 
         <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -78,26 +90,24 @@ function TwoModes() {
       tag: "BEFORE YOU PUBLISH",
       title: "Pre-publish analysis",
       description:
-        "Paste a draft or a URL and see how an answer engine will read it — before it goes live. Catch the crawlability blockers and the content gaps while you can still fix them.",
+        "Paste a draft or a URL and see how an answer engine will read it — before it goes live. Catch what's holding it back while you can still fix it.",
       points: [
-        "Score a draft against the target conversation",
+        "Score a draft against the topic AI is answering",
         "See what a crawler would keep vs skip",
-        "Fix structure, claims, and schema pre-launch",
+        "Fix structure, claims, and framing pre-launch",
       ],
-      accent: "blue",
     },
     {
       icon: ActivityIcon,
       tag: "AFTER YOU PUBLISH",
       title: "Post-publish monitoring",
       description:
-        "Once it's live, Content Analysis keeps watching: is the page still crawlable, still cited, still winning the answer? Re-checks run continuously as engines re-crawl and re-rank.",
+        "Once it's live, Content Analysis keeps watching: is the page still reachable, still cited, still winning the answer? Re-checks run as engines re-crawl.",
       points: [
-        "Continuous crawlability & citation tracking",
+        "Continuous reachability & citation tracking",
         "Alerts when access or structure regresses",
-        "Verify that a change actually moved visibility",
+        "Confirm a change actually moved visibility",
       ],
-      accent: "emerald",
     },
   ];
 
@@ -117,34 +127,15 @@ function TwoModes() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {modes.map((mode, index) => {
             const Icon = mode.icon;
-            const isBlue = mode.accent === "blue";
             return (
               <div
                 key={index}
-                className={`bg-[#0A0A0C] border rounded-2xl p-8 md:p-10 transition-all duration-300 ${
-                  isBlue
-                    ? "border-blue-500/20 hover:border-blue-500/40"
-                    : "border-emerald-500/20 hover:border-emerald-500/40"
-                }`}
+                className="bg-[#0A0A0C] border border-emerald-500/20 rounded-2xl p-8 md:p-10 hover:border-emerald-500/40 transition-all duration-300"
               >
-                <div
-                  className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-6 ${
-                    isBlue
-                      ? "bg-blue-500/10 border-blue-500/30"
-                      : "bg-emerald-500/10 border-emerald-500/30"
-                  }`}
-                >
-                  <Icon
-                    className={`w-6 h-6 ${
-                      isBlue ? "text-blue-400" : "text-emerald-400"
-                    }`}
-                  />
+                <div className="w-12 h-12 rounded-xl border bg-emerald-500/10 border-emerald-500/30 flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-emerald-400" />
                 </div>
-                <div
-                  className={`text-xs font-mono tracking-widest mb-3 ${
-                    isBlue ? "text-blue-400" : "text-emerald-400"
-                  }`}
-                >
+                <div className="text-xs font-mono tracking-widest mb-3 text-emerald-400">
                   {mode.tag}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -156,11 +147,7 @@ function TwoModes() {
                 <ul className="space-y-3">
                   {mode.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2Icon
-                        className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          isBlue ? "text-blue-400" : "text-emerald-400"
-                        }`}
-                      />
+                      <CheckCircle2Icon className="w-5 h-5 flex-shrink-0 mt-0.5 text-emerald-400" />
                       <span className="text-white/80 text-sm">{point}</span>
                     </li>
                   ))}
@@ -174,49 +161,19 @@ function TwoModes() {
   );
 }
 
-/* ───────────────────  THE QUESTIONS WE ANSWER  ─────────────────── */
-function QuestionsAnswered() {
-  const questions = [
-    {
-      icon: BotIcon,
-      q: "Can AI even reach this page?",
-      gloss: "Crawlers and AI bots can actually fetch and render it.",
-    },
-    {
-      icon: QuoteIcon,
-      q: "How often does AI already cite this domain?",
-      gloss: "Your domain's existing citation footprint across engines.",
-    },
-    {
-      icon: ScanSearchIcon,
-      q: "Does it cover the questions AI asks?",
-      gloss: "Coverage against the prompts engines fan out in your category.",
-    },
-    {
-      icon: FileCheck2Icon,
-      q: "Is this the kind of article AI cites here?",
-      gloss: "Format and depth match what engines actually cite for this query.",
-    },
-    {
-      icon: ShieldCheckIcon,
-      q: "Does it help your brand — without sounding like an ad?",
-      gloss: "Persuasive for you, still neutral enough to be quoted.",
-    },
-    {
-      icon: Heading1Icon,
-      q: "Is it structured to get cited?",
-      gloss: "Headings, structure, and extractable, evidence-backed claims.",
-    },
-    {
-      icon: GaugeIcon,
-      q: "Is it easy to read?",
-      gloss: "Clear and readable — for people and for machines.",
-    },
-    {
-      icon: CodeIcon,
-      q: "Is the page technically AI-readable?",
-      gloss: "robots.txt, schema, and rendering that don't get in the way.",
-    },
+/* ─────────────  THE REPORT: verdict + 8 checks in 2 groups  ───────────── */
+function ReportAnatomy() {
+  const content = [
+    { name: "Does it cover the questions AI asks?", good: true },
+    { name: "Is this the kind of article AI cites here?", good: true },
+    { name: "Does it help your brand, without sounding like an ad?", good: false },
+    { name: "Is it structured to get cited?", good: false },
+    { name: "Is it easy to read?", good: true },
+  ];
+  const publishing = [
+    { name: "Can AI even reach this page?", good: true },
+    { name: "Is the page technically AI-readable?", good: true },
+    { name: "How often does AI already cite this domain?", good: true },
   ];
 
   return (
@@ -224,115 +181,350 @@ function QuestionsAnswered() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
-            What Content Analysis answers
+            What one analysis looks like
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
-            Eight questions we answer for every page
+            Every page, scored on 8 checks
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto">
-            From "can AI reach it?" to "is it built to get cited?" — the
-            technical and the content, in one clear read.
+          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto">
+            Five checks on the content itself, three on how it's published — one
+            clear read on whether AI will cite it.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {questions.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300"
-              >
-                <div className="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-emerald-400" />
+        {/* Report card */}
+        <div className="max-w-4xl mx-auto bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl overflow-hidden shadow-2xl">
+          {/* Header */}
+          <div className="p-6 md:p-8 border-b border-white/10">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="min-w-0">
+                <div className="font-mono text-xs text-emerald-400/80 truncate">
+                  yourbrand.com/blog/best-project-management-tools-2026
                 </div>
-                <h3 className="text-base font-bold text-white mb-2 leading-snug">
-                  {item.q}
-                </h3>
-                <p className="text-[#B0B0B3] text-sm leading-relaxed">
-                  {item.gloss}
-                </p>
+                <div className="text-white/40 text-xs mt-1">
+                  1,620 words · Analyzed Aug 2026 · Topic: Project management
+                  tools — Recommender
+                </div>
               </div>
-            );
-          })}
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 self-start whitespace-nowrap">
+                <CheckCircle2Icon className="w-4 h-4" /> Looking good
+              </span>
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-white mt-5 mb-2">
+              Strong fit for this topic
+            </h3>
+            <p className="text-sm text-[#B0B0B3] leading-relaxed">
+              This article closely answers what people ask AI here — a strong
+              candidate to be cited. Two content checks have room to improve
+              before it's a lock.
+            </p>
+          </div>
+
+          {/* Two groups */}
+          <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
+            {[
+              { label: "CONTENT", icon: FileTextIcon, rows: content },
+              { label: "PUBLISHING", icon: ServerIcon, rows: publishing },
+            ].map((group, gi) => {
+              const GIcon = group.icon;
+              return (
+                <div key={gi} className="p-6 md:p-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <GIcon className="w-4 h-4 text-emerald-400" />
+                    <span className="text-xs font-mono tracking-widest text-white/50">
+                      {group.label}
+                    </span>
+                  </div>
+                  <div className="space-y-3">
+                    {group.rows.map((row, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center justify-between gap-3"
+                      >
+                        <span className="text-sm text-white/85 leading-snug">
+                          {row.name}
+                        </span>
+                        <StatusPill good={row.good} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <p className="text-center text-xs text-white/30 mt-4">
+          Illustrative report — sample data.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────  INSIDE A CHECK: concrete detail visuals  ───────────── */
+function InsideAnalysis() {
+  const citationTypes = [
+    { label: "Product / service page", pct: 26, you: false },
+    { label: "Listicle / best-of", pct: 24, you: false },
+    { label: "Blog / article (you)", pct: 17, you: true },
+    { label: "Comparison (vs) page", pct: 12, you: false },
+    { label: "News article", pct: 9, you: false },
+    { label: "Docs / knowledge base", pct: 6, you: false },
+  ];
+  const geo = [
+    { label: "Statistics & data", value: "6", ok: true },
+    { label: "Source citations", value: "14", ok: true },
+    { label: "Quotations", value: "0", ok: false },
+    { label: "Headings", value: "21", ok: true },
+    { label: "Lists", value: "33", ok: true },
+    { label: "Tables", value: "0", ok: false },
+  ];
+  const crawlers = [
+    "GPTBot",
+    "OAI-SearchBot",
+    "ClaudeBot",
+    "Claude-User",
+    "Google-Extended",
+    "PerplexityBot",
+    "CCBot",
+    "Applebot-Extended",
+  ];
+
+  return (
+    <section className="py-16 md:py-32 bg-[#0E0E10] relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+            Inside a check
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
+            Not a score you have to trust — evidence you can act on
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+          {/* Citation-type fit */}
+          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-2 mb-1">
+              <BarChart3Icon className="w-4 h-4 text-emerald-400" />
+              <span className="text-xs font-mono tracking-widest text-white/50">
+                CITATION-TYPE FIT
+              </span>
+            </div>
+            <p className="text-sm text-[#B0B0B3] mb-6">
+              What kind of page AI actually cites for this topic — and where
+              yours fits.
+            </p>
+            <div className="space-y-3">
+              {citationTypes.map((row, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span
+                    className={`text-xs w-44 flex-shrink-0 ${
+                      row.you ? "text-emerald-300 font-semibold" : "text-white/60"
+                    }`}
+                  >
+                    {row.label}
+                  </span>
+                  <div className="flex-1 h-2.5 rounded-full bg-white/5 overflow-hidden">
+                    <div
+                      className={`h-full rounded-full ${
+                        row.you ? "bg-emerald-500" : "bg-white/20"
+                      }`}
+                      style={{ width: `${row.pct * 3}%` }}
+                    />
+                  </div>
+                  <span
+                    className={`text-xs font-mono w-9 text-right flex-shrink-0 ${
+                      row.you ? "text-emerald-400" : "text-white/40"
+                    }`}
+                  >
+                    {row.pct}%
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* GEO structure */}
+          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-2 mb-1">
+              <ListChecksIcon className="w-4 h-4 text-emerald-400" />
+              <span className="text-xs font-mono tracking-widest text-white/50">
+                STRUCTURED TO GET CITED
+              </span>
+            </div>
+            <p className="text-sm text-[#B0B0B3] mb-6">
+              The signals engines look for when they decide what to quote.
+            </p>
+            <div className="grid grid-cols-3 gap-3">
+              {geo.map((m, i) => (
+                <div
+                  key={i}
+                  className="bg-[#050506] border border-white/10 rounded-xl p-4 text-center"
+                >
+                  <div
+                    className={`text-2xl font-extrabold leading-none mb-1 ${
+                      m.ok ? "text-white" : "text-amber-400"
+                    }`}
+                  >
+                    {m.value}
+                  </div>
+                  <div className="text-[11px] text-white/50 leading-tight">
+                    {m.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-amber-300/80 mt-4">
+              Add quotations and a comparison table — the fastest GEO wins here.
+            </p>
+          </div>
+
+          {/* Crawler access */}
+          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-2 mb-1">
+              <BotIcon className="w-4 h-4 text-emerald-400" />
+              <span className="text-xs font-mono tracking-widest text-white/50">
+                CAN AI REACH THIS PAGE?
+              </span>
+            </div>
+            <p className="text-sm text-[#B0B0B3] mb-6">
+              Every major AI crawler, checked against your robots rules.
+            </p>
+            <div className="grid grid-cols-2 gap-2.5">
+              {crawlers.map((c, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-2 bg-[#050506] border border-white/10 rounded-lg px-3 py-2"
+                >
+                  <CheckCircle2Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span className="text-xs font-mono text-white/70 truncate">
+                    {c}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Citation standing */}
+          <div className="bg-[#0A0A0C] border border-emerald-500/30 rounded-2xl p-6 md:p-8 flex flex-col">
+            <div className="flex items-center gap-2 mb-1">
+              <QuoteIcon className="w-4 h-4 text-emerald-400" />
+              <span className="text-xs font-mono tracking-widest text-white/50">
+                CITATION STANDING
+              </span>
+            </div>
+            <p className="text-sm text-[#B0B0B3] mb-6">
+              How much AI already trusts the domain you're publishing on.
+            </p>
+            <div className="flex items-baseline gap-3 mb-4">
+              <span className="text-5xl md:text-6xl font-extrabold text-emerald-400 leading-none">
+                #1
+              </span>
+              <span className="text-sm text-white/70">
+                of 1,180 domains AI cites for your brand — top 1%
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-3 mt-auto">
+              <div className="bg-[#050506] border border-white/10 rounded-xl p-4">
+                <div className="text-2xl font-extrabold text-white leading-none mb-1">
+                  7,400
+                </div>
+                <div className="text-[11px] text-white/50">
+                  AI answers it appears in
+                </div>
+              </div>
+              <div className="bg-[#050506] border border-white/10 rounded-xl p-4">
+                <div className="text-2xl font-extrabold text-white leading-none mb-1">
+                  72%
+                </div>
+                <div className="text-[11px] text-white/50">
+                  actually cited when it appears
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-/* ─────────────────────  CONTENT QUALITY  ───────────────────── */
-function ContentQuality() {
+/* ─────────────  ACTION PLAN → CONTENT HUB  ───────────── */
+function ActionPlan() {
+  const actions = [
+    {
+      impact: "High impact",
+      strong: true,
+      text: "Add a citable subsection covering the exact feature AI keeps asking about — with specifics and a source link.",
+    },
+    {
+      impact: "High impact",
+      strong: true,
+      text: "Add a short quotation from an authoritative source — a proven lever for getting cited.",
+    },
+    {
+      impact: "Worth doing",
+      strong: false,
+      text: "Soften promotional headings toward neutral, evidence-led framing so answer engines quote you.",
+    },
+    {
+      impact: "Nice to have",
+      strong: false,
+      text: "Add a head-to-head comparison table naming the real alternatives in your category.",
+    },
+  ];
+
   return (
-    <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: text */}
-          <div>
-            <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
-              The content layer
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
-              Will the machine{" "}
-              <span className="text-emerald-400">
-                keep what it reads?
+    <section className="py-16 md:py-32 bg-[#050506] relative">
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+            From findings to fixes
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
+            Every check ends in an action plan
+          </h2>
+          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto">
+            No vanity score. Each finding becomes a prioritized recommendation
+            you can send straight to Content Hub.
+          </p>
+        </div>
+
+        <div className="space-y-3 mb-10">
+          {actions.map((a, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 bg-[#0A0A0C] border border-[#1C1C20] rounded-xl p-5 hover:border-emerald-500/30 transition-all duration-300"
+            >
+              <CheckCircle2Icon className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+              <span className="flex-1 text-sm text-white/85 leading-relaxed">
+                {a.text}
               </span>
-            </h2>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
-              "Engaging" and "citable" are now two different disciplines. During
-              a fanout the engine skips your ads and hooks and extracts facts,
-              comparisons, and evidence. Content Analysis scores your page on
-              exactly what survives.
-            </p>
-          </div>
-
-          {/* Right: human vs machine visual */}
-          <div className="grid grid-cols-1 gap-4">
-            {/* What a human sees */}
-            <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 overflow-hidden">
-              <div className="text-xs font-mono text-white/40 tracking-widest mb-4">
-                WHAT A HUMAN SEES
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-xs font-mono text-white/40 bg-white/5 rounded-md px-3 py-2 line-through">
-                  <XCircleIcon className="w-4 h-4" /> display ad — 728×90
-                </div>
-                <div className="h-3 w-4/5 bg-white/10 rounded" />
-                <div className="flex items-center gap-2 text-xs font-mono text-white/40 bg-white/5 rounded-md px-3 py-2 line-through">
-                  <XCircleIcon className="w-4 h-4" /> hero video — autoplay
-                </div>
-                <div className="h-3 w-3/4 bg-white/10 rounded" />
-                <div className="flex items-center gap-2 text-xs font-mono text-white/40 bg-white/5 rounded-md px-3 py-2 line-through">
-                  <XCircleIcon className="w-4 h-4" /> newsletter popup
-                </div>
-              </div>
+              <span
+                className={`text-[11px] font-semibold px-2.5 py-1 rounded-md border whitespace-nowrap flex-shrink-0 ${
+                  a.strong
+                    ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"
+                    : "bg-white/5 text-white/50 border-white/10"
+                }`}
+              >
+                {a.impact}
+              </span>
             </div>
+          ))}
+        </div>
 
-            {/* What the machine keeps */}
-            <div className="bg-[#0A0A0C] border border-blue-500/40 rounded-2xl p-6">
-              <div className="text-xs font-mono text-blue-400 tracking-widest mb-4">
-                WHAT THE MACHINE KEEPS
-              </div>
-              <div className="space-y-3">
-                {[
-                  "Battery life: 4–5 days · no screen · strap form factor",
-                  "Sleep-stage accuracy vs polysomnography — study data, cited",
-                  "Structured comparison: you vs competitors",
-                  "Pricing & terms, stated plainly",
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex items-start gap-3 border-l-2 border-blue-400 pl-3"
-                  >
-                    <span className="text-white/90 text-sm leading-snug">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="text-center">
+          <Link to="/content-hub/">
+            <Button
+              size="lg"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:scale-105"
+            >
+              Continue in Content Hub
+              <ArrowRightIcon className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -349,25 +541,21 @@ function FlywheelDiagnoseVerify() {
   ];
 
   return (
-    <section className="py-16 md:py-28 bg-[#050506] relative">
+    <section className="py-16 md:py-28 bg-[#0E0E10] relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
         <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
           Where it fits
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Analysis powers{" "}
-          <span className="text-emerald-400">
-            Diagnose
-          </span>{" "}
-          and{" "}
-          <span className="text-emerald-400">
-            Verify
-          </span>
+          <span className="text-emerald-400">Diagnose</span> and{" "}
+          <span className="text-emerald-400">Verify</span>
         </h2>
         <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-12">
           It finds what's holding a page back before launch, and confirms the
-          fix actually moved visibility after. The two checkpoints that keep the
-          loop honest.
+          fix actually moved visibility after — the two checkpoints that keep
+          the loop honest.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
@@ -397,8 +585,8 @@ export function ContentAnalysis() {
   return (
     <>
       <PolymetSEO
-        title="Content Analysis — Crawlability & Citable-Content Audits | Genezio"
-        description="Genezio Content Analysis tells you if AI can read your page and whether it's built to get cited — pre-publish and post-publish. AI crawler access, coverage, structure, citations, and readability, in one read. Book a demo!"
+        title="Content Analysis — Will AI Cite Your Content? | Genezio"
+        description="Genezio Content Analysis scores every page on 8 checks — can AI reach it, does it cover what people ask, is it built to get cited — pre-publish and post-publish, then turns findings into an action plan. Book a demo!"
         canonicalPath="/content-analysis/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
@@ -410,7 +598,7 @@ export function ContentAnalysis() {
               name: "What does Genezio Content Analysis check?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Content Analysis answers eight questions for every page: can AI reach it, how often AI already cites the domain, whether it covers the questions AI asks, whether it's the kind of article AI cites for that query, whether it helps the brand without sounding like an ad, whether it's structured to get cited, whether it's easy to read, and whether the page is technically AI-readable (crawler access, schema, and rendering).",
+                text: "Content Analysis scores every page on eight checks across two groups. Content: does it cover the questions AI asks, is it the kind of article AI cites for the topic, does it help the brand without sounding like an ad, is it structured to get cited, and is it easy to read. Publishing: can AI reach the page, is it technically AI-readable, and how often AI already cites the domain.",
               },
             },
             {
@@ -418,7 +606,7 @@ export function ContentAnalysis() {
               name: "Does Content Analysis work before and after publishing?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. Pre-publish, you can score a draft or URL to catch crawlability blockers and content gaps before launch. Post-publish, Content Analysis monitors the live page continuously as engines re-crawl and re-rank, alerting you when access or structure regresses and verifying that changes moved visibility.",
+                text: "Yes. Pre-publish, you can score a draft or URL to catch what's holding it back before launch. Post-publish, Content Analysis monitors the live page as engines re-crawl, alerts you when access or structure regresses, and verifies that changes moved visibility. Every check ends in a prioritized action plan you can send to Content Hub.",
               },
             },
           ],
@@ -427,8 +615,9 @@ export function ContentAnalysis() {
       <div className="min-h-screen bg-[#050506]">
         <ContentAnalysisHero />
         <TwoModes />
-        <QuestionsAnswered />
-        <ContentQuality />
+        <ReportAnatomy />
+        <InsideAnalysis />
+        <ActionPlan />
         <FlywheelDiagnoseVerify />
         <GenezioCtaSection />
       </div>
