@@ -12,6 +12,10 @@ import {
   AlertTriangleIcon,
   CheckCircle2Icon,
   ArrowRightIcon,
+  PackageIcon,
+  BarChart3Icon,
+  MapPinIcon,
+  TrophyIcon,
 } from "lucide-react";
 
 const DEMO_URL =
@@ -685,6 +689,190 @@ function ThreeFindings() {
   );
 }
 
+/* ─────────────  PRODUCT-LEVEL VIEW  ───────────── */
+function ProductLevelView() {
+  const metrics = [
+    { label: "Recommendation share", value: "6%", tone: "amber" },
+    { label: "Carousel visibility", value: "31%", tone: "emerald" },
+    { label: "Feed entries (duplicates)", value: "12", tone: "amber" },
+    { label: "First-party source share", value: "18%", tone: "amber" },
+    { label: "Price accuracy", value: "82%", tone: "emerald" },
+    { label: "Best marketplace", value: "Amazon", tone: "emerald" },
+  ];
+  const others = [
+    { name: "Flagship Air", cat: "wireless earbuds", rec: 4 },
+    { name: "Studio Over-Ear", cat: "headset", rec: 3 },
+    { name: "Work Buds", cat: "wireless earbuds", rec: 2 },
+  ];
+  return (
+    <section className="py-16 md:py-32 bg-[#0E0E10] relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+            Product-level view
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
+            Zoom in to a single product
+          </h2>
+          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
+            Every metric on this page drills down to the SKU. Pick any product
+            and see exactly how AI ranks, prices, sources, and sells it.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-5 md:gap-6 max-w-6xl mx-auto">
+          {/* selected product dashboard */}
+          <div className="bg-[#0A0A0C] border border-emerald-500/25 rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-4 pb-6 mb-6 border-b border-white/10">
+              <div className="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                <PackageIcon className="w-7 h-7 text-emerald-400" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-white font-bold text-lg leading-tight">
+                  Your flagship
+                </div>
+                <div className="text-white/50 text-sm">
+                  wireless earbuds · $199 · ★ 4.4
+                </div>
+              </div>
+              <span className="ml-auto text-[10px] font-semibold px-2.5 py-1 rounded-md bg-white/5 text-white/50 border border-white/10 whitespace-nowrap self-start">
+                SELECTED
+              </span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {metrics.map((m, i) => (
+                <div
+                  key={i}
+                  className="bg-[#050506] border border-white/10 rounded-xl p-4"
+                >
+                  <div
+                    className={`text-2xl font-extrabold leading-none mb-1 ${
+                      m.tone === "amber" ? "text-amber-400" : "text-white"
+                    }`}
+                  >
+                    {m.value}
+                  </div>
+                  <div className="text-[11px] text-white/50 leading-tight">
+                    {m.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* other products list */}
+          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+            <div className="text-[11px] font-mono uppercase tracking-widest text-white/50 mb-5">
+              Switch product
+            </div>
+            <div className="space-y-2.5">
+              <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl px-4 py-3">
+                <PackageIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm text-white font-medium truncate">
+                    Your flagship
+                  </div>
+                  <div className="text-[11px] text-white/50">wireless earbuds</div>
+                </div>
+                <span className="text-xs font-mono text-emerald-400">6%</span>
+              </div>
+              {others.map((o, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3 hover:border-emerald-500/30 transition-colors"
+                >
+                  <PackageIcon className="w-4 h-4 text-white/40 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-white/80 font-medium truncate">
+                      {o.name}
+                    </div>
+                    <div className="text-[11px] text-white/40">{o.cat}</div>
+                  </div>
+                  <span className="text-xs font-mono text-white/40">
+                    {o.rec}%
+                  </span>
+                </div>
+              ))}
+              <div className="text-[11px] text-white/30 pt-2 text-center">
+                + 60 more entries in your catalogue
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────  MARKETPLACE PERFORMANCE  ───────────── */
+function MarketplacePerformance() {
+  const rows = [
+    { label: "Amazon", pct: 38, hl: true },
+    { label: "Best Buy", pct: 22 },
+    { label: "Walmart", pct: 15 },
+    { label: "Newegg", pct: 10 },
+    { label: "yourbrand.com", pct: 9 },
+    { label: "Other", pct: 6 },
+  ];
+  return (
+    <section className="py-16 md:py-32 bg-[#050506] relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+              Marketplace performance
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+              Where your product{" "}
+              <span className="text-emerald-400">actually wins</span>
+            </h2>
+            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-6">
+              When your product is sold through marketplaces, In-Chat Shopping
+              shows which one AI recommends it from most — so you know where the
+              sale really happens, and where to double down on stock, reviews,
+              and merchandising.
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-emerald-500/25 rounded-xl p-5">
+                <TrophyIcon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <span className="text-sm text-white/80">
+                  Amazon drives 38% of your product's AI recommendations — your
+                  best-performing shelf.
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-amber-500/25 rounded-xl p-5">
+                <MapPinIcon className="w-5 h-5 text-amber-400 flex-shrink-0" />
+                <span className="text-sm text-white/80">
+                  Your own store wins just 9% — a direct-margin opportunity
+                  hiding in plain sight.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+            <div className="flex items-center gap-2 mb-6">
+              <BarChart3Icon className="w-4 h-4 text-emerald-400" />
+              <span className="text-[11px] font-mono uppercase tracking-widest text-white/50">
+                Recommendations by marketplace
+              </span>
+            </div>
+            <div className="space-y-4">
+              {rows.map((r, i) => (
+                <Bar key={i} label={r.label} pct={r.pct} scale={2.2} hl={r.hl} />
+              ))}
+            </div>
+            <p className="text-xs text-white/40 mt-6">
+              Share of your product's AI recommendations attributed to each
+              marketplace.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function InChatShopping() {
   return (
     <>
@@ -720,10 +908,12 @@ export function InChatShopping() {
         <ShoppingHero />
         <GapStats />
         <ProductPerformance />
+        <ProductLevelView />
         <SelfCompetition />
         <CatalogueSurface />
         <SourceAuthority />
         <PriceAuthorship />
+        <MarketplacePerformance />
         <Perception />
         <ThreeFindings />
         <GenezioCtaSection />
