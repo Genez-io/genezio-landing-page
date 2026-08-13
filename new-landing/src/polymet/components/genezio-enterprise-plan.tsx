@@ -167,29 +167,51 @@ export function GenezioEnterprisePlan({
           <div className="relative grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 p-8 md:p-12 lg:p-14">
             {/* Left: offer summary + CTA */}
             <div className="flex flex-col justify-center">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-medium uppercase tracking-widest text-white/70 mb-6">
-                {content.eyebrow}
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-300 mb-6">
+                {content.eyebrow} · Sales-assisted
               </span>
 
-              <div className="flex items-baseline gap-3 mb-5">
-                <span className="text-5xl md:text-6xl font-bold text-white">
-                  Custom
-                </span>
-                <span className="text-sm text-white/50">pricing</span>
-              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+                Let's scope your plan together
+              </h3>
 
-              <p className="text-base md:text-lg text-white/70 leading-relaxed mb-8 max-w-md">
+              <p className="text-base md:text-lg text-white/70 leading-relaxed mb-7 max-w-md">
                 {content.description}
               </p>
 
-              <Button
-                onClick={() => window.open(CALENDAR_URL, "_blank")}
-                className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/20"
-              >
-                Contact Sales
-              </Button>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Scoped to the engines, markets & volume you need",
+                  "Dedicated onboarding & a named account manager",
+                  "Security review, SSO / SAML & DPA ready",
+                ].map((point, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-600/20">
+                      <CheckIcon className="h-3 w-3 text-emerald-400" />
+                    </div>
+                    <span className="text-sm text-white/80">{point}</span>
+                  </li>
+                ))}
+              </ul>
 
-              <p className="mt-4 text-xs text-white/40">{content.note}</p>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <Button
+                  onClick={() => window.open(CALENDAR_URL, "_blank")}
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/20"
+                >
+                  Book a Demo
+                </Button>
+                <button
+                  onClick={() => window.open(CALENDAR_URL, "_blank")}
+                  className="text-sm font-semibold text-white/70 hover:text-white transition-colors px-2 py-2"
+                >
+                  Talk to Sales →
+                </button>
+              </div>
+
+              <p className="mt-5 text-xs text-white/40">
+                Custom pricing, no fixed tiers. {content.note}
+              </p>
             </div>
 
             {/* Right: what's included */}
