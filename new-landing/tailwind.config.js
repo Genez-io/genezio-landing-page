@@ -52,6 +52,15 @@ export default {
                 "monospace"
             ]
         },
+        "fontSize": {
+            "2xl": ["1.375rem", { "lineHeight": "1.85rem" }],
+            "3xl": ["1.65rem", { "lineHeight": "2.05rem" }],
+            "4xl": ["1.95rem", { "lineHeight": "2.3rem" }],
+            "5xl": ["2.5rem", { "lineHeight": "1.08" }],
+            "6xl": ["3.05rem", { "lineHeight": "1.05" }],
+            "7xl": ["3.6rem", { "lineHeight": "1.03" }],
+            "8xl": ["4.6rem", { "lineHeight": "1" }]
+        },
         "colors": {
             "emerald": {
                 "50": "#E9FEF5",
