@@ -147,33 +147,6 @@ export function GenezioHeader() {
                             </div>
                           </div>
                         </Link>
-
-                        {/* Increase In-Chat Shopping */}
-                        <Link
-                          // to="/increase-in-chat-shopping/"
-                          to="#"
-                          onClick={() => setPlatformMenuOpen(false)}
-                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                              <ShoppingBagIcon className="w-5 h-5 text-emerald-400" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                                <div className="text-white font-semibold text-sm group-hover:text-emerald-400 transition-colors">
-                                  Increase In-Chat Shopping
-                                </div>
-                                <span className="px-2.5 py-1 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-md border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
-                                  COMING SOON
-                                </span>
-                              </div>
-                              <div className="text-white/60 text-xs leading-relaxed">
-                                E-commerce Performance
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
                       </div>
 
                       {/* Products */}
@@ -218,6 +191,32 @@ export function GenezioHeader() {
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
                                 Crawlability & citable-content audits
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+
+                        {/* In-Chat Shopping */}
+                        <Link
+                          to="/in-chat-shopping/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                              <ShoppingBagIcon className="w-5 h-5 text-emerald-400" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                                <div className="text-white font-semibold text-sm group-hover:text-emerald-400 transition-colors">
+                                  In-Chat Shopping
+                                </div>
+                                <span className="px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-md border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
+                                  NEW
+                                </span>
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                AI shopping & agentic commerce
                               </div>
                             </div>
                           </div>
@@ -507,23 +506,6 @@ export function GenezioHeader() {
                         Marketing Agent Performance
                       </div>
                     </a>
-                    <a
-                      href="#"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-2"
-                    >
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <div className="text-white text-sm font-medium">
-                          Increase In-Chat Shopping
-                        </div>
-                        <span className="px-2.5 py-1 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-md border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
-                          COMING SOON
-                        </span>
-                      </div>
-                      <div className="text-white/60 text-xs">
-                        E-commerce Performance
-                      </div>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -556,6 +538,18 @@ export function GenezioHeader() {
                     </div>
                     <div className="text-white/60 text-xs">
                       Crawlability & citable-content audits
+                    </div>
+                  </a>
+                  <a
+                    href="/in-chat-shopping/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">
+                      In-Chat Shopping
+                    </div>
+                    <div className="text-white/60 text-xs">
+                      AI shopping & agentic commerce
                     </div>
                   </a>
                 </div>

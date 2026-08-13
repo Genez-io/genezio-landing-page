@@ -17,6 +17,7 @@ const staticRoutes = [
     '/increase-conversion',
     '/content-hub',
     '/content-analysis',
+    '/in-chat-shopping',
     '/glossary',
     '/terms-and-conditions',
     '/support-terms',
