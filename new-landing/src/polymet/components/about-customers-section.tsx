@@ -5,6 +5,7 @@ import {
   FileTextIcon,
   TrendingUpIcon,
 } from "lucide-react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 const questions = [
   {
@@ -61,9 +62,7 @@ export function AboutCustomersSection() {
 
           {/* Right: Questions list */}
           <div className="space-y-4">
-            <p className="text-sm text-zinc-400 font-semibold uppercase tracking-[0.2em] mb-6">
-              Questions our customers answer with Genezio
-            </p>
+            <HeroEyebrow className="mb-4 mx-auto w-fit">Questions our customers answer with Genezio</HeroEyebrow>
             {questions.map((question, index) => {
               const Icon = question.icon;
               return (

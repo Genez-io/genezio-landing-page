@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   MessageSquareIcon,
   TrendingUpIcon,
@@ -75,9 +76,7 @@ export function GenezioBrandedQuestionsSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-            Direct AI Perception Analysis
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">Direct AI Perception Analysis</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             <span className="text-white">Discover What AI Engines</span>{" "}
             <span className="text-white font-extrabold">

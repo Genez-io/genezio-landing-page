@@ -13,6 +13,7 @@ import {
   ScanSearchIcon,
   BarChart3Icon,
   GlobeIcon,
+  PlugIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
@@ -218,8 +219,37 @@ export function GenezioHeader() {
                       </div>
                     </div>
 
-                    {/* Partners column */}
+                    {/* Right column: Build on Genezio + Partners */}
                     <div className="md:border-l md:border-white/10 md:pl-6">
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+                        Build on Genezio
+                      </div>
+                      {/* MCP */}
+                      <Link
+                        to="/mcp/"
+                        onClick={() => setPlatformMenuOpen(false)}
+                        className="group block p-3 rounded-xl hover:bg-white/5 transition-all mb-4"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                            <PlugIcon className="w-5 h-5 text-white/70" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                              <div className="text-white font-semibold text-sm group-hover:text-white transition-colors">
+                                MCP
+                              </div>
+                              <span className="px-2 py-0.5 text-[10px] font-semibold bg-white/10 text-emerald-300 rounded-md border border-white/15 whitespace-nowrap flex-shrink-0">
+                                NEW
+                              </span>
+                            </div>
+                            <div className="text-white/60 text-xs leading-relaxed">
+                              Your data in any AI assistant
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+
                       <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
                         Partners
                       </div>
@@ -534,6 +564,21 @@ export function GenezioHeader() {
                       </div>
                       <div className="text-white/60 text-xs">
                         AI shopping & agentic commerce
+                      </div>
+                    </a>
+                    <a
+                      href="/mcp/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="flex items-center gap-2">
+                        <div className="text-white text-sm font-medium">MCP</div>
+                        <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-white/10 text-emerald-300 rounded-md border border-white/15">
+                          NEW
+                        </span>
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Your data in any AI assistant
                       </div>
                     </a>
                   </div>

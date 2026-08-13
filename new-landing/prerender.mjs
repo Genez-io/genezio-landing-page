@@ -19,6 +19,7 @@ const routes = [
   "/content-hub",
   "/content-analysis",
   "/in-chat-shopping",
+  "/mcp",
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",

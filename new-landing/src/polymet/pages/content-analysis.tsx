@@ -112,9 +112,7 @@ function TwoModes() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            Two moments, one system
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">Two moments, one system</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Analyze before you ship. Monitor after you do.
           </h2>
@@ -176,9 +174,7 @@ function ReportAnatomy() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            What one analysis looks like
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">What one analysis looks like</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Every page, scored on 8 checks
           </h2>
@@ -291,9 +287,7 @@ function InsideAnalysis() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            Inside a check
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">Inside a check</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Not a score you have to trust, evidence you can act on
           </h2>
@@ -476,9 +470,7 @@ function ActionPlan() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            From findings to fixes
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">From findings to fixes</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Every check ends in an action plan
           </h2>
@@ -540,9 +532,7 @@ function FlywheelDiagnoseVerify() {
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
-        <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-          Where it fits
-        </p>
+        <HeroEyebrow className="mb-4 mx-auto w-fit">Where it fits</HeroEyebrow>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Analysis powers{" "}
           <span className="text-white">Diagnose</span> and{" "}

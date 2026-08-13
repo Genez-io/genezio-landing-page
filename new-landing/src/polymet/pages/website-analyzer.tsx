@@ -79,9 +79,7 @@ function ScoreVisual() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            One score, every gap
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">One score, every gap</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             A single AI-readiness score for your domain
           </h2>
@@ -197,9 +195,7 @@ function WhatItChecks() {
     <section className="py-16 md:py-28 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            What we check
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">What we check</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Every signal that decides if AI can use your site
           </h2>
@@ -262,9 +258,7 @@ function HowItWorks() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
-            How it works
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">How it works</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             From URL to fix list in minutes
           </h2>

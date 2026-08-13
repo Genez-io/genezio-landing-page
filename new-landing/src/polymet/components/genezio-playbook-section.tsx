@@ -1,4 +1,5 @@
 import { SearchIcon, LayersIcon, TargetIcon } from "lucide-react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 export function GenezioPlaybookSection() {
   const questions = [
@@ -35,9 +36,7 @@ export function GenezioPlaybookSection() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-            The playbook
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">The playbook</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             You can't buy the recommendation.{" "}
             <span className="text-white">

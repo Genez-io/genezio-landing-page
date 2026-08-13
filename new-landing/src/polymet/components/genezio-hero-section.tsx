@@ -64,8 +64,6 @@ export function GenezioHeroSection() {
               <span>SSO / SAML</span>
               <span className="hidden sm:inline text-white/15">·</span>
               <span>GDPR &amp; DPA ready</span>
-              <span className="hidden sm:inline text-white/15">·</span>
-              <span>Dedicated account manager</span>
             </div>
           </div>
 

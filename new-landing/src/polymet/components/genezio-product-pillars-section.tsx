@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   BarChart3Icon,
   MessagesSquareIcon,
@@ -57,9 +58,7 @@ export function GenezioProductPillarsSection() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-            The platform
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">The platform</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             One platform to{" "}
             <span className="text-white">

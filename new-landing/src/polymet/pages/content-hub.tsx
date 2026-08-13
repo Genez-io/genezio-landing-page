@@ -100,9 +100,7 @@ function MeasurementToBrief() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-            From measurement to action
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">From measurement to action</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             A brief is only as good as the data behind it
           </h2>
@@ -186,9 +184,7 @@ function BriefAnatomy() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
-            <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-              The brief is the product
-            </p>
+            <HeroEyebrow className="mb-4 mx-auto w-fit">The brief is the product</HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Every brief is a{" "}
               <span className="text-white">
@@ -262,9 +258,7 @@ function BriefsVsDirect() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-            Two ways to ship
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">Two ways to ship</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Brief it, or generate it
           </h2>
@@ -372,9 +366,7 @@ function PlanLikeMedia() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-            The playbook
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">The playbook</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Plan content like you plan media
           </h2>
@@ -423,9 +415,7 @@ function FlywheelPublish() {
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
-        <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
-          Where it fits
-        </p>
+        <HeroEyebrow className="mb-4 mx-auto w-fit">Where it fits</HeroEyebrow>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Hub is the{" "}
           <span className="text-white">
