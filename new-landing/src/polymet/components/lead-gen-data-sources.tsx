@@ -14,16 +14,16 @@ export function LeadGenDataSources() {
       title: "SEO Data",
       description:
         "Your search rankings, keywords, and organic performance metrics",
-      color: "bg-emerald-500/20",
-      borderColor: "border-blue-500/20",
-      iconColor: "text-blue-400",
+      color: "bg-white/10",
+      borderColor: "border-zinc-500/20",
+      iconColor: "text-zinc-400",
     },
     {
       icon: TargetIcon,
       title: "Marketing Campaigns",
       description: "Active campaigns, messaging, and positioning strategies",
-      color: "bg-emerald-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       iconColor: "text-emerald-400",
     },
     {
@@ -31,8 +31,8 @@ export function LeadGenDataSources() {
       title: "Public Data",
       description:
         "Website content, social media, press releases, and public statements",
-      color: "bg-emerald-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       iconColor: "text-emerald-400",
     },
     {
@@ -40,21 +40,21 @@ export function LeadGenDataSources() {
       title: "Brand Documentation",
       description:
         "Product specs, case studies, whitepapers, and technical docs",
-      color: "bg-emerald-500/20",
-      borderColor: "border-orange-500/20",
-      iconColor: "text-orange-400",
+      color: "bg-white/10",
+      borderColor: "border-zinc-500/20",
+      iconColor: "text-zinc-400",
     },
   ];
 
   return (
     <section className="relative py-16 sm:py-24 bg-[#0E0E10] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <DatabaseIcon className="w-4 h-4 text-emerald-400" />
 
             <span className="text-emerald-400 text-xs sm:text-sm font-medium">
@@ -105,9 +105,9 @@ export function LeadGenDataSources() {
         </div>
 
         {/* Bottom Feature */}
-        <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-8">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center flex-shrink-0">
               <SparklesIcon className="w-7 h-7 sm:w-8 sm:h-8 text-emerald-400" />
             </div>
             <div className="flex-1">

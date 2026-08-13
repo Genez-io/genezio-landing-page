@@ -369,7 +369,7 @@ export function Glossary() {
       <div className="relative pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <BookOpenIcon className="w-4 h-4 text-blue-400" />
+            <BookOpenIcon className="w-4 h-4 text-zinc-400" />
 
             <span className="text-white/80 text-sm font-medium">
               AI Search Glossary
@@ -399,7 +399,7 @@ export function Glossary() {
               placeholder="Search terms, acronyms, or definitions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-6 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl text-base focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20"
+              className="w-full pl-12 pr-4 py-6 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl text-base focus:border-zinc-500/50 focus:ring-2 focus:ring-zinc-500/20"
             />
           </div>
         </div>
@@ -435,11 +435,11 @@ export function Glossary() {
                           className="block group bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-white/10 transition-all cursor-pointer"
                         >
                           <div className="flex items-start justify-between gap-4 mb-3">
-                            <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            <h3 className="text-xl font-semibold text-white group-hover:text-zinc-400 transition-colors">
                               {item.term}
                             </h3>
                             {item.acronym && (
-                              <span className="px-3 py-1 text-xs font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full flex-shrink-0">
+                              <span className="px-3 py-1 text-xs font-bold bg-zinc-500/10 text-zinc-400 border border-zinc-500/20 rounded-full flex-shrink-0">
                                 {item.acronym}
                               </span>
                             )}

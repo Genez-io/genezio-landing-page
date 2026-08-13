@@ -61,12 +61,12 @@ function ShoppingHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
               <ShoppingBagIcon className="w-4 h-4 text-emerald-400" />
               <span className="text-sm text-emerald-400 font-medium">
                 In-Chat Shopping · AI Product Intelligence
@@ -81,7 +81,7 @@ function ShoppingHero() {
               </span>
             </h1>
 
-            <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
               When shoppers ask an assistant what to buy, winning the brand isn't
               the same as winning the sale. In-Chat Shopping shows how AI ranks,
               prices, sources, and sells your products, so you know exactly where
@@ -92,7 +92,7 @@ function ShoppingHero() {
               <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
                 >
                   Book a Demo
                 </Button>
@@ -110,10 +110,10 @@ function ShoppingHero() {
 
           {/* concept visual: brand vs product */}
           <div className="relative">
-            <div className="absolute -inset-3 bg-emerald-500/10 rounded-3xl blur-2xl" />
+            <div className="absolute -inset-3 bg-white/[0.04] rounded-3xl blur-2xl" />
             <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl">
               <div className="flex justify-end mb-4">
-                <div className="bg-emerald-500/15 border border-emerald-500/25 rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[88%]">
+                <div className="bg-white/[0.06] border border-white/10 rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[88%]">
                   <p className="text-sm text-emerald-50">
                     "Which one should I actually buy?"
                   </p>
@@ -121,9 +121,9 @@ function ShoppingHero() {
               </div>
               <div className="flex justify-start mb-6">
                 <div className="bg-[#1C1C20]/70 border border-white/10 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[92%]">
-                  <p className="text-sm text-gray-200 leading-relaxed">
+                  <p className="text-sm text-zinc-200 leading-relaxed">
                     Your brand is a great choice, for this use case, consider{" "}
-                    <span className="text-white font-semibold bg-emerald-500/15 border border-emerald-500/30 rounded px-1.5 py-0.5">
+                    <span className="text-white font-semibold bg-white/[0.06] border border-white/15 rounded px-1.5 py-0.5">
                       one of these models…
                     </span>
                   </p>
@@ -138,7 +138,7 @@ function ShoppingHero() {
                     recommended with confidence
                   </div>
                 </div>
-                <div className="bg-[#050506] border border-emerald-500/30 rounded-xl p-4 text-center">
+                <div className="bg-[#050506] border border-white/15 rounded-xl p-4 text-center">
                   <div className="text-3xl font-extrabold text-emerald-400 leading-none mb-1.5">
                     Product?
                   </div>
@@ -185,10 +185,10 @@ function WhatWeAnalyze() {
   ];
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             What we analyze
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -206,9 +206,9 @@ function WhatWeAnalyze() {
             return (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-emerald-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-white/15 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-emerald-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{d.name}</h3>
@@ -268,7 +268,7 @@ function WhatItReveals() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             What it reveals
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -281,9 +281,9 @@ function WhatItReveals() {
             return (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-white/15 transition-all duration-300"
               >
-                <div className="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-4">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/15 flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{it.title}</h3>
@@ -316,10 +316,10 @@ function ProductLevelView() {
   ];
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             Product-level view
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -332,9 +332,9 @@ function ProductLevelView() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-5 md:gap-6 max-w-6xl mx-auto">
-          <div className="bg-[#0A0A0C] border border-emerald-500/25 rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex items-center gap-4 pb-6 mb-6 border-b border-white/10">
-              <div className="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+              <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center flex-shrink-0">
                 <PackageIcon className="w-7 h-7 text-emerald-400" />
               </div>
               <div className="min-w-0">
@@ -357,7 +357,7 @@ function ProductLevelView() {
                 >
                   <div
                     className={`text-2xl font-extrabold leading-none mb-1 ${
-                      m.tone === "amber" ? "text-amber-400" : "text-white"
+                      m.tone === "amber" ? "text-zinc-400" : "text-white"
                     }`}
                   >
                     {m.value}
@@ -375,7 +375,7 @@ function ProductLevelView() {
               Switch product
             </div>
             <div className="space-y-2.5">
-              <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl px-4 py-3">
+              <div className="flex items-center gap-3 bg-white/5 border border-white/15 rounded-xl px-4 py-3">
                 <PackageIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <div className="flex-1 min-w-0">
                   <div className="text-sm text-white font-medium truncate">
@@ -388,7 +388,7 @@ function ProductLevelView() {
               {others.map((o, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3 hover:border-emerald-500/30 transition-colors"
+                  className="flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3 hover:border-white/15 transition-colors"
                 >
                   <PackageIcon className="w-4 h-4 text-white/40 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
@@ -431,7 +431,7 @@ function MarketplacePerformance() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+            <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
               Marketplace performance
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
@@ -445,15 +445,15 @@ function MarketplacePerformance() {
               and merchandising, or push your own store.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-emerald-500/25 rounded-xl p-5">
+              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-white/10 rounded-xl p-5">
                 <TrophyIcon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-sm text-white/80">
                   Know your best-performing shelf, where AI sends the most
                   buyers.
                 </span>
               </div>
-              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-amber-500/25 rounded-xl p-5">
-                <MapPinIcon className="w-5 h-5 text-amber-400 flex-shrink-0" />
+              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-zinc-500/25 rounded-xl p-5">
+                <MapPinIcon className="w-5 h-5 text-zinc-400 flex-shrink-0" />
                 <span className="text-sm text-white/80">
                   Spot where your own store is underrepresented, a
                   direct-margin opportunity.

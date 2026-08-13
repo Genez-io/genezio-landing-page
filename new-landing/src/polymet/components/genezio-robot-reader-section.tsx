@@ -17,11 +17,11 @@ export function GenezioRobotReaderSection() {
 
   return (
     <section className="relative py-24 md:py-32 bg-[#0E0E10] overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <EyeOffIcon className="w-4 h-4 text-emerald-400" />
             <span className="text-sm text-emerald-400 font-medium">
               The twist
@@ -65,15 +65,15 @@ export function GenezioRobotReaderSection() {
           </div>
 
           {/* What the machine keeps */}
-          <div className="bg-[#0A0A0C] border border-blue-500/40 rounded-2xl p-6 md:p-8">
-            <div className="text-xs font-mono text-blue-400 tracking-widest mb-5">
+          <div className="bg-[#0A0A0C] border border-zinc-500/40 rounded-2xl p-6 md:p-8">
+            <div className="text-xs font-mono text-zinc-400 tracking-widest mb-5">
               WHAT THE MACHINE KEEPS
             </div>
             <div className="space-y-3">
               {kept.map((item, i) => (
                 <div
                   key={i}
-                  className="border-l-2 border-blue-400 pl-4 py-1 text-sm text-white/90 leading-snug"
+                  className="border-l-2 border-zinc-400 pl-4 py-1 text-sm text-white/90 leading-snug"
                 >
                   {item}
                 </div>
@@ -86,7 +86,7 @@ export function GenezioRobotReaderSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {points.map((point, i) => (
             <div key={i} className="flex items-start gap-3">
-              <span className="text-blue-400 font-mono text-sm mt-0.5">
+              <span className="text-zinc-400 font-mono text-sm mt-0.5">
                 {`0${i + 1}`}
               </span>
               <span className="text-sm text-[#B0B0B3] leading-relaxed">

@@ -20,13 +20,13 @@ export function GenezioShiftSection() {
   return (
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-14 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-            <SearchXIcon className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-400 font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+            <SearchXIcon className="w-4 h-4 text-zinc-400" />
+            <span className="text-sm text-zinc-400 font-medium">
               The shift
             </span>
           </div>

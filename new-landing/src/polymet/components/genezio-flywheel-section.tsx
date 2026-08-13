@@ -42,13 +42,13 @@ export function GenezioFlywheelSection() {
 
   return (
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-            <RefreshCwIcon className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-400 font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+            <RefreshCwIcon className="w-4 h-4 text-zinc-400" />
+            <span className="text-sm text-zinc-400 font-medium">
               The operating model
             </span>
           </div>
@@ -69,16 +69,16 @@ export function GenezioFlywheelSection() {
             const Icon = step.icon;
             return (
               <div key={index} className="relative">
-                <div className="h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300">
+                <div className="h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-zinc-500/30 transition-all duration-300">
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-11 h-11 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-blue-400" />
+                    <div className="w-11 h-11 rounded-lg bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-zinc-400" />
                     </div>
                     <span className="text-xs font-mono text-white/30">
                       {`0${index + 1}`}
                     </span>
                   </div>
-                  <div className="text-xs font-mono text-blue-400 tracking-widest mb-2">
+                  <div className="text-xs font-mono text-zinc-400 tracking-widest mb-2">
                     {step.label}
                   </div>
                   <h3 className="text-base font-bold text-white mb-2 leading-snug">
@@ -90,7 +90,7 @@ export function GenezioFlywheelSection() {
                   {step.link && (
                     <Link
                       to={step.link.to}
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-400 hover:text-zinc-300 transition-colors"
                     >
                       {step.link.label}
                       <ArrowRightIcon className="w-3 h-3" />
@@ -98,7 +98,7 @@ export function GenezioFlywheelSection() {
                   )}
                 </div>
                 {index < steps.length - 1 && (
-                  <ArrowRightIcon className="hidden md:block absolute top-1/2 -right-3 -translate-y-1/2 w-5 h-5 text-blue-500/30 z-10" />
+                  <ArrowRightIcon className="hidden md:block absolute top-1/2 -right-3 -translate-y-1/2 w-5 h-5 text-zinc-500/30 z-10" />
                 )}
               </div>
             );

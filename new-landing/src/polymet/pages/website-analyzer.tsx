@@ -23,10 +23,10 @@ const DEMO_URL =
 function WebsiteAnalyzerHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-emerald-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
           <GlobeIcon className="w-4 h-4 text-emerald-400" />
           <span className="text-sm text-emerald-400 font-medium">
             Website Analyzer
@@ -39,7 +39,7 @@ function WebsiteAnalyzerHero() {
           <span className="text-emerald-400">for AI to recommend?</span>
         </h1>
 
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           Website Analyzer runs an instant, site-wide AI-readiness audit. Enter
           a domain and see where answer engines can reach you, where they can't,
           and exactly what to fix first.
@@ -49,7 +49,7 @@ function WebsiteAnalyzerHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
             >
               Book a Demo
             </Button>
@@ -80,16 +80,16 @@ function ScoreVisual() {
 
   return (
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             One score, every gap
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             A single AI-readiness score for your domain
           </h2>
-          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto">
             We roll every check into one number, then break it down so you know
             what is dragging it down and what to fix first.
           </p>
@@ -109,7 +109,7 @@ function ScoreVisual() {
                 /100
               </div>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-zinc-500/15 text-zinc-300 border border-zinc-500/30">
               <AlertTriangleIcon className="w-3.5 h-3.5" /> Room to improve
             </span>
             <p className="text-sm text-white/50 mt-6 max-w-xs">
@@ -132,7 +132,7 @@ function ScoreVisual() {
                     </span>
                     <span
                       className={`text-sm font-bold ${
-                        c.good ? "text-emerald-400" : "text-amber-300"
+                        c.good ? "text-emerald-400" : "text-zinc-300"
                       }`}
                     >
                       {c.score}
@@ -141,7 +141,7 @@ function ScoreVisual() {
                   <div className="h-2 w-full rounded-full bg-white/[0.06] overflow-hidden">
                     <div
                       className={`h-full rounded-full ${
-                        c.good ? "bg-emerald-500" : "bg-amber-400"
+                        c.good ? "bg-emerald-500" : "bg-zinc-400"
                       }`}
                       style={{ width: `${c.score}%` }}
                     />
@@ -201,7 +201,7 @@ function WhatItChecks() {
     <section className="py-16 md:py-28 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             What we check
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -215,9 +215,9 @@ function WhatItChecks() {
             return (
               <div
                 key={check.title}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-emerald-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-white/15 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-emerald-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
@@ -263,10 +263,10 @@ function HowItWorks() {
 
   return (
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             How it works
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -281,7 +281,7 @@ function HowItWorks() {
               <div key={step.label} className="relative">
                 <div className="h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7">
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                    <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/15 flex items-center justify-center">
                       <Icon className="w-5 h-5 text-emerald-400" />
                     </div>
                     <span className="text-xs font-mono text-white/30">
@@ -345,10 +345,10 @@ function NextStep() {
               <Link
                 key={card.name}
                 to={card.to}
-                className="group block bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 md:p-8 hover:border-emerald-500/30 transition-all duration-300"
+                className="group block bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 md:p-8 hover:border-white/15 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center">
                     <Icon className="w-6 h-6 text-emerald-400" />
                   </div>
                   <ArrowRightIcon className="w-5 h-5 text-white/20 group-hover:text-white/60 group-hover:translate-x-1 transition-all" />

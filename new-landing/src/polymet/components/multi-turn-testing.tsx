@@ -99,15 +99,15 @@ export function MultiTurnTesting() {
   return (
     <section className="relative py-16 sm:py-24 bg-[#0E0E10] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-blue-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-500/5 via-transparent to-zinc-500/5" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-            <FlaskConicalIcon className="w-4 h-4 text-blue-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+            <FlaskConicalIcon className="w-4 h-4 text-zinc-400" />
 
-            <span className="text-blue-400 text-sm font-medium">
+            <span className="text-zinc-400 text-sm font-medium">
               Multi-Turn Testing
             </span>
           </div>
@@ -131,7 +131,7 @@ export function MultiTurnTesting() {
             {/* Personas */}
             <div>
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <UserIcon className="w-5 h-5 text-blue-400" />
+                <UserIcon className="w-5 h-5 text-zinc-400" />
                 Select Persona
               </h3>
               <div className="space-y-3">
@@ -140,8 +140,8 @@ export function MultiTurnTesting() {
                     key={index}
                     onClick={() => setSelectedPersona(index)}
                     className={`w-full text-left bg-white/[0.02] backdrop-blur-sm border rounded-xl p-4 transition-all ${selectedPersona === index
-                      ? "border-blue-500/50 bg-white/[0.04]"
-                      : "border-white/10 hover:border-blue-500/30"
+                      ? "border-zinc-500/50 bg-white/[0.04]"
+                      : "border-white/10 hover:border-zinc-500/30"
                       }`}
                   >
                     <div className="flex items-center gap-3">
@@ -153,7 +153,7 @@ export function MultiTurnTesting() {
                           {persona.description}
                         </div>
                       </div>
-                      <div className="text-xs text-blue-400 font-semibold">
+                      <div className="text-xs text-zinc-400 font-semibold">
                         {persona.scenarios} scenarios
                       </div>
                     </div>
@@ -165,21 +165,21 @@ export function MultiTurnTesting() {
             {/* Test Scenarios */}
             <div>
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <FlaskConicalIcon className="w-5 h-5 text-blue-400" />
+                <FlaskConicalIcon className="w-5 h-5 text-zinc-400" />
                 Test Scenarios
               </h3>
               <div className="space-y-3">
                 {testScenarios.map((scenario, index) => (
                   <div
                     key={index}
-                    className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/[0.04] hover:border-blue-500/30 transition-all"
+                    className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/[0.04] hover:border-zinc-500/30 transition-all"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <h4 className="font-semibold text-white text-sm">
                         {scenario.title}
                       </h4>
-                      <div className="px-2 py-1 rounded bg-blue-500/10 border border-blue-500/20">
-                        <span className="text-xs text-blue-400 font-medium">
+                      <div className="px-2 py-1 rounded bg-zinc-500/10 border border-zinc-500/20">
+                        <span className="text-xs text-zinc-400 font-medium">
                           {scenario.turns} turns
                         </span>
                       </div>
@@ -193,7 +193,7 @@ export function MultiTurnTesting() {
                       </div>
                       <Button
                         size="sm"
-                        className="bg-blue-600 hover:bg-blue-500 text-white h-7 px-3 text-xs"
+                        className="bg-zinc-600 hover:bg-zinc-500 text-white h-7 px-3 text-xs"
                       >
                         <PlayIcon className="w-3 h-3 mr-1" />
                         Run
@@ -210,11 +210,11 @@ export function MultiTurnTesting() {
             <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                  <MessageSquareIcon className="w-5 h-5 text-blue-400" />
+                  <MessageSquareIcon className="w-5 h-5 text-zinc-400" />
                   Conversation Preview
                 </h3>
                 <div className="flex items-center gap-2">
-                  <div className="px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <div className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">
                     <span className="text-xs text-emerald-400 font-semibold">
                       3/3 Passed
                     </span>
@@ -228,8 +228,8 @@ export function MultiTurnTesting() {
                   <div key={index}>
                     {message.role === "user" ? (
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                          <UserIcon className="w-4 h-4 text-blue-400" />
+                        <div className="w-8 h-8 rounded-full bg-zinc-500/20 border border-zinc-500/20 flex items-center justify-center flex-shrink-0">
+                          <UserIcon className="w-4 h-4 text-zinc-400" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
@@ -249,8 +249,8 @@ export function MultiTurnTesting() {
                       </div>
                     ) : (
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                          <SparklesIcon className="w-4 h-4 text-blue-400" />
+                        <div className="w-8 h-8 rounded-full bg-zinc-500/20 border border-zinc-500/20 flex items-center justify-center flex-shrink-0">
+                          <SparklesIcon className="w-4 h-4 text-zinc-400" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
@@ -264,10 +264,10 @@ export function MultiTurnTesting() {
                               <CheckCircleIcon className="w-3 h-3 text-emerald-400" />
                             )}
                             {message.status === "fail" && (
-                              <XCircleIcon className="w-3 h-3 text-red-400" />
+                              <XCircleIcon className="w-3 h-3 text-zinc-400" />
                             )}
                           </div>
-                          <div className="bg-blue-500/5 border border-blue-500/20 rounded-lg rounded-tl-none px-4 py-3">
+                          <div className="bg-zinc-500/5 border border-zinc-500/20 rounded-lg rounded-tl-none px-4 py-3">
                             <p className="text-sm text-white/80">
                               {message.message}
                             </p>
@@ -280,7 +280,7 @@ export function MultiTurnTesting() {
               </div>
 
               {/* Test Results */}
-              <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                 <div className="flex items-center gap-3">
                   <CheckCircleIcon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
 
@@ -300,7 +300,7 @@ export function MultiTurnTesting() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 bg-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
+        <div className="mt-12 bg-zinc-500/10 border border-zinc-500/20 rounded-2xl p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-3">
               Generate Custom Test Scenarios

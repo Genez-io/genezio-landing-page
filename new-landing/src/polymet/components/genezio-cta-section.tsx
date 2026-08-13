@@ -5,7 +5,7 @@ export function GenezioCtaSection() {
     <section className="relative py-16 md:py-32 bg-[#050506] overflow-hidden">
       {/* Animated gradient background */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-transparent to-cyan-900/30 animate-pulse"
+        className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-transparent animate-pulse"
         style={{ animationDuration: "10s" }}
       />
 
@@ -14,7 +14,7 @@ export function GenezioCtaSection() {
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
 
         <div
-          className="absolute top-1/3 right-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+          className="absolute top-1/3 right-1/3 w-2 h-2 bg-zinc-400 rounded-full animate-pulse"
           style={{ animationDelay: "1s" }}
         />
 
@@ -24,13 +24,13 @@ export function GenezioCtaSection() {
         />
 
         <div
-          className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-300 rounded-full animate-pulse"
+          className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-zinc-300 rounded-full animate-pulse"
           style={{ animationDelay: "1.5s" }}
         />
       </div>
 
       {/* Glowing orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -52,7 +52,7 @@ export function GenezioCtaSection() {
         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
             >
               Book a Demo
             </Button>
@@ -70,7 +70,7 @@ export function GenezioCtaSection() {
       </div>
 
       {/* Bottom gradient line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </section>
   );
 }
@@ -79,7 +79,7 @@ export function GenezioCtaSection() {
           // <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
           //   <Button
           //     size="lg"
-          //     className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 w-full"
+          //     className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
           //   >
           //     Analyze Your AI Brand Visibility
           //   </Button>

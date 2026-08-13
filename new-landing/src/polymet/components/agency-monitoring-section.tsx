@@ -124,7 +124,7 @@ export function AgencyMonitoringSection() {
           <div className="order-1 lg:order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Monitor{" "}
-              <span className="text-blue-400">
+              <span className="text-zinc-400">
                 industry insights
               </span>
             </h2>
@@ -135,8 +135,8 @@ export function AgencyMonitoringSection() {
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                    <FilterIcon className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                    <FilterIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
                 <div>
@@ -151,8 +151,8 @@ export function AgencyMonitoringSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                    <BarChart3Icon className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                    <BarChart3Icon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
                 <div>
@@ -167,8 +167,8 @@ export function AgencyMonitoringSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                    <PieChartIcon className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                    <PieChartIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
                 <div>
@@ -185,7 +185,7 @@ export function AgencyMonitoringSection() {
             {/* Industry Report CTA */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
-                <Button className="mt-8 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white h-12">
+                <Button className="mt-8 w-full sm:w-auto bg-zinc-600 hover:bg-zinc-700 text-white h-12">
                   <DownloadIcon className="w-4 h-4 mr-2" />
                   Get Free Industry Report
                 </Button>
@@ -204,7 +204,7 @@ export function AgencyMonitoringSection() {
                       <Button
                         type="button"
                         variant={selectedIndustry === "banking" ? "default" : "outline"}
-                        className={selectedIndustry === "banking" ? "bg-blue-600 hover:bg-blue-700 text-white" : "border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white"}
+                        className={selectedIndustry === "banking" ? "bg-zinc-600 hover:bg-zinc-700 text-white" : "border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white"}
                         onClick={() => setSelectedIndustry("banking")}
                       >
                         Banking
@@ -212,7 +212,7 @@ export function AgencyMonitoringSection() {
                       <Button
                         type="button"
                         variant={selectedIndustry === "education" ? "default" : "outline"}
-                        className={selectedIndustry === "education" ? "bg-blue-600 hover:bg-blue-700 text-white" : "border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white"}
+                        className={selectedIndustry === "education" ? "bg-zinc-600 hover:bg-zinc-700 text-white" : "border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white"}
                         onClick={() => setSelectedIndustry("education")}
                       >
                         Education
@@ -259,14 +259,14 @@ export function AgencyMonitoringSection() {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="p-3 rounded-lg bg-red-500/20 border border-red-500/30 text-red-400 text-sm">
+                    <div className="p-3 rounded-lg bg-zinc-500/20 border border-zinc-500/30 text-zinc-400 text-sm">
                       Something went wrong. Please try again.
                     </div>
                   )}
 
                   <Button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-zinc-600 hover:bg-zinc-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!selectedIndustry || !email || isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Send Report to Email"}
@@ -278,7 +278,7 @@ export function AgencyMonitoringSection() {
 
           {/* Left visual */}
           <div className="relative order-2 lg:order-2 mt-8 lg:mt-0">
-            <div className="relative rounded-2xl bg-blue-500/10 border border-white/10 p-6 md:p-8">
+            <div className="relative rounded-2xl bg-zinc-500/10 border border-white/10 p-6 md:p-8">
               {/* Industry grid */}
               <div className="space-y-3">
                 <div className="text-sm font-medium text-white/60 mb-4">
@@ -290,7 +290,7 @@ export function AgencyMonitoringSection() {
                     className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-blue-400" />
+                      <div className="w-3 h-3 rounded-full bg-zinc-400" />
                       <span className="text-white font-medium">
                         {industry.name}
                       </span>
@@ -301,7 +301,7 @@ export function AgencyMonitoringSection() {
                       </span>
                       <div className="w-16 h-2 rounded-full bg-white/10">
                         <div
-                          className="h-full rounded-full bg-blue-400"
+                          className="h-full rounded-full bg-zinc-400"
                           style={{
                             width: `${(industry.brands / 12) * 100}%`,
                           }}
@@ -313,7 +313,7 @@ export function AgencyMonitoringSection() {
               </div>
 
               {/* Floating notification */}
-              <div className="absolute -top-4 -right-4 p-4 rounded-xl bg-blue-600 shadow-2xl">
+              <div className="absolute -top-4 -right-4 p-4 rounded-xl bg-zinc-600 shadow-2xl">
                 <div className="flex items-center gap-2">
                   <BellIcon className="w-4 h-4 text-white" />
                   <span className="text-sm font-medium text-white">
@@ -323,7 +323,7 @@ export function AgencyMonitoringSection() {
               </div>
 
               {/* Glow effects */}
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-blue-400 blur-2xl opacity-50" />
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-white/[0.04] blur-2xl opacity-50" />
             </div>
           </div>
 

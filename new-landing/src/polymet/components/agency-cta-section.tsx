@@ -6,15 +6,15 @@ export function AgencyCtaSection() {
   return (
     <section className="py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden bg-blue-500/20 border border-blue-500/30 p-8 md:p-12 lg:p-16">
+        <div className="relative rounded-3xl overflow-hidden bg-zinc-500/20 border border-zinc-500/30 p-8 md:p-12 lg:p-16">
           {/* Background glow */}
-          <div className="absolute inset-0 bg-blue-500/10 blur-3xl" />
+          <div className="absolute inset-0 bg-white/[0.04] blur-3xl" />
 
           {/* Content */}
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-blue-300">
+            <div className="inline-flex items-center gap-2 bg-zinc-500/20 border border-zinc-500/30 rounded-full px-4 py-2 mb-6">
+              <SparklesIcon className="w-4 h-4 text-zinc-400" />
+              <span className="text-sm font-semibold text-zinc-300">
                 Start today
               </span>
             </div>
@@ -32,7 +32,7 @@ export function AgencyCtaSection() {
               <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg font-medium w-full sm:w-auto"
+                  className="bg-zinc-600 hover:bg-zinc-700 text-white px-8 h-14 text-lg font-medium w-full sm:w-auto"
                 >
                   Talk to Sales
                 </Button>

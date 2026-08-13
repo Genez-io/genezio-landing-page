@@ -65,9 +65,9 @@ export function AgencyBrandScanSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-blue-300">
+            <div className="inline-flex items-center gap-2 bg-zinc-500/20 border border-zinc-500/30 rounded-full px-4 py-2 mb-6">
+              <SparklesIcon className="w-4 h-4 text-zinc-400" />
+              <span className="text-sm font-semibold text-zinc-300">
                 Free Brand Scan
               </span>
             </div>
@@ -75,7 +75,7 @@ export function AgencyBrandScanSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Start with a free
               <br />
-              <span className="text-blue-400">AI visibility scan</span>
+              <span className="text-zinc-400">AI visibility scan</span>
               <br />
               for one client
             </h2>
@@ -98,15 +98,15 @@ export function AgencyBrandScanSection() {
                 }}
                 className={`flex-1 h-12 bg-white/10 text-white placeholder:text-white/40 rounded-lg transition-all ${
                   highlightInput
-                    ? "border-2 border-blue-500 ring-4 ring-blue-500/30 animate-pulse"
-                    : "border border-white/20 focus:border-blue-500 focus:ring-blue-500"
+                    ? "border-2 border-zinc-500 ring-4 ring-zinc-500/30 animate-pulse"
+                    : "border border-white/20 focus:border-zinc-500 focus:ring-zinc-500"
                 }`}
               />
 
               <Button
                 size="lg"
                 onClick={handleAnalyze}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 font-medium w-full sm:w-auto"
+                className="bg-zinc-600 hover:bg-zinc-700 text-white px-8 h-12 font-medium w-full sm:w-auto"
               >
                     <SearchIcon className="w-4 h-4 mr-2" />
                     Scan Now
@@ -116,8 +116,8 @@ export function AgencyBrandScanSection() {
             {/* What You'll Get */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <BarChart3Icon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                  <BarChart3Icon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -130,8 +130,8 @@ export function AgencyBrandScanSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <TrendingUpIcon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                  <TrendingUpIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -142,8 +142,8 @@ export function AgencyBrandScanSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <TargetIcon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                  <TargetIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -154,8 +154,8 @@ export function AgencyBrandScanSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <LightbulbIcon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                  <LightbulbIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">
@@ -169,7 +169,7 @@ export function AgencyBrandScanSection() {
 
           {/* Right side - Visual Preview */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-blue-500/10 p-6 md:p-8">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-zinc-500/10 p-6 md:p-8">
               {/* Mock Dashboard Preview */}
               <div className="space-y-6">
                 {/* Header */}
@@ -184,7 +184,7 @@ export function AgencyBrandScanSection() {
                     <div className="text-white/60 text-sm mb-1">
                       Visibility score
                     </div>
-                    <div className="text-3xl font-bold text-blue-400">87</div>
+                    <div className="text-3xl font-bold text-zinc-400">87</div>
                   </div>
                 </div>
 
@@ -192,7 +192,7 @@ export function AgencyBrandScanSection() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400" />
+                      <div className="w-2 h-2 rounded-full bg-zinc-400" />
                       <div className="text-white/60 text-xs">
                         ChatGPT mentions
                       </div>
@@ -221,23 +221,23 @@ export function AgencyBrandScanSection() {
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="text-white/60 text-xs mb-3">Top keywords</div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-zinc-500/20 border border-zinc-500/30 text-zinc-300 text-xs font-medium">
                       best running shoes online under 300$
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-zinc-500/20 border border-zinc-500/30 text-zinc-300 text-xs font-medium">
                       lightweight athletic sneakers for winter 2026
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-zinc-500/20 border border-zinc-500/30 text-zinc-300 text-xs font-medium">
                       premium sportswear brands
                     </span>
                   </div>
                 </div>
 
                 {/* Insights */}
-                <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
+                <div className="p-4 rounded-xl bg-zinc-500/10 border border-zinc-500/30">
                   <div className="flex items-center gap-2 mb-2">
-                    <LightbulbIcon className="w-4 h-4 text-blue-400" />
-                    <div className="text-blue-300 text-sm font-semibold">
+                    <LightbulbIcon className="w-4 h-4 text-zinc-400" />
+                    <div className="text-zinc-300 text-sm font-semibold">
                       34 insights found
                     </div>
                   </div>
@@ -248,7 +248,7 @@ export function AgencyBrandScanSection() {
               </div>
 
               {/* Glow effect */}
-              <div className="absolute -inset-1 bg-blue-500/20 blur-2xl -z-10" />
+              <div className="absolute -inset-1 bg-white/[0.04] blur-2xl -z-10" />
             </div>
           </div>
         </div>

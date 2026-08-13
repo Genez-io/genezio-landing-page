@@ -23,11 +23,11 @@ const DEMO_URL =
 /* Status pill shared by the report visuals. All data on this page is illustrative. */
 function StatusPill({ good }: { good: boolean }) {
   return good ? (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 whitespace-nowrap">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/[0.06] text-emerald-300 border border-white/15 whitespace-nowrap">
       <CheckCircle2Icon className="w-3.5 h-3.5" /> Looking good
     </span>
   ) : (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30 whitespace-nowrap">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-zinc-500/15 text-zinc-300 border border-zinc-500/30 whitespace-nowrap">
       <AlertTriangleIcon className="w-3.5 h-3.5" /> Room to improve
     </span>
   );
@@ -38,10 +38,10 @@ function ContentAnalysisHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-emerald-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
           <ScanSearchIcon className="w-4 h-4 text-emerald-400" />
           <span className="text-sm text-emerald-400 font-medium">
             Content Analysis
@@ -54,7 +54,7 @@ function ContentAnalysisHero() {
           <span className="text-emerald-400">doesn't have eyes.</span>
         </h1>
 
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           Content Analysis tells you if AI can read your page, and if it's
           built to get cited. Before you publish, and every day after.
         </p>
@@ -63,7 +63,7 @@ function ContentAnalysisHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
             >
               Book a Demo
             </Button>
@@ -113,10 +113,10 @@ function TwoModes() {
 
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             Two moments, one system
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -130,9 +130,9 @@ function TwoModes() {
             return (
               <div
                 key={index}
-                className="bg-[#0A0A0C] border border-emerald-500/20 rounded-2xl p-8 md:p-10 hover:border-emerald-500/40 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10 hover:border-white/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl border bg-emerald-500/10 border-emerald-500/30 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-xl border bg-white/5 border-white/15 flex items-center justify-center mb-6">
                   <Icon className="w-6 h-6 text-emerald-400" />
                 </div>
                 <div className="text-xs font-mono tracking-widest mb-3 text-emerald-400">
@@ -180,7 +180,7 @@ function ReportAnatomy() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             What one analysis looks like
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -206,7 +206,7 @@ function ReportAnatomy() {
                   tools, Recommender
                 </div>
               </div>
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 self-start whitespace-nowrap">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold bg-white/[0.06] text-emerald-300 border border-white/15 self-start whitespace-nowrap">
                 <CheckCircle2Icon className="w-4 h-4" /> Looking good
               </span>
             </div>
@@ -292,10 +292,10 @@ function InsideAnalysis() {
 
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             Inside a check
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -365,7 +365,7 @@ function InsideAnalysis() {
                 >
                   <div
                     className={`text-2xl font-extrabold leading-none mb-1 ${
-                      m.ok ? "text-white" : "text-amber-400"
+                      m.ok ? "text-white" : "text-zinc-400"
                     }`}
                   >
                     {m.value}
@@ -376,7 +376,7 @@ function InsideAnalysis() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-amber-300/80 mt-4">
+            <p className="text-xs text-zinc-300/80 mt-4">
               Add quotations and a comparison table, the fastest GEO wins here.
             </p>
           </div>
@@ -408,7 +408,7 @@ function InsideAnalysis() {
           </div>
 
           {/* Citation standing */}
-          <div className="bg-[#0A0A0C] border border-emerald-500/30 rounded-2xl p-6 md:p-8 flex flex-col">
+          <div className="bg-[#0A0A0C] border border-white/15 rounded-2xl p-6 md:p-8 flex flex-col">
             <div className="flex items-center gap-2 mb-1">
               <QuoteIcon className="w-4 h-4 text-emerald-400" />
               <span className="text-xs font-mono tracking-widest text-white/50">
@@ -480,7 +480,7 @@ function ActionPlan() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             From findings to fixes
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -496,7 +496,7 @@ function ActionPlan() {
           {actions.map((a, i) => (
             <div
               key={i}
-              className="flex items-start gap-4 bg-[#0A0A0C] border border-[#1C1C20] rounded-xl p-5 hover:border-emerald-500/30 transition-all duration-300"
+              className="flex items-start gap-4 bg-[#0A0A0C] border border-[#1C1C20] rounded-xl p-5 hover:border-white/15 transition-all duration-300"
             >
               <CheckCircle2Icon className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <span className="flex-1 text-sm text-white/85 leading-relaxed">
@@ -505,7 +505,7 @@ function ActionPlan() {
               <span
                 className={`text-[11px] font-semibold px-2.5 py-1 rounded-md border whitespace-nowrap flex-shrink-0 ${
                   a.strong
-                    ? "bg-emerald-500/15 text-emerald-300 border-emerald-500/30"
+                    ? "bg-white/[0.06] text-emerald-300 border-white/15"
                     : "bg-white/5 text-white/50 border-white/10"
                 }`}
               >
@@ -519,7 +519,7 @@ function ActionPlan() {
           <Link to="/content-hub/">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:scale-105"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105"
             >
               Continue in Content Hub
               <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -542,9 +542,9 @@ function FlywheelDiagnoseVerify() {
 
   return (
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+        <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
           Where it fits
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
@@ -564,7 +564,7 @@ function FlywheelDiagnoseVerify() {
               <div
                 className={`px-5 py-3 rounded-xl border font-mono text-sm tracking-wider ${
                   step.active
-                    ? "bg-emerald-500/15 border-emerald-500/50 text-emerald-300 font-semibold"
+                    ? "bg-white/[0.06] border-white/20 text-emerald-300 font-semibold"
                     : "bg-[#0A0A0C] border-[#1C1C20] text-white/50"
                 }`}
               >

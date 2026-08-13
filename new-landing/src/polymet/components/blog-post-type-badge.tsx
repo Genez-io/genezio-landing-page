@@ -31,8 +31,8 @@ export function BlogPostTypeBadge({
     <div
       className={cn(
         "inline-flex items-center rounded-full font-semibold uppercase tracking-wide",
-        "bg-emerald-500/15",
-        "border border-emerald-400/25 shadow-[0_0_20px_rgba(139,92,246,0.08)]",
+        "bg-white/[0.06]",
+        "border border-white/20 shadow-[0_0_20px_rgba(139,92,246,0.08)]",
         sizeClasses[size],
         className
       )}

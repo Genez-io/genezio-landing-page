@@ -53,11 +53,11 @@ export function GenezioProductPillarsSection() {
 
   return (
     <section className="relative py-24 md:py-32 bg-[#0E0E10] overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
             The platform
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -83,13 +83,13 @@ export function GenezioProductPillarsSection() {
                   <div
                     className={`w-12 h-12 rounded-xl border flex items-center justify-center ${
                       isBlue
-                        ? "bg-blue-500/10 border-blue-500/30"
-                        : "bg-emerald-500/10 border-emerald-500/30"
+                        ? "bg-zinc-500/10 border-zinc-500/30"
+                        : "bg-white/5 border-white/15"
                     }`}
                   >
                     <Icon
                       className={`w-6 h-6 ${
-                        isBlue ? "text-blue-400" : "text-emerald-400"
+                        isBlue ? "text-zinc-400" : "text-emerald-400"
                       }`}
                     />
                   </div>
@@ -103,7 +103,7 @@ export function GenezioProductPillarsSection() {
                 </p>
                 <span
                   className={`inline-flex items-center gap-1.5 text-sm font-semibold ${
-                    isBlue ? "text-blue-400" : "text-emerald-400"
+                    isBlue ? "text-zinc-400" : "text-emerald-400"
                   }`}
                 >
                   {pillar.cta}
@@ -113,7 +113,7 @@ export function GenezioProductPillarsSection() {
             );
 
             const cardClass =
-              "group block h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 md:p-8 hover:border-blue-500/30 transition-all duration-300";
+              "group block h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 md:p-8 hover:border-zinc-500/30 transition-all duration-300";
 
             return pillar.external ? (
               <a

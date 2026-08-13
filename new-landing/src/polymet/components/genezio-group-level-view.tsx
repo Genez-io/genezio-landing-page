@@ -14,12 +14,12 @@ export function GenezioGroupLevelView() {
 
   return (
     <section className="py-12 md:py-20 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-300 mb-6">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white/50 mb-6">
               Enterprise · Group-level view
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
@@ -40,7 +40,7 @@ export function GenezioGroupLevelView() {
                 "Drill from group → brand → product in one click",
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-600/20">
+                  <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10">
                     <ArrowUpRightIcon className="h-3 w-3 text-emerald-400" />
                   </div>
                   <span className="text-sm text-white/80">{point}</span>
@@ -53,7 +53,7 @@ export function GenezioGroupLevelView() {
           <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
             {/* Group header */}
             <div className="flex items-center gap-4 pb-5 mb-5 border-b border-white/10">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center flex-shrink-0">
                 <LayersIcon className="w-6 h-6 text-emerald-400" />
               </div>
               <div className="flex-1 min-w-0">
@@ -77,7 +77,7 @@ export function GenezioGroupLevelView() {
               {brands.map((b, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3 hover:border-emerald-500/30 transition-colors"
+                  className="flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3 hover:border-white/15 transition-colors"
                 >
                   <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                     <BuildingIcon className="w-4 h-4 text-white/50" />

@@ -6,13 +6,13 @@ export function GenezioHeroSection() {
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       {/* Subtle gradient background + glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: headline */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
               <span className="text-sm text-emerald-400 font-medium">
                 The enterprise AI visibility platform
               </span>
@@ -26,7 +26,7 @@ export function GenezioHeroSection() {
               </span>
             </h1>
 
-            <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
               Enterprise brands trust Genezio to track how AI engines see them
               across every market, and to win the recommendation, not just the
               mention.
@@ -40,7 +40,7 @@ export function GenezioHeroSection() {
               >
                 <Button
                   size="default"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
                 >
                   Book a Demo
                 </Button>
@@ -62,7 +62,7 @@ export function GenezioHeroSection() {
                   "_blank"
                 )
               }
-              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium group"
+              className="inline-flex items-center gap-2 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group"
             >
               <PlayCircleIcon className="w-5 h-5 text-emerald-400 group-hover:text-emerald-300 transition-colors" />
               Try Interactive Demo
@@ -80,8 +80,8 @@ export function GenezioHeroSection() {
 
             {/* The question, the new way people search */}
             <div className="relative max-w-md ml-auto">
-              <div className="absolute -inset-3 bg-blue-500/10 rounded-3xl blur-2xl" />
-              <div className="relative bg-[#0E0E12] border border-blue-500/25 rounded-3xl rounded-bl-md p-7 md:p-8 shadow-2xl shadow-emerald-500/10">
+              <div className="absolute -inset-3 bg-white/[0.04] rounded-3xl blur-2xl" />
+              <div className="relative bg-[#0E0E12] border border-zinc-500/25 rounded-3xl rounded-bl-md p-7 md:p-8 shadow-2xl shadow-black/20">
                 <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
                   "What's the best wearable I could get for my husband to help
                   him{" "}

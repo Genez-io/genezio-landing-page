@@ -106,7 +106,7 @@ export function GenezioPricingFaq() {
                 className="bg-white/[0.03] border border-white/[0.08] rounded-xl overflow-hidden hover:border-white/20 transition-colors"
               >
                 <AccordionTrigger className="px-6 py-5 text-left hover:no-underline group">
-                  <span className="text-base font-medium text-white group-hover:text-blue-400 transition-colors">
+                  <span className="text-base font-medium text-white group-hover:text-zinc-400 transition-colors">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
@@ -119,7 +119,7 @@ export function GenezioPricingFaq() {
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-emerald-600/10 border border-emerald-500/30 rounded-2xl p-12">
+        <div className="text-center bg-white/5 border border-white/15 rounded-2xl p-12">
           <MessageCircleIcon className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
 
           <h3 className="text-2xl font-bold text-white mb-4">

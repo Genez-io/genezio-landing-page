@@ -10,7 +10,7 @@ export function GenezioFooter() {
                 <img src="/images/logo-white.svg" alt="Genezio Logo" width={120} height={32} className="h-8 w-auto" />
               </span>
             </a>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-zinc-400 text-sm leading-relaxed">
               The platform built for Generative Search
               <br />
               and Answer Engine Optimization.
@@ -24,7 +24,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/conversational-brand-presence/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Increase Lead Generation
                 </a>
@@ -32,13 +32,13 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/increase-conversion/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Increase Conversion
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                <a href="#" className="text-zinc-400 hover:text-white text-sm transition-colors">
                   Increase In-Chat Shopping (soon)
                 </a>
               </li>
@@ -52,7 +52,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/blog/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Blog
                 </a>
@@ -60,7 +60,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/research/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Research
                 </a>
@@ -68,7 +68,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/glossary/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Glossary
                 </a>
@@ -76,7 +76,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/industry-leaderboards/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Industry Leaderboards
                 </a>
@@ -84,7 +84,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/about-genezio/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   About Genezio
                 </a>
@@ -99,7 +99,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/terms-and-conditions/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Terms And Conditions
                 </a>
@@ -107,7 +107,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/support-terms/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Support Terms
                 </a>
@@ -115,7 +115,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/privacy-policy/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Privacy Policy
                 </a>
@@ -123,7 +123,7 @@ export function GenezioFooter() {
               <li>
                 <a
                   href="/data-processing-agreement/"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
                 >
                   Data Processing Agreement
                 </a>
@@ -134,7 +134,7 @@ export function GenezioFooter() {
 
         {/* Bottom bar */}
         <div className="pt-6 md:pt-8 border-t border-white/5 flex justify-center items-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-zinc-400 text-sm">
             © {new Date().getFullYear()} Genezio. All rights reserved.
           </p>
         </div>

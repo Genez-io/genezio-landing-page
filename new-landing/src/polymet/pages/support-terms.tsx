@@ -128,7 +128,7 @@ export function SupportTerms() {
                     </tr>
                   </thead>
                   <tbody className="[&amp;_tr:last-child]:border-0">
-                    <tr className="border-b transition-colors bg-red-50">
+                    <tr className="border-b transition-colors bg-zinc-50">
                       <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] font-semibold">
                         1 – Critical error
                       </td>
@@ -153,7 +153,7 @@ export function SupportTerms() {
                         18 hours when the Ticket is submitted during Working Hours*
                       </td>
                     </tr>
-                    <tr className="border-b transition-colors bg-blue-50">
+                    <tr className="border-b transition-colors bg-zinc-50">
                       <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] font-semibold">
                         3 - Medium
                       </td>

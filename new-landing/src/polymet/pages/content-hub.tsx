@@ -25,12 +25,12 @@ function ContentHubHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-          <FileTextIcon className="w-4 h-4 text-blue-400" />
-          <span className="text-sm text-blue-400 font-medium">Content Hub</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <FileTextIcon className="w-4 h-4 text-zinc-400" />
+          <span className="text-sm text-zinc-400 font-medium">Content Hub</span>
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
@@ -41,7 +41,7 @@ function ContentHubHero() {
           </span>
         </h1>
 
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           Content Hub turns what AI engines say about your brand into
           data-backed content briefs your team can ship, and drafts them for
           you when you need speed. Every brief is built from the real
@@ -52,7 +52,7 @@ function ContentHubHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
             >
               Book a Demo
             </Button>
@@ -99,10 +99,10 @@ function MeasurementToBrief() {
 
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
             From measurement to action
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -121,12 +121,12 @@ function MeasurementToBrief() {
             return (
               <div
                 key={index}
-                className="relative bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+                className="relative bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-8 hover:border-zinc-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 rounded-xl bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-zinc-400" />
                 </div>
-                <div className="text-xs font-mono text-blue-400 tracking-widest mb-3">
+                <div className="text-xs font-mono text-zinc-400 tracking-widest mb-3">
                   {step.label}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
@@ -136,7 +136,7 @@ function MeasurementToBrief() {
                   {step.description}
                 </p>
                 {index < steps.length - 1 && (
-                  <ArrowRightIcon className="hidden md:block absolute top-1/2 -right-4 -translate-y-1/2 w-6 h-6 text-blue-500/40 z-10" />
+                  <ArrowRightIcon className="hidden md:block absolute top-1/2 -right-4 -translate-y-1/2 w-6 h-6 text-zinc-500/40 z-10" />
                 )}
               </div>
             );
@@ -188,7 +188,7 @@ function BriefAnatomy() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
-            <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
+            <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
               The brief is the product
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
@@ -210,11 +210,11 @@ function BriefAnatomy() {
           </div>
 
           {/* Brief card visual */}
-          <div className="relative bg-[#0A0A0C] border border-blue-500/20 rounded-2xl p-6 md:p-8 shadow-2xl shadow-blue-500/5">
+          <div className="relative bg-[#0A0A0C] border border-zinc-500/20 rounded-2xl p-6 md:p-8 shadow-2xl shadow-zinc-500/5">
             <div className="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                  <FileTextIcon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <FileTextIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm">
@@ -225,7 +225,7 @@ function BriefAnatomy() {
                   </div>
                 </div>
               </div>
-              <span className="px-3 py-1 text-[10px] font-semibold bg-emerald-500/15 text-emerald-300 rounded-md border border-emerald-500/30">
+              <span className="px-3 py-1 text-[10px] font-semibold bg-white/[0.06] text-emerald-300 rounded-md border border-white/15">
                 READY
               </span>
             </div>
@@ -235,8 +235,8 @@ function BriefAnatomy() {
                 const Icon = field.icon;
                 return (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon className="w-4 h-4 text-blue-400" />
+                    <div className="w-8 h-8 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon className="w-4 h-4 text-zinc-400" />
                     </div>
                     <div className="min-w-0">
                       <div className="text-white/40 text-[11px] uppercase tracking-wider font-semibold mb-0.5">
@@ -261,10 +261,10 @@ function BriefAnatomy() {
 function BriefsVsDirect() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
             Two ways to ship
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -278,13 +278,13 @@ function BriefsVsDirect() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Briefs - primary */}
-          <div className="relative bg-[#0A0A0C] border border-blue-500/40 rounded-2xl p-8 md:p-10 overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
-            <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-blue-500/20 text-blue-300 rounded-md border border-blue-500/30 mb-6">
+          <div className="relative bg-[#0A0A0C] border border-zinc-500/40 rounded-2xl p-8 md:p-10 overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] rounded-full blur-3xl" />
+            <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-zinc-500/20 text-zinc-300 rounded-md border border-zinc-500/30 mb-6">
               MOST POPULAR
             </span>
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-6">
-              <FileTextIcon className="w-6 h-6 text-blue-400" />
+            <div className="w-12 h-12 rounded-xl bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-6">
+              <FileTextIcon className="w-6 h-6 text-zinc-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
               Data-backed briefs
@@ -302,7 +302,7 @@ function BriefsVsDirect() {
                 "Drop straight into your workflow or agency",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2Icon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2Icon className="w-5 h-5 text-zinc-400 flex-shrink-0 mt-0.5" />
                   <span className="text-white/80 text-sm">{item}</span>
                 </li>
               ))}
@@ -314,7 +314,7 @@ function BriefsVsDirect() {
             <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-white/50 rounded-md border border-white/10 mb-6">
               WHEN YOU NEED SPEED
             </span>
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-6">
               <PenLineIcon className="w-6 h-6 text-emerald-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -374,7 +374,7 @@ function PlanLikeMedia() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
             The playbook
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -392,10 +392,10 @@ function PlanLikeMedia() {
             return (
               <div
                 key={index}
-                className="bg-[#0A0A0C] border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-zinc-500/20 rounded-2xl p-6 hover:border-zinc-500/40 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div className="text-2xl font-extrabold text-white mb-2 tracking-tight">
                   {dim.label}
@@ -423,9 +423,9 @@ function FlywheelPublish() {
 
   return (
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
+        <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
           Where it fits
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
@@ -447,14 +447,14 @@ function FlywheelPublish() {
               <div
                 className={`px-5 py-3 rounded-xl border font-mono text-sm tracking-wider ${
                   step.active
-                    ? "bg-blue-500/15 border-blue-500/50 text-blue-300 font-semibold"
+                    ? "bg-zinc-500/15 border-zinc-500/50 text-zinc-300 font-semibold"
                     : "bg-[#0A0A0C] border-[#1C1C20] text-white/50"
                 }`}
               >
                 {`0${index + 1} · ${step.label}`}
               </div>
               {index < loop.length - 1 && (
-                <ArrowRightIcon className="w-5 h-5 text-blue-500/40" />
+                <ArrowRightIcon className="w-5 h-5 text-zinc-500/40" />
               )}
             </div>
           ))}

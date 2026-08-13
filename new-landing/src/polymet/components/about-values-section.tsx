@@ -64,7 +64,7 @@ export function AboutValuesSection() {
             return (
               <div
                 key={index}
-                className="group relative bg-[#050506] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1"
+                className="group relative bg-[#050506] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-zinc-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/10 hover:-translate-y-1"
               >
                 {/* Gradient top border */}
                 <div

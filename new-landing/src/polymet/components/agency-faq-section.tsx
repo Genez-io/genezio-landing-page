@@ -42,7 +42,7 @@ export function AgencyFaqSection() {
       answer: (
         <>
           You can find detailed information about our specialized features, case studies, and {" "}
-          <a href="/agencies/" className="text-blue-400 hover:underline">
+          <a href="/agencies/" className="text-zinc-400 hover:underline">
             solutions for agencies
           </a>{' '}on our dedicated agencies page.
         </>

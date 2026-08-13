@@ -61,7 +61,7 @@ export function AboutCustomersSection() {
 
           {/* Right: Questions list */}
           <div className="space-y-4">
-            <p className="text-sm text-blue-400 font-semibold uppercase tracking-wide mb-6">
+            <p className="text-sm text-zinc-400 font-semibold uppercase tracking-wide mb-6">
               Questions our customers answer with Genezio
             </p>
             {questions.map((question, index) => {
@@ -69,10 +69,10 @@ export function AboutCustomersSection() {
               return (
                 <div
                   key={index}
-                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#0E0E10] border border-[#1C1C20] hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#0E0E10] border border-[#1C1C20] hover:border-zinc-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-500/10"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-emerald-500/30 transition-all">
-                    <Icon className="w-5 h-5 text-blue-400" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-zinc-500/20 flex items-center justify-center group-hover:from-zinc-500/30 group-hover:to-transparent transition-all">
+                    <Icon className="w-5 h-5 text-zinc-400" />
                   </div>
                   <p className="text-white/90 font-medium leading-relaxed pt-1.5">
                     {question.text}

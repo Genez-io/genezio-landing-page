@@ -48,9 +48,9 @@ export function GenezioBrandPlans() {
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Professional Plan */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-zinc-500/50 transition-all">
             <div className="mb-8">
-              <div className="text-sm text-blue-400 font-semibold mb-2">PROFESSIONAL</div>
+              <div className="text-sm text-zinc-400 font-semibold mb-2">PROFESSIONAL</div>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-5xl font-bold text-white">499€</span>
                 <span className="text-white/60">/month</span>
@@ -59,18 +59,18 @@ export function GenezioBrandPlans() {
                 Perfect for growing brands looking to monitor and optimize their AI presence
               </p>
             </div>
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-base font-medium">
+            <Button className="w-full bg-zinc-600 hover:bg-zinc-700 text-white py-6 text-base font-medium">
               Talk to Sales
             </Button>
           </div>
 
           {/* Enterprise Plan */}
-          <div className="bg-blue-600/10 border-2 border-blue-500/50 rounded-2xl p-8 relative">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full">
+          <div className="bg-zinc-600/10 border-2 border-zinc-500/50 rounded-2xl p-8 relative">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-zinc-600 text-white text-sm font-bold px-6 py-2 rounded-full">
               MOST POPULAR
             </div>
             <div className="mb-8">
-              <div className="text-sm text-blue-400 font-semibold mb-2">ENTERPRISE</div>
+              <div className="text-sm text-zinc-400 font-semibold mb-2">ENTERPRISE</div>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-5xl font-bold text-white">Custom</span>
               </div>
@@ -105,7 +105,7 @@ export function GenezioBrandPlans() {
                     <td className="py-4 px-6 text-center">
                       {typeof feature.professional === "boolean" ? (
                         feature.professional ? (
-                          <CheckIcon className="w-5 h-5 text-blue-500 mx-auto" />
+                          <CheckIcon className="w-5 h-5 text-zinc-500 mx-auto" />
                         ) : (
                           <XIcon className="w-5 h-5 text-white/20 mx-auto" />
                         )

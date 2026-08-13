@@ -118,7 +118,7 @@ function BlogAuthor() {
         {/* Author Hero Section */}
         <section className="relative pt-16 pb-20 px-6 overflow-hidden">
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-emerald-600/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-600/10 via-white/10 to-transparent" />
 
           <div className="relative max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -136,7 +136,7 @@ function BlogAuthor() {
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
                   {author.name}
                 </h1>
-                <p className="text-xl text-blue-400 mb-4">{author.role}</p>
+                <p className="text-xl text-zinc-400 mb-4">{author.role}</p>
                 <p className="text-lg text-white/60 mb-6 leading-relaxed max-w-3xl">
                   {author.bio}
                 </p>
@@ -202,7 +202,7 @@ function BlogAuthor() {
                           {post.postType && (
                             <BlogPostTypeBadge type={post.postType} size="sm" />
                           )}
-                          <span className="text-xs font-medium text-blue-400">
+                          <span className="text-xs font-medium text-zinc-400">
                             {post.category}
                           </span>
                           <span className="text-xs text-white/40">•</span>
@@ -213,7 +213,7 @@ function BlogAuthor() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-zinc-400 transition-colors">
                           {post.title}
                         </h3>
 

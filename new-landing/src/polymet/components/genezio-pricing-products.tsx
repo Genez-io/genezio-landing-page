@@ -41,10 +41,10 @@ export function GenezioPricingProducts() {
 
   return (
     <section className="py-12 md:py-20 bg-[#050506] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-14">
-          <p className="text-sm text-emerald-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
             One platform, every product
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -63,9 +63,9 @@ export function GenezioPricingProducts() {
               <Link
                 key={i}
                 to={p.to}
-                className="group flex items-start gap-4 bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300"
+                className="group flex items-start gap-4 bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-white/15 transition-all duration-300"
               >
-                <div className="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/15 flex items-center justify-center flex-shrink-0">
                   <Icon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div className="flex-1 min-w-0">

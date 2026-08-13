@@ -40,11 +40,11 @@ export function Research() {
       />
       <div className="min-h-screen bg-[#050506]">
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/10 via-emerald-600/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-white/10 to-transparent" />
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
                 <FlaskConicalIcon className="w-4 h-4 text-emerald-400" />
                 <span className="text-sm font-medium text-emerald-400">
                   Original Research
@@ -87,7 +87,7 @@ export function Research() {
                     <a
                       key={post.id}
                       href={getPostPath(post)}
-                      className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-emerald-400/30 transition-all overflow-hidden"
+                      className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all overflow-hidden"
                     >
                       <div
                         className={`absolute inset-0 ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
@@ -130,7 +130,7 @@ export function Research() {
                           </div>
                         </div>
 
-                        <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/10 group-hover:border-emerald-400/20 transition-all">
+                        <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/5 group-hover:border-white/20 transition-all">
                           <ArrowRightIcon className="w-5 h-5 text-white/60 group-hover:text-emerald-300 group-hover:translate-x-0.5 transition-all" />
                         </div>
                       </div>

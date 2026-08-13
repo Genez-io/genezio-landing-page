@@ -113,11 +113,11 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                              <BarChart3Icon className="w-5 h-5 text-blue-400" />
+                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                              <BarChart3Icon className="w-5 h-5 text-white/70" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                                 AI Agent Analytics
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
@@ -134,11 +134,11 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                              <GlobeIcon className="w-5 h-5 text-emerald-400" />
+                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                              <GlobeIcon className="w-5 h-5 text-white/70" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                                 Website Analyzer
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
@@ -155,11 +155,11 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                              <FileTextIcon className="w-5 h-5 text-blue-400" />
+                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                              <FileTextIcon className="w-5 h-5 text-white/70" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                                 Content Hub
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
@@ -176,11 +176,11 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                              <ScanSearchIcon className="w-5 h-5 text-emerald-400" />
+                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                              <ScanSearchIcon className="w-5 h-5 text-white/70" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                                 Content Analysis
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
@@ -197,15 +197,15 @@ export function GenezioHeader() {
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
                           <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                              <ShoppingBagIcon className="w-5 h-5 text-emerald-400" />
+                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                              <ShoppingBagIcon className="w-5 h-5 text-white/70" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                                <div className="text-white font-semibold text-sm group-hover:text-emerald-400 transition-colors">
+                                <div className="text-white font-semibold text-sm group-hover:text-white transition-colors">
                                   In-Chat Shopping
                                 </div>
-                                <span className="px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 rounded-md border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
+                                <span className="px-2 py-0.5 text-[10px] font-semibold bg-white/10 text-emerald-300 rounded-md border border-white/15 whitespace-nowrap flex-shrink-0">
                                   NEW
                                 </span>
                               </div>
@@ -226,14 +226,14 @@ export function GenezioHeader() {
                       <Link
                         to="/agencies/"
                         onClick={() => setPlatformMenuOpen(false)}
-                        className="group block p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 hover:border-blue-500/20 transition-all"
+                        className="group block p-4 rounded-xl bg-white/5 border border-white/10 hover:border-zinc-500/20 transition-all"
                       >
                         <div className="flex items-start gap-3 mb-4">
-                          <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                            <UsersIcon className="w-5 h-5 text-blue-400" />
+                          <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                            <UsersIcon className="w-5 h-5 text-white/70" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="text-white font-semibold text-sm mb-1 group-hover:text-blue-400 transition-colors">
+                            <div className="text-white font-semibold text-sm mb-1 group-hover:text-white transition-colors">
                               For Agencies
                             </div>
                             <div className="text-white/60 text-xs leading-relaxed">
@@ -320,11 +320,11 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
-                          <BookMarkedIcon className="w-5 h-5 text-cyan-400" />
+                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                          <BookMarkedIcon className="w-5 h-5 text-white/70" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-cyan-400 transition-colors">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                             Docs
                           </div>
                           <div className="text-white/60 text-xs leading-relaxed">
@@ -341,11 +341,11 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                          <BookOpenIcon className="w-5 h-5 text-blue-400" />
+                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                          <BookOpenIcon className="w-5 h-5 text-white/70" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                             Glossary
                           </div>
                           <div className="text-white/60 text-xs leading-relaxed">
@@ -362,12 +362,12 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                          <FileTextIcon className="w-5 h-5 text-emerald-400" />
+                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                          <FileTextIcon className="w-5 h-5 text-white/70" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-0.5">
-                            <div className="text-white font-semibold text-sm group-hover:text-emerald-400 transition-colors">
+                            <div className="text-white font-semibold text-sm group-hover:text-white transition-colors">
                               Blog
                             </div>
                           </div>
@@ -384,11 +384,11 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                          <FlaskConicalIcon className="w-5 h-5 text-emerald-400" />
+                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                          <FlaskConicalIcon className="w-5 h-5 text-white/70" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                             Research
                           </div>
                           <div className="text-white/60 text-xs leading-relaxed">
@@ -404,11 +404,11 @@ export function GenezioHeader() {
                       className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-amber-500/20 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
-                          <TrophyIcon className="w-5 h-5 text-amber-400" />
+                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                          <TrophyIcon className="w-5 h-5 text-white/70" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-amber-400 transition-colors">
+                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
                             Leaderboards
                           </div>
                           <div className="text-white/60 text-xs leading-relaxed">

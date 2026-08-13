@@ -71,7 +71,7 @@ export function AboutAchievementsSection() {
             return (
               <div
                 key={index}
-                className="group relative bg-[#0E0E10] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1"
+                className="group relative bg-[#0E0E10] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-zinc-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/10 hover:-translate-y-1"
               >
                 <div className="flex items-start gap-5">
                   {/* Metric badge */}
@@ -93,7 +93,7 @@ export function AboutAchievementsSection() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-5 h-5 text-blue-400" />
+                      <Icon className="w-5 h-5 text-zinc-400" />
                       <h3 className="text-lg font-bold text-white">
                         {achievement.title}
                       </h3>

@@ -11,15 +11,15 @@ export function CsatHero() {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#050506] pt-20">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-emerald-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-transparent" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.04] via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Copy */}
           <div className="space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
               <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
 
               <span className="text-emerald-400 text-sm font-medium">
@@ -44,7 +44,7 @@ export function CsatHero() {
               <a href="/pricing/" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white border-0 shadow-lg shadow-emerald-500/25"
+                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white border-0 shadow-lg shadow-black/20"
                 >
 
                   Analyze Support Conversations
@@ -65,7 +65,7 @@ export function CsatHero() {
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                <div className="p-2 rounded-lg bg-white/5 border border-white/10">
                   <ShieldCheckIcon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ export function CsatHero() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                <div className="p-2 rounded-lg bg-white/5 border border-white/10">
                   <StarIcon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
@@ -96,7 +96,7 @@ export function CsatHero() {
           {/* Right: Visual - Scoring Card Preview */}
           <div className="relative">
             {/* Glow Effect */}
-            <div className="absolute inset-0 bg-emerald-500/20 blur-3xl" />
+            <div className="absolute inset-0 bg-white/[0.04] blur-3xl" />
 
             {/* Main Scoring Card */}
             <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
@@ -132,7 +132,7 @@ export function CsatHero() {
 
                 <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-blue-400" />
+                    <div className="w-2 h-2 rounded-full bg-zinc-400" />
 
                     <p className="text-xs text-white/60">Escalation Rate</p>
                   </div>
@@ -152,7 +152,7 @@ export function CsatHero() {
 
                 <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-orange-400" />
+                    <div className="w-2 h-2 rounded-full bg-zinc-400" />
 
                     <p className="text-xs text-white/60">Resolution Rate</p>
                   </div>

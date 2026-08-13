@@ -31,7 +31,7 @@ export function GenezioProofSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
             <span className="text-sm text-emerald-400 font-medium">
               The proof
@@ -53,7 +53,7 @@ export function GenezioProofSection() {
         {/* Hero stat + grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-5 md:gap-6">
           {/* Headline first-party stat */}
-          <div className="lg:row-span-2 bg-emerald-500/10 border border-emerald-500/40 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
+          <div className="lg:row-span-2 bg-white/5 border border-white/20 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
             <div className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-emerald-400 leading-none mb-6">
               37%
             </div>
@@ -68,7 +68,7 @@ export function GenezioProofSection() {
           {secondaryStats.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-7 flex flex-col justify-center hover:border-blue-500/30 transition-all duration-300"
+              className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-7 flex flex-col justify-center hover:border-zinc-500/30 transition-all duration-300"
             >
               <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
                 {stat.value}

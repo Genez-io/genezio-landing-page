@@ -35,14 +35,14 @@ export function AgencyTestimonialsSection() {
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <StarIcon
                     key={i}
-                    className="w-5 h-5 fill-blue-400 text-blue-400"
+                    className="w-5 h-5 fill-zinc-400 text-zinc-400"
                   />
                 ))}
               </div>
 
               {/* Quote */}
               <div className="relative mb-6">
-                <QuoteIcon className="w-8 h-8 text-blue-400/20 absolute -top-2 -left-2" />
+                <QuoteIcon className="w-8 h-8 text-zinc-400/20 absolute -top-2 -left-2" />
                 <p className="text-white/90 text-base md:text-lg leading-relaxed pl-6">
                   {testimonial.quote}
                 </p>

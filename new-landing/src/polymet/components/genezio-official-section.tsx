@@ -34,7 +34,7 @@ export function GenezioOfficialSection() {
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-14 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <BadgeCheckIcon className="w-4 h-4 text-emerald-400" />
             <span className="text-sm text-emerald-400 font-medium">
               It's official
@@ -53,8 +53,8 @@ export function GenezioOfficialSection() {
         <div className="max-w-4xl mx-auto mb-8">
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug">
-              <span className="text-blue-400">"</span>We are clearly in the
-              advertising business now.<span className="text-blue-400">"</span>
+              <span className="text-zinc-400">"</span>We are clearly in the
+              advertising business now.<span className="text-zinc-400">"</span>
             </p>
             <p className="text-sm text-white/50 mt-4">
               OpenAI at Cannes Lions · June 2026, its first appearance on
@@ -91,11 +91,11 @@ export function GenezioOfficialSection() {
             {timeline.map((item, i) => (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-5 hover:border-blue-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-5 hover:border-zinc-500/30 transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-blue-400" />
-                  <span className="text-xs font-mono text-blue-400 tracking-wider">
+                  <div className="w-2.5 h-2.5 rounded-full bg-zinc-400" />
+                  <span className="text-xs font-mono text-zinc-400 tracking-wider">
                     {item.date}
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export function GenezioOfficialSection() {
           </div>
           <p className="text-center text-sm md:text-base text-white/80 mt-10 max-w-2xl mx-auto">
             Performance ads in AI are arriving. But the organic recommendation{" "}
-            <span className="text-blue-400 font-semibold">
+            <span className="text-zinc-400 font-semibold">
               cannot be bought, only earned.
             </span>
           </p>

@@ -32,7 +32,7 @@ export function BlogPost() {
       <div className="min-h-screen bg-[#050506] flex items-center justify-center text-white">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post not found</h1>
-          <a href={backPath} className="text-blue-400 hover:underline">
+          <a href={backPath} className="text-zinc-400 hover:underline">
             {backLabel}
           </a>
         </div>
@@ -582,9 +582,9 @@ export function BlogPost() {
             {post.postType && (
               <BlogPostTypeBadge type={post.postType} size="lg" />
             )}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-400">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20">
+              <SparklesIcon className="w-4 h-4 text-zinc-400" />
+              <span className="text-sm font-medium text-zinc-400">
                 {post.category}
               </span>
             </div>
@@ -620,7 +620,7 @@ export function BlogPost() {
                   );
                 }
                 return (
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-zinc-500 flex items-center justify-center">
                     <span className="text-white font-semibold text-sm">
                       {post.author
                         .split(" ")
@@ -784,7 +784,7 @@ export function BlogPost() {
                       {...props}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
-                      className="text-blue-400 hover:text-blue-300 transition-colors break-all"
+                      className="text-zinc-400 hover:text-zinc-300 transition-colors break-all"
                     />
                   );
                 }
@@ -813,7 +813,7 @@ export function BlogPost() {
                   );
                 }
                 return (
-                  <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-zinc-500 flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-semibold text-lg">
                       {post.author
                         .split(" ")
@@ -853,10 +853,10 @@ export function BlogPost() {
                     href={getPostPath(relatedPost)}
                     className="group bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all flex flex-col"
                   >
-                    <div className="text-xs font-medium text-blue-400 mb-3">
+                    <div className="text-xs font-medium text-zinc-400 mb-3">
                       {relatedPost.category}
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-blue-400 transition-colors leading-snug mb-3">
+                    <h3 className="text-base font-semibold text-white group-hover:text-zinc-400 transition-colors leading-snug mb-3">
                       {relatedPost.title}
                     </h3>
                     {relatedPost.excerpt && relatedPost.excerpt !== "No description" && (
@@ -875,9 +875,9 @@ export function BlogPost() {
       {/* CTA Section */}
       <section className="px-6 pb-32">
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-blue-600/20 border border-white/10 rounded-2xl p-12 overflow-hidden">
+          <div className="relative bg-zinc-600/20 border border-white/10 rounded-2xl p-12 overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-emerald-600/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-600/10 via-white/10 to-transparent" />
 
             <div className="relative text-center">
               <h2 className="text-3xl font-bold text-white mb-4">

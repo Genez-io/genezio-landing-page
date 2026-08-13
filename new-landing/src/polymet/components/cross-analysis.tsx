@@ -18,9 +18,9 @@ export function CrossAnalysis() {
       action: "Optimize content to bridge this gap",
       impact: "high",
       icon: AlertTriangleIcon,
-      color: "bg-emerald-500/20",
-      borderColor: "border-blue-500/20",
-      textColor: "text-blue-400",
+      color: "bg-white/10",
+      borderColor: "border-zinc-500/20",
+      textColor: "text-zinc-400",
     },
     {
       category: "Pricing Questions",
@@ -32,8 +32,8 @@ export function CrossAnalysis() {
       action: "Maintain current content strategy",
       impact: "low",
       icon: SparklesIcon,
-      color: "bg-emerald-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       textColor: "text-emerald-400",
     },
     {
@@ -46,9 +46,9 @@ export function CrossAnalysis() {
       action: "Create detailed integration documentation",
       impact: "critical",
       icon: AlertTriangleIcon,
-      color: "bg-emerald-500/20",
-      borderColor: "border-red-500/20",
-      textColor: "text-red-400",
+      color: "bg-white/10",
+      borderColor: "border-zinc-500/20",
+      textColor: "text-zinc-400",
     },
     {
       category: "Use Cases",
@@ -60,8 +60,8 @@ export function CrossAnalysis() {
       action: "Leverage this strength in marketing",
       impact: "opportunity",
       icon: TrendingUpIcon,
-      color: "bg-emerald-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       textColor: "text-emerald-400",
     },
   ];
@@ -69,17 +69,17 @@ export function CrossAnalysis() {
   return (
     <section className="relative py-16 sm:py-24 bg-[#050506] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-blue-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-500/5 via-transparent to-zinc-500/5" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-500/10 via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-            <LayersIcon className="w-4 h-4 text-blue-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+            <LayersIcon className="w-4 h-4 text-zinc-400" />
 
-            <span className="text-blue-400 text-sm font-medium">
+            <span className="text-zinc-400 text-sm font-medium">
               Cross-Analysis
             </span>
           </div>
@@ -177,26 +177,26 @@ export function CrossAnalysis() {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-12 bg-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
+        <div className="mt-12 bg-zinc-500/10 border border-zinc-500/20 rounded-2xl p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Cross-Analysis Impact
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div>
-                <div className="text-3xl font-bold text-blue-400 mb-1">47%</div>
+                <div className="text-3xl font-bold text-zinc-400 mb-1">47%</div>
                 <div className="text-sm text-white/60">
                   Average content gap identified
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-400 mb-1">12</div>
+                <div className="text-3xl font-bold text-zinc-400 mb-1">12</div>
                 <div className="text-sm text-white/60">
                   Critical gaps requiring action
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-400 mb-1">
+                <div className="text-3xl font-bold text-zinc-400 mb-1">
                   +34%
                 </div>
                 <div className="text-sm text-white/60">

@@ -9,10 +9,10 @@ export function AboutTeamSection() {
       image: "/authors/andrei-pitis.webp",
       to: "/blog/author/andrei-pitis/",
       bio: "Strategic leader and veteran tech entrepreneur with 30+ years of experience, driving Genezio's vision to redefine AI-era search visibility.",
-      borderColor: "hover:border-blue-500/40",
-      shadowColor: "hover:shadow-blue-500/10",
-      imgBorderColor: "group-hover:border-blue-500/40",
-      roleColor: "text-blue-400"
+      borderColor: "hover:border-zinc-500/40",
+      shadowColor: "hover:shadow-zinc-500/10",
+      imgBorderColor: "group-hover:border-zinc-500/40",
+      roleColor: "text-zinc-400"
     },
     {
       name: "Bogdan Ripa",
@@ -20,10 +20,10 @@ export function AboutTeamSection() {
       image: "/authors/bogdan-ripa.webp",
       to: "/blog/author/bogdan-ripa/",
       bio: "Drives product vision and AI-native platform architecture, ensuring Genezio models AI behavior accurately for marketing teams.",
-      borderColor: "hover:border-indigo-500/40",
-      shadowColor: "hover:shadow-indigo-500/10",
-      imgBorderColor: "group-hover:border-indigo-500/40",
-      roleColor: "text-indigo-400"
+      borderColor: "hover:border-zinc-500/40",
+      shadowColor: "hover:shadow-zinc-500/10",
+      imgBorderColor: "group-hover:border-zinc-500/40",
+      roleColor: "text-zinc-400"
     },
     {
       name: "Paula Cionca",
@@ -31,9 +31,9 @@ export function AboutTeamSection() {
       image: "/authors/paula-cionca.webp",
       to: "/blog/author/paula-cionca/",
       bio: "Frequently publishes on recommendation rate, citations, perception analysis, and the evolving role of GEO in modern marketing strategy.",
-      borderColor: "hover:border-emerald-500/40",
-      shadowColor: "hover:shadow-emerald-500/10",
-      imgBorderColor: "group-hover:border-emerald-500/40",
+      borderColor: "hover:border-white/20",
+      shadowColor: "hover:shadow-black/20",
+      imgBorderColor: "group-hover:border-white/20",
       roleColor: "text-emerald-400"
     },
     {
@@ -42,10 +42,10 @@ export function AboutTeamSection() {
       image: "/authors/bogdan-vlad.webp",
       to: "/blog/author/bogdan-vlad/",
       bio: "Architects high-performance backend systems and AI integrations, drawing on deep engineering experience from Fitbit and Vector Watch.",
-      borderColor: "hover:border-cyan-500/40",
-      shadowColor: "hover:shadow-cyan-500/10",
-      imgBorderColor: "group-hover:border-cyan-500/40",
-      roleColor: "text-cyan-400"
+      borderColor: "hover:border-zinc-500/40",
+      shadowColor: "hover:shadow-zinc-500/10",
+      imgBorderColor: "group-hover:border-zinc-500/40",
+      roleColor: "text-zinc-400"
     }
   ];
 
@@ -58,8 +58,8 @@ export function AboutTeamSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         {/* Section header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-500/20 mb-6">
-            <UsersIcon className="w-8 h-8 text-blue-400" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-zinc-500/20 mb-6">
+            <UsersIcon className="w-8 h-8 text-zinc-400" />
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             The{" "}
@@ -88,7 +88,7 @@ export function AboutTeamSection() {
                   className={`w-14 h-14 rounded-full object-cover border border-[#1C1C20] ${member.imgBorderColor} transition-colors duration-300`}
                 />
                 <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white group-hover:text-zinc-400 transition-colors">
                     {member.name}
                   </h3>
                   <p className={`text-sm ${member.roleColor} font-medium`}>
@@ -106,7 +106,7 @@ export function AboutTeamSection() {
         {/* Culture description */}
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#050506] border border-[#1C1C20]">
-            <CodeIcon className="w-7 h-7 text-blue-400 mb-3" />
+            <CodeIcon className="w-7 h-7 text-zinc-400 mb-3" />
             <h4 className="text-white font-semibold mb-2">Product-Minded</h4>
             <p className="text-[#B0B0B3] text-sm">
               Technical rigor to model AI behavior accurately across engines and
@@ -124,7 +124,7 @@ export function AboutTeamSection() {
             </p>
           </div>
           <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#050506] border border-[#1C1C20]">
-            <UsersIcon className="w-7 h-7 text-blue-400 mb-3" />
+            <UsersIcon className="w-7 h-7 text-zinc-400 mb-3" />
             <h4 className="text-white font-semibold mb-2">Fast-Moving</h4>
             <p className="text-[#B0B0B3] text-sm">
               Analytical and grounded in practical outcomes under changing search

@@ -14,9 +14,9 @@ import {
         <div className="container mx-auto px-6 relative z-10">
           {/* Header */}
           <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm text-blue-400 font-medium">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+              <SparklesIcon className="w-4 h-4 text-zinc-400" />
+              <span className="text-sm text-zinc-400 font-medium">
                 The Hidden Traffic
               </span>
             </div>
@@ -41,8 +41,8 @@ import {
               <div className="flex justify-start animate-in fade-in slide-in-from-left duration-700">
                 <div className="max-w-[85%] bg-[#1C1C20]/60 border border-white/10 rounded-2xl rounded-tl-sm p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                      <span className="text-blue-400 text-sm font-semibold">Q</span>
+                    <div className="w-8 h-8 rounded-full bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                      <span className="text-zinc-400 text-sm font-semibold">Q</span>
                     </div>
                     <span className="text-white/50 text-sm">Marketing Team</span>
                   </div>
@@ -54,9 +54,9 @@ import {
   
               {/* AI Response - Right */}
               <div className="flex justify-end animate-in fade-in slide-in-from-right duration-700" style={{ animationDelay: "0.3s" }}>
-                <div className="max-w-[85%] bg-blue-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
+                <div className="max-w-[85%] bg-zinc-500/10 border border-zinc-500/20 rounded-2xl rounded-tr-sm p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-zinc-500 flex items-center justify-center">
                       <SparklesIcon className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-white/70 text-sm font-medium">AI Discovery Reality</span>
@@ -79,8 +79,8 @@ import {
               <div className="flex justify-start animate-in fade-in slide-in-from-left duration-700" style={{ animationDelay: "0.6s" }}>
                 <div className="max-w-[85%] bg-[#1C1C20]/60 border border-white/10 rounded-2xl rounded-tl-sm p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                      <span className="text-blue-400 text-sm font-semibold">Q</span>
+                    <div className="w-8 h-8 rounded-full bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                      <span className="text-zinc-400 text-sm font-semibold">Q</span>
                     </div>
                     <span className="text-white/50 text-sm">Marketing Team</span>
                   </div>
@@ -92,9 +92,9 @@ import {
   
               {/* AI Response - Right */}
               <div className="flex justify-end animate-in fade-in slide-in-from-right duration-700" style={{ animationDelay: "0.9s" }}>
-                <div className="max-w-[85%] bg-blue-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
+                <div className="max-w-[85%] bg-zinc-500/10 border border-zinc-500/20 rounded-2xl rounded-tr-sm p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-zinc-500 flex items-center justify-center">
                       <ThumbsUpIcon className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-white/70 text-sm font-medium">The Critical Difference</span>
@@ -144,7 +144,7 @@ import {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 hover:border-blue-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 hover:border-zinc-500/30 transition-all duration-300"
               >
                 <div className="text-2xl md:text-3xl font-extrabold text-emerald-400 mb-2 leading-none">
                   {stat.value}

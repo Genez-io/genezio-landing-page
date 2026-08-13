@@ -4,7 +4,7 @@ export function ConversionTestimonials() {
       role: "Marketing Director",
       company: "Leading Bank",
       initials: "MD",
-      bgColor: "bg-blue-500",
+      bgColor: "bg-zinc-500",
       quote:
         '"We launched a Q&A chatbot but soon realized it wasn\'t meeting customer expectations, some answers were inaccurate, causing frustration and churn. Genezio helped us identify gaps across key personas and gave our vendors the feedback they needed to improve fast. Now, the chatbot performs better and is generating leads."',
       industry: "Technology",
@@ -27,7 +27,7 @@ export function ConversionTestimonials() {
   return (
     <section className="relative py-12 sm:py-16 bg-[#0E0E10] overflow-hidden">
       {/* Background gradient - Banner style */}
-      <div className="absolute inset-0 bg-blue-500/10" />
+      <div className="absolute inset-0 bg-zinc-500/10" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Testimonials Banner - Full Width Grid */}

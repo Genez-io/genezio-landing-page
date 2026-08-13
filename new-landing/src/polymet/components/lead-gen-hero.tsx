@@ -54,9 +54,9 @@ export function LeadGenHero() {
     <>
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#050506] pt-20">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-transparent" />
 
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/[0.04] via-transparent to-transparent" />
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -66,7 +66,7 @@ export function LeadGenHero() {
             {/* Left Content */}
             <div className="space-y-6 sm:space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
                 <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
 
                 <span className="text-emerald-400 text-xs sm:text-sm font-medium">
@@ -93,7 +93,7 @@ export function LeadGenHero() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <a href="/pricing/" className="w-full sm:w-auto">
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-black/20">
 
                     Start Monitoring
                   </Button>
@@ -121,12 +121,12 @@ export function LeadGenHero() {
                     {/* Circular Loop Container */}
                     <div className="relative w-48 h-48">
                       {/* Static Circle Border */}
-                      <div className="absolute inset-0 rounded-full border-2 border-dashed border-emerald-500/30" />
+                      <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/15" />
 
                       {/* Center - Genezio Logo */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative bg-emerald-500/20 border-2 border-emerald-500/40 rounded-2xl p-4 backdrop-blur-sm">
-                          <div className="absolute inset-0 rounded-2xl bg-emerald-500/10" />
+                        <div className="relative bg-white/10 border-2 border-white/20 rounded-2xl p-4 backdrop-blur-sm">
+                          <div className="absolute inset-0 rounded-2xl bg-white/5" />
 
                           <div className="relative z-10 flex flex-col items-center gap-1">
                             <span className="text-base font-bold text-white text-center">
@@ -140,7 +140,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Generate (Top) */}
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-emerald-500/30 border border-emerald-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-emerald-500/30 border border-white/20 flex items-center justify-center backdrop-blur-sm">
                           <MessageSquareIcon className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -152,31 +152,31 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Analyze (Right) */}
                       <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-teal-500/30 border border-teal-500/40 flex items-center justify-center backdrop-blur-sm">
-                          <SearchIcon className="w-5 h-5 text-teal-400" />
+                        <div className="w-12 h-12 rounded-xl bg-zinc-500/30 border border-zinc-500/40 flex items-center justify-center backdrop-blur-sm">
+                          <SearchIcon className="w-5 h-5 text-zinc-400" />
                         </div>
                         <div className="text-center mt-1">
-                          <span className="text-[10px] text-teal-400/80 font-medium">Analyze</span>
+                          <span className="text-[10px] text-zinc-400/80 font-medium">Analyze</span>
                         </div>
                       </div>
 
                       {/* Orbiting Icons - Insights (Bottom) */}
                       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-cyan-500/30 border border-cyan-500/40 flex items-center justify-center backdrop-blur-sm">
-                          <LightbulbIcon className="w-5 h-5 text-cyan-400" />
+                        <div className="w-12 h-12 rounded-xl bg-zinc-500/30 border border-zinc-500/40 flex items-center justify-center backdrop-blur-sm">
+                          <LightbulbIcon className="w-5 h-5 text-zinc-400" />
                         </div>
                         <div className="text-center mt-1">
-                          <span className="text-[10px] text-cyan-400/80 font-medium">Insights</span>
+                          <span className="text-[10px] text-zinc-400/80 font-medium">Insights</span>
                         </div>
                       </div>
 
                       {/* Orbiting Icons - Optimize (Left) */}
                       <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-blue-500/30 border border-blue-500/40 flex items-center justify-center backdrop-blur-sm">
-                          <TargetIcon className="w-5 h-5 text-blue-400" />
+                        <div className="w-12 h-12 rounded-xl bg-zinc-500/30 border border-zinc-500/40 flex items-center justify-center backdrop-blur-sm">
+                          <TargetIcon className="w-5 h-5 text-zinc-400" />
                         </div>
                         <div className="text-center mt-1">
-                          <span className="text-[10px] text-blue-400/80 font-medium">Optimize</span>
+                          <span className="text-[10px] text-zinc-400/80 font-medium">Optimize</span>
                         </div>
                       </div>
                     </div>
@@ -198,7 +198,7 @@ export function LeadGenHero() {
                     {[...Array(16)].map((_, i) => (
                       <div
                         key={i}
-                        className="aspect-square rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center"
+                        className="aspect-square rounded-lg bg-white/10 border border-white/15 flex items-center justify-center"
                         style={{
                           animation: `pulse 2s ease-in-out ${i * 0.1}s infinite`,
                         }}
@@ -208,7 +208,7 @@ export function LeadGenHero() {
                     ))}
                   </div>
                   <div className="text-center pt-2">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
                       <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
 
                       <span className="text-sm font-semibold text-emerald-400">

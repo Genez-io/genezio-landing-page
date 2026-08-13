@@ -11,9 +11,9 @@ export function ConversionHero() {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#050506] pt-20">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-500/5 via-transparent to-transparent" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-zinc-500/10 via-transparent to-transparent" />
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -23,10 +23,10 @@ export function ConversionHero() {
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-              <TrendingUpIcon className="w-4 h-4 text-blue-400" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20">
+              <TrendingUpIcon className="w-4 h-4 text-zinc-400" />
 
-              <span className="text-blue-400 text-xs sm:text-sm font-medium">
+              <span className="text-zinc-400 text-xs sm:text-sm font-medium">
                 Increase Conversion
               </span>
             </div>
@@ -49,7 +49,7 @@ export function ConversionHero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
-                <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/25">
+                <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-zinc-500/25">
                   Request an Analysis
                 </Button>
               </Link>
@@ -71,9 +71,9 @@ export function ConversionHero() {
             {/* Browser Chrome */}
             <div className="mb-4">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-3 h-3 rounded-full bg-red-500/40" />
+                <div className="w-3 h-3 rounded-full bg-zinc-500/40" />
 
-                <div className="w-3 h-3 rounded-full bg-yellow-500/40" />
+                <div className="w-3 h-3 rounded-full bg-zinc-500/40" />
 
                 <div className="w-3 h-3 rounded-full bg-emerald-500/40" />
               </div>
@@ -102,9 +102,9 @@ export function ConversionHero() {
               </div>
 
               {/* AI Agent Chat Widget */}
-              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-blue-500/20 backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-zinc-500/20 backdrop-blur-xl border border-zinc-500/30 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Chat Header */}
-                <div className="bg-blue-600/80 backdrop-blur-sm px-4 py-3 border-b border-blue-500/30">
+                <div className="bg-zinc-600/80 backdrop-blur-sm px-4 py-3 border-b border-zinc-500/30">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                       <SparklesIcon className="w-4 h-4 text-white" />
@@ -122,8 +122,8 @@ export function ConversionHero() {
                 <div className="p-4 space-y-3 max-h-64 overflow-y-auto">
                   {/* Agent Message */}
                   <div className="flex items-start gap-2">
-                    <div className="w-6 h-6 rounded-full bg-blue-500/30 flex items-center justify-center flex-shrink-0">
-                      <SparklesIcon className="w-3 h-3 text-blue-400" />
+                    <div className="w-6 h-6 rounded-full bg-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                      <SparklesIcon className="w-3 h-3 text-zinc-400" />
                     </div>
                     <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">
                       <p className="text-xs text-white">
@@ -137,7 +137,7 @@ export function ConversionHero() {
                     <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                       <MessageSquareIcon className="w-3 h-3 text-white/60" />
                     </div>
-                    <div className="bg-blue-600/40 border border-blue-500/30 rounded-lg rounded-tr-sm px-3 py-2 max-w-[85%]">
+                    <div className="bg-zinc-600/40 border border-zinc-500/30 rounded-lg rounded-tr-sm px-3 py-2 max-w-[85%]">
                       <p className="text-xs text-white">
                         What pricing plans do you offer?
                       </p>
@@ -146,8 +146,8 @@ export function ConversionHero() {
 
                   {/* Agent Response with Analysis */}
                   <div className="flex items-start gap-2">
-                    <div className="w-6 h-6 rounded-full bg-blue-500/30 flex items-center justify-center flex-shrink-0">
-                      <SparklesIcon className="w-3 h-3 text-blue-400" />
+                    <div className="w-6 h-6 rounded-full bg-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                      <SparklesIcon className="w-3 h-3 text-zinc-400" />
                     </div>
                     <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">
                       <p className="text-xs text-white">

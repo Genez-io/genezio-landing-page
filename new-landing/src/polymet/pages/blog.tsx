@@ -54,21 +54,21 @@ export function Blog() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-emerald-600/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-600/10 via-white/10 to-transparent" />
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-                <SparklesIcon className="w-4 h-4 text-blue-400" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+                <SparklesIcon className="w-4 h-4 text-zinc-400" />
 
-                <span className="text-sm font-medium text-blue-400">
+                <span className="text-sm font-medium text-zinc-400">
                   Insights & Resources
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 The Genezio{" "}
-                <span className="bg-blue-400 text-transparent bg-clip-text">
+                <span className="bg-zinc-400 text-transparent bg-clip-text">
                   Blog
                 </span>
               </h1>
@@ -145,7 +145,7 @@ export function Blog() {
                           {post.postType && (
                             <BlogPostTypeBadge type={post.postType} size="sm" />
                           )}
-                          <span className="text-sm font-medium text-blue-400">
+                          <span className="text-sm font-medium text-zinc-400">
                             {post.category}
                           </span>
                           <span className="text-sm text-white/40">•</span>
@@ -157,7 +157,7 @@ export function Blog() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zinc-400 transition-colors">
                           {post.title}
                         </h3>
 
@@ -229,7 +229,7 @@ export function Blog() {
                         {post.postType && (
                           <BlogPostTypeBadge type={post.postType} size="sm" />
                         )}
-                        <span className="text-xs font-medium text-blue-400">
+                        <span className="text-xs font-medium text-zinc-400">
                           {post.category}
                         </span>
                         <span className="text-xs text-white/40">•</span>
@@ -241,7 +241,7 @@ export function Blog() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-lg font-bold text-white mb-3 group-hover:text-zinc-400 transition-colors">
                         {post.title}
                       </h3>
 

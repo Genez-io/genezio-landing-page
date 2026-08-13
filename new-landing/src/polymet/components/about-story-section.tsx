@@ -52,7 +52,7 @@ export function AboutStorySection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(16, 185, 129,0.06),transparent_50%)]" />
 
       {/* Top gradient line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         {/* Section header */}
@@ -109,7 +109,7 @@ export function AboutStorySection() {
               return (
                 <div
                   key={index}
-                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#050506] border border-[#1C1C20] hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#050506] border border-[#1C1C20] hover:border-zinc-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-500/10"
                 >
                   <div
                     className={`flex-shrink-0 w-10 h-10 rounded-lg ${milestone.color} p-[1px]`}

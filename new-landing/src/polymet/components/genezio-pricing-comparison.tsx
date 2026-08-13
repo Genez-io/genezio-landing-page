@@ -109,8 +109,8 @@ export function GenezioPricingComparison() {
     if (value === "check") {
       return (
         <div className="flex justify-center">
-          <div className="w-5 h-5 rounded-full bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
-            <CheckIcon className="w-3 h-3 text-blue-400/80" />
+          <div className="w-5 h-5 rounded-full bg-zinc-600/10 border border-zinc-500/20 flex items-center justify-center">
+            <CheckIcon className="w-3 h-3 text-zinc-400/80" />
           </div>
         </div>
       );
@@ -167,15 +167,15 @@ export function GenezioPricingComparison() {
                   Feature
                 </span>
               </div>
-              <div className="px-6 py-8 border-l border-white/[0.08] bg-blue-600/[0.08] relative">
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+              <div className="px-6 py-8 border-l border-white/[0.08] bg-zinc-600/[0.08] relative">
+                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                 <div className="flex flex-col items-center space-y-4">
                   <div className="text-center">
                     <div className="inline-flex items-center gap-2 mb-2">
                       <span className="text-sm font-medium text-white/60">
                         Growth
                       </span>
-                      <span className="inline-block bg-blue-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                      <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
                         Popular
                       </span>
                     </div>
@@ -190,7 +190,7 @@ export function GenezioPricingComparison() {
                     onClick={() =>
                       window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
                     }
-                    className="w-full bg-emerald-600 hover:bg-emerald-500 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/20"
+                    className="w-full bg-emerald-600 hover:bg-emerald-500 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-black/20"
                   >
                     Start Free Trial
                   </Button>
@@ -247,13 +247,13 @@ export function GenezioPricingComparison() {
                           {row.feature}
                         </span>
                         {row.comingSoon && (
-                          <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                          <span className="inline-block bg-zinc-600/20 text-zinc-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
                             Coming Soon
                           </span>
                         )}
                       </div>
                     </div>
-                    <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] bg-blue-600/[0.03] text-sm">
+                    <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] bg-zinc-600/[0.03] text-sm">
                       {renderCell(row.growth, row.subtext?.growth)}
                     </div>
                     <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] text-sm">
@@ -273,7 +273,7 @@ export function GenezioPricingComparison() {
               key={planIndex}
               className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${
                 plan === "Growth"
-                  ? "border-blue-500/20 bg-blue-600/[0.08]"
+                  ? "border-zinc-500/20 bg-zinc-600/[0.08]"
                   : "border-white/[0.08]"
               }`}
             >
@@ -282,7 +282,7 @@ export function GenezioPricingComparison() {
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <h3 className="text-lg font-medium text-white/80">{plan}</h3>
                   {plan === "Growth" && (
-                    <span className="inline-block bg-blue-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                    <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
                       Popular
                     </span>
                   )}
@@ -311,7 +311,7 @@ export function GenezioPricingComparison() {
                   }
                   className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
                     plan === "Growth"
-                      ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-500/20"
+                      ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-black/20"
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
                   }`}
                 >
@@ -341,7 +341,7 @@ export function GenezioPricingComparison() {
                             {row.feature}
                           </span>
                           {row.comingSoon && (
-                            <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide">
+                            <span className="inline-block bg-zinc-600/20 text-zinc-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide">
                               Soon
                             </span>
                           )}

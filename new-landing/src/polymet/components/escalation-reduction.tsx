@@ -12,9 +12,9 @@ export function EscalationReduction() {
     {
       phase: "Before Escalation",
       icon: ShieldCheckIcon,
-      color: "bg-emerald-500/20",
-      borderColor: "border-blue-500/20",
-      textColor: "text-blue-400",
+      color: "bg-white/10",
+      borderColor: "border-zinc-500/20",
+      textColor: "text-zinc-400",
       improvements: [
         {
           title: "Knowledge Base Integration",
@@ -33,8 +33,8 @@ export function EscalationReduction() {
     {
       phase: "After Escalation",
       icon: CheckCircleIcon,
-      color: "bg-emerald-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       textColor: "text-emerald-400",
       improvements: [
         {
@@ -87,14 +87,14 @@ export function EscalationReduction() {
   return (
     <section className="relative py-16 sm:py-24 bg-[#050506] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-pink-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-zinc-500/5" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.04] via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <ShieldCheckIcon className="w-4 h-4 text-emerald-400" />
 
             <span className="text-emerald-400 text-sm font-medium">
@@ -211,7 +211,7 @@ export function EscalationReduction() {
                   </div>
 
                   <div className="pt-3 border-t border-white/5">
-                    <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-white/5 border border-white/10">
                       <span className="text-xs font-semibold text-emerald-400">
                         {item.improvement}
                       </span>

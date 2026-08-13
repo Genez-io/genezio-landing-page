@@ -119,10 +119,10 @@ export function GenezioEnterprisePlan({
           type="button"
           className="group relative inline-flex items-center gap-1.5 text-emerald-400 outline-none transition-opacity hover:opacity-90 focus-visible:opacity-90"
         >
-          <span className="underline decoration-blue-400/40 decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-emerald-400/60">
+          <span className="underline decoration-zinc-400/40 decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-emerald-400/60">
             {content.titleWord}
           </span>
-          <ChevronDownIcon className="h-[0.7em] w-[0.7em] flex-shrink-0 text-blue-400/80 transition-transform group-data-[state=open]:rotate-180" />
+          <ChevronDownIcon className="h-[0.7em] w-[0.7em] flex-shrink-0 text-zinc-400/80 transition-transform group-data-[state=open]:rotate-180" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -141,7 +141,7 @@ export function GenezioEnterprisePlan({
             <span className="flex w-full items-center justify-between gap-3">
               your {CONTENT[v].titleWord}
               {v === variant && (
-                <CheckIcon className="h-4 w-4 text-blue-400" />
+                <CheckIcon className="h-4 w-4 text-zinc-400" />
               )}
             </span>
           </DropdownMenuItem>
@@ -177,13 +177,13 @@ export function GenezioEnterprisePlan({
         {/* Full-width enterprise panel */}
         <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-[#0A0A0B] shadow-2xl shadow-black/20">
           {/* Decorative glows */}
-          <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-blue-600/20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-emerald-600/20 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/[0.04] blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-white/[0.04] blur-3xl" />
 
           <div className="relative grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 p-8 md:p-12 lg:p-14">
             {/* Left: offer summary + CTA */}
             <div className="flex flex-col justify-center">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-300 mb-6">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white/50 mb-6">
                 {content.eyebrow} · Sales-assisted
               </span>
 
@@ -202,7 +202,7 @@ export function GenezioEnterprisePlan({
                   "Security review, SSO / SAML & DPA ready",
                 ].map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-600/20">
+                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10">
                       <CheckIcon className="h-3 w-3 text-emerald-400" />
                     </div>
                     <span className="text-sm text-white/80">{point}</span>
@@ -213,7 +213,7 @@ export function GenezioEnterprisePlan({
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <Button
                   onClick={() => window.open(CALENDAR_URL, "_blank")}
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/20"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-black/20"
                 >
                   Book a Demo
                 </Button>
@@ -259,8 +259,8 @@ export function GenezioEnterprisePlan({
               <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
                 {content.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-blue-500/30 bg-blue-600/20">
-                      <CheckIcon className="h-3 w-3 text-blue-400" />
+                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-zinc-500/30 bg-zinc-600/20">
+                      <CheckIcon className="h-3 w-3 text-zinc-400" />
                     </div>
                     <span className="text-sm leading-snug text-white/80">
                       {feature}

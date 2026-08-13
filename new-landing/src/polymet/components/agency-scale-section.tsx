@@ -20,8 +20,8 @@ import {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                  <BarChart3Icon className="w-4 h-4 text-blue-400" />
+                <div className="w-8 h-8 rounded bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <BarChart3Icon className="w-4 h-4 text-zinc-400" />
                 </div>
                 <div>
                   <div className="text-white text-sm font-medium">
@@ -30,7 +30,7 @@ import {
                   <div className="text-white/60 text-xs">Overall AI presence</div>
                 </div>
               </div>
-              <div className="text-2xl font-bold text-blue-400">87</div>
+              <div className="text-2xl font-bold text-zinc-400">87</div>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 rounded-lg bg-white/5 border border-white/10">
@@ -53,10 +53,10 @@ import {
         description: "Find gaps, untapped keywords, and winning strategies.",
         visual: (
           <div className="space-y-3">
-            <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
+            <div className="p-3 rounded-lg bg-zinc-500/10 border border-zinc-500/30">
               <div className="flex items-center gap-2 mb-2">
-                <SearchIcon className="w-4 h-4 text-blue-400" />
-                <div className="text-blue-300 text-sm font-semibold">
+                <SearchIcon className="w-4 h-4 text-zinc-400" />
+                <div className="text-zinc-300 text-sm font-semibold">
                   34 insights
                 </div>
               </div>
@@ -71,7 +71,7 @@ import {
               </div>
               <div className="flex items-center justify-between p-2 rounded bg-white/5 border border-white/10">
                 <div className="text-white text-xs">sustainable materials</div>
-                <div className="text-blue-400 text-xs font-medium">Medium</div>
+                <div className="text-zinc-400 text-xs font-medium">Medium</div>
               </div>
             </div>
           </div>
@@ -85,18 +85,18 @@ import {
           <div className="space-y-3">
             <div className="p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-2 mb-3">
-                <FileTextIcon className="w-4 h-4 text-blue-400" />
+                <FileTextIcon className="w-4 h-4 text-zinc-400" />
                 <div className="text-white text-sm font-medium">
                   Content strategy
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-blue-400" />
+                  <div className="w-2 h-2 rounded-full bg-zinc-400" />
                   <div className="text-white/70 text-xs">See top keywords</div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-blue-400" />
+                  <div className="w-2 h-2 rounded-full bg-zinc-400" />
                   <div className="text-white/70 text-xs">
                     Identify top citations domain
                   </div>
@@ -118,7 +118,7 @@ import {
         description: "Real-time tracking of LLM citations and references.",
         visual: (
           <div className="space-y-3">
-            <div className="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30">
+            <div className="p-3 rounded-lg bg-white/5 border border-white/15">
               <div className="flex items-center gap-2 mb-2">
                 <BellIcon className="w-4 h-4 text-emerald-400" />
                 <div className="text-emerald-300 text-sm font-semibold">
@@ -158,7 +158,7 @@ import {
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Scale your agency{" "}
-              <span className="text-blue-400">effortlessly</span>
+              <span className="text-zinc-400">effortlessly</span>
             </h2>
             <p className="text-base md:text-xl text-white/60 max-w-3xl mx-auto">
               Manage multiple brands with powerful monitoring, competitive
@@ -175,8 +175,8 @@ import {
                 className="group relative rounded-2xl bg-[#0E0E10] border border-white/10 p-6 md:p-8 hover:border-white/20 transition-all duration-300">
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex p-3 rounded-xl bg-blue-500/20 border border-blue-500/30">
-                    <feature.icon className="w-6 h-6 text-blue-400" />
+                  <div className="inline-flex p-3 rounded-xl bg-zinc-500/20 border border-zinc-500/30">
+                    <feature.icon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
   

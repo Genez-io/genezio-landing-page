@@ -319,7 +319,7 @@ export function GenezioDashboardSection() {
                     <div className="sticky bottom-0 bg-[#1C1C20] border-t border-[#2A2A30] px-6 py-4 flex items-center gap-3">
                       <Button
                         onClick={() => setShowFilters(false)}
-                        className="flex-1 bg-white hover:bg-gray-100 text-black px-6 py-2 text-sm font-medium"
+                        className="flex-1 bg-white hover:bg-zinc-100 text-black px-6 py-2 text-sm font-medium"
                       >
                         Apply Filters
                       </Button>
@@ -349,7 +349,7 @@ export function GenezioDashboardSection() {
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                               <span className="text-emerald-400 text-xs font-bold">YB</span>
                             </div>
                             <span className="text-white text-xs">Your Brand</span>
@@ -357,32 +357,32 @@ export function GenezioDashboardSection() {
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-gray-600/20 flex items-center justify-center">
-                              <span className="text-gray-400 text-xs font-bold">CA</span>
+                            <div className="w-8 h-8 rounded-full bg-zinc-600/20 flex items-center justify-center">
+                              <span className="text-zinc-400 text-xs font-bold">CA</span>
                             </div>
                             <span className="text-white text-xs">Comp A</span>
                           </div>
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-blue-900/20 flex items-center justify-center">
-                              <span className="text-blue-400 text-xs font-bold">CB</span>
+                            <div className="w-8 h-8 rounded-full bg-zinc-900/20 flex items-center justify-center">
+                              <span className="text-zinc-400 text-xs font-bold">CB</span>
                             </div>
                             <span className="text-white text-xs">Comp B</span>
                           </div>
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-teal-800/20 flex items-center justify-center">
-                              <span className="text-teal-400 text-xs font-bold">CC</span>
+                            <div className="w-8 h-8 rounded-full bg-zinc-800/20 flex items-center justify-center">
+                              <span className="text-zinc-400 text-xs font-bold">CC</span>
                             </div>
                             <span className="text-white text-xs">Comp C</span>
                           </div>
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-amber-700/20 flex items-center justify-center">
-                              <span className="text-amber-400 text-xs font-bold">CD</span>
+                            <div className="w-8 h-8 rounded-full bg-zinc-700/20 flex items-center justify-center">
+                              <span className="text-zinc-400 text-xs font-bold">CD</span>
                             </div>
                             <span className="text-white text-xs">Comp D</span>
                           </div>
@@ -412,7 +412,7 @@ export function GenezioDashboardSection() {
                             </td>
                             <td className="py-4 px-4 text-center">
                               <span className={`text-sm font-semibold ${
-                                isToolsIntegrations || isBestValue ? "text-red-500" : "text-white"
+                                isToolsIntegrations || isBestValue ? "text-zinc-500" : "text-white"
                               }`}>
                                 {row.compA}
                               </span>
@@ -424,7 +424,7 @@ export function GenezioDashboardSection() {
                             </td>
                             <td className="py-4 px-4 text-center">
                               <span className={`text-sm font-semibold ${
-                                isToolsIntegrations ? "text-red-500" : "text-white"
+                                isToolsIntegrations ? "text-zinc-500" : "text-white"
                               }`}>
                                 {row.compC}
                               </span>
@@ -445,7 +445,7 @@ export function GenezioDashboardSection() {
           </div>
 
           {/* Glow effect - Mobile responsive */}
-          <div className="absolute -inset-2 md:-inset-4 bg-blue-500/20 blur-2xl md:blur-3xl -z-10 opacity-50" />
+          <div className="absolute -inset-2 md:-inset-4 bg-white/[0.04] blur-2xl md:blur-3xl -z-10 opacity-50" />
           
           {/* 3D Shadow - natural depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/30 to-black/60 blur-3xl translate-y-6 scale-95 -z-20 rounded-xl" />
@@ -457,7 +457,7 @@ export function GenezioDashboardSection() {
           <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105"
             >
               Book a Demo
             </Button>
