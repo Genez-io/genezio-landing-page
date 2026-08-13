@@ -40,7 +40,7 @@ export function GenezioHeroSection() {
               <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
                 >
                   Book a Demo
                 </Button>

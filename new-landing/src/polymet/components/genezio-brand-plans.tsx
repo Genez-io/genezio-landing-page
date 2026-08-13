@@ -78,7 +78,7 @@ export function GenezioBrandPlans() {
                 Advanced features and unlimited resources for enterprise-scale brands
               </p>
             </div>
-            <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-6 text-base font-medium">
+            <Button className="w-full bg-emerald-400 hover:bg-emerald-300 text-black py-6 text-base font-medium">
               Contact Sales
             </Button>
           </div>

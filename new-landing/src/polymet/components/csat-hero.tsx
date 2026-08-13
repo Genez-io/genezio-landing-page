@@ -44,7 +44,7 @@ export function CsatHero() {
               <a href="/pricing/" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white border-0 shadow-lg shadow-black/20"
+                  className="w-full bg-emerald-400 hover:bg-emerald-300 text-black border-0 shadow-lg shadow-black/20"
                 >
 
                   Analyze Support Conversations
@@ -163,7 +163,7 @@ export function CsatHero() {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -top-4 -right-4 bg-emerald-500 text-white px-4 py-2 rounded-full shadow-lg border border-white/20">
+            <div className="absolute -top-4 -right-4 bg-emerald-400 hover:bg-emerald-300 text-black px-4 py-2 rounded-full shadow-lg border border-white/20">
               <div className="flex items-center gap-2">
                 <StarIcon className="w-4 h-4 fill-current" />
 

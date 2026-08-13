@@ -93,7 +93,7 @@ export function LeadGenHero() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <a href="/pricing/" className="w-full sm:w-auto">
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-black/20">
+                  <Button className="w-full bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-black/20">
 
                     Start Monitoring
                   </Button>

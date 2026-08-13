@@ -179,7 +179,7 @@ export function AgentScoringCards() {
             >
               {/* Rank Badge */}
               {agent.rank === "Top Performer" && (
-                <div className="absolute -top-3 -right-3 bg-emerald-500 text-white px-3 py-1 rounded-full shadow-lg border border-white/20 text-xs font-semibold flex items-center gap-1">
+                <div className="absolute -top-3 -right-3 bg-emerald-400 hover:bg-emerald-300 text-black px-3 py-1 rounded-full shadow-lg border border-white/20 text-xs font-semibold flex items-center gap-1">
                   <AwardIcon className="w-3 h-3 fill-current" />
 
                   {agent.rank}

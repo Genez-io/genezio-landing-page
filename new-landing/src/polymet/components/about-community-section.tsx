@@ -124,7 +124,7 @@ export function AboutCommunitySection() {
             >
               <Button
                 size="lg"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
               >
                 Book a Demo
               </Button>

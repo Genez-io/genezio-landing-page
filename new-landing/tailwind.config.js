@@ -53,6 +53,18 @@ export default {
             ]
         },
         "colors": {
+            "emerald": {
+                "50": "#E9FEF5",
+                "100": "#C7FDE7",
+                "200": "#8FFBD1",
+                "300": "#4FFAB8",
+                "400": "#02F8A2",
+                "500": "#00E191",
+                "600": "#00BE7A",
+                "700": "#009863",
+                "800": "#00744B",
+                "900": "#004D32"
+            },
             "border": "hsl(var(--border))",
             "input": "hsl(var(--input))",
             "ring": "hsl(var(--ring))",

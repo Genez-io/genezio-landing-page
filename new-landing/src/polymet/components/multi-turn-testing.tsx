@@ -310,7 +310,7 @@ export function MultiTurnTesting() {
               campaign update. Ensure quality before deployment.
             </p>
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
-              <Button className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl">
+              <Button className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl">
                 <FlaskConicalIcon className="w-5 h-5 mr-2" />
                 Talk to our Experts
               </Button>

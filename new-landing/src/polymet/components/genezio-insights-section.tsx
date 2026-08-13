@@ -5,10 +5,10 @@ export function GenezioInsightsSection() {
   const insights = [
     {
       icon: TrendingUpIcon,
-      team: "For Marketing & Growth Teams",
+      team: "For Marketing Teams",
       title: "Boost Visibility & Conversion",
       description:
-        "Track visibility and sentiment across AI engines. Identify prompts and conversations that drive discovery and conversion.",
+        "Track visibility and sentiment across AI engines. See which prompts drive discovery and conversion.",
       color: "bg-emerald-500"
     },
     {

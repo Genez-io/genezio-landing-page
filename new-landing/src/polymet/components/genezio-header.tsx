@@ -442,7 +442,7 @@ export function GenezioHeader() {
             </Button>
           </a>
           <Button
-            className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all"
+            className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-lg transition-all"
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC', '_blank')}
           >
             Book a Demo
@@ -639,7 +639,7 @@ export function GenezioHeader() {
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-6 rounded-lg transition-all w-full">
+                <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-lg transition-all w-full">
                   Talk to Sales
                 </Button>
               </a>

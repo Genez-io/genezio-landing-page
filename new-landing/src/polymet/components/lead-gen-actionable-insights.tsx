@@ -124,7 +124,7 @@ export function LeadGenActionableInsights() {
               </p>
             </div>
             <a href="/pricing/">
-              <Button className="w-full lg:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-black/20 flex-shrink-0">
+              <Button className="w-full lg:w-auto bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-black/20 flex-shrink-0">
                 <SparklesIcon className="w-5 h-5 mr-2" />
                 Get my Insights
               </Button>

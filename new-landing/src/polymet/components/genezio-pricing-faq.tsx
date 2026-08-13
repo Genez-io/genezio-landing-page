@@ -129,7 +129,7 @@ export function GenezioPricingFaq() {
             Talk to our team and we'll scope a plan around your brand.
           </p>
           <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
-            <Button className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-medium">
+            <Button className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-medium">
               Book a Demo
             </Button>
           </a>

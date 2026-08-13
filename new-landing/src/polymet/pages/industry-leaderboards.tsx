@@ -1023,7 +1023,7 @@ export function IndustryLeaderboards() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 font-semibold rounded-lg shadow-lg shadow-black/20 transition-all duration-200 hover:scale-105">
+              <Button size="lg" className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 font-semibold rounded-lg shadow-lg shadow-black/20 transition-all duration-200 hover:scale-105">
                 Get Free Analysis <ArrowRightIcon className="w-4 h-4 ml-2" />
               </Button>
             </a>

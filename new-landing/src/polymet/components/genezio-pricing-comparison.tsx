@@ -190,7 +190,7 @@ export function GenezioPricingComparison() {
                     onClick={() =>
                       window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
                     }
-                    className="w-full bg-emerald-600 hover:bg-emerald-500 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-black/20"
+                    className="w-full bg-emerald-400 hover:bg-emerald-300 text-black h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-black/20"
                   >
                     Start Free Trial
                   </Button>
@@ -311,7 +311,7 @@ export function GenezioPricingComparison() {
                   }
                   className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
                     plan === "Growth"
-                      ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-black/20"
+                      ? "bg-emerald-400 hover:bg-emerald-300 text-black shadow-lg shadow-black/20"
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
                   }`}
                 >

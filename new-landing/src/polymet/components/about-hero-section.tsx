@@ -49,7 +49,7 @@ export function AboutHeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-lg rounded-lg shadow-lg shadow-black/20 transition-all duration-200 hover:scale-105"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-lg rounded-lg shadow-lg shadow-black/20 transition-all duration-200 hover:scale-105"
               >
                 Book a Demo
               </Button>
