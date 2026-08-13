@@ -102,7 +102,7 @@ export function GenezioHeader() {
                   <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Products column */}
                     <div>
-                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
                         Products
                       </div>
                       <div className="space-y-1">
@@ -220,13 +220,13 @@ export function GenezioHeader() {
 
                     {/* Partners column */}
                     <div className="md:border-l md:border-white/10 md:pl-6">
-                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">
+                      <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
                         Partners
                       </div>
                       <Link
                         to="/agencies/"
                         onClick={() => setPlatformMenuOpen(false)}
-                        className="group block p-4 rounded-xl bg-white/5 border border-white/10 hover:border-zinc-500/20 transition-all"
+                        className="group block p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/15 transition-all"
                       >
                         <div className="flex items-start gap-3 mb-4">
                           <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">

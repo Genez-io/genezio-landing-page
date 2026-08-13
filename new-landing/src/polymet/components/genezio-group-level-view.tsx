@@ -50,7 +50,7 @@ export function GenezioGroupLevelView() {
           </div>
 
           {/* Visual: group rollup → brands */}
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             {/* Group header */}
             <div className="flex items-center gap-4 pb-5 mb-5 border-b border-white/10">
               <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center flex-shrink-0">

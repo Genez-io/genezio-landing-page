@@ -16,7 +16,7 @@ export function ConversationAnalysis() {
       percentage: 34,
       trend: "+12%",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {
@@ -25,7 +25,7 @@ export function ConversationAnalysis() {
       percentage: 24,
       trend: "+8%",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {
@@ -34,7 +34,7 @@ export function ConversationAnalysis() {
       percentage: 18,
       trend: "-5%",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {
@@ -43,7 +43,7 @@ export function ConversationAnalysis() {
       percentage: 12,
       trend: "+18%",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {
@@ -52,7 +52,7 @@ export function ConversationAnalysis() {
       percentage: 12,
       trend: "+3%",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
   ];
@@ -73,8 +73,8 @@ export function ConversationAnalysis() {
       type: "warning",
       icon: AlertCircleIcon,
       color: "text-zinc-400",
-      bgColor: "bg-zinc-500/10",
-      borderColor: "border-zinc-500/20",
+      bgColor: "bg-white/5",
+      borderColor: "border-white/10",
       title: "Drop-off Points",
       description:
         "Users asking about 'integration complexity' abandon 43% more often",
@@ -84,8 +84,8 @@ export function ConversationAnalysis() {
       type: "error",
       icon: XCircleIcon,
       color: "text-zinc-400",
-      bgColor: "bg-zinc-500/10",
-      borderColor: "border-zinc-500/20",
+      bgColor: "bg-white/5",
+      borderColor: "border-white/10",
       title: "Knowledge Gaps",
       description:
         "Agent fails to answer questions about 'API rate limits' in 78% of cases",
@@ -95,8 +95,8 @@ export function ConversationAnalysis() {
       type: "info",
       icon: ClockIcon,
       color: "text-zinc-400",
-      bgColor: "bg-zinc-500/10",
-      borderColor: "border-zinc-500/20",
+      bgColor: "bg-white/5",
+      borderColor: "border-white/10",
       title: "Response Time Impact",
       description: "Conversations with <2s response time convert 2.3x better",
       metric: "2.3x better",
@@ -111,7 +111,7 @@ export function ConversationAnalysis() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <TagIcon className="w-4 h-4 text-zinc-400" />
 
             <span className="text-zinc-400 text-sm font-medium">
@@ -137,7 +137,7 @@ export function ConversationAnalysis() {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/[0.04] hover:border-zinc-500/30 transition-all"
+              className="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/[0.04] hover:border-white/20 transition-all"
             >
               <div className="mb-4" />
 
@@ -161,7 +161,7 @@ export function ConversationAnalysis() {
         {/* Insights Section */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
               <TrendingUpIcon className="w-5 h-5 text-zinc-400" />
             </div>
             <h3 className="text-2xl font-bold text-white">
@@ -200,7 +200,7 @@ export function ConversationAnalysis() {
         </div>
 
         {/* Stats Bar */}
-        <div className="bg-zinc-500/10 border border-zinc-500/20 rounded-2xl p-8">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold text-white mb-2">

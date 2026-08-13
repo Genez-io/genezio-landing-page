@@ -77,9 +77,9 @@ export function GenezioTrustSection() {
   const companies = TRUSTED_COMPANIES;
 
   return (
-    <section className="py-12 md:py-20 pb-20 md:pb-32 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506] border-t border-[#1C1C20] -mb-32 relative z-20">
+    <section className="py-12 md:py-20 pb-20 md:pb-32 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506] border-t border-white/10 -mb-32 relative z-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <p className="text-center text-xs md:text-sm text-[#B0B0B3] uppercase tracking-wider mb-8 md:mb-12 font-medium">
+        <p className="text-center text-xs md:text-sm text-[#B0B0B3] uppercase tracking-[0.2em] mb-8 md:mb-12 font-medium">
           Trusted by teams at Fortune 500 companies
         </p>
 

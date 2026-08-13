@@ -48,7 +48,7 @@ export function GenezioBrandPlans() {
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Professional Plan */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-zinc-500/50 transition-all">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-white/10 transition-all">
             <div className="mb-8">
               <div className="text-sm text-zinc-400 font-semibold mb-2">PROFESSIONAL</div>
               <div className="flex items-baseline gap-2 mb-4">
@@ -65,7 +65,7 @@ export function GenezioBrandPlans() {
           </div>
 
           {/* Enterprise Plan */}
-          <div className="bg-zinc-600/10 border-2 border-zinc-500/50 rounded-2xl p-8 relative">
+          <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-8 relative">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-zinc-600 text-white text-sm font-bold px-6 py-2 rounded-full">
               MOST POPULAR
             </div>

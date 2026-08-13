@@ -188,7 +188,7 @@ function WhatWeAnalyze() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             What we analyze
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -206,7 +206,7 @@ function WhatWeAnalyze() {
             return (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-white/15 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 hover:border-white/15 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-emerald-400" />
@@ -268,7 +268,7 @@ function WhatItReveals() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             What it reveals
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -281,7 +281,7 @@ function WhatItReveals() {
             return (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-white/15 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/15 transition-all duration-300"
               >
                 <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/15 flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5 text-emerald-400" />
@@ -319,7 +319,7 @@ function ProductLevelView() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             Product-level view
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -370,7 +370,7 @@ function ProductLevelView() {
             </div>
           </div>
 
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="text-[11px] font-mono uppercase tracking-widest text-white/50 mb-5">
               Switch product
             </div>
@@ -431,7 +431,7 @@ function MarketplacePerformance() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+            <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
               Marketplace performance
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
@@ -452,7 +452,7 @@ function MarketplacePerformance() {
                   buyers.
                 </span>
               </div>
-              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-zinc-500/25 rounded-xl p-5">
+              <div className="flex items-center gap-3 bg-[#0A0A0C] border border-white/10 rounded-xl p-5">
                 <MapPinIcon className="w-5 h-5 text-zinc-400 flex-shrink-0" />
                 <span className="text-sm text-white/80">
                   Spot where your own store is underrepresented, a
@@ -461,7 +461,7 @@ function MarketplacePerformance() {
               </div>
             </div>
           </div>
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex items-center gap-2 mb-6">
               <BarChart3Icon className="w-4 h-4 text-emerald-400" />
               <span className="text-[11px] font-mono uppercase tracking-widest text-white/50">

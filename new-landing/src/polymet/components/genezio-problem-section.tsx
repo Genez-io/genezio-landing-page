@@ -41,7 +41,7 @@ export function GenezioProblemsSection() {
             <div className="space-y-6 relative">
               {/* Brand A - Mentioned */}
               <div
-                className="bg-[#050506] border border-[#1C1C20] rounded-lg p-6 hover:border-green-500/50 transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-green-500/20"
+                className="bg-[#050506] border border-white/10 rounded-lg p-6 hover:border-green-500/50 transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-green-500/20"
                 onMouseEnter={() => setHoveredCard("mentioned")}
                 onMouseLeave={() => setHoveredCard(null)}
               >
@@ -69,12 +69,12 @@ export function GenezioProblemsSection() {
 
               {/* Brand B - Missing */}
               <div
-                className="bg-[#050506] border border-[#1C1C20] rounded-lg p-6 hover:border-zinc-500/50 transition-all duration-300 group opacity-60 hover:opacity-100 cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-500/20"
+                className="bg-[#050506] border border-white/10 rounded-lg p-6 hover:border-white/10 transition-all duration-300 group opacity-60 hover:opacity-100 cursor-pointer transform hover:scale-105 hover:shadow-xl hover:shadow-zinc-500/20"
                 onMouseEnter={() => setHoveredCard("missing")}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-zinc-500/10 flex items-center justify-center group-hover:bg-zinc-500/20 transition-colors">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/5 transition-colors">
                     <XCircleIcon className="w-6 h-6 text-zinc-500" />
                   </div>
                   <div className="flex-1">

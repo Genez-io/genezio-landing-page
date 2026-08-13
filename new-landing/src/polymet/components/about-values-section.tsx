@@ -38,7 +38,7 @@ const values = [
 
 export function AboutValuesSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#0E0E10] relative overflow-hidden border-t border-[#1C1C20]">
+    <section className="py-16 md:py-24 bg-[#0E0E10] relative overflow-hidden border-t border-white/10">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16, 185, 129,0.04),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(77,195,255,0.04),transparent_50%)]" />
@@ -64,7 +64,7 @@ export function AboutValuesSection() {
             return (
               <div
                 key={index}
-                className="group relative bg-[#050506] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-zinc-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/10 hover:-translate-y-1"
+                className="group relative bg-[#050506] border border-white/10 rounded-xl p-6 md:p-8 hover:border-white/10 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/10 hover:-translate-y-1"
               >
                 {/* Gradient top border */}
                 <div

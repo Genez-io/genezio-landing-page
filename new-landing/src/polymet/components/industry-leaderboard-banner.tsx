@@ -8,7 +8,7 @@ export function IndustryLeaderboardBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="relative mt-16 bg-zinc-600/10 border-b border-zinc-500/20 backdrop-blur-sm">
+    <div className="relative mt-16 bg-white/5 border-b border-white/10 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3.5">
         <div className="flex items-center justify-center gap-3">
           {/* Message */}

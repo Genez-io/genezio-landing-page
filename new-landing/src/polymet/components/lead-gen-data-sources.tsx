@@ -15,7 +15,7 @@ export function LeadGenDataSources() {
       description:
         "Your search rankings, keywords, and organic performance metrics",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       iconColor: "text-zinc-400",
     },
     {
@@ -41,7 +41,7 @@ export function LeadGenDataSources() {
       description:
         "Product specs, case studies, whitepapers, and technical docs",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       iconColor: "text-zinc-400",
     },
   ];

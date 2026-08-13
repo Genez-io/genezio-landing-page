@@ -582,7 +582,7 @@ export function BlogPost() {
             {post.postType && (
               <BlogPostTypeBadge type={post.postType} size="lg" />
             )}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
               <SparklesIcon className="w-4 h-4 text-zinc-400" />
               <span className="text-sm font-medium text-zinc-400">
                 {post.category}
@@ -875,7 +875,7 @@ export function BlogPost() {
       {/* CTA Section */}
       <section className="px-6 pb-32">
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-zinc-600/20 border border-white/10 rounded-2xl p-12 overflow-hidden">
+          <div className="relative bg-white/5 border border-white/10 rounded-2xl p-12 overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-600/10 via-white/10 to-transparent" />
 

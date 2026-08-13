@@ -27,7 +27,7 @@ function StatusPill({ good }: { good: boolean }) {
       <CheckCircle2Icon className="w-3.5 h-3.5" /> Looking good
     </span>
   ) : (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-zinc-500/15 text-zinc-300 border border-zinc-500/30 whitespace-nowrap">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/5 text-zinc-300 border border-white/10 whitespace-nowrap">
       <AlertTriangleIcon className="w-3.5 h-3.5" /> Room to improve
     </span>
   );
@@ -116,7 +116,7 @@ function TwoModes() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             Two moments, one system
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -180,7 +180,7 @@ function ReportAnatomy() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             What one analysis looks like
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -193,7 +193,7 @@ function ReportAnatomy() {
         </div>
 
         {/* Report card */}
-        <div className="max-w-4xl mx-auto bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl overflow-hidden shadow-2xl">
+        <div className="max-w-4xl mx-auto bg-[#0A0A0C] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
           {/* Header */}
           <div className="p-6 md:p-8 border-b border-white/10">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
@@ -295,7 +295,7 @@ function InsideAnalysis() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             Inside a check
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -305,7 +305,7 @@ function InsideAnalysis() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
           {/* Citation-type fit */}
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex items-center gap-2 mb-1">
               <BarChart3Icon className="w-4 h-4 text-emerald-400" />
               <span className="text-xs font-mono tracking-widest text-white/50">
@@ -347,7 +347,7 @@ function InsideAnalysis() {
           </div>
 
           {/* GEO structure */}
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex items-center gap-2 mb-1">
               <ListChecksIcon className="w-4 h-4 text-emerald-400" />
               <span className="text-xs font-mono tracking-widest text-white/50">
@@ -382,7 +382,7 @@ function InsideAnalysis() {
           </div>
 
           {/* Crawler access */}
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex items-center gap-2 mb-1">
               <BotIcon className="w-4 h-4 text-emerald-400" />
               <span className="text-xs font-mono tracking-widest text-white/50">
@@ -480,7 +480,7 @@ function ActionPlan() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             From findings to fixes
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -496,7 +496,7 @@ function ActionPlan() {
           {actions.map((a, i) => (
             <div
               key={i}
-              className="flex items-start gap-4 bg-[#0A0A0C] border border-[#1C1C20] rounded-xl p-5 hover:border-white/15 transition-all duration-300"
+              className="flex items-start gap-4 bg-[#0A0A0C] border border-white/10 rounded-xl p-5 hover:border-white/15 transition-all duration-300"
             >
               <CheckCircle2Icon className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <span className="flex-1 text-sm text-white/85 leading-relaxed">
@@ -544,7 +544,7 @@ function FlywheelDiagnoseVerify() {
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+        <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
           Where it fits
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
@@ -565,7 +565,7 @@ function FlywheelDiagnoseVerify() {
                 className={`px-5 py-3 rounded-xl border font-mono text-sm tracking-wider ${
                   step.active
                     ? "bg-white/[0.06] border-white/20 text-emerald-300 font-semibold"
-                    : "bg-[#0A0A0C] border-[#1C1C20] text-white/50"
+                    : "bg-[#0A0A0C] border-white/10 text-white/50"
                 }`}
               >
                 {`0${index + 1} · ${step.label}`}

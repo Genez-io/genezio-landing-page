@@ -135,7 +135,7 @@ export function AgencyMonitoringSection() {
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <FilterIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export function AgencyMonitoringSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <BarChart3Icon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export function AgencyMonitoringSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <PieChartIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
@@ -259,7 +259,7 @@ export function AgencyMonitoringSection() {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="p-3 rounded-lg bg-zinc-500/20 border border-zinc-500/30 text-zinc-400 text-sm">
+                    <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-zinc-400 text-sm">
                       Something went wrong. Please try again.
                     </div>
                   )}
@@ -278,7 +278,7 @@ export function AgencyMonitoringSection() {
 
           {/* Left visual */}
           <div className="relative order-2 lg:order-2 mt-8 lg:mt-0">
-            <div className="relative rounded-2xl bg-zinc-500/10 border border-white/10 p-6 md:p-8">
+            <div className="relative rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8">
               {/* Industry grid */}
               <div className="space-y-3">
                 <div className="text-sm font-medium text-white/60 mb-4">

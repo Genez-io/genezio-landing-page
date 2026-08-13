@@ -111,4 +111,38 @@ body {
   border-radius: calc(var(--radius) + 4px);
 }
 
+/* ── High-touch enterprise refinements ─────────────────────────────── */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    /* Refined Inter glyph set for a more premium, editorial feel */
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  }
+  /* Tighten large display type; Tailwind tracking-* utilities still override */
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Emerald text selection, the single brand accent */
+::selection {
+  background-color: rgba(16, 185, 129, 0.28);
+  color: #ffffff;
+}
+
+/* Refined keyboard focus ring */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #050506, 0 0 0 4px rgba(16, 185, 129, 0.5);
+  border-radius: 4px;
+}
+
 /* Design system mode: light */

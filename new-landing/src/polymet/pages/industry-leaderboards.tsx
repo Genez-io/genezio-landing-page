@@ -274,7 +274,7 @@ function TopThreeChart({
     <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
       <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
         <div>
-          <p className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">
+          <p className="text-xs text-zinc-500 uppercase tracking-[0.2em] font-semibold">
             30-day AI Visibility trend
           </p>
           <p className="text-sm text-zinc-400 mt-0.5">Top 3 brands this month</p>
@@ -414,7 +414,7 @@ function TopThreeChartSkeleton() {
     <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <p className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">
+          <p className="text-xs text-zinc-500 uppercase tracking-[0.2em] font-semibold">
             30-day AI Visibility trend
           </p>
           <p className="text-sm text-zinc-400 mt-0.5">Top 3 brands this month</p>
@@ -435,9 +435,9 @@ function LeaderboardTableSkeleton({ rows = 8 }: { rows?: number }) {
   return (
     <div className="rounded-2xl border border-white/10 overflow-hidden animate-pulse">
       <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">#</span>
-        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Brand</span>
-        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">AI Visibility</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">#</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">Brand</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">AI Visibility</span>
       </div>
 
       {Array.from({ length: rows }).map((_, idx) => (
@@ -774,7 +774,7 @@ export function IndustryLeaderboards() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
             <ZapIcon className="w-3.5 h-3.5 text-zinc-400" />
-            <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-zinc-400 uppercase tracking-[0.2em]">
               Live AI Visibility Data · UK · US
             </span>
           </div>
@@ -884,7 +884,7 @@ export function IndustryLeaderboards() {
             </div>
           )}
           {apiBrandsError && (
-            <div className="mb-4 rounded-xl border border-zinc-400/20 bg-zinc-500/10 px-4 py-3 text-sm text-zinc-200">
+            <div className="mb-4 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-zinc-200">
               {apiBrandsError}
             </div>
           )}
@@ -932,9 +932,9 @@ export function IndustryLeaderboards() {
             <div className="rounded-2xl border border-white/10 overflow-hidden">
               {/* Header */}
               <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">#</span>
-                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Brand</span>
-                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">AI Visibility</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">#</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">Brand</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">AI Visibility</span>
               </div>
 
               {/* Rows */}

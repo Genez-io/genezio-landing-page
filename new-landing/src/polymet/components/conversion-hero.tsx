@@ -23,7 +23,7 @@ export function ConversionHero() {
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
               <TrendingUpIcon className="w-4 h-4 text-zinc-400" />
 
               <span className="text-zinc-400 text-xs sm:text-sm font-medium">
@@ -71,9 +71,9 @@ export function ConversionHero() {
             {/* Browser Chrome */}
             <div className="mb-4">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-3 h-3 rounded-full bg-zinc-500/40" />
+                <div className="w-3 h-3 rounded-full bg-white/5" />
 
-                <div className="w-3 h-3 rounded-full bg-zinc-500/40" />
+                <div className="w-3 h-3 rounded-full bg-white/5" />
 
                 <div className="w-3 h-3 rounded-full bg-emerald-500/40" />
               </div>
@@ -102,9 +102,9 @@ export function ConversionHero() {
               </div>
 
               {/* AI Agent Chat Widget */}
-              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-zinc-500/20 backdrop-blur-xl border border-zinc-500/30 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Chat Header */}
-                <div className="bg-zinc-600/80 backdrop-blur-sm px-4 py-3 border-b border-zinc-500/30">
+                <div className="bg-white/5 backdrop-blur-sm px-4 py-3 border-b border-white/10">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                       <SparklesIcon className="w-4 h-4 text-white" />
@@ -122,7 +122,7 @@ export function ConversionHero() {
                 <div className="p-4 space-y-3 max-h-64 overflow-y-auto">
                   {/* Agent Message */}
                   <div className="flex items-start gap-2">
-                    <div className="w-6 h-6 rounded-full bg-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
                       <SparklesIcon className="w-3 h-3 text-zinc-400" />
                     </div>
                     <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">
@@ -137,7 +137,7 @@ export function ConversionHero() {
                     <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                       <MessageSquareIcon className="w-3 h-3 text-white/60" />
                     </div>
-                    <div className="bg-zinc-600/40 border border-zinc-500/30 rounded-lg rounded-tr-sm px-3 py-2 max-w-[85%]">
+                    <div className="bg-white/5 border border-white/10 rounded-lg rounded-tr-sm px-3 py-2 max-w-[85%]">
                       <p className="text-xs text-white">
                         What pricing plans do you offer?
                       </p>
@@ -146,7 +146,7 @@ export function ConversionHero() {
 
                   {/* Agent Response with Analysis */}
                   <div className="flex items-start gap-2">
-                    <div className="w-6 h-6 rounded-full bg-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
                       <SparklesIcon className="w-3 h-3 text-zinc-400" />
                     </div>
                     <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">

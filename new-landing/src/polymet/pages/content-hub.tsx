@@ -28,7 +28,7 @@ function ContentHubHero() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
           <FileTextIcon className="w-4 h-4 text-zinc-400" />
           <span className="text-sm text-zinc-400 font-medium">Content Hub</span>
         </div>
@@ -102,7 +102,7 @@ function MeasurementToBrief() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             From measurement to action
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -121,9 +121,9 @@ function MeasurementToBrief() {
             return (
               <div
                 key={index}
-                className="relative bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-8 hover:border-zinc-500/30 transition-all duration-300"
+                className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                   <Icon className="w-6 h-6 text-zinc-400" />
                 </div>
                 <div className="text-xs font-mono text-zinc-400 tracking-widest mb-3">
@@ -188,7 +188,7 @@ function BriefAnatomy() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
-            <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+            <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
               The brief is the product
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
@@ -210,10 +210,10 @@ function BriefAnatomy() {
           </div>
 
           {/* Brief card visual */}
-          <div className="relative bg-[#0A0A0C] border border-zinc-500/20 rounded-2xl p-6 md:p-8 shadow-2xl shadow-zinc-500/5">
+          <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl shadow-zinc-500/5">
             <div className="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                   <FileTextIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
@@ -235,11 +235,11 @@ function BriefAnatomy() {
                 const Icon = field.icon;
                 return (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Icon className="w-4 h-4 text-zinc-400" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-white/40 text-[11px] uppercase tracking-wider font-semibold mb-0.5">
+                      <div className="text-white/40 text-[11px] uppercase tracking-[0.2em] font-semibold mb-0.5">
                         {field.label}
                       </div>
                       <div className="text-white/90 text-sm leading-snug">
@@ -264,7 +264,7 @@ function BriefsVsDirect() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             Two ways to ship
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -278,12 +278,12 @@ function BriefsVsDirect() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Briefs - primary */}
-          <div className="relative bg-[#0A0A0C] border border-zinc-500/40 rounded-2xl p-8 md:p-10 overflow-hidden">
+          <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10 overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] rounded-full blur-3xl" />
-            <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-zinc-500/20 text-zinc-300 rounded-md border border-zinc-500/30 mb-6">
+            <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-zinc-300 rounded-md border border-white/10 mb-6">
               MOST POPULAR
             </span>
-            <div className="w-12 h-12 rounded-xl bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
               <FileTextIcon className="w-6 h-6 text-zinc-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -310,7 +310,7 @@ function BriefsVsDirect() {
           </div>
 
           {/* Direct generation - secondary */}
-          <div className="relative bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-8 md:p-10">
+          <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10">
             <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-white/50 rounded-md border border-white/10 mb-6">
               WHEN YOU NEED SPEED
             </span>
@@ -374,7 +374,7 @@ function PlanLikeMedia() {
     <section className="py-16 md:py-32 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             The playbook
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -392,9 +392,9 @@ function PlanLikeMedia() {
             return (
               <div
                 key={index}
-                className="bg-[#0A0A0C] border border-zinc-500/20 rounded-2xl p-6 hover:border-zinc-500/40 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/10 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div className="text-2xl font-extrabold text-white mb-2 tracking-tight">
@@ -425,7 +425,7 @@ function FlywheelPublish() {
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+        <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
           Where it fits
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
@@ -447,8 +447,8 @@ function FlywheelPublish() {
               <div
                 className={`px-5 py-3 rounded-xl border font-mono text-sm tracking-wider ${
                   step.active
-                    ? "bg-zinc-500/15 border-zinc-500/50 text-zinc-300 font-semibold"
-                    : "bg-[#0A0A0C] border-[#1C1C20] text-white/50"
+                    ? "bg-white/5 border-white/10 text-zinc-300 font-semibold"
+                    : "bg-[#0A0A0C] border-white/10 text-white/50"
                 }`}
               >
                 {`0${index + 1} · ${step.label}`}

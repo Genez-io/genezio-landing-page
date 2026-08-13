@@ -43,7 +43,7 @@ export function GenezioRobotReaderSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto mb-12 md:mb-16">
           {/* What a human sees */}
-          <div className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="text-xs font-mono text-white/40 tracking-widest mb-5">
               WHAT A HUMAN SEES
             </div>
@@ -65,7 +65,7 @@ export function GenezioRobotReaderSection() {
           </div>
 
           {/* What the machine keeps */}
-          <div className="bg-[#0A0A0C] border border-zinc-500/40 rounded-2xl p-6 md:p-8">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="text-xs font-mono text-zinc-400 tracking-widest mb-5">
               WHAT THE MACHINE KEEPS
             </div>

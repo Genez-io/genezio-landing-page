@@ -109,7 +109,7 @@ export function AboutStorySection() {
               return (
                 <div
                   key={index}
-                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#050506] border border-[#1C1C20] hover:border-zinc-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-500/10"
+                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#050506] border border-white/10 hover:border-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-500/10"
                 >
                   <div
                     className={`flex-shrink-0 w-10 h-10 rounded-lg ${milestone.color} p-[1px]`}

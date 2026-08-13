@@ -60,7 +60,7 @@ export function GenezioInsightsSection() {
             return (
               <div
                 key={index}
-                className="group relative bg-[#050506] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-zinc-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/20 hover:-translate-y-2"
+                className="group relative bg-[#050506] border border-white/10 rounded-xl p-6 md:p-8 hover:border-white/10 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-500/20 hover:-translate-y-2"
               >
                 {/* Gradient top border */}
                 <div
@@ -77,7 +77,7 @@ export function GenezioInsightsSection() {
                 </div>
 
                 {/* Content */}
-                <p className="text-sm text-zinc-400 font-semibold mb-3 uppercase tracking-wide">
+                <p className="text-sm text-zinc-400 font-semibold mb-3 uppercase tracking-[0.2em]">
                   {item.team}
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-tight">

@@ -152,7 +152,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Analyze (Right) */}
                       <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-zinc-500/30 border border-zinc-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm">
                           <SearchIcon className="w-5 h-5 text-zinc-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -162,7 +162,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Insights (Bottom) */}
                       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-zinc-500/30 border border-zinc-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm">
                           <LightbulbIcon className="w-5 h-5 text-zinc-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -172,7 +172,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Optimize (Left) */}
                       <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-zinc-500/30 border border-zinc-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm">
                           <TargetIcon className="w-5 h-5 text-zinc-400" />
                         </div>
                         <div className="text-center mt-1">

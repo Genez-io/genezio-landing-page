@@ -85,7 +85,7 @@ export function LeadGenActionableInsights() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-1">
+                  <div className="text-xs font-semibold text-white/40 uppercase tracking-[0.2em] mb-1">
                     {item.category}
                   </div>
                   <h3 className="text-base sm:text-lg font-semibold text-white leading-snug">
@@ -100,7 +100,7 @@ export function LeadGenActionableInsights() {
                   <CheckCircleIcon className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
 
                   <div>
-                    <div className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-semibold text-white/50 uppercase tracking-[0.2em] mb-1">
                       Recommended Action
                     </div>
                     <div className="text-sm text-white/80">{item.action}</div>

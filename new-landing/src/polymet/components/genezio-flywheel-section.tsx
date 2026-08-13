@@ -46,7 +46,7 @@ export function GenezioFlywheelSection() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <RefreshCwIcon className="w-4 h-4 text-zinc-400" />
             <span className="text-sm text-zinc-400 font-medium">
               The operating model
@@ -69,9 +69,9 @@ export function GenezioFlywheelSection() {
             const Icon = step.icon;
             return (
               <div key={index} className="relative">
-                <div className="h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 hover:border-zinc-500/30 transition-all duration-300">
+                <div className="h-full bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-11 h-11 rounded-lg bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center">
+                    <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                       <Icon className="w-5 h-5 text-zinc-400" />
                     </div>
                     <span className="text-xs font-mono text-white/30">

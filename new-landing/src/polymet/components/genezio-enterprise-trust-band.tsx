@@ -27,7 +27,7 @@ export function GenezioEnterpriseTrustBand() {
             return (
               <div
                 key={i}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#0A0A0C] border border-[#1C1C20]"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#0A0A0C] border border-white/10"
               >
                 <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <span className="text-sm text-white/80 whitespace-nowrap">

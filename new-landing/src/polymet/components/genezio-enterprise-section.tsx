@@ -28,11 +28,11 @@ export function GenezioEnterpriseSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506] border-y border-[#1C1C20]">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506] border-y border-white/10">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-zinc-500/20 mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 mb-6">
             <BuildingIcon className="w-8 h-8 text-zinc-400" />
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -50,9 +50,9 @@ export function GenezioEnterpriseSection() {
             return (
               <div
                 key={index}
-                className="group p-6 rounded-xl border border-[#1C1C20] bg-[#0E0E10] hover:border-zinc-500/50 hover:shadow-lg hover:shadow-zinc-500/20 transition-all duration-300 hover:-translate-y-1"
+                className="group p-6 rounded-xl border border-white/10 bg-[#0E0E10] hover:border-white/10 hover:shadow-lg hover:shadow-zinc-500/20 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-lg bg-zinc-500/20 flex items-center justify-center mb-4 group-hover:from-zinc-500/30 group-hover:to-transparent transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-4 group-hover:from-zinc-500/30 group-hover:to-transparent transition-all duration-300">
                   <Icon className="w-6 h-6 text-zinc-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">

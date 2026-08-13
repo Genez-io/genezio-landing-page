@@ -68,7 +68,7 @@ export function GenezioOfficialSection() {
           {openaiStats.map((stat, i) => (
             <div
               key={i}
-              className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6"
+              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6"
             >
               <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
                 {stat.value}
@@ -91,7 +91,7 @@ export function GenezioOfficialSection() {
             {timeline.map((item, i) => (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-5 hover:border-zinc-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 hover:border-white/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2.5 h-2.5 rounded-full bg-zinc-400" />

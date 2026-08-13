@@ -399,7 +399,7 @@ export function Glossary() {
               placeholder="Search terms, acronyms, or definitions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-6 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl text-base focus:border-zinc-500/50 focus:ring-2 focus:ring-zinc-500/20"
+              className="w-full pl-12 pr-4 py-6 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl text-base focus:border-white/10 focus:ring-2 focus:ring-zinc-500/20"
             />
           </div>
         </div>
@@ -439,7 +439,7 @@ export function Glossary() {
                               {item.term}
                             </h3>
                             {item.acronym && (
-                              <span className="px-3 py-1 text-xs font-bold bg-zinc-500/10 text-zinc-400 border border-zinc-500/20 rounded-full flex-shrink-0">
+                              <span className="px-3 py-1 text-xs font-bold bg-white/5 text-zinc-400 border border-white/10 rounded-full flex-shrink-0">
                                 {item.acronym}
                               </span>
                             )}

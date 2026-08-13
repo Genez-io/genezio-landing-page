@@ -11,7 +11,7 @@ export function ConversionProcess() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <span className="text-zinc-400 text-sm font-medium">
               How It Works
             </span>
@@ -31,8 +31,8 @@ export function ConversionProcess() {
         {/* Process Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Step 1 */}
-          <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-zinc-500/30 transition-all group">
-            <div className="w-16 h-16 rounded-xl bg-zinc-500/20 border border-zinc-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-white/20 transition-all group">
+            <div className="w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
               <MessageSquareIcon className="w-8 h-8 text-zinc-400" />
             </div>
             <div className="text-center space-y-3">
@@ -47,8 +47,8 @@ export function ConversionProcess() {
           </div>
 
           {/* Step 2 */}
-          <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-zinc-500/30 transition-all group">
-            <div className="w-16 h-16 rounded-xl bg-zinc-500/20 border border-zinc-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-white/20 transition-all group">
+            <div className="w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
               <BarChart3Icon className="w-8 h-8 text-zinc-400" />
             </div>
             <div className="text-center space-y-3">
@@ -63,8 +63,8 @@ export function ConversionProcess() {
           </div>
 
           {/* Step 3 */}
-          <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-zinc-500/30 transition-all group">
-            <div className="w-16 h-16 rounded-xl bg-zinc-500/20 border border-zinc-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-white/20 transition-all group">
+            <div className="w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
               <TrendingUpIcon className="w-8 h-8 text-zinc-400" />
             </div>
             <div className="text-center space-y-3">

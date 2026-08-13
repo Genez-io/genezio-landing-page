@@ -58,7 +58,7 @@ export function Blog() {
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
                 <SparklesIcon className="w-4 h-4 text-zinc-400" />
 
                 <span className="text-sm font-medium text-zinc-400">

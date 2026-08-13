@@ -20,7 +20,7 @@ export function AgencyGeoSection() {
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <SearchIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
@@ -36,7 +36,7 @@ export function AgencyGeoSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <GlobeIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
@@ -52,7 +52,7 @@ export function AgencyGeoSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <LanguagesIcon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>
@@ -70,12 +70,12 @@ export function AgencyGeoSection() {
 
           {/* Right visual */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-2xl bg-zinc-500/10 border border-white/10 p-6 md:p-8">
+            <div className="relative rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8">
               {/* Mock dashboard */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                       <SearchIcon className="w-5 h-5 text-zinc-400" />
                     </div>
                     <div>
@@ -94,7 +94,7 @@ export function AgencyGeoSection() {
 
                 <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                       <GlobeIcon className="w-5 h-5 text-zinc-400" />
                     </div>
                     <div>
@@ -111,7 +111,7 @@ export function AgencyGeoSection() {
 
                 <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                       <MapPinIcon className="w-5 h-5 text-zinc-400" />
                     </div>
                     <div>

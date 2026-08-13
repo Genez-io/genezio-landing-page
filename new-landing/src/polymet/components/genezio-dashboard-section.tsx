@@ -357,7 +357,7 @@ export function GenezioDashboardSection() {
                         </th>
                         <th className="text-center py-4 px-4 text-xs font-medium text-[#B0B0B3] bg-[#0E0E10] min-w-[80px]">
                           <div className="flex flex-col items-center gap-1">
-                            <div className="w-8 h-8 rounded-full bg-zinc-600/20 flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
                               <span className="text-zinc-400 text-xs font-bold">CA</span>
                             </div>
                             <span className="text-white text-xs">Comp A</span>

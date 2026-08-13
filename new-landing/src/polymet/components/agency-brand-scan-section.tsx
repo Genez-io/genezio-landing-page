@@ -65,7 +65,7 @@ export function AgencyBrandScanSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-zinc-500/20 border border-zinc-500/30 rounded-full px-4 py-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-6">
               <SparklesIcon className="w-4 h-4 text-zinc-400" />
               <span className="text-sm font-semibold text-zinc-300">
                 Free Brand Scan
@@ -116,7 +116,7 @@ export function AgencyBrandScanSection() {
             {/* What You'll Get */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <BarChart3Icon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
@@ -130,7 +130,7 @@ export function AgencyBrandScanSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <TrendingUpIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
@@ -142,7 +142,7 @@ export function AgencyBrandScanSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <TargetIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
@@ -154,7 +154,7 @@ export function AgencyBrandScanSection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <LightbulbIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div>
@@ -169,7 +169,7 @@ export function AgencyBrandScanSection() {
 
           {/* Right side - Visual Preview */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-zinc-500/10 p-6 md:p-8">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 md:p-8">
               {/* Mock Dashboard Preview */}
               <div className="space-y-6">
                 {/* Header */}
@@ -221,20 +221,20 @@ export function AgencyBrandScanSection() {
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="text-white/60 text-xs mb-3">Top keywords</div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-zinc-500/20 border border-zinc-500/30 text-zinc-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
                       best running shoes online under 300$
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-zinc-500/20 border border-zinc-500/30 text-zinc-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
                       lightweight athletic sneakers for winter 2026
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-zinc-500/20 border border-zinc-500/30 text-zinc-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
                       premium sportswear brands
                     </span>
                   </div>
                 </div>
 
                 {/* Insights */}
-                <div className="p-4 rounded-xl bg-zinc-500/10 border border-zinc-500/30">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-2 mb-2">
                     <LightbulbIcon className="w-4 h-4 text-zinc-400" />
                     <div className="text-zinc-300 text-sm font-semibold">

@@ -24,7 +24,7 @@ export function GenezioShiftSection() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-14 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <SearchXIcon className="w-4 h-4 text-zinc-400" />
             <span className="text-sm text-zinc-400 font-medium">
               The shift

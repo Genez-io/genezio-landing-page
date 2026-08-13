@@ -56,7 +56,7 @@ export function AgentScoringCards() {
 
       improvements: ["Improve response speed", "Simplify explanations"],
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {

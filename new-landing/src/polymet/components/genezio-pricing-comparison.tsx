@@ -109,7 +109,7 @@ export function GenezioPricingComparison() {
     if (value === "check") {
       return (
         <div className="flex justify-center">
-          <div className="w-5 h-5 rounded-full bg-zinc-600/10 border border-zinc-500/20 flex items-center justify-center">
+          <div className="w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
             <CheckIcon className="w-3 h-3 text-zinc-400/80" />
           </div>
         </div>
@@ -175,7 +175,7 @@ export function GenezioPricingComparison() {
                       <span className="text-sm font-medium text-white/60">
                         Growth
                       </span>
-                      <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                      <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-[0.2em]">
                         Popular
                       </span>
                     </div>
@@ -247,7 +247,7 @@ export function GenezioPricingComparison() {
                           {row.feature}
                         </span>
                         {row.comingSoon && (
-                          <span className="inline-block bg-zinc-600/20 text-zinc-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                          <span className="inline-block bg-white/5 text-zinc-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-[0.2em]">
                             Coming Soon
                           </span>
                         )}
@@ -273,7 +273,7 @@ export function GenezioPricingComparison() {
               key={planIndex}
               className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${
                 plan === "Growth"
-                  ? "border-zinc-500/20 bg-zinc-600/[0.08]"
+                  ? "border-white/10 bg-zinc-600/[0.08]"
                   : "border-white/[0.08]"
               }`}
             >
@@ -282,7 +282,7 @@ export function GenezioPricingComparison() {
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <h3 className="text-lg font-medium text-white/80">{plan}</h3>
                   {plan === "Growth" && (
-                    <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                    <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-[0.2em]">
                       Popular
                     </span>
                   )}
@@ -341,7 +341,7 @@ export function GenezioPricingComparison() {
                             {row.feature}
                           </span>
                           {row.comingSoon && (
-                            <span className="inline-block bg-zinc-600/20 text-zinc-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide">
+                            <span className="inline-block bg-white/5 text-zinc-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-[0.2em]">
                               Soon
                             </span>
                           )}

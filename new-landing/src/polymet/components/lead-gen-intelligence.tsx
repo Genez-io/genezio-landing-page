@@ -21,7 +21,7 @@ export function LeadGenIntelligence() {
       ],
 
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       iconColor: "text-zinc-400",
     },
     {
@@ -64,7 +64,7 @@ export function LeadGenIntelligence() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <SearchIcon className="w-4 h-4 text-zinc-400" />
 
             <span className="text-zinc-400 text-xs sm:text-sm font-medium">

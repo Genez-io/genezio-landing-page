@@ -75,7 +75,7 @@ export function GenezioBrandedQuestionsSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             Direct AI Perception Analysis
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
@@ -104,7 +104,7 @@ export function GenezioBrandedQuestionsSection() {
                 {brandedQuestions.map((question, index) => (
                   <div
                     key={index}
-                    className="bg-[#1C1C20]/60 border border-zinc-500/20 rounded-xl p-4 hover:border-zinc-500/40 transition-all duration-300"
+                    className="bg-[#1C1C20]/60 border border-white/10 rounded-xl p-4 hover:border-white/10 transition-all duration-300"
                   >
                     <p className="text-sm text-[#B0B0B3] leading-relaxed">
                       {question}
@@ -147,7 +147,7 @@ export function GenezioBrandedQuestionsSection() {
               <Button
                 variant="outline"
                 onClick={() => (window.location.href = "/pricing/")}
-                className="bg-transparent border-zinc-500/50 text-zinc-400 hover:bg-zinc-500/20 hover:border-zinc-400 hover:text-zinc-300 transition-all duration-300 px-6 py-5 text-base font-semibold w-full"
+                className="bg-transparent border-white/10 text-zinc-400 hover:bg-white/5 hover:border-zinc-400 hover:text-zinc-300 transition-all duration-300 px-6 py-5 text-base font-semibold w-full"
               >
                 Analyze Your Brand Perception
               </Button>
@@ -155,7 +155,7 @@ export function GenezioBrandedQuestionsSection() {
           </div>
 
           {/* Right Column - SWOT Analysis Visual */}
-          <div className="bg-gradient-to-br from-zinc-500/5 via-white/10 to-transparent border border-zinc-500/20 rounded-2xl p-6 md:p-8">
+          <div className="bg-gradient-to-br from-zinc-500/5 via-white/10 to-transparent border border-white/10 rounded-2xl p-6 md:p-8">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8 text-center">
               SWOT Analysis
             </h3>
@@ -166,7 +166,7 @@ export function GenezioBrandedQuestionsSection() {
                 <div className="flex items-center gap-2 mb-4">
                   <TrendingUpIcon className="w-5 h-5 text-zinc-400" />
 
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                  <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em]">
                     Strengths
                   </h4>
                 </div>
@@ -186,7 +186,7 @@ export function GenezioBrandedQuestionsSection() {
                 <div className="flex items-center gap-2 mb-4">
                   <AlertTriangleIcon className="w-5 h-5 text-zinc-400" />
 
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                  <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em]">
                     Weaknesses
                   </h4>
                 </div>
@@ -206,7 +206,7 @@ export function GenezioBrandedQuestionsSection() {
                 <div className="flex items-center gap-2 mb-4">
                   <TargetIcon className="w-5 h-5 text-zinc-400" />
 
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                  <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em]">
                     Opportunities
                   </h4>
                 </div>
@@ -226,7 +226,7 @@ export function GenezioBrandedQuestionsSection() {
                 <div className="flex items-center gap-2 mb-4">
                   <ShieldCheckIcon className="w-5 h-5 text-zinc-400" />
 
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wide">
+                  <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em]">
                     Threats
                   </h4>
                 </div>
@@ -243,7 +243,7 @@ export function GenezioBrandedQuestionsSection() {
             </div>
 
             {/* AI Confidence Score */}
-            <div className="mt-6 bg-[#0A0A0C]/80 border border-zinc-500/30 rounded-xl p-5">
+            <div className="mt-6 bg-[#0A0A0C]/80 border border-white/10 rounded-xl p-5">
               <div className="flex items-center justify-between">
                 <p className="text-sm text-zinc-400">Overall AI Confidence</p>
                 <p className="text-xl font-bold text-zinc-400">
@@ -255,7 +255,7 @@ export function GenezioBrandedQuestionsSection() {
         </div>
 
         {/* Bottom Info */}
-        <div className="text-center bg-[#1C1C20]/40 border border-zinc-500/20 rounded-2xl p-6 md:p-8">
+        <div className="text-center bg-[#1C1C20]/40 border border-white/10 rounded-2xl p-6 md:p-8">
           <p className="text-[#B0B0B3] text-base leading-relaxed">
             <span className="text-zinc-400 font-semibold">
               Branded questions

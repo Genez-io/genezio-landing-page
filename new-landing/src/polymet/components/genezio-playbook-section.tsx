@@ -35,7 +35,7 @@ export function GenezioPlaybookSection() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-zinc-400 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             The playbook
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -57,9 +57,9 @@ export function GenezioPlaybookSection() {
             return (
               <div
                 key={i}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-zinc-500/30 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 hover:border-white/20 transition-all duration-300"
               >
-                <div className="w-11 h-11 rounded-lg bg-zinc-500/10 border border-zinc-500/30 flex items-center justify-center mb-5">
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
                   <Icon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <div className="text-xs font-mono text-zinc-400 tracking-widest mb-3">
@@ -85,7 +85,7 @@ export function GenezioPlaybookSection() {
             {media.map((m, i) => (
               <div
                 key={i}
-                className="border border-zinc-500/25 rounded-xl p-5 bg-zinc-500/[0.03]"
+                className="border border-white/10 rounded-xl p-5 bg-zinc-500/[0.03]"
               >
                 <div className="text-lg md:text-xl font-extrabold text-white mb-1 tracking-tight">
                   {m.label}

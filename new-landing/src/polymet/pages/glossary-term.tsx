@@ -1350,7 +1350,7 @@ export function GlossaryTerm() {
             href="/glossary/"
             className="inline-flex items-center gap-3 text-white hover:text-zinc-400 transition-colors group"
           >
-            <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-zinc-500/10 border border-white/10 group-hover:border-zinc-500/30 flex items-center justify-center transition-all">
+            <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-white/5 border border-white/10 group-hover:border-white/20 flex items-center justify-center transition-all">
               <ArrowLeftIcon className="w-4 h-4" />
             </div>
             <span className="font-medium">Back to Glossary</span>
@@ -1363,7 +1363,7 @@ export function GlossaryTerm() {
         {/* Term Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <div className="px-3 py-1 text-xs font-medium bg-zinc-500/10 text-zinc-400 border border-zinc-500/20 rounded-full">
+            <div className="px-3 py-1 text-xs font-medium bg-white/5 text-zinc-400 border border-white/10 rounded-full">
               {term.category}
             </div>
             {term.acronym && (
@@ -1383,7 +1383,7 @@ export function GlossaryTerm() {
         {/* Detailed Explanation */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
               <BookOpenIcon className="w-5 h-5 text-zinc-400" />
             </div>
             <h2 className="text-2xl font-bold text-white">
@@ -1448,7 +1448,7 @@ export function GlossaryTerm() {
         {relatedTermsData.length > 0 && (
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                 <LinkIcon className="w-5 h-5 text-zinc-400" />
               </div>
               <h2 className="text-2xl font-bold text-white">Related Terms</h2>
@@ -1477,7 +1477,7 @@ export function GlossaryTerm() {
         )}
 
         {/* CTA */}
-        <div className="mt-16 bg-zinc-500/10 border border-white/10 rounded-2xl p-8 text-center">
+        <div className="mt-16 bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
             Want to improve your AI visibility?
           </h3>

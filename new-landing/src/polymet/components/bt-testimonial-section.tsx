@@ -16,7 +16,7 @@ export function BtTestimonialSection() {
                         <div className="flex items-center gap-4 mb-8">
                             <QuoteIcon className="w-12 h-12 text-zinc-500/20" />
 
-                            <p className="text-sm font-medium text-white/40 uppercase tracking-wider">
+                            <p className="text-sm font-medium text-white/40 uppercase tracking-[0.2em]">
                                 Customer Success Story
                             </p>
                         </div>
@@ -67,7 +67,7 @@ export function BtTestimonialSection() {
                                             rel="noopener noreferrer"
                                             className="flex-shrink-0 group"
                                         >
-                                            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-zinc-500/50 transition-colors">
+                                            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-white/10 transition-colors">
                                                 <img
                                                     src="/images/1655112774883.webp"
                                                     alt="Ömer Tetik"
@@ -99,11 +99,11 @@ export function BtTestimonialSection() {
 
                                 {/* Bottom Section - Metric */}
                                 <div className="mt-8 pt-8 border-t border-white/5">
-                                    <div className="inline-flex flex-col items-start px-6 py-4 bg-zinc-500/5 border border-zinc-500/10 rounded-xl">
+                                    <div className="inline-flex flex-col items-start px-6 py-4 bg-white/5 border border-white/10 rounded-xl">
                                         <p className="text-3xl font-bold text-zinc-400 mb-1">
                                             +42%
                                         </p>
-                                        <p className="text-xs text-white/40 uppercase tracking-wider font-medium">
+                                        <p className="text-xs text-white/40 uppercase tracking-[0.2em] font-medium">
                                             Conversion Rate
                                         </p>
                                     </div>

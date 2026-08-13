@@ -5,7 +5,7 @@ export function AboutCommunitySection() {
   return (
     <section className="relative overflow-hidden">
       {/* Community & Sustainability */}
-      <div className="py-16 md:py-24 bg-[#0E0E10] border-t border-[#1C1C20]">
+      <div className="py-16 md:py-24 bg-[#0E0E10] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
@@ -17,9 +17,9 @@ export function AboutCommunitySection() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto mb-12">
-            <div className="group bg-[#050506] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-zinc-500/40 transition-all duration-300">
+            <div className="group bg-[#050506] border border-white/10 rounded-xl p-6 md:p-8 hover:border-white/10 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-zinc-500/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
                   <BookOpenIcon className="w-5 h-5 text-zinc-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white">Education</h3>
@@ -45,7 +45,7 @@ export function AboutCommunitySection() {
               </p>
             </div>
 
-            <div className="group bg-[#050506] border border-[#1C1C20] rounded-xl p-6 md:p-8 hover:border-white/20 transition-all duration-300">
+            <div className="group bg-[#050506] border border-white/10 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
                   <LeafIcon className="w-5 h-5 text-emerald-400" />
@@ -95,7 +95,7 @@ export function AboutCommunitySection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 md:px-6 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
             <SparklesIcon className="w-4 h-4 text-zinc-400" />
             <span className="text-sm text-zinc-400 font-medium">
               Why Choose Genezio

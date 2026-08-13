@@ -20,7 +20,7 @@ import {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded bg-zinc-500/20 border border-zinc-500/30 flex items-center justify-center">
+                <div className="w-8 h-8 rounded bg-white/5 border border-white/10 flex items-center justify-center">
                   <BarChart3Icon className="w-4 h-4 text-zinc-400" />
                 </div>
                 <div>
@@ -53,7 +53,7 @@ import {
         description: "Find gaps, untapped keywords, and winning strategies.",
         visual: (
           <div className="space-y-3">
-            <div className="p-3 rounded-lg bg-zinc-500/10 border border-zinc-500/30">
+            <div className="p-3 rounded-lg bg-white/5 border border-white/10">
               <div className="flex items-center gap-2 mb-2">
                 <SearchIcon className="w-4 h-4 text-zinc-400" />
                 <div className="text-zinc-300 text-sm font-semibold">
@@ -175,7 +175,7 @@ import {
                 className="group relative rounded-2xl bg-[#0E0E10] border border-white/10 p-6 md:p-8 hover:border-white/20 transition-all duration-300">
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex p-3 rounded-xl bg-zinc-500/20 border border-zinc-500/30">
+                  <div className="inline-flex p-3 rounded-xl bg-white/5 border border-white/10">
                     <feature.icon className="w-6 h-6 text-zinc-400" />
                   </div>
                 </div>

@@ -83,7 +83,7 @@ function ScoreVisual() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             One score, every gap
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -109,7 +109,7 @@ function ScoreVisual() {
                 /100
               </div>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-zinc-500/15 text-zinc-300 border border-zinc-500/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-white/5 text-zinc-300 border border-white/10">
               <AlertTriangleIcon className="w-3.5 h-3.5" /> Room to improve
             </span>
             <p className="text-sm text-white/50 mt-6 max-w-xs">
@@ -201,7 +201,7 @@ function WhatItChecks() {
     <section className="py-16 md:py-28 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             What we check
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -215,7 +215,7 @@ function WhatItChecks() {
             return (
               <div
                 key={check.title}
-                className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 hover:border-white/15 transition-all duration-300"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 hover:border-white/15 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-emerald-400" />
@@ -266,7 +266,7 @@ function HowItWorks() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm text-white/50 uppercase tracking-wider mb-4 font-semibold">
+          <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             How it works
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -279,7 +279,7 @@ function HowItWorks() {
             const Icon = step.icon;
             return (
               <div key={step.label} className="relative">
-                <div className="h-full bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7">
+                <div className="h-full bg-[#0A0A0C] border border-white/10 rounded-2xl p-7">
                   <div className="flex items-center justify-between mb-5">
                     <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/15 flex items-center justify-center">
                       <Icon className="w-5 h-5 text-emerald-400" />
@@ -345,7 +345,7 @@ function NextStep() {
               <Link
                 key={card.name}
                 to={card.to}
-                className="group block bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-7 md:p-8 hover:border-white/15 transition-all duration-300"
+                className="group block bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-8 hover:border-white/15 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center">

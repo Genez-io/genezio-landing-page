@@ -15,7 +15,7 @@ export function LeadGenPersonas() {
       description: "C-suite executives looking for scalable solutions",
       queries: "ROI, integration, security, compliance",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       iconColor: "text-zinc-400",
     },
     {
@@ -42,7 +42,7 @@ export function LeadGenPersonas() {
       description: "Marketing agencies managing multiple clients",
       queries: "White-label, multi-tenant, reporting, automation",
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       iconColor: "text-zinc-400",
     },
   ];
@@ -57,7 +57,7 @@ export function LeadGenPersonas() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <UsersIcon className="w-4 h-4 text-zinc-400" />
 
             <span className="text-zinc-400 text-xs sm:text-sm font-medium">
@@ -87,11 +87,11 @@ export function LeadGenPersonas() {
             <div className="space-y-4">
               {/* Persona Selector */}
               <div>
-                <label className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3 block">
+                <label className="text-xs font-semibold text-white/40 uppercase tracking-[0.2em] mb-3 block">
                   Select Persona
                 </label>
                 <div className="space-y-2">
-                  <div className="bg-zinc-500/20 border-2 border-zinc-500/50 rounded-xl p-3 cursor-pointer">
+                  <div className="bg-white/5 border-2 border-white/10 rounded-xl p-3 cursor-pointer">
                     <div className="flex items-center gap-3">
                       <BriefcaseIcon className="w-5 h-5 text-zinc-400" />
 
@@ -123,7 +123,7 @@ export function LeadGenPersonas() {
 
               {/* Topic Selector */}
               <div>
-                <label className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3 block">
+                <label className="text-xs font-semibold text-white/40 uppercase tracking-[0.2em] mb-3 block">
                   Select Topic
                 </label>
                 <div className="space-y-2">
@@ -147,11 +147,11 @@ export function LeadGenPersonas() {
 
               {/* AI Engine Selector */}
               <div>
-                <label className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3 block">
+                <label className="text-xs font-semibold text-white/40 uppercase tracking-[0.2em] mb-3 block">
                   Select AI Engine
                 </label>
                 <div className="space-y-2">
-                  <div className="bg-zinc-500/20 border-2 border-zinc-500/50 rounded-xl p-3 cursor-pointer">
+                  <div className="bg-white/5 border-2 border-white/10 rounded-xl p-3 cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-zinc-400" />
 
@@ -195,7 +195,7 @@ export function LeadGenPersonas() {
               <div className="space-y-4 flex-1">
                 {/* User Message */}
                 <div className="flex justify-end">
-                  <div className="bg-zinc-500/20 border border-zinc-500/30 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
+                  <div className="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
                     <p className="text-white/90 text-sm leading-relaxed">
                       Where can I find LEGO sets on sale?
                     </p>
@@ -242,7 +242,7 @@ export function LeadGenPersonas() {
 
                 {/* User Follow-up */}
                 <div className="flex justify-end">
-                  <div className="bg-zinc-500/20 border border-zinc-500/30 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
+                  <div className="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
                     <p className="text-white/90 text-sm leading-relaxed">
                       Yes, I'm looking for sets under $50. Preferably something
                       for adults, not kids.
@@ -290,7 +290,7 @@ export function LeadGenPersonas() {
 
         {/* Bottom Info */}
         <div className="mt-12 sm:mt-16 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-zinc-500/10 border border-zinc-500/20 rounded-2xl px-6 sm:px-8 py-4 sm:py-5">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 sm:px-8 py-4 sm:py-5">
             <SparklesIcon className="w-6 h-6 text-zinc-400" />
 
             <div className="text-sm sm:text-base text-white/70 text-center sm:text-left">

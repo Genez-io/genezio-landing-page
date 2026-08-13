@@ -68,7 +68,7 @@ export function GenezioProofSection() {
           {secondaryStats.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#0A0A0C] border border-[#1C1C20] rounded-2xl p-6 md:p-7 flex flex-col justify-center hover:border-zinc-500/30 transition-all duration-300"
+              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 flex flex-col justify-center hover:border-white/20 transition-all duration-300"
             >
               <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
                 {stat.value}

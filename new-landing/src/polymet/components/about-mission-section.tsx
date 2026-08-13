@@ -9,7 +9,7 @@ export function AboutMissionSection() {
 
       <div className="max-w-4xl mx-auto px-4 md:px-6 relative z-10 text-center">
         {/* Icon */}
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-zinc-500/20 mb-8">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 mb-8">
           <CrosshairIcon className="w-8 h-8 text-zinc-400" />
         </div>
 

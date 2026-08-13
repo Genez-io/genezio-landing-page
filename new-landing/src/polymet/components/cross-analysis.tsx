@@ -19,7 +19,7 @@ export function CrossAnalysis() {
       impact: "high",
       icon: AlertTriangleIcon,
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {
@@ -47,7 +47,7 @@ export function CrossAnalysis() {
       impact: "critical",
       icon: AlertTriangleIcon,
       color: "bg-white/10",
-      borderColor: "border-zinc-500/20",
+      borderColor: "border-white/10",
       textColor: "text-zinc-400",
     },
     {
@@ -76,7 +76,7 @@ export function CrossAnalysis() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-500/10 border border-zinc-500/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <LayersIcon className="w-4 h-4 text-zinc-400" />
 
             <span className="text-zinc-400 text-sm font-medium">
@@ -177,7 +177,7 @@ export function CrossAnalysis() {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-12 bg-zinc-500/10 border border-zinc-500/20 rounded-2xl p-8">
+        <div className="mt-12 bg-white/5 border border-white/10 rounded-2xl p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Cross-Analysis Impact

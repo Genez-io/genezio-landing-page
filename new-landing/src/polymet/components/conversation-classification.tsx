@@ -206,7 +206,7 @@ export function ConversationClassification() {
         </div>
 
         {/* Bottom Stats */}
-        <div className="bg-zinc-500/10 border border-zinc-500/20 rounded-2xl p-8">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-zinc-400 mb-1">3,657</div>

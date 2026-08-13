@@ -259,7 +259,7 @@ export function GenezioEnterprisePlan({
               <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
                 {content.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-zinc-500/30 bg-zinc-600/20">
+                    <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5">
                       <CheckIcon className="h-3 w-3 text-zinc-400" />
                     </div>
                     <span className="text-sm leading-snug text-white/80">
