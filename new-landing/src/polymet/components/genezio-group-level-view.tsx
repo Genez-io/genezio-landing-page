@@ -3,6 +3,7 @@ import {
   BuildingIcon,
   ArrowUpRightIcon,
 } from "lucide-react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 export function GenezioGroupLevelView() {
   const brands = [
@@ -15,13 +16,13 @@ export function GenezioGroupLevelView() {
   return (
     <section className="py-12 md:py-20 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white/50 mb-6">
+            <HeroEyebrow className="w-fit mb-6">
               Enterprise · Group-level view
-            </span>
+            </HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               One group. Every brand.{" "}
               <span className="text-emerald-400">One report.</span>

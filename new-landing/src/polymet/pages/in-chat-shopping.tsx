@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
@@ -63,15 +64,10 @@ function ShoppingHero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <ShoppingBagIcon className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm text-emerald-400 font-medium">
-                In-Chat Shopping · AI Product Intelligence
-              </span>
-            </div>
+            <HeroEyebrow className="mb-6">In-Chat Shopping · AI Product Intelligence</HeroEyebrow>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6 text-white">
               AI recommends your brand.
@@ -186,7 +182,7 @@ function WhatWeAnalyze() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             What we analyze
@@ -266,7 +262,7 @@ function WhatItReveals() {
   ];
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             What it reveals
@@ -317,7 +313,7 @@ function ProductLevelView() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">
             Product-level view
@@ -428,7 +424,7 @@ function MarketplacePerformance() {
   ];
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <p className="text-sm text-white/50 uppercase tracking-[0.2em] mb-4 font-semibold">

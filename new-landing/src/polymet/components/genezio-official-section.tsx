@@ -1,5 +1,6 @@
 import { BadgeCheckIcon } from "lucide-react";
 
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioOfficialSection() {
   const openaiStats = [
     { value: "~20%", label: "of ChatGPT queries carry direct commercial intent" },
@@ -32,14 +33,9 @@ export function GenezioOfficialSection() {
 
   return (
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-14 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <BadgeCheckIcon className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm text-emerald-400 font-medium">
-              It's official
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">It's official</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             The answer engine is now a{" "}
             <span className="text-emerald-400">

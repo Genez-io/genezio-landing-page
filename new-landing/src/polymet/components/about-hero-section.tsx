@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   SparklesIcon,
   MessageSquareIcon,
@@ -16,12 +17,7 @@ export function AboutHeroSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
-            <SparklesIcon className="w-4 h-4 text-zinc-400" />
-            <span className="text-sm text-zinc-400 font-medium">
-              About Genezio
-            </span>
-          </div>
+          <HeroEyebrow className="mb-8">About Genezio</HeroEyebrow>
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">

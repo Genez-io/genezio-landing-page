@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PlayCircleIcon, ShieldCheckIcon } from "lucide-react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 const DEMO_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
@@ -10,19 +11,13 @@ export function GenezioHeroSection() {
       {/* Single, restrained glow */}
       <div className="pointer-events-none absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center">
           {/* Left: headline */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60 animate-ping" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              </span>
-              <span className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
-                The enterprise AI visibility platform
-              </span>
-            </div>
+            <HeroEyebrow className="mb-8">
+              The enterprise AI visibility platform
+            </HeroEyebrow>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.03] tracking-[-0.03em] mb-8">
               <span className="block text-white">The world stopped</span>

@@ -29,7 +29,7 @@ export function ConversionTestimonials() {
       {/* Background gradient - Banner style */}
       <div className="absolute inset-0 bg-white/5" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Testimonials Banner - Full Width Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (

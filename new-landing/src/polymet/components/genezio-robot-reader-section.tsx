@@ -1,5 +1,6 @@
 import { EyeOffIcon, XCircleIcon } from "lucide-react";
 
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioRobotReaderSection() {
   const kept = [
     "Battery life, specs, and form factor, stated plainly",
@@ -19,14 +20,9 @@ export function GenezioRobotReaderSection() {
     <section className="relative py-24 md:py-32 bg-[#0E0E10] overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <EyeOffIcon className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm text-emerald-400 font-medium">
-              The twist
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">The twist</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             Your content's most important reader{" "}
             <span className="text-emerald-400">

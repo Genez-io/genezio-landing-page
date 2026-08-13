@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   FlaskConicalIcon,
   UserIcon,
@@ -101,16 +102,10 @@ export function MultiTurnTesting() {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-500/5 via-transparent to-zinc-500/5" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <FlaskConicalIcon className="w-4 h-4 text-zinc-400" />
-
-            <span className="text-zinc-400 text-sm font-medium">
-              Multi-Turn Testing
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Multi-Turn Testing</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Test Before You{" "}

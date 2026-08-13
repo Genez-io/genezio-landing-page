@@ -2,7 +2,7 @@ import { GlobeIcon, MapPinIcon, LanguagesIcon, SearchIcon } from "lucide-react";
 
 export function AgencyGeoSection() {
   return (
-    <section className="relative py-12 md:py-24 bg-[#050506] px-4 md:px-6">
+    <section className="relative py-12 md:py-24 bg-[#050506] px-6 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left content */}

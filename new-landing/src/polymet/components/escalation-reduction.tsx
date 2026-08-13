@@ -1,3 +1,4 @@
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   ShieldCheckIcon,
   TrendingDownIcon,
@@ -91,16 +92,10 @@ export function EscalationReduction() {
 
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.04] via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <ShieldCheckIcon className="w-4 h-4 text-emerald-400" />
-
-            <span className="text-emerald-400 text-sm font-medium">
-              Escalation Management
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Escalation Management</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Reduce Escalations{" "}

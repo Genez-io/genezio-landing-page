@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { CheckIcon, ChevronDownIcon } from "lucide-react";
 import {
   DropdownMenu,
@@ -152,7 +153,7 @@ export function GenezioEnterprisePlan({
 
   return (
     <section
-      className={`relative px-4 md:px-6 bg-[#050506] ${
+      className={`relative px-6 md:px-8 lg:px-16 bg-[#050506] ${
         isPageHero ? "pt-28 md:pt-36 pb-12 md:pb-20" : "py-12 md:py-20"
       }`}
     >
@@ -183,9 +184,9 @@ export function GenezioEnterprisePlan({
           <div className="relative grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 p-8 md:p-12 lg:p-14">
             {/* Left: offer summary + CTA */}
             <div className="flex flex-col justify-center">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white/50 mb-6">
+              <HeroEyebrow className="w-fit mb-6">
                 {content.eyebrow} · Sales-assisted
-              </span>
+              </HeroEyebrow>
 
               <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
                 Let's scope your plan together

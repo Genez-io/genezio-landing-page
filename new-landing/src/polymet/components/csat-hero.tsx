@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   SparklesIcon,
   TrendingUpIcon,
@@ -15,17 +16,11 @@ export function CsatHero() {
 
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.04] via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 w-full">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 py-12 sm:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Copy */}
           <div className="space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
-
-              <span className="text-emerald-400 text-sm font-medium">
-                Increase CSAT
-              </span>
-            </div>
+            <HeroEyebrow className="mb-6">Increase CSAT</HeroEyebrow>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Elevate Your{" "}
@@ -54,7 +49,7 @@ export function CsatHero() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
+                  className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
                 >
 
                   Book a Demo

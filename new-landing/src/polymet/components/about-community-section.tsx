@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { BookOpenIcon, LeafIcon, SparklesIcon } from "lucide-react";
 
 export function AboutCommunitySection() {
@@ -6,7 +7,7 @@ export function AboutCommunitySection() {
     <section className="relative overflow-hidden">
       {/* Community & Sustainability */}
       <div className="py-16 md:py-24 bg-[#0E0E10] border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Community &{" "}
@@ -94,13 +95,8 @@ export function AboutCommunitySection() {
         {/* Glowing orb */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
-        <div className="max-w-5xl mx-auto px-4 md:px-6 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
-            <SparklesIcon className="w-4 h-4 text-zinc-400" />
-            <span className="text-sm text-zinc-400 font-medium">
-              Why Choose Genezio
-            </span>
-          </div>
+        <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center relative z-10">
+          <HeroEyebrow className="mb-8">Why Choose Genezio</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-white">Built specifically for</span>
@@ -124,7 +120,7 @@ export function AboutCommunitySection() {
             >
               <Button
                 size="lg"
-                className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
               >
                 Book a Demo
               </Button>
@@ -138,7 +134,7 @@ export function AboutCommunitySection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
+                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
               >
                 Book a Demo
               </Button>

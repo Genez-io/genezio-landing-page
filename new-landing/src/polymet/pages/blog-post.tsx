@@ -1,4 +1,5 @@
 import React from "react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Button } from "@/components/ui/button";
 import { useParams, Navigate, useLocation } from "react-router";
 import remarkGfm from "remark-gfm";
@@ -582,12 +583,7 @@ export function BlogPost() {
             {post.postType && (
               <BlogPostTypeBadge type={post.postType} size="lg" />
             )}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-              <SparklesIcon className="w-4 h-4 text-zinc-400" />
-              <span className="text-sm font-medium text-zinc-400">
-                {post.category}
-              </span>
-            </div>
+            <HeroEyebrow>{post.category}</HeroEyebrow>
           </div>
 
           {/* Title */}

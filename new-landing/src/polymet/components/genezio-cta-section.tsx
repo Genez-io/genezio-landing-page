@@ -32,7 +32,7 @@ export function GenezioCtaSection() {
       {/* Glowing orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
-      <div className="max-w-5xl mx-auto px-4 md:px-6 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
           <span className="text-white">Ready to win</span>
           <br />
@@ -52,7 +52,7 @@ export function GenezioCtaSection() {
         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
             >
               Book a Demo
             </Button>
@@ -61,7 +61,7 @@ export function GenezioCtaSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
+              className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
             >
               Book a Demo
             </Button>
@@ -79,7 +79,7 @@ export function GenezioCtaSection() {
           // <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
           //   <Button
           //     size="lg"
-          //     className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+          //     className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
           //   >
           //     Analyze Your AI Brand Visibility
           //   </Button>
@@ -88,7 +88,7 @@ export function GenezioCtaSection() {
           //   <Button
           //     size="lg"
           //     variant="outline"
-          //     className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
+          //     className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
           //   >
           //     Book a Demo
           //   </Button>

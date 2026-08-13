@@ -4,7 +4,7 @@ export function CsatTestimonialBanner() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-white/5" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Testimonial Quote */}
         <blockquote className="text-white/90 italic text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
           "Our customer service chatbot was struggling with complex energy

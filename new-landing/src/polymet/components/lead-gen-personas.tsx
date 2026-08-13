@@ -1,3 +1,4 @@
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   UsersIcon,
   BriefcaseIcon,
@@ -54,16 +55,10 @@ export function LeadGenPersonas() {
 
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-500/5 via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <UsersIcon className="w-4 h-4 text-zinc-400" />
-
-            <span className="text-zinc-400 text-xs sm:text-sm font-medium">
-              Persona-Based Analysis
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Persona-Based Analysis</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Every{" "}

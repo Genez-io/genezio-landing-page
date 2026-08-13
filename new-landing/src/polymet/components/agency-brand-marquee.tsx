@@ -83,7 +83,7 @@ function brandLogoFilter(brand: Brand, hovered: boolean) {
 }
 
 const LOGO_SLOT =
-  "h-12 w-28 sm:h-14 sm:w-32 md:h-16 md:w-36 flex shrink-0 items-center justify-center px-4 md:px-6";
+  "h-12 w-28 sm:h-14 sm:w-32 md:h-16 md:w-36 flex shrink-0 items-center justify-center px-6 md:px-8 lg:px-16";
 
 function BrandLogo({ brand }: { brand: Brand }) {
   const { name, logo, url } = brand;

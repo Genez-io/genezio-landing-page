@@ -1,3 +1,4 @@
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
     SparklesIcon,
     TrendingUpIcon,
@@ -14,12 +15,7 @@ import {
         <div className="container mx-auto px-6 relative z-10">
           {/* Header */}
           <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <SparklesIcon className="w-4 h-4 text-zinc-400" />
-              <span className="text-sm text-zinc-400 font-medium">
-                The Hidden Traffic
-              </span>
-            </div>
+            <HeroEyebrow className="mb-6">The Hidden Traffic</HeroEyebrow>
   
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               AI traffic is already{" "}

@@ -1,4 +1,5 @@
 import { Input } from "@/components/ui/input";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   SearchIcon,
   ArrowRightIcon,
@@ -44,12 +45,7 @@ export function Research() {
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-                <FlaskConicalIcon className="w-4 h-4 text-emerald-400" />
-                <span className="text-sm font-medium text-emerald-400">
-                  Original Research
-                </span>
-              </div>
+              <HeroEyebrow className="mb-6">Original Research</HeroEyebrow>
 
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Genezio{" "}

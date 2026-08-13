@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useMemo } from "react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Button } from "@/components/ui/button";
 import {
   ShoppingCartIcon,
@@ -772,12 +773,7 @@ export function IndustryLeaderboards() {
       <section className="pt-28 md:pt-36 pb-12 px-6 md:px-12 lg:px-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.15),transparent_70%)] pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-            <ZapIcon className="w-3.5 h-3.5 text-zinc-400" />
-            <span className="text-xs font-semibold text-zinc-400 uppercase tracking-[0.2em]">
-              Live AI Visibility Data · UK · US
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Live AI Visibility Data · UK · US</HeroEyebrow>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             <span className="text-white">Your competitors are already in </span>
             <span className="text-emerald-400">AI answers.</span>

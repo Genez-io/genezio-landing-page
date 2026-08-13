@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   TrendingUpIcon,
   SparklesIcon,
@@ -61,18 +62,12 @@ export function LeadGenHero() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 py-12 sm:py-20 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-6 sm:space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
-
-                <span className="text-emerald-400 text-xs sm:text-sm font-medium">
-                  Increase Lead Generation
-                </span>
-              </div>
+              <HeroEyebrow>Increase Lead Generation</HeroEyebrow>
 
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
@@ -102,7 +97,7 @@ export function LeadGenHero() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
+                    className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
                   >
 
                     Book a Demo

@@ -12,7 +12,7 @@ export function AgencyTestimonialsSection() {
   ];
 
   return (
-    <section className="py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
+    <section className="py-12 md:py-24 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">

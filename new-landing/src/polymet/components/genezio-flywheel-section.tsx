@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   ActivityIcon,
   StethoscopeIcon,
@@ -44,14 +45,9 @@ export function GenezioFlywheelSection() {
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <RefreshCwIcon className="w-4 h-4 text-zinc-400" />
-            <span className="text-sm text-zinc-400 font-medium">
-              The operating model
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">The operating model</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             From invisible to recommended:{" "}
             <span className="text-emerald-400">

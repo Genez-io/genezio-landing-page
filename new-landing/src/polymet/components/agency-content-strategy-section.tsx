@@ -2,7 +2,7 @@ import { FileTextIcon, TargetIcon, TrendingUpIcon, ZapIcon, PenToolIcon, EyeIcon
 
 export function AgencyContentStrategySection() {
   return (
-    <section className="relative py-12 md:py-24 bg-[#050506] px-4 md:px-6">
+    <section className="relative py-12 md:py-24 bg-[#050506] px-6 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-8 md:mb-16">

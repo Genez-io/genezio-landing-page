@@ -114,6 +114,9 @@ body {
 /* ── High-touch enterprise refinements ─────────────────────────────── */
 @layer base {
   html {
+    /* Slightly smaller base so the whole site reads less oversized;
+       scales every rem-based size (type, spacing, max-widths) down ~6%. */
+    font-size: 15px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;

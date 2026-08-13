@@ -29,7 +29,7 @@ export function GenezioEnterpriseSection() {
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506] border-y border-white/10">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 mb-6">
@@ -69,7 +69,7 @@ export function GenezioEnterpriseSection() {
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" target="_blank">
             <Button
               size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               Talk to Enterprise Sales
             </Button>

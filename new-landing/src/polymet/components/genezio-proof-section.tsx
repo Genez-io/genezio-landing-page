@@ -1,5 +1,6 @@
 import { TrendingUpIcon } from "lucide-react";
 
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioProofSection() {
   const secondaryStats = [
     {
@@ -28,15 +29,10 @@ export function GenezioProofSection() {
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E10] via-[#050506] to-[#050506]" />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-            <TrendingUpIcon className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm text-emerald-400 font-medium">
-              The proof
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">The proof</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Small traffic.{" "}
             <span className="text-emerald-400">

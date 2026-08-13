@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
@@ -27,11 +28,8 @@ function ContentHubHero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-          <FileTextIcon className="w-4 h-4 text-zinc-400" />
-          <span className="text-sm text-zinc-400 font-medium">Content Hub</span>
-        </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
+        <HeroEyebrow className="mb-6">Content Hub</HeroEyebrow>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
           You can't buy the recommendation.
@@ -100,7 +98,7 @@ function MeasurementToBrief() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-20">
           <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             From measurement to action
@@ -184,7 +182,7 @@ function BriefAnatomy() {
 
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
@@ -262,7 +260,7 @@ function BriefsVsDirect() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             Two ways to ship
@@ -372,7 +370,7 @@ function PlanLikeMedia() {
 
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
             The playbook
@@ -424,7 +422,7 @@ function FlywheelPublish() {
   return (
     <section className="py-16 md:py-28 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-5xl mx-auto px-4 md:px-6 text-center">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <p className="text-sm text-zinc-400 uppercase tracking-[0.2em] mb-4 font-semibold">
           Where it fits
         </p>

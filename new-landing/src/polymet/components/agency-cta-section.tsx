@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export function AgencyCtaSection() {
   return (
-    <section className="py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
+    <section className="py-12 md:py-24 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
       <div className="max-w-5xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 p-8 md:p-12 lg:p-16">
           {/* Background glow */}

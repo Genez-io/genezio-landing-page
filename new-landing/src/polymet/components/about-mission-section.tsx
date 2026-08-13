@@ -7,7 +7,7 @@ export function AboutMissionSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/[0.04] rounded-full blur-3xl" />
 
-      <div className="max-w-4xl mx-auto px-4 md:px-6 relative z-10 text-center">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-16 relative z-10 text-center">
         {/* Icon */}
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 mb-8">
           <CrosshairIcon className="w-8 h-8 text-zinc-400" />
