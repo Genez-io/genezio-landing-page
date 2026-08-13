@@ -3,8 +3,6 @@ import {
   MenuIcon,
   XIcon,
   ChevronDownIcon,
-  TrendingUpIcon,
-  TargetIcon,
   ShoppingBagIcon,
   BookOpenIcon,
   BookMarkedIcon,
@@ -13,6 +11,8 @@ import {
   UsersIcon,
   TrophyIcon,
   ScanSearchIcon,
+  BarChart3Icon,
+  GlobeIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
@@ -100,34 +100,13 @@ export function GenezioHeader() {
 
                 <div className="relative">
                   <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* For Teams column */}
+                    {/* Products column */}
                     <div>
                       <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">
-                        For Teams
+                        Products
                       </div>
                       <div className="space-y-1">
-                        {/* Increase Lead Generation */}
-                        <Link
-                          to="/conversational-brand-presence/"
-                          onClick={() => setPlatformMenuOpen(false)}
-                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                              <TrendingUpIcon className="w-5 h-5 text-emerald-400" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
-                                Increase Lead Generation
-                              </div>
-                              <div className="text-white/60 text-xs leading-relaxed">
-                                Conversational Brand Presence
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-
-                        {/* Increase Conversion */}
+                        {/* AI Agent Analytics */}
                         <Link
                           to="/increase-conversion/"
                           onClick={() => setPlatformMenuOpen(false)}
@@ -135,25 +114,40 @@ export function GenezioHeader() {
                         >
                           <div className="flex items-start gap-3">
                             <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                              <TargetIcon className="w-5 h-5 text-blue-400" />
+                              <BarChart3Icon className="w-5 h-5 text-blue-400" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-blue-400 transition-colors">
-                                Increase Conversion
+                                AI Agent Analytics
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
-                                Marketing Agent Performance
+                                Convert more from agent conversations
                               </div>
                             </div>
                           </div>
                         </Link>
-                      </div>
 
-                      {/* Products */}
-                      <div className="text-white/40 text-xs font-semibold uppercase tracking-wider mt-6 mb-3">
-                        Products
-                      </div>
-                      <div className="space-y-1">
+                        {/* Website Analyzer */}
+                        <Link
+                          to="/website-analyzer/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                              <GlobeIcon className="w-5 h-5 text-emerald-400" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
+                                Website Analyzer
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                Instant AI-readiness site audit
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+
                         {/* Content Hub */}
                         <Link
                           to="/content-hub/"
@@ -483,75 +477,66 @@ export function GenezioHeader() {
                 <div className="pl-4 space-y-3 border-l-2 border-white/10">
                   <div className="space-y-2">
                     <a
-                      href="/conversational-brand-presence/"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-2"
-                    >
-                      <div className="text-white text-sm font-medium">
-                        Increase Lead Generation
-                      </div>
-                      <div className="text-white/60 text-xs">
-                        Conversational Brand Presence
-                      </div>
-                    </a>
-                    <a
                       href="/increase-conversion/"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
                     >
                       <div className="text-white text-sm font-medium">
-                        Increase Conversion
+                        AI Agent Analytics
                       </div>
                       <div className="text-white/60 text-xs">
-                        Marketing Agent Performance
+                        Convert more from agent conversations
+                      </div>
+                    </a>
+                    <a
+                      href="/website-analyzer/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Website Analyzer
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Instant AI-readiness site audit
+                      </div>
+                    </a>
+                    <a
+                      href="/content-hub/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Content Hub
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Data-backed content briefs
+                      </div>
+                    </a>
+                    <a
+                      href="/content-analysis/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Content Analysis
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Crawlability & citable-content audits
+                      </div>
+                    </a>
+                    <a
+                      href="/in-chat-shopping/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        In-Chat Shopping
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        AI shopping & agentic commerce
                       </div>
                     </a>
                   </div>
-                </div>
-              </div>
-
-              {/* Products Mobile Submenu */}
-              <div>
-                <div className="text-white/80 text-sm font-medium py-2">
-                  Products
-                </div>
-                <div className="pl-4 space-y-3 border-l-2 border-white/10">
-                  <a
-                    href="/content-hub/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      Content Hub
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      Data-backed content briefs
-                    </div>
-                  </a>
-                  <a
-                    href="/content-analysis/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      Content Analysis
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      Crawlability & citable-content audits
-                    </div>
-                  </a>
-                  <a
-                    href="/in-chat-shopping/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      In-Chat Shopping
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      AI shopping & agentic commerce
-                    </div>
-                  </a>
                 </div>
               </div>
 

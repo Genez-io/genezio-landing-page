@@ -23,6 +23,7 @@ import { Agencies } from "./polymet/pages/agencies";
 import { IndustryLeaderboards } from "./polymet/pages/industry-leaderboards";
 import { ContentHub } from "./polymet/pages/content-hub";
 import { ContentAnalysis } from "./polymet/pages/content-analysis";
+import { WebsiteAnalyzer } from "./polymet/pages/website-analyzer";
 import { InChatShopping } from "./polymet/pages/in-chat-shopping";
 import { GenezioLandingV2 } from "@/polymet/v2/pages/genezio-landing";
 import { GenezioLayoutV2 } from "@/polymet/v2/layouts/genezio-layout";
@@ -136,6 +137,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <ContentAnalysis />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/website-analyzer"
+        element={
+          <GenezioLayout>
+            <WebsiteAnalyzer />
           </GenezioLayout>
         }
       />

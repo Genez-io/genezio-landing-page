@@ -15,6 +15,7 @@ const routes = [
   "/glossary",
 
   "/increase-conversion",
+  "/website-analyzer",
   "/content-hub",
   "/content-analysis",
   "/in-chat-shopping",

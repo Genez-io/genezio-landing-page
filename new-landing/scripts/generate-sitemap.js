@@ -15,6 +15,7 @@ const staticRoutes = [
     '/pricing',
     '/conversational-brand-presence',
     '/increase-conversion',
+    '/website-analyzer',
     '/content-hub',
     '/content-analysis',
     '/in-chat-shopping',
