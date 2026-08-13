@@ -1,5 +1,4 @@
-import { TrendingUpIcon, ArrowRightIcon } from "lucide-react";
-import { Link } from "react-router";
+import { TrendingUpIcon } from "lucide-react";
 
 export function GenezioProofSection() {
   const secondaryStats = [
@@ -39,9 +38,9 @@ export function GenezioProofSection() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Does winning AI recommendations{" "}
+            Small traffic.{" "}
             <span className="text-emerald-400">
-              drive revenue?
+              Outsized revenue.
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
@@ -82,30 +81,6 @@ export function GenezioProofSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Original data we own */}
-        <div className="max-w-3xl mx-auto mt-12 md:mt-16 text-center">
-          <p className="text-sm text-white/50 mb-4">
-            Backed by our own original research on how AI search really works:
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link
-              to="/research/"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
-            >
-              Research studies
-              <ArrowRightIcon className="w-4 h-4" />
-            </Link>
-            <span className="text-white/20">·</span>
-            <Link
-              to="/industry-leaderboards"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
-            >
-              Industry leaderboards
-              <ArrowRightIcon className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </div>
     </section>

@@ -53,9 +53,9 @@ export function GenezioFlywheelSection() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
-            How do you go from invisible to{" "}
+            From invisible to recommended:{" "}
             <span className="text-emerald-400">
-              recommended?
+              the flywheel
             </span>
           </h2>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">

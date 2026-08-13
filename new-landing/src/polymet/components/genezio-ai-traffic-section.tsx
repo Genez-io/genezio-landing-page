@@ -22,14 +22,15 @@ import {
             </div>
   
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why don't your best prospects{" "}
+              AI traffic is already{" "}
               <span className="text-emerald-400">
-                show up in your analytics?
-              </span>
+                double-digit percentage
+              </span>{" "}
+              of your total traffic
             </h2>
   
             <p className="text-lg md:text-xl text-white/60 leading-relaxed">
-              Because they research you inside AI, and that demand rarely shows up in analytics.
+              But it rarely shows up in analytics.
             </p>
           </div>
   
