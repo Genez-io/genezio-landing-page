@@ -588,140 +588,221 @@ export function DataProcessingAgreement() {
                     of sub-processors is mandatory for Genezio to operate its services:
                   </p>
                   <div className="relative w-full overflow-auto">
-                    <table className="w-full caption-bottom border-2 border-grey-300">
-                      <thead className="[&amp;_tr]:border-b bg-grey-900 text-white">
+                    <table className="w-full table-fixed caption-bottom border-2 border-grey-300 text-sm">
+                      <colgroup>
+                        <col className="w-[22%]" />
+                        <col className="w-[28%]" />
+                        <col className="w-[12%]" />
+                        <col className="w-[38%]" />
+                      </colgroup>
+                      <thead className="[&_tr]:border-b bg-grey-900 text-white">
                         <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
+                          <th className="h-10 px-2 text-left align-top font-medium [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-white">
                             Sub-processor
                           </th>
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
+                          <th className="h-10 px-2 text-left align-top font-medium [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-white">
                             Purpose
                           </th>
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
+                          <th className="h-10 px-2 text-left align-top font-medium [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-white">
                             Storage location
                           </th>
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
+                          <th className="h-10 px-2 text-left align-top font-medium [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-white">
                             Duration of processing
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="[&amp;_tr:last-child]:border-0">
+                      <tbody className="[&_tr:last-child]:border-0">
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Amazon AWS
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Data storage, Training and Processing
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Cloud hosting, data storage and processing
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Anthropic
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             General purpose AI
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Google Cloud
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Google Cloud Platform
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Data storage, Training and Processing
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Cloud hosting, data storage and processing
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            LangFuse
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            AI observability and analytics
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            EU
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            As required under the Main Agreement, unless otherwise required by the
+                            law or by sub-processor’s binding rules
+                          </td>
+                        </tr>
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Meta
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Advertising Campaigns
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Microsoft
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Microsoft Azure
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Data hosting stored in Microsoft Azure
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Cloud hosting, data storage and processing
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            MongoDB
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            MongoDB Atlas
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Database hosting and data storage
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             OpenAI
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             General purpose AI
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             OVH
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Cloud hosting and infrastructure services
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
                           </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            As required under the Main Agreement, unless otherwise required by the
+                            law or by sub-processor’s binding rules
+                          </td>
+                        </tr>
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Sentry
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Application error monitoring
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            EU
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            As required under the Main Agreement, unless otherwise required by the
+                            law or by sub-processor’s binding rules
+                          </td>
+                        </tr>
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Stripe
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Payment processing and billing
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            EU
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            As required under the Main Agreement, unless otherwise required by the
+                            law or by sub-processor’s binding rules
+                          </td>
+                        </tr>
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Upstash
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Caching and queueing infrastructure
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            EU
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            As required under the Main Agreement, unless otherwise required by the
+                            law or by sub-processor’s binding rules
+                          </td>
+                        </tr>
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Vercel
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            Frontend hosting and delivery
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
+                            EU
+                          </td>
+                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             As required under the Main Agreement, unless otherwise required by the
                             law or by sub-processor’s binding rules
                           </td>
