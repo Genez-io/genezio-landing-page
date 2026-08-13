@@ -132,6 +132,8 @@ body {
   h3,
   h4 {
     letter-spacing: -0.02em;
+    /* Even out multi-line titles instead of leaving 1–2 orphan words on the last line */
+    text-wrap: balance;
   }
 }
 

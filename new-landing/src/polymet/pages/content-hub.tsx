@@ -191,7 +191,7 @@ function BriefAnatomy() {
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Every brief is a{" "}
-              <span className="text-emerald-400">
+              <span className="text-white">
                 blueprint for a citable answer
               </span>
             </h2>
@@ -428,7 +428,7 @@ function FlywheelPublish() {
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Hub is the{" "}
-          <span className="text-emerald-400">
+          <span className="text-white">
             Publish
           </span>{" "}
           step of the loop

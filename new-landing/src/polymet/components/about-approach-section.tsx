@@ -38,7 +38,7 @@ export function AboutApproachSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Our{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Approach
             </span>
           </h2>

@@ -38,7 +38,7 @@ export function GenezioOfficialSection() {
           <HeroEyebrow className="mb-6">It's official</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             The answer engine is now a{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               revenue channel
             </span>{" "}
 , and the platforms are saying so out loud

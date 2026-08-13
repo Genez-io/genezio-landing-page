@@ -150,7 +150,7 @@ export function GenezioDifferentiatorsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             <span className="text-white">The platform built for</span>{" "}
-            <span className="text-emerald-400 font-extrabold">
+            <span className="text-white font-extrabold">
               Generative Search and Answer Engine Optimization
             </span>
           </h2>

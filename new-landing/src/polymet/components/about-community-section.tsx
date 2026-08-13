@@ -11,7 +11,7 @@ export function AboutCommunitySection() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Community &{" "}
-              <span className="text-emerald-400">
+              <span className="text-white">
                 Sustainability
               </span>
             </h2>
@@ -101,7 +101,7 @@ export function AboutCommunitySection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-white">Built specifically for</span>
             <br />
-            <span className="text-emerald-400 font-extrabold">
+            <span className="text-white font-extrabold">
               AI recommendation performance
             </span>
           </h2>
@@ -120,7 +120,7 @@ export function AboutCommunitySection() {
             >
               <Button
                 size="lg"
-                className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
               >
                 Book a Demo
               </Button>
@@ -134,7 +134,7 @@ export function AboutCommunitySection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 lg:px-16 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
+                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
               >
                 Book a Demo
               </Button>

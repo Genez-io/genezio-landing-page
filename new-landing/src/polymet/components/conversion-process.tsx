@@ -15,7 +15,7 @@ export function ConversionProcess() {
           <HeroEyebrow className="mb-6">How It Works</HeroEyebrow>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Three Steps to{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Higher Conversions
             </span>
           </h2>

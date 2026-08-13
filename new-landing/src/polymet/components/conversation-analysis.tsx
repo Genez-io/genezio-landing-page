@@ -116,7 +116,7 @@ export function ConversationAnalysis() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Understand What{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Customers Ask
             </span>
           </h2>

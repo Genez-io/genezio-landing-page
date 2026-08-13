@@ -35,7 +35,7 @@ export function GenezioProofSection() {
           <HeroEyebrow className="mb-6">The proof</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Small traffic.{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Outsized revenue.
             </span>
           </h2>

@@ -96,7 +96,7 @@ export function ConversationClassification() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Understand{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Every Conversation
             </span>
           </h2>

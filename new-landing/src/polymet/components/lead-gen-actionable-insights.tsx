@@ -51,7 +51,7 @@ export function LeadGenActionableInsights() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Don't Just Monitor.{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Take Action.
             </span>
           </h2>

@@ -25,7 +25,7 @@ export function GenezioGroupLevelView() {
             </HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               One group. Every brand.{" "}
-              <span className="text-emerald-400">One report.</span>
+              <span className="text-white">One report.</span>
             </h2>
             <p className="text-base md:text-lg text-white/70 leading-relaxed mb-6">
               Managing a portfolio? Roll every brand up under a single group and

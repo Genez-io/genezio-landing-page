@@ -1011,7 +1011,7 @@ export function IndustryLeaderboards() {
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             How does{" "}
-            <span className="text-emerald-400">your brand</span>{" "}
+            <span className="text-white">your brand</span>{" "}
             rank?
           </h2>
           <p className="text-base text-[#B0B0B3] max-w-xl mx-auto">

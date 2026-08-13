@@ -81,7 +81,7 @@ export function CrossAnalysis() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Connect the{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Full Picture
             </span>
           </h2>

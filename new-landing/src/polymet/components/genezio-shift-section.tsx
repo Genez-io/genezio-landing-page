@@ -28,7 +28,7 @@ export function GenezioShiftSection() {
           <HeroEyebrow className="mb-6">The shift</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             This isn't the future.{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               It's already happening.
             </span>
           </h2>

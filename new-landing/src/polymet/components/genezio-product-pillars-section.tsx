@@ -62,7 +62,7 @@ export function GenezioProductPillarsSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             One platform to{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               win the recommendation
             </span>
           </h2>

@@ -59,7 +59,7 @@ export function LeadGenDataSources() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Generate{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Realistic Conversations
             </span>
           </h2>

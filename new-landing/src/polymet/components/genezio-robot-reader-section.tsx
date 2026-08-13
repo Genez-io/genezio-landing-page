@@ -25,7 +25,7 @@ export function GenezioRobotReaderSection() {
           <HeroEyebrow className="mb-6">The twist</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             Your content's most important reader{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               doesn't have eyes.
             </span>
           </h2>

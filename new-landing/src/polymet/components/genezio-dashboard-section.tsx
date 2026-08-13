@@ -123,7 +123,7 @@ export function GenezioDashboardSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Track AI{" "}
-            <span className="text-emerald-400 font-extrabold">
+            <span className="text-white font-extrabold">
               visibility & recommendations
             </span>
           </h2>

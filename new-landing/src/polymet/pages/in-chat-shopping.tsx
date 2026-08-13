@@ -432,7 +432,7 @@ function MarketplacePerformance() {
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
               Where your product{" "}
-              <span className="text-emerald-400">actually wins</span>
+              <span className="text-white">actually wins</span>
             </h2>
             <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-6">
               When your product is sold through marketplaces, In-Chat Shopping

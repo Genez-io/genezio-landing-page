@@ -41,7 +41,7 @@ export function AboutCustomersSection() {
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Our{" "}
-              <span className="text-emerald-400">
+              <span className="text-white">
                 Customers
               </span>
             </h2>

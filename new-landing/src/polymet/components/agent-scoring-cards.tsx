@@ -126,7 +126,7 @@ export function AgentScoringCards() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Personalized{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Scoring Cards
             </span>
           </h2>

@@ -63,7 +63,7 @@ export function AboutTeamSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             The{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               Team
             </span>
           </h2>

@@ -40,7 +40,7 @@ export function GenezioPlaybookSection() {
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             You can't buy the recommendation.{" "}
-            <span className="text-emerald-400">
+            <span className="text-white">
               You can earn it.
             </span>
           </h2>

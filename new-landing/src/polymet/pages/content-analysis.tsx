@@ -545,8 +545,8 @@ function FlywheelDiagnoseVerify() {
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
           Content Analysis powers{" "}
-          <span className="text-emerald-400">Diagnose</span> and{" "}
-          <span className="text-emerald-400">Verify</span>
+          <span className="text-white">Diagnose</span> and{" "}
+          <span className="text-white">Verify</span>
         </h2>
         <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-12">
           It finds what's holding a page back before launch, and confirms the

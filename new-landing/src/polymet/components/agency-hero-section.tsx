@@ -36,7 +36,7 @@ export function AgencyHeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-zinc-600 hover:bg-zinc-500 text-white px-6 md:px-8 lg:px-16 py-6 sm:py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-zinc-500/30 w-full"
+                className="bg-zinc-600 hover:bg-zinc-500 text-white px-6 md:px-8 py-6 sm:py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-zinc-500/30 w-full"
               >
                 Talk to Sales
               </Button>
@@ -49,7 +49,7 @@ export function AgencyHeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/20 text-white hover:text-white px-6 md:px-8 lg:px-16 py-6 sm:py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full sm:w-auto"
+                className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/20 text-white hover:text-white px-6 md:px-8 py-6 sm:py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full sm:w-auto"
               >
                 Contact Us
               </Button>
