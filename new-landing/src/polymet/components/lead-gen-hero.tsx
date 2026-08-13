@@ -77,7 +77,7 @@ export function LeadGenHero() {
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Turn{" "}
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="text-emerald-400">
                   AI Conversations
                 </span>
                 <br />
@@ -93,7 +93,7 @@ export function LeadGenHero() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <a href="/pricing/" className="w-full sm:w-auto">
-                  <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25">
 
                     Start Monitoring
                   </Button>
@@ -125,7 +125,7 @@ export function LeadGenHero() {
 
                       {/* Center - Genezio Logo */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border-2 border-emerald-500/40 rounded-2xl p-4 backdrop-blur-sm">
+                        <div className="relative bg-emerald-500/20 border-2 border-emerald-500/40 rounded-2xl p-4 backdrop-blur-sm">
                           <div className="absolute inset-0 rounded-2xl bg-emerald-500/10" />
 
                           <div className="relative z-10 flex flex-col items-center gap-1">
@@ -140,7 +140,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Generate (Top) */}
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/30 to-teal-500/30 border border-emerald-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-emerald-500/30 border border-emerald-500/40 flex items-center justify-center backdrop-blur-sm">
                           <MessageSquareIcon className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -152,7 +152,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Analyze (Right) */}
                       <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500/30 to-cyan-500/30 border border-teal-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-teal-500/30 border border-teal-500/40 flex items-center justify-center backdrop-blur-sm">
                           <SearchIcon className="w-5 h-5 text-teal-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -162,7 +162,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Insights (Bottom) */}
                       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-blue-500/30 border border-cyan-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-cyan-500/30 border border-cyan-500/40 flex items-center justify-center backdrop-blur-sm">
                           <LightbulbIcon className="w-5 h-5 text-cyan-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -172,7 +172,7 @@ export function LeadGenHero() {
 
                       {/* Orbiting Icons - Optimize (Left) */}
                       <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 border border-blue-500/40 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-12 h-12 rounded-xl bg-blue-500/30 border border-blue-500/40 flex items-center justify-center backdrop-blur-sm">
                           <TargetIcon className="w-5 h-5 text-blue-400" />
                         </div>
                         <div className="text-center mt-1">
@@ -198,7 +198,7 @@ export function LeadGenHero() {
                     {[...Array(16)].map((_, i) => (
                       <div
                         key={i}
-                        className="aspect-square rounded-lg bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 flex items-center justify-center"
+                        className="aspect-square rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center"
                         style={{
                           animation: `pulse 2s ease-in-out ${i * 0.1}s infinite`,
                         }}

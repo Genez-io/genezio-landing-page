@@ -42,7 +42,7 @@ function renderRichText(text: string) {
       <a
         key={key++}
         href={url}
-        className="text-purple-400 underline hover:text-purple-300"
+        className="text-emerald-400 underline hover:text-emerald-300"
         {...(isExternal
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {})}
@@ -1367,7 +1367,7 @@ export function GlossaryTerm() {
               {term.category}
             </div>
             {term.acronym && (
-              <div className="px-3 py-1 text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-full">
+              <div className="px-3 py-1 text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">
                 {term.acronym}
               </div>
             )}
@@ -1401,8 +1401,8 @@ export function GlossaryTerm() {
         {/* Examples */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-              <LightbulbIcon className="w-5 h-5 text-purple-400" />
+            <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <LightbulbIcon className="w-5 h-5 text-emerald-400" />
             </div>
             <h2 className="text-2xl font-bold text-white">Examples</h2>
           </div>
@@ -1414,8 +1414,8 @@ export function GlossaryTerm() {
                 className="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] transition-colors"
               >
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                    <span className="text-sm font-bold text-purple-400">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+                    <span className="text-sm font-bold text-emerald-400">
                       {index + 1}
                     </span>
                   </div>
@@ -1437,7 +1437,7 @@ export function GlossaryTerm() {
             <h2 className="text-2xl font-bold text-white">Why It Matters</h2>
           </div>
 
-          <div className="bg-gradient-to-br from-green-500/5 to-blue-500/5 border border-white/10 rounded-xl p-8">
+          <div className="bg-green-500/5 border border-white/10 rounded-xl p-8">
             <p className="text-white/80 leading-relaxed text-lg">
               {renderRichText(term.whyItMatters)}
             </p>
@@ -1477,7 +1477,7 @@ export function GlossaryTerm() {
         )}
 
         {/* CTA */}
-        <div className="mt-16 bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10 rounded-2xl p-8 text-center">
+        <div className="mt-16 bg-blue-500/10 border border-white/10 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
             Want to improve your AI visibility?
           </h3>

@@ -18,7 +18,7 @@ export function ConversionProcess() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Three Steps to{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Higher Conversions
             </span>
           </h2>
@@ -32,7 +32,7 @@ export function ConversionProcess() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Step 1 */}
           <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-blue-500/30 transition-all group">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
               <MessageSquareIcon className="w-8 h-8 text-blue-400" />
             </div>
             <div className="text-center space-y-3">
@@ -48,7 +48,7 @@ export function ConversionProcess() {
 
           {/* Step 2 */}
           <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-blue-500/30 transition-all group">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
               <BarChart3Icon className="w-8 h-8 text-blue-400" />
             </div>
             <div className="text-center space-y-3">
@@ -64,7 +64,7 @@ export function ConversionProcess() {
 
           {/* Step 3 */}
           <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-blue-500/30 transition-all group">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-500/20 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
               <TrendingUpIcon className="w-8 h-8 text-blue-400" />
             </div>
             <div className="text-center space-y-3">

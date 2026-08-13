@@ -54,7 +54,7 @@ export function Blog() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-purple-600/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-emerald-600/5 to-transparent" />
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -68,7 +68,7 @@ export function Blog() {
 
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 The Genezio{" "}
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+                <span className="bg-blue-400 text-transparent bg-clip-text">
                   Blog
                 </span>
               </h1>

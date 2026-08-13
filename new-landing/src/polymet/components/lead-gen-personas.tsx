@@ -14,7 +14,7 @@ export function LeadGenPersonas() {
       title: "Enterprise Decision Makers",
       description: "C-suite executives looking for scalable solutions",
       queries: "ROI, integration, security, compliance",
-      color: "from-blue-500/20 to-indigo-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       iconColor: "text-blue-400",
     },
@@ -23,16 +23,16 @@ export function LeadGenPersonas() {
       title: "Technical Evaluators",
       description: "Engineers and architects assessing capabilities",
       queries: "API, performance, architecture, documentation",
-      color: "from-purple-500/20 to-violet-500/20",
-      borderColor: "border-purple-500/20",
-      iconColor: "text-purple-400",
+      color: "bg-emerald-500/20",
+      borderColor: "border-emerald-500/20",
+      iconColor: "text-emerald-400",
     },
     {
       icon: ShoppingBagIcon,
       title: "SMB Owners",
       description: "Small business owners seeking quick wins",
       queries: "Pricing, ease of use, support, quick setup",
-      color: "from-emerald-500/20 to-teal-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-emerald-500/20",
       iconColor: "text-emerald-400",
     },
@@ -41,7 +41,7 @@ export function LeadGenPersonas() {
       title: "Agency Partners",
       description: "Marketing agencies managing multiple clients",
       queries: "White-label, multi-tenant, reporting, automation",
-      color: "from-orange-500/20 to-amber-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-orange-500/20",
       iconColor: "text-orange-400",
     },
@@ -67,7 +67,7 @@ export function LeadGenPersonas() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Every{" "}
-            <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Conversation
             </span>{" "}
             Is Unique
@@ -290,7 +290,7 @@ export function LeadGenPersonas() {
 
         {/* Bottom Info */}
         <div className="mt-12 sm:mt-16 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10 border border-teal-500/20 rounded-2xl px-6 sm:px-8 py-4 sm:py-5">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-teal-500/10 border border-teal-500/20 rounded-2xl px-6 sm:px-8 py-4 sm:py-5">
             <SparklesIcon className="w-6 h-6 text-teal-400" />
 
             <div className="text-sm sm:text-base text-white/70 text-center sm:text-left">

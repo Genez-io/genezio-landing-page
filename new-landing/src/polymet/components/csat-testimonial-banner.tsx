@@ -2,7 +2,7 @@ export function CsatTestimonialBanner() {
   return (
     <section className="relative py-12 sm:py-16 bg-[#0E0E10] overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/5 to-purple-500/10" />
+      <div className="absolute inset-0 bg-emerald-500/10" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
         {/* Testimonial Quote */}

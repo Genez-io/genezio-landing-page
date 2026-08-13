@@ -7,7 +7,7 @@ const pillars = [
     title: "Measure What Matters",
     description:
       "Many platforms stop at mention counts or share of voice. Genezio distinguishes between visibility and recommendation because a mention does not guarantee preference. That difference matters in real buying journeys, especially where the asker's role, intent, and follow-up questions reshape the result.",
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-emerald-500",
   },
   {
     number: "02",
@@ -15,7 +15,7 @@ const pillars = [
     title: "Analyze Real Conversations",
     description:
       "Instead of relying only on static prompt snapshots, Genezio emphasizes multi-turn interactions and scenario logic. This reveals how recommendations shift between discovery, comparison, and decision stages — critical for teams evaluating AI-generated conversation visibility by persona.",
-    color: "from-cyan-500 to-purple-500",
+    color: "bg-emerald-500",
   },
   {
     number: "03",
@@ -23,7 +23,7 @@ const pillars = [
     title: "Prioritize Action Over Dashboards",
     description:
       "Genezio surfaces concrete next steps: publish on sources AI already trusts, create missing comparison content, strengthen product-page clarity, monitor cited URLs, and correct weak or outdated narratives. Practical orientation over another analytics layer.",
-    color: "from-purple-500 to-blue-500",
+    color: "bg-emerald-500",
   },
 ];
 
@@ -38,7 +38,7 @@ export function AboutApproachSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Our{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Approach
             </span>
           </h2>
@@ -60,19 +60,19 @@ export function AboutApproachSection() {
               >
                 {/* Gradient top border */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${pillar.color} rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  className={`absolute top-0 left-0 right-0 h-1 ${pillar.color} rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                 />
 
                 {/* Number badge */}
                 <div
-                  className={`inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r ${pillar.color} text-white text-sm font-bold mb-5`}
+                  className={`inline-flex items-center justify-center w-10 h-10 rounded-full ${pillar.color} text-white text-sm font-bold mb-5`}
                 >
                   {pillar.number}
                 </div>
 
                 {/* Icon */}
                 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${pillar.color} p-[1px] mb-5`}
+                  className={`w-12 h-12 rounded-lg ${pillar.color} p-[1px] mb-5`}
                 >
                   <div className="w-full h-full bg-[#0E0E10] rounded-lg flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" />

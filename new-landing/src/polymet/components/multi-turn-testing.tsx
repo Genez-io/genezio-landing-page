@@ -114,7 +114,7 @@ export function MultiTurnTesting() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Test Before You{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Deploy
             </span>
           </h2>
@@ -228,7 +228,7 @@ export function MultiTurnTesting() {
                   <div key={index}>
                     {message.role === "user" ? (
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                           <UserIcon className="w-4 h-4 text-blue-400" />
                         </div>
                         <div className="flex-1">
@@ -249,7 +249,7 @@ export function MultiTurnTesting() {
                       </div>
                     ) : (
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                           <SparklesIcon className="w-4 h-4 text-blue-400" />
                         </div>
                         <div className="flex-1">
@@ -280,7 +280,7 @@ export function MultiTurnTesting() {
               </div>
 
               {/* Test Results */}
-              <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
+              <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
                 <div className="flex items-center gap-3">
                   <CheckCircleIcon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
 
@@ -300,7 +300,7 @@ export function MultiTurnTesting() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
+        <div className="mt-12 bg-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-3">
               Generate Custom Test Scenarios
@@ -310,7 +310,7 @@ export function MultiTurnTesting() {
               campaign update. Ensure quality before deployment.
             </p>
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
-              <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-6 text-base font-semibold rounded-xl">
+              <Button className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl">
                 <FlaskConicalIcon className="w-5 h-5 mr-2" />
                 Talk to our Experts
               </Button>

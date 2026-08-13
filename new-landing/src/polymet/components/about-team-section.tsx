@@ -31,10 +31,10 @@ export function AboutTeamSection() {
       image: "/authors/paula-cionca.webp",
       to: "/blog/author/paula-cionca/",
       bio: "Frequently publishes on recommendation rate, citations, perception analysis, and the evolving role of GEO in modern marketing strategy.",
-      borderColor: "hover:border-purple-500/40",
-      shadowColor: "hover:shadow-purple-500/10",
-      imgBorderColor: "group-hover:border-purple-500/40",
-      roleColor: "text-purple-400"
+      borderColor: "hover:border-emerald-500/40",
+      shadowColor: "hover:shadow-emerald-500/10",
+      imgBorderColor: "group-hover:border-emerald-500/40",
+      roleColor: "text-emerald-400"
     },
     {
       name: "Bogdan Vlad",
@@ -53,17 +53,17 @@ export function AboutTeamSection() {
     <section className="py-16 md:py-24 bg-[#0E0E10] relative overflow-hidden border-t border-[#1C1C20]">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.04),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(192,132,252,0.04),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16, 185, 129,0.04),transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         {/* Section header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-500/20 mb-6">
             <UsersIcon className="w-8 h-8 text-blue-400" />
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             The{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Team
             </span>
           </h2>
@@ -114,7 +114,7 @@ export function AboutTeamSection() {
             </p>
           </div>
           <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#050506] border border-[#1C1C20]">
-            <MegaphoneIcon className="w-7 h-7 text-purple-400 mb-3" />
+            <MegaphoneIcon className="w-7 h-7 text-emerald-400 mb-3" />
             <h4 className="text-white font-semibold mb-2">
               Commercially Focused
             </h4>

@@ -15,7 +15,7 @@ export function ConversationAnalysis() {
       count: 1247,
       percentage: 34,
       trend: "+12%",
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
     },
@@ -24,7 +24,7 @@ export function ConversationAnalysis() {
       count: 892,
       percentage: 24,
       trend: "+8%",
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
     },
@@ -33,7 +33,7 @@ export function ConversationAnalysis() {
       count: 654,
       percentage: 18,
       trend: "-5%",
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
     },
@@ -42,7 +42,7 @@ export function ConversationAnalysis() {
       count: 445,
       percentage: 12,
       trend: "+18%",
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
     },
@@ -51,7 +51,7 @@ export function ConversationAnalysis() {
       count: 432,
       percentage: 12,
       trend: "+3%",
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
     },
@@ -121,7 +121,7 @@ export function ConversationAnalysis() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Understand What{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Customers Ask
             </span>
           </h2>
@@ -161,7 +161,7 @@ export function ConversationAnalysis() {
         {/* Insights Section */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/20 flex items-center justify-center">
               <TrendingUpIcon className="w-5 h-5 text-blue-400" />
             </div>
             <h3 className="text-2xl font-bold text-white">
@@ -200,7 +200,7 @@ export function ConversationAnalysis() {
         </div>
 
         {/* Stats Bar */}
-        <div className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
+        <div className="bg-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold text-white mb-2">

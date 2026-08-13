@@ -34,7 +34,7 @@ export function ConversionHero() {
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
               Optimize Your AI Agent's{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 Conversations
               </span>
             </h1>
@@ -49,7 +49,7 @@ export function ConversionHero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/25">
+                <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-blue-500/25">
                   Request an Analysis
                 </Button>
               </Link>
@@ -102,9 +102,9 @@ export function ConversionHero() {
               </div>
 
               {/* AI Agent Chat Widget */}
-              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute bottom-4 right-4 w-[280px] sm:w-80 bg-blue-500/20 backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Chat Header */}
-                <div className="bg-gradient-to-r from-blue-600/80 to-cyan-600/80 backdrop-blur-sm px-4 py-3 border-b border-blue-500/30">
+                <div className="bg-blue-600/80 backdrop-blur-sm px-4 py-3 border-b border-blue-500/30">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                       <SparklesIcon className="w-4 h-4 text-white" />

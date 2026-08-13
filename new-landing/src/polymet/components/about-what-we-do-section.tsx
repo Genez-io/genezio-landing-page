@@ -13,42 +13,42 @@ const capabilities = [
     title: "AI Visibility & Recommendation Tracking",
     description:
       "Track your brand across ChatGPT, Google AI Overviews, Gemini, Perplexity, and Claude — measuring not just mentions, but actual recommendations.",
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-emerald-500",
   },
   {
     icon: UsersIcon,
     title: "Persona-Based Conversation Analysis",
     description:
       "See how AI-generated conversations change for developers, B2B buyers, journalists, or consumers — revealing persona-specific recommendation patterns.",
-    color: "from-cyan-500 to-blue-500",
+    color: "bg-emerald-500",
   },
   {
     icon: SwordsIcon,
     title: "Competitor Comparisons",
     description:
       "Understand not only whether you are mentioned by topic and scenario, but when AI actively prefers a rival over your brand.",
-    color: "from-blue-500 to-purple-500",
+    color: "bg-emerald-500",
   },
   {
     icon: LinkIcon,
     title: "Citation Intelligence & Monitoring",
     description:
       "See which publishers and URLs shape AI answers and identify where corrective work should happen to strengthen your citations.",
-    color: "from-purple-500 to-blue-500",
+    color: "bg-emerald-500",
   },
   {
     icon: LightbulbIcon,
     title: "Action Recommendations",
     description:
       "Get specific content creation opportunities, website improvements, citation-gap fixes, and strategies to improve AI recommendations.",
-    color: "from-blue-400 to-purple-400",
+    color: "bg-emerald-500",
   },
   {
     icon: GlobeIcon,
     title: "Multi-Brand & Global Support",
     description:
       "Manage several brands, countries, languages, or agency relationships from one dashboard — ideal for enterprise and agency teams.",
-    color: "from-purple-400 to-blue-400",
+    color: "bg-emerald-500",
   },
 ];
 
@@ -56,7 +56,7 @@ export function AboutWhatWeDoSection() {
   return (
     <section className="py-16 md:py-24 bg-[#0E0E10] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(192,132,252,0.04),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16, 185, 129,0.04),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(77,195,255,0.04),transparent_50%)]" />
 
       {/* Top gradient line */}
@@ -67,7 +67,7 @@ export function AboutWhatWeDoSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             What We{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Do
             </span>
           </h2>
@@ -94,12 +94,12 @@ export function AboutWhatWeDoSection() {
               >
                 {/* Gradient top border on hover */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${capability.color} rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  className={`absolute top-0 left-0 right-0 h-1 ${capability.color} rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                 />
 
                 {/* Icon */}
                 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${capability.color} p-[1px] mb-5`}
+                  className={`w-12 h-12 rounded-lg ${capability.color} p-[1px] mb-5`}
                 >
                   <div className="w-full h-full bg-[#050506] rounded-lg flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" />

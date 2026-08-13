@@ -31,14 +31,14 @@ export function BlogPostTypeBadge({
     <div
       className={cn(
         "inline-flex items-center rounded-full font-semibold uppercase tracking-wide",
-        "bg-gradient-to-r from-violet-500/15 via-purple-500/10 to-fuchsia-500/15",
-        "border border-violet-400/25 shadow-[0_0_20px_rgba(139,92,246,0.08)]",
+        "bg-emerald-500/15",
+        "border border-emerald-400/25 shadow-[0_0_20px_rgba(139,92,246,0.08)]",
         sizeClasses[size],
         className
       )}
     >
-      <Icon className="text-violet-400 shrink-0" />
-      <span className="bg-gradient-to-r from-violet-200 via-purple-300 to-fuchsia-300 bg-clip-text text-transparent">
+      <Icon className="text-emerald-400 shrink-0" />
+      <span className="text-emerald-400">
         {config.label}
       </span>
     </div>

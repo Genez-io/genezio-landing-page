@@ -100,7 +100,7 @@ export function GenezioPricingFaq() {
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-gradient-to-br from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-2xl p-12">
+        <div className="text-center bg-blue-600/10 border border-blue-500/30 rounded-2xl p-12">
           <MessageCircleIcon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
 
           <h3 className="text-2xl font-bold text-white mb-4">

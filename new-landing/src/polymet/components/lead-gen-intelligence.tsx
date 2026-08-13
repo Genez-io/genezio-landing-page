@@ -20,7 +20,7 @@ export function LeadGenIntelligence() {
         "Identify missing authoritative sources",
       ],
 
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       iconColor: "text-blue-400",
     },
@@ -35,9 +35,9 @@ export function LeadGenIntelligence() {
         "Identify perception gaps",
       ],
 
-      color: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/20",
-      iconColor: "text-purple-400",
+      color: "bg-emerald-500/20",
+      borderColor: "border-emerald-500/20",
+      iconColor: "text-emerald-400",
     },
     {
       icon: HashIcon,
@@ -50,7 +50,7 @@ export function LeadGenIntelligence() {
         "Improve AI discoverability",
       ],
 
-      color: "from-emerald-500/20 to-teal-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-emerald-500/20",
       iconColor: "text-emerald-400",
     },
@@ -74,7 +74,7 @@ export function LeadGenIntelligence() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Understand{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Every Detail
             </span>
           </h2>
@@ -95,7 +95,7 @@ export function LeadGenIntelligence() {
             >
               {/* Icon */}
               <div
-                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${feature.color} border ${feature.borderColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl ${feature.color} border ${feature.borderColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
                 <feature.icon
                   className={`w-7 h-7 sm:w-8 sm:h-8 ${feature.iconColor}`}
@@ -176,7 +176,7 @@ export function LeadGenIntelligence() {
                     <span className="text-white font-medium">
                       "affordable pricing"
                     </span>
-                    <span className="text-purple-400 text-sm font-semibold">
+                    <span className="text-emerald-400 text-sm font-semibold">
                       Low Intent
                     </span>
                   </div>
@@ -191,7 +191,7 @@ export function LeadGenIntelligence() {
 
             {/* Right: Impact */}
             <div className="flex flex-col justify-center">
-              <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-8">
+              <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-8">
                 <TrendingUpIcon className="w-10 h-10 sm:w-12 sm:h-12 text-emerald-400 mb-4" />
 
                 <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">

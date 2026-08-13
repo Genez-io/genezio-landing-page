@@ -12,35 +12,35 @@ const milestones = [
     title: "AI-Native Launch",
     description:
       "Built from scratch as an AI-native platform, not a retrofitted SEO add-on.",
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-emerald-500",
   },
   {
     icon: MessageSquareIcon,
     title: "Multi-Turn Conversations",
     description:
       "Introduced multi-turn conversation analysis to mirror real buyer journeys.",
-    color: "from-cyan-500 to-blue-500",
+    color: "bg-emerald-500",
   },
   {
     icon: UsersIcon,
     title: "Persona-Based Tracking",
     description:
       "Expanded persona-based tracking so teams see how AI responds to different buyer types.",
-    color: "from-blue-500 to-purple-500",
+    color: "bg-emerald-500",
   },
   {
     icon: LinkIcon,
     title: "Citation Monitoring",
     description:
       "Added citation monitoring and direct perception analysis for full-funnel visibility.",
-    color: "from-purple-500 to-blue-500",
+    color: "bg-emerald-500",
   },
   {
     icon: BuildingIcon,
     title: "Enterprise Adoption",
     description:
       "Trusted by Fortune 500 teams and brands including BCR, Bitdefender, Vodafone, CBRE, and Auchan.",
-    color: "from-blue-400 to-purple-400",
+    color: "bg-emerald-500",
   },
 ];
 
@@ -49,7 +49,7 @@ export function AboutStorySection() {
     <section className="py-16 md:py-24 bg-[#0E0E10] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.06),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(192,132,252,0.06),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(16, 185, 129,0.06),transparent_50%)]" />
 
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
@@ -59,7 +59,7 @@ export function AboutStorySection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Our{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Story
             </span>
           </h2>
@@ -112,7 +112,7 @@ export function AboutStorySection() {
                   className="group flex items-start gap-4 p-4 rounded-xl bg-[#050506] border border-[#1C1C20] hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
                 >
                   <div
-                    className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br ${milestone.color} p-[1px]`}
+                    className={`flex-shrink-0 w-10 h-10 rounded-lg ${milestone.color} p-[1px]`}
                   >
                     <div className="w-full h-full bg-[#050506] rounded-lg flex items-center justify-center group-hover:bg-[#0A0A0F] transition-colors">
                       <Icon className="w-5 h-5 text-white" />

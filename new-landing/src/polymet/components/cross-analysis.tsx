@@ -18,7 +18,7 @@ export function CrossAnalysis() {
       action: "Optimize content to bridge this gap",
       impact: "high",
       icon: AlertTriangleIcon,
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
     },
@@ -32,7 +32,7 @@ export function CrossAnalysis() {
       action: "Maintain current content strategy",
       impact: "low",
       icon: SparklesIcon,
-      color: "from-emerald-500/20 to-teal-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-emerald-500/20",
       textColor: "text-emerald-400",
     },
@@ -46,7 +46,7 @@ export function CrossAnalysis() {
       action: "Create detailed integration documentation",
       impact: "critical",
       icon: AlertTriangleIcon,
-      color: "from-red-500/20 to-orange-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-red-500/20",
       textColor: "text-red-400",
     },
@@ -60,9 +60,9 @@ export function CrossAnalysis() {
       action: "Leverage this strength in marketing",
       impact: "opportunity",
       icon: TrendingUpIcon,
-      color: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/20",
-      textColor: "text-purple-400",
+      color: "bg-emerald-500/20",
+      borderColor: "border-emerald-500/20",
+      textColor: "text-emerald-400",
     },
   ];
 
@@ -86,7 +86,7 @@ export function CrossAnalysis() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Connect the{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Full Picture
             </span>
           </h2>
@@ -177,7 +177,7 @@ export function CrossAnalysis() {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-12 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
+        <div className="mt-12 bg-blue-500/10 border border-blue-500/20 rounded-2xl p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Cross-Analysis Impact

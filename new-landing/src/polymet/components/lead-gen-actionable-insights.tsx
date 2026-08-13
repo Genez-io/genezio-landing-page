@@ -15,7 +15,7 @@ export function LeadGenActionableInsights() {
     {
       category: "Visibility Gaps",
       icon: TargetIcon,
-      color: "from-emerald-500/20 to-teal-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-emerald-500/20",
       iconColor: "text-emerald-400",
       insight: "Your brand isn't mentioned in 73% of relevant AI conversations",
@@ -26,7 +26,7 @@ export function LeadGenActionableInsights() {
     {
       category: "Competitive Positioning",
       icon: TrendingUpIcon,
-      color: "from-emerald-500/20 to-teal-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-emerald-500/20",
       iconColor: "text-emerald-400",
       insight: "AI platforms favor competitors for 'enterprise' queries",
@@ -56,7 +56,7 @@ export function LeadGenActionableInsights() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Don't Just Monitor.{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Take Action.
             </span>
           </h2>
@@ -78,7 +78,7 @@ export function LeadGenActionableInsights() {
               {/* Header */}
               <div className="flex items-start gap-4 mb-6">
                 <div
-                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${item.color} border ${item.borderColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl ${item.color} border ${item.borderColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <item.icon
                     className={`w-6 h-6 sm:w-7 sm:h-7 ${item.iconColor}`}
@@ -112,7 +112,7 @@ export function LeadGenActionableInsights() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-10">
+        <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="flex-1 text-center lg:text-left">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -124,7 +124,7 @@ export function LeadGenActionableInsights() {
               </p>
             </div>
             <a href="/pricing/">
-              <Button className="w-full lg:w-auto bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25 flex-shrink-0">
+              <Button className="w-full lg:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-emerald-500/25 flex-shrink-0">
                 <SparklesIcon className="w-5 h-5 mr-2" />
                 Get my Insights
               </Button>

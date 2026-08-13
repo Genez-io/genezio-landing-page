@@ -620,7 +620,7 @@ export function BlogPost() {
                   );
                 }
                 return (
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
                     <span className="text-white font-semibold text-sm">
                       {post.author
                         .split(" ")
@@ -813,7 +813,7 @@ export function BlogPost() {
                   );
                 }
                 return (
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-semibold text-lg">
                       {post.author
                         .split(" ")
@@ -875,9 +875,9 @@ export function BlogPost() {
       {/* CTA Section */}
       <section className="px-6 pb-32">
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 border border-white/10 rounded-2xl p-12 overflow-hidden">
+          <div className="relative bg-blue-600/20 border border-white/10 rounded-2xl p-12 overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-emerald-600/10 to-transparent" />
 
             <div className="relative text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -889,7 +889,7 @@ export function BlogPost() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="/pricing/">
-                  <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold px-8 py-6 rounded-xl text-base">
+                  <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-6 rounded-xl text-base">
                     Get Started
                     <ArrowLeftIcon className="w-5 h-5 ml-2 rotate-180" />
                   </Button>

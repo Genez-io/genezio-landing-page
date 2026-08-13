@@ -445,7 +445,7 @@ export function GenezioDashboardSection() {
           </div>
 
           {/* Glow effect - Mobile responsive */}
-          <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-blue-500/20 via-emerald-500/20 to-blue-500/20 blur-2xl md:blur-3xl -z-10 opacity-50" />
+          <div className="absolute -inset-2 md:-inset-4 bg-blue-500/20 blur-2xl md:blur-3xl -z-10 opacity-50" />
           
           {/* 3D Shadow - natural depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/30 to-black/60 blur-3xl translate-y-6 scale-95 -z-20 rounded-xl" />
@@ -457,7 +457,7 @@ export function GenezioDashboardSection() {
           <Link to="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Get Started Today
             </Button>

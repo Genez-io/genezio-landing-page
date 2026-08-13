@@ -169,7 +169,7 @@ export function AgencyBrandScanSection() {
 
           {/* Right side - Visual Preview */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6 md:p-8">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-blue-500/10 p-6 md:p-8">
               {/* Mock Dashboard Preview */}
               <div className="space-y-6">
                 {/* Header */}
@@ -205,7 +205,7 @@ export function AgencyBrandScanSection() {
 
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-2 h-2 rounded-full bg-purple-400" />
+                      <div className="w-2 h-2 rounded-full bg-emerald-400" />
                       <div className="text-white/60 text-xs">
                         Perplexity coverage
                       </div>
@@ -248,7 +248,7 @@ export function AgencyBrandScanSection() {
               </div>
 
               {/* Glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-2xl -z-10" />
+              <div className="absolute -inset-1 bg-blue-500/20 blur-2xl -z-10" />
             </div>
           </div>
         </div>

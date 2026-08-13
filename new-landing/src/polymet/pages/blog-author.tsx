@@ -73,7 +73,7 @@ function BlogAuthor() {
             The author you're looking for doesn't exist.
           </p>
           <Link to="/blog/">
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500">
+            <Button className="bg-emerald-600 hover:bg-emerald-500">
               Back to Blog
             </Button>
           </Link>
@@ -118,7 +118,7 @@ function BlogAuthor() {
         {/* Author Hero Section */}
         <section className="relative pt-16 pb-20 px-6 overflow-hidden">
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-purple-600/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-emerald-600/5 to-transparent" />
 
           <div className="relative max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -186,13 +186,13 @@ function BlogAuthor() {
                     >
                       {/* Gradient overlay */}
                       <div
-                        className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
+                        className={`absolute inset-0 ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
                       />
 
                       <div className="relative">
                         {/* Icon */}
                         <div
-                          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${post.gradient} opacity-20 flex items-center justify-center mb-4`}
+                          className={`w-12 h-12 rounded-xl ${post.gradient} opacity-20 flex items-center justify-center mb-4`}
                         >
                           <Icon className="w-6 h-6 text-white" />
                         </div>

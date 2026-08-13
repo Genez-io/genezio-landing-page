@@ -9,7 +9,7 @@ export function GenezioProblemsSection() {
   return (
     <section className="py-32 bg-[#0E0E10] relative overflow-hidden">
       {/* Subtle gradient accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -96,7 +96,7 @@ export function GenezioProblemsSection() {
 
               {/* Floating indicator */}
               <div
-                className={`absolute -right-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-blue-500/50 transition-all duration-300 ${
+                className={`absolute -right-4 top-1/2 -translate-y-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-blue-500/50 transition-all duration-300 ${
                   hoveredCard === "mentioned"
                     ? "scale-110 shadow-green-500/50"
                     : hoveredCard === "missing"

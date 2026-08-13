@@ -780,7 +780,7 @@ export function IndustryLeaderboards() {
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             <span className="text-white">Your competitors are already in </span>
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI answers.</span>
+            <span className="text-emerald-400">AI answers.</span>
             <span className="text-white"> Are you?</span>
           </h1>
           <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-10">
@@ -963,7 +963,7 @@ export function IndustryLeaderboards() {
                   {/* Visibility bar + % */}
                   <div className="flex items-center gap-2">
                     <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                      <div className="h-full rounded-full bg-blue-500"
                         style={{ width: `${brand.visibility}%` }} />
                     </div>
                     <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
@@ -1015,7 +1015,7 @@ export function IndustryLeaderboards() {
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             How does{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">your brand</span>{" "}
+            <span className="text-emerald-400">your brand</span>{" "}
             rank?
           </h2>
           <p className="text-base text-[#B0B0B3] max-w-xl mx-auto">
@@ -1023,7 +1023,7 @@ export function IndustryLeaderboards() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://app.genezio.ai/sign-up">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 font-semibold rounded-lg shadow-lg shadow-purple-500/20 transition-all duration-200 hover:scale-105">
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 font-semibold rounded-lg shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:scale-105">
                 Get Free Analysis <ArrowRightIcon className="w-4 h-4 ml-2" />
               </Button>
             </a>

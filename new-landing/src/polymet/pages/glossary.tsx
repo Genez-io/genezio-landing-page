@@ -379,7 +379,7 @@ export function Glossary() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             AI Search & Visibility
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Terminology Guide
             </span>
           </h1>

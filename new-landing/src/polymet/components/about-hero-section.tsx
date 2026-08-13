@@ -11,7 +11,7 @@ export function AboutHeroSection() {
     <section className="relative bg-[#050506] pt-40 pb-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-transparent to-transparent" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -27,7 +27,7 @@ export function AboutHeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             AI-Driven Search Visibility
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               & Recommendation Analytics
             </span>
           </h1>
@@ -49,7 +49,7 @@ export function AboutHeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-lg rounded-lg shadow-lg shadow-purple-500/20 transition-all duration-200 hover:scale-105"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-lg rounded-lg shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:scale-105"
               >
                 Book a Demo
               </Button>
@@ -75,8 +75,8 @@ export function AboutHeroSection() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1">
-              <TrendingUpIcon className="w-8 h-8 text-purple-400" />
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1">
+              <TrendingUpIcon className="w-8 h-8 text-emerald-400" />
               <div className="text-2xl font-bold text-white">
                 Recommendation
               </div>

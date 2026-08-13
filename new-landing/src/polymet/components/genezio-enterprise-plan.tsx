@@ -99,9 +99,9 @@ export function GenezioEnterprisePlan({
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className="group relative inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent outline-none transition-opacity hover:opacity-90 focus-visible:opacity-90"
+          className="group relative inline-flex items-center gap-1.5 text-emerald-400 outline-none transition-opacity hover:opacity-90 focus-visible:opacity-90"
         >
-          <span className="underline decoration-blue-400/40 decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-purple-400/60">
+          <span className="underline decoration-blue-400/40 decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-emerald-400/60">
             {content.titleWord}
           </span>
           <ChevronDownIcon className="h-[0.7em] w-[0.7em] flex-shrink-0 text-blue-400/80 transition-transform group-data-[state=open]:rotate-180" />
@@ -157,10 +157,10 @@ export function GenezioEnterprisePlan({
         </div>
 
         {/* Full-width enterprise panel */}
-        <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-blue-600/[0.1] via-[#0A0A0B] to-purple-600/[0.1] shadow-2xl shadow-blue-500/5">
+        <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-br from-blue-600/[0.1] via-[#0A0A0B] to-emerald-600/[0.1] shadow-2xl shadow-blue-500/5">
           {/* Decorative glows */}
           <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-blue-600/20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-purple-600/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-emerald-600/20 blur-3xl" />
 
           <div className="relative grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 p-8 md:p-12 lg:p-14">
             {/* Left: offer summary + CTA */}
@@ -182,7 +182,7 @@ export function GenezioEnterprisePlan({
 
               <Button
                 onClick={() => window.open(CALENDAR_URL, "_blank")}
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20"
+                className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/20"
               >
                 Contact Sales
               </Button>

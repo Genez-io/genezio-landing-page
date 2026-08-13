@@ -65,8 +65,8 @@ export function GenezioBrandPlans() {
           </div>
 
           {/* Enterprise Plan */}
-          <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 border-2 border-blue-500/50 rounded-2xl p-8 relative">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-6 py-2 rounded-full">
+          <div className="bg-blue-600/10 border-2 border-blue-500/50 rounded-2xl p-8 relative">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full">
               MOST POPULAR
             </div>
             <div className="mb-8">
@@ -78,7 +78,7 @@ export function GenezioBrandPlans() {
                 Advanced features and unlimited resources for enterprise-scale brands
               </p>
             </div>
-            <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base font-medium">
+            <Button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-6 text-base font-medium">
               Contact Sales
             </Button>
           </div>
@@ -116,7 +116,7 @@ export function GenezioBrandPlans() {
                     <td className="py-4 px-6 text-center">
                       {typeof feature.enterprise === "boolean" ? (
                         feature.enterprise ? (
-                          <CheckIcon className="w-5 h-5 text-purple-500 mx-auto" />
+                          <CheckIcon className="w-5 h-5 text-emerald-500 mx-auto" />
                         ) : (
                           <XIcon className="w-5 h-5 text-white/20 mx-auto" />
                         )

@@ -6,9 +6,9 @@ export function AgencyCtaSection() {
   return (
     <section className="py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/30 p-8 md:p-12 lg:p-16">
+        <div className="relative rounded-3xl overflow-hidden bg-blue-500/20 border border-blue-500/30 p-8 md:p-12 lg:p-16">
           {/* Background glow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
+          <div className="absolute inset-0 bg-blue-500/10 blur-3xl" />
 
           {/* Content */}
           <div className="relative z-10 text-center">

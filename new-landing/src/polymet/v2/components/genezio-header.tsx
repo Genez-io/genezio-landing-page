@@ -37,7 +37,7 @@ export function GenezioHeaderV2() {
 
             <Button
               size="default"
-              className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white border-0"
               asChild
             >
               <Link to="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO" className="flex items-center gap-2">

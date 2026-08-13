@@ -12,7 +12,7 @@ export function EscalationReduction() {
     {
       phase: "Before Escalation",
       icon: ShieldCheckIcon,
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-blue-500/20",
       textColor: "text-blue-400",
       improvements: [
@@ -33,7 +33,7 @@ export function EscalationReduction() {
     {
       phase: "After Escalation",
       icon: CheckCircleIcon,
-      color: "from-emerald-500/20 to-teal-500/20",
+      color: "bg-emerald-500/20",
       borderColor: "border-emerald-500/20",
       textColor: "text-emerald-400",
       improvements: [
@@ -87,24 +87,24 @@ export function EscalationReduction() {
   return (
     <section className="relative py-16 sm:py-24 bg-[#050506] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-pink-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-pink-500/5" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
-            <ShieldCheckIcon className="w-4 h-4 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+            <ShieldCheckIcon className="w-4 h-4 text-emerald-400" />
 
-            <span className="text-purple-400 text-sm font-medium">
+            <span className="text-emerald-400 text-sm font-medium">
               Escalation Management
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Reduce Escalations{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               at Every Stage
             </span>
           </h2>
@@ -123,7 +123,7 @@ export function EscalationReduction() {
             return (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${phase.color} backdrop-blur-sm border ${phase.borderColor} rounded-2xl p-8`}
+                className={`${phase.color} backdrop-blur-sm border ${phase.borderColor} rounded-2xl p-8`}
               >
                 {/* Phase Header */}
                 <div className="flex items-center gap-3 mb-6">
@@ -188,7 +188,7 @@ export function EscalationReduction() {
                   className="bg-white/[0.02] border border-white/10 rounded-xl p-6"
                 >
                   <div className="flex items-center gap-2 mb-4">
-                    <Icon className="w-4 h-4 text-purple-400" />
+                    <Icon className="w-4 h-4 text-emerald-400" />
 
                     <p className="text-sm text-white/60">{item.metric}</p>
                   </div>
@@ -211,8 +211,8 @@ export function EscalationReduction() {
                   </div>
 
                   <div className="pt-3 border-t border-white/5">
-                    <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
-                      <span className="text-xs font-semibold text-purple-400">
+                    <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                      <span className="text-xs font-semibold text-emerald-400">
                         {item.improvement}
                       </span>
                     </div>

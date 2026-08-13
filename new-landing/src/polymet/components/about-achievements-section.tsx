@@ -13,7 +13,7 @@ const achievements = [
       "Trusted by brands including BCR, Bitdefender, Vodafone, CBRE, FlowX, and Auchan — demonstrating traction with both enterprise and high-growth teams.",
     metric: "Fortune 500",
     metricLabel: "Clients",
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-emerald-500",
   },
   {
     icon: TrendingUpIcon,
@@ -22,7 +22,7 @@ const achievements = [
       "In Genezio's BCR customer story, brand presence in AI conversations on key topics grew by double digits in just a few weeks — practical lift, not theoretical potential.",
     metric: "2x+",
     metricLabel: "Growth",
-    color: "from-cyan-500 to-blue-500",
+    color: "bg-emerald-500",
   },
   {
     icon: BrainIcon,
@@ -31,7 +31,7 @@ const achievements = [
       "Genezio differentiates through multi-turn, persona-led conversational analysis and direct brand-perception workflows — going beyond standard mention tracking.",
     metric: "AI-Native",
     metricLabel: "Platform",
-    color: "from-blue-500 to-purple-500",
+    color: "bg-emerald-500",
   },
   {
     icon: ShieldCheckIcon,
@@ -40,7 +40,7 @@ const achievements = [
       "SOC 2 Type II certified, supporting enterprise-grade deployment for organizations that need secure multi-brand collaboration across regions.",
     metric: "SOC 2",
     metricLabel: "Type II",
-    color: "from-purple-500 to-blue-500",
+    color: "bg-emerald-500",
   },
 ];
 
@@ -55,7 +55,7 @@ export function AboutAchievementsSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Key{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-emerald-400">
               Achievements
             </span>
           </h2>
@@ -77,7 +77,7 @@ export function AboutAchievementsSection() {
                   {/* Metric badge */}
                   <div className="flex-shrink-0 text-center">
                     <div
-                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${achievement.color} p-[1px] mb-2`}
+                      className={`w-16 h-16 rounded-xl ${achievement.color} p-[1px] mb-2`}
                     >
                       <div className="w-full h-full bg-[#0E0E10] rounded-xl flex flex-col items-center justify-center group-hover:bg-[#131316] transition-colors">
                         <span className="text-white text-xs font-bold leading-none">

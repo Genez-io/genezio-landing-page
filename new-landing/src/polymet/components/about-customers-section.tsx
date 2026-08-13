@@ -33,7 +33,7 @@ export function AboutCustomersSection() {
   return (
     <section className="py-16 md:py-24 bg-[#050506] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(192,132,252,0.04),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16, 185, 129,0.04),transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -41,7 +41,7 @@ export function AboutCustomersSection() {
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Our{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 Customers
               </span>
             </h2>
@@ -71,7 +71,7 @@ export function AboutCustomersSection() {
                   key={index}
                   className="group flex items-start gap-4 p-4 rounded-xl bg-[#0E0E10] border border-[#1C1C20] hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-emerald-500/30 transition-all">
                     <Icon className="w-5 h-5 text-blue-400" />
                   </div>
                   <p className="text-white/90 font-medium leading-relaxed pt-1.5">

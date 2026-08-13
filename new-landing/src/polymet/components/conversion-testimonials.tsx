@@ -27,7 +27,7 @@ export function ConversionTestimonials() {
   return (
     <section className="relative py-12 sm:py-16 bg-[#0E0E10] overflow-hidden">
       {/* Background gradient - Banner style */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/5 to-blue-500/10" />
+      <div className="absolute inset-0 bg-blue-500/10" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Testimonials Banner - Full Width Grid */}

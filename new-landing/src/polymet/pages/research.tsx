@@ -40,20 +40,20 @@ export function Research() {
       />
       <div className="min-h-screen bg-[#050506]">
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-violet-600/10 via-purple-600/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/10 via-emerald-600/5 to-transparent" />
 
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-6">
-                <FlaskConicalIcon className="w-4 h-4 text-violet-400" />
-                <span className="text-sm font-medium text-violet-400">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                <FlaskConicalIcon className="w-4 h-4 text-emerald-400" />
+                <span className="text-sm font-medium text-emerald-400">
                   Original Research
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Genezio{" "}
-                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 text-transparent bg-clip-text">
+                <span className="bg-emerald-400 text-transparent bg-clip-text">
                   Research
                 </span>
               </h1>
@@ -87,15 +87,15 @@ export function Research() {
                     <a
                       key={post.id}
                       href={getPostPath(post)}
-                      className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-violet-400/30 transition-all overflow-hidden"
+                      className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-emerald-400/30 transition-all overflow-hidden"
                     >
                       <div
-                        className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
+                        className={`absolute inset-0 ${post.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}
                       />
 
                       <div className="relative">
                         <div
-                          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${post.gradient} opacity-20 flex items-center justify-center mb-4`}
+                          className={`w-12 h-12 rounded-xl ${post.gradient} opacity-20 flex items-center justify-center mb-4`}
                         >
                           <Icon className="w-6 h-6 text-white" />
                         </div>
@@ -104,7 +104,7 @@ export function Research() {
                           {post.postType && (
                             <BlogPostTypeBadge type={post.postType} size="sm" />
                           )}
-                          <span className="text-xs font-medium text-violet-400">
+                          <span className="text-xs font-medium text-emerald-400">
                             {post.category}
                           </span>
                           <span className="text-xs text-white/40">•</span>
@@ -114,7 +114,7 @@ export function Research() {
                           </div>
                         </div>
 
-                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
+                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
                           {post.title}
                         </h3>
 
@@ -130,8 +130,8 @@ export function Research() {
                           </div>
                         </div>
 
-                        <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-violet-500/10 group-hover:border-violet-400/20 transition-all">
-                          <ArrowRightIcon className="w-5 h-5 text-white/60 group-hover:text-violet-300 group-hover:translate-x-0.5 transition-all" />
+                        <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/10 group-hover:border-emerald-400/20 transition-all">
+                          <ArrowRightIcon className="w-5 h-5 text-white/60 group-hover:text-emerald-300 group-hover:translate-x-0.5 transition-all" />
                         </div>
                       </div>
                     </a>
