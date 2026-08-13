@@ -54,13 +54,13 @@ export function AboutHeroSection() {
                 Book a Demo
               </Button>
             </a>
-            <a href="https://app.genezio.ai/sign-up">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
               <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-8 py-6 text-lg rounded-lg transition-all"
               >
-                Get Started
+                Talk to Sales
               </Button>
             </a>
           </div>

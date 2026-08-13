@@ -57,12 +57,12 @@ function ContentHubHero() {
               Book a Demo
             </Button>
           </a>
-          <a href="https://app.genezio.ai/sign-up">
+          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               variant="outline"
               className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-lg transition-all"
             >
-              Get Started
+              Talk to Sales
             </Button>
           </a>
         </div>

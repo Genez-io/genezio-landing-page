@@ -12,6 +12,12 @@ export function GenezioHeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: headline */}
           <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+              <span className="text-sm text-emerald-400 font-medium">
+                The enterprise AI visibility platform
+              </span>
+            </div>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
               <span className="block text-white">The world stopped</span>
               <span className="block text-white">searching.</span>
@@ -21,8 +27,9 @@ export function GenezioHeroSection() {
             </h1>
 
             <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              Track how AI engines see your brand — and win the recommendation,
-              not just the mention.
+              Enterprise brands trust Genezio to track how AI engines see them
+              across every market — and to win the recommendation, not just the
+              mention.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6">
@@ -38,12 +45,12 @@ export function GenezioHeroSection() {
                   Book a Demo
                 </Button>
               </a>
-              <a href="https://app.genezio.ai/sign-up">
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
                 <Button
                   variant="outline"
                   className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
                 >
-                  Get Started
+                  Talk to Sales
                 </Button>
               </a>
             </div>

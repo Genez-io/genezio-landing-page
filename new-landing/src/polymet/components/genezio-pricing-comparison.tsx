@@ -188,7 +188,7 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     onClick={() =>
-                      window.open("https://app.genezio.ai/sign-up", "_blank")
+                      window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
                     }
                     className="w-full bg-emerald-600 hover:bg-emerald-500 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-emerald-500/20"
                   >
@@ -307,7 +307,7 @@ export function GenezioPricingComparison() {
                           "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
                           "_blank"
                         )
-                      : window.open("https://app.genezio.ai/sign-up", "_blank")
+                      : window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
                   }
                   className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
                     plan === "Growth"

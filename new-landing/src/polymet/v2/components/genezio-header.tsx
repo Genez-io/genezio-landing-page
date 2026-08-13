@@ -40,8 +40,8 @@ export function GenezioHeaderV2() {
               className="bg-emerald-600 hover:bg-emerald-500 text-white border-0"
               asChild
             >
-              <Link to="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO" className="flex items-center gap-2">
-                Get Started for Free
+              <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="flex items-center gap-2">
+                Talk to Sales
                 <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </Button>

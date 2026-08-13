@@ -52,7 +52,7 @@ export function AgencyBrandScanSection() {
     const hostname = parsed.hostname.replace(/^www\./i, "");
     const brandName = hostname.split(".")[0] || hostname;
 
-    const redirectUrl = new URL("https://app.genezio.ai/sign-up");
+    const redirectUrl = new URL("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC");
     // redirectUrl.searchParams.set("brandUrl", rawInput);
     redirectUrl.searchParams.set("brandName", brandName);
 

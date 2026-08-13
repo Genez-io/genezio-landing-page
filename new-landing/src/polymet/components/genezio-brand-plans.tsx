@@ -60,7 +60,7 @@ export function GenezioBrandPlans() {
               </p>
             </div>
             <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-base font-medium">
-              Get Started
+              Talk to Sales
             </Button>
           </div>
 

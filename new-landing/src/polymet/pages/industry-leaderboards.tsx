@@ -1022,7 +1022,7 @@ export function IndustryLeaderboards() {
             Get a personalised AI visibility report for your brand — see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="https://app.genezio.ai/sign-up">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 font-semibold rounded-lg shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:scale-105">
                 Get Free Analysis <ArrowRightIcon className="w-4 h-4 ml-2" />
               </Button>

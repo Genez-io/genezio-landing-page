@@ -454,12 +454,12 @@ export function GenezioDashboardSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <Link to="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO">
+          <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               size="lg"
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
-              Get Started Today
+              Book a Demo
             </Button>
           </Link>
         </div>

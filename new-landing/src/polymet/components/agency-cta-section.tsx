@@ -29,12 +29,12 @@ export function AgencyCtaSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="https://app.genezio.ai/sign-up">
+              <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg font-medium w-full sm:w-auto"
                 >
-                  Get Started
+                  Talk to Sales
                 </Button>
               </Link>
               <Button

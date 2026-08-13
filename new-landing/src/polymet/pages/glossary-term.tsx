@@ -1489,7 +1489,7 @@ export function GlossaryTerm() {
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
             onClick={() => (window.location.href = "/pricing/")}
           >
-            Get Started
+            Talk to Sales
           </Button>
         </div>
       </div>

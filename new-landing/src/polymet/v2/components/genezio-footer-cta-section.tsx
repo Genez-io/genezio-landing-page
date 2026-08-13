@@ -34,9 +34,9 @@ export function GenezioFooterCtaSection() {
 
           {/* CTA */}
           <div className="pt-4">
-            <a href="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button size="lg" className="text-base px-10 h-14 group shadow-xl">
-              Get Started Today
+              Book a Demo
               <ArrowRightIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             </a>

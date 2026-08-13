@@ -890,7 +890,7 @@ export function BlogPost() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="/pricing/">
                   <Button className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-6 rounded-xl text-base">
-                    Get Started
+                    Talk to Sales
                     <ArrowLeftIcon className="w-5 h-5 ml-2 rotate-180" />
                   </Button>
                 </a>
