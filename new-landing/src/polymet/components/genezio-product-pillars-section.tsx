@@ -74,23 +74,12 @@ export function GenezioProductPillarsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-6xl mx-auto">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
-            const isBlue = pillar.accent === "blue";
 
             const inner = (
               <>
                 <div className="flex items-start justify-between mb-5">
-                  <div
-                    className={`w-12 h-12 rounded-xl border flex items-center justify-center ${
-                      isBlue
-                        ? "bg-white/5 border-white/10"
-                        : "bg-white/5 border-white/15"
-                    }`}
-                  >
-                    <Icon
-                      className={`w-6 h-6 ${
-                        isBlue ? "text-zinc-400" : "text-emerald-400"
-                      }`}
-                    />
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-emerald-400" />
                   </div>
                   <ArrowRightIcon className="w-5 h-5 text-white/20 group-hover:text-white/60 group-hover:translate-x-1 transition-all" />
                 </div>
@@ -100,11 +89,7 @@ export function GenezioProductPillarsSection() {
                 <p className="text-[#B0B0B3] text-sm md:text-base leading-relaxed mb-5">
                   {pillar.description}
                 </p>
-                <span
-                  className={`inline-flex items-center gap-1.5 text-sm font-semibold ${
-                    isBlue ? "text-zinc-400" : "text-emerald-400"
-                  }`}
-                >
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-white">
                   {pillar.cta}
                   <ArrowRightIcon className="w-4 h-4" />
                 </span>

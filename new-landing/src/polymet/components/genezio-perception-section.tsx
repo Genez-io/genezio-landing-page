@@ -33,12 +33,12 @@ function poly(vals: number[]): string {
 const YOU = [0.86, 0.62, 0.55, 0.8, 0.7];
 const COMPETITOR = [0.6, 0.9, 0.83, 0.5, 0.74];
 
-/* Association (known-for) vs recommendation (recommended-for), illustrative */
-const ATTRIBUTES = [
-  { name: "Digital experience", known: 84, rec: 76 },
-  { name: "Trust & security", known: 88, rec: 81 },
-  { name: "Low fees", known: 73, rec: 44 },
-  { name: "Mortgages", known: 66, rec: 38 },
+/* Mentioned-for vs recommended-for, by topic, illustrative */
+const TOPICS = [
+  { name: "Digital experience", mentioned: 84, rec: 76 },
+  { name: "Trust & security", mentioned: 88, rec: 81 },
+  { name: "Low fees", mentioned: 73, rec: 44 },
+  { name: "Mortgages", mentioned: 66, rec: 38 },
 ];
 const RINGS = [0.25, 0.5, 0.75, 1].map((f) =>
   AXES.map((_, i) => pt(i, R * f).join(",")).join(" ")
@@ -209,24 +209,24 @@ export function GenezioPerceptionSection() {
         <div className="mt-16 md:mt-20">
           <div className="max-w-2xl mb-8">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 leading-tight">
-              Being known for something isn't being recommended for it
+              Being visible for a topic isn't being recommended for it
             </h3>
             <p className="text-sm md:text-base text-white/60 leading-relaxed">
-              AI can strongly associate your brand with an attribute and still
-              send the customer to a competitor. We show the gap attribute by
-              attribute, so you fix the ones that actually decide the pick.
+              AI can strongly associate your brand with a topic and still send
+              the customer to a competitor. We show the gap topic by topic, so
+              you fix the ones that actually decide the pick.
             </p>
           </div>
 
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
             <div className="hidden sm:grid grid-cols-[160px_1fr_120px] gap-4 pb-4 mb-4 border-b border-white/10 text-[11px] uppercase tracking-[0.2em] text-white/35">
-              <span>Attribute</span>
-              <span>Known for vs recommended for</span>
+              <span>Topic</span>
+              <span>Mentioned for vs recommended for</span>
               <span className="text-right">Gap</span>
             </div>
             <div className="space-y-5">
-              {ATTRIBUTES.map((a) => {
-                const gap = a.known - a.rec;
+              {TOPICS.map((a) => {
+                const gap = a.mentioned - a.rec;
                 const wins = gap >= 20;
                 return (
                   <div
