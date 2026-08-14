@@ -84,7 +84,10 @@ export function GenezioAiTrafficSection() {
             </p>
             <p className="text-sm text-white/70 leading-relaxed">
               A brand can be mentioned constantly yet rarely recommended when a
-              user asks for the best option. The worst place to be:{" "}
+              user asks for the best option.
+            </p>
+            <p className="text-sm text-white/70 leading-relaxed mt-2">
+              The worst place to be:{" "}
               <span className="inline-flex items-center gap-1.5 text-white/90 font-medium">
                 <AlertTriangleIcon className="w-3.5 h-3.5 text-emerald-400" />
                 high visibility, low recommendation
