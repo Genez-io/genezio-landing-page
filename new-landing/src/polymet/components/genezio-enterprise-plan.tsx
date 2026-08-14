@@ -89,7 +89,7 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
       "Email, Slack & dedicated success manager support",
       "Flexible add-ons to scale any limit",
     ],
-    note: "Custom Enterprise offer tailored to your agency.",
+    note: "Custom Enterprise pricing, exclusive of any applicable taxes.",
   },
 };
 
@@ -232,7 +232,7 @@ export function GenezioEnterprisePlan({
               </div>
 
               <p className="mt-5 text-xs text-white/40">
-                Custom pricing, no fixed tiers. {content.note}
+                {content.note}
               </p>
             </div>
 
