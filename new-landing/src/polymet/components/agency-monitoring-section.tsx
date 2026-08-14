@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { isWorkEmail } from "@/lib/work-email";
 import { useState } from "react";
 
 export function AgencyMonitoringSection() {
@@ -11,6 +12,7 @@ export function AgencyMonitoringSection() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [emailError, setEmailError] = useState("");
 
   const ZOHO_FORM_BASE = "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK";
   
@@ -21,6 +23,14 @@ export function AgencyMonitoringSection() {
       return;
     }
 
+    if (!isWorkEmail(email)) {
+      setEmailError(
+        "Please use your work email. Free inboxes like Gmail or Outlook aren't accepted."
+      );
+      return;
+    }
+
+    setEmailError("");
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
@@ -242,13 +252,24 @@ export function AgencyMonitoringSection() {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder="you@company.com"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (emailError) setEmailError("");
+                      }}
                       required
                       disabled={isSubmitting}
-                      className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
+                      aria-invalid={!!emailError}
+                      className={`bg-white/5 text-white placeholder:text-white/40 ${
+                        emailError
+                          ? "border-red-500/60 focus-visible:border-red-500/60"
+                          : "border-white/10"
+                      }`}
                     />
+                    {emailError && (
+                      <p className="text-xs text-red-400">{emailError}</p>
+                    )}
                   </div>
 
                   {submitStatus === "success" && (

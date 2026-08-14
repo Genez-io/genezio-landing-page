@@ -5,6 +5,7 @@ import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
+import { isWorkEmail } from "@/lib/work-email";
 import {
   GlobeIcon,
   BotIcon,
@@ -33,24 +34,6 @@ const ZOHO_ACTION =
   "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK/formperma/qSA39uMeRrOgilhwxH5VK30jDRp58OiflOnixL6yjmE";
 
 /* ─────────────────────────────  HERO  ───────────────────────────── */
-/* Consumer inboxes we don't accept, work email only */
-const FREE_EMAIL_DOMAINS = new Set([
-  "gmail.com", "googlemail.com", "yahoo.com", "yahoo.co.uk", "ymail.com",
-  "rocketmail.com", "hotmail.com", "hotmail.co.uk", "outlook.com", "live.com",
-  "msn.com", "icloud.com", "me.com", "mac.com", "aol.com", "proton.me",
-  "protonmail.com", "gmx.com", "gmx.net", "mail.com", "yandex.com", "yandex.ru",
-  "zoho.com", "pm.me", "hey.com", "fastmail.com", "tutanota.com", "qq.com",
-  "163.com", "126.com", "web.de", "orange.fr", "free.fr",
-]);
-
-function isWorkEmail(email: string): boolean {
-  const at = email.lastIndexOf("@");
-  if (at === -1) return false;
-  const domain = email.slice(at + 1).trim().toLowerCase();
-  if (!domain || !domain.includes(".")) return false;
-  return !FREE_EMAIL_DOMAINS.has(domain);
-}
-
 function WebsiteAnalyzerHero() {
   const [domain, setDomain] = useState("");
   const [email, setEmail] = useState("");
