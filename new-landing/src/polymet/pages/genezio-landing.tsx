@@ -1,11 +1,7 @@
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioHeroSection } from "@/polymet/components/genezio-hero-section";
 import { GenezioTrustSection } from "@/polymet/components/genezio-trust-section";
-import { GenezioDifferentiatorsSection } from "@/polymet/components/genezio-differentiators-section";
-import { GenezioBrandedQuestionsSection } from "@/polymet/components/genezio-branded-questions-section";
-import { GenezioInsightsSection } from "@/polymet/components/genezio-insights-section";
 import { GenezioEnterpriseSection } from "@/polymet/components/genezio-enterprise-section";
-import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import { GenezioTestimonialSection } from "../components/genezio-testimonial-section";
 import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic-section";
 import { GenezioPerceptionSection } from "@/polymet/components/genezio-perception-section";
@@ -59,17 +55,12 @@ export function GenezioLanding() {
         <GenezioProductPillarsSection />
         <GenezioBusinessGoalsSection />
 
-        {/* Product + social proof */}
-        <GenezioDifferentiatorsSection />
-        <GenezioBrandedQuestionsSection />
-        <GenezioInsightsSection />
+        {/* Social proof */}
         <GenezioTestimonialSection />
 
         {/* Enterprise: multi-brand executive view + enterprise-readiness */}
         <GenezioGroupLevelView />
         <GenezioEnterpriseSection />
-
-        <GenezioCtaSection />
       </div>
     </>
   );

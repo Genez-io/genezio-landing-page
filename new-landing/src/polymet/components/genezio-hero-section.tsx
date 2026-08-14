@@ -76,7 +76,7 @@ export function GenezioHeroSection() {
           {/* Right: the "prompt → recommendation" visual */}
           <div className="relative">
             <div className="mb-4 flex items-center gap-2 max-w-md ml-auto text-xs uppercase tracking-[0.2em] text-white/35">
-              A buyer asks an AI assistant
+              A buyer asks an AI
             </div>
 
             {/* The question */}

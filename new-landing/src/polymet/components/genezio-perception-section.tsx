@@ -8,6 +8,10 @@ import {
   TargetIcon,
   RefreshCwIcon,
   CheckCircle2Icon,
+  BriefcaseIcon,
+  Building2Icon,
+  CodeIcon,
+  NewspaperIcon,
 } from "lucide-react";
 
 const DEMO_URL =
@@ -39,6 +43,38 @@ const TOPICS = [
   { name: "Trust & security", mentioned: 88, rec: 81 },
   { name: "Low fees", mentioned: 73, rec: 44 },
   { name: "Mortgages", mentioned: 66, rec: 38 },
+];
+
+/* Different buyer personas asking in their own words, illustrative */
+const PERSONAS = [
+  {
+    icon: BriefcaseIcon,
+    name: "Young Professional",
+    question: "Best bank account with a great mobile app?",
+    status: "Recommended #1",
+    won: true,
+  },
+  {
+    icon: Building2Icon,
+    name: "B2B Buyer",
+    question: "Which bank for business fiber and payments?",
+    status: "2nd, not yet",
+    won: false,
+  },
+  {
+    icon: CodeIcon,
+    name: "Developer",
+    question: "Bank with the best API and sandbox?",
+    status: "Not mentioned",
+    won: false,
+  },
+  {
+    icon: NewspaperIcon,
+    name: "Journalist",
+    question: "Most trusted bank on security?",
+    status: "Recommended",
+    won: true,
+  },
 ];
 const RINGS = [0.25, 0.5, 0.75, 1].map((f) =>
   AXES.map((_, i) => pt(i, R * f).join(",")).join(" ")
@@ -279,6 +315,56 @@ export function GenezioPerceptionSection() {
               recommends someone else, exactly where an intervention moves the
               needle.
             </p>
+          </div>
+        </div>
+
+        {/* Win every buyer persona */}
+        <div className="mt-16 md:mt-20">
+          <div className="max-w-2xl mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 leading-tight">
+              Win every buyer persona
+            </h3>
+            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+              Different buyers ask differently. See how AI answers each persona,
+              and win the recommendation with all of them.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {PERSONAS.map((p) => {
+              const Icon = p.icon;
+              return (
+                <div
+                  key={p.name}
+                  className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 hover:border-white/20 transition-colors"
+                >
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                      <Icon className="w-4 h-4 text-emerald-400" />
+                    </span>
+                    <span className="text-sm font-semibold text-white leading-tight">
+                      {p.name}
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/50 leading-relaxed mb-4 min-h-[48px]">
+                    “{p.question}”
+                  </p>
+                  <div className="flex items-center gap-1.5">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-[2px] ${
+                        p.won ? "bg-emerald-400" : "bg-white/25"
+                      }`}
+                    />
+                    <span
+                      className={`text-[11px] font-medium ${
+                        p.won ? "text-emerald-400" : "text-white/40"
+                      }`}
+                    >
+                      {p.status}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

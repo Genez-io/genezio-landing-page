@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
+import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 import { Link } from "react-router";
 import {
   ShieldCheckIcon,
@@ -409,6 +410,8 @@ export function Security() {
         <CapabilitySections />
 
         <TrustBand />
+
+        <GenezioGroupLevelView />
 
         <GenezioCtaSection />
       </div>
