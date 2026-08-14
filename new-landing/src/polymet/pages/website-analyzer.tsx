@@ -272,12 +272,6 @@ function WhatItChecks() {
         "Headings, answers, and semantics across the site, so engines can lift a clean answer from your pages.",
     },
     {
-      icon: QuoteIcon,
-      title: "Citation coverage",
-      description:
-        "How often the domain is already cited by answer engines, and which pages are pulling their weight.",
-    },
-    {
       icon: CodeIcon,
       title: "Schema & metadata",
       description:

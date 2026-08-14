@@ -82,10 +82,10 @@ export function GenezioRobotReaderSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {points.map((point, i) => (
             <div key={i} className="flex items-start gap-3">
-              <span className="text-zinc-400 font-mono text-sm mt-0.5">
+              <span className="text-emerald-400 font-mono text-sm mt-0.5">
                 {`0${i + 1}`}
               </span>
-              <span className="text-sm text-[#B0B0B3] leading-relaxed">
+              <span className="text-sm text-white/90 leading-relaxed">
                 {point}
               </span>
             </div>
