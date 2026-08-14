@@ -90,7 +90,7 @@ function ShoppingHero() {
                   size="lg"
                   className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-black/20"
                 >
-                  Book a Demo
+                  Get a demo
                 </Button>
               </a>
               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">

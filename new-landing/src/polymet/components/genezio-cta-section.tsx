@@ -54,7 +54,7 @@ export function GenezioCtaSection() {
               size="lg"
               className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl shadow-lg transition-all duration-300 w-full"
             >
-              Book a Demo
+              Get a demo
             </Button>
           </a>
           <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
@@ -90,6 +90,6 @@ export function GenezioCtaSection() {
           //     variant="outline"
           //     className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200 w-full"
           //   >
-          //     Book a Demo
+          //     Get a demo
           //   </Button>
           // </a>

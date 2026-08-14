@@ -40,7 +40,7 @@ export function AgencyCtaSection() {
                 variant="outline"
                 className="border border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-6 py-6 text-base font-semibold rounded-xl transition-colors w-full sm:w-auto"
               >
-                Book a Demo
+                Get a demo
               </Button>
             </div>
           </div>

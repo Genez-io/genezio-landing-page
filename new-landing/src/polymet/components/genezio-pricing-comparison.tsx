@@ -217,7 +217,7 @@ export function GenezioPricingComparison() {
                     }
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
                   >
-                    Book a Demo
+                    Get a demo
                   </Button>
                 </div>
               </div>
@@ -315,7 +315,7 @@ export function GenezioPricingComparison() {
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
                   }`}
                 >
-                  {plan === "Enterprise" ? "Book a Demo" : "Start Free Trial"}
+                  {plan === "Enterprise" ? "Get a demo" : "Start Free Trial"}
                 </Button>
               </div>
 

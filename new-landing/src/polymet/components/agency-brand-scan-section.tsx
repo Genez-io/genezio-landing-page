@@ -45,7 +45,7 @@ export function AgencyBrandScanSection() {
                   size="lg"
                   className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
                 >
-                  Book a Demo
+                  Get a demo
                 </Button>
               </a>
               <span className="inline-flex items-center gap-2 text-sm text-white/50 pt-4">

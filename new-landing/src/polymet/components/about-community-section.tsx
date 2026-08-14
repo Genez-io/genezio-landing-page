@@ -107,7 +107,7 @@ export function AboutCommunitySection() {
                 size="lg"
                 className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl transition-colors w-full"
               >
-                Book a Demo
+                Get a demo
               </Button>
             </a>
             <a

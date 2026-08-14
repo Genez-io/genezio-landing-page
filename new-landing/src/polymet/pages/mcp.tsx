@@ -50,7 +50,7 @@ function McpHero() {
                   size="lg"
                   className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
                 >
-                  Book a Demo
+                  Get a demo
                 </Button>
               </a>
               <a href="/docs/" className="inline-flex items-center gap-2 px-5 py-3 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group">

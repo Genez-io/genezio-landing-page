@@ -1026,7 +1026,7 @@ export function IndustryLeaderboards() {
             <Button size="lg" variant="outline"
               className="border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08] hover:border-white/40 px-8 font-semibold rounded-xl transition-all duration-200"
               onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")}>
-              Book a Demo
+              Get a demo
             </Button>
           </div>
         </div>

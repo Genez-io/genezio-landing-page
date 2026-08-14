@@ -221,7 +221,7 @@ export function GenezioEnterprisePlan({
                   onClick={() => window.open(CALENDAR_URL, "_blank")}
                   className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-black/20"
                 >
-                  Book a Demo
+                  Get a demo
                 </Button>
                 <button
                   onClick={() => window.open(CALENDAR_URL, "_blank")}

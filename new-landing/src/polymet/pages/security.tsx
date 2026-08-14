@@ -259,7 +259,7 @@ function SecurityHero() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-3 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group"
           >
-            Book a Demo
+            Get a demo
             <ArrowRightIcon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
           </a>
         </div>
