@@ -244,7 +244,7 @@ export function GenezioPerceptionSection() {
                         <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
                           <div
                             className="h-full rounded-full bg-white/40"
-                            style={{ width: `${a.known}%` }}
+                            style={{ width: `${a.mentioned}%` }}
                           />
                         </div>
                       </div>
