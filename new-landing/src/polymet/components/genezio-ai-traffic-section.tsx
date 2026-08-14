@@ -15,7 +15,7 @@ function BandLabel({ children }: { children: React.ReactNode }) {
 
 export function GenezioAiTrafficSection() {
   const hiddenStats = [
-    { value: "~64%", label: "of AI users click nothing at all — they just take the answer" },
+    { value: "~64%", label: "of AI users click nothing at all, they just take the answer" },
     {
       value: "12–15%",
       label: "of all searches now happen inside AI tools, up from 5–6% a year ago",
@@ -55,7 +55,7 @@ export function GenezioAiTrafficSection() {
           </p>
         </div>
 
-        {/* Part 1 — invisible in analytics */}
+        {/* Part 1: invisible in analytics */}
         <BandLabel>Invisible in analytics</BandLabel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto mb-6">
           {hiddenStats.map((stat, index) => (
@@ -73,7 +73,7 @@ export function GenezioAiTrafficSection() {
           ))}
         </div>
 
-        {/* Bridge callout — the critical difference */}
+        {/* Bridge callout: the critical difference */}
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start gap-4 bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 mb-16 md:mb-20">
           <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
             <EyeOffIcon className="w-5 h-5 text-emerald-400" />
@@ -88,13 +88,12 @@ export function GenezioAiTrafficSection() {
               <span className="inline-flex items-center gap-1.5 text-white/90 font-medium">
                 <AlertTriangleIcon className="w-3.5 h-3.5 text-emerald-400" />
                 high visibility, low recommendation
-              </span>{" "}
-              — AI knows you exist but prefers your competitors.
+              </span>. AI knows you exist but prefers your competitors.
             </p>
           </div>
         </div>
 
-        {/* Part 2 — outsized in revenue */}
+        {/* Part 2: outsized in revenue */}
         <BandLabel>Outsized in revenue</BandLabel>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {/* Headline first-party stat */}

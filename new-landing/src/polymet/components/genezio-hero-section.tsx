@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { PlayCircleIcon, ShieldCheckIcon } from "lucide-react";
+import {
+  PlayCircleIcon,
+  ShieldCheckIcon,
+  QuoteIcon,
+  GitForkIcon,
+  SparklesIcon,
+} from "lucide-react";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 const DEMO_URL =
@@ -88,30 +94,54 @@ export function GenezioHeroSection() {
               </div>
             </div>
 
-            {/* The recommendation Genezio measures & moves */}
-            <div className="relative max-w-md mr-auto mt-4 pl-1">
-              <div className="inline-flex flex-col gap-2 bg-white/[0.03] border border-white/10 rounded-2xl rounded-tl-md p-5 md:p-6 backdrop-blur-sm">
+            {/* What Genezio extracts from this conversation */}
+            <div className="relative max-w-md mr-auto mt-4">
+              <div className="bg-white/[0.03] border border-white/10 rounded-2xl rounded-tl-md p-5 md:p-6 backdrop-blur-sm">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-white/35">
-                  The answer engine recommends
+                  Genezio extracts from this conversation
                 </span>
-                <div className="flex items-center gap-2.5">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-300">
-                    1
-                  </span>
-                  <span className="text-base md:text-lg font-semibold text-white">
-                    Your brand
-                  </span>
-                  <span className="ml-1 text-xs font-medium text-emerald-400">
-                    Recommended
-                  </span>
-                </div>
-                <div className="flex items-center gap-2.5 opacity-50">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-white/60">
-                    2
-                  </span>
-                  <span className="text-base font-medium text-white/70">
-                    A competitor
-                  </span>
+                <div className="mt-4 space-y-3.5">
+                  {[
+                    {
+                      icon: QuoteIcon,
+                      label: "Citations",
+                      chips: ["sleepfoundation.org", "oura.com"],
+                    },
+                    {
+                      icon: GitForkIcon,
+                      label: "Query fanouts",
+                      chips: ["best sleep wearables", "tracking accuracy"],
+                    },
+                    {
+                      icon: SparklesIcon,
+                      label: "Perceptions",
+                      chips: ["accurate tracking", "comfortable to wear"],
+                    },
+                  ].map((row) => {
+                    const Icon = row.icon;
+                    return (
+                      <div key={row.label} className="flex items-start gap-3">
+                        <span className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                          <Icon className="w-3.5 h-3.5 text-emerald-400" />
+                        </span>
+                        <div className="min-w-0">
+                          <div className="text-xs font-semibold text-white/80 mb-1.5">
+                            {row.label}
+                          </div>
+                          <div className="flex flex-wrap gap-1.5">
+                            {row.chips.map((chip) => (
+                              <span
+                                key={chip}
+                                className="px-2 py-0.5 text-[11px] rounded-md bg-white/5 border border-white/10 text-white/60"
+                              >
+                                {chip}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

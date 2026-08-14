@@ -38,9 +38,9 @@ export function GenezioEnterpriseSection() {
             Enterprise-ready, from procurement to production
           </h2>
           <p className="text-base md:text-lg text-white/60 leading-relaxed">
-            Built for banks, telecom groups, agencies and multinationals — the
-            security, controls and multi-brand reporting your teams and vendors
-            expect. Some capabilities are sales-assisted at rollout.
+            Built for banks, telecom groups, agencies and multinationals, with
+            the security, controls and multi-brand reporting your teams and
+            vendors expect. Some capabilities are sales-assisted at rollout.
           </p>
         </div>
 

@@ -14,7 +14,7 @@ export function HeroEyebrow({ children, className = "" }: HeroEyebrowProps) {
     <div
       className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 ${className}`}
     >
-      {/* Small green square — mirrors the dot on the "i" in the Genezio logo */}
+      {/* Small green square: mirrors the dot on the "i" in the Genezio logo */}
       <span className="h-1.5 w-1.5 flex-shrink-0 rounded-[2px] bg-emerald-400" />
       <span className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
         {children}
