@@ -327,11 +327,12 @@ export function GenezioHeader() {
 
             {/* Resources Dropdown Menu */}
             {resourcesMenuOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[280px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[560px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Arrow pointer */}
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
 
-                <div className="relative p-4">
+                <div className="relative p-6">
+                  <div className="grid grid-cols-2 gap-6">
                   {[
                     {
                       heading: "Insights",
@@ -376,9 +377,9 @@ export function GenezioHeader() {
                   ].map((group, gi) => (
                     <div
                       key={group.heading}
-                      className={gi > 0 ? "mt-3 pt-3 border-t border-white/10" : ""}
+                      className={gi > 0 ? "md:border-l md:border-white/10 md:pl-6" : ""}
                     >
-                      <div className="px-3 mb-1 text-white/40 text-[11px] font-semibold uppercase tracking-[0.2em]">
+                      <div className="px-3 mb-2 text-white/40 text-[11px] font-semibold uppercase tracking-[0.2em]">
                         {group.heading}
                       </div>
                       <div className="space-y-1">
@@ -410,6 +411,7 @@ export function GenezioHeader() {
                       </div>
                     </div>
                   ))}
+                  </div>
                 </div>
               </div>
             )}
