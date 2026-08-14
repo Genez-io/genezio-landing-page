@@ -15,7 +15,7 @@ export function GenezioLanding() {
     <>
       <PolymetSEO
         title="Genezio | Optimize Your AI Presence to Win Recommendations"
-        description="Discover how AI engines see your brand and optimize your presence to win more AI recommendations. Get a demo with the Genezio team."
+        description="AI market intelligence for enterprise brands. See how AI engines represent and recommend your brand, and win more AI recommendations. Get a demo."
         canonicalPath="/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{

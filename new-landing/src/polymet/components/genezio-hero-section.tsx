@@ -32,9 +32,10 @@ export function GenezioHeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-zinc-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              Enterprise brands trust Genezio to measure how AI engines
-              represent them in every market, and to win the recommendation,
-              not just the mention.
+              Genezio is AI market intelligence for the answer-engine era.
+              Enterprise brands trust us to measure how AI engines represent
+              them in every market, and to win the recommendation, not just the
+              mention.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-8">

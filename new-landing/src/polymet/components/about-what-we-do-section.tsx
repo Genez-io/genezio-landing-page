@@ -69,9 +69,9 @@ export function AboutWhatWeDoSection() {
               AI recommendation intelligence platform
             </span>{" "}
             designed for marketing leaders, growth teams, PR teams, SEO teams,
-            and agencies. We help organizations centralize and optimize both
-            in-house digital work and collaborations with external content
-            agencies.
+            and agencies. Think of it as AI market intelligence for the
+            answer-engine era: how AI picks, describes, and recommends brands,
+            and what to do about it.
           </p>
         </div>
 
