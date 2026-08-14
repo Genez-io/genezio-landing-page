@@ -89,7 +89,7 @@ export function GenezioHeroSection() {
                 <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
                   "What's the best wearable I could get for my husband to help
                   him{" "}
-                  <span className="text-emerald-400 font-semibold">
+                  <span className="text-white font-semibold">
                     monitor his sleep
                   </span>
                   ?"
