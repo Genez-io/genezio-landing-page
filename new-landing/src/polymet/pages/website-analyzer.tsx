@@ -3,6 +3,7 @@ import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
+import { WebsiteAnalyzerReportCta } from "@/polymet/components/website-analyzer-report-cta";
 import {
   GlobeIcon,
   BotIcon,
@@ -392,6 +393,7 @@ export function WebsiteAnalyzer() {
       />
       <div className="min-h-screen bg-[#050506]">
         <WebsiteAnalyzerHero />
+        <WebsiteAnalyzerReportCta />
         <ScoreVisual />
         <WhatItChecks />
         <HowItWorks />
