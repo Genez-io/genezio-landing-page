@@ -332,112 +332,84 @@ export function GenezioHeader() {
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
 
                 <div className="relative p-4">
-                  <div className="space-y-1">
-                    {/* Docs */}
-                    <a
-                      href="/docs/"
-                      onClick={() => setResourcesMenuOpen(false)}
-                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                  {[
+                    {
+                      heading: "Insights",
+                      items: [
+                        {
+                          href: "/blog/",
+                          Icon: FileTextIcon,
+                          title: "Blog",
+                          desc: "Insights & best practices",
+                        },
+                        {
+                          href: "/research/",
+                          Icon: FlaskConicalIcon,
+                          title: "Research",
+                          desc: "Original AI search studies",
+                        },
+                        {
+                          href: "/industry-leaderboards/",
+                          Icon: TrophyIcon,
+                          title: "Leaderboards",
+                          desc: "Industry AI visibility rankings",
+                        },
+                      ],
+                    },
+                    {
+                      heading: "Reference",
+                      items: [
+                        {
+                          href: "/glossary/",
+                          Icon: BookOpenIcon,
+                          title: "Glossary",
+                          desc: "AI Search terminology guide",
+                        },
+                        {
+                          href: "/docs/",
+                          Icon: BookMarkedIcon,
+                          title: "Docs",
+                          desc: "Product documentation & guides",
+                        },
+                      ],
+                    },
+                  ].map((group, gi) => (
+                    <div
+                      key={group.heading}
+                      className={gi > 0 ? "mt-3 pt-3 border-t border-white/10" : ""}
                     >
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                          <BookMarkedIcon className="w-5 h-5 text-white/70" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
-                            Docs
-                          </div>
-                          <div className="text-white/60 text-xs leading-relaxed">
-                            Product documentation &amp; guides
-                          </div>
-                        </div>
+                      <div className="px-3 mb-1 text-white/40 text-[11px] font-semibold uppercase tracking-[0.2em]">
+                        {group.heading}
                       </div>
-                    </a>
-
-                    {/* Glossary */}
-                    <a
-                      href="/glossary/"
-                      onClick={() => setResourcesMenuOpen(false)}
-                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                          <BookOpenIcon className="w-5 h-5 text-white/70" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
-                            Glossary
-                          </div>
-                          <div className="text-white/60 text-xs leading-relaxed">
-                            AI Search terminology guide
-                          </div>
-                        </div>
+                      <div className="space-y-1">
+                        {group.items.map((item) => {
+                          const Icon = item.Icon;
+                          return (
+                            <a
+                              key={item.title}
+                              href={item.href}
+                              onClick={() => setResourcesMenuOpen(false)}
+                              className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                            >
+                              <div className="flex items-start gap-3">
+                                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                                  <Icon className="w-5 h-5 text-white/70" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
+                                    {item.title}
+                                  </div>
+                                  <div className="text-white/60 text-xs leading-relaxed">
+                                    {item.desc}
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          );
+                        })}
                       </div>
-                    </a>
-
-                    {/* Blog */}
-                    <a
-                      href="/blog/"
-                      onClick={() => setResourcesMenuOpen(false)}
-                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                          <FileTextIcon className="w-5 h-5 text-white/70" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-0.5">
-                            <div className="text-white font-semibold text-sm group-hover:text-white transition-colors">
-                              Blog
-                            </div>
-                          </div>
-                          <div className="text-white/60 text-xs leading-relaxed">
-                            Insights & best practices
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-
-                    <a
-                      href="/research/"
-                      onClick={() => setResourcesMenuOpen(false)}
-                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                          <FlaskConicalIcon className="w-5 h-5 text-white/70" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
-                            Research
-                          </div>
-                          <div className="text-white/60 text-xs leading-relaxed">
-                            Original AI search studies
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-
-                    <Link
-                      to="/industry-leaderboards"
-                      onClick={() => setResourcesMenuOpen(false)}
-                      className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                          <TrophyIcon className="w-5 h-5 text-white/70" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
-                            Leaderboards
-                          </div>
-                          <div className="text-white/60 text-xs leading-relaxed">
-                            Industry AI visibility rankings
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
@@ -597,64 +569,76 @@ export function GenezioHeader() {
               <div className="text-white/80 text-sm font-medium py-2">
                 Resources
               </div>
-              <div className="pl-4 space-y-3 border-l-2 border-white/10">
-                <div className="space-y-2">
-                  <a
-                    href="/docs/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">Docs</div>
-                    <div className="text-white/60 text-xs">
-                      Product documentation &amp; guides
-                    </div>
-                  </a>
-                  <a
-                    href="/glossary/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      Glossary
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      AI Search terminology guide
-                    </div>
-                  </a>
-                  <a
-                    href="/blog/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="flex items-center gap-2">
+              <div className="pl-4 space-y-4 border-l-2 border-white/10">
+                <div>
+                  <div className="text-white/40 text-[11px] font-semibold uppercase tracking-[0.2em] mb-1">
+                    Insights
+                  </div>
+                  <div className="space-y-2">
+                    <a
+                      href="/blog/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
                       <div className="text-white text-sm font-medium">Blog</div>
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      Insights & best practices
-                    </div>
-                  </a>
-                  <a
-                    href="/research/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">Research</div>
-                    <div className="text-white/60 text-xs">
-                      Original AI search studies
-                    </div>
-                  </a>
-                  <Link
-                    to="/industry-leaderboards"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    <div className="text-white text-sm font-medium">
-                      Leaderboards
-                    </div>
-                    <div className="text-white/60 text-xs">
-                      Industry AI visibility rankings
-                    </div>
-                  </Link>
+                      <div className="text-white/60 text-xs">
+                        Insights & best practices
+                      </div>
+                    </a>
+                    <a
+                      href="/research/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Research
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Original AI search studies
+                      </div>
+                    </a>
+                    <a
+                      href="/industry-leaderboards/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Leaderboards
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Industry AI visibility rankings
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-white/40 text-[11px] font-semibold uppercase tracking-[0.2em] mb-1">
+                    Reference
+                  </div>
+                  <div className="space-y-2">
+                    <a
+                      href="/glossary/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        Glossary
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        AI Search terminology guide
+                      </div>
+                    </a>
+                    <a
+                      href="/docs/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">Docs</div>
+                      <div className="text-white/60 text-xs">
+                        Product documentation &amp; guides
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
