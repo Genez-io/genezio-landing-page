@@ -59,7 +59,7 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
       "Unlimited competitor SWOT analysis & seats",
       "Dedicated onboarding & Account Manager",
       "Dedicated Slack support",
-      "SSO / SAML + SOC 2 Type II",
+      "SSO / SAML",
     ],
     note: "Custom Enterprise pricing, exclusive of any applicable taxes.",
   },

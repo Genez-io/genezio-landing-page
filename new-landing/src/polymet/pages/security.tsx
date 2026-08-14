@@ -9,19 +9,15 @@ import {
   KeyRoundIcon,
   UsersIcon,
   ScrollTextIcon,
-  DatabaseIcon,
   LockIcon,
-  ClockIcon,
   FileCheck2Icon,
-  PlugIcon,
   ServerIcon,
-  GaugeIcon,
-  LayersIcon,
+  CodeIcon,
+  ActivityIcon,
   CheckCircle2Icon,
   ArrowRightIcon,
-  FingerprintIcon,
   BadgeCheckIcon,
-  ClipboardCheckIcon,
+  AlertTriangleIcon,
   type LucideIcon,
 } from "lucide-react";
 
@@ -31,144 +27,79 @@ const TRUST_CENTER_URL = "https://trust.genezio.com/";
 const CSA_STAR_URL = "https://cloudsecurityalliance.org/star/registry/genezio";
 
 /* ─────────────────────────────  DATA  ───────────────────────────── */
-interface Capability {
+interface SecurityDomain {
   icon: LucideIcon;
   title: string;
   description: string;
-  salesAssisted?: boolean;
-  /** Optional internal link rendered under the description */
-  href?: string;
-  linkLabel?: string;
+  points: string[];
 }
 
-interface CapabilityGroup {
-  label: string;
-  items: Capability[];
-}
-
-const GROUPS: CapabilityGroup[] = [
+const DOMAINS: SecurityDomain[] = [
   {
-    label: "Access & identity",
-    items: [
-      {
-        icon: KeyRoundIcon,
-        title: "SSO / SAML",
-        description:
-          "Sign in through your identity provider with SAML 2.0. Centralize authentication and enforce your own login policies.",
-      },
-      {
-        icon: UsersIcon,
-        title: "SCIM provisioning",
-        description:
-          "Automate user onboarding and offboarding so access follows your directory of record.",
-        salesAssisted: true,
-      },
-      {
-        icon: FingerprintIcon,
-        title: "Role-based access control",
-        description:
-          "Grant least-privilege permissions per workspace and role, from admin to read-only analyst.",
-      },
-      {
-        icon: ScrollTextIcon,
-        title: "Audit logs",
-        description:
-          "Track who accessed what and when across your workspaces for review and accountability.",
-      },
+    icon: CodeIcon,
+    title: "Application security",
+    description:
+      "Security is part of how we build, not a step at the end.",
+    points: [
+      "Secure development lifecycle with peer code review",
+      "Dependency and vulnerability scanning in CI",
+      "Regular security testing and tracked remediation",
     ],
   },
   {
-    label: "Data & privacy",
-    items: [
-      {
-        icon: DatabaseIcon,
-        title: "Data residency & regionality",
-        description:
-          "Keep processing and storage aligned to your region to meet local data-handling requirements.",
-        salesAssisted: true,
-      },
-      {
-        icon: LockIcon,
-        title: "Encryption in transit & at rest",
-        description:
-          "All data is encrypted with TLS in transit and AES-256 at rest, end to end.",
-      },
-      {
-        icon: ClockIcon,
-        title: "Configurable data retention",
-        description:
-          "Set retention windows that match your policy, and remove data when you no longer need it.",
-      },
-      {
-        icon: FileCheck2Icon,
-        title: "GDPR compliant",
-        description:
-          "Compliant with GDPR for the data we process, with a Data Processing Agreement (DPA) available on request.",
-      },
+    icon: ServerIcon,
+    title: "Infrastructure & cloud",
+    description:
+      "Operated on hardened, reputable cloud infrastructure.",
+    points: [
+      "Network isolation and least-privilege service access",
+      "Encrypted storage and managed key handling",
+      "99.9% uptime target with proactive monitoring",
     ],
   },
   {
-    label: "Platform & integration",
-    items: [
-      {
-        icon: PlugIcon,
-        title: "REST API",
-        description:
-          "Pull visibility and conversation data into your own systems with a documented REST API.",
-      },
-      {
-        icon: ServerIcon,
-        title: "MCP server",
-        description:
-          "Query your answer-engine data from any MCP-compatible assistant with scoped, read-only access.",
-        href: "/mcp/",
-        linkLabel: "Explore the MCP server",
-      },
-      {
-        icon: LayersIcon,
-        title: "Portfolio & multi-brand workspaces",
-        description:
-          "Organize brands, regions, and business units into separate workspaces under one account.",
-      },
-      {
-        icon: GaugeIcon,
-        title: "99.9% uptime target",
-        description:
-          "Operated on resilient cloud infrastructure with a 99.9% uptime target and proactive monitoring.",
-      },
+    icon: LockIcon,
+    title: "Data protection",
+    description:
+      "Your data is encrypted, contained, and never used to train models.",
+    points: [
+      "TLS in transit and AES-256 at rest, end to end",
+      "Regional data residency options",
+      "Configurable retention and deletion on request",
+      "We never train AI models on your data",
     ],
   },
   {
-    label: "Certifications & attestations",
-    items: [
-      {
-        icon: ShieldCheckIcon,
-        title: "SOC 2 Type II",
-        description:
-          "Security controls independently examined against SOC 2 Type II criteria. Report available under NDA.",
-        salesAssisted: true,
-      },
-      {
-        icon: BadgeCheckIcon,
-        title: "ISO/IEC 27001",
-        description:
-          "Information security managed under an ISO/IEC 27001-certified management system.",
-      },
-      {
-        icon: FileCheck2Icon,
-        title: "CSA STAR Level 1",
-        description:
-          "Listed in the Cloud Security Alliance STAR registry for cloud security assurance.",
-        href: "https://cloudsecurityalliance.org/star/registry/genezio",
-        linkLabel: "View our STAR registry entry",
-      },
-      {
-        icon: ClipboardCheckIcon,
-        title: "Vendor security reviews supported",
-        description:
-          "We complete security questionnaires and assessments to move your procurement process forward.",
-        salesAssisted: true,
-      },
+    icon: KeyRoundIcon,
+    title: "Identity & access",
+    description:
+      "Authentication and permissions that fit your organization.",
+    points: [
+      "SSO / SAML 2.0 and SCIM provisioning",
+      "Role-based access control, least privilege by default",
+      "Audit logs across every workspace",
+    ],
+  },
+  {
+    icon: UsersIcon,
+    title: "Organizational security",
+    description:
+      "The people and processes behind the platform are governed too.",
+    points: [
+      "Security awareness training for staff",
+      "Periodic access reviews and offboarding controls",
+      "Sub-processor and vendor risk management",
+    ],
+  },
+  {
+    icon: ActivityIcon,
+    title: "Monitoring & resilience",
+    description:
+      "We watch production continuously and plan for the worst day.",
+    points: [
+      "Logging and monitoring of production systems",
+      "A documented incident response process",
+      "Backups and business continuity planning",
     ],
   },
 ];
@@ -180,59 +111,13 @@ function Hairline() {
   );
 }
 
-function SalesAssistedPill() {
-  return (
-    <span className="ml-2 inline-block align-middle text-[10px] font-medium uppercase tracking-wider text-white/40 border border-white/10 rounded-md px-1.5 py-0.5 bg-white/5">
-      Sales-assisted
-    </span>
-  );
-}
-
-function GroupLabel({ children }: { children: string }) {
+function GroupLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-2 mb-6">
       <span className="h-1.5 w-1.5 rounded-[2px] bg-emerald-400" />
       <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
         {children}
       </span>
-    </div>
-  );
-}
-
-function CapabilityCard({ item }: { item: Capability }) {
-  const Icon = item.icon;
-  return (
-    <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors">
-      <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-        <Icon className="w-5 h-5 text-emerald-400" />
-      </div>
-      <h3 className="text-base font-semibold text-white leading-snug">
-        {item.title}
-        {item.salesAssisted && <SalesAssistedPill />}
-      </h3>
-      <p className="mt-2 text-sm leading-relaxed text-white/60">
-        {item.description}
-      </p>
-      {item.href &&
-        (item.href.startsWith("http") ? (
-          <a
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors group"
-          >
-            {item.linkLabel ?? "Learn more"}
-            <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-          </a>
-        ) : (
-          <Link
-            to={item.href}
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors group"
-          >
-            {item.linkLabel ?? "Learn more"}
-            <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-        ))}
     </div>
   );
 }
@@ -245,7 +130,7 @@ function SecurityHero() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <HeroEyebrow className="mb-6 mx-auto w-fit">
-          Enterprise & security
+          Security & trust
         </HeroEyebrow>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.03em] text-white leading-[1.05]">
@@ -254,18 +139,18 @@ function SecurityHero() {
 
         <p className="mt-6 text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
           Genezio is built for the way large organizations buy and operate:
-          SSO and SCIM, regional data handling, encryption everywhere, and a
-          documented path through your security review. Everything you need to
-          clear procurement with confidence.
+          independent certifications, encryption everywhere, regional data
+          handling, and a documented path through your security review.
+          Everything you need to clear procurement with confidence.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={SALES_URL} target="_blank" rel="noopener noreferrer">
+          <a href={TRUST_CENTER_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
             >
-              Talk to Enterprise Sales
+              Visit our Trust Center
             </Button>
           </a>
           <a
@@ -274,7 +159,7 @@ function SecurityHero() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-3 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group"
           >
-            Get a demo
+            Talk to Enterprise Sales
             <ArrowRightIcon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
           </a>
         </div>
@@ -323,7 +208,7 @@ function CertificationsBand() {
   ];
 
   return (
-    <section className="relative bg-[#050506] py-16 md:py-20">
+    <section className="relative bg-[#0E0E10] py-16 md:py-20">
       <Hairline />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
@@ -396,41 +281,61 @@ function CertificationsBand() {
   );
 }
 
-/* ───────────────────────  CAPABILITY SECTIONS  ─────────────────── */
-function CapabilitySections() {
+/* ─────────────────────  SECURITY DOMAINS  ──────────────────────── */
+function DomainsSection() {
   return (
-    <section className="relative bg-[#0E0E10] py-20 md:py-28">
+    <section className="relative bg-[#050506] py-20 md:py-28">
       <Hairline />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
-            Everything your security team asks for
+            Security built into every layer
           </h2>
           <p className="mt-4 text-base md:text-lg text-white/60 leading-relaxed">
-            Controls and documentation mapped to how enterprise buyers evaluate
-            vendors, across identity, data handling, platform, and compliance.
+            The controls behind our certifications, spanning the application,
+            the infrastructure it runs on, your data, and the people who
+            operate it.
           </p>
         </div>
 
-        <div className="space-y-16 md:space-y-20">
-          {GROUPS.map((group) => (
-            <div key={group.label}>
-              <GroupLabel>{group.label}</GroupLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-                {group.items.map((item) => (
-                  <CapabilityCard key={item.title} item={item} />
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          {DOMAINS.map((d) => {
+            const Icon = d.icon;
+            return (
+              <div
+                key={d.title}
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors"
+              >
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
+                  <Icon className="w-5 h-5 text-emerald-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white leading-snug">
+                  {d.title}
+                </h3>
+                <p className="mt-2 text-sm text-white/50 leading-relaxed">
+                  {d.description}
+                </p>
+                <ul className="mt-4 space-y-2.5">
+                  {d.points.map((p) => (
+                    <li key={p} className="flex items-start gap-2.5">
+                      <CheckCircle2Icon className="mt-0.5 w-4 h-4 flex-shrink-0 text-emerald-400" />
+                      <span className="text-sm text-white/70 leading-snug">
+                        {p}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
-/* ─────────────────────────  TRUST BAND  ────────────────────────── */
+/* ─────────────────────────  DATA OWNERSHIP  ────────────────────── */
 function TrustBand() {
   const points = [
     {
@@ -454,7 +359,7 @@ function TrustBand() {
   ];
 
   return (
-    <section className="relative bg-[#050506] py-20 md:py-28">
+    <section className="relative bg-[#0E0E10] py-20 md:py-28">
       <Hairline />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
@@ -509,6 +414,127 @@ function TrustBand() {
   );
 }
 
+/* ──────────────────  DOCUMENTATION & DISCLOSURE  ────────────────── */
+function ResourcesSection() {
+  const resources = [
+    {
+      icon: ShieldCheckIcon,
+      title: "Trust Center",
+      desc: "Live security posture, certifications, and documents on request.",
+      href: TRUST_CENTER_URL,
+      external: true,
+      cta: "Open Trust Center",
+    },
+    {
+      icon: FileCheck2Icon,
+      title: "Data Processing Agreement",
+      desc: "Roles, safeguards, and sub-processor terms for the data we process.",
+      href: "/data-processing-agreement/",
+      external: false,
+      cta: "Read the DPA",
+    },
+    {
+      icon: ScrollTextIcon,
+      title: "Privacy Policy",
+      desc: "How we collect, use, and protect personal data across the platform.",
+      href: "/privacy-policy/",
+      external: false,
+      cta: "Read the policy",
+    },
+  ];
+
+  return (
+    <section className="relative bg-[#050506] py-20 md:py-28">
+      <Hairline />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="max-w-2xl mb-12 md:mb-14">
+          <GroupLabel>Documentation</GroupLabel>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-white leading-tight">
+            Everything your reviewers need
+          </h2>
+          <p className="mt-4 text-base md:text-lg text-white/60 leading-relaxed">
+            Self-serve the documents that move procurement forward, and reach us
+            directly for anything scoped to your review.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+          {resources.map((r) => {
+            const Icon = r.icon;
+            const body = (
+              <>
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
+                  <Icon className="w-5 h-5 text-emerald-400" />
+                </div>
+                <h3 className="text-base font-semibold text-white">
+                  {r.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/60">
+                  {r.desc}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
+                  {r.cta}
+                  <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </>
+            );
+            const className =
+              "group block bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors";
+            return r.external ? (
+              <a
+                key={r.title}
+                href={r.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+              >
+                {body}
+              </a>
+            ) : (
+              <Link key={r.title} to={r.href} className={className}>
+                {body}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Responsible disclosure */}
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7">
+          <div className="flex items-start gap-3 flex-1">
+            <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+              <AlertTriangleIcon className="w-4 h-4 text-emerald-400" />
+            </span>
+            <div>
+              <h3 className="text-base font-semibold text-white">
+                Report a vulnerability
+              </h3>
+              <p className="mt-1 text-sm text-white/60 leading-relaxed">
+                We support responsible disclosure. If you believe you've found a
+                security issue, tell us through our Trust Center and we'll
+                respond quickly.
+              </p>
+            </div>
+          </div>
+          <a
+            href={TRUST_CENTER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:flex-shrink-0"
+          >
+            <Button
+              variant="outline"
+              className="w-full sm:w-auto border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl px-5 py-5 text-sm font-semibold"
+            >
+              Report an issue
+            </Button>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────────────────────  PAGE  ───────────────────────────── */
 export function Security() {
   return (
@@ -524,11 +550,13 @@ export function Security() {
 
         <CertificationsBand />
 
-        <CapabilitySections />
+        <DomainsSection />
 
         <TrustBand />
 
         <GenezioGroupLevelView />
+
+        <ResourcesSection />
 
         <GenezioCtaSection />
       </div>
