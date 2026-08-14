@@ -171,7 +171,7 @@ export function GenezioHeader() {
                         </Link>
 
                         <Link
-                          to="/increase-conversion/"
+                          to="/ai-agent-analytics/"
                           onClick={() => setPlatformMenuOpen(false)}
                           className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
                         >
@@ -506,7 +506,7 @@ export function GenezioHeader() {
                       </div>
                     </a>
                     <a
-                      href="/increase-conversion/"
+                      href="/ai-agent-analytics/"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
                     >

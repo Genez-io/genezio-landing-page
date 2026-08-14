@@ -127,7 +127,7 @@ export function GenezioPricing() {
               "name": "How does the free brand scan work?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. Free as part of the 7-day trial and takes less than 10 minutes."
+                "text": "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. It is free to run and takes less than 10 minutes."
               }
             },
             {

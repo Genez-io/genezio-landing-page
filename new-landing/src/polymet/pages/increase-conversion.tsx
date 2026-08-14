@@ -11,9 +11,9 @@ export function IncreaseConversion() {
   return (
     <>
       <PolymetSEO
-        title="Increase Conversion from AI Conversations | Genezio"
-        description="Turn AI-powered conversations into revenue. Genezio analyzes multi-turn chats, surfaces drop-off points, and helps you optimize conversational funnels."
-        canonicalPath="/increase-conversion/"
+        title="AI Agent Analytics | Genezio"
+        description="Analyze the real conversations your AI agent has with customers. Genezio classifies intent, surfaces drop-off points, and tests improvements before deployment."
+        canonicalPath="/ai-agent-analytics/"
       />
       <div className="min-h-screen bg-[#050506]">
         <ConversionHero />

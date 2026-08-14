@@ -14,7 +14,7 @@ const routes = [
   "/data-processing-agreement",
   "/glossary",
 
-  "/increase-conversion",
+  "/ai-agent-analytics",
   "/website-analyzer",
   "/content-hub",
   "/content-analysis",

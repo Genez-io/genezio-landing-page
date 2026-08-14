@@ -135,8 +135,8 @@ export function GenezioEnterprisePlan({
           <DropdownMenuItem
             key={v}
             onSelect={() => onVariantChange?.(v)}
-            className={`cursor-pointer rounded-lg px-3 py-2.5 text-base font-medium focus:bg-white/[0.06] ${
-              v === variant ? "text-white" : "text-white/60"
+            className={`cursor-pointer rounded-lg px-3 py-2.5 text-base font-medium text-white/60 hover:bg-white/10 focus:bg-white/10 hover:text-white focus:text-white data-[highlighted]:bg-white/10 data-[highlighted]:text-white ${
+              v === variant ? "text-white" : ""
             }`}
           >
             <span className="flex w-full items-center justify-between gap-3">
