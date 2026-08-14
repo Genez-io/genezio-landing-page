@@ -74,25 +74,61 @@ export function GenezioAiTrafficSection() {
         </div>
 
         {/* Bridge callout: the critical difference */}
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start gap-4 bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 md:p-6 mb-16 md:mb-20">
-          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
-            <EyeOffIcon className="w-5 h-5 text-emerald-400" />
-          </div>
-          <div>
-            <p className="text-white font-semibold mb-1">
-              Visibility ≠ recommendation
-            </p>
-            <p className="text-sm text-white/70 leading-relaxed">
-              A brand can be mentioned constantly yet rarely recommended when a
-              user asks for the best option.
-            </p>
-            <p className="text-sm text-white/70 leading-relaxed mt-2">
-              The worst place to be:{" "}
-              <span className="inline-flex items-center gap-1.5 text-white/90 font-medium">
-                <AlertTriangleIcon className="w-3.5 h-3.5 text-emerald-400" />
-                high visibility, low recommendation
-              </span>. AI knows you exist but prefers your competitors.
-            </p>
+        <div className="max-w-5xl mx-auto bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 mb-16 md:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+            {/* Left: message */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                  <EyeOffIcon className="w-5 h-5 text-emerald-400" />
+                </span>
+                <h3 className="text-lg md:text-xl font-semibold text-white">
+                  Visibility ≠ recommendation
+                </h3>
+              </div>
+              <p className="text-sm md:text-base text-white/60 leading-relaxed">
+                A brand can be mentioned constantly yet rarely recommended when a
+                user asks for the best option. The worst place to be: high
+                visibility, low recommendation. AI knows you exist, but prefers
+                your competitors.
+              </p>
+            </div>
+
+            {/* Right: the gap, visualized */}
+            <div className="bg-[#050506] border border-white/10 rounded-xl p-5 md:p-6">
+              <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-5">
+                Same brand, two very different numbers
+              </div>
+              {[
+                { label: "Mentioned", value: 88, tone: "muted" },
+                { label: "Recommended", value: 31, tone: "accent" },
+              ].map((b) => (
+                <div key={b.label} className="mb-4 last:mb-0">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-sm text-white/70">{b.label}</span>
+                    <span
+                      className={`text-sm font-bold ${
+                        b.tone === "accent" ? "text-emerald-400" : "text-white"
+                      }`}
+                    >
+                      {b.value}%
+                    </span>
+                  </div>
+                  <div className="h-2.5 w-full rounded-full bg-white/[0.06] overflow-hidden">
+                    <div
+                      className={`h-full rounded-full ${
+                        b.tone === "accent" ? "bg-emerald-500" : "bg-white/40"
+                      }`}
+                      style={{ width: `${b.value}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+              <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-white/60">
+                <AlertTriangleIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
+                A 57-point gap: seen everywhere, chosen rarely.
+              </div>
+            </div>
           </div>
         </div>
 

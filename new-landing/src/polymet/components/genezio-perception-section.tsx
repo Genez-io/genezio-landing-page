@@ -8,6 +8,7 @@ import {
   TargetIcon,
   RefreshCwIcon,
   CheckCircle2Icon,
+  SparklesIcon,
   BriefcaseIcon,
   Building2Icon,
   CodeIcon,
@@ -128,12 +129,15 @@ function SwotCard() {
         ))}
       </div>
 
-      {/* misperception → corrected callout */}
-      <div className="mt-4 flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3">
-        <CheckCircle2Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-        <span className="text-sm text-white/80">
-          <span className="font-semibold text-white">1 misperception</span>{" "}
-          detected on “pricing”, corrected across engines
+      {/* Recommended action to outperform the competitor */}
+      <div className="mt-4 flex items-start gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3">
+        <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-emerald-500/15 border border-emerald-500/30">
+          <SparklesIcon className="w-3.5 h-3.5 text-emerald-400" />
+        </span>
+        <span className="text-sm text-white/80 leading-snug">
+          <span className="font-semibold text-white">Recommended action:</span>{" "}
+          publish a head-to-head comparison page. You're missing from the “vs”
+          prompts this competitor keeps winning.
         </span>
       </div>
     </div>
