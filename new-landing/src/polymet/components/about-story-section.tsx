@@ -54,7 +54,7 @@ export function AboutStorySection() {
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-6 mx-auto w-fit">Our story</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Our Story
+            From tracking visibility to winning the recommendation
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
             Founded by product, marketing and infrastructure experts, Genezio
@@ -90,8 +90,7 @@ export function AboutStorySection() {
               tracking to a practical{" "}
               <span className="text-white font-medium">
                 operating system for AI search visibility
-              </span>
-             , recommendation optimization, and cross-team execution.
+              </span>, recommendation optimization, and cross-team execution.
             </p>
           </div>
 

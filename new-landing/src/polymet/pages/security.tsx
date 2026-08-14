@@ -400,7 +400,7 @@ export function Security() {
     <>
       <PolymetSEO
         title="Enterprise & Security | Genezio"
-        description="Genezio is enterprise-ready with SSO/SAML, SCIM provisioning, RBAC, data residency, encryption in transit and at rest, and SOC 2 Type II controls. GDPR and DPA ready, with a REST API and MCP server for scoped, read-only access."
+        description="Genezio is enterprise-ready: SSO/SAML, SCIM, RBAC, data residency, encryption in transit and at rest, SOC 2 Type II controls, and GDPR/DPA readiness."
         canonicalPath="/security/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
       />

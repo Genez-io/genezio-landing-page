@@ -128,6 +128,7 @@ function WebsiteAnalyzerHero() {
               <Input
                 type="text"
                 inputMode="url"
+                aria-label="Website domain"
                 placeholder="yourcompany.com"
                 value={domain}
                 onChange={(e) => setDomain(e.target.value)}
@@ -140,6 +141,7 @@ function WebsiteAnalyzerHero() {
                 <MailIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
                 <Input
                   type="email"
+                  aria-label="Email address"
                   placeholder="you@company.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -464,7 +466,7 @@ export function WebsiteAnalyzer() {
     <>
       <PolymetSEO
         title="Website Analyzer, Is Your Site Ready for AI? | Genezio"
-        description="Genezio Website Analyzer runs an instant, site-wide AI-readiness audit: crawler access, content structure, citation coverage, schema, and performance, rolled into one score with a prioritized fix list. Book a demo!"
+        description="Genezio Website Analyzer runs an instant, site-wide AI-readiness audit across crawler access, content structure, schema, and performance, with one score and a fix list."
         canonicalPath="/website-analyzer/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{

@@ -61,7 +61,7 @@ export function AboutWhatWeDoSection() {
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-6 mx-auto w-fit">What we do</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            What We Do
+            See how AI recommends you, and change it
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
             Genezio is an{" "}

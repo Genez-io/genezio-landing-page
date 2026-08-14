@@ -8,7 +8,7 @@ import {
 
 export function GenezioEnterpriseTrustBand() {
   const items = [
-    { icon: ShieldCheckIcon, label: "SOC 2 compliant" },
+    { icon: ShieldCheckIcon, label: "SOC 2 Type II" },
     { icon: KeyRoundIcon, label: "SSO / SAML" },
     { icon: LockIcon, label: "GDPR & DPA" },
     { icon: HeadsetIcon, label: "Dedicated account manager" },

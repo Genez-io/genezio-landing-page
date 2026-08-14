@@ -45,7 +45,7 @@ export function AboutCustomersSection() {
           <div>
             <HeroEyebrow className="mb-6 w-fit">Our customers</HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Our Customers
+              Teams that need more than prompt monitoring
             </h2>
             <p className="text-base md:text-lg text-white/60 leading-relaxed mb-4">
               Genezio serves marketing professionals and decision-makers who

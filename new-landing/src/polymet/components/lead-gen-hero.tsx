@@ -15,28 +15,28 @@ import {
 export function LeadGenHero() {
   const topics = [
     {
-      name: "Cloud Infrastructure",
+      name: "Best sleep tracker",
       chatgpt: 245,
       claude: 189,
       gemini: 167,
       perplexity: 134,
     },
     {
-      name: "Serverless Platform",
+      name: "Most accurate wearable",
       chatgpt: 312,
       claude: 278,
       gemini: 234,
       perplexity: 198,
     },
     {
-      name: "Backend Development",
+      name: "Trusted for security",
       chatgpt: 189,
       claude: 156,
       gemini: 145,
       perplexity: 112,
     },
     {
-      name: "API Management",
+      name: "Best value for money",
       chatgpt: 267,
       claude: 223,
       gemini: 201,

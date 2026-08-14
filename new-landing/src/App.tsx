@@ -27,8 +27,6 @@ import { WebsiteAnalyzer } from "./polymet/pages/website-analyzer";
 import { InChatShopping } from "./polymet/pages/in-chat-shopping";
 import { Mcp } from "./polymet/pages/mcp";
 import { Security } from "./polymet/pages/security";
-import { GenezioLandingV2 } from "@/polymet/v2/pages/genezio-landing";
-import { GenezioLayoutV2 } from "@/polymet/v2/layouts/genezio-layout";
 
 
 const ExternalRedirect = ({ to }: { to: string }) => {
@@ -98,17 +96,6 @@ export default function GenezioApp() {
           </GenezioLayout>
         }
       />
-
-/*
-      <Route
-        path="/ai-search-optimization-tool/"
-        element={
-          <GenezioLayoutV2>
-            <GenezioLandingV2 />
-          </GenezioLayoutV2>
-        }
-      />
-*/
 
       <Route
         path="/pricing"

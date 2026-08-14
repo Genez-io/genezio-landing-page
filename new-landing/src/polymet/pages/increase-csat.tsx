@@ -11,7 +11,7 @@ export function IncreaseCsat() {
     <>
       <PolymetSEO
         title="Increase CSAT with AI Conversation Intelligence | Genezio"
-        description="Improve customer satisfaction by analyzing AI and human conversations. Genezio helps you classify intent, reduce escalations, and measure agent performance across channels."
+        description="Improve customer satisfaction by analyzing AI and human conversations: classify intent, reduce escalations, and measure agent performance across channels."
         canonicalPath="/increase-csat/"
       />
       <div className="min-h-screen bg-[#050506]">

@@ -572,7 +572,7 @@ export function ContentAnalysis() {
     <>
       <PolymetSEO
         title="Content Analysis, Will AI Cite Your Content? | Genezio"
-        description="Genezio Content Analysis scores every page on 8 checks, can AI reach it, does it cover what people ask, is it built to get cited, pre-publish and post-publish, then turns findings into an action plan. Book a demo!"
+        description="Genezio Content Analysis scores every page on 8 checks, pre-publish and post-publish: can AI reach it, does it answer real questions, is it built to get cited, then plans the fixes."
         canonicalPath="/content-analysis/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
@@ -584,7 +584,7 @@ export function ContentAnalysis() {
               name: "What does Genezio Content Analysis check?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Content Analysis scores every page on eight checks across two groups. Content: does it cover the questions AI asks, is it the kind of article AI cites for the topic, does it help the brand without sounding like an ad, is it structured to get cited, and is it easy to read. Publishing: can AI reach the page, is it technically AI-readable, and how often AI already cites the domain.",
+                text: "Content Analysis scores every page on 8 checks across two groups. Content: does it cover the questions AI asks, is it the kind of article AI cites for the topic, does it help the brand without sounding like an ad, is it structured to get cited, and is it easy to read. Publishing: can AI reach the page, is it technically AI-readable, and how often AI already cites the domain.",
               },
             },
             {

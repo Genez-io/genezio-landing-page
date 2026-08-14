@@ -170,7 +170,6 @@ export function GenezioHeader() {
                           </div>
                         </Link>
 
-                        {/* Content Analysis (moved below) → AI Agent Analytics */}
                         <Link
                           to="/increase-conversion/"
                           onClick={() => setPlatformMenuOpen(false)}
@@ -654,9 +653,9 @@ export function GenezioHeader() {
             </a>
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" onClick={() => setMobileMenuOpen(false)}>
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-xl transition-all w-full">
-                  Talk to Sales
+                  Get a demo
                 </Button>
               </a>
             </div>
