@@ -59,7 +59,7 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
       "Unlimited competitor SWOT analysis & seats",
       "Dedicated onboarding & Account Manager",
       "Dedicated Slack support",
-      "SSO / SAML + SOC2 compliance",
+      "SSO / SAML + SOC 2 Type II",
     ],
     note: "Custom Enterprise pricing, exclusive of any applicable taxes.",
   },
@@ -205,7 +205,7 @@ export function GenezioEnterprisePlan({
                 {[
                   "Scoped to the engines, markets & volume you need",
                   "Dedicated onboarding & a named account manager",
-                  "Security review, SSO / SAML & DPA ready",
+                  "Security review, SSO / SAML & DPA available",
                 ].map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10">

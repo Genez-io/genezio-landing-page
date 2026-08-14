@@ -33,9 +33,28 @@ const ZOHO_ACTION =
   "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK/formperma/qSA39uMeRrOgilhwxH5VK30jDRp58OiflOnixL6yjmE";
 
 /* ─────────────────────────────  HERO  ───────────────────────────── */
+/* Consumer inboxes we don't accept, work email only */
+const FREE_EMAIL_DOMAINS = new Set([
+  "gmail.com", "googlemail.com", "yahoo.com", "yahoo.co.uk", "ymail.com",
+  "rocketmail.com", "hotmail.com", "hotmail.co.uk", "outlook.com", "live.com",
+  "msn.com", "icloud.com", "me.com", "mac.com", "aol.com", "proton.me",
+  "protonmail.com", "gmx.com", "gmx.net", "mail.com", "yandex.com", "yandex.ru",
+  "zoho.com", "pm.me", "hey.com", "fastmail.com", "tutanota.com", "qq.com",
+  "163.com", "126.com", "web.de", "orange.fr", "free.fr",
+]);
+
+function isWorkEmail(email: string): boolean {
+  const at = email.lastIndexOf("@");
+  if (at === -1) return false;
+  const domain = email.slice(at + 1).trim().toLowerCase();
+  if (!domain || !domain.includes(".")) return false;
+  return !FREE_EMAIL_DOMAINS.has(domain);
+}
+
 function WebsiteAnalyzerHero() {
   const [domain, setDomain] = useState("");
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success">(
     "idle"
   );
@@ -43,6 +62,13 @@ function WebsiteAnalyzerHero() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!domain.trim() || !email.trim() || status === "submitting") return;
+    if (!isWorkEmail(email)) {
+      setError(
+        "Please use your work email. Free inboxes like Gmail or Outlook aren't accepted."
+      );
+      return;
+    }
+    setError("");
     setStatus("submitting");
     try {
       let iframe = document.getElementById(
@@ -144,9 +170,17 @@ function WebsiteAnalyzerHero() {
                   aria-label="Email address"
                   placeholder="you@company.com"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (error) setError("");
+                  }}
                   required
-                  className="h-12 pl-12 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl focus:border-white/20"
+                  aria-invalid={!!error}
+                  className={`h-12 pl-12 bg-white/5 text-white placeholder:text-white/40 rounded-xl ${
+                    error
+                      ? "border-red-500/60 focus:border-red-500/60"
+                      : "border-white/10 focus:border-white/20"
+                  }`}
                 />
               </div>
               <Button
@@ -162,11 +196,16 @@ function WebsiteAnalyzerHero() {
                 )}
               </Button>
             </div>
+            {error && (
+              <p className="text-xs text-red-400 text-left sm:text-center">
+                {error}
+              </p>
+            )}
           </form>
         )}
 
         <p className="text-xs text-white/40 mt-4">
-          Free · One report to your inbox · No credit card
+          Free · One report to your inbox · Work email required
         </p>
       </div>
     </section>

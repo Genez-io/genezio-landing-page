@@ -27,6 +27,8 @@ import {
 
 const SALES_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
+const TRUST_CENTER_URL = "https://trust.genezio.com/";
+const CSA_STAR_URL = "https://cloudsecurityalliance.org/star/registry/genezio";
 
 /* ─────────────────────────────  DATA  ───────────────────────────── */
 interface Capability {
@@ -99,9 +101,9 @@ const GROUPS: CapabilityGroup[] = [
       },
       {
         icon: FileCheck2Icon,
-        title: "GDPR & DPA ready",
+        title: "GDPR compliant",
         description:
-          "Built for GDPR compliance with a signable Data Processing Agreement and clear sub-processor terms.",
+          "Compliant with GDPR for the data we process, with a Data Processing Agreement (DPA) available on request.",
       },
     ],
   },
@@ -137,7 +139,7 @@ const GROUPS: CapabilityGroup[] = [
     ],
   },
   {
-    label: "Compliance",
+    label: "Certifications & attestations",
     items: [
       {
         icon: ShieldCheckIcon,
@@ -148,9 +150,17 @@ const GROUPS: CapabilityGroup[] = [
       },
       {
         icon: BadgeCheckIcon,
-        title: "Least-privilege access",
+        title: "ISO/IEC 27001",
         description:
-          "Internal access is scoped to what each role needs, reviewed regularly, and revoked on offboarding.",
+          "Information security managed under an ISO/IEC 27001-certified management system.",
+      },
+      {
+        icon: FileCheck2Icon,
+        title: "CSA STAR Level 1",
+        description:
+          "Listed in the Cloud Security Alliance STAR registry for cloud security assurance.",
+        href: "https://cloudsecurityalliance.org/star/registry/genezio",
+        linkLabel: "View our STAR registry entry",
       },
       {
         icon: ClipboardCheckIcon,
@@ -158,12 +168,6 @@ const GROUPS: CapabilityGroup[] = [
         description:
           "We complete security questionnaires and assessments to move your procurement process forward.",
         salesAssisted: true,
-      },
-      {
-        icon: FileCheck2Icon,
-        title: "Data processing agreement",
-        description:
-          "Sign our DPA to define roles, safeguards, and responsibilities for the data we process on your behalf.",
       },
     ],
   },
@@ -209,15 +213,26 @@ function CapabilityCard({ item }: { item: Capability }) {
       <p className="mt-2 text-sm leading-relaxed text-white/60">
         {item.description}
       </p>
-      {item.href && (
-        <Link
-          to={item.href}
-          className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors group"
-        >
-          {item.linkLabel ?? "Learn more"}
-          <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-        </Link>
-      )}
+      {item.href &&
+        (item.href.startsWith("http") ? (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors group"
+          >
+            {item.linkLabel ?? "Learn more"}
+            <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+          </a>
+        ) : (
+          <Link
+            to={item.href}
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors group"
+          >
+            {item.linkLabel ?? "Learn more"}
+            <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        ))}
     </div>
   );
 }
@@ -270,11 +285,111 @@ function SecurityHero() {
             SOC 2 Type II
           </span>
           <span className="hidden sm:inline text-white/15">·</span>
-          <span>SSO &amp; SCIM</span>
+          <span>ISO 27001</span>
           <span className="hidden sm:inline text-white/15">·</span>
-          <span>GDPR &amp; DPA ready</span>
+          <span>CSA STAR Level 1</span>
           <span className="hidden sm:inline text-white/15">·</span>
-          <span>Scoped, read-only access</span>
+          <span>GDPR compliant</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────  CERTIFICATIONS & TRUST CENTER  ──────────────── */
+function CertificationsBand() {
+  const certs = [
+    {
+      icon: ShieldCheckIcon,
+      name: "SOC 2 Type II",
+      desc: "Independently audited security controls.",
+    },
+    {
+      icon: BadgeCheckIcon,
+      name: "ISO/IEC 27001",
+      desc: "Certified information security management.",
+    },
+    {
+      icon: FileCheck2Icon,
+      name: "CSA STAR Level 1",
+      desc: "Listed in the CSA STAR registry.",
+      href: CSA_STAR_URL,
+    },
+    {
+      icon: LockIcon,
+      name: "GDPR compliant",
+      desc: "DPA available on request.",
+    },
+  ];
+
+  return (
+    <section className="relative bg-[#050506] py-16 md:py-20">
+      <Hairline />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between mb-10 md:mb-12">
+          <div>
+            <GroupLabel>Certifications &amp; compliance</GroupLabel>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-white leading-tight">
+              Audited, certified, and documented
+            </h2>
+            <p className="mt-3 max-w-xl text-sm md:text-base text-white/60 leading-relaxed">
+              Independent attestations and a public Trust Center, so your
+              security team can verify us without waiting on an email.
+            </p>
+          </div>
+          <a href={TRUST_CENTER_URL} target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-xl px-6 py-6 text-base font-semibold group"
+            >
+              Visit our Trust Center
+              <ArrowRightIcon className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            </Button>
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+          {certs.map((c) => {
+            const Icon = c.icon;
+            const body = (
+              <>
+                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
+                  <Icon className="w-5 h-5 text-emerald-400" />
+                </div>
+                <div className="text-base font-semibold text-white">
+                  {c.name}
+                </div>
+                <p className="mt-1.5 text-sm text-white/60 leading-relaxed">
+                  {c.desc}
+                </p>
+                {c.href && (
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
+                    View registry entry
+                    <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                )}
+              </>
+            );
+            return c.href ? (
+              <a
+                key={c.name}
+                href={c.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors"
+              >
+                {body}
+              </a>
+            ) : (
+              <div
+                key={c.name}
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7"
+              >
+                {body}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -400,12 +515,14 @@ export function Security() {
     <>
       <PolymetSEO
         title="Enterprise & Security | Genezio"
-        description="Genezio is enterprise-ready: SSO/SAML, SCIM, RBAC, data residency, encryption in transit and at rest, SOC 2 Type II controls, and GDPR/DPA readiness."
+        description="Genezio is enterprise-ready: SOC 2 Type II, ISO/IEC 27001, CSA STAR Level 1, GDPR compliant, plus SSO/SAML, SCIM, RBAC, encryption in transit and at rest, and a public Trust Center."
         canonicalPath="/security/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
       />
       <div className="min-h-screen bg-[#050506]">
         <SecurityHero />
+
+        <CertificationsBand />
 
         <CapabilitySections />
 

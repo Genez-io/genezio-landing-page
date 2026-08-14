@@ -124,7 +124,7 @@ export function GenezioFooter() {
           </p>
           <div className="flex items-center gap-2 text-xs text-white/30">
             <span className="h-1.5 w-1.5 rounded-[2px] bg-emerald-400" />
-            SOC 2 Type II · GDPR &amp; DPA ready
+            SOC 2 Type II · ISO 27001 · CSA STAR Level 1 · GDPR compliant
           </div>
         </div>
       </div>

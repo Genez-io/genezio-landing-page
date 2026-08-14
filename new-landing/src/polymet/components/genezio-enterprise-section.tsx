@@ -23,7 +23,7 @@ export function GenezioEnterpriseSection() {
     { icon: ShieldCheckIcon, title: "Role-based access", detail: "Granular roles & permissions" },
     { icon: ScrollTextIcon, title: "Audit logs", detail: "Every action, traceable" },
     { icon: DatabaseIcon, title: "Data residency", detail: "Regional controls & retention" },
-    { icon: FileCheck2Icon, title: "SOC 2 Type II", detail: "Independently audited" },
+    { icon: FileCheck2Icon, title: "Certified & audited", detail: "SOC 2 Type II, ISO 27001, CSA STAR" },
     { icon: PlugIcon, title: "API + MCP", detail: "Your data in any workflow" },
     { icon: HeadsetIcon, title: "Dedicated support", detail: "Named account manager" },
   ];

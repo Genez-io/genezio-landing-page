@@ -67,9 +67,11 @@ export function GenezioHeroSection() {
                 SOC 2 Type II
               </span>
               <span className="hidden sm:inline text-white/15">·</span>
-              <span>SSO / SAML</span>
+              <span>ISO 27001</span>
               <span className="hidden sm:inline text-white/15">·</span>
-              <span>GDPR &amp; DPA ready</span>
+              <span>CSA STAR Level 1</span>
+              <span className="hidden sm:inline text-white/15">·</span>
+              <span>GDPR compliant</span>
             </div>
           </div>
 

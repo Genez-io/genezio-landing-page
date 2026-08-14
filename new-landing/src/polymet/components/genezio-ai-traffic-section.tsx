@@ -15,23 +15,36 @@ function BandLabel({ children }: { children: React.ReactNode }) {
 
 export function GenezioAiTrafficSection() {
   const hiddenStats = [
-    { value: "~64%", label: "of AI users click nothing at all, they just take the answer" },
     {
-      value: "12–15%",
-      label: "of all searches now happen inside AI tools, up from 5–6% a year ago",
+      value: "~60%",
+      label: "of searches now end without a click, the AI answers the question",
+      source: "Bain & Company · 2025",
+      sourceUrl:
+        "https://www.bain.com/about/media-center/press-releases/20252/consumer-reliance-on-ai-search-results-signals-new-era-of-marketing--bain--company-about-80-of-search-users-rely-on-ai-summaries-at-least-40-of-the-time-on-traditional-search-engines-about-60-of-searches-now-end-without-the-user-progressing-to-a/",
+    },
+    {
+      value: "15%",
+      label:
+        "of consumers now start their search in an AI chatbot, 25% of Gen Z and millennials",
+      source: "Bain & Company · 2025",
+      sourceUrl:
+        "https://www.bain.com/about/media-center/press-releases/20252/consumer-reliance-on-ai-search-results-signals-new-era-of-marketing--bain--company-about-80-of-search-users-rely-on-ai-summaries-at-least-40-of-the-time-on-traditional-search-engines-about-60-of-searches-now-end-without-the-user-progressing-to-a/",
     },
   ];
 
   const revenueStats = [
     {
       value: "4.4×",
-      label: "higher conversion from AI visitors vs standard organic traffic",
-      source: "Semrush · 2026",
+      label: "more valuable than a traditional organic visit, by conversion rate",
+      source: "Semrush · 2025",
+      sourceUrl: "https://www.semrush.com/blog/ai-search-seo-traffic-study/",
     },
     {
-      value: "+42%",
-      label: "better conversion, AI-referred vs non-AI retail traffic",
-      source: "Adobe · Q1 2026",
+      value: "+31%",
+      label: "higher conversion, AI referrals vs other traffic to retail sites",
+      source: "Adobe Analytics · 2025",
+      sourceUrl:
+        "https://business.adobe.com/blog/ai-driven-traffic-surges-across-industries",
     },
   ];
 
@@ -66,9 +79,17 @@ export function GenezioAiTrafficSection() {
               <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
                 {stat.value}
               </div>
-              <div className="text-sm text-white/60 leading-snug">
+              <div className="text-sm text-white/60 leading-snug mb-3">
                 {stat.label}
               </div>
+              <a
+                href={stat.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono text-white/40 hover:text-emerald-400 transition-colors underline decoration-white/15 underline-offset-2"
+              >
+                {stat.source}
+              </a>
             </div>
           ))}
         </div>
@@ -159,9 +180,14 @@ export function GenezioAiTrafficSection() {
               <div className="text-sm text-white/80 leading-snug mb-2">
                 {stat.label}
               </div>
-              <div className="text-xs font-mono text-white/40">
+              <a
+                href={stat.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-white/40 hover:text-emerald-400 transition-colors underline decoration-white/15 underline-offset-2"
+              >
                 {stat.source}
-              </div>
+              </a>
             </div>
           ))}
         </div>

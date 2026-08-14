@@ -1,18 +1,18 @@
 import {
   ShieldCheckIcon,
+  BadgeCheckIcon,
+  FileCheck2Icon,
   KeyRoundIcon,
   LockIcon,
-  HeadsetIcon,
-  DatabaseIcon,
 } from "lucide-react";
 
 export function GenezioEnterpriseTrustBand() {
   const items = [
     { icon: ShieldCheckIcon, label: "SOC 2 Type II" },
+    { icon: BadgeCheckIcon, label: "ISO 27001" },
+    { icon: FileCheck2Icon, label: "CSA STAR Level 1" },
+    { icon: LockIcon, label: "GDPR compliant" },
     { icon: KeyRoundIcon, label: "SSO / SAML" },
-    { icon: LockIcon, label: "GDPR & DPA" },
-    { icon: HeadsetIcon, label: "Dedicated account manager" },
-    { icon: DatabaseIcon, label: "Custom data retention" },
   ];
 
   return (
