@@ -1,6 +1,6 @@
 // src/GenezioApp.tsx
 import { useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route, Navigate, useLocation } from "react-router";
 import { GenezioLayout } from "@/polymet/layouts/genezio-layout";
 import { GenezioLanding } from "@/polymet/pages/genezio-landing";
 import { GenezioPricing } from "@/polymet/pages/genezio-pricing";
@@ -75,9 +75,21 @@ const LEGACY_REDIRECTS = [
   { from: "/blog/author/virgil-turcu/", to: "/blog/" },
 ];
 
+/** Reset scroll to top on route change (SPA navigations don't by default). */
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) return; // let in-page anchors keep their behavior
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+  return null;
+}
+
 export default function GenezioApp() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route
         path="/"
         element={
@@ -335,5 +347,6 @@ export default function GenezioApp() {
       />
 
     </Routes>
+    </>
   );
 }
