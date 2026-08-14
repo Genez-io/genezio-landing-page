@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
-import { WebsiteAnalyzerReportCta } from "@/polymet/components/website-analyzer-report-cta";
 import {
   GlobeIcon,
   BotIcon,
@@ -16,49 +17,230 @@ import {
   ClipboardListIcon,
   ArrowRightIcon,
   AlertTriangleIcon,
+  MailIcon,
+  Loader2Icon,
+  CheckCircle2Icon,
 } from "lucide-react";
 
 const DEMO_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
 
+/**
+ * Zoho lead-capture endpoint (hidden-iframe POST). Update to the dedicated
+ * Website Analyzer form + field names when it's ready.
+ */
+const ZOHO_ACTION =
+  "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK/formperma/qSA39uMeRrOgilhwxH5VK30jDRp58OiflOnixL6yjmE";
+
 /* ─────────────────────────────  HERO  ───────────────────────────── */
 function WebsiteAnalyzerHero() {
+  const [domain, setDomain] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
+    "idle"
+  );
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!domain.trim() || !email.trim() || status === "submitting") return;
+    setStatus("submitting");
+    try {
+      let iframe = document.getElementById(
+        "genezio_hidden_iframe"
+      ) as HTMLIFrameElement | null;
+      if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.id = "genezio_hidden_iframe";
+        iframe.name = "genezio_hidden_iframe";
+        iframe.style.cssText =
+          "position:absolute;width:0;height:0;border:0;visibility:hidden";
+        document.body.appendChild(iframe);
+      }
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = ZOHO_ACTION;
+      form.target = "genezio_hidden_iframe";
+      form.style.display = "none";
+      form.setAttribute("accept-charset", "UTF-8");
+      const fields: Record<string, string> = {
+        Email: email.trim(),
+        Website: domain.trim(),
+      };
+      for (const [name, value] of Object.entries(fields)) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+      setTimeout(() => {
+        if (form.parentNode) form.parentNode.removeChild(form);
+      }, 1500);
+    } catch {
+      /* best-effort */
+    }
+    setStatus("success");
+  };
+
+  const rows = [
+    { label: "Crawler access", score: 92, good: true },
+    { label: "Content structure", score: 74, good: true },
+    { label: "Citation coverage", score: 58, good: false },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
+    <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-44 md:pb-28">
+      <div className="pointer-events-none absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
-        <HeroEyebrow className="mb-6">Website Analyzer</HeroEyebrow>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center">
+          {/* Left: copy + capture */}
+          <div className="text-center lg:text-left">
+            <HeroEyebrow className="mb-8 mx-auto lg:mx-0 w-fit">
+              Website Analyzer
+            </HeroEyebrow>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-          Is your whole site ready
-          <br />
-          <span className="text-emerald-400">for AI to recommend?</span>
-        </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.03em] mb-6 text-white">
+              Is your whole site ready{" "}
+              <span className="text-emerald-400">for AI to recommend?</span>
+            </h1>
 
-        <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Website Analyzer runs an instant, site-wide AI-readiness audit. Enter
-          a domain and see where answer engines can reach you, where they can't,
-          and exactly what to fix first.
-        </p>
+            <p className="text-lg md:text-xl text-zinc-400 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              Enter your domain and we'll email you an instant, site-wide
+              AI-readiness analysis, where answer engines can reach you, where
+              they can't, and what to fix first.
+            </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
-            <Button
-              size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
-            >
-              Book a Demo
-            </Button>
-          </a>
-          <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="outline"
-              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-lg transition-all"
-            >
-              Talk to Sales
-            </Button>
-          </a>
+            {status === "success" ? (
+              <div className="flex items-start gap-3 bg-[#0A0A0C] border border-white/10 rounded-2xl p-5 max-w-md mx-auto lg:mx-0">
+                <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/15 border border-emerald-500/30">
+                  <CheckCircle2Icon className="w-5 h-5 text-emerald-400" />
+                </span>
+                <div className="text-left">
+                  <p className="text-white font-semibold">
+                    Your analysis is on its way
+                  </p>
+                  <p className="text-sm text-white/60">
+                    We'll email{" "}
+                    <span className="text-white/80 font-medium">{email}</span>{" "}
+                    the report for{" "}
+                    <span className="text-white/80 font-medium">{domain}</span>{" "}
+                    shortly.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="max-w-md mx-auto lg:mx-0 space-y-3"
+              >
+                <div className="relative">
+                  <GlobeIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                  <Input
+                    type="text"
+                    inputMode="url"
+                    placeholder="yourcompany.com"
+                    value={domain}
+                    onChange={(e) => setDomain(e.target.value)}
+                    required
+                    className="h-12 pl-12 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl focus:border-white/20"
+                  />
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="relative flex-1">
+                    <MailIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                    <Input
+                      type="email"
+                      placeholder="you@company.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="h-12 pl-12 bg-white/5 border-white/10 text-white placeholder:text-white/40 rounded-xl focus:border-white/20"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={status === "submitting"}
+                    className="h-12 bg-emerald-400 hover:bg-emerald-300 text-black px-6 font-semibold rounded-xl transition-colors duration-200 disabled:opacity-60"
+                  >
+                    {status === "submitting" ? (
+                      <Loader2Icon className="w-4 h-4 animate-spin" />
+                    ) : (
+                      "Email me the analysis"
+                    )}
+                  </Button>
+                </div>
+              </form>
+            )}
+
+            <p className="text-xs text-white/40 mt-4">
+              Free · One report to your inbox · No credit card
+            </p>
+          </div>
+
+          {/* Right: emailed report preview */}
+          <div className="relative">
+            <div className="relative bg-[#0E0E12] border border-white/10 rounded-3xl p-6 md:p-7 shadow-2xl shadow-black/40">
+              <div className="flex items-center gap-3 pb-4 mb-5 border-b border-white/10">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                  <MailIcon className="w-4 h-4 text-emerald-400" />
+                </span>
+                <div className="min-w-0">
+                  <div className="text-[11px] text-white/40">From Genezio</div>
+                  <div className="text-sm font-medium text-white truncate">
+                    Your AI-readiness report
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-end justify-between mb-6">
+                <div>
+                  <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-1">
+                    Overall score
+                  </div>
+                  <div className="text-5xl font-extrabold text-emerald-400 leading-none">
+                    78
+                    <span className="text-xl font-bold text-white/40">/100</span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/5 text-white/70 border border-white/10">
+                  <AlertTriangleIcon className="w-3.5 h-3.5" /> Room to improve
+                </span>
+              </div>
+
+              <div className="space-y-4">
+                {rows.map((r) => (
+                  <div key={r.label}>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-sm text-white/70">{r.label}</span>
+                      <span
+                        className={`text-sm font-bold ${
+                          r.good ? "text-emerald-400" : "text-white/70"
+                        }`}
+                      >
+                        {r.score}
+                      </span>
+                    </div>
+                    <div className="h-2 w-full rounded-full bg-white/[0.06] overflow-hidden">
+                      <div
+                        className={`h-full rounded-full ${
+                          r.good ? "bg-emerald-500" : "bg-white/25"
+                        }`}
+                        style={{ width: `${r.score}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-white/10 text-xs text-white/40">
+                Delivered to your inbox as a shareable report.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -393,7 +575,6 @@ export function WebsiteAnalyzer() {
       />
       <div className="min-h-screen bg-[#050506]">
         <WebsiteAnalyzerHero />
-        <WebsiteAnalyzerReportCta />
         <ScoreVisual />
         <WhatItChecks />
         <HowItWorks />
