@@ -98,7 +98,7 @@ export function GenezioHeroSection() {
             <div className="relative max-w-md mr-auto mt-4">
               <div className="bg-white/[0.03] border border-white/10 rounded-2xl rounded-tl-md p-5 md:p-6 backdrop-blur-sm">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-white/35">
-                  Genezio extracts from this conversation
+                  Genezio collects data from each conversation
                 </span>
                 <div className="mt-4 space-y-3.5">
                   {[
@@ -125,18 +125,11 @@ export function GenezioHeroSection() {
                           <Icon className="w-3.5 h-3.5 text-emerald-400" />
                         </span>
                         <div className="min-w-0">
-                          <div className="text-xs font-semibold text-white/80 mb-1.5">
+                          <div className="text-sm font-semibold text-white/85 mb-0.5">
                             {row.label}
                           </div>
-                          <div className="flex flex-wrap gap-1.5">
-                            {row.chips.map((chip) => (
-                              <span
-                                key={chip}
-                                className="px-2 py-0.5 text-[11px] rounded-md bg-white/5 border border-white/10 text-white/60"
-                              >
-                                {chip}
-                              </span>
-                            ))}
+                          <div className="text-[11px] text-white/35 leading-relaxed">
+                            {row.chips.join(", ")}
                           </div>
                         </div>
                       </div>
