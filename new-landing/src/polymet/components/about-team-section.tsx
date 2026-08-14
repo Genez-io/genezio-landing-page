@@ -23,7 +23,7 @@ export function AboutTeamSection() {
       role: "Co-Founder & CMO",
       image: "/authors/paula-cionca.webp",
       to: "/blog/author/paula-cionca/",
-      bio: "Frequently publishes on recommendation rate, citations, perception analysis, and the evolving role of GEO in modern marketing strategy.",
+      bio: "PhD in AI, drives marketing and customer success at Genezio. Publishes widely on recommendation rate, citations, perception analysis, and the evolving role of GEO in modern marketing.",
     },
     {
       name: "Bogdan Vlad",
