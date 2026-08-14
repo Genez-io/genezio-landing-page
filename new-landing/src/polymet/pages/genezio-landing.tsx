@@ -11,7 +11,7 @@ import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic
 import { GenezioPerceptionSection } from "@/polymet/components/genezio-perception-section";
 import { GenezioProductPillarsSection } from "@/polymet/components/genezio-product-pillars-section";
 import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-reader-section";
-import { GenezioFlywheelSection } from "@/polymet/components/genezio-flywheel-section";
+import { GenezioBusinessGoalsSection } from "@/polymet/components/genezio-flywheel-section";
 import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterprise-trust-band";
 import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 
@@ -57,7 +57,7 @@ export function GenezioLanding() {
         <GenezioRobotReaderSection />
         <GenezioAiTrafficSection />
         <GenezioProductPillarsSection />
-        <GenezioFlywheelSection />
+        <GenezioBusinessGoalsSection />
 
         {/* Product + social proof */}
         <GenezioDifferentiatorsSection />
