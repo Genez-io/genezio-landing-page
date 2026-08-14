@@ -674,21 +674,6 @@ export function DataProcessingAgreement() {
                         </tr>
                         <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
                           <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            Meta
-                          </td>
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            Advertising Campaigns
-                          </td>
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Microsoft Azure
                           </td>
                           <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
@@ -753,21 +738,6 @@ export function DataProcessingAgreement() {
                           </td>
                           <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             Application error monitoring
-                          </td>
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            Stripe
-                          </td>
-                          <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
-                            Payment processing and billing
                           </td>
                           <td className="p-2 align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]">
                             EU
