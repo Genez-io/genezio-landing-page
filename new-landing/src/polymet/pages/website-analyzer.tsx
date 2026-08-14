@@ -176,7 +176,6 @@ function ScoreVisual() {
   const categories = [
     { label: "Crawler access", score: 92, good: true },
     { label: "Content structure", score: 74, good: true },
-    { label: "Citation coverage", score: 58, good: false },
     { label: "Schema & metadata", score: 86, good: true },
     { label: "Page performance", score: 80, good: true },
   ];
