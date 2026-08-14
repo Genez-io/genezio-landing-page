@@ -428,7 +428,7 @@ function ResourcesSection() {
     {
       icon: FileCheck2Icon,
       title: "Data Processing Agreement",
-      desc: "Roles, safeguards, and sub-processor terms for the data we process.",
+      desc: "Roles, safeguards, and responsibilities for the data we process.",
       href: "/data-processing-agreement/",
       external: false,
       cta: "Read the DPA",
