@@ -88,7 +88,7 @@ function ShoppingHero() {
               <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-black/20"
                 >
                   Book a Demo
                 </Button>
@@ -96,7 +96,7 @@ function ShoppingHero() {
               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
                 <Button
                   variant="outline"
-                  className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-lg transition-all"
+                  className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-xl transition-all"
                 >
                   Talk to Sales
                 </Button>
@@ -188,7 +188,7 @@ function WhatWeAnalyze() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             Four layers behind every AI shopping answer
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-6">
             In-Chat Shopping reads the whole buying moment, not just whether
             you're mentioned, but everything that decides whether AI sells your
             product.
@@ -206,7 +206,7 @@ function WhatWeAnalyze() {
                   <Icon className="w-6 h-6 text-emerald-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{d.name}</h3>
-                <p className="text-[#B0B0B3] text-sm leading-relaxed">
+                <p className="text-white/60 text-sm leading-relaxed">
                   {d.description}
                 </p>
               </div>
@@ -279,7 +279,7 @@ function WhatItReveals() {
                   <Icon className="w-5 h-5 text-emerald-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{it.title}</h3>
-                <p className="text-[#B0B0B3] text-sm leading-relaxed">
+                <p className="text-white/60 text-sm leading-relaxed">
                   {it.description}
                 </p>
               </div>
@@ -315,7 +315,7 @@ function ProductLevelView() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
             Zoom in to a single product
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-6">
             Every metric drills down to the SKU. Pick any product and see how AI
             ranks, prices, sources, and sells it.
           </p>
@@ -426,7 +426,7 @@ function MarketplacePerformance() {
               Where your product{" "}
               <span className="text-white">actually wins</span>
             </h2>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-white/60 leading-relaxed mb-6">
               When your product is sold through marketplaces, In-Chat Shopping
               shows which one AI recommends it from most, so you know where the
               sale really happens, and where to double down on stock, reviews,

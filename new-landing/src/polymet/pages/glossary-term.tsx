@@ -1350,7 +1350,7 @@ export function GlossaryTerm() {
             href="/glossary/"
             className="inline-flex items-center gap-3 text-white hover:text-zinc-400 transition-colors group"
           >
-            <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-white/5 border border-white/10 group-hover:border-white/20 flex items-center justify-center transition-all">
+            <div className="w-8 h-8 rounded-xl bg-white/5 group-hover:bg-white/5 border border-white/10 group-hover:border-white/20 flex items-center justify-center transition-all">
               <ArrowLeftIcon className="w-4 h-4" />
             </div>
             <span className="font-medium">Back to Glossary</span>

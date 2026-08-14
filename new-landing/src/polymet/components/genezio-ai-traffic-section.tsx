@@ -48,7 +48,7 @@ export function GenezioAiTrafficSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             The traffic you can't see is your best-converting channel
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
+          <p className="text-base md:text-lg text-white/60 leading-relaxed">
             AI answers the question and the user rarely clicks, so it barely
             shows up in analytics. But the few who do arrive already had their
             comparison shopping done, so they convert like nothing else.
@@ -107,7 +107,7 @@ export function GenezioAiTrafficSection() {
             <div className="text-lg font-semibold text-white leading-snug mb-3">
               of new signups arrived recommended by answer engines
             </div>
-            <div className="text-sm text-[#B0B0B3]">
+            <div className="text-sm text-white/60">
               Genezio customer, first-party data. Already happening.
             </div>
           </div>

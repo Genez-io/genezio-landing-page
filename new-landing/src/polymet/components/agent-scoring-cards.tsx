@@ -170,7 +170,7 @@ export function AgentScoringCards() {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className={`${agent.color} backdrop-blur-sm border ${agent.borderColor} rounded-2xl p-6 hover:scale-[1.02] transition-all relative`}
+              className={`${agent.color} backdrop-blur-sm border ${agent.borderColor} rounded-2xl p-6 transition-all relative`}
             >
               {/* Rank Badge */}
               {agent.rank === "Top Performer" && (

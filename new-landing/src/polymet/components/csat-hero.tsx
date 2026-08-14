@@ -49,7 +49,7 @@ export function CsatHero() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
+                  className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200"
                 >
 
                   Book a Demo

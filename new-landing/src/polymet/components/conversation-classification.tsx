@@ -115,7 +115,7 @@ export function ConversationClassification() {
             return (
               <div
                 key={index}
-                className={`${category.color} backdrop-blur-sm border ${category.borderColor} rounded-xl p-6 hover:scale-[1.02] transition-all`}
+                className={`${category.color} backdrop-blur-sm border ${category.borderColor} rounded-xl p-6 transition-all`}
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">

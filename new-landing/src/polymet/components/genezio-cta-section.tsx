@@ -42,7 +42,7 @@ export function GenezioCtaSection() {
           </span>
         </h2>
 
-        <p className="text-base md:text-lg lg:text-xl text-[#B0B0B3] max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
           Join leading brands using Genezio to understand, influence, and win AI driven purchase decisions.
           <br />
           Move beyond visibility, optimize for recommendations that drive conversions.
@@ -52,7 +52,7 @@ export function GenezioCtaSection() {
         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl shadow-lg transition-all duration-300 w-full"
             >
               Book a Demo
             </Button>
@@ -61,7 +61,7 @@ export function GenezioCtaSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
+              className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200 w-full"
             >
               Talk to Sales
             </Button>
@@ -79,7 +79,7 @@ export function GenezioCtaSection() {
           // <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
           //   <Button
           //     size="lg"
-          //     className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105 w-full"
+          //     className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl shadow-lg transition-all duration-300 w-full"
           //   >
           //     Analyze Your AI Brand Visibility
           //   </Button>
@@ -88,7 +88,7 @@ export function GenezioCtaSection() {
           //   <Button
           //     size="lg"
           //     variant="outline"
-          //     className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200 w-full"
+          //     className="border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200 w-full"
           //   >
           //     Book a Demo
           //   </Button>

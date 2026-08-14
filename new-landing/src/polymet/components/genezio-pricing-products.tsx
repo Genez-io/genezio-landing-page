@@ -74,7 +74,7 @@ export function GenezioPricingProducts() {
                     </h3>
                     <ArrowRightIcon className="w-4 h-4 text-white/20 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" />
                   </div>
-                  <p className="text-sm text-[#B0B0B3] leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {p.description}
                   </p>
                 </div>

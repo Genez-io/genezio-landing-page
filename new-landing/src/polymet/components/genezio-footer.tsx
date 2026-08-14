@@ -72,7 +72,7 @@ export function GenezioFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Genezio on LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/60 hover:text-emerald-400 hover:border-white/20 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/60 hover:text-emerald-400 hover:border-white/20 transition-colors"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -81,7 +81,7 @@ export function GenezioFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Genezio on X"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/60 hover:text-emerald-400 hover:border-white/20 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/60 hover:text-emerald-400 hover:border-white/20 transition-colors"
               >
                 <TwitterIcon className="w-4 h-4" />
               </a>

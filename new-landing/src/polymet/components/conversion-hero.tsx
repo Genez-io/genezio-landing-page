@@ -44,7 +44,7 @@ export function ConversionHero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
-                <Button className="w-full bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg shadow-zinc-500/25">
+                <Button className="w-full bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg">
                   Request an Analysis
                 </Button>
               </Link>
@@ -52,7 +52,7 @@ export function ConversionHero() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg transition-all duration-200"
+                  className="w-full border-2 border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white hover:text-white px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200"
                 >
 
                   Book a Demo
@@ -120,7 +120,7 @@ export function ConversionHero() {
                     <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
                       <SparklesIcon className="w-3 h-3 text-zinc-400" />
                     </div>
-                    <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">
+                    <div className="bg-white/10 border border-white/20 rounded-xl rounded-tl-sm px-3 py-2 max-w-[85%]">
                       <p className="text-xs text-white">
                         Hi! How can I help you today?
                       </p>
@@ -144,7 +144,7 @@ export function ConversionHero() {
                     <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
                       <SparklesIcon className="w-3 h-3 text-zinc-400" />
                     </div>
-                    <div className="bg-white/10 border border-white/20 rounded-lg rounded-tl-sm px-3 py-2 max-w-[85%]">
+                    <div className="bg-white/10 border border-white/20 rounded-xl rounded-tl-sm px-3 py-2 max-w-[85%]">
                       <p className="text-xs text-white">
                         We have three plans: Starter, Pro, and Enterprise...
                       </p>

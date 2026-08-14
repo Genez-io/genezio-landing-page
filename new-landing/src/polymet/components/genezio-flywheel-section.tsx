@@ -50,7 +50,7 @@ export function GenezioBusinessGoalsSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
             Set the goal. Genezio tracks it and hands you the plan
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] mt-6 leading-relaxed">
+          <p className="text-base md:text-lg text-white/60 mt-6 leading-relaxed">
             Define the outcomes that matter, a recommendation rate, a ranking, a
             corrected fact, marketplace share. Genezio tracks each one daily
             against the AI answer engines, then gives you a clear plan to follow

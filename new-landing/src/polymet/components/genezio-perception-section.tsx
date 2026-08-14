@@ -17,25 +17,29 @@ import {
 const DEMO_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
 
-/* ── Radar geometry (SSR-safe, deterministic) ─────────────────────── */
-const AXES = ["Perception", "Visibility", "Recommendation", "Sentiment", "Accuracy"];
-const VBW = 440;
-const VBH = 360;
-const CX = 220;
-const CY = 175;
-const R = 118;
-const N = AXES.length;
-
-function pt(i: number, radius: number): [number, number] {
-  const a = ((-90 + (i * 360) / N) * Math.PI) / 180;
-  return [CX + radius * Math.cos(a), CY + radius * Math.sin(a)];
-}
-function poly(vals: number[]): string {
-  return vals.map((v, i) => pt(i, R * v).join(",")).join(" ");
-}
-
-const YOU = [0.86, 0.62, 0.55, 0.8, 0.7];
-const COMPETITOR = [0.6, 0.9, 0.83, 0.5, 0.74];
+/* Competitive SWOT vs a top competitor, illustrative */
+const SWOT = [
+  {
+    key: "Strengths",
+    positive: true,
+    items: ["Cited by authoritative sources", "Positive sentiment on reliability"],
+  },
+  {
+    key: "Weaknesses",
+    positive: false,
+    items: ["Absent from comparison prompts", "Thin coverage on pricing"],
+  },
+  {
+    key: "Opportunities",
+    positive: true,
+    items: ["Unanswered “best for…” queries", "Winnable mortgage-intent prompts"],
+  },
+  {
+    key: "Threats",
+    positive: false,
+    items: ["A competitor is gaining on ChatGPT", "Outdated facts still cited"],
+  },
+];
 
 /* Mentioned-for vs recommended-for, by topic, illustrative */
 const TOPICS = [
@@ -76,97 +80,53 @@ const PERSONAS = [
     won: true,
   },
 ];
-const RINGS = [0.25, 0.5, 0.75, 1].map((f) =>
-  AXES.map((_, i) => pt(i, R * f).join(",")).join(" ")
-);
-const LABELS = AXES.map((name, i) => {
-  const [x, y] = pt(i, R + 16);
-  const anchor = x < CX - 6 ? "end" : x > CX + 6 ? "start" : "middle";
-  return { name, x, y, anchor };
-});
-
-function RadarCard() {
+function SwotCard() {
   return (
     <div className="relative bg-[#0A0A0C] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl shadow-black/40">
-      {/* header + legend */}
-      <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
-        <div>
-          <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-1">
-            AI perception index
-          </div>
-          <div className="text-white font-semibold">Your brand vs the category</div>
+      {/* header */}
+      <div className="mb-5">
+        <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-1">
+          Competitive SWOT
         </div>
-        <div className="flex items-center gap-4 text-xs">
-          <span className="inline-flex items-center gap-1.5 text-white/70">
-            <span className="h-2 w-2 rounded-[2px] bg-emerald-400" /> You
-          </span>
-          <span className="inline-flex items-center gap-1.5 text-white/50">
-            <span className="h-2 w-2 rounded-[2px] bg-white/40" /> Top competitor
-          </span>
+        <div className="text-white font-semibold">
+          Your brand vs a top competitor
         </div>
       </div>
 
-      {/* radar */}
-      <svg viewBox={`0 0 ${VBW} ${VBH}`} className="w-full h-auto" role="img" aria-label="Radar comparing your brand to a competitor across five AI perception dimensions">
-        {/* grid rings */}
-        {RINGS.map((points, i) => (
-          <polygon
-            key={i}
-            points={points}
-            fill="none"
-            stroke="rgba(255,255,255,0.08)"
-            strokeWidth="1"
-          />
-        ))}
-        {/* axis spokes */}
-        {AXES.map((_, i) => {
-          const [x, y] = pt(i, R);
-          return (
-            <line
-              key={i}
-              x1={CX}
-              y1={CY}
-              x2={x}
-              y2={y}
-              stroke="rgba(255,255,255,0.08)"
-              strokeWidth="1"
-            />
-          );
-        })}
-        {/* competitor polygon */}
-        <polygon
-          points={poly(COMPETITOR)}
-          fill="rgba(255,255,255,0.06)"
-          stroke="rgba(255,255,255,0.4)"
-          strokeWidth="1.5"
-        />
-        {/* your polygon */}
-        <polygon
-          points={poly(YOU)}
-          fill="rgba(2,248,162,0.16)"
-          stroke="#02F8A2"
-          strokeWidth="2"
-        />
-        {YOU.map((v, i) => {
-          const [x, y] = pt(i, R * v);
-          return <circle key={i} cx={x} cy={y} r="3" fill="#02F8A2" />;
-        })}
-        {/* axis labels */}
-        {LABELS.map((l) => (
-          <text
-            key={l.name}
-            x={l.x}
-            y={l.y}
-            textAnchor={l.anchor as "start" | "middle" | "end"}
-            dominantBaseline="middle"
-            fill="rgba(255,255,255,0.55)"
-            fontSize="11"
-            fontWeight="600"
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {SWOT.map((q) => (
+          <div
+            key={q.key}
+            className="bg-[#050506] border border-white/10 rounded-xl p-4"
           >
-            {l.name}
-          </text>
+            <div className="flex items-center gap-2 mb-3">
+              <span
+                className={`h-1.5 w-1.5 rounded-[2px] ${
+                  q.positive ? "bg-emerald-400" : "bg-white/30"
+                }`}
+              />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/70">
+                {q.key}
+              </span>
+            </div>
+            <ul className="space-y-2">
+              {q.items.map((it) => (
+                <li
+                  key={it}
+                  className="flex items-start gap-2 text-xs text-white/60 leading-snug"
+                >
+                  <span
+                    className={`mt-1 h-1 w-1 flex-shrink-0 rounded-full ${
+                      q.positive ? "bg-emerald-400/70" : "bg-white/25"
+                    }`}
+                  />
+                  {it}
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </svg>
+      </div>
 
       {/* misperception → corrected callout */}
       <div className="mt-4 flex items-center gap-3 bg-[#050506] border border-white/10 rounded-xl px-4 py-3">
@@ -235,9 +195,9 @@ export function GenezioPerceptionSection() {
             </a>
           </div>
 
-          {/* Right: competitive radar */}
+          {/* Right: competitive SWOT */}
           <div className="relative">
-            <RadarCard />
+            <SwotCard />
           </div>
         </div>
 

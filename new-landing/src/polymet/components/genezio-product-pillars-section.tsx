@@ -65,7 +65,7 @@ export function GenezioProductPillarsSection() {
               win the recommendation
             </span>
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mt-6">
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-6">
             Measure how AI sees your brand, diagnose what's holding you back, and
             ship the content that moves it, end to end.
           </p>
@@ -86,7 +86,7 @@ export function GenezioProductPillarsSection() {
                 <h3 className="text-xl font-bold text-white mb-3">
                   {pillar.name}
                 </h3>
-                <p className="text-[#B0B0B3] text-sm md:text-base leading-relaxed mb-5">
+                <p className="text-white/60 text-sm md:text-base leading-relaxed mb-5">
                   {pillar.description}
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-white">

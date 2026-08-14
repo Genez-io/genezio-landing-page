@@ -29,7 +29,7 @@ export function GenezioRobotReaderSection() {
               doesn't have eyes.
             </span>
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto mt-6">
+          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto mt-6">
             During an AI answer, the reader on your page skips your ads, ignores
             your hooks, and extracts only facts, comparisons, and evidence.
             Everything else is dropped, including the ads that paid for the

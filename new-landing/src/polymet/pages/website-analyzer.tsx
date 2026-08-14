@@ -315,7 +315,7 @@ function WhatItChecks() {
                 <h3 className="text-lg font-bold text-white mb-2">
                   {check.title}
                 </h3>
-                <p className="text-sm text-[#B0B0B3] leading-relaxed">
+                <p className="text-sm text-white/60 leading-relaxed">
                   {check.description}
                 </p>
               </div>
@@ -381,7 +381,7 @@ function HowItWorks() {
                   <h3 className="text-lg font-bold text-white mb-2 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-[#B0B0B3] leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -446,7 +446,7 @@ function NextStep() {
                 <h3 className="text-xl font-bold text-white mb-3">
                   {card.name}
                 </h3>
-                <p className="text-[#B0B0B3] text-sm md:text-base leading-relaxed">
+                <p className="text-white/60 text-sm md:text-base leading-relaxed">
                   {card.description}
                 </p>
               </Link>

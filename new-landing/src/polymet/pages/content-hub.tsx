@@ -50,7 +50,7 @@ function ContentHubHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-black/20"
             >
               Book a Demo
             </Button>
@@ -58,7 +58,7 @@ function ContentHubHero() {
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               variant="outline"
-              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-lg transition-all"
+              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-xl transition-all"
             >
               Talk to Sales
             </Button>
@@ -104,7 +104,7 @@ function MeasurementToBrief() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             A brief is only as good as the data behind it
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto">
             Content Hub doesn't guess what to write. It starts from what AI
             engines are already doing with your category, then turns every gap
             into a brief you can hand to a writer.
@@ -128,7 +128,7 @@ function MeasurementToBrief() {
                 <h3 className="text-xl font-bold text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-[#B0B0B3] leading-relaxed">
+                <p className="text-white/60 leading-relaxed">
                   {step.description}
                 </p>
                 {index < steps.length - 1 && (
@@ -191,20 +191,20 @@ function BriefAnatomy() {
                 blueprint for a citable answer
               </span>
             </h2>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-white/60 leading-relaxed mb-6">
               Not a title and a word count. A Content Hub brief tells your
               writer exactly which conversation to win, which sub-questions the
               engines fan out, which facts and comparisons the machine keeps,
               and which trusted sources you need to show up in.
             </p>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
+            <p className="text-base md:text-lg text-white/60 leading-relaxed">
               Hand it to your in-house team or your agency, the strategy is
               already done.
             </p>
           </div>
 
           {/* Brief card visual */}
-          <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl shadow-zinc-500/5">
+          <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl">
             <div className="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
@@ -262,7 +262,7 @@ function BriefsVsDirect() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Brief it, or generate it
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto">
             Most teams want the strategy and their own voice on the page. Some
             want a running start. Content Hub does both.
           </p>
@@ -281,7 +281,7 @@ function BriefsVsDirect() {
             <h3 className="text-2xl font-bold text-white mb-4">
               Data-backed briefs
             </h3>
-            <p className="text-[#B0B0B3] leading-relaxed mb-6">
+            <p className="text-white/60 leading-relaxed mb-6">
               The strategic layer. Genezio decides what to write, for whom,
               where, and why it will get cited, then your writers do what they
               do best. You keep full editorial control and brand voice.
@@ -312,7 +312,7 @@ function BriefsVsDirect() {
             <h3 className="text-2xl font-bold text-white mb-4">
               Direct content generation
             </h3>
-            <p className="text-[#B0B0B3] leading-relaxed mb-6">
+            <p className="text-white/60 leading-relaxed mb-6">
               Need a first draft now? Content Hub can generate the full piece
               from the same brief, machine-readable, structured, and citable
               from line one, ready for your team to review and refine.
@@ -370,7 +370,7 @@ function PlanLikeMedia() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Plan content like you plan media
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto">
             Content Hub structures every brief across the four decisions that
             decide whether you show up in the answer.
           </p>
@@ -390,7 +390,7 @@ function PlanLikeMedia() {
                 <div className="text-2xl font-extrabold text-white mb-2 tracking-tight">
                   {dim.label}
                 </div>
-                <p className="text-[#B0B0B3] text-sm leading-relaxed">
+                <p className="text-white/60 text-sm leading-relaxed">
                   {dim.description}
                 </p>
               </div>
@@ -423,7 +423,7 @@ function FlywheelPublish() {
           </span>{" "}
           step of the loop
         </h2>
-        <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-12">
+        <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-12">
           Measure the conversations, diagnose the gaps, publish citable content
           where engines trust it, then verify that visibility moved. Every turn
           spins the wheel faster.

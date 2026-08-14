@@ -59,7 +59,7 @@ function ContentAnalysisHero() {
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-black/20"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-black/20"
             >
               Book a Demo
             </Button>
@@ -67,7 +67,7 @@ function ContentAnalysisHero() {
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               variant="outline"
-              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-lg transition-all"
+              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-xl transition-all"
             >
               Talk to Sales
             </Button>
@@ -135,7 +135,7 @@ function TwoModes() {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {mode.title}
                 </h3>
-                <p className="text-[#B0B0B3] leading-relaxed mb-6">
+                <p className="text-white/60 leading-relaxed mb-6">
                   {mode.description}
                 </p>
                 <ul className="space-y-3">
@@ -178,7 +178,7 @@ function ReportAnatomy() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Every page, scored on 8 checks
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
             Five checks on the content itself, three on how it's published, one
             clear read on whether AI will cite it.
           </p>
@@ -205,7 +205,7 @@ function ReportAnatomy() {
             <h3 className="text-xl md:text-2xl font-bold text-white mt-5 mb-2">
               Strong fit for this topic
             </h3>
-            <p className="text-sm text-[#B0B0B3] leading-relaxed">
+            <p className="text-sm text-white/60 leading-relaxed">
               This article closely answers what people ask AI here, a strong
               candidate to be cited. Two content checks have room to improve
               before it's a lock.
@@ -302,7 +302,7 @@ function InsideAnalysis() {
                 CITATION-TYPE FIT
               </span>
             </div>
-            <p className="text-sm text-[#B0B0B3] mb-6">
+            <p className="text-sm text-white/60 mb-6">
               What kind of page AI actually cites for this topic, and where
               yours fits.
             </p>
@@ -344,7 +344,7 @@ function InsideAnalysis() {
                 STRUCTURED TO GET CITED
               </span>
             </div>
-            <p className="text-sm text-[#B0B0B3] mb-6">
+            <p className="text-sm text-white/60 mb-6">
               The signals engines look for when they decide what to quote.
             </p>
             <div className="grid grid-cols-3 gap-3">
@@ -379,7 +379,7 @@ function InsideAnalysis() {
                 CAN AI REACH THIS PAGE?
               </span>
             </div>
-            <p className="text-sm text-[#B0B0B3] mb-6">
+            <p className="text-sm text-white/60 mb-6">
               Every major AI crawler, checked against your robots rules.
             </p>
             <div className="grid grid-cols-2 gap-2.5">
@@ -405,7 +405,7 @@ function InsideAnalysis() {
                 CITATION STANDING
               </span>
             </div>
-            <p className="text-sm text-[#B0B0B3] mb-6">
+            <p className="text-sm text-white/60 mb-6">
               How much AI already trusts the domain you're publishing on.
             </p>
             <div className="flex items-baseline gap-3 mb-4">
@@ -474,7 +474,7 @@ function ActionPlan() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
             Every check ends in an action plan
           </h2>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
             No vanity score. Each finding becomes a prioritized recommendation
             you can send straight to Content Hub.
           </p>
@@ -507,7 +507,7 @@ function ActionPlan() {
           <Link to="/content-hub/">
             <Button
               size="lg"
-              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl shadow-lg shadow-black/20 transition-all duration-300"
             >
               Continue in Content Hub
               <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -538,7 +538,7 @@ function FlywheelDiagnoseVerify() {
           <span className="text-white">Diagnose</span> and{" "}
           <span className="text-white">Verify</span>
         </h2>
-        <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-12">
+        <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-12">
           It finds what's holding a page back before launch, and confirms the
           fix actually moved visibility after, the two checkpoints that keep
           the loop honest.
