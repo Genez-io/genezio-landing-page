@@ -47,11 +47,11 @@ export function GenezioPricingProducts() {
         <div className="text-center mb-10 md:mb-14">
           <HeroEyebrow className="mb-4 mx-auto w-fit">One platform, every product</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight max-w-3xl mx-auto">
-            Every enterprise plan includes the full platform
+            One platform, scoped to what you need
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-5">
-            Measure, diagnose, publish, and sell, the complete suite, scoped to
-            the engines, markets, and volume you need.
+            Measure, diagnose, publish, and sell. Pick the modules, engines,
+            markets, and volume that fit your brand.
           </p>
         </div>
 

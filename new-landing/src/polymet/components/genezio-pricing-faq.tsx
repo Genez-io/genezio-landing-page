@@ -24,7 +24,7 @@ export function GenezioPricingFaq() {
       question: "What's included in the platform?",
       answer: (
         <>
-          Every enterprise plan includes the full platform:{" "}
+          The Genezio platform spans:{" "}
           <a href="/conversational-brand-presence/" className="text-emerald-400 hover:underline">
             Monitor &amp; benchmark
           </a>{" "}
@@ -40,7 +40,8 @@ export function GenezioPricingFaq() {
           <a href="/in-chat-shopping/" className="text-emerald-400 hover:underline">
             In-Chat Shopping
           </a>{" "}
-          (AI product intelligence). You scope the volume, not the feature set.
+          (AI product intelligence). Your plan is scoped to the modules,
+          engines, markets, and volume you actually need.
         </>
       ),
     },
