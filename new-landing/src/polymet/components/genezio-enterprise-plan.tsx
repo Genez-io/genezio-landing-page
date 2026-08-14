@@ -29,7 +29,7 @@ const CONTENT: Record<"brands" | "agencies", EnterprisePlanContent> = {
     eyebrow: "Enterprise",
     titleWord: "brand",
     sectionSubtitle:
-      "No fixed tiers. Your plan is shaped by the engines, markets, and volume you actually need.",
+      "Your plan is shaped by the engines, markets, and volume you actually need.",
     description:
       "Tailored AI visibility for multi-market brands and teams. We scope pricing around the answer engines, markets, and conversation volume that matter to you, so you only pay for what moves the needle.",
     enginesLabel: "All answer engines tracked",
@@ -160,6 +160,11 @@ export function GenezioEnterprisePlan({
       <div className="relative max-w-6xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-10 md:mb-14">
+          {isPageHero && (
+            <HeroEyebrow className="mb-6 mx-auto w-fit">
+              Enterprise pricing
+            </HeroEyebrow>
+          )}
           <Heading className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             {interactive ? (
               <>

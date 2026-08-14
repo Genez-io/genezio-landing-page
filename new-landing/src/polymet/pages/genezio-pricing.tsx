@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioEnterprisePlan } from "@/polymet/components/genezio-enterprise-plan";
+import { GenezioExpertServices } from "@/polymet/components/genezio-expert-services";
 import { GenezioPricingProducts } from "@/polymet/components/genezio-pricing-products";
 import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
 
-const PRICING_TITLE = "Flexible plans for your AI brand visibility";
+const PRICING_TITLE = "Enterprise Pricing for AI Brand Visibility | Genezio";
 const PRICING_DESCRIPTION =
-  "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
+  "Genezio is a custom Enterprise plan shaped around the answer engines, markets, and conversation volume you need, with optional dedicated AI-SEO and GEO experts to run the platform and produce your content. Book a demo for a tailored quote.";
 
 export function GenezioPricing() {
   const [selectedAudience, setSelectedAudience] = useState<
@@ -164,6 +165,7 @@ export function GenezioPricing() {
               onVariantChange={setSelectedAudience}
               isPageHero
             />
+            <GenezioExpertServices />
             <GenezioPricingProducts />
             <GenezioGroupLevelView />
             <GenezioPricingFaq />
@@ -175,6 +177,7 @@ export function GenezioPricing() {
               onVariantChange={setSelectedAudience}
               isPageHero
             />
+            <GenezioExpertServices />
             <GenezioPricingProducts />
             <GenezioGroupLevelView />
             <AgencyFaqSection />
