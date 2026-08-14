@@ -32,28 +32,28 @@ const questions = [
 
 export function AboutCustomersSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#050506] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16, 185, 129,0.04),transparent_50%)]" />
+    <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
+      {/* Top hairline divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      {/* Subtle glow */}
+      <div className="pointer-events-none absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-white/[0.03] rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text content */}
           <div>
+            <HeroEyebrow className="mb-6 w-fit">Our customers</HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Our{" "}
-              <span className="text-white">
-                Customers
-              </span>
+              Our Customers
             </h2>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed mb-4">
+            <p className="text-base md:text-lg text-white/60 leading-relaxed mb-4">
               Genezio serves marketing professionals and decision-makers who
               need more than prompt monitoring. Our customers include enterprise
               brands, growth-stage companies, and agencies that want a central
-              platform for AI-driven search visibility and recommendation
-              analytics.
+              AI recommendation intelligence platform.
             </p>
-            <p className="text-base md:text-lg text-[#B0B0B3] leading-relaxed">
+            <p className="text-base md:text-lg text-white/60 leading-relaxed">
               Genezio gives everyone the same operating picture, whether the
               work happens in-house, with a PR partner, or through multiple
               content agencies.
@@ -62,18 +62,20 @@ export function AboutCustomersSection() {
 
           {/* Right: Questions list */}
           <div className="space-y-4">
-            <HeroEyebrow className="mb-4 mx-auto w-fit">Questions our customers answer with Genezio</HeroEyebrow>
+            <HeroEyebrow className="mb-4 mx-auto w-fit">
+              Questions our customers answer with Genezio
+            </HeroEyebrow>
             {questions.map((question, index) => {
               const Icon = question.icon;
               return (
                 <div
                   key={index}
-                  className="group flex items-start gap-4 p-4 rounded-xl bg-[#0E0E10] border border-white/10 hover:border-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-500/10"
+                  className="flex items-start gap-4 bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:from-zinc-500/30 group-hover:to-transparent transition-all">
-                    <Icon className="w-5 h-5 text-zinc-400" />
+                  <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-emerald-400" />
                   </div>
-                  <p className="text-white/90 font-medium leading-relaxed pt-1.5">
+                  <p className="text-white/80 font-medium leading-relaxed pt-2">
                     {question.text}
                   </p>
                 </div>

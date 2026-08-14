@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  SparklesIcon,
   MessageSquareIcon,
   TrendingUpIcon,
   TargetIcon,
@@ -10,14 +9,15 @@ import {
 export function AboutHeroSection() {
   return (
     <section className="relative bg-[#050506] pt-40 pb-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-600/10 via-transparent to-transparent" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.04] rounded-full blur-3xl" />
+      {/* Subtle center glow */}
+      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.03] rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <HeroEyebrow className="mb-8">About Genezio</HeroEyebrow>
+          {/* Eyebrow */}
+          <HeroEyebrow className="mb-8 mx-auto w-fit">
+            About Genezio
+          </HeroEyebrow>
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -45,7 +45,7 @@ export function AboutHeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-lg rounded-lg shadow-lg shadow-black/20 transition-all duration-200 hover:scale-105"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-lg rounded-xl transition-colors"
               >
                 Book a Demo
               </Button>
@@ -54,7 +54,7 @@ export function AboutHeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-8 py-6 text-lg rounded-lg transition-all"
+                className="border border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-8 py-6 text-lg rounded-xl transition-colors"
               >
                 Talk to Sales
               </Button>
@@ -63,15 +63,15 @@ export function AboutHeroSection() {
 
           {/* Visual indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 max-w-3xl mx-auto">
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1">
-              <MessageSquareIcon className="w-8 h-8 text-zinc-400" />
+            <div className="flex flex-col items-center gap-3 bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
+              <MessageSquareIcon className="w-8 h-8 text-emerald-400" />
               <div className="text-2xl font-bold text-white">AI-Native</div>
               <div className="text-sm text-white/60">
                 Built for Generative Search
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/15 transition-all duration-300 hover:-translate-y-1">
+            <div className="flex flex-col items-center gap-3 bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
               <TrendingUpIcon className="w-8 h-8 text-emerald-400" />
               <div className="text-2xl font-bold text-white">
                 Recommendation
@@ -81,8 +81,8 @@ export function AboutHeroSection() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1">
-              <TargetIcon className="w-8 h-8 text-zinc-400" />
+            <div className="flex flex-col items-center gap-3 bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
+              <TargetIcon className="w-8 h-8 text-emerald-400" />
               <div className="text-2xl font-bold text-white">Actionable</div>
               <div className="text-sm text-white/60">
                 Insights & Benchmarks
