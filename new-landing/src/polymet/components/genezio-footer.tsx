@@ -38,6 +38,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
       { label: "Support Terms", href: "/support-terms/" },
       { label: "Privacy Policy", href: "/privacy-policy/" },
       { label: "Data Processing Agreement", href: "/data-processing-agreement/" },
+      { label: "Trust Center", href: "https://trust.genezio.com/" },
     ],
   },
 ];
@@ -102,6 +103,9 @@ export function GenezioFooter() {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      {...(link.href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       className="text-zinc-400 hover:text-white text-sm transition-colors"
                     >
                       {link.label}

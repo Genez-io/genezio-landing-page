@@ -288,7 +288,7 @@ function CapabilitySections() {
       <Hairline />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
-        <div className="max-w-2xl mb-14 md:mb-20">
+        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-[-0.02em] text-white leading-tight">
             Everything your security team asks for
           </h2>
