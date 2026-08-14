@@ -327,9 +327,9 @@ export function GenezioHeader() {
 
             {/* Resources Dropdown Menu */}
             {resourcesMenuOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[560px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="absolute top-full left-0 mt-6 w-[560px] bg-[#0E0E10] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Arrow pointer */}
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
+                <div className="absolute -top-2 left-8 w-4 h-4 bg-[#0E0E10] border-l border-t border-white/10 rotate-45" />
 
                 <div className="relative p-6">
                   <div className="grid grid-cols-2 gap-6">
