@@ -238,8 +238,8 @@ export function GenezioPerceptionSection() {
                     </span>
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2.5">
-                        <span className="w-16 text-[10px] uppercase tracking-wider text-white/35">
-                          Known
+                        <span className="w-20 text-[10px] uppercase tracking-wider text-white/35">
+                          Mentioned
                         </span>
                         <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
                           <div
@@ -249,7 +249,7 @@ export function GenezioPerceptionSection() {
                         </div>
                       </div>
                       <div className="flex items-center gap-2.5">
-                        <span className="w-16 text-[10px] uppercase tracking-wider text-white/35">
+                        <span className="w-20 text-[10px] uppercase tracking-wider text-white/35">
                           Rec.
                         </span>
                         <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
@@ -275,8 +275,9 @@ export function GenezioPerceptionSection() {
               })}
             </div>
             <p className="mt-6 pt-5 border-t border-white/10 text-xs text-white/40">
-              Illustrative. A wide gap means AI knows you for it, but recommends
-              someone else, exactly where an intervention moves the needle.
+              Illustrative. A wide gap means AI mentions you for it, but
+              recommends someone else, exactly where an intervention moves the
+              needle.
             </p>
           </div>
         </div>
