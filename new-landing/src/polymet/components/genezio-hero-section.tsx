@@ -105,17 +105,21 @@ export function GenezioHeroSection() {
                     {
                       icon: QuoteIcon,
                       label: "Citations",
-                      chips: ["sleepfoundation.org", "oura.com"],
+                      chips: ["sleepfoundation.org", "oura.com", "whoop.com"],
                     },
                     {
                       icon: GitForkIcon,
                       label: "Query fanouts",
-                      chips: ["best sleep wearables", "tracking accuracy"],
+                      chips: [
+                        "best sleep tracker 2026",
+                        "most accurate sleep wearable",
+                        "Oura vs Whoop for sleep",
+                      ],
                     },
                     {
                       icon: SparklesIcon,
                       label: "Perceptions",
-                      chips: ["accurate tracking", "comfortable to wear"],
+                      chips: ["Accurate sleep-stage tracking, validated in studies"],
                     },
                   ].map((row) => {
                     const Icon = row.icon;
