@@ -91,7 +91,7 @@ function WebsiteAnalyzerHero() {
       <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <HeroEyebrow className="mb-6 mx-auto w-fit">Website Analyzer</HeroEyebrow>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight text-white">
           Is your whole site ready
           <br />
           <span className="text-emerald-400">for AI to recommend?</span>

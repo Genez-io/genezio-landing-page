@@ -136,7 +136,7 @@ export function GenezioAiTrafficSection() {
         <BandLabel>Outsized in revenue</BandLabel>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {/* Headline first-party stat */}
-          <div className="bg-white/5 border border-white/20 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
+          <div className="bg-white/[0.06] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
             <div className="text-6xl md:text-7xl font-extrabold text-emerald-400 leading-none mb-5">
               37%
             </div>

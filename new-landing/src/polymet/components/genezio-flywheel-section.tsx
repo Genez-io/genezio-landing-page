@@ -193,7 +193,7 @@ export function GenezioBusinessGoalsSection() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-xs text-white/40">
+              <p className="mt-5 text-xs text-white/50">
                 One new action arrives each week, and you run it right in the
                 platform.
               </p>

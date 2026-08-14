@@ -45,7 +45,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
 
 export function GenezioFooter() {
   return (
-    <footer className="bg-black border-t border-white/5">
+    <footer className="bg-[#050506] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 py-12 md:py-16">
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 md:gap-10 mb-10">
           {/* Brand */}

@@ -22,7 +22,7 @@ export function GenezioRobotReaderSection() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <HeroEyebrow className="mb-6">The twist</HeroEyebrow>
+          <HeroEyebrow className="mb-6 mx-auto w-fit">The twist</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">
             Your content's most important reader{" "}
             <span className="text-white">
@@ -62,7 +62,7 @@ export function GenezioRobotReaderSection() {
 
           {/* What the machine keeps */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
-            <div className="text-xs font-mono text-zinc-400 tracking-widest mb-5">
+            <div className="text-xs font-mono text-white/40 tracking-widest mb-5">
               WHAT THE MACHINE KEEPS
             </div>
             <div className="space-y-3">

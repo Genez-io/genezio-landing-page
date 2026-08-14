@@ -134,7 +134,7 @@ function McpHero() {
 /* ───────────────────────  GROUNDED IN DATA BAND  ─────────────────── */
 function GroundedBand() {
   return (
-    <section className="py-16 md:py-24 bg-[#0E0E10] relative">
+    <section className="py-16 md:py-28 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 mb-6">
@@ -323,10 +323,10 @@ function SkillsAndRoutines() {
             <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
               <BlocksIcon className="w-5 h-5 text-emerald-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
               Skills that already know the questions
-            </h2>
-            <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-6">
+            </h3>
+            <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
               Ship faster with predefined skills built by the Genezio team,
               each one a battle-tested workflow over your conversation data.
             </p>
@@ -345,10 +345,10 @@ function SkillsAndRoutines() {
             <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
               <ClockIcon className="w-5 h-5 text-emerald-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
               Routines that run without you
-            </h2>
-            <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-6">
+            </h3>
+            <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
               Turn any skill into a schedule. The MCP runs it on cadence and
               delivers the result where your team already reads it.
             </p>

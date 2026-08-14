@@ -274,7 +274,7 @@ export function GenezioPerceptionSection() {
                 );
               })}
             </div>
-            <p className="mt-6 pt-5 border-t border-white/10 text-xs text-white/40">
+            <p className="mt-6 pt-5 border-t border-white/10 text-xs text-white/50">
               Illustrative. A wide gap means AI mentions you for it, but
               recommends someone else, exactly where an intervention moves the
               needle.

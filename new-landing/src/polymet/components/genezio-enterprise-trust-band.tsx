@@ -18,7 +18,7 @@ export function GenezioEnterpriseTrustBand() {
   return (
     <section className="py-12 md:py-16 bg-[#050506] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
-        <p className="text-center text-xs md:text-sm text-white/40 uppercase tracking-widest font-medium mb-8">
+        <p className="text-center text-xs md:text-sm text-white/60 uppercase tracking-[0.2em] font-medium mb-8">
           Built for the enterprise
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
