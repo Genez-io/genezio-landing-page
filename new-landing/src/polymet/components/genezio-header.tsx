@@ -107,27 +107,6 @@ export function GenezioHeader() {
                         Products
                       </div>
                       <div className="space-y-1">
-                        {/* AI Agent Analytics */}
-                        <Link
-                          to="/increase-conversion/"
-                          onClick={() => setPlatformMenuOpen(false)}
-                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                              <BarChart3Icon className="w-5 h-5 text-white/70" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
-                                AI Agent Analytics
-                              </div>
-                              <div className="text-white/60 text-xs leading-relaxed">
-                                Convert more from agent conversations
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-
                         {/* Website Analyzer */}
                         <Link
                           to="/website-analyzer/"
@@ -191,6 +170,27 @@ export function GenezioHeader() {
                           </div>
                         </Link>
 
+                        {/* Content Analysis (moved below) → AI Agent Analytics */}
+                        <Link
+                          to="/increase-conversion/"
+                          onClick={() => setPlatformMenuOpen(false)}
+                          className="group block p-3 rounded-xl hover:bg-white/5 transition-all"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                              <BarChart3Icon className="w-5 h-5 text-white/70" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
+                                AI Agent Analytics
+                              </div>
+                              <div className="text-white/60 text-xs leading-relaxed">
+                                Convert more from agent conversations
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+
                         {/* In-Chat Shopping */}
                         <Link
                           to="/in-chat-shopping/"
@@ -202,13 +202,8 @@ export function GenezioHeader() {
                               <ShoppingBagIcon className="w-5 h-5 text-white/70" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                                <div className="text-white font-semibold text-sm group-hover:text-white transition-colors">
-                                  In-Chat Shopping
-                                </div>
-                                <span className="px-2 py-0.5 text-[10px] font-semibold bg-white/10 text-emerald-300 rounded-md border border-white/15 whitespace-nowrap flex-shrink-0">
-                                  NEW
-                                </span>
+                              <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
+                                In-Chat Shopping
                               </div>
                               <div className="text-white/60 text-xs leading-relaxed">
                                 AI shopping & agentic commerce
@@ -235,13 +230,8 @@ export function GenezioHeader() {
                             <PlugIcon className="w-5 h-5 text-white/70" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                              <div className="text-white font-semibold text-sm group-hover:text-white transition-colors">
-                                MCP
-                              </div>
-                              <span className="px-2 py-0.5 text-[10px] font-semibold bg-white/10 text-emerald-300 rounded-md border border-white/15 whitespace-nowrap flex-shrink-0">
-                                NEW
-                              </span>
+                            <div className="text-white font-semibold text-sm mb-0.5 group-hover:text-white transition-colors">
+                              MCP
                             </div>
                             <div className="text-white/60 text-xs leading-relaxed">
                               Your data in any AI assistant
@@ -507,18 +497,6 @@ export function GenezioHeader() {
                 <div className="pl-4 space-y-3 border-l-2 border-white/10">
                   <div className="space-y-2">
                     <a
-                      href="/increase-conversion/"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-2"
-                    >
-                      <div className="text-white text-sm font-medium">
-                        AI Agent Analytics
-                      </div>
-                      <div className="text-white/60 text-xs">
-                        Convert more from agent conversations
-                      </div>
-                    </a>
-                    <a
                       href="/website-analyzer/"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
@@ -555,6 +533,18 @@ export function GenezioHeader() {
                       </div>
                     </a>
                     <a
+                      href="/increase-conversion/"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2"
+                    >
+                      <div className="text-white text-sm font-medium">
+                        AI Agent Analytics
+                      </div>
+                      <div className="text-white/60 text-xs">
+                        Convert more from agent conversations
+                      </div>
+                    </a>
+                    <a
                       href="/in-chat-shopping/"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
@@ -571,12 +561,7 @@ export function GenezioHeader() {
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2"
                     >
-                      <div className="flex items-center gap-2">
-                        <div className="text-white text-sm font-medium">MCP</div>
-                        <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-white/10 text-emerald-300 rounded-md border border-white/15">
-                          NEW
-                        </span>
-                      </div>
+                      <div className="text-white text-sm font-medium">MCP</div>
                       <div className="text-white/60 text-xs">
                         Your data in any AI assistant
                       </div>

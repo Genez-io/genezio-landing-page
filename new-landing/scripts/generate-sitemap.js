@@ -20,6 +20,7 @@ const staticRoutes = [
     '/content-analysis',
     '/in-chat-shopping',
     '/mcp',
+    '/security',
     '/glossary',
     '/terms-and-conditions',
     '/support-terms',

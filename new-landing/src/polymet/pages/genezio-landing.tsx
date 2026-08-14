@@ -13,6 +13,7 @@ import { GenezioProductPillarsSection } from "@/polymet/components/genezio-produ
 import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-reader-section";
 import { GenezioFlywheelSection } from "@/polymet/components/genezio-flywheel-section";
 import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterprise-trust-band";
+import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 
 export function GenezioLanding() {
   return (
@@ -63,6 +64,9 @@ export function GenezioLanding() {
         <GenezioBrandedQuestionsSection />
         <GenezioInsightsSection />
         <GenezioTestimonialSection />
+
+        {/* Enterprise: multi-brand executive view + enterprise-readiness */}
+        <GenezioGroupLevelView />
         <GenezioEnterpriseSection />
 
         <GenezioCtaSection />

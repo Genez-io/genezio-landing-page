@@ -20,6 +20,7 @@ const routes = [
   "/content-analysis",
   "/in-chat-shopping",
   "/mcp",
+  "/security",
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",

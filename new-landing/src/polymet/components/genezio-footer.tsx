@@ -42,6 +42,22 @@ export function GenezioFooter() {
                   Increase In-Chat Shopping (soon)
                 </a>
               </li>
+              <li>
+                <a
+                  href="/mcp/"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
+                >
+                  MCP
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/security/"
+                  className="text-zinc-400 hover:text-white text-sm transition-colors"
+                >
+                  Enterprise &amp; Security
+                </a>
+              </li>
             </ul>
           </div>
 

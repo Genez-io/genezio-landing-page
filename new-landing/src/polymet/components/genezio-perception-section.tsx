@@ -32,6 +32,14 @@ function poly(vals: number[]): string {
 
 const YOU = [0.86, 0.62, 0.55, 0.8, 0.7];
 const COMPETITOR = [0.6, 0.9, 0.83, 0.5, 0.74];
+
+/* Association (known-for) vs recommendation (recommended-for), illustrative */
+const ATTRIBUTES = [
+  { name: "Digital experience", known: 84, rec: 76 },
+  { name: "Trust & security", known: 88, rec: 81 },
+  { name: "Low fees", known: 73, rec: 44 },
+  { name: "Mortgages", known: 66, rec: 38 },
+];
 const RINGS = [0.25, 0.5, 0.75, 1].map((f) =>
   AXES.map((_, i) => pt(i, R * f).join(",")).join(" ")
 );
@@ -157,11 +165,12 @@ export function GenezioPerceptionSection() {
           <div>
             <HeroEyebrow className="mb-6 w-fit">Know where you stand</HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Today, you have to know how AI sees your brand
+              Know why AI recommends someone else — and what changes that
             </h2>
             <p className="text-base md:text-lg text-white/60 leading-relaxed mb-8">
-              Answer engines are the new front page. Winning starts with a clear
-              picture of how AI sees, ranks, and sometimes misreads your brand.
+              Being seen isn't the same as being chosen. Genezio shows why an
+              answer engine picks a competitor over you, and the exact move that
+              flips the recommendation in your favor.
             </p>
 
             <ul className="space-y-3.5 mb-10">
@@ -193,6 +202,82 @@ export function GenezioPerceptionSection() {
           {/* Right: competitive radar */}
           <div className="relative">
             <RadarCard />
+          </div>
+        </div>
+
+        {/* Perception ≠ recommendation gap */}
+        <div className="mt-16 md:mt-20">
+          <div className="max-w-2xl mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 leading-tight">
+              Being known for something isn't being recommended for it
+            </h3>
+            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+              AI can strongly associate your brand with an attribute and still
+              send the customer to a competitor. We show the gap attribute by
+              attribute, so you fix the ones that actually decide the pick.
+            </p>
+          </div>
+
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
+            <div className="hidden sm:grid grid-cols-[160px_1fr_120px] gap-4 pb-4 mb-4 border-b border-white/10 text-[11px] uppercase tracking-[0.2em] text-white/35">
+              <span>Attribute</span>
+              <span>Known for vs recommended for</span>
+              <span className="text-right">Gap</span>
+            </div>
+            <div className="space-y-5">
+              {ATTRIBUTES.map((a) => {
+                const gap = a.known - a.rec;
+                const wins = gap >= 20;
+                return (
+                  <div
+                    key={a.name}
+                    className="grid grid-cols-1 sm:grid-cols-[160px_1fr_120px] gap-3 sm:gap-4 sm:items-center"
+                  >
+                    <span className="text-sm font-medium text-white/80">
+                      {a.name}
+                    </span>
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2.5">
+                        <span className="w-16 text-[10px] uppercase tracking-wider text-white/35">
+                          Known
+                        </span>
+                        <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-white/40"
+                            style={{ width: `${a.known}%` }}
+                          />
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2.5">
+                        <span className="w-16 text-[10px] uppercase tracking-wider text-white/35">
+                          Rec.
+                        </span>
+                        <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-emerald-500"
+                            style={{ width: `${a.rec}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="sm:text-right">
+                      {wins ? (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white/70">
+                          <span className="h-1.5 w-1.5 rounded-[2px] bg-emerald-400" />
+                          −{gap} pts
+                        </span>
+                      ) : (
+                        <span className="text-xs text-white/35">Aligned</span>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="mt-6 pt-5 border-t border-white/10 text-xs text-white/40">
+              Illustrative. A wide gap means AI knows you for it, but recommends
+              someone else, exactly where an intervention moves the needle.
+            </p>
           </div>
         </div>
       </div>

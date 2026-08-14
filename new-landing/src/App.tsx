@@ -26,6 +26,7 @@ import { ContentAnalysis } from "./polymet/pages/content-analysis";
 import { WebsiteAnalyzer } from "./polymet/pages/website-analyzer";
 import { InChatShopping } from "./polymet/pages/in-chat-shopping";
 import { Mcp } from "./polymet/pages/mcp";
+import { Security } from "./polymet/pages/security";
 import { GenezioLandingV2 } from "@/polymet/v2/pages/genezio-landing";
 import { GenezioLayoutV2 } from "@/polymet/v2/layouts/genezio-layout";
 
@@ -165,6 +166,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <Mcp />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/security"
+        element={
+          <GenezioLayout>
+            <Security />
           </GenezioLayout>
         }
       />
