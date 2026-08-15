@@ -2,12 +2,9 @@ import { Button } from "@/components/ui/button";
 
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  LightbulbIcon,
   TrendingUpIcon,
   TargetIcon,
-  MessageSquareIcon,
   CheckCircleIcon,
-  ArrowRightIcon,
   SparklesIcon
 } from "lucide-react";
 

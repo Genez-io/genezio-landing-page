@@ -1,7 +1,7 @@
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Input } from "@/components/ui/input";
-import { SearchIcon, BookOpenIcon } from "lucide-react";
+import { SearchIcon } from "lucide-react";
 import { useState } from "react";
 
 interface GlossaryTerm {

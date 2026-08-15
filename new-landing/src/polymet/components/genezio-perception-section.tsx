@@ -7,7 +7,6 @@ import {
   TrophyIcon,
   TargetIcon,
   RefreshCwIcon,
-  CheckCircle2Icon,
   SparklesIcon,
   BriefcaseIcon,
   Building2Icon,

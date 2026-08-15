@@ -1,6 +1,5 @@
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  LayersIcon,
   ArrowRightIcon,
   SparklesIcon,
   TrendingUpIcon,

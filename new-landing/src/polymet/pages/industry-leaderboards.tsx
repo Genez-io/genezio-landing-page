@@ -7,7 +7,6 @@ import {
   ShirtIcon,
   BuildingIcon,
   ArrowRightIcon,
-  ZapIcon,
   BarChart2Icon,
   GlobeIcon,
   SparklesIcon,

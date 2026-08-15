@@ -2,10 +2,8 @@ import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   ShieldCheckIcon,
   TrendingDownIcon,
-  AlertTriangleIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  SparklesIcon,
 } from "lucide-react";
 
 export function EscalationReduction() {

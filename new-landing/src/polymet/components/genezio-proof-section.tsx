@@ -1,5 +1,3 @@
-import { TrendingUpIcon } from "lucide-react";
-
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioProofSection() {
   const secondaryStats = [

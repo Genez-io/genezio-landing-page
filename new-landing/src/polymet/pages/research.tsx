@@ -5,7 +5,6 @@ import {
   ArrowRightIcon,
   ClockIcon,
   CalendarIcon,
-  FlaskConicalIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";

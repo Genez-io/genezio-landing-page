@@ -3,7 +3,6 @@ import {
   LinkIcon,
   MessageSquareIcon,
   HashIcon,
-  SearchIcon,
   FileTextIcon,
   TrendingUpIcon,
 } from "lucide-react";

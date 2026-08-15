@@ -38,7 +38,7 @@ export function AgencyHeroSection() {
               </Button>
             </Link>
             <a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
               className="w-full sm:w-auto"
             >

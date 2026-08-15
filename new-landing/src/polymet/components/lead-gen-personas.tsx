@@ -1,53 +1,12 @@
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  UsersIcon,
   BriefcaseIcon,
   GraduationCapIcon,
-  ShoppingBagIcon,
   BuildingIcon,
   SparklesIcon,
 } from "lucide-react";
 
 export function LeadGenPersonas() {
-  const personas = [
-    {
-      icon: BriefcaseIcon,
-      title: "Enterprise Decision Makers",
-      description: "C-suite executives looking for scalable solutions",
-      queries: "ROI, integration, security, compliance",
-      color: "bg-white/10",
-      borderColor: "border-white/10",
-      iconColor: "text-zinc-400",
-    },
-    {
-      icon: GraduationCapIcon,
-      title: "Technical Evaluators",
-      description: "Engineers and architects assessing capabilities",
-      queries: "API, performance, architecture, documentation",
-      color: "bg-white/10",
-      borderColor: "border-white/10",
-      iconColor: "text-emerald-400",
-    },
-    {
-      icon: ShoppingBagIcon,
-      title: "SMB Owners",
-      description: "Small business owners seeking quick wins",
-      queries: "Pricing, ease of use, support, quick setup",
-      color: "bg-white/10",
-      borderColor: "border-white/10",
-      iconColor: "text-emerald-400",
-    },
-    {
-      icon: BuildingIcon,
-      title: "Agency Partners",
-      description: "Marketing agencies managing multiple clients",
-      queries: "White-label, multi-tenant, reporting, automation",
-      color: "bg-white/10",
-      borderColor: "border-white/10",
-      iconColor: "text-zinc-400",
-    },
-  ];
-
   return (
     <section className="relative py-16 sm:py-24 bg-[#050506] overflow-hidden">
       {/* Background Elements */}

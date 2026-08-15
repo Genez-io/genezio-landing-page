@@ -157,23 +157,23 @@ function SecurityHero() {
             href={SALES_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group"
+            className="inline-flex items-center gap-2 px-5 py-3 text-white/80 hover:text-white transition-colors duration-200 text-base font-medium group"
           >
             Talk to Enterprise Sales
             <ArrowRightIcon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
           </a>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/40">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/70">
           <span className="inline-flex items-center gap-1.5">
-            <ShieldCheckIcon className="w-3.5 h-3.5 text-white/40" />
+            <ShieldCheckIcon className="w-3.5 h-3.5 text-emerald-400" />
             SOC 2 Type II
           </span>
-          <span className="hidden sm:inline text-white/15">·</span>
+          <span className="hidden sm:inline text-white/25">·</span>
           <span>ISO 27001</span>
-          <span className="hidden sm:inline text-white/15">·</span>
+          <span className="hidden sm:inline text-white/25">·</span>
           <span>CSA STAR Level 1</span>
-          <span className="hidden sm:inline text-white/15">·</span>
+          <span className="hidden sm:inline text-white/25">·</span>
           <span>GDPR compliant</span>
         </div>
       </div>

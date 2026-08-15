@@ -142,7 +142,7 @@ export function GenezioEnterprisePlan({
             <span className="flex w-full items-center justify-between gap-3">
               your {CONTENT[v].titleWord}
               {v === variant && (
-                <CheckIcon className="h-4 w-4 text-zinc-400" />
+                <CheckIcon className="h-4 w-4 text-emerald-400" />
               )}
             </span>
           </DropdownMenuItem>
@@ -266,7 +266,7 @@ export function GenezioEnterprisePlan({
                 {content.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5">
-                      <CheckIcon className="h-3 w-3 text-zinc-400" />
+                      <CheckIcon className="h-3 w-3 text-white/70" />
                     </div>
                     <span className="text-sm leading-snug text-white/80">
                       {feature}

@@ -1,7 +1,5 @@
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  MessageSquareIcon,
-  TagIcon,
   TrendingUpIcon,
   AlertCircleIcon,
   CheckCircleIcon,

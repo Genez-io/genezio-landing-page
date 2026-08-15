@@ -23,9 +23,6 @@ import {
   CheckCircle2Icon,
 } from "lucide-react";
 
-const DEMO_URL =
-  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
-
 /**
  * Zoho lead-capture endpoint (hidden-iframe POST). Update to the dedicated
  * Website Analyzer form + field names when it's ready.

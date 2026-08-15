@@ -1,4 +1,4 @@
-import { EyeOffIcon, XCircleIcon } from "lucide-react";
+import { XCircleIcon } from "lucide-react";
 
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioRobotReaderSection() {

@@ -1,5 +1,3 @@
-import { SearchXIcon } from "lucide-react";
-
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioShiftSection() {
   const stats = [

@@ -3,7 +3,6 @@ import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
-  ShoppingBagIcon,
   StoreIcon,
   PackageIcon,
   BookOpenIcon,
@@ -14,7 +13,6 @@ import {
   CopyIcon,
   TagIcon,
   QuoteIcon,
-  ArrowRightIcon,
 } from "lucide-react";
 
 const DEMO_URL =

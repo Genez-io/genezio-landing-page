@@ -10,7 +10,6 @@ import {
   ArrowLeftIcon,
   ClockIcon,
   CalendarIcon,
-  SparklesIcon
 } from "lucide-react";
 import { getPostById, getAllPosts, getPostPath } from "@/lib/posts";
 import { authors } from "@/lib/authors";

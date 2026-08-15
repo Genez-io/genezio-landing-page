@@ -1,5 +1,3 @@
-import { BadgeCheckIcon } from "lucide-react";
-
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 export function GenezioOfficialSection() {
   const openaiStats = [

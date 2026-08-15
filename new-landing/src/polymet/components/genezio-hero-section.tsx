@@ -62,16 +62,16 @@ export function GenezioHeroSection() {
             </div>
 
             {/* Enterprise trust microline */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-xs text-white/40">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-xs text-white/70">
               <span className="inline-flex items-center gap-1.5">
-                <ShieldCheckIcon className="w-3.5 h-3.5 text-white/40" />
+                <ShieldCheckIcon className="w-3.5 h-3.5 text-emerald-400" />
                 SOC 2 Type II
               </span>
-              <span className="hidden sm:inline text-white/15">·</span>
+              <span className="hidden sm:inline text-white/25">·</span>
               <span>ISO 27001</span>
-              <span className="hidden sm:inline text-white/15">·</span>
+              <span className="hidden sm:inline text-white/25">·</span>
               <span>CSA STAR Level 1</span>
-              <span className="hidden sm:inline text-white/15">·</span>
+              <span className="hidden sm:inline text-white/25">·</span>
               <span>GDPR compliant</span>
             </div>
           </div>
