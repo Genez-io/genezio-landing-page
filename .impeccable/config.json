@@ -1,3 +1,15 @@
 {
-  "buildPath": "comp"
+  "buildPath": "comp",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-08-15T19:34:07.903Z",
+        "reason": "Incumbent brand typeface: self-hosted @fontsource-variable/inter with alternate glyphs cv02/cv03/cv04/cv11/ss01 enabled, documented as the type system in DESIGN.md (committed 8392a4bd). Not a default reached for by habit."
+      }
+    ]
+  }
 }
