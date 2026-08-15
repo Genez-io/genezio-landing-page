@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-15T00:00:00Z",
+  "title": "Design System: Genezio",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#050506",
+        "tonalRamp": ["#050506", "#0E0E10", "#17171A", "#232327", "#3A3A40", "#5C5C64", "#8E8E96", "#C9C9CF"]
+      },
+      "band": {
+        "role": "neutral",
+        "displayName": "Band",
+        "canonical": "#0E0E10",
+        "tonalRamp": ["#0E0E10", "#17171A", "#232327", "#313136", "#4A4A51", "#70707A", "#A1A1A9", "#D6D6DA"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#0A0A0C",
+        "tonalRamp": ["#0A0A0C", "#141417", "#1F1F23", "#2E2E33", "#47474E", "#6D6D77", "#9E9EA7", "#D3D3D8"]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Green",
+        "canonical": "#02F8A2",
+        "tonalRamp": ["#004D32", "#00744B", "#009863", "#00BE7A", "#00E191", "#02F8A2", "#4FFAB8", "#C7FDE7"]
+      },
+      "signal-bright": {
+        "role": "primary",
+        "displayName": "Signal Bright",
+        "canonical": "#4FFAB8",
+        "tonalRamp": ["#004D32", "#00744B", "#009863", "#00BE7A", "#00E191", "#02F8A2", "#4FFAB8", "#C7FDE7"]
+      },
+      "signal-deep": {
+        "role": "primary",
+        "displayName": "Signal Deep",
+        "canonical": "#00E191",
+        "tonalRamp": ["#004D32", "#00744B", "#009863", "#00BE7A", "#00E191", "#02F8A2", "#4FFAB8", "#C7FDE7"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#17171A", "#313136", "#4A4A51", "#70707A", "#A1A1A9", "#D6D6DA", "#EDEDF0", "#FFFFFF"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(255,255,255,0.10)",
+        "tonalRamp": ["rgba(255,255,255,0.03)", "rgba(255,255,255,0.05)", "rgba(255,255,255,0.08)", "rgba(255,255,255,0.10)", "rgba(255,255,255,0.15)", "rgba(255,255,255,0.20)", "rgba(255,255,255,0.30)", "rgba(255,255,255,0.40)"]
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(255,255,255,0.20)",
+        "tonalRamp": ["rgba(255,255,255,0.03)", "rgba(255,255,255,0.05)", "rgba(255,255,255,0.08)", "rgba(255,255,255,0.10)", "rgba(255,255,255,0.15)", "rgba(255,255,255,0.20)", "rgba(255,255,255,0.30)", "rgba(255,255,255,0.40)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page-defining hero headline. One per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings. text-4xl is the workhorse." },
+      "title": { "displayName": "Title", "purpose": "Card headings and subsection titles." },
+      "body": { "displayName": "Body", "purpose": "Paragraph text at text-white/60, held to 65-75ch." },
+      "label": { "displayName": "Label", "purpose": "Uppercase tracked group label. Marks a group, never a decorative kicker." }
+    },
+    "shadows": [
+      { "name": "menu", "value": "0 25px 50px -12px rgba(0,0,0,0.25)", "purpose": "Header dropdowns and popovers only, where a panel genuinely floats over content." },
+      { "name": "action", "value": "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)", "purpose": "Primary CTA buttons, giving the one interactive element slight physical presence." }
+    ],
+    "motion": [
+      { "name": "state", "value": "200ms", "purpose": "Hover and focus state changes on controls. 35 uses." },
+      { "name": "surface", "value": "300ms", "purpose": "Larger surface transitions: menus, panels, CTA fills. 39 uses." },
+      { "name": "ease-default", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Tailwind default easing; the system rarely overrides it." },
+      { "name": "drawer", "value": "cubic-bezier(0.82, 0.085, 0.395, 0.895)", "purpose": "Mobile navigation sheet slide-in and slide-out." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1400px" }
+    ],
+    "rootScale": { "value": "15px", "purpose": "html font-size. Every rem-based token inherits a ~6% reduction from browser default." },
+    "fontFeatures": { "value": "\"cv02\", \"cv03\", \"cv04\", \"cv11\", \"ss01\"", "purpose": "Inter alternate glyphs: single-storey a, straighter digits, cleaner l." }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single high-intent action on a section. Black text on Signal Green is deliberate; white would fail contrast.",
+      "html": "<button class=\"ds-btn-primary\">Get a demo</button>",
+      "css": ".ds-btn-primary { background: #02F8A2; color: #000000; padding: 1.5rem 1.75rem; font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-size: 1rem; font-weight: 600; border: none; border-radius: 12px; cursor: pointer; transition: background 200ms cubic-bezier(0.4,0,0.2,1); } .ds-btn-primary:hover { background: #4FFAB8; } .ds-btn-primary:active { background: #00E191; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px #050506, 0 0 0 4px rgba(16,185,129,0.5); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "The secondary action beside a primary CTA. Stroke only; fills on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Talk to Enterprise Sales</button>",
+      "css": ".ds-btn-ghost { background: rgba(255,255,255,0.05); color: #FFFFFF; padding: 1.5rem 1.75rem; font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-size: 1rem; font-weight: 600; border: 2px solid rgba(255,255,255,0.20); border-radius: 12px; cursor: pointer; transition: background 200ms cubic-bezier(0.4,0,0.2,1), border-color 200ms cubic-bezier(0.4,0,0.2,1); } .ds-btn-ghost:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.40); } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 2px #050506, 0 0 0 4px rgba(16,185,129,0.5); }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat container in the page flow. Tonal step plus hairline, never a shadow.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Multi-turn simulation</h3><p class=\"ds-card-body\">Full conversations, not single prompts, measured across personas and markets.</p></div>",
+      "css": ".ds-card { background: #0A0A0C; border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 2rem; transition: border-color 200ms cubic-bezier(0.4,0,0.2,1); } .ds-card:hover { border-color: rgba(255,255,255,0.20); } .ds-card-title { font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem; letter-spacing: -0.02em; } .ds-card-body { font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-size: 1rem; line-height: 1.65; color: rgba(255,255,255,0.60); margin: 0; }"
+    },
+    {
+      "name": "Group Label",
+      "kind": "chip",
+      "refersTo": "label-eyebrow",
+      "description": "Marks a group of content with a signal dot. Not a decorative kicker above a section heading.",
+      "html": "<div class=\"ds-group-label\"><span class=\"ds-group-dot\"></span><span>Certifications</span></div>",
+      "css": ".ds-group-label { display: flex; align-items: center; gap: 0.5rem; } .ds-group-dot { width: 0.375rem; height: 0.375rem; border-radius: 2px; background: #02F8A2; } .ds-group-label span:last-child { font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.50); }"
+    },
+    {
+      "name": "Hairline Seam",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The system's signature structural element: a 1px rule fading to transparent at both ends, separating stacked sections.",
+      "html": "<div class=\"ds-hairline\"></div>",
+      "css": ".ds-hairline { height: 1px; width: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent); }"
+    },
+    {
+      "name": "Navigation Item",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Header link. Muted at rest, resolving to full white on hover.",
+      "html": "<a class=\"ds-nav-item\" href=\"#\">Pricing</a>",
+      "css": ".ds-nav-item { font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; color: rgba(255,255,255,0.60); text-decoration: none; transition: color 200ms cubic-bezier(0.4,0,0.2,1); } .ds-nav-item:hover { color: #FFFFFF; } .ds-nav-item:focus-visible { outline: none; box-shadow: 0 0 0 2px #050506, 0 0 0 4px rgba(16,185,129,0.5); border-radius: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Instrument Panel",
+    "overview": "Genezio measures something invisible — what machines say about a brand when nobody is watching. The interface is built like the readout of a precision instrument: a near-black chassis, hairline rules that organize without decorating, and a single luminous green that means signal. Nothing glows unless it carries a reading.\n\nThe density is editorial rather than dashboard-like. Sections breathe at a fixed rhythm, the container holds at max-w-7xl with px-6 md:px-8 lg:px-16 gutters, and type is set on a slightly reduced 15px root so the whole surface reads calmer and denser than a default Tailwind build. The result should feel like something an enterprise buyer would trust with a board slide: exact, unhurried, quietly expensive.\n\nDepth comes almost entirely from tonal layering — three near-black steps that a casual eye reads as one — not from shadows. Sixty-six shadow utilities across twenty-two thousand lines is the measure of this restraint.",
+    "keyCharacteristics": [
+      "Near-black chassis with a single emerald signal color",
+      "Hairline borders at 10% white as the primary structural device",
+      "Flat by default; depth via three tonal steps, not elevation",
+      "15px root size — the whole system scales ~6% down from browser default",
+      "Inter Variable with alternate glyphs enabled (cv02 cv03 cv04 cv11 ss01)"
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Emerald means \"a reading, a result, or the next action.\" It is never used to make a section look designed. If an element is emerald and carries no data and no action, it is wrong.", "section": "colors" },
+      { "name": "The Three-Step Rule", "body": "There are exactly three background values: Void #050506 for the page, Band #0E0E10 to stripe sections apart, Surface #0A0A0C for cards. A fourth tone is not a new token; it is drift. Anything nested deeper than a card uses a translucent white overlay (bg-white/5), not another opaque hex.", "section": "colors" },
+      { "name": "The No-Gray Rule", "body": "Secondary text is text-white/60, never text-zinc-400 or a gray hex. Opacity keeps text harmonized with whatever sits behind it. This rule is aspirational, not descriptive: text-zinc-400 still appears 173 times against 275 for text-white/60, a second vocabulary inherited from an earlier pass. New work uses the opacity ladder; existing zinc values are a known migration, not a precedent.", "section": "colors" },
+      { "name": "The Semibold Default Rule", "body": "Headings are font-semibold, not font-bold. Bold is reserved for emphasis inside a heading or for numerals in data. Reaching for bold on every heading flattens the hierarchy the weight step is supposed to create.", "section": "typography" },
+      { "name": "The Balanced Heading Rule", "body": "h1-h4 carry text-wrap: balance and letter-spacing: -0.02em globally. Never leave a one-word orphan on a heading's last line; if balance does not fix it, rewrite the heading.", "section": "typography" },
+      { "name": "The Label Is Not An Eyebrow Rule", "body": "The uppercase tracked label marks a group — a SWOT quadrant, a nav column, a table header. It is never a decorative kicker floating above a section heading to announce the section. The heading carries its own weight.", "section": "typography" },
+      { "name": "The Invariant Gutter Rule", "body": "px-6 md:px-8 lg:px-16 on every section wrapper. Left edges must align down the entire page — a section that indents differently breaks the instrument-panel read more than any color mistake.", "section": "layout" },
+      { "name": "The Earned Shadow Rule", "body": "A shadow means \"this element is above the page plane\" — a menu, a dialog, a button you press. A card sitting in a grid is not above the page; it gets #0E0E10 and a hairline instead.", "section": "elevation" },
+      { "name": "The No Halo Rule", "body": "Shadows carry offset and blur. A zero-offset colored glow around an emerald element is decoration, and this system does not use it.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use px-6 md:px-8 lg:px-16 on every section wrapper so left edges align down the page.",
+      "Do express secondary text as text-white/60 and let opacity do the tinting.",
+      "Do keep the accent at or under 10% of a screen's area. Its rarity is what makes it mean something.",
+      "Do reach for a hairline border (border-white/10) before reaching for a shadow.",
+      "Do set section rhythm with py-24 md:py-32.",
+      "Do use font-semibold for headings and reserve font-bold for genuine emphasis.",
+      "Do let the global :focus-visible ring handle keyboard focus."
+    ],
+    "donts": [
+      "Don't introduce a fourth background tone. Void, Band, Surface — anything deeper is a translucent white overlay.",
+      "Don't use gray text values (text-zinc-400, text-gray-500) — they desynchronize from the surface behind them.",
+      "Don't apply gradients to text. Emphasis comes from weight, size, or the accent color.",
+      "Don't place a decorative uppercase kicker above a section heading. The tracked label marks a group, not a section announcement.",
+      "Don't add focus:outline-none without an explicit replacement ring.",
+      "Don't put a shadow on a card that sits in the page flow.",
+      "Don't compensate for the 15px root by bumping every Tailwind size up a step."
+    ]
+  }
+}
