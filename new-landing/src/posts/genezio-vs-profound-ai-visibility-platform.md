@@ -118,7 +118,7 @@ Both platforms are serious. They optimize for different jobs.
 **Best for:** Marketing and PR teams whose KPI is being recommended, and who need to act on the result.   
 **Key strengths:** Recommendation rate as the primary metric, measured through multi-turn persona conversations at scale with confidence intervals. Competitive [benchmarking on recommendation](/industry-leaderboards/) over time. Citation and source analysis tied to narrative accuracy. Direct AI perception analysis, branded questions, extracted values, sentiment, SWOT, and detection of factual misrepresentation. Prioritized action recommendations across website, content, and citations: actionable strategies, not just data.   
 **Limitations:** Genezio is not a content-generation engine. It tells you precisely what to fix and in what order; It can help you with briefs and drafts, but your team or your agency does the writing. If all you want is the cheapest possible mention tracker, that's not what this is built for.   
-**Pricing signals:** Quote-based, with enterprise plans including SOC 2 Type II and multi-brand management. Talk to the team for coverage-based pricing.   
+**Pricing signals:** Quote-based, with enterprise plans including SOC 2 Type II, ISO 27001, SSO/SAML, and multi-brand management. Talk to the team for coverage-based pricing.   
 **Ideal team:** Mid-market to enterprise brand that has to defend a recommendation number to leadership and turn it into a backlog.
 
 | Capability | Genezio | Profound |
@@ -132,7 +132,7 @@ Both platforms are serious. They optimize for different jobs.
 | Agent / content workflows | No (action briefs, not generation) | Yes (content generation agents) |
 | Perception analysis (values, sentiment, SWOT) | Yes | Partial (sentiment) |
 | Exports / API | Yes | Yes (higher tiers) |
-| Security / compliance | SOC 2 Type II, multi-brand | SOC 2, SSO on Enterprise |
+| Security / compliance | SOC 2 Type II, ISO 27001, CSA STAR Level 1, SSO/SAML, multi-brand | SOC 2, SSO on Enterprise |
 
 The honest read: if you want demand data and a content generator inside one analytics suite, Profound has real depth. If your problem is that AI keeps recommending someone else and you need to know why and what to do about it, that's the axis Genezio is built on.
 

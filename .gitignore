@@ -133,3 +133,7 @@ dist
 .DS_Store
 
 .idea/
+
+# AI assistant tooling: shared skills and hooks are committed;
+# only per-machine local state is ignored.
+.impeccable/config.local.json
