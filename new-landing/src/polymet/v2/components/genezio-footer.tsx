@@ -12,6 +12,7 @@ export function GenezioFooterV2() {
     { label: "Support Terms", href: "/support-terms/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
     { label: "Data Processing Agreement", href: "/data-processing-agreement/" },
+    { label: "Trust Center", href: "https://trust.genezio.com/", external: true },
   ];
 
   return (
@@ -52,12 +53,23 @@ export function GenezioFooterV2() {
             <ul className="space-y-3">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
