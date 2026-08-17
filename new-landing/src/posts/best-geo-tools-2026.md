@@ -136,7 +136,7 @@ And the statistical piece: we run enough conversations to give you recommendatio
 
 Beyond measurement, Genezio identifies specific content gaps from the data, topics where AI doesn't recommend you but should, and includes an article generation feature that pre-fills from the insight data. You can track whether published articles are actually picked up by AI models afterward. The loop closes: measure, identify gaps, create content, verify impact.
 
-**Where Genezio is weaker:** We don't have 90+ blog posts, 16 webinars, or a conference brand. Our content volume is growing but doesn't match Profound or Peec. We have 4 UK vertical leaderboards, Profound has 12+ global. Profound already offers enterprise features like HIPAA compliance, SOC 2, and SSO, Genezio doesn't, yet. Our integration ecosystem is still expanding.
+**Where Genezio is weaker:** We don't have 90+ blog posts, 16 webinars, or a conference brand. Our content volume is growing but doesn't match Profound or Peec. We have 4 UK vertical leaderboards, Profound has 12+ global. Our integration ecosystem is still expanding.
 
 **Best for:** Brands that need to understand not just where they appear in AI, but whether they're being recommended, and why. Teams that want persona-based analysis rather than generic prompt monitoring. Anyone who needs to prove AI ROI with statistically defensible numbers.
 
