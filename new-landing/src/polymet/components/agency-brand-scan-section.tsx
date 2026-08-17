@@ -1,182 +1,93 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
-  SearchIcon,
-  SparklesIcon,
   BarChart3Icon,
   TrendingUpIcon,
   TargetIcon,
   LightbulbIcon,
+  ArrowRightIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
+
+const DEMO_URL =
+  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
 
 export function AgencyBrandScanSection() {
-  const [brandUrl, setBrandUrl] = useState("");
-  const [highlightInput, setHighlightInput] = useState(false);
-
-//   const handleScan = () => {
-//     if (brandName.trim()) {
-//       setIsScanning(true);
-//       // Simulate scanning
-//       setTimeout(() => {
-//         setIsScanning(false);
-//         // In real implementation, this would trigger the scan
-//       }, 2000);
-//     }
-//   };
-
-  const handleAnalyze = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!brandUrl.trim()) {
-      setHighlightInput(true);
-      setTimeout(() => setHighlightInput(false), 2000);
-      return;
-    }
-
-    const rawInput = brandUrl.trim();
-    if (!rawInput) return;
-
-    
-    let parsed: URL;
-    try {
-      parsed = new URL(rawInput);
-    } catch {
-      try {
-        parsed = new URL(`http://${rawInput}`);
-      } catch {
-        return;
-      }
-    }
-
-    const hostname = parsed.hostname.replace(/^www\./i, "");
-    const brandName = hostname.split(".")[0] || hostname;
-
-    const redirectUrl = new URL("https://app.genezio.ai/sign-up");
-    // redirectUrl.searchParams.set("brandUrl", rawInput);
-    redirectUrl.searchParams.set("brandName", brandName);
-
-    window.location.assign(redirectUrl.toString());
-  };
+  const deliverables = [
+    { icon: BarChart3Icon, title: "Visibility score", desc: "AI presence metrics" },
+    { icon: TrendingUpIcon, title: "Citations", desc: "Source analysis" },
+    { icon: TargetIcon, title: "Top keywords", desc: "What drives answers" },
+    { icon: LightbulbIcon, title: "Action plan", desc: "Prioritized next steps" },
+  ];
 
   return (
-    <section className="relative py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
+    <section className="relative py-24 md:py-32 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
+      {/* Top hairline divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-blue-300">
-                Free Brand Scan
+            <HeroEyebrow className="mb-6 w-fit">Client visibility</HeroEyebrow>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              See how AI represents every client
+            </h2>
+
+            <p className="text-base md:text-lg text-white/60 mb-8 leading-relaxed">
+              Visibility, citations, sentiment and recommendations, per client
+              and per engine, all in one workspace. Bring it to your next
+              pitch or QBR with a report clients understand.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+              <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
+                >
+                  Get a demo
+                </Button>
+              </a>
+              <span className="inline-flex items-center gap-2 text-sm text-white/50 pt-4">
+                <ArrowRightIcon className="w-4 h-4 text-white/40" />
+                See a live client report
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Start with a free
-              <br />
-              <span className="text-blue-400">AI visibility scan</span>
-              <br />
-              for one client
-            </h2>
-
-            <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              Insights into visibility, citations, and recommendations.
-            </p>
-
-
-
-            {/* Scan Input */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              <Input
-                type="text"
-                placeholder="Enter brand name (e.g., Nike, Tesla, Starbucks)"
-                value={brandUrl}
-                onChange={(e) => {
-                  setBrandUrl(e.target.value);
-                  if (highlightInput) setHighlightInput(false);
-                }}
-                className={`flex-1 h-12 bg-white/10 text-white placeholder:text-white/40 rounded-lg transition-all ${
-                  highlightInput
-                    ? "border-2 border-blue-500 ring-4 ring-blue-500/30 animate-pulse"
-                    : "border border-white/20 focus:border-blue-500 focus:ring-blue-500"
-                }`}
-              />
-
-              <Button
-                size="lg"
-                onClick={handleAnalyze}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 font-medium w-full sm:w-auto"
-              >
-                    <SearchIcon className="w-4 h-4 mr-2" />
-                    Scan Now
-              </Button>
-            </div>
-
-            {/* What You'll Get */}
+            {/* What you get per client */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <BarChart3Icon className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm mb-1">
-                    Visibility score
+              {deliverables.map((d) => {
+                const Icon = d.icon;
+                return (
+                  <div
+                    key={d.title}
+                    className="flex items-start gap-3 p-4 rounded-2xl bg-[#0A0A0C] border border-white/10 hover:border-white/20 transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold text-sm mb-1">
+                        {d.title}
+                      </div>
+                      <div className="text-white/60 text-xs">{d.desc}</div>
+                    </div>
                   </div>
-                  <div className="text-white/60 text-xs">
-                    AI presence metrics
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <TrendingUpIcon className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm mb-1">
-                    Citations
-                  </div>
-                  <div className="text-white/60 text-xs">Source analysis</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <TargetIcon className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm mb-1">
-                    Top keywords
-                  </div>
-                  <div className="text-white/60 text-xs">Top performing</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                  <LightbulbIcon className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm mb-1">
-                    Action plan
-                  </div>
-                  <div className="text-white/60 text-xs">Next steps</div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
 
           {/* Right side - Visual Preview */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6 md:p-8">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0A0A0C] p-6 md:p-8">
               {/* Mock Dashboard Preview */}
               <div className="space-y-6">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-4 border-b border-white/10">
                   <div>
                     <div className="text-white/60 text-sm mb-1">
-                      Brand Analysis
+                      Client analysis
                     </div>
                     <div className="text-white font-bold text-xl">Nike</div>
                   </div>
@@ -184,7 +95,7 @@ export function AgencyBrandScanSection() {
                     <div className="text-white/60 text-sm mb-1">
                       Visibility score
                     </div>
-                    <div className="text-3xl font-bold text-blue-400">87</div>
+                    <div className="text-3xl font-bold text-emerald-400">87</div>
                   </div>
                 </div>
 
@@ -192,7 +103,7 @@ export function AgencyBrandScanSection() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400" />
+                      <div className="w-2 h-2 rounded-full bg-white/40" />
                       <div className="text-white/60 text-xs">
                         ChatGPT mentions
                       </div>
@@ -205,7 +116,7 @@ export function AgencyBrandScanSection() {
 
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-2 h-2 rounded-full bg-purple-400" />
+                      <div className="w-2 h-2 rounded-full bg-emerald-400" />
                       <div className="text-white/60 text-xs">
                         Perplexity coverage
                       </div>
@@ -221,23 +132,23 @@ export function AgencyBrandScanSection() {
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="text-white/60 text-xs mb-3">Top keywords</div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-medium">
                       best running shoes online under 300$
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-medium">
                       lightweight athletic sneakers for winter 2026
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-medium">
                       premium sportswear brands
                     </span>
                   </div>
                 </div>
 
                 {/* Insights */}
-                <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-2 mb-2">
-                    <LightbulbIcon className="w-4 h-4 text-blue-400" />
-                    <div className="text-blue-300 text-sm font-semibold">
+                    <LightbulbIcon className="w-4 h-4 text-emerald-400" />
+                    <div className="text-white text-sm font-semibold">
                       34 insights found
                     </div>
                   </div>
@@ -248,7 +159,7 @@ export function AgencyBrandScanSection() {
               </div>
 
               {/* Glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-2xl -z-10" />
+              <div className="absolute -inset-1 bg-white/[0.04] blur-2xl -z-10" />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { isWorkEmail } from "@/lib/work-email";
 import { useState } from "react";
 
 export function AgencyMonitoringSection() {
@@ -11,6 +12,7 @@ export function AgencyMonitoringSection() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [emailError, setEmailError] = useState("");
 
   const ZOHO_FORM_BASE = "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK";
   
@@ -21,6 +23,14 @@ export function AgencyMonitoringSection() {
       return;
     }
 
+    if (!isWorkEmail(email)) {
+      setEmailError(
+        "Please use your work email. Free inboxes like Gmail or Outlook aren't accepted."
+      );
+      return;
+    }
+
+    setEmailError("");
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
@@ -117,30 +127,29 @@ export function AgencyMonitoringSection() {
   ];
 
   return (
-    <section className="relative py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
+    <section className="relative py-24 md:py-32 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
+      {/* Top hairline divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Right content */}
           <div className="order-1 lg:order-1">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Monitor{" "}
-              <span className="text-blue-400">
-                industry insights
-              </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Monitor industry insights
             </h2>
-            <p className="text-base md:text-xl text-white/60 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-white/60 mb-8 leading-relaxed">
               We monitor dozens of industry reports daily. Get for free industry report.
             </p>
 
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                    <FilterIcon className="w-6 h-6 text-blue-400" />
+                  <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    <FilterIcon className="w-5 h-5 text-emerald-400" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
                     Industry segmentation
                   </h3>
                   <p className="text-white/60">
@@ -151,12 +160,12 @@ export function AgencyMonitoringSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                    <BarChart3Icon className="w-6 h-6 text-blue-400" />
+                  <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    <BarChart3Icon className="w-5 h-5 text-emerald-400" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
                     Unified reporting
                   </h3>
                   <p className="text-white/60">
@@ -167,12 +176,12 @@ export function AgencyMonitoringSection() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                    <PieChartIcon className="w-6 h-6 text-blue-400" />
+                  <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    <PieChartIcon className="w-5 h-5 text-emerald-400" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
                     Real-time alerts
                   </h3>
                   <p className="text-white/60">
@@ -185,7 +194,7 @@ export function AgencyMonitoringSection() {
             {/* Industry Report CTA */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
-                <Button className="mt-8 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white h-12">
+                <Button className="mt-8 w-full sm:w-auto bg-emerald-400 hover:bg-emerald-300 text-black font-semibold rounded-xl transition-colors duration-200 h-12">
                   <DownloadIcon className="w-4 h-4 mr-2" />
                   Get Free Industry Report
                 </Button>
@@ -204,7 +213,7 @@ export function AgencyMonitoringSection() {
                       <Button
                         type="button"
                         variant={selectedIndustry === "banking" ? "default" : "outline"}
-                        className={selectedIndustry === "banking" ? "bg-blue-600 hover:bg-blue-700 text-white" : "border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white"}
+                        className={selectedIndustry === "banking" ? "bg-emerald-400 hover:bg-emerald-300 text-black font-semibold" : "border border-white/20 bg-transparent hover:bg-white/10 text-white hover:text-white"}
                         onClick={() => setSelectedIndustry("banking")}
                       >
                         Banking
@@ -212,7 +221,7 @@ export function AgencyMonitoringSection() {
                       <Button
                         type="button"
                         variant={selectedIndustry === "education" ? "default" : "outline"}
-                        className={selectedIndustry === "education" ? "bg-blue-600 hover:bg-blue-700 text-white" : "border-white/20 bg-white/5 hover:bg-white/10 text-white hover:text-white"}
+                        className={selectedIndustry === "education" ? "bg-emerald-400 hover:bg-emerald-300 text-black font-semibold" : "border border-white/20 bg-transparent hover:bg-white/10 text-white hover:text-white"}
                         onClick={() => setSelectedIndustry("education")}
                       >
                         Education
@@ -243,13 +252,24 @@ export function AgencyMonitoringSection() {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder="you@company.com"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (emailError) setEmailError("");
+                      }}
                       required
                       disabled={isSubmitting}
-                      className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
+                      aria-invalid={!!emailError}
+                      className={`bg-white/5 text-white placeholder:text-white/40 ${
+                        emailError
+                          ? "border-red-500/60 focus-visible:border-red-500/60"
+                          : "border-white/10"
+                      }`}
                     />
+                    {emailError && (
+                      <p className="text-xs text-red-400">{emailError}</p>
+                    )}
                   </div>
 
                   {submitStatus === "success" && (
@@ -259,14 +279,14 @@ export function AgencyMonitoringSection() {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="p-3 rounded-lg bg-red-500/20 border border-red-500/30 text-red-400 text-sm">
+                    <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-white/60 text-sm">
                       Something went wrong. Please try again.
                     </div>
                   )}
 
                   <Button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-emerald-400 hover:bg-emerald-300 text-black font-semibold rounded-xl transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!selectedIndustry || !email || isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Send Report to Email"}
@@ -278,7 +298,7 @@ export function AgencyMonitoringSection() {
 
           {/* Left visual */}
           <div className="relative order-2 lg:order-2 mt-8 lg:mt-0">
-            <div className="relative rounded-2xl bg-blue-500/10 border border-white/10 p-6 md:p-8">
+            <div className="relative rounded-2xl bg-[#0A0A0C] border border-white/10 p-6 md:p-8">
               {/* Industry grid */}
               <div className="space-y-3">
                 <div className="text-sm font-medium text-white/60 mb-4">
@@ -290,7 +310,7 @@ export function AgencyMonitoringSection() {
                     className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-blue-400" />
+                      <div className="w-3 h-3 rounded-full bg-white/40" />
                       <span className="text-white font-medium">
                         {industry.name}
                       </span>
@@ -301,7 +321,7 @@ export function AgencyMonitoringSection() {
                       </span>
                       <div className="w-16 h-2 rounded-full bg-white/10">
                         <div
-                          className="h-full rounded-full bg-blue-400"
+                          className="h-full rounded-full bg-emerald-400"
                           style={{
                             width: `${(industry.brands / 12) * 100}%`,
                           }}
@@ -313,17 +333,17 @@ export function AgencyMonitoringSection() {
               </div>
 
               {/* Floating notification */}
-              <div className="absolute -top-4 -right-4 p-4 rounded-xl bg-blue-600 shadow-2xl">
+              <div className="absolute -top-4 -right-4 p-4 rounded-xl bg-emerald-400 shadow-2xl">
                 <div className="flex items-center gap-2">
-                  <BellIcon className="w-4 h-4 text-white" />
-                  <span className="text-sm font-medium text-white">
+                  <BellIcon className="w-4 h-4 text-black" />
+                  <span className="text-sm font-semibold text-black">
                     3 new insights
                   </span>
                 </div>
               </div>
 
-              {/* Glow effects */}
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-blue-400 blur-2xl opacity-50" />
+              {/* Subtle glow for depth */}
+              <div className="pointer-events-none absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-white/[0.03] blur-3xl" />
             </div>
           </div>
 

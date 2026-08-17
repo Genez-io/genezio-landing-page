@@ -1,22 +1,21 @@
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioHeroSection } from "@/polymet/components/genezio-hero-section";
 import { GenezioTrustSection } from "@/polymet/components/genezio-trust-section";
-import { GenezioDashboardSection } from "@/polymet/components/genezio-dashboard-section";
-import { GenezioDifferentiatorsSection } from "@/polymet/components/genezio-differentiators-section";
-import { GenezioBrandedQuestionsSection } from "@/polymet/components/genezio-branded-questions-section";
-import { GenezioInsightsSection } from "@/polymet/components/genezio-insights-section";
 import { GenezioEnterpriseSection } from "@/polymet/components/genezio-enterprise-section";
-import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import { GenezioTestimonialSection } from "../components/genezio-testimonial-section";
-import { IndustryLeaderboardBanner } from "@/polymet/components/industry-leaderboard-banner";
 import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic-section";
+import { GenezioPerceptionSection } from "@/polymet/components/genezio-perception-section";
+import { GenezioProductPillarsSection } from "@/polymet/components/genezio-product-pillars-section";
+import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-reader-section";
+import { GenezioBusinessGoalsSection } from "@/polymet/components/genezio-flywheel-section";
+import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterprise-trust-band";
 
 export function GenezioLanding() {
   return (
     <>
       <PolymetSEO
         title="Genezio | Optimize Your AI Presence to Win Recommendations"
-        description="Discover how AI engines see your brand. Optimize your presence to win more AI recommendations. Start your free 7-day trial today, no credit card required!"
+        description="AI market intelligence for enterprise brands. See how AI engines represent and recommend your brand, and win more AI recommendations. Get a demo."
         canonicalPath="/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
@@ -43,24 +42,23 @@ export function GenezioLanding() {
         }}
       />
       <div className="min-h-screen bg-[#050506]">
-        <IndustryLeaderboardBanner />
-
         <GenezioHeroSection />
 
         <GenezioTrustSection />
-        <GenezioTestimonialSection />
+        <GenezioEnterpriseTrustBand />
+
+        {/* Why it matters → the blackout → proof → the product → how you win */}
+        <GenezioPerceptionSection />
+        <GenezioRobotReaderSection />
         <GenezioAiTrafficSection />
-        <GenezioDashboardSection />
+        <GenezioProductPillarsSection />
+        <GenezioBusinessGoalsSection />
 
-        <GenezioDifferentiatorsSection />
+        {/* Social proof */}
+        <GenezioTestimonialSection />
 
-        <GenezioBrandedQuestionsSection />
-
-        <GenezioInsightsSection />
-
+        {/* Enterprise readiness */}
         <GenezioEnterpriseSection />
-
-        <GenezioCtaSection />
       </div>
     </>
   );

@@ -9,7 +9,7 @@ export function DataProcessingAgreement() {
         canonicalPath="/data-processing-agreement/"
       />
       <div className="min-h-screen bg-[#050506]">
-        <div className="max-w-4xl mx-auto px-4 md:px-6 pt-32 md:pt-40 pb-20 md:pb-24">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-16 pt-32 md:pt-40 pb-20 md:pb-24">
           {/* Header */}
           <div className="mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -606,7 +606,7 @@ export function DataProcessingAgreement() {
                         </tr>
                       </thead>
                       <tbody className="[&amp;_tr:last-child]:border-0">
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             Amazon AWS
                           </td>
@@ -621,7 +621,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             Anthropic
                           </td>
@@ -636,7 +636,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             Google Cloud
                           </td>
@@ -651,7 +651,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             Meta
                           </td>
@@ -666,7 +666,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             Microsoft
                           </td>
@@ -681,7 +681,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             MongoDB
                           </td>
@@ -696,7 +696,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             OpenAI
                           </td>
@@ -711,7 +711,7 @@ export function DataProcessingAgreement() {
                             law or by sub-processor’s binding rules
                           </td>
                         </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
+                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-zinc-50">
                           <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
                             OVH
                           </td>

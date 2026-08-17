@@ -42,12 +42,12 @@ const icons = [
 ];
 
 const gradients = [
-    "from-blue-500 to-purple-500",
-    "from-emerald-500 to-teal-500",
-    "from-blue-500 to-cyan-500",
-    "from-purple-500 to-pink-500",
-    "from-orange-500 to-red-500",
-    "from-yellow-500 to-orange-500",
+    "from-zinc-500 to-zinc-500",
+    "from-emerald-500 to-zinc-500",
+    "from-zinc-500 to-zinc-500",
+    "from-zinc-500 to-zinc-500",
+    "from-zinc-500 to-zinc-500",
+    "from-zinc-500 to-zinc-500",
 ];
 
 function parseFrontmatter(content: string): Record<string, any> {

@@ -1,128 +1,197 @@
-import {
-    SparklesIcon,
-    TrendingUpIcon,
-    EyeIcon,
-    ThumbsUpIcon,
-  } from "lucide-react";
-  
-  export function GenezioAiTrafficSection() {
-    return (
-      <section className="relative py-24 md:py-32 bg-[#0E0E10] overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0E0E10] to-[#0E0E10]" />
-  
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Header */}
-          <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm text-blue-400 font-medium">
-                The Hidden Traffic
-              </span>
-            </div>
-  
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              AI traffic is already{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                double-digit percentage
-              </span>{" "}
-              of your total traffic
-            </h2>
-  
-            <p className="text-lg md:text-xl text-white/60 leading-relaxed">
-              But it rarely shows up in analytics.
-            </p>
-          </div>
-  
-          {/* Conversation-style Content */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="space-y-6">
-              {/* User Question - Left */}
-              <div className="flex justify-start animate-in fade-in slide-in-from-left duration-700">
-                <div className="max-w-[85%] bg-[#1C1C20]/60 border border-white/10 rounded-2xl rounded-tl-sm p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                      <span className="text-blue-400 text-sm font-semibold">Q</span>
-                    </div>
-                    <span className="text-white/50 text-sm">Marketing Team</span>
-                  </div>
-                  <p className="text-white/90 leading-relaxed">
-                    Why don't we see AI traffic in Google Analytics?
-                  </p>
-                </div>
-              </div>
-  
-              {/* AI Response - Right */}
-              <div className="flex justify-end animate-in fade-in slide-in-from-right duration-700" style={{ animationDelay: "0.3s" }}>
-                <div className="max-w-[85%] bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                      <SparklesIcon className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-white/70 text-sm font-medium">AI Discovery Reality</span>
-                  </div>
-                  <div className="space-y-3 text-white/80 leading-relaxed">
-                    <p>
-                      When people ask an AI assistant for advice, they often receive a full answer and <span className="text-white font-medium">never click a link</span>.
-                    </p>
-                    <p>
-                      Traditional analytics only capture a tiny fraction of interactions where your brand is discussed.
-                    </p>
-                    <p className="text-white/90 font-medium">
-                      Many companies discover that conversations about their category inside AI systems are far larger than the visits they see in analytics.
-                    </p>
-                  </div>
-                </div>
-              </div>
-  
-              {/* User Question - Left */}
-              <div className="flex justify-start animate-in fade-in slide-in-from-left duration-700" style={{ animationDelay: "0.6s" }}>
-                <div className="max-w-[85%] bg-[#1C1C20]/60 border border-white/10 rounded-2xl rounded-tl-sm p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                      <span className="text-blue-400 text-sm font-semibold">Q</span>
-                    </div>
-                    <span className="text-white/50 text-sm">Marketing Team</span>
-                  </div>
-                  <p className="text-white/90 leading-relaxed">
-                    So if we're being mentioned, that's good, right?
-                  </p>
-                </div>
-              </div>
-  
-              {/* AI Response - Right */}
-              <div className="flex justify-end animate-in fade-in slide-in-from-right duration-700" style={{ animationDelay: "0.9s" }}>
-                <div className="max-w-[85%] bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl rounded-tr-sm p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                      <ThumbsUpIcon className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-white/70 text-sm font-medium">The Critical Difference</span>
-                  </div>
-                  <div className="space-y-3 text-white/80 leading-relaxed">
-                    <p>
-                      <span className="text-white font-medium">Visibility ≠ Recommendation</span>
-                    </p>
-                    <p>
-                      A brand might be mentioned frequently but <span className="text-white font-medium">rarely recommended</span> when a user asks for the best option.
-                    </p>
-                    <div className="bg-[#0E0E10]/60 border border-white/10 rounded-xl p-4 mt-4">
-                      <p className="text-white/90 font-semibold mb-2">
-                        ⚠️ The worst position:
-                      </p>
-                      <p className="text-white/80">
-                        High visibility but low recommendation means AI knows your brand exists but <span className="font-medium">prefers competitors</span>.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-  
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
+import { EyeOffIcon, AlertTriangleIcon } from "lucide-react";
+
+/* Small centered divider label with the brand square marker */
+function BandLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center justify-center gap-2 mb-6">
+      <span className="h-1.5 w-1.5 flex-shrink-0 rounded-[2px] bg-emerald-400" />
+      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
+        {children}
+      </span>
+    </div>
+  );
+}
+
+export function GenezioAiTrafficSection() {
+  const hiddenStats = [
+    {
+      value: "~60%",
+      label: "of searches now end without a click, the AI answers the question",
+      source: "Bain & Company · 2025",
+      sourceUrl:
+        "https://www.bain.com/about/media-center/press-releases/20252/consumer-reliance-on-ai-search-results-signals-new-era-of-marketing--bain--company-about-80-of-search-users-rely-on-ai-summaries-at-least-40-of-the-time-on-traditional-search-engines-about-60-of-searches-now-end-without-the-user-progressing-to-a/",
+    },
+    {
+      value: "15%",
+      label:
+        "of consumers now start their search in an AI chatbot, 25% of Gen Z and millennials",
+      source: "Bain & Company · 2025",
+      sourceUrl:
+        "https://www.bain.com/about/media-center/press-releases/20252/consumer-reliance-on-ai-search-results-signals-new-era-of-marketing--bain--company-about-80-of-search-users-rely-on-ai-summaries-at-least-40-of-the-time-on-traditional-search-engines-about-60-of-searches-now-end-without-the-user-progressing-to-a/",
+    },
+  ];
+
+  const revenueStats = [
+    {
+      value: "4.4×",
+      label: "more valuable than a traditional organic visit, by conversion rate",
+      source: "Semrush · 2025",
+      sourceUrl: "https://www.semrush.com/blog/ai-search-seo-traffic-study/",
+    },
+    {
+      value: "+31%",
+      label: "higher conversion, AI referrals vs other traffic to retail sites",
+      source: "Adobe Analytics · 2025",
+      sourceUrl:
+        "https://business.adobe.com/blog/ai-driven-traffic-surges-across-industries",
+    },
+  ];
+
+  return (
+    <section className="relative py-24 md:py-32 bg-[#0E0E10] overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-14 md:mb-20">
+          <HeroEyebrow className="mb-6 mx-auto w-fit">
+            The hidden traffic
+          </HeroEyebrow>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            The traffic you can't see is your best-converting channel
+          </h2>
+          <p className="text-base md:text-lg text-white/60 leading-relaxed">
+            AI answers the question and the user rarely clicks, so it barely
+            shows up in analytics. But the few who do arrive already had their
+            comparison shopping done, so they convert like nothing else.
+          </p>
         </div>
-      </section>
-    );
-  }
-  
+
+        {/* Part 1: invisible in analytics */}
+        <BandLabel>Invisible in analytics</BandLabel>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto mb-6">
+          {hiddenStats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors duration-300"
+            >
+              <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-none">
+                {stat.value}
+              </div>
+              <div className="text-sm text-white/60 leading-snug mb-3">
+                {stat.label}
+              </div>
+              <a
+                href={stat.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono text-white/40 hover:text-emerald-400 transition-colors underline decoration-white/15 underline-offset-2"
+              >
+                {stat.source}
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* Bridge callout: the critical difference */}
+        <div className="max-w-5xl mx-auto bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 mb-16 md:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+            {/* Left: message */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                  <EyeOffIcon className="w-5 h-5 text-emerald-400" />
+                </span>
+                <h3 className="text-lg md:text-xl font-semibold text-white">
+                  Visibility ≠ recommendation
+                </h3>
+              </div>
+              <p className="text-sm md:text-base text-white/60 leading-relaxed">
+                A brand can be mentioned constantly yet rarely recommended when a
+                user asks for the best option. The worst place to be: high
+                visibility, low recommendation. AI knows you exist, but prefers
+                your competitors.
+              </p>
+            </div>
+
+            {/* Right: the gap, visualized */}
+            <div className="bg-[#050506] border border-white/10 rounded-xl p-5 md:p-6">
+              <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-5">
+                Same brand, two very different numbers
+              </div>
+              {[
+                { label: "Mentioned", value: 88, tone: "muted" },
+                { label: "Recommended", value: 31, tone: "accent" },
+              ].map((b) => (
+                <div key={b.label} className="mb-4 last:mb-0">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-sm text-white/70">{b.label}</span>
+                    <span
+                      className={`text-sm font-bold ${
+                        b.tone === "accent" ? "text-emerald-400" : "text-white"
+                      }`}
+                    >
+                      {b.value}%
+                    </span>
+                  </div>
+                  <div className="h-2.5 w-full rounded-full bg-white/[0.06] overflow-hidden">
+                    <div
+                      className={`h-full rounded-full ${
+                        b.tone === "accent" ? "bg-emerald-500" : "bg-white/40"
+                      }`}
+                      style={{ width: `${b.value}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+              <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-white/60">
+                <AlertTriangleIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
+                A 57-point gap: seen everywhere, chosen rarely.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Part 2: outsized in revenue */}
+        <BandLabel>Outsized in revenue</BandLabel>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
+          {/* Headline first-party stat */}
+          <div className="bg-white/[0.06] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col justify-center">
+            <div className="text-6xl md:text-7xl font-extrabold text-emerald-400 leading-none mb-5">
+              37%
+            </div>
+            <div className="text-lg font-semibold text-white leading-snug mb-3">
+              of new signups arrived recommended by answer engines
+            </div>
+            <div className="text-sm text-white/60">
+              Genezio customer, first-party data. Already happening.
+            </div>
+          </div>
+
+          {revenueStats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col justify-center hover:border-white/20 transition-colors duration-300"
+            >
+              <div className="text-4xl md:text-5xl font-extrabold text-white mb-3 leading-none">
+                {stat.value}
+              </div>
+              <div className="text-sm text-white/80 leading-snug mb-2">
+                {stat.label}
+              </div>
+              <a
+                href={stat.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-white/40 hover:text-emerald-400 transition-colors underline decoration-white/15 underline-offset-2"
+              >
+                {stat.source}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

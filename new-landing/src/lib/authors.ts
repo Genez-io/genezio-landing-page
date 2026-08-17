@@ -253,7 +253,7 @@ export const authors: Record<string, any> = {
     "luis-minvielle": {
         "name": "Luis Minvielle",
         "role": "Contributor",
-        "bio": "Luis Minvielle is a writer with over 5 years of experience in the software sector. Even though he mainly worked in tech, a sector he regularly publishes about, his initial incursions into writing were, oddly enough, music essays—most likely to deal with his unrealized ambitions of becoming a songwriter. And, yes—Luis strongly disagrees with every generic LinkedIn post that claims that reading a — character is a confirmation of AI-written text.",
+        "bio": "Luis Minvielle is a writer with over 5 years of experience in the software sector. Even though he mainly worked in tech, a sector he regularly publishes about, his initial incursions into writing were, oddly enough, music essays, most likely to deal with his unrealized ambitions of becoming a songwriter. And, yes, Luis strongly disagrees with every generic LinkedIn post that claims that reading a, character is a confirmation of AI-written text.",
         "image": "/authors/luis-minvielle.webp",
         "location": "Remote",
         "social": {

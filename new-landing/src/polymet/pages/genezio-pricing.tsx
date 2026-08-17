@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioEnterprisePlan } from "@/polymet/components/genezio-enterprise-plan";
+import { GenezioExpertServices } from "@/polymet/components/genezio-expert-services";
+import { GenezioPricingProducts } from "@/polymet/components/genezio-pricing-products";
+import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
 
-const PRICING_TITLE = "Flexible plans for your AI brand visibility";
+const PRICING_TITLE = "Enterprise Pricing for AI Brand Visibility | Genezio";
 const PRICING_DESCRIPTION =
-  "Explore Genezio pricing plans to boost your AI brand visibility. Monitor LLMs, track sentiment, and optimize your presence. Start your free trial.";
+  "Genezio is a custom Enterprise plan shaped around the answer engines, markets, and conversation volume you need, with optional dedicated AI-SEO and GEO experts to run the platform and produce your content. Book a demo for a tailored quote.";
 
 export function GenezioPricing() {
   const [selectedAudience, setSelectedAudience] = useState<
@@ -60,7 +63,7 @@ export function GenezioPricing() {
               "name": "Can I adjust my plan later?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Your Enterprise plan is fully flexible — you can scale engines, markets, personas, and volume up or down at any time. Just talk to your dedicated account manager and we'll adjust your plan."
+                "text": "Yes. Your Enterprise plan is fully flexible, you can scale engines, markets, personas, and volume up or down at any time. Just talk to your dedicated account manager and we'll adjust your plan."
               }
             },
             {
@@ -124,7 +127,7 @@ export function GenezioPricing() {
               "name": "How does the free brand scan work?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. Free as part of the 7-day trial and takes less than 10 minutes."
+                "text": "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. It is free to run and takes less than 10 minutes."
               }
             },
             {
@@ -162,6 +165,9 @@ export function GenezioPricing() {
               onVariantChange={setSelectedAudience}
               isPageHero
             />
+            <GenezioExpertServices />
+            <GenezioPricingProducts />
+            <GenezioGroupLevelView />
             <GenezioPricingFaq />
           </>
         ) : (
@@ -171,6 +177,9 @@ export function GenezioPricing() {
               onVariantChange={setSelectedAudience}
               isPageHero
             />
+            <GenezioExpertServices />
+            <GenezioPricingProducts />
+            <GenezioGroupLevelView />
             <AgencyFaqSection />
           </>
         )}

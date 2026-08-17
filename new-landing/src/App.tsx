@@ -1,6 +1,6 @@
 // src/GenezioApp.tsx
 import { useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route, Navigate, useLocation } from "react-router";
 import { GenezioLayout } from "@/polymet/layouts/genezio-layout";
 import { GenezioLanding } from "@/polymet/pages/genezio-landing";
 import { GenezioPricing } from "@/polymet/pages/genezio-pricing";
@@ -21,8 +21,12 @@ import "./index.css";
 import BlogAuthor from "./polymet/pages/blog-author";
 import { Agencies } from "./polymet/pages/agencies";
 import { IndustryLeaderboards } from "./polymet/pages/industry-leaderboards";
-import { GenezioLandingV2 } from "@/polymet/v2/pages/genezio-landing";
-import { GenezioLayoutV2 } from "@/polymet/v2/layouts/genezio-layout";
+import { ContentHub } from "./polymet/pages/content-hub";
+import { ContentAnalysis } from "./polymet/pages/content-analysis";
+import { WebsiteAnalyzer } from "./polymet/pages/website-analyzer";
+import { InChatShopping } from "./polymet/pages/in-chat-shopping";
+import { Mcp } from "./polymet/pages/mcp";
+import { Security } from "./polymet/pages/security";
 
 
 const ExternalRedirect = ({ to }: { to: string }) => {
@@ -54,6 +58,7 @@ const LEGACY_REDIRECTS = [
   { from: "/blog/chatgpt-fanout-brand-injection/", to: "/research/chatgpt-fanout-brand-injection/" },
   { from: "/blog/zero-query-overlaps/", to: "/research/zero-query-overlaps/" },
   { from: "/blog/decision-grade-geo-aeo-intelligence/", to: "/blog/best-accurate-data-platform-for-ai-search-optimization/" },
+  { from: "/increase-conversion/", to: "/ai-agent-analytics/" },
 
   // Drafted authors who no longer contribute to the current platform
   { from: "/blog/author/andra-pitis/", to: "/blog/" },
@@ -69,9 +74,21 @@ const LEGACY_REDIRECTS = [
   { from: "/blog/author/virgil-turcu/", to: "/blog/" },
 ];
 
+/** Reset scroll to top on route change (SPA navigations don't by default). */
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) return; // let in-page anchors keep their behavior
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+  return null;
+}
+
 export default function GenezioApp() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route
         path="/"
         element={
@@ -80,17 +97,6 @@ export default function GenezioApp() {
           </GenezioLayout>
         }
       />
-
-/*
-      <Route
-        path="/ai-search-optimization-tool/"
-        element={
-          <GenezioLayoutV2>
-            <GenezioLandingV2 />
-          </GenezioLayoutV2>
-        }
-      />
-*/
 
       <Route
         path="/pricing"
@@ -111,10 +117,64 @@ export default function GenezioApp() {
       />
 
       <Route
-        path="/increase-conversion"
+        path="/ai-agent-analytics"
         element={
           <GenezioLayout>
             <IncreaseConversion />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/content-hub"
+        element={
+          <GenezioLayout>
+            <ContentHub />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/content-analysis"
+        element={
+          <GenezioLayout>
+            <ContentAnalysis />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/website-analyzer"
+        element={
+          <GenezioLayout>
+            <WebsiteAnalyzer />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/in-chat-shopping"
+        element={
+          <GenezioLayout>
+            <InChatShopping />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/mcp"
+        element={
+          <GenezioLayout>
+            <Mcp />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/security"
+        element={
+          <GenezioLayout>
+            <Security />
           </GenezioLayout>
         }
       />
@@ -275,5 +335,6 @@ export default function GenezioApp() {
       />
 
     </Routes>
+    </>
   );
 }

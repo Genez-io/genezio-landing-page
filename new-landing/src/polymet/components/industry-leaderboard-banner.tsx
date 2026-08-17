@@ -8,12 +8,12 @@ export function IndustryLeaderboardBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="relative mt-16 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10 border-b border-blue-500/20 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3.5">
+    <div className="relative mt-16 bg-white/5 border-b border-white/10 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 py-3.5">
         <div className="flex items-center justify-center gap-3">
           {/* Message */}
           <div className="flex items-center gap-2 text-sm">
-            <span className="text-blue-400 font-bold">
+            <span className="text-zinc-400 font-bold">
               🎉 Industry Leaderboards Now Public!
             </span>
             <span className="hidden md:inline text-white/70">
@@ -24,7 +24,7 @@ export function IndustryLeaderboardBanner() {
           {/* CTA Link */}
           <Link
             to="/industry-leaderboards/"
-            className="flex items-center gap-1.5 text-sm text-white font-semibold hover:text-blue-300 transition-colors group px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10"
+            className="flex items-center gap-1.5 text-sm text-white font-semibold hover:text-zinc-300 transition-colors group px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10"
           >
             <span>View Leaderboards</span>
             <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />

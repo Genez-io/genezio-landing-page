@@ -10,7 +10,7 @@ export function AgencyFaqSection() {
     {
       question: "How many brands can I monitor?",
       answer:
-        "Your agency plan is custom — we scope the number of brands around your client roster. You can add more brands at any time with flexible add-ons, and each brand includes full monitoring, AI tracking, and insights.",
+        "Your agency plan is custom, we scope the number of brands around your client roster. You can add more brands at any time with flexible add-ons, and each brand includes full monitoring, AI tracking, and insights.",
     },
     {
       question: "Can I manage multiple clients?",
@@ -42,7 +42,7 @@ export function AgencyFaqSection() {
       answer: (
         <>
           You can find detailed information about our specialized features, case studies, and {" "}
-          <a href="/agencies/" className="text-blue-400 hover:underline">
+          <a href="/agencies/" className="text-zinc-400 hover:underline">
             solutions for agencies
           </a>{' '}on our dedicated agencies page.
         </>
@@ -51,7 +51,7 @@ export function AgencyFaqSection() {
   ];
 
   return (
-    <section className="py-12 md:py-24 bg-[#050506] px-4 md:px-6">
+    <section className="py-12 md:py-24 bg-[#050506] px-6 md:px-8 lg:px-16">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">

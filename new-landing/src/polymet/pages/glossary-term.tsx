@@ -42,7 +42,7 @@ function renderRichText(text: string) {
       <a
         key={key++}
         href={url}
-        className="text-purple-400 underline hover:text-purple-300"
+        className="text-emerald-400 underline hover:text-emerald-300"
         {...(isExternal
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {})}
@@ -1322,7 +1322,7 @@ export function GlossaryTerm() {
             The glossary term you're looking for doesn't exist.
           </p>
           <a href="/glossary/">
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-zinc-600 hover:bg-zinc-700">
               <ArrowLeftIcon className="w-4 h-4 mr-2" />
               Back to Glossary
             </Button>
@@ -1348,9 +1348,9 @@ export function GlossaryTerm() {
         <div className="max-w-4xl mx-auto px-6 py-6">
           <a
             href="/glossary/"
-            className="inline-flex items-center gap-3 text-white hover:text-blue-400 transition-colors group"
+            className="inline-flex items-center gap-3 text-white hover:text-zinc-400 transition-colors group"
           >
-            <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-blue-500/10 border border-white/10 group-hover:border-blue-500/30 flex items-center justify-center transition-all">
+            <div className="w-8 h-8 rounded-xl bg-white/5 group-hover:bg-white/5 border border-white/10 group-hover:border-white/20 flex items-center justify-center transition-all">
               <ArrowLeftIcon className="w-4 h-4" />
             </div>
             <span className="font-medium">Back to Glossary</span>
@@ -1363,11 +1363,11 @@ export function GlossaryTerm() {
         {/* Term Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <div className="px-3 py-1 text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full">
+            <div className="px-3 py-1 text-xs font-medium bg-white/5 text-zinc-400 border border-white/10 rounded-full">
               {term.category}
             </div>
             {term.acronym && (
-              <div className="px-3 py-1 text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-full">
+              <div className="px-3 py-1 text-xs font-bold bg-white/5 text-emerald-400 border border-white/10 rounded-full">
                 {term.acronym}
               </div>
             )}
@@ -1383,8 +1383,8 @@ export function GlossaryTerm() {
         {/* Detailed Explanation */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-              <BookOpenIcon className="w-5 h-5 text-blue-400" />
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+              <BookOpenIcon className="w-5 h-5 text-zinc-400" />
             </div>
             <h2 className="text-2xl font-bold text-white">
               Detailed Explanation
@@ -1401,8 +1401,8 @@ export function GlossaryTerm() {
         {/* Examples */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-              <LightbulbIcon className="w-5 h-5 text-purple-400" />
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+              <LightbulbIcon className="w-5 h-5 text-emerald-400" />
             </div>
             <h2 className="text-2xl font-bold text-white">Examples</h2>
           </div>
@@ -1414,8 +1414,8 @@ export function GlossaryTerm() {
                 className="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] transition-colors"
               >
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                    <span className="text-sm font-bold text-purple-400">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+                    <span className="text-sm font-bold text-emerald-400">
                       {index + 1}
                     </span>
                   </div>
@@ -1437,7 +1437,7 @@ export function GlossaryTerm() {
             <h2 className="text-2xl font-bold text-white">Why It Matters</h2>
           </div>
 
-          <div className="bg-gradient-to-br from-green-500/5 to-blue-500/5 border border-white/10 rounded-xl p-8">
+          <div className="bg-green-500/5 border border-white/10 rounded-xl p-8">
             <p className="text-white/80 leading-relaxed text-lg">
               {renderRichText(term.whyItMatters)}
             </p>
@@ -1448,8 +1448,8 @@ export function GlossaryTerm() {
         {relatedTermsData.length > 0 && (
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
-                <LinkIcon className="w-5 h-5 text-orange-400" />
+              <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                <LinkIcon className="w-5 h-5 text-zinc-400" />
               </div>
               <h2 className="text-2xl font-bold text-white">Related Terms</h2>
             </div>
@@ -1463,7 +1463,7 @@ export function GlossaryTerm() {
                     href={`/glossary/${relatedSlug}/`}
                     className="group bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:bg-white/[0.04] hover:border-white/10 transition-all"
                   >
-                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-zinc-400 transition-colors mb-2">
                       {relatedTerm.term}
                     </h3>
                     <p className="text-white/60 text-sm line-clamp-2">
@@ -1477,7 +1477,7 @@ export function GlossaryTerm() {
         )}
 
         {/* CTA */}
-        <div className="mt-16 bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10 rounded-2xl p-8 text-center">
+        <div className="mt-16 bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
             Want to improve your AI visibility?
           </h3>
@@ -1486,10 +1486,10 @@ export function GlossaryTerm() {
             actionable insights to improve your presence across AI platforms.
           </p>
           <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
+            className="bg-zinc-600 hover:bg-zinc-700 text-white px-8 py-6 text-lg"
             onClick={() => (window.location.href = "/pricing/")}
           >
-            Get Started
+            Talk to Sales
           </Button>
         </div>
       </div>

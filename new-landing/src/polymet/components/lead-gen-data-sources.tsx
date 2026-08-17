@@ -1,3 +1,4 @@
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   DatabaseIcon,
   TrendingUpIcon,
@@ -14,25 +15,25 @@ export function LeadGenDataSources() {
       title: "SEO Data",
       description:
         "Your search rankings, keywords, and organic performance metrics",
-      color: "from-blue-500/20 to-cyan-500/20",
-      borderColor: "border-blue-500/20",
-      iconColor: "text-blue-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      iconColor: "text-zinc-400",
     },
     {
       icon: TargetIcon,
       title: "Marketing Campaigns",
       description: "Active campaigns, messaging, and positioning strategies",
-      color: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/20",
-      iconColor: "text-purple-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      iconColor: "text-emerald-400",
     },
     {
       icon: GlobeIcon,
       title: "Public Data",
       description:
         "Website content, social media, press releases, and public statements",
-      color: "from-emerald-500/20 to-teal-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       iconColor: "text-emerald-400",
     },
     {
@@ -40,31 +41,25 @@ export function LeadGenDataSources() {
       title: "Brand Documentation",
       description:
         "Product specs, case studies, whitepapers, and technical docs",
-      color: "from-orange-500/20 to-amber-500/20",
-      borderColor: "border-orange-500/20",
-      iconColor: "text-orange-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      iconColor: "text-zinc-400",
     },
   ];
 
   return (
     <section className="relative py-16 sm:py-24 bg-[#0E0E10] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
-            <DatabaseIcon className="w-4 h-4 text-emerald-400" />
-
-            <span className="text-emerald-400 text-xs sm:text-sm font-medium">
-              Powered by Your Data
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Powered by Your Data</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Generate{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="text-white">
               Realistic Conversations
             </span>
           </h2>
@@ -85,7 +80,7 @@ export function LeadGenDataSources() {
             >
               <div className="flex items-start gap-4 sm:gap-6">
                 <div
-                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${source.color} border ${source.borderColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl ${source.color} border ${source.borderColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <source.icon
                     className={`w-7 h-7 sm:w-8 sm:h-8 ${source.iconColor}`}
@@ -105,9 +100,9 @@ export function LeadGenDataSources() {
         </div>
 
         {/* Bottom Feature */}
-        <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-8">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center flex-shrink-0">
               <SparklesIcon className="w-7 h-7 sm:w-8 sm:h-8 text-emerald-400" />
             </div>
             <div className="flex-1">

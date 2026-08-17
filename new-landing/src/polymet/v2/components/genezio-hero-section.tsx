@@ -39,7 +39,7 @@ export function GenezioHeroSection() {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <a href="https://app.genezio.ai/sign-up?coupon=EXPLOREGENEZIO">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               size="lg"
               className="text-lg px-8 py-6 bg-foreground text-background hover:bg-foreground/90 group"
