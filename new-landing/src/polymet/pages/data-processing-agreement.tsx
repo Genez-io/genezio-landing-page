@@ -1,5 +1,28 @@
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
+const SUB_PROCESSORS = [
+  ["Amazon AWS", "Cloud hosting, data storage and processing"],
+  ["Anthropic", "General purpose AI"],
+  ["Azure Open AI", "General purpose AI"],
+  ["Google Cloud Platform", "Cloud hosting, data storage and processing"],
+  ["Google Gemini", "General purpose AI"],
+  ["Langfuse", "AI observability and analytics"],
+  ["Microsoft Azure", "Cloud hosting, data storage and processing"],
+  ["OpenAI", "General purpose AI"],
+  ["OVH", "Cloud hosting and infrastructure services"],
+  ["Perplexity", "General purpose AI"],
+  ["Sentry", "Application error monitoring"],
+  ["Slack", "Internal collaboration"],
+  ["Upstash", "Caching and queueing infrastructure"],
+  ["Vercel", "Frontend hosting and delivery"],
+  ["Zoho (ZeptoMail)", "Delivery and access"],
+];
+
+const CELL =
+  "p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]";
+const HEADER_CELL =
+  "h-10 px-2 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-white";
+
 export function DataProcessingAgreement() {
   return (
     <>
@@ -15,7 +38,7 @@ export function DataProcessingAgreement() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Data Processing Agreement
             </h1>
-            <p className="text-white/60 text-lg">Last modified: November 18, 2025</p>
+            <p className="text-white/60 text-lg">Updated: 18 August 2026</p>
           </div>
 
           {/* Content */}
@@ -301,9 +324,10 @@ export function DataProcessingAgreement() {
                 <ul className="list-disc pl-8 space-y-2 mt-4">
                   <li>
                     in notifying the personal data breach to the competent supervisory
-                    authority/ies, without undue delay after the controller has become aware of it,
-                    where relevant/(unless the personal data breach is unlikely to result in a risk
-                    to the rights and freedoms of natural persons);
+                    authority/ies, without undue delay and in any event within 24 hours after the
+                    controller has become aware of it, where relevant/(unless the personal data
+                    breach is unlikely to result in a risk to the rights and freedoms of natural
+                    persons);
                   </li>
                   <li>
                     in obtaining the following information which, pursuant to the Applicable Data
@@ -381,6 +405,19 @@ export function DataProcessingAgreement() {
                   subscription term, except that for new features, offerings, supplements, or
                   related software, new or additional DPA terms may apply.
                 </p>
+                <p>
+                  <strong>Deletion or return of personal data.</strong> Upon termination or expiry
+                  of the Main Agreement, and at the choice of the controller notified to the
+                  processor in writing, the processor shall delete or return to the controller all
+                  personal data processed on behalf of the controller, and shall delete existing
+                  copies, within 60 days of such termination or expiry, unless retention is required
+                  by the Applicable Data Protection Legislation or other applicable law, in which
+                  case the processor shall inform the controller of that requirement. Where no
+                  choice is notified within 60 days of termination or expiry, the processor shall
+                  delete the personal data. Deletion from backups takes place in accordance with the
+                  backup retention cycle described in Annex III. Upon the controller's written
+                  request, the processor shall provide written confirmation of deletion.
+                </p>
                 <div
                   data-orientation="horizontal"
                   role="none"
@@ -400,7 +437,7 @@ export function DataProcessingAgreement() {
                       </p>
                       <p className="mt-1">
                         the controller's contact is identified in the Main Agreement as the person
-                        sinning the Main Agreement
+                        signing the Main Agreement
                       </p>
                     </div>
                     <div className="p-6 rounded-lg border">
@@ -413,7 +450,14 @@ export function DataProcessingAgreement() {
                         <strong>Contact person's name:</strong>
                       </p>
                       <p className="mt-1">
-                        the controller's contact is Iulia Trandafir; e-mail: iulia@genez.io
+                        the controller's contact is Iulia Trandafir; Chief Operating Officer;
+                        e-mail:{" "}
+                        <a
+                          href="mailto:iulia@genezio.com"
+                          className="text-white hover:underline"
+                        >
+                          iulia@genezio.com
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -447,7 +491,9 @@ export function DataProcessingAgreement() {
                         <p className="font-semibold">Categories of personal data processed</p>
                         <p className="mt-2">
                           The Controller determines the categories of data for each Service used
-                          under the Main Agreement.
+                          under the Main Agreement. These typically include: account data relating
+                          to the Controller's authorised users, such as name, business e-mail
+                          address and organisation.
                         </p>
                       </div>
                     </div>
@@ -461,7 +507,11 @@ export function DataProcessingAgreement() {
                         transfers or additional security measures.
                       </p>
                       <p className="mt-2">
-                        <strong>N/A</strong>
+                        The Products are not intended for the processing of sensitive data. The
+                        Controller undertakes not to submit sensitive data through the Products, in
+                        particular through free-text fields, and acknowledges that it does so at its
+                        own risk. Should sensitive data nevertheless be submitted, the processor
+                        shall apply the technical and organisational measures set out in Annex III.
                       </p>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -482,8 +532,10 @@ export function DataProcessingAgreement() {
                         </p>
                         <p className="mt-2">
                           Performance of the Main Agreement concluded between the Parties and the
-                          provisions and use of the Products, including for training if and as
-                          provided under the Main Agreement.
+                          provisions and use of the Products. The processor does not use personal
+                          data processed on behalf of the controller to train, fine-tune or
+                          otherwise develop or improve any artificial intelligence or machine
+                          learning models, whether its own or those of any sub-processor.
                         </p>
                         <p className="mt-2">
                           The controller personal data will also be processed in order to send
@@ -497,8 +549,8 @@ export function DataProcessingAgreement() {
                       <div>
                         <p className="font-semibold">Duration of the processing</p>
                         <p className="mt-2">
-                          For the duration of the Main Agreement, or longer when and if required by
-                          the applicable law.
+                          Upon termination of the Main Agreement, personal data is deleted or
+                          returned in accordance with Clause 12 (e) above.
                         </p>
                       </div>
                       <div>
@@ -519,7 +571,7 @@ export function DataProcessingAgreement() {
                   <div className="p-6 rounded-lg border space-y-6">
                     <div>
                       <h4 className="font-semibold">
-                        "Technical and organisational measures implemented by the processor
+                        Technical and organisational measures implemented by the processor
                       </h4>
                       <ul className="list-disc pl-6 mt-4 space-y-2">
                         <li>Processor has implemented an IT security policy that addresses:</li>
@@ -548,6 +600,50 @@ export function DataProcessingAgreement() {
                           passwords.
                         </li>
                         <li>Processor has rules for analysing and reporting security breaches.</li>
+                        <li>
+                          Processor maintains centralised logging and monitoring of its production
+                          environment, and retains audit logs for security investigation purposes.
+                        </li>
+                        <li>
+                          Processor performs regular vulnerability scanning and annual penetration
+                          testing, and remediates identified findings according to documented
+                          severity levels.
+                        </li>
+                        <li>
+                          Processor maintains a documented business continuity and disaster recovery
+                          plan, which is reviewed and tested at least annually.
+                        </li>
+                        <li>
+                          Processor carries out background verification of personnel where permitted
+                          by applicable law, requires all personnel to sign confidentiality
+                          undertakings, and delivers security awareness training upon hire and at
+                          least annually thereafter.
+                        </li>
+                        <li>
+                          Processor maintains a certified information security management system in
+                          accordance with ISO/IEC 27001:2022, and undergoes an annual SOC 2 Type II
+                          examination. Current certificates and reports are made available to the
+                          controller upon request, subject to confidentiality obligations, via the
+                          processor's Trust Center at{" "}
+                          <a
+                            href="https://trust.genezio.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:underline"
+                          >
+                            https://trust.genezio.com
+                          </a>
+                          .
+                        </li>
+                        <li>
+                          Backups and data recovery: all data is backed up daily; backups are
+                          encrypted at rest and retained for 7 days, after which they expire
+                          automatically. Personal data deleted at the controller's request is
+                          removed from production systems within 7 days. Deleted data may persist in
+                          encrypted backups until those backups expire in the normal retention
+                          cycle, as backups cannot be selectively modified without compromising
+                          their integrity. Expired backups are permanently and irreversibly deleted.
+                        </li>
                       </ul>
                     </div>
                     <div>
@@ -589,143 +685,29 @@ export function DataProcessingAgreement() {
                   </p>
                   <div className="relative w-full overflow-auto">
                     <table className="w-full caption-bottom border-2 border-grey-300">
-                      <thead className="[&amp;_tr]:border-b bg-grey-900 text-white">
+                      <thead className="[&_tr]:border-b bg-grey-900 text-white">
                         <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
-                            Sub-processor
-                          </th>
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
-                            Purpose
-                          </th>
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
-                            Storage location
-                          </th>
-                          <th className="h-10 px-2 text-left align-middle font-medium [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px] text-white">
-                            Duration of processing
-                          </th>
+                          <th className={HEADER_CELL}>Sub-processor</th>
+                          <th className={HEADER_CELL}>Purpose</th>
+                          <th className={HEADER_CELL}>Storage location</th>
+                          <th className={HEADER_CELL}>Duration of processing</th>
                         </tr>
                       </thead>
-                      <tbody className="[&amp;_tr:last-child]:border-0">
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Amazon AWS
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Data storage, Training and Processing
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Anthropic
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            General purpose AI
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Google Cloud
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Data storage, Training and Processing
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Meta
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Advertising Campaigns
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Microsoft
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Data hosting stored in Microsoft Azure
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            MongoDB
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Database hosting and data storage
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            OpenAI
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            General purpose AI
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
-                        <tr className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-gray-50">
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            OVH
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            Cloud hosting and infrastructure services
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            EU
-                          </td>
-                          <td className="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
-                            As required under the Main Agreement, unless otherwise required by the
-                            law or by sub-processor’s binding rules
-                          </td>
-                        </tr>
+                      <tbody className="[&_tr:last-child]:border-0">
+                        {SUB_PROCESSORS.map(([name, purpose]) => (
+                          <tr
+                            key={name}
+                            className="border-b transition-colors data-[state=selected]:bg-muted hover:bg-white/5"
+                          >
+                            <td className={CELL}>{name}</td>
+                            <td className={CELL}>{purpose}</td>
+                            <td className={CELL}>EU</td>
+                            <td className={CELL}>
+                              As required under the Main Agreement, unless otherwise required by the
+                              law or by sub-processor’s binding rules
+                            </td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
