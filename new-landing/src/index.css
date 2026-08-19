@@ -111,4 +111,98 @@ body {
   border-radius: calc(var(--radius) + 4px);
 }
 
+/* CookieYes Auto Cookie Policy Styles */
+#cky-auto-cookie-policy {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.75;
+}
+
+#cky-auto-cookie-policy h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  #cky-auto-cookie-policy h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+}
+
+#cky-auto-cookie-policy h2,
+#cky-auto-cookie-policy h3,
+#cky-auto-cookie-policy h4,
+#cky-auto-cookie-policy h5,
+#cky-auto-cookie-policy h6 {
+  color: #ffffff;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#cky-auto-cookie-policy h2 {
+  font-size: 1.75rem;
+}
+
+#cky-auto-cookie-policy h3 {
+  font-size: 1.25rem;
+}
+
+#cky-auto-cookie-policy p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+#cky-auto-cookie-policy a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#cky-auto-cookie-policy a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#cky-auto-cookie-policy table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#cky-auto-cookie-policy th,
+#cky-auto-cookie-policy td {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+#cky-auto-cookie-policy th {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#cky-auto-cookie-policy ul,
+#cky-auto-cookie-policy ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  space-y: 0.5rem;
+}
+
+#cky-auto-cookie-policy ul {
+  list-style-type: disc;
+}
+
+#cky-auto-cookie-policy ol {
+  list-style-type: decimal;
+}
+
+#cky-auto-cookie-policy li {
+  margin-bottom: 0.5rem;
+}
+
 /* Design system mode: light */

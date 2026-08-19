@@ -122,6 +122,14 @@ export function GenezioFooter() {
               </li>
               <li>
                 <a
+                  href="/cookie-policy/"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a
                   href="/data-processing-agreement/"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
