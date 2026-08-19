@@ -1,6 +1,29 @@
+import { useEffect } from "react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 
+const COOKIEYES_POLICY_SCRIPT_URL =
+  "https://cdn-cookieyes.com/client_data/7f0138f89a561e3e38e64c98/cookie-policy/script.js";
+
 export function CookiePolicy() {
+  useEffect(() => {
+    const container = document.getElementById("cky-auto-cookie-policy");
+    if (!container) return;
+
+    // Remove any existing script tag to allow clean re-execution on SPA route transitions
+    const oldScript = document.getElementById("cky-cookie-policy");
+    if (oldScript) {
+      oldScript.remove();
+    }
+
+    const script = document.createElement("script");
+    script.src = COOKIEYES_POLICY_SCRIPT_URL;
+    script.async = true;
+    script.defer = true;
+    script.id = "cky-cookie-policy";
+
+    container.appendChild(script);
+  }, []);
+
   return (
     <>
       <PolymetSEO
