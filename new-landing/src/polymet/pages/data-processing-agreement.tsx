@@ -120,7 +120,7 @@ export function DataProcessingAgreement() {
                   protection laws require one.
                 </p>
 
-                <Section>Section 1.</Section>
+                <Section>Section 1. General provisions</Section>
 
                 <Clause number="Clause 1." title="Purpose and scope" />
                 <Item label="(a)">
@@ -163,8 +163,8 @@ export function DataProcessingAgreement() {
                 <Item label="(b)">
                   <p>
                     This DPA shall be read and interpreted in the light of the provisions of the
-                    Applicable Data Protection Legislation. This DPA is subject to and an integral
-                    part of the Main Agreement.
+                    Applicable Data Protection Legislation. This DPA forms an integral part of the
+                    Main Agreement and, in case of conflict, Clause 3 (Hierarchy) shall apply.
                   </p>
                 </Item>
 
@@ -215,8 +215,8 @@ export function DataProcessingAgreement() {
                 <SubClause number="6.1" title="Instructions" />
                 <Item label="(a)">
                   <p>
-                    The processor shall process personal data on documented instructions from the
-                    controller, unless required to do so by the Applicable Data Protection Legislation
+                    The processor shall process personal data only on documented instructions from
+                    the controller, unless required to do so by the Applicable Data Protection Legislation
                     to which the processor is subject, including those provided in the Annexes
                     hereunder. In this case, the processor shall inform the controller of that legal
                     requirement before processing, unless the law prohibits this on important grounds
@@ -372,7 +372,8 @@ export function DataProcessingAgreement() {
                 <Item label="(a)">
                   <p>
                     The processor shall notify the controller of any request it has received from the
-                    data subject.
+                    data subject. It shall not respond to the request itself, unless authorised to do
+                    so by the controller.
                   </p>
                 </Item>
                 <Item label="(b)">
@@ -430,8 +431,9 @@ export function DataProcessingAgreement() {
                 </Item>
                 <Item label="(b)">
                   <p>
-                    in obtaining the following information which, pursuant to the Applicable Data
-                    Protection Legislation, shall be stated in the controller’s notification
+                    in obtaining the information which, pursuant to Article 33(3) of the GDPR and any
+                    other Applicable Data Protection Legislation, must be stated in the
+                    controller’s notification;
                   </p>
                 </Item>
                 <Item label="(c)">
@@ -684,7 +686,7 @@ export function DataProcessingAgreement() {
                   <div className="p-6 rounded-lg border space-y-6">
                     <div>
                       <h4 className="font-semibold">
-                        Technical and organisational measures implemented by the processor
+                        1. Technical and organisational measures implemented by the processor
                       </h4>
                       <ul className="list-disc pl-6 mt-4 space-y-2">
                         <li>
@@ -763,8 +765,8 @@ export function DataProcessingAgreement() {
                     </div>
                     <div>
                       <h4 className="font-semibold">
-                        Description of the specific technical and organisational measures to be
-                        taken by the processor to be able to provide assistance to the controller:
+                        2. Description of the specific technical and organisational measures to
+                        be taken by the processor to be able to provide assistance to the controller:
                       </h4>
                       <p className="mt-4">
                         Processor has implemented the technical and organisational measures
@@ -774,8 +776,8 @@ export function DataProcessingAgreement() {
                     </div>
                     <div>
                       <h4 className="font-semibold">
-                        For transfers to (sub-)processors, also describe the specific technical and
-                        organisational measures to be taken by the (sub-)processor to be able to
+                        3. For transfers to (sub-)processors, also describe the specific technical
+                        and organisational measures to be taken by the (sub-)processor to be able to
                         provide assistance to the controller:
                       </h4>
                       <p className="mt-4">
