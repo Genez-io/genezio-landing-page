@@ -16,6 +16,7 @@ import { TermsAndConditions } from "./polymet/pages/terms-and-conditions";
 import { SupportTerms } from "./polymet/pages/support-terms";
 import { DataProcessingAgreement } from "./polymet/pages/data-processing-agreement";
 import { PrivacyPolicy } from "./polymet/pages/privacy-policy";
+import { CookiePolicy } from "./polymet/pages/cookie-policy";
 import { AboutGenezio } from "./polymet/pages/about-genezio";
 import "./index.css";
 import BlogAuthor from "./polymet/pages/blog-author";
@@ -252,6 +253,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <DataProcessingAgreement />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/cookie-policy"
+        element={
+          <GenezioLayout>
+            <CookiePolicy />
           </GenezioLayout>
         }
       />

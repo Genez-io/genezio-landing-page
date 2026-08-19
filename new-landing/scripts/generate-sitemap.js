@@ -20,6 +20,7 @@ const staticRoutes = [
     '/support-terms',
     '/data-processing-agreement',
     '/privacy-policy',
+    '/cookie-policy',
     '/industry-leaderboards',
     '/about-genezio',
     '/agencies',
