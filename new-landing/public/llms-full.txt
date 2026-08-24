@@ -144,5 +144,6 @@ Ask AI engines direct questions about your brand and get structured analysis of 
 ### Legal
 - [Terms and Conditions](https://genezio.com/terms-and-conditions/)
 - [Privacy Policy](https://genezio.com/privacy-policy/)
+- [Cookie Policy](https://genezio.com/cookie-policy/)
 - [Support Terms](https://genezio.com/support-terms/)
 - [Data Processing Agreement](https://genezio.com/data-processing-agreement/)

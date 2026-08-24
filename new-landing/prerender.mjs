@@ -27,6 +27,7 @@ const routes = [
   "/support-terms",
   "/terms-and-conditions",
   "/privacy-policy",
+  "/cookie-policy",
   "/about-genezio",
   "/blog",
   "/research",
