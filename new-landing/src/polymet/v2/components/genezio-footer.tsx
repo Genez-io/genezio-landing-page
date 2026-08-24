@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export function GenezioFooterV2() {
   const productLinks = [
     { label: "Increase Lead Generation", href: "/conversational-brand-presence/" },
-    { label: "Increase Conversion", href: "/increase-conversion/" },
+    { label: "AI Agent Analytics", href: "/ai-agent-analytics/" },
     { label: "Increase In-Chat Shopping (soon)", href: "#" },
   ];
 
@@ -23,8 +23,8 @@ export function GenezioFooterV2() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16">
           {/* Brand section */}
           <div className="space-y-4">
-            <Link to="/ai-search-optimization-tool/" className="inline-flex items-center gap-2 group">
-              <img src="https://genezio.com/images/logo-dark.svg" alt="genezio" class="h-8 block sm:block"></img>
+            <Link to="/" className="inline-flex items-center gap-2 group">
+              <img src="https://genezio.com/images/logo-dark.svg" alt="genezio" className="h-8 block sm:block" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               The platform built for Generative Search and Answer Engine Optimization.

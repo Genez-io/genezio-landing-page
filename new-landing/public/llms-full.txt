@@ -134,7 +134,7 @@ Ask AI engines direct questions about your brand and get structured analysis of 
 - [Homepage](https://genezio.com/): Main platform overview and free analysis tool
 - [Pricing](https://genezio.com/pricing/): Plan comparison and pricing details
 - [Increase Lead Generation](https://genezio.com/conversational-brand-presence/): Conversational brand presence features
-- [Increase Conversion](https://genezio.com/increase-conversion/): Conversion optimization through AI visibility
+- [AI Agent Analytics](https://genezio.com/ai-agent-analytics/): Real conversation analytics & conversion optimization
 - [For Agencies](https://genezio.com/agencies/): Multi-brand management for agencies
 - [Industry Leaderboards](https://genezio.com/industry-leaderboards/): AI visibility benchmarks across industries
 - [Blog](https://genezio.com/blog/): Insights and best practices for GEO

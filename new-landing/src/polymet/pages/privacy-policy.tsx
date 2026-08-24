@@ -306,12 +306,12 @@ export function PrivacyPolicy() {
                                                     <p>
                                                         Hosting and infrastructure providers used to deliver our Services are listed in our Data Processing Agreement, available at{" "}
                                                         <a
-                                                            href="https://genezio.com/data-processing-agreement"
+                                                            href="https://genezio.com/data-processing-agreement/"
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="text-white hover:underline"
                                                         >
-                                                            https://genezio.com/data-processing-agreement
+                                                            https://genezio.com/data-processing-agreement/
                                                         </a>
                                                         . That list applies where we act as a processor on behalf of our customers, as described in the Introduction above.
                                                     </p>
@@ -414,12 +414,12 @@ export function PrivacyPolicy() {
                                 <p>
                                     We use cookies, web beacons, pixels and similar technologies on our websites. Strictly necessary cookies are used to operate and secure the website and do not require your consent. Analytics and advertising cookies are set only where you consent through our cookie banner, and you may change or withdraw your preferences at any time through the same banner or through your browser settings. Detailed information on the cookies we use, their purpose and their duration is available in our Cookie Policy at{" "}
                                     <a
-                                        href="https://genezio.com/cookie-policy"
+                                        href="https://genezio.com/cookie-policy/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-white hover:underline"
                                     >
-                                        https://genezio.com/cookie-policy
+                                        https://genezio.com/cookie-policy/
                                     </a>
                                     .
                                 </p>

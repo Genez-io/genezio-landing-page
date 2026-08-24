@@ -4,7 +4,6 @@ import { Link } from "react-router";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
-  ScanSearchIcon,
   FileCheck2Icon,
   ActivityIcon,
   CheckCircle2Icon,
