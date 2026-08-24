@@ -5,8 +5,57 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+/** Plain-text FAQ for the JSON-LD FAQPage schema, mirroring the visible content. */
+export const AGENCY_FAQ_SCHEMA = [
+  {
+    question: "How much does Genezio for agencies cost?",
+    answer:
+      "The Agency Enterprise plan is custom, scoped around the brands, engines, markets and volume across your client roster. Engagements typically start around €20,000 a year and scale to €100,000+ for larger, multi-client programs. Book a demo and we'll put together a quote that fits your roster.",
+  },
+  {
+    question: "How many brands can I monitor?",
+    answer:
+      "Your agency plan is custom, we scope the number of brands around your client roster. You can add more brands at any time with flexible add-ons, and each brand includes full monitoring, AI tracking, and insights.",
+  },
+  {
+    question: "Can I manage multiple clients?",
+    answer:
+      "Yes! The agency plan includes workspace management specifically designed for multi-client operations. You can organize brands by client, set permissions, and generate client-specific reports.",
+  },
+  {
+    question: "What AI engines do you track?",
+    answer:
+      "We track up to 5 answer engines per brand (e.g., ChatGPT, Claude, Gemini, Perplexity, Grok). You can add more engines with our enterprise add-ons to get comprehensive coverage across all major LLMs.",
+  },
+  {
+    question: "How does the free brand scan work?",
+    answer:
+      "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. It takes less than 10 minutes and is a great way to preview the platform before talking to our team.",
+  },
+  {
+    question: "Can I white-label reports for clients?",
+    answer:
+      "Yes! Enterprise add-ons include white-label reporting, custom branding, and client-ready dashboards. Perfect for agencies that want to present insights under their own brand.",
+  },
+  {
+    question: "What support do you offer?",
+    answer:
+      "Agency plans include email and Slack support. Enterprise customers get a dedicated success manager, priority support, and regular strategy calls.",
+  },
+  {
+    question: "Where can I learn more about Genezio for Agencies?",
+    answer:
+      "You can find detailed information about our specialized features, case studies, and solutions for agencies on our dedicated agencies page at genezio.com/agencies/.",
+  },
+];
+
 export function AgencyFaqSection() {
   const faqs = [
+    {
+      question: "How much does Genezio for agencies cost?",
+      answer:
+        "The Agency Enterprise plan is custom, scoped around the brands, engines, markets and volume across your client roster. Engagements typically start around €20,000 a year and scale to €100,000+ for larger, multi-client programs. Book a demo and we'll put together a quote that fits your roster.",
+    },
     {
       question: "How many brands can I monitor?",
       answer:

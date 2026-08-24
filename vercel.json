@@ -252,6 +252,16 @@
       "permanent": true
     },
     {
+      "source": "/increase-conversion/",
+      "destination": "/ai-agent-analytics/",
+      "permanent": true
+    },
+    {
+      "source": "/increase-conversion",
+      "destination": "/ai-agent-analytics/",
+      "permanent": true
+    },
+    {
       "source": "/glossary/llm-optimisation/",
       "destination": "/glossary/llm-optimization/",
       "permanent": true

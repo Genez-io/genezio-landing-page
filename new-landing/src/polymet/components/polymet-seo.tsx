@@ -68,11 +68,6 @@ export function PolymetSEO({
       applicationCategory: "Generative Engine Optimization, AI Agents Testing",
       operatingSystem: "Cloud",
       description: "Track how AI engines see your brand and optimize your presence to win more recommendations",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5",
-        reviewCount: "16",
-      },
     };
 
     const path = canonicalPath || "";
@@ -85,19 +80,16 @@ export function PolymetSEO({
         baseOrg,
         {
           ...baseApp,
-          offers: [
-            {
-              "@type": "Offer",
-              name: "Enterprise",
-              description: "For large-scale operations",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "0",
-                priceCurrency: "EUR",
-                description: "Custom/Contact for quote",
-              },
-            }
-          ],
+          offers: {
+            "@type": "AggregateOffer",
+            name: "Enterprise",
+            priceCurrency: "EUR",
+            lowPrice: "20000",
+            highPrice: "100000",
+            offerCount: "2",
+            description:
+              "Custom annual Enterprise engagement. Typically starts around €20,000/year for a single brand in one market, and scales to €100,000+ for large, multi-brand, multi-market programs.",
+          },
         },
       ];
     } else if (path.startsWith("/blog/author/")) {

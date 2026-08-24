@@ -8,8 +8,67 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+/** Plain-text FAQ for the JSON-LD FAQPage schema, mirroring the visible content. */
+export const PRICING_FAQ_SCHEMA = [
+  {
+    question: "How much does Genezio cost?",
+    answer:
+      "Genezio is a custom Enterprise plan, priced around four levers: the answer engines you track, the markets and languages you cover, the personas, topics and scenarios you monitor, and your monthly conversation volume. Engagements typically start around €20,000 a year for a single brand in one market, and scale to €100,000+ for large, multi-brand, multi-market programs. Book a demo and we'll scope a quote to your footprint.",
+  },
+  {
+    question: "Why is Genezio enterprise-only, with no self-serve tiers?",
+    answer:
+      "AI visibility is different for every brand, the engines that matter, the markets and languages you sell in, the personas who buy, and the volume of conversations worth tracking all vary. Fixed tiers would either overcharge or under-serve. Instead, our team scopes a plan with you so you only pay for what moves the needle. Every engagement is sales-assisted and starts with a demo.",
+  },
+  {
+    question: "How does pricing actually work?",
+    answer:
+      "Pricing is built around four levers: the answer engines you track (ChatGPT, Gemini, Perplexity, Google AI Overviews, Copilot, Claude and more), the markets and languages you cover, the personas, topics and scenarios you monitor, and your conversation volume. Book a demo and we'll put together a quote scoped to your footprint, no fixed tiers, no per-seat surprises.",
+  },
+  {
+    question: "What's included in the platform?",
+    answer:
+      "The Genezio platform spans Monitor & benchmark (visibility, recommendation share, sentiment & citations), Content Hub (data-backed briefs & generation), Content Analysis (crawlability & citable-content audits), and In-Chat Shopping (AI product intelligence). Your plan is scoped to the modules, engines, markets, and volume you actually need.",
+  },
+  {
+    question: "Which answer engines and markets do you cover?",
+    answer:
+      "We track all the major answer engines, ChatGPT, Google AI Overviews & AI Mode, Gemini, Perplexity, Copilot, Claude, Grok, DeepSeek and Meta AI, across any market and language you operate in. We run realistic, multi-turn conversations per persona and per market, because the same question gets a different answer in London than in New York.",
+  },
+  {
+    question: "How fast can we get live, and what does onboarding look like?",
+    answer:
+      "Most brands are live within days. You get dedicated onboarding and a named account manager who helps set up your personas, topics, scenarios and competitive set, then walks your team through the first results and the action plan.",
+  },
+  {
+    question: "How do you handle security and compliance?",
+    answer:
+      "Genezio is built for enterprise security: SOC 2 Type II, ISO 27001, CSA STAR Level 1, SSO / SAML, role-based access, and a signed DPA for GDPR compliance. Our team is happy to complete your security review and answer vendor-assessment questionnaires as part of the evaluation.",
+  },
+  {
+    question: "Can we scale the plan up or down later?",
+    answer:
+      "Yes. Your plan is fully flexible, add engines, markets, personas, brands or volume as you grow, or adjust down between cycles. Your account manager handles the change; there are no rigid tiers to jump between.",
+  },
+  {
+    question: "What support do enterprise customers get?",
+    answer:
+      "A named account manager, dedicated Slack support, priority assistance, and regular strategy reviews, so AI visibility becomes an ongoing program, not a one-off report.",
+  },
+  {
+    question: "Do you offer plans for marketing agencies?",
+    answer:
+      "Yes, we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. See our agencies page at genezio.com/agencies/.",
+  },
+];
+
 export function GenezioPricingFaq() {
   const faqs = [
+    {
+      question: "How much does Genezio cost?",
+      answer:
+        "Genezio is a custom Enterprise plan, priced around four levers: the answer engines you track, the markets and languages you cover, the personas, topics and scenarios you monitor, and your monthly conversation volume. Engagements typically start around €20,000 a year for a single brand in one market, and scale to €100,000+ for large, multi-brand, multi-market programs. Book a demo and we'll scope a quote to your footprint.",
+    },
     {
       question: "Why is Genezio enterprise-only, with no self-serve tiers?",
       answer:
@@ -58,7 +117,7 @@ export function GenezioPricingFaq() {
     {
       question: "How do you handle security and compliance?",
       answer:
-        "Genezio is built for enterprise security: SOC 2, SSO / SAML, role-based access, and a signed DPA for GDPR compliance. Our team is happy to complete your security review and answer vendor-assessment questionnaires as part of the evaluation.",
+        "Genezio is built for enterprise security: SOC 2 Type II, ISO 27001, CSA STAR Level 1, SSO / SAML, role-based access, and a signed DPA for GDPR compliance. Our team is happy to complete your security review and answer vendor-assessment questionnaires as part of the evaluation.",
     },
     {
       question: "Can we scale the plan up or down later?",

@@ -4,7 +4,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
   {
     heading: "Platform",
     links: [
-      { label: "AI Agent Analytics", href: "/increase-conversion/" },
+      { label: "AI Agent Analytics", href: "/ai-agent-analytics/" },
       { label: "Website Analyzer", href: "/website-analyzer/" },
       { label: "Content Analysis", href: "/content-analysis/" },
       { label: "Content Hub", href: "/content-hub/" },
