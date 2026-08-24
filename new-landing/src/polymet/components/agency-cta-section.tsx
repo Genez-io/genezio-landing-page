@@ -10,7 +10,6 @@ export function AgencyCtaSection() {
       <div className="max-w-5xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden bg-[#0A0A0C] border border-white/10 p-8 md:p-12 lg:p-16">
           {/* Subtle single glow for depth */}
-          <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-white/[0.03] rounded-full blur-3xl" />
 
           {/* Content */}
           <div className="relative z-10 text-center">

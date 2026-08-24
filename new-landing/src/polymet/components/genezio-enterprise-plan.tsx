@@ -183,8 +183,6 @@ export function GenezioEnterprisePlan({
         {/* Full-width enterprise panel */}
         <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-[#0A0A0B] shadow-2xl shadow-black/20">
           {/* Decorative glows */}
-          <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/[0.04] blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-white/[0.04] blur-3xl" />
 
           <div className="relative grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 p-8 md:p-12 lg:p-14">
             {/* Left: offer summary + CTA */}

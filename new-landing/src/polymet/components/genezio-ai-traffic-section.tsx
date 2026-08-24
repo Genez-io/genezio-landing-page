@@ -4,8 +4,7 @@ import { EyeOffIcon, AlertTriangleIcon } from "lucide-react";
 /* Small centered divider label with the brand square marker */
 function BandLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center justify-center gap-2 mb-6">
-      <span className="h-1.5 w-1.5 flex-shrink-0 rounded-[2px] bg-emerald-400" />
+    <div className="flex items-center justify-center mb-6">
       <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
         {children}
       </span>

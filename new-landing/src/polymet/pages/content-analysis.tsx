@@ -39,7 +39,6 @@ function ContentAnalysisHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <HeroEyebrow className="mb-6">Content Analysis</HeroEyebrow>

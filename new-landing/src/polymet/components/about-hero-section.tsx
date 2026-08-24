@@ -10,7 +10,6 @@ export function AboutHeroSection() {
   return (
     <section className="relative bg-[#050506] pt-40 pb-20 overflow-hidden">
       {/* Subtle center glow */}
-      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.03] rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

@@ -7,7 +7,6 @@ export function AgencyHeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050506] pt-24 pb-12 px-4">
       {/* Subtle single glow for depth */}
-      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/[0.03] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="text-center mb-10 md:mb-12 px-2 sm:px-4 md:px-12 py-2 md:py-8 mt-0 md:mt-4">

@@ -30,7 +30,6 @@ export function GenezioCtaSection() {
       </div>
 
       {/* Glowing orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">

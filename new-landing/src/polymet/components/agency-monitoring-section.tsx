@@ -343,7 +343,6 @@ export function AgencyMonitoringSection() {
               </div>
 
               {/* Subtle glow for depth */}
-              <div className="pointer-events-none absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-white/[0.03] blur-3xl" />
             </div>
           </div>
 

@@ -113,11 +113,8 @@ function Hairline() {
 
 function GroupLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-2 mb-6">
-      <span className="h-1.5 w-1.5 rounded-[2px] bg-emerald-400" />
-      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-        {children}
-      </span>
+    <div className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
+      {children}
     </div>
   );
 }
@@ -126,7 +123,6 @@ function GroupLabel({ children }: { children: React.ReactNode }) {
 function SecurityHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-44 md:pb-28">
-      <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[640px] h-[640px] bg-white/[0.03] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <HeroEyebrow className="mb-6 mx-auto w-fit">

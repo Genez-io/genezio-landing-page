@@ -63,7 +63,6 @@ export function Blog() {
       <div className="min-h-screen bg-[#050506]">
         {/* Hero */}
         <section className="relative pt-32 pb-16 md:pb-20 px-6 md:px-8 lg:px-16 overflow-hidden">
-          <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-white/[0.03] rounded-full blur-3xl" />
 
           <div className="relative max-w-3xl mx-auto text-center">
             <HeroEyebrow className="mb-6 mx-auto w-fit">

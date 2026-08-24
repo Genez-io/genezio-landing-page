@@ -26,7 +26,6 @@ function ContentHubHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-white/[0.04] rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <HeroEyebrow className="mb-6">Content Hub</HeroEyebrow>
@@ -271,7 +270,6 @@ function BriefsVsDirect() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Briefs - primary */}
           <div className="relative bg-[#0A0A0C] border border-white/10 rounded-2xl p-8 md:p-10 overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] rounded-full blur-3xl" />
             <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-zinc-300 rounded-md border border-white/10 mb-6">
               MOST POPULAR
             </span>

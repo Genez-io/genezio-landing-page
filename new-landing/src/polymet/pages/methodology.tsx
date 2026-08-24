@@ -82,7 +82,6 @@ const ENGINES = [
 function MethodologyHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-44 md:pb-28">
-      <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[640px] h-[640px] bg-white/[0.03] rounded-full blur-3xl" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 lg:px-16 text-center">
         <HeroEyebrow className="mb-6 mx-auto w-fit">Methodology</HeroEyebrow>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.03em] text-white leading-[1.05]">
