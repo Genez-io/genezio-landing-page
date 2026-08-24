@@ -9,6 +9,7 @@ import { GenezioProductPillarsSection } from "@/polymet/components/genezio-produ
 import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-reader-section";
 import { GenezioBusinessGoalsSection } from "@/polymet/components/genezio-flywheel-section";
 import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterprise-trust-band";
+import { GenezioCommercialIntentBand } from "@/polymet/components/genezio-commercial-intent-band";
 
 export function GenezioLanding() {
   return (
@@ -43,6 +44,8 @@ export function GenezioLanding() {
       />
       <div className="min-h-screen bg-[#050506]">
         <GenezioHeroSection />
+
+        <GenezioCommercialIntentBand />
 
         <GenezioTrustSection />
         <GenezioEnterpriseTrustBand />

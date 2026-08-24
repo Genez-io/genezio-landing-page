@@ -94,6 +94,51 @@ export function GenezioAiTrafficSection() {
           ))}
         </div>
 
+        {/* The GA4 Illusion: analytics vs reality */}
+        <div className="max-w-5xl mx-auto bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 mb-6">
+          <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-6">
+            The GA4 illusion
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-8 items-center">
+            {/* What analytics shows */}
+            <div className="bg-[#050506] border border-white/10 rounded-xl p-5 md:p-6">
+              <div className="text-xs uppercase tracking-wider text-white/35 mb-2">
+                What GA4 shows
+              </div>
+              <div className="text-3xl md:text-4xl font-extrabold text-white/70 leading-none mb-1">
+                1,500
+              </div>
+              <div className="text-sm text-white/50">visits from AI</div>
+            </div>
+
+            {/* Multiplier */}
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-extrabold text-emerald-400 leading-none">
+                100×
+              </div>
+              <div className="mt-1 text-[11px] uppercase tracking-wider text-white/35">
+                the gap
+              </div>
+            </div>
+
+            {/* What actually happened */}
+            <div className="bg-[#050506] border border-emerald-500/20 rounded-xl p-5 md:p-6">
+              <div className="text-xs uppercase tracking-wider text-white/35 mb-2">
+                What actually happened
+              </div>
+              <div className="text-3xl md:text-4xl font-extrabold text-emerald-400 leading-none mb-1">
+                150,000
+              </div>
+              <div className="text-sm text-white/50">conversations in the logs</div>
+            </div>
+          </div>
+          <div className="mt-6 pt-5 border-t border-white/10 flex items-start gap-2 text-sm text-white/60">
+            <AlertTriangleIcon className="w-4 h-4 mt-0.5 text-emerald-400 flex-shrink-0" />
+            Analytics hides up to 99% of it, so every budget conversation is
+            being had on the wrong number.
+          </div>
+        </div>
+
         {/* Bridge callout: the critical difference */}
         <div className="max-w-5xl mx-auto bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 mb-16 md:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">

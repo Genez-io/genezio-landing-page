@@ -282,6 +282,59 @@ export function GenezioPerceptionSection() {
           </div>
         </div>
 
+        {/* The mechanism: we don't run prompts, we run conversations */}
+        <div className="mt-16 md:mt-20">
+          <div className="max-w-2xl mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 leading-tight">
+              We don't run prompts. We run conversations.
+            </h3>
+            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+              We simulate full conversations as your actual customer personas,
+              across multiple turns, in their own language and from inside their
+              own market. The keyword is the same. The answer is not.
+            </p>
+          </div>
+
+          {/* Same question, two personas, different answer */}
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
+            <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-5">
+              One question · “What's the best wearable to monitor sleep?”
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div className="bg-[#050506] border border-white/10 rounded-xl p-5">
+                <div className="text-xs text-white/50 leading-relaxed mb-4 min-h-[40px]">
+                  Marathon runner, €300 to spend, already dismissed two brands
+                  earlier in the chat
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-[2px] bg-emerald-400" />
+                  <span className="text-[11px] font-medium text-emerald-400">
+                    Recommended: recovery-grade tracker
+                  </span>
+                </div>
+              </div>
+              <div className="bg-[#050506] border border-white/10 rounded-xl p-5">
+                <div className="text-xs text-white/50 leading-relaxed mb-4 min-h-[40px]">
+                  First-time buyer asking the identical question, wants simple
+                  and affordable
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-[2px] bg-white/25" />
+                  <span className="text-[11px] font-medium text-white/40">
+                    Recommended: a different brand entirely
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-5 pt-4 border-t border-white/10 text-sm text-white/60 leading-relaxed">
+              A conversation is a chain of decisions, not a single answer. Turn
+              one narrows the field, turn three sets up the repeat purchase. By
+              the time the model helps set up a recurring order, the habit
+              belongs to whoever was named three turns earlier.
+            </div>
+          </div>
+        </div>
+
         {/* Win every buyer persona */}
         <div className="mt-16 md:mt-20">
           <div className="max-w-2xl mb-8">

@@ -66,8 +66,9 @@ export function GenezioProductPillarsSection() {
             </span>
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-6">
-            Measure how AI sees your brand, diagnose what's holding you back, and
-            ship the content that moves it, end to end.
+            Not just monitoring, but intervention and maintenance: measure how AI
+            sees your brand, act on what's holding you back, and hold the
+            position, end to end.
           </p>
         </div>
 
