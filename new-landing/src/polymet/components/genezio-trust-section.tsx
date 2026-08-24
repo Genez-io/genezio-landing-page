@@ -2,24 +2,20 @@ import React, { useEffect, useRef } from "react";
 
 const TRUSTED_COMPANIES = [
   {
-    name: "ERSTE BCR",
+    name: "Vodafone",
+    logo: "images/vodafone-logo.svg",
+    url: "https://www.vodafone.ro",
+    slot: "compact",
+  },
+  {
+    name: "Kaufland",
+    logo: "images/kaufland-logo.svg",
+    url: "https://www.kaufland.ro",
+  },
+  {
+    name: "BCR",
     logo: "images/erste-logo.svg",
     url: "https://www.bcr.ro",
-  },
-  {
-    name: "Banca Transilvania",
-    logo: "images/bt-logo.svg",
-    url: "https://www.bancatransilvania.ro",
-  },
-  {
-    name: "Druid",
-    logo: "images/druid-logo.svg",
-    url: "https://www.druidai.com",
-  },
-  {
-    name: "FlowX",
-    logo: "images/flowx-logo.png",
-    url: "https://www.flowx.ai",
   },
   {
     name: "CBRE",
@@ -32,21 +28,34 @@ const TRUSTED_COMPANIES = [
     url: "https://www.bitdefender.com",
   },
   {
+    name: "DRUID AI",
+    logo: "images/druid-logo.svg",
+    url: "https://www.druidai.com",
+  },
+  {
+    name: "FLOWX.AI",
+    logo: "images/flowx-logo.png",
+    url: "https://www.flowx.ai",
+  },
+  {
+    name: "SmartBill",
+    logo: "images/smartbill-logo.svg",
+    url: "https://www.smartbill.ro",
+  },
+  {
+    name: "Data Revolt",
+    logo: "images/data-revolt-logo.svg",
+    url: "https://www.datarevoltagency.com",
+  },
+  {
     name: "Lexters",
     logo: "images/lexters-logo.svg",
     url: "https://lexters.com",
   },
   {
-    name: "Auchan",
-    logo: "images/auchan-logo.svg",
-    url: "https://www.auchan.ro",
-    slot: "wide",
-  },
-  {
-    name: "Vodafone",
-    logo: "images/vodafone-logo.svg",
-    url: "https://www.vodafone.com",
-    slot: "compact",
+    name: "404 agency",
+    logo: "images/404-agency-logo.svg",
+    url: "https://404.agency",
   },
 ] as const;
 

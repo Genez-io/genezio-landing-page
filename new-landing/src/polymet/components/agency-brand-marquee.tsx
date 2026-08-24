@@ -73,7 +73,7 @@ export const AGENCY_BRANDS = [
 type Brand = (typeof AGENCY_BRANDS)[number];
 
 function brandLogoFilter(brand: Brand, hovered: boolean) {
-  const opacity = hovered ? 0.9 : 0.5;
+  const opacity = hovered ? 1 : 0.7;
 
   if ("invert" in brand && brand.invert) {
     return `brightness(0) invert(1) opacity(${opacity})`;
@@ -83,7 +83,7 @@ function brandLogoFilter(brand: Brand, hovered: boolean) {
 }
 
 const LOGO_SLOT =
-  "h-12 w-28 sm:h-14 sm:w-32 md:h-16 md:w-36 flex shrink-0 items-center justify-center px-6 md:px-8 lg:px-16";
+  "h-14 w-36 sm:h-16 sm:w-44 md:h-20 md:w-52 flex shrink-0 items-center justify-center px-5 md:px-8";
 
 function BrandLogo({ brand }: { brand: Brand }) {
   const { name, logo, url } = brand;

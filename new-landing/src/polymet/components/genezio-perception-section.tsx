@@ -164,7 +164,7 @@ export function GenezioPerceptionSection() {
           <div>
             <HeroEyebrow className="mb-6 w-fit">Know where you stand</HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Know why AI recommends someone else
+              Discover why AI recommends someone else
             </h2>
             <p className="text-base md:text-lg text-white/60 leading-relaxed mb-8">
               Being seen isn't the same as being chosen. Genezio shows why an
