@@ -380,7 +380,7 @@ export function Mcp() {
     <>
       <PolymetSEO
         title="Genezio MCP, Your AI Visibility Data in Any Assistant | Genezio"
-        description="The Genezio MCP server connects any AI assistant to your answer-engine data: custom questions, custom reporting, predefined skills, and scheduled routines."
+        description="Connect any AI assistant to your Genezio answer-engine data, custom questions, reports, skills and routines. Book a demo to see the MCP live."
         canonicalPath="/mcp/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{

@@ -10,7 +10,7 @@ linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/bcr-success-story.webp
 preview: Discover how BCR, a key entity within the major European financial player Erste Group, adopted a GEO strategy to stay relevant for the new generation of users.
 # meta data start
-description: Discover how BCR, a key entity within the major European financial player Erste Group, adopted a GEO strategy to stay relevant for the new generation of people.
+description: See how BCR, part of Europe's Erste Group, used a GEO strategy to dominate AI conversations and stay relevant for a new generation. Read the story.
 meta_og_url: "https://genezio.com/blog/bcr-success-story/"
 
 meta_og_image: "https://genezio.com/images/bcr-success-story.webp"

@@ -79,4 +79,4 @@ Customer Care experts know the risks of skipping proper testing. If an AI agent 
 
 Genezio makes this part easier. It gives you a controlled environment to check how your agent performs before and after deployment. So you're not guessing. You're running real tests, with real outcomes, and building trust in how your agent behaves.
 
-If you've been asking, how can I test the effectiveness of my AI agent?—this is the answer. [Try Genezio for free](/increase-conversion/) or book a demo to see how it works.
+If you've been asking, how can I test the effectiveness of my AI agent?—this is the answer. [Try Genezio for free](/ai-agent-analytics/) or book a demo to see how it works.

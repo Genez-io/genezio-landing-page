@@ -5,7 +5,7 @@ export function DataProcessingAgreement() {
     <>
       <PolymetSEO
         title="Genezio Data Processing Agreement (DPA) & GDPR Compliance"
-        description="Review Genezio's Data Processing Agreement (DPA) outlining our commitment to GDPR compliance, data security, and your personal data protection as a processor."
+        description="Read Genezio's Data Processing Agreement (DPA): our GDPR commitment, data security and protection of your personal data as processor. Contact us."
         canonicalPath="/data-processing-agreement/"
       />
       <div className="min-h-screen bg-[#050506]">

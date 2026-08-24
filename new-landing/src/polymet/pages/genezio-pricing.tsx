@@ -11,7 +11,7 @@ import { GenezioTestimonialSection } from "@/polymet/components/genezio-testimon
 
 const PRICING_TITLE = "Enterprise Pricing for AI Brand Visibility | Genezio";
 const PRICING_DESCRIPTION =
-  "Genezio is a custom Enterprise plan shaped around the answer engines, markets, and conversation volume you need, with optional dedicated AI-SEO and GEO experts to run the platform and produce your content. Book a demo for a tailored quote.";
+  "Genezio Enterprise pricing is scoped to the engines, markets and volume you need, with optional AI-SEO and GEO experts. Book a demo for a quote.";
 
 export function GenezioPricing() {
   const [selectedAudience, setSelectedAudience] = useState<

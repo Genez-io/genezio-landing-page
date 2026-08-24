@@ -13,7 +13,7 @@ linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/deciphering-fan-out-implicit-queries.webp
 preview: Master Generative Engine Optimization. Discover how Implicit and Fan-out Queries shape AI search and how the queries ChatGPT and Gemini use impact visibility.
 # meta data start
-description: Master Generative Engine Optimization. Discover how Implicit and Fan-out Queries shape AI search and how the queries ChatGPT and Gemini use impact visibility.
+description: Fan-out and implicit queries shape AI search visibility. Learn how ChatGPT and Gemini expand prompts and how to optimize for GEO. Read the guide.
 meta_og_url: "https://genezio.com/blog/deciphering-fan-out-implicit-queries/"
 
 meta_og_image: "https://genezio.com/images/deciphering-fan-out-implicit-queries.webp"

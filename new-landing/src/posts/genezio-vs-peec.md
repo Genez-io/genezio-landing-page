@@ -11,7 +11,7 @@ linkedIn: https://www.linkedin.com/in/bogdanripa/
 thumbnail: /images/genezio-vs-peec.webp
 preview: Looking for Peec AI alternatives? Discover how Genezio goes beyond static monitoring to track real user journeys, multi-turn conversations, and hidden queries.
 # meta data start
-description: Looking for Peec AI alternatives? Discover how Genezio goes beyond static monitoring to track real user journeys, multi-turn conversations, and hidden queries.
+description: Looking for Peec AI alternatives? See how Genezio goes beyond static monitoring to track real user journeys, multi-turn chats, and hidden queries.
 meta_og_url: "https://genezio.com/blog/genezio-vs-peec/"
 
 meta_og_image: "https://genezio.com/images/genezio-vs-peec.webp"

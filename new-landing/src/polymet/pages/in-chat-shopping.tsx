@@ -476,7 +476,7 @@ export function InChatShopping() {
     <>
       <PolymetSEO
         title="In-Chat Shopping, AI Product Intelligence | Genezio"
-        description="See how AI ranks, prices, and sells your products across ChatGPT and Google AI Overviews. Genezio In-Chat Shopping analyzes conversations, products, retailers, and sources."
+        description="See how AI ranks, prices and recommends your products across ChatGPT and Google AI Overviews. Book a live demo of Genezio In-Chat Shopping."
         canonicalPath="/in-chat-shopping/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{

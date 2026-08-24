@@ -9,7 +9,7 @@ linkedIn: https://www.linkedin.com/in/bogdanripa/
 thumbnail: /images/perplexity-vs-chatgpt.webp
 preview: We compared ChatGPT vs. Perplexity to reveal how they prioritize sources. Optimize your AI strategy by understanding how their search behaviors diverge.
 # meta data start
-description: ChatGPT acts like an analyst; Perplexity acts like a shopper. Discover the massive differences in their search queries and what it means for your AI visibility.
+description: ChatGPT searches like an analyst; Perplexity like a shopper. See how their AI search queries differ and what it means for your visibility.
 meta_og_url: "https://genezio.com/blog/perplexity-vs-chatgpt/"
 
 meta_og_image: "https://genezio.com/images/perplexity-vs-chatgpt.webp"

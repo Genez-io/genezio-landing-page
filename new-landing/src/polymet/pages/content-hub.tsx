@@ -455,7 +455,7 @@ export function ContentHub() {
     <>
       <PolymetSEO
         title="Content Hub, Data-Backed Content Briefs for AI Search | Genezio"
-        description="Genezio Content Hub turns AI-engine data into prioritized content briefs your team can ship, and drafts them too, to win recommendations in ChatGPT, Gemini, and AI Overviews."
+        description="Turn AI-engine data into prioritized content briefs, and drafts, that win recommendations in ChatGPT, Gemini and AI Overviews. Book a demo."
         canonicalPath="/content-hub/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{

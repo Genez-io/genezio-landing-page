@@ -66,4 +66,4 @@ Genezio checks for greater risks than just prompt injection attacks. It simulate
 
 The result? Peace of mind that your AI agents are safe, secure, and ready to serve your customers without risk.
 
-**Don’t wait for a breach to happen. [Test your AI agents now with Genezio](/increase-conversion/) and safeguard your business from prompt injection attacks.**
+**Don’t wait for a breach to happen. [Test your AI agents now with Genezio](/ai-agent-analytics/) and safeguard your business from prompt injection attacks.**

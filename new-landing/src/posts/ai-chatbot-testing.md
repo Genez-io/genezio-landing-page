@@ -73,4 +73,4 @@ If your business is using AI to power customer support on multiple platforms, yo
 
 Genezio's scope currently focuses on text agents, so depending on your solution layout, you might be able to also test voice agents, especially if they're powered by an LLM.
 
-Don't wait for a viral PR nightmare to realize your chatbot isn't behaving as it should. **Book a demo and get your free [AI chatbot testing with Genezio](/increase-conversion/).**
+Don't wait for a viral PR nightmare to realize your chatbot isn't behaving as it should. **Book a demo and get your free [AI chatbot testing with Genezio](/ai-agent-analytics/).**

@@ -4,6 +4,7 @@
   "installCommand": "cd new-landing && npm install",
   "buildCommand": "cd new-landing && npm run build",
   "outputDirectory": "new-landing/dist",
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/docs",

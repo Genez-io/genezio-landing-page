@@ -1,5 +1,6 @@
 ---
 title: "Continuous Testing for AI Chatbots"
+metaTitle: "Continuous Testing for AI Chatbots Explained | Genezio"
 date: 2025-06-30
 tags:
   - AI

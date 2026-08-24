@@ -539,8 +539,8 @@ export function Security() {
   return (
     <>
       <PolymetSEO
-        title="Enterprise & Security | Genezio"
-        description="Genezio is enterprise-ready: SOC 2 Type II, ISO/IEC 27001, CSA STAR Level 1, GDPR compliant, plus SSO/SAML, SCIM, RBAC, encryption in transit and at rest, and a public Trust Center."
+        title="Enterprise Security & Compliance for AI Search | Genezio"
+        description="Genezio is enterprise-ready: SOC 2 Type II, ISO 27001, CSA STAR Level 1, GDPR, SSO/SAML and encryption. Visit our Trust Center or book a demo."
         canonicalPath="/security/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
       />

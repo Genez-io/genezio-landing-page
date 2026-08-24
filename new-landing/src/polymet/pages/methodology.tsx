@@ -259,8 +259,8 @@ export function Methodology() {
   return (
     <>
       <PolymetSEO
-        title="Methodology | Genezio"
-        description="How Genezio measures AI recommendation: simulated multi-turn personas from in-country IPs, confidence intervals over large samples, and correlational, not deterministic, citation analysis."
+        title="Methodology: How We Measure AI Recommendation | Genezio"
+        description="How Genezio measures AI recommendation, simulated multi-turn personas, in-country IPs and confidence intervals over large samples. Book a demo."
         canonicalPath="/methodology/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
       />

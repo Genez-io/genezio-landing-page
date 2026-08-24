@@ -91,4 +91,4 @@ Genezio gives you a simple and quick way to test for that. It helps you catch in
 
 You can test your agent with a simulation by just pasting a URL. That's all.
 
-[Try Genezio for free](/increase-conversion/) and get your first AI agent security report in just 24 hours.
+[Try Genezio for free](/ai-agent-analytics/) and get your first AI agent security report in just 24 hours.

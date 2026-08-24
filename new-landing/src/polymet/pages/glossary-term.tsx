@@ -62,7 +62,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "ai-visibility": {
     title: "AI Visibility: Measure & Improve LLM Brand Presence",
     metaDescription:
-      "Measure your brand's AI Visibility across ChatGPT, Perplexity, and Gemini. Discover how often your brand appears in LLM responses & get insights to improve.",
+      "AI Visibility measures how often and how prominently your brand appears in AI answers across ChatGPT, Claude, and Gemini. Track it with Genezio.",
     term: "AI Visibility",
     definition:
       "The measure of how often and how prominently your brand appears in AI-generated responses across conversational AI platforms like ChatGPT, Claude, Perplexity, and Gemini.",
@@ -111,7 +111,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "generative-engine-optimization": {
     title: "Generative Engine Optimization: Master AI Brand Presence",
     metaDescription:
-      "Master Generative Engine Optimization (GEO). Ensure your brand is accurately represented by AI models & LLMs. Protect your reputation and boost AI visibility.",
+      "Generative Engine Optimization (GEO) shapes how AI models represent your brand when they generate answers about your industry. Master it with Genezio.",
     term: "Generative Engine Optimization",
     acronym: "GEO",
     definition:
@@ -136,7 +136,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "ai-search-optimization": {
     title: "AI Search Optimization (ASO): Boost AI Visibility | Genezio",
     metaDescription:
-      "Understand AI Search Optimization (ASO). Rank higher in AI search results & conversational responses. Ensure your brand presence in LLMs. Boost AI visibility!",
+      "AI Search Optimization (ASO) tunes your digital presence to rank in AI-powered search and conversational answers. See how Genezio lifts visibility.",
     term: "AI Search Optimization",
     acronym: "ASO",
     definition:
@@ -185,7 +185,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "ai-citation": {
     title: "AI Citation: Boost Brand Presence in LLMs | Genezio",
     metaDescription:
-      "Unlock brand authority in LLMs with AI Citations. Learn how these direct mentions boost AI visibility, influence users, and drive decisions. Boost your brand!",
+      "AI Citation is when an AI engine references your brand or content as a source in its answer, building authority and visibility. Track it with Genezio.",
     term: "AI Citation",
     definition:
       "When an AI engine references or mentions your brand, product, or content as a source in its generated response. Citations are crucial for building AI visibility and credibility.",
@@ -498,7 +498,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "structured-data-for-ai": {
     title: "Structured Data for AI: Boost AI Brand Presence | Genezio",
     metaDescription:
-      "Optimize your brand's structured data for AI & LLMs. Ensure accurate representation, reduce misinterpretation, and boost visibility. Improve your AI presence.",
+      "Structured Data for AI uses schema markup and knowledge graphs so AI engines understand your content accurately. Measure it with Genezio.",
     term: "Structured Data for AI",
     definition:
       "Organized information formats that help AI engines better understand and represent your content. This includes schema markup, knowledge graphs, and API-accessible data.",
@@ -546,7 +546,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "ai-platform": {
     title: "AI Platform: Maximize Brand Visibility in LLMs | Genezio",
     metaDescription:
-      "Master AI Platforms like ChatGPT & Claude. Discover how unique characteristics affect brand visibility & optimize your presence. Get insights with Genezio!",
+      "An AI Platform is a conversational AI like ChatGPT, Claude, Perplexity, or Gemini that users query for answers. Track yours with Genezio.",
     term: "AI Platform",
     definition:
       "A conversational AI system or service (such as ChatGPT, Claude, Perplexity, or Gemini) that users interact with to get information, recommendations, and answers. Each platform has unique characteristics that affect how brands should optimize their presence.",
@@ -618,7 +618,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "enterprise-ai-platform": {
     title: "Enterprise AI Platform: Secure, Scalable AI for Orgs",
     metaDescription:
-      "Discover Enterprise AI Platforms: secure, scalable infrastructure for large organizations. Ensure compliance & governance. Improve your brand's AI visibility.",
+      "An Enterprise AI Platform is secure, scalable AI infrastructure with governance and compliance built for large organizations. Explore it with Genezio.",
     term: "Enterprise AI Platform",
     definition:
       "A scalable, secure AI infrastructure designed for large organizations. Enterprise AI platforms provide advanced features like multi-user management, data governance, compliance controls, and integration capabilities to meet corporate requirements.",
@@ -690,7 +690,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "ai-platforms-for-business": {
     title: "AI Platforms For Business: Drive Growth & Efficiency",
     metaDescription:
-      "Discover how AI platforms for business drive operational efficiency, customer engagement & competitive advantage. Get insights to boost your brand presence!",
+      "AI Platforms for Business apply AI to operational efficiency, customer engagement, and competitive advantage in your workflows. See it in Genezio.",
     term: "AI Platforms For Business",
     definition:
       "Business-focused AI solutions that help companies leverage artificial intelligence for operational efficiency, customer engagement, and competitive advantage. These platforms are designed to address specific business needs and integrate with existing workflows.",
@@ -714,7 +714,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "enterprise-ai-software": {
     title: "Enterprise AI Software: Scalable AI for Enterprises",
     metaDescription:
-      "Leverage Enterprise AI Software with robust security, compliance, & scalability for large organizations. Deploy AI at scale. See how Genezio boosts your brand.",
+      "Enterprise AI Software delivers robust security, compliance, and scalability for AI deployed across large organizations. See how Genezio helps you.",
     term: "Enterprise AI Software",
     definition:
       "AI software specifically built for enterprise-scale deployments. Features include robust security, compliance certifications, advanced analytics, multi-tenant architecture, and enterprise support to meet the demands of large organizations.",
@@ -810,7 +810,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "conversation-analysis": {
     title: "Conversation Analysis: AI-Driven Support QA & Insights | Genezio",
     metaDescription:
-      "Transform support teams with Conversation Analysis. Use AI to automate QA, measure agent performance, and decode customer sentiment across every interaction.",
+      "Conversation Analysis uses AI to transcribe and evaluate customer calls and chats for agent performance and sentiment. Measure it with Genezio.",
     term: "Conversation Analysis",
     definition:
       "The methodology of using AI to transcribe and evaluate customer interactions (calls, chats, emails) to assess agent performance, compliance, and customer sentiment.",
@@ -833,7 +833,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "llm-optimization": {
     title: "LLM Optimization (LLMO): Make Content AI Can Reproduce",
     metaDescription:
-      "What is LLM Optimization (LLMO)? Learn how to structure content so LLMs like ChatGPT, Claude & Gemini ingest, understand & reproduce your brand accurately.",
+      "LLM Optimization (LLMO) structures content so large language models understand and reproduce your brand accurately. See how Genezio tracks it.",
     term: "LLM Optimization",
     acronym: "LLMO",
     definition:
@@ -997,7 +997,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "zero-click-search": {
     title: "Zero-Click Search: Why AI Answers Reduce Clicks",
     metaDescription:
-      "What is zero-click search? Learn how AI Overviews and generated answers satisfy users without a click, and why brand mentions now matter more than traffic.",
+      "Zero-Click Search resolves a user's need on the results page via AI answers, making brand mentions matter more than clicks. Track them with Genezio.",
     term: "Zero-Click Search",
     definition:
       "A search where the user's need is met directly on the results page, through an AI Overview, featured snippet, or generated answer, without clicking through to any website. Zero-click behavior makes AI citation and brand mention more valuable than raw traffic.",
@@ -1112,7 +1112,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "entity": {
     title: "Entity in SEO & AI: Why Your Brand Must Be Defined",
     metaDescription:
-      "What is an entity in SEO and AI? Learn how search and AI systems recognize brands, products, and people, and why being a clear entity drives AI visibility.",
+      "An Entity is a uniquely identifiable brand, product, person, or place that AI and search systems can recognize. Define yours with Genezio.",
     term: "Entity",
     definition:
       "A distinct, uniquely identifiable thing, such as a brand, product, person, or place, that AI and search systems recognize and reason about. Establishing your brand as a well-defined entity is foundational to consistent AI representation.",
@@ -1229,7 +1229,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "share-of-voice": {
     title: "Share of Voice in AI: Measure Competitive Dominance",
     metaDescription:
-      "What is Share of Voice (SOV) in AI search? Learn how to measure how often AI recommends your brand versus competitors, and quantify your category dominance.",
+      "Share of Voice (SOV) is the share of AI answers that mention or recommend your brand versus competitors in your category. Measure it with Genezio.",
     term: "Share of Voice",
     acronym: "SOV",
     definition:
@@ -1276,7 +1276,7 @@ const glossaryData: Record<string, GlossaryTerm> = {
   "visibility-to-recommendation-rate": {
     title: "Visibility-to-Recommendation Rate (VRR): The AI Metric",
     metaDescription:
-      "What is Visibility-to-Recommendation Rate (VRR)? Learn why brands are pivoting from Share of Voice to VRR, the percentage of times AI explicitly recommends you.",
+      "Visibility-to-Recommendation Rate (VRR) is the share of times AI explicitly recommends your brand as the best choice. Measure it with Genezio.",
     term: "Visibility-to-Recommendation Rate",
     acronym: "VRR",
     definition:

@@ -571,7 +571,7 @@ export function ContentAnalysis() {
     <>
       <PolymetSEO
         title="Content Analysis, Will AI Cite Your Content? | Genezio"
-        description="Genezio Content Analysis scores every page on 8 checks, pre-publish and post-publish: can AI reach it, does it answer real questions, is it built to get cited, then plans the fixes."
+        description="Score every page on 8 checks, can AI reach it, cover the question and earn citations, pre- and post-publish. Book a demo for a fix plan."
         canonicalPath="/content-analysis/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
         schema={{
