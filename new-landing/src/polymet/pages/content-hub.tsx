@@ -9,7 +9,6 @@ import {
   GlobeIcon,
   LinkIcon,
   ListChecksIcon,
-  SparklesIcon,
   PenLineIcon,
   SearchIcon,
   ArrowRightIcon,
