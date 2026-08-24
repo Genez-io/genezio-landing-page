@@ -22,6 +22,7 @@ const routes = [
   "/mcp",
   "/security",
   "/methodology",
+  "/academy",
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",

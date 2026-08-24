@@ -28,6 +28,7 @@ import { InChatShopping } from "./polymet/pages/in-chat-shopping";
 import { Mcp } from "./polymet/pages/mcp";
 import { Security } from "./polymet/pages/security";
 import { Methodology } from "./polymet/pages/methodology";
+import { Academy } from "./polymet/pages/academy";
 
 
 const ExternalRedirect = ({ to }: { to: string }) => {
@@ -185,6 +186,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <Methodology />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/academy"
+        element={
+          <GenezioLayout>
+            <Academy />
           </GenezioLayout>
         }
       />

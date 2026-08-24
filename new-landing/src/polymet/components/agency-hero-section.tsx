@@ -22,7 +22,8 @@ export function AgencyHeroSection() {
           </h1>
 
           <p className="text-base md:text-lg text-white/60 mb-8 max-w-2xl mx-auto leading-relaxed px-2">
-            Monitor brands, deliver digital strategies, own AI presence.
+            Build a GEO practice on a methodology you can put in front of any
+            client, and own AI presence across your whole roster.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-10 md:mb-12 px-2 sm:px-4 max-w-md sm:max-w-none mx-auto">
@@ -37,19 +38,15 @@ export function AgencyHeroSection() {
                 Talk to Sales
               </Button>
             </Link>
-            <a
-              target="_blank"
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
-              className="w-full sm:w-auto"
-            >
+            <Link to="/methodology/" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 variant="outline"
                 className="border border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-6 py-6 text-base font-semibold rounded-xl transition-colors w-full sm:w-auto"
               >
-                Contact Us
+                See the methodology
               </Button>
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:block max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 lg:mt-24 overflow-hidden">

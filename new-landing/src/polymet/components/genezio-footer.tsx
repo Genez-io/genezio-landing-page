@@ -25,6 +25,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
     heading: "Resources",
     links: [
       { label: "Blog", href: "/blog/" },
+      { label: "Academy", href: "/academy/" },
       { label: "Research", href: "/research/" },
       { label: "Methodology", href: "/methodology/" },
       { label: "Glossary", href: "/glossary/" },
