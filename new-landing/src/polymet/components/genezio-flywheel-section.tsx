@@ -44,8 +44,8 @@ export function GenezioBusinessGoalsSection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
-        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
-          <HeroEyebrow className="mb-6 mx-auto w-fit">Business goals</HeroEyebrow>
+        <div className="mb-12 md:mb-16 max-w-3xl">
+          <HeroEyebrow className="mb-6">Business goals</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
             Set the goal. Genezio tracks it and hands you the plan
           </h2>
