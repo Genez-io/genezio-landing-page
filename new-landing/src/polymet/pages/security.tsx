@@ -184,6 +184,8 @@ function CertificationsBand() {
       icon: ShieldCheckIcon,
       name: "SOC 2 Type II",
       desc: "Independently audited security controls.",
+      href: TRUST_CENTER_URL,
+      cta: "View in Trust Center",
     },
     {
       icon: BadgeCheckIcon,
@@ -195,6 +197,7 @@ function CertificationsBand() {
       name: "CSA STAR Level 1",
       desc: "Listed in the CSA STAR registry.",
       href: CSA_STAR_URL,
+      cta: "View registry entry",
     },
     {
       icon: LockIcon,
@@ -246,7 +249,7 @@ function CertificationsBand() {
                 </p>
                 {c.href && (
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
-                    View registry entry
+                    {c.cta ?? "Learn more"}
                     <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 )}
