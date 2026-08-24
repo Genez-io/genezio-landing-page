@@ -83,7 +83,7 @@ function brandLogoFilter(brand: Brand, hovered: boolean) {
 }
 
 const LOGO_SLOT =
-  "h-14 w-36 sm:h-16 sm:w-44 md:h-20 md:w-52 flex shrink-0 items-center justify-center px-5 md:px-8";
+  "h-16 w-44 sm:h-20 sm:w-52 md:h-24 md:w-64 flex shrink-0 items-center justify-center px-4 md:px-6";
 
 function BrandLogo({ brand }: { brand: Brand }) {
   const { name, logo, url } = brand;
@@ -100,7 +100,7 @@ function BrandLogo({ brand }: { brand: Brand }) {
         src={logo}
         alt={name}
         loading="lazy"
-        className="max-h-full max-w-full object-contain object-center transition-transform duration-300 group-hover:scale-110"
+        className="h-full w-full object-contain object-center transition-transform duration-300 group-hover:scale-110"
         style={{ filter: brandLogoFilter(brand, false) }}
         onMouseEnter={(event) => {
           event.currentTarget.style.filter = brandLogoFilter(brand, true);
