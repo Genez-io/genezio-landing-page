@@ -6,17 +6,16 @@ interface HeroEyebrowProps {
 }
 
 /**
- * The standard hero/section eyebrow tag used across the site:
- * a subtle pill with a live green dot and an uppercase, wide-tracked label.
+ * The standard hero/section eyebrow (kicker) used across the site:
+ * a small green square marker + an uppercase, wide-tracked label. No pill,
+ * to match the section labels elsewhere and read editorial rather than templated.
  */
 export function HeroEyebrow({ children, className = "" }: HeroEyebrowProps) {
   return (
-    <div
-      className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 ${className}`}
-    >
+    <div className={`inline-flex items-center gap-2.5 ${className}`}>
       {/* Small green square: mirrors the dot on the "i" in the Genezio logo */}
       <span className="h-1.5 w-1.5 flex-shrink-0 rounded-[2px] bg-emerald-400" />
-      <span className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
+      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
         {children}
       </span>
     </div>
