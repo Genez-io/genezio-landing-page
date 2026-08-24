@@ -216,12 +216,12 @@ function Capabilities() {
                 key={c.title}
                 className="group bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors"
               >
-                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-                  <Icon className="w-5 h-5 text-emerald-400" />
+                <div className="flex items-center gap-2.5 mb-2">
+                  <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2 leading-tight">
+                    {c.title}
+                  </h3>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-2 leading-tight">
-                  {c.title}
-                </h3>
                 <p className="text-sm text-zinc-400 leading-relaxed">
                   {c.description}
                 </p>
@@ -319,12 +319,12 @@ function SkillsAndRoutines() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Skills */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-9">
-            <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-              <BlocksIcon className="w-5 h-5 text-emerald-400" />
+            <div className="flex items-center gap-2.5 mb-2">
+              <BlocksIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+                Skills that already know the questions
+              </h3>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
-              Skills that already know the questions
-            </h3>
             <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
               Ship faster with predefined skills built by the Genezio team,
               each one a battle-tested workflow over your conversation data.
@@ -341,12 +341,12 @@ function SkillsAndRoutines() {
 
           {/* Routines */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-9">
-            <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-              <ClockIcon className="w-5 h-5 text-emerald-400" />
+            <div className="flex items-center gap-2.5 mb-2">
+              <ClockIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+                Routines that run without you
+              </h3>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
-              Routines that run without you
-            </h3>
             <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
               Turn any skill into a schedule. The MCP runs it on cadence and
               delivers the result where your team already reads it.

@@ -273,12 +273,12 @@ function BriefsVsDirect() {
             <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-zinc-300 rounded-md border border-white/10 mb-6">
               MOST POPULAR
             </span>
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
-              <FileTextIcon className="w-6 h-6 text-zinc-400" />
+            <div className="flex items-center gap-2.5 mb-2">
+              <FileTextIcon className="w-4 h-4 text-zinc-400 flex-shrink-0" />
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Data-backed briefs
+              </h3>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Data-backed briefs
-            </h3>
             <p className="text-white/60 leading-relaxed mb-6">
               The strategic layer. Genezio decides what to write, for whom,
               where, and why it will get cited, then your writers do what they
@@ -304,12 +304,12 @@ function BriefsVsDirect() {
             <span className="inline-block px-3 py-1 text-[10px] font-semibold bg-white/5 text-white/50 rounded-md border border-white/10 mb-6">
               WHEN YOU NEED SPEED
             </span>
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-6">
-              <PenLineIcon className="w-6 h-6 text-emerald-400" />
+            <div className="flex items-center gap-2.5 mb-2">
+              <PenLineIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Direct content generation
+              </h3>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Direct content generation
-            </h3>
             <p className="text-white/60 leading-relaxed mb-6">
               Need a first draft now? Content Hub can generate the full piece
               from the same brief, machine-readable, structured, and citable
@@ -382,11 +382,11 @@ function PlanLikeMedia() {
                 key={index}
                 className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/10 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-zinc-400" />
-                </div>
-                <div className="text-2xl font-extrabold text-white mb-2 tracking-tight">
-                  {dim.label}
+                <div className="flex items-center gap-2.5 mb-2">
+                  <Icon className="w-4 h-4 text-zinc-400 flex-shrink-0" />
+                  <div className="text-2xl font-extrabold text-white mb-2 tracking-tight">
+                    {dim.label}
+                  </div>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed">
                   {dim.description}
