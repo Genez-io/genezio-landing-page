@@ -125,7 +125,7 @@ export function Blog() {
                         {post.postType && (
                           <BlogPostTypeBadge type={post.postType} size="sm" />
                         )}
-                        <span className="inline-flex items-center rounded-md bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-emerald-400">
+                        <span className="inline-flex items-center rounded-md bg-white/[0.06] border border-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
                           {post.category}
                         </span>
                         <span className="inline-flex items-center gap-1.5 text-sm text-white/40">
@@ -186,7 +186,7 @@ export function Blog() {
                       {post.postType && (
                         <BlogPostTypeBadge type={post.postType} size="sm" />
                       )}
-                      <span className="inline-flex items-center rounded-md bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-emerald-400">
+                      <span className="inline-flex items-center rounded-md bg-white/[0.06] border border-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-white/70">
                         {post.category}
                       </span>
                       <span className="inline-flex items-center gap-1 text-xs text-white/40">
