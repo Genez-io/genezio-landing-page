@@ -1,3 +1,4 @@
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   LinkIcon,
   MessageSquareIcon,
@@ -20,9 +21,9 @@ export function LeadGenIntelligence() {
         "Identify missing authoritative sources",
       ],
 
-      color: "from-blue-500/20 to-cyan-500/20",
-      borderColor: "border-blue-500/20",
-      iconColor: "text-blue-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      iconColor: "text-zinc-400",
     },
     {
       icon: MessageSquareIcon,
@@ -35,9 +36,9 @@ export function LeadGenIntelligence() {
         "Identify perception gaps",
       ],
 
-      color: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/20",
-      iconColor: "text-purple-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      iconColor: "text-emerald-400",
     },
     {
       icon: HashIcon,
@@ -50,8 +51,8 @@ export function LeadGenIntelligence() {
         "Improve AI discoverability",
       ],
 
-      color: "from-emerald-500/20 to-teal-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       iconColor: "text-emerald-400",
     },
   ];
@@ -59,22 +60,16 @@ export function LeadGenIntelligence() {
   return (
     <section className="relative py-16 sm:py-24 bg-[#050506] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
-            <SearchIcon className="w-4 h-4 text-cyan-400" />
-
-            <span className="text-cyan-400 text-xs sm:text-sm font-medium">
-              Deep Intelligence
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Deep Intelligence</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Understand{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-white">
               Every Detail
             </span>
           </h2>
@@ -95,7 +90,7 @@ export function LeadGenIntelligence() {
             >
               {/* Icon */}
               <div
-                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${feature.color} border ${feature.borderColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl ${feature.color} border ${feature.borderColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
                 <feature.icon
                   className={`w-7 h-7 sm:w-8 sm:h-8 ${feature.iconColor}`}
@@ -103,7 +98,7 @@ export function LeadGenIntelligence() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 group-hover:text-zinc-400 transition-colors">
                 {feature.title}
               </h3>
               <p className="text-sm sm:text-base text-white/60 mb-6 leading-relaxed">
@@ -114,7 +109,7 @@ export function LeadGenIntelligence() {
               <div className="space-y-3">
                 {feature.benefits.map((benefit, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0 mt-2" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-400 flex-shrink-0 mt-2" />
 
                     <span className="text-sm text-white/70">{benefit}</span>
                   </div>
@@ -130,7 +125,7 @@ export function LeadGenIntelligence() {
             {/* Left: Example Data */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <FileTextIcon className="w-6 h-6 text-cyan-400" />
+                <FileTextIcon className="w-6 h-6 text-zinc-400" />
 
                 <h3 className="text-xl sm:text-2xl font-semibold text-white">
                   Example: Keyword Analysis
@@ -160,7 +155,7 @@ export function LeadGenIntelligence() {
                     <span className="text-white font-medium">
                       "easy integration"
                     </span>
-                    <span className="text-blue-400 text-sm font-semibold">
+                    <span className="text-zinc-400 text-sm font-semibold">
                       Medium Intent
                     </span>
                   </div>
@@ -176,7 +171,7 @@ export function LeadGenIntelligence() {
                     <span className="text-white font-medium">
                       "affordable pricing"
                     </span>
-                    <span className="text-purple-400 text-sm font-semibold">
+                    <span className="text-emerald-400 text-sm font-semibold">
                       Low Intent
                     </span>
                   </div>
@@ -191,7 +186,7 @@ export function LeadGenIntelligence() {
 
             {/* Right: Impact */}
             <div className="flex flex-col justify-center">
-              <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl p-6 sm:p-8">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
                 <TrendingUpIcon className="w-10 h-10 sm:w-12 sm:h-12 text-emerald-400 mb-4" />
 
                 <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">

@@ -8,15 +8,15 @@ export function BtTestimonialSection() {
                 {/* Main Testimonial Card */}
                 <div className="relative bg-gradient-to-br from-[#0E0E10] to-[#1A1A1F] border border-white/5 rounded-3xl overflow-hidden">
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-transparent to-purple-500/[0.03] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-transparent pointer-events-none"></div>
 
                     {/* Content */}
                     <div className="relative p-8 md:p-16">
                         {/* Quote Icon and Tag */}
                         <div className="flex items-center gap-4 mb-8">
-                            <QuoteIcon className="w-12 h-12 text-blue-500/20" />
+                            <QuoteIcon className="w-12 h-12 text-zinc-500/20" />
 
-                            <p className="text-sm font-medium text-white/40 uppercase tracking-wider">
+                            <p className="text-sm font-medium text-white/40 uppercase tracking-[0.2em]">
                                 Customer Success Story
                             </p>
                         </div>
@@ -36,7 +36,7 @@ export function BtTestimonialSection() {
                                         By making our marketing chatbots consistently accurate and
                                         relevant, the platform strengthens the trust our customers
                                         place in Banca Transilvania and reflects our commitment to{" "}
-                                        <span className="text-blue-400 font-semibold">
+                                        <span className="text-zinc-400 font-semibold">
                                             responsibility, ethics, and respect
                                         </span>{" "}
                                         in every digital interaction."
@@ -67,7 +67,7 @@ export function BtTestimonialSection() {
                                             rel="noopener noreferrer"
                                             className="flex-shrink-0 group"
                                         >
-                                            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-blue-500/50 transition-colors">
+                                            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-white/10 transition-colors">
                                                 <img
                                                     src="/images/1655112774883.webp"
                                                     alt="Ömer Tetik"
@@ -84,7 +84,7 @@ export function BtTestimonialSection() {
                                                     href="https://www.linkedin.com/in/omer-tetik-355ksk/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-white/40 hover:text-blue-400 transition-colors"
+                                                    className="text-white/40 hover:text-zinc-400 transition-colors"
                                                     aria-label="LinkedIn Profile"
                                                 >
                                                     <LinkedinIcon className="w-4 h-4" />
@@ -99,11 +99,11 @@ export function BtTestimonialSection() {
 
                                 {/* Bottom Section - Metric */}
                                 <div className="mt-8 pt-8 border-t border-white/5">
-                                    <div className="inline-flex flex-col items-start px-6 py-4 bg-blue-500/5 border border-blue-500/10 rounded-xl">
-                                        <p className="text-3xl font-bold text-blue-400 mb-1">
+                                    <div className="inline-flex flex-col items-start px-6 py-4 bg-white/5 border border-white/10 rounded-xl">
+                                        <p className="text-3xl font-bold text-zinc-400 mb-1">
                                             +42%
                                         </p>
-                                        <p className="text-xs text-white/40 uppercase tracking-wider font-medium">
+                                        <p className="text-xs text-white/40 uppercase tracking-[0.2em] font-medium">
                                             Conversion Rate
                                         </p>
                                     </div>

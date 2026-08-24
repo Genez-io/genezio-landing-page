@@ -111,6 +111,45 @@ body {
   border-radius: calc(var(--radius) + 4px);
 }
 
+/* ── High-touch enterprise refinements ─────────────────────────────── */
+@layer base {
+  html {
+    /* Slightly smaller base so the whole site reads less oversized;
+       scales every rem-based size (type, spacing, max-widths) down ~6%. */
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    /* Refined Inter glyph set for a more premium, editorial feel */
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  }
+  /* Tighten large display type; Tailwind tracking-* utilities still override */
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+    /* Even out multi-line titles instead of leaving 1–2 orphan words on the last line */
+    text-wrap: balance;
+  }
+}
+
+/* Emerald text selection, the single brand accent */
+::selection {
+  background-color: rgba(16, 185, 129, 0.28);
+  color: #ffffff;
+}
+
+/* Refined keyboard focus ring */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #050506, 0 0 0 4px rgba(16, 185, 129, 0.5);
+  border-radius: 4px;
+}
+
 /* CookieYes Auto Cookie Policy Styles */
 #cky-auto-cookie-policy {
   color: hsl(var(--muted-foreground));

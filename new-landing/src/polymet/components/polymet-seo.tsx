@@ -68,11 +68,6 @@ export function PolymetSEO({
       applicationCategory: "Generative Engine Optimization, AI Agents Testing",
       operatingSystem: "Cloud",
       description: "Track how AI engines see your brand and optimize your presence to win more recommendations",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5",
-        reviewCount: "16",
-      },
     };
 
     const path = canonicalPath || "";
@@ -81,25 +76,8 @@ export function PolymetSEO({
     if (path === "/" || path === "") {
       defaultGraph = [baseOrg, baseApp];
     } else if (path === "/pricing" || path === "/pricing/") {
-      defaultGraph = [
-        baseOrg,
-        {
-          ...baseApp,
-          offers: [
-            {
-              "@type": "Offer",
-              name: "Enterprise",
-              description: "For large-scale operations",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                price: "0",
-                priceCurrency: "EUR",
-                description: "Custom/Contact for quote",
-              },
-            }
-          ],
-        },
-      ];
+      // No price in schema, pricing is custom Enterprise (quote-based).
+      defaultGraph = [baseOrg, baseApp];
     } else if (path.startsWith("/blog/author/")) {
       const authorKey = path.split("/blog/author/")[1]?.replace(/\/$/, "");
       const authorData = authorKey ? authors[authorKey] : null;

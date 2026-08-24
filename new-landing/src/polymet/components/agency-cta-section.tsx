@@ -1,49 +1,45 @@
 import { Button } from "@/components/ui/button";
-import { SparklesIcon } from "lucide-react";
 import { Link } from "react-router";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 export function AgencyCtaSection() {
   return (
-    <section className="py-12 md:py-24 bg-[#0E0E10] px-4 md:px-6">
+    <section className="relative py-24 md:py-32 bg-[#0E0E10] px-6 md:px-8 lg:px-16">
+      {/* Top hairline divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="max-w-5xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/30 p-8 md:p-12 lg:p-16">
-          {/* Background glow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
+        <div className="relative rounded-3xl overflow-hidden bg-[#0A0A0C] border border-white/10 p-8 md:p-12 lg:p-16">
+          {/* Subtle single glow for depth */}
 
           {/* Content */}
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-blue-300">
-                Start today
-              </span>
-            </div>
+            <HeroEyebrow className="mb-6 mx-auto w-fit">Start today</HeroEyebrow>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
               Ready to scale your agency?
             </h2>
 
-            <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-white/60 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
               Join leading agencies delivering AI-powered strategies
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="https://app.genezio.ai/sign-up">
+              <Link to="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg font-medium w-full sm:w-auto"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200 w-full sm:w-auto"
                 >
-                  Get Started
+                  Talk to Sales
                 </Button>
               </Link>
               <Button
                 onClick={() => window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"}
                 size="lg"
                 variant="outline"
-                className="border-white/30 bg-white/10 hover:bg-white/20 text-white hover:text-white px-8 h-14 text-lg font-medium w-full sm:w-auto backdrop-blur-sm"
+                className="border border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-6 py-6 text-base font-semibold rounded-xl transition-colors w-full sm:w-auto"
               >
-                Contact Sales
+                Get a demo
               </Button>
             </div>
           </div>

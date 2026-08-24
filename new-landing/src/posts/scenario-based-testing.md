@@ -60,4 +60,4 @@ Because **Genezio** supports non-technical users, it's perfect for bringing cros
 
 **AI agents** are often the first point of contact between a business and its customers. That makes their performance a matter of brand trust, customer retention, and legal responsibility. **Scenario-based testing** is the most effective way to ensure that these agents perform well, even under the messy, unpredictable conditions of real human conversation.
 
-[Book a free demo with Genezio and put your chatbot through scenario-based tests today.](/increase-conversion/)
+[Book a free demo with Genezio and put your chatbot through scenario-based tests today.](/ai-agent-analytics/)

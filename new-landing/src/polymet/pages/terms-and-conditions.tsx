@@ -5,11 +5,11 @@ export function TermsAndConditions() {
     <>
       <PolymetSEO
         title="Genezio Terms and Conditions - Official Legal Agreement"
-        description="Review Genezio's comprehensive Terms and Conditions. Understand our legal agreement for platform use, licenses, financial terms, and user responsibilities."
+        description="Read Genezio's Terms and Conditions, covering platform use, licenses, financial terms and user responsibilities. Contact us with any questions."
         canonicalPath="/terms-and-conditions/"
       />
       <div className="min-h-screen bg-[#050506]">
-        <div className="max-w-4xl mx-auto px-4 md:px-6 pt-32 md:pt-40 pb-20 md:pb-24">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-16 pt-32 md:pt-40 pb-20 md:pb-24">
           {/* Header */}
           <div className="mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Terms and Conditions</h1>

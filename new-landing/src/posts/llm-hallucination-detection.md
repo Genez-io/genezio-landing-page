@@ -25,7 +25,7 @@ url: /llm-hallucination-detection/
 
 AI agents are great at automating tasks, but they're not always accurate. LLM hallucination detection helps Customer Care Executives test and monitor AI-generated responses to catch errors before they cause real business problems. Genezio makes it simple to check AI agents for mistakes, so they stay reliable and on track throughout their lifecycles.
 
-[Try for free](/increase-conversion/) / [Book your Demo](/increase-conversion/)
+[Try for free](/ai-agent-analytics/) / [Book your Demo](/ai-agent-analytics/)
 
 ## What Are Large Language Models (LLMs)?
 
@@ -96,7 +96,7 @@ To help LLMs perform better, businesses can also consider tools like these:
 - **CX Automation**: Keeps AI-driven customer support on-topic and relevant across all channels.
 - **LLM Anomaly Detection**: Spots strange or unexpected behavior in LLMs replies.
 
-[Learn More](/increase-conversion/)
+[Learn More](/ai-agent-analytics/)
 
 ## Real Case Scenarios of AI Failures
 
@@ -106,10 +106,10 @@ LLMs don't always get it right. And when they don't, things can get serious fast
 - **National Eating Disorders Association (NEDA)**: AI gave harmful weight loss advice, which triggered backlash and forced the system offline.
 - **OpenAI Whisper**: In hospital tests, the OpenAI Whisper transcription model made up entire sentences that were never spoken by patients or doctors.
 
-Protect your business from preventable trouble. [Test Now](/increase-conversion/)
+Protect your business from preventable trouble. [Test Now](/ai-agent-analytics/)
 
 ## Get Started with LLM Hallucination Detection Today
 
 You don't need complex tools or long setups to start testing your AI agents. Genezio makes LLM hallucination detection simple. Start testing today and get your free report in just 24 hours. Check how your agents perform in real scenarios.
 
-**[Try Genezio for free](/increase-conversion/) or book a demo to see how it works.**
+**[Try Genezio for free](/ai-agent-analytics/) or book a demo to see how it works.**

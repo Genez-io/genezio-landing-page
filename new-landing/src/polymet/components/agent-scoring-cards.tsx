@@ -1,3 +1,4 @@
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   StarIcon,
   TrendingUpIcon,
@@ -31,8 +32,8 @@ export function AgentScoringCards() {
       ],
 
       improvements: ["Reduce technical jargon", "Faster initial response"],
-      color: "from-emerald-500/20 to-teal-500/20",
-      borderColor: "border-emerald-500/20",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
       textColor: "text-emerald-400",
     },
     {
@@ -55,9 +56,9 @@ export function AgentScoringCards() {
       ],
 
       improvements: ["Improve response speed", "Simplify explanations"],
-      color: "from-blue-500/20 to-cyan-500/20",
-      borderColor: "border-blue-500/20",
-      textColor: "text-blue-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      textColor: "text-zinc-400",
     },
     {
       name: "Emily Rodriguez",
@@ -74,9 +75,9 @@ export function AgentScoringCards() {
       },
       strengths: ["Quick responses", "Proactive solutions", "Customer rapport"],
       improvements: ["Handle complex technical issues", "Documentation"],
-      color: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/20",
-      textColor: "text-purple-400",
+      color: "bg-white/10",
+      borderColor: "border-white/10",
+      textColor: "text-emerald-400",
     },
   ];
 
@@ -116,22 +117,16 @@ export function AgentScoringCards() {
   return (
     <section className="relative py-16 sm:py-24 bg-[#0E0E10] overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-purple-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
-            <StarIcon className="w-4 h-4 text-purple-400 fill-current" />
-
-            <span className="text-purple-400 text-sm font-medium">
-              Agent Performance
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Agent Performance</HeroEyebrow>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Personalized{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-white">
               Scoring Cards
             </span>
           </h2>
@@ -159,7 +154,7 @@ export function AgentScoringCards() {
                     <p className="text-sm font-semibold text-white mb-1">
                       {item.category}
                     </p>
-                    <p className="text-xs text-purple-400 font-semibold mb-2">
+                    <p className="text-xs text-emerald-400 font-semibold mb-2">
                       {item.weight}
                     </p>
                     <p className="text-xs text-white/60">{item.description}</p>
@@ -175,11 +170,11 @@ export function AgentScoringCards() {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br ${agent.color} backdrop-blur-sm border ${agent.borderColor} rounded-2xl p-6 hover:scale-[1.02] transition-all relative`}
+              className={`${agent.color} backdrop-blur-sm border ${agent.borderColor} rounded-2xl p-6 transition-all relative`}
             >
               {/* Rank Badge */}
               {agent.rank === "Top Performer" && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full shadow-lg border border-white/20 text-xs font-semibold flex items-center gap-1">
+                <div className="absolute -top-3 -right-3 bg-emerald-400 hover:bg-emerald-300 text-black px-3 py-1 rounded-full shadow-lg border border-white/20 text-xs font-semibold flex items-center gap-1">
                   <AwardIcon className="w-3 h-3 fill-current" />
 
                   {agent.rank}
@@ -221,15 +216,15 @@ export function AgentScoringCards() {
                   </p>
                   <div className="flex items-center gap-1">
                     {agent.metrics.csat.trend === "up" ? (
-                      <TrendingUpIcon className="w-3 h-3 text-purple-400" />
+                      <TrendingUpIcon className="w-3 h-3 text-emerald-400" />
                     ) : (
-                      <TrendingDownIcon className="w-3 h-3 text-red-400" />
+                      <TrendingDownIcon className="w-3 h-3 text-zinc-400" />
                     )}
                     <span
                       className={`text-xs font-semibold ${
                         agent.metrics.csat.trend === "up"
-                          ? "text-purple-400"
-                          : "text-red-400"
+                          ? "text-emerald-400"
+                          : "text-zinc-400"
                       }`}
                     >
                       {agent.metrics.csat.change}
@@ -248,15 +243,15 @@ export function AgentScoringCards() {
                   </p>
                   <div className="flex items-center gap-1">
                     {agent.metrics.escalation.trend === "up" ? (
-                      <TrendingUpIcon className="w-3 h-3 text-purple-400" />
+                      <TrendingUpIcon className="w-3 h-3 text-emerald-400" />
                     ) : (
-                      <TrendingDownIcon className="w-3 h-3 text-red-400" />
+                      <TrendingDownIcon className="w-3 h-3 text-zinc-400" />
                     )}
                     <span
                       className={`text-xs font-semibold ${
                         agent.metrics.escalation.trend === "up"
-                          ? "text-purple-400"
-                          : "text-red-400"
+                          ? "text-emerald-400"
+                          : "text-zinc-400"
                       }`}
                     >
                       {agent.metrics.escalation.change}
@@ -275,15 +270,15 @@ export function AgentScoringCards() {
                   </p>
                   <div className="flex items-center gap-1">
                     {agent.metrics.responseTime.trend === "up" ? (
-                      <TrendingUpIcon className="w-3 h-3 text-purple-400" />
+                      <TrendingUpIcon className="w-3 h-3 text-emerald-400" />
                     ) : (
-                      <TrendingDownIcon className="w-3 h-3 text-red-400" />
+                      <TrendingDownIcon className="w-3 h-3 text-zinc-400" />
                     )}
                     <span
                       className={`text-xs font-semibold ${
                         agent.metrics.responseTime.trend === "up"
-                          ? "text-purple-400"
-                          : "text-red-400"
+                          ? "text-emerald-400"
+                          : "text-zinc-400"
                       }`}
                     >
                       {agent.metrics.responseTime.change}
@@ -302,15 +297,15 @@ export function AgentScoringCards() {
                   </p>
                   <div className="flex items-center gap-1">
                     {agent.metrics.resolution.trend === "up" ? (
-                      <TrendingUpIcon className="w-3 h-3 text-purple-400" />
+                      <TrendingUpIcon className="w-3 h-3 text-emerald-400" />
                     ) : (
-                      <TrendingDownIcon className="w-3 h-3 text-red-400" />
+                      <TrendingDownIcon className="w-3 h-3 text-zinc-400" />
                     )}
                     <span
                       className={`text-xs font-semibold ${
                         agent.metrics.resolution.trend === "up"
-                          ? "text-purple-400"
-                          : "text-red-400"
+                          ? "text-emerald-400"
+                          : "text-zinc-400"
                       }`}
                     >
                       {agent.metrics.resolution.change}
@@ -322,7 +317,7 @@ export function AgentScoringCards() {
               {/* Strengths */}
               <div className="mb-4">
                 <p className="text-xs font-semibold text-white/80 mb-2 flex items-center gap-1">
-                  <StarIcon className="w-3 h-3 fill-current text-purple-400" />
+                  <StarIcon className="w-3 h-3 fill-current text-emerald-400" />
                   Top Strengths
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -340,7 +335,7 @@ export function AgentScoringCards() {
               {/* Improvements */}
               <div>
                 <p className="text-xs font-semibold text-white/80 mb-2 flex items-center gap-1">
-                  <TargetIcon className="w-3 h-3 text-blue-400" />
+                  <TargetIcon className="w-3 h-3 text-zinc-400" />
                   Focus Areas
                 </p>
                 <div className="flex flex-wrap gap-2">

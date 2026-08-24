@@ -85,4 +85,4 @@ Once the agent is live, Genezio keeps checking for problems like hallucinations,
 
 For Customer Care Experts, that means fewer surprises. And an extra layer of assurance that the AI is doing what it's supposed to do.
 
-**The benefits of using AI in customer service only matter if the answers are correct. Genezio helps make sure they are. [Try Genezio for free](/increase-conversion/) or book a demo to start testing today!**
+**The benefits of using AI in customer service only matter if the answers are correct. Genezio helps make sure they are. [Try Genezio for free](/ai-agent-analytics/) or book a demo to start testing today!**

@@ -25,7 +25,7 @@ import {
       {
         question: "How does the free brand scan work?",
         answer:
-          "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. Free as part of the 7-day trial and takes less than 10 minutes.",
+          "Enter any brand name to instantly see visibility scores, citations, top AI keywords, and actionable recommendations. It is free to run and takes less than 10 minutes.",
       },
       {
         question: "Can I white-label reports for clients?",
@@ -40,7 +40,7 @@ import {
     ];
   
     return (
-      <section className="py-12 md:py-24 bg-[#050506] px-4 md:px-6">
+      <section className="py-12 md:py-24 bg-[#050506] px-6 md:px-8 lg:px-16">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-8 md:mb-16">

@@ -83,4 +83,4 @@ Some businesses need a one-time validation, while others require continuous moni
 
 **If you're ready to test your AI agents properly, get started today.**
 
-**[Try Genezio for free](/increase-conversion/) or book a demo to see how it works.**
+**[Try Genezio for free](/ai-agent-analytics/) or book a demo to see how it works.**

@@ -73,7 +73,7 @@ export const AGENCY_BRANDS = [
 type Brand = (typeof AGENCY_BRANDS)[number];
 
 function brandLogoFilter(brand: Brand, hovered: boolean) {
-  const opacity = hovered ? 0.9 : 0.5;
+  const opacity = hovered ? 1 : 0.7;
 
   if ("invert" in brand && brand.invert) {
     return `brightness(0) invert(1) opacity(${opacity})`;
@@ -83,7 +83,7 @@ function brandLogoFilter(brand: Brand, hovered: boolean) {
 }
 
 const LOGO_SLOT =
-  "h-12 w-28 sm:h-14 sm:w-32 md:h-16 md:w-36 flex shrink-0 items-center justify-center px-4 md:px-6";
+  "h-16 w-44 sm:h-20 sm:w-52 md:h-24 md:w-64 flex shrink-0 items-center justify-center px-4 md:px-6";
 
 function BrandLogo({ brand }: { brand: Brand }) {
   const { name, logo, url } = brand;
@@ -100,7 +100,7 @@ function BrandLogo({ brand }: { brand: Brand }) {
         src={logo}
         alt={name}
         loading="lazy"
-        className="max-h-full max-w-full object-contain object-center transition-transform duration-300 group-hover:scale-110"
+        className="h-full w-full object-contain object-center transition-transform duration-300 group-hover:scale-110"
         style={{ filter: brandLogoFilter(brand, false) }}
         onMouseEnter={(event) => {
           event.currentTarget.style.filter = brandLogoFilter(brand, true);
