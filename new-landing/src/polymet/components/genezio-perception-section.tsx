@@ -81,18 +81,6 @@ const PERSONAS = [
     tone: "good" as const,
   },
 ];
-
-const TONE_DOT = {
-  good: "bg-emerald-400",
-  warn: "bg-amber-400",
-  bad: "bg-rose-500",
-} as const;
-
-const TONE_TEXT = {
-  good: "text-emerald-400",
-  warn: "text-amber-400",
-  bad: "text-rose-400",
-} as const;
 function SwotCard() {
   return (
     <div className="relative bg-[#0A0A0C] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl shadow-black/40">
@@ -377,12 +365,8 @@ export function GenezioPerceptionSection() {
                     “{p.question}”
                   </p>
                   <div className="flex items-center gap-1.5">
-                    <span
-                      className={`h-1.5 w-1.5 rounded-[2px] ${TONE_DOT[p.tone]}`}
-                    />
-                    <span
-                      className={`text-[11px] font-medium ${TONE_TEXT[p.tone]}`}
-                    >
+                    <span className="h-1.5 w-1.5 rounded-[2px] bg-white/40" />
+                    <span className="text-[11px] font-medium text-white/70">
                       {p.status}
                     </span>
                   </div>

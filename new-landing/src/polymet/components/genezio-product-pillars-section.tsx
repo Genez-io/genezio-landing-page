@@ -79,9 +79,7 @@ export function GenezioProductPillarsSection() {
             const inner = (
               <>
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-emerald-400" />
-                  </div>
+                  <Icon className="w-6 h-6 text-emerald-400" />
                   <ArrowRightIcon className="w-5 h-5 text-white/20 group-hover:text-white/60 group-hover:translate-x-1 transition-all" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">

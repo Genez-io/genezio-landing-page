@@ -102,7 +102,7 @@ function HowWeMeasure() {
     <section className="relative bg-[#0E0E10] py-20 md:py-28">
       <Hairline />
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
-        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
+        <div className="max-w-2xl mb-14 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
             How we measure
           </h2>
@@ -120,13 +120,13 @@ function HowWeMeasure() {
                 key={m.title}
                 className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors"
               >
-                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-                  <Icon className="w-5 h-5 text-emerald-400" />
+                <div className="flex items-center gap-2.5 mb-2">
+                  <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-lg font-semibold text-white leading-snug">
+                    {m.title}
+                  </h3>
                 </div>
-                <h3 className="text-lg font-semibold text-white leading-snug">
-                  {m.title}
-                </h3>
-                <p className="mt-2 text-sm text-white/60 leading-relaxed">
+                <p className="text-sm text-white/60 leading-relaxed">
                   {m.description}
                 </p>
               </div>
@@ -147,12 +147,12 @@ function SampleAndSizing() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Sample size */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
-            <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-              <SigmaIcon className="w-5 h-5 text-emerald-400" />
+            <div className="flex items-center gap-2.5 mb-3">
+              <SigmaIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
+                Math, not vibes
+              </h3>
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight mb-3">
-              Math, not vibes
-            </h3>
             <p className="text-sm md:text-base text-white/60 leading-relaxed mb-5">
               A consulting firm runs 1,000 calls and reports noise. We run
               100,000 and give a recommendation rate with a mathematically
@@ -168,12 +168,12 @@ function SampleAndSizing() {
 
           {/* Sizing */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
-            <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-              <ScaleIcon className="w-5 h-5 text-emerald-400" />
+            <div className="flex items-center gap-2.5 mb-3">
+              <ScaleIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
+                How volume is sized
+              </h3>
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight mb-3">
-              How volume is sized
-            </h3>
             <p className="text-sm md:text-base text-white/60 leading-relaxed mb-5">
               Volume is driven by three things: how many brands, how many
               markets, and how many buyer personas. Roughly 30 scenarios per
