@@ -5,18 +5,17 @@ import {
   FileCheck2Icon,
   KeyRoundIcon,
   LockIcon,
-  ArrowRightIcon,
 } from "lucide-react";
 
 const TRUST_CENTER_URL = "https://trust.genezio.com/";
 
 export function GenezioEnterpriseTrustBand() {
   const items = [
-    { icon: ShieldCheckIcon, label: "SOC 2 Type II", href: TRUST_CENTER_URL },
-    { icon: BadgeCheckIcon, label: "ISO 27001" },
-    { icon: FileCheck2Icon, label: "CSA STAR Level 1" },
-    { icon: LockIcon, label: "GDPR compliant" },
-    { icon: KeyRoundIcon, label: "SSO / SAML" },
+    { icon: ShieldCheckIcon, label: "SOC 2 Type II", href: TRUST_CENTER_URL, external: true },
+    { icon: BadgeCheckIcon, label: "ISO 27001", href: "/security/" },
+    { icon: FileCheck2Icon, label: "CSA STAR Level 1", href: "/security/" },
+    { icon: LockIcon, label: "GDPR compliant", href: "/security/" },
+    { icon: KeyRoundIcon, label: "SSO / SAML", href: "/security/" },
   ];
 
   return (
@@ -38,7 +37,7 @@ export function GenezioEnterpriseTrustBand() {
                 </span>
               </>
             );
-            return item.href ? (
+            return item.external ? (
               <a
                 key={i}
                 href={item.href}
@@ -49,21 +48,11 @@ export function GenezioEnterpriseTrustBand() {
                 {inner}
               </a>
             ) : (
-              <div key={i} className={className}>
+              <Link key={i} to={item.href} className={className}>
                 {inner}
-              </div>
+              </Link>
             );
           })}
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <Link
-            to="/security/"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors group"
-          >
-            See security &amp; compliance
-            <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
         </div>
       </div>
     </section>
