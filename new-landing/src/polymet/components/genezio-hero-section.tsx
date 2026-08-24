@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
-  PlayCircleIcon,
+  ArrowUpRightIcon,
   ShieldCheckIcon,
   QuoteIcon,
   GitForkIcon,
@@ -55,8 +55,8 @@ export function GenezioHeroSection() {
                 }
                 className="inline-flex items-center gap-2 px-5 py-3 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group"
               >
-                <PlayCircleIcon className="w-5 h-5 text-white/50 group-hover:text-white transition-colors" />
-                See the interactive demo
+                Explore a live brand report
+                <ArrowUpRightIcon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
               </button>
             </div>
 
