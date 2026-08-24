@@ -76,22 +76,8 @@ export function PolymetSEO({
     if (path === "/" || path === "") {
       defaultGraph = [baseOrg, baseApp];
     } else if (path === "/pricing" || path === "/pricing/") {
-      defaultGraph = [
-        baseOrg,
-        {
-          ...baseApp,
-          offers: {
-            "@type": "AggregateOffer",
-            name: "Enterprise",
-            priceCurrency: "EUR",
-            lowPrice: "20000",
-            highPrice: "100000",
-            offerCount: "2",
-            description:
-              "Custom annual Enterprise engagement. Typically starts around €20,000/year for a single brand in one market, and scales to €100,000+ for large, multi-brand, multi-market programs.",
-          },
-        },
-      ];
+      // No price in schema, pricing is custom Enterprise (quote-based).
+      defaultGraph = [baseOrg, baseApp];
     } else if (path.startsWith("/blog/author/")) {
       const authorKey = path.split("/blog/author/")[1]?.replace(/\/$/, "");
       const authorData = authorKey ? authors[authorKey] : null;
