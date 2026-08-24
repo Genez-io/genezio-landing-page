@@ -64,12 +64,12 @@ export function GenezioExpertServices() {
                 key={s.title}
                 className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-9 hover:border-white/20 transition-colors"
               >
-                <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-5">
-                  <Icon className="w-5 h-5 text-emerald-400" />
+                <div className="flex items-center gap-2.5 mb-2">
+                  <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+                    {s.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
-                  {s.title}
-                </h3>
                 <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
                   {s.description}
                 </p>
