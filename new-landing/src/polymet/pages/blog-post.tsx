@@ -780,7 +780,7 @@ export function BlogPost() {
                       {...props}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
-                      className="text-zinc-400 hover:text-zinc-300 transition-colors break-all"
+                      className="text-emerald-400 underline underline-offset-2 decoration-emerald-400/40 hover:text-emerald-300 hover:decoration-emerald-400 transition-colors break-words"
                     />
                   );
                 }
