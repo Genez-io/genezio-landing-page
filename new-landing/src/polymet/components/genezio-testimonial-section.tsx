@@ -76,7 +76,7 @@ export function GenezioTestimonialSection() {
                                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-white/10 transition-colors">
                                           <img
                                             src="/images/ionut-stanimir.webp"
-                                            alt="I. Stanimir"
+                                            alt="Ionuț Stanimir"
                                             width={64}
                                             height={64}
                                             loading="lazy"
@@ -88,7 +88,7 @@ export function GenezioTestimonialSection() {
                                         <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <p className="text-lg font-semibold text-white">
-                          I. Stanimir
+                          Ionuț Stanimir
                         </p>
                         <a
                           href="https://www.linkedin.com/in/ionutstanimir/"
@@ -110,7 +110,7 @@ export function GenezioTestimonialSection() {
                                 {/* Bottom Section - Metric */}
                                 <div className="mt-8 pt-8 border-t border-white/5">
                                     <div className="inline-flex flex-col items-start px-6 py-4 bg-white/5 border border-white/10 rounded-xl">
-                                        <p className="text-3xl font-bold text-zinc-400 mb-1">2x</p>
+                                        <p className="text-3xl font-bold text-emerald-400 mb-1">2x</p>
                                         <p className="text-xs text-white/40 uppercase tracking-[0.2em] font-medium">
                                             Growth in Weeks
                                         </p>

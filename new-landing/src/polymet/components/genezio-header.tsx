@@ -442,19 +442,30 @@ export function GenezioHeader() {
           </Button>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? (
-            <XIcon className="w-6 h-6" />
-          ) : (
-            <MenuIcon className="w-6 h-6" />
-          )}
-        </button>
+        {/* Mobile: compact persistent CTA + menu button */}
+        <div className="flex md:hidden items-center gap-1.5">
+          <a
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-4 h-9 rounded-lg transition-all">
+              Get a demo
+            </Button>
+          </a>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? (
+              <XIcon className="w-6 h-6" />
+            ) : (
+              <MenuIcon className="w-6 h-6" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

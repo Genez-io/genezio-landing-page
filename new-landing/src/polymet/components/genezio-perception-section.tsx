@@ -57,30 +57,42 @@ const PERSONAS = [
     name: "Young Professional",
     question: "Best bank account with a great mobile app?",
     status: "Recommended #1",
-    won: true,
+    tone: "good" as const,
   },
   {
     icon: Building2Icon,
     name: "B2B Buyer",
     question: "Which bank for business fiber and payments?",
     status: "2nd, not yet",
-    won: false,
+    tone: "warn" as const,
   },
   {
     icon: CodeIcon,
     name: "Developer",
     question: "Bank with the best API and sandbox?",
     status: "Not mentioned",
-    won: false,
+    tone: "bad" as const,
   },
   {
     icon: NewspaperIcon,
     name: "Journalist",
     question: "Most trusted bank on security?",
     status: "Recommended",
-    won: true,
+    tone: "good" as const,
   },
 ];
+
+const TONE_DOT = {
+  good: "bg-emerald-400",
+  warn: "bg-amber-400",
+  bad: "bg-rose-500",
+} as const;
+
+const TONE_TEXT = {
+  good: "text-emerald-400",
+  warn: "text-amber-400",
+  bad: "text-rose-400",
+} as const;
 function SwotCard() {
   return (
     <div className="relative bg-[#0A0A0C] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl shadow-black/40">
@@ -366,14 +378,10 @@ export function GenezioPerceptionSection() {
                   </p>
                   <div className="flex items-center gap-1.5">
                     <span
-                      className={`h-1.5 w-1.5 rounded-[2px] ${
-                        p.won ? "bg-emerald-400" : "bg-white/25"
-                      }`}
+                      className={`h-1.5 w-1.5 rounded-[2px] ${TONE_DOT[p.tone]}`}
                     />
                     <span
-                      className={`text-[11px] font-medium ${
-                        p.won ? "text-emerald-400" : "text-white/40"
-                      }`}
+                      className={`text-[11px] font-medium ${TONE_TEXT[p.tone]}`}
                     >
                       {p.status}
                     </span>

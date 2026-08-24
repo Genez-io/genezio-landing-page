@@ -11,6 +11,7 @@ import { GenezioBusinessGoalsSection } from "@/polymet/components/genezio-flywhe
 import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterprise-trust-band";
 import { GenezioCommercialIntentBand } from "@/polymet/components/genezio-commercial-intent-band";
 import { GenezioProofSection } from "@/polymet/components/genezio-proof-section";
+import { GenezioClosingSection } from "@/polymet/components/genezio-closing-section";
 
 export function GenezioLanding() {
   return (
@@ -66,6 +67,9 @@ export function GenezioLanding() {
 
         {/* Enterprise readiness */}
         <GenezioEnterpriseSection />
+
+        {/* Closing bookend */}
+        <GenezioClosingSection />
       </div>
     </>
   );
