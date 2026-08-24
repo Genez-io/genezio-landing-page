@@ -84,9 +84,9 @@ export function AboutWhatWeDoSection() {
                 className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors"
               >
                 {/* Icon + title */}
-                <div className="flex items-center gap-2.5 mb-2">
-                  <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 leading-tight">
+                <div className="flex items-center gap-3 mb-2">
+                  <Icon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-lg md:text-xl font-semibold text-white leading-tight">
                     {capability.title}
                   </h3>
                 </div>

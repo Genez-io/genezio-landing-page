@@ -216,9 +216,9 @@ function Capabilities() {
                 key={c.title}
                 className="group bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-7 hover:border-white/20 transition-colors"
               >
-                <div className="flex items-center gap-2.5 mb-2">
-                  <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2 leading-tight">
+                <div className="flex items-center gap-3 mb-3">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-lg md:text-xl font-semibold text-white leading-tight">
                     {c.title}
                   </h3>
                 </div>
@@ -319,9 +319,9 @@ function SkillsAndRoutines() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Skills */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-9">
-            <div className="flex items-center gap-2.5 mb-2">
-              <BlocksIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+            <div className="flex items-center gap-3 mb-3">
+              <BlocksIcon className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
                 Skills that already know the questions
               </h3>
             </div>
@@ -341,9 +341,9 @@ function SkillsAndRoutines() {
 
           {/* Routines */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-9">
-            <div className="flex items-center gap-2.5 mb-2">
-              <ClockIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+            <div className="flex items-center gap-3 mb-3">
+              <ClockIcon className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
                 Routines that run without you
               </h3>
             </div>

@@ -147,8 +147,8 @@ function SampleAndSizing() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Sample size */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
-            <div className="flex items-center gap-2.5 mb-3">
-              <SigmaIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+            <div className="flex items-center gap-3 mb-3">
+              <SigmaIcon className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 flex-shrink-0" />
               <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
                 Math, not vibes
               </h3>
@@ -168,8 +168,8 @@ function SampleAndSizing() {
 
           {/* Sizing */}
           <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8">
-            <div className="flex items-center gap-2.5 mb-3">
-              <ScaleIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+            <div className="flex items-center gap-3 mb-3">
+              <ScaleIcon className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 flex-shrink-0" />
               <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
                 How volume is sized
               </h3>

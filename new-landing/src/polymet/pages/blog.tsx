@@ -125,10 +125,9 @@ export function Blog() {
                         {post.postType && (
                           <BlogPostTypeBadge type={post.postType} size="sm" />
                         )}
-                        <span className="text-sm font-medium text-white/70">
+                        <span className="inline-flex items-center rounded-md bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-emerald-400">
                           {post.category}
                         </span>
-                        <span className="text-white/20">•</span>
                         <span className="inline-flex items-center gap-1.5 text-sm text-white/40">
                           <ClockIcon className="w-4 h-4" />
                           {post.readTime}
@@ -187,10 +186,9 @@ export function Blog() {
                       {post.postType && (
                         <BlogPostTypeBadge type={post.postType} size="sm" />
                       )}
-                      <span className="text-xs font-medium text-white/70">
+                      <span className="inline-flex items-center rounded-md bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-emerald-400">
                         {post.category}
                       </span>
-                      <span className="text-white/20">•</span>
                       <span className="inline-flex items-center gap-1 text-xs text-white/40">
                         <ClockIcon className="w-3 h-3" />
                         {post.readTime}

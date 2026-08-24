@@ -175,9 +175,9 @@ import {
                 key={index}
                 className="group relative rounded-2xl bg-[#0A0A0C] border border-white/10 p-6 md:p-8 hover:border-white/20 transition-colors">
                 {/* Icon + Title */}
-                <div className="flex items-center gap-2.5 mb-2">
-                  <feature.icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                  <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
+                <div className="flex items-center gap-3 mb-3">
+                  <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-xl md:text-2xl font-semibold text-white">
                     {feature.title}
                   </h3>
                 </div>
