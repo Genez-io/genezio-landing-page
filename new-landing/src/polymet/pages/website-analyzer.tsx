@@ -26,13 +26,6 @@ import {
 const DEMO_URL =
   "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
 
-/**
- * Zoho lead-capture endpoint (hidden-iframe POST). Update to the dedicated
- * Website Analyzer form + field names when it's ready.
- */
-const ZOHO_ACTION =
-  "https://forms.zohopublic.eu/genezio1/form/IndustryReportUK/formperma/qSA39uMeRrOgilhwxH5VK30jDRp58OiflOnixL6yjmE";
-
 /* ─────────────────────────────  HERO  ───────────────────────────── */
 function WebsiteAnalyzerHero() {
   const [domain, setDomain] = useState("");
@@ -42,7 +35,7 @@ function WebsiteAnalyzerHero() {
     "idle"
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!domain.trim() || !email.trim() || status === "submitting") return;
     if (!isWorkEmail(email)) {
@@ -54,43 +47,24 @@ function WebsiteAnalyzerHero() {
     setError("");
     setStatus("submitting");
     try {
-      let iframe = document.getElementById(
-        "genezio_hidden_iframe"
-      ) as HTMLIFrameElement | null;
-      if (!iframe) {
-        iframe = document.createElement("iframe");
-        iframe.id = "genezio_hidden_iframe";
-        iframe.name = "genezio_hidden_iframe";
-        iframe.style.cssText =
-          "position:absolute;width:0;height:0;border:0;visibility:hidden";
-        document.body.appendChild(iframe);
+      const res = await fetch("/api/website-analysis", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ domain: domain.trim(), email: email.trim() }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(
+          (data && data.error) || "Something went wrong. Please try again."
+        );
+        setStatus("idle");
+        return;
       }
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = ZOHO_ACTION;
-      form.target = "genezio_hidden_iframe";
-      form.style.display = "none";
-      form.setAttribute("accept-charset", "UTF-8");
-      const fields: Record<string, string> = {
-        Email: email.trim(),
-        Website: domain.trim(),
-      };
-      for (const [name, value] of Object.entries(fields)) {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = name;
-        input.value = value;
-        form.appendChild(input);
-      }
-      document.body.appendChild(form);
-      form.submit();
-      setTimeout(() => {
-        if (form.parentNode) form.parentNode.removeChild(form);
-      }, 1500);
+      setStatus("success");
     } catch {
-      /* best-effort */
+      setError("Something went wrong. Please try again.");
+      setStatus("idle");
     }
-    setStatus("success");
   };
 
   return (
