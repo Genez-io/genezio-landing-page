@@ -21,6 +21,7 @@ const routes = [
   "/in-chat-shopping",
   "/mcp",
   "/security",
+  "/methodology",
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",

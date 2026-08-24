@@ -27,6 +27,7 @@ import { WebsiteAnalyzer } from "./polymet/pages/website-analyzer";
 import { InChatShopping } from "./polymet/pages/in-chat-shopping";
 import { Mcp } from "./polymet/pages/mcp";
 import { Security } from "./polymet/pages/security";
+import { Methodology } from "./polymet/pages/methodology";
 
 
 const ExternalRedirect = ({ to }: { to: string }) => {
@@ -175,6 +176,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <Security />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/methodology"
+        element={
+          <GenezioLayout>
+            <Methodology />
           </GenezioLayout>
         }
       />

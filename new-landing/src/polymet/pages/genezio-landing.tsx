@@ -10,6 +10,7 @@ import { GenezioRobotReaderSection } from "@/polymet/components/genezio-robot-re
 import { GenezioBusinessGoalsSection } from "@/polymet/components/genezio-flywheel-section";
 import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterprise-trust-band";
 import { GenezioCommercialIntentBand } from "@/polymet/components/genezio-commercial-intent-band";
+import { GenezioProofSection } from "@/polymet/components/genezio-proof-section";
 
 export function GenezioLanding() {
   return (
@@ -56,6 +57,9 @@ export function GenezioLanding() {
         <GenezioAiTrafficSection />
         <GenezioProductPillarsSection />
         <GenezioBusinessGoalsSection />
+
+        {/* Proof, real client findings anonymized */}
+        <GenezioProofSection />
 
         {/* Social proof */}
         <GenezioTestimonialSection />

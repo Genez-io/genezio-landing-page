@@ -6,6 +6,7 @@ import { GenezioPricingProducts } from "@/polymet/components/genezio-pricing-pro
 import { GenezioGroupLevelView } from "@/polymet/components/genezio-group-level-view";
 import { GenezioPricingFaq } from "@/polymet/components/genezio-pricing-faq";
 import { AgencyFaqSection } from "@/polymet/components/agency-faq-section";
+import { GenezioRoiBand } from "@/polymet/components/genezio-roi-band";
 
 const PRICING_TITLE = "Enterprise Pricing for AI Brand Visibility | Genezio";
 const PRICING_DESCRIPTION =
@@ -165,6 +166,7 @@ export function GenezioPricing() {
               onVariantChange={setSelectedAudience}
               isPageHero
             />
+            <GenezioRoiBand />
             <GenezioExpertServices />
             <GenezioPricingProducts />
             <GenezioGroupLevelView />
@@ -177,6 +179,7 @@ export function GenezioPricing() {
               onVariantChange={setSelectedAudience}
               isPageHero
             />
+            <GenezioRoiBand />
             <GenezioExpertServices />
             <GenezioPricingProducts />
             <GenezioGroupLevelView />
