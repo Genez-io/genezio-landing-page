@@ -1,9 +1,14 @@
 // Vercel serverless function: /api/website-analysis
 // Receives a Website Analyzer submission, validates it, records it (function
-// logs) and emails the team. Configure email via env vars in Vercel:
-//   RESEND_API_KEY   - Resend API key (https://resend.com)
-//   MAIL_FROM        - verified sender, e.g. "Genezio <notifications@genez.io>"
-//   NOTIFY_TO        - optional comma-separated override of recipients
+// logs), emails the team and pings a Slack channel. Configure via env vars in
+// Vercel:
+//   RESEND_API_KEY    - Resend API key (https://resend.com) — enables email
+//   MAIL_FROM         - verified sender, e.g. "Genezio <notifications@genez.io>"
+//   NOTIFY_TO         - optional comma-separated override of email recipients
+//   SLACK_WEBHOOK_URL - Slack Incoming Webhook URL for the target channel —
+//                       enables the Slack notification (set it to the webhook of
+//                       the new channel you create)
+// Email and Slack are independent: whichever env vars are set will fire.
 
 const DEFAULT_RECIPIENTS = ["paula@genez.io", "andra.patru@genezio.com"];
 
@@ -58,17 +63,26 @@ module.exports = async function handler(req, res) {
   // Record the submission in the function logs (queryable in Vercel).
   console.log("[website-analysis] submission", JSON.stringify({ domain, email, submittedAt }));
 
+  // Fire email and Slack notifications independently and best-effort: the
+  // visitor always gets a success response as long as the submission is recorded.
+  await Promise.allSettled([
+    sendEmail({ domain, email, submittedAt }),
+    sendSlack({ domain, email, submittedAt }),
+  ]);
+
+  return res.status(200).json({ ok: true });
+};
+
+async function sendEmail({ domain, email, submittedAt }) {
   const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("[website-analysis] RESEND_API_KEY not set, email skipped");
+    return;
+  }
   const from = process.env.MAIL_FROM || "Genezio Website Analyzer <notifications@genez.io>";
   const to = (process.env.NOTIFY_TO
     ? process.env.NOTIFY_TO.split(",").map((s) => s.trim()).filter(Boolean)
     : DEFAULT_RECIPIENTS);
-
-  if (!apiKey) {
-    // No email provider configured yet: the submission is still recorded above.
-    console.warn("[website-analysis] RESEND_API_KEY not set, email skipped");
-    return res.status(202).json({ ok: true });
-  }
 
   try {
     const resp = await fetch("https://api.resend.com/emails", {
@@ -96,17 +110,51 @@ module.exports = async function handler(req, res) {
           `</p>`,
       }),
     });
-
     if (!resp.ok) {
       const detail = await resp.text().catch(() => "");
       console.error("[website-analysis] email send failed", resp.status, detail);
-      // The submission is recorded; report success to the visitor either way.
-      return res.status(200).json({ ok: true });
     }
-
-    return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error("[website-analysis] error", err);
-    return res.status(200).json({ ok: true });
+    console.error("[website-analysis] email error", err);
   }
-};
+}
+
+async function sendSlack({ domain, email, submittedAt }) {
+  const webhook = process.env.SLACK_WEBHOOK_URL;
+  if (!webhook) {
+    console.warn("[website-analysis] SLACK_WEBHOOK_URL not set, Slack skipped");
+    return;
+  }
+  try {
+    const resp = await fetch(webhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: `New Website Analyzer request: ${domain} (${email})`,
+        blocks: [
+          {
+            type: "header",
+            text: { type: "plain_text", text: "🔍 New Website Analyzer request", emoji: true },
+          },
+          {
+            type: "section",
+            fields: [
+              { type: "mrkdwn", text: `*Website:*\n${domain}` },
+              { type: "mrkdwn", text: `*Work email:*\n${email}` },
+            ],
+          },
+          {
+            type: "context",
+            elements: [{ type: "mrkdwn", text: `Submitted ${submittedAt}` }],
+          },
+        ],
+      }),
+    });
+    if (!resp.ok) {
+      const detail = await resp.text().catch(() => "");
+      console.error("[website-analysis] slack post failed", resp.status, detail);
+    }
+  } catch (err) {
+    console.error("[website-analysis] slack error", err);
+  }
+}
