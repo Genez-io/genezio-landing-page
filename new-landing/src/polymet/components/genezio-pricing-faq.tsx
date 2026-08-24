@@ -13,7 +13,7 @@ export const PRICING_FAQ_SCHEMA = [
   {
     question: "How much does Genezio cost?",
     answer:
-      "Genezio is a custom Enterprise plan, priced around four levers: the answer engines you track, the markets and languages you cover, the personas, topics and scenarios you monitor, and your monthly conversation volume. Engagements typically start around €20,000 a year for a single brand in one market, and scale to €100,000+ for large, multi-brand, multi-market programs. Book a demo and we'll scope a quote to your footprint.",
+      "Genezio is a custom Enterprise plan, priced around four levers: the answer engines you track, the markets and languages you cover, the personas, topics and scenarios you monitor, and your monthly conversation volume. Book a demo and we'll scope a tailored quote to your footprint.",
   },
   {
     question: "Why is Genezio enterprise-only, with no self-serve tiers?",
@@ -67,7 +67,7 @@ export function GenezioPricingFaq() {
     {
       question: "How much does Genezio cost?",
       answer:
-        "Genezio is a custom Enterprise plan, priced around four levers: the answer engines you track, the markets and languages you cover, the personas, topics and scenarios you monitor, and your monthly conversation volume. Engagements typically start around €20,000 a year for a single brand in one market, and scale to €100,000+ for large, multi-brand, multi-market programs. Book a demo and we'll scope a quote to your footprint.",
+        "Genezio is a custom Enterprise plan, priced around four levers: the answer engines you track, the markets and languages you cover, the personas, topics and scenarios you monitor, and your monthly conversation volume. Book a demo and we'll scope a tailored quote to your footprint.",
     },
     {
       question: "Why is Genezio enterprise-only, with no self-serve tiers?",

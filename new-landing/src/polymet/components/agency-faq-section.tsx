@@ -10,7 +10,7 @@ export const AGENCY_FAQ_SCHEMA = [
   {
     question: "How much does Genezio for agencies cost?",
     answer:
-      "The Agency Enterprise plan is custom, scoped around the brands, engines, markets and volume across your client roster. Engagements typically start around €20,000 a year and scale to €100,000+ for larger, multi-client programs. Book a demo and we'll put together a quote that fits your roster.",
+      "The Agency Enterprise plan is custom, scoped around the brands, engines, markets and volume across your client roster. Book a demo and we'll put together a quote that fits your roster.",
   },
   {
     question: "How many brands can I monitor?",
@@ -54,7 +54,7 @@ export function AgencyFaqSection() {
     {
       question: "How much does Genezio for agencies cost?",
       answer:
-        "The Agency Enterprise plan is custom, scoped around the brands, engines, markets and volume across your client roster. Engagements typically start around €20,000 a year and scale to €100,000+ for larger, multi-client programs. Book a demo and we'll put together a quote that fits your roster.",
+        "The Agency Enterprise plan is custom, scoped around the brands, engines, markets and volume across your client roster. Book a demo and we'll put together a quote that fits your roster.",
     },
     {
       question: "How many brands can I monitor?",
