@@ -149,13 +149,13 @@ function HowItRuns() {
             Bring the whole team
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 border-t border-white/10">
           {facts.map((f) => (
             <div
               key={f}
-              className="flex items-start gap-3 bg-[#0A0A0C] border border-white/10 rounded-2xl p-5"
+              className="flex items-start gap-3 py-4 border-b border-white/10"
             >
-              <CheckCircle2Icon className="mt-0.5 w-5 h-5 flex-shrink-0 text-emerald-400" />
+              <CheckCircle2Icon className="mt-0.5 w-4 h-4 flex-shrink-0 text-emerald-400" />
               <span className="text-sm md:text-base text-white/70 leading-snug">
                 {f}
               </span>
