@@ -1,111 +1,151 @@
 import { Button } from "@/components/ui/button";
-import { PlayCircleIcon } from "lucide-react";
-import { useState, useEffect } from "react";
-import chatgptLogo from "@/assets/chatgpt-icon.svg";
-import claudeLogo from "@/assets/claude-icon.svg";
-import geminiLogo from "@/assets/gemini-icon.svg";
-import perplexityLogo from "@/assets/perplexity-icon.svg";
+import {
+  ArrowUpRightIcon,
+  ShieldCheckIcon,
+  QuoteIcon,
+  GitForkIcon,
+  SparklesIcon,
+} from "lucide-react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
+
+const DEMO_URL =
+  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
 
 export function GenezioHeroSection() {
-  const platforms = [
-    {
-      name: "ChatGPT",
-      logo: chatgptLogo,
-    },
-    {
-      name: "Perplexity",
-      logo: perplexityLogo,
-    },
-    {
-      name: "Claude",
-      logo: claudeLogo,
-    },
-    {
-      name: "Gemini",
-      logo: geminiLogo,
-    },
-  ];
-
-  const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Fade out
-      setIsVisible(false);
-
-      // Wait for fade out, then change platform and fade in
-      setTimeout(() => {
-        setCurrentPlatformIndex((prev) => (prev + 1) % platforms.length);
-        setIsVisible(true);
-      }, 500);
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [platforms.length]);
-
   return (
-    <section className="relative flex items-center justify-center overflow-hidden bg-[#050506] pt-32 pb-20">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
+    <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-44 md:pb-28">
+      {/* Single, restrained glow */}
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight flex flex-col items-center md:block">
-          <span className="text-white block md:inline">Get recommended by </span>
-          <span
-            className="text-white transition-all duration-500 inline-flex items-center justify-center gap-3 min-w-[200px] md:min-w-[260px] mt-2 md:mt-0"
-            style={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "translateY(0)" : "translateY(-10px)",
-            }}
-          >
-            <img
-              src={platforms[currentPlatformIndex].logo}
-              alt={platforms[currentPlatformIndex].name}
-              className="h-8 w-8 object-contain"
-            />
-            <span>{platforms[currentPlatformIndex].name}</span>
-          </span>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center">
+          {/* Left: headline */}
+          <div className="text-center lg:text-left">
+            <HeroEyebrow className="mb-8">
+              The enterprise AI visibility platform
+            </HeroEyebrow>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.03] tracking-[-0.03em] mb-8">
+              <span className="block text-white">The world stopped</span>
+              <span className="block text-white">searching.</span>
+              <span className="block text-emerald-400">It started asking.</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-zinc-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+              Genezio is AI market intelligence for the answer-engine era.
+              Enterprise brands trust us to measure how AI engines represent
+              them in every market, and to win the recommendation, not just the
+              mention.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-8">
+              <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200"
+                >
+                  Get a demo
+                </Button>
+              </a>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://app.genezio.ai/brand-report/49/Natwest?demo=account",
+                    "_blank"
+                  )
+                }
+                className="inline-flex items-center gap-2 px-5 py-3 text-zinc-300 hover:text-white transition-colors duration-200 text-base font-medium group"
+              >
+                Explore a live brand report
+                <ArrowUpRightIcon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
+              </button>
+            </div>
+
+            {/* Enterprise trust microline */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-xs text-white/40">
+              <span className="inline-flex items-center gap-1.5">
+                <ShieldCheckIcon className="w-3.5 h-3.5 text-white/40" />
+                SOC 2 Type II
+              </span>
+              <span className="hidden sm:inline text-white/15">·</span>
+              <span>ISO 27001</span>
+              <span className="hidden sm:inline text-white/15">·</span>
+              <span>CSA STAR Level 1</span>
+              <span className="hidden sm:inline text-white/15">·</span>
+              <span>GDPR compliant</span>
+            </div>
+          </div>
+
+          {/* Right: the "prompt → recommendation" visual */}
+          <div className="relative">
+            <div className="mb-4 flex items-center gap-2 max-w-md ml-auto text-xs uppercase tracking-[0.2em] text-white/35">
+              A buyer asks an AI
+            </div>
+
+            {/* The question */}
+            <div className="relative max-w-md ml-auto">
+              <div className="absolute -inset-3 bg-white/[0.03] rounded-3xl blur-2xl" />
+              <div className="relative bg-[#0E0E12] border border-white/10 rounded-3xl rounded-bl-md p-7 md:p-8 shadow-2xl shadow-black/40">
+                <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
+                  "What's the best wearable I could get for my husband to help
+                  him{" "}
+                  <span className="text-white font-semibold">
+                    monitor his sleep
+                  </span>
+                  ?"
+                </p>
+              </div>
+            </div>
+
+            {/* What Genezio extracts from this conversation */}
+            <div className="relative max-w-md mr-auto mt-4">
+              <div className="bg-white/[0.03] border border-white/10 rounded-2xl rounded-tl-md p-5 md:p-6 backdrop-blur-sm">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-white/35">
+                  Genezio collects data from each conversation
+                </span>
+                <div className="mt-4 space-y-3.5">
+                  {[
+                    {
+                      icon: QuoteIcon,
+                      label: "Citations",
+                      chips: ["sleepfoundation.org", "oura.com", "whoop.com"],
+                    },
+                    {
+                      icon: GitForkIcon,
+                      label: "Query fanouts",
+                      chips: [
+                        "best sleep tracker 2026",
+                        "most accurate sleep wearable",
+                        "Oura vs Whoop for sleep",
+                      ],
+                    },
+                    {
+                      icon: SparklesIcon,
+                      label: "Perceptions",
+                      chips: ["Accurate sleep-stage tracking, validated in studies"],
+                    },
+                  ].map((row) => {
+                    const Icon = row.icon;
+                    return (
+                      <div key={row.label} className="flex items-start gap-3">
+                        <span className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10">
+                          <Icon className="w-3.5 h-3.5 text-emerald-400" />
+                        </span>
+                        <div className="min-w-0">
+                          <div className="text-sm font-semibold text-white/85 mb-0.5">
+                            {row.label}
+                          </div>
+                          <div className="text-[11px] text-white/35 leading-relaxed">
+                            {row.chips.join(", ")}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <h1 className="text-base md:text-lg text-gray-400 max-w-2xl mx-6 md:mx-[180px] mb-10 leading-relaxed">
-          Track how AI engines see your brand and optimize your presence to win
-          more recommendations.
-        </h1>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <a
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              size="default"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
-            >
-              Book a Demo
-            </Button>
-          </a>
-          <a href="https://app.genezio.ai/sign-up">
-            <Button
-              variant="outline"
-              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 rounded-lg transition-all"
-            >
-              Get Started
-            </Button>
-          </a>
-        </div>
-
-        <button
-          onClick={() =>
-            window.open("https://app.genezio.ai/brand-report/49/Natwest?demo=account", "_blank")
-          }
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium group"
-        >
-          <PlayCircleIcon className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors" />
-          Try Interactive Demo
-        </button>
       </div>
     </section>
   );

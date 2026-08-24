@@ -20,7 +20,7 @@ export function GenezioSocialProofSection() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-12">
               Trusted by teams at{" "}
-              <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 Erste Group
               </span>
               , and more.
@@ -49,12 +49,12 @@ export function GenezioSocialProofSection() {
           <div className="relative group">
             <div className="relative rounded-2xl border border-border bg-card backdrop-blur-sm p-8 md:p-12 shadow-xl overflow-hidden">
               {/* Subtle decorative corner accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-blue-500/10 blur-2xl" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-500/10 to-cyan-500/10 blur-2xl" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-2xl" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 blur-2xl" />
 
               {/* Quote icon */}
               <div className="relative mb-6">
-                <div className="inline-flex w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 items-center justify-center shadow-lg">
+                <div className="inline-flex w-14 h-14 rounded-2xl bg-emerald-500 items-center justify-center shadow-lg">
                   <QuoteIcon className="w-7 h-7 text-white" />
                 </div>
               </div>
@@ -65,7 +65,7 @@ export function GenezioSocialProofSection() {
                   "Creating powerful brands that customers trust is changing.
                   With Genezio, brand presence in AI conversations on key topics
                   grew for BCR by{" "}
-                  <span className="font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+                  <span className="font-bold text-emerald-400">
                     double digits in just a few weeks
                   </span>
                   . That visibility matters because it ensures clients receive
@@ -74,10 +74,10 @@ export function GenezioSocialProofSection() {
 
                 <div className="flex items-center gap-4 pt-4">
                   <div className="relative">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    <div className="w-14 h-14 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                       IS
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-purple-500 border-2 border-card flex items-center justify-center">
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-card flex items-center justify-center">
                       <SparklesIcon className="w-3 h-3 text-white" />
                     </div>
                   </div>
@@ -88,7 +88,7 @@ export function GenezioSocialProofSection() {
                     <div className="text-sm text-muted-foreground">
                       Director of Marketing & Communication
                     </div>
-                    <div className="text-xs text-purple-500 font-medium mt-1">
+                    <div className="text-xs text-emerald-500 font-medium mt-1">
                       BCR • Erste Group
                     </div>
                   </div>

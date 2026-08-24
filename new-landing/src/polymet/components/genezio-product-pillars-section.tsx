@@ -1,0 +1,121 @@
+import { Link } from "react-router";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
+import {
+  BarChart3Icon,
+  MessagesSquareIcon,
+  ScanSearchIcon,
+  FileTextIcon,
+  ArrowRightIcon,
+} from "lucide-react";
+
+export function GenezioProductPillarsSection() {
+  const pillars = [
+    {
+      icon: BarChart3Icon,
+      name: "Monitor & benchmark",
+      description:
+        "See how AI represents your brand in every conversation, visibility, recommendation share, and sentiment vs competitors, per engine, persona, and market.",
+      href: "https://app.genezio.ai/brand-report/49/Natwest?demo=account",
+      cta: "See it live",
+      external: true,
+      accent: "blue",
+    },
+    {
+      icon: MessagesSquareIcon,
+      name: "Conversation & fanout intelligence",
+      description:
+        "Understand what people ask AI in your category, the real multi-turn conversations, query fanouts, and the sources engines pull to answer.",
+      href: "/conversational-brand-presence/",
+      cta: "Learn more",
+      external: false,
+      accent: "blue",
+    },
+    {
+      icon: ScanSearchIcon,
+      name: "Content Analysis",
+      description:
+        "Check whether AI can read your page and whether it's built to get cited, crawler access, coverage, structure, citations, and readability, pre- and post-publish.",
+      href: "/content-analysis/",
+      cta: "Learn more",
+      external: false,
+      accent: "emerald",
+    },
+    {
+      icon: FileTextIcon,
+      name: "Content Hub",
+      description:
+        "Turn every gap into a data-backed content brief your team can ship, and generate the draft directly when you need speed.",
+      href: "/content-hub/",
+      cta: "Learn more",
+      external: false,
+      accent: "emerald",
+    },
+  ];
+
+  return (
+    <section className="relative py-24 md:py-32 bg-[#0E0E10] overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
+        <div className="text-center mb-12 md:mb-16">
+          <HeroEyebrow className="mb-4 mx-auto w-fit">The platform</HeroEyebrow>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
+            One platform to{" "}
+            <span className="text-white">
+              win the recommendation
+            </span>
+          </h2>
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mt-6">
+            Not just monitoring, but intervention and maintenance: measure how AI
+            sees your brand, act on what's holding you back, and hold the
+            position, end to end.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-6xl mx-auto">
+          {pillars.map((pillar, index) => {
+            const Icon = pillar.icon;
+
+            const inner = (
+              <>
+                <div className="flex items-start justify-between mb-5">
+                  <Icon className="w-6 h-6 text-emerald-400" />
+                  <ArrowRightIcon className="w-5 h-5 text-white/20 group-hover:text-white/60 group-hover:translate-x-1 transition-all" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {pillar.name}
+                </h3>
+                <p className="text-white/60 text-sm md:text-base leading-relaxed mb-5">
+                  {pillar.description}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-white">
+                  {pillar.cta}
+                  <ArrowRightIcon className="w-4 h-4" />
+                </span>
+              </>
+            );
+
+            const cardClass =
+              "group block h-full bg-[#0A0A0C] border border-white/10 rounded-2xl p-7 md:p-8 hover:border-white/20 transition-all duration-300";
+
+            return pillar.external ? (
+              <a
+                key={index}
+                href={pillar.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClass}
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link key={index} to={pillar.href} className={cardClass}>
+                {inner}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

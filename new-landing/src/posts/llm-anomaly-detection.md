@@ -25,7 +25,7 @@ url: /llm-anomaly-detection/
 
 Large language models (LLMs) don't always behave the way you expect. They can go off-topic, return inaccurate data, or overlook important instructions. Genezio's focus on LLM anomaly detection helps businesses test and monitor AI agents and catch (and address!) those harmful behaviors before they happen with clients.
 
-[Try for free](/increase-conversion/) [Book your demo](/increase-conversion/)
+[Try for free](/ai-agent-analytics/) [Book your demo](/ai-agent-analytics/)
 
 ## What are Large Language Models (LLMs)?
 
@@ -91,7 +91,7 @@ Some businesses add extra tools to support regular testing.
 - **CX Automation**: Uses AI to speed up customer support and keep conversations accurate and consistent.
 - **LLM Hallucination Detection**: Catches false or made-up responses before they reach customers.
 
-[Learn More](/increase-conversion/)
+[Learn More](/ai-agent-analytics/)
 
 ## What Real AI Mistakes Look Like in Practice
 
@@ -101,10 +101,10 @@ AI can sound confident even when it's wrong. Without testing, mistakes can cost 
 - **OpenAI Whisper**: In hospital tests, the OpenAI Whisper transcription model made up entire sentences that were never spoken by patients or doctors.
 - **Chevrolet**: AI system was manipulated into confirming a car purchase for one dollar, which damaged the dealership's reputation.
 
-These AI failures all started with unchecked anomalies. [Test now](/increase-conversion/)
+These AI failures all started with unchecked anomalies. [Test now](/ai-agent-analytics/)
 
 ## Start Using LLM Anomaly Detection Today
 
 Genezio supports fast LLM anomaly detection, with a free report ready in 24 hours. Find out where your AI agents need adjustment before they go live.
 
-[Try Genezio now](/increase-conversion/) [Schedule a Demo](/increase-conversion/)
+[Try Genezio now](/ai-agent-analytics/) [Schedule a Demo](/ai-agent-analytics/)

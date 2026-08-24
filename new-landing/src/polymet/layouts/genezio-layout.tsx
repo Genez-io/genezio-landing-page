@@ -15,7 +15,7 @@ export function GenezioLayout({ children }: GenezioLayoutProps) {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-black text-foreground flex flex-col">
+    <div className="min-h-screen bg-[#050506] text-foreground flex flex-col">
       <GenezioHeader />
 
       <main className="flex-1">{children}</main>

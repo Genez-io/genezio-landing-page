@@ -52,7 +52,28 @@ export default {
                 "monospace"
             ]
         },
+        "fontSize": {
+            "2xl": ["1.375rem", { "lineHeight": "1.85rem" }],
+            "3xl": ["1.65rem", { "lineHeight": "2.05rem" }],
+            "4xl": ["1.95rem", { "lineHeight": "2.3rem" }],
+            "5xl": ["2.5rem", { "lineHeight": "1.08" }],
+            "6xl": ["3.05rem", { "lineHeight": "1.05" }],
+            "7xl": ["3.6rem", { "lineHeight": "1.03" }],
+            "8xl": ["4.6rem", { "lineHeight": "1" }]
+        },
         "colors": {
+            "emerald": {
+                "50": "#E9FEF5",
+                "100": "#C7FDE7",
+                "200": "#8FFBD1",
+                "300": "#4FFAB8",
+                "400": "#02F8A2",
+                "500": "#00E191",
+                "600": "#00BE7A",
+                "700": "#009863",
+                "800": "#00744B",
+                "900": "#004D32"
+            },
             "border": "hsl(var(--border))",
             "input": "hsl(var(--input))",
             "ring": "hsl(var(--ring))",

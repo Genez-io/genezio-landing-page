@@ -72,11 +72,11 @@ export function DataProcessingAgreement() {
     <>
       <PolymetSEO
         title="Genezio Data Processing Agreement (DPA) & GDPR Compliance"
-        description="Review Genezio's Data Processing Agreement (DPA) outlining our commitment to GDPR compliance, data security, and your personal data protection as a processor."
+        description="Read Genezio's Data Processing Agreement (DPA): our GDPR commitment, data security and protection of your personal data as processor. Contact us."
         canonicalPath="/data-processing-agreement/"
       />
       <div className="min-h-screen bg-[#050506]">
-        <div className="max-w-4xl mx-auto px-4 md:px-6 pt-32 md:pt-40 pb-20 md:pb-24">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-16 pt-32 md:pt-40 pb-20 md:pb-24">
           {/* Header */}
           <div className="mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">

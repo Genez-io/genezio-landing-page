@@ -10,11 +10,11 @@ export function GenezioProblemsSection() {
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Enhanced background with gradient and decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-blue-500/5 to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-blue-500/5 to-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent" />
 
       {/* Decorative blur elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
 
       <div className="px-6 md:px-8 lg:px-12 relative z-10">
@@ -29,7 +29,7 @@ export function GenezioProblemsSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Win every search. <br />
               From{" "}
-              <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 traditional SEO to AI Discovery
               </span>
             </h2>
@@ -83,12 +83,12 @@ export function GenezioProblemsSection() {
             <div className="relative p-8 rounded-2xl border border-border bg-card backdrop-blur-sm">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-lg">
+                  <div className="w-20 h-20 rounded-2xl bg-emerald-500 flex items-center justify-center shadow-lg">
                     <TrendingDownIcon className="w-10 h-10 text-white" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+                  <div className="text-4xl md:text-5xl font-bold mb-3 text-emerald-400">
                     60% of searches
                   </div>
                   <p className="text-lg text-muted-foreground">
@@ -103,9 +103,9 @@ export function GenezioProblemsSection() {
           <div className="space-y-3">
             {queries.map((query, index) => (
               <div key={index} className="group relative">
-                <div className="flex items-start gap-4 p-5 rounded-xl border border-border bg-gradient-to-r from-card to-muted/20 hover:border-purple-500/30 transition-all duration-300">
+                <div className="flex items-start gap-4 p-5 rounded-xl border border-border bg-gradient-to-r from-card to-muted/20 hover:border-emerald-500/30 transition-all duration-300">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-lg">
+                    <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg">
                       <BotIcon className="w-5 h-5 text-white" />
                     </div>
                   </div>
@@ -113,7 +113,7 @@ export function GenezioProblemsSection() {
                     <div className="text-xs text-muted-foreground">{query.user} asks:</div>
                     <p className="text-foreground font-medium">{query.text}</p>
                   </div>
-                  <MessageSquareIcon className="w-5 h-5 text-muted-foreground/50 group-hover:text-purple-500 transition-colors" />
+                  <MessageSquareIcon className="w-5 h-5 text-muted-foreground/50 group-hover:text-emerald-500 transition-colors" />
                 </div>
               </div>
             ))}

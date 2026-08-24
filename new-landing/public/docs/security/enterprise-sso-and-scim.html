@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Enterprise SSO and SCIM | Genezio Docs</title>
+  <meta name="description" content="Enterprise SSO and SCIM in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://genezio.com/docs/security/enterprise-sso-and-scim.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://genezio.com/docs/security/enterprise-sso-and-scim.html" />
+  <meta property="og:title" content="Enterprise SSO and SCIM | Genezio Docs" />
+  <meta property="og:description" content="Enterprise SSO and SCIM in Genezio documentation" />
+  <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Enterprise SSO and SCIM | Genezio Docs" />
+  <meta property="og:site_name" content="Genezio Docs" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://genezio.com/docs/security/enterprise-sso-and-scim.html" />
+  <meta name="twitter:title" content="Enterprise SSO and SCIM | Genezio Docs" />
+  <meta name="twitter:description" content="Enterprise SSO and SCIM in Genezio documentation" />
+  <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+  <meta name="twitter:image:alt" content="Enterprise SSO and SCIM | Genezio Docs" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Genezio Homepage"><img class="brand-logo" src="/images/logo-white.svg" alt="Genezio" /></a>
+      <nav class="topbar-nav" aria-label="Main navigation">
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Platform <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-platform">
+            <div class="nav-menu-grid">
+              <div class="menu-col">
+                <div class="menu-col-label">For Teams</div>
+                <a class="menu-tile" href="/conversational-brand-presence/">
+                  <div class="menu-ico emerald"><i data-lucide="trending-up"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Lead Generation</div><div class="menu-st">Conversational Brand Presence</div></div>
+                </a>
+                <a class="menu-tile" href="/increase-conversion/">
+                  <div class="menu-ico blue"><i data-lucide="target"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Conversion</div><div class="menu-st">Marketing Agent Performance</div></div>
+                </a>
+                <a class="menu-tile" href="#">
+                  <div class="menu-ico purple"><i data-lucide="shopping-bag"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase In-Chat Shopping <span class="menu-badge">COMING SOON</span></div><div class="menu-st">E-commerce Performance</div></div>
+                </a>
+              </div>
+              <div class="menu-col partners">
+                <div class="menu-col-label">Partners</div>
+                <a class="partner-card" href="/agencies/">
+                  <div class="menu-tile" style="padding:0">
+                    <div class="menu-ico agency"><i data-lucide="users"></i></div>
+                    <div class="menu-text"><div class="menu-tt">For Agencies</div><div class="menu-st">Manage multiple brands effortlessly</div></div>
+                  </div>
+                  <div class="partner-rows">
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand A</div><span class="partner-delta">&#8593; 24%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand B</div><span class="partner-delta">&#8593; 18%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand C</div><span class="partner-delta">&#8593; 31%</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Resources <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-resources">
+            <a class="menu-tile" href="/docs/">
+              <div class="menu-ico cyan"><i data-lucide="book-marked"></i></div>
+              <div class="menu-text"><div class="menu-tt">Docs</div><div class="menu-st">Product documentation &amp; guides</div></div>
+            </a>
+            <a class="menu-tile" href="/glossary/">
+              <div class="menu-ico blue"><i data-lucide="book-open"></i></div>
+              <div class="menu-text"><div class="menu-tt">Glossary</div><div class="menu-st">AI Search terminology guide</div></div>
+            </a>
+            <a class="menu-tile" href="/blog/">
+              <div class="menu-ico emerald"><i data-lucide="file-text"></i></div>
+              <div class="menu-text"><div class="menu-tt">Blog</div><div class="menu-st">Insights &amp; best practices</div></div>
+            </a>
+            <a class="menu-tile" href="/research/">
+              <div class="menu-ico violet"><i data-lucide="flask-conical"></i></div>
+              <div class="menu-text"><div class="menu-tt">Research</div><div class="menu-st">Original AI search studies</div></div>
+            </a>
+            <a class="menu-tile" href="/industry-leaderboards">
+              <div class="menu-ico amber"><i data-lucide="trophy"></i></div>
+              <div class="menu-text"><div class="menu-tt">Leaderboards</div><div class="menu-st">Industry AI visibility rankings</div></div>
+            </a>
+          </div>
+        </div>
+        <a class="nav-link" href="/pricing/">Pricing</a>
+      </nav>
+      <div class="topbar-cta">
+        <a class="btn-login" href="https://app.genezio.ai/sign-in">Login</a>
+        <a class="btn-demo" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a>
+      </div>
+      <button class="topbar-burger" id="site-burger" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+    <div class="site-mobile" id="site-mobile">
+      <div class="m-label">Platform</div>
+      <div class="m-group">
+        <a href="/conversational-brand-presence/">Increase Lead Generation<span class="m-sub">Conversational Brand Presence</span></a>
+        <a href="/increase-conversion/">Increase Conversion<span class="m-sub">Marketing Agent Performance</span></a>
+        <a href="/agencies/">For Agencies<span class="m-sub">Manage multiple brands effortlessly</span></a>
+      </div>
+      <div class="m-label">Resources</div>
+      <div class="m-group">
+        <a href="/docs/">Docs<span class="m-sub">Product documentation &amp; guides</span></a>
+        <a href="/glossary/">Glossary<span class="m-sub">AI Search terminology guide</span></a>
+        <a href="/blog/">Blog<span class="m-sub">Insights &amp; best practices</span></a>
+        <a href="/research/">Research<span class="m-sub">Original AI search studies</span></a>
+        <a href="/industry-leaderboards">Leaderboards<span class="m-sub">Industry AI visibility rankings</span></a>
+      </div>
+      <a class="m-label" href="/pricing/" style="display:block">Pricing</a>
+      <div class="m-cta"><a class="btn-demo" style="display:block;text-align:center" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a></div>
+    </div>
+  </header>
+  <div class="docs-subbar"><button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Open documentation menu"><i data-lucide="panel-left-open"></i> Documentation</button></div>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../introduction/what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="../introduction/what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="../introduction/why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="../introduction/how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="../introduction/query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="../introduction/how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="../introduction/how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="../introduction/what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="../introduction/how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="../introduction/how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../core-concepts/brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="../core-concepts/brands.html">Brands</a></li><li><a class="" href="../core-concepts/brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="../core-concepts/brand-visibility.html">Brand Visibility</a></li><li><a class="" href="../core-concepts/users.html">Users</a></li><li><a class="" href="../core-concepts/personas.html">Personas</a></li><li><a class="" href="../core-concepts/topics.html">Topics</a></li><li><a class="" href="../core-concepts/scenarios.html">Scenarios</a></li><li><a class="" href="../core-concepts/topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="../core-concepts/conversations.html">Conversations</a></li><li><a class="" href="../core-concepts/query-fanouts.html">Query Fanouts</a></li><li><a class="" href="../core-concepts/citations.html">Citations</a></li><li><a class="" href="../core-concepts/perceptions.html">Perceptions</a></li><li><a class="" href="../core-concepts/competitors.html">Competitors</a></li><li><a class="" href="../core-concepts/knowledge-base.html">Knowledge Base</a></li><li><a class="" href="../core-concepts/master-filters.html">Master Filters</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../shopping/product-visibility.html">Shopping</a></h3>
+        <ul><li><a class="" href="../shopping/product-visibility.html">Product Visibility</a></li><li><a class="" href="../shopping/shopping-overview.html">Shopping Overview</a></li><li><a class="" href="../shopping/products.html">Products</a></li><li><a class="" href="../shopping/product-details.html">Product Details</a></li><li><a class="" href="../shopping/merchants-and-retailers.html">Merchants and Retailers</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="enterprise-sso-and-scim.html">Security &amp; Data</a></h3>
+        <ul><li><a class="active" href="enterprise-sso-and-scim.html">Enterprise SSO and SCIM</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analyzer.html">Content Analyzer</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1 id="enterprise-sso-and-scim">Enterprise SSO and SCIM</h1>
+<p><strong>Enterprise SSO</strong> lets your team sign in to Genezio through your own identity provider — Okta, Microsoft Entra ID, OneLogin, Ping, or any SAML 2.0 IdP. <strong>SCIM provisioning</strong> goes a step further and makes your IdP the source of truth for who has a Genezio account and what they can do.</p>
+<p>Both are arranged <strong>per customer, with the Genezio team</strong> — they are not self-serve. This page covers what you need to do, what Genezio does, and the behaviour to expect once it&#39;s live.</p>
+<hr />
+<h2 id="what-you-get">What You Get</h2>
+<p><strong>Single sign-on (SAML)</strong> — your people sign in with your corporate credentials, under your own MFA and session policies. No separate Genezio password to manage.</p>
+<p><strong>SCIM provisioning</strong> — when someone joins the right group in your IdP, their Genezio account is created automatically. When they leave, their access is removed. No manual invitations, no orphaned accounts after offboarding. Roles are then set in Genezio by an account Owner — see <a href="#roles-are-assigned-in-genezio-not-in-your-idp">Roles</a>.</p>
+<p>Most organizations want both. They solve different problems:</p>
+<ul>
+<li><strong>SSO</strong> answers <em>&quot;is this person who they say they are?&quot;</em></li>
+<li><strong>SCIM</strong> answers <em>&quot;should this person have an account, and what can they do with it?&quot;</em></li>
+</ul>
+<hr />
+<h2 id="the-one-thing-to-know-first">The One Thing to Know First</h2>
+<p><strong>SSO does not create accounts.</strong> Signing in successfully proves identity — it does not grant access to your Genezio account. A first-time user who authenticates through your IdP but has no Genezio account and no pending invitation will be turned away with a message telling them they need an invitation.</p>
+<p>So a user has to exist in Genezio first, created either by <strong>SCIM</strong> or by an <strong>invitation from an account Owner</strong>. If you roll out SSO without SCIM, plan on inviting every user by hand.</p>
+<hr />
+<h2 id="how-setup-works">How Setup Works</h2>
+<p>Ask your Genezio representative to start the process. On our side we:</p>
+<ul>
+<li>register your <strong>email domains</strong> and create the identity-provider connection for your organization</li>
+<li>send you the two values you need to set up the SAML application in your IdP — the <strong>Identifier (Entity ID)</strong> and the <strong>Reply URL (Assertion Consumer Service URL)</strong></li>
+<li><strong>enable SCIM</strong> on your account</li>
+</ul>
+<p>Until SCIM is enabled, the <strong>SCIM</strong> entry stays hidden in your account settings.</p>
+<p>Then, on your side:</p>
+<ol>
+<li><strong>Configure SAML</strong> in your IdP using those two values, and send us your IdP&#39;s SAML metadata XML.</li>
+<li><strong>Test with one pilot user</strong> who already has a Genezio account or a pending invitation.</li>
+<li><strong>Connect SCIM</strong> using a token you generate in Genezio, and provision that same pilot user.</li>
+<li><strong>Check for email conflicts</strong> before provisioning everyone — see <a href="#troubleshooting">Troubleshooting</a>.</li>
+<li><strong>Provision your team</strong>, then have an Owner set anyone who needs more than the default Member role.</li>
+<li><strong>Test offboarding</strong> — deactivate a test user and confirm their access is gone.</li>
+</ol>
+<hr />
+<h2 id="connecting-your-identity-provider">Connecting Your Identity Provider</h2>
+<p>Setting up SSO is a two-way exchange. Genezio sends you two values; you send us one file.</p>
+<p><strong>What Genezio gives you.</strong> Create a standard SAML 2.0 application in your IdP and enter these:</p>
+<table>
+<thead><tr><th style="text-align:left">Value</th><th style="text-align:left">Also called</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left"><strong>Identifier (Entity ID)</strong></td><td style="text-align:left">Audience URI, SP Entity ID</td></tr>
+<tr><td style="text-align:left"><strong>Reply URL (Assertion Consumer Service URL)</strong></td><td style="text-align:left">ACS URL, Single sign-on URL</td></tr>
+</tbody>
+</table>
+<p>Both are specific to your organization&#39;s connection, so use the ones we send you rather than copying them from another tenant.</p>
+<p><strong>What you send back.</strong> Export your IdP&#39;s <strong>SAML metadata XML</strong> and send it to your Genezio representative. We use it to complete the federation on our side — nothing happens until we have it, so this is usually the step that holds up a rollout. If your IdP can only give you a metadata URL, tell us and we&#39;ll work from that.</p>
+<p><strong>Send email as an attribute.</strong> Email is required — as the NameID in <code>emailAddress</code> format, an explicit email attribute, or both. Display name is optional but recommended; without it, Genezio uses the part of the email before the <code>@</code>.</p>
+<p><strong>The email must match exactly.</strong> Genezio compares the address your IdP returns against the address the user typed on the sign-in page. Case doesn&#39;t matter, but anything else does — an alias, a UPN that differs from the mail attribute, or a legacy domain will fail the sign-in. Make sure the attribute you send is the address your users think of as their work email.</p>
+<p><strong>Give us every domain.</strong> SSO is keyed to email domains, so include secondary and acquired-company domains. Each domain maps to one identity provider; a single domain can&#39;t be split across two.</p>
+<p><strong>Sign-in starts at Genezio.</strong> Users go to the Genezio sign-in page and enter their work email, and Genezio routes them to your IdP from there. IdP-initiated launches aren&#39;t supported — if you want a tile in your app catalog, make it a bookmark pointing at the Genezio sign-in page.</p>
+<hr />
+<h2 id="turning-on-automatic-provisioning">Turning On Automatic Provisioning</h2>
+<p>You&#39;ll need the <strong>Owner</strong> role and SCIM enabled on your account.</p>
+<ol>
+<li>Go to <strong>Settings -&gt; SCIM</strong>.</li>
+<li>Create a token, giving it a name you&#39;ll recognise later (e.g. &quot;Okta production&quot;) and an optional expiry.</li>
+<li><strong>Copy the token straight away</strong> — it&#39;s shown once and can&#39;t be retrieved afterwards. Only the first few characters stay visible, so you can tell tokens apart.</li>
+<li>Paste the token and the base URL shown alongside it into your IdP&#39;s provisioning settings, using bearer-token authentication.</li>
+</ol>
+<p>Tokens can be <strong>rotated</strong> (new secret, same name and expiry, old one dead immediately), <strong>disabled and re-enabled</strong>, or <strong>deleted permanently</strong>. Each token works for exactly one Genezio account and can only act on the users it provisioned — treat it as a high-value credential and keep it in your IdP&#39;s secret store.</p>
+<blockquote><p>Disabling or deleting a token stops provisioning, but it doesn&#39;t remove anyone&#39;s access. To offboard people, deprovision them through your IdP first, then remove the connection.</p></blockquote>
+<h3 id="roles-are-assigned-in-genezio-not-in-your-idp">Roles Are Assigned in Genezio, Not in Your IdP</h3>
+<p><strong>SCIM groups are not supported.</strong> Genezio&#39;s SCIM implementation covers the user lifecycle only — creating, updating, deactivating, and removing people. It does not expose a Group resource, so your IdP cannot push groups or assign roles.</p>
+<p><strong>Every user SCIM creates arrives as a Member.</strong> To give someone a different role, an account Owner changes it in the Genezio dashboard under <strong>Users</strong>. Role changes are an in-app action; there&#39;s no way to drive them from your IdP.</p>
+<p>Genezio has three account roles:</p>
+<table>
+<thead><tr><th style="text-align:left">Role</th><th style="text-align:left">What they can do</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left"><strong>Owner</strong></td><td style="text-align:left">Full control — manage brands, invite and remove users, change roles, billing</td></tr>
+<tr><td style="text-align:left"><strong>Member</strong></td><td style="text-align:left">Collaborator with access to the data; can invite others, but can&#39;t create or delete brands</td></tr>
+<tr><td style="text-align:left"><strong>Viewer</strong></td><td style="text-align:left">Read-only — can see reports and data, but can&#39;t change anything</td></tr>
+</tbody>
+</table>
+<p>In practice this means provisioning and permissions are separate jobs: your IdP decides <em>who</em> has an account, and an Owner decides <em>what</em> they can do. For most teams that&#39;s a one-time step per person, since Member is the right role for the majority of users.</p>
+<h3 id="connector-settings">Connector Settings</h3>
+<p>Genezio implements SCIM 2.0, so any standards-compliant connector works. A few things to configure:</p>
+<ul>
+<li><strong>Leave group and role provisioning switched off.</strong> Genezio advertises only the User resource, so there&#39;s nothing for a group push to talk to. Watch out for Microsoft Entra ID, which enables group mapping by default — turn it off.</li>
+<li><strong>Turn off bulk operations and sorting</strong> — provisioning happens one user at a time.</li>
+<li><strong>Keep filters simple</strong> — only single-attribute equality filters are supported.</li>
+<li><strong>Don&#39;t sync passwords</strong> — SCIM users authenticate through your IdP, not with a Genezio password.</li>
+</ul>
+<p>Entra&#39;s provisioning validator will flag bulk, sort, and etag as unsupported. That&#39;s expected and doesn&#39;t block anything.</p>
+<hr />
+<h2 id="what-happens-when-someone-leaves">What Happens When Someone Leaves</h2>
+<p>Deactivating a user in your IdP (or deleting them) removes their Genezio account membership and all of their permissions immediately. If Genezio was their only account, their active session is revoked too. Someone who also belongs to a different Genezio account keeps their access there.</p>
+<p>One limitation to be aware of: <strong>SSO doesn&#39;t switch off password sign-in</strong>. Enabling SSO gives your users an additional way in — it doesn&#39;t remove a password they already set, and it doesn&#39;t stop them using it. Genezio has no setting to enforce SSO-only sign-in for a domain today. If that&#39;s a hard requirement for your security review, raise it with us before you plan the rollout; it would need work on our side rather than a configuration change.</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead><tr><th style="text-align:left">What you see</th><th style="text-align:left">What it means</th><th style="text-align:left">What to do</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">&quot;SSO is not configured for this email domain&quot;</td><td style="text-align:left">The domain isn&#39;t registered or has been disabled</td><td style="text-align:left">Ask Genezio to register or re-enable it</td></tr>
+<tr><td style="text-align:left">&quot;You need an invitation before signing in with SSO&quot;</td><td style="text-align:left">Sign-in worked, but there&#39;s no Genezio account for this person</td><td style="text-align:left">Provision them via SCIM, or have an Owner invite them</td></tr>
+<tr><td style="text-align:left">&quot;Does not match the email you entered&quot;</td><td style="text-align:left">Your IdP returned a different address than the user typed</td><td style="text-align:left">Align your IdP&#39;s email attribute with the user&#39;s work email</td></tr>
+<tr><td style="text-align:left">&quot;Your SSO session expired&quot;</td><td style="text-align:left">A stale sign-in, usually from several open login tabs</td><td style="text-align:left">Close the other tabs and try again</td></tr>
+<tr><td style="text-align:left">SCIM: invalid or expired token</td><td style="text-align:left">The token is wrong, disabled, or past its expiry</td><td style="text-align:left">Rotate the token and update your IdP</td></tr>
+<tr><td style="text-align:left">SCIM: SCIM is not enabled for this account</td><td style="text-align:left">The token is valid but the feature isn&#39;t switched on</td><td style="text-align:left">Contact Genezio</td></tr>
+<tr><td style="text-align:left">SCIM: user already exists in another account</td><td style="text-align:left">This email belongs to a user in a different Genezio account</td><td style="text-align:left">Contact Genezio support to detach it</td></tr>
+<tr><td style="text-align:left">Your IdP reports failures pushing groups</td><td style="text-align:left">Genezio has no Group resource — group provisioning isn&#39;t supported</td><td style="text-align:left">Switch group provisioning off in your connector; set roles in Genezio under <strong>Users</strong></td></tr>
+<tr><td style="text-align:left">SCIM entry missing from Settings</td><td style="text-align:left">SCIM isn&#39;t enabled yet, or you&#39;re not an Owner</td><td style="text-align:left">Contact Genezio, and check your role</td></tr>
+</tbody>
+</table>
+<p><strong>Watch out for the email conflict.</strong> People who signed up for Genezio on their own before your enterprise rollout will already own an account under their work email, and provisioning them will fail. Audit for these and clear them with Genezio support before you provision everyone.</p>
+<hr />
+<h2 id="what-to-send-genezio">What to Send Genezio</h2>
+<p>To get set up quickly, have these ready:</p>
+<ul>
+<li class="task-item"><label><input type="checkbox" disabled /> <span>Every email domain your users sign in with</span></label></li>
+<li class="task-item"><label><input type="checkbox" disabled /> <span>Which identity provider you use</span></label></li>
+<li class="task-item"><label><input type="checkbox" disabled /> <span>Your IdP&#39;s <strong>SAML metadata XML</strong> (this is the one we can&#39;t proceed without)</span></label></li>
+<li class="task-item"><label><input type="checkbox" disabled /> <span>The attribute you&#39;ll send as email, confirmed to match users&#39; work emails</span></label></li>
+<li class="task-item"><label><input type="checkbox" disabled /> <span>The Genezio account SCIM should manage, and its Owner&#39;s email</span></label></li>
+</ul>
+<hr />
+<h2 id="related-pages">Related Pages</h2>
+<ul>
+<li><a href="../getting-started/sign-in-and-sso-options.html">Getting Started -&gt; Sign-in and SSO Options</a></li>
+<li><a href="../core-concepts/users.html">Core Concepts -&gt; Users</a></li>
+</ul>
+    </main>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    (function(){
+      if(window.lucide){lucide.createIcons();}
+      // Header dropdowns
+      var items=[].slice.call(document.querySelectorAll('.nav-item[data-dropdown]'));
+      document.querySelectorAll('[data-dropdown-trigger]').forEach(function(btn){
+        btn.addEventListener('click',function(e){
+          e.stopPropagation();
+          var item=btn.closest('.nav-item');
+          var willOpen=!item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');});
+          if(willOpen)item.classList.add('open');
+        });
+      });
+      document.addEventListener('click',function(e){
+        if(!e.target.closest('.nav-item[data-dropdown]'))items.forEach(function(i){i.classList.remove('open');});
+      });
+      // Mobile site nav
+      var burger=document.getElementById('site-burger'),sm=document.getElementById('site-mobile');
+      if(burger&&sm)burger.addEventListener('click',function(){sm.classList.toggle('open');});
+      // Docs sidebar drawer (mobile)
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),tg=document.getElementById('sidebar-toggle');
+      var scrollY=0;
+      function openSb(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function closeSb(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      if(tg)tg.addEventListener('click',openSb);
+      if(ov)ov.addEventListener('click',closeSb);
+      if(sb)sb.addEventListener('click',function(e){if(e.target.tagName==='A')closeSb();});
+    })();
+  </script>
+</body>
+</html>

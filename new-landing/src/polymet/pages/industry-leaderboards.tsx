@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useMemo } from "react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Button } from "@/components/ui/button";
 import {
   ShoppingCartIcon,
@@ -274,10 +275,10 @@ function TopThreeChart({
     <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
       <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
         <div>
-          <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">
+          <p className="text-xs text-zinc-500 uppercase tracking-[0.2em] font-semibold">
             30-day AI Visibility trend
           </p>
-          <p className="text-sm text-gray-400 mt-0.5">Top 3 brands this month</p>
+          <p className="text-sm text-zinc-400 mt-0.5">Top 3 brands this month</p>
         </div>
         <div className="flex items-center gap-5 flex-wrap">
           {series.map((s) => (
@@ -292,14 +293,14 @@ function TopThreeChart({
                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                   />
                 </div>
-                <span className="text-xs text-gray-300 font-medium">{s.brand.name}</span>
+                <span className="text-xs text-zinc-300 font-medium">{s.brand.name}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Chart area — relative container for tooltip overlay */}
+      {/* Chart area, relative container for tooltip overlay */}
       <div className="relative overflow-x-auto">
         {/* Tooltip */}
         {hoverIdx !== null && tooltipLeftPct !== null && (
@@ -310,12 +311,12 @@ function TopThreeChart({
             }}
           >
             <div className="bg-[#1a1a2e] border border-white/15 rounded-xl px-3 py-2.5 shadow-xl shadow-black/40 min-w-[130px]">
-              <p className="text-[10px] text-gray-500 font-semibold mb-1.5">{hoverDate}</p>
+              <p className="text-[10px] text-zinc-500 font-semibold mb-1.5">{hoverDate}</p>
               {series.map((s) => (
                 <div key={s.brand.name} className="flex items-center justify-between gap-3 py-0.5">
                   <div className="flex items-center gap-1.5">
                     <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: s.color }} />
-                    <span className="text-xs text-gray-400 truncate max-w-[80px]">{s.brand.name}</span>
+                    <span className="text-xs text-zinc-400 truncate max-w-[80px]">{s.brand.name}</span>
                   </div>
                   <span className="text-xs font-bold tabular-nums" style={{ color: s.color }}>
                     {s.data[hoverIdx]}%
@@ -414,12 +415,12 @@ function TopThreeChartSkeleton() {
     <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">
+          <p className="text-xs text-zinc-500 uppercase tracking-[0.2em] font-semibold">
             30-day AI Visibility trend
           </p>
-          <p className="text-sm text-gray-400 mt-0.5">Top 3 brands this month</p>
+          <p className="text-sm text-zinc-400 mt-0.5">Top 3 brands this month</p>
         </div>
-        <div className="inline-flex items-center gap-2 text-sm text-gray-300">
+        <div className="inline-flex items-center gap-2 text-sm text-zinc-300">
           <span className="w-4 h-4 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
           Loading chart data...
         </div>
@@ -435,9 +436,9 @@ function LeaderboardTableSkeleton({ rows = 8 }: { rows?: number }) {
   return (
     <div className="rounded-2xl border border-white/10 overflow-hidden animate-pulse">
       <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-        <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
-        <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
-        <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">#</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">Brand</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">AI Visibility</span>
       </div>
 
       {Array.from({ length: rows }).map((_, idx) => (
@@ -772,19 +773,14 @@ export function IndustryLeaderboards() {
       <section className="pt-28 md:pt-36 pb-12 px-6 md:px-12 lg:px-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.15),transparent_70%)] pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-            <ZapIcon className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              Live AI Visibility Data · UK · US
-            </span>
-          </div>
+          <HeroEyebrow className="mb-6">Live AI Visibility Data · UK · US</HeroEyebrow>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             <span className="text-white">Your competitors are already in </span>
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI answers.</span>
+            <span className="text-emerald-400">AI answers.</span>
             <span className="text-white"> Are you?</span>
           </h1>
-          <p className="text-base md:text-lg text-[#B0B0B3] max-w-2xl mx-auto mb-10">
-            Real AI visibility rankings across industries — powered by thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-10">
+            Real AI visibility rankings across industries, powered by thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             {[
@@ -792,8 +788,8 @@ export function IndustryLeaderboards() {
               { icon: GlobeIcon,     label: "2 Markets: UK · US" },
               { icon: SparklesIcon,  label: "Updated weekly" },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-sm text-gray-400">
-                <Icon className="w-4 h-4 text-gray-500" />{label}
+              <div key={label} className="flex items-center gap-2 text-sm text-zinc-400">
+                <Icon className="w-4 h-4 text-zinc-500" />{label}
               </div>
             ))}
           </div>
@@ -805,7 +801,7 @@ export function IndustryLeaderboards() {
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#050506] to-transparent z-10 pointer-events-none" />
           <div ref={scrollRef} className="flex gap-4 overflow-x-hidden whitespace-nowrap py-3" style={{ scrollbarWidth: "none" }}>
             {[...scrollingBrands, ...scrollingBrands].map((brand, i) => (
-              <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-gray-300 font-medium shrink-0">
+              <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-zinc-300 font-medium shrink-0">
                 <img src={faviconUrl(brand.website, 32)} alt={brand.name} className="w-4 h-4 object-contain rounded"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
                 {brand.name}
@@ -839,17 +835,17 @@ export function IndustryLeaderboards() {
                     }}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                       comingSoon
-                        ? "text-gray-500 opacity-60 cursor-not-allowed"
+                        ? "text-zinc-500 opacity-60 cursor-not-allowed"
                         : active
                           ? "bg-white text-black shadow-sm"
-                          : "text-gray-400 hover:text-white"
+                          : "text-zinc-400 hover:text-white"
                     }`}
                   >
                     <span className="text-base leading-none">{c.flag}</span>
                     <span className="hidden sm:inline">{c.label}</span>
                     <span className="inline sm:hidden">{c.code}</span>
                     {comingSoon && (
-                      <span className="ml-1 hidden md:inline-flex items-center rounded-full border border-white/10 bg-white/[0.06] px-2 py-0.5 text-[10px] font-semibold text-gray-300">
+                      <span className="ml-1 hidden md:inline-flex items-center rounded-full border border-white/10 bg-white/[0.06] px-2 py-0.5 text-[10px] font-semibold text-zinc-300">
                         Coming soon
                       </span>
                     )}
@@ -868,7 +864,7 @@ export function IndustryLeaderboards() {
                     className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 border ${
                       active
                         ? "bg-white text-black border-white shadow-lg"
-                        : "bg-white/[0.04] text-gray-400 border-white/10 hover:bg-white/[0.08] hover:text-white"
+                        : "bg-white/[0.04] text-zinc-400 border-white/10 hover:bg-white/[0.08] hover:text-white"
                     }`}>
                     <Icon className="w-3.5 h-3.5" />{ind.label}
                   </button>
@@ -879,12 +875,12 @@ export function IndustryLeaderboards() {
 
           {/* Chart for top 3 */}
           {shouldShowChartLoading && (
-            <div className="mb-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300">
+            <div className="mb-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-zinc-300">
               Loading live leaderboard data...
             </div>
           )}
           {apiBrandsError && (
-            <div className="mb-4 rounded-xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+            <div className="mb-4 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-zinc-200">
               {apiBrandsError}
             </div>
           )}
@@ -932,9 +928,9 @@ export function IndustryLeaderboards() {
             <div className="rounded-2xl border border-white/10 overflow-hidden">
               {/* Header */}
               <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-                <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">#</span>
-                <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Brand</span>
-                <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">AI Visibility</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">#</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">Brand</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">AI Visibility</span>
               </div>
 
               {/* Rows */}
@@ -946,11 +942,11 @@ export function IndustryLeaderboards() {
                   {/* Rank */}
                   <div>
                     {brand.rank <= 3 ? (
-                      <span className={`text-sm font-bold ${brand.rank === 1 ? "text-yellow-400" : brand.rank === 2 ? "text-gray-300" : "text-amber-600"}`}>
+                      <span className={`text-sm font-bold ${brand.rank === 1 ? "text-zinc-400" : brand.rank === 2 ? "text-zinc-300" : "text-zinc-600"}`}>
                         #{brand.rank}
                       </span>
                     ) : (
-                      <span className="text-sm text-gray-600 font-semibold">{brand.rank}</span>
+                      <span className="text-sm text-zinc-600 font-semibold">{brand.rank}</span>
                     )}
                   </div>
 
@@ -963,7 +959,7 @@ export function IndustryLeaderboards() {
                   {/* Visibility bar + % */}
                   <div className="flex items-center gap-2">
                     <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                      <div className="h-full rounded-full bg-zinc-500"
                         style={{ width: `${brand.visibility}%` }} />
                     </div>
                     <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
@@ -975,9 +971,9 @@ export function IndustryLeaderboards() {
 
           {/* Footer */}
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-zinc-500">
               Showing {Math.min(10, ranked.length)} of {ranked.length > 10 ? "10" : ranked.length} brands ·{" "}
-              <span className="text-gray-400">Average AI mention rate across all platforms</span>
+              <span className="text-zinc-400">Average AI mention rate across all platforms</span>
             </p>
             <a href={current.url[activeCountry]} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/[0.06] border border-white/15 text-sm font-semibold text-white hover:bg-white/[0.12] transition-all duration-200 group">
@@ -995,14 +991,14 @@ export function IndustryLeaderboards() {
             <h2 className="text-lg font-bold text-white mb-6">How AI Visibility Scores work</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { step: "01", title: "Real queries, real AI engines", body: "Genezio runs thousands of industry-specific queries across ChatGPT, Perplexity, Gemini, and Claude — the same questions real users are asking." },
-                { step: "02", title: "Brand mention detection", body: "Each AI response is analysed to detect which brands are recommended, mentioned, or cited — and in what context." },
-                { step: "03", title: "Visibility score aggregation", body: "The visibility score represents the percentage of relevant AI conversations in which a brand is mentioned — averaged across all platforms." },
+                { step: "01", title: "Real queries, real AI engines", body: "Genezio runs thousands of industry-specific queries across ChatGPT, Perplexity, Gemini, and Claude, the same questions real users are asking." },
+                { step: "02", title: "Brand mention detection", body: "Each AI response is analysed to detect which brands are recommended, mentioned, or cited, and in what context." },
+                { step: "03", title: "Visibility score aggregation", body: "The visibility score represents the percentage of relevant AI conversations in which a brand is mentioned, averaged across all platforms." },
               ].map(({ step, title, body }) => (
                 <div key={step} className="space-y-2">
                   <div className="text-3xl font-black text-white/10 font-mono">{step}</div>
                   <h3 className="text-sm font-bold text-white">{title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
+                  <p className="text-sm text-zinc-500 leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>
@@ -1015,22 +1011,22 @@ export function IndustryLeaderboards() {
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             How does{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">your brand</span>{" "}
+            <span className="text-white">your brand</span>{" "}
             rank?
           </h2>
-          <p className="text-base text-[#B0B0B3] max-w-xl mx-auto">
-            Get a personalised AI visibility report for your brand — see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
+          <p className="text-base text-white/60 max-w-xl mx-auto">
+            Get a personalised AI visibility report for your brand, see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="https://app.genezio.ai/sign-up">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 font-semibold rounded-lg shadow-lg shadow-purple-500/20 transition-all duration-200 hover:scale-105">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
+              <Button size="lg" className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 font-semibold rounded-xl shadow-lg shadow-black/20 transition-all duration-200">
                 Get Free Analysis <ArrowRightIcon className="w-4 h-4 ml-2" />
               </Button>
             </a>
             <Button size="lg" variant="outline"
-              className="border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08] hover:border-white/40 px-8 font-semibold rounded-lg transition-all duration-200"
+              className="border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08] hover:border-white/40 px-8 font-semibold rounded-xl transition-all duration-200"
               onClick={() => window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")}>
-              Book a Demo
+              Get a demo
             </Button>
           </div>
         </div>

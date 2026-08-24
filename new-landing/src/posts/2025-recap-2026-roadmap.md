@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/genezio-2025-recap-2026-roadmap.webp
 preview: Discover Genezio’s 2025 evolution into a Conversational Optimization Platform and explore the 2026 roadmap, featuring AI intent grouping, competitive intelligence, and self-serve tools.
 # meta data start
-description: Discover Genezio’s 2025 evolution into a Conversational Optimization Platform and explore the 2026 roadmap, featuring AI intent grouping and self-serve tools.
+description: See how Genezio evolved into a Conversational Optimization Platform in 2025 and what its 2026 roadmap brings for AI visibility. Explore the vision.
 meta_og_url: "https://genezio.com/blog/2025-recap-2026-roadmap/"
 
 meta_og_image: "https://genezio.com/images/genezio-2025-recap-2026-roadmap.webp"

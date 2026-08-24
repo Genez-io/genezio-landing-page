@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   MessageCircleIcon,
   UsersIcon,
@@ -58,8 +59,8 @@ function PersonaScenarioSelector() {
             <div
               key={index}
               className={`flex items-center gap-2 px-4 py-2 rounded-full border ${persona.isSelected
-                  ? "bg-blue-500/20 border-blue-500/50 text-blue-300"
-                  : "bg-[#1C1C20]/50 border-blue-500/20 text-gray-400"
+                  ? "bg-white/5 border-white/10 text-zinc-300"
+                  : "bg-[#1C1C20]/50 border-white/10 text-zinc-400"
                 }`}
             >
               <Icon className="w-4 h-4" />
@@ -71,12 +72,12 @@ function PersonaScenarioSelector() {
       </div>
 
       {/* Selected Persona Card */}
-      <div className="relative bg-[#0A0A0C]/80 border border-blue-500/20 rounded-2xl p-8">
+      <div className="relative bg-[#0A0A0C]/80 border border-white/10 rounded-2xl p-8">
         <div className="space-y-4">
           {/* Persona Icon and Name */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
-              <PersonaIcon className="w-6 h-6 text-blue-400" />
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <PersonaIcon className="w-6 h-6 text-zinc-400" />
             </div>
             <p className="text-lg font-bold text-white">
               {selectedPersona.name}
@@ -85,7 +86,7 @@ function PersonaScenarioSelector() {
 
           {/* User Query - Static */}
           <div className="space-y-2">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-zinc-400">
               User Query:{" "}
               <span className="text-white font-medium">
                 Where should I open a bank account with the best mobile app?
@@ -111,7 +112,7 @@ export function GenezioDifferentiatorsSection() {
       icon: UsersIcon,
       title: "Win every buyer persona",
       description:
-        "Understand how different decision-makers perceive your brand in AI conversations. Tailor your strategy to win B2B buyers, developers, journalists, and consumers — each with personalized messaging that converts.",
+        "Understand how different decision-makers perceive your brand in AI conversations. Tailor your strategy to win B2B buyers, developers, journalists, and consumers, each with personalized messaging that converts.",
       visual: "personas"
     },
     {
@@ -140,17 +141,15 @@ export function GenezioDifferentiatorsSection() {
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
       {/* Decorative gradient line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm text-blue-400 uppercase tracking-wider mb-4 font-semibold">
-            Drive measurable business outcomes
-          </p>
+          <HeroEyebrow className="mb-4 mx-auto w-fit">Drive measurable business outcomes</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             <span className="text-white">The platform built for</span>{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
+            <span className="text-white font-extrabold">
               Generative Search and Answer Engine Optimization
             </span>
           </h2>
@@ -165,7 +164,7 @@ export function GenezioDifferentiatorsSection() {
             return (
               <div
                 key={index}
-                className="relative border border-[#1C1C20] rounded-2xl bg-[#0A0A0C] overflow-hidden group hover:border-blue-500/30 transition-all duration-300"
+                className="relative border border-white/10 rounded-2xl bg-[#0A0A0C] overflow-hidden group hover:border-white/20 transition-all duration-300"
               >
                 {/* Vertical divider line */}
                 <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1C1C20] to-transparent" />
@@ -196,23 +195,23 @@ export function GenezioDifferentiatorsSection() {
                       </div>
 
                       {/* Right Column - Visual */}
-                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent order-2">
+                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-zinc-500/5 via-white/10 to-transparent order-2">
                         {/* Render different visuals based on card type */}
                         {item.visual === "conversation" ? (
                           // Multi-turn conversation visual with real conversation
                           <div className="w-full space-y-3">
                             {/* Message 1 - User */}
                             <div className="flex justify-end">
-                              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-blue-100">
+                              <div className="bg-white/5 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-100">
                                   Where can I buy organic products?
                                 </p>
                               </div>
                             </div>
                             {/* Message 2 - AI */}
                             <div className="flex justify-start">
-                              <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-gray-200">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-200">
                                   You can find organic products at Whole Foods,
                                   local farmers markets, or online stores like
                                   Thrive Market.
@@ -221,16 +220,16 @@ export function GenezioDifferentiatorsSection() {
                             </div>
                             {/* Message 3 - User */}
                             <div className="flex justify-end">
-                              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-blue-100">
+                              <div className="bg-white/5 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-100">
                                   What about organic vegetables?
                                 </p>
                               </div>
                             </div>
                             {/* Message 4 - AI */}
                             <div className="flex justify-start">
-                              <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-gray-200">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-200">
                                   For organic vegetables, try your local farmers
                                   market or subscribe to a CSA box delivery
                                   service.
@@ -247,18 +246,18 @@ export function GenezioDifferentiatorsSection() {
                             {/* AI Overview - Search Query */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                                  <SettingsIcon className="w-4 h-4 text-blue-400" />
+                                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                                  <SettingsIcon className="w-4 h-4 text-zinc-400" />
                                 </div>
                                 <span className="text-sm font-semibold text-white">
                                   AI Overview
                                 </span>
-                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-blue-500/20">
+                                <span className="text-xs text-zinc-400 px-2 py-1 rounded bg-[#1C1C20] border border-white/10">
                                   Search Query
                                 </span>
                               </div>
-                              <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-4">
-                                <p className="text-blue-300 text-sm font-medium">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-4">
+                                <p className="text-zinc-300 text-sm font-medium">
                                   best laptop for travel
                                 </p>
                               </div>
@@ -267,7 +266,7 @@ export function GenezioDifferentiatorsSection() {
                             {/* Divider */}
                             <div className="relative">
                               <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-blue-500/20"></div>
+                                <div className="w-full border-t border-white/10"></div>
                               </div>
                               <div className="relative flex justify-center text-xs">
                                 <span className="bg-[#050506] px-2 text-white">
@@ -279,18 +278,18 @@ export function GenezioDifferentiatorsSection() {
                             {/* ChatGPT/Claude - Conversational */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                                  <MessageCircleIcon className="w-4 h-4 text-purple-400" />
+                                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center">
+                                  <MessageCircleIcon className="w-4 h-4 text-emerald-400" />
                                 </div>
                                 <span className="text-sm font-semibold text-white">
                                   ChatGPT / Claude
                                 </span>
-                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-purple-500/20">
+                                <span className="text-xs text-zinc-400 px-2 py-1 rounded bg-[#1C1C20] border border-white/10">
                                   Conversational
                                 </span>
                               </div>
-                              <div className="bg-[#1C1C20]/80 border border-purple-500/20 rounded-lg p-4">
-                                <p className="text-purple-300 text-sm font-medium">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-4">
+                                <p className="text-emerald-300 text-sm font-medium">
                                   What's the best lightweight laptop for travel?
                                 </p>
                               </div>
@@ -328,17 +327,17 @@ export function GenezioDifferentiatorsSection() {
                               return (
                                 <div
                                   key={idx}
-                                  className="bg-[#1C1C20]/60 border border-blue-500/20 rounded-xl p-4 hover:border-blue-500/40 transition-all duration-300 hover:bg-[#1C1C20]/80"
+                                  className="bg-[#1C1C20]/60 border border-white/10 rounded-xl p-4 hover:border-white/10 transition-all duration-300 hover:bg-[#1C1C20]/80"
                                 >
                                   <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                                      <ActionIcon className="w-5 h-5 text-blue-400" />
+                                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                                      <ActionIcon className="w-5 h-5 text-zinc-400" />
                                     </div>
                                     <div className="flex-1">
                                       <p className="text-sm font-bold text-white mb-1">
                                         {action.title}
                                       </p>
-                                      <p className="text-xs text-gray-400 leading-relaxed">
+                                      <p className="text-xs text-zinc-400 leading-relaxed">
                                         {action.description}
                                       </p>
                                     </div>
@@ -351,14 +350,14 @@ export function GenezioDifferentiatorsSection() {
                         ) : item.visual === "citations" ? (
                           // Citations table visual with mock data
                           <div className="w-full space-y-3">
-                            <div className="grid grid-cols-[auto_1fr_auto] gap-4 pb-3 border-b border-blue-500/20">
-                              <span className="text-xs font-semibold text-gray-400">
+                            <div className="grid grid-cols-[auto_1fr_auto] gap-4 pb-3 border-b border-white/10">
+                              <span className="text-xs font-semibold text-zinc-400">
                                 #
                               </span>
-                              <span className="text-xs font-semibold text-gray-400">
+                              <span className="text-xs font-semibold text-zinc-400">
                                 Source
                               </span>
-                              <span className="text-xs font-semibold text-gray-400">
+                              <span className="text-xs font-semibold text-zinc-400">
                                 Citations
                               </span>
                             </div>
@@ -371,22 +370,22 @@ export function GenezioDifferentiatorsSection() {
                             ].map((item, idx) => (
                               <div
                                 key={idx}
-                                className="grid grid-cols-[auto_1fr_auto] gap-4 items-center py-2 hover:bg-blue-500/5 rounded transition-colors duration-200"
+                                className="grid grid-cols-[auto_1fr_auto] gap-4 items-center py-2 hover:bg-white/5 rounded transition-colors duration-200"
                               >
                                 <div className="text-sm text-[#B0B0B3] font-mono">
                                   {idx + 1}.
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center flex-shrink-0">
-                                    <FileTextIcon className="w-3 h-3 text-blue-400" />
+                                  <div className="w-6 h-6 rounded bg-white/5 flex items-center justify-center flex-shrink-0">
+                                    <FileTextIcon className="w-3 h-3 text-zinc-400" />
                                   </div>
                                   <span className="text-sm text-white font-medium">
                                     {item.source}
                                   </span>
                                 </div>
                                 {item.citations !== null ? (
-                                  <div className="px-3 py-1 rounded bg-blue-500/20 border border-blue-500/30">
-                                    <span className="text-xs font-bold text-blue-400">
+                                  <div className="px-3 py-1 rounded bg-white/5 border border-white/10">
+                                    <span className="text-xs font-bold text-zinc-400">
                                       {item.citations}
                                     </span>
                                   </div>
@@ -402,23 +401,23 @@ export function GenezioDifferentiatorsSection() {
                   ) : (
                     <>
                       {/* Left Column - Visual */}
-                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent order-2 lg:order-1">
+                      <div className="p-6 md:p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-zinc-500/5 via-white/10 to-transparent order-2 lg:order-1">
                         {/* Same visual content */}
                         {item.visual === "conversation" ? (
                           // Multi-turn conversation visual with real conversation
                           <div className="w-full space-y-3">
                             {/* Message 1 - User */}
                             <div className="flex justify-end">
-                              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-blue-100">
+                              <div className="bg-white/5 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-100">
                                   Where can I buy organic products?
                                 </p>
                               </div>
                             </div>
                             {/* Message 2 - AI */}
                             <div className="flex justify-start">
-                              <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-gray-200">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-200">
                                   You can find organic products at Whole Foods,
                                   local farmers markets, or online stores like
                                   Thrive Market.
@@ -427,16 +426,16 @@ export function GenezioDifferentiatorsSection() {
                             </div>
                             {/* Message 3 - User */}
                             <div className="flex justify-end">
-                              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-blue-100">
+                              <div className="bg-white/5 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-100">
                                   What about organic vegetables?
                                 </p>
                               </div>
                             </div>
                             {/* Message 4 - AI */}
                             <div className="flex justify-start">
-                              <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-3 max-w-[80%]">
-                                <p className="text-sm text-gray-200">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-3 max-w-[80%]">
+                                <p className="text-sm text-zinc-200">
                                   For organic vegetables, try your local farmers
                                   market or subscribe to a CSA box delivery
                                   service.
@@ -453,18 +452,18 @@ export function GenezioDifferentiatorsSection() {
                             {/* AI Overview - Search Query */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
-                                  <SettingsIcon className="w-4 h-4 text-blue-400" />
+                                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                                  <SettingsIcon className="w-4 h-4 text-zinc-400" />
                                 </div>
                                 <span className="text-sm font-semibold text-white">
                                   AI Overview
                                 </span>
-                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-blue-500/20">
+                                <span className="text-xs text-zinc-400 px-2 py-1 rounded bg-[#1C1C20] border border-white/10">
                                   Search Query
                                 </span>
                               </div>
-                              <div className="bg-[#1C1C20]/80 border border-blue-500/20 rounded-lg p-4">
-                                <p className="text-blue-300 text-sm font-medium">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-4">
+                                <p className="text-zinc-300 text-sm font-medium">
                                   best laptop for travel
                                 </p>
                               </div>
@@ -473,7 +472,7 @@ export function GenezioDifferentiatorsSection() {
                             {/* Divider */}
                             <div className="relative">
                               <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-blue-500/20"></div>
+                                <div className="w-full border-t border-white/10"></div>
                               </div>
                               <div className="relative flex justify-center text-xs">
                                 <span className="bg-[#050506] px-2 text-white">
@@ -485,18 +484,18 @@ export function GenezioDifferentiatorsSection() {
                             {/* ChatGPT/Claude - Conversational */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
-                                  <MessageCircleIcon className="w-4 h-4 text-purple-400" />
+                                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center">
+                                  <MessageCircleIcon className="w-4 h-4 text-emerald-400" />
                                 </div>
                                 <span className="text-sm font-semibold text-white">
                                   ChatGPT / Claude
                                 </span>
-                                <span className="text-xs text-gray-400 px-2 py-1 rounded bg-[#1C1C20] border border-purple-500/20">
+                                <span className="text-xs text-zinc-400 px-2 py-1 rounded bg-[#1C1C20] border border-white/10">
                                   Conversational
                                 </span>
                               </div>
-                              <div className="bg-[#1C1C20]/80 border border-purple-500/20 rounded-lg p-4">
-                                <p className="text-purple-300 text-sm font-medium">
+                              <div className="bg-[#1C1C20]/80 border border-white/10 rounded-lg p-4">
+                                <p className="text-emerald-300 text-sm font-medium">
                                   What's the best lightweight laptop for travel?
                                 </p>
                               </div>
@@ -534,17 +533,17 @@ export function GenezioDifferentiatorsSection() {
                               return (
                                 <div
                                   key={idx}
-                                  className="bg-[#1C1C20]/60 border border-blue-500/20 rounded-xl p-4 hover:border-blue-500/40 transition-all duration-300 hover:bg-[#1C1C20]/80"
+                                  className="bg-[#1C1C20]/60 border border-white/10 rounded-xl p-4 hover:border-white/10 transition-all duration-300 hover:bg-[#1C1C20]/80"
                                 >
                                   <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
-                                      <ActionIcon className="w-5 h-5 text-blue-400" />
+                                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                                      <ActionIcon className="w-5 h-5 text-zinc-400" />
                                     </div>
                                     <div className="flex-1">
                                       <p className="text-sm font-bold text-white mb-1">
                                         {action.title}
                                       </p>
-                                      <p className="text-xs text-gray-400 leading-relaxed">
+                                      <p className="text-xs text-zinc-400 leading-relaxed">
                                         {action.description}
                                       </p>
                                     </div>
@@ -557,14 +556,14 @@ export function GenezioDifferentiatorsSection() {
                         ) : item.visual === "citations" ? (
                           // Citations table visual with mock data
                           <div className="w-full space-y-3">
-                            <div className="grid grid-cols-[auto_1fr_auto] gap-4 pb-3 border-b border-blue-500/20">
-                              <span className="text-xs font-semibold text-gray-400">
+                            <div className="grid grid-cols-[auto_1fr_auto] gap-4 pb-3 border-b border-white/10">
+                              <span className="text-xs font-semibold text-zinc-400">
                                 #
                               </span>
-                              <span className="text-xs font-semibold text-gray-400">
+                              <span className="text-xs font-semibold text-zinc-400">
                                 Source
                               </span>
-                              <span className="text-xs font-semibold text-gray-400">
+                              <span className="text-xs font-semibold text-zinc-400">
                                 Citations
                               </span>
                             </div>
@@ -577,22 +576,22 @@ export function GenezioDifferentiatorsSection() {
                             ].map((item, idx) => (
                               <div
                                 key={idx}
-                                className="grid grid-cols-[auto_1fr_auto] gap-4 items-center py-2 hover:bg-blue-500/5 rounded transition-colors duration-200"
+                                className="grid grid-cols-[auto_1fr_auto] gap-4 items-center py-2 hover:bg-white/5 rounded transition-colors duration-200"
                               >
                                 <div className="text-sm text-[#B0B0B3] font-mono">
                                   {idx + 1}.
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <div className="w-6 h-6 rounded bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center flex-shrink-0">
-                                    <FileTextIcon className="w-3 h-3 text-blue-400" />
+                                  <div className="w-6 h-6 rounded bg-white/5 flex items-center justify-center flex-shrink-0">
+                                    <FileTextIcon className="w-3 h-3 text-zinc-400" />
                                   </div>
                                   <span className="text-sm text-white font-medium">
                                     {item.source}
                                   </span>
                                 </div>
                                 {item.citations !== null ? (
-                                  <div className="px-3 py-1 rounded bg-blue-500/20 border border-blue-500/30">
-                                    <span className="text-xs font-bold text-blue-400">
+                                  <div className="px-3 py-1 rounded bg-white/5 border border-white/10">
+                                    <span className="text-xs font-bold text-zinc-400">
                                       {item.citations}
                                     </span>
                                   </div>
@@ -635,10 +634,10 @@ export function GenezioDifferentiatorsSection() {
 
         {/* CTA */}
         <div className="text-center">
-          <a href="https://app.genezio.ai/sign-up">
+          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-zinc-500/30 hover:shadow-zinc-500/50 transition-all duration-300 hover:scale-105"
             >
               Start Your AI Visibility Audit
             </Button>

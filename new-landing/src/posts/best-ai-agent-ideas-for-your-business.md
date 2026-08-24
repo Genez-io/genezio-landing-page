@@ -77,8 +77,8 @@ This is why an AI testing solution like Genezio is so important for a Customer C
 
 Genezio offers an AI testing solution that helps businesses validate their AI agents' performance before and after deployment. With tools that check for fact errors, offensive language, and security risks like data leaks, it lets businesses avoid costly mistakes that can lead to customer frustration or security concerns.
 
-Testing with Genezio is simple and practical. First, businesses choose which AI agents to test. Next, Genezio runs tests in real-world scenarios to check for common failures, such as AI misinterpreting customer queries or offering incorrect advice. Finally, businesses get clear reports that highlight any issues found, along with suggestions for fixing them. You can get one-time reports or set up regular tests to keep performance in check over time. Businesses can get started by [pasting a URL that points to their AI agent](/increase-conversion/).
+Testing with Genezio is simple and practical. First, businesses choose which AI agents to test. Next, Genezio runs tests in real-world scenarios to check for common failures, such as AI misinterpreting customer queries or offering incorrect advice. Finally, businesses get clear reports that highlight any issues found, along with suggestions for fixing them. You can get one-time reports or set up regular tests to keep performance in check over time. Businesses can get started by [pasting a URL that points to their AI agent](/ai-agent-analytics/).
 
 Bringing AI agents into your business can lead to big leaps in worker productivity and customer engagement. But it's important to make sure these agents are always performing as expected. With Genezio, you can be confident your AI agents stay reliable, secure, and ready for real-world use.
 
-**If you're ready to start testing your AI agents, sign up for Genezio to [test your agent for free](/increase-conversion/), or book a demo today!**
+**If you're ready to start testing your AI agents, sign up for Genezio to [test your agent for free](/ai-agent-analytics/), or book a demo today!**

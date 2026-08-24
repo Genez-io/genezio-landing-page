@@ -85,4 +85,4 @@ You can run one-time tests or set up ongoing monitoring to keep things on track 
 
 For teams looking for professional, simple AI monitoring tools, Genezio gives you a full environment to check, test, and track your AI agent's behavior before and after launch.
 
-**Ready to take control of your AI agents? Start monitoring real-world performance with Genezio — no setup, no hassle. [Try Genezio for free](/increase-conversion/) or book a report today.**
+**Ready to take control of your AI agents? Start monitoring real-world performance with Genezio — no setup, no hassle. [Try Genezio for free](/ai-agent-analytics/) or book a report today.**

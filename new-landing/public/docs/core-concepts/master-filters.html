@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Master Filters | Genezio Docs</title>
+  <meta name="description" content="Master Filters in Genezio documentation" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://genezio.com/docs/core-concepts/master-filters.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://genezio.com/docs/core-concepts/master-filters.html" />
+  <meta property="og:title" content="Master Filters | Genezio Docs" />
+  <meta property="og:description" content="Master Filters in Genezio documentation" />
+  <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://genezio.com/images/genezio-black-logo.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Master Filters | Genezio Docs" />
+  <meta property="og:site_name" content="Genezio Docs" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://genezio.com/docs/core-concepts/master-filters.html" />
+  <meta name="twitter:title" content="Master Filters | Genezio Docs" />
+  <meta name="twitter:description" content="Master Filters in Genezio documentation" />
+  <meta name="twitter:image" content="https://genezio.com/images/genezio-black-logo.jpg" />
+  <meta name="twitter:image:alt" content="Master Filters | Genezio Docs" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Genezio Homepage"><img class="brand-logo" src="/images/logo-white.svg" alt="Genezio" /></a>
+      <nav class="topbar-nav" aria-label="Main navigation">
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Platform <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-platform">
+            <div class="nav-menu-grid">
+              <div class="menu-col">
+                <div class="menu-col-label">For Teams</div>
+                <a class="menu-tile" href="/conversational-brand-presence/">
+                  <div class="menu-ico emerald"><i data-lucide="trending-up"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Lead Generation</div><div class="menu-st">Conversational Brand Presence</div></div>
+                </a>
+                <a class="menu-tile" href="/increase-conversion/">
+                  <div class="menu-ico blue"><i data-lucide="target"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase Conversion</div><div class="menu-st">Marketing Agent Performance</div></div>
+                </a>
+                <a class="menu-tile" href="#">
+                  <div class="menu-ico purple"><i data-lucide="shopping-bag"></i></div>
+                  <div class="menu-text"><div class="menu-tt">Increase In-Chat Shopping <span class="menu-badge">COMING SOON</span></div><div class="menu-st">E-commerce Performance</div></div>
+                </a>
+              </div>
+              <div class="menu-col partners">
+                <div class="menu-col-label">Partners</div>
+                <a class="partner-card" href="/agencies/">
+                  <div class="menu-tile" style="padding:0">
+                    <div class="menu-ico agency"><i data-lucide="users"></i></div>
+                    <div class="menu-text"><div class="menu-tt">For Agencies</div><div class="menu-st">Manage multiple brands effortlessly</div></div>
+                  </div>
+                  <div class="partner-rows">
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand A</div><span class="partner-delta">&#8593; 24%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand B</div><span class="partner-delta">&#8593; 18%</span></div>
+                    <div class="partner-row"><div class="partner-chip"><span class="partner-dot"></span>Brand C</div><span class="partner-delta">&#8593; 31%</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-dropdown>
+          <button class="nav-trigger" type="button" data-dropdown-trigger>Resources <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+          <div class="nav-menu nav-menu-resources">
+            <a class="menu-tile" href="/docs/">
+              <div class="menu-ico cyan"><i data-lucide="book-marked"></i></div>
+              <div class="menu-text"><div class="menu-tt">Docs</div><div class="menu-st">Product documentation &amp; guides</div></div>
+            </a>
+            <a class="menu-tile" href="/glossary/">
+              <div class="menu-ico blue"><i data-lucide="book-open"></i></div>
+              <div class="menu-text"><div class="menu-tt">Glossary</div><div class="menu-st">AI Search terminology guide</div></div>
+            </a>
+            <a class="menu-tile" href="/blog/">
+              <div class="menu-ico emerald"><i data-lucide="file-text"></i></div>
+              <div class="menu-text"><div class="menu-tt">Blog</div><div class="menu-st">Insights &amp; best practices</div></div>
+            </a>
+            <a class="menu-tile" href="/research/">
+              <div class="menu-ico violet"><i data-lucide="flask-conical"></i></div>
+              <div class="menu-text"><div class="menu-tt">Research</div><div class="menu-st">Original AI search studies</div></div>
+            </a>
+            <a class="menu-tile" href="/industry-leaderboards">
+              <div class="menu-ico amber"><i data-lucide="trophy"></i></div>
+              <div class="menu-text"><div class="menu-tt">Leaderboards</div><div class="menu-st">Industry AI visibility rankings</div></div>
+            </a>
+          </div>
+        </div>
+        <a class="nav-link" href="/pricing/">Pricing</a>
+      </nav>
+      <div class="topbar-cta">
+        <a class="btn-login" href="https://app.genezio.ai/sign-in">Login</a>
+        <a class="btn-demo" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a>
+      </div>
+      <button class="topbar-burger" id="site-burger" type="button" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+    <div class="site-mobile" id="site-mobile">
+      <div class="m-label">Platform</div>
+      <div class="m-group">
+        <a href="/conversational-brand-presence/">Increase Lead Generation<span class="m-sub">Conversational Brand Presence</span></a>
+        <a href="/increase-conversion/">Increase Conversion<span class="m-sub">Marketing Agent Performance</span></a>
+        <a href="/agencies/">For Agencies<span class="m-sub">Manage multiple brands effortlessly</span></a>
+      </div>
+      <div class="m-label">Resources</div>
+      <div class="m-group">
+        <a href="/docs/">Docs<span class="m-sub">Product documentation &amp; guides</span></a>
+        <a href="/glossary/">Glossary<span class="m-sub">AI Search terminology guide</span></a>
+        <a href="/blog/">Blog<span class="m-sub">Insights &amp; best practices</span></a>
+        <a href="/research/">Research<span class="m-sub">Original AI search studies</span></a>
+        <a href="/industry-leaderboards">Leaderboards<span class="m-sub">Industry AI visibility rankings</span></a>
+      </div>
+      <a class="m-label" href="/pricing/" style="display:block">Pricing</a>
+      <div class="m-cta"><a class="btn-demo" style="display:block;text-align:center" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">Book a Demo</a></div>
+    </div>
+  </header>
+  <div class="docs-subbar"><button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Open documentation menu"><i data-lucide="panel-left-open"></i> Documentation</button></div>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Genezio Docs</span>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0 0" />
+    </div>
+    <div class="sidebar-nav">
+      
+      <section class="nav-group">
+        <h3><a class="" href="../getting-started/setup-guide.html">Getting Started</a></h3>
+        <ul><li><a class="" href="../getting-started/setup-guide.html">Setup Guide</a></li><li><a class="" href="../getting-started/sign-in-and-sso-options.html">Sign-in and SSO Options</a></li><li><a class="" href="../getting-started/describe-your-brand.html">Describe Your Brand</a></li><li><a class="" href="../getting-started/create-scenarios.html">Create Scenarios</a></li><li><a class="" href="../getting-started/generating-personas-from-documents.html">Generating Personas from Documents</a></li><li><a class="" href="../getting-started/customizing-your-dashboard.html">Customizing Your Dashboard</a></li><li><a class="" href="../getting-started/topic-tags.html">Topic Tags</a></li><li><a class="" href="../getting-started/your-first-week.html">Your First Week</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../introduction/what-is-genezio.html">Introduction</a></h3>
+        <ul><li><a class="" href="../introduction/what-is-genezio.html">What is Genezio?</a></li><li><a class="" href="../introduction/why-ai-recommendations-matter.html">Why AI Recommendations Matter</a></li><li><a class="" href="../introduction/how-llm-search-works.html">How LLM Search Works</a></li><li><a class="" href="../introduction/query-fanouts-explained.html">Query Fanouts Explained</a></li><li><a class="" href="../introduction/how-llms-select-sources.html">How LLMs Select Sources</a></li><li><a class="" href="../introduction/how-ai-citations-work.html">How AI Citations Work</a></li><li><a class="" href="../introduction/what-kpis-are-we-measuring.html">What KPIs Are We Measuring</a></li><li><a class="" href="../introduction/how-genezio-measures-visibility.html">How Genezio Measures Visibility</a></li><li><a class="" href="../introduction/how-the-5-agents-work.html">How the 5 Agents Work</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="active" href="brands.html">Core Concepts</a></h3>
+        <ul><li><a class="" href="brands.html">Brands</a></li><li><a class="" href="brand-recommendation.html">Brand Recommendation</a></li><li><a class="" href="brand-visibility.html">Brand Visibility</a></li><li><a class="" href="users.html">Users</a></li><li><a class="" href="personas.html">Personas</a></li><li><a class="" href="topics.html">Topics</a></li><li><a class="" href="scenarios.html">Scenarios</a></li><li><a class="" href="topic-scenario-relevance.html">Topic / Scenario Relevance</a></li><li><a class="" href="conversations.html">Conversations</a></li><li><a class="" href="query-fanouts.html">Query Fanouts</a></li><li><a class="" href="citations.html">Citations</a></li><li><a class="" href="perceptions.html">Perceptions</a></li><li><a class="" href="competitors.html">Competitors</a></li><li><a class="" href="knowledge-base.html">Knowledge Base</a></li><li><a class="active" href="master-filters.html">Master Filters</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../genezio-agents/prompter-agent.html">Genezio Agents</a></h3>
+        <ul><li><a class="" href="../genezio-agents/prompter-agent.html">Prompter Agent</a></li><li><a class="" href="../genezio-agents/recommender-agent.html">Recommender Agent</a></li><li><a class="" href="../genezio-agents/introspector-agent.html">Introspector Agent</a></li><li><a class="" href="../genezio-agents/comparer-agent.html">Comparer Agent</a></li><li><a class="" href="../genezio-agents/fact-checker-agent.html">Fact Checker Agent</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../analysis/creating-scenarios.html">Running Conversations</a></h3>
+        <ul><li><a class="" href="../analysis/creating-scenarios.html">Creating Scenarios</a></li><li><a class="" href="../analysis/selecting-answer-engines.html">Selecting Answer Engines</a></li><li><a class="" href="../analysis/running-conversations.html">Running Conversations</a></li><li><a class="" href="../analysis/playground.html">Playground</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></h3>
+        <ul><li><a class="" href="../geo-assistant/geo-assistant.html">Geo Assistant</a></li><li><a class="" href="../geo-assistant/send-to-geo.html">Send to Geo</a></li><li><a class="" href="../geo-assistant/sessions-and-history.html">Sessions and History</a></li><li><a class="" href="../geo-assistant/actions-geo-can-take.html">Actions Geo Can Take</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../shopping/product-visibility.html">Shopping</a></h3>
+        <ul><li><a class="" href="../shopping/product-visibility.html">Product Visibility</a></li><li><a class="" href="../shopping/shopping-overview.html">Shopping Overview</a></li><li><a class="" href="../shopping/products.html">Products</a></li><li><a class="" href="../shopping/product-details.html">Product Details</a></li><li><a class="" href="../shopping/merchants-and-retailers.html">Merchants and Retailers</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce</a></h3>
+        <ul><li><a class="" href="../agentic-commerce/agentic-commerce-readiness.html">Agentic Commerce Readiness</a></li><li><a class="" href="../agentic-commerce/ucp-readiness-audit.html">UCP Readiness Audit</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../integrations/cdn-log-integration.html">Integrations</a></h3>
+        <ul><li><a class="" href="../integrations/cdn-log-integration.html">CDN Log Integration</a></li></ul>
+      </section><section class="nav-group">
+        <h3><a class="" href="../security/enterprise-sso-and-scim.html">Security &amp; Data</a></h3>
+        <ul><li><a class="" href="../security/enterprise-sso-and-scim.html">Enterprise SSO and SCIM</a></li></ul>
+      </section>
+      <section class="nav-group">
+        <h3>Actions</h3>
+        <ul><li><a class="" href="../insights/your-kpis-explained.html">Your KPIs Explained</a></li><li><a class="" href="../insights/ai-perception-summary.html">AI Perception Summary</a></li><li><a class="" href="../insights/share-of-voice.html">Share of Voice</a></li><li><a class="" href="../insights/swot-analysis.html">SWOT Analysis</a></li><li><a class="" href="../insights/actionable-insights.html">Actionable Insights</a></li><li><a class="" href="../content-hub/content-hub.html">Content Hub</a></li><li><a class="" href="../content-hub/from-data-to-content-strategy.html">From Data to Content Strategy</a></li><li><a class="" href="../content-hub/briefs.html">Briefs</a></li><li><a class="" href="../content-hub/content-analyzer.html">Content Analyzer</a></li><li><a class="" href="../content-hub/editing-articles.html">Editing Articles</a></li></ul>
+      </section>
+    </div>
+  </aside>
+    <main class="content" id="main-content">
+      <h1 id="master-filters">Master Filters</h1>
+<p><strong>Master Filters</strong> let you slice a single brand&#39;s data by product line — so a multi-product company can stay as one brand in Genezio and still see how each line is doing individually.</p>
+<p>A master filter is defined as a <strong>set of topics</strong>. When you create master filters and pick one from the picker, every view in Genezio narrows to that filter&#39;s topics: dashboards, conversations, insights, citations, share of voice, perceptions, everything.</p>
+<blockquote><p><strong>Note:</strong> Master Filters were previously called <strong>Products</strong>. They were renamed to avoid confusion with the products AI mentions in shopping answers — see <a href="../shopping/products.html">Shopping -&gt; Products</a>, which is a different feature entirely.</p></blockquote>
+<hr />
+<h2 id="when-to-use-master-filters-vs-separate-brands">When to Use Master Filters vs. Separate Brands</h2>
+<p>Genezio supports two ways to model a multi-product company. Picking the right one matters.</p>
+<h3 id="use-separate-brands-when">Use Separate Brands When...</h3>
+<p>Your products have their own brand presence in answer engines:</p>
+<ul>
+<li>the products are well-known to answer engines <strong>by their product names</strong></li>
+<li>customers and buyers refer to them directly by product name</li>
+<li>each product has its own distinct competitors</li>
+</ul>
+<p>In this case, model each product as its own brand. Microsoft Word, Microsoft Excel, and Microsoft Teams are different brands to an answer engine — each has its own competitors (Google Docs, Google Sheets, Slack), its own buyer personas, and its own visibility story.</p>
+<p>See <a href="brands.html#multi-product-companies">Brands -&gt; Multi-Product Companies</a>.</p>
+<h3 id="use-master-filters-when">Use Master Filters When...</h3>
+<p>Your <strong>brand</strong> is strong but your individual product lines don&#39;t carry their own brand recognition:</p>
+<ul>
+<li>customers know the company name, not the product-line names</li>
+<li>answer engines describe the lines as offerings of the parent brand, not as standalone names</li>
+<li>lines often share competitors, or the competitive set isn&#39;t sharply different per line</li>
+<li>you want a single source of truth at the brand level, with product-line slices on top</li>
+</ul>
+<p>In this case, keep everything at the brand level and define <strong>Master Filters</strong> to filter the data per product line.</p>
+<h3 id="quick-decision">Quick Decision</h3>
+<table>
+<thead><tr><th style="text-align:left">If...</th><th style="text-align:left">Use</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Each product has its own brand recognition and distinct competitors</td><td style="text-align:left"><strong>Separate brands</strong></td></tr>
+<tr><td style="text-align:left">The parent brand is strong; product lines don&#39;t have independent brand presence</td><td style="text-align:left"><strong>Master Filters</strong> (within one brand)</td></tr>
+<tr><td style="text-align:left">You&#39;re not sure</td><td style="text-align:left">Start with one brand + Master Filters. Splitting later is easy; merging later is harder.</td></tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-master-filters-work">How Master Filters Work</h2>
+<p>A master filter is a <strong>named set of topics</strong>. That&#39;s the whole definition.</p>
+<ul>
+<li>Topics can be <strong>shared across master filters</strong>. The topic <em>&quot;Customer support best practices&quot;</em> might belong to your Sales filter and your Service filter at the same time.</li>
+<li>Topics that aren&#39;t tied to any master filter still exist on the brand — they just don&#39;t appear when a filter is active.</li>
+<li>Master filters are managed at the brand level. Each brand has its own list.</li>
+</ul>
+<hr />
+<h2 id="where-to-set-them-up">Where to Set Them Up</h2>
+<p>Master Filters are defined in <strong>Settings</strong>.</p>
+<p>You give each one a name and pick the topics that belong to it. Once at least one master filter is defined, a <strong>picker</strong> appears in the main header — letting you switch the entire view between filters (or back to the unfiltered default).</p>
+<hr />
+<h2 id="filtering-your-reports">Filtering Your Reports</h2>
+<p>Filters live in the <strong>report header</strong> and carry across screens — a selection you make on one page follows you to the next, so you don&#39;t have to re-apply it everywhere.</p>
+<p>Two filters are available there:</p>
+<ul>
+<li><strong>Master filter</strong> — appears once at least one master filter is defined for the brand. Picking one narrows every view to that filter&#39;s topics.</li>
+<li><strong>Persona</strong> — appears when the brand&#39;s topics span <strong>two or more personas</strong>. Picking one narrows the view to that persona&#39;s data. See <a href="personas.html">Personas</a>.</li>
+</ul>
+<p>If you haven&#39;t defined any master filters, that dropdown stays hidden and Genezio behaves as it always has.</p>
+<p>When you pick a master filter:</p>
+<ul>
+<li><strong>dashboards</strong> show metrics for the topics in that filter</li>
+<li><strong>conversations</strong> filter to that filter&#39;s topics</li>
+<li><strong>insights</strong> are scoped to that filter&#39;s data</li>
+<li><strong>citations</strong>, <strong>SOV</strong>, <strong>perceptions</strong>, <strong>competitors</strong> — every view narrows accordingly</li>
+</ul>
+<p>The default view is <strong>unfiltered</strong> — the brand-wide picture, untouched by any master filter. The picker is an optional lens you opt into.</p>
+<hr />
+<h2 id="a-typical-setup">A Typical Setup</h2>
+<p>A consumer-electronics company, for example, with three product lines:</p>
+<ol>
+<li>The company creates one brand for itself.</li>
+<li>In Settings, it defines three master filters: <em>Headphones</em>, <em>Speakers</em>, <em>Wearables</em>.</li>
+<li>Topics that apply to all three (e.g., <em>&quot;Brand reputation&quot;</em>) are attached to all three — or left at the brand level if leadership cares about them company-wide.</li>
+<li>Topics specific to one line (e.g., <em>&quot;Noise-cancelling headphones for travel&quot;</em>) belong only to <em>Headphones</em>.</li>
+<li>The picker appears in the header. The marketing manager for <em>Headphones</em> uses it daily to see just their slice; the CMO leaves it unfiltered for the company-wide view.</li>
+</ol>
+<hr />
+<h2 id="master-filters-and-the-rest-of-the-platform">Master Filters and the Rest of the Platform</h2>
+<p>Because the picker filters at the data level, Master Filters work cleanly with the rest of Genezio:</p>
+<ul>
+<li>the <a href="../geo-assistant/geo-assistant.html">Geo Assistant</a> respects the current master filter when answering questions</li>
+<li><a href="../insights/actionable-insights.html">Insights</a> and <a href="../insights/share-of-voice.html">Share of Voice</a> reflect the active filter</li>
+<li>exporting reports for stakeholder reviews picks up the filter context</li>
+<li><a href="../getting-started/topic-tags.html">Topic Tags</a> still work independently — you can have <em>Headphones</em> (master filter) and <em>Pricing</em> (tag) on the same topic</li>
+</ul>
+<hr />
+<h2 id="not-the-same-as-shopping-products">Not the Same as Shopping Products</h2>
+<p>Master Filters group <strong>topics</strong> to slice your own reporting. They are a reporting lens you configure.</p>
+<p>The <a href="../shopping/product-visibility.html">Shopping</a> section deals with something different: the <strong>individual products answer engines actually mention</strong> in shopping answers, which Genezio detects automatically from conversations. You don&#39;t configure those — they&#39;re discovered.</p>
+<hr />
+<h2 id="related-pages">Related Pages</h2>
+<ul>
+<li><a href="brands.html">Brands</a></li>
+<li><a href="../getting-started/topic-tags.html">Topic Tags</a></li>
+<li><a href="competitors.html">Competitors</a></li>
+<li><a href="../shopping/product-visibility.html">Shopping -&gt; Product Visibility</a></li>
+</ul>
+    </main>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    (function(){
+      if(window.lucide){lucide.createIcons();}
+      // Header dropdowns
+      var items=[].slice.call(document.querySelectorAll('.nav-item[data-dropdown]'));
+      document.querySelectorAll('[data-dropdown-trigger]').forEach(function(btn){
+        btn.addEventListener('click',function(e){
+          e.stopPropagation();
+          var item=btn.closest('.nav-item');
+          var willOpen=!item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');});
+          if(willOpen)item.classList.add('open');
+        });
+      });
+      document.addEventListener('click',function(e){
+        if(!e.target.closest('.nav-item[data-dropdown]'))items.forEach(function(i){i.classList.remove('open');});
+      });
+      // Mobile site nav
+      var burger=document.getElementById('site-burger'),sm=document.getElementById('site-mobile');
+      if(burger&&sm)burger.addEventListener('click',function(){sm.classList.toggle('open');});
+      // Docs sidebar drawer (mobile)
+      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),tg=document.getElementById('sidebar-toggle');
+      var scrollY=0;
+      function openSb(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
+      function closeSb(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
+      if(tg)tg.addEventListener('click',openSb);
+      if(ov)ov.addEventListener('click',closeSb);
+      if(sb)sb.addEventListener('click',function(e){if(e.target.tagName==='A')closeSb();});
+    })();
+  </script>
+</body>
+</html>

@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/paula-cionca/
 thumbnail: /images/four-agents-four-questions.webp
 preview: For modern brands, appearing in an AI response is only the baseline. Discover why AI visibility can still mean losing the deal, and explore the 4-agent framework marketing leaders use to track AI recommendations.
 # meta data start
-description: AI visibility isn't enough. Discover how Genezio's 4 AI agents—Prompter, Recommender, Comparer, and Introspector—help brands win AI search recommendations.
+description: AI visibility isn't enough to win the deal. See how Genezio's 4 AI agents reveal how brands earn AI search recommendations. Read the full breakdown.
 meta_og_url: "https://genezio.com/blog/four-agents-four-questions/"
 
 meta_og_image: "https://genezio.com/images/four-agents-four-questions.webp"

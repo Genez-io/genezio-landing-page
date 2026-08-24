@@ -1,4 +1,5 @@
 import React from "react";
+import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Button } from "@/components/ui/button";
 import { useParams, Navigate, useLocation } from "react-router";
 import remarkGfm from "remark-gfm";
@@ -32,7 +33,7 @@ export function BlogPost() {
       <div className="min-h-screen bg-[#050506] flex items-center justify-center text-white">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post not found</h1>
-          <a href={backPath} className="text-blue-400 hover:underline">
+          <a href={backPath} className="text-zinc-400 hover:underline">
             {backLabel}
           </a>
         </div>
@@ -317,7 +318,7 @@ export function BlogPost() {
           "name": "What is a citation footprint and why does it matter for GEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A citation footprint refers to how frequently a brand appears across external authoritative sources such as directory listings, comparison guides, editorial reviews, and Wikipedia entries. In AI-driven discovery, presence creates presence — brands with more external coverage become more visible in LLM outputs because models treat widely-cited entities as more trustworthy."
+            "text": "A citation footprint refers to how frequently a brand appears across external authoritative sources such as directory listings, comparison guides, editorial reviews, and Wikipedia entries. In AI-driven discovery, presence creates presence, brands with more external coverage become more visible in LLM outputs because models treat widely-cited entities as more trustworthy."
           }
         },
         {
@@ -364,7 +365,7 @@ export function BlogPost() {
           "name": "What is the difference between SEO and GEO (Generative Engine Optimization)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SEO (Search Engine Optimization) focuses on ranking favorably on Google through keywords and backlinks. GEO (Generative Engine Optimization) focuses on controlling your AI Narrative — the sum of everything a Large Language Model says about your brand, products, and competitors in AI-generated conversations, which is where Gen Z increasingly starts their discovery journey."
+            "text": "SEO (Search Engine Optimization) focuses on ranking favorably on Google through keywords and backlinks. GEO (Generative Engine Optimization) focuses on controlling your AI Narrative, the sum of everything a Large Language Model says about your brand, products, and competitors in AI-generated conversations, which is where Gen Z increasingly starts their discovery journey."
           }
         },
         {
@@ -497,7 +498,7 @@ export function BlogPost() {
           "name": "What's the difference between GEO and AEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal — being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions."
+            "text": "GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) describe the same broad goal, being present and chosen in AI-generated answers. AEO is the term Profound favors. The practical question isn't the label; it's whether a tool measures recommendation or only mentions."
           }
         },
         {
@@ -529,7 +530,7 @@ export function BlogPost() {
           "name": "Do SEO tools replace a GEO platform?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For baseline mention monitoring, an SEO suite add-on is fine — especially if you already use it. For recommendation optimization, perception analysis, and a prioritized action plan, a purpose-built GEO platform does what a suite add-on wasn't designed to do."
+            "text": "For baseline mention monitoring, an SEO suite add-on is fine, especially if you already use it. For recommendation optimization, perception analysis, and a prioritized action plan, a purpose-built GEO platform does what a suite add-on wasn't designed to do."
           }
         },
         {
@@ -537,7 +538,7 @@ export function BlogPost() {
           "name": "How does Genezio measure recommendations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "By simulating multi-turn conversations as your configured customer personas, across engines and geographies, at a sample size large enough to report a recommendation rate with a confidence interval — then mapping the gaps to specific actions on your website, content, and citations."
+            "text": "By simulating multi-turn conversations as your configured customer personas, across engines and geographies, at a sample size large enough to report a recommendation rate with a confidence interval, then mapping the gaps to specific actions on your website, content, and citations."
           }
         }
       ]
@@ -582,12 +583,7 @@ export function BlogPost() {
             {post.postType && (
               <BlogPostTypeBadge type={post.postType} size="lg" />
             )}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
-              <SparklesIcon className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-400">
-                {post.category}
-              </span>
-            </div>
+            <HeroEyebrow>{post.category}</HeroEyebrow>
           </div>
 
           {/* Title */}
@@ -620,7 +616,7 @@ export function BlogPost() {
                   );
                 }
                 return (
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-zinc-500 flex items-center justify-center">
                     <span className="text-white font-semibold text-sm">
                       {post.author
                         .split(" ")
@@ -784,7 +780,7 @@ export function BlogPost() {
                       {...props}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
-                      className="text-blue-400 hover:text-blue-300 transition-colors break-all"
+                      className="text-zinc-400 hover:text-zinc-300 transition-colors break-all"
                     />
                   );
                 }
@@ -813,7 +809,7 @@ export function BlogPost() {
                   );
                 }
                 return (
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-zinc-500 flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-semibold text-lg">
                       {post.author
                         .split(" ")
@@ -853,10 +849,10 @@ export function BlogPost() {
                     href={getPostPath(relatedPost)}
                     className="group bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all flex flex-col"
                   >
-                    <div className="text-xs font-medium text-blue-400 mb-3">
+                    <div className="text-xs font-medium text-zinc-400 mb-3">
                       {relatedPost.category}
                     </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-blue-400 transition-colors leading-snug mb-3">
+                    <h3 className="text-base font-semibold text-white group-hover:text-zinc-400 transition-colors leading-snug mb-3">
                       {relatedPost.title}
                     </h3>
                     {relatedPost.excerpt && relatedPost.excerpt !== "No description" && (
@@ -875,9 +871,9 @@ export function BlogPost() {
       {/* CTA Section */}
       <section className="px-6 pb-32">
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 border border-white/10 rounded-2xl p-12 overflow-hidden">
+          <div className="relative bg-white/5 border border-white/10 rounded-2xl p-12 overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-600/10 via-white/10 to-transparent" />
 
             <div className="relative text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -889,8 +885,8 @@ export function BlogPost() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="/pricing/">
-                  <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold px-8 py-6 rounded-xl text-base">
-                    Get Started
+                  <Button className="bg-emerald-400 hover:bg-emerald-300 text-black font-semibold px-8 py-6 rounded-xl text-base">
+                    Talk to Sales
                     <ArrowLeftIcon className="w-5 h-5 ml-2 rotate-180" />
                   </Button>
                 </a>

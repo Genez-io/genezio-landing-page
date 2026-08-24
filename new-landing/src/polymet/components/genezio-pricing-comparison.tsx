@@ -109,8 +109,8 @@ export function GenezioPricingComparison() {
     if (value === "check") {
       return (
         <div className="flex justify-center">
-          <div className="w-5 h-5 rounded-full bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
-            <CheckIcon className="w-3 h-3 text-blue-400/80" />
+          <div className="w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+            <CheckIcon className="w-3 h-3 text-zinc-400/80" />
           </div>
         </div>
       );
@@ -145,7 +145,7 @@ export function GenezioPricingComparison() {
   };
 
   return (
-    <section className="relative py-16 md:py-24 px-4 md:px-6 bg-[#050506]">
+    <section className="relative py-16 md:py-24 px-6 md:px-8 lg:px-16 bg-[#050506]">
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -167,15 +167,15 @@ export function GenezioPricingComparison() {
                   Feature
                 </span>
               </div>
-              <div className="px-6 py-8 border-l border-white/[0.08] bg-gradient-to-b from-blue-600/[0.08] to-purple-600/[0.08] relative">
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+              <div className="px-6 py-8 border-l border-white/[0.08] bg-zinc-600/[0.08] relative">
+                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                 <div className="flex flex-col items-center space-y-4">
                   <div className="text-center">
                     <div className="inline-flex items-center gap-2 mb-2">
                       <span className="text-sm font-medium text-white/60">
                         Growth
                       </span>
-                      <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                      <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-[0.2em]">
                         Popular
                       </span>
                     </div>
@@ -188,9 +188,9 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     onClick={() =>
-                      window.open("https://app.genezio.ai/sign-up", "_blank")
+                      window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
                     }
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/20"
+                    className="w-full bg-emerald-400 hover:bg-emerald-300 text-black h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-black/20"
                   >
                     Start Free Trial
                   </Button>
@@ -217,7 +217,7 @@ export function GenezioPricingComparison() {
                     }
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
                   >
-                    Book a Demo
+                    Get a demo
                   </Button>
                 </div>
               </div>
@@ -247,13 +247,13 @@ export function GenezioPricingComparison() {
                           {row.feature}
                         </span>
                         {row.comingSoon && (
-                          <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                          <span className="inline-block bg-white/5 text-zinc-400 text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-[0.2em]">
                             Coming Soon
                           </span>
                         )}
                       </div>
                     </div>
-                    <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] bg-gradient-to-b from-blue-600/[0.03] to-purple-600/[0.03] text-sm">
+                    <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] bg-zinc-600/[0.03] text-sm">
                       {renderCell(row.growth, row.subtext?.growth)}
                     </div>
                     <div className="px-6 py-4 flex items-center justify-center border-l border-white/[0.06] text-sm">
@@ -273,7 +273,7 @@ export function GenezioPricingComparison() {
               key={planIndex}
               className={`border rounded-2xl overflow-hidden backdrop-blur-sm ${
                 plan === "Growth"
-                  ? "border-blue-500/20 bg-gradient-to-b from-blue-600/[0.08] to-purple-600/[0.08]"
+                  ? "border-white/10 bg-zinc-600/[0.08]"
                   : "border-white/[0.08]"
               }`}
             >
@@ -282,7 +282,7 @@ export function GenezioPricingComparison() {
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <h3 className="text-lg font-medium text-white/80">{plan}</h3>
                   {plan === "Growth" && (
-                    <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                    <span className="inline-block bg-zinc-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-[0.2em]">
                       Popular
                     </span>
                   )}
@@ -307,15 +307,15 @@ export function GenezioPricingComparison() {
                           "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
                           "_blank"
                         )
-                      : window.open("https://app.genezio.ai/sign-up", "_blank")
+                      : window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
                   }
                   className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
                     plan === "Growth"
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg shadow-purple-500/20"
+                      ? "bg-emerald-400 hover:bg-emerald-300 text-black shadow-lg shadow-black/20"
                       : "bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20"
                   }`}
                 >
-                  {plan === "Enterprise" ? "Book a Demo" : "Start Free Trial"}
+                  {plan === "Enterprise" ? "Get a demo" : "Start Free Trial"}
                 </Button>
               </div>
 
@@ -341,7 +341,7 @@ export function GenezioPricingComparison() {
                             {row.feature}
                           </span>
                           {row.comingSoon && (
-                            <span className="inline-block bg-blue-600/20 text-blue-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide">
+                            <span className="inline-block bg-white/5 text-zinc-400 text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-[0.2em]">
                               Soon
                             </span>
                           )}

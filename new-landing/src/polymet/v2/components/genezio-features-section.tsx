@@ -54,7 +54,7 @@ export function GenezioFeaturesSection() {
           <div className="text-center space-y-4 mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               Everything you need to{" "}
-              <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 dominate AI Search
               </span>
             </h2>
@@ -80,7 +80,7 @@ export function GenezioFeaturesSection() {
                   {/* Content */}
                   <div className={`space-y-6 ${!isEven ? "lg:order-2" : ""}`}>
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-border bg-muted/50">
-                      <Icon className="w-5 h-5 text-purple-500" />
+                      <Icon className="w-5 h-5 text-emerald-500" />
                       <span className="text-sm font-medium">{feature.title}</span>
                     </div>
 
@@ -93,9 +93,9 @@ export function GenezioFeaturesSection() {
                     </p>
 
                     {feature.benefit && (
-                      <div className="p-4 rounded-lg border border-purple-500/30 bg-purple-500/5">
+                      <div className="p-4 rounded-lg border border-emerald-500/30 bg-emerald-500/5">
                         <p className="text-sm font-medium text-foreground">
-                          <span className="text-purple-500">💡 Benefit:</span> {feature.benefit}
+                          <span className="text-emerald-500">💡 Benefit:</span> {feature.benefit}
                         </p>
                       </div>
                     )}
@@ -167,7 +167,7 @@ function FeatureVisual({ type }: { type: string }) {
         </div>
         <div className="flex items-center justify-center gap-6 mt-6 text-xs">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-purple-500" />
+            <div className="w-3 h-3 rounded-full bg-emerald-500" />
             <span>Your Brand (58%)</span>
           </div>
           <div className="flex items-center gap-2">
@@ -187,7 +187,7 @@ function FeatureVisual({ type }: { type: string }) {
     return (
       <div className="relative rounded-xl border border-border bg-card/50 backdrop-blur-sm p-6 shadow-xl space-y-4">
         <div className="flex justify-end">
-          <div className="max-w-[80%] rounded-lg border border-purple-500/30 bg-purple-500/10 px-4 py-2">
+          <div className="max-w-[80%] rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2">
             <p className="text-sm">What's the best CRM for enterprise?</p>
           </div>
         </div>
@@ -201,7 +201,7 @@ function FeatureVisual({ type }: { type: string }) {
           </div>
         </div>
         <div className="flex justify-end">
-          <div className="max-w-[80%] rounded-lg border border-purple-500/30 bg-purple-500/10 px-4 py-2">
+          <div className="max-w-[80%] rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2">
             <p className="text-sm">How does it compare to Competitor X?</p>
           </div>
         </div>
@@ -225,9 +225,9 @@ function FeatureVisual({ type }: { type: string }) {
           {personas.map((persona, i) => (
             <div
               key={i}
-              className="rounded-lg border border-border bg-muted/30 p-4 hover:border-purple-500/50 transition-colors"
+              className="rounded-lg border border-border bg-muted/30 p-4 hover:border-emerald-500/50 transition-colors"
             >
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold mb-3">
+              <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold mb-3">
                 {persona[0]}
               </div>
               <div className="text-sm font-medium mb-2">{persona}</div>
@@ -241,7 +241,7 @@ function FeatureVisual({ type }: { type: string }) {
 
   if (type === "citations") {
     const sources = [
-      { name: "TechCrunch", count: 24, color: "purple-500" },
+      { name: "TechCrunch", count: 24, color: "emerald-500" },
       { name: "Forbes", count: 18, color: "blue-500" },
       { name: "Your Blog", count: 31, color: "cyan-500" },
       { name: "Industry News", count: 12, color: "muted" },
@@ -273,7 +273,7 @@ function FeatureVisual({ type }: { type: string }) {
         <div className="text-sm font-semibold mb-4">Recent Citations</div>
         {[1, 2, 3].map((i) => (
           <div key={i} className="flex items-start gap-3 p-3 rounded-lg border border-border bg-muted/30">
-            <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-emerald-500 mt-2 flex-shrink-0" />
             <div className="flex-1 min-w-0">
               <div className="text-sm font-medium mb-1">Your blog post cited by ChatGPT</div>
               <div className="text-xs text-muted-foreground truncate">blog.yourbrand.com/article-{i}</div>

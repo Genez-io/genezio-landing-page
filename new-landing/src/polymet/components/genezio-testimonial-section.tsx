@@ -8,15 +8,15 @@ export function GenezioTestimonialSection() {
                 {/* Main Testimonial Card */}
                 <div className="relative bg-gradient-to-br from-[#0E0E10] to-[#1A1A1F] border border-white/5 rounded-3xl overflow-hidden">
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-transparent to-purple-500/[0.03] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-transparent pointer-events-none"></div>
 
                     {/* Content */}
                     <div className="relative p-8 md:p-16 mt-10 md:mt-0">
                         {/* Quote Icon and Tag */}
                         <div className="flex items-center gap-4 mb-8">
-                            <QuoteIcon className="w-12 h-12 text-blue-500/20" />
+                            <QuoteIcon className="w-12 h-12 text-zinc-500/20" />
 
-                            <p className="text-sm font-medium text-white/40 uppercase tracking-wider">
+                            <p className="text-sm font-medium text-white/40 uppercase tracking-[0.2em]">
                                 Customer Success Story
                             </p>
                         </div>
@@ -35,7 +35,7 @@ export function GenezioTestimonialSection() {
                                     <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
                                         With Genezio, brand presence in AI conversations on key
                                         topics grew for BCR by{" "}
-                                        <span className="text-blue-400 font-semibold">
+                                        <span className="text-zinc-400 font-semibold">
                                             double digits in just a few weeks
                                         </span>
                                         . That visibility matters because it ensures that BCR
@@ -73,10 +73,10 @@ export function GenezioTestimonialSection() {
                                         rel="noopener noreferrer"
                                         className="flex-shrink-0 group"
                                       >
-                                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-blue-500/50 transition-colors">
+                                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-white/10 transition-colors">
                                           <img
                                             src="/images/ionut-stanimir.webp"
-                                            alt="I. Stanimir"
+                                            alt="Ionuț Stanimir"
                                             width={64}
                                             height={64}
                                             loading="lazy"
@@ -88,13 +88,13 @@ export function GenezioTestimonialSection() {
                                         <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <p className="text-lg font-semibold text-white">
-                          I. Stanimir
+                          Ionuț Stanimir
                         </p>
                         <a
                           href="https://www.linkedin.com/in/ionutstanimir/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white/40 hover:text-blue-400 transition-colors"
+                          className="text-white/40 hover:text-zinc-400 transition-colors"
                           aria-label="LinkedIn Profile"
                         >
                           <LinkedinIcon className="w-4 h-4" />
@@ -109,9 +109,9 @@ export function GenezioTestimonialSection() {
 
                                 {/* Bottom Section - Metric */}
                                 <div className="mt-8 pt-8 border-t border-white/5">
-                                    <div className="inline-flex flex-col items-start px-6 py-4 bg-blue-500/5 border border-blue-500/10 rounded-xl">
-                                        <p className="text-3xl font-bold text-blue-400 mb-1">2x</p>
-                                        <p className="text-xs text-white/40 uppercase tracking-wider font-medium">
+                                    <div className="inline-flex flex-col items-start px-6 py-4 bg-white/5 border border-white/10 rounded-xl">
+                                        <p className="text-3xl font-bold text-emerald-400 mb-1">2x</p>
+                                        <p className="text-xs text-white/40 uppercase tracking-[0.2em] font-medium">
                                             Growth in Weeks
                                         </p>
                                     </div>
