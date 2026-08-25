@@ -12,6 +12,7 @@ import { GenezioEnterpriseTrustBand } from "@/polymet/components/genezio-enterpr
 import { GenezioCommercialIntentBand } from "@/polymet/components/genezio-commercial-intent-band";
 import { GenezioProofSection } from "@/polymet/components/genezio-proof-section";
 import { GenezioClosingSection } from "@/polymet/components/genezio-closing-section";
+import { GenezioHomeFaq, HOME_FAQ_SCHEMA } from "@/polymet/components/genezio-home-faq";
 
 export function GenezioLanding() {
   return (
@@ -21,6 +22,18 @@ export function GenezioLanding() {
         description="AI market intelligence for enterprise brands. See how AI engines represent and recommend your brand, and win more AI recommendations. Get a demo."
         canonicalPath="/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": HOME_FAQ_SCHEMA.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer,
+            },
+          })),
+        }}
       />
       <div className="min-h-screen bg-[#050506]">
         <GenezioHeroSection />
@@ -45,6 +58,9 @@ export function GenezioLanding() {
 
         {/* Enterprise readiness */}
         <GenezioEnterpriseSection />
+
+        {/* FAQ Section */}
+        <GenezioHomeFaq />
 
         {/* Closing bookend */}
         <GenezioClosingSection />
