@@ -675,7 +675,7 @@ export function BlogPost() {
       />
       {/* Back Button */}
       <div className="pt-24 pb-8 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <a
             href={`${sectionBasePath}/`}
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors group"
@@ -689,7 +689,7 @@ export function BlogPost() {
 
       {/* Article Header */}
       <article className="px-6 pb-32">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Post Type & Category Badges */}
           <div className="flex flex-wrap items-center gap-3 mb-6">
             {post.postType && (
@@ -786,18 +786,24 @@ export function BlogPost() {
               loading="eager"
             />
           )}
-        </div>
 
-        {/* Table of contents (fixed, left) + article body */}
-        <div className="max-w-5xl mx-auto lg:flex lg:gap-12">
-          {showToc && (
-            <aside className="hidden lg:block w-[210px] flex-shrink-0 order-first">
-              <div className="sticky top-28">
-                <TableOfContents headings={headings} />
-              </div>
-            </aside>
-          )}
-          <div className="min-w-0 flex-1 max-w-3xl">
+          {/* Table of contents (fixed, left) + article body — one grid so the
+              hero, header and TOC all share the same left edge */}
+          <div
+            className={
+              showToc
+                ? "lg:grid lg:grid-cols-[210px_minmax(0,1fr)] lg:gap-12"
+                : ""
+            }
+          >
+            {showToc && (
+              <aside className="hidden lg:block">
+                <div className="sticky top-28">
+                  <TableOfContents headings={headings} />
+                </div>
+              </aside>
+            )}
+            <div className={showToc ? "min-w-0" : "min-w-0 max-w-3xl mx-auto"}>
           {/* Article Content */}
           <div className="prose prose-invert prose-lg max-w-none mb-16 text-zinc-400">
             <ReactMarkdown
@@ -1001,6 +1007,7 @@ export function BlogPost() {
               </div>
             </div>
           )}
+            </div>
           </div>
         </div>
       </article>
