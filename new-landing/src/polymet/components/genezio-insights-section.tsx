@@ -36,7 +36,7 @@ export function GenezioInsightsSection() {
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(77,195,255,0.05),transparent_50%)]" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         {/* Header */}
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">

@@ -146,7 +146,7 @@ export function GenezioPricingComparison() {
 
   return (
     <section className="relative py-16 md:py-24 px-6 md:px-8 lg:px-16 bg-[#050506]">
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">

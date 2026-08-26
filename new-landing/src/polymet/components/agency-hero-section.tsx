@@ -48,7 +48,7 @@ export function AgencyHeroSection() {
             </Link>
           </div>
 
-          <div className="hidden md:block max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 lg:mt-24 overflow-hidden">
+          <div className="hidden md:block max-w-6xl mx-auto mt-8 sm:mt-12 md:mt-16 lg:mt-24 overflow-hidden">
             <AgencyBrandMarquee />
           </div>
         </div>

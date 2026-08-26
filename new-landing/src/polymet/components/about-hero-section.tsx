@@ -11,7 +11,7 @@ export function AboutHeroSection() {
     <section className="relative bg-[#050506] pt-40 pb-20 overflow-hidden">
       {/* Subtle center glow */}
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Eyebrow */}
           <HeroEyebrow className="mb-8 mx-auto w-fit">
