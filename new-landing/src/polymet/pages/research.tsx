@@ -73,8 +73,8 @@ export function Research() {
           </div>
         </section>
 
-        <section className="px-6 pb-32">
-          <div className="max-w-6xl mx-auto">
+        <section className="pb-32">
+          <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post) => {
