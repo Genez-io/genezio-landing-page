@@ -23,6 +23,8 @@ readTime: 7
 url: /ai-mentions-arent-random/
 ---
 
+![AI Mentions Aren't Random: The Content and Source Signals Behind Brand Visibility](/images/ai-mentions-arent-random.webp)
+
 If your brand shows up in ChatGPT, Google AI Overviews, Perplexity, Claude, or Copilot, that visibility rarely happens by accident. AI mentions are usually the result of two forces working together: **what models already know from training data** and **what answer engines can retrieve, read, and cite from the live web today**.
 
 For marketing leaders, that distinction matters. A brand may be well known in model memory yet still lose high-intent recommendations because its current content is weak, inaccessible, or too promotional to quote. Just as often, a lesser-known competitor earns the citation because it published a clearer comparison, a stronger proof point, or a more machine-readable page.
