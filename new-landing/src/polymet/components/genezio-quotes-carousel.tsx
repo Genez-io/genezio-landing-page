@@ -64,7 +64,7 @@ export function GenezioQuotesCarousel() {
 
         {/* CSS-only scroll-snap carousel — all cards are static, crawlable HTML */}
         <div
-          className="flex gap-5 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:-mx-8 md:px-8 lg:-mx-16 lg:px-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-5 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           role="group"
           aria-label="Customer testimonials"
         >
