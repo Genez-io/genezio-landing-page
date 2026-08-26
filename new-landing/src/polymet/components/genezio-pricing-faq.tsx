@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircleIcon, ChevronDownIcon } from "lucide-react";
-import { useState } from "react";
+import { MessageCircleIcon } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -58,7 +57,7 @@ export const PRICING_FAQ_SCHEMA = [
   {
     question: "Do you offer plans for marketing agencies?",
     answer:
-      "Yes, we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. See our agencies page at genezio.com/agencies/.",
+      "Yes, we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. Switch to our Agency pricing view at genezio.com/pricing/?view=agency or explore our agencies page at genezio.com/agencies/.",
   },
 ];
 
@@ -133,7 +132,11 @@ export function GenezioPricingFaq() {
       question: "Do you offer plans for marketing agencies?",
       answer: (
         <>
-          Yes, we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. See our{" "}
+          Yes, we have a dedicated Agency Enterprise offer for teams managing GEO across multiple clients, with multi-client workspaces and white-label reporting. Switch to our{" "}
+          <a href="/pricing/?view=agency" className="text-emerald-400 hover:underline">
+            Agency pricing view
+          </a>{" "}
+          or explore our{" "}
           <a href="/agencies/" className="text-emerald-400 hover:underline">
             agencies page
           </a>
