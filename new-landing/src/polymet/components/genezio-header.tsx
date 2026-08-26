@@ -19,7 +19,11 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
 
 
-export function GenezioHeader() {
+export function GenezioHeader({
+  maxWidthClass = "max-w-7xl",
+}: {
+  maxWidthClass?: string;
+} = {}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [platformMenuOpen, setPlatformMenuOpen] = useState(false);
   const [resourcesMenuOpen, setResourcesMenuOpen] = useState(false);
@@ -78,7 +82,7 @@ export function GenezioHeader() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 py-4 flex items-center justify-between">
+      <div className={`${maxWidthClass} mx-auto px-6 md:px-8 lg:px-16 py-4 flex items-center justify-between`}>
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group" aria-label="Genezio Homepage">
           <span className="text-white text-xl font-semibold">
