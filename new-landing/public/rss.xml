@@ -5,7 +5,7 @@
     <link>https://genezio.com/blog/</link>
     <description>The platform built for Generative Search and Answer Engine Optimization.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 19:20:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 19:40:16 GMT</lastBuildDate>
     <atom:link href="https://genezio.com/rss.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -16,6 +16,15 @@
         <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
         <author>Paula Cionca</author>
         <enclosure url="https://genezio.com/images/ai-mentions-arent-random.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[How to Audit Your AI Visibility Platform Before Switching]]></title>
+        <link>https://genezio.com/blog/audit-ai-visibility-platform-before-switching/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/audit-ai-visibility-platform-before-switching/</guid>
+        <description><![CDATA[How to audit your AI visibility platform before switching, test methodology, engine coverage, recommendation vs mention, citations, and competitor tracking.]]></description>
+        <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/audit-ai-visibility-platform-before-switching.webp" type="image/webp" length="0" />
     </item>
     <item>
         <title><![CDATA[Enterprise Buyer's Checklist for AI Visibility Platforms in 2026]]></title>
