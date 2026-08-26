@@ -675,7 +675,7 @@ export function BlogPost() {
       />
       {/* Back Button */}
       <div className="pt-24 pb-8">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
           <a
             href={`${sectionBasePath}/`}
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors group"
@@ -689,7 +689,7 @@ export function BlogPost() {
 
       {/* Article Header */}
       <article className="pb-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
           {/* Post Type & Category Badges */}
           <div className="flex flex-wrap items-center gap-3 mb-6">
             {post.postType && (
@@ -1014,7 +1014,7 @@ export function BlogPost() {
 
       {/* CTA Section */}
       <section className="pb-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
           <div className="relative bg-white/5 border border-white/10 rounded-2xl p-12 overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-600/10 via-white/10 to-transparent" />

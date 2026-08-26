@@ -40,7 +40,7 @@ export function GenezioExpertServices() {
     <section className="relative py-24 md:py-32 bg-[#0E0E10]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <HeroEyebrow className="mb-6 mx-auto w-fit">
             Dedicated expert services

@@ -74,7 +74,7 @@ export function CrossAnalysis() {
 
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-500/10 via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+      <div className="relative max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <HeroEyebrow className="mb-6">Cross-Analysis</HeroEyebrow>

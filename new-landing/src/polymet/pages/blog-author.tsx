@@ -104,7 +104,7 @@ function BlogAuthor() {
       <div className="min-h-screen bg-[#050506]">
         {/* Back Button */}
         <div className="px-6 pt-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <Link
               to="/blog/"
               className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
@@ -169,7 +169,7 @@ function BlogAuthor() {
 
         {/* Author's Articles */}
         <section className="px-6 pb-32">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8">
               Articles by {author.name}
             </h2>

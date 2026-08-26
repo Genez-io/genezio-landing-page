@@ -33,7 +33,7 @@ export function GenezioOfficialSection() {
 
   return (
     <section className="relative py-24 md:py-32 bg-[#050506] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
         <div className="text-center mb-14 md:mb-16">
           <HeroEyebrow className="mb-6">It's official</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto">

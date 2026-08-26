@@ -25,7 +25,7 @@ function McpHero() {
   return (
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-44 md:pb-28">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center">
           {/* Left */}
           <div className="text-center lg:text-left">
@@ -196,7 +196,7 @@ function Capabilities() {
 
   return (
     <section className="py-16 md:py-28 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
           <HeroEyebrow className="mb-6 mx-auto w-fit">What you can do</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">

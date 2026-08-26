@@ -96,7 +96,7 @@ function MeasurementToBrief() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-20">
           <HeroEyebrow className="mb-4 mx-auto w-fit">From measurement to action</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -178,7 +178,7 @@ function BriefAnatomy() {
 
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div>
@@ -254,7 +254,7 @@ function BriefsVsDirect() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-4 mx-auto w-fit">Two ways to ship</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">
@@ -361,7 +361,7 @@ function PlanLikeMedia() {
 
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-4 mx-auto w-fit">The playbook</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white max-w-3xl mx-auto">

@@ -119,7 +119,7 @@ export function AgentScoringCards() {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+      <div className="relative max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <HeroEyebrow className="mb-6">Agent Performance</HeroEyebrow>

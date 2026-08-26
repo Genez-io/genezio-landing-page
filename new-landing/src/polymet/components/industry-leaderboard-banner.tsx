@@ -9,7 +9,7 @@ export function IndustryLeaderboardBanner() {
 
   return (
     <div className="relative mt-16 bg-white/5 border-b border-white/10 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 py-3.5">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16 py-3.5">
         <div className="flex items-center justify-center gap-3">
           {/* Message */}
           <div className="flex items-center gap-2 text-sm">

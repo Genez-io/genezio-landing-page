@@ -4,7 +4,7 @@ import bcrLogo from "../../assets/bcr.svg";
 export function GenezioTestimonialSection() {
     return (
         <section className="relative py-20 md:py-32 bg-[#050506]">
-            <div className="container mx-auto px-6 max-w-7xl">
+            <div className="container mx-auto px-6 max-w-6xl">
                 {/* Main Testimonial Card */}
                 <div className="relative bg-gradient-to-br from-[#0E0E10] to-[#1A1A1F] border border-white/5 rounded-3xl overflow-hidden">
                     {/* Gradient Overlay */}

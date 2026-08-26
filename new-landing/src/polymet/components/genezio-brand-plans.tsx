@@ -36,7 +36,7 @@ export function GenezioBrandPlans() {
 
   return (
     <section className="py-20 px-6 bg-[#0E0E10]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Plans for Brands</h2>
