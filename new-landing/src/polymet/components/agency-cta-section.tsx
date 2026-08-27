@@ -33,14 +33,15 @@ export function AgencyCtaSection() {
                   Talk to Sales
                 </Button>
               </Link>
-              <Button
-                onClick={() => window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"}
-                size="lg"
-                variant="outline"
-                className="border border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-6 py-6 text-base font-semibold rounded-xl transition-colors w-full sm:w-auto"
-              >
-                Get a demo
-              </Button>
+              <Link to="/pricing/?view=agency" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white px-6 py-6 text-base font-semibold rounded-xl transition-colors w-full"
+                >
+                  View agency pricing
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
