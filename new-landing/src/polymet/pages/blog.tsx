@@ -94,8 +94,8 @@ export function Blog() {
 
         {/* Featured */}
         {featuredPosts.length > 0 && (
-          <section className="px-6 md:px-8 lg:px-16 pb-16 md:pb-20">
-            <div className="max-w-7xl mx-auto">
+          <section className="pb-16 md:pb-20">
+            <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
               <SectionLabel>Featured</SectionLabel>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -165,8 +165,8 @@ export function Blog() {
         )}
 
         {/* All posts */}
-        <section className="px-6 md:px-8 lg:px-16 pb-32">
-          <div className="max-w-7xl mx-auto">
+        <section className="pb-32">
+          <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
             <SectionLabel>AI visibility &amp; recommendation deep dives</SectionLabel>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

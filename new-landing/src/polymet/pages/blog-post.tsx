@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import { Button } from "@/components/ui/button";
 import { useParams, Navigate, useLocation } from "react-router";
@@ -15,6 +15,98 @@ import {
 import { getPostById, getAllPosts, getPostPath } from "@/lib/posts";
 import { authors } from "@/lib/authors";
 import { BlogPostTypeBadge } from "@/polymet/components/blog-post-type-badge";
+
+/** Slugify heading text into a stable anchor id. */
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
+/** Flatten React children (markdown-rendered heading) into plain text. */
+function nodeToText(children: React.ReactNode): string {
+  if (children == null || children === false) return "";
+  if (typeof children === "string" || typeof children === "number")
+    return String(children);
+  if (Array.isArray(children)) return children.map(nodeToText).join("");
+  if (React.isValidElement(children))
+    return nodeToText((children.props as { children?: React.ReactNode }).children);
+  return "";
+}
+
+/** Extract H2 headings (the "main sections") from markdown for the table of contents. */
+function extractH2Headings(markdown: string): { id: string; text: string }[] {
+  const out: { id: string; text: string }[] = [];
+  let inCode = false;
+  for (const line of markdown.split("\n")) {
+    if (line.trim().startsWith("```")) {
+      inCode = !inCode;
+      continue;
+    }
+    if (inCode) continue;
+    const m = line.match(/^##\s+(.+?)\s*$/);
+    if (m) {
+      const text = m[1].replace(/\*\*/g, "").replace(/`/g, "").trim();
+      out.push({ id: slugify(text), text });
+    }
+  }
+  return out;
+}
+
+/** Sticky in-page table of contents with scroll-spy, shown in the left gutter. */
+function TableOfContents({
+  headings,
+}: {
+  headings: { id: string; text: string }[];
+}) {
+  const [active, setActive] = useState<string>(headings[0]?.id ?? "");
+
+  useEffect(() => {
+    const els = headings
+      .map((h) => document.getElementById(h.id))
+      .filter((el): el is HTMLElement => !!el);
+    if (!els.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActive(visible[0].target.id);
+      },
+      { rootMargin: "-112px 0px -68% 0px", threshold: 0 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [headings]);
+
+  return (
+    <nav aria-label="Table of contents" className="text-sm">
+      <div className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40 mb-4">
+        On this page
+      </div>
+      <ul className="border-l border-white/10">
+        {headings.map((h) => (
+          <li key={h.id}>
+            <a
+              href={`#${h.id}`}
+              onClick={() => setActive(h.id)}
+              className={`block border-l -ml-px pl-4 py-1.5 leading-snug transition-colors ${
+                active === h.id
+                  ? "border-emerald-400 text-white"
+                  : "border-transparent text-white/45 hover:text-white/75"
+              }`}
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
 
 export function BlogPost() {
   const { slug } = useParams<{
@@ -126,6 +218,26 @@ export function BlogPost() {
       (_, url, id) => `[TWEET_EMBED__${id}](${url})`
     );
   }, [post.content]);
+
+  // Pull a leading hero image out of the body so it renders full-width above
+  // the two-column (table-of-contents + article) layout.
+  const { heroImage, bodyContent } = React.useMemo(() => {
+    const m = contentWithTweets.match(/^\s*!\[([^\]]*)\]\(([^)]+)\)\s*/);
+    if (m) {
+      return {
+        heroImage: { alt: m[1], src: m[2] },
+        bodyContent: contentWithTweets.slice(m[0].length).replace(/^\s+/, ""),
+      };
+    }
+    return { heroImage: null as null | { alt: string; src: string }, bodyContent: contentWithTweets };
+  }, [contentWithTweets]);
+
+  // "Main sections" for the table of contents (H2 headings only).
+  const headings = React.useMemo(
+    () => extractH2Headings(bodyContent),
+    [bodyContent]
+  );
+  const showToc = headings.length >= 2;
 
   let customSchema: Record<string, unknown> | undefined = undefined;
   if (post.id === "ai-recommendation-vs-ai-visibility") {
@@ -562,8 +674,8 @@ export function BlogPost() {
         tags={post.tags}
       />
       {/* Back Button */}
-      <div className="pt-24 pb-8 px-6">
-        <div className="max-w-4xl mx-auto">
+      <div className="pt-24 pb-8">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
           <a
             href={`${sectionBasePath}/`}
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors group"
@@ -576,8 +688,8 @@ export function BlogPost() {
       </div>
 
       {/* Article Header */}
-      <article className="px-6 pb-32">
-        <div className="max-w-4xl mx-auto">
+      <article className="pb-32">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
           {/* Post Type & Category Badges */}
           <div className="flex flex-wrap items-center gap-3 mb-6">
             {post.postType && (
@@ -665,8 +777,35 @@ export function BlogPost() {
             </div> */}
           </div>
 
+          {/* Hero image (pulled out of the body so the TOC starts below it) */}
+          {heroImage && (
+            <img
+              src={heroImage.src}
+              alt={heroImage.alt}
+              className="w-full rounded-xl border border-white/10 mb-10"
+              loading="eager"
+            />
+          )}
+
+          {/* Table of contents (fixed, left) + article body — one grid so the
+              hero, header and TOC all share the same left edge */}
+          <div
+            className={
+              showToc
+                ? "lg:grid lg:grid-cols-[210px_minmax(0,1fr)] lg:gap-12"
+                : ""
+            }
+          >
+            {showToc && (
+              <aside className="hidden lg:block">
+                <div className="sticky top-28">
+                  <TableOfContents headings={headings} />
+                </div>
+              </aside>
+            )}
+            <div className={showToc ? "min-w-0" : "min-w-0 max-w-3xl mx-auto"}>
           {/* Article Content */}
-          <div className="prose prose-invert prose-lg max-w-none mb-16 text-white/80">
+          <div className="prose prose-invert prose-lg max-w-none mb-16 text-zinc-400">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
@@ -676,11 +815,14 @@ export function BlogPost() {
                     {...props}
                   />
                 ),
-                h2: ({ node, ...props }) => (
+                h2: ({ node, children, ...props }) => (
                   <h2
-                    className="text-3xl font-bold text-white mt-10 mb-5 leading-snug"
+                    id={slugify(nodeToText(children))}
+                    className="text-3xl font-bold text-white mt-10 mb-5 leading-snug scroll-mt-28"
                     {...props}
-                  />
+                  >
+                    {children}
+                  </h2>
                 ),
                 h3: ({ node, ...props }) => (
                   <h3
@@ -704,7 +846,7 @@ export function BlogPost() {
                 ),
                 tbody: ({ node, ...props }) => (
                   <tbody
-                    className="divide-y divide-white/10 text-white/80"
+                    className="divide-y divide-white/10 text-zinc-400"
                     {...props}
                   />
                 ),
@@ -716,13 +858,13 @@ export function BlogPost() {
                 ),
                 ul: ({ node, ...props }) => (
                   <ul
-                    className="list-disc pl-6 mb-6 text-white/80 space-y-2"
+                    className="list-disc pl-6 mb-6 text-zinc-400 space-y-2"
                     {...props}
                   />
                 ),
                 ol: ({ node, ...props }) => (
                   <ol
-                    className="list-decimal pl-6 mb-6 text-white/80 space-y-2"
+                    className="list-decimal pl-6 mb-6 text-zinc-400 space-y-2"
                     {...props}
                   />
                 ),
@@ -737,7 +879,7 @@ export function BlogPost() {
                 ),
                 p: ({ node, ...props }) => (
                   <p
-                    className="mb-3 leading-relaxed text-white/80"
+                    className="mb-3 leading-relaxed text-zinc-400"
                     {...props}
                   />
                 ),
@@ -780,13 +922,13 @@ export function BlogPost() {
                       {...props}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
-                      className="underline underline-offset-2 decoration-white/40 hover:decoration-white/80 transition-colors break-words"
+                      className="text-blue-400 underline underline-offset-2 decoration-blue-400/50 hover:text-blue-300 hover:decoration-blue-300 transition-colors break-words"
                     />
                   );
                 }
               }}
             >
-              {contentWithTweets}
+              {bodyContent}
             </ReactMarkdown>
           </div>
 
@@ -865,12 +1007,14 @@ export function BlogPost() {
               </div>
             </div>
           )}
+            </div>
+          </div>
         </div>
       </article>
 
       {/* CTA Section */}
-      <section className="px-6 pb-32">
-        <div className="max-w-4xl mx-auto">
+      <section className="pb-32">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
           <div className="relative bg-white/5 border border-white/10 rounded-2xl p-12 overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-600/10 via-white/10 to-transparent" />

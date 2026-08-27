@@ -2,7 +2,7 @@ import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { GenezioHeroSection } from "@/polymet/components/genezio-hero-section";
 import { GenezioTrustSection } from "@/polymet/components/genezio-trust-section";
 import { GenezioEnterpriseSection } from "@/polymet/components/genezio-enterprise-section";
-import { GenezioTestimonialSection } from "../components/genezio-testimonial-section";
+import { GenezioQuotesCarousel } from "@/polymet/components/genezio-quotes-carousel";
 import { GenezioAiTrafficSection } from "@/polymet/components/genezio-ai-traffic-section";
 import { GenezioPerceptionSection } from "@/polymet/components/genezio-perception-section";
 import { GenezioProductPillarsSection } from "@/polymet/components/genezio-product-pillars-section";
@@ -54,7 +54,7 @@ export function GenezioLanding() {
         <GenezioProofSection />
 
         {/* Social proof */}
-        <GenezioTestimonialSection />
+        <GenezioQuotesCarousel />
 
         {/* Enterprise readiness */}
         <GenezioEnterpriseSection />

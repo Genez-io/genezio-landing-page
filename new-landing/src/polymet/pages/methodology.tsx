@@ -101,7 +101,7 @@ function HowWeMeasure() {
   return (
     <section className="relative bg-[#0E0E10] py-20 md:py-28">
       <Hairline />
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="max-w-2xl mb-14 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
             How we measure

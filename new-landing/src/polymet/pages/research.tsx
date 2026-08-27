@@ -43,7 +43,7 @@ export function Research() {
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-white/10 to-transparent" />
 
-          <div className="relative max-w-7xl mx-auto">
+          <div className="relative max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <HeroEyebrow className="mb-6">Original Research</HeroEyebrow>
 
@@ -73,8 +73,8 @@ export function Research() {
           </div>
         </section>
 
-        <section className="px-6 pb-32">
-          <div className="max-w-7xl mx-auto">
+        <section className="pb-32">
+          <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post) => {

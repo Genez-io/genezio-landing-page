@@ -61,7 +61,7 @@ function ShoppingHero() {
     <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-[#050506] via-[#0A0A0F] to-[#050506]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left">
             <HeroEyebrow className="mb-6">In-Chat Shopping · AI Product Intelligence</HeroEyebrow>
@@ -179,7 +179,7 @@ function WhatWeAnalyze() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-4 mx-auto w-fit">What we analyze</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -257,7 +257,7 @@ function WhatItReveals() {
   ];
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-4 mx-auto w-fit">What it reveals</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -306,7 +306,7 @@ function ProductLevelView() {
   return (
     <section className="py-16 md:py-32 bg-[#0E0E10] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <HeroEyebrow className="mb-4 mx-auto w-fit">Product-level view</HeroEyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -415,7 +415,7 @@ function MarketplacePerformance() {
   ];
   return (
     <section className="py-16 md:py-32 bg-[#050506] relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <HeroEyebrow className="mb-4 mx-auto w-fit">Marketplace performance</HeroEyebrow>

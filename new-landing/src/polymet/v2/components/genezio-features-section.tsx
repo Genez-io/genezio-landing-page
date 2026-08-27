@@ -49,7 +49,7 @@ export function GenezioFeaturesSection() {
   return (
     <section className="relative py-20 md:py-32">
       <div className="px-6 md:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-4 mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">

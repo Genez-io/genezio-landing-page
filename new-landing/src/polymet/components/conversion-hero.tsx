@@ -19,7 +19,7 @@ export function ConversionHero() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 py-12 sm:py-20 w-full">
+      <div className="relative max-w-6xl mx-auto px-6 sm:px-8 lg:px-16 py-12 sm:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8">
