@@ -75,7 +75,7 @@ export function PolymetSEO({
 
     if (path === "/" || path === "") {
       defaultGraph = [baseOrg, baseApp];
-    } else if (path === "/pricing" || path === "/pricing/") {
+    } else if (path === "/pricing" || path === "/pricing/" || path.startsWith("/pricing")) {
       // No price in schema, pricing is custom Enterprise (quote-based).
       defaultGraph = [baseOrg, baseApp];
     } else if (path.startsWith("/blog/author/")) {
@@ -217,7 +217,6 @@ export function PolymetSEO({
 
   return (
     <>
-      {/* @ts-ignore */}
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />

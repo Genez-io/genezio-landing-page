@@ -40,7 +40,8 @@ Genezio is the enterprise AI visibility platform built for Generative Search & C
 ## Key Pages
 - [Homepage](https://genezio.com/): Enterprise AI visibility platform overview (Explore a live brand report)
 - [Live Brand Report](https://app.genezio.ai/brand-report/49/Natwest?demo=account): Explore a live brand report
-- [Pricing](https://genezio.com/pricing/): Custom enterprise pricing for brands and agencies
+- [Pricing](https://genezio.com/pricing/): Custom enterprise pricing for brands
+- [Agency Pricing](https://genezio.com/pricing/?view=agency): Custom enterprise pricing for agencies managing multi-client GEO
 - [Increase Lead Generation](https://genezio.com/conversational-brand-presence/): Conversational brand presence features
 - [AI Agent Analytics](https://genezio.com/ai-agent-analytics/): Real conversation analytics & conversion optimization
 - [For Agencies](https://genezio.com/agencies/): Multi-brand management for agencies
