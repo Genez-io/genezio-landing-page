@@ -83,7 +83,7 @@ export function GenezioPricing() {
         <GenezioExpertServices />
         <GenezioPricingProducts />
         <GenezioGroupLevelView />
-        <GenezioTestimonialSection />
+        <GenezioQuotesCarousel />
 
         {/* Render both FAQ variants with data-pricing-faq attributes */}
         <div data-pricing-faq="brands">
