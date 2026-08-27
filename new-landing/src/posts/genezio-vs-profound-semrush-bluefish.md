@@ -1,6 +1,6 @@
 ---
-title: "Why Enterprises Choose Genezio Over Profound, Semrush, and Bluefish for AI Visibility"
-metaTitle: "Genezio vs Profound, Semrush & Bluefish for AI Visibility"
+title: "Profound, Semrush & Bluefish Alternatives: How Genezio Compares"
+metaTitle: "Genezio vs Profound, Semrush & Bluefish (2026)"
 date: 2026-08-27
 tags:
   - AI
