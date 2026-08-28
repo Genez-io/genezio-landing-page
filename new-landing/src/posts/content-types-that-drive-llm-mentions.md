@@ -29,7 +29,7 @@ url: /content-types-that-drive-llm-mentions/
 
 As users shift from traditional search to AI-driven discovery—asking ChatGPT, Gemini, or Claude which brands they should trust—a new strategic question emerges: **What types of content most influence LLMs when deciding which brands to mention?**
 
-Unlike search engines, which rely heavily on keywords and backlinks, LLMs generate recommendations based on **structured knowledge, reasoning patterns, and the sources they consider authoritative**.
+Unlike search engines, which rely heavily on keywords and backlinks, LLMs generate recommendations based on **structured knowledge, reasoning patterns, and the sources they consider authoritative**. In fact, [AI mentions aren't random](/blog/ai-mentions-arent-random/)—they depend on how model training familiarity and live retrievable content align.
 
 To understand these mechanisms, Genezio analyzed how UK universities appear in AI-generated answers, a dataset that includes **2,909 citations**, **946 user queries**, and dozens of real LLM scenarios.
 

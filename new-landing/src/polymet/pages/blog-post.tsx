@@ -9,8 +9,7 @@ import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import {
   ArrowLeftIcon,
   ClockIcon,
-  CalendarIcon,
-  SparklesIcon
+  CalendarIcon
 } from "lucide-react";
 import { getPostById, getAllPosts, getPostPath } from "@/lib/posts";
 import { authors } from "@/lib/authors";
@@ -54,6 +53,60 @@ function extractH2Headings(markdown: string): { id: string; text: string }[] {
     }
   }
   return out;
+}
+
+/** Automatically extract FAQ schema from markdown content when an FAQ section is present. */
+function extractFAQSchemaFromMarkdown(content: string): Record<string, unknown> | undefined {
+  if (!content) return undefined;
+
+  // Match the FAQ section: ## FAQ / ## Frequently Asked Questions / etc.
+  const faqSectionRegex = /(?:^|\n)##\s+.*?(?:FAQ|Frequently Asked Questions|Questions\s*(?:&|and)\s*Answers)[^\n]*\n([\s\S]*?)(?=\n##\s+|$)/i;
+  const faqMatch = content.match(faqSectionRegex);
+  if (!faqMatch) return undefined;
+
+  const faqBody = faqMatch[1];
+
+  // Match each ### Question
+  const qaRegex = /(?:^|\n)###\s+([^\n]+)\n([\s\S]*?)(?=\n###\s+|$)/g;
+  const questions: Array<{ "@type": string; name: string; acceptedAnswer: { "@type": string; text: string } }> = [];
+
+  let match: RegExpExecArray | null;
+  while ((match = qaRegex.exec(faqBody)) !== null) {
+    const rawQuestion = match[1];
+    const rawAnswer = match[2];
+
+    const name = rawQuestion
+      .replace(/[*_`]/g, "")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .trim();
+
+    const text = rawAnswer
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, "") // remove images
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // link text only
+      .replace(/[*_`]/g, "") // markdown markers
+      .replace(/\n+/g, " ") // collapse newlines
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (name && text) {
+      questions.push({
+        "@type": "Question",
+        name,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text,
+        },
+      });
+    }
+  }
+
+  if (questions.length === 0) return undefined;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": questions,
+  };
 }
 
 /** Sticky in-page table of contents with scroll-spy, shown in the left gutter. */
@@ -655,6 +708,11 @@ export function BlogPost() {
         }
       ]
     };
+  }
+
+  // Fallback: automatically generate FAQPage schema from markdown if post has an FAQ section
+  if (!customSchema && post.content) {
+    customSchema = extractFAQSchemaFromMarkdown(post.content);
   }
 
   return (

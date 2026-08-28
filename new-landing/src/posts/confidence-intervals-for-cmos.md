@@ -101,7 +101,7 @@ Three questions. None of them are tricks.
 
 2. **Do you publish confidence intervals on your headline numbers?** If the answer is "we plan to" or "we have it on the roadmap," the current dashboard is producing point estimates without error bars. Those are not metrics. They are stories. Check our guide on [Visibility to Recommendation Rate](/blog/visibility-to-recommendation-rate/) to see how we track these metrics at scale.
 
-3. **How does your tool handle non-determinism?** If the vendor doesn't know what you're asking, that's its own answer. If the vendor has a real story — Wilson scores, sliding windows, hierarchical aggregation, statistical thresholds for declaring a real change — keep talking. They've thought about the actual problem.
+3. **How does your tool handle non-determinism?** If the vendor doesn't know what you're asking, that's its own answer. If the vendor has a real story — Wilson scores, sliding windows, hierarchical aggregation, statistical thresholds for declaring a real change — keep talking. They've thought about the actual problem. For a complete procurement framework, consult our [Enterprise Buyer's Checklist for AI Visibility Platforms](/blog/enterprise-buyers-checklist-ai-visibility-platforms-2026/).
 
 The math here isn't optional. It's not a feature you add later when the product matures. AI variance is the central methodological problem in this category, and a tool that ignores it isn't measuring [AI search (GEO)](/blog/what-is-geo-complete-guide/) — it's decorating one.
 
