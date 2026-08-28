@@ -17,9 +17,7 @@
 }
 
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 :root {
@@ -229,7 +227,6 @@ body {
 #cky-auto-cookie-policy ol {
   padding-left: 1.5rem;
   margin-bottom: 1rem;
-  space-y: 0.5rem;
 }
 
 #cky-auto-cookie-policy ul {
@@ -245,3 +242,54 @@ body {
 }
 
 /* Design system mode: light */
+
+/* Pricing View Switcher CSS rules to prevent FOUC / hydration flicker */
+html.pricing-view-agency [data-pricing-panel="brands"] {
+  display: none !important;
+}
+html.pricing-view-agency [data-pricing-panel="agencies"] {
+  display: block !important;
+}
+html.pricing-view-agency [data-pricing-word="brands"] {
+  display: none !important;
+}
+html.pricing-view-agency [data-pricing-word="agencies"] {
+  display: inline !important;
+}
+html.pricing-view-agency [data-pricing-subtitle="brands"] {
+  display: none !important;
+}
+html.pricing-view-agency [data-pricing-subtitle="agencies"] {
+  display: block !important;
+}
+html.pricing-view-agency [data-pricing-faq="brands"] {
+  display: none !important;
+}
+html.pricing-view-agency [data-pricing-faq="agencies"] {
+  display: block !important;
+}
+
+html:not(.pricing-view-agency) [data-pricing-panel="agencies"] {
+  display: none !important;
+}
+html:not(.pricing-view-agency) [data-pricing-panel="brands"] {
+  display: block !important;
+}
+html:not(.pricing-view-agency) [data-pricing-word="agencies"] {
+  display: none !important;
+}
+html:not(.pricing-view-agency) [data-pricing-word="brands"] {
+  display: inline !important;
+}
+html:not(.pricing-view-agency) [data-pricing-subtitle="agencies"] {
+  display: none !important;
+}
+html:not(.pricing-view-agency) [data-pricing-subtitle="brands"] {
+  display: block !important;
+}
+html:not(.pricing-view-agency) [data-pricing-faq="agencies"] {
+  display: none !important;
+}
+html:not(.pricing-view-agency) [data-pricing-faq="brands"] {
+  display: block !important;
+}

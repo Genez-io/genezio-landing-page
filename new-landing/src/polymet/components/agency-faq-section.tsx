@@ -47,6 +47,11 @@ export const AGENCY_FAQ_SCHEMA = [
     answer:
       "You can find detailed information about our specialized features, case studies, and solutions for agencies on our dedicated agencies page at genezio.com/agencies/.",
   },
+  {
+    question: "Looking for direct brand or enterprise pricing?",
+    answer:
+      "If you are looking for pricing for a single company or in-house team, view our Brand Enterprise plan at genezio.com/pricing/.",
+  },
 ];
 
 export function AgencyFaqSection() {
@@ -94,6 +99,18 @@ export function AgencyFaqSection() {
           <a href="/agencies/" className="text-zinc-400 hover:underline">
             solutions for agencies
           </a>{' '}on our dedicated agencies page.
+        </>
+      ),
+    },
+    {
+      question: "Looking for direct brand or enterprise pricing?",
+      answer: (
+        <>
+          If you are looking for pricing for a single company or in-house team, view our{" "}
+          <a href="/pricing/" className="text-emerald-400 hover:underline">
+            Brand Enterprise plan
+          </a>
+          .
         </>
       ),
     },

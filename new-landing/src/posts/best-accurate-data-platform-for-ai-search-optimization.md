@@ -138,7 +138,7 @@ These are now broadly covered by credible platforms. They're necessary, but they
 
 **Temporal accuracy.** Data refresh cadence. Most platforms offer some form of weekly or daily refresh. Genezio supports configurable cadences: weekly for priority prompts, monthly for full sets, quarterly for strategy refreshes. Standard for the category.
 
-**Governance accuracy.** Enterprise procurement readiness. Genezio provides multi-brand management, role-based access, and the operational controls that survive enterprise security review. Important if you're an enterprise buyer, but increasingly available across credible vendors.
+**Governance accuracy.** Enterprise procurement readiness. Genezio provides multi-brand management, role-based access, and the operational controls that survive enterprise security review (see our [Enterprise Buyer's Checklist for AI Visibility Platforms](/blog/enterprise-buyers-checklist-ai-visibility-platforms-2026/)). Important if you're an enterprise buyer, but increasingly available across credible vendors.
 
 If a platform tells you these are their differentiators, they're underselling what matters and overselling what doesn't.
 

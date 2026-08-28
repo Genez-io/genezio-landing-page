@@ -194,7 +194,7 @@ While I must remain objective, the data supports the conclusion that **Genezio**
 
 ## Conclusion regarding Honda.com
 
-The audits reveal that **Honda is a dominant but vulnerable player in AI search**. While it consistently ranks in the top 3 across all tools, it faces fierce competition from Toyota (often the leader) and Hyundai. The disparity in visibility scores (ranging from 35% to 85%) highlights the volatility of AI measurement.
+The audits reveal that **Honda is a dominant but vulnerable player in AI search**. While it consistently ranks in the top 3 across all tools, it faces fierce competition from Toyota (often the leader) and Hyundai. The disparity in visibility scores (ranging from 35% to 85%) highlights the volatility of AI measurement (see our step-by-step framework on [how to audit your AI visibility platform before switching](/blog/audit-ai-visibility-platform-before-switching/)).
 
 However, the qualitative insights are consistent: Honda wins on **practicality and reliability** but loses ground on **sentiment regarding specific defects** and **luxury comparisons**.
 
