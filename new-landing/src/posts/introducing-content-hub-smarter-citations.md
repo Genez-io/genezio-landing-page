@@ -36,8 +36,8 @@ This update strengthens Genezio's core promise: turning AI Visibility from somet
 
 ![Editing a Genezio-generated article via the chat interface](/images/content-hub-chat-interface.webp  "Editing a Genezio-generated article via the chat interface")  
 
-Most brands create content based on intuition, SEO tradition, or internal assumptions. But LLMs don't think like traditional search engines.
-
+Most brands create content based on intuition, SEO tradition, or internal assumptions. But LLMs don't think like traditional search engines. Because [AI mentions aren't random](/blog/ai-mentions-arent-random/), understanding what models cite is critical.
+ 
 The Content Hub helps you create content that is aligned with how AI assistants actually gather information, structure answers, and decide what to cite. This process begins with [data-backed briefs, not articles](/blog/briefs-not-articles/), to guide content creation before drafting.
 
 Instead of guessing what might work, you start from:

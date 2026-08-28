@@ -47,6 +47,8 @@ Decision rules:
 - **Choose Profound if** you want a broad answer-engine analytics suite with panel-derived prompt demand data and built-in content generation agents, and you have the budget and analyst time to work the dashboards.  
 - **Choose Semrush or Ahrefs if** you already live inside their SEO suite every day and want baseline AI-mention monitoring bolted onto your existing workflow, not a recommendation-optimization program.
 
+*(Looking for a broader enterprise comparison including Bluefish? See our [Genezio vs Profound, Semrush & Bluefish comparison](/blog/genezio-vs-profound-semrush-bluefish/)).*
+
 | Tool | Best for |
 | :---- | :---- |
 | **Genezio** | Recommendation-first measurement \+ an executable action plan |
