@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 const DEMO_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 /* Status pill shared by the report visuals. All data on this page is illustrative. */
 function StatusPill({ good }: { good: boolean }) {
@@ -62,7 +62,7 @@ function ContentAnalysisHero() {
               Get a demo
             </Button>
           </a>
-          <a href="/contact-sales">
+          <a href="/contact-sales/">
             <Button
               variant="outline"
               className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white text-sm font-semibold px-6 py-6 rounded-xl transition-all"

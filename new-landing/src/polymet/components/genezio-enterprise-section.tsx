@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 const DEMO_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 export function GenezioEnterpriseSection() {
   const capabilities = [

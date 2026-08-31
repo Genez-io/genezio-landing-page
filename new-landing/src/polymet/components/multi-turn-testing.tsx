@@ -304,7 +304,7 @@ export function MultiTurnTesting() {
               Create unlimited test conversations for any persona, scenario, or
               campaign update. Ensure quality before deployment.
             </p>
-            <a href="/contact-sales">
+            <a href="/contact-sales/">
               <Button className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl">
                 <FlaskConicalIcon className="w-5 h-5 mr-2" />
                 Talk to our Experts

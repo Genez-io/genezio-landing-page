@@ -497,7 +497,7 @@ export function GenezioHeader() {
           <Button
             className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-xl transition-all"
             onClick={() =>
-              window.location.assign("/contact-sales")
+              window.location.assign("/contact-sales/")
             }
           >
             Get a demo
@@ -507,7 +507,7 @@ export function GenezioHeader() {
         {/* Mobile: compact persistent CTA + menu button */}
         <div className="flex md:hidden items-center gap-1.5">
           <a
-            href="/contact-sales"
+            href="/contact-sales/"
           >
             <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-4 h-9 rounded-lg transition-all">
               Get a demo
@@ -731,7 +731,7 @@ export function GenezioHeader() {
 
           <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
             <a
-              href="/contact-sales"
+              href="/contact-sales/"
               onClick={() => setMobileMenuOpen(false)}
             >
               <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-xl transition-all w-full">

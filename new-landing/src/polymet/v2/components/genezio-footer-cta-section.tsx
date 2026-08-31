@@ -34,7 +34,7 @@ export function GenezioFooterCtaSection() {
 
           {/* CTA */}
           <div className="pt-4">
-            <a href="/contact-sales">
+            <a href="/contact-sales/">
             <Button size="lg" className="text-base px-10 h-14 group shadow-xl">
               Get a demo
               <ArrowRightIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -23,9 +23,6 @@ import {
   CheckCircle2Icon,
 } from "lucide-react";
 
-const DEMO_URL =
-  "/contact-sales";
-
 /* ─────────────────────────────  HERO  ───────────────────────────── */
 function WebsiteAnalyzerHero() {
   const [domain, setDomain] = useState("");

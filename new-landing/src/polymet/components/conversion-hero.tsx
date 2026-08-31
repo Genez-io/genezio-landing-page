@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  TrendingUpIcon,
   SparklesIcon,
   MessageSquareIcon,
-  CalendarIcon
 } from "lucide-react";
 import { Link } from "react-router";
 
@@ -43,12 +41,12 @@ export function ConversionHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <Link to="/contact-sales" className="w-full sm:w-auto">
+              <Link to="/contact-sales/" className="w-full sm:w-auto">
                 <Button className="w-full bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-semibold rounded-xl transition-all shadow-lg">
                   Request an Analysis
                 </Button>
               </Link>
-              <a href="/contact-sales" className="w-full sm:w-auto">
+              <a href="/contact-sales/" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"

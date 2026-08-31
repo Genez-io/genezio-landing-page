@@ -7,7 +7,6 @@ import {
   TrophyIcon,
   TargetIcon,
   RefreshCwIcon,
-  CheckCircle2Icon,
   SparklesIcon,
   BriefcaseIcon,
   Building2Icon,
@@ -16,7 +15,7 @@ import {
 } from "lucide-react";
 
 const DEMO_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 /* Competitive SWOT vs a top competitor, illustrative */
 const SWOT = [

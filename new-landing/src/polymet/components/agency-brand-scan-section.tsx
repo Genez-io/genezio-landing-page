@@ -9,7 +9,7 @@ import {
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 const DEMO_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 export function AgencyBrandScanSection() {
   const deliverables = [

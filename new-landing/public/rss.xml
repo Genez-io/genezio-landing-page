@@ -5,9 +5,18 @@
     <link>https://genezio.com/blog/</link>
     <description>The platform built for Generative Search and Answer Engine Optimization.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2026 09:23:55 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 11:44:04 GMT</lastBuildDate>
     <atom:link href="https://genezio.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+        <title><![CDATA[Are Brands Using Prompt Injection to Manipulate ChatGPT Recommendations?]]></title>
+        <link>https://genezio.com/blog/are-brands-using-prompt-injection-to-manipulate-chatgpt-recommendations/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/are-brands-using-prompt-injection-to-manipulate-chatgpt-recommendations/</guid>
+        <description><![CDATA[Discover how marketers use prompt injection to hijack AI search responses, the security risks of black-hat GEO, and why it threatens brand reputation.]]></description>
+        <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+        <author>Horatiu Voicu</author>
+        <enclosure url="https://genezio.com/images/are-brands-using-prompt-injection-to-manipulate-chatgpt-recommendations.webp" type="image/webp" length="0" />
+    </item>
     <item>
         <title><![CDATA[Can Brands Influence AI Training Data? What Marketing Leaders Can Actually Control]]></title>
         <link>https://genezio.com/blog/can-brands-influence-ai-training-data/</link>
@@ -198,15 +207,6 @@
         <enclosure url="https://genezio.com/images/genezio-release-content-hub.webp" type="image/webp" length="0" />
     </item>
     <item>
-        <title><![CDATA[Marketing Agency Brand Presence in the Age of AI Search]]></title>
-        <link>https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</link>
-        <guid isPermaLink="true">https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</guid>
-        <description><![CDATA[Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.]]></description>
-        <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
-        <author>Paula Cionca</author>
-        <enclosure url="https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp" type="image/webp" length="0" />
-    </item>
-    <item>
         <title><![CDATA[Mastering Brand Presence in 2026: AI-Powered Measurement Tools]]></title>
         <link>https://genezio.com/blog/mastering-company-brand-presence/</link>
         <guid isPermaLink="true">https://genezio.com/blog/mastering-company-brand-presence/</guid>
@@ -214,6 +214,15 @@
         <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
         <author>Paula Cionca</author>
         <enclosure url="https://genezio.com/images/mastering-company-brand-presence-2026.webp" type="image/webp" length="0" />
+    </item>
+    <item>
+        <title><![CDATA[Marketing Agency Brand Presence in the Age of AI Search]]></title>
+        <link>https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</link>
+        <guid isPermaLink="true">https://genezio.com/blog/marketing-agency-brand-presence-ai-search/</guid>
+        <description><![CDATA[Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.]]></description>
+        <pubDate>Sun, 01 Mar 2026 22:00:00 GMT</pubDate>
+        <author>Paula Cionca</author>
+        <enclosure url="https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp" type="image/webp" length="0" />
     </item>
     <item>
         <title><![CDATA[Genezio vs Semrush: What marketing agencies need to know]]></title>

@@ -38,7 +38,7 @@ export function AboutHeroSection() {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/contact-sales"
+              href="/contact-sales/"
             >
               <Button
                 size="lg"
@@ -47,7 +47,7 @@ export function AboutHeroSection() {
                 Get a demo
               </Button>
             </a>
-            <a href="/contact-sales">
+            <a href="/contact-sales/">
               <Button
                 variant="outline"
                 size="lg"

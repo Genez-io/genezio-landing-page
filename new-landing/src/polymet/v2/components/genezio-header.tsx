@@ -29,7 +29,7 @@ export function GenezioHeaderV2() {
               className="hidden sm:inline-flex"
               asChild
             >
-              <Link to="/contact-sales" className="flex items-center gap-2">
+              <Link to="/contact-sales/" className="flex items-center gap-2">
                 <CalendarIcon className="w-4 h-4" />
                 Book a Call
               </Link>
@@ -40,7 +40,7 @@ export function GenezioHeaderV2() {
               className="bg-emerald-600 hover:bg-emerald-500 text-white border-0"
               asChild
             >
-              <Link to="/contact-sales" className="flex items-center gap-2">
+              <Link to="/contact-sales/" className="flex items-center gap-2">
                 Talk to Sales
                 <ArrowRightIcon className="w-4 h-4" />
               </Link>

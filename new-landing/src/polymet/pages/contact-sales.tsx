@@ -219,7 +219,7 @@ export function ContactSales() {
       <PolymetSEO
         title="Contact sales | Genezio"
         description="Talk to the Genezio team about a demo, an enterprise plan, or how AI assistants recommend your brand. Tell us about your company and we'll get back to you."
-        canonicalPath="/contact-sales"
+        canonicalPath="/contact-sales/"
       />
 
       <section className="relative overflow-hidden bg-[#050506] pt-32 pb-20 md:pt-40 md:pb-28">
