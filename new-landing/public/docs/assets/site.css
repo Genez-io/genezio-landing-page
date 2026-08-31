@@ -836,6 +836,12 @@ li + li {
 
 .landing-card a {
   font-size: 16px;
+  color: #fff;
+}
+
+.landing-card a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .landing-card p {
