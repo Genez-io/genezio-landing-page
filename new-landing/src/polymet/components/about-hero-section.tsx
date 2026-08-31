@@ -38,9 +38,7 @@ export function AboutHeroSection() {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact-sales"
             >
               <Button
                 size="lg"
@@ -49,7 +47,7 @@ export function AboutHeroSection() {
                 Get a demo
               </Button>
             </a>
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
+            <a href="/contact-sales">
               <Button
                 variant="outline"
                 size="lg"

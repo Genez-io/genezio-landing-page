@@ -93,7 +93,7 @@ export function LeadGenHero() {
                     Start Monitoring
                   </Button>
                 </a>
-                <a target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="w-full sm:w-auto">
+                <a href="/contact-sales" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="outline"

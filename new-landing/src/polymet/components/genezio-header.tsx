@@ -497,10 +497,7 @@ export function GenezioHeader() {
           <Button
             className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-xl transition-all"
             onClick={() =>
-              window.open(
-                "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
-                "_blank"
-              )
+              window.location.assign("/contact-sales")
             }
           >
             Get a demo
@@ -510,9 +507,7 @@ export function GenezioHeader() {
         {/* Mobile: compact persistent CTA + menu button */}
         <div className="flex md:hidden items-center gap-1.5">
           <a
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact-sales"
           >
             <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-4 h-9 rounded-lg transition-all">
               Get a demo
@@ -736,9 +731,7 @@ export function GenezioHeader() {
 
           <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact-sales"
               onClick={() => setMobileMenuOpen(false)}
             >
               <Button className="bg-emerald-400 hover:bg-emerald-300 text-black text-sm font-semibold px-6 rounded-xl transition-all w-full">

@@ -16,6 +16,7 @@ const routes = [
 
   "/ai-agent-analytics",
   "/website-analyzer",
+  "/contact-sales",
   "/content-hub",
   "/content-analysis",
   "/in-chat-shopping",

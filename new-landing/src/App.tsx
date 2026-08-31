@@ -25,6 +25,7 @@ import { IndustryLeaderboards } from "./polymet/pages/industry-leaderboards";
 import { ContentHub } from "./polymet/pages/content-hub";
 import { ContentAnalysis } from "./polymet/pages/content-analysis";
 import { WebsiteAnalyzer } from "./polymet/pages/website-analyzer";
+import { ContactSales } from "./polymet/pages/contact-sales";
 import { InChatShopping } from "./polymet/pages/in-chat-shopping";
 import { Mcp } from "./polymet/pages/mcp";
 import { Security } from "./polymet/pages/security";
@@ -151,6 +152,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <WebsiteAnalyzer />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/contact-sales"
+        element={
+          <GenezioLayout>
+            <ContactSales />
           </GenezioLayout>
         }
       />

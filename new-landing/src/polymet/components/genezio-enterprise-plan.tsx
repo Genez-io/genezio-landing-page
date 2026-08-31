@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const CALENDAR_URL =
-  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
+  "/contact-sales";
 
 const TITLE_PREFIX = "One plan, built around your ";
 

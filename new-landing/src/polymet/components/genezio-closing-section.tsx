@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
 
 const DEMO_URL =
-  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
+  "/contact-sales";
 const REPORT_URL =
   "https://app.genezio.ai/brand-report/49/Natwest?demo=account";
 
