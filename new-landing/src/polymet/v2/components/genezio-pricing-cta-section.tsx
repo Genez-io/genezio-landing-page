@@ -62,7 +62,7 @@ export function GenezioPricingCtaSection() {
                   size="lg"
                   className="text-base px-10 h-14 group shadow-lg"
                 >
-                  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC">
+                  <a href="/contact-sales">
                     Talk to Sales
                     <ArrowRightIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>

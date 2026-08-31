@@ -188,7 +188,7 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     onClick={() =>
-                      window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
+                      window.location.assign("/contact-sales")
                     }
                     className="w-full bg-emerald-400 hover:bg-emerald-300 text-black h-11 text-sm font-medium rounded-lg transition-all duration-200 shadow-lg shadow-black/20"
                   >
@@ -210,10 +210,7 @@ export function GenezioPricingComparison() {
                   </div>
                   <Button
                     onClick={() =>
-                      window.open(
-                        "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
-                        "_blank"
-                      )
+                      window.location.assign("/contact-sales")
                     }
                     className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-white/20 h-11 text-sm font-medium rounded-lg transition-all duration-200"
                   >
@@ -303,11 +300,8 @@ export function GenezioPricingComparison() {
                 <Button
                   onClick={() =>
                     plan === "Enterprise"
-                      ? window.open(
-                          "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC",
-                          "_blank"
-                        )
-                      : window.open("https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC", "_blank")
+                      ? window.location.assign("/contact-sales")
+                      : window.location.assign("/contact-sales")
                   }
                   className={`w-full h-11 text-sm font-medium rounded-lg transition-all duration-200 mt-4 ${
                     plan === "Growth"

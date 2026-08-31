@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 const SALES_URL =
-  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC";
+  "/contact-sales";
 
 export function GenezioExpertServices() {
   const services = [

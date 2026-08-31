@@ -99,7 +99,7 @@ export function AboutCommunitySection() {
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
+              href="/contact-sales"
               className="w-full sm:w-auto"
             >
               <Button
@@ -110,10 +110,8 @@ export function AboutCommunitySection() {
               </Button>
             </a>
             <a
-              target="_blank"
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC"
+              href="/contact-sales"
               className="w-full sm:w-auto"
-              rel="noopener noreferrer"
             >
               <Button
                 size="lg"

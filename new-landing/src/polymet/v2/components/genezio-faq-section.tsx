@@ -63,7 +63,7 @@ export function GenezioFaqSection() {
           <div className="mt-12 text-center p-6 rounded-xl border border-border bg-muted/30">
             <p className="text-muted-foreground">
               Still have questions?{" "}
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC" className="text-chart-1 font-semibold hover:underline">
+              <a href="/contact-sales" className="text-chart-1 font-semibold hover:underline">
                 Contact our team
               </a>
             </p>
