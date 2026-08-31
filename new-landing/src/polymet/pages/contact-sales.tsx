@@ -456,7 +456,7 @@ export function ContactSales() {
                 <p className="text-xs leading-relaxed text-white/35">
                   By submitting this form you agree to our{" "}
                   <Link
-                    to="/privacy-policy"
+                    to="/privacy-policy/"
                     className="underline decoration-white/20 underline-offset-2 hover:text-white/60"
                   >
                     Privacy Policy

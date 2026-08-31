@@ -39,6 +39,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
       { label: "Terms & Conditions", href: "/terms-and-conditions/" },
       { label: "Support Terms", href: "/support-terms/" },
       { label: "Privacy Policy", href: "/privacy-policy/" },
+      { label: "Cookie Policy", href: "/cookie-policy/" },
       { label: "Data Processing Agreement", href: "/data-processing-agreement/" },
       { label: "Trust Center", href: "https://trust.genezio.com/" },
     ],
