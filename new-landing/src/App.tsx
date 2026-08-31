@@ -164,6 +164,14 @@ export default function GenezioApp() {
           </GenezioLayout>
         }
       />
+      <Route
+        path="/contact-sales/"
+        element={
+          <GenezioLayout>
+            <ContactSales />
+          </GenezioLayout>
+        }
+      />
 
       <Route
         path="/in-chat-shopping"

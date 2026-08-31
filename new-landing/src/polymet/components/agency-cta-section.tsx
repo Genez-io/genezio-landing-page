@@ -25,7 +25,7 @@ export function AgencyCtaSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact-sales">
+              <Link to="/contact-sales/">
                 <Button
                   size="lg"
                   className="bg-emerald-400 hover:bg-emerald-300 text-black px-7 py-6 text-base font-semibold rounded-xl transition-colors duration-200 w-full sm:w-auto"

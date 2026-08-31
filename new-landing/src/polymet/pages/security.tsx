@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 const SALES_URL =
-  "/contact-sales";
+  "/contact-sales/";
 const TRUST_CENTER_URL = "https://trust.genezio.com/";
 const CSA_STAR_URL = "https://cloudsecurityalliance.org/star/registry/genezio";
 
