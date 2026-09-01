@@ -9,17 +9,17 @@ tags:
 author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
 
-thumbnail: /images/bcr-customer-success-story.webp
+thumbnail: /images/erste-group-two-markets.png
 preview: BCR and Erste Bank Hungary run enterprise AI search programmes inside the same group, in two markets that behave nothing alike, with two different objectives. One grew recommendation 70%. The other closed a 15-point gap on the market leader.
 # meta data start
 description: How two banks in one group won two different AI search objectives in two markets, with brand intelligence built separately for each one.
 meta_og_url: "https://genezio.com/blog/erste-group-banks-ai-search-case-study/"
 
-meta_og_image: "https://genezio.com/images/bcr-customer-success-story.webp"
+meta_og_image: "https://genezio.com/images/erste-group-two-markets.png"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 11
+readTime: 12
 url: /erste-group-banks-ai-search-case-study/
 ---
 
@@ -29,7 +29,7 @@ BCR set out to convert brand awareness into recommendations in Romania, where th
 
 Erste Bank Hungary set out to close a gap. It started fifth in its market, roughly 15 points behind a dominant incumbent on presence, and pulled level, finishing two separate months in front.
 
-![Two Erste Group banks and their AI recommendation rate growth](/images/bcr-customer-success-story.webp)
+![Erste Group: one group, two markets, two different wins in AI search](/images/erste-group-two-markets.png)
 
 Both are enterprise deployments on Genezio, and neither is a template for the other. The competitor sets do not overlap. The products do not match. The questions customers ask are not the same questions. What the two programmes share is a measurement standard, which is what lets a group read them side by side, and what each of them got on top of that standard was brand intelligence built for its own market.
 
@@ -107,9 +107,11 @@ Splitting by profile is where the sharpest reading came from. Inside the same pr
 > "Genezio helped us move from a nebula to a coherent strategy. I could know which publications to target, how to target, and how to formulate the content."
 > — **Carmen Herisanu**, Senior SEO Specialist @ BCR
 
-## The gaps were specific, and that is why they were fixable
+## What the brand intelligence layer actually surfaced
 
-The useful findings never say "improve your content." They name a topic and a competitor.
+A visibility score tells a bank whether it showed up. Brand intelligence tells it how the answer got built: which competitors the models treat as the real alternatives, which domains supply the evidence, what the models believe about the bank's products, and which of the hundreds of questions in a category are the ones where the decision is made.
+
+That is the layer both banks bought, and it is assembled per market. The useful findings never say "improve your content." They name a topic and a competitor.
 
 One example from the credit-card category: the bank was recommended in the large majority of general card conversations and almost entirely absent from one benefit-level question inside the same category, where a domestic competitor owned nearly all of the answer. Not a category problem. A single-question problem, worth a single page.
 
@@ -132,11 +134,10 @@ Erste Bank Hungary started measuring in November 2025. The first reading was blu
 | February 2026 | +49% | −6.9 points |
 | May 2026 | +63% | −0.1 points |
 | June 2026 | **+83%** | **+0.4 points** |
-| August 2026 | +58% | −1.9 points |
 
-A 15-point deficit against the largest bank in the country became a coin flip, and twice the bank finished a month in front of it.
+Selected months, measured against the same tracked competitor set throughout. A 15-point deficit against the largest bank in the country became a coin flip, and twice the bank finished a month in front of it.
 
-The build followed the same shape as the Romanian one, compressed and localised: three topics in November, thirteen by mid-January covering refinancing, the state lending programmes, student and children's accounts and the business segment. In May, a Comparer built on the question Hungarian customers actually type, which is not a product question at all but a switching question. Recommender coverage across the full product set eleven days later.
+The intelligence layer was rebuilt from scratch for this market. Different competitor set, different intermediaries owning the proof, different products carrying the demand, different questions. The build followed the same shape as the Romanian one, compressed and localised: three topics in November, thirteen by mid-January covering refinancing, the state lending programmes, student and children's accounts and the business segment. In May, a Comparer built on the question Hungarian customers actually type, which is not a product question at all but a switching question. Recommender coverage across the full product set eleven days later.
 
 erstebank.hu is now the most-cited domain in the Hungarian banking answer space, **cited 22% more often than the market leader's domain** across more than a thousand distinct domains in a single week.
 
@@ -157,7 +158,7 @@ That is a specific, buildable answer to a specific, measured loss, and it is why
 
 Not the content plan, and not the benchmark. A bank fighting neobanks for everyday accounts and a bank fighting a dominant incumbent for state-programme lending do not share a target list, a competitor set or a page inventory. Anyone selling a single playbook across a multi-market group is selling the wrong thing.
 
-What transfers is the measurement standard, and for a group that is the whole point. Three decisions make it work.
+What transfers is the measurement standard. The brand intelligence itself stays local, and for a group that split is the whole point: one way of counting, so two countries can be read on the same page, and two separate pictures of how answers actually get built, so each bank knows what to do on Monday. Three decisions make it work.
 
 Measure recommendation, not presence. It is the only reason the Romanian problem was visible in April, and the only reason the Hungarian one is visible now.
 
@@ -174,9 +175,12 @@ The work is continuous rather than a report drop. Each cycle produces a short li
 
 The next front is the same shape in both markets and narrower than the one just cleared: benefit-level questions asked by a customer who has already decided to buy and is choosing between two names. Each is a single question worth a single page, and each is currently being answered by somebody else's page. That is where the next tranche of recommendation growth sits, in both countries.
 
-If you run marketing for a bank, or for several in a group, the question worth asking this quarter is not whether AI mentions you. It is which of your products the assistant puts on the shortlist, in which market, and whose page it quotes to justify the choice. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) and Genezio will run your market.
+If you run marketing for a bank, or for several in a group, the question worth asking this quarter is not whether AI mentions you. It is which of your products the assistant puts on the shortlist, in which market, and whose page it quotes to justify the choice. That is brand intelligence, and it only means anything when it is built for the market you actually compete in. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) and Genezio will run your market.
 
 ## FAQ
+
+**What is brand intelligence in AI search?**
+It is the layer underneath the score. A visibility metric says whether a brand appeared. Brand intelligence explains how the answer was assembled: which competitors the models treat as real alternatives, which domains supplied the evidence, what the models believe about the brand's products, and which questions in the category decide the purchase. It has to be built per market, because all four of those change at the border.
 
 **Why does AI search matter for banks specifically?**
 Because banking products are compared before they are chosen, and the comparison now happens inside an AI answer that names two or three brands. The shortlist forms before the customer reaches any bank's website. Accuracy matters as much as presence: a model that is wrong about an early repayment fee or a rate structure creates a compliance issue, not just a lost lead.
