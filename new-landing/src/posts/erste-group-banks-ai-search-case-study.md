@@ -75,6 +75,8 @@ Six product topics (current account, mortgage, personal loan, credit card, mobil
 | July 2026 | +62% | +14.7 points |
 | August 2026 | **+70%** | **+18.7 points** |
 
+![BCR recommendation rate growth and lead over the nearest competitor, April to August 2026](/images/bcr-recommendation-growth-2026.png)
+
 Share of voice grew 37% over the same five months. BCR now leads the recommendation ranking on four of the six topics; in the two where it does not, the brand ahead of it is Revolut. The objective was never more mentions. It was more shortlists, and that is what moved.
 
 > "With Genezio, BCR's brand presence in AI conversations on key topics grew by double digits in just a few weeks. That visibility matters because it ensures BCR clients receive accurate, consistent answers, and that consistency builds trust when it truly counts."
@@ -116,6 +118,8 @@ Erste Bank Hungary started measuring in November 2025, and the first reading was
 | February 2026 | +49% | −6.9 points |
 | May 2026 | +63% | −0.1 points |
 | June 2026 | **+83%** | **+0.4 points** |
+
+![Erste Bank Hungary presence growth and closing gap to the market leader, November 2025 to June 2026](/images/erste-hungary-gap-to-leader-2026.png)
 
 Selected months, same tracked competitor set throughout. A 15-point deficit against the largest bank in the country became a coin flip, and twice the bank finished a month in front of it.
 
