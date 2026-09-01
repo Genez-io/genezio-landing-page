@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const CALENDAR_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 const TITLE_PREFIX = "One plan, built around your ";
 

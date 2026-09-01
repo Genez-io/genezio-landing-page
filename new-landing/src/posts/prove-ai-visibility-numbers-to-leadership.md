@@ -1,7 +1,7 @@
 ---
 title: "How to Prove and Defend AI Visibility Numbers to Leadership"
 metaTitle: "Prove and Defend AI Visibility Numbers to Leadership"
-date: 2026-08-31
+date: 2026-09-01
 tags:
   - AI
   - AI Visibility

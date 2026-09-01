@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
-  SparklesIcon,
-  TrendingUpIcon,
   ShieldCheckIcon,
   StarIcon,
-  CalendarIcon
 } from "lucide-react";
 
 export function CsatHero() {
@@ -45,7 +42,7 @@ export function CsatHero() {
                   Analyze Support Conversations
                 </Button>
               </a>
-              <a href="/contact-sales" className="w-full sm:w-auto">
+              <a href="/contact-sales/" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"

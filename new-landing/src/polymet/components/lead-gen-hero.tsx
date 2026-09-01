@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 import {
   TrendingUpIcon,
-  SparklesIcon,
   UserIcon,
-  CalendarIcon,
   MessageSquareIcon,
   SearchIcon,
   LightbulbIcon,
@@ -13,43 +11,6 @@ import {
 } from "lucide-react";
 
 export function LeadGenHero() {
-  const topics = [
-    {
-      name: "Best sleep tracker",
-      chatgpt: 245,
-      claude: 189,
-      gemini: 167,
-      perplexity: 134,
-    },
-    {
-      name: "Most accurate wearable",
-      chatgpt: 312,
-      claude: 278,
-      gemini: 234,
-      perplexity: 198,
-    },
-    {
-      name: "Trusted for security",
-      chatgpt: 189,
-      claude: 156,
-      gemini: 145,
-      perplexity: 112,
-    },
-    {
-      name: "Best value for money",
-      chatgpt: 267,
-      claude: 223,
-      gemini: 201,
-      perplexity: 167,
-    },
-  ];
-
-  const aiEngines = [
-    { name: "ChatGPT", color: "emerald", leads: 1013 },
-    { name: "Claude", color: "teal", leads: 846 },
-    { name: "Gemini", color: "cyan", leads: 747 },
-    { name: "Perplexity", color: "blue", leads: 611 },
-  ];
 
   return (
     <>
@@ -93,7 +54,7 @@ export function LeadGenHero() {
                     Start Monitoring
                   </Button>
                 </a>
-                <a href="/contact-sales" className="w-full sm:w-auto">
+                <a href="/contact-sales/" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="outline"

@@ -7,7 +7,6 @@ import {
   ShirtIcon,
   BuildingIcon,
   ArrowRightIcon,
-  ZapIcon,
   BarChart2Icon,
   GlobeIcon,
   SparklesIcon,
@@ -1018,14 +1017,14 @@ export function IndustryLeaderboards() {
             Get a personalised AI visibility report for your brand, see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/contact-sales">
+            <a href="/contact-sales/">
               <Button size="lg" className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 font-semibold rounded-xl shadow-lg shadow-black/20 transition-all duration-200">
                 Get Free Analysis <ArrowRightIcon className="w-4 h-4 ml-2" />
               </Button>
             </a>
             <Button size="lg" variant="outline"
               className="border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08] hover:border-white/40 px-8 font-semibold rounded-xl transition-all duration-200"
-              onClick={() => window.location.assign("/contact-sales")}>
+              onClick={() => window.location.assign("/contact-sales/")}>
               Get a demo
             </Button>
           </div>

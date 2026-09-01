@@ -39,7 +39,7 @@ export function GenezioHeroSection() {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <a href="/contact-sales">
+            <a href="/contact-sales/">
             <Button
               size="lg"
               className="text-lg px-8 py-6 bg-foreground text-background hover:bg-foreground/90 group"

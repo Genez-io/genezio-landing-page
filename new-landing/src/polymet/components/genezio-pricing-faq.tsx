@@ -1,11 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircleIcon } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { FaqAccordion } from "@/polymet/components/faq-accordion";
 
 /** Plain-text FAQ for the JSON-LD FAQPage schema, mirroring the visible content. */
 export const PRICING_FAQ_SCHEMA = [
@@ -161,24 +156,13 @@ export function GenezioPricingFaq() {
 
         {/* FAQ Accordion */}
         <div className="mb-16">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-white/[0.03] border border-white/[0.08] rounded-xl overflow-hidden hover:border-white/20 transition-colors"
-              >
-                <AccordionTrigger className="px-6 py-5 text-left hover:no-underline group">
-                  <span className="text-base font-medium text-white group-hover:text-zinc-400 transition-colors">
-                    {faq.question}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-5 text-white/60">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <FaqAccordion
+            items={faqs}
+            idPrefix="pricing-faq"
+            itemClassName="bg-white/[0.03] border border-white/[0.08] rounded-xl overflow-hidden hover:border-white/20 transition-colors"
+            questionClassName="px-6 py-5 text-base font-medium text-white hover:text-zinc-400"
+            answerClassName="px-6 pb-5 text-white/60"
+          />
         </div>
 
         {/* CTA */}
@@ -191,7 +175,7 @@ export function GenezioPricingFaq() {
           <p className="text-white/60 mb-6 max-w-xl mx-auto">
             Talk to our team and we'll scope a plan around your brand.
           </p>
-          <a href="/contact-sales" className="w-full sm:w-auto">
+          <a href="/contact-sales/" className="w-full sm:w-auto">
             <Button className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 py-6 text-base font-medium">
               Talk to the team
             </Button>

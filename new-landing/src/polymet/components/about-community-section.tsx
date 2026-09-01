@@ -99,7 +99,7 @@ export function AboutCommunitySection() {
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
             <a
-              href="/contact-sales"
+              href="/contact-sales/"
               className="w-full sm:w-auto"
             >
               <Button
@@ -110,7 +110,7 @@ export function AboutCommunitySection() {
               </Button>
             </a>
             <a
-              href="/contact-sales"
+              href="/contact-sales/"
               className="w-full sm:w-auto"
             >
               <Button

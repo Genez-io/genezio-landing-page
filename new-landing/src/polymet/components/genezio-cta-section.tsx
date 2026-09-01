@@ -48,7 +48,7 @@ export function GenezioCtaSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-        <a href="/contact-sales" className="w-full sm:w-auto">
+        <a href="/contact-sales/" className="w-full sm:w-auto">
             <Button
               size="lg"
               className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl shadow-lg transition-all duration-300 w-full"
@@ -56,7 +56,7 @@ export function GenezioCtaSection() {
               Get a demo
             </Button>
           </a>
-          <a href="/contact-sales" className="w-full sm:w-auto">
+          <a href="/contact-sales/" className="w-full sm:w-auto">
             <Button
               size="lg"
               variant="outline"
@@ -75,7 +75,7 @@ export function GenezioCtaSection() {
 }
 
 
-          // <a href="/contact-sales" className="w-full sm:w-auto">
+          // <a href="/contact-sales/" className="w-full sm:w-auto">
           //   <Button
           //     size="lg"
           //     className="bg-emerald-400 hover:bg-emerald-300 text-black px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-xl shadow-lg transition-all duration-300 w-full"
@@ -83,7 +83,7 @@ export function GenezioCtaSection() {
           //     Analyze Your AI Brand Visibility
           //   </Button>
           // </a>
-          // <a href="/contact-sales" className="w-full sm:w-auto">
+          // <a href="/contact-sales/" className="w-full sm:w-auto">
           //   <Button
           //     size="lg"
           //     variant="outline"

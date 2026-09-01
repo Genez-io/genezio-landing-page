@@ -9,7 +9,7 @@ import {
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 const DEMO_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 export function GenezioHeroSection() {
   return (
@@ -24,9 +24,16 @@ export function GenezioHeroSection() {
               The enterprise AI visibility platform
             </HeroEyebrow>
 
+            {/*
+              The `{" "}` between the line spans is deliberate: the spans are
+              block-level, so the whitespace never renders, but it keeps the
+              headline readable as text ("The world stopped searching. It
+              started asking.") instead of "stoppedsearching.It started asking."
+              for crawlers and AI extractors that strip the markup.
+            */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.03] tracking-[-0.03em] mb-8">
-              <span className="block text-white">The world stopped</span>
-              <span className="block text-white">searching.</span>
+              <span className="block text-white">The world stopped</span>{" "}
+              <span className="block text-white">searching.</span>{" "}
               <span className="block text-emerald-400">It started asking.</span>
             </h1>
 

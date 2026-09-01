@@ -27,7 +27,7 @@ export function AgencyHeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-10 md:mb-12 px-2 sm:px-4 max-w-md sm:max-w-none mx-auto">
             <Link
-              to="/contact-sales"
+              to="/contact-sales/"
               className="w-full sm:w-auto"
             >
               <Button

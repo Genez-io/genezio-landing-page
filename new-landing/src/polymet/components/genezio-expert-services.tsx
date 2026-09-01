@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 const SALES_URL =
-  "/contact-sales";
+  "/contact-sales/";
 
 export function GenezioExpertServices() {
   const services = [

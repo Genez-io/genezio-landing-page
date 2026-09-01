@@ -88,7 +88,7 @@ export function GenezioInsightsSection() {
                 </p>
 
                 {/* CTA */}
-                <a href="/contact-sales" className="w-full sm:w-auto">
+                <a href="/contact-sales/" className="w-full sm:w-auto">
                   <Button
                     
                     variant="outline"
