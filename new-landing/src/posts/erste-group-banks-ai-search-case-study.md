@@ -1,5 +1,5 @@
 ---
-title: "A 70% Higher Recommendation Rate in Romania, a Different Fight in Hungary"
+title: "One Banking Group, Two Markets, Two Different Wins in AI Search"
 date: 2026-09-01
 tags:
   - GEO
@@ -10,26 +10,36 @@ author: Paula Cionca
 linkedIn: https://www.linkedin.com/in/paula-cionca/
 
 thumbnail: /images/bcr-customer-success-story.webp
-preview: Two banks in the same group, two markets that behave nothing alike. BCR's AI recommendation rate grew 70% in five months. Erste Bank Hungary closed a 15-point gap on the market leader. Same measurement standard, different fights.
+preview: BCR and Erste Bank Hungary run enterprise AI search programmes inside the same group, in two markets that behave nothing alike, with two different objectives. One grew recommendation 70%. The other closed a 15-point gap on the market leader.
 # meta data start
-description: How two Erste Group banks grew their AI recommendation rate and presence in two very different markets, and why banking shortlists are now won market by market.
+description: How two banks in one group won two different AI search objectives in two markets, with brand intelligence built separately for each one.
 meta_og_url: "https://genezio.com/blog/erste-group-banks-ai-search-case-study/"
 
 meta_og_image: "https://genezio.com/images/bcr-customer-success-story.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
-readTime: 9
+readTime: 11
 url: /erste-group-banks-ai-search-case-study/
 ---
 
-Between April and August 2026, BCR's AI recommendation rate grew by 70%. In April the bank was level with its nearest competitor. By August that competitor was 19 points behind.
+Two banks in the same group, in two markets, went after two different things in AI search. Both got them.
 
-Erste Bank Hungary, part of the same group and working to the same measurement standard, produced a different-shaped result for a different-shaped problem. It started fifth in its market, around 15 points behind the leader on presence, and pulled level.
+BCR set out to convert brand awareness into recommendations in Romania, where the threat to an incumbent comes from neobanks. Between April and August 2026 its AI recommendation rate grew by 70%, and a competitor that was level with it in April finished August 19 points behind.
+
+Erste Bank Hungary set out to close a gap. It started fifth in its market, roughly 15 points behind a dominant incumbent on presence, and pulled level, finishing two separate months in front.
 
 ![Two Erste Group banks and their AI recommendation rate growth](/images/bcr-customer-success-story.webp)
 
-Both programmes run on Genezio. Neither is a template for the other, and that is the more useful half of this story.
+Both are enterprise deployments on Genezio, and neither is a template for the other. The competitor sets do not overlap. The products do not match. The questions customers ask are not the same questions. What the two programmes share is a measurement standard, which is what lets a group read them side by side, and what each of them got on top of that standard was brand intelligence built for its own market.
+
+| | Romania (BCR) | Hungary (Erste Bank Hungary) |
+|---|---|---|
+| **Objective** | Turn awareness into recommendation | Close the gap to the market leader |
+| **Main threat** | Neobanks on everyday products | A dominant incumbent at scale |
+| **Result** | Recommendation rate +70% in five months | Presence gap of 15 points closed to level |
+| **Also won** | +18.7 point lead over the nearest rival | Two months finished ahead of the leader |
+| **Citation position** | Most-cited domain in the market | Most-cited domain in the market |
 
 ## Why the AI shortlist matters more in banking than almost anywhere else
 
@@ -53,9 +63,9 @@ In Hungary, the pressure comes from scale. OTP Bank is an incumbent with a marke
 
 The product sets do not map either. A large share of what a Hungarian bank needs to win is state-programme lending with no Romanian equivalent: the Otthon Start first-home scheme, the Babaváró family loan, the Munkáshitel salary-based loan. A Romanian content plan translated into Hungarian would have missed most of the demand.
 
-So the two programmes share a method and almost nothing else.
+So the two programmes share a method and almost nothing else. Everything that makes the intelligence useful — which competitors to track, which intermediaries own the proof layer, which product journeys carry the demand, which questions to measure — is assembled per market. A single global dashboard would have reported both banks accurately and told neither of them what to do.
 
-## Romania: the number that moved was recommendation, not visibility
+## Romania: the objective was recommendation, not visibility
 
 BCR was never invisible. A bank of that size, with that many indexed pages, gets mentioned. Presence was never the constraint, which is exactly what makes it a misleading metric.
 
@@ -75,10 +85,12 @@ Six product topics (current account, mortgage, personal loan, credit card, mobil
 
 Share of voice across those topics grew 37% over the same five months, in a market where 14 brands compete for the same answer space. BCR now leads the recommendation ranking on four of the six topics; in the two where it does not, the brand ahead of it is Revolut.
 
+The objective was never more mentions. It was more shortlists, and that is what moved.
+
 > "With Genezio, BCR's brand presence in AI conversations on key topics grew by double digits in just a few weeks. That visibility matters because it ensures BCR clients receive accurate, consistent answers, and that consistency builds trust when it truly counts."
 > — **Ionuț Stanimir**, Director of Marketing and Communication @ BCR
 
-## What changed in how the market was measured
+## How the Romanian market was measured differently
 
 The first setup, in late 2025, looked like most first setups: topics written as questions, close to keywords. It answered "are we there?" and very little else.
 
@@ -109,7 +121,7 @@ The citation ledger now reads differently. Across nearly 700 distinct cited doma
 
 The longer version of how BCR's team rebuilt its workflow around this is in [their own account of the first year](/blog/bcr-success-story/).
 
-## Hungary: a harder starting position and a different opponent
+## Hungary: the objective was closing the gap to the market leader
 
 Erste Bank Hungary started measuring in November 2025. The first reading was blunt: fifth place on presence, behind the three largest players in the market.
 
@@ -127,6 +139,8 @@ A 15-point deficit against the largest bank in the country became a coin flip, a
 The build followed the same shape as the Romanian one, compressed and localised: three topics in November, thirteen by mid-January covering refinancing, the state lending programmes, student and children's accounts and the business segment. In May, a Comparer built on the question Hungarian customers actually type, which is not a product question at all but a switching question. Recommender coverage across the full product set eleven days later.
 
 erstebank.hu is now the most-cited domain in the Hungarian banking answer space, **cited 22% more often than the market leader's domain** across more than a thousand distinct domains in a single week.
+
+A bank that started fifth now trades the top position with the largest bank in the country. That was the objective, and it is a different objective from the Romanian one, reached through a different set of moves.
 
 > "One of the main reasons we value the platform is that it gives us a straightforward view of where we stand against competitors. It also helps us spot gaps, follow changes in visibility and citations, and decide where we should focus next."
 > — **Tamás Várfi**, Senior Digital Marketing Specialist @ Erste Bank Hungary
@@ -152,6 +166,8 @@ Run multi-turn conversations as configured customer profiles rather than prompts
 Treat [confidence intervals](/blog/confidence-intervals-for-cmos/) as a requirement rather than a nicety. A rate quoted at ±1.4 points survives a conversation with a CFO in a way that "we seem to be doing better" does not, and it is what lets a group compare two markets that share no competitors.
 
 Across both programmes, that is more than 140,000 tracked conversations and 164 prioritised actions, each one naming a topic, a competitor and a gap.
+
+The work is continuous rather than a report drop. Each cycle produces a short list of what moved, why, and what to do next, ranked against the objective that particular bank is working to, in a form that holds up in an internal budget conversation. Two banks in one group can therefore run different plays toward different goals and still be read on the same page by whoever is accountable for both.
 
 > "New features are introduced regularly, and the reports are clear enough to use both for ongoing optimization and internal discussions."
 > — **Tamás Várfi**, Erste Bank Hungary
