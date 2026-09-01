@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { FaqAccordion } from "@/polymet/components/faq-accordion";
 
 /** Plain-text FAQ for the JSON-LD FAQPage schema, mirroring the visible content. */
 export const AGENCY_FAQ_SCHEMA = [
@@ -130,22 +125,13 @@ export function AgencyFaqSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="bg-white/5 border border-white/10 rounded-xl px-6 hover:border-white/20 transition-colors"
-            >
-              <AccordionTrigger className="text-left text-white hover:text-white/80 py-4 md:py-6 text-base md:text-lg font-medium">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-white/70 pb-6 text-base leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <FaqAccordion
+          items={faqs}
+          idPrefix="agency-faq"
+          itemClassName="bg-white/5 border border-white/10 rounded-xl px-6 hover:border-white/20 transition-colors"
+          questionClassName="text-white hover:text-white/80 py-4 md:py-6 text-base md:text-lg font-medium"
+          answerClassName="text-white/70 pb-6 text-base leading-relaxed"
+        />
       </div>
     </section>
   );
