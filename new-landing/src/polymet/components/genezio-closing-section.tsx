@@ -28,9 +28,11 @@ export function GenezioClosingSection() {
         </div>
 
         {/* Thesis bookend */}
+        {/* Whitespace between the block-level line spans: invisible on screen,
+            but keeps the extracted text from reading "asking.Make sure...". */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.03em] leading-[1.05]">
-          <span className="block text-white">The world stopped searching.</span>
-          <span className="block text-white">It started asking.</span>
+          <span className="block text-white">The world stopped searching.</span>{" "}
+          <span className="block text-white">It started asking.</span>{" "}
           <span className="block text-emerald-400 mt-2">
             Make sure the answer is you.
           </span>
