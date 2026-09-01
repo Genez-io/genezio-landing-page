@@ -158,7 +158,7 @@ That shift changes what “good reporting” looks like for marketing leaders:
 - **Prompt consistency matters more than anecdotal screenshots.**
 - **Competitive evidence matters more than isolated wins.**
 
-There is also a commercial reason to care. Genezio reports that in one customer case, 37% of new signups were already arriving recommended by answer engines, and it warns that standard analytics can hide much of the upstream influence. Whether your exact number is higher or lower, the strategic takeaway is clear: leadership needs a reliable way to evaluate answer-engine impact before all of it shows up in last-click reporting.
+There is also a commercial reason to care. One Genezio client added a single question to their onboarding flow, asking how customers heard about them with an explicit option for AI assistants. AI attribution went from single digits to 36% in one quarter. The demand was already there; standard analytics was simply hiding most of the upstream influence. Whether your exact number is higher or lower, the strategic takeaway is clear: leadership needs a reliable way to evaluate answer-engine impact before all of it shows up in last-click reporting.
 
 ## How Genezio Addresses This
 
