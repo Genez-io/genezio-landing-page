@@ -133,3 +133,5 @@ dist
 .DS_Store
 
 .idea/
+# Firecrawl CLI scratch output (skills write scrapes/searches here)
+.firecrawl/
