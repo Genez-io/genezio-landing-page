@@ -58,6 +58,7 @@ export function PolymetSEO({
       sameAs: [
         "https://linkedin.com/company/genezio",
         "https://x.com/genezioai",
+        "https://www.g2.com/products/genezio/reviews",
       ],
     };
 
@@ -67,7 +68,19 @@ export function PolymetSEO({
       name: "Genezio",
       applicationCategory: "Generative Engine Optimization, AI Agents Testing",
       operatingSystem: "Cloud",
+      url: "https://genezio.com",
       description: "Track how AI engines see your brand and optimize your presence to win more recommendations",
+      sameAs: [
+        "https://www.g2.com/products/genezio/reviews",
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        ratingCount: "3",
+        reviewCount: "3",
+        bestRating: "5",
+        worstRating: "1",
+      },
     };
 
     const path = canonicalPath || "";

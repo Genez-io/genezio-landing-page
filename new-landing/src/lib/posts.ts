@@ -7,6 +7,7 @@ import {
     BarChartIcon,
 } from "lucide-react";
 import { authors } from "./authors";
+import postsMeta from "./posts-meta.json";
 
 export type BlogPostType = "research";
 
@@ -50,63 +51,14 @@ const gradients = [
     "from-zinc-500 to-zinc-500",
 ];
 
-function parseFrontmatter(content: string): Record<string, any> {
-    const frontmatterRegex = /^---\n([\s\S]*?)\n---/;
-    const match = content.match(frontmatterRegex);
-    if (!match) return {};
-
-    const frontmatterBlock = match[1];
-    const frontmatter: Record<string, any> = {};
-
-    frontmatterBlock.split("\n").forEach((line) => {
-        const [key, ...valueParts] = line.split(":");
-        if (key && valueParts.length > 0) {
-            let value = valueParts.join(":").trim();
-            // Remove quotes if present
-            if (value.startsWith('"') && value.endsWith('"')) {
-                value = value.slice(1, -1);
-            }
-            // Handle arrays (simple case for tags)
-            if (key.trim() === "tags") {
-                // This simple parser might fail on multi-line arrays, but let's handle the single line case or skip complex ones for now.
-                // The example file had tags on new lines.
-                // Let's just ignore complex array parsing for now and handle simple key-values.
-                return;
-            }
-            // Handle tags if they are inline like tags: [AI, Tech] - not the case in example
-
-            frontmatter[key.trim()] = value;
-        }
-    });
-
-    // A bit more robust parsing for the example file structure where tags are list items
-    // But for now let's stick to simple key: value.
-    // The example file has:
-    // tags:
-    //   - AI
-    // This simple parser will skip 'tags' line (value empty) and '- AI' line (no colon).
-    // We can improve if needed, but 'category' is mapped from 'tags' in the plan? 
-    // Wait, the plan said "tags (category)".
-    // Let's try to extract the first tag if possible.
-
-    return frontmatter;
+// SSR-only raw modules loader (only bundled for SSR build, completely dead-code eliminated in client build)
+let ssrModules: Record<string, string> = {};
+if (import.meta.env.SSR) {
+    ssrModules = import.meta.glob("../posts/*.md", { query: "?raw", import: "default", eager: true });
 }
 
-// Helper to extract first tag from content if simple parsing failed
-function extractFirstTag(content: string): string {
-    const tagMatch = content.match(/tags:\s*\n\s*-\s*(.*)/);
-    if (tagMatch) return tagMatch[1].trim();
-    return "General";
-}
-
-// Extract all tags from YAML list format in frontmatter
-function extractAllTags(content: string): string[] {
-    const tagsSection = content.match(/tags:\s*\n((?:\s*-\s*.+\n?)*)/);
-    if (!tagsSection) return [];
-    const tagLines = tagsSection[1].match(/\s*-\s*(.+)/g);
-    if (!tagLines) return [];
-    return tagLines.map(line => line.replace(/\s*-\s*/, "").trim()).filter(Boolean);
-}
+// Client-side async dynamic loader for on-demand post content (split into separate tiny chunks)
+const clientPostLoaders = import.meta.glob("../posts/*.md", { query: "?raw", import: "default" });
 
 export function getPostPath(post: Pick<BlogPost, "id" | "postType">): string {
     const base = post.postType === "research" ? "/research" : "/blog";
@@ -114,71 +66,49 @@ export function getPostPath(post: Pick<BlogPost, "id" | "postType">): string {
 }
 
 export function getAllPosts(): BlogPost[] {
-    const modules = import.meta.glob("../posts/*.md", { as: "raw", eager: true });
-
-    const posts: BlogPost[] = [];
-
-    for (const path in modules) {
-        const content = modules[path] as string;
-        const frontmatter = parseFrontmatter(content);
-        const filename = path.split("/").pop()?.replace(".md", "") || "";
-
-        // Skip draft posts
-        if (frontmatter.draft === "true") continue;
-
-        // Extract tag manually if not in simple frontmatter
-        const category = extractFirstTag(content);
-
-        // Assign random icon and gradient based on filename length to be deterministic
-        const iconIndex = filename.length % icons.length;
-        const gradientIndex = filename.length % gradients.length;
-
-        // Extract content (remove frontmatter)
-        let contentBody = content.replace(/^---\n[\s\S]*?\n---/, "").trim();
-
-        // Replace Hugo-style external-link shortcodes with Markdown links
-        // Pattern: {{< external-link link="URL" >}}TEXT{{< /external-link >}}
-        contentBody = contentBody.replace(
-            /{{<\s*external-link\s+link="([^"]+)"\s*>}}(.*?){{<\s*\/external-link\s*>}}/g,
-            "[$2]($1)"
-        );
-
-        const authorKey = frontmatter.author?.toLowerCase()?.split(" ")?.join("-");
+    return (postsMeta as any[]).map((item) => {
+        const iconIndex = item.id.length % icons.length;
+        const gradientIndex = item.id.length % gradients.length;
+        const authorKey = item.author?.toLowerCase()?.split(" ")?.join("-");
         const authorData = authors[authorKey];
 
-        posts.push({
-            id: filename,
-            title: frontmatter.title || "Untitled",
-            excerpt: frontmatter.preview || frontmatter.description || "No description",
-            description: frontmatter.description || frontmatter.preview || "",
-            category: category,
-            postType: frontmatter.type === "research" ? "research" : undefined,
-            readTime: (frontmatter.readTime ? `${frontmatter.readTime} min read` : "5 min read"),
-            date: frontmatter.date ? new Date(frontmatter.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-            }) : "Recent",
-            timestamp: frontmatter.date ? new Date(frontmatter.date).getTime() : 0,
-            author: frontmatter.author || "Genezio Team",
+        let content = "";
+        if (import.meta.env.SSR) {
+            const raw = ssrModules[`../posts/${item.id}.md`] || "";
+            let contentBody = raw.replace(/^---\n[\s\S]*?\n---/, "").trim();
+            contentBody = contentBody.replace(
+                /{{<\s*external-link\s+link="([^"]+)"\s*>}}(.*?){{<\s*\/external-link\s*>}}/g,
+                "[$2]($1)"
+            );
+            content = contentBody;
+        }
+
+        return {
+            ...item,
             authorRole: authorData?.role || "Contributor",
-            featured: true, // As requested
+            featured: true,
             icon: icons[iconIndex],
             gradient: gradients[gradientIndex],
-            content: contentBody,
-            metaOgImage: frontmatter.meta_og_image || "",
-            metaOgUrl: frontmatter.meta_og_url || "",
-            metaTitle: frontmatter.metaTitle || undefined,
-            tags: extractAllTags(content),
-        });
-    }
-
-    return posts;
+            content,
+        };
+    });
 }
 
 export function getPostById(id: string): BlogPost | undefined {
     const posts = getAllPosts();
     return posts.find((post) => post.id === id);
+}
+
+export async function fetchPostContent(id: string): Promise<string> {
+    const loader = clientPostLoaders[`../posts/${id}.md`];
+    if (!loader) return "";
+    const raw = (await loader()) as string;
+    let contentBody = raw.replace(/^---\n[\s\S]*?\n---/, "").trim();
+    contentBody = contentBody.replace(
+        /{{<\s*external-link\s+link="([^"]+)"\s*>}}(.*?){{<\s*\/external-link\s*>}}/g,
+        "[$2]($1)"
+    );
+    return contentBody;
 }
 
 export function getBlogPosts(): BlogPost[] {

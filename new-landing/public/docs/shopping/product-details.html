@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/site.css" />
+  <link rel="stylesheet" href="../assets/site.min.css" />
 </head>
 <body>
   <header class="topbar">
@@ -303,36 +303,7 @@
 </ul>
     </main>
   </div>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    (function(){
-      if(window.lucide){lucide.createIcons();}
-      // Header dropdowns
-      var items=[].slice.call(document.querySelectorAll('.nav-item[data-dropdown]'));
-      document.querySelectorAll('[data-dropdown-trigger]').forEach(function(btn){
-        btn.addEventListener('click',function(e){
-          e.stopPropagation();
-          var item=btn.closest('.nav-item');
-          var willOpen=!item.classList.contains('open');
-          items.forEach(function(i){i.classList.remove('open');});
-          if(willOpen)item.classList.add('open');
-        });
-      });
-      document.addEventListener('click',function(e){
-        if(!e.target.closest('.nav-item[data-dropdown]'))items.forEach(function(i){i.classList.remove('open');});
-      });
-      // Mobile site nav
-      var burger=document.getElementById('site-burger'),sm=document.getElementById('site-mobile');
-      if(burger&&sm)burger.addEventListener('click',function(){sm.classList.toggle('open');});
-      // Docs sidebar drawer (mobile)
-      var sb=document.querySelector('.sidebar'),ov=document.getElementById('sidebar-overlay'),tg=document.getElementById('sidebar-toggle');
-      var scrollY=0;
-      function openSb(){scrollY=window.scrollY;document.body.style.top='-'+scrollY+'px';sb.classList.add('open');ov.classList.add('open');document.body.classList.add('sidebar-open');}
-      function closeSb(){sb.classList.remove('open');ov.classList.remove('open');document.body.classList.remove('sidebar-open');document.body.style.top='';window.scrollTo(0,scrollY);}
-      if(tg)tg.addEventListener('click',openSb);
-      if(ov)ov.addEventListener('click',closeSb);
-      if(sb)sb.addEventListener('click',function(e){if(e.target.tagName==='A')closeSb();});
-    })();
-  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>(function(){window.lucide&&lucide.createIcons();var i=[].slice.call(document.querySelectorAll(".nav-item[data-dropdown]"));document.querySelectorAll("[data-dropdown-trigger]").forEach(function(e){e.addEventListener("click",function(c){c.stopPropagation();var r=e.closest(".nav-item"),u=!r.classList.contains("open");i.forEach(function(v){v.classList.remove("open")}),u&&r.classList.add("open")})}),document.addEventListener("click",function(e){e.target.closest(".nav-item[data-dropdown]")||i.forEach(function(c){c.classList.remove("open")})});var s=document.getElementById("site-burger"),d=document.getElementById("site-mobile");s&&d&&s.addEventListener("click",function(){d.classList.toggle("open")});var t=document.querySelector(".sidebar"),o=document.getElementById("sidebar-overlay"),a=document.getElementById("sidebar-toggle"),n=0;function m(){n=window.scrollY,document.body.style.top="-"+n+"px",t.classList.add("open"),o.classList.add("open"),document.body.classList.add("sidebar-open")}function l(){t.classList.remove("open"),o.classList.remove("open"),document.body.classList.remove("sidebar-open"),document.body.style.top="",window.scrollTo(0,n)}a&&a.addEventListener("click",m),o&&o.addEventListener("click",l),t&&t.addEventListener("click",function(e){e.target.tagName==="A"&&l()})})();</script>
 </body>
 </html>
