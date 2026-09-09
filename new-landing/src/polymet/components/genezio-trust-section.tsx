@@ -45,7 +45,7 @@ const TRUSTED_COMPANIES = [
   {
     name: "Data Revolt",
     logo: "images/data-revolt-logo.svg",
-    url: "https://www.datarevoltagency.com",
+    url: "https://www.datarevolt.agency/",
   },
   {
     name: "Lexters",
@@ -61,8 +61,12 @@ const TRUSTED_COMPANIES = [
 
 type TrustedCompany = (typeof TRUSTED_COMPANIES)[number];
 
+type CompanySlot = "wide" | "compact";
+
 function logoSlotClass(company: TrustedCompany) {
-  const slot = "slot" in company ? company.slot : undefined;
+  const slot = ("slot" in company ? company.slot : undefined) as
+    | CompanySlot
+    | undefined;
 
   switch (slot) {
     case "wide":
@@ -115,10 +119,10 @@ export function GenezioTrustSection() {
                     loading="lazy"
                     className="max-h-full max-w-full object-contain object-center transition-all duration-300"
                     style={{ filter: logoFilter(false) }}
-                    onMouseEnter={(e) => {
+                    onMouseEnter={(e: React.MouseEvent<HTMLImageElement>) => {
                       e.currentTarget.style.filter = logoFilter(true);
                     }}
-                    onMouseLeave={(e) => {
+                    onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => {
                       e.currentTarget.style.filter = logoFilter(false);
                     }}
                   />

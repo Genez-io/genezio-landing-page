@@ -11,7 +11,7 @@ import {
   ClockIcon,
   CalendarIcon
 } from "lucide-react";
-import { getPostById, getAllPosts, getPostPath } from "@/lib/posts";
+import { getPostById, getAllPosts, getPostPath, fetchPostContent } from "@/lib/posts";
 import { authors } from "@/lib/authors";
 import { BlogPostTypeBadge } from "@/polymet/components/blog-post-type-badge";
 
@@ -263,14 +263,33 @@ export function BlogPost() {
     return topScored.map((item) => item.post);
   }, [post, isResearchSection]);
 
+  const [clientContent, setClientContent] = React.useState<string>(() => {
+    if (post?.content) return post.content;
+    if (typeof document !== "undefined") {
+      const el = document.getElementById("__POST_CONTENT__");
+      if (el?.textContent) return el.textContent;
+    }
+    return "";
+  });
+
+  React.useEffect(() => {
+    if (!clientContent && post?.id) {
+      fetchPostContent(post.id).then((c) => {
+        if (c) setClientContent(c);
+      });
+    }
+  }, [post?.id, clientContent]);
+
+  const effectiveContent = post?.content || clientContent;
+
   // Preprocess content to replace tweet shortcodes with marker links
   const contentWithTweets = React.useMemo(() => {
-    if (!post.content) return "";
-    return post.content.replace(
+    if (!effectiveContent) return "";
+    return effectiveContent.replace(
       /{{<\s*tweet\s+"(https?:\/\/twitter\.com\/[^\/]+\/status\/(\d+))"\s*>}}/g,
       (_, url, id) => `[TWEET_EMBED__${id}](${url})`
     );
-  }, [post.content]);
+  }, [effectiveContent]);
 
   // Pull a leading hero image out of the body so it renders full-width above
   // the two-column (table-of-contents + article) layout.
@@ -711,8 +730,8 @@ export function BlogPost() {
   }
 
   // Fallback: automatically generate FAQPage schema from markdown if post has an FAQ section
-  if (!customSchema && post.content) {
-    customSchema = extractFAQSchemaFromMarkdown(post.content);
+  if (!customSchema && effectiveContent) {
+    customSchema = extractFAQSchemaFromMarkdown(effectiveContent);
   }
 
   return (

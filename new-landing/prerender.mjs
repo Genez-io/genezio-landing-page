@@ -387,12 +387,32 @@ for (const url of routes) {
     extraMetaKeys.push("og:image:height");
   }
 
-  const html = stripOverriddenHead(template, helmetTitleText, helmetMetaHtml, extraMetaKeys)
+  let postContentScript = "";
+  const postMatch = url.match(/^\/(?:blog|research)\/([^\/]+)/);
+  if (postMatch && !url.includes("/author/")) {
+    const slug = postMatch[1];
+    const postFilePath = path.join(postsDir, `${slug}.md`);
+    if (fs.existsSync(postFilePath)) {
+      const raw = fs.readFileSync(postFilePath, "utf-8");
+      let contentBody = raw.replace(/^---\n[\s\S]*?\n---/, "").trim();
+      contentBody = contentBody.replace(
+        /{{<\s*external-link\s+link="([^"]+)"\s*>}}(.*?){{<\s*\/external-link\s*>}}/g,
+        "[$2]($1)"
+      );
+      postContentScript = `\n  <script id="__POST_CONTENT__" type="text/plain">${contentBody.replace(/<\/script/gi, "<\\/script")}</script>`;
+    }
+  }
+
+  let html = stripOverriddenHead(template, helmetTitleText, helmetMetaHtml, extraMetaKeys)
     .replace("<!--app-helmet-head-->", mergedHeadHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
       `<div id="root">${cleanAppHtml}</div>`
     );
+
+  if (postContentScript) {
+    html = html.replace("</body>", `${postContentScript}\n</body>`);
+  }
   const cleanedHtml = html;
 
   const filePath =
