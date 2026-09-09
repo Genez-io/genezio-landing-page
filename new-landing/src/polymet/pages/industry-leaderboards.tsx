@@ -24,7 +24,7 @@ function faviconUrl(website: string, size = 48) {
 
 const COUNTRIES = [
   { code: "UK", label: "United Kingdom", flag: "🇬🇧" },
-  { code: "US", label: "United States",  flag: "🇺🇸" },
+  { code: "US", label: "United States", flag: "🇺🇸" },
 ];
 
 type CountryCode = "UK" | "US" | "EU";
@@ -88,26 +88,32 @@ const DYNAMIC_INDUSTRY_CONFIG: Partial<
     brandId: -49,
     topicIds: [269, 265, 264, 263, 262, 261, 260, 259, 520, 272],
     token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTUyNTY5LCJqdGkiOiIyZTJhYmVhMS1kNzA0LTRkNGEtOThjYS1lZTE2OTZkMWFmYmYifQ.zY_KQZ5rsB7So8QdSQnykPGqwoVsjqijCqIE8_syrDs",
-    models: ["chatgpt.com", "google-ai-overview", "perplexity", "google-ai-mode", "gpt-5.2"],
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
+    models: [
+      "chatgpt.com",
+      "google-ai-overview",
+      "perplexity",
+      "google-ai-mode",
+      "gpt-5.2",
+    ],
   },
   fashion: {
     brandId: -64,
     topicIds: [397, 396, 398, 572, 483],
     token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTQ5MzA5LCJqdGkiOiIyNTY3MWZiYS03MjVhLTQxZTItOGEzMy1jY2IxYjg4OTZiY2MifQ.iI2HcioMBvEv6AEg87yp1GZb9_LODJeqnGqZYfZdb4Y",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
   },
   healthcare: {
     brandId: -31,
     topicIds: [96, 95, 94, 511],
     token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTUyMTg4LCJqdGkiOiJmNDJlMzM3NS0zZjRkLTQyMWQtYWRmNC1mOGU0NjZiMThiMTEifQ.Ri939zWcorIFrbGlnrgNse1TDRW9AdmNFOa8yUOyc_8",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
   },
   retail: {
     brandId: -29,
     topicIds: [90, 89, 88, 518],
     token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxNzc3NTUyNTA4LCJqdGkiOiI0YTJiOGVkNi1mYTBiLTQxNjEtOTQ5NC04MDkzMWExM2UyZGUifQ.ed22XHPZ6iRgAauZuruIZc8vhVDJFNI7UGx1A2NZn8s",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
   },
 };
 
@@ -196,17 +202,20 @@ function TopThreeChart({
         ? raw
         : (() => {
             const delta = desiredStart - raw[0];
-            return raw.map((v) => Math.max(0, Math.min(100, Math.round(v + delta))));
+            return raw.map((v) =>
+              Math.max(0, Math.min(100, Math.round(v + delta))),
+            );
           })();
     return { brand: b, color: CHART_COLORS[i], data };
   });
-  const series = seriesOverride && seriesOverride.length > 0
-    ? seriesOverride.slice(0, 3).map((s, i) => ({
-        brand: { name: s.name, website: s.website },
-        color: CHART_COLORS[i],
-        data: s.data,
-      }))
-    : generatedSeries;
+  const series =
+    seriesOverride && seriesOverride.length > 0
+      ? seriesOverride.slice(0, 3).map((s, i) => ({
+          brand: { name: s.name, website: s.website },
+          color: CHART_COLORS[i],
+          data: s.data,
+        }))
+      : generatedSeries;
 
   const allVals = series.flatMap((s) => s.data);
   const minV =
@@ -222,7 +231,10 @@ function TopThreeChart({
   }
   function pathD(data: number[]) {
     return data
-      .map((v, i) => `${i === 0 ? "M" : "L"}${toX(i).toFixed(1)},${toY(v).toFixed(1)}`)
+      .map(
+        (v, i) =>
+          `${i === 0 ? "M" : "L"}${toX(i).toFixed(1)},${toY(v).toFixed(1)}`,
+      )
       .join(" ");
   }
 
@@ -242,13 +254,20 @@ function TopThreeChart({
     const d = new Date(now);
     d.setDate(d.getDate() - (days - 1 - i));
     monthLabels.push({
-      label: xLabelsOverride?.[i] ?? d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      label:
+        xLabelsOverride?.[i] ??
+        d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
       x: toX(i),
     });
   }
   if (monthLabels[monthLabels.length - 1]?.x !== toX(days - 1)) {
     monthLabels.push({
-      label: xLabelsOverride?.[days - 1] ?? new Date(now).toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      label:
+        xLabelsOverride?.[days - 1] ??
+        new Date(now).toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "short",
+        }),
       x: toX(days - 1),
     });
   }
@@ -260,15 +279,15 @@ function TopThreeChart({
       ? (() => {
           const d = new Date(now);
           d.setDate(d.getDate() - (days - 1 - hoverIdx));
-          return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+          return d.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "short",
+          });
         })()
       : null;
 
   // Tooltip x position as % of full SVG width (maps to % of container since SVG is 100% wide)
-  const tooltipLeftPct =
-    hoverIdx !== null
-      ? (toX(hoverIdx) / W) * 100
-      : null;
+  const tooltipLeftPct = hoverIdx !== null ? (toX(hoverIdx) / W) * 100 : null;
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-6">
@@ -277,22 +296,31 @@ function TopThreeChart({
           <p className="text-xs text-zinc-500 uppercase tracking-[0.2em] font-semibold">
             30-day AI Visibility trend
           </p>
-          <p className="text-sm text-zinc-400 mt-0.5">Top 3 brands this month</p>
+          <p className="text-sm text-zinc-400 mt-0.5">
+            Top 3 brands this month
+          </p>
         </div>
         <div className="flex items-center gap-5 flex-wrap">
           {series.map((s) => (
             <div key={s.brand.name} className="flex items-center gap-2">
-              <div className="w-8 h-0.5 rounded-full" style={{ background: s.color }} />
+              <div
+                className="w-8 h-0.5 rounded-full"
+                style={{ background: s.color }}
+              />
               <div className="flex items-center gap-1.5">
                 <div className="w-4 h-4 rounded bg-white/10 flex items-center justify-center overflow-hidden">
                   <img
                     src={faviconUrl(s.brand.website, 32)}
                     alt={s.brand.name}
                     className="w-3 h-3 object-contain"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
                   />
                 </div>
-                <span className="text-xs text-zinc-300 font-medium">{s.brand.name}</span>
+                <span className="text-xs text-zinc-300 font-medium">
+                  {s.brand.name}
+                </span>
               </div>
             </div>
           ))}
@@ -310,14 +338,27 @@ function TopThreeChart({
             }}
           >
             <div className="bg-[#1a1a2e] border border-white/15 rounded-xl px-3 py-2.5 shadow-xl shadow-black/40 min-w-[130px]">
-              <p className="text-[10px] text-zinc-500 font-semibold mb-1.5">{hoverDate}</p>
+              <p className="text-[10px] text-zinc-500 font-semibold mb-1.5">
+                {hoverDate}
+              </p>
               {series.map((s) => (
-                <div key={s.brand.name} className="flex items-center justify-between gap-3 py-0.5">
+                <div
+                  key={s.brand.name}
+                  className="flex items-center justify-between gap-3 py-0.5"
+                >
                   <div className="flex items-center gap-1.5">
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: s.color }} />
-                    <span className="text-xs text-zinc-400 truncate max-w-[80px]">{s.brand.name}</span>
+                    <div
+                      className="w-2 h-2 rounded-full flex-shrink-0"
+                      style={{ background: s.color }}
+                    />
+                    <span className="text-xs text-zinc-400 truncate max-w-[80px]">
+                      {s.brand.name}
+                    </span>
                   </div>
-                  <span className="text-xs font-bold tabular-nums" style={{ color: s.color }}>
+                  <span
+                    className="text-xs font-bold tabular-nums"
+                    style={{ color: s.color }}
+                  >
                     {s.data[hoverIdx]}%
                   </span>
                 </div>
@@ -339,11 +380,22 @@ function TopThreeChart({
           {yTicks.map((v) => (
             <g key={v}>
               <line
-                x1={PAD.left} y1={toY(v)} x2={W - PAD.right} y2={toY(v)}
-                stroke="rgba(255,255,255,0.06)" strokeWidth="1" strokeDasharray="4 4"
+                x1={PAD.left}
+                y1={toY(v)}
+                x2={W - PAD.right}
+                y2={toY(v)}
+                stroke="rgba(255,255,255,0.06)"
+                strokeWidth="1"
+                strokeDasharray="4 4"
               />
-              <text x={PAD.left - 8} y={toY(v) + 4} textAnchor="end"
-                fill="rgba(255,255,255,0.3)" fontSize="10" fontFamily="monospace">
+              <text
+                x={PAD.left - 8}
+                y={toY(v) + 4}
+                textAnchor="end"
+                fill="rgba(255,255,255,0.3)"
+                fontSize="10"
+                fontFamily="monospace"
+              >
                 {v}%
               </text>
             </g>
@@ -351,8 +403,15 @@ function TopThreeChart({
 
           {/* X axis labels */}
           {monthLabels.map(({ label, x }) => (
-            <text key={label} x={x} y={H - 6} textAnchor="middle"
-              fill="rgba(255,255,255,0.25)" fontSize="9" fontFamily="sans-serif">
+            <text
+              key={label}
+              x={x}
+              y={H - 6}
+              textAnchor="middle"
+              fill="rgba(255,255,255,0.25)"
+              fontSize="9"
+              fontFamily="sans-serif"
+            >
               {label}
             </text>
           ))}
@@ -374,9 +433,14 @@ function TopThreeChart({
           {series.map((s) => {
             const last = s.data[s.data.length - 1];
             return (
-              <circle key={`dot-end-${s.brand.name}`}
-                cx={toX(days - 1)} cy={toY(last)} r="4"
-                fill={s.color} stroke="#050506" strokeWidth="2"
+              <circle
+                key={`dot-end-${s.brand.name}`}
+                cx={toX(days - 1)}
+                cy={toY(last)}
+                r="4"
+                fill={s.color}
+                stroke="#050506"
+                strokeWidth="2"
               />
             );
           })}
@@ -385,14 +449,23 @@ function TopThreeChart({
           {hoverIdx !== null && (
             <g>
               <line
-                x1={toX(hoverIdx)} y1={PAD.top}
-                x2={toX(hoverIdx)} y2={PAD.top + innerH}
-                stroke="rgba(255,255,255,0.2)" strokeWidth="1" strokeDasharray="3 3"
+                x1={toX(hoverIdx)}
+                y1={PAD.top}
+                x2={toX(hoverIdx)}
+                y2={PAD.top + innerH}
+                stroke="rgba(255,255,255,0.2)"
+                strokeWidth="1"
+                strokeDasharray="3 3"
               />
               {series.map((s) => (
-                <circle key={`hover-dot-${s.brand.name}`}
-                  cx={toX(hoverIdx)} cy={toY(s.data[hoverIdx])} r="5"
-                  fill={s.color} stroke="#050506" strokeWidth="2"
+                <circle
+                  key={`hover-dot-${s.brand.name}`}
+                  cx={toX(hoverIdx)}
+                  cy={toY(s.data[hoverIdx])}
+                  r="5"
+                  fill={s.color}
+                  stroke="#050506"
+                  strokeWidth="2"
                 />
               ))}
             </g>
@@ -400,7 +473,10 @@ function TopThreeChart({
 
           {/* Transparent overlay for mouse events */}
           <rect
-            x={PAD.left} y={PAD.top} width={innerW} height={innerH}
+            x={PAD.left}
+            y={PAD.top}
+            width={innerW}
+            height={innerH}
             fill="transparent"
           />
         </svg>
@@ -417,7 +493,9 @@ function TopThreeChartSkeleton() {
           <p className="text-xs text-zinc-500 uppercase tracking-[0.2em] font-semibold">
             30-day AI Visibility trend
           </p>
-          <p className="text-sm text-zinc-400 mt-0.5">Top 3 brands this month</p>
+          <p className="text-sm text-zinc-400 mt-0.5">
+            Top 3 brands this month
+          </p>
         </div>
         <div className="inline-flex items-center gap-2 text-sm text-zinc-300">
           <span className="w-4 h-4 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
@@ -435,9 +513,15 @@ function LeaderboardTableSkeleton({ rows = 8 }: { rows?: number }) {
   return (
     <div className="rounded-2xl border border-white/10 overflow-hidden animate-pulse">
       <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">#</span>
-        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">Brand</span>
-        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">AI Visibility</span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">
+          #
+        </span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">
+          Brand
+        </span>
+        <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">
+          AI Visibility
+        </span>
       </div>
 
       {Array.from({ length: rows }).map((_, idx) => (
@@ -527,48 +611,51 @@ const industries: Industry[] = [
   },
 ];
 
-const scrollingBrandsByCountry: Record<CountryCode, { name: string; website: string }[]> = {
+const scrollingBrandsByCountry: Record<
+  CountryCode,
+  { name: string; website: string }[]
+> = {
   UK: [
-    { name: "Tesco",          website: "https://www.tesco.com" },
-    { name: "Barclays",       website: "https://www.barclays.co.uk" },
-    { name: "Bupa",           website: "https://www.bupa.co.uk" },
-    { name: "Zara",           website: "https://www.zara.com" },
-    { name: "HSBC",           website: "https://www.hsbc.co.uk" },
-    { name: "H&M",            website: "https://www.hm.com" },
-    { name: "Sainsbury's",    website: "https://www.sainsburys.co.uk" },
-    { name: "Nuffield Health",website: "https://www.nuffieldhealth.com" },
-    { name: "Lloyds",         website: "https://www.lloydsbank.com" },
-    { name: "ASOS",           website: "https://www.asos.com" },
-    { name: "NHS",            website: "https://www.nhs.uk" },
-    { name: "Primark",        website: "https://www.primark.com" },
+    { name: "Tesco", website: "https://www.tesco.com" },
+    { name: "Barclays", website: "https://www.barclays.co.uk" },
+    { name: "Bupa", website: "https://www.bupa.co.uk" },
+    { name: "Zara", website: "https://www.zara.com" },
+    { name: "HSBC", website: "https://www.hsbc.co.uk" },
+    { name: "H&M", website: "https://www.hm.com" },
+    { name: "Sainsbury's", website: "https://www.sainsburys.co.uk" },
+    { name: "Nuffield Health", website: "https://www.nuffieldhealth.com" },
+    { name: "Lloyds", website: "https://www.lloydsbank.com" },
+    { name: "ASOS", website: "https://www.asos.com" },
+    { name: "NHS", website: "https://www.nhs.uk" },
+    { name: "Primark", website: "https://www.primark.com" },
   ],
   US: [
-    { name: "Walmart",       website: "https://www.walmart.com" },
-    { name: "JPMorgan",      website: "https://www.jpmorganchase.com" },
-    { name: "UnitedHealth",  website: "https://www.unitedhealthgroup.com" },
-    { name: "Nike",          website: "https://www.nike.com" },
-    { name: "Amazon",        website: "https://www.amazon.com" },
-    { name: "Bank of America",website: "https://www.bankofamerica.com" },
-    { name: "CVS Health",    website: "https://www.cvshealth.com" },
-    { name: "Gap",           website: "https://www.gap.com" },
-    { name: "Target",        website: "https://www.target.com" },
+    { name: "Walmart", website: "https://www.walmart.com" },
+    { name: "JPMorgan", website: "https://www.jpmorganchase.com" },
+    { name: "UnitedHealth", website: "https://www.unitedhealthgroup.com" },
+    { name: "Nike", website: "https://www.nike.com" },
+    { name: "Amazon", website: "https://www.amazon.com" },
+    { name: "Bank of America", website: "https://www.bankofamerica.com" },
+    { name: "CVS Health", website: "https://www.cvshealth.com" },
+    { name: "Gap", website: "https://www.gap.com" },
+    { name: "Target", website: "https://www.target.com" },
     { name: "Goldman Sachs", website: "https://www.goldmansachs.com" },
-    { name: "Aetna",         website: "https://www.aetna.com" },
-    { name: "Shein",         website: "https://www.shein.com" },
+    { name: "Aetna", website: "https://www.aetna.com" },
+    { name: "Shein", website: "https://www.shein.com" },
   ],
   EU: [
-    { name: "Carrefour",    website: "https://www.carrefour.com" },
-    { name: "BNP Paribas",  website: "https://www.bnpparibas.com" },
-    { name: "Fresenius",    website: "https://www.fresenius.com" },
-    { name: "Zara",         website: "https://www.zara.com" },
-    { name: "Deutsche Bank",website: "https://www.db.com" },
-    { name: "Lidl",         website: "https://www.lidl.com" },
-    { name: "AXA Health",   website: "https://www.axa.com" },
-    { name: "H&M",          website: "https://www.hm.com" },
-    { name: "ING",          website: "https://www.ing.com" },
-    { name: "Mango",        website: "https://www.mango.com" },
+    { name: "Carrefour", website: "https://www.carrefour.com" },
+    { name: "BNP Paribas", website: "https://www.bnpparibas.com" },
+    { name: "Fresenius", website: "https://www.fresenius.com" },
+    { name: "Zara", website: "https://www.zara.com" },
+    { name: "Deutsche Bank", website: "https://www.db.com" },
+    { name: "Lidl", website: "https://www.lidl.com" },
+    { name: "AXA Health", website: "https://www.axa.com" },
+    { name: "H&M", website: "https://www.hm.com" },
+    { name: "ING", website: "https://www.ing.com" },
+    { name: "Mango", website: "https://www.mango.com" },
     { name: "Allianz Care", website: "https://www.allianzcare.com" },
-    { name: "Aldi",         website: "https://www.aldi.com" },
+    { name: "Aldi", website: "https://www.aldi.com" },
   ],
 };
 
@@ -576,16 +663,26 @@ function BrandLogo({ brand }: { brand: BrandEntry }) {
   const [imgError, setImgError] = useState(false);
   if (imgError) {
     return (
-      <div className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0"
-        style={{ background: `${brand.color}20`, color: brand.color, border: `1px solid ${brand.color}40` }}>
+      <div
+        className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0"
+        style={{
+          background: `${brand.color}20`,
+          color: brand.color,
+          border: `1px solid ${brand.color}40`,
+        }}
+      >
         {brand.initials}
       </div>
     );
   }
   return (
     <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center overflow-hidden shrink-0 border border-white/10">
-      <img src={faviconUrl(brand.website, 48)} alt={brand.name} className="w-5 h-5 object-contain"
-        onError={() => setImgError(true)} />
+      <img
+        src={faviconUrl(brand.website, 48)}
+        alt={brand.name}
+        className="w-5 h-5 object-contain"
+        onError={() => setImgError(true)}
+      />
     </div>
   );
 }
@@ -600,7 +697,10 @@ export function IndustryLeaderboards() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const current = industries.find((i) => i.id === activeIndustry)!;
-  const dynamicIndustryConfig = activeCountry === "UK" ? DYNAMIC_INDUSTRY_CONFIG[activeIndustry] : undefined;
+  const dynamicIndustryConfig =
+    activeCountry === "UK"
+      ? DYNAMIC_INDUSTRY_CONFIG[activeIndustry]
+      : undefined;
   const isDynamicIndustryUK = Boolean(dynamicIndustryConfig);
 
   useEffect(() => {
@@ -612,7 +712,9 @@ export function IndustryLeaderboards() {
     if (!token) {
       setApiBrands([]);
       setApiOverviews([]);
-      setApiBrandsError("Missing API token. Set VITE_GENEZIO_LEADERBOARD_TOKEN.");
+      setApiBrandsError(
+        "Missing API token. Set VITE_GENEZIO_LEADERBOARD_TOKEN.",
+      );
       return;
     }
 
@@ -636,18 +738,22 @@ export function IndustryLeaderboards() {
           start_date: startDate.toISOString(),
           end_date: endDate.toISOString(),
         });
-        for (const topicId of dynamicIndustryConfig.topicIds) params.append("topic_ids", String(topicId));
+        for (const topicId of dynamicIndustryConfig.topicIds)
+          params.append("topic_ids", String(topicId));
         const models = dynamicIndustryConfig.models ?? BRAND_METRICS_MODELS;
         for (const model of models) params.append("models_name", model);
 
-        const res = await fetch(`https://app.backend.genezio.ai/api/v1/sql/brand/overview/${dynamicIndustryConfig.brandId}/brand-metrics?${params.toString()}`, {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            Authorization: `Bearer ${token}`,
+        const res = await fetch(
+          `https://app.backend.genezio.ai/api/v1/sql/brand/overview/${dynamicIndustryConfig.brandId}/brand-metrics?${params.toString()}`,
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            signal: controller.signal,
           },
-          signal: controller.signal,
-        });
+        );
 
         if (!res.ok) {
           throw new Error(`Request failed with status ${res.status}`);
@@ -681,7 +787,9 @@ export function IndustryLeaderboards() {
         if ((error as Error).name === "AbortError") return;
         setApiBrands([]);
         setApiOverviews([]);
-        setApiBrandsError((error as Error).message || "Failed to load leaderboard data.");
+        setApiBrandsError(
+          (error as Error).message || "Failed to load leaderboard data.",
+        );
       } finally {
         setIsLoadingApiBrands(false);
       }
@@ -691,9 +799,14 @@ export function IndustryLeaderboards() {
     return () => controller.abort();
   }, [dynamicIndustryConfig]);
 
-  const brands = isDynamicIndustryUK ? apiBrands : current.countries[activeCountry];
+  const brands = isDynamicIndustryUK
+    ? apiBrands
+    : current.countries[activeCountry];
   // Table order should match the authored lists (screenshots).
-  const ranked = useMemo(() => brands.map((b, i) => ({ ...b, rank: i + 1 })), [brands]);
+  const ranked = useMemo(
+    () => brands.map((b, i) => ({ ...b, rank: i + 1 })),
+    [brands],
+  );
   const chartBrands = useMemo(() => {
     if (activeIndustry === "banking" && activeCountry === "UK") {
       const preferred = ["Monzo", "Starling Bank", "HSBC UK"];
@@ -742,11 +855,16 @@ export function IndustryLeaderboards() {
   const dynamicChartLabels = useMemo(() => {
     if (!isDynamicIndustryUK || apiOverviews.length === 0) return undefined;
     return apiOverviews.map((overview) =>
-      new Date(overview.period_date).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+      new Date(overview.period_date).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+      }),
     );
   }, [isDynamicIndustryUK, apiOverviews]);
-  const shouldShowChartLoading = isDynamicIndustryUK && (isLoadingApiBrands || apiOverviews.length === 0);
-  const shouldShowTableLoading = isDynamicIndustryUK && (isLoadingApiBrands || apiBrands.length === 0);
+  const shouldShowChartLoading =
+    isDynamicIndustryUK && (isLoadingApiBrands || apiOverviews.length === 0);
+  const shouldShowTableLoading =
+    isDynamicIndustryUK && (isLoadingApiBrands || apiBrands.length === 0);
   const scrollingBrands = scrollingBrandsByCountry[activeCountry];
 
   useEffect(() => {
@@ -766,29 +884,40 @@ export function IndustryLeaderboards() {
 
   return (
     <div className="min-h-screen bg-[#050506]">
-      <PolymetSEO title={PAGE_TITLE} description={PAGE_DESCRIPTION} canonicalPath="/industry-leaderboards/" />
+      <PolymetSEO
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        canonicalPath="/industry-leaderboards/"
+      />
 
       {/* ── Hero ── */}
       <section className="pt-28 md:pt-36 pb-12 px-6 md:px-12 lg:px-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.15),transparent_70%)] pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <HeroEyebrow className="mb-6">Live AI Visibility Data · UK · US</HeroEyebrow>
+          <HeroEyebrow className="mb-6">
+            Live AI Visibility Data · UK · US
+          </HeroEyebrow>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             <span className="text-white">Your competitors are already in </span>
             <span className="text-emerald-400">AI answers.</span>
             <span className="text-white"> Are you?</span>
           </h1>
           <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto mb-10">
-            Real AI visibility rankings across industries, powered by thousands of daily queries to ChatGPT, Perplexity, Gemini & Claude.
+            Real AI visibility rankings across industries, powered by thousands
+            of daily queries to ChatGPT, Perplexity, Gemini & Claude.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             {[
               { icon: BarChart2Icon, label: "4 Industries tracked" },
-              { icon: GlobeIcon,     label: "2 Markets: UK · US" },
-              { icon: SparklesIcon,  label: "Updated weekly" },
+              { icon: GlobeIcon, label: "2 Markets: UK · US" },
+              { icon: SparklesIcon, label: "Updated weekly" },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-sm text-zinc-400">
-                <Icon className="w-4 h-4 text-zinc-500" />{label}
+              <div
+                key={label}
+                className="flex items-center gap-2 text-sm text-zinc-400"
+              >
+                <Icon className="w-4 h-4 text-zinc-500" />
+                {label}
               </div>
             ))}
           </div>
@@ -798,11 +927,24 @@ export function IndustryLeaderboards() {
         <div className="relative overflow-hidden mt-2 mb-4 -mx-6 md:-mx-12 lg:-mx-20">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#050506] to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#050506] to-transparent z-10 pointer-events-none" />
-          <div ref={scrollRef} className="flex gap-4 overflow-x-hidden whitespace-nowrap py-3" style={{ scrollbarWidth: "none" }}>
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-hidden whitespace-nowrap py-3"
+            style={{ scrollbarWidth: "none" }}
+          >
             {[...scrollingBrands, ...scrollingBrands].map((brand, i) => (
-              <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-zinc-300 font-medium shrink-0">
-                <img src={faviconUrl(brand.website, 32)} alt={brand.name} className="w-4 h-4 object-contain rounded"
-                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+              <span
+                key={i}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-sm text-zinc-300 font-medium shrink-0"
+              >
+                <img
+                  src={faviconUrl(brand.website, 32)}
+                  alt={brand.name}
+                  className="w-4 h-4 object-contain rounded"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
                 {brand.name}
               </span>
             ))}
@@ -813,7 +955,6 @@ export function IndustryLeaderboards() {
       {/* ── Filters + Chart + Table ── */}
       <section className="pb-20 md:pb-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto">
-
           {/* Filter row */}
           <div className="flex flex-col sm:flex-row gap-3 mb-8 items-start sm:items-center justify-between">
             {/* Country */}
@@ -859,13 +1000,17 @@ export function IndustryLeaderboards() {
                 const Icon = ind.icon;
                 const active = activeIndustry === ind.id;
                 return (
-                  <button key={ind.id} onClick={() => setActiveIndustry(ind.id)}
+                  <button
+                    key={ind.id}
+                    onClick={() => setActiveIndustry(ind.id)}
                     className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 border ${
                       active
                         ? "bg-white text-black border-white shadow-lg"
                         : "bg-white/[0.04] text-zinc-400 border-white/10 hover:bg-white/[0.08] hover:text-white"
-                    }`}>
-                    <Icon className="w-3.5 h-3.5" />{ind.label}
+                    }`}
+                  >
+                    <Icon className="w-3.5 h-3.5" />
+                    {ind.label}
                   </button>
                 );
               })}
@@ -892,14 +1037,18 @@ export function IndustryLeaderboards() {
               xLabelsOverride={dynamicChartLabels}
               startOverrides={
                 activeIndustry === "banking" && activeCountry === "UK"
-                  ? { "Monzo": 62, "Starling Bank": 59, "HSBC UK": 58 }
+                  ? { Monzo: 62, "Starling Bank": 59, "HSBC UK": 58 }
                   : activeIndustry === "retail" && activeCountry === "UK"
-                    ? { "Tesco": 97, "Sainsbury's": 91, "Asda": 80 }
+                    ? { Tesco: 97, "Sainsbury's": 91, Asda: 80 }
                     : activeIndustry === "healthcare" && activeCountry === "UK"
-                      ? { "Spire": 72, "Circle Health Group": 60, "HCA Healthcare UK": 58 }
+                      ? {
+                          Spire: 72,
+                          "Circle Health Group": 60,
+                          "HCA Healthcare UK": 58,
+                        }
                       : activeIndustry === "fashion" && activeCountry === "UK"
-                      ? undefined
-                  : undefined
+                        ? undefined
+                        : undefined
               }
               yAxis={
                 activeIndustry === "retail" && activeCountry === "UK"
@@ -910,11 +1059,11 @@ export function IndustryLeaderboards() {
                       ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
                       : activeIndustry === "banking" && activeCountry === "UK"
                         ? { min: 0, max: 80, ticks: [0, 20, 40, 60, 80] }
-                  : undefined
+                        : undefined
               }
               endOverrides={
                 activeIndustry === "banking" && activeCountry === "UK"
-                  ? { "Monzo": 60, "Starling Bank": 58, "HSBC UK": 57 }
+                  ? { Monzo: 60, "Starling Bank": 58, "HSBC UK": 57 }
                   : undefined
               }
             />
@@ -927,41 +1076,59 @@ export function IndustryLeaderboards() {
             <div className="rounded-2xl border border-white/10 overflow-hidden">
               {/* Header */}
               <div className="grid grid-cols-[40px_1fr_170px] gap-3 px-5 py-3 bg-white/[0.03] border-b border-white/10 items-center">
-                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">#</span>
-                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">Brand</span>
-                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">AI Visibility</span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">
+                  #
+                </span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">
+                  Brand
+                </span>
+                <span className="text-xs text-zinc-500 font-semibold uppercase tracking-[0.2em]">
+                  AI Visibility
+                </span>
               </div>
 
               {/* Rows */}
               {top10.map((brand, idx) => (
-                <div key={`${activeCountry}-${activeIndustry}-${brand.name}`}
+                <div
+                  key={`${activeCountry}-${activeIndustry}-${brand.name}`}
                   className={`grid grid-cols-[40px_1fr_170px] gap-3 items-center px-5 py-4 transition-colors duration-150 hover:bg-white/[0.03] ${
                     idx < top10.length - 1 ? "border-b border-white/[0.06]" : ""
-                  }`}>
+                  }`}
+                >
                   {/* Rank */}
                   <div>
                     {brand.rank <= 3 ? (
-                      <span className={`text-sm font-bold ${brand.rank === 1 ? "text-zinc-400" : brand.rank === 2 ? "text-zinc-300" : "text-zinc-600"}`}>
+                      <span
+                        className={`text-sm font-bold ${brand.rank === 1 ? "text-zinc-400" : brand.rank === 2 ? "text-zinc-300" : "text-zinc-600"}`}
+                      >
                         #{brand.rank}
                       </span>
                     ) : (
-                      <span className="text-sm text-zinc-600 font-semibold">{brand.rank}</span>
+                      <span className="text-sm text-zinc-600 font-semibold">
+                        {brand.rank}
+                      </span>
                     )}
                   </div>
 
                   {/* Brand */}
                   <div className="flex items-center gap-3 min-w-0">
                     <BrandLogo brand={brand} />
-                    <span className="text-sm font-semibold text-white truncate">{brand.name}</span>
+                    <span className="text-sm font-semibold text-white truncate">
+                      {brand.name}
+                    </span>
                   </div>
 
                   {/* Visibility bar + % */}
                   <div className="flex items-center gap-2">
                     <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-zinc-500"
-                        style={{ width: `${brand.visibility}%` }} />
+                      <div
+                        className="h-full rounded-full bg-zinc-500"
+                        style={{ width: `${brand.visibility}%` }}
+                      />
                     </div>
-                    <span className="text-sm font-semibold text-white tabular-nums">{brand.visibility}%</span>
+                    <span className="text-sm font-semibold text-white tabular-nums">
+                      {brand.visibility}%
+                    </span>
                   </div>
                 </div>
               ))}
@@ -971,11 +1138,18 @@ export function IndustryLeaderboards() {
           {/* Footer */}
           <div className="mt-5 flex items-center justify-between flex-wrap gap-4">
             <p className="text-sm text-zinc-500">
-              Showing {Math.min(10, ranked.length)} of {ranked.length > 10 ? "10" : ranked.length} brands ·{" "}
-              <span className="text-zinc-400">Average AI mention rate across all platforms</span>
+              Showing {Math.min(10, ranked.length)} of{" "}
+              {ranked.length > 10 ? "10" : ranked.length} brands ·{" "}
+              <span className="text-zinc-400">
+                Average AI mention rate across all platforms
+              </span>
             </p>
-            <a href={current.url[activeCountry]} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/[0.06] border border-white/15 text-sm font-semibold text-white hover:bg-white/[0.12] transition-all duration-200 group">
+            <a
+              href={current.url[activeCountry]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/[0.06] border border-white/15 text-sm font-semibold text-white hover:bg-white/[0.12] transition-all duration-200 group"
+            >
               View Full Report
               <ExternalLinkIcon className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </a>
@@ -987,17 +1161,35 @@ export function IndustryLeaderboards() {
       <section className="pb-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto">
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-10">
-            <h2 className="text-lg font-bold text-white mb-6">How AI Visibility Scores work</h2>
+            <h2 className="text-lg font-bold text-white mb-6">
+              How AI Visibility Scores work
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { step: "01", title: "Real queries, real AI engines", body: "Genezio runs thousands of industry-specific queries across ChatGPT, Perplexity, Gemini, and Claude, the same questions real users are asking." },
-                { step: "02", title: "Brand mention detection", body: "Each AI response is analysed to detect which brands are recommended, mentioned, or cited, and in what context." },
-                { step: "03", title: "Visibility score aggregation", body: "The visibility score represents the percentage of relevant AI conversations in which a brand is mentioned, averaged across all platforms." },
+                {
+                  step: "01",
+                  title: "Real queries, real AI engines",
+                  body: "Genezio runs thousands of industry-specific queries across ChatGPT, Perplexity, Gemini, and Claude, the same questions real users are asking.",
+                },
+                {
+                  step: "02",
+                  title: "Brand mention detection",
+                  body: "Each AI response is analysed to detect which brands are recommended, mentioned, or cited, and in what context.",
+                },
+                {
+                  step: "03",
+                  title: "Visibility score aggregation",
+                  body: "The visibility score represents the percentage of relevant AI conversations in which a brand is mentioned, averaged across all platforms.",
+                },
               ].map(({ step, title, body }) => (
                 <div key={step} className="space-y-2">
-                  <div className="text-3xl font-black text-white/10 font-mono">{step}</div>
+                  <div className="text-3xl font-black text-white/10 font-mono">
+                    {step}
+                  </div>
                   <h3 className="text-sm font-bold text-white">{title}</h3>
-                  <p className="text-sm text-zinc-500 leading-relaxed">{body}</p>
+                  <p className="text-sm text-zinc-500 leading-relaxed">
+                    {body}
+                  </p>
                 </div>
               ))}
             </div>
@@ -1009,22 +1201,27 @@ export function IndustryLeaderboards() {
       <section className="pb-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            How does{" "}
-            <span className="text-white">your brand</span>{" "}
-            rank?
+            How does <span className="text-white">your brand</span> rank?
           </h2>
           <p className="text-base text-white/60 max-w-xl mx-auto">
-            Get a personalised AI visibility report for your brand, see exactly how ChatGPT, Gemini, Perplexity, and Claude describe you today.
+            Get a personalised AI visibility report for your brand, see exactly
+            how ChatGPT, Gemini, Perplexity, and Claude describe you today.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="/contact-sales/">
-              <Button size="lg" className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 font-semibold rounded-xl shadow-lg shadow-black/20 transition-all duration-200">
+              <Button
+                size="lg"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black px-8 font-semibold rounded-xl shadow-lg shadow-black/20 transition-all duration-200"
+              >
                 Get Free Analysis <ArrowRightIcon className="w-4 h-4 ml-2" />
               </Button>
             </a>
-            <Button size="lg" variant="outline"
+            <Button
+              size="lg"
+              variant="outline"
               className="border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08] hover:border-white/40 px-8 font-semibold rounded-xl transition-all duration-200"
-              onClick={() => window.location.assign("/contact-sales/")}>
+              onClick={() => window.location.assign("/contact-sales/")}
+            >
               Get a demo
             </Button>
           </div>
