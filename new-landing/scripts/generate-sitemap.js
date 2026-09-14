@@ -25,6 +25,7 @@ const staticRoutes = [
     'https://trust.genezio.com/',
     '/methodology',
     '/academy',
+    '/changelog',
     '/glossary',
     '/terms-and-conditions',
     '/support-terms',

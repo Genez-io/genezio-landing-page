@@ -31,6 +31,7 @@ import { Mcp } from "./polymet/pages/mcp";
 import { Security } from "./polymet/pages/security";
 import { Methodology } from "./polymet/pages/methodology";
 import { Academy } from "./polymet/pages/academy";
+import { Changelog } from "./polymet/pages/changelog";
 
 
 const ExternalRedirect = ({ to }: { to: string }) => {
@@ -205,6 +206,15 @@ export default function GenezioApp() {
         element={
           <GenezioLayout>
             <Methodology />
+          </GenezioLayout>
+        }
+      />
+
+      <Route
+        path="/changelog"
+        element={
+          <GenezioLayout>
+            <Changelog />
           </GenezioLayout>
         }
       />

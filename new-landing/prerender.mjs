@@ -24,6 +24,7 @@ const routes = [
   "/security",
   "/methodology",
   "/academy",
+  "/changelog",
   "/pricing",
   "/support-terms",
   "/terms-and-conditions",

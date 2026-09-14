@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>Genezio Changelog</title>
+    <link>https://genezio.com/changelog/</link>
+    <description>New features, improvements and fixes shipped to the Genezio platform.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Sep 2026 11:30:26 GMT</lastBuildDate>
+    <atom:link href="https://genezio.com/changelog.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+        <title><![CDATA[Q3 2026 — Google Analytics 4 and Search Console integrations]]></title>
+        <link>https://genezio.com/changelog/#q3-2026-analytics-integrations</link>
+        <guid isPermaLink="false">genezio-changelog-q3-2026-analytics-integrations</guid>
+        <description><![CDATA[Genezio now connects to the two places your traditional web data already lives, so AI visibility can be read next to the traffic and the search behaviour around it.
+
+Google Analytics 4 integration — A native GA4 connection that correlates AI visibility and recommendation metrics with downstream web traffic behaviour, including attribution for AI-influenced visits that arrive without a referrer header.
+
+Google Search Console integration — Connect Search Console to a brand to correlate traditional search visibility with AI recommendation trends, and to generate topics directly from the queries your site already ranks for.]]></description>
+        <pubDate>Mon, 14 Sep 2026 09:00:00 GMT</pubDate>
+        <category>New</category>
+        <category>Integrations</category>
+    </item>
+    <item>
+        <title><![CDATA[Q2 2026 — AI Share of Voice, the Fact Checker agent and SOC 2 Type II]]></title>
+        <link>https://genezio.com/changelog/#q2-2026-share-of-voice-fact-checker</link>
+        <guid isPermaLink="false">genezio-changelog-q2-2026-share-of-voice-fact-checker</guid>
+        <description><![CDATA[The market moved from “are we mentioned” to “are we mentioned correctly.” This quarter followed it: a new headline metric, an agent that catches false claims, and the enterprise certifications and coverage to run all of it at scale.
+
+AI Share of Voice — A new headline metric measuring a brand's share of visibility across AI answers versus its competitors, with sentence-level brand attribution per AI response.
+
+Fact Checker agent and the Knowledge Base Layer — The Knowledge Base Layer is a brand truth layer that verifies what an AI engine states during a conversation. The Fact Checker agent sits on top of it and flags when an engine says something false about your brand — bringing the agent suite to five: Prompter, Comparer, Introspector, Recommender and Fact Checker.
+
+Brand Perception & Sentiment — How AI talks about a brand, not just whether it does: tone, trend over time, and an AI-perceived SWOT.
+
+Passage-Level Retrieval Analysis — Captures the exact text fragments AI engines cite and maps them back to the source sections they came from, so you can see which passages are being retrieved and which are ignored.
+
+CDN Log Ingestion & Clustering — Process server logs to show which AI crawlers visit a site and which of those visits turn into citations — tying crawl activity to real server traffic instead of estimates.
+
+Shopping Analysis — A new module for tracking product and retailer visibility inside AI shopping conversations. Launched and in active testing with clients.
+
+Enterprise readiness and engine coverage — SOC 2 Type II certification achieved, removing a recurring blocker in enterprise procurement, alongside broader authentication and coverage.
+
+Content Hub templates and per-topic engines — Reusable templates for generating on-brand articles and briefs, plus the ability to choose which AI engines run on each topic for more granular testing.
+
+Other updates:
+• Introspector positive signals: positive statements and positive citation scoring added to the Introspector agent.
+• Notifications system with automatic alerts.
+• Custom tagging system for organising topics with your own labels.]]></description>
+        <pubDate>Tue, 30 Jun 2026 09:00:00 GMT</pubDate>
+        <category>New</category>
+        <category>Improved</category>
+        <category>Beta</category>
+        <category>Integrations</category>
+    </item>
+    <item>
+        <title><![CDATA[Q1 2026 — Self-serve goes live, and the platform consolidates around four agents]]></title>
+        <link>https://genezio.com/changelog/#q1-2026-self-serve-four-agents</link>
+        <guid isPermaLink="false">genezio-changelog-q1-2026-self-serve-four-agents</guid>
+        <description><![CDATA[Self-serve onboarding went into production in January, and the product consolidated around four specialised agents — each with a strategy adapted to the customer's business type.
+
+Self-serve onboarding in production — Self-serve functionality went live in January, removing the manual setup that every new account previously depended on.
+
+The four-agent suite — Prompter, Comparer, Introspector and Recommender were refined into a coherent suite, each running a strategy adapted to the customer's business type. Personas and multi-turn conversations were sharpened as the core differentiators.
+
+Page Analyser — Explains why a competitor's article gets cited — comparing the content against the topic and scenario it is winning on.
+
+Content Generation — Generate an article or a brief from a topic, a set of keywords and a subject, closing the gap between finding a content gap and filling it.
+
+Competitor head-to-head analysis and query fanout clustering — Direct brand-versus-competitor comparison, and clustering of the fanned-out queries an engine generates from a single prompt.
+
+Citation classification — Every citation is now classified as first-party, competitor, social media, news or community, which required auto-detecting the domains each competitor owns.
+
+Chat with your data — Ask questions of your own visibility data in natural language, including through the Genezio connector for Claude as a skill and over MCP.
+
+Other updates:
+• A Recommender question now closes the Comparer flow.
+• UI Automation workers that run logged out or with a free account.
+• Prompt Test Framework.
+• Introspector KPIs, plus Recommender fixes to recommended competitors and to how recommendation rate is calculated.
+• More actionable insights, and an improved empty state after onboarding.
+• DRIP email campaigns.]]></description>
+        <pubDate>Tue, 31 Mar 2026 09:00:00 GMT</pubDate>
+        <category>New</category>
+        <category>Improved</category>
+    </item>
+    <item>
+        <title><![CDATA[Q4 2025 — A rebuilt Brand Analysis experience and agency mode]]></title>
+        <link>https://genezio.com/changelog/#q4-2025-brand-analysis-redesign</link>
+        <guid isPermaLink="false">genezio-changelog-q4-2025-brand-analysis-redesign</guid>
+        <description><![CDATA[Brand Analysis became the primary driver of sales conversations, so the quarter was spent rebuilding it — new interface, deeper analysis types, and a mode for agencies running several brands.
+
+New Brand Analysis UI and UX — A rebuilt interface, significantly more advanced than the previous dashboard and designed for deeper analytical exploration.
+
+Fanout queries and statements — Analysis now works at the level of the queries an engine fans out from a prompt, and of the individual statements it makes about a brand.
+
+Three new topic types — Introspector, Recommender and Comparer joined the product as distinct topic types, each probing brand presence from a different angle.
+
+Agency mode — Agency mode in Brand Analysis, for teams running the platform across multiple client brands.
+
+Other updates:
+• Brand Analysis self-serve reached near-production readiness.
+• The Customer Support Evaluation Platform continued in enterprise testing.]]></description>
+        <pubDate>Wed, 31 Dec 2025 09:00:00 GMT</pubDate>
+        <category>New</category>
+        <category>Improved</category>
+    </item>
+    <item>
+        <title><![CDATA[Q3 2025 — Brand Analysis ships, across four AI engines]]></title>
+        <link>https://genezio.com/changelog/#q3-2025-brand-analysis-ships</link>
+        <guid isPermaLink="false">genezio-changelog-q3-2025-brand-analysis-ships</guid>
+        <description><![CDATA[Brand Analysis went from feature to finished product this quarter, with coverage across the four engines that mattered most to customers, and user management to go with it.
+
+Brand Analysis — The Brand Analysis feature was completed — a periodic report giving customers insight into their brand's visibility across leading LLMs.
+
+Four AI engines — A brand can now be analysed across ChatGPT, Google AI Overview, Perplexity and Google AI Mode.
+
+User management — User management functionality was added to the dashboard.
+
+Other updates:
+• The Customer Support Evaluation Platform entered testing with an enterprise client.]]></description>
+        <pubDate>Tue, 30 Sep 2025 09:00:00 GMT</pubDate>
+        <category>New</category>
+    </item>
+    <item>
+        <title><![CDATA[Q2 2025 — More evaluation agents, audit logs and a metrics dashboard]]></title>
+        <link>https://genezio.com/changelog/#q2-2025-agents-audit-logs</link>
+        <guid isPermaLink="false">genezio-changelog-q2-2025-agents-audit-logs</guid>
+        <description><![CDATA[The agent library grew in both directions this quarter — existing agents got better, and three new ones covered ground the suite had been missing.
+
+Three new agents — Industry Bias, Sanitization and Capability Detection joined the evaluation agent library.
+
+Improved existing agents — Fact Checker, Functional Tester, Offtopic, Competitor Advertising and Security were all improved.
+
+Metrics dashboard — A dashboard showing how a chatbot has evolved over time, rather than only how it performs in a single run.
+
+Audit logs — Audit logs were added to the platform.
+
+Other updates:
+• Improved testing conversations.
+• Better fact and testing scenario generation.]]></description>
+        <pubDate>Mon, 30 Jun 2025 09:00:00 GMT</pubDate>
+        <category>New</category>
+        <category>Improved</category>
+    </item>
+    <item>
+        <title><![CDATA[Q1 2025 — The Evaluation Agents Platform]]></title>
+        <link>https://genezio.com/changelog/#q1-2025-evaluation-agents-platform</link>
+        <guid isPermaLink="false">genezio-changelog-q1-2025-evaluation-agents-platform</guid>
+        <description><![CDATA[The quarter the platform pivoted: a new core product for evaluating agentic AI applications, with a dashboard, a scalable simulation engine, and the first library of testing agents.
+
+Evaluation Agents Platform — A new core product, with a dashboard where clients manage knowledge bases, personas, test agent libraries, simulations and detailed reports.
+
+Conversations at scale — Clients can run thousands of conversations in parallel, across multiple languages and configurations.
+
+The first AI Test Agents Library — The first version of our own suite of testing agents, covering three families.
+
+Other updates:
+• A new homepage and messaging aligned with the agentic app positioning.
+• Infrastructure shifted to support Python-first, agent-based development and deployment.]]></description>
+        <pubDate>Mon, 31 Mar 2025 09:00:00 GMT</pubDate>
+        <category>New</category>
+    </item>
+</channel>
+</rss>
