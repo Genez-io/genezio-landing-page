@@ -229,7 +229,7 @@ export const changelog: ChangelogEntry[] = [
     ],
     otherUpdates: [
       "Brand Analysis self-serve reached near-production readiness.",
-      "The Customer Support Evaluation Platform continued in testing at Superbet.",
+      "The Customer Support Evaluation Platform continued in enterprise testing.",
     ],
   },
   {
@@ -258,7 +258,7 @@ export const changelog: ChangelogEntry[] = [
       },
     ],
     otherUpdates: [
-      "The Customer Support Evaluation Platform entered testing at Superbet.",
+      "The Customer Support Evaluation Platform entered testing with an enterprise client.",
     ],
   },
   {

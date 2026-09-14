@@ -5,7 +5,7 @@
     <link>https://genezio.com/changelog/</link>
     <description>New features, improvements and fixes shipped to the Genezio platform.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 11:22:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 11:33:58 GMT</lastBuildDate>
     <atom:link href="https://genezio.com/changelog.xml" rel="self" type="application/rss+xml" />
 
     <item>
@@ -100,7 +100,7 @@ Agency mode — Agency mode in Brand Analysis, for teams running the platform ac
 
 Other updates:
 • Brand Analysis self-serve reached near-production readiness.
-• The Customer Support Evaluation Platform continued in testing at Superbet.]]></description>
+• The Customer Support Evaluation Platform continued in enterprise testing.]]></description>
         <pubDate>Wed, 31 Dec 2025 09:00:00 GMT</pubDate>
         <category>New</category>
         <category>Improved</category>
@@ -118,7 +118,7 @@ Four AI engines — A brand can now be analysed across ChatGPT, Google AI Overvi
 User management — User management functionality was added to the dashboard.
 
 Other updates:
-• The Customer Support Evaluation Platform entered testing at Superbet.]]></description>
+• The Customer Support Evaluation Platform entered testing with an enterprise client.]]></description>
         <pubDate>Tue, 30 Sep 2025 09:00:00 GMT</pubDate>
         <category>New</category>
     </item>
