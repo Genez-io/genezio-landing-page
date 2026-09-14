@@ -15,7 +15,6 @@ export type ChangelogTag =
   | "New"
   | "Improved"
   | "Fixed"
-  | "Beta"
   | "API"
   | "Integrations";
 
@@ -84,7 +83,7 @@ export const changelog: ChangelogEntry[] = [
     title: "AI Share of Voice, the Fact Checker agent and SOC 2 Type II",
     summary:
       "The market moved from “are we mentioned” to “are we mentioned correctly.” This release followed it: a new headline metric, an agent that catches false claims, and the enterprise certifications and coverage to run all of it at scale.",
-    tags: ["New", "Improved", "Beta", "Integrations"],
+    tags: ["New", "Improved", "Integrations"],
     highlights: [
       {
         title: "AI Share of Voice",
