@@ -8,15 +8,17 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
   ChangelogEntry,
   ChangelogTag,
+  formatChangelogMonth,
+  formatChangelogMonthShort,
+  formatChangelogYear,
   getChangelogEntries,
-  splitPeriod,
 } from "@/lib/changelog";
 
 const entries = getChangelogEntries();
 
 const CHANGELOG_TITLE = "Genezio Changelog: Product Updates & Release Notes";
 const CHANGELOG_DESCRIPTION =
-  "Every capability shipped to the Genezio platform, quarter by quarter — AI Share of Voice, the Fact Checker agent, Content Hub, citation analysis, enterprise auth and engine coverage.";
+  "Every capability shipped to the Genezio platform — AI Share of Voice, the Fact Checker agent, Content Hub, citation analysis, enterprise auth and engine coverage.";
 
 const FILTERS: ("All" | ChangelogTag)[] = [
   "All",
@@ -75,27 +77,25 @@ function FilterChip({
 }
 
 function ReleaseEntry({ entry }: { entry: ChangelogEntry }) {
-  const { quarter, year } = splitPeriod(entry.period);
-
   return (
     <article
       id={entry.slug}
       className="relative scroll-mt-28 lg:grid lg:grid-cols-[190px_minmax(0,1fr)] lg:gap-14"
     >
-      {/* Period rail — sticks alongside the release while it scrolls */}
+      {/* Date rail — month and year only; see changelog.ts on why no day */}
       <div className="mb-6 lg:mb-0">
         <div className="lg:sticky lg:top-28">
           <time
             dateTime={entry.date}
             className="block text-sm font-semibold text-white"
           >
-            <span className="lg:hidden">{entry.period}</span>
+            <span className="lg:hidden">{formatChangelogMonth(entry.date)}</span>
             <span className="hidden lg:block lg:text-2xl lg:font-semibold lg:tracking-[-0.02em]">
-              {quarter}
+              {formatChangelogMonthShort(entry.date)}
             </span>
           </time>
           <div className="mt-1 hidden text-xs font-semibold uppercase tracking-[0.2em] text-white/35 lg:block">
-            {year}
+            {formatChangelogYear(entry.date)}
           </div>
           <a
             href={`#${entry.slug}`}
@@ -256,9 +256,9 @@ export function Changelog() {
             </h1>
 
             <p className="mb-8 text-lg leading-relaxed text-white/60 md:text-xl">
-              Every capability we have shipped, quarter by quarter — from the
-              first evaluation agents to AI Share of Voice, the Fact Checker and
-              enterprise-grade coverage.
+              Every capability we have shipped — from the first evaluation
+              agents to AI Share of Voice, the Fact Checker and enterprise-grade
+              coverage.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
@@ -275,7 +275,7 @@ export function Changelog() {
                   className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-5 py-2.5 text-sm font-medium text-emerald-300 transition-colors hover:border-emerald-400/40"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                  Latest: {latest.period}
+                  Latest: {formatChangelogMonth(latest.date)}
                 </a>
               )}
             </div>
