@@ -19,7 +19,7 @@ const achievements = [
     icon: TrendingUpIcon,
     title: "Measured Customer Impact",
     description:
-      "Customers see rapid results. In our BCR case study, AI visibility on key topics doubled in weeks.",
+      "Customers see rapid results. In our BCR case study, AI visibility on key topics grew by double digits in weeks.",
     metric: "2x+",
     metricLabel: "Growth",
   },
