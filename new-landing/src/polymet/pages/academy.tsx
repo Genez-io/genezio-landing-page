@@ -172,7 +172,7 @@ export function Academy() {
   return (
     <>
       <PolymetSEO
-        title="Genezio Academy | Workshops on AI Recommendation"
+        title="Genezio Academy | workshops on AI Recommendation"
         description="Genezio Academy: three hands-on workshops that put your team in a room with your own AI recommendation data. Book a workshop to get started."
         canonicalPath="/academy/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"
