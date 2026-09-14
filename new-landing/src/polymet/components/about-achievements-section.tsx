@@ -11,7 +11,7 @@ const achievements = [
     icon: BuildingIcon,
     title: "Enterprise Trust & Adoption",
     description:
-      "Trusted by brands including BCR, Bitdefender, Vodafone, CBRE, FlowX, and Auchan, demonstrating traction with both enterprise and high-growth teams.",
+      "Trusted by leading brands including BCR, Bitdefender, Vodafone, CBRE, and Auchan.",
     metric: "Fortune 500",
     metricLabel: "Clients",
   },
@@ -19,23 +19,23 @@ const achievements = [
     icon: TrendingUpIcon,
     title: "Measured Customer Impact",
     description:
-      "In Genezio's BCR customer story, brand presence in AI conversations on key topics grew by double digits in just a few weeks, practical lift, not theoretical potential.",
+      "Customers see rapid results. In our BCR case study, AI visibility on key topics doubled in weeks.",
     metric: "2x+",
     metricLabel: "Growth",
   },
   {
     icon: BrainIcon,
-    title: "AI Recommendation Innovation",
+    title: "AI-Native Innovation",
     description:
-      "Genezio differentiates through multi-turn, persona-led conversational analysis and direct brand-perception workflows, going beyond standard mention tracking.",
+      "We test multi-turn chats and buyer personas to uncover true brand preference.",
     metric: "AI-Native",
     metricLabel: "Platform",
   },
   {
     icon: ShieldCheckIcon,
-    title: "Secure, Scalable Operations",
+    title: "Secure Enterprise Security",
     description:
-      "SOC 2 Type II certified, supporting enterprise-grade deployment for organizations that need secure multi-brand collaboration across regions.",
+      "SOC 2 Type II certified with bank-grade data protection for global teams.",
     metric: "SOC 2",
     metricLabel: "Type II",
   },

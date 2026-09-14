@@ -11,25 +11,25 @@ const values = [
     icon: CrosshairIcon,
     title: "Actionable Clarity",
     description:
-      "We turn complex AI search signals into specific next steps. Instead of merely showing that a competitor is cited more often, Genezio helps identify which content gap or source relationship should be fixed first.",
+      "We turn complex AI signals into clear steps. We show exactly which content gap or source to fix first.",
   },
   {
     icon: TrophyIcon,
-    title: "Recommendation Over Vanity Metrics",
+    title: "Recommendations First",
     description:
-      "We focus on whether AI systems actually choose and endorse a brand, not just whether it appears in a long list of options. That distinction drives every feature we build.",
+      "We focus on whether AI engines recommend your brand. Appearing in a long list is not enough.",
   },
   {
     icon: UsersRoundIcon,
-    title: "Collaboration at Scale",
+    title: "Team Collaboration",
     description:
-      "Modern AI search optimization spans in-house marketers, SEO specialists, PR teams, and outside agencies. Genezio is built to centralize that work in one workflow.",
+      "AI search touches SEO, PR, and content. Genezio brings in-house teams and agencies into one shared workflow.",
   },
   {
     icon: ShieldCheckIcon,
     title: "Trust Through Evidence",
     description:
-      "Our real-world impact comes from citation monitoring, source analysis, and persona-based testing that show why AI says what it says, giving teams evidence they can use in strategy and reporting.",
+      "We back every insight with clear proof. See the exact citations, reviews, and test chats behind each score.",
   },
 ];
 

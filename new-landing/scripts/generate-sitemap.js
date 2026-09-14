@@ -22,7 +22,6 @@ const staticRoutes = [
     '/in-chat-shopping',
     '/mcp',
     '/security',
-    'https://trust.genezio.com/',
     '/methodology',
     '/academy',
     '/changelog',

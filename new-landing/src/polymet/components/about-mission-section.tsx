@@ -18,21 +18,43 @@ export function AboutMissionSection() {
           <CrosshairIcon className="w-6 h-6 text-emerald-400" />
         </div>
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
           Our Mission
         </h2>
 
         <p className="text-xl md:text-2xl text-white/90 font-medium mb-6 leading-relaxed max-w-3xl mx-auto">
-          Help brands earn trustworthy AI recommendations, not just
-          appearances, by turning AI-generated conversations into measurable,
-          actionable growth opportunities.
+          Help brands earn trusted AI recommendations, not just name mentions.
+          We turn AI chat data into clear steps for business growth.
         </p>
 
-        <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-3xl mx-auto">
-          We want every marketing team to have clear visibility into how AI
-          platforms describe, compare, cite, and recommend their brand across
-          personas, scenarios, and markets.
+        <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-3xl mx-auto mb-10">
+          Every marketing team deserves clear answers to three key questions:
         </p>
+
+        {/* Structured bullet points */}
+        <div className="grid sm:grid-cols-3 gap-4 text-left max-w-3xl mx-auto">
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-xl p-5">
+            <div className="text-emerald-400 font-semibold text-sm mb-1">1. Perception</div>
+            <div className="text-white font-medium text-sm mb-1">How AI describes you</div>
+            <p className="text-xs text-white/60 leading-relaxed">
+              Understand the exact words and traits AI uses for your brand.
+            </p>
+          </div>
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-xl p-5">
+            <div className="text-emerald-400 font-semibold text-sm mb-1">2. Preference</div>
+            <div className="text-white font-medium text-sm mb-1">Who AI recommends</div>
+            <p className="text-xs text-white/60 leading-relaxed">
+              Find out when AI picks you over rivals in direct comparisons.
+            </p>
+          </div>
+          <div className="bg-[#0A0A0C] border border-white/10 rounded-xl p-5">
+            <div className="text-emerald-400 font-semibold text-sm mb-1">3. Sources</div>
+            <div className="text-white font-medium text-sm mb-1">What AI cites</div>
+            <p className="text-xs text-white/60 leading-relaxed">
+              Identify the exact web pages and reviews that train the answers.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

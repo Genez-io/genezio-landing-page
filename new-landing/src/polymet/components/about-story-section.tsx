@@ -12,31 +12,31 @@ const milestones = [
     icon: RocketIcon,
     title: "AI-Native Launch",
     description:
-      "Built from scratch as an AI-native platform, not a retrofitted SEO add-on.",
+      "Built from scratch for AI discovery, not adapted from old SEO tools.",
   },
   {
     icon: MessageSquareIcon,
-    title: "Multi-Turn Conversations",
+    title: "Multi-Turn Chats",
     description:
-      "Introduced multi-turn conversation analysis to mirror real buyer journeys.",
+      "Tests multi-step chats to match real buyer habits.",
   },
   {
     icon: UsersIcon,
     title: "Persona-Based Tracking",
     description:
-      "Expanded persona-based tracking so teams see how AI responds to different buyer types.",
+      "Shows how AI answers vary by buyer role and industry.",
   },
   {
     icon: LinkIcon,
     title: "Citation Monitoring",
     description:
-      "Added citation monitoring and direct perception analysis for full-funnel visibility.",
+      "Tracks web sources that shape AI answers and brand mentions.",
   },
   {
     icon: BuildingIcon,
     title: "Enterprise Adoption",
     description:
-      "Trusted by Fortune 500 teams and brands including BCR, Bitdefender, Vodafone, CBRE, and Auchan.",
+      "Trusted by leaders like BCR, Bitdefender, Vodafone, and Auchan.",
   },
 ];
 
@@ -65,31 +65,59 @@ export function AboutStorySection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Story narrative */}
           <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                The shift from keywords to AI answers
+              </h3>
+              <p className="text-white/70 leading-relaxed text-base md:text-lg mb-4">
+                Search has changed forever. Buyers now rely on ChatGPT, Google AI
+                Overviews, Perplexity, and Claude for advice. Traditional SEO
+                tools track ranks and backlinks, but they cannot tell you which
+                brand AI recommends.
+              </p>
+              <p className="text-white/70 leading-relaxed text-base md:text-lg">
+                Your brand can appear in an answer and still lose the sale. An AI
+                might list three products, yet advise the buyer to pick your
+                competitor.
+              </p>
+            </div>
+
+            <div className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6">
+              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4 text-emerald-400">
+                What marketing teams need today
+              </h4>
+              <ul className="space-y-3 text-sm text-white/70">
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
+                  <span>
+                    <strong className="text-white">Recommendations over mentions:</strong> Win
+                    the preferred pick, not just a passing name-drop.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
+                  <span>
+                    <strong className="text-white">Real buyer dialogues:</strong> Test full
+                    conversations, because buyers ask follow-up questions.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
+                  <span>
+                    <strong className="text-white">Clear action steps:</strong> Learn which
+                    pages and citations to fix first.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
             <p className="text-white/70 leading-relaxed text-base md:text-lg">
-              As generative search expanded across ChatGPT, Google AI Overviews,
-              Gemini, Perplexity, and Claude, our team saw a gap that classic SEO
-              suites could not fully solve. Marketers could measure rankings,
-              traffic, and backlinks, yet they still lacked a reliable way to
-              understand{" "}
+              Genezio gives teams an{" "}
               <span className="text-white font-medium">
-                AI recommendation intelligence
-              </span>{" "}
-              for marketing teams that need to win actual AI recommendations, not
-              just mentions.
-            </p>
-            <p className="text-white/70 leading-relaxed text-base md:text-lg">
-              A brand can appear in an answer and still lose the recommendation.
-              Since day one, what has stayed constant is our focus on helping
-              brands understand how AI engines see them, how buyer personas
-              experience them, and what actions most improve the odds of being
-              recommended.
-            </p>
-            <p className="text-white/70 leading-relaxed text-base md:text-lg">
-              The trajectory has been consistent: move from raw visibility
-              tracking to a practical{" "}
-              <span className="text-white font-medium">
-                operating system for AI search visibility
-              </span>, recommendation optimization, and cross-team execution.
+                operating system for AI visibility
+              </span>
+              . We show how AI perceives you, who it prefers, and how to improve
+              your win rate.
             </p>
           </div>
 

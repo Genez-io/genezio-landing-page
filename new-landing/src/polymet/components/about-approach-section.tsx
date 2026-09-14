@@ -5,23 +5,35 @@ const pillars = [
   {
     number: "01",
     icon: BarChart3Icon,
-    title: "Measure What Matters",
-    description:
-      "Many platforms stop at mention counts or share of voice. Genezio distinguishes between visibility and recommendation because a mention does not guarantee preference. That difference matters in real buying journeys, especially where the asker's role, intent, and follow-up questions reshape the result.",
+    title: "Measure Real Recommendations",
+    subtitle: "A mention is not an endorsement.",
+    points: [
+      "Track recommendation rate vs. raw mentions",
+      "Uncover direct competitor preference",
+      "Measure buyer sentiment across AI engines",
+    ],
   },
   {
     number: "02",
     icon: MessageCircleIcon,
-    title: "Analyze Real Conversations",
-    description:
-      "Instead of relying only on static prompt snapshots, Genezio emphasizes multi-turn interactions and scenario logic. This reveals how recommendations shift between discovery, comparison, and decision stages, critical for teams evaluating AI-generated conversation visibility by persona.",
+    title: "Test Multi-Turn Conversations",
+    subtitle: "Buyers ask follow-up questions.",
+    points: [
+      "Simulate complete buyer chat journeys",
+      "Test persona-specific buying scenarios",
+      "See how AI answers shift as chats deepen",
+    ],
   },
   {
     number: "03",
     icon: ZapIcon,
-    title: "Prioritize Action Over Dashboards",
-    description:
-      "Genezio surfaces concrete next steps: publish on sources AI already trusts, create missing comparison content, strengthen product-page clarity, monitor cited URLs, and correct weak or outdated narratives. Practical orientation over another analytics layer.",
+    title: "Prioritize Action Over Data",
+    subtitle: "Clear next steps over vanity dashboards.",
+    points: [
+      "Pinpoint trusted sources AI quotes most",
+      "Fix missing comparison and pricing pages",
+      "Correct outdated facts and weak narratives",
+    ],
   },
 ];
 
@@ -41,9 +53,8 @@ export function AboutApproachSection() {
             Our Approach
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
-            AI-native, recommendation-focused, and operational by design.
-            Measure AI perception clearly, connect it to business outcomes, and
-            give teams enough specificity to move quickly.
+            Built for action. We measure AI perception clearly, connect it to business
+            revenue, and give your team clear tasks to improve.
           </p>
         </div>
 
@@ -54,25 +65,36 @@ export function AboutApproachSection() {
             return (
               <div
                 key={index}
-                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors"
+                className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors flex flex-col justify-between"
               >
-                {/* Number + icon chip */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-emerald-400" />
+                <div>
+                  {/* Number + icon chip */}
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <span className="text-sm font-semibold tracking-wide text-white/30">
+                      {pillar.number}
+                    </span>
                   </div>
-                  <span className="text-sm font-semibold tracking-wide text-white/30">
-                    {pillar.number}
-                  </span>
-                </div>
 
-                {/* Content */}
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-4 leading-tight">
-                  {pillar.title}
-                </h3>
-                <p className="text-white/60 leading-relaxed text-sm">
-                  {pillar.description}
-                </p>
+                  {/* Content */}
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-1 leading-tight">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs text-emerald-400/90 font-medium mb-4">
+                    {pillar.subtitle}
+                  </p>
+
+                  <ul className="space-y-2.5 pt-2 border-t border-white/10">
+                    {pillar.points.map((point, pIdx) => (
+                      <li key={pIdx} className="flex items-start gap-2 text-xs text-white/70">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             );
           })}
