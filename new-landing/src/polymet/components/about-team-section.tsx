@@ -9,28 +9,28 @@ export function AboutTeamSection() {
       role: "Co-Founder & CEO",
       image: "/authors/andrei-pitis.webp",
       to: "/blog/author/andrei-pitis/",
-      bio: "Strategic leader and veteran tech entrepreneur with 30+ years of experience, driving Genezio's vision to redefine AI-era search visibility.",
+      bio: "Serial tech entrepreneur with 30+ years of experience. Leads Genezio's mission to redefine AI search visibility.",
     },
     {
       name: "Bogdan Ripa",
       role: "Co-Founder & CPO",
       image: "/authors/bogdan-ripa.webp",
       to: "/blog/author/bogdan-ripa/",
-      bio: "Drives product vision and AI-native platform architecture, ensuring Genezio models AI behavior accurately for marketing teams.",
+      bio: "Veteran product leader. Drives platform design and models real AI engine behavior for marketing teams.",
     },
     {
       name: "Paula Cionca",
       role: "Co-Founder & CMO",
       image: "/authors/paula-cionca.webp",
       to: "/blog/author/paula-cionca/",
-      bio: "PhD in AI, drives marketing and customer success at Genezio. Publishes widely on recommendation rate, citations, perception analysis, and the evolving role of GEO in modern marketing.",
+      bio: "PhD in AI. Leads growth and marketing, publishing key research on citations, GEO, and AI recommendation rates.",
     },
     {
       name: "Bogdan Vlad",
       role: "Co-Founder & CTO",
       image: "/authors/bogdan-vlad.webp",
       to: "/blog/author/bogdan-vlad/",
-      bio: "Architects high-performance backend systems and AI integrations, drawing on deep engineering experience from Fitbit and Vector Watch.",
+      bio: "Former engineering leader at Fitbit and Vector Watch. Architect of Genezio's high-speed cloud systems.",
     },
   ];
 
@@ -49,8 +49,8 @@ export function AboutTeamSection() {
             The Team
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
-            Led by founders and operators with deep expertise in product, cloud
-            infrastructure, brand strategy, and AI-era growth.
+            Founded by product, engineering, and marketing leaders with decades
+            of experience building high-scale tech companies.
           </p>
         </div>
 
@@ -90,8 +90,7 @@ export function AboutTeamSection() {
             <CodeIcon className="w-7 h-7 text-emerald-400 mb-3" />
             <h4 className="text-white font-semibold mb-2">Product-Minded</h4>
             <p className="text-white/60 text-sm">
-              Technical rigor to model AI behavior accurately across engines and
-              scenarios.
+              Deep technical rigor to model AI behavior across engines.
             </p>
           </div>
           <div className="flex flex-col items-center text-center bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
@@ -100,16 +99,14 @@ export function AboutTeamSection() {
               Commercially Focused
             </h4>
             <p className="text-white/60 text-sm">
-              Clear workflows for internal stakeholders and external agencies
-              alike.
+              Clear workflows for internal teams and agency partners.
             </p>
           </div>
           <div className="flex flex-col items-center text-center bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
             <UsersIcon className="w-7 h-7 text-emerald-400 mb-3" />
             <h4 className="text-white font-semibold mb-2">Fast-Moving</h4>
             <p className="text-white/60 text-sm">
-              Analytical and grounded in practical outcomes under changing search
-              conditions.
+              Agile and data-driven as AI search continues to evolve.
             </p>
           </div>
         </div>

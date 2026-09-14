@@ -11,39 +11,39 @@ import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 const capabilities = [
   {
     icon: EyeIcon,
-    title: "AI Visibility & Recommendation Tracking",
+    title: "AI Recommendation Tracking",
     description:
-      "Track your brand across ChatGPT, Google AI Overviews, Gemini, Perplexity, and Claude, measuring not just mentions, but actual recommendations.",
+      "Track your brand across ChatGPT, Google AI Overviews, Perplexity, Gemini, and Claude. Measure true recommendations, not just mentions.",
   },
   {
     icon: UsersIcon,
-    title: "Persona-Based Conversation Analysis",
+    title: "Persona-Based Chat Analysis",
     description:
-      "See how AI-generated conversations change for developers, B2B buyers, journalists, or consumers, revealing persona-specific recommendation patterns.",
+      "See how AI answers change for B2B buyers, developers, or consumers. Win recommendations across every target audience.",
   },
   {
     icon: SwordsIcon,
-    title: "Competitor Comparisons",
+    title: "Competitor Benchmarking",
     description:
-      "Understand not only whether you are mentioned by topic and scenario, but when AI actively prefers a rival over your brand.",
+      "Analyze head-to-head showdowns. Know when AI prefers a competitor over your brand, and uncover why.",
   },
   {
     icon: LinkIcon,
-    title: "Citation Intelligence & Monitoring",
+    title: "Citation Intelligence",
     description:
-      "See which publishers and URLs shape AI answers and identify where corrective work should happen to strengthen your citations.",
+      "Discover which websites, blogs, and reviews feed AI answers. Find citation gaps and correct outdated information.",
   },
   {
     icon: LightbulbIcon,
-    title: "Action Recommendations",
+    title: "Actionable Recommendations",
     description:
-      "Get specific content creation opportunities, website improvements, citation-gap fixes, and strategies to improve AI recommendations.",
+      "Get clear steps to improve your visibility. Know what content to publish, which pages to update, and where to build trust.",
   },
   {
     icon: GlobeIcon,
     title: "Multi-Brand & Global Support",
     description:
-      "Manage several brands, countries, languages, or agency relationships from one dashboard, ideal for enterprise and agency teams.",
+      "Manage multiple brands, markets, and languages from one central place. Built for enterprise teams and agencies.",
   },
 ];
 
@@ -67,10 +67,8 @@ export function AboutWhatWeDoSection() {
             <span className="text-white font-medium">
               AI recommendation intelligence platform
             </span>{" "}
-            designed for marketing leaders, growth teams, PR teams, SEO teams,
-            and agencies. Think of it as AI market intelligence for the
-            answer-engine era: how AI picks, describes, and recommends brands,
-            and what to do about it.
+            for marketing, SEO, and PR teams. We reveal how AI engines pick and
+            describe brands—and give you clear steps to win the recommendation.
           </p>
         </div>
 
@@ -84,8 +82,10 @@ export function AboutWhatWeDoSection() {
                 className="bg-[#0A0A0C] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors"
               >
                 {/* Icon + title */}
-                <div className="flex items-center gap-3 mb-2">
-                  <Icon className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-emerald-400" />
+                  </div>
                   <h3 className="text-lg md:text-xl font-semibold text-white leading-tight">
                     {capability.title}
                   </h3>
@@ -100,13 +100,12 @@ export function AboutWhatWeDoSection() {
 
         {/* Bottom context */}
         <p className="text-center text-white/60 text-base md:text-lg mt-12 max-w-3xl mx-auto leading-relaxed">
-          Instead of fragmenting insights across spreadsheets, prompt lists, and
-          separate vendor tools, Genezio creates a{" "}
+          Stop juggling messy spreadsheets and separate prompt lists. Genezio gives your
+          marketing team a{" "}
           <span className="text-white font-medium">
-            shared source of truth
+            single command center
           </span>{" "}
-          for coordinating SEO, content, brand, and PR activity around AI
-          discovery.
+          to coordinate SEO, PR, and content for AI search.
         </p>
       </div>
     </section>

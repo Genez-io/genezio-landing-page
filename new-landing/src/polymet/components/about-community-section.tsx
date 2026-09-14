@@ -43,9 +43,9 @@ export function AboutCommunitySection() {
                 >
                   blog
                 </a>
-               , we help marketers understand terms such as GEO, AEO, AI
-                visibility, and recommendation rate. Good decisions require
-                shared language, especially in a rapidly evolving industry.
+                , we help marketers master AI search terms like GEO, AEO, and
+                recommendation rate. Teams make better decisions when everyone
+                shares a common language.
               </p>
             </div>
 
@@ -59,11 +59,9 @@ export function AboutCommunitySection() {
                 </h3>
               </div>
               <p className="text-white/60 leading-relaxed text-sm">
-                We encourage accurate, high-quality, citation-worthy content
-                instead of low-value content inflation. We help teams reduce
-                wasted content production by focusing on assets, channels, and
-                partnerships most likely to improve visibility and
-                recommendations.
+                We champion trustworthy, high-quality content over low-value spam.
+                We help teams eliminate wasted effort by focusing on pages and
+                sources that truly earn AI recommendations.
               </p>
             </div>
           </div>
@@ -91,10 +89,9 @@ export function AboutCommunitySection() {
           </h2>
 
           <p className="text-base md:text-lg lg:text-xl text-white/60 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
-            Genezio is the AI-native platform that helps brands understand how
-            AI engines see them, improve how they are cited, and increase how
-            often they are recommended across personas, topics, and competitive
-            scenarios.
+            Genezio is built for the AI search era. We help you understand how AI
+            engines see your brand, improve where you are cited, and win more recommendations
+            across every buyer journey.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">

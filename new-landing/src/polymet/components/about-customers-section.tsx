@@ -10,23 +10,23 @@ import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 const questions = [
   {
     icon: UserCheckIcon,
-    text: "Which personas are most likely to hear our brand recommended?",
+    text: "Which buyer personas hear our brand recommended most?",
   },
   {
     icon: SwordsIcon,
-    text: "Which competitors win head-to-head comparisons in AI answers?",
+    text: "Which competitors beat us in head-to-head AI answers?",
   },
   {
     icon: LinkIcon,
-    text: "Which citations are helping or hurting us?",
+    text: "Which cited websites help or hurt our reputation?",
   },
   {
     icon: FileTextIcon,
-    text: "What content should our team or agency create next?",
+    text: "What content should our team create next to win?",
   },
   {
     icon: TrendingUpIcon,
-    text: "Where are the best opportunities to improve AI recommendation rates?",
+    text: "Where are our biggest opportunities to gain market share?",
   },
 ];
 
@@ -44,18 +44,15 @@ export function AboutCustomersSection() {
           <div>
             <HeroEyebrow className="mb-6 w-fit">Our customers</HeroEyebrow>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Teams that need more than prompt monitoring
+              Teams that need more than basic prompt tracking
             </h2>
             <p className="text-base md:text-lg text-white/60 leading-relaxed mb-4">
-              Genezio serves marketing professionals and decision-makers who
-              need more than prompt monitoring. Our customers include enterprise
-              brands, growth-stage companies, and agencies that want a central
-              AI recommendation intelligence platform.
+              Genezio serves marketing leaders who need more than prompt monitoring.
+              Our clients include enterprise brands, high-growth startups, and agencies.
             </p>
             <p className="text-base md:text-lg text-white/60 leading-relaxed">
-              Genezio gives everyone the same operating picture, whether the
-              work happens in-house, with a PR partner, or through multiple
-              content agencies.
+              We give your entire team one clear view. Coordinate in-house marketers,
+              PR partners, and content agencies in one place.
             </p>
           </div>
 

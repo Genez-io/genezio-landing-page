@@ -35,15 +35,30 @@ Before a single web result loads, ChatGPT runs this internal search:
 
 *UK supermarket price comparison which is cheapest Tesco Aldi Lidl Sainsbury's Asda Morrisons 2026*
 
-The user named no one, but ChatGPT named six chains and a year. None of that came off the web. It came from what the model already believed about the grocery market, and what it trusts to judge it, before it had looked anything up.
+The user named no one, but ChatGPT named six chains and a year. None of that came off the web. It came from what the model already believed about the grocery market, and what it trusts to judge it, before looking anything up.
 
-That internal search is called a query fanout, and it's the part of AI search that almost nobody is tracking. At [Genezio](https://genezio.com), we captured 220,000 of them from ChatGPT and matched 40,000 back to the exact prompts that produced them. There are two findings worth your time here, and then the part you can actually use: a map of what the model trusts, broken down by industry.
+That internal search is called a **query fanout**. It is the hidden phase of AI search that almost nobody tracks.
+
+At [Genezio](https://genezio.com), we captured 220,000 query fanouts from ChatGPT and matched 40,000 back to the exact prompts that triggered them.
+
+Below are two critical findings—followed by an industry breakdown of the sources AI trusts most.
 
 ## The fanout decides who's in the running
 
-A search-enabled model doesn't go looking for what you typed. It expands your prompt into a handful of web queries (that's the fanout) and those get built before any result comes back. They draw on three things: your prompt, the model's training knowledge, and whatever it remembers about you, both from earlier in the chat and across past sessions. So if something shows up in the fanout that wasn't in your prompt, the model put it there from its own priors.
+A search-enabled model doesn't simply look up what you typed.
 
-The first thing it puts there is competitors. In 11.9% of fanouts, ChatGPT volunteered a brand the user had never mentioned, and nearly all of those (9.9%) were competitors. That rate isn't flat, either. It rises with buying intent, and it peaks at the exact moment the user hands the decision to the model:
+Instead, it expands your prompt into several parallel web queries—the query fanout. These queries are built before any live web results return.
+
+They draw on three signals:
+- Your original prompt
+- The model's pre-training knowledge
+- What it remembers about you from current and past chats
+
+If a brand appears in the fanout that was not in your prompt, the model put it there from its own priors.
+
+The first thing it adds is competitors. In 11.9% of fanouts, ChatGPT volunteered a brand the user had never mentioned, and nearly all of them (9.9%) were competitors.
+
+This rate rises with buying intent, peaking when the user asks the model for a recommendation:
 
 | What the user is doing | Fanouts volunteering a competitor |
 | :---- | :---- |
@@ -51,13 +66,23 @@ The first thing it puts there is competitors. In 11.9% of fanouts, ChatGPT volun
 | Comparing brands they named | 6.1% |
 | **Asking the model to recommend** | **16.5%** |
 
-The second thing is the one that should make you care. Whatever the model searches for, it tends to keep. Of the brands ChatGPT searched for in its fanouts, 97% made it into the final answer and only 3% got dropped along the way. In practice, being searched for is being recommended. Any brand that wasn't searched for has to fight its way in from whatever pages got retrieved, which is a much weaker position to be in. That's the whole game, really, and you can't see any of it unless you're capturing the fanout itself.
+The second finding is even more decisive: **whatever the model searches for, it tends to keep**.
+
+Of all brands ChatGPT searched for in its fanouts, **97% survived into the final answer**. Only 3% got dropped along the way.
+
+In practice, being searched for means being recommended.
+
+Any brand not included in the fanout must fight its way in from whatever web pages happen to get retrieved—a far weaker position. You cannot see any of this without tracking the fanout itself.
 
 ## What the model trusts, by industry
 
-This is where the leverage is. The fanout doesn't only inject competitors. It also injects the sources the model trusts to judge your category. When it tacks "Reddit" or "Trustpilot" or "CQC" onto a search, it's showing you where it's about to go looking. And those sources aren't the same from one industry to the next. We measured them.
+This is where the real leverage lies.
 
-Find your row. The middle column is where the model goes to validate brands in your space. The right column is who it lines you up against.
+The fanout doesn't only inject competitors. It also injects the specific sources the model trusts to evaluate your category.
+
+When ChatGPT adds "Reddit", "Trustpilot", or "CQC" to a search, it reveals where it validates brands. These trusted authorities change dramatically by vertical.
+
+Find your industry in the table below. The middle column shows where the model goes to validate brands. The right column shows who it benchmarks you against:
 
 | Industry | Sources the model reaches for | Who it benchmarks you against |
 | :---- | :---- | :---- |
@@ -74,24 +99,73 @@ Find your row. The middle column is where the model goes to validate brands in y
 | **Automotive** | Reddit, reviews (12%), NCAP and spec sites | same-segment models |
 | **Grocery / retail** | reviews (21%), Which?, Reddit | the major chains |
 
-Two things hold across the whole table. One is that "reviews" is the model's default. It appends some version of "reviews" to a big share of fanouts in nearly every category, which makes review presence the price of entry no matter what you sell. The other is that the *named* authority is highly specific to the vertical. GitHub is what decides developer tools. CQC decides UK care homes. ADAC and Mumsnet decide baby products. Booking.com decides travel. Chase the wrong one and you've spent the effort for nothing.
+Two key takeaways emerge across the table:
+
+1. **"Reviews" is the baseline requirement.** ChatGPT adds "reviews" to a large share of queries across almost every industry. Having an active presence on review sites is the entry fee for AI search.
+
+2. **Named authorities are strictly vertical-specific:**
+   - **Developer tools:** GitHub decides.
+   - **Care homes:** CQC decides.
+   - **Baby products:** ADAC and Mumsnet decide.
+   - **Travel:** Booking.com and Reddit decide.
+
+Targeting the wrong authority in your vertical leads to wasted effort.
 
 ## So what do you do about it
 
-Start with your industry's named source rather than trying to be everywhere at once. A care home needs to be rated on CQC and the review sites. An antivirus needs AV-TEST results and a presence in the Reddit threads. A developer tool lives or dies on GitHub and Reddit. Find your row above and get your brand properly represented in the one or two places the model actually pulls from. You can't change the query the model decides to run, but you can make sure you're what it finds when it runs it.
+### 1. Win your industry's primary authority
 
-Then go after the queries it's already firing. ChatGPT rarely searches your name on its own. It searches your category plus a dimension it adds, and the three it adds most are reviews (18%), a comparison (18%), and pricing (10%). It's out there running "best \[category\] reviews," "\[your brand\] vs \[rival\]," and "\[your brand\] pricing" whether or not you've thought about it. If you don't have a page that wins those specific searches, the model runs them and you're just not in the results. Build the comparison and pricing pages it's demonstrably looking for.
+Focus on your vertical's trusted sources rather than trying to be everywhere at once:
+- **Care homes** must be rated on CQC and leading review portals.
+- **Antivirus tools** require AV-TEST scores and Reddit community discussions.
+- **Developer tools** depend on GitHub repositories and developer subreddits.
 
-The last one is about the fights you lose by default. When a user names two brands to compare, ChatGPT researches only one of them in 25% of head-to-heads, and which one gets dropped is roughly a coin flip, so being the bigger name is no protection. We saw it across a run of "Uniqlo vs Marks & Spencer" comparisons: the user pitted the two against each other, but the model fired fanouts like "Marks & Spencer clothing quality, durability, reviews," with Uniqlo's name nowhere in them. Uniqlo still made the written answer, but only by surfacing from retrieved pages, never because the model searched for it.
+You cannot rewrite the query the model decides to run. But you can make sure you are what it finds when it runs it.
 
-The fix isn't a "Uniqlo vs M\&S" page, because that's not what the model searched for. It searched for a durability question with only the rival's name attached. So what saves you from getting skipped is being unmissable on the dimension the model queried and the sources it trusts for your category, so even a search built around your competitor turns you up.
+### 2. Build pages for the queries AI already fires
 
-It isn't something you check once and file away. ChatGPT rewrites its fanouts on every run and reaches into memory each time, so the sources and competitors it pulls from keep moving. The only way to know whether you're being volunteered or skipped is to watch the fanouts over time, run as the personas your actual customers represent.
+ChatGPT rarely searches a brand name alone. Instead, it pairs your category with three core dimensions:
+- **Reviews** (18% of queries)
+- **Comparisons** (18% of queries)
+- **Pricing** (10% of queries)
 
-That's exactly what Genezio is built to do. It runs full multi-turn conversations as your real customer personas, captures the fanouts as they happen, and reports recommendation rates with proper confidence intervals rather than a single snapshot. [Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team today to see exactly which competitors and sources AI is injecting into conversations about your brand.
+The model is actively running searches like *"best [category] reviews"*, *"[your brand] vs [rival]"*, and *"[your brand] pricing"*.
+
+If you do not publish pages that address these queries, the model searches and your brand simply does not appear. Build the comparison and pricing assets it actively seeks out.
+
+### 3. Protect against the 25% "coin-flip" drop
+
+When users ask ChatGPT to compare two brands, the model searches for only one of them in **25% of head-to-head comparisons**.
+
+Which brand gets omitted is roughly a coin flip (50.4% vs 44.5%). Being the larger, more established brand is no defense.
+
+In tests comparing Uniqlo against Marks & Spencer, the model ran queries like *"Marks & Spencer clothing quality, durability, reviews"*, leaving Uniqlo out entirely. Uniqlo reached the final answer only if retrieved third-party pages happened to mention them.
+
+### 4. Optimize category dimensions, not just comparison pages
+
+Creating a standard comparison page is not enough. The model queried a specific attribute—durability—paired only with the competitor's name.
+
+To prevent being dropped, your brand must be prominent across the specific product dimensions and trusted sources AI queries for your industry.
+
+### 5. Continuously monitor query fanouts
+
+Fanouts are never permanent. ChatGPT revises its internal queries on every run, influenced by model updates, session context, and live web data.
+
+The only way to know whether your brand is being searched or skipped is to monitor fanouts over time using realistic customer personas.
+
+[Genezio](https://genezio.com) runs multi-turn conversations simulating your target buyer personas, captures live query fanouts, and measures real recommendation rates.
+
+[Book a strategy call](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30EAVu1QPRbggnIoR502OSYQwgn_fnBZYKo6AoZsu8ApjuqBdq59VHOxs3AsynJnOz1_G-kHnC) with our team to see which competitors and sources AI injects into conversations about your brand.
 
 ---
 
 ### Methodology
 
-We analyzed query fanouts captured from ChatGPT's live search, meaning the model's own internal web queries, the ones generated before any result returns. The mention and survival rates draw on a 220,193-fanout corpus, and the volunteered-brand analysis comes from two prompt-verified cohorts totaling 31,470 prompts. "Volunteered" means a brand that appears in the fanout but not in the user's prompt, matched alias-aware and split into the user's own brand versus competitors. Survival is measured against the platform's extracted answer brands, at the conversation level. The per-industry figures are the share of each industry's fanouts that named a given source or competitor; we show a percentage where a source clears a meaningful threshold, and the industries come from the brands in our cohorts. The named competitor sets and the strongest named authorities are exact; "reviews" is generic and counted by keyword. The one-sided-comparison rate (25.4%) comes from 21,608 comparer conversations, measured across all of a prompt's fanouts; which of the two brands gets dropped is close to even (own 50.4%, competitor 44.5%). The data is observational and skews heavily to ChatGPT, since it's the engine that exposes its fanouts. For contrast, Perplexity volunteers a competitor just 0.6% of the time.
+We analyzed query fanouts captured directly from ChatGPT's live search engine—the internal web queries generated before any results return.
+
+- **Corpus Size:** 220,193 query fanouts captured from ChatGPT.
+- **Prompt Verification:** 40,000 fanouts matched to exact user prompts across cohorts totaling 31,470 prompts.
+- **Volunteered Brands:** Brands appearing in the fanout that were not in the user prompt, categorized into own-brand vs. competitors using alias-aware matching.
+- **Survival Rate:** Percentage of searched brands retained in the final answer at the conversation level (97% survival).
+- **One-Sided Comparisons:** In 21,608 comparer conversations, ChatGPT researched only one brand in 25.4% of tests (dropped own brand 50.4%, dropped competitor 44.5%).
+- **Scope & Limitations:** Data is observational and focused on ChatGPT, which exposes its internal search queries. For comparison, Perplexity volunteers a competitor in just 0.6% of fanouts.

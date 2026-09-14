@@ -29,10 +29,8 @@ export function AboutHeroSection() {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Genezio was built for a new reality in digital discovery: buyers
-            increasingly ask AI systems for recommendations before they ever
-            click a link. We help marketing teams win actual AI
-            recommendations, not just mentions.
+            Buyers now ask AI engines for answers before clicking links.
+            Genezio helps marketing teams win real recommendations, not just mentions.
           </p>
 
           {/* CTA buttons */}
