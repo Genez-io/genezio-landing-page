@@ -49,11 +49,6 @@ export const AGENCY_BRANDS = [
     url: "https://www.kaufland.ro",
   },
   {
-    name: "Pluxee",
-    logo: "/images/pluxee-logo.png",
-    url: "https://www.pluxee.ro",
-  },
-  {
     name: "SmartBill",
     logo: "/images/smartbill-logo.svg",
     url: "https://www.smartbill.ro",

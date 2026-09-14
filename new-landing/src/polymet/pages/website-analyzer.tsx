@@ -457,7 +457,7 @@ export function WebsiteAnalyzer() {
   return (
     <>
       <PolymetSEO
-        title="Website Analyzer, Is Your Site Ready for AI? | Genezio"
+        title="Website Analyzer: is your site ready for AI? | Genezio"
         description="Run an instant, site-wide AI-readiness audit, crawler access, structure, schema and performance, in one score. Get your free report by email."
         canonicalPath="/website-analyzer/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"

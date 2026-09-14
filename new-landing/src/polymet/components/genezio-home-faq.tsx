@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { FaqAccordion } from "@/polymet/components/faq-accordion";
 import { HeroEyebrow } from "@/polymet/components/hero-eyebrow";
 
 export const HOME_FAQ_SCHEMA = [
@@ -39,22 +34,13 @@ export function GenezioHomeFaq() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {HOME_FAQ_SCHEMA.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="bg-[#0A0A0C] border border-white/10 rounded-2xl px-6 md:px-8 hover:border-white/20 transition-colors"
-            >
-              <AccordionTrigger className="text-left text-white hover:text-white/90 py-5 md:py-6 text-base md:text-lg font-medium hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-white/70 pb-6 text-sm md:text-base leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <FaqAccordion
+          items={HOME_FAQ_SCHEMA}
+          idPrefix="home-faq"
+          itemClassName="bg-[#0A0A0C] border border-white/10 rounded-2xl px-6 md:px-8 hover:border-white/20 transition-colors"
+          questionClassName="text-white hover:text-white/90 py-5 md:py-6 text-base md:text-lg font-medium"
+          answerClassName="text-white/70 pb-6 text-sm md:text-base leading-relaxed"
+        />
       </div>
     </section>
   );
