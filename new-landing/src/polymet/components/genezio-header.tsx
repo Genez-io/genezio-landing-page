@@ -14,6 +14,7 @@ import {
   BarChart3Icon,
   GlobeIcon,
   PlugIcon,
+  RocketIcon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
@@ -405,6 +406,12 @@ export function GenezioHeader() {
                           desc: "AI Search terminology guide",
                         },
                         {
+                          href: "/changelog/",
+                          Icon: RocketIcon,
+                          title: "Changelog",
+                          desc: "What we shipped, release by release",
+                        },
+                        {
                           href: "/docs/",
                           Icon: BookMarkedIcon,
                           title: "Docs",
@@ -704,6 +711,18 @@ export function GenezioHeader() {
                     </div>
                     <div className="text-white/60 text-xs">
                       AI Search terminology guide
+                    </div>
+                  </Link>
+                  <Link
+                    to="/changelog/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2"
+                  >
+                    <div className="text-white text-sm font-medium">
+                      Changelog
+                    </div>
+                    <div className="text-white/60 text-xs">
+                      What we shipped, release by release
                     </div>
                   </Link>
                   <a

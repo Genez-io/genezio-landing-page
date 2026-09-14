@@ -29,6 +29,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
       { label: "Research", href: "/research/" },
       { label: "Methodology", href: "/methodology/" },
       { label: "Glossary", href: "/glossary/" },
+      { label: "Changelog", href: "/changelog/" },
       { label: "Industry Leaderboards", href: "/industry-leaderboards/" },
       { label: "Docs", href: "/docs/" },
     ],
