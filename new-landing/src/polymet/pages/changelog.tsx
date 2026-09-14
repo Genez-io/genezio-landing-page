@@ -25,7 +25,6 @@ const FILTERS: ("All" | ChangelogTag)[] = [
   "New",
   "Improved",
   "Fixed",
-  "Beta",
   "API",
   "Integrations",
 ];
@@ -34,13 +33,10 @@ const FILTERS: ("All" | ChangelogTag)[] = [
    "something appeared" get it; the rest stay neutral to keep releases scannable. */
 function TagBadge({ tag }: { tag: ChangelogTag }) {
   const accented = tag === "New";
-  const outlined = tag === "Beta";
 
   const tone = accented
     ? "bg-emerald-400/10 border-emerald-400/25 text-emerald-300"
-    : outlined
-      ? "bg-transparent border-emerald-400/25 text-emerald-300/80"
-      : "bg-white/[0.06] border-white/10 text-white/70";
+    : "bg-white/[0.06] border-white/10 text-white/70";
 
   return (
     <span
