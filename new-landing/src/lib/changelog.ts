@@ -1,13 +1,14 @@
 /**
  * Release notes / changelog content.
  *
- * Entries are grouped by quarter, matching how shipped work is recorded in the
- * quarterly business reviews. Add a new release by prepending an entry; `date`
- * (ISO, the last day of the reported quarter) drives sorting and the RSS feed,
- * `period` is what the page and the date rail display.
+ * Shipped work is recorded per quarter in the quarterly business reviews, so
+ * the quarter of each release is known but the exact day is not. `date` places
+ * each release on a representative month inside its known quarter — the month
+ * is approximate, the quarter it sits in is not. The page deliberately renders
+ * month and year only, never a day, so it does not imply precision we lack.
  *
- * Only shipped work belongs here — never roadmap or committed-but-unreleased
- * capabilities.
+ * Add a new release by prepending an entry. Only shipped work belongs here —
+ * never roadmap or committed-but-unreleased capabilities.
  */
 
 export type ChangelogTag =
@@ -34,10 +35,12 @@ export interface ChangelogHighlight {
 export interface ChangelogEntry {
   /** URL-safe id, used for the deep-link anchor (#<slug>). */
   slug: string;
-  /** ISO date, YYYY-MM-DD — the last day of the quarter being reported. */
+  /**
+   * ISO date, YYYY-MM-DD. The month is a representative month within the
+   * release's known quarter; the day is never displayed. Drives sorting and
+   * the RSS feed.
+   */
   date: string;
-  /** Display label for the release period, e.g. "Q2 2026". */
-  period: string;
   /** Headline for the whole release. */
   title: string;
   /** Short intro paragraph shown under the title. */
@@ -54,9 +57,9 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
-    slug: "q3-2026-analytics-integrations",
-    date: "2026-09-14",
-    period: "Q3 2026",
+    slug: "sep-2026-analytics-integrations",
+    // Reported in Q3 2026; the month below is representative, not exact.
+    date: "2026-09-10",
     title: "Google Analytics 4 and Search Console integrations",
     summary:
       "Genezio now connects to the two places your traditional web data already lives, so AI visibility can be read next to the traffic and the search behaviour around it.",
@@ -75,12 +78,12 @@ export const changelog: ChangelogEntry[] = [
     ],
   },
   {
-    slug: "q2-2026-share-of-voice-fact-checker",
-    date: "2026-06-30",
-    period: "Q2 2026",
+    slug: "jun-2026-share-of-voice-fact-checker",
+    // Reported in Q2 2026; the month below is representative, not exact.
+    date: "2026-06-24",
     title: "AI Share of Voice, the Fact Checker agent and SOC 2 Type II",
     summary:
-      "The market moved from “are we mentioned” to “are we mentioned correctly.” This quarter followed it: a new headline metric, an agent that catches false claims, and the enterprise certifications and coverage to run all of it at scale.",
+      "The market moved from “are we mentioned” to “are we mentioned correctly.” This release followed it: a new headline metric, an agent that catches false claims, and the enterprise certifications and coverage to run all of it at scale.",
     tags: ["New", "Improved", "Beta", "Integrations"],
     highlights: [
       {
@@ -140,9 +143,9 @@ export const changelog: ChangelogEntry[] = [
     ],
   },
   {
-    slug: "q1-2026-self-serve-four-agents",
-    date: "2026-03-31",
-    period: "Q1 2026",
+    slug: "mar-2026-self-serve-four-agents",
+    // Reported in Q1 2026; the month below is representative, not exact.
+    date: "2026-03-18",
     title: "Self-serve goes live, and the platform consolidates around four agents",
     summary:
       "Self-serve onboarding went into production in January, and the product consolidated around four specialised agents — each with a strategy adapted to the customer's business type.",
@@ -197,12 +200,12 @@ export const changelog: ChangelogEntry[] = [
     ],
   },
   {
-    slug: "q4-2025-brand-analysis-redesign",
-    date: "2025-12-31",
-    period: "Q4 2025",
+    slug: "nov-2025-brand-analysis-redesign",
+    // Reported in Q4 2025; the month below is representative, not exact.
+    date: "2025-11-26",
     title: "A rebuilt Brand Analysis experience and agency mode",
     summary:
-      "Brand Analysis became the primary driver of sales conversations, so the quarter was spent rebuilding it — new interface, deeper analysis types, and a mode for agencies running several brands.",
+      "Brand Analysis became the primary driver of sales conversations, so it was rebuilt from the ground up — new interface, deeper analysis types, and a mode for agencies running several brands.",
     tags: ["New", "Improved"],
     highlights: [
       {
@@ -233,12 +236,12 @@ export const changelog: ChangelogEntry[] = [
     ],
   },
   {
-    slug: "q3-2025-brand-analysis-ships",
-    date: "2025-09-30",
-    period: "Q3 2025",
+    slug: "sep-2025-brand-analysis-ships",
+    // Reported in Q3 2025; the month below is representative, not exact.
+    date: "2025-09-09",
     title: "Brand Analysis ships, across four AI engines",
     summary:
-      "Brand Analysis went from feature to finished product this quarter, with coverage across the four engines that mattered most to customers, and user management to go with it.",
+      "Brand Analysis went from feature to finished product, with coverage across the four engines that mattered most to customers, and user management to go with it.",
     tags: ["New"],
     highlights: [
       {
@@ -262,12 +265,12 @@ export const changelog: ChangelogEntry[] = [
     ],
   },
   {
-    slug: "q2-2025-agents-audit-logs",
-    date: "2025-06-30",
-    period: "Q2 2025",
+    slug: "may-2025-agents-audit-logs",
+    // Reported in Q2 2025; the month below is representative, not exact.
+    date: "2025-05-21",
     title: "More evaluation agents, audit logs and a metrics dashboard",
     summary:
-      "The agent library grew in both directions this quarter — existing agents got better, and three new ones covered ground the suite had been missing.",
+      "The agent library grew in both directions — existing agents got better, and three new ones covered ground the suite had been missing.",
     tags: ["New", "Improved"],
     highlights: [
       {
@@ -297,12 +300,12 @@ export const changelog: ChangelogEntry[] = [
     ],
   },
   {
-    slug: "q1-2025-evaluation-agents-platform",
-    date: "2025-03-31",
-    period: "Q1 2025",
+    slug: "feb-2025-evaluation-agents-platform",
+    // Reported in Q1 2025; the month below is representative, not exact.
+    date: "2025-02-19",
     title: "The Evaluation Agents Platform",
     summary:
-      "The quarter the platform pivoted: a new core product for evaluating agentic AI applications, with a dashboard, a scalable simulation engine, and the first library of testing agents.",
+      "The platform pivoted: a new core product for evaluating agentic AI applications, with a dashboard, a scalable simulation engine, and the first library of testing agents.",
     tags: ["New"],
     highlights: [
       {
@@ -333,9 +336,24 @@ export const changelog: ChangelogEntry[] = [
   },
 ];
 
-/** Long-form date, e.g. "September 14th, 2026". Used by the RSS feed. */
-export function formatChangelogDate(iso: string): string {
-  const [year, month, day] = iso.split("-").map(Number);
+const MONTHS_SHORT = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+/** Month and year, e.g. "September 2026". The day is never shown. */
+export function formatChangelogMonth(iso: string): string {
+  const [year, month] = iso.split("-").map(Number);
   const monthName = [
     "January",
     "February",
@@ -350,21 +368,17 @@ export function formatChangelogDate(iso: string): string {
     "November",
     "December",
   ][month - 1];
-  const suffix =
-    day % 10 === 1 && day !== 11
-      ? "st"
-      : day % 10 === 2 && day !== 12
-        ? "nd"
-        : day % 10 === 3 && day !== 13
-          ? "rd"
-          : "th";
-  return `${monthName} ${day}${suffix}, ${year}`;
+  return `${monthName} ${year}`;
 }
 
-/** Splits "Q2 2026" into its quarter and year halves for the date rail. */
-export function splitPeriod(period: string): { quarter: string; year: string } {
-  const [quarter, year = ""] = period.split(" ");
-  return { quarter, year };
+/** Abbreviated month for the date rail, e.g. "Sep". */
+export function formatChangelogMonthShort(iso: string): string {
+  return MONTHS_SHORT[Number(iso.split("-")[1]) - 1];
+}
+
+/** Four-digit year for the date rail. */
+export function formatChangelogYear(iso: string): string {
+  return iso.slice(0, 4);
 }
 
 /** Newest first. */

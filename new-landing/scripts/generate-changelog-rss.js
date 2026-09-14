@@ -73,7 +73,7 @@ ${entries
             .map((entry) => {
                 const url = `${BASE_URL}/changelog/#${entry.slug}`;
                 return `    <item>
-        <title><![CDATA[${entry.period} — ${entry.title}]]></title>
+        <title><![CDATA[${entry.title}]]></title>
         <link>${url}</link>
         <guid isPermaLink="false">genezio-changelog-${entry.slug}</guid>
         <description><![CDATA[${renderDescription(entry)}]]></description>
