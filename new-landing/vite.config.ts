@@ -9,6 +9,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // `vite` serves the client alone, thus a call to `/api/...` from the dev
+  // server would come back as the HTML of the page. `scripts/dev-api.mjs`
+  // serves the functions of `api/`, and this sends those calls to it, so the
+  // page uses the same paths in development as on Vercel.
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3001",
+        changeOrigin: true
+      }
+    }
+  },
   build: {
     rollupOptions: {
       input: "index.html"
