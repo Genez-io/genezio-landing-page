@@ -72,50 +72,18 @@ interface ChartSeriesOverride {
   data: number[];
 }
 
-const BRAND_METRICS_MODELS = ["chatgpt.com", "google-ai-overview"];
-const DYNAMIC_INDUSTRY_CONFIG: Partial<
-  Record<
-    string,
-    {
-      brandId: number;
-      topicIds: number[];
-      token: string;
-      models?: string[];
-    }
-  >
-> = {
-  banking: {
-    brandId: -49,
-    topicIds: [269, 265, 264, 263, 262, 261, 260, 259, 520, 272],
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
-    models: [
-      "chatgpt.com",
-      "google-ai-overview",
-      "perplexity",
-      "google-ai-mode",
-      "gpt-5.2",
-    ],
-  },
-  fashion: {
-    brandId: -64,
-    topicIds: [397, 396, 398, 572, 483],
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
-  },
-  healthcare: {
-    brandId: -31,
-    topicIds: [96, 95, 94, 511],
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
-  },
-  retail: {
-    brandId: -29,
-    topicIds: [90, 89, 88, 518],
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk5IiwiZXhwIjoxOTQ2NjUzNTU4LCJqdGkiOiI3ZDlmZmMzZi0zYzI0LTQwNjQtOTM2MC0xOTgzZDVlMzZiMjAifQ.oFSZgPaIoGQdtPM24yhYYxKkZfYrvXgrS7jU1VVavvM",
-  },
-};
+// The brand, the topics and the credentials of each leaderboard live in
+// `/api/leaderboard` (a Vercel function of this repo). The page used to hold a
+// bearer token of its own here, which meant the token shipped in the bundle for
+// anyone to read, and it died as soon as the API started to check that a token
+// still names a live session. The function holds the credentials of a service
+// client instead, refreshes its token on its own, and answers from the CDN.
+const DYNAMIC_INDUSTRIES = new Set([
+  "banking",
+  "fashion",
+  "healthcare",
+  "retail",
+]);
 
 function toNumber(value: ApiNumericValue): number {
   if (typeof value === "number") return value;
@@ -697,26 +665,14 @@ export function IndustryLeaderboards() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const current = industries.find((i) => i.id === activeIndustry)!;
-  const dynamicIndustryConfig =
-    activeCountry === "UK"
-      ? DYNAMIC_INDUSTRY_CONFIG[activeIndustry]
+  const dynamicIndustry =
+    activeCountry === "UK" && DYNAMIC_INDUSTRIES.has(activeIndustry)
+      ? activeIndustry
       : undefined;
-  const isDynamicIndustryUK = Boolean(dynamicIndustryConfig);
+  const isDynamicIndustryUK = Boolean(dynamicIndustry);
 
   useEffect(() => {
-    if (!dynamicIndustryConfig) return;
-
-    const token =
-      (import.meta.env.VITE_GENEZIO_LEADERBOARD_TOKEN as string | undefined) ||
-      dynamicIndustryConfig.token;
-    if (!token) {
-      setApiBrands([]);
-      setApiOverviews([]);
-      setApiBrandsError(
-        "Missing API token. Set VITE_GENEZIO_LEADERBOARD_TOKEN.",
-      );
-      return;
-    }
+    if (!dynamicIndustry) return;
 
     const controller = new AbortController();
     const fetchBrandMetrics = async () => {
@@ -726,31 +682,11 @@ export function IndustryLeaderboards() {
         setApiBrands([]);
         setApiOverviews([]);
 
-        const endDate = new Date();
-        endDate.setHours(23, 59, 59, 999);
-        const startDate = new Date(endDate);
-        startDate.setDate(startDate.getDate() - 30);
-        startDate.setHours(0, 0, 0, 0);
-
-        const params = new URLSearchParams({
-          metric_type: "mentioned",
-          aggregation_type: "daily",
-          start_date: startDate.toISOString(),
-          end_date: endDate.toISOString(),
-        });
-        for (const topicId of dynamicIndustryConfig.topicIds)
-          params.append("topic_ids", String(topicId));
-        const models = dynamicIndustryConfig.models ?? BRAND_METRICS_MODELS;
-        for (const model of models) params.append("models_name", model);
-
         const res = await fetch(
-          `https://app.backend.genezio.ai/api/v1/sql/brand/overview/${dynamicIndustryConfig.brandId}/brand-metrics?${params.toString()}`,
+          `/api/leaderboard?industry=${encodeURIComponent(dynamicIndustry)}`,
           {
             method: "GET",
-            headers: {
-              Accept: "application/json",
-              Authorization: `Bearer ${token}`,
-            },
+            headers: { Accept: "application/json" },
             signal: controller.signal,
           },
         );
@@ -797,7 +733,7 @@ export function IndustryLeaderboards() {
 
     void fetchBrandMetrics();
     return () => controller.abort();
-  }, [dynamicIndustryConfig]);
+  }, [dynamicIndustry]);
 
   const brands = isDynamicIndustryUK
     ? apiBrands
