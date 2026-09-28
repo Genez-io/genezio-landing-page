@@ -61,7 +61,7 @@ The platform is especially useful for companies without a dedicated AI team. You
 
 ### Arize
 
-Arize offers observability tools for teams working with large language models (LLMs). One of its tools, Phoenix, is an open-source platform designed for evaluating and debugging AI applications. It helps technical teams trace how inputs move through a system and identify where things may go wrong. This can be useful if you're in charge of model performance or infrastructure. You can also monitor drift and surface-level anomalies.
+Arize offers [observability tools](https://betterstack.com/community/comparisons/best-observability-tools/) for teams working with large language models (LLMs). One of its tools, Phoenix, is an open-source platform designed for evaluating and debugging AI applications. It helps technical teams trace how inputs move through a system and identify where things may go wrong. This can be useful if you're in charge of model performance or infrastructure. You can also monitor drift and surface-level anomalies.
 
 ![Arize platform interface](https://genezio.com/images/arize.webp)
 
