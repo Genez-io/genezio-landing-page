@@ -33,11 +33,6 @@ const TRUSTED_COMPANIES = [
     url: "https://www.druidai.com",
   },
   {
-    name: "FLOWX.AI",
-    logo: "images/flowx-logo.png",
-    url: "https://www.flowx.ai",
-  },
-  {
     name: "SmartBill",
     logo: "images/smartbill-logo.svg",
     url: "https://www.smartbill.ro",
