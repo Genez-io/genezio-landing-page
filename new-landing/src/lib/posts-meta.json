@@ -1,5 +1,45 @@
 [
   {
+    "id": "queries-that-trigger-ai-overviews",
+    "title": "The queries that trigger AI Overviews are already in your Search Console",
+    "excerpt": "Seven regex filters that pull conversational, AI Overview-triggering queries out of Google Search Console, and how to turn that export into a prompt list built from real demand.",
+    "description": "Seven regex filters that pull AI Overview-triggering queries out of Google Search Console, and how to turn that export into a prompt list.",
+    "category": "GEO",
+    "readTime": "6 min read",
+    "date": "September 18, 2026",
+    "timestamp": 1789689600000,
+    "author": "Paula Cionca",
+    "metaOgImage": "https://genezio.com/images/queries-that-trigger-ai-overviews.webp",
+    "metaOgUrl": "https://genezio.com/blog/queries-that-trigger-ai-overviews/",
+    "metaTitle": "Find AI Overview Queries in Your Search Console",
+    "tags": [
+      "GEO",
+      "AI Search",
+      "Search Console",
+      "AI Overviews"
+    ]
+  },
+  {
+    "id": "prove-ai-visibility-numbers-to-leadership",
+    "title": "How to Prove and Defend AI Visibility Numbers to Leadership",
+    "excerpt": "How to validate and defend AI visibility numbers in front of leadership, prompt coverage, mention vs recommendation rate, citation evidence, competitor benchmarking, and pre/post content measurement.",
+    "description": "How to prove AI visibility numbers to leadership, prompt coverage, mention vs recommendation rate, citation evidence, and pre/post content measurement.",
+    "category": "AI",
+    "readTime": "10 min read",
+    "date": "September 1, 2026",
+    "timestamp": 1788220800000,
+    "author": "Paula Cionca",
+    "metaOgImage": "https://genezio.com/images/prove-ai-visibility-numbers-to-leadership.webp",
+    "metaOgUrl": "https://genezio.com/blog/prove-ai-visibility-numbers-to-leadership/",
+    "metaTitle": "Prove and Defend AI Visibility Numbers to Leadership",
+    "tags": [
+      "AI",
+      "AI Visibility",
+      "GEO",
+      "Enterprise"
+    ]
+  },
+  {
     "id": "are-brands-using-prompt-injection-to-manipulate-chatgpt-recommendations",
     "title": "Are Brands Using Prompt Injection to Manipulate ChatGPT Recommendations?",
     "excerpt": "Discover how marketers use prompt injection to hijack AI search responses, the security risks of black-hat GEO, and why it threatens brand reputation.",
@@ -450,6 +490,25 @@
     ]
   },
   {
+    "id": "marketing-agency-brand-presence-ai-search",
+    "title": "Marketing Agency Brand Presence in the Age of AI Search",
+    "excerpt": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
+    "description": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
+    "category": "Marketing Agencies",
+    "readTime": "6 min read",
+    "date": "March 2, 2026",
+    "timestamp": 1772409600000,
+    "author": "Paula Cionca",
+    "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
+    "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
+    "tags": [
+      "Marketing Agencies",
+      "AI Brand Presence",
+      "AI Visibility",
+      "GEO"
+    ]
+  },
+  {
     "id": "mastering-company-brand-presence",
     "title": "Mastering Brand Presence in 2026: AI-Powered Measurement Tools",
     "excerpt": "In 2026, company brand presence transcends traditional boundaries. Discover actionable strategies and AI-powered tools to optimize your visibility.",
@@ -466,25 +525,6 @@
       "AI Measurement",
       "Conversational AI",
       "Genezio"
-    ]
-  },
-  {
-    "id": "marketing-agency-brand-presence-ai-search",
-    "title": "Marketing Agency Brand Presence in the Age of AI Search",
-    "excerpt": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
-    "description": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
-    "category": "Marketing Agencies",
-    "readTime": "6 min read",
-    "date": "March 2, 2026",
-    "timestamp": 1772402400000,
-    "author": "Paula Cionca",
-    "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
-    "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
-    "tags": [
-      "Marketing Agencies",
-      "AI Brand Presence",
-      "AI Visibility",
-      "GEO"
     ]
   },
   {

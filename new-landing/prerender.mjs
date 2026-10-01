@@ -404,15 +404,19 @@ for (const url of routes) {
     }
   }
 
+  // Replacements use functions so that `$` sequences inside generated markup or
+  // post content are inserted literally. A code span such as `\S+$` in a post is
+  // followed by a backtick, and String.replace would read that `$\`` as the
+  // "text before the match" pattern and splice the whole document in mid-article.
   let html = stripOverriddenHead(template, helmetTitleText, helmetMetaHtml, extraMetaKeys)
-    .replace("<!--app-helmet-head-->", mergedHeadHtml)
+    .replace("<!--app-helmet-head-->", () => mergedHeadHtml)
     .replace(
       '<div id="root"><!--app-html--></div>',
-      `<div id="root">${cleanAppHtml}</div>`
+      () => `<div id="root">${cleanAppHtml}</div>`
     );
 
   if (postContentScript) {
-    html = html.replace("</body>", `${postContentScript}\n</body>`);
+    html = html.replace("</body>", () => `${postContentScript}\n</body>`);
   }
   const cleanedHtml = html;
 
