@@ -139,6 +139,12 @@
     <loc>https://genezio.com/docs/insights/swot-analysis.html</loc>
   </url>
   <url>
+    <loc>https://genezio.com/docs/insights/channels-and-authors.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/insights/monitor-perceptions.html</loc>
+  </url>
+  <url>
     <loc>https://genezio.com/docs/insights/actionable-insights.html</loc>
   </url>
   <url>
@@ -154,6 +160,21 @@
     <loc>https://genezio.com/docs/content-hub/content-analyzer.html</loc>
   </url>
   <url>
+    <loc>https://genezio.com/docs/content-hub/analyzing-landing-pages.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/content-hub/analyzing-many-urls-at-once.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/content-hub/covering-several-topics-in-one-piece.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/content-hub/schema-markup.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/content-hub/working-in-your-brand-language.html</loc>
+  </url>
+  <url>
     <loc>https://genezio.com/docs/content-hub/editing-articles.html</loc>
   </url>
   <url>
@@ -167,6 +188,24 @@
   </url>
   <url>
     <loc>https://genezio.com/docs/geo-assistant/actions-geo-can-take.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/scorecard/index.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/scorecard/creating-a-goal.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/scorecard/reading-a-goal.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/scorecard/managing-your-board.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/mcp/index.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/mcp/scorecards-over-mcp.html</loc>
   </url>
   <url>
     <loc>https://genezio.com/docs/shopping/product-visibility.html</loc>
@@ -190,7 +229,22 @@
     <loc>https://genezio.com/docs/agentic-commerce/ucp-readiness-audit.html</loc>
   </url>
   <url>
+    <loc>https://genezio.com/docs/integrations/google-search-console.html</loc>
+  </url>
+  <url>
     <loc>https://genezio.com/docs/integrations/cdn-log-integration.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/api/index.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/api/authentication.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/api/errors.html</loc>
+  </url>
+  <url>
+    <loc>https://genezio.com/docs/api/rate-limits.html</loc>
   </url>
   <url>
     <loc>https://genezio.com/docs/security/enterprise-sso-and-scim.html</loc>
