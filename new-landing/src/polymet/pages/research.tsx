@@ -18,6 +18,18 @@ const RESEARCH_TITLE = "Genezio Research: Original AI Search Studies";
 const RESEARCH_DESCRIPTION =
   "Data-driven research on how AI models search, recommend brands, and shape competitive visibility across industries.";
 
+const researchItemList = {
+  "@type": "ItemList",
+  itemListElement: [...researchPosts]
+    .sort((a, b) => b.timestamp - a.timestamp)
+    .map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: post.title,
+      url: `https://genezio.com${getPostPath(post)}`,
+    })),
+};
+
 export function Research() {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -38,6 +50,8 @@ export function Research() {
         title={RESEARCH_TITLE}
         description={RESEARCH_DESCRIPTION}
         canonicalPath="/research/"
+        pageType="CollectionPage"
+        mainEntity={researchItemList}
       />
       <div className="min-h-screen bg-[#050506]">
         <section className="relative pt-32 pb-20 px-6 overflow-hidden">
