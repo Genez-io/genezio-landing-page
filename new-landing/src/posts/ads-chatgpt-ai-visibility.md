@@ -35,7 +35,9 @@ Not because ads are coming to AI, but because it formally confirms something bra
 
 And while ads will exist *around* answers, OpenAI has been explicit about one thing:
 
-> “Ads will not influence the answers ChatGPT gives.”
+> “Ads do not influence the answers ChatGPT gives you.”
+>
+> — [OpenAI, “Our approach to advertising and expanding access to ChatGPT”](https://openai.com/index/our-approach-to-advertising-and-expanding-access/)
 
 This distinction changes everything.
 

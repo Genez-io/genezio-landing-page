@@ -25,6 +25,37 @@ function slugify(text: string): string {
     .replace(/-+/g, "-");
 }
 
+type HastNode = {
+  type: string;
+  tagName?: string;
+  value?: string;
+  children?: HastNode[];
+};
+
+/**
+ * Rehype plugin: in a blockquote, a final paragraph starting with "— " is the
+ * quote's attribution, so render it as <cite> (with any link kept intact).
+ */
+function rehypeBlockquoteCite() {
+  const visit = (node: HastNode) => {
+    node.children?.forEach(visit);
+    if (node.type !== "element" || node.tagName !== "blockquote") return;
+    const last = [...(node.children ?? [])]
+      .reverse()
+      .find((child) => child.type === "element");
+    const first = last?.children?.[0];
+    if (
+      last?.tagName !== "p" ||
+      first?.type !== "text" ||
+      !first.value?.startsWith("— ")
+    )
+      return;
+    first.value = first.value.slice(2);
+    last.tagName = "cite";
+  };
+  return (tree: HastNode) => visit(tree);
+}
+
 /** Flatten React children (markdown-rendered heading) into plain text. */
 function nodeToText(children: React.ReactNode): string {
   if (children == null || children === false) return "";
@@ -885,6 +916,7 @@ export function BlogPost() {
           <div className="prose prose-invert prose-lg max-w-none mb-16 text-zinc-400">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeBlockquoteCite]}
               components={{
                 h1: ({ node, ...props }) => (
                   <h1
@@ -957,6 +989,12 @@ export function BlogPost() {
                 p: ({ node, ...props }) => (
                   <p
                     className="mb-3 leading-relaxed text-zinc-400"
+                    {...props}
+                  />
+                ),
+                cite: ({ node, ...props }) => (
+                  <cite
+                    className="block mt-2 text-sm not-italic text-zinc-500 before:content-['—_']"
                     {...props}
                   />
                 ),
