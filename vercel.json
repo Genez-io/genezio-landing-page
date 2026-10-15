@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
+  "git": {
+    "deploymentEnabled": false
+  },
   "installCommand": "cd new-landing && npm install",
   "buildCommand": "cd new-landing && npm run build && rm -rf dist/server",
   "outputDirectory": "new-landing/dist",

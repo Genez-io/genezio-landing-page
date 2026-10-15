@@ -48,8 +48,17 @@ has files in `/docs`.
 
 `.github/workflows/deploy.yaml` runs on a push to `dev` or to `main`.
 genezio-code also starts it on the same branch after it puts a new build of
-the documentation in S3. The projects of Vercel have no Git connection: only
-the workflow deploys them. The workflow does these steps:
+the documentation in S3. Only the workflow deploys: `vercel.json` turns off
+the deployments of the Git connection of Vercel
+(`git.deploymentEnabled: false`), because they have no documentation.
+
+A pull request to `dev` or to `main` gets a preview. The preview has the
+documentation of the base branch, and it is a deployment of
+`gta-landing-internal-gta` that is not production. A comment on the pull
+request gives its URL. A pull request from a fork gets no preview, because it
+gets no secrets.
+
+The workflow does these steps:
 
 1. It downloads the build of the documentation from S3. The bucket has
    versioning, and the metadata `commit` of a version gives the commit of
