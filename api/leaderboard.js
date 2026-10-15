@@ -1,10 +1,11 @@
 // Vercel serverless function: /api/leaderboard?industry=banking
 //
-// The Industry Leaderboards page used to call the Genezio API straight from
-// the browser, with a JWT compiled into the bundle. Two things were wrong with
-// that: the token was public — anyone could read it out of the JS and call the
-// API as that user — and it stopped working the day the API began to check
-// that a token still names a live session. The charts went blank.
+// The page of the Industry Leaderboards called the Genezio API from the
+// browser, with a JWT in the bundle. That had two problems:
+// - The token was public. Each person could read it from the JS and call the
+//   API as that user.
+// - The API now checks that a token names a live session, thus the token
+//   stopped working and the charts were empty.
 //
 // This function takes that call over. It holds the credentials of a *service
 // client*: an identity with no person behind it. It trades them for a token at
@@ -144,7 +145,8 @@ function buildMetricsUrl(industry) {
   const endDate = new Date();
   endDate.setUTCHours(23, 59, 59, 999);
   const startDate = new Date(endDate);
-  startDate.setUTCDate(startDate.getUTCDate() - WINDOW_DAYS);
+  // The window includes today, thus it starts WINDOW_DAYS - 1 days before.
+  startDate.setUTCDate(startDate.getUTCDate() - (WINDOW_DAYS - 1));
   startDate.setUTCHours(0, 0, 0, 0);
 
   const params = new URLSearchParams({
@@ -185,7 +187,9 @@ module.exports = async function handler(req, res) {
   const requested = String(
     (req.query && req.query.industry) || "",
   ).toLowerCase();
-  const industry = INDUSTRIES[requested];
+  // Only the own keys of INDUSTRIES. A key of the prototype, such as
+  // "constructor", is not an industry.
+  const industry = Object.hasOwn(INDUSTRIES, requested) ? INDUSTRIES[requested] : null;
   if (!industry) {
     return res.status(400).json({
       error: `Unknown industry. Expected one of: ${Object.keys(INDUSTRIES).join(", ")}.`,

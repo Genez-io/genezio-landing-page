@@ -20,6 +20,16 @@ const CHANGELOG_TITLE = "Genezio Changelog: Product Updates & Release Notes";
 const CHANGELOG_DESCRIPTION =
   "Every capability shipped to the Genezio platform — AI Share of Voice, the Fact Checker agent, Content Hub, citation analysis, enterprise auth and engine coverage.";
 
+const changelogItemList = {
+  "@type": "ItemList",
+  itemListElement: entries.map((entry, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: entry.title,
+    url: `https://genezio.com/changelog/#${entry.slug}`,
+  })),
+};
+
 const FILTERS: ("All" | ChangelogTag)[] = [
   "All",
   "New",
@@ -237,6 +247,8 @@ export function Changelog() {
         title={CHANGELOG_TITLE}
         description={CHANGELOG_DESCRIPTION}
         canonicalPath="/changelog/"
+        pageType="CollectionPage"
+        mainEntity={changelogItemList}
       />
 
       <div className="min-h-screen bg-[#050506]">

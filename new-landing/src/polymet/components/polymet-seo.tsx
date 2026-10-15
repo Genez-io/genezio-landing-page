@@ -10,6 +10,10 @@ interface PolymetSEOProps {
   ogUrl?: string;
   ogType?: string;
   schema?: Record<string, unknown>;
+  /** schema.org WebPage subtype for pages without a more specific schema (e.g. "CollectionPage"). */
+  pageType?: string;
+  /** The page's main entity, e.g. an ItemList of what a listing page shows. */
+  mainEntity?: Record<string, unknown>;
   authorName?: string;
   datePublished?: string;
   tags?: string[];
@@ -37,6 +41,8 @@ export function PolymetSEO({
   ogUrl,
   ogType = "website",
   schema,
+  pageType = "WebPage",
+  mainEntity,
   authorName,
   datePublished,
   tags,
@@ -215,8 +221,25 @@ export function PolymetSEO({
       };
     }
 
+    // Any other page: describe it as a WebPage built from its visible title and description.
+    if (url) {
+      return {
+        "@context": "https://schema.org",
+        "@type": pageType,
+        "@id": `${url}#webpage`,
+        url,
+        name: title,
+        description,
+        inLanguage: "en",
+        primaryImageOfPage: ogImage || undefined,
+        isPartOf: { "@type": "WebSite", name: "Genezio", url: "https://genezio.com/" },
+        publisher: baseOrg,
+        mainEntity,
+      };
+    }
+
     return null;
-  }, [schema, canonicalPath, title, description, url, ogImage, authorName, datePublished, tags, termName, termDefinition]);
+  }, [schema, pageType, mainEntity, canonicalPath, title, description, url, ogImage, authorName, datePublished, tags, termName, termDefinition]);
 
   const finalOgUrl = ogUrl || url;
 
