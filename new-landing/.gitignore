@@ -1,1 +1,1 @@
-# package-lock.json is committed so Vercel/CI npm installs are deterministic
+package-lock.json

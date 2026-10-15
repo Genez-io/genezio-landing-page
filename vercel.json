@@ -2,15 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "cd new-landing && npm install",
-  "buildCommand": "cd new-landing && npm run build",
+  "buildCommand": "cd new-landing && npm run build && rm -rf dist/server",
   "outputDirectory": "new-landing/dist",
   "trailingSlash": true,
   "redirects": [
-    {
-      "source": "/docs",
-      "destination": "/docs/",
-      "permanent": false
-    },
     {
       "source": "/:path*",
       "has": [
@@ -215,11 +210,6 @@
     {
       "source": "/deployment-platform/deploy-nextjs-apps",
       "destination": "https://genezio.com/",
-      "permanent": true
-    },
-    {
-      "source": "/docs/:path((?!.*\\.(?:html|css|js|xml|png|jpg|jpeg|svg|webp|ico|woff|woff2)$).+)",
-      "destination": "https://genezio.com/docs/",
       "permanent": true
     },
     {
