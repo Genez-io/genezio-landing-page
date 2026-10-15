@@ -1,6 +1,7 @@
-// Put the documentation site (apps/docs) under /docs of the landing page.
+// Put the documentation site (apps/docs of Genez-io/genezio-code) under /docs
+// of the landing page.
 //
-//   node scripts/add-docs.mjs --site .vercel/output --docs ../docs/output
+//   node scripts/add-docs.mjs --site .vercel/output --docs <docs>/output
 //
 // genezio.com is one deployment of Vercel. `vercel build` writes the landing
 // page in the Build Output API of Vercel (--site): the files, the functions of

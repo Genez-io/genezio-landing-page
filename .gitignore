@@ -134,10 +134,9 @@ dist
 
 .idea/
 
-# The root .gitignore of the monorepo ignores each package-lock.json. The
-# build of Vercel installs from new-landing/package-lock.json, thus git keeps
-# that file.
+# The build of Vercel installs from new-landing/package-lock.json, thus git
+# keeps that file.
 !new-landing/package-lock.json
 
-# The cache of the dev server of Vite (docker compose service `landing`).
+# The cache of the dev server of Vite.
 new-landing/.vite/

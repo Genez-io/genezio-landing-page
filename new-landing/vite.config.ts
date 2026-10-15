@@ -14,10 +14,10 @@ export default defineConfig({
   // serves the functions of `api/`, and this sends those calls to it, so the
   // page uses the same paths in development as on Vercel.
   //
-  // On genezio.com, /docs is the documentation of apps/docs. The dev server
+  // On genezio.com, /docs is the documentation of genezio-code. The dev server
   // of Mintlify serves it on port 3333, with its files at the root (/_next,
   // /favicons, /logo), thus the dev server sends these paths to it too.
-  // DOCS_DEV_URL names the server of Mintlify in docker compose.
+  // DOCS_DEV_URL names the server of Mintlify on another host.
   server: {
     proxy: {
       "/api": {
