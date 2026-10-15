@@ -103,9 +103,12 @@ jobs:
           KEY="${{ steps.names.outputs.docs_key }}"
           DOCS="$RUNNER_TEMP/docs"
           rm -rf "$DOCS" && mkdir -p "$DOCS"
-          aws s3api get-object --region eu-central-1 \
+          if ! aws s3api get-object --region eu-central-1 \
             --bucket docs-builds --key "$KEY" "$RUNNER_TEMP/docs.tar.gz" \
-            > "$RUNNER_TEMP/docs-object.json"
+            > "$RUNNER_TEMP/docs-object.json"; then
+            echo "❌ cannot read s3://docs-builds/$KEY. The workflow Deploy Docs of genezio-code writes it: run it for this branch."
+            exit 1
+          fi
           tar -xzf "$RUNNER_TEMP/docs.tar.gz" -C "$DOCS"
           [ -f "$DOCS/output/config.json" ] || { echo "❌ s3://docs-builds/$KEY has no output/config.json"; exit 1; }
           VERSION=$(jq -r '.VersionId' "$RUNNER_TEMP/docs-object.json")
