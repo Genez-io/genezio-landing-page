@@ -1,0 +1,281 @@
+name: Deploy
+
+# The site of genezio.com: the landing page of this repository at / and the
+# documentation at /docs, in one deployment of Vercel.
+#
+# The documentation is not in this repository. The repository
+# Genez-io/genezio-code builds it (apps/docs) and puts the Build Output API of
+# Vercel in the S3 bucket docs-builds, at dev/docs.tar.gz for the branch dev
+# and at main/docs.tar.gz for the branch main. The bucket has versioning, thus
+# the current version of the key is the last build.
+#
+# A push to dev or to main starts this workflow. genezio-code also starts it
+# (workflow_dispatch on the same branch) after it puts a new build of the
+# documentation in S3, thus a change of the documentation gets to the site
+# with no push here.
+#
+# A pull request to dev or to main gets a preview: the same build, with the
+# documentation of the base branch, as a deployment of the dev project that is
+# not production. A comment on the pull request gives its URL.
+#
+# `vercel build` builds the landing page and its functions (api/).
+# scripts/add-docs.mjs puts the documentation under /docs of that output, and
+# Vercel deploys the result with no build. Only this workflow deploys:
+# vercel.json turns off the deployments of the Git connection of Vercel,
+# because they have no documentation.
+on:
+  push:
+    branches:
+      - dev
+      - main
+  pull_request:
+    branches:
+      - dev
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  # The comment with the URL of the preview.
+  pull-requests: write
+
+env:
+  VERCEL_SCOPE: genezio
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # A pull request from a fork gets no secrets, thus it gets no preview.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    # The GitHub environment gives the secrets: VERCEL_TOKEN,
+    # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY. A preview uses dev.
+    environment: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' && 'production' || 'dev' }}
+    outputs:
+      site_url: ${{ steps.deploy.outputs.url }}
+    steps:
+      # Explicit for each branch: a branch that is not in this list never
+      # gets to the project of production. A preview reads the documentation
+      # of the base branch, and it always goes to the dev project, as a
+      # deployment that is not production.
+      - name: Resolve the names of the deployment
+        id: names
+        env:
+          EVENT: ${{ github.event_name }}
+          BRANCH: ${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}
+        run: |
+          set -euo pipefail
+          case "$BRANCH" in
+            dev) PROJECT="gta-landing-internal-gta" ;;
+            main) PROJECT="gta-landing-app" ;;
+            *) echo "❌ the branch '$BRANCH' has no deployment"; exit 1 ;;
+          esac
+          if [ "$EVENT" = "pull_request" ]; then
+            PROJECT="gta-landing-internal-gta"
+            echo "target=preview" >> "$GITHUB_OUTPUT"
+            echo "prod_flag=" >> "$GITHUB_OUTPUT"
+          else
+            echo "target=production" >> "$GITHUB_OUTPUT"
+            echo "prod_flag=--prod" >> "$GITHUB_OUTPUT"
+          fi
+          echo "docs_key=${BRANCH}/docs.tar.gz" >> "$GITHUB_OUTPUT"
+          echo "project=$PROJECT" >> "$GITHUB_OUTPUT"
+          echo "Vercel project: $PROJECT ($EVENT), documentation of $BRANCH"
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The runner has the AWS CLI. The key of the branch has the last build of
+      # the documentation, and the metadata `commit` of the version gives the
+      # commit of genezio-code that built it.
+      - name: Download the documentation
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          set -euo pipefail
+          KEY="${{ steps.names.outputs.docs_key }}"
+          DOCS="$RUNNER_TEMP/docs"
+          rm -rf "$DOCS" && mkdir -p "$DOCS"
+          if ! aws s3api get-object --region eu-central-1 \
+            --bucket docs-builds --key "$KEY" "$RUNNER_TEMP/docs.tar.gz" \
+            > "$RUNNER_TEMP/docs-object.json"; then
+            echo "❌ cannot read s3://docs-builds/$KEY. The workflow Deploy Docs of genezio-code writes it: run it for this branch."
+            exit 1
+          fi
+          tar -xzf "$RUNNER_TEMP/docs.tar.gz" -C "$DOCS"
+          [ -f "$DOCS/output/config.json" ] || { echo "❌ s3://docs-builds/$KEY has no output/config.json"; exit 1; }
+          VERSION=$(jq -r '.VersionId' "$RUNNER_TEMP/docs-object.json")
+          COMMIT=$(jq -r '.Metadata.commit // "unknown"' "$RUNNER_TEMP/docs-object.json")
+          echo "- Documentation: s3://docs-builds/${KEY}, version ${VERSION}, genezio-code@${COMMIT}" >> "$GITHUB_STEP_SUMMARY"
+          echo "✅ s3://docs-builds/${KEY}, version ${VERSION}, genezio-code@${COMMIT}"
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      # The Vercel CLI sends the author of the last commit when it runs in a
+      # git repository. A merge on GitHub has the noreply address of its
+      # author, and Vercel blocks a deployment whose author it cannot match to
+      # an account. Thus the build and the deployment run from a copy outside
+      # the repository, with no git data.
+      - name: Copy the site out of the repository
+        env:
+          SITE: ${{ runner.temp }}/landing-site
+        run: |
+          set -euo pipefail
+          rm -rf "$SITE"
+          mkdir -p "$SITE"
+          tar --exclude=.git --exclude=.vercel -cf - . | tar -xf - -C "$SITE"
+          if git -C "$SITE" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+            echo "❌ $SITE is inside a git repository"; exit 1
+          fi
+
+      - name: Link Vercel project
+        working-directory: ${{ runner.temp }}/landing-site
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          PROJECT: ${{ steps.names.outputs.project }}
+        run: |
+          set -euo pipefail
+          # Idempotent: `project add` fails harmlessly when it already exists.
+          vercel project add "$PROJECT" --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN" || true
+          vercel link --yes --project "$PROJECT" --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
+
+      # vercel.json gives the commands of the build and the redirects. The
+      # functions of api/ read their variables (RESEND_API_KEY, the Slack
+      # webhooks, the service client of the leaderboard) from the project in
+      # Vercel when they run.
+      - name: Build the landing page
+        working-directory: ${{ runner.temp }}/landing-site
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          vercel pull --yes --environment="${{ steps.names.outputs.target }}" --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
+          vercel build ${{ steps.names.outputs.prod_flag }} --yes --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
+
+      - name: Put the documentation under /docs
+        working-directory: ${{ runner.temp }}/landing-site
+        run: |
+          set -euo pipefail
+          node scripts/add-docs.mjs --site .vercel/output --docs "$RUNNER_TEMP/docs/output"
+          for file in static/index.html static/docs/index.html static/sitemap.xml static/docs/sitemap.xml static/docs/index.rsc; do
+            [ -f ".vercel/output/$file" ] || { echo "❌ the output has no $file"; exit 1; }
+          done
+          # /sitemap.xml must give each page of the site, not the landing page
+          # alone.
+          grep -q '<loc>[^<]*/docs' .vercel/output/static/sitemap.xml \
+            || { echo "❌ /sitemap.xml has no page of /docs"; exit 1; }
+
+      # The output is built, thus Vercel deploys it with no build.
+      - name: Deploy
+        id: deploy
+        working-directory: ${{ runner.temp }}/landing-site
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          # The name of the branch of a pull request comes from its author,
+          # thus it goes into the script as a variable, not as an expression.
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          set -euo pipefail
+          URL=$(vercel deploy --prebuilt ${{ steps.names.outputs.prod_flag }} --yes --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN")
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          {
+            echo "### ✅ Landing deployed (${{ steps.names.outputs.target }}) — ${{ steps.names.outputs.project }}"
+            echo "- Branch: \`${BRANCH}\`"
+            echo "- URL: $URL"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Deployed to $URL"
+
+      # One comment for each pull request: each run changes the last comment of
+      # this workflow, thus the pull request does not get a new comment on each
+      # push.
+      - name: Give the URL of the preview on the pull request
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.deploy.outputs.url }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          BODY="Preview with the documentation of \`${{ github.base_ref }}\`: ${URL} (commit ${{ github.event.pull_request.head.sha }})"
+          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --edit-last --create-if-none --body "$BODY"
+
+      # The URL of each deployment (<project>-<hash>-genezio.vercel.app) has
+      # the Deployment Protection of Vercel: a request with no session of
+      # Vercel gets a 302 to vercel.com/sso-api. The aliases of a deployment
+      # of production, such as <project>.vercel.app and genezio.com, are open,
+      # thus the checks use an alias. With no alias, the checks use the URL
+      # of the deployment.
+      - name: Resolve the URL of the site
+        id: site
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          set -euo pipefail
+          ALIAS=$(curl -sSf -H "Authorization: Bearer ${VERCEL_TOKEN}" \
+              "https://api.vercel.com/v13/deployments/${URL#https://}?slug=${VERCEL_SCOPE}" \
+            | jq -r '[.alias[]? | select(endswith(".vercel.app"))] | sort_by(length) | .[0] // empty' \
+            || true)
+          SITE="${URL}"
+          [ -n "$ALIAS" ] && SITE="https://${ALIAS}"
+          echo "url=${SITE}" >> "$GITHUB_OUTPUT"
+          echo "- Site: ${SITE}" >> "$GITHUB_STEP_SUMMARY"
+          echo "The checks use ${SITE}"
+
+      # A deployment that answers no page is a broken site, thus the check of
+      # the landing page and of the documentation fails the job. Each path ends
+      # with a slash because the landing page and the documentation both add
+      # one (trailingSlash).
+      - name: Check the deployment
+        env:
+          URL: ${{ steps.site.outputs.url }}
+        run: |
+          set -euo pipefail
+          for path in "/" "/pricing/" "/docs/" "/docs/api-reference/introduction/" "/docs/mcp/"; do
+            read -r status location < <(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' "${URL}${path}" || echo "000")
+            if [ "$status" = "200" ]; then
+              echo "✅ ${path} answers 200"
+            elif [ "$status" = "401" ] || [[ "$status" = "302" && "${location:-}" == https://vercel.com/sso-api* ]]; then
+              echo "::warning::${path} answers ${status}: the Deployment Protection of Vercel is on for ${URL}"
+            else
+              echo "❌ ${path} answers ${status} ${location:-}"; exit 1
+            fi
+          done
+
+      # The functions of api/ read their variables from the project in Vercel,
+      # and a new project has none. The leaderboard calls the API with the
+      # service client, thus a 502 means that a variable is missing. On main,
+      # the charts of the site are then empty, thus the job fails. On dev, the
+      # job gives a warning. The path ends with a slash because vercel.json
+      # adds one (trailingSlash).
+      - name: Check the functions
+        env:
+          URL: ${{ steps.site.outputs.url }}
+          PROJECT: ${{ steps.names.outputs.project }}
+        run: |
+          set -euo pipefail
+          path="/api/leaderboard/?industry=banking"
+          read -r status location < <(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' "${URL}${path}" || echo "000")
+          if [ "$status" = "401" ] || [[ "$status" = "302" && "${location:-}" == https://vercel.com/sso-api* ]]; then
+            echo "::warning::${path} answers ${status}: the Deployment Protection of Vercel is on for ${URL}"
+            exit 0
+          fi
+          case "$status" in
+            200) echo "✅ ${path} answers 200" ;;
+            404) echo "❌ ${path} answers 404: the deployment has no functions"; exit 1 ;;
+            *)
+              MESSAGE="${path} answers ${status}: set the variables of the functions on the Vercel project ${PROJECT} (README.md gives the list)"
+              if [ "${{ github.event_name }}" != "pull_request" ] && [ "${{ github.ref_name }}" = "main" ]; then
+                echo "❌ ${MESSAGE}"; exit 1
+              fi
+              echo "::warning::${MESSAGE}"
+              ;;
+          esac
