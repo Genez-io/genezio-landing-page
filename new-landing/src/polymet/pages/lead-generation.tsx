@@ -10,7 +10,7 @@ export function LeadGeneration() {
   return (
     <>
       <PolymetSEO
-        title="Turn AI Conversations Into Qualified Leads | Genezio"
+        title="Turn AI conversations into qualified leads | Genezio"
         description="Monitor & optimize your brand's AI presence. Turn AI conversations into qualified leads with Genezio's actionable insights. Book a demo today!"
         canonicalPath="/conversational-brand-presence/"
       />

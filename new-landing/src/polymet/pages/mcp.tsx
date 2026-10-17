@@ -379,7 +379,7 @@ export function Mcp() {
   return (
     <>
       <PolymetSEO
-        title="Genezio MCP, Your AI Visibility Data in Any Assistant | Genezio"
+        title="Genezio MCP: your AI Visibility data in any assistant | Genezio"
         description="Connect any AI assistant to your Genezio answer-engine data, custom questions, reports, skills and routines. Book a demo to see the MCP live."
         canonicalPath="/mcp/"
         ogImage="https://genezio.com/images/genezio-black-logo.webp"

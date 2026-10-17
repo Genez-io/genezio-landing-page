@@ -14,7 +14,7 @@ export function AboutGenezio() {
   return (
     <>
       <PolymetSEO
-        title="About Genezio | AI-Driven Search Visibility & Recommendation"
+        title="About Genezio | AI-driven Search Visibility & Recommendation"
         description="Learn how Genezio helps marketing teams earn AI recommendations. AI market intelligence across ChatGPT, Gemini, Perplexity, and Claude."
         canonicalPath="/about-genezio/"
       />

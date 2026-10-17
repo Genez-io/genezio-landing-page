@@ -13,7 +13,7 @@ export function Agencies() {
   return (
     <>
       <PolymetSEO
-        title="Genezio for Agencies | AI Visibility & GEO Solutions"
+        title="Genezio for agencies | AI Visibility & GEO solutions"
         description="Empower your agency with Genezio's GEO platform. Monitor brand presence, improve AI recommendations, and deliver results for clients in the age of Gen AI"
         canonicalPath="/agencies/"
       />
