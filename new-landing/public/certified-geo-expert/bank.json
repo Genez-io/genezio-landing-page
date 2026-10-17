@@ -462,6 +462,28 @@
      ],
      "a": 0,
      "why": "There is no click to attribute, no referrer to follow and no impression count. What you <i>can</i> establish is presence: were we named, were we cited, on the questions that matter, consistently, over time.<br><br><b>Contribution is provable where attribution is not.</b> Anyone promising you attribution for AI answers is promising something the channel does not emit."
+    },
+    {
+     "q": "Your tool tracks single, fixed questions. Real buyers ask one question, then narrow it down over several messages. What does the fixed question miss?",
+     "o": [
+      "How the brands named change as the buyer narrows the request",
+      "Nothing: engines name the same brands however the chat unfolds",
+      "Only the wording, since engines ignore what was said earlier",
+      "Only the tone of the answers, which is not worth measuring"
+     ],
+     "a": 0,
+     "why": "Most buying conversations don't stop at the first answer. People add what matters to them: a budget, a team size, a feature they can't do without. Each follow-up can change which brands get named, and the ones still standing at the end are the ones that get bought.<br><br>A single fixed question measures the opening answer only. A brand can look strong there and drop out by the third message, or the other way round. Ask whether your measurement follows the conversation or stops after the first reply."
+    },
+    {
+     "q": "A vendor shows you AI visibility numbers. Which question tells you most about whether they match what your buyers actually see?",
+     "o": [
+      "Do you collect answers from the engines' apps, or only from their APIs?",
+      "How many engines do you cover, and how often do you add new ones?",
+      "Can we export the raw numbers into our own dashboards each week?",
+      "How many competing brands and products can we track at once?"
+     ],
+     "a": 0,
+     "why": "The app a buyer uses is more than the model. ChatGPT or Gemini wraps the model in its own instructions, decides when to search the web, may remember earlier chats, and can route the question to a different model version from the one a tool calls.<br><br>An API call usually starts from a bare model with whatever settings the vendor chose, so API-based numbers can differ from <b>what buyers actually see</b>. If the answer is \"only the API\", ask whether anyone checks the numbers against the real apps, and how far apart they are."
     }
    ]
   },
