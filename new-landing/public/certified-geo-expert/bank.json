@@ -420,15 +420,15 @@
      "why": "A jump in a report can come from anything: noise, a competitor's change, a shift in the engines. The direct link between your page and the jump is the page itself, showing up as a cited source in the answers that moved. If it isn't cited there, you can't claim the jump for it.<br><br>Check the timing as well: a weekly report is a snapshot from a fixed day, and if its data was collected before Wednesday, the new page cannot be in it at all."
     },
     {
-     "q": "Your AI visibility score drops from 70 to 62, yet you appear in more answers than before. How can both be true?",
+     "q": "This quarter your visibility rose by 10 points, while your recommendation rate fell by 5. Which number tells you more about sales?",
      "o": [
-      "It compares you with other brands, and they gained more than you did",
-      "The tool has a bug: more mentions should always raise the score",
-      "The engines lowered your ranking, which outweighs the mentions",
-      "Scores out of 100 reset every quarter, so a fall is expected"
+      "The recommendation rate: being advised beats being listed",
+      "Visibility, since more answers means more buyers see you",
+      "Neither: a rise and a fall of similar size cancel out",
+      "Visibility, since recommendation rates are too noisy to use"
      ],
      "a": 0,
-     "why": "A score out of 100 has to be measured against something. Often that is a set of competing brands, sometimes picked by the tool rather than by you.<br><br>So your score can fall while you appear in more answers, simply because the brands you are compared with grew faster, or because the tool changed which brands it compares you with.<br><br>Before you put a score like this in front of an executive, ask what it is measured against."
+     "why": "Visibility counts the answers you appear in, even as the eighth name in a list. Recommendation rate counts the answers where you are the one being advised. Buyers act on the advice, not on the list.<br><br>So visibility going up while recommendations go down usually means you are mentioned more often while competitors win the actual decision. That is a positioning problem, and a visibility number on its own would hide it. Report both, and <b>lead with the one that tracks the decision</b>."
     },
     {
      "q": "You have budget to make one part of your GEO reporting more trustworthy. Which buys the most?",
