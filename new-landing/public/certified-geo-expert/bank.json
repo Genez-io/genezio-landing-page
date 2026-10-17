@@ -252,15 +252,15 @@
      "why": "These are a few small files that let AI agents address your service directly instead of scraping a page built for human eyes. Today they influence very little traffic.<br><br>They are worth publishing because the cost is near zero, the option value is real, and so few sites have them that being early is genuinely cheap. Say “cheap insurance” rather than “urgent”, and save your urgency for the things that move answers this quarter."
     },
     {
-     "q": "Your security team blocks all non-browser traffic. In commercial terms, what have they just decided?",
+     "q": "Your security team blocks every visitor that isn't a person browsing the site. What have they decided for the business, perhaps without knowing it?",
      "o": [
-      "That AI agents buying on a customer's behalf cannot buy from you",
-      "Nothing commercial: bots are not customers and never place orders",
-      "That the site gets faster for people, since bots no longer load it",
-      "That you rank better, since engines reward sites that block scrapers"
+      "That AI agents shopping for your customers can't buy from you",
+      "Nothing: AI agents are not customers and never place orders",
+      "That you rank higher, since AI engines reward sites that block them",
+      "That the site gets faster for customers, since agents no longer load it"
      ],
      "a": 0,
-     "why": "When the buyer is an AI agent, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
+     "why": "More and more, the buyer is an AI agent acting for a person: comparing options, checking prices, placing the order. To your website, it doesn't look like a person browsing.<br><br>So a rule that lets only people through is also a decision to turn those buyers away, and it is usually made by people who were never told it was a commercial decision. When the buyer is an AI agent, your security policy <b>is</b> your sales policy.<br><br>Your job is not to overrule security. It is to make sure the trade-off is made on purpose, by people who can see both sides of it."
     },
     {
      "q": "An AI agent is shopping for a customer on your site. What most helps it get your prices and stock right?",
