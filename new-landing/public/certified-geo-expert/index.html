@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Certified GEO Expert</title>
+<meta name="description" content="A free, vendor-neutral test on generative engine optimisation, with a clear explanation of everything you get wrong.">
+<meta property="og:title" content="Think you know GEO?">
+<meta property="og:description" content="A free, vendor-neutral test on generative engine optimisation. Most people who do this for a living get a good few of these wrong.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/certified-geo-expert/style.css">
+</head>
+<body>
+<div class="wrap">
+  <main id="app" class="stack"></main>
+</div>
+
+<script>
+// The questions, the pass mark and the hook question are in bank.json, which
+// the credential API (api/credentials.js) scores against too.
+let MODULES=[],PASS=0.8,HOOK_M=0,HOOK_Q=0;
+
+// The credential API is /api/credentials on the same origin (api/credentials.js).
+const QUIZ_URL=location.origin+"/certified-geo-expert/";
+const KEYS=["A","B","C","D"];
+const app=document.getElementById("app");
+const S={screen:"intro",mod:0,qi:0,answers:{},done:[],seed:0};
+const LS="geo-cert-v1";
+// Answers, progress and the issued credential live in localStorage, thus a reload
+// or a later visit picks up where the visitor left off.
+function save(){try{localStorage.setItem(LS,JSON.stringify({answers:S.answers,done:S.done,mod:S.mod,seed:S.seed,cred:S.cred||null,holder:S.holder||null}))}catch(e){}}
+function load(){try{const r=localStorage.getItem(LS);if(!r)return;const d=JSON.parse(r);if(d&&d.answers){S.answers=d.answers;S.done=d.done||[];S.mod=d.mod||0;S.seed=d.seed||0;S.cred=d.cred||null;S.holder=d.holder||null}}catch(e){}}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function modScore(i){const m=MODULES[i];let c=0;m.qs.forEach((q,j)=>{if(S.answers[i+"."+j]===q.a)c++});return c}
+function totalScore(){return MODULES.reduce((a,_,i)=>a+modScore(i),0)}
+function totalQs(){return MODULES.reduce((a,m)=>a+m.qs.length,0)}
+
+// The bank lists the right option first. Each visitor sees the options of a
+// question in an order of their own, fixed by a seed that persists with the
+// answers, thus a resumed test shows the same order. Answers keep the index of
+// the bank, the one the API scores.
+function order(key){
+  let h=S.seed>>>0;for(let i=0;i<key.length;i++)h=Math.imul(h^key.charCodeAt(i),2654435761)>>>0;
+  const rnd=()=>{h=(h+0x6D2B79F5)>>>0;let t=h;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296};
+  const o=[0,1,2,3];for(let i=o.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[o[i],o[j]]=[o[j],o[i]]}
+  return o;
+}
+
+function render(){
+  app.innerHTML="";
+  if(S.screen==="intro")intro();
+  else if(S.screen==="modintro")modintro();
+  else if(S.screen==="q")question();
+  else if(S.screen==="review")review();
+  else if(S.screen==="claim")claim();
+  else if(S.screen==="cert")cert();
+  window.scrollTo({top:0,behavior:"instant"});
+}
+function el(h){const d=document.createElement("div");d.innerHTML=h.trim();return d.firstElementChild}
+
+function intro(){
+  const resume=S.done.length>0&&S.done.length<MODULES.length;
+  const finished=S.done.length>=MODULES.length;
+  const label=S.cred?"View your credential":finished?"See your result":resume?"Pick up where you left off":"Take the test";
+  app.append(el(`<div class="stack" style="gap:22px">
+    <div>
+      <p class="eyebrow">Free &middot; vendor-neutral &middot; nothing is being sold to you</p>
+      <h1 style="margin-top:10px">Think you know GEO?</h1>
+      <p style="font-family:var(--display);font-size:clamp(21px,4.2vw,27px);font-weight:400;color:var(--ink-2);margin-top:6px">Let's find out.</p>
+    </div>
+
+    <p class="lede" style="font-size:17.5px;color:var(--ink)">Generative engine optimisation is young enough that confident advice badly outnumbers tested advice. Plenty of it is wrong in ways that are expensive and very hard to notice.</p>
+
+    <p class="lede">If you know why a jump from 30% to 40% visibility can mean nothing at all, why most of your AI traffic is probably hiding in the wrong line of your analytics, and why being named in an answer now changes shortlists rather than just confirming them &mdash; you'll be fine.</p>
+
+    <p class="lede">The certificate is just what you take to LinkedIn afterwards.</p>
+
+    <div class="stack" style="gap:10px">
+      <p class="eyebrow">The ${MODULES.length} sections</p>
+      <div class="modlist">${MODULES.map((m,i)=>`<div class="modrow"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="t">${esc(m.title)}</span><span class="d">${esc(m.blurb)}</span></div>`).join("")}</div>
+    </div>
+
+    <div class="row">
+      <button class="btn" id="go" style="font-size:16px;padding:14px 26px">${label}</button>
+      ${resume||finished||S.cred?'<button class="btn ghost" id="reset">Start over</button>':""}
+    </div>
+    <p class="foot">${MODULES.length} sections, about half an hour. ${Math.round(PASS*100)}% to certify. Nothing is timed and you can retake any section.</p>
+    <div class="sitefoot"><span>Maintained by <a href="https://genezio.com" target="_blank" rel="noopener">Genezio</a></span></div>
+  </div>`));
+  document.getElementById("go").onclick=()=>{
+    if(S.cred)S.screen="cert";else if(finished)S.screen="claim";
+    else{S.mod=resume?S.done.length:0;S.qi=0;S.screen="modintro"}
+    render();
+  };
+  const rs=document.getElementById("reset");
+  if(rs)rs.onclick=()=>{S.answers={};S.done=[];S.mod=0;S.cred=null;S.holder=null;save();render()};
+}
+
+function modintro(){
+  const m=MODULES[S.mod];
+  app.append(el(`<div class="stack">
+    <div><p class="eyebrow">Section ${S.mod+1} of ${MODULES.length}</p>
+    <h2 style="margin-top:8px">${esc(m.title)}</h2></div>
+    <p class="lede">${esc(m.blurb)}</p>
+    <div class="card"><p style="font-size:14.5px;color:var(--ink-2);margin:0">${m.qs.length} questions. No feedback until the section ends — answer them all, then you'll get a clear explanation of anything you missed.</p></div>
+    <div class="row"><button class="btn" id="start">Start section</button></div>
+  </div>`));
+  document.getElementById("start").onclick=()=>{S.qi=0;S.screen="q";render()};
+}
+
+function question(){
+  const m=MODULES[S.mod],q=m.qs[S.qi],key=S.mod+"."+S.qi;
+  const sel=S.answers[key];
+  const pct=Math.round((S.qi/m.qs.length)*100);
+  const node=el(`<div class="stack">
+    <div class="stack" style="gap:10px">
+      <div class="qhead"><span class="eyebrow">${esc(m.title)}</span><span class="eyebrow">${S.qi+1} / ${m.qs.length}</span></div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+    </div>
+    <div class="card stack" style="gap:16px">
+      <p class="qtext">${q.q}</p>
+      <div class="opts">${order(key).slice(0,q.o.length).map((i,p)=>`<button class="opt" data-i="${i}" aria-pressed="${sel===i?"true":"false"}"><span class="k">${KEYS[p]}</span><span>${q.o[i]}</span></button>`).join("")}</div>
+    </div>
+    <div class="navrow">
+      <button class="btn ghost" id="back" ${S.qi===0?"disabled":""}>Back</button>
+      <span class="hint">Keys ${KEYS.join(" ")} &middot; Enter to continue</span>
+      <button class="btn" id="next" ${sel===undefined?"disabled":""}>${S.qi===m.qs.length-1?"Finish section":"Next"}</button>
+    </div>
+  </div>`);
+  app.append(node);
+  node.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    S.answers[key]=+b.dataset.i;save();
+    node.querySelectorAll(".opt").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));
+    document.getElementById("next").disabled=false;
+  });
+  document.getElementById("back").onclick=()=>{if(S.qi>0){S.qi--;render()}};
+  document.getElementById("next").onclick=adv;
+}
+function adv(){
+  const m=MODULES[S.mod];
+  if(S.answers[S.mod+"."+S.qi]===undefined)return;
+  if(S.qi<m.qs.length-1){S.qi++;render()}
+  else{if(!S.done.includes(S.mod))S.done.push(S.mod);save();S.screen="review";render()}
+}
+document.addEventListener("keydown",e=>{
+  if(S.screen!=="q")return;
+  const i=KEYS.indexOf(e.key.toUpperCase());
+  if(i>-1){const b=app.querySelectorAll(".opt")[i];if(b){b.click();e.preventDefault()}}
+  if(e.key==="Enter"){adv();e.preventDefault()}
+});
+
+function headline(c,t){
+  const r=c/t;
+  if(r===1)return["Clean sweep.","Every one. That section is genuinely yours."];
+  if(r>=.8)return["Strong.","Solid grasp — read the misses below and it's airtight."];
+  if(r>=.5)return["Halfway there.","The gaps below are the ones that cost people money in practice."];
+  return["Worth a reread.","No shame in it — most of these are counter-intuitive on purpose."];
+}
+function review(){
+  const i=S.mod,m=MODULES[i],c=modScore(i),t=m.qs.length;
+  const wrong=m.qs.map((q,j)=>({q,j})).filter(({q,j})=>S.answers[i+"."+j]!==q.a);
+  const [h,sub]=headline(c,t);
+  const last=i===MODULES.length-1;
+  const node=el(`<div class="stack">
+    <div><p class="eyebrow">Section ${i+1} complete &middot; ${esc(m.title)}</p>
+      <div class="row" style="align-items:baseline;gap:14px;margin-top:10px">
+        <span class="scorebig">${c}<span style="color:var(--ink-3);font-size:.5em">/${t}</span></span>
+        <h2>${h}</h2>
+      </div>
+      <p class="verdict" style="margin-top:8px">${sub}</p>
+    </div>
+    ${wrong.length===0?`<div class="allright">Nothing to correct. Here's the one worth remembering anyway: <span class="why">${m.qs[0].why}</span></div>`:
+      `<p class="eyebrow">What you missed</p>`+wrong.map(({q,j})=>`
+      <div class="missed">
+        <p class="q">${q.q}</p>
+        <div class="ab">
+          <div><span class="tag bad">You said</span><span>${q.o[S.answers[i+"."+j]]}</span></div>
+          <div><span class="tag good">Answer</span><span>${q.o[q.a]}</span></div>
+        </div>
+        <p class="why">${q.why}</p>
+      </div>`).join("")}
+    <div class="row">
+      <button class="btn" id="on">${last?"See your result":"Next section"}</button>
+      <button class="btn ghost" id="retry">Retake this section</button>
+    </div>
+  </div>`);
+  app.append(node);
+  document.getElementById("on").onclick=()=>{
+    if(last){S.screen="claim"}else{S.mod++;S.qi=0;S.screen="modintro"}
+    save();render();
+  };
+  document.getElementById("retry").onclick=()=>{
+    m.qs.forEach((_,j)=>delete S.answers[i+"."+j]);
+    S.done=S.done.filter(x=>x!==i);save();S.qi=0;S.screen="modintro";render();
+  };
+}
+
+// The question most people get wrong (bank.json `hook`). Used to make the share text actually interesting.
+function hookGotIt(){return S.answers[HOOK_M+"."+HOOK_Q]===MODULES[HOOK_M].qs[HOOK_Q].a}
+
+function claim(){
+  const c=totalScore(),t=totalQs(),pct=Math.round(c/t*100),passed=c/t>=PASS;
+  if(!passed){
+    app.append(el(`<div class="stack">
+      <div><p class="eyebrow">Result</p>
+        <div class="row" style="align-items:baseline;gap:14px;margin-top:10px"><span class="scorebig">${pct}%</span><h2>Not yet.</h2></div>
+        <p class="verdict" style="margin-top:8px">${c} of ${t}. You need ${Math.round(PASS*100)}% to certify. The explanations are still sitting in each section &mdash; reread the ones that caught you, then retake.</p></div>
+      <div class="grid2">${MODULES.map((m,i)=>`<div class="modscore"><div class="t">${esc(m.title)}</div><div class="s">${modScore(i)}/${m.qs.length}</div></div>`).join("")}</div>
+      <div class="row"><button class="btn" id="again">Back to sections</button></div>
+    </div>`));
+    document.getElementById("again").onclick=()=>{S.screen="intro";render()};
+    return;
+  }
+  app.append(el(`<div class="stack">
+    <div><p class="eyebrow">Result</p>
+      <div class="row" style="align-items:baseline;gap:14px;margin-top:10px"><span class="scorebig">${pct}%</span><h2>Certified.</h2></div>
+      <p class="verdict" style="margin-top:8px">${c} of ${t}. You can tell a retrieval problem from a selection problem, you know why a ten-run sample proves nothing, and you can read a vendor statistic without being steered by it. That is a higher bar than most of this market clears.</p></div>
+    <div class="grid2">${MODULES.map((m,i)=>`<div class="modscore"><div class="t">${esc(m.title)}</div><div class="s">${modScore(i)}/${m.qs.length}</div></div>`).join("")}</div>
+    <div class="card stack" style="gap:14px">
+      <div><h3>Claim your credential</h3>
+      <p style="font-size:14.5px;color:var(--ink-2);margin-top:6px">This issues a credential with a public verification page, so the badge on your profile can actually be checked. Anyone with the link sees your name, your company if you give one, your score and the date. Your email is never shown: we use it to confirm the credential and to handle your requests to recover, revoke or delete it, and to contact you only if you tick the box below. See the <a href="/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.</p></div>
+      <div class="field"><label for="nm">Full name</label><input id="nm" autocomplete="name" placeholder="Ada Lovelace"></div>
+      <div class="field"><label for="em">Email</label><input id="em" type="email" autocomplete="email" placeholder="ada@example.com"></div>
+      <div class="field"><label for="co">Company <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input id="co" autocomplete="organization" placeholder="Analytical Engines Ltd"></div>
+      <label class="check"><input type="checkbox" id="ok"><span>Genezio may email me with follow-up questions about GEO and how my team works on it. Optional &mdash; the credential is the same either way, and you can withdraw this at any time by writing to privacy@genezio.com.</span></label>
+      <p class="err" id="er" hidden></p>
+      <div class="row"><button class="btn" id="issue">Issue credential</button></div>
+    </div>
+  </div>`));
+  document.getElementById("issue").onclick=async(ev)=>{
+    const nm=document.getElementById("nm").value.trim();
+    const em=document.getElementById("em").value.trim();
+    const co=document.getElementById("co").value.trim();
+    const contact=document.getElementById("ok").checked;
+    const er=document.getElementById("er");
+    if(nm.length<2){er.textContent="Enter the name you want on the credential.";er.hidden=false;return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){er.textContent="That email doesn't look right.";er.hidden=false;return}
+    er.hidden=true;
+    const btn=ev.currentTarget;btn.disabled=true;btn.textContent="Issuing\u2026";
+    // The API scores `answers` itself; the rest is for the record of the request.
+    const payload={name:nm,email:em,company:co,contactConsent:contact,score:c,total:t,percent:pct,
+      modules:MODULES.map((m,i)=>({id:m.id,score:modScore(i),total:m.qs.length})),
+      answers:S.answers};
+    let res=null,msg="The credential service didn't answer. Your answers are saved here — try again in a minute.";
+    try{
+      const r=await fetch("/api/credentials",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+      const d=await r.json().catch(()=>null);
+      if(r.ok&&d&&d.id)res=d;else if(d&&d.error)msg=d.error;
+    }catch(e){}
+    if(!res){er.textContent=msg;er.hidden=false;btn.disabled=false;btn.textContent="Issue credential";return}
+    S.cred=res;
+    S.holder={name:nm,company:co,email:em};
+    save();S.screen="cert";render();
+  };
+}
+
+function sharePost(pct,url,id){
+  const got=hookGotIt();
+  return `Your team blocks the AI crawler. You have opted out of AI training.
+
+So why is ChatGPT still quoting your website?
+
+${got?"I got this one right on the test. Most people don't.":"I got this one wrong."}
+
+Because the crawler that trains the model and the one that fetches your page the moment somebody asks a question are two different agents. Blocking the first does nothing to the second.
+
+And it runs the other way too: plenty of brands have blocked the agent that decides whether they appear in answers at all, and have no idea they did it.
+
+I just took the Certified GEO Expert test. ${totalQs()} questions on how answer engines pick sources, and on how to measure any of it without fooling yourself. I scored ${pct}%.
+
+It's free, vendor-neutral, and takes about 20 minutes: ${url}
+
+Credential: ${id}`;
+}
+
+function cert(){
+  const c=totalScore(),t=totalQs(),pct=Math.round(c/t*100);
+  const d=new Date(),cr=S.cred;
+  const certUrl=cr.url;
+  const li="https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME"
+    +"&name="+encodeURIComponent("Certified GEO Expert")
+    +"&organizationName="+encodeURIComponent("Genezio")
+    +"&issueYear="+d.getFullYear()+"&issueMonth="+(d.getMonth()+1)
+    +"&certUrl="+encodeURIComponent(certUrl)+"&certId="+encodeURIComponent(cr.id);
+  const post=sharePost(pct,QUIZ_URL,cr.id);
+  const liShare="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(QUIZ_URL);
+  app.append(el(`<div class="stack">
+    <div class="cert">
+      <p class="seal">GEO Certification</p>
+      <p class="nm">${esc(S.holder&&S.holder.name||"Certified GEO Expert")}</p>
+      <p class="sub">Certified GEO Expert${S.holder&&S.holder.company?" \u00b7 "+esc(S.holder.company):""}<br>${pct}% across ${MODULES.length} sections on generative engine optimisation.</p>
+      <p class="meta">Credential ${esc(cr.id)} &middot; ${d.toLocaleDateString(undefined,{month:"long",year:"numeric"})}<br>${esc(certUrl)}</p>
+    </div>
+    ${cr.status==="pending"?`<p class="notice"><b>One step left.</b> We sent a confirmation link to ${esc(S.holder&&S.holder.email||"your email")}. The credential and its verification link go live once you click it. Add it to LinkedIn now if you like &mdash; just confirm before anyone checks it.</p>`:""}
+    ${cr.rank?`<p class="statline">${esc(cr.rank)}</p>`:""}
+    <div class="row">
+      <a class="btn" href="${li}" target="_blank" rel="noopener">Add to LinkedIn profile</a>
+      <a class="btn" id="lipost" href="${liShare}" target="_blank" rel="noopener">Copy post &amp; open LinkedIn</a>
+      <button class="btn ghost" id="copy">Copy text only</button>
+    </div>
+    <div class="stack" style="gap:8px">
+      <p class="eyebrow">Suggested post</p>
+      <p style="font-size:13.5px;color:var(--ink-2);margin:0">It opens with the mistake most people make, not with the badge. That is what makes someone stop and try it. LinkedIn will not accept pre-written text, so the button copies this and opens the composer &mdash; paste, then publish.</p>
+      <div class="sharebox" id="pb">${esc(post)}</div>
+    </div>
+    <div class="row"><button class="btn ghost" id="again">Back to sections</button></div>
+    <div class="sitefoot"><span>Maintained by <a href="https://genezio.com" target="_blank" rel="noopener">Genezio</a></span></div>
+  </div>`));
+  document.getElementById("again").onclick=()=>{S.screen="intro";render()};
+  const lp=document.getElementById("lipost");
+  if(lp)lp.addEventListener("click",()=>{try{navigator.clipboard.writeText(post)}catch(e){}});
+  document.getElementById("copy").onclick=async(ev)=>{
+    const b=ev.currentTarget;
+    try{await navigator.clipboard.writeText(post);b.textContent="Copied";setTimeout(()=>b.textContent="Copy text only",1800)}
+    catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById("pb"));
+      const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected \u2014 press copy"}
+  };
+}
+
+fetch("/certified-geo-expert/bank.json").then(r=>{if(!r.ok)throw r.status;return r.json()}).then(b=>{
+  MODULES=b.modules;PASS=b.pass;
+  HOOK_M=Math.max(0,MODULES.findIndex(m=>m.id===b.hook.module));HOOK_Q=b.hook.question;
+  load();
+  if(!S.seed){S.seed=(crypto.getRandomValues(new Uint32Array(1))[0]||1);save()}
+  render();
+}).catch(()=>{app.append(el(`<p class="notice">The questions didn't load. Reload the page to try again.</p>`))});
+</script>
+</body>
+</html>

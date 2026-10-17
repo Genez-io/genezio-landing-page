@@ -30,9 +30,14 @@ const EMAIL_SYNTAX = /^[^\s@<>(),;:"[\]\\]+@[^\s@<>(),;:"[\]\\]+\.[^\s@<>(),;:"[
 const SLACK_FIELD_MAX = 2000;
 const SLACK_SECTION_MAX = 3000;
 
+/** An address that Resend takes as a recipient or a `reply_to`. */
+function isEmail(email) {
+  return EMAIL_SYNTAX.test(String(email).trim());
+}
+
 function isWorkEmail(email) {
   const value = String(email).trim();
-  if (!EMAIL_SYNTAX.test(value)) return false;
+  if (!isEmail(value)) return false;
   const domain = value.slice(value.lastIndexOf("@") + 1).toLowerCase();
   return !FREE_EMAIL_DOMAINS.has(domain);
 }
@@ -152,6 +157,7 @@ async function sendSlack({ tag, webhook, webhookName, text, blocks }) {
 
 module.exports = {
   clean,
+  isEmail,
   isWorkEmail,
   recipients,
   sendEmail,

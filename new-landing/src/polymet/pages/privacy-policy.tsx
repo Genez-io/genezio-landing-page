@@ -13,7 +13,7 @@ export function PrivacyPolicy() {
                     {/* Header */}
                     <div className="mb-12 md:mb-16">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">PRIVACY POLICY</h1>
-                        <p className="text-white/60 text-lg">This Privacy Policy was last updated on 18 August, 2026</p>
+                        <p className="text-white/60 text-lg">This Privacy Policy was last updated on 17 October, 2026</p>
                     </div>
 
                     {/* Content */}
@@ -259,6 +259,31 @@ export function PrivacyPolicy() {
                                     </p>
                                     <p>
                                         Genezio may obtain Personal Information from third party sources, including customers, third-party cloud, software or services providers, or third-party tracking technologies such as cookies.
+                                    </p>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                                    CERTIFIED GEO EXPERT CREDENTIALS
+                                </h2>
+                                <div className="space-y-4">
+                                    <p>
+                                        When you pass the Certified GEO Expert test at genezio.com/certified-geo-expert and claim a credential, we process your name, your email address, your company name if you provide it, your answers and score, the date of issue and, for rate limiting only, a one-way hash of your IP address that is deleted after two days.
+                                    </p>
+                                    <p>
+                                        We use your email address to confirm the credential and to handle your requests to recover, revoke or delete it. It is never shown on the credential. A credential that is not confirmed within 7 days is deleted automatically.
+                                    </p>
+                                    <p>
+                                        The claim form also has an optional box, unticked by default, to let Genezio email you with follow-up questions about GEO and how your team works on it. If you tick it and confirm your email, we share your name, email, company and score with our team for that purpose, on the basis of your consent, and keep a record of when you gave it. The credential is the same whether or not you tick it. You can withdraw this consent at any time by emailing privacy@genezio.com; we then stop contacting you and keep the credential.
+                                    </p>
+                                    <p>
+                                        The verification page of a confirmed credential is public by design: anyone with its link or ID can see your name, your company if you provided it, your score by section and the date of issue. The legal basis is your consent, given when you confirm the credential; you can withdraw it at any time.
+                                    </p>
+                                    <p>
+                                        To revoke a credential or delete its record, email{" "}
+                                        <a href="mailto:privacy@genezio.com" className="text-white hover:underline">privacy@genezio.com</a>{" "}
+                                        from the address it was issued to. Credential records are stored with Upstash and confirmation emails are sent through Resend, acting as our processors.
                                     </p>
                                 </div>
                             </section>

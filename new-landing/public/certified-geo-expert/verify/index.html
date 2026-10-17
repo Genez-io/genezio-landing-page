@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verify a Certified GEO Expert credential</title>
+<meta name="description" content="Check that a Certified GEO Expert credential was really earned, by that person, on that date.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Certified GEO Expert">
+<meta property="og:description" content="A free, vendor-neutral test on generative engine optimisation. Check this credential, then try a question yourself.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/certified-geo-expert/style.css">
+</head>
+<body>
+<div class="wrap">
+  <main id="app" class="stack"></main>
+</div>
+
+<script>
+// /certified-geo-expert/verify/
+//   ?id=GEO-…        the public record of a credential (GET /api/credentials)
+//   ?confirm=<token> the link of the confirmation email: a button POSTs the
+//                    token to /api/credentials-confirm, then the page shows the
+//                    credential. The button stops link scanners from confirming.
+// Under the credential, one question of the test to play: the visitors of this
+// page are mostly people who clicked a badge on LinkedIn.
+const app=document.getElementById("app");
+const params=new URLSearchParams(location.search);
+const KEYS=["A","B","C","D"];
+let BANK=null;
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function el(h){const d=document.createElement("div");d.innerHTML=h.trim();return d.firstElementChild}
+const bankReady=fetch("/certified-geo-expert/bank.json").then(r=>r.ok?r.json():null).then(b=>BANK=b).catch(()=>null);
+function title(id){const m=BANK&&BANK.modules.find(x=>x.id===id);return m?m.title:id}
+function dateText(iso){const d=new Date(iso+"T00:00:00Z");return isNaN(d)?iso:d.toLocaleDateString(undefined,{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
+
+const credBox=el(`<section class="stack"></section>`);
+const hookBox=el(`<section class="stack"></section>`);
+const detailBox=el(`<section class="stack"></section>`);
+app.append(credBox,hookBox,detailBox,el(`<div class="sitefoot"><span>Free &middot; vendor-neutral &middot; nothing is being sold to you here.</span><span>Maintained by <a href="https://genezio.com" target="_blank" rel="noopener">Genezio</a></span></div>`));
+
+function show(html){credBox.innerHTML="";detailBox.innerHTML="";credBox.append(el(`<div class="stack">${html}</div>`))}
+
+function valid(c,banner){
+  document.title=c.name+" — Certified GEO Expert";
+  show(`
+    ${banner?`<p class="notice"><b>Confirmed.</b> Your credential is live, and this is the page anyone who checks it will see. Add the link to your LinkedIn profile from the test page, or copy it from the address bar.</p>`:""}
+    <div><span class="status ok">Valid credential</span></div>
+    <div class="cert">
+      <p class="seal">Certified GEO Expert</p>
+      <p class="nm">${esc(c.name)}</p>
+      <p class="sub">${c.company?esc(c.company)+"<br>":""}Scored ${esc(c.percent)}% on the Certified GEO Expert test</p>
+      <p class="meta">Credential ${esc(c.id)} &middot; issued ${esc(dateText(c.issued))}</p>
+    </div>`);
+  // The breakdown goes under the question: the question is what a visitor should see first.
+  detailBox.append(el(`<div class="stack">
+    <p class="eyebrow">Score by section</p>
+    ${Array.isArray(c.modules)&&c.modules.length?`<div class="grid2">${c.modules.map(m=>`<div class="modscore"><div class="t">${esc(title(m.id))}</div><div class="s">${esc(m.score)}/${esc(m.total)}</div></div>`).join("")}</div>`:""}
+    <p class="foot">This credential was issued to the person named above after they passed the test with the score shown, and confirmed their email address. It is not a statement about them by Genezio beyond that.</p>
+  </div>`));
+}
+
+function notFound(id){
+  show(`
+    <div><span class="status no">Not found</span></div>
+    <div class="card stack" style="gap:10px">
+      <h2>No valid credential${id?` with the ID ${esc(id)}`:""}.</h2>
+      <p style="color:var(--ink-2)">It may be mistyped, not yet confirmed by its holder, or revoked. A credential only verifies here once its holder has confirmed their email.</p>
+    </div>
+    ${lookupForm(id)}`);
+  bindLookup();
+}
+
+function lookupForm(id){
+  return `<form class="card stack" id="lk" style="gap:12px">
+    <div class="field"><label for="cid">Credential ID</label><input id="cid" placeholder="GEO-2026-XXXXXXX" value="${esc(id||"")}" autocomplete="off" spellcheck="false"></div>
+    <div class="row"><button class="btn" type="submit">Verify</button></div>
+  </form>`;
+}
+function bindLookup(){
+  const f=document.getElementById("lk");
+  if(f)f.onsubmit=e=>{e.preventDefault();const v=document.getElementById("cid").value.trim().toUpperCase();if(v)location.search="?id="+encodeURIComponent(v)};
+}
+
+function unavailable(retry){
+  show(`<div class="card stack" style="gap:10px"><h2>We couldn't check this right now.</h2>
+    <p style="color:var(--ink-2)">The credential service didn't answer. That says nothing about the credential itself.</p>
+    <div class="row"><button class="btn" id="rt">Try again</button></div></div>`);
+  document.getElementById("rt").onclick=retry;
+}
+
+async function verify(id,banner){
+  show(`<p class="eyebrow">Checking ${esc(id)}…</p>`);
+  try{
+    const r=await fetch("/api/credentials?id="+encodeURIComponent(id));
+    if(r.status===404){await bankReady;return notFound(id)}
+    if(!r.ok)throw r.status;
+    const c=await r.json();await bankReady;valid(c,banner);
+  }catch(e){unavailable(()=>verify(id,banner))}
+}
+
+function confirmStep(token){
+  show(`<div class="card stack" style="gap:14px">
+    <div><p class="eyebrow">Last step</p><h2 style="margin-top:8px">Activate your credential</h2></div>
+    <p style="color:var(--ink-2)">This confirms your email and publishes your credential: anyone with its link will see your name, your company if you gave one, your score and the date. Your email stays private.</p>
+    <p class="err" id="er" hidden></p>
+    <div class="row"><button class="btn" id="go">Confirm and activate</button></div>
+  </div>`);
+  document.getElementById("go").onclick=async ev=>{
+    const b=ev.currentTarget,er=document.getElementById("er");
+    b.disabled=true;b.textContent="Activating…";er.hidden=true;
+    try{
+      const r=await fetch("/api/credentials-confirm",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token})});
+      const d=await r.json().catch(()=>null);
+      if(r.ok&&d&&d.id){history.replaceState(null,"","?id="+encodeURIComponent(d.id));await verify(d.id,true);return playHook()}
+      er.textContent=(d&&d.error)||"That didn't work. Try again in a minute.";
+    }catch(e){er.textContent="The credential service didn't answer. Try again in a minute."}
+    er.hidden=false;b.disabled=false;b.textContent="Confirm and activate";
+  };
+}
+
+// The question most people get wrong (bank.json `hook`), playable in place.
+function playHook(){
+  if(!BANK||!BANK.hook)return;
+  const mi=BANK.modules.findIndex(m=>m.id===BANK.hook.module);
+  const m=BANK.modules[mi],q=m&&m.qs[BANK.hook.question];
+  if(!q)return;
+  const total=BANK.modules.reduce((a,x)=>a+x.qs.length,0);
+  const seq=[...q.o.keys()];
+  for(let i=seq.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[seq[i],seq[j]]=[seq[j],seq[i]]}
+  hookBox.innerHTML="";
+  const node=el(`<div class="stack">
+    <div><p class="eyebrow">One question from the test</p>
+      <h2 style="margin-top:8px">Most people get this one wrong.</h2></div>
+    <div class="card stack" style="gap:16px">
+      <p class="qtext">${q.q}</p>
+      <div class="opts">${seq.map((i,p)=>`<button class="opt" data-i="${i}"><span class="k">${KEYS[p]}</span><span>${q.o[i]}</span></button>`).join("")}</div>
+      <div id="ans" hidden class="stack" style="gap:12px"></div>
+    </div>
+  </div>`);
+  hookBox.append(node);
+  node.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    const pick=+b.dataset.i,right=pick===q.a;
+    node.querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(+x.dataset.i===q.a)x.dataset.right="true";else if(x===b)x.dataset.wrong="true"});
+    const a=node.querySelector("#ans");
+    a.innerHTML=`<p><span class="tag ${right?"good":"bad"}" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:5px">${right?"Right":"Not quite"}</span></p>
+      <p class="why">${q.why}</p>
+      <div class="row"><a class="btn" href="/certified-geo-expert/">The rest of the test &rarr;</a></div>
+      <p class="foot">${total} questions across ${BANK.modules.length} sections. Free, no sign-up, about half an hour.</p>`;
+    a.hidden=false;
+  });
+}
+
+(async()=>{
+  const token=params.get("confirm"),id=(params.get("id")||"").trim().toUpperCase();
+  if(token)confirmStep(token);
+  else if(id)verify(id,false);
+  else{show(`<div><p class="eyebrow">Certified GEO Expert</p><h2 style="margin-top:8px">Verify a credential</h2></div>${lookupForm("")}`);bindLookup()}
+  await bankReady;if(!token)playHook();
+})();
+</script>
+</body>
+</html>
