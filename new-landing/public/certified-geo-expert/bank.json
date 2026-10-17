@@ -263,15 +263,15 @@
      "why": "When the buyer is software, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
     },
     {
-     "q": "What most limits an agent's ability to buy from your store on a customer's behalf?",
+     "q": "An AI agent is shopping for a customer on your site. What most helps it get your prices and stock right?",
      "o": [
-      "No product data it can read without scraping the page",
-      "No live chat",
-      "Missing social share images",
-      "No mobile app"
+      "An up-to-date product feed, like the one you send to Google Shopping",
+      "More product photos, so it can see exactly what each item looks like",
+      "Longer product descriptions that explain each item in more detail",
+      "Customer reviews on every page, so it can judge which item is best"
      ],
      "a": 0,
-     "why": "An agent needs to know what you sell, at what price, and whether it is in stock — in a form it can parse reliably. If that only exists inside a page rendered for human eyes, the agent gets it wrong or gives up and goes elsewhere.<br><br>A clean, current product feed is the highest-value thing you can hand it, and it is usually something you already produce for another channel."
+     "why": "Agents can read your product pages much as a person does. The trouble is that the price, stock and options on a page often depend on what gets clicked, where the visitor is, or what loads last, so an agent can come away with the wrong one.<br><br>A <b>product feed</b> states each item's price and availability plainly and stays current. Most stores already produce one for Google Shopping or the marketplaces, so offering it to agents as well is usually cheap.<br><br>It will not decide whether the agent can finish the purchase (checkout is a separate hurdle), but it decides whether the agent gets the basics right."
     },
     {
      "q": "A competitor publishes a commerce manifest for agents and you do not. What does that change today?",
