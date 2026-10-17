@@ -123,6 +123,20 @@ function escapeHtml(s) {
 }
 
 /**
+ * The sender of the confirmation email. Resend refuses an address whose domain
+ * the account has not verified, thus this takes the address of MAIL_FROM, the
+ * one that the emails of the other forms already send from, under the name of
+ * the certification. CREDENTIALS_MAIL_FROM overrides both.
+ */
+function sender() {
+  if (process.env.CREDENTIALS_MAIL_FROM) return process.env.CREDENTIALS_MAIL_FROM;
+  const shared = process.env.MAIL_FROM || "";
+  const match = shared.match(/<([^>]+)>/);
+  const address = match ? match[1] : shared.trim() || "notifications@genez.io";
+  return `Certified GEO Expert <${address}>`;
+}
+
+/**
  * Email the confirmation link with Resend. Gives true when Resend took it.
  * With no RESEND_API_KEY off Vercel, the link goes to the log instead, thus
  * the flow can be driven on a laptop.
@@ -160,7 +174,7 @@ async function sendConfirmation({ to, name, id, confirmUrl, contactConsent }) {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: process.env.CREDENTIALS_MAIL_FROM || "Certified GEO Expert <notifications@genez.io>",
+        from: sender(),
         to: [to],
         reply_to: process.env.CREDENTIALS_REPLY_TO || "privacy@genezio.com",
         subject: `Confirm your Certified GEO Expert credential (${id})`,
