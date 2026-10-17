@@ -206,6 +206,7 @@ module.exports = {
   publicView,
   score,
   sendConfirmation,
+  sender,
   sha256,
   siteUrl,
   verifyUrl,
