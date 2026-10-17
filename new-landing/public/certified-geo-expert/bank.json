@@ -506,10 +506,10 @@
     {
      "q": "When an AI Overview appears, what happens to click-through on the #1 organic desktop result?",
      "o": [
-      "It falls by roughly 58%",
-      "It rises slightly",
-      "It is unchanged",
-      "It falls by about 5%"
+      "It falls by more than half, as many searchers stop at the Overview",
+      "It falls a little, by around one click in every twenty",
+      "It rises slightly, since the Overview links to the top result",
+      "It stays the same, since people still scroll past the Overview"
      ],
      "a": 0,
      "why": "Ahrefs measured a drop of about 58% across 300,000 keywords in December 2025, and roughly 74% of informational queries now end with no click at all.<br><br>Position one did not stop being valuable. It stopped being the same prize. If your reporting still treats rank one as the goal, you are tracking a position whose payout has quietly fallen."
