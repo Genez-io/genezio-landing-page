@@ -420,15 +420,15 @@
      "why": "A weekly report is a snapshot taken on a fixed day. If its data was collected on Monday, a page you published on Wednesday cannot be in it, yet the report will still show some movement, and the temptation to claim it is strong.<br><br>Movement from before your change is noise, or the result of something else. Before you credit any change to your work, check when each report's data was collected, and compare only data collected after the work went live."
     },
     {
-     "q": "A composite \"AI visibility score\" out of 100 is most often normalised against:",
+     "q": "Your AI visibility score drops from 70 to 62, yet you appear in more answers than before. How can both be true?",
      "o": [
-      "A set of competitors the vendor picked, not an absolute scale",
-      "The total number of people asking AI assistants about your category",
-      "Your own result from the previous quarter, used as the baseline",
-      "Every indexed website in your category, weighted by its traffic"
+      "It compares you with other brands, and they gained more than you did",
+      "The tool has a bug: more mentions should always raise the score",
+      "The engines lowered your ranking, which outweighs the mentions",
+      "Scores out of 100 reset every quarter, so a fall is expected"
      ],
      "a": 0,
-     "why": "The score is usually relative to an auto-selected competitor set, often a median. So it can fall while your absolute presence rises, simply because the comparison set changed. Always read the denominator before you put a score of this kind in front of an executive."
+     "why": "A score out of 100 has to be measured against something. Often that is a set of competing brands, sometimes picked by the tool rather than by you.<br><br>So your score can fall while you appear in more answers, simply because the brands you are compared with grew faster, or because the tool changed which brands it compares you with.<br><br>Before you put a score like this in front of an executive, ask what it is measured against."
     },
     {
      "q": "You have budget to improve the trustworthiness of one thing in your GEO reporting. Choose:",
