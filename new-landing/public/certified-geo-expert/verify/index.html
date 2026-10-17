@@ -20,9 +20,6 @@
 <script>
 // /certified-geo-expert/verify/
 //   ?id=GEO-…        the public record of a credential (GET /api/credentials)
-//   ?confirm=<token> the link of the confirmation email: a button POSTs the
-//                    token to /api/credentials-confirm, then the page shows the
-//                    credential. The button stops link scanners from confirming.
 // Under the credential, one question of the test to play: the visitors of this
 // page are mostly people who clicked a badge on LinkedIn.
 const app=document.getElementById("app");
@@ -42,10 +39,9 @@ app.append(credBox,hookBox,detailBox,el(`<div class="sitefoot"><span>Free &middo
 
 function show(html){credBox.innerHTML="";detailBox.innerHTML="";credBox.append(el(`<div class="stack">${html}</div>`))}
 
-function valid(c,banner){
+function valid(c){
   document.title=c.name+" — Certified GEO Expert";
   show(`
-    ${banner?`<p class="notice"><b>Confirmed.</b> Your credential is live, and this is the page anyone who checks it will see. Add the link to your LinkedIn profile from the test page, or copy it from the address bar.</p>`:""}
     <div><span class="status ok">Valid credential</span></div>
     <div class="cert">
       <p class="seal">Certified GEO Expert</p>
@@ -57,7 +53,7 @@ function valid(c,banner){
   detailBox.append(el(`<div class="stack">
     <p class="eyebrow">Score by section</p>
     ${Array.isArray(c.modules)&&c.modules.length?`<div class="grid2">${c.modules.map(m=>`<div class="modscore"><div class="t">${esc(title(m.id))}</div><div class="s">${esc(m.score)}/${esc(m.total)}</div></div>`).join("")}</div>`:""}
-    <p class="foot">This credential was issued to the person named above after they passed the test with the score shown, and confirmed their email address. It is not a statement about them by Genezio beyond that.</p>
+    <p class="foot">This credential was issued to the person named above after they passed the test with the score shown. It is not a statement about them by Genezio beyond that.</p>
   </div>`));
 }
 
@@ -66,7 +62,7 @@ function notFound(id){
     <div><span class="status no">Not found</span></div>
     <div class="card stack" style="gap:10px">
       <h2>No valid credential${id?` with the ID ${esc(id)}`:""}.</h2>
-      <p style="color:var(--ink-2)">It may be mistyped, not yet confirmed by its holder, or revoked. A credential only verifies here once its holder has confirmed their email.</p>
+      <p style="color:var(--ink-2)">It may be mistyped, or revoked by its holder.</p>
     </div>
     ${lookupForm(id)}`);
   bindLookup();
@@ -90,34 +86,14 @@ function unavailable(retry){
   document.getElementById("rt").onclick=retry;
 }
 
-async function verify(id,banner){
+async function verify(id){
   show(`<p class="eyebrow">Checking ${esc(id)}…</p>`);
   try{
     const r=await fetch("/api/credentials?id="+encodeURIComponent(id));
     if(r.status===404){await bankReady;return notFound(id)}
     if(!r.ok)throw r.status;
-    const c=await r.json();await bankReady;valid(c,banner);
-  }catch(e){unavailable(()=>verify(id,banner))}
-}
-
-function confirmStep(token){
-  show(`<div class="card stack" style="gap:14px">
-    <div><p class="eyebrow">Last step</p><h2 style="margin-top:8px">Activate your credential</h2></div>
-    <p style="color:var(--ink-2)">This confirms your email and publishes your credential: anyone with its link will see your name, your company if you gave one, your score and the date. Your email stays private.</p>
-    <p class="err" id="er" hidden></p>
-    <div class="row"><button class="btn" id="go">Confirm and activate</button></div>
-  </div>`);
-  document.getElementById("go").onclick=async ev=>{
-    const b=ev.currentTarget,er=document.getElementById("er");
-    b.disabled=true;b.textContent="Activating…";er.hidden=true;
-    try{
-      const r=await fetch("/api/credentials-confirm",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token})});
-      const d=await r.json().catch(()=>null);
-      if(r.ok&&d&&d.id){history.replaceState(null,"","?id="+encodeURIComponent(d.id));await verify(d.id,true);return playHook()}
-      er.textContent=(d&&d.error)||"That didn't work. Try again in a minute.";
-    }catch(e){er.textContent="The credential service didn't answer. Try again in a minute."}
-    er.hidden=false;b.disabled=false;b.textContent="Confirm and activate";
-  };
+    const c=await r.json();await bankReady;valid(c);
+  }catch(e){unavailable(()=>verify(id))}
 }
 
 // The question most people get wrong (bank.json `hook`), playable in place.
@@ -153,11 +129,10 @@ function playHook(){
 }
 
 (async()=>{
-  const token=params.get("confirm"),id=(params.get("id")||"").trim().toUpperCase();
-  if(token)confirmStep(token);
-  else if(id)verify(id,false);
+  const id=(params.get("id")||"").trim().toUpperCase();
+  if(id)verify(id);
   else{show(`<div><p class="eyebrow">Certified GEO Expert</p><h2 style="margin-top:8px">Verify a credential</h2></div>${lookupForm("")}`);bindLookup()}
-  await bankReady;if(!token)playHook();
+  await bankReady;playHook();
 })();
 </script>
 </body>

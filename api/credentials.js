@@ -1,41 +1,35 @@
 // Vercel serverless function: /api/credentials
 // The credentials of /certified-geo-expert.
 //
-//   POST /api/credentials        issue a credential, as `pending`, and email the
-//                                confirmation link: the verification page with
-//                                ?confirm=<token>, which POSTs it to
-//                                api/credentials-confirm.js
+//   POST /api/credentials        issue a credential; it is active at once
 //   GET  /api/credentials?id=…   the public record of an active credential, for
 //                                /certified-geo-expert/verify/. Never the email.
 //
 // The answers are scored here against bank.json; the score that the page sends
-// is not read. A holder who ticks the optional contact box is a lead: the team
-// hears of it once the email is confirmed (api/credentials-confirm.js). The page holds the answers too, thus a determined visitor can
-// still post a perfect set: the confirmation of the email and the rate limit
-// stop the casual and the bulk cases, and nothing more is attempted.
+// is not read. A holder who ticks the optional contact box is a lead, and the
+// team hears of it on Slack. The page holds the answers too, thus a determined
+// visitor can still post a perfect set: the rate limit stops the bulk case,
+// and nothing more is attempted. No email is sent, thus nobody proves that the
+// address is theirs.
 //
 // Configure via env vars in Vercel:
 //   KV_REST_API_URL, KV_REST_API_TOKEN - Upstash Redis (the Vercel integration sets them)
-//   RESEND_API_KEY                     - sends the confirmation email
-//   CREDENTIALS_MAIL_FROM              - optional verified sender of that email
-//   CREDENTIALS_REPLY_TO               - optional reply-to (default privacy@genezio.com)
+//   SLACK_CERTIFICATION_WEBHOOK_URL    - optional Slack webhook for leads
+//                                        (falls back to SLACK_WEBHOOK_URL)
 //   SITE_URL                           - optional origin of the links (default: genezio.com
 //                                        in production, the request host elsewhere)
 
-const crypto = require("node:crypto");
 const { clean, isEmail } = require("./_notify");
 const { isConfigured, kv, kvAtomic } = require("./_kv");
 const {
   CONSENT_TEXT,
-  PENDING_TTL,
-  VERIFY_PATH,
   clientIp,
   key,
   newId,
   normalizeId,
+  notifyLead,
   publicView,
   score,
-  sendConfirmation,
   siteUrl,
   verifyUrl,
 } = require("./_credentials");
@@ -81,7 +75,7 @@ async function lookup(req, res) {
 }
 
 function notFound(res) {
-  // Not cached: a pending credential becomes active when its link is clicked.
+  // Not cached: an id that is not found now can be issued a moment later.
   res.setHeader("Cache-Control", "no-store");
   return res.status(404).json({ status: "not_found" });
 }
@@ -141,7 +135,7 @@ async function issue(req, res) {
       percent: result.percent,
       modules: result.modules,
       issued: now.toISOString().slice(0, 10),
-      status: "pending",
+      status: "active",
       createdAt: now.toISOString(),
       contactConsent,
       ...(contactConsent ? { consentAt: now.toISOString(), consentText: CONSENT_TEXT } : {}),
@@ -151,37 +145,22 @@ async function issue(req, res) {
     let id = null;
     for (let attempt = 0; attempt < 3 && !id; attempt++) {
       const candidate = newId(now.getUTCFullYear());
-      const ok = await kv("SET", key.cred(candidate), JSON.stringify({ id: candidate, ...record }), "EX", PENDING_TTL, "NX");
+      const ok = await kv("SET", key.cred(candidate), JSON.stringify({ id: candidate, ...record }), "NX");
       if (ok === "OK") id = candidate;
     }
     if (!id) throw new Error("no free id");
 
-    const token = crypto.randomBytes(24).toString("base64url");
     await kvAtomic([
-      ["SET", key.confirm(token), id, "EX", PENDING_TTL],
       ["SADD", key.email(email), id],
+      ["ZADD", key.scores, record.percent, id],
     ]);
 
-    const site = siteUrl(req);
-    const confirmUrl = `${site}${VERIFY_PATH}?confirm=${token}`;
-    const sent = await sendConfirmation({ to: email, name, id, confirmUrl, contactConsent });
-    if (!sent) {
-      // A failed email issued nothing, thus it does not count against the limit.
-      await kvAtomic([
-        ["DEL", key.cred(id)],
-        ["DEL", key.confirm(token)],
-        ["SREM", key.email(email), id],
-        ["DECR", key.rate("ip", clientIp(req), day)],
-        ["DECR", key.rate("email", email, day)],
-      ]).catch(() => {});
-      return res.status(502).json({
-        error: "We couldn't send the confirmation email just now. Your answers are saved here; try again in a few minutes.",
-      });
-    }
+    const url = verifyUrl(siteUrl(req), id);
+    if (contactConsent) await notifyLead({ id, ...record }, url);
 
     console.log("[credentials] issued", JSON.stringify({ id, percent: result.percent, issued: record.issued }));
 
-    const response = { id, url: verifyUrl(site, id), status: "pending" };
+    const response = { id, url, status: "active" };
     const rank = await rankText(result.percent).catch(() => null);
     if (rank) response.rank = rank;
     return res.status(201).json(response);
@@ -191,13 +170,13 @@ async function issue(req, res) {
   }
 }
 
-/** "Top 12% of 1,284 people certified so far.", from the active credentials. */
+/** "Top 12% of 1,284 people certified so far.", from the active credentials, the new one included. */
 async function rankText(percent) {
   const [holders, above] = await kvAtomic([
     ["ZCARD", key.scores],
     ["ZCOUNT", key.scores, `(${percent}`, "+inf"],
   ]);
   if (holders < RANK_MIN_HOLDERS) return null;
-  const top = Math.max(1, Math.ceil(((above + 1) / (holders + 1)) * 100));
+  const top = Math.max(1, Math.ceil(((above + 1) / holders) * 100));
   return `Top ${top}% of ${holders.toLocaleString("en-US")} people certified so far.`;
 }
