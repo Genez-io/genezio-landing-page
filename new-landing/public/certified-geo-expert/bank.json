@@ -226,7 +226,7 @@
   },
   {
    "id": "agents",
-   "title": "When the buyer is software",
+   "title": "When the buyer is an AI agent",
    "blurb": "Agents that browse, compare and buy for someone — and what your site has to offer them.",
    "qs": [
     {
@@ -238,29 +238,29 @@
       "Neither; wait for more data"
      ],
      "a": 0,
-     "why": "These checks stack. If software cannot fetch the page, every score above that point describes a page nobody reached. A readability score for a URL that returns a block is noise presented as data.<br><br>The order is: can it be reached, can it be found, can it be read, can it be used, can it be bought from. Report the first level that fails and stop scoring above it."
+     "why": "These checks stack. If an AI agent cannot fetch the page, every score above that point describes a page nobody reached. A readability score for a URL that returns a block is noise presented as data.<br><br>The order is: can it be reached, can it be found, can it be read, can it be used, can it be bought from. Report the first level that fails and stop scoring above it."
     },
     {
-     "q": "Your developer asks whether it is worth publishing the small discovery files that tell software what your service is and how to talk to it. Honest answer?",
+     "q": "Your developer asks whether it is worth publishing the small discovery files that tell AI agents what your service is and how to talk to it. Honest answer?",
      "o": [
       "Yes — they cost almost nothing and almost nobody has them",
-      "No — software ignores them and reads the human pages anyway",
+      "No — AI agents ignore them and reads the human pages anyway",
       "Only if you run an online store; for anyone else they do nothing",
       "Not until a standard is ratified, or the work will be thrown away"
      ],
      "a": 0,
-     "why": "These are a few small files that let software address your service directly instead of scraping a page built for human eyes. Today they influence very little traffic.<br><br>They are worth publishing because the cost is near zero, the option value is real, and so few sites have them that being early is genuinely cheap. Say “cheap insurance” rather than “urgent”, and save your urgency for the things that move answers this quarter."
+     "why": "These are a few small files that let AI agents address your service directly instead of scraping a page built for human eyes. Today they influence very little traffic.<br><br>They are worth publishing because the cost is near zero, the option value is real, and so few sites have them that being early is genuinely cheap. Say “cheap insurance” rather than “urgent”, and save your urgency for the things that move answers this quarter."
     },
     {
      "q": "Your security team blocks all non-browser traffic. In commercial terms, what have they just decided?",
      "o": [
-      "That software buying on a customer's behalf cannot buy from you",
+      "That AI agents buying on a customer's behalf cannot buy from you",
       "Nothing commercial: bots are not customers and never place orders",
       "That the site gets faster for people, since bots no longer load it",
       "That you rank better, since engines reward sites that block scrapers"
      ],
      "a": 0,
-     "why": "When the buyer is software, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
+     "why": "When the buyer is an AI agent, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
     },
     {
      "q": "An AI agent is shopping for a customer on your site. What most helps it get your prices and stock right?",
