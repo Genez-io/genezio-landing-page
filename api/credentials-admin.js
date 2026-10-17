@@ -10,6 +10,7 @@
 //     {"action": "delete", "id": "GEO-2026-…"}    the record is gone
 //     {"action": "delete", "email": "a@b.com"}    every record of the address is gone
 //     {"action": "withdraw-consent", "email": "a@b.com"}  no more contact; the credentials stay
+//     {"action": "email-check", "email": "you@x.com"}  the email setup, and Resend's answer to a test
 //
 //   curl -X POST https://genezio.com/api/credentials-admin \
 //     -H "Authorization: Bearer $CREDENTIALS_ADMIN_TOKEN" \
@@ -17,7 +18,7 @@
 
 const crypto = require("node:crypto");
 const { isConfigured, kv, kvAtomic } = require("./_kv");
-const { key, normalizeId } = require("./_credentials");
+const { key, normalizeId, sender } = require("./_credentials");
 
 module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
@@ -34,6 +35,7 @@ module.exports = async function handler(req, res) {
   }
   body = body || {};
   const email = body.email ? String(body.email).trim().toLowerCase() : null;
+  if (body.action === "email-check") return emailCheck(res, email);
   const id = body.id ? normalizeId(body.id) : null;
   if (body.id && !id) return res.status(400).json({ error: "Malformed id" });
 
@@ -93,6 +95,35 @@ module.exports = async function handler(req, res) {
     return res.status(503).json({ error: String(err.message || err) });
   }
 };
+
+// The configuration of the confirmation email, and Resend's own answer to one
+// test email: what a 502 of POST /api/credentials hides from the visitor.
+async function emailCheck(res, to) {
+  const report = {
+    resendKeySet: Boolean(process.env.RESEND_API_KEY),
+    mailFrom: process.env.MAIL_FROM || null,
+    credentialsMailFrom: process.env.CREDENTIALS_MAIL_FROM || null,
+    sender: sender(),
+  };
+  if (!to) return res.status(200).json({ ...report, resend: "Give an email to send a test to" });
+  if (!report.resendKeySet) return res.status(200).json({ ...report, resend: "not called: RESEND_API_KEY is not set" });
+  try {
+    const resp = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: report.sender,
+        to: [to],
+        subject: "Certified GEO Expert: email check",
+        text: "A test of the confirmation email of the Certified GEO Expert credentials.\n",
+      }),
+    });
+    report.resend = { status: resp.status, body: await resp.json().catch(() => null) };
+  } catch (err) {
+    report.resend = { error: String(err.message || err) };
+  }
+  return res.status(200).json(report);
+}
 
 function authorized(req) {
   const expected = process.env.CREDENTIALS_ADMIN_TOKEN;
