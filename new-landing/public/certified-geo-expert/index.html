@@ -257,19 +257,13 @@ function claim(){
 
 function sharePost(pct,url,id){
   const got=hookGotIt();
-  return `Your team blocks the AI crawler. You have opted out of AI training.
+  return `I just took the Certified GEO Expert test and scored ${pct}%.
 
-So why is ChatGPT still quoting your website?
+It's a free test on generative engine optimisation: how AI assistants like ChatGPT choose their sources, and how to measure any of it honestly.
 
-${got?"I got this one right on the test. Most people don't.":"I got this one wrong."}
+${got?"One thing worth knowing":"One thing I got wrong and learned"}: the crawler that collects pages to train a model and the agent that reads your page when someone asks a question are not the same. Blocking one doesn't block the other, so it may be worth a quick look at what your site allows.
 
-Because the crawler that trains the model and the one that fetches your page the moment somebody asks a question are two different agents. Blocking the first does nothing to the second.
-
-And it runs the other way too: plenty of brands have blocked the agent that decides whether they appear in answers at all, and have no idea they did it.
-
-I just took the Certified GEO Expert test. ${totalQs()} questions on how answer engines pick sources, and on how to measure any of it without fooling yourself. I scored ${pct}%.
-
-It's free, vendor-neutral, and takes about 20 minutes: ${url}
+${totalQs()} questions, about half an hour, with a clear explanation for anything you miss: ${url}
 
 Credential: ${id}`;
 }
@@ -300,7 +294,7 @@ function cert(){
     </div>
     <div class="stack" style="gap:8px">
       <p class="eyebrow">Suggested post</p>
-      <p style="font-size:13.5px;color:var(--ink-2);margin:0">It opens with the mistake most people make, not with the badge. That is what makes someone stop and try it. LinkedIn will not accept pre-written text, so the button copies this and opens the composer &mdash; paste, then publish.</p>
+      <p style="font-size:13.5px;color:var(--ink-2);margin:0">LinkedIn will not accept pre-written text, so the button copies this and opens the composer &mdash; paste it, change anything you like, then publish.</p>
       <div class="sharebox" id="pb">${esc(post)}</div>
     </div>
     <div class="row"><button class="btn ghost" id="again">Back to sections</button></div>
