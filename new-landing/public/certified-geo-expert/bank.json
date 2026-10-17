@@ -179,15 +179,15 @@
      "why": "Many of the fetchers that assemble AI answers take the raw HTML and move on without running your JavaScript. If the content only exists after the page hydrates, it may not exist at all as far as the answer is concerned.<br><br>You do not need to know how they fix it. You need that one screenshot. It takes a developer about a minute, and the gap between what you see and what it shows is the entire business case for the work that follows."
     },
     {
-     "q": "Your pages take about four seconds to respond. Why does that matter more here than it does for a human visitor?",
+     "q": "Your pages take about four seconds to respond. When does that actually cost you a place in an AI answer?",
      "o": [
-      "Fetchers give up far sooner and build the answer without you",
-      "Answer engines rank sources by load time, so slow pages drop down",
-      "Slow pages get dropped from the index the engine retrieves from",
-      "Only a cached copy gets used, so the answer reflects an old page"
+      "When the page has to be fetched live: not cached yet, or the user asked to check it now",
+      "Always: answer engines rank every source by load time, so slow pages drop down",
+      "Never: engines answer only from copies cached earlier, so speed cannot matter",
+      "Only when the slow page has no structured data the engine can fall back on"
      ],
      "a": 0,
-     "why": "A person waits and sighs. Software assembling an answer under time pressure abandons the request and uses whatever it already has. Nothing is logged on your side, nobody sees an error, and there is no second chance inside that answer.<br><br>From where the engine is standing, slow and absent look identical."
+     "why": "Most of the time an answer engine works from its own index or cache, built earlier and at its own pace, so a slow site is not simply left out.<br><br>Speed bites when the engine has to fetch the page <b>live</b>: a page it has not cached yet, a recent change it has no copy of, or a user who pastes your link or asks it to check now. Those fetches run against a short time limit, and a page that does not answer in time is left out of that one answer.<br><br>So a slow site is not invisible, but it loses exactly the moments when freshness matters: a launch, a price change, a correction."
     },
     {
      "q": "Your agency says “AI crawlers can access the site, we checked.” What is the right follow-up?",
