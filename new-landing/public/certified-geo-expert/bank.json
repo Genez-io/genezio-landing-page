@@ -409,15 +409,15 @@
      "why": "Two very different things share one word. As a <b>dimension</b>, the persona is a tag for slicing results. As an <b>identity</b>, the persona's role, language and location actually change what gets sent and from where — which can change the answer. When a vendor says \"persona support\", ask which one they mean; the capability gap is large."
     },
     {
-     "q": "Your tracked prompts refresh daily, but brand reporting refreshes weekly. What is the reporting risk?",
+     "q": "You publish a new page on Wednesday. On Friday, your weekly AI visibility report shows a jump. What should you check before taking credit?",
      "o": [
-      "Attributing a change to work that landed after the data was collected",
-      "Counting the same mention twice when daily and weekly data are merged",
-      "Losing the citations that appear and disappear between weekly runs",
-      "None, as long as both are compared over the same calendar month"
+      "When the report's data was collected: it may predate the new page",
+      "Whether the jump is bigger than the one in last week's report",
+      "Whether the page was shared on social media after it went live",
+      "Whether the new page is longer than the pages it competes with"
      ],
      "a": 0,
-     "why": "If you publish on Wednesday and the weekly snapshot was taken on Monday, the next report cannot contain your change — but it will contain <i>something</i>, and the temptation to claim it is strong. Know each surface's collection date before you attribute any movement."
+     "why": "A weekly report is a snapshot taken on a fixed day. If its data was collected on Monday, a page you published on Wednesday cannot be in it, yet the report will still show some movement, and the temptation to claim it is strong.<br><br>Movement from before your change is noise, or the result of something else. Before you credit any change to your work, check when each report's data was collected, and compare only data collected after the work went live."
     },
     {
      "q": "A composite \"AI visibility score\" out of 100 is most often normalised against:",
