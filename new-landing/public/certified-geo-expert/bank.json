@@ -411,13 +411,13 @@
     {
      "q": "You publish a new page on Wednesday. On Friday, your weekly AI visibility report shows a jump. What should you check before taking credit?",
      "o": [
-      "When the report's data was collected: it may predate the new page",
+      "Whether the new page is actually cited in the answers behind the jump",
       "Whether the jump is bigger than the one in last week's report",
       "Whether the page was shared on social media after it went live",
       "Whether the new page is longer than the pages it competes with"
      ],
      "a": 0,
-     "why": "A weekly report is a snapshot taken on a fixed day. If its data was collected on Monday, a page you published on Wednesday cannot be in it, yet the report will still show some movement, and the temptation to claim it is strong.<br><br>Movement from before your change is noise, or the result of something else. Before you credit any change to your work, check when each report's data was collected, and compare only data collected after the work went live."
+     "why": "A jump in a report can come from anything: noise, a competitor's change, a shift in the engines. The direct link between your page and the jump is the page itself, showing up as a cited source in the answers that moved. If it isn't cited there, you can't claim the jump for it.<br><br>Check the timing as well: a weekly report is a snapshot from a fixed day, and if its data was collected before Wednesday, the new page cannot be in it at all."
     },
     {
      "q": "Your AI visibility score drops from 70 to 62, yet you appear in more answers than before. How can both be true?",
