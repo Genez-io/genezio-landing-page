@@ -57,7 +57,7 @@
     {
      "q": "\"Average position\" in an AI answer refers to:",
      "o": [
-      "Where your brand falls in the order of things named",
+      "Where your brand ranks among the brands the answer names",
       "Your Google rank averaged over the period",
       "The position of your link in the sources list",
       "How many words into the answer you appear"
