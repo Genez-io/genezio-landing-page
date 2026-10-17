@@ -92,7 +92,7 @@
       "Your account was A/B tested"
      ],
      "a": 0,
-     "why": "Generation is probabilistic. Two runs of one prompt are two samples, not one measurement repeated. This is the single most important fact about measuring GEO: <b>one run tells you almost nothing</b>, and any metric built on a handful of runs is mostly noise."
+     "why": "Generation is probabilistic. Two runs of one question are two samples, not one measurement repeated. This is the single most important fact about measuring GEO: <b>one run tells you almost nothing</b>, and any metric built on a handful of runs is mostly noise."
     },
     {
      "q": "\"Query fan-out\" means:",
@@ -263,15 +263,15 @@
      "why": "When the buyer is software, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
     },
     {
-     "q": "What most limits an agent's ability to buy from your store on a customer's behalf?",
+     "q": "An AI agent is shopping for a customer on your site. What most helps it get your prices and stock right?",
      "o": [
-      "No product data it can read without scraping the page",
-      "No live chat the agent can ask about stock and delivery times",
-      "No account login the agent can use to store the customer's details",
-      "No mobile app, which is where most agents complete a purchase"
+      "An up-to-date product feed, like the one you send to Google Shopping",
+      "More product photos, so it can see exactly what each item looks like",
+      "Longer product descriptions that explain each item in more detail",
+      "Customer reviews on every page, so it can judge which item is best"
      ],
      "a": 0,
-     "why": "An agent needs to know what you sell, at what price, and whether it is in stock — in a form it can parse reliably. If that only exists inside a page rendered for human eyes, the agent gets it wrong or gives up and goes elsewhere.<br><br>A clean, current product feed is the highest-value thing you can hand it, and it is usually something you already produce for another channel."
+     "why": "Agents can read your product pages much as a person does. The trouble is that the price, stock and options on a page often depend on what gets clicked, where the visitor is, or what loads last, so an agent can come away with the wrong one.<br><br>A <b>product feed</b> states each item's price and availability plainly and stays current. Most stores already produce one for Google Shopping or the marketplaces, so offering it to agents as well is usually cheap.<br><br>It will not decide whether the agent can finish the purchase (checkout is a separate hurdle), but it decides whether the agent gets the basics right."
     },
     {
      "q": "A competitor publishes a commerce manifest for agents and you do not. What does that change today?",
@@ -322,7 +322,7 @@
       "Citations lag crawls by about 90 days, so wait for the next quarter"
      ],
      "a": 0,
-     "why": "You have separated two failure modes that look identical from the outside. Being fetched and not used means access is fine and the material is not winning — an argument, evidence or structure problem. Had the logs been empty, it would have been an access problem. <b>Logs are the only way to tell these apart</b>, which is why prompt-testing alone cannot diagnose GEO."
+     "why": "You have separated two failure modes that look identical from the outside. Being fetched and not used means access is fine and the material is not winning — an argument, evidence or structure problem. Had the logs been empty, it would have been an access problem. <b>Logs are the only way to tell these apart</b>, which is why testing answers alone cannot diagnose GEO."
     },
     {
      "q": "A log line claims the user agent <code>ChatGPT-User</code>. How do you know it is genuine?",
@@ -378,71 +378,71 @@
     {
      "q": "A tool reports 30% visibility from 10 runs. Next week it reports 40%. What can you conclude?",
      "o": [
-      "Essentially nothing — the interval around both is enormous",
+      "Nothing yet: 10 runs is far too few to tell a real change from noise",
       "A 33% relative improvement, which is worth reporting upward",
       "That the work is paying off, since the gain is a full ten points",
-      "That the engine refreshed its index between the two weeks"
+      "That the engine refreshed its index between the two measurements"
      ],
      "a": 0,
-     "why": "Three out of ten against four out of ten. The 95% interval on each spans roughly 10–60%, so the two overlap almost entirely. Reporting that as an improvement is not a small error — it is the error that gets GEO programmes cancelled when the \"gain\" reverses next week.<br><br>Ask every vendor two questions: <b>how many runs is this built on</b>, and <b>where is the confidence interval</b>. Very few can answer the second."
+     "why": "Ten runs is far too little data. The same answers come out differently from one run to the next, so 3 out of 10 one week and 4 out of 10 the next can easily come from exactly the same situation. On 10 runs, a true 30% can show up as anything from about 10% to 60%.<br><br>Reporting that as an improvement is not a small error: it is the error that gets GEO programmes cancelled when the \"gain\" reverses the following week. A ten-point move starts to mean something only on many more runs, in the hundreds rather than the tens.<br><br>Ask every vendor how many runs a number is built on. If they can't tell you, don't report the number as a trend."
     },
     {
      "q": "Vendor A says you have 22% AI visibility and vendor B says 61%. The most likely explanation is:",
      "o": [
-      "Different prompt sets, engines and definitions — the numbers aren't comparable",
-      "Vendor A samples too few prompts, so its figure is the unreliable one",
+      "Different questions, engines and definitions: the numbers aren't comparable",
+      "Vendor A tracks too few questions, so its figure is the unreliable one",
       "Vendor B covers more engines, so its 61% is the more complete figure",
       "Your site changed between the two runs, and both numbers caught it"
      ],
      "a": 0,
-     "why": "Each vendor runs its own prompts against its own engine mix and defines the metric its own way — some divide by prompts, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
+     "why": "Each vendor asks its own questions against its own engine mix and defines the metric its own way — some divide by questions, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
     },
     {
-     "q": "A persona is used as a reporting dimension rather than an impersonated identity. What does that mean?",
+     "q": "A vendor's report says CFOs and IT managers see your brand equally often. The vendor explains that \"persona\" is a filter on the results. What do you actually know about the two groups?",
      "o": [
-      "It labels and filters results; it is not sent to the engine",
-      "The engine is told to act as that persona",
-      "It changes the model's temperature",
-      "It selects which engine runs"
+      "Nothing yet: the same answers were simply sorted into two piles",
+      "That both see you equally, so one message can serve both groups",
+      "That engines treat every buyer the same, whatever their job title",
+      "That your positioning works for both, since the numbers match"
      ],
      "a": 0,
-     "why": "Two very different things share one word. As a <b>dimension</b>, the persona is a tag for slicing results. As an <b>identity</b>, the persona's role, language and location actually change what gets sent and from where — which can change the answer. When a vendor says \"persona support\", ask which one they mean; the capability gap is large."
+     "why": "Two very different things get called a persona. As a <b>filter</b>, it is a tag added to the results afterwards: every question was asked the same way, so the \"CFO\" numbers and the \"IT manager\" numbers are the same answers sorted into two piles.<br><br>As an <b>identity</b>, the persona shapes the conversation itself. A CFO asks about cost and risk, in their own words, language and country; an IT manager asks about integration and security. That can change which brands get named.<br><br>When a vendor says it supports personas, ask which of the two it means. A persona that never reaches the engine can't tell you anything about that persona."
     },
     {
-     "q": "Your tracked prompts refresh daily, but brand reporting refreshes weekly. What is the reporting risk?",
+     "q": "You publish a new page on Wednesday. On Friday, your weekly AI visibility report shows a jump. What should you check before taking credit?",
      "o": [
-      "Attributing a change to work that landed after the data was collected",
-      "Counting the same mention twice when daily and weekly data are merged",
-      "Losing the citations that appear and disappear between weekly runs",
-      "None, as long as both are compared over the same calendar month"
+      "When the report's data was collected: it may predate the new page",
+      "Whether the jump is bigger than the one in last week's report",
+      "Whether the page was shared on social media after it went live",
+      "Whether the new page is longer than the pages it competes with"
      ],
      "a": 0,
-     "why": "If you publish on Wednesday and the weekly snapshot was taken on Monday, the next report cannot contain your change — but it will contain <i>something</i>, and the temptation to claim it is strong. Know each surface's collection date before you attribute any movement."
+     "why": "A weekly report is a snapshot taken on a fixed day. If its data was collected on Monday, a page you published on Wednesday cannot be in it, yet the report will still show some movement, and the temptation to claim it is strong.<br><br>Movement from before your change is noise, or the result of something else. Before you credit any change to your work, check when each report's data was collected, and compare only data collected after the work went live."
     },
     {
-     "q": "A composite \"AI visibility score\" out of 100 is most often normalised against:",
+     "q": "Your AI visibility score drops from 70 to 62, yet you appear in more answers than before. How can both be true?",
      "o": [
-      "A set of competitors the vendor picked, not an absolute scale",
-      "The total number of people asking AI assistants about your category",
-      "Your own result from the previous quarter, used as the baseline",
-      "Every indexed website in your category, weighted by its traffic"
+      "It compares you with other brands, and they gained more than you did",
+      "The tool has a bug: more mentions should always raise the score",
+      "The engines lowered your ranking, which outweighs the mentions",
+      "Scores out of 100 reset every quarter, so a fall is expected"
      ],
      "a": 0,
-     "why": "The score is usually relative to an auto-selected competitor set, often a median. So it can fall while your absolute presence rises, simply because the comparison set changed. Always read the denominator before you put a score of this kind in front of an executive."
+     "why": "A score out of 100 has to be measured against something. Often that is a set of competing brands, sometimes picked by the tool rather than by you.<br><br>So your score can fall while you appear in more answers, simply because the brands you are compared with grew faster, or because the tool changed which brands it compares you with.<br><br>Before you put a score like this in front of an executive, ask what it is measured against."
     },
     {
-     "q": "You have budget to improve the trustworthiness of one thing in your GEO reporting. Choose:",
+     "q": "You have budget to make one part of your GEO reporting more trustworthy. Which buys the most?",
      "o": [
-      "More runs per prompt",
-      "More prompts tracked",
-      "More engines covered",
-      "A prettier dashboard"
+      "More runs of the questions you already track",
+      "More questions tracked, across more topics",
+      "More engines covered in every report",
+      "A clearer dashboard for the leadership team"
      ],
      "a": 0,
-     "why": "Coverage without precision produces more numbers of the same low quality — a wider survey of noise. Increasing runs per prompt narrows the interval on what you already measure and is what makes a change detectable at all. Get a small set of prompts measured properly before measuring a large set badly."
+     "why": "Answers vary from one run to the next, so a number built on a few runs is mostly noise. Running the questions you already track more times narrows that noise, and it is what makes a real change visible at all.<br><br>Adding questions or engines without it produces more numbers of the same low quality: a wider survey of noise. Measure a small set properly before you measure a large set badly."
     },
     {
-     "q": "Your dashboard reports AI visibility to one decimal place, refreshed daily, built from five runs per prompt. In measurement terms, that is:",
+     "q": "Your dashboard reports AI visibility to one decimal place, refreshed daily, built from five runs of each question. In measurement terms, that is:",
      "o": [
       "Precisely wrong",
       "Roughly right",
@@ -458,10 +458,32 @@
       "Were we present at the points where the decision got made?",
       "Which engine converted best?",
       "What was the last click before the purchase?",
-      "Which prompt drove the revenue?"
+      "Which question drove the revenue?"
      ],
      "a": 0,
      "why": "There is no click to attribute, no referrer to follow and no impression count. What you <i>can</i> establish is presence: were we named, were we cited, on the questions that matter, consistently, over time.<br><br><b>Contribution is provable where attribution is not.</b> Anyone promising you attribution for AI answers is promising something the channel does not emit."
+    },
+    {
+     "q": "Your tool tracks single, fixed questions. Real buyers ask one question, then narrow it down over several messages. What does the fixed question miss?",
+     "o": [
+      "How the brands named change as the buyer narrows the request",
+      "Nothing: engines name the same brands however the chat unfolds",
+      "Only the wording, since engines ignore what was said earlier",
+      "Only the tone of the answers, which is not worth measuring"
+     ],
+     "a": 0,
+     "why": "Most buying conversations don't stop at the first answer. People add what matters to them: a budget, a team size, a feature they can't do without. Each follow-up can change which brands get named, and the ones still standing at the end are the ones that get bought.<br><br>A single fixed question measures the opening answer only. A brand can look strong there and drop out by the third message, or the other way round. Ask whether your measurement follows the conversation or stops after the first reply."
+    },
+    {
+     "q": "A vendor shows you AI visibility numbers. Which question tells you most about whether they match what your buyers actually see?",
+     "o": [
+      "Do you collect answers from the engines' apps, or only from their APIs?",
+      "How many engines do you cover, and how often do you add new ones?",
+      "Can we export the raw numbers into our own dashboards each week?",
+      "How many competing brands and products can we track at once?"
+     ],
+     "a": 0,
+     "why": "The app a buyer uses is more than the model. ChatGPT or Gemini wraps the model in its own instructions, decides when to search the web, may remember earlier chats, and can route the question to a different model version from the one a tool calls.<br><br>An API call usually starts from a bare model with whatever settings the vendor chose, so API-based numbers can differ from <b>what buyers actually see</b>. If the answer is \"only the API\", ask whether anyone checks the numbers against the real apps, and how far apart they are."
     }
    ]
   },
