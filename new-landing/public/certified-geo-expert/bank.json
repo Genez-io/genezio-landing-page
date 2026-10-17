@@ -378,13 +378,13 @@
     {
      "q": "A tool reports 30% visibility from 10 runs. Next week it reports 40%. What can you conclude?",
      "o": [
-      "Essentially nothing — the interval around both is enormous",
+      "Nothing yet: 10 runs is far too few to tell a real change from noise",
       "A 33% relative improvement, which is worth reporting upward",
       "That the work is paying off, since the gain is a full ten points",
-      "That the engine refreshed its index between the two weeks"
+      "That the engine refreshed its index between the two measurements"
      ],
      "a": 0,
-     "why": "Three out of ten against four out of ten. The 95% interval on each spans roughly 10–60%, so the two overlap almost entirely. Reporting that as an improvement is not a small error — it is the error that gets GEO programmes cancelled when the \"gain\" reverses next week.<br><br>Ask every vendor two questions: <b>how many runs is this built on</b>, and <b>where is the confidence interval</b>. Very few can answer the second."
+     "why": "Ten runs is far too little data. The same answers come out differently from one run to the next, so 3 out of 10 one week and 4 out of 10 the next can easily come from exactly the same situation. On 10 runs, a true 30% can show up as anything from about 10% to 60%.<br><br>Reporting that as an improvement is not a small error: it is the error that gets GEO programmes cancelled when the \"gain\" reverses the following week. A ten-point move starts to mean something only on many more runs, in the hundreds rather than the tens.<br><br>Ask every vendor how many runs a number is built on. If they can't tell you, don't report the number as a trend."
     },
     {
      "q": "Vendor A says you have 22% AI visibility and vendor B says 61%. The most likely explanation is:",
