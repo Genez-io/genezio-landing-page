@@ -300,7 +300,7 @@
   {
    "id": "citations",
    "title": "Citations and sources",
-   "blurb": "Where answers get their material, and what your logs know that prompts don't.",
+   "blurb": "Where answers get their material, and what your logs know that testing answers can't.",
    "qs": [
     {
      "q": "Across most brands, the majority of sources behind AI answers are:",
