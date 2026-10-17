@@ -109,9 +109,9 @@
      "q": "A model answers a question about your company with no web search at all. Where did that answer come from?",
      "o": [
       "Parametric memory — what the model absorbed in training",
-      "A cached copy of your homepage",
-      "Its system prompt",
-      "The previous user's session"
+      "A cached copy of your homepage that ships with the model",
+      "Its system prompt, which vendors fill with company facts",
+      "The previous user's session, carried over by the assistant"
      ],
      "a": 0,
      "why": "Models carry knowledge in their weights from training. That knowledge is frozen at the training cutoff, cannot be edited by changing your website, and is often where stale or wrong brand facts live. Fixing it means getting corrected information into the sources the next generation trains on — slow work, and quite different from fixing a retrieval problem."
@@ -142,9 +142,9 @@
      "q": "Two engines give very different pictures of your brand in the same week. The best first explanation is:",
      "o": [
       "They retrieve from different indexes and refresh on different cycles",
-      "One of them is broken",
-      "Your site blocks one of them",
-      "Sentiment analysis differs"
+      "One of them is malfunctioning, so its numbers should be set aside",
+      "Your site blocks one of them, so it is answering from stale data",
+      "Their sentiment models score the same mentions in different ways"
      ],
      "a": 0,
      "why": "Each engine has its own index, its own refresh cadence and its own retrieval behaviour. Divergence is the normal state, not an anomaly. Any single-number \"AI visibility\" score hides it, so always keep the per-engine breakdown next to the headline figure."
@@ -160,9 +160,9 @@
      "q": "Your dev team tells you: “We've blocked the AI crawlers in robots.txt, so we're not being used for training.” What should you check before you relax?",
      "o": [
       "Whether the agent that fetches pages for live answers is still allowed",
-      "Whether the file is valid",
-      "Whether your competitors did the same",
-      "Whether it reached production"
+      "Whether the file validates, since one syntax error voids every rule",
+      "Whether the training data already collected has been deleted",
+      "Whether the file was resubmitted so the engines re-read it quickly"
      ],
      "a": 0,
      "why": "Each AI company runs several agents doing different jobs. One trains the model. A different one fetches your page in the moment somebody asks a question — and that second one decides whether you appear in the answer at all. Blocking the training crawler does nothing to it.<br><br>This is the most expensive misunderstanding in the field. Teams opt out of training, believe they have opted out of AI, and never notice they are still being read. Others block the fetching agent by accident and quietly disappear from answers. <b>Ask for the verdict agent by agent — never accept a single “AI bots: blocked” summary.</b>"
@@ -171,9 +171,9 @@
      "q": "Your product copy only appears after JavaScript runs. What do you ask your dev team for?",
      "o": [
       "A screenshot of the page loaded with JavaScript switched off",
-      "More structured data",
-      "A bigger crawl budget",
-      "A resubmission to the index"
+      "More structured data, so engines can read the copy without rendering",
+      "A larger crawl budget, so fetchers wait for the scripts to finish",
+      "A resubmission of the page, so the index picks up the rendered copy"
      ],
      "a": 0,
      "why": "Many of the fetchers that assemble AI answers take the raw HTML and move on without running your JavaScript. If the content only exists after the page hydrates, it may not exist at all as far as the answer is concerned.<br><br>You do not need to know how they fix it. You need that one screenshot. It takes a developer about a minute, and the gap between what you see and what it shows is the entire business case for the work that follows."
@@ -182,9 +182,9 @@
      "q": "Your pages take about four seconds to respond. Why does that matter more here than it does for a human visitor?",
      "o": [
       "Fetchers give up far sooner and build the answer without you",
-      "AI engines rank pages by speed",
-      "Slow pages get flagged as spam",
-      "It invalidates your structured data"
+      "Answer engines rank sources by load time, so slow pages drop down",
+      "Slow pages get dropped from the index the engine retrieves from",
+      "Only a cached copy gets used, so the answer reflects an old page"
      ],
      "a": 0,
      "why": "A person waits and sighs. Software assembling an answer under time pressure abandons the request and uses whatever it already has. Nothing is logged on your side, nobody sees an error, and there is no second chance inside that answer.<br><br>From where the engine is standing, slow and absent look identical."
@@ -193,9 +193,9 @@
      "q": "Your agency says “AI crawlers can access the site, we checked.” What is the right follow-up?",
      "o": [
       "Which agents did you test, and what did each one get back?",
-      "When did you check?",
-      "Can I see the robots.txt file?",
-      "Nothing — that is the whole check"
+      "When did you check, and will you check again after each release?",
+      "Can you send me the robots.txt file so I can review the rules?",
+      "Did you check from more than one country and network?"
      ],
      "a": 0,
      "why": "“We checked” almost always means one request from one tool. The artefact worth having is a list: every named agent, allowed or blocked, the rule that decided it, and the status code it received.<br><br>A single pass/fail verdict hides the precise failure that matters. This is the one place where a confident answer from a supplier is worth the least."
@@ -204,9 +204,9 @@
      "q": "What does adding schema.org markup actually buy you in an AI answer?",
      "o": [
       "Facts stated plainly enough that nothing has to be inferred",
-      "A ranking boost",
-      "A guaranteed citation",
-      "Faster crawling"
+      "A ranking boost over pages that say the same thing without markup",
+      "A citation whenever the engine uses a fact from the marked-up page",
+      "Priority crawling, so engines pick up your changes within hours"
      ],
      "a": 0,
      "why": "Markup says: this is an organisation, this is its name, this is the product, this is the price — in a form that needs no interpretation. It buys <b>clarity</b>.<br><br>It does not buy preference. Nobody has demonstrated that schema causes citation, so anyone selling it to you as a ranking lever is overclaiming. Knowing that is worth more than the markup is."
@@ -215,9 +215,9 @@
      "q": "A vendor tells you that publishing an llms.txt file will get you into AI answers. How should you treat that?",
      "o": [
       "Publish it if it is cheap, but it is a proposal no engine has committed to",
-      "Treat it as mandatory",
-      "Ignore it — it is a hoax",
-      "Replace robots.txt with it"
+      "Treat it as required: engines now skip sites that don't publish one",
+      "Skip it: engines read robots.txt and nothing else, so it can't matter",
+      "Use it instead of robots.txt, which AI engines have stopped reading"
      ],
      "a": 0,
      "why": "It is a community convention, not a standard, and no major engine has promised to honour it. Publishing one is cheap and harmless and may pay off later.<br><br>The reason this question is here at all: knowing which parts of this field are settled and which are merely hopeful is most of what expertise means right now. Treat a convention as compliance and you will spend budget on the wrong thing while the checks that demonstrably matter go undone."
@@ -244,9 +244,9 @@
      "q": "Your developer asks whether it is worth publishing the small discovery files that tell software what your service is and how to talk to it. Honest answer?",
      "o": [
       "Yes — they cost almost nothing and almost nobody has them",
-      "No — they do nothing",
-      "Only for e-commerce",
-      "Only once a standard is ratified"
+      "No — software ignores them and reads the human pages anyway",
+      "Only if you run an online store; for anyone else they do nothing",
+      "Not until a standard is ratified, or the work will be thrown away"
      ],
      "a": 0,
      "why": "These are a few small files that let software address your service directly instead of scraping a page built for human eyes. Today they influence very little traffic.<br><br>They are worth publishing because the cost is near zero, the option value is real, and so few sites have them that being early is genuinely cheap. Say “cheap insurance” rather than “urgent”, and save your urgency for the things that move answers this quarter."
@@ -255,9 +255,9 @@
      "q": "Your security team blocks all non-browser traffic. In commercial terms, what have they just decided?",
      "o": [
       "That software buying on a customer's behalf cannot buy from you",
-      "Nothing — bots are not customers",
-      "That the site will load faster",
-      "That you will rank better"
+      "Nothing commercial: bots are not customers and never place orders",
+      "That the site gets faster for people, since bots no longer load it",
+      "That you rank better, since engines reward sites that block scrapers"
      ],
      "a": 0,
      "why": "When the buyer is software, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
@@ -266,9 +266,9 @@
      "q": "What most limits an agent's ability to buy from your store on a customer's behalf?",
      "o": [
       "No product data it can read without scraping the page",
-      "No live chat",
-      "Missing social share images",
-      "No mobile app"
+      "No live chat the agent can ask about stock and delivery times",
+      "No account login the agent can use to store the customer's details",
+      "No mobile app, which is where most agents complete a purchase"
      ],
      "a": 0,
      "why": "An agent needs to know what you sell, at what price, and whether it is in stock — in a form it can parse reliably. If that only exists inside a page rendered for human eyes, the agent gets it wrong or gives up and goes elsewhere.<br><br>A clean, current product feed is the highest-value thing you can hand it, and it is usually something you already produce for another channel."
@@ -277,9 +277,9 @@
      "q": "A competitor publishes a commerce manifest for agents and you do not. What does that change today?",
      "o": [
       "Little right now — but it is cheap insurance as agent buying grows",
-      "Nothing, ever",
-      "They immediately outrank you in AI answers",
-      "Their prices start appearing in your answers"
+      "Nothing, now or later — agents will keep reading product pages",
+      "They start to outrank you in AI answers from the next refresh",
+      "Agents start quoting their prices when people ask about yours"
      ],
      "a": 0,
      "why": "Honest answer: agent-driven buying is early and the volume is small. The reason to do it is that the cost is near zero and the upside is real if it lands.<br><br>Overselling this is how GEO loses credibility with the people holding the budget. Being the person who says “small, cheap, not urgent” about the right things is what gets you believed about the urgent ones."
@@ -288,9 +288,9 @@
      "q": "A check shows AI agents are receiving your bot-protection challenge page instead of your content. Who do you need in the room?",
      "o": [
       "Whoever owns the CDN or firewall — usually not your dev team",
-      "Your content team",
-      "Your SEO agency",
-      "Nobody — it resolves itself"
+      "Your content team, since the agents are being served the wrong copy",
+      "Your SEO agency, since it already manages how crawlers see the site",
+      "Nobody yet: agents retry until they get past the challenge page"
      ],
      "a": 0,
      "why": "Whatever comes back is what gets read, so a challenge page can be ingested as your content. That is worse than a clean refusal, because everything still looks fine in your own analytics.<br><br>The reason this one is here: the fix almost never sits with the people who build the site. It sits with infrastructure or security. Working that out early saves weeks of asking the wrong team."
@@ -306,9 +306,9 @@
      "q": "Across most brands, the majority of sources behind AI answers are:",
      "o": [
       "Third-party pages you do not control",
-      "Your own domain",
-      "Wikipedia alone",
-      "Social media"
+      "Pages on your own domain, led by the homepage",
+      "Wikipedia and a handful of other reference sites",
+      "Social media posts from the last few weeks"
      ],
      "a": 0,
      "why": "Answers lean heavily on review sites, forums, press and comparison pages. That reframes the job: a GEO programme that only edits the client's own site is working on a minority of the surface area. Earned presence on the domains that actually get cited is usually the larger lever."
@@ -317,9 +317,9 @@
      "q": "Server logs show heavy AI crawler traffic, but the brand is rarely cited. The most useful conclusion is:",
      "o": [
       "Retrieval is working; selection is not — the problem is the content",
-      "The crawlers are broken",
-      "You should block them to save bandwidth",
-      "Citations lag crawls by 90 days"
+      "The crawlers are failing to parse the pages they download",
+      "You should block them: they cost bandwidth and bring nothing back",
+      "Citations lag crawls by about 90 days, so wait for the next quarter"
      ],
      "a": 0,
      "why": "You have separated two failure modes that look identical from the outside. Being fetched and not used means access is fine and the material is not winning — an argument, evidence or structure problem. Had the logs been empty, it would have been an access problem. <b>Logs are the only way to tell these apart</b>, which is why prompt-testing alone cannot diagnose GEO."
@@ -328,9 +328,9 @@
      "q": "A log line claims the user agent <code>ChatGPT-User</code>. How do you know it is genuine?",
      "o": [
       "Check the client IP against the operator's published ranges",
-      "Trust the user-agent string",
-      "Check it has a referrer",
-      "Count how often it appears"
+      "Trust the user-agent string; operators sign it so it can't be faked",
+      "Check that the request carries a referrer from chatgpt.com",
+      "Check that it obeys robots.txt, which only genuine agents do"
      ],
      "a": 0,
      "why": "User-agent strings are free text and trivially forged — scrapers impersonate AI crawlers precisely because they get let through. Without IP verification against published ranges, your crawler analytics are inflated by an unknown amount and every conclusion drawn from them is soft."
@@ -339,9 +339,9 @@
      "q": "Your citation report shows <code>reddit.com</code> as a single source. What is it hiding?",
      "o": [
       "Which subreddit and which thread actually carried the influence",
-      "Whether the link worked",
-      "The sentiment of the answer",
-      "How many users clicked"
+      "Whether the Reddit links in the answer still resolve to live posts",
+      "Whether the answer spoke about you positively or negatively",
+      "How many people clicked through from the answer to Reddit"
      ],
      "a": 0,
      "why": "Domain-level reporting collapses the thing you can act on. \"Reddit cites you\" is not actionable; \"this subreddit, in these threads\" is. The same applies to YouTube channels and to named authors on publications — resolution below the domain is where outreach actually starts."
@@ -350,9 +350,9 @@
      "q": "Which pattern most clearly signals an outreach opportunity rather than an on-site fix?",
      "o": [
       "A domain cited often for your category that never mentions you",
-      "A slow page on your own site",
-      "A missing meta description",
-      "A page with no schema markup"
+      "A slow page on your own site that answers a high-volume question",
+      "A product page with no meta description and no schema markup",
+      "A competitor's page that ranks above yours in classic search"
      ],
      "a": 0,
      "why": "That is a source the engine already trusts for your topic, where you are absent. Getting represented there changes what the engine can say about you. The other three are your own housekeeping — worth doing, but they do not add new evidence about you to the world."
@@ -379,9 +379,9 @@
      "q": "A tool reports 30% visibility from 10 runs. Next week it reports 40%. What can you conclude?",
      "o": [
       "Essentially nothing — the interval around both is enormous",
-      "A 33% relative improvement",
-      "That the work is paying off",
-      "That the engine changed its index"
+      "A 33% relative improvement, which is worth reporting upward",
+      "That the work is paying off, since the gain is a full ten points",
+      "That the engine refreshed its index between the two weeks"
      ],
      "a": 0,
      "why": "Three out of ten against four out of ten. The 95% interval on each spans roughly 10–60%, so the two overlap almost entirely. Reporting that as an improvement is not a small error — it is the error that gets GEO programmes cancelled when the \"gain\" reverses next week.<br><br>Ask every vendor two questions: <b>how many runs is this built on</b>, and <b>where is the confidence interval</b>. Very few can answer the second."
@@ -390,9 +390,9 @@
      "q": "Vendor A says you have 22% AI visibility and vendor B says 61%. The most likely explanation is:",
      "o": [
       "Different prompt sets, engines and definitions — the numbers aren't comparable",
-      "One vendor is lying",
-      "Vendor B has better coverage",
-      "Your site changed between the measurements"
+      "Vendor A samples too few prompts, so its figure is the unreliable one",
+      "Vendor B covers more engines, so its 61% is the more complete figure",
+      "Your site changed between the two runs, and both numbers caught it"
      ],
      "a": 0,
      "why": "Each vendor runs its own prompts against its own engine mix and defines the metric its own way — some divide by prompts, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
@@ -412,9 +412,9 @@
      "q": "Your tracked prompts refresh daily, but brand reporting refreshes weekly. What is the reporting risk?",
      "o": [
       "Attributing a change to work that landed after the data was collected",
-      "Double-counting mentions",
-      "Losing citation data",
-      "Nothing — cadence doesn't matter"
+      "Counting the same mention twice when daily and weekly data are merged",
+      "Losing the citations that appear and disappear between weekly runs",
+      "None, as long as both are compared over the same calendar month"
      ],
      "a": 0,
      "why": "If you publish on Wednesday and the weekly snapshot was taken on Monday, the next report cannot contain your change — but it will contain <i>something</i>, and the temptation to claim it is strong. Know each surface's collection date before you attribute any movement."
@@ -423,9 +423,9 @@
      "q": "A composite \"AI visibility score\" out of 100 is most often normalised against:",
      "o": [
       "A set of competitors the vendor picked, not an absolute scale",
-      "The total number of AI users",
-      "Your previous quarter",
-      "All indexed websites"
+      "The total number of people asking AI assistants about your category",
+      "Your own result from the previous quarter, used as the baseline",
+      "Every indexed website in your category, weighted by its traffic"
      ],
      "a": 0,
      "why": "The score is usually relative to an auto-selected competitor set, often a median. So it can fall while your absolute presence rises, simply because the comparison set changed. Always read the denominator before you put a score of this kind in front of an executive."
