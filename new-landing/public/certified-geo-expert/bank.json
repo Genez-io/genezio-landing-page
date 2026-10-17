@@ -92,7 +92,7 @@
       "Your account was A/B tested"
      ],
      "a": 0,
-     "why": "Generation is probabilistic. Two runs of one prompt are two samples, not one measurement repeated. This is the single most important fact about measuring GEO: <b>one run tells you almost nothing</b>, and any metric built on a handful of runs is mostly noise."
+     "why": "Generation is probabilistic. Two runs of one question are two samples, not one measurement repeated. This is the single most important fact about measuring GEO: <b>one run tells you almost nothing</b>, and any metric built on a handful of runs is mostly noise."
     },
     {
      "q": "\"Query fan-out\" means:",
@@ -322,7 +322,7 @@
       "Citations lag crawls by about 90 days, so wait for the next quarter"
      ],
      "a": 0,
-     "why": "You have separated two failure modes that look identical from the outside. Being fetched and not used means access is fine and the material is not winning — an argument, evidence or structure problem. Had the logs been empty, it would have been an access problem. <b>Logs are the only way to tell these apart</b>, which is why prompt-testing alone cannot diagnose GEO."
+     "why": "You have separated two failure modes that look identical from the outside. Being fetched and not used means access is fine and the material is not winning — an argument, evidence or structure problem. Had the logs been empty, it would have been an access problem. <b>Logs are the only way to tell these apart</b>, which is why testing answers alone cannot diagnose GEO."
     },
     {
      "q": "A log line claims the user agent <code>ChatGPT-User</code>. How do you know it is genuine?",
@@ -389,13 +389,13 @@
     {
      "q": "Vendor A says you have 22% AI visibility and vendor B says 61%. The most likely explanation is:",
      "o": [
-      "Different prompt sets, engines and definitions — the numbers aren't comparable",
-      "Vendor A samples too few prompts, so its figure is the unreliable one",
+      "Different questions, engines and definitions: the numbers aren't comparable",
+      "Vendor A tracks too few questions, so its figure is the unreliable one",
       "Vendor B covers more engines, so its 61% is the more complete figure",
       "Your site changed between the two runs, and both numbers caught it"
      ],
      "a": 0,
-     "why": "Each vendor runs its own prompts against its own engine mix and defines the metric its own way — some divide by prompts, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
+     "why": "Each vendor asks its own questions against its own engine mix and defines the metric its own way — some divide by questions, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
     },
     {
      "q": "A persona is used as a reporting dimension rather than an impersonated identity. What does that mean?",
@@ -431,18 +431,18 @@
      "why": "A score out of 100 has to be measured against something. Often that is a set of competing brands, sometimes picked by the tool rather than by you.<br><br>So your score can fall while you appear in more answers, simply because the brands you are compared with grew faster, or because the tool changed which brands it compares you with.<br><br>Before you put a score like this in front of an executive, ask what it is measured against."
     },
     {
-     "q": "You have budget to improve the trustworthiness of one thing in your GEO reporting. Choose:",
+     "q": "You have budget to make one part of your GEO reporting more trustworthy. Which buys the most?",
      "o": [
-      "More runs per prompt",
-      "More prompts tracked",
-      "More engines covered",
-      "A prettier dashboard"
+      "More runs of the questions you already track",
+      "More questions tracked, across more topics",
+      "More engines covered in every report",
+      "A clearer dashboard for the leadership team"
      ],
      "a": 0,
-     "why": "Coverage without precision produces more numbers of the same low quality — a wider survey of noise. Increasing runs per prompt narrows the interval on what you already measure and is what makes a change detectable at all. Get a small set of prompts measured properly before measuring a large set badly."
+     "why": "Answers vary from one run to the next, so a number built on a few runs is mostly noise. Running the questions you already track more times narrows that noise, and it is what makes a real change visible at all.<br><br>Adding questions or engines without it produces more numbers of the same low quality: a wider survey of noise. Measure a small set properly before you measure a large set badly."
     },
     {
-     "q": "Your dashboard reports AI visibility to one decimal place, refreshed daily, built from five runs per prompt. In measurement terms, that is:",
+     "q": "Your dashboard reports AI visibility to one decimal place, refreshed daily, built from five runs of each question. In measurement terms, that is:",
      "o": [
       "Precisely wrong",
       "Roughly right",
@@ -458,7 +458,7 @@
       "Were we present at the points where the decision got made?",
       "Which engine converted best?",
       "What was the last click before the purchase?",
-      "Which prompt drove the revenue?"
+      "Which question drove the revenue?"
      ],
      "a": 0,
      "why": "There is no click to attribute, no referrer to follow and no impression count. What you <i>can</i> establish is presence: were we named, were we cited, on the questions that matter, consistently, over time.<br><br><b>Contribution is provable where attribution is not.</b> Anyone promising you attribution for AI answers is promising something the channel does not emit."
