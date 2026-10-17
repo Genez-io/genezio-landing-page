@@ -11,7 +11,8 @@ and this repository adds it to each deployment.
 | Path | Content |
 | --- | --- |
 | `new-landing/` | The React/Vite application. `npm run build` writes `new-landing/dist`. |
-| `api/` | The functions of Vercel: `contact-sales`, `website-analysis`, `leaderboard`. |
+| `api/` | The functions of Vercel: `contact-sales`, `website-analysis`, `leaderboard`, and the `credentials*` of the GEO certification. |
+| `new-landing/public/certified-geo-expert/` | The Certified GEO Expert test and its verification page: static HTML outside React. `bank.json` holds the questions and the answer key, for the page and for `api/credentials.js`. |
 | `vercel.json` | The commands of the build, `trailingSlash`, and the redirects. The build removes `dist/server`, the bundle of the static render, thus Vercel does not publish it. |
 | `scripts/dev-api.mjs` | Serves the functions of `api/` on a laptop. |
 | `scripts/add-docs.mjs` | Puts the documentation under `/docs` of the output of Vercel. |
@@ -31,6 +32,37 @@ variables.
 The server of Vite sends `/docs` to the server of Mintlify at
 http://localhost:3333 (`DOCS_DEV_URL` changes it). Start that server with
 `npm run dev` in `apps/docs` of genezio-code.
+
+## Certified GEO Expert
+
+`/certified-geo-expert/` is a test with a credential at the end. The page is
+static HTML, and React does not render it. The credentials are in Upstash
+Redis: connect an Upstash database to both Vercel projects (Storage →
+Upstash), which sets `KV_REST_API_URL` and `KV_REST_API_TOKEN`.
+
+| Function | Does |
+| --- | --- |
+| `POST /api/credentials` | Scores the answers against `bank.json`, stores the credential as `pending` for 7 days, emails the confirmation link (Resend). |
+| `GET /api/credentials?id=…` | The public record of an active credential. Never the email. |
+| `POST /api/credentials-confirm` | Activates the credential of a token. The email links to the verification page, whose button posts the token, thus a link scanner does not confirm it. |
+| `POST /api/credentials-admin` | Get, find by email, revoke, delete, withdraw the consent to be contacted. Needs `Authorization: Bearer $CREDENTIALS_ADMIN_TOKEN`; without that variable it answers 404. |
+
+The claim form has an optional, unticked box: Genezio may email the holder
+with follow-up questions. A holder who ticks it is a lead, and the team hears
+of it (Resend to `CERTIFICATION_NOTIFY_TO`, Slack to
+`SLACK_CERTIFICATION_WEBHOOK_URL` or `SLACK_WEBHOOK_URL`) once the email is
+confirmed, thus each lead has a real address. The record keeps the text and
+the time of the consent; `CONSENT_TEXT` in `api/_credentials.js` must match the
+box of the page.
+
+To change the questions, edit `bank.json`: the page, the verification page and
+the API read the counts from it. The right option of each question is `a`; the
+page shuffles the options for each visitor.
+
+On a laptop with no `RESEND_API_KEY`, `dev-api.mjs` logs the confirmation link
+instead of emailing it. Vite serves the page at
+http://localhost:5173/certified-geo-expert/index.html (with no `index.html`,
+the React app answers).
 
 ## Do not put files in /docs
 

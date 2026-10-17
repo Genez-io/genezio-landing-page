@@ -1,0 +1,542 @@
+{
+ "pass": 0.8,
+ "hook": {
+  "module": "technical",
+  "question": 0
+ },
+ "modules": [
+  {
+   "id": "foundations",
+   "title": "GEO foundations",
+   "blurb": "What the words mean, and which number answers which question.",
+   "qs": [
+    {
+     "q": "Your brand is named in an AI answer, but the answer links to a review site instead of to you. In the standard vocabulary, what did you get?",
+     "o": [
+      "A mention, not a citation",
+      "A citation, not a mention",
+      "Both a mention and a citation",
+      "Neither"
+     ],
+     "a": 0,
+     "why": "A <b>mention</b> is your brand appearing in the answer text. A <b>citation</b> is the answer pointing at your domain as a source. They move independently, and the gap between them is one of the most useful things you can measure: being talked about without being linked means the engine learned about you somewhere else, and that somewhere else is where the work is."
+    },
+    {
+     "q": "What does share of voice actually divide by?",
+     "o": [
+      "All mentions across the brands being tracked",
+      "All AI answers generated that month",
+      "All answers where any brand is mentioned",
+      "Your mentions last period"
+     ],
+     "a": 0,
+     "why": "Share of voice is your mentions over mentions of <b>the tracked set</b>. That makes the denominator a choice, not a fact. Add a dominant competitor and your share falls without anything changing in the world. Always ask what a share-of-voice figure was computed over before you compare it to anything."
+    },
+    {
+     "q": "Visibility says you appear in 60% of answers. Recommendation rate says 25%. What is the most defensible reading?",
+     "o": [
+      "You are often present but rarely the one being advised",
+      "The two metrics contradict each other",
+      "Your visibility number is inflated",
+      "25% of users saw you"
+     ],
+     "a": 0,
+     "why": "Presence and endorsement are different events. Being listed among eight options is not the same as being the answer. A brand with high visibility and low recommendation has a positioning problem, not a coverage problem — and the fix is different for each."
+    },
+    {
+     "q": "A page ranks #1 in Google for a query. The AI answer to the same question doesn't cite it. Most likely reason?",
+     "o": [
+      "The engine retrieves and selects its own sources, often from different queries",
+      "Ranking data is not shared with AI engines",
+      "The page must be blocked in robots.txt",
+      "AI answers never cite top-ranked pages"
+     ],
+     "a": 0,
+     "why": "The engine rewrites your question into its own searches, then picks passages that answer the question it asked. Classic rank is one input among several, and often not the one that decided the citation. This is why GEO is not a rename of SEO: the retrieval step in between is new, and you can influence it."
+    },
+    {
+     "q": "\"Average position\" in an AI answer refers to:",
+     "o": [
+      "Where your brand falls in the order of things named",
+      "Your Google rank averaged over the period",
+      "The position of your link in the sources list",
+      "How many words into the answer you appear"
+     ],
+     "a": 0,
+     "why": "It is ordinal placement within the answer — first named, third named, and so on. Order matters because readers stop early, and because engines tend to put the recommendation first and the alternatives after. A brand that moves from fifth to second has gained something real even if visibility did not move."
+    },
+    {
+     "q": "Which of these is NOT something a GEO programme can directly measure?",
+     "o": [
+      "How many people saw the answer",
+      "Whether you were mentioned",
+      "Which sources were cited",
+      "Where you ranked in the answer"
+     ],
+     "a": 0,
+     "why": "There is no impression count. Engines publish no reach data, so everything is measured on answers the tool generated itself, not on answers real users received. Any vendor number that looks like reach is an estimate built from other data — treat it as modelled, not observed."
+    }
+   ]
+  },
+  {
+   "id": "llms",
+   "title": "How answer engines work",
+   "blurb": "Retrieval, fan-out, and why the same question gives different answers.",
+   "qs": [
+    {
+     "q": "You ask the same question twice and get two different brand lists. The most likely cause is:",
+     "o": [
+      "Sampling — the model draws from a distribution each time",
+      "The index changed between the two runs",
+      "One of the answers is a cached error",
+      "Your account was A/B tested"
+     ],
+     "a": 0,
+     "why": "Generation is probabilistic. Two runs of one prompt are two samples, not one measurement repeated. This is the single most important fact about measuring GEO: <b>one run tells you almost nothing</b>, and any metric built on a handful of runs is mostly noise."
+    },
+    {
+     "q": "\"Query fan-out\" means:",
+     "o": [
+      "The engine breaks your question into several searches of its own",
+      "The answer is shown across several surfaces",
+      "Your prompt is sent to several models",
+      "Citations spread across several domains"
+     ],
+     "a": 0,
+     "why": "Before answering, the engine rewrites the question into multiple search queries and retrieves against those. Those intermediate queries are the real battleground: you are not competing for the user's phrasing, you are competing for the engine's. Tools that surface fan-out queries show you what the engine actually searched."
+    },
+    {
+     "q": "A model answers a question about your company with no web search at all. Where did that answer come from?",
+     "o": [
+      "Parametric memory — what the model absorbed in training",
+      "A cached copy of your homepage",
+      "Its system prompt",
+      "The previous user's session"
+     ],
+     "a": 0,
+     "why": "Models carry knowledge in their weights from training. That knowledge is frozen at the training cutoff, cannot be edited by changing your website, and is often where stale or wrong brand facts live. Fixing it means getting corrected information into the sources the next generation trains on — slow work, and quite different from fixing a retrieval problem."
+    },
+    {
+     "q": "An engine retrieves your page while answering but does not cite it. Did your page affect the answer?",
+     "o": [
+      "Yes — retrieved content can shape the answer without being linked",
+      "No — only cited sources affect the answer",
+      "Only if the page was ranked first",
+      "Only if the user clicks through"
+     ],
+     "a": 0,
+     "why": "Retrieval and citation are separate events. Text that entered the context window can steer wording, framing and which brands get named, with no link shown. This is why tools that count only citations undercount your influence, and why the retrieved-but-not-cited set is worth looking at."
+    },
+    {
+     "q": "Which is the strongest reason a brand fact can be wrong in an answer even after you fix your website?",
+     "o": [
+      "The claim sits in training weights or in third-party sources the engine trusts",
+      "Search engines cache pages for 30 days",
+      "AI engines ignore sites under a traffic threshold",
+      "Structured data takes a quarter to propagate"
+     ],
+     "a": 0,
+     "why": "You control your own site; you do not control the model's memory or a review site's summary of you. Correcting the record usually means correcting the <b>sources</b>, not just the homepage — and then verifying over time that the answer actually moved."
+    },
+    {
+     "q": "Two engines give very different pictures of your brand in the same week. The best first explanation is:",
+     "o": [
+      "They retrieve from different indexes and refresh on different cycles",
+      "One of them is broken",
+      "Your site blocks one of them",
+      "Sentiment analysis differs"
+     ],
+     "a": 0,
+     "why": "Each engine has its own index, its own refresh cadence and its own retrieval behaviour. Divergence is the normal state, not an anomaly. Any single-number \"AI visibility\" score hides it, so always keep the per-engine breakdown next to the headline figure."
+    }
+   ]
+  },
+  {
+   "id": "technical",
+   "title": "Briefing your dev team",
+   "blurb": "You don't have to build any of this. You do have to know what to ask for, and whether the answer you get back is good enough.",
+   "qs": [
+    {
+     "q": "Your dev team tells you: “We've blocked the AI crawlers in robots.txt, so we're not being used for training.” What should you check before you relax?",
+     "o": [
+      "Whether the agent that fetches pages for live answers is still allowed",
+      "Whether the file is valid",
+      "Whether your competitors did the same",
+      "Whether it reached production"
+     ],
+     "a": 0,
+     "why": "Each AI company runs several agents doing different jobs. One trains the model. A different one fetches your page in the moment somebody asks a question — and that second one decides whether you appear in the answer at all. Blocking the training crawler does nothing to it.<br><br>This is the most expensive misunderstanding in the field. Teams opt out of training, believe they have opted out of AI, and never notice they are still being read. Others block the fetching agent by accident and quietly disappear from answers. <b>Ask for the verdict agent by agent — never accept a single “AI bots: blocked” summary.</b>"
+    },
+    {
+     "q": "Your product copy only appears after JavaScript runs. What do you ask your dev team for?",
+     "o": [
+      "A screenshot of the page loaded with JavaScript switched off",
+      "More structured data",
+      "A bigger crawl budget",
+      "A resubmission to the index"
+     ],
+     "a": 0,
+     "why": "Many of the fetchers that assemble AI answers take the raw HTML and move on without running your JavaScript. If the content only exists after the page hydrates, it may not exist at all as far as the answer is concerned.<br><br>You do not need to know how they fix it. You need that one screenshot. It takes a developer about a minute, and the gap between what you see and what it shows is the entire business case for the work that follows."
+    },
+    {
+     "q": "Your pages take about four seconds to respond. Why does that matter more here than it does for a human visitor?",
+     "o": [
+      "Fetchers give up far sooner and build the answer without you",
+      "AI engines rank pages by speed",
+      "Slow pages get flagged as spam",
+      "It invalidates your structured data"
+     ],
+     "a": 0,
+     "why": "A person waits and sighs. Software assembling an answer under time pressure abandons the request and uses whatever it already has. Nothing is logged on your side, nobody sees an error, and there is no second chance inside that answer.<br><br>From where the engine is standing, slow and absent look identical."
+    },
+    {
+     "q": "Your agency says “AI crawlers can access the site, we checked.” What is the right follow-up?",
+     "o": [
+      "Which agents did you test, and what did each one get back?",
+      "When did you check?",
+      "Can I see the robots.txt file?",
+      "Nothing — that is the whole check"
+     ],
+     "a": 0,
+     "why": "“We checked” almost always means one request from one tool. The artefact worth having is a list: every named agent, allowed or blocked, the rule that decided it, and the status code it received.<br><br>A single pass/fail verdict hides the precise failure that matters. This is the one place where a confident answer from a supplier is worth the least."
+    },
+    {
+     "q": "What does adding schema.org markup actually buy you in an AI answer?",
+     "o": [
+      "Facts stated plainly enough that nothing has to be inferred",
+      "A ranking boost",
+      "A guaranteed citation",
+      "Faster crawling"
+     ],
+     "a": 0,
+     "why": "Markup says: this is an organisation, this is its name, this is the product, this is the price — in a form that needs no interpretation. It buys <b>clarity</b>.<br><br>It does not buy preference. Nobody has demonstrated that schema causes citation, so anyone selling it to you as a ranking lever is overclaiming. Knowing that is worth more than the markup is."
+    },
+    {
+     "q": "A vendor tells you that publishing an llms.txt file will get you into AI answers. How should you treat that?",
+     "o": [
+      "Publish it if it is cheap, but it is a proposal no engine has committed to",
+      "Treat it as mandatory",
+      "Ignore it — it is a hoax",
+      "Replace robots.txt with it"
+     ],
+     "a": 0,
+     "why": "It is a community convention, not a standard, and no major engine has promised to honour it. Publishing one is cheap and harmless and may pay off later.<br><br>The reason this question is here at all: knowing which parts of this field are settled and which are merely hopeful is most of what expertise means right now. Treat a convention as compliance and you will spend budget on the wrong thing while the checks that demonstrably matter go undone."
+    }
+   ]
+  },
+  {
+   "id": "agents",
+   "title": "When the buyer is software",
+   "blurb": "Agents that browse, compare and buy for someone — and what your site has to offer them.",
+   "qs": [
+    {
+     "q": "An audit says your pages score badly on “readability for agents”, and also that agents are being blocked at the door. Which do you fix first?",
+     "o": [
+      "The block — nothing above it can even be measured",
+      "Readability, since it affects more pages",
+      "Both at once",
+      "Neither; wait for more data"
+     ],
+     "a": 0,
+     "why": "These checks stack. If software cannot fetch the page, every score above that point describes a page nobody reached. A readability score for a URL that returns a block is noise presented as data.<br><br>The order is: can it be reached, can it be found, can it be read, can it be used, can it be bought from. Report the first level that fails and stop scoring above it."
+    },
+    {
+     "q": "Your developer asks whether it is worth publishing the small discovery files that tell software what your service is and how to talk to it. Honest answer?",
+     "o": [
+      "Yes — they cost almost nothing and almost nobody has them",
+      "No — they do nothing",
+      "Only for e-commerce",
+      "Only once a standard is ratified"
+     ],
+     "a": 0,
+     "why": "These are a few small files that let software address your service directly instead of scraping a page built for human eyes. Today they influence very little traffic.<br><br>They are worth publishing because the cost is near zero, the option value is real, and so few sites have them that being early is genuinely cheap. Say “cheap insurance” rather than “urgent”, and save your urgency for the things that move answers this quarter."
+    },
+    {
+     "q": "Your security team blocks all non-browser traffic. In commercial terms, what have they just decided?",
+     "o": [
+      "That software buying on a customer's behalf cannot buy from you",
+      "Nothing — bots are not customers",
+      "That the site will load faster",
+      "That you will rank better"
+     ],
+     "a": 0,
+     "why": "When the buyer is software, your bot policy <b>is</b> your sales policy. A blanket block on non-browser traffic is a decision to refuse agent-driven purchases, and it is almost always taken by people who were never told it was a commercial decision.<br><br>Your job is not to overrule them. It is to make sure the trade-off gets made deliberately, by people who can see both sides of it."
+    },
+    {
+     "q": "What most limits an agent's ability to buy from your store on a customer's behalf?",
+     "o": [
+      "No product data it can read without scraping the page",
+      "No live chat",
+      "Missing social share images",
+      "No mobile app"
+     ],
+     "a": 0,
+     "why": "An agent needs to know what you sell, at what price, and whether it is in stock — in a form it can parse reliably. If that only exists inside a page rendered for human eyes, the agent gets it wrong or gives up and goes elsewhere.<br><br>A clean, current product feed is the highest-value thing you can hand it, and it is usually something you already produce for another channel."
+    },
+    {
+     "q": "A competitor publishes a commerce manifest for agents and you do not. What does that change today?",
+     "o": [
+      "Little right now — but it is cheap insurance as agent buying grows",
+      "Nothing, ever",
+      "They immediately outrank you in AI answers",
+      "Their prices start appearing in your answers"
+     ],
+     "a": 0,
+     "why": "Honest answer: agent-driven buying is early and the volume is small. The reason to do it is that the cost is near zero and the upside is real if it lands.<br><br>Overselling this is how GEO loses credibility with the people holding the budget. Being the person who says “small, cheap, not urgent” about the right things is what gets you believed about the urgent ones."
+    },
+    {
+     "q": "A check shows AI agents are receiving your bot-protection challenge page instead of your content. Who do you need in the room?",
+     "o": [
+      "Whoever owns the CDN or firewall — usually not your dev team",
+      "Your content team",
+      "Your SEO agency",
+      "Nobody — it resolves itself"
+     ],
+     "a": 0,
+     "why": "Whatever comes back is what gets read, so a challenge page can be ingested as your content. That is worse than a clean refusal, because everything still looks fine in your own analytics.<br><br>The reason this one is here: the fix almost never sits with the people who build the site. It sits with infrastructure or security. Working that out early saves weeks of asking the wrong team."
+    }
+   ]
+  },
+  {
+   "id": "citations",
+   "title": "Citations and sources",
+   "blurb": "Where answers get their material, and what your logs know that prompts don't.",
+   "qs": [
+    {
+     "q": "Across most brands, the majority of sources behind AI answers are:",
+     "o": [
+      "Third-party pages you do not control",
+      "Your own domain",
+      "Wikipedia alone",
+      "Social media"
+     ],
+     "a": 0,
+     "why": "Answers lean heavily on review sites, forums, press and comparison pages. That reframes the job: a GEO programme that only edits the client's own site is working on a minority of the surface area. Earned presence on the domains that actually get cited is usually the larger lever."
+    },
+    {
+     "q": "Server logs show heavy AI crawler traffic, but the brand is rarely cited. The most useful conclusion is:",
+     "o": [
+      "Retrieval is working; selection is not — the problem is the content",
+      "The crawlers are broken",
+      "You should block them to save bandwidth",
+      "Citations lag crawls by 90 days"
+     ],
+     "a": 0,
+     "why": "You have separated two failure modes that look identical from the outside. Being fetched and not used means access is fine and the material is not winning — an argument, evidence or structure problem. Had the logs been empty, it would have been an access problem. <b>Logs are the only way to tell these apart</b>, which is why prompt-testing alone cannot diagnose GEO."
+    },
+    {
+     "q": "A log line claims the user agent <code>ChatGPT-User</code>. How do you know it is genuine?",
+     "o": [
+      "Check the client IP against the operator's published ranges",
+      "Trust the user-agent string",
+      "Check it has a referrer",
+      "Count how often it appears"
+     ],
+     "a": 0,
+     "why": "User-agent strings are free text and trivially forged — scrapers impersonate AI crawlers precisely because they get let through. Without IP verification against published ranges, your crawler analytics are inflated by an unknown amount and every conclusion drawn from them is soft."
+    },
+    {
+     "q": "Your citation report shows <code>reddit.com</code> as a single source. What is it hiding?",
+     "o": [
+      "Which subreddit and which thread actually carried the influence",
+      "Whether the link worked",
+      "The sentiment of the answer",
+      "How many users clicked"
+     ],
+     "a": 0,
+     "why": "Domain-level reporting collapses the thing you can act on. \"Reddit cites you\" is not actionable; \"this subreddit, in these threads\" is. The same applies to YouTube channels and to named authors on publications — resolution below the domain is where outreach actually starts."
+    },
+    {
+     "q": "Which pattern most clearly signals an outreach opportunity rather than an on-site fix?",
+     "o": [
+      "A domain cited often for your category that never mentions you",
+      "A slow page on your own site",
+      "A missing meta description",
+      "A page with no schema markup"
+     ],
+     "a": 0,
+     "why": "That is a source the engine already trusts for your topic, where you are absent. Getting represented there changes what the engine can say about you. The other three are your own housekeeping — worth doing, but they do not add new evidence about you to the world."
+    },
+    {
+     "q": "Why is \"cited without being mentioned\" worth tracking?",
+     "o": [
+      "Your page supplied the answer while a competitor got named",
+      "It means the citation was broken",
+      "It indicates duplicate content",
+      "It only affects image results"
+     ],
+     "a": 0,
+     "why": "You did the work and someone else collected the credit. Usually the page answers the question well but never states plainly who is answering it. The fix is cheap: make the brand attribution explicit in the passage that gets quoted, not only in the header and footer."
+    }
+   ]
+  },
+  {
+   "id": "rigour",
+   "title": "Measurement rigour",
+   "blurb": "Telling a real change from noise — where most GEO reporting falls apart.",
+   "qs": [
+    {
+     "q": "A tool reports 30% visibility from 10 runs. Next week it reports 40%. What can you conclude?",
+     "o": [
+      "Essentially nothing — the interval around both is enormous",
+      "A 33% relative improvement",
+      "That the work is paying off",
+      "That the engine changed its index"
+     ],
+     "a": 0,
+     "why": "Three out of ten against four out of ten. The 95% interval on each spans roughly 10–60%, so the two overlap almost entirely. Reporting that as an improvement is not a small error — it is the error that gets GEO programmes cancelled when the \"gain\" reverses next week.<br><br>Ask every vendor two questions: <b>how many runs is this built on</b>, and <b>where is the confidence interval</b>. Very few can answer the second."
+    },
+    {
+     "q": "Vendor A says you have 22% AI visibility and vendor B says 61%. The most likely explanation is:",
+     "o": [
+      "Different prompt sets, engines and definitions — the numbers aren't comparable",
+      "One vendor is lying",
+      "Vendor B has better coverage",
+      "Your site changed between the measurements"
+     ],
+     "a": 0,
+     "why": "Each vendor runs its own prompts against its own engine mix and defines the metric its own way — some divide by prompts, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
+    },
+    {
+     "q": "A persona is used as a reporting dimension rather than an impersonated identity. What does that mean?",
+     "o": [
+      "It labels and filters results; it is not sent to the engine",
+      "The engine is told to act as that persona",
+      "It changes the model's temperature",
+      "It selects which engine runs"
+     ],
+     "a": 0,
+     "why": "Two very different things share one word. As a <b>dimension</b>, the persona is a tag for slicing results. As an <b>identity</b>, the persona's role, language and location actually change what gets sent and from where — which can change the answer. When a vendor says \"persona support\", ask which one they mean; the capability gap is large."
+    },
+    {
+     "q": "Your tracked prompts refresh daily, but brand reporting refreshes weekly. What is the reporting risk?",
+     "o": [
+      "Attributing a change to work that landed after the data was collected",
+      "Double-counting mentions",
+      "Losing citation data",
+      "Nothing — cadence doesn't matter"
+     ],
+     "a": 0,
+     "why": "If you publish on Wednesday and the weekly snapshot was taken on Monday, the next report cannot contain your change — but it will contain <i>something</i>, and the temptation to claim it is strong. Know each surface's collection date before you attribute any movement."
+    },
+    {
+     "q": "A composite \"AI visibility score\" out of 100 is most often normalised against:",
+     "o": [
+      "A set of competitors the vendor picked, not an absolute scale",
+      "The total number of AI users",
+      "Your previous quarter",
+      "All indexed websites"
+     ],
+     "a": 0,
+     "why": "The score is usually relative to an auto-selected competitor set, often a median. So it can fall while your absolute presence rises, simply because the comparison set changed. Always read the denominator before you put a score of this kind in front of an executive."
+    },
+    {
+     "q": "You have budget to improve the trustworthiness of one thing in your GEO reporting. Choose:",
+     "o": [
+      "More runs per prompt",
+      "More prompts tracked",
+      "More engines covered",
+      "A prettier dashboard"
+     ],
+     "a": 0,
+     "why": "Coverage without precision produces more numbers of the same low quality — a wider survey of noise. Increasing runs per prompt narrows the interval on what you already measure and is what makes a change detectable at all. Get a small set of prompts measured properly before measuring a large set badly."
+    },
+    {
+     "q": "Your dashboard reports AI visibility to one decimal place, refreshed daily, built from five runs per prompt. In measurement terms, that is:",
+     "o": [
+      "Precisely wrong",
+      "Roughly right",
+      "Both precise and accurate",
+      "Neither precise nor accurate"
+     ],
+     "a": 0,
+     "why": "Precision is how finely you report. Accuracy is whether you are anywhere near the truth. Five runs cannot support a decimal place, so the decimal is decoration — it makes a noisy number look authoritative, which is worse than looking noisy.<br><br><b>Roughly right beats precisely wrong.</b> A wide range, honestly stated, leads to better decisions than a sharp number that is confidently off."
+    },
+    {
+     "q": "Attribution asks which touch produced the sale. For AI answers, the question you can actually answer is:",
+     "o": [
+      "Were we present at the points where the decision got made?",
+      "Which engine converted best?",
+      "What was the last click before the purchase?",
+      "Which prompt drove the revenue?"
+     ],
+     "a": 0,
+     "why": "There is no click to attribute, no referrer to follow and no impression count. What you <i>can</i> establish is presence: were we named, were we cited, on the questions that matter, consistently, over time.<br><br><b>Contribution is provable where attribution is not.</b> Anyone promising you attribution for AI answers is promising something the channel does not emit."
+    }
+   ]
+  },
+  {
+   "id": "economy",
+   "title": "The answer economy",
+   "blurb": "What changed in how people actually buy — and what the headline numbers are worth.",
+   "qs": [
+    {
+     "q": "Of every 1,000 Google searches in 2026, roughly how many end in a click to a website?",
+     "o": [
+      "Fewer than 300",
+      "About 500",
+      "About 700",
+      "More than 900"
+     ],
+     "a": 0,
+     "why": "Under 300, on SparkToro's analysis of Similarweb clickstream data across six countries, January to April 2026. The other 700-plus are research that never touches your analytics.<br><br>That one figure is the whole commercial argument for GEO. Most research now happens somewhere you cannot measure and cannot be clicked from, so a strategy built only around the click is optimising for the minority case."
+    },
+    {
+     "q": "When an AI Overview appears, what happens to click-through on the #1 organic desktop result?",
+     "o": [
+      "It falls by roughly 58%",
+      "It rises slightly",
+      "It is unchanged",
+      "It falls by about 5%"
+     ],
+     "a": 0,
+     "why": "Ahrefs measured a drop of about 58% across 300,000 keywords in December 2025, and roughly 74% of informational queries now end with no click at all.<br><br>Position one did not stop being valuable. It stopped being the same prize. If your reporting still treats rank one as the goal, you are tracking a position whose payout has quietly fallen."
+    },
+    {
+     "q": "A survey of 1,076 B2B software buyers found 69% chose a different vendor than they had planned, because it appeared in a chatbot recommendation. The useful implication is:",
+     "o": [
+      "Being in the answer can change the shortlist, not just confirm it",
+      "Chatbots are replacing sales teams",
+      "Buyers do not trust their own research",
+      "The survey is probably wrong"
+     ],
+     "a": 0,
+     "why": "This is the line between GEO as a branding exercise and GEO as pipeline. The answer is not reflecting a decision already taken — it is changing it. One in three of those buyers bought from a vendor they had never heard of until the chatbot named it.<br><br>Which also reframes the job: if you are not in the answer, you are not in a shortlist that got assembled without you."
+    },
+    {
+     "q": "That same research found review-site citations are buyers' top trust signal in an AI answer. It was published by G2, which sells review products. What do you do with the finding?",
+     "o": [
+      "Take it seriously, and note who paid for it",
+      "Discard it — vendor research is worthless",
+      "Treat it as a neutral measurement",
+      "Use it only if a competitor publishes the same thing"
+     ],
+     "a": 0,
+     "why": "Self-interest does not make research false. It makes it <b>directional</b>. G2 sells exactly what this finding recommends, so the honest reading is: real sample, plausible direction, interested author.<br><br>Read every number in this field that way, because nearly all of them come from someone with something to sell — this test included. Ask who ran it, what they sell, how big the sample was, and whether anyone without a stake found the same thing."
+    },
+    {
+     "q": "A large share of visits that began in an AI assistant land in your analytics as:",
+     "o": [
+      "Direct or unassigned traffic",
+      "A referral from the assistant's domain",
+      "Organic search",
+      "Social"
+     ],
+     "a": 0,
+     "why": "Referrers are often stripped or missing, and people frequently retype or paste a link rather than clicking one. The visit lands in Direct. Assistants vary and this is slowly improving, but Direct stays a large and growing bucket.<br><br>So \"we get no traffic from AI\" is usually a statement about your measurement rather than about the world — and a rising unassigned line is one of the few early signals you have."
+    },
+    {
+     "q": "Buyers increasingly ask the same question of ChatGPT, Gemini and Claude before deciding. What does that imply for your programme?",
+     "o": [
+      "Consistency across engines matters, not just winning one",
+      "Track only the largest engine",
+      "Nothing — the answers are much the same anyway",
+      "Buyers pick one assistant and stay with it"
+     ],
+     "a": 0,
+     "why": "Buyers treat agreement between assistants as a trust signal, and conflicting or incomplete answers as a reason to keep digging. A strong showing on one engine and absence on another does not average out — to a buyer it reads as doubt.<br><br>It is also why one blended \"AI visibility score\" makes a poor operating metric: it hides precisely the divergence your buyers are using to judge you."
+    }
+   ]
+  }
+ ]
+}

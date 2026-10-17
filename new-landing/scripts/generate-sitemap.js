@@ -35,7 +35,8 @@ const staticRoutes = [
     '/about-genezio',
     '/agencies',
     '/blog',
-    '/research'
+    '/research',
+    '/certified-geo-expert'
 ];
 
 /**
