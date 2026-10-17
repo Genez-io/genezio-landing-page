@@ -42,16 +42,15 @@ Upstash), which sets `KV_REST_API_URL` and `KV_REST_API_TOKEN`.
 
 | Function | Does |
 | --- | --- |
-| `POST /api/credentials` | Scores the answers against `bank.json`, stores the credential as `pending` for 7 days, emails the confirmation link (Resend). |
+| `POST /api/credentials` | Scores the answers against `bank.json` and stores the credential, active at once. No email is sent. |
 | `GET /api/credentials?id=…` | The public record of an active credential. Never the email. |
-| `POST /api/credentials-confirm` | Activates the credential of a token. The email links to the verification page, whose button posts the token, thus a link scanner does not confirm it. |
 | `POST /api/credentials-admin` | Get, find by email, revoke, delete, withdraw the consent to be contacted. Needs `Authorization: Bearer $CREDENTIALS_ADMIN_TOKEN`; without that variable it answers 404. |
 
 The claim form has an optional, unticked box: Genezio may email the holder
 with follow-up questions. A holder who ticks it is a lead, and the team hears
-of it (Resend to `CERTIFICATION_NOTIFY_TO`, Slack to
-`SLACK_CERTIFICATION_WEBHOOK_URL` or `SLACK_WEBHOOK_URL`) once the email is
-confirmed, thus each lead has a real address. The record keeps the text and
+of it on Slack (`SLACK_CERTIFICATION_WEBHOOK_URL`, or `SLACK_WEBHOOK_URL`).
+Nothing confirms the address, thus a lead may give one that is not theirs.
+The record keeps the text and
 the time of the consent; `CONSENT_TEXT` in `api/_credentials.js` must match the
 box of the page.
 
@@ -59,8 +58,7 @@ To change the questions, edit `bank.json`: the page, the verification page and
 the API read the counts from it. The right option of each question is `a`; the
 page shuffles the options for each visitor.
 
-On a laptop with no `RESEND_API_KEY`, `dev-api.mjs` logs the confirmation link
-instead of emailing it. Vite serves the page at
+Vite serves the page at
 http://localhost:5173/certified-geo-expert/index.html (with no `index.html`,
 the React app answers).
 
