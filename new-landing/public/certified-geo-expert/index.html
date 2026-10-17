@@ -219,7 +219,7 @@ function claim(){
     <div class="grid2">${MODULES.map((m,i)=>`<div class="modscore"><div class="t">${esc(m.title)}</div><div class="s">${modScore(i)}/${m.qs.length}</div></div>`).join("")}</div>
     <div class="card stack" style="gap:14px">
       <div><h3>Claim your credential</h3>
-      <p style="font-size:14.5px;color:var(--ink-2);margin-top:6px">This issues a credential with a public verification page, so the badge on your profile can actually be checked. Anyone with the link sees your name, your company if you give one, your score and the date. Your email is never shown: we use it to confirm the credential and to handle your requests to recover, revoke or delete it, and to contact you only if you tick the box below. See the <a href="/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.</p></div>
+      <p style="font-size:14.5px;color:var(--ink-2);margin-top:6px">This issues a credential with a public verification page, so the badge on your profile can actually be checked. Anyone with the link sees your name, your company if you give one, your score and the date. Your email is never shown: we use it only to handle your requests to recover, revoke or delete the credential, and to contact you if you tick the box below. See the <a href="/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.</p></div>
       <div class="field"><label for="nm">Full name</label><input id="nm" autocomplete="name" placeholder="Ada Lovelace"></div>
       <div class="field"><label for="em">Email</label><input id="em" type="email" autocomplete="email" placeholder="ada@example.com"></div>
       <div class="field"><label for="co">Company <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input id="co" autocomplete="organization" placeholder="Analytical Engines Ltd"></div>
@@ -292,7 +292,6 @@ function cert(){
       <p class="sub">Certified GEO Expert${S.holder&&S.holder.company?" \u00b7 "+esc(S.holder.company):""}<br>${pct}% across ${MODULES.length} sections on generative engine optimisation.</p>
       <p class="meta">Credential ${esc(cr.id)} &middot; ${d.toLocaleDateString(undefined,{month:"long",year:"numeric"})}<br>${esc(certUrl)}</p>
     </div>
-    ${cr.status==="pending"?`<p class="notice"><b>One step left.</b> We sent a confirmation link to ${esc(S.holder&&S.holder.email||"your email")}. The credential and its verification link go live once you click it. Add it to LinkedIn now if you like &mdash; just confirm before anyone checks it.</p>`:""}
     ${cr.rank?`<p class="statline">${esc(cr.rank)}</p>`:""}
     <div class="row">
       <a class="btn" href="${li}" target="_blank" rel="noopener">Add to LinkedIn profile</a>
