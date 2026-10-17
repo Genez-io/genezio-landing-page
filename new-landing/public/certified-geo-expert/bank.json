@@ -398,15 +398,15 @@
      "why": "Each vendor asks its own questions against its own engine mix and defines the metric its own way — some divide by questions, some by answers, some normalise against a competitor median. Cross-vendor comparison of absolute scores is meaningless. Compare <b>trend within one tool</b>, and never put two vendors' headline numbers in the same chart."
     },
     {
-     "q": "A vendor's report says CFOs and IT managers see your brand equally often. The vendor explains that \"persona\" is a filter on the results. What do you actually know about the two groups?",
+     "q": "You sell mainly in Germany, but your AI visibility is measured with questions in English, asked from the US. What is the risk?",
      "o": [
-      "Nothing yet: the same answers were simply sorted into two piles",
-      "That both see you equally, so one message can serve both groups",
-      "That engines treat every buyer the same, whatever their job title",
-      "That your positioning works for both, since the numbers match"
+      "Buyers in Germany may get different brands than the ones you measure",
+      "None: engines give the same answer in every language and country",
+      "Only the wording changes, since engines translate the same answer",
+      "Only the prices change, which has no effect on which brands appear"
      ],
      "a": 0,
-     "why": "Two very different things get called a persona. As a <b>filter</b>, it is a tag added to the results afterwards: every question was asked the same way, so the \"CFO\" numbers and the \"IT manager\" numbers are the same answers sorted into two piles.<br><br>As an <b>identity</b>, the persona shapes the conversation itself. A CFO asks about cost and risk, in their own words, language and country; an IT manager asks about integration and security. That can change which brands get named.<br><br>When a vendor says it supports personas, ask which of the two it means. A persona that never reaches the engine can't tell you anything about that persona."
+     "why": "Engines build answers from the sources they find, and those sources differ by language and country: local review sites, local press, local retailers. A brand that leads in English answers from the US can be missing from German answers, and the other way round.<br><br>Measure in the languages and places where your buyers actually ask. A number collected anywhere else <b>describes someone else's market</b>."
     },
     {
      "q": "You publish a new page on Wednesday. On Friday, your weekly AI visibility report shows a jump. What should you check before taking credit?",
