@@ -166,12 +166,17 @@ async function issue(req, res) {
     const confirmUrl = `${site}${VERIFY_PATH}?confirm=${token}`;
     const sent = await sendConfirmation({ to: email, name, id, confirmUrl, contactConsent });
     if (!sent) {
+      // A failed email issued nothing, thus it does not count against the limit.
       await kvAtomic([
         ["DEL", key.cred(id)],
         ["DEL", key.confirm(token)],
         ["SREM", key.email(email), id],
+        ["DECR", key.rate("ip", clientIp(req), day)],
+        ["DECR", key.rate("email", email, day)],
       ]).catch(() => {});
-      return res.status(502).json({ error: "We couldn't send the confirmation email. Check the address and try again." });
+      return res.status(502).json({
+        error: "We couldn't send the confirmation email just now. Your answers are saved here; try again in a few minutes.",
+      });
     }
 
     console.log("[credentials] issued", JSON.stringify({ id, percent: result.percent, issued: record.issued }));
