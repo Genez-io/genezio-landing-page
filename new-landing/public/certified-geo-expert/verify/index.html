@@ -29,15 +29,13 @@ let BANK=null;
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
 function el(h){const d=document.createElement("div");d.innerHTML=h.trim();return d.firstElementChild}
 const bankReady=fetch("/certified-geo-expert/bank.json").then(r=>r.ok?r.json():null).then(b=>BANK=b).catch(()=>null);
-function title(id){const m=BANK&&BANK.modules.find(x=>x.id===id);return m?m.title:id}
 function dateText(iso){const d=new Date(iso+"T00:00:00Z");return isNaN(d)?iso:d.toLocaleDateString(undefined,{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
 
 const credBox=el(`<section class="stack"></section>`);
 const hookBox=el(`<section class="stack"></section>`);
-const detailBox=el(`<section class="stack"></section>`);
-app.append(credBox,hookBox,detailBox,el(`<div class="sitefoot"><span>Free &middot; vendor-neutral &middot; nothing is being sold to you here.</span><span>Maintained by <a href="https://genezio.com" target="_blank" rel="noopener">Genezio</a></span></div>`));
+app.append(credBox,hookBox,el(`<div class="sitefoot"><span>Free &middot; vendor-neutral &middot; nothing is being sold to you here.</span><span>Maintained by <a href="https://genezio.com" target="_blank" rel="noopener">Genezio</a></span></div>`));
 
-function show(html){credBox.innerHTML="";detailBox.innerHTML="";credBox.append(el(`<div class="stack">${html}</div>`))}
+function show(html){credBox.innerHTML="";credBox.append(el(`<div class="stack">${html}</div>`))}
 
 function valid(c){
   document.title=c.name+" — Certified GEO Expert";
@@ -48,13 +46,9 @@ function valid(c){
       <p class="nm">${esc(c.name)}</p>
       <p class="sub">${c.company?esc(c.company)+"<br>":""}Scored ${esc(c.percent)}% on the Certified GEO Expert test</p>
       <p class="meta">Credential ${esc(c.id)} &middot; issued ${esc(dateText(c.issued))}</p>
-    </div>`);
-  // The breakdown goes under the question: the question is what a visitor should see first.
-  detailBox.append(el(`<div class="stack">
-    <p class="eyebrow">Score by section</p>
-    ${Array.isArray(c.modules)&&c.modules.length?`<div class="grid2">${c.modules.map(m=>`<div class="modscore"><div class="t">${esc(title(m.id))}</div><div class="s">${esc(m.score)}/${esc(m.total)}</div></div>`).join("")}</div>`:""}
+    </div>
     <p class="foot">This credential was issued to the person named above after they passed the test with the score shown. It is not a statement about them by Genezio beyond that.</p>
-  </div>`));
+    <div class="row"><a class="btn" href="/certified-geo-expert/">Take the test yourself &rarr;</a><span class="foot" style="margin:0">Free, about half an hour.</span></div>`);
 }
 
 function notFound(id){
@@ -107,8 +101,7 @@ function playHook(){
   for(let i=seq.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[seq[i],seq[j]]=[seq[j],seq[i]]}
   hookBox.innerHTML="";
   const node=el(`<div class="stack">
-    <div><p class="eyebrow">One question from the test</p>
-      <h2 style="margin-top:8px">Most people get this one wrong.</h2></div>
+    <div><p class="eyebrow">One question from the test</p></div>
     <div class="card stack" style="gap:16px">
       <p class="qtext">${q.q}</p>
       <div class="opts">${seq.map((i,p)=>`<button class="opt" data-i="${i}"><span class="k">${KEYS[p]}</span><span>${q.o[i]}</span></button>`).join("")}</div>
