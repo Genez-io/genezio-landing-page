@@ -255,7 +255,7 @@ function claim(){
   };
 }
 
-function sharePost(pct,url,id){
+function sharePost(pct,url,certUrl){
   const got=hookGotIt();
   return `I just took the Certified GEO Expert test and scored ${pct}%.
 
@@ -265,7 +265,7 @@ ${got?"One thing worth knowing":"One thing I got wrong and learned"}: the crawle
 
 ${totalQs()} questions, about half an hour, with a clear explanation for anything you miss: ${url}
 
-Credential: ${id}`;
+My credential: ${certUrl}`;
 }
 
 function cert(){
@@ -277,7 +277,7 @@ function cert(){
     +"&organizationName="+encodeURIComponent("Genezio")
     +"&issueYear="+d.getFullYear()+"&issueMonth="+(d.getMonth()+1)
     +"&certUrl="+encodeURIComponent(certUrl)+"&certId="+encodeURIComponent(cr.id);
-  const post=sharePost(pct,QUIZ_URL,cr.id);
+  const post=sharePost(pct,QUIZ_URL,certUrl);
   const liShare="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(QUIZ_URL);
   app.append(el(`<div class="stack">
     <div class="cert">
