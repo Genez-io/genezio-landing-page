@@ -1,6 +1,6 @@
 # genezio-landing-page
 
-The landing page of https://genezio.com: React and Vite, with a static
+The landing page of https://genezio.com: React and Vite, with a static 
 render of each page (`new-landing/prerender.mjs`) and the functions of
 Vercel in `api/`. The path `/docs` of the same site is the documentation.
 The repository Genez-io/genezio-code builds the documentation (`apps/docs`),
