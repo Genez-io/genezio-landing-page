@@ -38,8 +38,12 @@ const MAX_EVENTS = 50000;
 const RETENTION_DAYS = 30;
 const ID_RE = /^[0-9a-f]{8}$/;
 const BEACON_KINDS = new Set(["t0", "d1", "d3", "d5", "d10", "d20"]);
+// Names of crawlers and tools, not of brands: "bing", "duckduck", "petal" or
+// "claude" alone also match the apps and browsers of people (the Bing app, the
+// DuckDuckGo browser, the CUBOT phones). "+http" is the contact URL that
+// crawlers put in their user agent.
 const BOT_UA_RE =
-  /bot|crawl|spider|slurp|headless|gpt|oai-|chatgpt|openai|perplexity|claude|anthropic|bing|google-|googleother|bytespider|facebookexternalhit|meta-external|amazon|applebot|duckduck|yandex|baidu|petal|python|curl|wget|node-fetch|undici|axios|go-http|java\/|okhttp|playwright|puppeteer|phantom|selenium|lighthouse/i;
+  /\bbot\b|\+https?:\/\/|crawler|spider|slurp|headless|gptbot|oai-searchbot|chatgpt-user|perplexitybot|perplexity-user|claudebot|claude-user|claude-searchbot|anthropic-ai|bingbot|bingpreview|adidxbot|googlebot|googleother|google-|bytespider|facebookexternalhit|meta-externalagent|meta-externalfetcher|amazonbot|applebot|duckduckbot|duckassistbot|yandexbot|baiduspider|petalbot|python|curl\/|wget|node-fetch|undici|axios|go-http|java\/|okhttp|playwright|puppeteer|phantomjs|selenium|lighthouse/i;
 // The request headers that help to tell the clients apart. Cookies are not here.
 const LOGGED_HEADERS = [
   "accept-language", "referer", "from", "sec-ch-ua", "sec-ch-ua-platform",
@@ -59,8 +63,16 @@ const RANGE_LISTS = {
   "perplexity-user": "https://www.perplexity.ai/perplexity-user.json",
 };
 const RANGES_TTL_MS = 12 * 3600 * 1000;
-let ranges = null; // [{ owner, v6, net, bits }]
+const RANGES_RETRY_MS = 60 * 1000;
+let rangesByOwner = {}; // owner -> [{ v6, net, bits }], the last good copy of each list
 let rangesAt = 0;
+let rangesLoading = null;
+
+// A "t0" that is kept leaves this mark for MARK_TTL_SEC. A delayed beacon is
+// kept only when the mark of its id exists, thus delayed beacons alone cannot
+// write to the log.
+const markKey = (id) => `render-probe:id:${id}`;
+const MARK_TTL_SEC = 120;
 
 module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
@@ -77,40 +89,59 @@ module.exports = async function handler(req, res) {
   const ua = String(req.headers["user-agent"] || "").slice(0, 500);
   const ip = clientIp(req);
   const fp = fingerprint(req.body);
-  const owner = await ipOwner(ip);
+  let owner = null;
   const reasons = [];
-  if (BOT_UA_RE.test(ua)) reasons.push("ua");
-  if (fp && (fp.webdriver === true || /headless/i.test(String(fp.ua || "")))) reasons.push("automation");
-  if (owner) reasons.push("ip");
-  // A delayed beacon comes only after a "t0" that was kept, thus it is kept too.
-  const watch = reasons.length > 0 || kind !== "t0";
+  if (kind === "t0") {
+    owner = await ipOwner(ip);
+    if (BOT_UA_RE.test(ua)) reasons.push("ua");
+    if (fp && (fp.webdriver === true || /headless/i.test(String(fp.ua || "")))) reasons.push("automation");
+    if (owner) reasons.push("ip");
+  }
+  const watch = kind === "t0" ? reasons.length > 0 : await wasKept(id);
 
   if (watch) {
     const headers = {};
     for (const name of LOGGED_HEADERS) {
       if (req.headers[name]) headers[name] = String(req.headers[name]).slice(0, 300);
     }
-    await record({
-      kind, id, path: String(q.p || "").slice(0, 300), at: new Date().toISOString(),
-      ua, ip, owner, reasons, fp, headers,
-    });
+    await record(
+      {
+        kind, id, path: String(q.p || "").slice(0, 300), at: new Date().toISOString(),
+        ua, ip, owner, reasons, fp, headers,
+      },
+      kind === "t0",
+    );
   }
   return res.status(200).json({ watch });
 };
 
-async function record(event) {
+/** One event in the log; with `mark`, also the mark of its id for the delayed beacons. */
+async function record(event, mark) {
   if (!isConfigured()) {
     console.warn("[render-probe] KV not configured, event not stored", JSON.stringify(event));
     return;
   }
+  const commands = [
+    ["LPUSH", EVENTS_KEY, JSON.stringify(event)],
+    ["LTRIM", EVENTS_KEY, 0, MAX_EVENTS - 1],
+    ["EXPIRE", EVENTS_KEY, RETENTION_DAYS * 24 * 3600],
+  ];
+  if (mark) commands.push(["SET", markKey(event.id), "1", "EX", MARK_TTL_SEC]);
   try {
-    await kvAtomic([
-      ["LPUSH", EVENTS_KEY, JSON.stringify(event)],
-      ["LTRIM", EVENTS_KEY, 0, MAX_EVENTS - 1],
-      ["EXPIRE", EVENTS_KEY, RETENTION_DAYS * 24 * 3600],
-    ]);
+    await kvAtomic(commands);
   } catch (err) {
     console.error("[render-probe] store failed", err);
+  }
+}
+
+/** True when a "t0" of this id was kept in the last MARK_TTL_SEC. A store that fails says no. */
+async function wasKept(id) {
+  if (!isConfigured()) return false;
+  try {
+    return Number(await kv("EXISTS", markKey(id))) === 1;
+  } catch (err) {
+    console.error("[render-probe] mark check failed", err);
+    return false;
   }
 }
 
@@ -135,41 +166,60 @@ function fingerprint(body) {
 async function ipOwner(ip) {
   const parsed = parseIp(ip);
   if (!parsed) return null;
-  for (const r of await loadRanges()) {
-    if (r.v6 !== parsed.v6) continue;
-    const shift = (parsed.v6 ? 128n : 32n) - BigInt(r.bits);
-    if ((parsed.n >> shift) === (r.net >> shift)) return r.owner;
+  for (const [owner, list] of Object.entries(await loadRanges())) {
+    for (const r of list) {
+      if (r.v6 !== parsed.v6) continue;
+      const shift = (parsed.v6 ? 128n : 32n) - BigInt(r.bits);
+      if ((parsed.n >> shift) === (r.net >> shift)) return owner;
+    }
   }
   return null;
 }
 
-/** The ranges, from memory while they are fresh. A list that fails to load is skipped. */
+/**
+ * The ranges, from memory while they are fresh. Concurrent requests share one
+ * load. A list that fails to load keeps its last good copy, and the next try
+ * comes after RANGES_RETRY_MS, not after the full RANGES_TTL_MS.
+ */
 async function loadRanges() {
-  if (ranges && Date.now() - rangesAt < RANGES_TTL_MS) return ranges;
-  const lists = await Promise.all(
+  if (Date.now() - rangesAt < RANGES_TTL_MS) return rangesByOwner;
+  if (!rangesLoading) rangesLoading = refreshRanges().finally(() => { rangesLoading = null; });
+  await rangesLoading;
+  return rangesByOwner;
+}
+
+async function refreshRanges() {
+  const results = await Promise.all(
     Object.entries(RANGE_LISTS).map(async ([owner, url]) => {
       try {
         const resp = await fetch(url, { signal: AbortSignal.timeout(5000) });
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
-        return (data.prefixes || [])
+        const list = (data.prefixes || [])
           .map((p) => p.ipv4Prefix || p.ipv6Prefix)
           .filter(Boolean)
           .map((cidr) => {
             const [addr, bits] = cidr.split("/");
             const parsed = parseIp(addr);
-            return parsed && { owner, v6: parsed.v6, net: parsed.n, bits: Number(bits) };
+            return parsed && { v6: parsed.v6, net: parsed.n, bits: Number(bits) };
           })
           .filter(Boolean);
+        if (!list.length) throw new Error("no prefixes");
+        return [owner, list];
       } catch (err) {
         console.warn(`[render-probe] range list ${owner} not loaded:`, err.message || err);
-        return [];
+        return [owner, null];
       }
     }),
   );
-  ranges = lists.flat();
-  rangesAt = Date.now();
-  return ranges;
+  const next = { ...rangesByOwner };
+  let failed = 0;
+  for (const [owner, list] of results) {
+    if (list) next[owner] = list;
+    else failed++;
+  }
+  rangesByOwner = next;
+  rangesAt = failed ? Date.now() - RANGES_TTL_MS + RANGES_RETRY_MS : Date.now();
 }
 
 /** An IPv4 or IPv6 address as a BigInt, or null. */
