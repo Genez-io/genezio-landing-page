@@ -1,2 +1,4 @@
 _src
 README.md
+.gitignore
+.env*

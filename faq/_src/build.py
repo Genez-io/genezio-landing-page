@@ -234,7 +234,7 @@ INDEX_HTML = f"""<!doctype html>
 </html>
 """
 
-KEEP = {"_src", ".vercelignore", ".vercel", "README.md"}
+KEEP = {"_src", ".vercelignore", ".vercel", ".gitignore", "README.md"}
 for f in sorted(OUT.rglob("*"), reverse=True):
     if KEEP & set(f.relative_to(OUT).parts):
         continue
