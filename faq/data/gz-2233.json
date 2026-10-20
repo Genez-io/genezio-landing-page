@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2233",
+ "reviewed": "October 2026",
+ "body": [
+  "Genezio offers an MCP server, so you can ask questions about your Genezio data from an AI assistant that supports the Model Context Protocol.",
+  "Access through MCP is read-only and limited to your own data, under the same permissions as the platform.",
+  "Teams use it to pull numbers into a planning conversation or a report without opening the dashboard."
+ ]
+}

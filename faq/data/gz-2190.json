@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2190",
+ "reviewed": "October 2026",
+ "body": [
+  "Genezio holds SOC 2 Type II, ISO 27001 and CSA STAR Level 1, and is GDPR compliant with a Data Processing Agreement you can sign.",
+  "Sign-in supports SSO with SAML 2.0 and SCIM provisioning. Access is role-based with least privilege by default, and every workspace keeps audit logs.",
+  "Data is encrypted with TLS in transit and AES-256 at rest, with regional data residency options. The team completes security reviews and vendor questionnaires as part of an evaluation, and the Trust Center has the current documents."
+ ]
+}

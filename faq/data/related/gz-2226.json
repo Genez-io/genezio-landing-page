@@ -1,0 +1,8 @@
+{
+ "tip": "Briefs work best when they target a single question the assistants already answer badly, rather than a broad topic.",
+ "related": [
+  "GZ-2142",
+  "GZ-2211",
+  "GZ-2138"
+ ]
+}

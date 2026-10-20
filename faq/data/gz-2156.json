@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2156",
+ "reviewed": "October 2026",
+ "body": [
+  "Conversations run on a regular schedule, so dashboards keep filling as new answers come in.",
+  "A baseline needs time. Until it is two weeks old, Genezio labels it directional, because a few days of answers can swing more than the underlying trend.",
+  "Targets are shown as targets, never as guarantees. The goal is to give your team numbers it can defend in a review, not numbers that look good on day one."
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2124",
+ "reviewed": "October 2026",
+ "body": [
+  "Genezio does not wait for answers to appear. It asks for them: the platform holds multi-turn conversations with each answer engine, the way a buyer would, and records what comes back.",
+  "Those conversations are built from three things you agree on during onboarding: personas (who is asking), topics (what they care about) and scenarios (the situation that makes them ask).",
+  "The questions are simulated, not copied from real customers. Modelling them this way is what makes the sample large enough to be statistically meaningful from week to week and market to market."
+ ]
+}
