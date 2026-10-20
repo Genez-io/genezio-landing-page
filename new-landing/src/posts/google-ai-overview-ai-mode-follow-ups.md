@@ -1,5 +1,5 @@
 ---
-title: "Genezio now follows your buyers from the AI Overview into AI Mode"
+title: "Track your brand from the AI Overview to AI Mode’s final recommendation"
 metaTitle: "Google AI Overview + AI Mode: Track Follow-Up Questions"
 date: 2026-10-20
 tags:
@@ -25,7 +25,7 @@ readTime: 5
 url: /blog/google-ai-overview-ai-mode-follow-ups/
 ---
 
-![Genezio now follows your buyers from the AI Overview into AI Mode](/images/google-ai-overview-ai-mode-follow-ups.webp)
+![Track your brand from the AI Overview to AI Mode’s final recommendation](/images/google-ai-overview-ai-mode-follow-ups.webp)
 
 **Showing up in Google's AI Overview doesn't mean you win the customer.** Most brands track whether they appear in that first AI answer at the top of the page. But that is where the search starts, not where the buyer decides.
 
