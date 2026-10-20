@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faq.genezio.com/sitemap.xml

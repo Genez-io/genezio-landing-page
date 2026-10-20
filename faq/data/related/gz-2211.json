@@ -1,0 +1,8 @@
+{
+ "tip": "A page that only shows its text after scripts run can look complete in a browser and still be close to empty for some crawlers.",
+ "related": [
+  "GZ-2142",
+  "GZ-2226",
+  "GZ-2101"
+ ]
+}

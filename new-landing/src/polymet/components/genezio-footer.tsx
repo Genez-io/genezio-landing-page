@@ -32,6 +32,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
       { label: "Changelog", href: "/changelog/" },
       { label: "Industry Leaderboards", href: "/industry-leaderboards/" },
       { label: "Docs", href: "/docs/" },
+      { label: "FAQ", href: "https://faq.genezio.com/" },
     ],
   },
   {

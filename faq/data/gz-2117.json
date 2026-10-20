@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2117",
+ "reviewed": "October 2026",
+ "body": [
+  "Genezio covers the major answer engines: ChatGPT, Google AI Overviews and AI Mode, Gemini, Perplexity, Microsoft Copilot, Claude, Grok, DeepSeek and Meta AI.",
+  "Coverage is set per market and per language. The same question can get a different answer in London than in New York, so each market you sell in is measured on its own rather than averaged into one global number.",
+  "Your plan decides which engines are included. Engines can be added later as your priorities change."
+ ]
+}

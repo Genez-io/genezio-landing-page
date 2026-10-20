@@ -1,0 +1,8 @@
+{
+ "tip": "Asking for a comparison across two markets in one sentence is often faster through MCP than building the same view in a dashboard.",
+ "related": [
+  "GZ-2204",
+  "GZ-2226",
+  "GZ-2101"
+ ]
+}

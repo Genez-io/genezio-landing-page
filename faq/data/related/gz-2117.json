@@ -1,0 +1,8 @@
+{
+ "tip": "Two cities that share a language can still get different shortlists from the same assistant, which is why markets are never merged.",
+ "related": [
+  "GZ-2124",
+  "GZ-2179",
+  "GZ-2101"
+ ]
+}

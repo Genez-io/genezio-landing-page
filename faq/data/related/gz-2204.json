@@ -1,0 +1,8 @@
+{
+ "tip": "Because integrations are read-only, connecting one never gives Genezio a way to change anything in your own systems.",
+ "related": [
+  "GZ-2190",
+  "GZ-2233",
+  "GZ-2163"
+ ]
+}

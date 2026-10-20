@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2211",
+ "reviewed": "October 2026",
+ "body": [
+  "The Website Analyzer gives an instant AI-readiness audit of a site: a quick first look at how well answer engines can work with it.",
+  "Content Analysis goes deeper, page by page. It checks crawlability (can the crawlers of answer engines actually get to the text) and citable content (is the text written so an assistant can lift a clear answer from it).",
+  "Both point to concrete fixes, so the outcome is a list of pages to change rather than a score."
+ ]
+}
