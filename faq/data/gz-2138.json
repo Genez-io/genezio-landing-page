@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2138",
+ "reviewed": "October 2026",
+ "body": [
+  "Visibility answers a simple question: does your brand show up in the conversation at all? An assistant can list five brands and still steer the buyer toward one of them.",
+  "Recommendation share answers the harder question: in how many conversations is your brand the one the assistant actually recommends? It is the number closest to a won deal, and it is the one Genezio is built to move.",
+  "Next to both, Genezio tracks sentiment (how you are described) and citations (which sources the assistant leaned on), so a drop in either metric comes with a reason attached."
+ ]
+}

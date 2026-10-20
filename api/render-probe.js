@@ -17,8 +17,14 @@
 // that arrives shows how long the renderer waits. A person gets
 // {"watch": false}, and nothing about the visit is stored.
 //
+// Other sites of Genezio send the same beacons from the browser, cross-origin,
+// to the alias /api/v1/collect/ (vercel.json), with the names of an analytics
+// call: e=pv for "t0", e=hb<N> for "d<N>", and sid for id. ALLOWED_ORIGINS
+// lists those sites; each event keeps its host.
+//
 // Routes:
 //   POST /api/render-probe/?b=<kind>&id=<id>&p=<path>  a beacon
+//   POST /api/v1/collect/?e=<event>&sid=<id>&p=<path>  the same, from another site
 //   GET  /api/render-probe/?log=1[&limit=2000]          the log, grouped by id.
 //        Needs Authorization: Bearer $RENDER_PROBE_ADMIN_TOKEN; without that
 //        variable it answers 404.
@@ -38,6 +44,8 @@ const MAX_EVENTS = 50000;
 const RETENTION_DAYS = 30;
 const ID_RE = /^[0-9a-f]{8}$/;
 const BEACON_KINDS = new Set(["t0", "d1", "d3", "d5", "d10", "d20"]);
+const EVENT_KINDS = { pv: "t0", hb1: "d1", hb3: "d3", hb5: "d5", hb10: "d10", hb20: "d20" };
+const ALLOWED_ORIGINS = new Set(["https://faq.genezio.com"]);
 // Names of crawlers and tools, not of brands: "bing", "duckduck", "petal" or
 // "claude" alone also match the apps and browsers of people (the Bing app, the
 // DuckDuckGo browser, the CUBOT phones). "+http" is the contact URL that
@@ -80,8 +88,21 @@ module.exports = async function handler(req, res) {
 
   if (q.log) return showLog(req, res, q);
 
-  const kind = String(q.b || "");
-  const id = String(q.id || "");
+  // The page of another site sends text/plain, thus the browser makes no
+  // preflight; an OPTIONS still gets an answer.
+  const origin = String(req.headers.origin || "");
+  if (ALLOWED_ORIGINS.has(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Vary", "Origin");
+  }
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Methods", "POST");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    return res.status(204).end();
+  }
+
+  const kind = q.e ? EVENT_KINDS[String(q.e)] || "" : String(q.b || "");
+  const id = String(q.sid || q.id || "");
   if (!BEACON_KINDS.has(kind) || !ID_RE.test(id)) {
     return res.status(400).json({ error: "Malformed beacon" });
   }
@@ -106,7 +127,8 @@ module.exports = async function handler(req, res) {
     }
     await record(
       {
-        kind, id, path: String(q.p || "").slice(0, 300), at: new Date().toISOString(),
+        kind, id, host: hostOf(origin) || "genezio.com",
+        path: String(q.p || "").slice(0, 300), at: new Date().toISOString(),
         ua, ip, owner, reasons, fp, headers,
       },
       kind === "t0",
@@ -143,6 +165,10 @@ async function wasKept(id) {
     console.error("[render-probe] mark check failed", err);
     return false;
   }
+}
+
+function hostOf(origin) {
+  try { return origin ? new URL(origin).host : null; } catch { return null; }
 }
 
 function clientIp(req) {
@@ -257,7 +283,7 @@ async function showLog(req, res, q) {
   const byId = {};
   for (const e of events) {
     const run = (byId[e.id] = byId[e.id] || {
-      path: e.path, at: e.at, ua: e.ua, ip: e.ip, owner: e.owner,
+      host: e.host || "genezio.com", path: e.path, at: e.at, ua: e.ua, ip: e.ip, owner: e.owner,
       reasons: e.reasons, fp: e.fp, kinds: [],
     });
     run.kinds.push(e.kind);

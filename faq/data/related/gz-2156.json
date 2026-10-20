@@ -1,0 +1,8 @@
+{
+ "tip": "If a metric jumps in the first week, wait for the two-week mark before you report it upward; most early jumps settle.",
+ "related": [
+  "GZ-2124",
+  "GZ-2138",
+  "GZ-2163"
+ ]
+}

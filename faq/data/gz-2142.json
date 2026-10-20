@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2142",
+ "reviewed": "October 2026",
+ "body": [
+  "Every tracked conversation keeps the list of sources the assistant cited. Across thousands of conversations, that list shows which publishers, review sites, forums and pages of your own site carry the most weight in your category.",
+  "It also shows the gaps: topics where the assistant cites your competitors' content and none of yours. Those are usually the fastest places to improve.",
+  "Citation data is correlational. Genezio can show which sources the models read, how often, and how that changed; it does not claim that a given source caused a given sale."
+ ]
+}

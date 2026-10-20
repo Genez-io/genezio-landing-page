@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2204",
+ "reviewed": "October 2026",
+ "body": [
+  "No. Genezio never trains AI models on customer data.",
+  "Integrations and MCP access are read-only by design: they can read the data you connect and nothing more. Access inside Genezio follows least privilege and is reviewed regularly.",
+  "Retention is configurable. You can export your data, and Genezio deletes it on request."
+ ]
+}
