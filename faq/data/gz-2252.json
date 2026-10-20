@@ -1,0 +1,9 @@
+{
+ "id": "GZ-2252",
+ "reviewed": "October 2026",
+ "body": [
+  "Genezio's conversations run over several turns, the way a buyer narrows a choice: a broad question first, then follow-ups about budget, use case and alternatives.",
+  "Between the first and the last turn, the list of brands an assistant mentions usually changes. Some brands drop out, others appear for the first time. We call that change shortlist drift, and it is the main reason a single-prompt check can give a misleading picture of where you stand.",
+  "Recommendation share counts the conversations in which your brand is the one the assistant finally recommends, so it follows the end of the conversation rather than the first mention."
+ ]
+}

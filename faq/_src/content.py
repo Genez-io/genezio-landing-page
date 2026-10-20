@@ -50,6 +50,17 @@ ARTICLES = [
     tip="A brand can gain visibility and lose recommendation share in the same week; mentions alone do not tell you whether the assistant is still on your side.",
     related=["GZ-2142", "GZ-2124", "GZ-2156"]),
 
+  dict(id="GZ-2252", slug="why-the-last-answer-matters", cat="Measurement",
+    title="Why does Genezio focus on the last answer in a conversation?",
+    summary="Because buyers act on the brand an assistant names at the end of a conversation. We call that brand the last-turn pick.",
+    body=[
+      "Genezio's conversations run over several turns, the way a buyer narrows a choice: a broad question first, then follow-ups about budget, use case and alternatives.",
+      "Between the first and the last turn, the list of brands an assistant mentions usually changes. Some brands drop out, others appear for the first time. We call that change shortlist drift, and it is the main reason a single-prompt check can give a misleading picture of where you stand.",
+      "Recommendation share counts the conversations in which your brand is the one the assistant finally recommends, so it follows the end of the conversation rather than the first mention.",
+    ],
+    tip="Watch for the quiet competitor: a brand that barely appears in the first answer but is the assistant's pick by the last turn. It is usually winning on one source the assistant trusts.",
+    related=["GZ-2138", "GZ-2124", "GZ-2142"]),
+
   dict(id="GZ-2142", slug="which-sources-ai-cites", cat="Measurement",
     title="How can I see which sources AI relies on for my brand?",
     summary="Genezio records the pages each assistant cites when it answers, so you can see which sources shape what it says about you.",
