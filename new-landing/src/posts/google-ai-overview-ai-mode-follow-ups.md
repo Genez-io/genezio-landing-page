@@ -39,6 +39,8 @@ Picture a marketing manager looking for a project management tool. She types "be
 
 She doesn't stop there. She clicks "Ask anything" under the Overview and keeps going: "Which of these works best for a team of 10?" Then: "Which one should I pick?" Google remembers what it already told her and answers each question with that in mind. Two or three questions later, she has a favourite.
 
+This isn’t a niche habit. A [study of 155 Search Console properties](https://www.gscwizard.com/learn/research/ai-mode-queries-in-search-console.html) found that follow-up questions asked inside AI Mode, like “what about salary?”, grew 39x between June 2025 and September 2026.
+
 Most AI visibility tools only see pieces of this. They record the first answer on its own. Or they ask Google's AI Mode a question in a brand-new chat that knows nothing about the Overview. Neither is what the buyer actually saw.
 
 That matters because the brands change along the way. A brand can be listed in the Overview and vanish when the buyer asks for the best fit. Another can be missing from the first answer and end up as the final recommendation.
