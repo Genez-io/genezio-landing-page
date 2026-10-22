@@ -62,6 +62,7 @@ const LEGACY_REDIRECTS = [
   { from: "/ai-search-optimization-tool/", to: "/" },
   { from: "/blog/chatgpt-fanout-brand-injection/", to: "/research/chatgpt-fanout-brand-injection/" },
   { from: "/blog/zero-query-overlaps/", to: "/research/zero-query-overlaps/" },
+  { from: "/blog/openai-crawler-runs-javascript/", to: "/research/openai-crawler-runs-javascript/" },
   { from: "/blog/decision-grade-geo-aeo-intelligence/", to: "/blog/best-accurate-data-platform-for-ai-search-optimization/" },
   { from: "/increase-conversion/", to: "/ai-agent-analytics/" },
 

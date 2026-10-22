@@ -1,6 +1,7 @@
 ---
 title: "OpenAI’s Search Crawler Runs JavaScript. Here’s the Proof."
 metaTitle: "OpenAI's Search Crawler Runs JavaScript: Proof From Our Logs"
+type: research
 date: 2026-10-22
 tags:
   - AI Research
@@ -15,14 +16,14 @@ thumbnail: /images/openai-crawler-runs-javascript.webp
 preview: "Every guide says OpenAI's crawlers don't render JavaScript. We built a page that calls home only when its JavaScript runs, and OpenAI's crawler called."
 # meta data start
 description: "OpenAI's search crawler executes JavaScript. Next.js prefetches and a JS-only beacon, traced to OpenAI's published IP ranges, prove it. Here's the test."
-meta_og_url: "https://genezio.com/blog/openai-crawler-runs-javascript/"
+meta_og_url: "https://genezio.com/research/openai-crawler-runs-javascript/"
 
 meta_og_image: "https://genezio.com/images/openai-crawler-runs-javascript.webp"
 # meta data end
 customHeader: "White header"
 customFooter: "White footer"
 readTime: 4
-url: /blog/openai-crawler-runs-javascript/
+url: /research/openai-crawler-runs-javascript/
 ---
 
 ![OpenAI's search crawler runs JavaScript](/images/openai-crawler-runs-javascript.webp)
