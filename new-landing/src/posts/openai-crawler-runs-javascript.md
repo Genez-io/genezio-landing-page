@@ -29,7 +29,7 @@ url: /blog/openai-crawler-runs-javascript/
 
 ## The pages that shouldn't have been cited
 
-**OpenAI's search crawler executes JavaScript. We know because we made it call us back.**
+**OpenAI's search crawler (OAI-SearchBot) executes JavaScript. We know because we made it call us back.**
 
 It started with something that didn't add up. Several of our clients run websites that are rendered entirely in the browser: the server sends an almost empty HTML shell, and JavaScript builds everything the visitor actually sees. If you read the raw HTML, there is no product copy, no pricing, no headings. Just a `<div id="root">` and a few script tags.
 
