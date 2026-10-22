@@ -13,7 +13,7 @@ author: Bogdan Vlad
 linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 
 thumbnail: /images/openai-crawler-runs-javascript.webp
-preview: "Every guide says OpenAI's crawlers don't render JavaScript. We built a page that calls home only when its JavaScript runs, and OpenAI's crawler called."
+preview: "OAI-SearchBot executes JavaScript. Here is how we proved it, and what it means for client-side rendered sites."
 # meta data start
 description: "OpenAI's search crawler executes JavaScript. Next.js prefetches and a JS-only beacon, traced to OpenAI's published IP ranges, prove it. Here's the test."
 meta_og_url: "https://genezio.com/research/openai-crawler-runs-javascript/"
