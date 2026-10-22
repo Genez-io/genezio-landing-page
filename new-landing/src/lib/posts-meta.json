@@ -1,5 +1,47 @@
 [
   {
+    "id": "openai-crawler-runs-javascript",
+    "title": "OpenAI’s Search Crawler Runs JavaScript. Here’s the Proof.",
+    "excerpt": "Every guide says OpenAI's crawlers don't render JavaScript. We built a page that calls home only when its JavaScript runs, and OpenAI's crawler called.",
+    "description": "OpenAI's search crawler executes JavaScript. Next.js prefetches and a JS-only beacon, traced to OpenAI's published IP ranges, prove it. Here's the test.",
+    "category": "AI Research",
+    "readTime": "4 min read",
+    "date": "October 22, 2026",
+    "timestamp": 1792627200000,
+    "author": "Bogdan Vlad",
+    "metaOgImage": "https://genezio.com/images/openai-crawler-runs-javascript.webp",
+    "metaOgUrl": "https://genezio.com/blog/openai-crawler-runs-javascript/",
+    "metaTitle": "OpenAI's Search Crawler Runs JavaScript: Proof From Our Logs",
+    "tags": [
+      "AI Research",
+      "ChatGPT",
+      "AI Crawlers",
+      "JavaScript Rendering",
+      "Technical SEO"
+    ]
+  },
+  {
+    "id": "google-ai-overview-ai-mode-follow-ups",
+    "title": "Track your brand from the AI Overview to AI Mode’s final recommendation",
+    "excerpt": "Showing up in Google's AI Overview doesn't mean you win the customer. Genezio now follows buyers into AI Mode follow-ups, where 80% of lost recommendations go to a competitor.",
+    "description": "Genezio now tracks Google AI Overview and AI Mode follow-ups as one journey. By the third question, 80% of brands are recommended less than in the Overview.",
+    "category": "Product Update",
+    "readTime": "5 min read",
+    "date": "October 20, 2026",
+    "timestamp": 1792454400000,
+    "author": "Bogdan Vlad",
+    "metaOgImage": "https://genezio.com/images/google-ai-overview-ai-mode-follow-ups.webp",
+    "metaOgUrl": "https://genezio.com/blog/google-ai-overview-ai-mode-follow-ups/",
+    "metaTitle": "Google AI Overview + AI Mode: Track Follow-Up Questions",
+    "tags": [
+      "Product Update",
+      "Google AI Overview",
+      "Google AI Mode",
+      "AI Visibility",
+      "Brand Recommendation"
+    ]
+  },
+  {
     "id": "genezio-fact-checker-agent",
     "title": "Genezio Fact Checker Agent: Detecting False AI Claims About a Brand",
     "excerpt": "AI engines describe brands in conversations the brands never see, and some of those descriptions are wrong. The Genezio Fact Checker verifies what an AI engine states against the brand's own truth layer.",
@@ -555,7 +597,7 @@
     "category": "Marketing Agencies",
     "readTime": "6 min read",
     "date": "March 2, 2026",
-    "timestamp": 1772409600000,
+    "timestamp": 1772402400000,
     "author": "Paula Cionca",
     "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
     "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
