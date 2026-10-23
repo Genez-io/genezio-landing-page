@@ -8,8 +8,8 @@ import { GenezioCtaSection } from "@/polymet/components/genezio-cta-section";
 import {
   ChangelogEntry,
   ChangelogTag,
-  formatChangelogMonth,
-  formatChangelogMonthShort,
+  formatChangelogDate,
+  formatChangelogRailDate,
   formatChangelogYear,
   getChangelogEntries,
 } from "@/lib/changelog";
@@ -88,16 +88,16 @@ function ReleaseEntry({ entry }: { entry: ChangelogEntry }) {
       id={entry.slug}
       className="relative scroll-mt-28 lg:grid lg:grid-cols-[190px_minmax(0,1fr)] lg:gap-14"
     >
-      {/* Date rail — month and year only; see changelog.ts on why no day */}
+      {/* Date rail — the day shows when the entry knows it; see changelog.ts */}
       <div className="mb-6 lg:mb-0">
         <div className="lg:sticky lg:top-28">
           <time
             dateTime={entry.date}
             className="block text-sm font-semibold text-white"
           >
-            <span className="lg:hidden">{formatChangelogMonth(entry.date)}</span>
+            <span className="lg:hidden">{formatChangelogDate(entry)}</span>
             <span className="hidden lg:block lg:text-2xl lg:font-semibold lg:tracking-[-0.02em]">
-              {formatChangelogMonthShort(entry.date)}
+              {formatChangelogRailDate(entry)}
             </span>
           </time>
           <div className="mt-1 hidden text-xs font-semibold uppercase tracking-[0.2em] text-white/35 lg:block">
@@ -283,7 +283,7 @@ export function Changelog() {
                   className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-5 py-2.5 text-sm font-medium text-emerald-300 transition-colors hover:border-emerald-400/40"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                  Latest: {formatChangelogMonth(latest.date)}
+                  Latest: {formatChangelogDate(latest)}
                 </a>
               )}
             </div>

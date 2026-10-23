@@ -3,9 +3,11 @@
  *
  * Releases up to Q3 2026 come from the quarterly business reviews, so only
  * their quarter is known. `date` places each one on a representative month
- * inside that quarter. Releases from September 2026 on are dated from the
- * release history, so their month is exact. The page deliberately renders
- * month and year only, never a day, so it does not imply precision we lack.
+ * inside that quarter, and `precision` stays "month", so the page shows the
+ * month and the year only and implies no precision we lack. A release that the
+ * changelog routine writes carries the exact day of the push and sets
+ * `precision` to "day", so the page shows that day. Several releases can ship
+ * in one month, thus the day is what separates them.
  *
  * Add a new release by prepending an entry. Only shipped work belongs here —
  * never roadmap or committed-but-unreleased capabilities.
@@ -36,10 +38,16 @@ export interface ChangelogEntry {
   slug: string;
   /**
    * ISO date, YYYY-MM-DD. For a quarterly release the month is representative;
-   * from September 2026 on it is exact. The day is never displayed. Drives sorting and
-   * the RSS feed.
+   * from September 2026 on it is exact. Drives sorting and the RSS feed.
    */
   date: string;
+  /**
+   * How exact `date` is, and therefore how the page renders it. "day" shows
+   * the day, and belongs to a release dated from its own push. "month" shows
+   * the month and the year only, and is the default, because an older entry
+   * knows its quarter and not its day.
+   */
+  precision?: "day" | "month";
   /** Headline for the whole release. */
   title: string;
   /** Short intro paragraph shown under the title. */
@@ -484,6 +492,26 @@ export function formatChangelogMonth(iso: string): string {
     "December",
   ][month - 1];
   return `${monthName} ${year}`;
+}
+
+/**
+ * The date as a reader says it. An entry of day precision gives
+ * "23 October 2026", and any other entry gives "October 2026".
+ */
+export function formatChangelogDate(entry: ChangelogEntry): string {
+  const month = formatChangelogMonth(entry.date);
+  if (entry.precision !== "day") return month;
+  return `${Number(entry.date.slice(8, 10))} ${month}`;
+}
+
+/**
+ * The top line of the date rail. An entry of day precision gives "Oct 23", and
+ * any other entry gives "Oct".
+ */
+export function formatChangelogRailDate(entry: ChangelogEntry): string {
+  const short = formatChangelogMonthShort(entry.date);
+  if (entry.precision !== "day") return short;
+  return `${short} ${Number(entry.date.slice(8, 10))}`;
 }
 
 /** Abbreviated month for the date rail, e.g. "Sep". */
