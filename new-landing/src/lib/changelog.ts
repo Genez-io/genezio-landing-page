@@ -1,10 +1,10 @@
 /**
  * Release notes / changelog content.
  *
- * Shipped work is recorded per quarter in the quarterly business reviews, so
- * the quarter of each release is known but the exact day is not. `date` places
- * each release on a representative month inside its known quarter — the month
- * is approximate, the quarter it sits in is not. The page deliberately renders
+ * Releases up to Q3 2026 come from the quarterly business reviews, so only
+ * their quarter is known. `date` places each one on a representative month
+ * inside that quarter. Releases from September 2026 on are dated from the
+ * release history, so their month is exact. The page deliberately renders
  * month and year only, never a day, so it does not imply precision we lack.
  *
  * Add a new release by prepending an entry. Only shipped work belongs here —
@@ -35,8 +35,8 @@ export interface ChangelogEntry {
   /** URL-safe id, used for the deep-link anchor (#<slug>). */
   slug: string;
   /**
-   * ISO date, YYYY-MM-DD. The month is a representative month within the
-   * release's known quarter; the day is never displayed. Drives sorting and
+   * ISO date, YYYY-MM-DD. For a quarterly release the month is representative;
+   * from September 2026 on it is exact. The day is never displayed. Drives sorting and
    * the RSS feed.
    */
   date: string;
@@ -55,6 +55,122 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    slug: "oct-2026-perception-monitoring-public-api",
+    // Shipped in October 2026, dated from the release history.
+    date: "2026-10-20",
+    title: "Perception Monitoring, the Public API and AI crawler analytics",
+    summary:
+      "Knowing that an engine mentions you is the start. This release tracks whether the specific claims it makes about you hold up over time, shows which AI bots actually read your site, and opens the platform's data to your own tools through a public API.",
+    tags: ["New", "Improved", "API"],
+    highlights: [
+      {
+        title: "Perception Monitoring",
+        description:
+          "Pick a claim about your brand and Genezio tracks it across every run: how often AI answers agree or disagree, how that agreement moves over time, and how it differs from one model to the next. Each verdict keeps the pages it cited, so you can see which domains sit behind the answers that get you right and the ones that get you wrong.",
+      },
+      {
+        title: "Public API and API keys",
+        description:
+          "Account owners create API keys, each limited to the brands it needs, and read Genezio data from their own reporting stack. The API covers visibility, recommendation, citations, sentiment, fact checking, query fan-outs, products and conversations, and manages topics, scenarios, competitors and personas. It is described in OpenAPI and documented with a full reference.",
+      },
+      {
+        title: "ChatGPT Ads",
+        description:
+          "ChatGPT now shows sponsored placements inside answers. A new Ads page captures each ad in your tracked conversations and shows who advertises on your topics, which creatives they run, the topics and scenarios that trigger them, and your share of ad visibility against competitors.",
+      },
+      {
+        title: "Agent Analytics",
+        description:
+          "Upload an access log from your site or CDN and see which AI bots visit, what they read, how your server answers them, and how often the pages they read end up cited in AI answers. Each visit is checked against the IP ranges that the AI providers publish, so a fake user agent shows up as unverified instead of inflating the count.",
+      },
+      {
+        title: "Crawlability",
+        description:
+          "For each website of a brand, Crawlability reads robots.txt and the sitemaps and shows which of 49 AI bots can crawl the site. A host is flagged when a main AI search bot is blocked, when robots.txt is unreachable, or when no valid sitemap exists.",
+      },
+      {
+        title: "Custom roles",
+        description:
+          "Account owners define their own roles and give each one a level for every area of the product. Members and invites take a custom role or a built-in one.",
+      },
+      {
+        title: "Content Hub: plans, formats and video",
+        description:
+          "Content Hub now shows the plan of an article for your approval before it writes, and one run produces every format you ask for.",
+        bullets: [
+          "Brand skills: house style and structure rules, written once or uploaded from PDF, Word or Markdown files, that the agents follow",
+          "Content Analysis reads a YouTube link and gives a video analysis, with a partial report when the video has no transcript",
+          "Topics in New Content have search and filters",
+        ],
+        link: { label: "See Content Hub", href: "/content-hub/" },
+      },
+      {
+        title: "Scorecard goals over MCP",
+        description:
+          "An MCP client such as Claude can now create and change Scorecard goals. The goal agent does the build, the same way it does in the dashboard.",
+        link: { label: "See the MCP server", href: "/mcp/" },
+      },
+    ],
+    otherUpdates: [
+      "A new sidebar for the brand, the account and the user, with a search of every page.",
+      "ChatGPT answers that use generative UI show as ChatGPT draws them: layout, maps, images, forms and charts.",
+      "Custom answer engines, with a plan limit and an explicit choice of the topics they run on.",
+      "The prompts of a topic can come from Search Console queries.",
+      "The users page exports the members as a CSV file.",
+    ],
+  },
+  {
+    slug: "sep-2026-scorecard-content-hub",
+    // Shipped in September 2026, dated from the release history.
+    date: "2026-09-25",
+    title: "Scorecard, and a Content Hub that works the way editors do",
+    summary:
+      "Dashboards answer the questions someone thought to build them for. Scorecard answers yours: describe a business goal in plain words, and an agent turns it into a metric that updates every day.",
+    tags: ["New", "Improved", "Integrations"],
+    highlights: [
+      {
+        title: "Scorecard",
+        description:
+          "Describe a goal in a conversation, for example the share of recommendations you win against one competitor in one market. The goal agent writes the metric, runs it on yesterday's data every day, and puts it on a board you arrange yourself.",
+        bullets: [
+          "Views for checklists, step lines, share bars and day grids",
+          "A row that names a product shows the product's photo",
+          "Every action on the board goes to the audit log",
+        ],
+      },
+      {
+        title: "Content Hub editing",
+        description:
+          "The New Content wizard starts with the content type, and a brief can generate its own type. Each version highlights the text that changed, and an article gives its schema.org JSON-LD markup.",
+        link: { label: "See Content Hub", href: "/content-hub/" },
+      },
+      {
+        title: "Content Analysis for landing pages and lists of URLs",
+        description:
+          "Content Analysis has a mode for landing pages, and it can start one analysis for each URL of a list.",
+        link: { label: "See Content Analysis", href: "/content-analysis/" },
+      },
+      {
+        title: "Topics from a Search Console export",
+        description:
+          "A brand can seed its topics from a Search Console CSV export, which works without a live connection.",
+      },
+      {
+        title: "Personas with a country",
+        description:
+          "Each persona shows its country, and its conversations take that country's language.",
+      },
+    ],
+    otherUpdates: [
+      "Free-text search across the conversations of a brand.",
+      "A Usage tab for each brand.",
+      "Master filters hold personas, and the topic list names the type of each topic.",
+      "A knowledge base imports a CSV file or a workbook.",
+      "The title of a citation fills in from the page itself.",
+      "An owner renames the account from the menu.",
+    ],
+  },
   {
     slug: "sep-2026-analytics-integrations",
     // Reported in Q3 2026; the month below is representative, not exact.
