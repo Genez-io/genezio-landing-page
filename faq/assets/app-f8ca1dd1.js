@@ -4,37 +4,6 @@
   var CATEGORIES = ["Getting started", "Measurement", "Platform", "Plans & billing", "Security & data"];
   var REVIEWED = "October 2026";
 
-  /* analytics */
-  var sid = (function () {
-    var r = 0;
-    try { r = crypto.getRandomValues(new Uint32Array(1))[0]; } catch (e) { r = Math.floor(Math.random() * 4294967295); }
-    return ((r ^ (Date.now() & 0xffffffff) ^ Math.floor(performance.now() * 1000)) >>> 0).toString(16).padStart(8, "0");
-  })();
-  var t0 = Date.now();
-  function collect(ev) {
-    var n = navigator, s = window.screen || {}, d = {
-      ua: n.userAgent, webdriver: n.webdriver, lang: n.language,
-      langs: n.languages && n.languages.slice(0, 5), platform: n.platform,
-      cores: n.hardwareConcurrency, mem: n.deviceMemory,
-      screen: [s.width, s.height], view: [window.innerWidth, window.innerHeight],
-      vis: document.visibilityState, plugins: n.plugins && n.plugins.length,
-      t: Date.now() - t0
-    };
-    try { d.tz = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
-    return fetch("https://genezio.com/api/v1/collect/?e=" + ev + "&sid=" + sid + "&p=" + encodeURIComponent(location.pathname), {
-      method: "POST", keepalive: true, mode: "cors", credentials: "omit",
-      headers: { "Content-Type": "text/plain" }, body: JSON.stringify(d)
-    });
-  }
-  try {
-    collect("pv").then(function (r) { return r.json(); }).then(function (d) {
-      if (!d || !d.watch) return;
-      [1, 3, 5, 10, 20].forEach(function (sec) {
-        setTimeout(function () { collect("hb" + sec).catch(function () {}); }, Math.max(0, sec * 1000 - (Date.now() - t0)));
-      });
-    }).catch(function () {});
-  } catch (e) {}
-
   /* helpers */
   function h(tag, attrs, kids) {
     var el = document.createElement(tag);
