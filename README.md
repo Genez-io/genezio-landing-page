@@ -11,7 +11,7 @@ and this repository adds it to each deployment.
 | Path | Content |
 | --- | --- |
 | `new-landing/` | The React/Vite application. `npm run build` writes `new-landing/dist`. |
-| `api/` | The functions of Vercel: `contact-sales`, `website-analysis`, `leaderboard`, the `credentials*` of the GEO certification, and `render-probe`: a script in `new-landing/index.html` calls it from each page, and it logs the bots that run JavaScript (the log needs `RENDER_PROBE_ADMIN_TOKEN`). |
+| `api/` | The functions of Vercel: `contact-sales`, `website-analysis`, `leaderboard`, and the `credentials*` of the GEO certification. |
 | `new-landing/public/certified-geo-expert/` | The Certified GEO Expert test and its verification page: static HTML outside React. `bank.json` holds the questions and the answer key, for the page and for `api/credentials.js`. |
 | `faq/` | The static site of faq.genezio.com, a separate Vercel project (`faq/README.md`). |
 | `vercel.json` | The commands of the build, `trailingSlash`, and the redirects. The build removes `dist/server`, the bundle of the static render, thus Vercel does not publish it. |

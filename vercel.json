@@ -8,12 +8,6 @@
   "buildCommand": "cd new-landing && npm run build && rm -rf dist/server",
   "outputDirectory": "new-landing/dist",
   "trailingSlash": true,
-  "rewrites": [
-    {
-      "source": "/api/v1/collect/",
-      "destination": "/api/render-probe/"
-    }
-  ],
   "redirects": [
     {
       "source": "/:path*",
