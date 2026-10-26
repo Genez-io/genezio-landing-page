@@ -11,6 +11,12 @@
  *
  * Add a new release by prepending an entry. Only shipped work belongs here —
  * never roadmap or committed-but-unreleased capabilities.
+ *
+ * Write for the marketer reading it, not the engineer who built it. Every
+ * title says what the customer can now do or know ("Catch false claims before
+ * your customers believe them"), not what the feature is called or how it
+ * works. Bullets and other updates use "Benefit: detail" — the page bolds the
+ * part before the colon. Leave out internal work with no customer-facing value.
  */
 
 export type ChangelogTag =
@@ -21,11 +27,11 @@ export type ChangelogTag =
   | "Integrations";
 
 export interface ChangelogHighlight {
-  /** Feature name, rendered as the sub-heading of the block. */
+  /** The value to the customer, rendered as the sub-heading of the block. */
   title: string;
-  /** One or two sentences describing what shipped and why it matters. */
+  /** One or two sentences on what the customer gets, then what shipped. */
   description: string;
-  /** Optional supporting bullets for the details that don't need a paragraph. */
+  /** Optional "Benefit: detail" bullets for details that don't need a paragraph. */
   bullets?: string[];
   /** Optional screenshot or GIF illustrating the feature. */
   image?: { src: string; alt: string };
@@ -67,136 +73,131 @@ export const changelog: ChangelogEntry[] = [
     slug: "oct-2026-perception-monitoring-public-api",
     // Shipped in October 2026, dated from the release history.
     date: "2026-10-20",
-    title: "Perception Monitoring, the Public API and AI crawler analytics",
+    title: "Know whether AI gets your story right, and put the data where your team works",
     summary:
-      "Knowing that an engine mentions you is the start. This release tracks whether the specific claims it makes about you hold up over time, shows which AI bots actually read your site, and opens the platform's data to your own tools through a public API.",
+      "Being mentioned is only the start. This release shows whether the specific claims AI makes about you hold up over time, which AI bots actually read your site, and who is buying ads on your topics in ChatGPT. Then it sends that data into the tools your team already reports from.",
     tags: ["New", "Improved", "API"],
     highlights: [
       {
-        title: "Perception Monitoring",
+        title: "Find out whether AI repeats the story you want told",
         description:
-          "Pick a claim about your brand and Genezio tracks it across every run: how often AI answers agree or disagree, how that agreement moves over time, and how it differs from one model to the next. Each verdict keeps the pages it cited, so you can see which domains sit behind the answers that get you right and the ones that get you wrong.",
+          "Pick a claim about your brand, such as “the most secure option” or “best for small teams”, and Perception Monitoring checks it in every run. See how often AI agrees, how that changes over time and model by model, and which websites sit behind the answers that get you right and the ones that get you wrong.",
       },
       {
-        title: "Public API and API keys",
+        title: "Put AI visibility in the reports your leadership already reads",
         description:
-          "Account owners create API keys, each limited to the brands it needs, and read Genezio data from their own reporting stack. The API covers visibility, recommendation, citations, sentiment, fact checking, query fan-outs, products and conversations, and manages topics, scenarios, competitors and personas. It is described in OpenAPI and documented with a full reference.",
+          "The new Public API sends Genezio data straight into your own dashboards and BI tools, so AI visibility sits next to the rest of your marketing numbers. It covers visibility, recommendations, citations, sentiment, fact checks, products and conversations. Each API key is limited to the brands it needs.",
       },
       {
-        title: "ChatGPT Ads",
+        title: "See who is buying their way into ChatGPT answers on your topics",
         description:
-          "ChatGPT now shows sponsored placements inside answers. A new Ads page captures each ad in your tracked conversations and shows who advertises on your topics, which creatives they run, the topics and scenarios that trigger them, and your share of ad visibility against competitors.",
+          "ChatGPT now shows sponsored placements inside answers. The new Ads page shows which competitors advertise on your topics, the ads they run, the questions that trigger them, and your share of ad visibility next to theirs.",
       },
       {
-        title: "Agent Analytics",
+        title: "See which AI bots read your site, and whether it pays off",
         description:
-          "Upload an access log from your site or CDN and see which AI bots visit, what they read, how your server answers them, and how often the pages they read end up cited in AI answers. Each visit is checked against the IP ranges that the AI providers publish, so a fake user agent shows up as unverified instead of inflating the count.",
+          "Upload an access log from your site or CDN to see which AI bots visit, what they read, and how often those pages end up cited in AI answers. Every visit is checked against the IP ranges AI providers publish, so bots faking their identity don't inflate your numbers.",
       },
       {
-        title: "Crawlability",
+        title: "Make sure AI is allowed to read your site",
         description:
-          "For each website of a brand, Crawlability reads robots.txt and the sitemaps and shows which of 49 AI bots can crawl the site. A host is flagged when a main AI search bot is blocked, when robots.txt is unreachable, or when no valid sitemap exists.",
+          "Crawlability checks every website of your brand against 49 AI bots and flags the problems that quietly keep you out of AI answers: a major AI search bot blocked, robots.txt unreachable, or no valid sitemap.",
       },
       {
-        title: "Custom roles",
+        title: "Give every teammate exactly the access they need",
         description:
-          "Account owners define their own roles and give each one a level for every area of the product. Members and invites take a custom role or a built-in one.",
+          "Account owners can now create their own roles and choose what each one can see and change in every part of the product.",
       },
       {
-        title: "Content Hub: plans, formats and video",
+        title: "Approve the outline before AI writes the article",
         description:
-          "Content Hub now shows the plan of an article for your approval before it writes, and one run produces every format you ask for.",
+          "Content Hub now shows you the plan for an article before writing it, and one run gives you every format you asked for.",
         bullets: [
-          "Brand skills: house style and structure rules, written once or uploaded from PDF, Word or Markdown files, that the agents follow",
-          "Content Analysis reads a YouTube link and gives a video analysis, with a partial report when the video has no transcript",
-          "Topics in New Content have search and filters",
+          "Content that sounds like you: upload your style guide once, as PDF, Word or Markdown, and every draft follows it.",
+          "Learn from video too: paste a YouTube link and get a content analysis of the video.",
+          "Find the right topic faster: search and filter topics when you start new content.",
         ],
         link: { label: "See Content Hub", href: "/content-hub/" },
       },
       {
-        title: "Scorecard goals over MCP",
+        title: "Set business goals from Claude",
         description:
-          "An MCP client such as Claude can now create and change Scorecard goals. The goal agent does the build, the same way it does in the dashboard.",
+          "Create and change Scorecard goals straight from Claude or any other MCP client, without opening the dashboard.",
         link: { label: "See the MCP server", href: "/mcp/" },
       },
     ],
     otherUpdates: [
-      "A new sidebar for the brand, the account and the user, with a search of every page.",
-      "ChatGPT answers that use generative UI show as ChatGPT draws them: layout, maps, images, forms and charts.",
-      "Custom answer engines, with a plan limit and an explicit choice of the topics they run on.",
-      "The prompts of a topic can come from Search Console queries.",
-      "The users page exports the members as a CSV file.",
+      "Find any page in seconds: a new sidebar with search across the whole product.",
+      "See answers the way your customers see them: ChatGPT answers keep their maps, images, forms and charts.",
+      "Track the AI assistants your industry uses: add custom answer engines and choose the topics they run on.",
+      "Start from what people already search for: build a topic's prompts from your Search Console queries.",
+      "Share your team list: export members as a CSV file.",
     ],
   },
   {
     slug: "sep-2026-scorecard-content-hub",
     // Shipped in September 2026, dated from the release history.
     date: "2026-09-25",
-    title: "Scorecard, and a Content Hub that works the way editors do",
+    title: "Track the goals your business cares about, not the ones a dashboard picked for you",
     summary:
-      "Dashboards answer the questions someone thought to build them for. Scorecard answers yours: describe a business goal in plain words, and an agent turns it into a metric that updates every day.",
+      "Standard dashboards only answer the questions someone built them for. Scorecard answers yours: describe a business goal in plain words, and Genezio turns it into a metric that updates every day.",
     tags: ["New", "Improved", "Integrations"],
     highlights: [
       {
-        title: "Scorecard",
+        title: "Turn any business goal into a number that updates daily",
         description:
-          "Describe a goal in a conversation, for example the share of recommendations you win against one competitor in one market. The goal agent writes the metric, runs it on yesterday's data every day, and puts it on a board you arrange yourself.",
+          "Describe a goal in a conversation, for example “our share of recommendations against one competitor in Germany.” Scorecard builds the metric, refreshes it every day, and puts it on a board you arrange yourself.",
         bullets: [
-          "Views for checklists, step lines, share bars and day grids",
-          "A row that names a product shows the product's photo",
-          "Every action on the board goes to the audit log",
+          "Show progress the way your team reads it: checklists, trend lines, share bars and day grids.",
+          "Recognise products at a glance: rows that name a product show its photo.",
+          "Stay audit-ready: every change to the board is logged.",
         ],
       },
       {
-        title: "Content Hub editing",
+        title: "Edit content the way your editors already work",
         description:
-          "The New Content wizard starts with the content type, and a brief can generate its own type. Each version highlights the text that changed, and an article gives its schema.org JSON-LD markup.",
+          "Start with the content type you need, see exactly what changed between versions, and get structured data markup with every article, ready for search engines and AI to read.",
         link: { label: "See Content Hub", href: "/content-hub/" },
       },
       {
-        title: "Content Analysis for landing pages and lists of URLs",
+        title: "Check landing pages, or a whole list of pages at once",
         description:
-          "Content Analysis has a mode for landing pages, and it can start one analysis for each URL of a list.",
+          "Content Analysis now handles landing pages, and you can paste a list of URLs to analyse them all in one go.",
         link: { label: "See Content Analysis", href: "/content-analysis/" },
       },
       {
-        title: "Topics from a Search Console export",
+        title: "Build topics from your search data, no connection required",
         description:
-          "A brand can seed its topics from a Search Console CSV export, which works without a live connection.",
+          "Upload a Search Console CSV export and Genezio turns the searches you already rank for into AI tracking topics.",
       },
       {
-        title: "Personas with a country",
+        title: "See what buyers in each country see",
         description:
-          "Each persona shows its country, and its conversations take that country's language.",
+          "Every persona now has a country, and its conversations run in that country's language.",
       },
     ],
     otherUpdates: [
-      "Free-text search across the conversations of a brand.",
-      "A Usage tab for each brand.",
-      "Master filters hold personas, and the topic list names the type of each topic.",
-      "A knowledge base imports a CSV file or a workbook.",
-      "The title of a citation fills in from the page itself.",
-      "An owner renames the account from the menu.",
+      "Find any conversation: free-text search across every conversation of a brand.",
+      "Keep an eye on usage: a Usage tab for each brand.",
+      "Filter faster: master filters include personas, and the topic list shows each topic's type.",
+      "Bring your knowledge in quickly: import a CSV file or spreadsheet into a knowledge base.",
+      "Cleaner citation lists: citation titles fill in from the page itself.",
+      "Rename your account from the menu.",
     ],
   },
   {
     slug: "sep-2026-analytics-integrations",
     // Reported in Q3 2026; the month below is representative, not exact.
     date: "2026-09-10",
-    title: "Google Analytics 4 and Search Console integrations",
+    title: "Connect AI visibility to the search demand you already report on",
     summary:
-      "Genezio now connects to the two places your traditional web data already lives, so AI visibility can be read next to the traffic and the search behaviour around it.",
+      "AI visibility is hard to defend in a budget meeting when it lives in its own silo. Genezio now sits next to the search data your team already trusts, so you can show how AI answers and search demand move together.",
     tags: ["New", "Integrations"],
     highlights: [
       {
-        title: "Google Analytics 4 integration",
+        title: "Turn the searches you already win into AI topics",
         description:
-          "A native GA4 connection that correlates AI visibility and recommendation metrics with downstream web traffic behaviour, including attribution for AI-influenced visits that arrive without a referrer header.",
-      },
-      {
-        title: "Google Search Console integration",
-        description:
-          "Connect Search Console to a brand to correlate traditional search visibility with AI recommendation trends, and to generate topics directly from the queries your site already ranks for.",
+          "Connect Google Search Console to see whether your search rankings and your AI recommendations move together, and to build tracking topics straight from the queries your site already ranks for. No blank-page topic research.",
       },
     ],
   },
@@ -204,257 +205,245 @@ export const changelog: ChangelogEntry[] = [
     slug: "jun-2026-share-of-voice-fact-checker",
     // Reported in Q2 2026; the month below is representative, not exact.
     date: "2026-06-24",
-    title: "AI Share of Voice, the Fact Checker agent and SOC 2 Type II",
+    title: "Know your share of every AI answer, and catch what AI gets wrong about you",
     summary:
-      "The market moved from “are we mentioned” to “are we mentioned correctly.” This release followed it: a new headline metric, an agent that catches false claims, and the enterprise certifications and coverage to run all of it at scale.",
+      "Being mentioned is no longer enough. Brands now need to know how much of the conversation they own and whether AI describes them correctly. This release answers both, and clears the security review that enterprise teams need before they can start.",
     tags: ["New", "Improved", "Integrations"],
     highlights: [
       {
-        title: "AI Share of Voice",
+        title: "See how much of the AI conversation you own",
         description:
-          "A new headline metric measuring a brand's share of visibility across AI answers versus its competitors, with sentence-level brand attribution per AI response.",
+          "AI Share of Voice gives you one number for your share of AI answers against your competitors, a metric you can put in front of leadership and track quarter over quarter. Every answer is broken down sentence by sentence, so you see exactly where you were named and where a competitor was.",
       },
       {
-        title: "Fact Checker agent and the Knowledge Base Layer",
+        title: "Catch false claims before your customers believe them",
         description:
-          "The Knowledge Base Layer is a brand truth layer that verifies what an AI engine states during a conversation. The Fact Checker agent sits on top of it and flags when an engine says something false about your brand — bringing the agent suite to five: Prompter, Comparer, Introspector, Recommender and Fact Checker.",
+          "Tell Genezio what is true about your brand once. The new Fact Checker agent then flags every time an AI engine says something false about you, whether that's an outdated price, a discontinued product or a feature you never had, so you can correct the source instead of finding out from a customer.",
       },
       {
-        title: "Brand Perception & Sentiment",
+        title: "Understand how AI talks about you, not just whether it does",
         description:
-          "How AI talks about a brand, not just whether it does: tone, trend over time, and an AI-perceived SWOT.",
+          "Brand Perception & Sentiment shows the tone AI uses when it describes you, how that tone shifts over time, and the strengths and weaknesses AI attributes to your brand, laid out as a SWOT.",
       },
       {
-        title: "Passage-Level Retrieval Analysis",
+        title: "Learn which sentences on your site AI actually quotes",
         description:
-          "Captures the exact text fragments AI engines cite and maps them back to the source sections they came from, so you can see which passages are being retrieved and which are ignored.",
+          "See the exact passages AI engines lift from your pages and which sections they skip. Your content team knows what to protect, what to rewrite and what to stop producing.",
         link: { label: "See Content Analysis", href: "/content-analysis/" },
       },
       {
-        title: "CDN Log Ingestion & Clustering",
+        title: "See the AI traffic your analytics can't",
         description:
-          "Process server logs to show which AI crawlers visit a site and which of those visits turn into citations — tying crawl activity to real server traffic instead of estimates.",
+          "Bring in your CDN logs and see which AI crawlers read your site, which pages they read, and which of those visits turn into citations. Real server traffic instead of estimates.",
       },
       {
-        title: "Shopping Analysis",
+        title: "Find out if AI shopping assistants recommend your products",
         description:
-          "A new module for tracking product and retailer visibility inside AI shopping conversations. Launched and in active testing with clients.",
+          "Shopping Analysis tracks how your products and retailers show up when people shop inside AI chats. Now in testing with clients.",
         link: { label: "See In-Chat Shopping", href: "/in-chat-shopping/" },
       },
       {
-        title: "Enterprise readiness and engine coverage",
+        title: "Pass enterprise security review and cover every market you sell in",
         description:
-          "SOC 2 Type II certification achieved, removing a recurring blocker in enterprise procurement, alongside broader authentication and coverage.",
+          "Genezio is now SOC 2 Type II certified, which removes the most common blocker in enterprise procurement.",
         bullets: [
-          "Enterprise auth: SAML SSO and Microsoft login",
-          "Three new AI engines: DeepSeek, Grok and Microsoft Copilot",
-          "Dedicated in-country proxies for Germany, France, Australia, Czechia and Austria",
+          "Sign in the way your company already does: SAML SSO and Microsoft login.",
+          "Cover the engines your customers use: DeepSeek, Grok and Microsoft Copilot join the line-up.",
+          "See what local buyers see: dedicated in-country proxies for Germany, France, Australia, Czechia and Austria.",
         ],
         link: { label: "Enterprise & security", href: "/security/" },
       },
       {
-        title: "Content Hub templates and per-topic engines",
+        title: "Publish on-brand content faster",
         description:
-          "Reusable templates for generating on-brand articles and briefs, plus the ability to choose which AI engines run on each topic for more granular testing.",
+          "Content Hub templates let your team turn out articles and briefs in your house style without starting from scratch. You can also choose which AI engines run on each topic, so you test where it matters to your business.",
         link: { label: "See Content Hub", href: "/content-hub/" },
       },
     ],
     otherUpdates: [
-      "Introspector positive signals: positive statements and positive citation scoring added to the Introspector agent.",
-      "Notifications system with automatic alerts.",
-      "Custom tagging system for organising topics with your own labels.",
+      "See what's working, not just what's broken: Introspector now highlights the positive things AI says about you and the citations that help you.",
+      "Hear about changes as they happen: automatic alerts when something important moves.",
+      "Organise topics your way: custom tags that match how your team plans and reports.",
     ],
   },
   {
     slug: "mar-2026-self-serve-four-agents",
     // Reported in Q1 2026; the month below is representative, not exact.
     date: "2026-03-18",
-    title: "Self-serve goes live, and the platform consolidates around four agents",
+    title: "Start measuring AI recommendations on your own, the same day",
     summary:
-      "Self-serve onboarding went into production in January, and the product consolidated around four specialised agents — each with a strategy adapted to the customer's business type.",
+      "You no longer need a kickoff call to see how AI treats your brand. Sign up and get results the same day, then go further: find out why competitors get cited, fill the gaps with content, and ask questions of your data in plain language.",
     tags: ["New", "Improved"],
     highlights: [
       {
-        title: "Self-serve onboarding in production",
+        title: "Get started without waiting on a setup call",
         description:
-          "Self-serve functionality went live in January, removing the manual setup that every new account previously depended on.",
+          "Self-serve onboarding is live. Create an account and start tracking your brand right away, with no manual setup on our side.",
       },
       {
-        title: "The four-agent suite",
+        title: "Four agents that test your brand the way buyers actually ask",
         description:
-          "Prompter, Comparer, Introspector and Recommender were refined into a coherent suite, each running a strategy adapted to the customer's business type. Personas and multi-turn conversations were sharpened as the core differentiators.",
+          "Prompter, Comparer, Introspector and Recommender each look at your brand from a different angle: discovery, comparison, reputation and recommendation. Each one adapts to your type of business, and each runs full multi-turn conversations as your real customer personas instead of one-off prompts.",
       },
       {
-        title: "Page Analyser",
+        title: "Find out why a competitor's page gets cited instead of yours",
         description:
-          "Explains why a competitor's article gets cited — comparing the content against the topic and scenario it is winning on.",
+          "Page Analyser compares a competitor's winning article with the topic and scenario it wins on, so you know what to change instead of guessing.",
         link: { label: "See Content Analysis", href: "/content-analysis/" },
       },
       {
-        title: "Content Generation",
+        title: "Go from content gap to published draft in minutes",
         description:
-          "Generate an article or a brief from a topic, a set of keywords and a subject, closing the gap between finding a content gap and filling it.",
+          "Give Genezio a topic, a few keywords and a subject, and get an article or brief back. The gap you found in the morning is a draft by lunch.",
         link: { label: "See Content Hub", href: "/content-hub/" },
       },
       {
-        title: "Competitor head-to-head analysis and query fanout clustering",
+        title: "See exactly where you win and lose against each competitor",
         description:
-          "Direct brand-versus-competitor comparison, and clustering of the fanned-out queries an engine generates from a single prompt.",
+          "Head-to-head analysis puts you and one competitor side by side. Fan-out clustering groups the follow-up searches AI runs behind a single question, so you see the whole set of queries you need to show up for.",
       },
       {
-        title: "Citation classification",
+        title: "Know who controls the sources AI trusts about you",
         description:
-          "Every citation is now classified as first-party, competitor, social media, news or community, which required auto-detecting the domains each competitor owns.",
+          "Every citation is now labelled as your own site, a competitor's, social media, news or community. You can see whether AI learns about you from you or from someone else, and where your next piece of outreach should go.",
       },
       {
-        title: "Chat with your data",
+        title: "Ask your data a question and get an answer",
         description:
-          "Ask questions of your own visibility data in natural language, including through the Genezio connector for Claude as a skill and over MCP.",
+          "Ask about your AI visibility in plain language, in Genezio or straight from Claude through our MCP connector. No dashboards to dig through.",
         link: { label: "See the MCP server", href: "/mcp/" },
       },
     ],
     otherUpdates: [
-      "A Recommender question now closes the Comparer flow.",
-      "UI Automation workers that run logged out or with a free account.",
-      "Prompt Test Framework.",
-      "Introspector KPIs, plus Recommender fixes to recommended competitors and to how recommendation rate is calculated.",
-      "More actionable insights, and an improved empty state after onboarding.",
-      "DRIP email campaigns.",
+      "Comparisons that end with a verdict: every Comparer conversation now closes by asking which brand AI would recommend.",
+      "Results that match what real people see: conversations also run logged out and on free accounts.",
+      "More reliable results: a new test framework checks every prompt before it runs.",
+      "Recommendation rates you can trust: new Introspector KPIs, plus fixes to recommended competitors and to how recommendation rate is calculated.",
+      "Clearer next steps: more actionable insights, and a better first view right after onboarding.",
     ],
   },
   {
     slug: "nov-2025-brand-analysis-redesign",
     // Reported in Q4 2025; the month below is representative, not exact.
     date: "2025-11-26",
-    title: "A rebuilt Brand Analysis experience and agency mode",
+    title: "Go deeper into how AI sees your brand, and run it for every client",
     summary:
-      "Brand Analysis became the primary driver of sales conversations, so it was rebuilt from the ground up — new interface, deeper analysis types, and a mode for agencies running several brands.",
+      "A rebuilt Brand Analysis makes it faster to get from “what happened” to “why it happened”, and agencies can now manage every client brand from one place.",
     tags: ["New", "Improved"],
     highlights: [
       {
-        title: "New Brand Analysis UI and UX",
+        title: "Get to the answer faster",
         description:
-          "A rebuilt interface, significantly more advanced than the previous dashboard and designed for deeper analytical exploration.",
+          "Brand Analysis has a completely new interface built for exploration, so you can follow a question from the headline number down to the conversation that explains it.",
       },
       {
-        title: "Fanout queries and statements",
+        title: "See the exact claims AI makes about you",
         description:
-          "Analysis now works at the level of the queries an engine fans out from a prompt, and of the individual statements it makes about a brand.",
+          "Analysis now reaches the individual statements AI makes about your brand and the follow-up searches it runs behind each question, not just whether you appeared.",
       },
       {
-        title: "Three new topic types",
+        title: "Test your brand from three new angles",
         description:
-          "Introspector, Recommender and Comparer joined the product as distinct topic types, each probing brand presence from a different angle.",
+          "New Introspector, Recommender and Comparer topics show what AI thinks of you, whether it recommends you, and how it stacks you up against competitors.",
       },
       {
-        title: "Agency mode",
+        title: "Run GEO for every client from one account",
         description:
-          "Agency mode in Brand Analysis, for teams running the platform across multiple client brands.",
+          "Agency mode lets agencies manage many client brands side by side, so a GEO practice scales without juggling logins.",
         link: { label: "For agencies", href: "/agencies/" },
       },
-    ],
-    otherUpdates: [
-      "Brand Analysis self-serve reached near-production readiness.",
-      "The Customer Support Evaluation Platform continued in enterprise testing.",
     ],
   },
   {
     slug: "sep-2025-brand-analysis-ships",
     // Reported in Q3 2025; the month below is representative, not exact.
     date: "2025-09-09",
-    title: "Brand Analysis ships, across four AI engines",
+    title: "See how your brand shows up across the AI engines your customers use",
     summary:
-      "Brand Analysis went from feature to finished product, with coverage across the four engines that mattered most to customers, and user management to go with it.",
+      "Brand Analysis is here: a regular report on how visible your brand is in the AI answers your customers read, across the four engines that matter most.",
     tags: ["New"],
     highlights: [
       {
-        title: "Brand Analysis",
+        title: "Know where you stand in AI answers",
         description:
-          "The Brand Analysis feature was completed — a periodic report giving customers insight into their brand's visibility across leading LLMs.",
+          "Brand Analysis gives you a periodic report on your brand's visibility in AI answers, so you can track progress instead of spot-checking.",
       },
       {
-        title: "Four AI engines",
+        title: "Cover the engines your customers actually use",
         description:
-          "A brand can now be analysed across ChatGPT, Google AI Overview, Perplexity and Google AI Mode.",
+          "Track your brand across ChatGPT, Google AI Overviews, Perplexity and Google AI Mode from one place.",
       },
       {
-        title: "User management",
+        title: "Bring your whole team in",
         description:
-          "User management functionality was added to the dashboard.",
+          "Invite teammates and manage who has access, so everyone works from the same numbers.",
       },
-    ],
-    otherUpdates: [
-      "The Customer Support Evaluation Platform entered testing with an enterprise client.",
     ],
   },
   {
     slug: "may-2025-agents-audit-logs",
     // Reported in Q2 2025; the month below is representative, not exact.
     date: "2025-05-21",
-    title: "More evaluation agents, audit logs and a metrics dashboard",
+    title: "Catch more chatbot risks, and prove your chatbot is getting better",
     summary:
-      "The agent library grew in both directions — existing agents got better, and three new ones covered ground the suite had been missing.",
+      "Three new testing agents find problems the suite used to miss, and a new dashboard shows how your chatbot improves from one release to the next.",
     tags: ["New", "Improved"],
     highlights: [
       {
-        title: "Three new agents",
+        title: "Find bias, data leaks and hidden capabilities before your users do",
         description:
-          "Industry Bias, Sanitization and Capability Detection joined the evaluation agent library.",
+          "The Industry Bias, Sanitization and Capability Detection agents test for risks that can embarrass a brand or break compliance.",
       },
       {
-        title: "Improved existing agents",
+        title: "Sharper results from the agents you already use",
         description:
-          "Fact Checker, Functional Tester, Offtopic, Competitor Advertising and Security were all improved.",
+          "Fact Checker, Functional Tester, Off-topic, Competitor Advertising and Security now catch more and report it more clearly.",
       },
       {
-        title: "Metrics dashboard",
+        title: "Show progress over time, not just a single score",
         description:
-          "A dashboard showing how a chatbot has evolved over time, rather than only how it performs in a single run.",
+          "The metrics dashboard tracks how your chatbot improves release after release, which is the evidence stakeholders ask for.",
       },
       {
-        title: "Audit logs",
+        title: "Know who changed what, and when",
         description:
-          "Audit logs were added to the platform.",
+          "Audit logs record every action in the platform, ready for your compliance reviews.",
       },
     ],
     otherUpdates: [
-      "Improved testing conversations.",
-      "Better fact and testing scenario generation.",
+      "Tests that feel like real customers: more realistic testing conversations.",
+      "Better coverage with less effort: stronger generation of facts and test scenarios.",
     ],
   },
   {
     slug: "feb-2025-evaluation-agents-platform",
     // Reported in Q1 2025; the month below is representative, not exact.
     date: "2025-02-19",
-    title: "The Evaluation Agents Platform",
+    title: "Test your AI chatbot like thousands of real customers would",
     summary:
-      "The platform pivoted: a new core product for evaluating agentic AI applications, with a dashboard, a scalable simulation engine, and the first library of testing agents.",
+      "Ship AI assistants with confidence. The Evaluation Agents Platform puts your chatbot through thousands of realistic conversations before your customers have a single one.",
     tags: ["New"],
     highlights: [
       {
-        title: "Evaluation Agents Platform",
+        title: "Launch knowing how your chatbot behaves",
         description:
-          "A new core product, with a dashboard where clients manage knowledge bases, personas, test agent libraries, simulations and detailed reports.",
+          "Set up your knowledge base, personas and test agents, run simulations, and get detailed reports, all from one dashboard.",
       },
       {
-        title: "Conversations at scale",
+        title: "Test at the scale of real traffic",
         description:
-          "Clients can run thousands of conversations in parallel, across multiple languages and configurations.",
+          "Run thousands of conversations in parallel, in multiple languages and configurations, so problems surface before launch instead of after.",
       },
       {
-        title: "The first AI Test Agents Library",
+        title: "Ready-made testers for the risks that matter",
         description:
-          "The first version of our own suite of testing agents, covering three families.",
+          "Start with a library of testing agents instead of writing test cases by hand.",
         bullets: [
-          "Personality and behavioural profile agents",
-          "Compliance and industry-specific agents",
-          "Security evaluation agents",
+          "Real customer behaviour: agents that act out different personalities and behaviour profiles.",
+          "Compliance: agents built around industry-specific rules.",
+          "Security: agents that probe for vulnerabilities.",
         ],
       },
-    ],
-    otherUpdates: [
-      "A new homepage and messaging aligned with the agentic app positioning.",
-      "Infrastructure shifted to support Python-first, agent-based development and deployment.",
     ],
   },
 ];
