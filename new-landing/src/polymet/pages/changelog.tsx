@@ -18,7 +18,7 @@ const entries = getChangelogEntries();
 
 const CHANGELOG_TITLE = "Genezio Changelog: Product Updates & Release Notes";
 const CHANGELOG_DESCRIPTION =
-  "Every capability shipped to the Genezio platform — AI Share of Voice, the Fact Checker agent, Content Hub, citation analysis, enterprise auth and engine coverage.";
+  "Read the newest platform updates and product features. Check the changelog to see what is new.";
 
 const changelogItemList = {
   "@type": "ItemList",

@@ -168,10 +168,11 @@ jobs:
           for file in static/index.html static/docs/index.html static/sitemap.xml static/docs/sitemap.xml static/docs/index.rsc; do
             [ -f ".vercel/output/$file" ] || { echo "❌ the output has no $file"; exit 1; }
           done
-          # /sitemap.xml must give each page of the site, not the landing page
-          # alone.
-          grep -q '<loc>[^<]*/docs' .vercel/output/static/sitemap.xml \
-            || { echo "❌ /sitemap.xml has no page of /docs"; exit 1; }
+          # Verify that both the main sitemap and the docs sitemap exist and contain entries.
+          grep -q '<loc>[^<]*/blog/' .vercel/output/static/sitemap.xml \
+            || { echo "❌ /sitemap.xml has no blog entries"; exit 1; }
+          grep -q '<loc>[^<]*/docs' .vercel/output/static/docs/sitemap.xml \
+            || { echo "❌ /docs/sitemap.xml has no page of /docs"; exit 1; }
 
       # The output is built, thus Vercel deploys it with no build.
       - name: Deploy

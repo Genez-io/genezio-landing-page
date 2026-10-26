@@ -140,7 +140,7 @@ export function PolymetSEO({
 
       const articleSchema = {
         "@context": "https://schema.org",
-        "@type": "ScholarlyArticle",
+        "@type": ["ScholarlyArticle", "Article"],
         headline: title,
         description: description,
         image: ogImage || undefined,
@@ -191,14 +191,124 @@ export function PolymetSEO({
       };
       return schema ? { "@context": "https://schema.org", "@graph": [articleSchema, schema] } : articleSchema;
     } else if (path.startsWith("/glossary/")) {
+      const bogdanData = authors["bogdan-ripa"];
+      const authorPerson = {
+        "@type": "Person",
+        name: bogdanData?.name || "Bogdan Ripa",
+        jobTitle: bogdanData?.role || "Co-Founder and CPO",
+        url: "https://genezio.com/blog/author/bogdan-ripa/",
+        image: bogdanData?.image ? `https://genezio.com${bogdanData.image}` : undefined,
+        worksFor: baseOrg,
+      };
+
+      const articleSchema = {
+        "@type": "Article",
+        headline: title,
+        description: description,
+        url: url,
+        mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
+        inLanguage: "en",
+        author: authorPerson,
+        publisher: baseOrg,
+        datePublished: datePublished || "2025-01-15T00:00:00Z",
+        dateModified: datePublished || "2026-10-26T00:00:00Z",
+      };
+
+      const isRoot = path === "/glossary" || path === "/glossary/";
+      if (isRoot) {
+        return schema
+          ? { "@context": "https://schema.org", "@graph": [articleSchema, schema] }
+          : { "@context": "https://schema.org", "@graph": [articleSchema] };
+      }
+
       const termSchema = {
-        "@context": "https://schema.org",
         "@type": "DefinedTerm",
         name: termName || title,
         description: termDefinition || description,
         inDefinedTermSet: "https://genezio.com/glossary/",
       };
-      return schema ? { "@context": "https://schema.org", "@graph": [termSchema, schema] } : termSchema;
+      return {
+        "@context": "https://schema.org",
+        "@graph": schema ? [termSchema, articleSchema, schema] : [termSchema, articleSchema],
+      };
+    } else if (path.startsWith("/changelog")) {
+      const bogdanData = authors["bogdan-ripa"];
+      const authorPerson = {
+        "@type": "Person",
+        name: bogdanData?.name || "Bogdan Ripa",
+        jobTitle: bogdanData?.role || "Co-Founder and CPO",
+        url: "https://genezio.com/blog/author/bogdan-ripa/",
+        image: bogdanData?.image ? `https://genezio.com${bogdanData.image}` : undefined,
+        worksFor: baseOrg,
+      };
+      const articleSchema = {
+        "@type": "Article",
+        headline: title,
+        description: description,
+        url: url,
+        mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
+        inLanguage: "en",
+        author: authorPerson,
+        publisher: baseOrg,
+        datePublished: datePublished || "2024-01-01T00:00:00Z",
+        dateModified: new Date().toISOString().split("T")[0],
+      };
+      const collectionPageSchema = {
+        "@type": "CollectionPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: title,
+        description,
+        inLanguage: "en",
+        publisher: baseOrg,
+        mainEntity,
+      };
+      return {
+        "@context": "https://schema.org",
+        "@graph": [articleSchema, collectionPageSchema],
+      };
+    } else if (path.startsWith("/content-analysis")) {
+      const bogdanData = authors["bogdan-ripa"];
+      const authorPerson = {
+        "@type": "Person",
+        name: bogdanData?.name || "Bogdan Ripa",
+        jobTitle: bogdanData?.role || "Co-Founder and CPO",
+        url: "https://genezio.com/blog/author/bogdan-ripa/",
+        image: bogdanData?.image ? `https://genezio.com${bogdanData.image}` : undefined,
+        worksFor: baseOrg,
+      };
+      const articleSchema = {
+        "@type": "Article",
+        headline: title,
+        description: description,
+        url: url,
+        mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
+        inLanguage: "en",
+        author: authorPerson,
+        publisher: baseOrg,
+        datePublished: datePublished || "2025-06-01T00:00:00Z",
+        dateModified: new Date().toISOString().split("T")[0],
+      };
+      return schema
+        ? { "@context": "https://schema.org", "@graph": [articleSchema, schema] }
+        : { "@context": "https://schema.org", "@graph": [articleSchema] };
+    } else if (path.startsWith("/data-processing-agreement")) {
+      const articleSchema = {
+        "@type": "Article",
+        headline: title,
+        description: description,
+        url: url,
+        mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
+        inLanguage: "en",
+        author: baseOrg,
+        publisher: baseOrg,
+        datePublished: "2024-01-01T00:00:00Z",
+        dateModified: new Date().toISOString().split("T")[0],
+      };
+      return {
+        "@context": "https://schema.org",
+        "@graph": [articleSchema],
+      };
     }
 
     if (schema) {

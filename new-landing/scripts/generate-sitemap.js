@@ -209,6 +209,10 @@ ${allRoutes.map(route => {
 </urlset>`;
 
     fs.writeFileSync(SITEMAP_FILE, sitemapContent);
+    const distSitemap = path.join(__dirname, '../dist/sitemap.xml');
+    if (fs.existsSync(path.dirname(distSitemap))) {
+        fs.writeFileSync(distSitemap, sitemapContent);
+    }
     console.log(`✅ Main sitemap generated at ${SITEMAP_FILE}`);
 
     // 2. Generate Images Sitemap (only image URLs)
@@ -253,6 +257,10 @@ ${allImages.map(imgUrl => `  <url>
 </urlset>`;
 
     fs.writeFileSync(IMAGES_SITEMAP_FILE, imagesSitemapContent);
+    const distImagesSitemap = path.join(__dirname, '../dist/imagessitemap.xml');
+    if (fs.existsSync(path.dirname(distImagesSitemap))) {
+        fs.writeFileSync(distImagesSitemap, imagesSitemapContent);
+    }
     console.log(`✅ Images sitemap generated at ${IMAGES_SITEMAP_FILE}`);
 }
 
