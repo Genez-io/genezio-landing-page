@@ -280,9 +280,8 @@ export function Changelog() {
             </h1>
 
             <p className="mb-8 text-lg leading-relaxed text-white/60 md:text-xl">
-              Every capability we have shipped — from the first evaluation
-              agents to AI Share of Voice, the Fact Checker and enterprise-grade
-              coverage.
+              What&apos;s new in Genezio, and how each update helps you get
+              recommended by AI.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
