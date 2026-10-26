@@ -12,7 +12,7 @@ linkedIn: https://www.linkedin.com/in/iulian-bogdan-vlad/
 thumbnail: /images/monitor-ai-brand-perceptions.webp
 preview: Write one sentence you believe AI says about your brand. Genezio counts every collected AI answer that agrees with it, every one that disagrees, and shows you the exact paragraphs.
 # meta data start
-description: Write one sentence you believe AI says about your brand. Genezio counts every AI answer that agrees, every one that disagrees, and links each number to its paragraph.
+description: Learn how to track and verify what AI engines say about your brand. Read the article to monitor brand perception.
 meta_og_url: "https://genezio.com/blog/monitor-ai-brand-perceptions/"
 
 meta_og_image: "https://genezio.com/images/monitor-ai-brand-perceptions.webp"
