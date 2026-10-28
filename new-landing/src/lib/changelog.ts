@@ -64,24 +64,30 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    // The slug stays as it is, because the entry is live and people can link to it.
     slug: "oct-2026-scorecard-deadlines-chart-color",
     date: "2026-10-28",
     precision: "day",
     title:
-      "See which goals are slipping, and the text AI never reads on your pages",
+      "See which goals are slipping, and each answer the way your buyer sees it",
     summary:
-      "A goal with no date and no rank cannot tell you where to look first, and a page whose answer appears only after JavaScript may never be read by the engines you are trying to win. This release closes both, and keeps what AI believes about you current every day.",
-    tags: ["New", "Improved"],
+      "A goal with no date and no rank cannot tell you where to look first. An answer that says only \"Assistant\" cannot tell you which engine you lose. This release closes both, shows the text that AI crawlers never read on your pages, and keeps what AI believes about you current every day.",
+    tags: ["New", "Improved", "Fixed"],
     highlights: [
       {
         title: "Know which goals are at risk, while you can still act",
         description:
-          "A goal now carries a deadline and a priority, so the board tells you where the risk is instead of asking you to read every card. A goal that falls behind the pace it needs turns amber, then red, early enough to do something about it.",
+          "A goal now carries a deadline and a priority, so the board tells you where the risk is instead of asking you to read every card. A goal that falls behind the pace it needs turns amber, then red, early enough to do something about it. Your weekly review becomes a plan: what matters most, what is late, and what to drop.",
         bullets: [
           "A deadline in one click: the end of the month, the end of the quarter, 30 days or 90 days",
           "The page of a goal says in one sentence whether you are ahead or behind",
           "The agent asks for the deadline and the priority while you build the goal, thus no goal starts without them",
         ],
+      },
+      {
+        title: "See each answer the way your buyer sees it",
+        description:
+          "Each answer now carries the name of the engine that gave it, such as ChatGPT, Perplexity or Google AI Overview, in place of \"Assistant\". You can see immediately where you win and where you are invisible. The product cards, charts, tables and ad carousels of a ChatGPT answer also show as ChatGPT shows them, thus the screenshot you take to your CMO is evidence and not an approximation.",
       },
       {
         title: "The text that AI crawlers never read",
@@ -92,17 +98,21 @@ export const changelog: ChangelogEntry[] = [
       {
         title: "What AI believes about you, checked every day",
         description:
-          "A claim that the engines start repeating about your brand reaches you within a day, with no manual run. Reputation moves faster than a check that waits for somebody to remember it.",
+          "A claim that the engines start to repeat about your brand reaches you within a day, with no manual run. Reputation moves faster than a check that waits for somebody to remember it.",
+      },
+      {
+        title: "Hundreds of citations, sorted in minutes",
+        description:
+          "Mark the owner of a domain one time and each URL of that domain follows, thus a brand with hundreds of citations no longer sorts them address by address. Genezio also reads the Instagram posts, reels and profiles that the engines cite, and finds who wrote them, thus a consumer brand can see which creators and which accounts the engines lean on.",
       },
     ],
     otherUpdates: [
       "Charts carry the colour of your brand, which you pick in the settings of the dashboard. Competitors keep their own.",
-      "Mark the owner of a domain one time on Citations, and each URL of that domain follows.",
-      "The sentiment of a cited Instagram post, reel or profile now comes from the content itself.",
       "Crawlability tries again as a browser when a site refuses it, and names Cloudflare or the firewall that refused, because the same rule can refuse the AI bots.",
-      "A ChatGPT ad of more than one card shows as the carousel that ChatGPT shows.",
-      "An answer carries the name of the engine that gave it, such as ChatGPT or Perplexity, in place of \"Assistant\".",
-      "The brand picker shows the ID of two brands that share a name.",
+      "The brand picker shows the ID of two brands that share a name, thus an agency does not edit the wrong brand.",
+      "The API reference carries a description for each page, and llms.txt points to the correct addresses, thus a developer and an AI assistant can both find how to integrate.",
+      "The copy button of the token page copies the token only.",
+      "The Perception Verification chart stays hidden until the brand has a knowledge base, in place of an empty box.",
     ],
   },
 
