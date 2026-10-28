@@ -68,51 +68,44 @@ export const changelog: ChangelogEntry[] = [
     date: "2026-10-28",
     precision: "day",
     title:
-      "Deadlines and priorities for Scorecard goals, your brand's chart color, and more",
+      "See which goals are slipping, and the text AI never reads on your pages",
     summary:
-      "A goal with no date and no rank does not tell you where to look first. Scorecard goals now carry a deadline and a priority. This release also puts your brand's own color on the charts, and shows the text of a page that AI crawlers do not get.",
+      "A goal with no date and no rank cannot tell you where to look first, and a page whose answer appears only after JavaScript may never be read by the engines you are trying to win. This release closes both, and keeps what AI believes about you current every day.",
     tags: ["New", "Improved"],
     highlights: [
       {
-        title: "Deadlines and priorities for Scorecard goals",
+        title: "Know which goals are at risk, while you can still act",
         description:
-          "Each goal can have a deadline and a priority of High, Medium or Low. The card shows the time left, in green, amber or red by the pace of the goal. Open **Scorecard**, then click **Deadline** or **Priority** on a goal card.",
+          "A goal now carries a deadline and a priority, so the board tells you where the risk is instead of asking you to read every card. A goal that falls behind the pace it needs turns amber, then red, early enough to do something about it.",
         bullets: [
-          "**Presets**: the end of the month, the end of the quarter, 30 days or 90 days",
-          "**Goal page**: a strip shows how much of the time is gone, with one sentence about the pace",
-          "**Goal agent**: when you build a goal, the agent asks for its deadline and its priority",
+          "A deadline in one click: the end of the month, the end of the quarter, 30 days or 90 days",
+          "The page of a goal says in one sentence whether you are ahead or behind",
+          "The agent asks for the deadline and the priority while you build the goal, thus no goal starts without them",
         ],
       },
       {
-        title: "Your brand's color in the charts",
+        title: "The text that AI crawlers never read",
         description:
-          "Your brand's line no longer has to be purple. Open **Settings**, then **Dashboard Components**, and pick a color in **Brand Chart Color**. Competitors keep their own colors.",
-        bullets: [
-          "A preview shows the chart in the light and the dark theme",
-          "A color with too little contrast keeps its hue, and the charts change only its lightness",
-        ],
-      },
-      {
-        title: "What AI crawlers miss",
-        description:
-          "Content Analysis now compares a page before and after JavaScript runs. In the technical part of a report, click **See what AI crawlers miss** to see each block of text that shows only after JavaScript. An AI crawler that does not run JavaScript does not get that text, and you can copy the missing lines.",
+          "If the answer on your page appears only after JavaScript runs, a crawler that does not run JavaScript never reads it, and a page you paid for cannot be cited. Content Analysis now compares your page before and after JavaScript and lists the text that only a browser sees, so your developers get the exact lines to fix.",
         link: { label: "See Content Analysis", href: "/content-analysis/" },
       },
       {
-        title: "Daily Perception Monitoring",
+        title: "What AI believes about you, checked every day",
         description:
-          "Each perception in **Monitor perceptions** now updates every day, with no manual run. Each run reads only the days that no run read before.",
+          "A claim that the engines start repeating about your brand reaches you within a day, with no manual run. Reputation moves faster than a check that waits for somebody to remember it.",
       },
     ],
     otherUpdates: [
-      "On **Citations**, grouped by domain, a change of the ownership of a domain applies to each URL of that domain.",
-      "Genezio reads cited Instagram posts, reels and profiles, thus the sentiment of those citations comes from their content.",
-      "**Crawlability** tries again as a browser when a site refuses its request, and tells you when Cloudflare or a firewall refused it, because that firewall can also refuse AI bots.",
-      "A ChatGPT ad of more than one card shows as a carousel, as ChatGPT shows it.",
-      "Each answer in a conversation shows the name of its answer engine, such as ChatGPT or Perplexity, in place of \"Assistant\".",
-      "The brand picker shows the ID of brands that have the same name.",
+      "Charts carry the colour of your brand, which you pick in the settings of the dashboard. Competitors keep their own.",
+      "Mark the owner of a domain one time on Citations, and each URL of that domain follows.",
+      "The sentiment of a cited Instagram post, reel or profile now comes from the content itself.",
+      "Crawlability tries again as a browser when a site refuses it, and names Cloudflare or the firewall that refused, because the same rule can refuse the AI bots.",
+      "A ChatGPT ad of more than one card shows as the carousel that ChatGPT shows.",
+      "An answer carries the name of the engine that gave it, such as ChatGPT or Perplexity, in place of \"Assistant\".",
+      "The brand picker shows the ID of two brands that share a name.",
     ],
   },
+
   {
     slug: "oct-2026-perception-monitoring-public-api",
     // Shipped in October 2026, dated from the release history.
