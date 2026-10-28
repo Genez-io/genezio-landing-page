@@ -64,6 +64,56 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    slug: "oct-2026-scorecard-deadlines-chart-color",
+    date: "2026-10-28",
+    precision: "day",
+    title:
+      "Deadlines and priorities for Scorecard goals, your brand's chart color, and more",
+    summary:
+      "A goal with no date and no rank does not tell you where to look first. Scorecard goals now carry a deadline and a priority. This release also puts your brand's own color on the charts, and shows the text of a page that AI crawlers do not get.",
+    tags: ["New", "Improved"],
+    highlights: [
+      {
+        title: "Deadlines and priorities for Scorecard goals",
+        description:
+          "Each goal can have a deadline and a priority of High, Medium or Low. The card shows the time left, in green, amber or red by the pace of the goal. Open **Scorecard**, then click **Deadline** or **Priority** on a goal card.",
+        bullets: [
+          "**Presets**: the end of the month, the end of the quarter, 30 days or 90 days",
+          "**Goal page**: a strip shows how much of the time is gone, with one sentence about the pace",
+          "**Goal agent**: when you build a goal, the agent asks for its deadline and its priority",
+        ],
+      },
+      {
+        title: "Your brand's color in the charts",
+        description:
+          "Your brand's line no longer has to be purple. Open **Settings**, then **Dashboard Components**, and pick a color in **Brand Chart Color**. Competitors keep their own colors.",
+        bullets: [
+          "A preview shows the chart in the light and the dark theme",
+          "A color with too little contrast keeps its hue, and the charts change only its lightness",
+        ],
+      },
+      {
+        title: "What AI crawlers miss",
+        description:
+          "Content Analysis now compares a page before and after JavaScript runs. In the technical part of a report, click **See what AI crawlers miss** to see each block of text that shows only after JavaScript. An AI crawler that does not run JavaScript does not get that text, and you can copy the missing lines.",
+        link: { label: "See Content Analysis", href: "/content-analysis/" },
+      },
+      {
+        title: "Daily Perception Monitoring",
+        description:
+          "Each perception in **Monitor perceptions** now updates every day, with no manual run. Each run reads only the days that no run read before.",
+      },
+    ],
+    otherUpdates: [
+      "On **Citations**, grouped by domain, a change of the ownership of a domain applies to each URL of that domain.",
+      "Genezio reads cited Instagram posts, reels and profiles, thus the sentiment of those citations comes from their content.",
+      "**Crawlability** tries again as a browser when a site refuses its request, and tells you when Cloudflare or a firewall refused it, because that firewall can also refuse AI bots.",
+      "A ChatGPT ad of more than one card shows as a carousel, as ChatGPT shows it.",
+      "Each answer in a conversation shows the name of its answer engine, such as ChatGPT or Perplexity, in place of \"Assistant\".",
+      "The brand picker shows the ID of brands that have the same name.",
+    ],
+  },
+  {
     slug: "oct-2026-perception-monitoring-public-api",
     // Shipped in October 2026, dated from the release history.
     date: "2026-10-20",
