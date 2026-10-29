@@ -64,6 +64,26 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    slug: "oct-2026-facebook-citations",
+    date: "2026-10-29",
+    precision: "day",
+    title: "See what the Facebook pages that AI cites say about you, and more",
+    summary:
+      "When an engine cites a Facebook post as its source, you could not see what that post said about your brand. Now you can, and your competitive comparison stays on the rivals that you chose.",
+    tags: ["New", "Fixed"],
+    highlights: [
+      {
+        title: "Know what the Facebook posts that AI cites say about you",
+        description:
+          "Genezio now reads the Facebook posts, videos, reels, pages and events that the engines cite, as it already reads LinkedIn and Instagram. A consumer brand can see which community pages and which posts shape the answers about it, and decide where to show up or what to correct.",
+      },
+    ],
+    otherUpdates: [
+      "The SWOT comparison shows only the competitors that you chose to track, thus a company that you never picked does not crowd your report.",
+    ],
+  },
+
+  {
     // The slug stays as it is, because the entry is live and people can link to it.
     slug: "oct-2026-scorecard-deadlines-chart-color",
     date: "2026-10-28",
