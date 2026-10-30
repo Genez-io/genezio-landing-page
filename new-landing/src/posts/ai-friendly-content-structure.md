@@ -85,6 +85,17 @@ Before publishing, copy each section under an H2 or H3 into a blank document. Th
 
 A section that fails any of the three needs a rewrite. Agencies selling "AI-friendly content structuring" can run this test on a client's top 20 pages in an afternoon, and it produces a concrete rewrite list instead of a generic audit.
 
+## How Genezio Content Analysis automates the chunk test
+
+[Genezio Content Analysis](/content-analysis/) reads a page the way an answer engine does and tells you which sections would survive retrieval, before and after the page goes live. You paste a draft or a URL, and Content Analysis scores it on 8 checks that map to the pipeline above:
+
+- **Fetch.** Content Analysis checks whether every major AI crawler can reach the page under your robots rules. It also compares the page before and after JavaScript runs, and lists the text that only a browser sees, so developers get the exact lines to move into the HTML.
+- **Retrieve.** It checks whether the page covers the questions AI asks about the topic, so each section has a fan-out query to match.
+- **Rerank.** It checks whether the page is structured to get cited, whether it is the kind of article AI cites for that topic, and whether it helps the brand without sounding like an ad.
+- **Generate.** After publishing, Content Analysis maps the exact fragments AI engines quote back to the sections they came from, so you see which passages are retrieved and which are ignored.
+
+Every check ends in a prioritized fix, for example "add a head-to-head comparison table naming the real alternatives in your category." For agencies, Content Analysis can start one analysis for each URL in a list, which turns a client's top 20 pages into a single rewrite plan.
+
 ## Measure whether the structure worked
 
 Structure changes are cheap to make and easy to fake success on. Track two things before and after: whether the page is cited in AI answers for its target questions, and whether the brand's recommendation rate moves for the conversations that page should influence. If citations rise and recommendations don't, the page is retrieved but not persuasive, and the next fix is the argument, not the formatting.
