@@ -166,7 +166,9 @@ function ReleaseEntry({ entry }: { entry: ChangelogEntry }) {
                       className="flex max-w-2xl gap-3 leading-relaxed text-white/55"
                     >
                       <span className="mt-[0.6rem] h-1 w-1 flex-shrink-0 rounded-[1px] bg-emerald-400/70" />
-                      <span>{bullet}</span>
+                      <span>
+                        <LabelledItem text={bullet} />
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -206,7 +208,9 @@ function ReleaseEntry({ entry }: { entry: ChangelogEntry }) {
                   className="flex gap-3 text-sm leading-relaxed text-white/55"
                 >
                   <span className="mt-[0.55rem] h-1 w-1 flex-shrink-0 rounded-[1px] bg-white/30" />
-                  <span>{item}</span>
+                  <span>
+                    <LabelledItem text={item} />
+                  </span>
                 </li>
               ))}
             </ul>
@@ -214,6 +218,18 @@ function ReleaseEntry({ entry }: { entry: ChangelogEntry }) {
         )}
       </div>
     </article>
+  );
+}
+
+/** Renders "Benefit: detail" with the benefit in bold; plain text otherwise. */
+function LabelledItem({ text }: { text: string }) {
+  const match = text.match(/^([^:]{2,80}):\s(.+)$/);
+  if (!match) return <>{text}</>;
+  return (
+    <>
+      <strong className="font-semibold text-white/85">{match[1]}:</strong>{" "}
+      {match[2]}
+    </>
   );
 }
 
@@ -264,9 +280,8 @@ export function Changelog() {
             </h1>
 
             <p className="mb-8 text-lg leading-relaxed text-white/60 md:text-xl">
-              Every capability we have shipped — from the first evaluation
-              agents to AI Share of Voice, the Fact Checker and enterprise-grade
-              coverage.
+              What&apos;s new in Genezio, and how each update helps you get
+              recommended by AI.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
