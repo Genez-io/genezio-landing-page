@@ -64,6 +64,26 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    slug: "oct-2026-netherlands-market",
+    date: "2026-10-30",
+    precision: "day",
+    title: "See what AI tells buyers in the Netherlands, and more",
+    summary:
+      "If you sell in the Netherlands, you could not see what AI tells a Dutch buyer about you. Now you can.",
+    tags: ["New", "Fixed"],
+    highlights: [
+      {
+        title: "Know what AI tells your Dutch buyers",
+        description:
+          "You can now track the answers that a buyer in Amsterdam gets, asked in Dutch, as you already track other European markets. A brand that sells in the Netherlands sees where it wins and where a local rival takes its place, before it puts budget into that market.",
+      },
+    ],
+    otherUpdates: [
+      "When you send an expired invitation again, your colleague now gets a link that works, thus they join your team without a second request.",
+    ],
+  },
+
+  {
     slug: "oct-2026-facebook-citations",
     date: "2026-10-29",
     precision: "day",
