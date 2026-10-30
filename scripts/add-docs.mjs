@@ -78,7 +78,7 @@ const routes = [
   ...site.routes.filter(isHostRoute),
   ...docsRoutes,
   { src: `^/${BASE}/?$`, dest: `/${BASE}` },
-  { src: `^/${BASE}/(.+?)/?$`, dest: `/${BASE}/$1` },
+  { src: `^/${BASE}/(.+?)/$`, dest: `/${BASE}/$1` },
   ...site.routes,
 ];
 
