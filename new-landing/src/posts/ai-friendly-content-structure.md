@@ -102,6 +102,9 @@ Structure changes are cheap to make and easy to fake success on. Track two thing
 
 ## FAQ
 
+### What is a chunk in AI search?
+A chunk is a passage of a few hundred tokens that an answer engine cuts out of a page, usually at a heading. The engine retrieves and ranks chunks, not pages, and the language model writes its answer from the few chunks that rank best.
+
 ### How long should a section be for AI retrieval?
 About 150 to 400 words, focused on one question.
 
@@ -110,3 +113,15 @@ Yes, when each answer is self-contained and specific. A list of one-line answers
 
 ### Should I rewrite old content or publish new pages?
 Rewrite pages that already rank or get cited first. They are already in the retrieval set, so structure gains show up faster.
+
+### Should headings be phrased as questions?
+Yes, for sections that answer something a buyer would ask. A heading like "How much does a GEO audit cost?" matches a fan-out query directly, while a label like "Pricing philosophy" matches nothing.
+
+### Does schema markup help a page get cited by AI?
+Schema markup helps classic search engines parse a page, but we have not seen evidence that it changes which chunk a language model quotes. Keep it, and fix weak passages in the text itself.
+
+### Can AI crawlers read content inside tabs and accordions?
+Usually yes, if the content is in the HTML and only collapsed. If it loads through JavaScript when the visitor clicks, most AI crawlers never see it.
+
+### How do I check whether my content is AI-friendly?
+Run the chunk test: copy each section into a blank document and check that it names its subject, answers its heading in the first sentence, and gives one specific fact. Genezio Content Analysis runs the same checks automatically, on a draft or a live URL, and turns each finding into a prioritized fix.
