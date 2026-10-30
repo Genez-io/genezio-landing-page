@@ -1,5 +1,26 @@
 [
   {
+    "id": "ai-friendly-content-structure",
+    "title": "AI-Friendly Content Structure: Write for Chunks, Not Pages",
+    "excerpt": "Answer engines never read your whole page. They read a few hundred words cut out of it. Here is how retrieval pipelines slice content, and a structure that survives the cut.",
+    "description": "Answer engines never read your whole page. They read a few hundred words cut out of it. Here is how retrieval pipelines slice content, and a structure that survives the cut.",
+    "category": "GEO",
+    "readTime": "5 min read",
+    "date": "October 30, 2026",
+    "timestamp": 1793318400000,
+    "author": "Bogdan Vlad",
+    "metaOgImage": "https://genezio.com/images/ai-friendly-content-structure.webp",
+    "metaOgUrl": "https://genezio.com/blog/ai-friendly-content-structure/",
+    "metaTitle": "AI-Friendly Content Structure: Write for Chunks, Not Pages",
+    "tags": [
+      "GEO",
+      "AI Content",
+      "Content Structure",
+      "Marketing Agencies",
+      "AI Search"
+    ]
+  },
+  {
     "id": "openai-crawler-runs-javascript",
     "title": "OpenAI’s Search Crawler Runs JavaScript. Here’s the Proof.",
     "excerpt": "OAI-SearchBot executes JavaScript. Here is how we proved it, and what it means for client-side rendered sites.",
