@@ -34,7 +34,6 @@ const FILTERS: ("All" | ChangelogTag)[] = [
   "All",
   "New",
   "Improved",
-  "Fixed",
   "API",
   "Integrations",
 ];
