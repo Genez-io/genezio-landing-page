@@ -1,5 +1,26 @@
 [
   {
+    "id": "pentest-tools-case-study",
+    "title": "How Genezio Helped Pentest-Tools.com See and Grow Its Presence in AI Answers",
+    "excerpt": "Since June 2026, Pentest-Tools.com has used Genezio to measure which of its pages AI engines cite, for which use cases, and whether AI answers reflect its new positioning.",
+    "description": "How Pentest-Tools.com used Genezio to track AI citations at page level, grow weekly citations to several hundred, and check that AI answers reflect its positioning.",
+    "category": "Case Study",
+    "readTime": "6 min read",
+    "date": "November 3, 2026",
+    "timestamp": 1793664000000,
+    "author": "Paula Cionca",
+    "metaOgImage": "https://genezio.com/images/pentest-tools-case-study.webp",
+    "metaOgUrl": "https://genezio.com/blog/pentest-tools-case-study/",
+    "metaTitle": "Pentest-Tools.com Case Study: Growing Citations in AI Answers",
+    "tags": [
+      "Case Study",
+      "GEO",
+      "AI Citations",
+      "Cybersecurity",
+      "Brand Perception"
+    ]
+  },
+  {
     "id": "ai-friendly-content-structure",
     "title": "AI-Friendly Content Structure: Write for Chunks, Not Pages",
     "excerpt": "Answer engines never read your whole page. They read a few hundred words cut out of it. Here is how retrieval pipelines slice content, and a structure that survives the cut.",
