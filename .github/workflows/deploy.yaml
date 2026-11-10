@@ -14,9 +14,8 @@ name: Deploy
 # documentation in S3, thus a change of the documentation gets to the site
 # with no push here.
 #
-# A pull request to dev or to main gets a preview: the same build, with the
-# documentation of the base branch, as a deployment of the dev project that is
-# not production. A comment on the pull request gives its URL.
+# A pull request runs nothing: the environments dev and main give the secrets
+# only to their own branch, and a pull request runs on refs/pull/N/merge.
 #
 # `vercel build` builds the landing page and its functions (api/).
 # scripts/add-docs.mjs puts the documentation under /docs of that output, and
@@ -28,20 +27,14 @@ on:
     branches:
       - dev
       - main
-  pull_request:
-    branches:
-      - dev
-      - main
   workflow_dispatch:
 
 concurrency:
-  group: deploy-${{ github.head_ref || github.ref_name }}
+  group: deploy-${{ github.ref_name }}
   cancel-in-progress: true
 
 permissions:
   contents: read
-  # The comment with the URL of the preview.
-  pull-requests: write
 
 env:
   VERCEL_SCOPE: genezio
@@ -49,23 +42,18 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # A pull request from a fork gets no secrets, thus it gets no preview.
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     # The GitHub environment gives the secrets: VERCEL_TOKEN,
-    # AWS_ACCESS_KEY_ID_DOCS and AWS_SECRET_ACCESS_KEY_DOCS. A preview uses dev.
-    environment: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' && 'main' || 'dev' }}
+    # AWS_ACCESS_KEY_ID_DOCS and AWS_SECRET_ACCESS_KEY_DOCS.
+    environment: ${{ github.ref_name == 'main' && 'main' || 'dev' }}
     outputs:
       site_url: ${{ steps.deploy.outputs.url }}
     steps:
       # Explicit for each branch: a branch that is not in this list never
-      # gets to the project of production. A preview reads the documentation
-      # of the base branch, and it always goes to the dev project, as a
-      # deployment that is not production.
+      # gets to the project of production.
       - name: Resolve the names of the deployment
         id: names
         env:
-          EVENT: ${{ github.event_name }}
-          BRANCH: ${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}
+          BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
           case "$BRANCH" in
@@ -73,17 +61,9 @@ jobs:
             main) PROJECT="gta-landing-app" ;;
             *) echo "❌ the branch '$BRANCH' has no deployment"; exit 1 ;;
           esac
-          if [ "$EVENT" = "pull_request" ]; then
-            PROJECT="gta-landing-internal-gta"
-            echo "target=preview" >> "$GITHUB_OUTPUT"
-            echo "prod_flag=" >> "$GITHUB_OUTPUT"
-          else
-            echo "target=production" >> "$GITHUB_OUTPUT"
-            echo "prod_flag=--prod" >> "$GITHUB_OUTPUT"
-          fi
           echo "docs_key=${BRANCH}/docs.tar.gz" >> "$GITHUB_OUTPUT"
           echo "project=$PROJECT" >> "$GITHUB_OUTPUT"
-          echo "Vercel project: $PROJECT ($EVENT), documentation of $BRANCH"
+          echo "Vercel project: $PROJECT, documentation of $BRANCH"
 
       - uses: actions/checkout@v4
 
@@ -157,8 +137,8 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           set -euo pipefail
-          vercel pull --yes --environment="${{ steps.names.outputs.target }}" --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
-          vercel build ${{ steps.names.outputs.prod_flag }} --yes --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
+          vercel pull --yes --environment=production --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
+          vercel build --prod --yes --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN"
 
       - name: Put the documentation under /docs
         working-directory: ${{ runner.temp }}/landing-site
@@ -180,33 +160,17 @@ jobs:
         working-directory: ${{ runner.temp }}/landing-site
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          # The name of the branch of a pull request comes from its author,
-          # thus it goes into the script as a variable, not as an expression.
-          BRANCH: ${{ github.head_ref || github.ref_name }}
+          BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
-          URL=$(vercel deploy --prebuilt ${{ steps.names.outputs.prod_flag }} --yes --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN")
+          URL=$(vercel deploy --prebuilt --prod --yes --scope "$VERCEL_SCOPE" --token "$VERCEL_TOKEN")
           echo "url=$URL" >> "$GITHUB_OUTPUT"
           {
-            echo "### ✅ Landing deployed (${{ steps.names.outputs.target }}) — ${{ steps.names.outputs.project }}"
+            echo "### ✅ Landing deployed (production) — ${{ steps.names.outputs.project }}"
             echo "- Branch: \`${BRANCH}\`"
             echo "- URL: $URL"
           } >> "$GITHUB_STEP_SUMMARY"
           echo "Deployed to $URL"
-
-      # One comment for each pull request: each run changes the last comment of
-      # this workflow, thus the pull request does not get a new comment on each
-      # push.
-      - name: Give the URL of the preview on the pull request
-        if: github.event_name == 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          URL: ${{ steps.deploy.outputs.url }}
-          PR: ${{ github.event.pull_request.number }}
-        run: |
-          set -euo pipefail
-          BODY="Preview with the documentation of \`${{ github.base_ref }}\`: ${URL} (commit ${{ github.event.pull_request.head.sha }})"
-          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --edit-last --create-if-none --body "$BODY"
 
       # The URL of each deployment (<project>-<hash>-genezio.vercel.app) has
       # the Deployment Protection of Vercel: a request with no session of
@@ -274,7 +238,7 @@ jobs:
             404) echo "❌ ${path} answers 404: the deployment has no functions"; exit 1 ;;
             *)
               MESSAGE="${path} answers ${status}: set the variables of the functions on the Vercel project ${PROJECT} (README.md gives the list)"
-              if [ "${{ github.event_name }}" != "pull_request" ] && [ "${{ github.ref_name }}" = "main" ]; then
+              if [ "${{ github.ref_name }}" = "main" ]; then
                 echo "❌ ${MESSAGE}"; exit 1
               fi
               echo "::warning::${MESSAGE}"
