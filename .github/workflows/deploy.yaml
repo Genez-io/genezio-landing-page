@@ -52,8 +52,8 @@ jobs:
     # A pull request from a fork gets no secrets, thus it gets no preview.
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     # The GitHub environment gives the secrets: VERCEL_TOKEN,
-    # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY. A preview uses dev.
-    environment: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' && 'production' || 'dev' }}
+    # AWS_ACCESS_KEY_ID_DOCS and AWS_SECRET_ACCESS_KEY_DOCS. A preview uses dev.
+    environment: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' && 'main' || 'dev' }}
     outputs:
       site_url: ${{ steps.deploy.outputs.url }}
     steps:
@@ -96,8 +96,8 @@ jobs:
       # commit of genezio-code that built it.
       - name: Download the documentation
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DOCS }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DOCS }}
         run: |
           set -euo pipefail
           KEY="${{ steps.names.outputs.docs_key }}"
