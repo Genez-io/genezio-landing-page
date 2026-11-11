@@ -98,10 +98,3 @@ List the topics you want to own and compare them with what ChatGPT reports. The 
 If you plan to launch a Business Agent, test it before your customers do.
 
 The brands that pair ChatGPT's numbers with a clear picture of how AI recommends them will be the first to turn this new channel into growth.
-
-## Sources
-
-- [OpenAI: Introducing Businesses in ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/)
-- [The Next Web: OpenAI lets businesses claim ChatGPT profiles and launch their own agents](https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents)
-- [Search Engine Roundtable: Businesses in ChatGPT Business Hub](https://www.seroundtable.com/chatgpt-business-hub-42505.html)
-- [SmartCompany: Australian businesses can now claim themselves in ChatGPT](https://www.smartcompany.com.au/artificial-intelligence/australian-businesses-can-now-claim-themselves-in-chatgpt/)

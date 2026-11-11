@@ -3,20 +3,22 @@
  *
  * Releases up to Q3 2026 come from the quarterly business reviews, so only
  * their quarter is known. `date` places each one on a representative month
- * inside that quarter. Releases from September 2026 on are dated from the
- * release history, so their month is exact. The page deliberately renders
- * month and year only, never a day, so it does not imply precision we lack.
+ * inside that quarter, and `precision` stays "month", so the page shows the
+ * month and the year only and implies no precision we lack. A release that the
+ * changelog routine writes carries the exact day of the push and sets
+ * `precision` to "day", so the page shows that day. Several releases can ship
+ * in one month, thus the day is what separates them.
  *
  * Add a new release by prepending an entry. Only shipped work belongs here —
  * never roadmap or committed-but-unreleased capabilities.
+ *
+ * A fix of a bug belongs in no entry. The reader pays for the product and
+ * expects it to work, thus a line that says something now works tells them
+ * only that it was broken. The test: if the customer would have called the
+ * old behaviour broken, it stays off the page.
  */
 
-export type ChangelogTag =
-  | "New"
-  | "Improved"
-  | "Fixed"
-  | "API"
-  | "Integrations";
+export type ChangelogTag = "New" | "Improved" | "API" | "Integrations";
 
 export interface ChangelogHighlight {
   /** Feature name, rendered as the sub-heading of the block. */
@@ -36,10 +38,16 @@ export interface ChangelogEntry {
   slug: string;
   /**
    * ISO date, YYYY-MM-DD. For a quarterly release the month is representative;
-   * from September 2026 on it is exact. The day is never displayed. Drives sorting and
-   * the RSS feed.
+   * from September 2026 on it is exact. Drives sorting and the RSS feed.
    */
   date: string;
+  /**
+   * How exact `date` is, and therefore how the page renders it. "day" shows
+   * the day, and belongs to a release dated from its own push. "month" shows
+   * the month and the year only, and is the default, because an older entry
+   * knows its quarter and not its day.
+   */
+  precision?: "day" | "month";
   /** Headline for the whole release. */
   title: string;
   /** Short intro paragraph shown under the title. */
@@ -55,6 +63,85 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    slug: "oct-2026-netherlands-market",
+    date: "2026-10-30",
+    precision: "day",
+    title: "See what AI tells buyers in the Netherlands",
+    summary:
+      "If you sell in the Netherlands, you could not see what AI tells a Dutch buyer about you. Now you can.",
+    tags: ["New"],
+    highlights: [
+      {
+        title: "Know what AI tells your Dutch buyers",
+        description:
+          "You can now track the answers that a buyer in Amsterdam gets, asked in Dutch, as you already track other European markets. A brand that sells in the Netherlands sees where it wins and where a local rival takes its place, before it puts budget into that market.",
+      },
+    ],
+  },
+
+  {
+    slug: "oct-2026-facebook-citations",
+    date: "2026-10-29",
+    precision: "day",
+    title: "See what the Facebook pages that AI cites say about you",
+    summary:
+      "When an engine cites a Facebook post as its source, you could not see what that post said about your brand. Now you can.",
+    tags: ["New"],
+    highlights: [
+      {
+        title: "Know what the Facebook posts that AI cites say about you",
+        description:
+          "Genezio now reads the Facebook posts, videos, reels, pages and events that the engines cite, as it already reads LinkedIn and Instagram. A consumer brand can see which community pages and which posts shape the answers about it, and decide where to show up or what to correct.",
+      },
+    ],
+  },
+
+  {
+    // The slug stays as it is, because the entry is live and people can link to it.
+    slug: "oct-2026-scorecard-deadlines-chart-color",
+    date: "2026-10-28",
+    precision: "day",
+    title: "Catch the goal that is slipping, and the pages AI cannot cite",
+    summary:
+      "You cannot fix what you learn about too late. This release tells you which of your targets are at risk while you can still save them, which of your pages the AI engines cannot read, and which engine answers your buyers without you.",
+    tags: ["New", "Improved"],
+    highlights: [
+      {
+        title: "Save a goal before it misses",
+        description:
+          "You learn that a target is at risk weeks before the review, and not in it. The goals that need you come first, thus a quarter no longer ends with a surprise.",
+      },
+      {
+        title: "Know which engine answers your buyers without you",
+        description:
+          "You can see where you win and where you are absent, one engine at a time, and you can show your CMO the answer as a buyer meets it. An engine that leaves you out is a market you can now name and work on.",
+      },
+      {
+        title: "Stop paying for pages that AI cannot cite",
+        description:
+          "Some of your best content is invisible to the engines, thus it earns you no citation and no mention. Genezio names those pages and the exact text to fix, and content you already paid for starts to work.",
+        link: { label: "See Content Analysis", href: "/content-analysis/" },
+      },
+      {
+        title: "Hear what AI says about you within a day",
+        description:
+          "A false claim about your brand reaches you while it is still small, and not after your customers find it. Your reputation no longer waits for somebody to remember a check.",
+      },
+      {
+        title: "Hours of citation admin, gone",
+        description:
+          "A brand with hundreds of citations sorts them in minutes. You also see which creators and which social accounts the engines trust about you, thus you know who to work with.",
+      },
+    ],
+    otherUpdates: [
+      "Charts carry the colour of your brand, thus a Genezio chart goes into a board deck with no work.",
+      "Crawlability names the firewall that turns the AI bots away from your site.",
+      "The brand picker tells two brands of one name apart, thus an agency works on the brand it means to.",
+      "Your developers, and the AI assistants that help them, find the integration help faster.",
+    ],
+  },
+
   {
     slug: "oct-2026-perception-monitoring-public-api",
     // Shipped in October 2026, dated from the release history.
@@ -484,6 +571,26 @@ export function formatChangelogMonth(iso: string): string {
     "December",
   ][month - 1];
   return `${monthName} ${year}`;
+}
+
+/**
+ * The date as a reader says it. An entry of day precision gives
+ * "23 October 2026", and any other entry gives "October 2026".
+ */
+export function formatChangelogDate(entry: ChangelogEntry): string {
+  const month = formatChangelogMonth(entry.date);
+  if (entry.precision !== "day") return month;
+  return `${Number(entry.date.slice(8, 10))} ${month}`;
+}
+
+/**
+ * The top line of the date rail. An entry of day precision gives "Oct 23", and
+ * any other entry gives "Oct".
+ */
+export function formatChangelogRailDate(entry: ChangelogEntry): string {
+  const short = formatChangelogMonthShort(entry.date);
+  if (entry.precision !== "day") return short;
+  return `${short} ${Number(entry.date.slice(8, 10))}`;
 }
 
 /** Abbreviated month for the date rail, e.g. "Sep". */
