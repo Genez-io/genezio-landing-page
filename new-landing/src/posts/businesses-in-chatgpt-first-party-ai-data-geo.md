@@ -29,6 +29,8 @@ url: /blog/businesses-in-chatgpt-first-party-ai-data-geo/
 
 OpenAI launched Businesses in ChatGPT in beta on November 10. Companies can now claim their profile in ChatGPT and see how often it mentions them, how many people view that profile, and how many click through to their website.
 
+{{< youtube "https://www.youtube.com/watch?v=Z9k5oI3Paoc" >}}
+
 At Genezio, we see this as a big step forward for GEO. When the most-used answer engine builds a home for businesses inside its own product, it shows where discovery is heading. More and more buying journeys will start in a conversation with an AI, and many will end there too.
 
 It also brings a valuable new signal into GEO. Genezio measures how AI models recommend brands by simulating real customer conversations at scale. ChatGPT now adds first-party numbers from real users. Used together, they give brands a fuller picture than either one alone.

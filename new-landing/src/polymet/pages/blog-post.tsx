@@ -313,13 +313,19 @@ export function BlogPost() {
 
   const effectiveContent = post?.content || clientContent;
 
-  // Preprocess content to replace tweet shortcodes with marker links
+  // Preprocess content to replace tweet and YouTube shortcodes with marker
+  // links, which the renderer of links turns into embeds.
   const contentWithTweets = React.useMemo(() => {
     if (!effectiveContent) return "";
-    return effectiveContent.replace(
-      /{{<\s*tweet\s+"(https?:\/\/twitter\.com\/[^\/]+\/status\/(\d+))"\s*>}}/g,
-      (_, url, id) => `[TWEET_EMBED__${id}](${url})`
-    );
+    return effectiveContent
+      .replace(
+        /{{<\s*tweet\s+"(https?:\/\/twitter\.com\/[^\/]+\/status\/(\d+))"\s*>}}/g,
+        (_, url, id) => `[TWEET_EMBED__${id}](${url})`
+      )
+      .replace(
+        /{{<\s*youtube\s+"(https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})[^"]*)"\s*>}}/g,
+        (_, url, id) => `[YOUTUBE_EMBED__${id}](${url})`
+      );
   }, [effectiveContent]);
 
   // Pull a leading hero image out of the body so it renders full-width above
@@ -1028,6 +1034,27 @@ export function BlogPost() {
                       <div className="flex justify-center my-8 not-prose tweet-container">
                         <Tweet id={id} />
                       </div>
+                    );
+                  }
+                  // A YouTube marker: the player, in a block span because
+                  // the link sits inside a paragraph.
+                  if (
+                    typeof children === "string" &&
+                    children.startsWith("YOUTUBE_EMBED__")
+                  ) {
+                    const id = children.replace("YOUTUBE_EMBED__", "");
+                    return (
+                      <span className="block my-8 not-prose aspect-video w-full overflow-hidden rounded-xl border border-white/10">
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube-nocookie.com/embed/${id}`}
+                          title="YouTube video"
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                        />
+                      </span>
                     );
                   }
 
