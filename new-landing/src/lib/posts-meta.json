@@ -21,6 +21,32 @@
     ]
   },
   {
+    "id": "pentest-tools-case-study",
+    "title": "How Genezio Helped Pentest-Tools.com See and Grow Its Presence in AI Answers",
+    "excerpt": "Since June 2026, Pentest-Tools.com has used Genezio to measure which of its pages AI engines cite, for which use cases, and whether AI answers reflect its new positioning.",
+    "description": "How Pentest-Tools.com used Genezio to track AI citations at page level, grow weekly citations to over a thousand, and check that AI answers reflect its positioning.",
+    "category": "Case Study",
+    "readTime": "6 min read",
+    "date": "November 3, 2026",
+    "timestamp": 1793664000000,
+    "author": "Paula Cionca",
+    "coAuthor": "Andra Zaharia",
+    "coAuthorRole": "Head of Marketing, Pentest-Tools.com",
+    "coAuthorLinkedIn": "https://www.linkedin.com/in/andrazaharia/",
+    "coAuthorOrg": "Pentest-Tools.com",
+    "coAuthorOrgUrl": "https://pentest-tools.com/",
+    "metaOgImage": "https://genezio.com/images/pentest-tools-case-study.webp",
+    "metaOgUrl": "https://genezio.com/blog/pentest-tools-case-study/",
+    "metaTitle": "Pentest-Tools.com Case Study: Growing Citations in AI Answers",
+    "tags": [
+      "Case Study",
+      "GEO",
+      "AI Citations",
+      "Cybersecurity",
+      "Brand Perception"
+    ]
+  },
+  {
     "id": "ai-friendly-content-structure",
     "title": "AI-Friendly Content Structure: Write for Chunks, Not Pages",
     "excerpt": "Answer engines never read your whole page. They read a few hundred words cut out of it. Here is how retrieval pipelines slice content, and a structure that survives the cut.",
@@ -108,7 +134,7 @@
     "id": "monitor-ai-brand-perceptions",
     "title": "What Does AI Actually Say About Your Brand? Start Monitoring It.",
     "excerpt": "Write one sentence you believe AI says about your brand. Genezio counts every collected AI answer that agrees with it, every one that disagrees, and shows you the exact paragraphs.",
-    "description": "Write one sentence you believe AI says about your brand. Genezio counts every AI answer that agrees, every one that disagrees, and links each number to its paragraph.",
+    "description": "Learn how to track and verify what AI engines say about your brand. Read the article to monitor brand perception.",
     "category": "Product Update",
     "readTime": "7 min read",
     "date": "October 13, 2026",
@@ -614,6 +640,25 @@
     ]
   },
   {
+    "id": "marketing-agency-brand-presence-ai-search",
+    "title": "Marketing Agency Brand Presence in the Age of AI Search",
+    "excerpt": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
+    "description": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
+    "category": "Marketing Agencies",
+    "readTime": "6 min read",
+    "date": "March 2, 2026",
+    "timestamp": 1772409600000,
+    "author": "Paula Cionca",
+    "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
+    "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
+    "tags": [
+      "Marketing Agencies",
+      "AI Brand Presence",
+      "AI Visibility",
+      "GEO"
+    ]
+  },
+  {
     "id": "mastering-company-brand-presence",
     "title": "Mastering Brand Presence in 2026: AI-Powered Measurement Tools",
     "excerpt": "In 2026, company brand presence transcends traditional boundaries. Discover actionable strategies and AI-powered tools to optimize your visibility.",
@@ -630,25 +675,6 @@
       "AI Measurement",
       "Conversational AI",
       "Genezio"
-    ]
-  },
-  {
-    "id": "marketing-agency-brand-presence-ai-search",
-    "title": "Marketing Agency Brand Presence in the Age of AI Search",
-    "excerpt": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
-    "description": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
-    "category": "Marketing Agencies",
-    "readTime": "6 min read",
-    "date": "March 2, 2026",
-    "timestamp": 1772402400000,
-    "author": "Paula Cionca",
-    "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
-    "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
-    "tags": [
-      "Marketing Agencies",
-      "AI Brand Presence",
-      "AI Visibility",
-      "GEO"
     ]
   },
   {

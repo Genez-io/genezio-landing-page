@@ -784,6 +784,17 @@ export function BlogPost() {
         ogType="article"
         schema={customSchema}
         authorName={post.author}
+        coAuthor={
+          post.coAuthor
+            ? {
+                name: post.coAuthor,
+                role: post.coAuthorRole,
+                linkedIn: post.coAuthorLinkedIn,
+                organization: post.coAuthorOrg,
+                organizationUrl: post.coAuthorOrgUrl,
+              }
+            : undefined
+        }
         datePublished={post.date}
         tags={post.tags}
       />
@@ -863,6 +874,40 @@ export function BlogPost() {
                 <div className="text-xs text-white/40">{post.authorRole}</div>
               </div>
             </div>
+
+            {/* Co-author (external, e.g. case study customer) */}
+            {post.coAuthor && (
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-zinc-500 flex items-center justify-center">
+                  <span className="text-white font-semibold text-sm">
+                    {post.coAuthor
+                      .split(" ")
+                      .map((n: string) => n[0])
+                      .join("")}
+                  </span>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    {post.coAuthorLinkedIn ? (
+                      <a
+                        href={post.coAuthorLinkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {post.coAuthor}
+                      </a>
+                    ) : (
+                      post.coAuthor
+                    )}
+                  </div>
+                  {post.coAuthorRole && (
+                    <div className="text-xs text-white/40">
+                      {post.coAuthorRole}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
 
             {/* Date */}
             <div className="flex items-center gap-2 text-sm text-white/60">
@@ -1116,6 +1161,38 @@ export function BlogPost() {
                 </div>
               </div>
             </div>
+            {post.coAuthor && (
+              <div className="flex items-start gap-4 mt-6 pt-6 border-t border-white/10">
+                <div className="w-16 h-16 rounded-full bg-zinc-500 flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-semibold text-lg">
+                    {post.coAuthor
+                      .split(" ")
+                      .map((n: string) => n[0])
+                      .join("")}
+                  </span>
+                </div>
+                <div>
+                  <div className="text-lg font-semibold text-white mb-1">
+                    {post.coAuthorLinkedIn ? (
+                      <a
+                        href={post.coAuthorLinkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {post.coAuthor}
+                      </a>
+                    ) : (
+                      post.coAuthor
+                    )}
+                  </div>
+                  {post.coAuthorRole && (
+                    <div className="text-sm text-white/60 mb-3">
+                      {post.coAuthorRole}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Related Posts */}
