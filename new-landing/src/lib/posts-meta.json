@@ -1,5 +1,26 @@
 [
   {
+    "id": "businesses-in-chatgpt-first-party-ai-data-geo",
+    "title": "Businesses in ChatGPT: What First-Party AI Data Means for GEO",
+    "excerpt": "OpenAI now lets companies claim their profile in ChatGPT and see mentions and clicks. Here is what that first-party data means for GEO, and how to use it with Genezio.",
+    "description": "OpenAI now lets companies claim their profile in ChatGPT and see mentions and clicks. Here is what that first-party data means for GEO, and how to use it with Genezio.",
+    "category": "GEO",
+    "readTime": "5 min read",
+    "date": "November 11, 2026",
+    "timestamp": 1794355200000,
+    "author": "Bogdan Vlad",
+    "metaOgImage": "https://genezio.com/images/businesses-in-chatgpt-first-party-ai-data-geo.webp",
+    "metaOgUrl": "https://genezio.com/blog/businesses-in-chatgpt-first-party-ai-data-geo/",
+    "metaTitle": "Businesses in ChatGPT: What First-Party AI Data Means for GEO",
+    "tags": [
+      "GEO",
+      "ChatGPT",
+      "AI Analytics",
+      "Business Agents",
+      "AI Search"
+    ]
+  },
+  {
     "id": "ai-friendly-content-structure",
     "title": "AI-Friendly Content Structure: Write for Chunks, Not Pages",
     "excerpt": "Answer engines never read your whole page. They read a few hundred words cut out of it. Here is how retrieval pipelines slice content, and a structure that survives the cut.",
