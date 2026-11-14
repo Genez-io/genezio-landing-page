@@ -64,6 +64,43 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    slug: "nov-2026-connectors-google-ads",
+    date: "2026-11-13",
+    precision: "day",
+    title: "Bring your marketing tools to Genezio, see the ads in Google's AI answers, and more",
+    summary:
+      "Your AI visibility data sat apart from your SEO tools, your analytics and your search data, thus each question took a copy and a paste. Now Genezio works with the tools your team already uses, and shows you the ads that compete for your buyers in Google's AI answers.",
+    tags: ["New", "Integrations"],
+    highlights: [
+      {
+        title: "Ask one question across all your marketing tools",
+        description:
+          "Connect the tools your team already pays for, such as Semrush, Ahrefs, Similarweb, Amplitude, Klaviyo, Notion or Webflow, and Geo, Content Hub and the Scorecard use their data next to what AI says about you. You get one answer from all your sources, and you stop moving data from tool to tool by hand.",
+      },
+      {
+        title: "Write the content your buyers already search for",
+        description:
+          "Content Hub now plans each article around the searches that bring people to your site, from Search Console, Bing or the export of any keyword tool. Your new content serves real demand, and not a guess.",
+      },
+      {
+        title: "See who buys your buyers' attention in Google's AI answers",
+        description:
+          "Genezio now captures the ads in Google AI Mode and AI Overviews, as it already does in ChatGPT, and shows the share of each engine. You see which rivals pay to stand next to the answers about you, and you know where your ad budget can win.",
+      },
+      {
+        title: "Give Geo the time a real analysis needs",
+        description:
+          "Geo now has a full page, your chats stay in a list that you can search and pin, and you get a notice when an answer is ready. You can run a deep question, do other work, and come back to it days later without starting again.",
+      },
+    ],
+    otherUpdates: [
+      "Limit your citations to the sources that an engine names in its answer, thus you know which pages AI trusts by name.",
+      "See what the TikTok videos and profiles that AI cites say about your brand.",
+      "An account owner can ask an AI assistant such as Claude who changed what, and on which brand.",
+    ],
+  },
+
+  {
     slug: "oct-2026-netherlands-market",
     date: "2026-10-30",
     precision: "day",
