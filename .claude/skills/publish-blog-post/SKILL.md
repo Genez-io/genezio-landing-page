@@ -90,8 +90,21 @@ Keep the message timestamp so later updates go in its thread.
 
 - Wait for PR events; do not poll. Merge only when the PR has at least one approving
   review from a colleague and no failing required checks.
-- If a reviewer requests changes, make them on the same branch, push, and reply in the
-  Slack thread that it is ready again.
+- **Comments on the PR: ping the user.** Whenever someone leaves a comment, an inline
+  review comment, or a "changes requested" review (anyone but the user and Claude),
+  send the user a Slack DM right away (`slack_send_message` with `channel_id` set to
+  the user's own Slack user ID, e.g. `U03V09XG2MB` for Paula), so they know they have
+  to act. The DM says who commented, quotes or summarises the comment, links to it
+  (or to the PR), and says what is needed, e.g.:
+
+  > :eyes: Comment on PR #<N> "<title>" from <reviewer>: "<short quote>"
+  > <link to comment>. Needs your input: <what they ask for>.
+
+  Also mention it in the chat. Send one DM per new comment batch, not one per event.
+- Do not merge while a comment is unanswered or a review asks for changes. Make small,
+  clear fixes (typos, wording, a link) on the same branch, push, reply on the comment
+  thread, and reply in the Slack review thread that it is ready again. Anything that
+  changes the article's substance, claims, quotes or authorship waits for the user.
 - Merge with a merge commit (the repo's convention: "Merge pull request #N from ...").
 - After merging, reply in the Slack thread: "Merged, live after deploy:
   https://genezio.com/blog/<slug>/", then unsubscribe from the PR.
