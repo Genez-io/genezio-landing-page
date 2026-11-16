@@ -15,6 +15,14 @@ interface PolymetSEOProps {
   /** The page's main entity, e.g. an ItemList of what a listing page shows. */
   mainEntity?: Record<string, unknown>;
   authorName?: string;
+  /** Optional external co-author (e.g. the customer quoted in a case study). */
+  coAuthor?: {
+    name: string;
+    role?: string;
+    linkedIn?: string;
+    organization?: string;
+    organizationUrl?: string;
+  };
   datePublished?: string;
   tags?: string[];
   termName?: string;
@@ -44,6 +52,7 @@ export function PolymetSEO({
   pageType = "WebPage",
   mainEntity,
   authorName,
+  coAuthor,
   datePublished,
   tags,
   termName,
@@ -175,6 +184,23 @@ export function PolymetSEO({
         worksFor: baseOrg,
       };
 
+      const coAuthorSchema = coAuthor
+        ? {
+            "@type": "Person",
+            name: coAuthor.name,
+            jobTitle: coAuthor.role || undefined,
+            url: coAuthor.linkedIn || undefined,
+            sameAs: coAuthor.linkedIn ? [coAuthor.linkedIn] : undefined,
+            worksFor: coAuthor.organization
+              ? {
+                  "@type": "Organization",
+                  name: coAuthor.organization,
+                  url: coAuthor.organizationUrl || undefined,
+                }
+              : undefined,
+          }
+        : null;
+
       const articleSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -186,7 +212,7 @@ export function PolymetSEO({
         mainEntityOfPage: url ? { "@type": "WebPage", "@id": url } : undefined,
         url: url,
         keywords: tags ? tags.join(", ") : undefined,
-        author: personSchema,
+        author: coAuthorSchema ? [personSchema, coAuthorSchema] : personSchema,
         publisher: baseOrg,
       };
       return schema ? { "@context": "https://schema.org", "@graph": [articleSchema, schema] } : articleSchema;
@@ -349,7 +375,7 @@ export function PolymetSEO({
     }
 
     return null;
-  }, [schema, pageType, mainEntity, canonicalPath, title, description, url, ogImage, authorName, datePublished, tags, termName, termDefinition]);
+  }, [schema, pageType, mainEntity, canonicalPath, title, description, url, ogImage, authorName, coAuthor, datePublished, tags, termName, termDefinition]);
 
   const finalOgUrl = ogUrl || url;
 
