@@ -20,6 +20,7 @@ interface PolymetSEOProps {
     name: string;
     role?: string;
     linkedIn?: string;
+    image?: string;
     organization?: string;
     organizationUrl?: string;
   };
@@ -190,6 +191,7 @@ export function PolymetSEO({
             name: coAuthor.name,
             jobTitle: coAuthor.role || undefined,
             url: coAuthor.linkedIn || undefined,
+            image: coAuthor.image ? `https://genezio.com${coAuthor.image}` : undefined,
             sameAs: coAuthor.linkedIn ? [coAuthor.linkedIn] : undefined,
             worksFor: coAuthor.organization
               ? {

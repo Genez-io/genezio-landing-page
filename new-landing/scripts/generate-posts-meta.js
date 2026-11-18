@@ -72,6 +72,7 @@ files.forEach((file) => {
     coAuthor: fm.coAuthor || undefined,
     coAuthorRole: fm.coAuthorRole || undefined,
     coAuthorLinkedIn: fm.coAuthorLinkedIn || undefined,
+    coAuthorImage: fm.coAuthorImage || undefined,
     coAuthorOrg: fm.coAuthorOrg || undefined,
     coAuthorOrgUrl: fm.coAuthorOrgUrl || undefined,
     metaOgImage: fm.meta_og_image || "",

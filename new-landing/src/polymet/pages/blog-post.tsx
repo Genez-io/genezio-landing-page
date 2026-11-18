@@ -790,6 +790,7 @@ export function BlogPost() {
                 name: post.coAuthor,
                 role: post.coAuthorRole,
                 linkedIn: post.coAuthorLinkedIn,
+                image: post.coAuthorImage,
                 organization: post.coAuthorOrg,
                 organizationUrl: post.coAuthorOrgUrl,
               }
@@ -878,6 +879,13 @@ export function BlogPost() {
             {/* Co-author (external, e.g. case study customer) */}
             {post.coAuthor && (
               <div className="flex items-center gap-3">
+                {post.coAuthorImage ? (
+                  <img
+                    src={post.coAuthorImage}
+                    alt={post.coAuthor}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-white/10"
+                  />
+                ) : (
                 <div className="w-12 h-12 rounded-full bg-zinc-500 flex items-center justify-center">
                   <span className="text-white font-semibold text-sm">
                     {post.coAuthor
@@ -886,6 +894,7 @@ export function BlogPost() {
                       .join("")}
                   </span>
                 </div>
+                )}
                 <div>
                   <div className="text-sm font-medium text-white">
                     {post.coAuthorLinkedIn ? (
@@ -1163,6 +1172,13 @@ export function BlogPost() {
             </div>
             {post.coAuthor && (
               <div className="flex items-start gap-4 mt-6 pt-6 border-t border-white/10">
+                {post.coAuthorImage ? (
+                  <img
+                    src={post.coAuthorImage}
+                    alt={post.coAuthor}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-white/10 flex-shrink-0"
+                  />
+                ) : (
                 <div className="w-16 h-16 rounded-full bg-zinc-500 flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-semibold text-lg">
                     {post.coAuthor
@@ -1171,6 +1187,7 @@ export function BlogPost() {
                       .join("")}
                   </span>
                 </div>
+                )}
                 <div>
                   <div className="text-lg font-semibold text-white mb-1">
                     {post.coAuthorLinkedIn ? (
