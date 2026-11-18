@@ -64,6 +64,37 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    slug: "nov-2026-geo-routines-article-comments",
+    date: "2026-11-18",
+    precision: "day",
+    title: "Get your AI visibility report without asking, review drafts as a team, and more",
+    summary:
+      "Each week you had to ask how your brand did in AI answers, and the feedback on a draft got lost in email and chat. Now the answers come to you on your schedule, your team reviews each draft where it is written, and more of your business data sits next to what AI says about you.",
+    tags: ["New", "Integrations"],
+    highlights: [
+      {
+        title: "Get your AI visibility report without asking for it",
+        description:
+          "Tell Geo one time what to watch, such as the weekly pulse of your brand, new rivals or lost citations, and the report comes to you on your schedule, in the app or by email. Each report says what changed since the last one and stays quiet when nothing did, thus you spend time only on what needs you.",
+      },
+      {
+        title: "Review a draft with your team, in the draft",
+        description:
+          "Your team comments on the exact words of an article, and the AI makes the change that a comment asks for. All the feedback stays in one place, thus a draft goes out after fewer rounds.",
+      },
+      {
+        title: "Put your pipeline and your warehouse next to your AI visibility",
+        description:
+          "Connect HubSpot, Slack, Snowflake or Databricks next to the tools that you connected before. You compare what AI says about you with your pipeline and your own data, thus you can show your board what AI visibility is worth.",
+      },
+    ],
+    otherUpdates: [
+      "If your brand runs more than one site, such as one for each country, Genezio reads the search data of all of them together.",
+      "Download an article as clean HTML that you paste into your CMS with no work on the format.",
+    ],
+  },
+
+  {
     slug: "nov-2026-connectors-google-ads",
     date: "2026-11-13",
     precision: "day",
