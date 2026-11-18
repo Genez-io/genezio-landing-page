@@ -25,6 +25,7 @@ export interface BlogPost {
     coAuthor?: string;
     coAuthorRole?: string;
     coAuthorLinkedIn?: string;
+    coAuthorImage?: string;
     coAuthorOrg?: string;
     coAuthorOrgUrl?: string;
     featured: boolean;

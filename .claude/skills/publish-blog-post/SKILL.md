@@ -23,6 +23,7 @@ image. Run every step below without asking again, except where a step says to as
   coAuthor: Firstname Lastname
   coAuthorRole: Job title, Company
   coAuthorLinkedIn: https://www.linkedin.com/in/<handle>/
+  coAuthorImage: /authors/<firstname-lastname>.webp   # optional, square photo, 400x400 webp
   coAuthorOrg: Company
   coAuthorOrgUrl: https://company.com/
   ```
