@@ -16,6 +16,18 @@
  * expects it to work, thus a line that says something now works tells them
  * only that it was broken. The test: if the customer would have called the
  * old behaviour broken, it stays off the page.
+ *
+ * Genezio is more than a tool that measures AI visibility. It also writes
+ * content (Content Hub), analyses on request (Geo), tracks goals
+ * (Scorecard), and captures the ads in AI answers. Do not use "AI
+ * visibility" as the name of the product or as the sum of what it gives.
+ * Use that phrase only for the measurement itself.
+ *
+ * Each title of a release or of a highlight names the part of Genezio that
+ * it is about, such as Geo, Content Hub or the Scorecard. A reader who sees
+ * only the title must know where the change is. "Review a draft with your
+ * team" is not sufficient. "Review Content Hub articles with your team" is
+ * correct.
  */
 
 export type ChangelogTag = "New" | "Improved" | "API" | "Integrations";
@@ -67,30 +79,30 @@ export const changelog: ChangelogEntry[] = [
     slug: "nov-2026-geo-routines-article-comments",
     date: "2026-11-18",
     precision: "day",
-    title: "Get your AI visibility report without asking, review drafts as a team, and more",
+    title: "Geo reports to you on a schedule, your team reviews Content Hub articles together, and more",
     summary:
-      "Each week you had to ask how your brand did in AI answers, and the feedback on a draft got lost in email and chat. Now the answers come to you on your schedule, your team reviews each draft where it is written, and more of your business data sits next to what AI says about you.",
+      "You had to ask Geo each time that you wanted an update, and the feedback on a Content Hub draft got lost in email and chat. Now Geo brings you its report on your schedule, your team reviews each article where it is written, and Genezio works with your CRM, your team chat and your data warehouse.",
     tags: ["New", "Integrations"],
     highlights: [
       {
-        title: "Get your AI visibility report without asking for it",
+        title: "Geo, your AI analyst, reports to you on a schedule",
         description:
-          "Tell Geo one time what to watch, such as the weekly pulse of your brand, new rivals or lost citations, and the report comes to you on your schedule, in the app or by email. Each report says what changed since the last one and stays quiet when nothing did, thus you spend time only on what needs you.",
+          "Tell Geo one time what to watch, such as how your brand moves in AI answers, the rivals that gain ground, or the sources that stop citing you, and Geo sends you its report on your schedule, in the app or by email. Each report says what changed since the last one and why, and stays quiet when nothing did, thus you spend time only on what needs you.",
       },
       {
-        title: "Review a draft with your team, in the draft",
+        title: "Review Content Hub articles with your team before they go live",
         description:
-          "Your team comments on the exact words of an article, and the AI makes the change that a comment asks for. All the feedback stays in one place, thus a draft goes out after fewer rounds.",
+          "Your team comments on the exact words of an article in Content Hub, and the writing agent makes the change that a comment asks for. All the feedback stays next to the draft, thus an article goes out after fewer rounds.",
       },
       {
-        title: "Put your pipeline and your warehouse next to your AI visibility",
+        title: "Connect HubSpot, Slack, Snowflake and Databricks to Genezio",
         description:
-          "Connect HubSpot, Slack, Snowflake or Databricks next to the tools that you connected before. You compare what AI says about you with your pipeline and your own data, thus you can show your board what AI visibility is worth.",
+          "Genezio now works with your CRM, your team chat and your data warehouse, next to the tools that you connected before. You tie what AI says about you to your pipeline and your own numbers, thus you can show your board what your work in AI search earns.",
       },
     ],
     otherUpdates: [
-      "If your brand runs more than one site, such as one for each country, Genezio reads the search data of all of them together.",
-      "Download an article as clean HTML that you paste into your CMS with no work on the format.",
+      "If your brand runs more than one site, such as one for each country, Genezio reads the Search Console and Bing data of all of them together.",
+      "Download a Content Hub article as clean HTML that you paste into your CMS with no work on the format.",
     ],
   },
 
