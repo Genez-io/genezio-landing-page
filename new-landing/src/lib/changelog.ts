@@ -76,6 +76,39 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    slug: "nov-2026-content-analysis-brand-roles",
+    date: "2026-11-24",
+    precision: "day",
+    title: "Content Analysis that knows your brand, the right access on each brand of your Genezio account, and more",
+    summary:
+      "Advice on a page that ignores who owns it is advice that you cannot use, and one person had the same access to each brand of your account. Now Content Analysis reads each page as part of your brand, you give each person a role for each brand, and you see how strongly AI recommends you in each answer.",
+    tags: ["New", "Improved"],
+    highlights: [
+      {
+        title: "Get Content Analysis advice that fits your brand and the page",
+        description:
+          "Content Analysis now reads each page in the context of your brand, follows the rules that you set for your brand, and does not mark a page down for a structure that does not suit it. On a page that you do not control, such as a partner's review, the advice becomes a request for its publisher, thus each piece of advice is one that you can act on.",
+      },
+      {
+        title: "Give each person the right access to each brand in your Genezio account",
+        description:
+          "A person on your team can now have a different role on each brand, for example full access to one brand and read-only access to the others. You can bring in an agency or a country team for the brands that they run, and keep the rest of your account safe from their changes.",
+      },
+      {
+        title: "See how strongly AI recommends you in each conversation that Genezio captures",
+        description:
+          "Each recommended brand in a conversation now shows if AI named it as the only choice, the first choice, one of several, or only a backup. You see where a rival takes first place while you only make the list, thus you know which answers to work on first.",
+      },
+    ],
+    otherUpdates: [
+      "A new Scorecard goal shows a month of history from its first day, thus you see the trend before you report it.",
+      "See what AI tells buyers in the United Arab Emirates.",
+      "Your AI assistant, such as Claude, can read which AI bots visit your site, and can manage the templates and the rules of your brand for you.",
+      "Give more room to the chat or to the article in Content Hub, as the task needs.",
+    ],
+  },
+
+  {
     slug: "nov-2026-geo-routines-article-comments",
     date: "2026-11-18",
     precision: "day",
