@@ -145,7 +145,7 @@ export const authors: Record<string, any> = {
             "twitter": "https://x.com/cristim67",
             "email": "contact@genezio.com",
             "github": "https://github.com/cristim67",
-            "website": "https://www.cristimiloiu.com"
+            "website": "https://cristimiloiu.com/"
         },
         "stats": {
             "articles": 0,

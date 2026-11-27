@@ -5,6 +5,7 @@ import {
   LinkedinIcon,
   ClockIcon,
   CalendarIcon,
+  GlobeIcon,
 } from "lucide-react";
 import { PolymetSEO } from "@/polymet/components/polymet-seo";
 import { getAllPosts, getPostPath } from "@/lib/posts";
@@ -166,6 +167,17 @@ function BlogAuthor() {
                   >
                     <LinkedinIcon className="w-5 h-5 text-white/60" />
                   </a>
+                  {author.social.website && (
+                    <a
+                      href={author.social.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Website of ${author.name}`}
+                      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center transition-all"
+                    >
+                      <GlobeIcon className="w-5 h-5 text-white/60" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
