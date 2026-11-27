@@ -108,7 +108,7 @@ GPT-6.2 also widened a gap that already existed between free and paid users. To 
 | Conversations with an ad | 3.4% | 0% |
 | Web pages cited per answer | 27.0 | 27.2 |
 
-The road is different. Free users get more searches, more searches with a year in them, a smaller model on one answer in ten, and all of the ads we saw. We wrote more about [how ads in ChatGPT target local markets](https://genezio.com/research/chatgpt-ads-went-local/). Paid users get the fast mode, more checks on brand websites, and now the new model.
+The road is different. Free users get more searches, more searches with a year in them, a smaller model on one answer in ten, and all of the ads we saw. We wrote more about [how ads in ChatGPT target local markets](https://genezio.com/blog/chatgpt-ads-went-local/). Paid users get the fast mode, more checks on brand websites, and now the new model.
 
 The destination is mostly the same. Both plans cite the same number of pages from the same number of websites. We also compared the ten most cited websites for each brand on the two plans. They overlap as much as two random halves of the free conversations overlap with each other. We found no evidence that free and paid users see a different set of top sources.
 
