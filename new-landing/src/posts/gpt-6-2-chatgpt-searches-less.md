@@ -44,9 +44,9 @@ We measured this in 24,584 ChatGPT conversations. Here is what changed, what did
 
 ## First: what is a fan-out search?
 
-When you ask ChatGPT a question that needs fresh information, it does not send your question to the web as it is. It writes its own web searches first, reads the results, and then writes the answer. These hidden searches are called fan-out queries, because one question fans out into several searches.
+When you ask ChatGPT a question that needs fresh information, it does not send your question to the web as it is. It writes its own web searches first, reads the results, and then writes the answer. These hidden searches are called [fan-out queries](https://genezio.com/docs/core-concepts/query-fanouts/), because one question fans out into several searches. For a longer introduction, read [how fan-out and implicit queries work in ChatGPT and Gemini](https://genezio.com/blog/deciphering-fan-out-implicit-queries/).
 
-The fan-out decides which pages ChatGPT can read. A page that no search finds cannot be cited, however good it is. For GEO (Generative Engine Optimization), the fan-out is the front door.
+The fan-out decides which pages ChatGPT can read. A page that no search finds cannot be [cited](https://genezio.com/docs/core-concepts/citations/), however good it is. For GEO (Generative Engine Optimization), the fan-out is the front door.
 
 ![Illustration: GPT-6 runs three searches for a question, GPT-6.2 runs one longer search, and both answers cite about the same number of sources](/images/gpt-6-2-fanout-explained.webp)
 
@@ -88,11 +88,11 @@ Instant search is the most common mode on paid accounts in our data. It is also 
 
 Real buyers do not ask one complete question. They ask, read, and then follow up: "does it have quiet rooms and decent wifi?". That message names no hotel. ChatGPT still has to search for one.
 
-In our data, ChatGPT turned that follow-up into a search for "[hotel name] Athens quiet rooms soundproofing Wi-Fi guest reviews". The hotel name came from an earlier turn of the conversation. This is the normal case. Across all answers, **84% of the words in ChatGPT's searches are not in the user's last message**. They come from earlier turns, from what ChatGPT knows about the user, or from ChatGPT's own expansion of the question.
+In our data, ChatGPT turned that follow-up into a search for "[hotel name] Athens quiet rooms soundproofing Wi-Fi guest reviews". The hotel name came from an earlier turn of the conversation. This is the normal case. Across all answers, **84% of the words in ChatGPT's searches are not in the user's last message**. They come from earlier turns, from what ChatGPT knows about the user, or from ChatGPT's own expansion of the question. Sometimes that expansion adds brand names the user never typed, as we showed in our study of [how ChatGPT injects competitors into its searches](https://genezio.com/research/chatgpt-fanout-brand-injection/).
 
 GPT-6.2 did not change this part. It still builds its searches from the whole conversation. It just builds fewer of them.
 
-This is why a single prompt is a poor test of AI visibility. A tool that sends "best hotel in Athens" sees one search. A real buyer who talks to ChatGPT for four turns triggers searches that name the shortlist, the conditions and the competitors from earlier in the conversation. On GPT-6.2, a follow-up often gets only one search, so that one search decides which pages make it into the answer.
+This is why a single prompt is a poor test of AI visibility. Even the same model searches differently through the API than in the ChatGPT app: we found [zero overlap between their queries](https://genezio.com/research/zero-query-overlaps/). A tool that sends "best hotel in Athens" sees one search. A real buyer who talks to ChatGPT for four turns triggers searches that name the shortlist, the conditions and the competitors from earlier in the conversation. On GPT-6.2, a follow-up often gets only one search, so that one search decides which pages make it into the answer.
 
 ## Free and paid: different roads, same destination
 
@@ -108,7 +108,7 @@ GPT-6.2 also widened a gap that already existed between free and paid users. To 
 | Conversations with an ad | 3.4% | 0% |
 | Web pages cited per answer | 27.0 | 27.2 |
 
-The road is different. Free users get more searches, more searches with a year in them, a smaller model on one answer in ten, and all of the ads we saw. Paid users get the fast mode, more checks on brand websites, and now the new model.
+The road is different. Free users get more searches, more searches with a year in them, a smaller model on one answer in ten, and all of the ads we saw. We wrote more about [how ads in ChatGPT target local markets](https://genezio.com/research/chatgpt-ads-went-local/). Paid users get the fast mode, more checks on brand websites, and now the new model.
 
 The destination is mostly the same. Both plans cite the same number of pages from the same number of websites. We also compared the ten most cited websites for each brand on the two plans. They overlap as much as two random halves of the free conversations overlap with each other. We found no evidence that free and paid users see a different set of top sources.
 
@@ -153,3 +153,29 @@ By mode, the effect on searches per answer is −1.18 for instant search, −0.0
 **Free against paid.** For November 25–27, we averaged each metric per brand and per plan, and compared the plans brand by brand (every brand with at least five answers on each plan). For the overlap of sources, we compared the ten most cited domains per brand on each plan (Jaccard 0.43), against two random halves of the same plan (also 0.43), for every brand with at least 20 answers on each plan.
 
 **Limits.** Our questions come from persona conversations about tracked brands, not from a random sample of all ChatGPT traffic. The window after the rollout is three days long. We will run the same analysis again in December to see if the effect holds. We publish only aggregate numbers, and no brand in this study is named.
+
+## FAQ
+
+### What changed with GPT-6.2 in ChatGPT?
+
+On November 24, OpenAI moved paid ChatGPT accounts to GPT-6.2. Since then, 43% of paid answers come from a single web search, up from 21%. The number of searches per answer went down.
+
+### Does GPT-6.2 cite fewer sources?
+
+No. Each answer still cites about 27 web pages from about 11 websites. GPT-6.2 gets them from fewer, longer searches.
+
+### Are free ChatGPT accounts affected by GPT-6.2?
+
+Not yet. Free accounts stayed on GPT-6. They still run more searches per answer, and they are the only accounts where we saw ads.
+
+### How can my brand stay visible with GPT-6.2?
+
+Answer the full buyer question on one page, rank high in the results of that one search, and be present on the review and comparison sites that ChatGPT reads.
+
+### Why did my ChatGPT visibility change this week?
+
+It may be the model, not your content. A trend line that crosses November 24 compares GPT-6 with GPT-6.2 on paid accounts. Check the model before you change your pages.
+
+## See what ChatGPT searches for your brand
+
+Genezio runs multi-turn conversations as your customer personas, on free and paid ChatGPT accounts, and shows the searches behind each answer and the pages that ChatGPT cites. If you want to know which searches decide your visibility after GPT-6.2, [book a demo or an audit with Genezio](https://genezio.com/contact-sales/).
