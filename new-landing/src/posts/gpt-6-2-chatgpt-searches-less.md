@@ -54,8 +54,6 @@ With GPT-6.2, that front door got narrower.
 
 ## What happened on November 24
 
-Genezio talks to ChatGPT every day on behalf of the brands we track. We do not send single prompts. We run full conversations, several turns long, as the customer personas of each brand. We do this on free accounts and on paid accounts, and we keep the full technical record of every answer: the model that wrote it, the account plan, and every web search that ChatGPT ran.
-
 Until November 23, every paid answer in our data came from GPT-6. On November 24, the first GPT-6.2 answer appeared at 00:49 UTC. By the end of that day, 95% of paid answers came from the new model. From November 25, 99% did. Not one free answer came from GPT-6.2. This matches OpenAI's announcement, which lists the paid plans only.
 
 This gave us a clean experiment that we did not plan. The same personas kept asking the same kinds of questions about the same brands. Only the paid accounts got the new model. The free accounts show what would have happened without it, like the placebo group in a drug trial. Thus we can separate the effect of GPT-6.2 from everything else that changed that week.
