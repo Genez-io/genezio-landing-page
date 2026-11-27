@@ -1,5 +1,27 @@
 [
   {
+    "id": "gpt-6-2-chatgpt-searches-less",
+    "title": "GPT-6.2 Searches Less for Paid ChatGPT Users. We Measured It.",
+    "excerpt": "On November 24, paid ChatGPT accounts moved to GPT-6.2. Overnight, the share of answers built on a single web search doubled, from 21% to 43%. Free accounts did not change.",
+    "description": "GPT-6.2 answers paid ChatGPT users with one web search twice as often as GPT-6 did. A before-and-after study of 24,584 conversations, with free accounts as the control.",
+    "category": "AI Research",
+    "postType": "research",
+    "readTime": "8 min read",
+    "date": "November 27, 2026",
+    "timestamp": 1795737600000,
+    "author": "Cristi Miloiu",
+    "metaOgImage": "https://genezio.com/images/gpt-6-2-chatgpt-searches-less.webp",
+    "metaOgUrl": "https://genezio.com/research/gpt-6-2-chatgpt-searches-less/",
+    "metaTitle": "GPT-6.2 Runs Fewer Searches in ChatGPT: Data From 24,584 Conversations",
+    "tags": [
+      "AI Research",
+      "ChatGPT",
+      "GPT-6.2",
+      "Fan-out Queries",
+      "AI Visibility"
+    ]
+  },
+  {
     "id": "businesses-in-chatgpt-first-party-ai-data-geo",
     "title": "Businesses in ChatGPT: What First-Party AI Data Means for GEO",
     "excerpt": "OpenAI now lets companies claim their profile in ChatGPT and see mentions and clicks. Here is what that first-party data means for GEO, and how to use it with Genezio.",
@@ -108,7 +130,7 @@
     "id": "monitor-ai-brand-perceptions",
     "title": "What Does AI Actually Say About Your Brand? Start Monitoring It.",
     "excerpt": "Write one sentence you believe AI says about your brand. Genezio counts every collected AI answer that agrees with it, every one that disagrees, and shows you the exact paragraphs.",
-    "description": "Write one sentence you believe AI says about your brand. Genezio counts every AI answer that agrees, every one that disagrees, and links each number to its paragraph.",
+    "description": "Learn how to track and verify what AI engines say about your brand. Read the article to monitor brand perception.",
     "category": "Product Update",
     "readTime": "7 min read",
     "date": "October 13, 2026",
