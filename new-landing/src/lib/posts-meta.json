@@ -22,6 +22,27 @@
     ]
   },
   {
+    "id": "chatgpt-ads-went-local",
+    "title": "ChatGPT Ads Went Local. Measurement Didn't.",
+    "excerpt": "Postal code targeting reached ChatGPT Ads in Europe, but Ads Manager still won't show who advertises next to your answers. What changed and what to track.",
+    "description": "Postal code targeting reached ChatGPT Ads in Europe, but Ads Manager still won't show who advertises next to your answers. What changed and what to track.",
+    "category": "ChatGPT Ads",
+    "readTime": "13 min read",
+    "date": "November 20, 2026",
+    "timestamp": 1795132800000,
+    "author": "Horatiu Voicu",
+    "metaOgImage": "https://genezio.com/images/chatgpt-ads-went-local.webp",
+    "metaOgUrl": "https://genezio.com/blog/chatgpt-ads-went-local/",
+    "metaTitle": "ChatGPT Ads Went Local. Measurement Didn't.",
+    "tags": [
+      "ChatGPT Ads",
+      "AI Advertising",
+      "Location Targeting",
+      "Digital Services Act",
+      "AI Visibility"
+    ]
+  },
+  {
     "id": "businesses-in-chatgpt-first-party-ai-data-geo",
     "title": "Businesses in ChatGPT: What First-Party AI Data Means for GEO",
     "excerpt": "OpenAI now lets companies claim their profile in ChatGPT and see mentions and clicks. Here is what that first-party data means for GEO, and how to use it with Genezio.",
@@ -40,6 +61,33 @@
       "AI Analytics",
       "Business Agents",
       "AI Search"
+    ]
+  },
+  {
+    "id": "pentest-tools-case-study",
+    "title": "How Genezio Helped Pentest-Tools.com See and Grow Its Presence in AI Answers",
+    "excerpt": "Since June 2026, Pentest-Tools.com has used Genezio to measure which of its pages AI engines cite, for which use cases, and whether AI answers reflect its new positioning.",
+    "description": "How Pentest-Tools.com used Genezio to track AI citations at page level, grow weekly citations to over a thousand, and check that AI answers reflect its positioning.",
+    "category": "Case Study",
+    "readTime": "6 min read",
+    "date": "November 3, 2026",
+    "timestamp": 1793664000000,
+    "author": "Paula Cionca",
+    "coAuthor": "Andra Zaharia",
+    "coAuthorRole": "Head of Marketing, Pentest-Tools.com",
+    "coAuthorLinkedIn": "https://www.linkedin.com/in/andrazaharia/",
+    "coAuthorImage": "/authors/andra-zaharia.webp",
+    "coAuthorOrg": "Pentest-Tools.com",
+    "coAuthorOrgUrl": "https://pentest-tools.com/",
+    "metaOgImage": "https://genezio.com/images/pentest-tools-case-study.webp",
+    "metaOgUrl": "https://genezio.com/blog/pentest-tools-case-study/",
+    "metaTitle": "Pentest-Tools.com Case Study: Growing Citations in AI Answers",
+    "tags": [
+      "Case Study",
+      "GEO",
+      "AI Citations",
+      "Cybersecurity",
+      "Brand Perception"
     ]
   },
   {
