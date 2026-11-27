@@ -10,7 +10,7 @@ tags:
   - Fan-out Queries
   - AI Visibility
 author: Cristi Miloiu
-linkedIn: ""
+linkedIn: https://www.linkedin.com/in/cristi-miloiu-3a174a267
 
 thumbnail: /images/gpt-6-2-chatgpt-searches-less.webp
 preview: "On November 24, paid ChatGPT accounts moved to GPT-6.2. Overnight, the share of answers built on a single web search doubled, from 21% to 43%. Free accounts did not change."

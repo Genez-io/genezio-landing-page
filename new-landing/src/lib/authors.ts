@@ -135,27 +135,27 @@ export const authors: Record<string, any> = {
         }
     },
     "cristi-miloiu": {
-        "draft": true,
         "name": "Cristi Miloiu",
-        "role": "Software Engineer",
-        "bio": "Cristi Miloiu is a Software Engineer and Builder focused on AI Agents and Cloud Architecture at Genezio. As a core member of the team, he helped secure a €2M pre-seed round and transitioned the platform towards LLM brand visibility and enterprise AI agent testing solutions. He is the owner and maintainer of the backend and agents codebase, having engineered Red/Blue Team Agents and architected critical infrastructure systems. Highly active in the open-source and developer community, Cristi made over 6,000 GitHub contributions in the last year alone.\n\nHe holds a Bachelor's degree in Computer Science from the National University of Science and Technology Politehnica Bucharest and is currently pursuing his Master's in Information Systems Engineering at the same university. Beyond his technical work, Cristi is a dedicated community leader; he managed the IT Department for the League of Electronics Students and actively mentors at Innovation Labs and The Bucharest Hackathon. His innovative projects have earned him multiple accolades, including 1st Place at the Electron Hackathon.",
+        "role": "Tech Lead & Product Owner",
+        "bio": "Cristi Miloiu is Tech Lead and Product Owner at Genezio. He leads the engineering team behind the platform that measures how AI assistants talk about brands: the roadmap, code reviews, releases, platform security (SOC 2 Type II), and the cost of the cloud and of the LLMs. He still builds core parts of the product himself, including the engine that reverse-engineers how 9 AI assistants search and answer, the public REST API and MCP server, enterprise SSO with role-based access, and AI Shopping.\n\nCristi joined Genezio in 2023 as a software engineer. He was part of the core team that secured a €2M pre-seed round, and as owner of the backend and agents codebase, he helped move the platform towards LLM brand visibility and enterprise AI agent testing. His research at Genezio looks at how answer engines such as ChatGPT build their web searches, and what that means for the brands they recommend.\n\nHe holds a Bachelor's degree in Computer Science from the National University of Science and Technology Politehnica Bucharest, where he now studies for a Master's in Information Systems Engineering. He mentors at Innovation Labs and The Bucharest Hackathon, and his projects have won awards that include 1st Place at the Electron Hackathon.",
         "image": "/authors/cristi-miloiu.webp",
         "location": "Bucharest, Romania",
         "social": {
             "linkedin": "https://www.linkedin.com/in/cristi-miloiu-3a174a267",
+            "twitter": "https://x.com/cristim67",
             "email": "contact@genezio.com",
             "github": "https://github.com/cristim67",
-            "website": "https://cristimiloiu.com"
+            "website": "https://www.cristimiloiu.com"
         },
         "stats": {
             "articles": 0,
             "readers": "5K",
             "expertise": [
                 "AI Agents",
+                "LLM Search Research",
                 "Cloud Architecture",
                 "Python & FastAPI",
-                "TypeScript",
-                "Next.js & React"
+                "TypeScript & React"
             ]
         }
     },
