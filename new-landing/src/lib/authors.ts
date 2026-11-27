@@ -137,7 +137,7 @@ export const authors: Record<string, any> = {
     "cristi-miloiu": {
         "name": "Cristi Miloiu",
         "role": "Tech Lead & PO",
-        "bio": "Cristi Miloiu is Tech Lead and Product Owner at Genezio. He leads the engineering team and builds the systems that show how AI assistants such as ChatGPT search, answer, and recommend brands.\n\nHe studied Computer Science at Politehnica Bucharest, where he is now doing his Master's.",
+        "bio": "Cristi Miloiu is the Tech Lead and Product Owner at Genezio. As a Software Engineer focused on AI agents and cloud architecture, he leads the engineering team and builds the systems that show how AI assistants such as ChatGPT search, answer, and recommend brands. He joined Genezio in 2023, was part of the core team that secured a €2M pre-seed round, and owned the backend and agents codebase as the platform moved towards LLM brand visibility. Before Genezio, he did an internship at Huawei Enterprise GSC, where he worked on enterprise storage and Linux server administration. Academically, he earned a Bachelor's degree in Computer Science from the National University of Science and Technology Politehnica Bucharest, where he now studies for a Master's in Information Systems Engineering. Outside work, he mentors at Innovation Labs and The Bucharest Hackathon, and his projects have won awards that include 1st Place at the Electron Hackathon. Recently, his research looks at how answer engines build their web searches and what that means for brands.",
         "image": "/authors/cristi-miloiu.webp",
         "location": "Bucharest, Romania",
         "social": {
