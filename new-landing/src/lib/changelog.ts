@@ -16,6 +16,18 @@
  * expects it to work, thus a line that says something now works tells them
  * only that it was broken. The test: if the customer would have called the
  * old behaviour broken, it stays off the page.
+ *
+ * Genezio is more than a tool that measures AI visibility. It also writes
+ * content (Content Hub), analyses on request (Geo), tracks goals
+ * (Scorecard), and captures the ads in AI answers. Do not use "AI
+ * visibility" as the name of the product or as the sum of what it gives.
+ * Use that phrase only for the measurement itself.
+ *
+ * Each title of a release or of a highlight names the part of Genezio that
+ * it is about, such as Geo, Content Hub or the Scorecard. A reader who sees
+ * only the title must know where the change is. "Review a draft with your
+ * team" is not sufficient. "Review Content Hub articles with your team" is
+ * correct.
  */
 
 export type ChangelogTag = "New" | "Improved" | "API" | "Integrations";
@@ -63,6 +75,107 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    slug: "nov-2026-content-analysis-brand-roles",
+    date: "2026-11-24",
+    precision: "day",
+    title: "Content Analysis that knows your brand, the right access on each brand of your Genezio account, and more",
+    summary:
+      "Advice on a page that ignores who owns it is advice that you cannot use, and one person had the same access to each brand of your account. Now Content Analysis reads each page as part of your brand, you give each person a role for each brand, and you see how strongly AI recommends you in each answer.",
+    tags: ["New", "Improved"],
+    highlights: [
+      {
+        title: "Get Content Analysis advice that fits your brand and the page",
+        description:
+          "Content Analysis now reads each page in the context of your brand, follows the rules that you set for your brand, and does not mark a page down for a structure that does not suit it. On a page that you do not control, such as a partner's review, the advice becomes a request for its publisher, thus each piece of advice is one that you can act on.",
+      },
+      {
+        title: "Give each person the right access to each brand in your Genezio account",
+        description:
+          "A person on your team can now have a different role on each brand, for example full access to one brand and read-only access to the others. You can bring in an agency or a country team for the brands that they run, and keep the rest of your account safe from their changes.",
+      },
+      {
+        title: "See how strongly AI recommends you in each conversation that Genezio captures",
+        description:
+          "Each recommended brand in a conversation now shows if AI named it as the only choice, the first choice, one of several, or only a backup. You see where a rival takes first place while you only make the list, thus you know which answers to work on first.",
+      },
+    ],
+    otherUpdates: [
+      "A new Scorecard goal shows a month of history from its first day, thus you see the trend before you report it.",
+      "See what AI tells buyers in the United Arab Emirates.",
+      "Your AI assistant, such as Claude, can read which AI bots visit your site, and can manage the templates and the rules of your brand for you.",
+      "Give more room to the chat or to the article in Content Hub, as the task needs.",
+    ],
+  },
+
+  {
+    slug: "nov-2026-geo-routines-article-comments",
+    date: "2026-11-18",
+    precision: "day",
+    title: "Geo reports to you on a schedule, your team reviews Content Hub articles together, and more",
+    summary:
+      "You had to ask Geo each time that you wanted an update, and the feedback on a Content Hub draft got lost in email and chat. Now Geo brings you its report on your schedule, your team reviews each article where it is written, and Genezio works with your CRM, your team chat and your data warehouse.",
+    tags: ["New", "Integrations"],
+    highlights: [
+      {
+        title: "Geo, your AI analyst, reports to you on a schedule",
+        description:
+          "Tell Geo one time what to watch, such as how your brand moves in AI answers, the rivals that gain ground, or the sources that stop citing you, and Geo sends you its report on your schedule, in the app or by email. Each report says what changed since the last one and why, and stays quiet when nothing did, thus you spend time only on what needs you.",
+      },
+      {
+        title: "Review Content Hub articles with your team before they go live",
+        description:
+          "Your team comments on the exact words of an article in Content Hub, and the writing agent makes the change that a comment asks for. All the feedback stays next to the draft, thus an article goes out after fewer rounds.",
+      },
+      {
+        title: "Connect HubSpot, Slack, Snowflake and Databricks to Genezio",
+        description:
+          "Genezio now works with your CRM, your team chat and your data warehouse, next to the tools that you connected before. You tie what AI says about you to your pipeline and your own numbers, thus you can show your board what your work in AI search earns.",
+      },
+    ],
+    otherUpdates: [
+      "If your brand runs more than one site, such as one for each country, Genezio reads the Search Console and Bing data of all of them together.",
+      "Download a Content Hub article as clean HTML that you paste into your CMS with no work on the format.",
+    ],
+  },
+
+  {
+    slug: "nov-2026-connectors-google-ads",
+    date: "2026-11-13",
+    precision: "day",
+    title: "Bring your marketing tools to Genezio, see the ads in Google's AI answers, and more",
+    summary:
+      "Your AI visibility data sat apart from your SEO tools, your analytics and your search data, thus each question took a copy and a paste. Now Genezio works with the tools your team already uses, and shows you the ads that compete for your buyers in Google's AI answers.",
+    tags: ["New", "Integrations"],
+    highlights: [
+      {
+        title: "Ask one question across all your marketing tools",
+        description:
+          "Connect the tools your team already pays for, such as Semrush, Ahrefs, Similarweb, Amplitude, Klaviyo, Notion or Webflow, and Geo, Content Hub and the Scorecard use their data next to what AI says about you. You get one answer from all your sources, and you stop moving data from tool to tool by hand.",
+      },
+      {
+        title: "Write the content your buyers already search for",
+        description:
+          "Content Hub now plans each article around the searches that bring people to your site, from Search Console, Bing or the export of any keyword tool. Your new content serves real demand, and not a guess.",
+      },
+      {
+        title: "See who buys your buyers' attention in Google's AI answers",
+        description:
+          "Genezio now captures the ads in Google AI Mode and AI Overviews, as it already does in ChatGPT, and shows the share of each engine. You see which rivals pay to stand next to the answers about you, and you know where your ad budget can win.",
+      },
+      {
+        title: "Give Geo the time a real analysis needs",
+        description:
+          "Geo now has a full page, your chats stay in a list that you can search and pin, and you get a notice when an answer is ready. You can run a deep question, do other work, and come back to it days later without starting again.",
+      },
+    ],
+    otherUpdates: [
+      "Limit your citations to the sources that an engine names in its answer, thus you know which pages AI trusts by name.",
+      "See what the TikTok videos and profiles that AI cites say about your brand.",
+      "An account owner can ask an AI assistant such as Claude who changed what, and on which brand.",
+    ],
+  },
+
   {
     slug: "oct-2026-netherlands-market",
     date: "2026-10-30",

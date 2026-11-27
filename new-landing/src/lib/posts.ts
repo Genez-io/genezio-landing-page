@@ -22,6 +22,12 @@ export interface BlogPost {
     date: string;
     author: string;
     authorRole: string;
+    coAuthor?: string;
+    coAuthorRole?: string;
+    coAuthorLinkedIn?: string;
+    coAuthorImage?: string;
+    coAuthorOrg?: string;
+    coAuthorOrgUrl?: string;
     featured: boolean;
     icon: any;
     gradient: string;
