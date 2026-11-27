@@ -1,7 +1,7 @@
 [
   {
     "id": "gpt-6-2-chatgpt-searches-less",
-    "title": "GPT-6.2 Searches Less for Paid ChatGPT Users. We Measured It.",
+    "title": "GPT-6.2 Gives Your Brand Fewer Chances to Show Up in ChatGPT",
     "excerpt": "On November 24, paid ChatGPT accounts moved to GPT-6.2. Overnight, the share of answers built on a single web search doubled, from 21% to 43%. Free accounts did not change.",
     "description": "GPT-6.2 answers paid ChatGPT users with one web search twice as often as GPT-6 did. A before-and-after study of 24,584 conversations, with free accounts as the control.",
     "category": "AI Research",
@@ -12,7 +12,7 @@
     "author": "Cristi Miloiu",
     "metaOgImage": "https://genezio.com/images/gpt-6-2-chatgpt-searches-less.webp",
     "metaOgUrl": "https://genezio.com/research/gpt-6-2-chatgpt-searches-less/",
-    "metaTitle": "GPT-6.2 Runs Fewer Searches in ChatGPT: Data From 24,584 Conversations",
+    "metaTitle": "GPT-6.2 Gives Brands Fewer Chances in ChatGPT: Data From 24,584 Chats",
     "tags": [
       "AI Research",
       "ChatGPT",

@@ -1,6 +1,6 @@
 ---
-title: "GPT-6.2 Searches Less for Paid ChatGPT Users. We Measured It."
-metaTitle: "GPT-6.2 Runs Fewer Searches in ChatGPT: Data From 24,584 Conversations"
+title: "GPT-6.2 Gives Your Brand Fewer Chances to Show Up in ChatGPT"
+metaTitle: "GPT-6.2 Gives Brands Fewer Chances in ChatGPT: Data From 24,584 Chats"
 type: research
 date: 2026-11-27
 tags:
