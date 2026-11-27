@@ -42,7 +42,7 @@ const AUTHOR_META: Record<
   "cristi-miloiu": {
     title: "Cristi Miloiu: AI Search Research & Engineering | Genezio",
     description:
-      "Read research by Cristi Miloiu, Tech Lead & Product Owner at Genezio. Data-driven studies of how ChatGPT and other answer engines search, cite, and recommend brands.",
+      "Read research by Cristi Miloiu, Tech Lead & PO at Genezio. Data-driven studies of how ChatGPT and other answer engines search, cite, and recommend brands.",
   },
   "denisa-lera": {
     title: "Denisa Lera: Gen Z AI Trends & Consumer Trust | Genezio",

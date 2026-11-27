@@ -32,7 +32,7 @@ On November 24, OpenAI moved paid ChatGPT accounts to its new model, GPT-6.2. Fr
 
 That matters for every brand that wants to be in ChatGPT's answers. Fewer searches means fewer ways in. If your page does not match the one search that ChatGPT runs, there is no second search to find it.
 
-We measured this in 24,584 ChatGPT conversations about 129 brands. Here is what changed, what did not, and what to do about it.
+We measured this in 24,584 ChatGPT conversations. Here is what changed, what did not, and what to do about it.
 
 ## The short version
 
@@ -98,7 +98,7 @@ This is why a single prompt is a poor test of AI visibility. A tool that sends "
 
 ## Free and paid: different roads, same destination
 
-GPT-6.2 also widened a gap that already existed between free and paid users. To make a fair comparison, we compared free and paid answers for the same 117 brands, brand by brand, after November 25.
+GPT-6.2 also widened a gap that already existed between free and paid users. To make a fair comparison, we compared free and paid answers for the same brands, brand by brand, after November 25.
 
 | Same brands, Nov 25–27 | Free | Paid |
 | --- | --- | --- |
@@ -132,7 +132,7 @@ The destination is mostly the same. Both plans cite the same number of pages fro
 
 This section is for the analysts who want to check our work.
 
-**Data.** 24,584 ChatGPT conversations from November 23 to November 27, 2026, about 129 brands tracked on Genezio. Every conversation is a multi-turn conversation run by a configured customer persona, with web search on. For the daily chart, November 19–22 comes from an even sample of 1,576 conversations from the same brands.
+**Data.** 24,584 ChatGPT conversations from November 23 to November 27, 2026, about the brands tracked on Genezio. Every conversation is a multi-turn conversation run by a configured customer persona, with web search on. For the daily chart, November 19–22 comes from an even sample of 1,576 conversations from the same brands.
 
 **Fields.** For each answer, we read the account plan, the model, the mode, the fan-out queries, the search results and the cited URLs from the raw event stream of the answer. We put Team and Plus accounts together as "paid", because both moved to GPT-6.2 on the same day.
 
@@ -152,6 +152,6 @@ By mode, the effect on searches per answer is −1.18 for instant search, −0.0
 
 **Words from outside the message.** For each answer, we took the words of four or more letters in all its searches and counted the share that does not occur in the user's current message.
 
-**Free against paid.** For November 25–27, we averaged each metric per brand and per plan, and compared the plans brand by brand (117 brands with at least five answers on each plan). For the overlap of sources, we compared the ten most cited domains per brand on each plan (Jaccard 0.43), against two random halves of the same plan (also 0.43), for 69 brands with at least 20 answers on each plan.
+**Free against paid.** For November 25–27, we averaged each metric per brand and per plan, and compared the plans brand by brand (every brand with at least five answers on each plan). For the overlap of sources, we compared the ten most cited domains per brand on each plan (Jaccard 0.43), against two random halves of the same plan (also 0.43), for every brand with at least 20 answers on each plan.
 
 **Limits.** Our questions come from persona conversations about tracked brands, not from a random sample of all ChatGPT traffic. The window after the rollout is three days long. We will run the same analysis again in December to see if the effect holds. We publish only aggregate numbers, and no brand in this study is named.
