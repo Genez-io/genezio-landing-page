@@ -48,9 +48,11 @@ When you ask ChatGPT a question that needs fresh information, it does not send y
 
 The fan-out decides which pages ChatGPT can read. A page that no search finds cannot be cited, however good it is. For GEO (Generative Engine Optimization), the fan-out is the front door.
 
-![The same question before and after: GPT-6 ran four searches, one per provider, and GPT-6.2 ran one search that named all of them](/images/gpt-6-2-fanout-explained.webp)
+![Before, ChatGPT ran a separate search for each brand. Now it runs one search for all of them, and one brand was left out](/images/gpt-6-2-fanout-explained.webp)
 
-With GPT-6.2, that front door got narrower. The example above is real. A persona asked ChatGPT the same question every day. On GPT-6, ChatGPT searched each provider separately, so each provider got its own list of results. On GPT-6.2, one search named all of them, so they competed in one list. GPT-6.2 does not merge the searches every time: on the following days, the same question got 1, 1 and 4 searches. But it merges them far more often, as the numbers below show.
+With GPT-6.2, that front door got narrower. The example above is real: a buyer question that a persona asked ChatGPT every day. On GPT-6, ChatGPT searched for each brand by name, one search per brand. On GPT-6.2, it ran one search that named several brands at once, and one of the four brands from before was not in it at all.
+
+GPT-6.2 does not do this every time. On the following days, the same question got 1, 1 and 4 searches. But it does it far more often, as the numbers below show.
 
 ## What happened on November 24
 
