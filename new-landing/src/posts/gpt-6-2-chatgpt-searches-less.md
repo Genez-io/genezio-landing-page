@@ -132,7 +132,7 @@ The destination is mostly the same. Both plans cite the same number of pages fro
 
 This section is for the analysts who want to check our work.
 
-**Data.** 24,584 ChatGPT conversations from November 23 to November 27, 2026, about the brands tracked on Genezio. Every conversation is a multi-turn conversation run by a configured customer persona, with web search on. For the daily chart, November 19–22 comes from an even sample of 1,576 conversations from the same brands.
+**Data.** 24,584 ChatGPT conversations from November 23 to November 27, 2026, about the brands tracked on Genezio. Every conversation is a multi-turn conversation run by a configured customer persona, with web search on.
 
 **Fields.** For each answer, we read the account plan, the model, the mode, the fan-out queries, the search results and the cited URLs from the raw event stream of the answer. We put Team and Plus accounts together as "paid", because both moved to GPT-6.2 on the same day.
 
