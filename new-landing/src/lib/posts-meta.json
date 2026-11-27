@@ -1,5 +1,27 @@
 [
   {
+    "id": "gpt-6-2-chatgpt-searches-less",
+    "title": "GPT-6.2 Gives Your Brand Fewer Chances to Show Up in ChatGPT",
+    "excerpt": "On November 24, paid ChatGPT accounts moved to GPT-6.2. Overnight, the share of answers built on a single web search doubled, from 21% to 43%. Free accounts did not change.",
+    "description": "GPT-6.2 answers paid ChatGPT users with one web search twice as often as GPT-6 did. A before-and-after study of 24,584 conversations, with free accounts as the control.",
+    "category": "AI Research",
+    "postType": "research",
+    "readTime": "8 min read",
+    "date": "November 27, 2026",
+    "timestamp": 1795737600000,
+    "author": "Cristi Miloiu",
+    "metaOgImage": "https://genezio.com/images/gpt-6-2-chatgpt-searches-less.webp",
+    "metaOgUrl": "https://genezio.com/research/gpt-6-2-chatgpt-searches-less/",
+    "metaTitle": "GPT-6.2 Gives Brands Fewer Chances in ChatGPT: Data From 24,584 Chats",
+    "tags": [
+      "AI Research",
+      "ChatGPT",
+      "GPT-6.2",
+      "Fan-out Queries",
+      "AI Visibility"
+    ]
+  },
+  {
     "id": "chatgpt-ads-went-local",
     "title": "ChatGPT Ads Went Local. Measurement Didn't.",
     "excerpt": "Postal code targeting reached ChatGPT Ads in Europe, but Ads Manager still won't show who advertises next to your answers. What changed and what to track.",
@@ -662,25 +684,6 @@
     ]
   },
   {
-    "id": "marketing-agency-brand-presence-ai-search",
-    "title": "Marketing Agency Brand Presence in the Age of AI Search",
-    "excerpt": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
-    "description": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
-    "category": "Marketing Agencies",
-    "readTime": "6 min read",
-    "date": "March 2, 2026",
-    "timestamp": 1772409600000,
-    "author": "Paula Cionca",
-    "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
-    "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
-    "tags": [
-      "Marketing Agencies",
-      "AI Brand Presence",
-      "AI Visibility",
-      "GEO"
-    ]
-  },
-  {
     "id": "mastering-company-brand-presence",
     "title": "Mastering Brand Presence in 2026: AI-Powered Measurement Tools",
     "excerpt": "In 2026, company brand presence transcends traditional boundaries. Discover actionable strategies and AI-powered tools to optimize your visibility.",
@@ -697,6 +700,25 @@
       "AI Measurement",
       "Conversational AI",
       "Genezio"
+    ]
+  },
+  {
+    "id": "marketing-agency-brand-presence-ai-search",
+    "title": "Marketing Agency Brand Presence in the Age of AI Search",
+    "excerpt": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
+    "description": "Discover why AI brand presence matters for marketing agencies in 2026 and how to leverage AI visibility tools like Genezio to master generative search.",
+    "category": "Marketing Agencies",
+    "readTime": "6 min read",
+    "date": "March 2, 2026",
+    "timestamp": 1772402400000,
+    "author": "Paula Cionca",
+    "metaOgImage": "https://genezio.com/images/marketing-agency-brand-presence-ai-search.webp",
+    "metaOgUrl": "https://genezio.com/blog/marketing-agency-brand-presence-ai-search/",
+    "tags": [
+      "Marketing Agencies",
+      "AI Brand Presence",
+      "AI Visibility",
+      "GEO"
     ]
   },
   {
